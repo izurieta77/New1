@@ -1,4 +1,4 @@
-R06 - corrida 2026-09-25T06:21:56Z - datos reales
+R06 - corrida 2026-09-25T06:25:57Z - datos reales
 Pre-registro verificado: sha256 b12cbc772436d4c0f6b02f4f1284c636e663041d0c92080b69d8b6e2e4797699
 Registro de variantes: /home/user/New1/laboratorio/replicas/R06-variantes.csv
 
@@ -592,6 +592,67 @@ Regla 1 (filtro de 200 dias para apalancados): Se confirma
 Regla 2 (VIX < 25): Se propone quitarlo o dejarlo opcional
   k=0.5 SMA200+VIX25 1990-2026: DD<=-20% 3.0%, DD<=-35% 0.0%; con rezago: 3.0%, 0.0%; SMA200 sola 1928-2026: DD<=-20% 7.1%, DD<=-35% 0.8%
 Regla 3 (etf_apalancado_max = 0.5): Sensato
+
+================ POST-HOC (no pre-registrado; agregado despues de la corrida 1) ================
+(a) Volatilidad anual 1928-10-01 a 2015-10-30 (articulo: 18.9% con S&P 500 TR de Bloomberg):
+    French mercado: diaria x raiz(252) 17.12%; sesiones por año 263.2 (sabados en el tramo: 1051); diaria x raiz(sesiones) 17.49%; mensual x raiz(12) 18.78%
+    ^GSPC (precio; S&P 90 antes de 1957): diaria x raiz(252) 19.07%; sesiones por año 251.2; mensual x raiz(12) 18.86%
+(b) Convencion del articulo sobre ^GSPC de precio (sin dividendos), desde 1928-10-18; corridas registradas con es_prueba=0:
+variante                                     inicio        fin      n     CAGR     vol  Sharpe  Sh_art      MDD  invert  camb/a  costo/a
+art_bh_L1                                1928-09-29 2015-10-30  22923    9.32%  17.12%   0.402   0.351  -84.07%  100.0%    0.01   0.000%
+posthoc_art_gspc_bh_L1                   1928-10-17 2015-10-30  21860    5.38%  19.07%   0.201   0.109  -86.19%  100.0%    0.01   0.000%
+art_bh_L2                                1928-09-29 2015-10-30  22923   14.71%  34.23%   0.465   0.333  -98.32%  100.0%    0.01   0.000%
+posthoc_art_gspc_bh_L2                   1928-10-17 2015-10-30  21860    5.98%  38.15%   0.260   0.070  -98.86%  100.0%    0.01   0.000%
+art_sma200_L2                            1928-09-29 2015-10-30  22923   20.18%  22.34%   0.761   0.755  -59.61%   70.9%    5.75   0.000%
+posthoc_art_gspc_sma200_L2               1928-10-17 2015-10-30  21860   12.58%  24.45%   0.476   0.380  -78.84%   66.3%    5.94   0.000%
+art_sma200_L3                            1928-09-29 2015-10-30  22923   29.00%  33.51%   0.804   0.767  -77.38%   70.9%    5.75   0.000%
+posthoc_art_gspc_sma200_L3               1928-10-17 2015-10-30  21860   16.48%  36.68%   0.514   0.360  -93.41%   66.3%    5.94   0.000%
+    posthoc_art_gspc_sma200_L2: MDD dentro de muestra -78.84% pico 1929-09-16 valle 1933-03-20
+    posthoc_art_gspc_sma200_L3: MDD dentro de muestra -93.41% pico 1929-09-03 valle 1935-05-16
+(c) Arena con 50% en 3x del Nasdaq-100 simulado (^NDX de precio, sin dividendos), corridas registradas con es_prueba=0:
+
+--- post-hoc arena Nasdaq-100 [completo] ---
+variante                                     inicio        fin      n     CAGR     vol  Sharpe  Sh_art      MDD  invert  camb/a  costo/a
+ndx_bh_L1                                1986-07-31 2026-07-31  10076   14.09%  26.05%   0.521   0.424  -82.90%  100.0%    0.03   0.008%
+ndx_sma200_L3                            1986-07-31 2026-07-31  10076   17.48%  54.17%   0.516   0.267  -96.14%   75.3%    6.92   2.354%
+posthoc_arena_k050_ndx_sma200_vix25_L3   1990-01-02 2026-07-31   9211   10.10%  24.07%   0.409   0.306  -65.96%   68.7%  178.32   1.829%
+posthoc_arena_k050_ndx_sma200_L3         1986-07-31 2026-07-31  10076   14.27%  27.23%   0.517   0.413  -74.27%   75.3%  193.12   1.247%
+
+--- post-hoc arena Nasdaq-100 [dentro_muestra] ---
+variante                                     inicio        fin      n     CAGR     vol  Sharpe  Sh_art      MDD  invert  camb/a  costo/a
+ndx_bh_L1                                1986-07-31 2015-10-30   7375   12.58%  27.26%   0.451   0.340  -82.90%  100.0%    0.03   0.012%
+ndx_sma200_L3                            1986-07-31 2015-10-30   7375   12.43%  55.78%   0.433   0.163  -96.14%   73.0%    7.69   2.616%
+posthoc_arena_k050_ndx_sma200_vix25_L3   1990-01-02 2015-10-30   6510    8.73%  24.93%   0.345   0.233  -65.96%   66.0%  171.90   1.900%
+posthoc_arena_k050_ndx_sma200_L3         1986-07-31 2015-10-30   7375   12.23%  28.00%   0.436   0.318  -74.27%   73.0%  187.77   1.377%
+
+--- post-hoc arena Nasdaq-100 [fuera_muestra] ---
+variante                                     inicio        fin      n     CAGR     vol  Sharpe  Sh_art      MDD  invert  camb/a  costo/a
+ndx_bh_L1                                2015-10-30 2026-07-31   2701   18.28%  22.44%   0.763   0.714  -35.56%  100.0%    0.00   0.000%
+ndx_sma200_L3                            2015-10-30 2026-07-31   2701   32.38%  49.50%   0.774   0.609  -56.60%   81.7%    4.84   1.644%
+posthoc_arena_k050_ndx_sma200_vix25_L3   2015-10-30 2026-07-31   2701   13.45%  21.85%   0.587   0.512  -36.78%   75.2%  193.74   1.660%
+posthoc_arena_k050_ndx_sma200_L3         2015-10-30 2026-07-31   2701   20.02%  24.99%   0.769   0.711  -32.48%   81.7%  207.69   0.895%
+    posthoc_arena_k050_ndx_sma200_vix25_L3: MDD completo -65.96% pico 2000-03-27 valle 2010-02-05 recuperacion 2017-10-17
+    posthoc_arena_k050_ndx_sma200_L3: MDD completo -74.27% pico 2000-03-27 valle 2003-03-31 recuperacion 2017-05-25
+(d) Temporadas de 6 meses adicionales (mismo calculo que la seccion pre-registrada):
+variante                                      desde      hasta    n  mediana       p5      p95   %neg  DD<=12  DD<=20  DD<=28  DD<=35   peorDD dias<=-5%  peor dia
+arena_k050_sma200_L3 desde 1990          1990-01-03 2026-07-31  433     5.1%   -15.2%    27.6%    33%   34.4%    6.9%    2.3%    0.0%   -33.3%     0.24%     -9.8%
+arena_k050_bh_L3 desde 1990              1990-01-03 2026-07-31  433     8.8%   -18.8%    33.6%    26%   49.2%   24.5%   12.9%    6.0%   -61.6%     0.84%    -18.0%
+ndx_bh_L1                                1986-08-01 2026-07-31  475     9.5%   -22.5%    35.0%    25%   45.5%   18.7%   10.7%    7.2%   -58.7%     0.68%    -15.1%
+posthoc_arena_k050_ndx_sma200_vix25_L3   1990-01-03 2026-07-31  434     4.3%   -20.6%    37.2%    38%   60.8%   19.4%    3.9%    1.2%   -49.4%     0.75%    -11.1%
+posthoc_arena_k050_ndx_sma200_L3         1986-08-01 2026-07-31  475     6.2%   -20.5%    43.0%    36%   66.3%   21.7%    6.1%    2.1%   -56.1%     1.05%    -14.1%
+real_QQQ_bh                              2006-06-23 2026-07-31  237    10.4%   -13.4%    28.3%    21%   37.6%   15.6%    5.5%    2.1%   -49.4%     0.36%    -12.0%
+real_SPY_bh                              2006-06-23 2026-07-31  237     7.3%   -11.2%    20.8%    22%   27.8%    8.9%    5.5%    2.5%   -45.8%     0.36%    -10.9%
+    Rebalanceos con costo por año y cruces del filtro por año (la columna camb/a del motor cuenta tambien la deriva que la banda deja pasar):
+    arena_k025_sma200_vix25_L3                 rebalanceos/año 10.88  cruces del filtro/año 9.62
+    arena_k050_sma200_vix25_L3                 rebalanceos/año 11.46  cruces del filtro/año 9.62
+    arena_k100_sma200_vix25_L3                 rebalanceos/año 9.65  cruces del filtro/año 9.62
+    arena_k050_sma200_vix25_L3|rezago1         rebalanceos/año 11.46  cruces del filtro/año 9.62
+    arena_k050_sma200_L3                       rebalanceos/año 8.30  cruces del filtro/año 5.74
+    arena_k050_bh_L3                           rebalanceos/año 6.10  cruces del filtro/año 0.00
+    arena_k050_real_UPRO_sma200_vix25          rebalanceos/año 10.76  cruces del filtro/año 8.95
+    arena_k050_real_TQQQ_sma200_vix25          rebalanceos/año 12.82  cruces del filtro/año 9.11
+    posthoc_arena_k050_ndx_sma200_vix25_L3     rebalanceos/año 14.35  cruces del filtro/año 10.50
+    posthoc_arena_k050_ndx_sma200_L3           rebalanceos/año 11.97  cruces del filtro/año 6.90
 
 Salidas: /home/user/New1/laboratorio/replicas/R06-resultados.json
          /home/user/New1/laboratorio/replicas/R06-salida.txt

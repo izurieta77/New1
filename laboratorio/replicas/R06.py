@@ -14,6 +14,8 @@ Datos (ficha R06-apalancados-y-filtro-de-tendencia.md, seccion 3):
   - FRED: VIXCLS, DEXMXUS, INTGSTMXM193N. Yahoo y FRED no se congelan (se imprime su huella).
 Motor: herramientas/backtest.py. Cada corrida se agrega a R06-variantes.csv (nunca se borra).
 Salidas: R06-variantes.csv, R06-resultados.json y R06-salida.txt (copia de lo impreso).
+Analisis post-hoc (NO pre-registrados, agregados despues de la corrida 1 del 2026-09-25 06:21 UTC):
+  funcion post_hoc(). No cambian reglas, variantes, cortes ni criterios; se marcan asi en la salida.
 Solo biblioteca estandar.
 """
 from __future__ import annotations
@@ -643,6 +645,133 @@ def dif_newey_west(a: Corrida, b: Corrida, segmento: str) -> dict:
     return newey_west(x, NW_REZAGOS)
 
 
+# ============================================================== post-hoc (no pre-registrado)
+
+def rebalanceos_por_anio(k: Corrida) -> tuple[float, float]:
+    """(rebalanceos con costo por anio, entradas o salidas del filtro por anio) de una corrida."""
+    anios = (k.fechas[-1] - k.fecha_inicial).days / 365.25
+    reb = sum(1 for x in k.rotacion if x > 1e-12)
+    cruces = sum(1 for j in range(1, len(k.exposicion)) if (k.exposicion[j] > 0) != (k.exposicion[j - 1] > 0))
+    return reb / anios, cruces / anios
+
+
+def post_hoc(lab: Laboratorio, fuentes, mercado, rf, rf_serie, yh, rets, niv_y, vix, fuente_fr, mh_vix,
+             sintetico: bool) -> dict:
+    """Analisis agregados DESPUES de ver la corrida 1. No entran en el estado ni en los veredictos."""
+    R = lab.res
+    salida: dict = {}
+    P("\n================ POST-HOC (no pre-registrado; agregado despues de la corrida 1) ================")
+    # (a) C1: anualizacion de la volatilidad y sesiones de sabado
+    d0, d1 = INICIO_ART, FIN_ART
+    fr_tramo = [(f, r) for f, r in mercado if d0 <= f <= d1]
+    anios = (d1 - date(1928, 9, 30)).days / 365.25
+    sd_d = statistics.stdev([r for _, r in fr_tramo])
+    sesiones = len(fr_tramo) / anios
+    sabados = sum(1 for f, _ in fr_tramo if f.weekday() == 5)
+
+    def mensual(serie):
+        meses: dict = {}
+        for f, r in serie:
+            meses[(f.year, f.month)] = meses.get((f.year, f.month), 1.0) * (1 + r)
+        return [v - 1 for v in meses.values()]
+
+    g_tramo = [(f, r) for f, r in rets["^GSPC"] if d0 <= f <= d1]
+    sd_g = statistics.stdev([r for _, r in g_tramo])
+    diag = {"french_sd_diaria_x_raiz252": sd_d * math.sqrt(252),
+            "french_sesiones_por_anio": sesiones, "french_sabados": sabados,
+            "french_sd_diaria_x_raiz_sesiones": sd_d * math.sqrt(sesiones),
+            "french_sd_mensual_x_raiz12": statistics.stdev(mensual(fr_tramo)) * math.sqrt(12),
+            "gspc_sd_diaria_x_raiz252": sd_g * math.sqrt(252),
+            "gspc_sesiones_por_anio": len(g_tramo) / anios,
+            "gspc_sd_mensual_x_raiz12": statistics.stdev(mensual(g_tramo)) * math.sqrt(12)}
+    salida["diagnostico_volatilidad_1928_2015"] = diag
+    P("(a) Volatilidad anual 1928-10-01 a 2015-10-30 (articulo: 18.9% con S&P 500 TR de Bloomberg):")
+    P(f"    French mercado: diaria x raiz(252) {pct(diag['french_sd_diaria_x_raiz252'])}; sesiones por año "
+      f"{sesiones:.1f} (sabados en el tramo: {sabados}); diaria x raiz(sesiones) {pct(diag['french_sd_diaria_x_raiz_sesiones'])}; "
+      f"mensual x raiz(12) {pct(diag['french_sd_mensual_x_raiz12'])}")
+    P(f"    ^GSPC (precio; S&P 90 antes de 1957): diaria x raiz(252) {pct(diag['gspc_sd_diaria_x_raiz252'])}; "
+      f"sesiones por año {diag['gspc_sesiones_por_anio']:.1f}; mensual x raiz(12) {pct(diag['gspc_sd_mensual_x_raiz12'])}")
+
+    # (b) convencion del articulo sobre ^GSPC de precio (senal sobre ^GSPC): corridas registradas, es_prueba=0
+    g = rets["^GSPC"]
+    f_g = [f for f, _ in g if f in rf]
+    niv_g = niv_y["^GSPC"]
+    inicio_g = max(INICIO_ART, niv_g[200][0] + timedelta(days=1))
+    mh_g = bisect_left(f_g, inicio_g)
+    fuente_g = f"Yahoo ^GSPC precio (sin dividendos) huella {huella_serie(g)}; RF {fuente_fr}"
+    for L, v_, s_ in ((1, "posthoc_art_gspc_bh_L1", bt.senal_comprar_y_mantener),
+                      (2, "posthoc_art_gspc_sma200_L2", senal_filtro(200)),
+                      (3, "posthoc_art_gspc_sma200_L3", senal_filtro(200)),
+                      (2, "posthoc_art_gspc_bh_L2", bt.senal_comprar_y_mantener)):
+        serie = simular_letf(g, rf, L, gasto=COMISION_ART if L > 1 else 0.0, financiar=False)
+        lab.correr(v_, serie, rf_serie, s_, es_prueba=False, costos="sin_costos_tx", min_historia=mh_g,
+                   extras={"sub": niv_g},
+                   parametros={"subyacente": "^GSPC precio", "L": L, "comision_articulo": COMISION_ART,
+                               "financiamiento": "ninguno", "regla": v_},
+                   fuente=fuente_g, nota="POST-HOC no pre-registrado: convencion del articulo sobre ^GSPC de precio")
+    P(f"(b) Convencion del articulo sobre ^GSPC de precio (sin dividendos), desde {inicio_g}; corridas registradas con es_prueba=0:")
+    P(ENCABEZADO)
+    for v_ in ("art_bh_L1", "posthoc_art_gspc_bh_L1", "art_bh_L2", "posthoc_art_gspc_bh_L2", "art_sma200_L2",
+               "posthoc_art_gspc_sma200_L2", "art_sma200_L3", "posthoc_art_gspc_sma200_L3"):
+        P(fila(v_, R[v_].metricas["dentro_muestra"]))
+    for v_ in ("posthoc_art_gspc_sma200_L2", "posthoc_art_gspc_sma200_L3"):
+        x = mdd_con_fechas(R[v_], date(1900, 1, 1), CORTE)
+        P(f"    {v_}: MDD dentro de muestra {pct(x['valor'])} pico {x['fecha_pico']} valle {x['fecha_valle']}")
+    salida["gspc"] = {v_: R[v_].metricas for v_ in R if v_.startswith("posthoc_art_gspc")}
+
+    # (c) arena con 3x del Nasdaq-100 simulado (^NDX de precio): corridas registradas, es_prueba=0
+    ndx = rets["^NDX"]
+    s3 = simular_letf(ndx, rf, 3, gasto=GA, financiar=True)
+    f_n = [f for f, _ in s3]
+    fuente_n = f"Yahoo ^NDX precio huella {huella_serie(ndx)}; RF {fuente_fr}; FRED VIXCLS"
+    lab.correr("posthoc_arena_k050_ndx_sma200_vix25_L3", s3, rf_serie,
+               senal_filtro(200, umbral_vix=25, peso=0.5, banda=0.05), es_prueba=False,
+               min_historia=bisect_left(f_n, INICIO_VIX), extras={"sub": niv_y["^NDX"], "vix": vix},
+               parametros={"subyacente": "^NDX precio", "L": 3, "gasto_anual": GA, "ventana": 200, "umbral_vix": 25,
+                           "peso": 0.5, "banda": 0.05},
+               fuente=fuente_n, nota="POST-HOC no pre-registrado: arena con 3x Nasdaq-100 simulado")
+    lab.correr("posthoc_arena_k050_ndx_sma200_L3", s3, rf_serie, senal_filtro(200, peso=0.5, banda=0.05),
+               es_prueba=False, min_historia=bisect_left(f_n, INICIO_NDX), extras={"sub": niv_y["^NDX"]},
+               parametros={"subyacente": "^NDX precio", "L": 3, "gasto_anual": GA, "ventana": 200, "peso": 0.5,
+                           "banda": 0.05},
+               fuente=fuente_n, nota="POST-HOC no pre-registrado: arena con 3x Nasdaq-100 simulado")
+    P("(c) Arena con 50% en 3x del Nasdaq-100 simulado (^NDX de precio, sin dividendos), corridas registradas con es_prueba=0:")
+    tabla(lab, "post-hoc arena Nasdaq-100", ["ndx_bh_L1", "ndx_sma200_L3", "posthoc_arena_k050_ndx_sma200_vix25_L3",
+                                             "posthoc_arena_k050_ndx_sma200_L3"])
+    for v_ in ("posthoc_arena_k050_ndx_sma200_vix25_L3", "posthoc_arena_k050_ndx_sma200_L3"):
+        x = mdd_con_fechas(R[v_], date(1900, 1, 1), FIN_DATOS)
+        P(f"    {v_}: MDD completo {pct(x['valor'])} pico {x['fecha_pico']} valle {x['fecha_valle']} "
+          f"recuperacion {x['fecha_recuperacion']}")
+
+    # (d) temporadas adicionales y rebalanceos por anio
+    P("(d) Temporadas de 6 meses adicionales (mismo calculo que la seccion pre-registrada):")
+    P(f"{'variante':<40}{'desde':>11}{'hasta':>11}{'n':>5}{'mediana':>9}{'p5':>9}{'p95':>9}{'%neg':>7}"
+      f"{'DD<=12':>8}{'DD<=20':>8}{'DD<=28':>8}{'DD<=35':>8}{'peorDD':>9}{'dias<=-5%':>10}{'peor dia':>10}")
+    temp = {}
+    for etiqueta, v_, d0_ in (("arena_k050_sma200_L3 desde 1990", "arena_k050_sma200_L3", INICIO_VIX),
+                              ("arena_k050_bh_L3 desde 1990", "arena_k050_bh_L3", INICIO_VIX),
+                              ("ndx_bh_L1", "ndx_bh_L1", None),
+                              ("posthoc_arena_k050_ndx_sma200_vix25_L3", "posthoc_arena_k050_ndx_sma200_vix25_L3", None),
+                              ("posthoc_arena_k050_ndx_sma200_L3", "posthoc_arena_k050_ndx_sma200_L3", None),
+                              ("real_QQQ_bh", "real_QQQ_bh", None), ("real_SPY_bh", "real_SPY_bh", None)):
+        x = temporadas(R[v_], d0_)
+        temp[etiqueta] = x
+        P(f"{etiqueta[:40]:<40}{str(x['desde']):>11}{str(x['hasta']):>11}{x['n_temporadas']:>5}{pct(x['mediana'], 1):>9}"
+          f"{pct(x['p5'], 1):>9}{pct(x['p95'], 1):>9}{pct(x['frac_ret_neg'], 0):>7}{pct(x['frac_dd_12'], 1):>8}"
+          f"{pct(x['frac_dd_20'], 1):>8}{pct(x['frac_dd_28'], 1):>8}{pct(x['frac_dd_35'], 1):>8}{pct(x['peor_dd'], 1):>9}"
+          f"{pct(x['frac_dias_perdida_5'], 2):>10}{pct(x['peor_dia'], 1):>10}")
+    salida["temporadas"] = temp
+    P("    Rebalanceos con costo por año y cruces del filtro por año (la columna camb/a del motor cuenta tambien "
+      "la deriva que la banda deja pasar):")
+    reb = {}
+    for v_ in [v for v in R if v.startswith("arena") or v.startswith("posthoc_arena")]:
+        a_, b_ = rebalanceos_por_anio(R[v_])
+        reb[v_] = {"rebalanceos_por_anio": a_, "cruces_filtro_por_anio": b_}
+        P(f"    {v_:<42} rebalanceos/año {a_:.2f}  cruces del filtro/año {b_:.2f}")
+    salida["rebalanceos"] = reb
+    return salida
+
+
 # ============================================================== principal
 
 def principal(sintetico: bool) -> None:
@@ -1193,6 +1322,8 @@ def principal(sintetico: bool) -> None:
                                 "refutacion_b": ref_b, "ventanas_gana": gana, "estado": estado_final,
                                 "veredicto_fuera": ver_oos, "veredicto_spy": ver_spy, "veredicto_qqq": ver_qqq,
                                 "reduccion_mdd_reales": red, "op_filtro": op_filtro, "op_vix": op_vix, "op_max": op_max}
+    salida_json["post_hoc"] = post_hoc(lab, fuentes, mercado, rf, rf_serie, yh, rets, niv_y, vix, fuente_fr,
+                                       mh_vix, sintetico)
     salida_json["metricas"] = {v_: R[v_].metricas for v_ in R}
     salida_json["tramo_post_publicacion"] = post
 

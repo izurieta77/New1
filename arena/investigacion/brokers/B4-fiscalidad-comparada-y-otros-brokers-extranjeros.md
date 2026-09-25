@@ -61,7 +61,7 @@
    - **Webull México:** "cero comisiones" y tipo de cambio "competitivo" sin cifra. Los valores de EUA quedan en Webull Financial LLC [34] (ver B2).
 9. **[C] Costo de fricción de un bróker extranjero con 20k (sección 5).**
    - **Entrada:** convertir 20,000 MXN a USD con Wise costó **193.84 MXN (0.97%)** en la cotización en vivo del 25-sep-2026, a una tasa media de 17.70 MXN/USD [36].
-   - **Salida** (si la temporada termina en pesos): wire de US$25 (Firstrade) o US$45 (tastytrade), más ~1.1% de conversión de regreso [37]. Sube el total a **~4.3% (Firstrade) o ~6.1% (tastytrade)**.
+   - **Salida** (si la temporada termina en pesos): wire de US$25 (Firstrade) o US$45 (tastytrade), más ~1.1% de conversión de regreso [37]. Sube el total a **~4.3% (Firstrade) o ~6.0% (tastytrade)**.
    - **Contra GBM** (0.58% por ida y vuelta, B2): el bróker extranjero gana si la cuenta rota **más de ~1.7 veces** (contando solo la entrada) o **más de ~7.4 veces** (Firstrade, contando la salida).
 10. **[R] Veredicto de B4** (lo fiscal no decide el torneo, pero sí el neto del dueño):
     - **Para el marcador (TWR), el régimen fiscal casi no pesa.** El ISR sobre ganancias se paga en la declaración anual, fuera de la cuenta (B1). En dividendos, el bróker extranjero **resta menos dentro de la cuenta**: 10% contra 19% con W-8BEN en el SIC, porque el 10% mexicano lo pagas por fuera.
@@ -211,16 +211,16 @@
 | Entrada (MXN→USD, Wise) | 193.84 (0.97%) | 193.84 (0.97%) | 0 |
 | Comisiones por 6 idas y vueltas | ~0 | ~0 (*clearing* ≈ US$0.02 por orden de ~20 acciones) | 696 (3.48%) (B2) |
 | Salida: wire | 442.5 (2.21%) = US$25 × 17.70 | 796.5 (3.98%) = US$45 × 17.70 | 0 |
-| Salida: USD→MXN (Wise) | ~222 (1.11%) | ~222 (1.11%) | 0 |
-| **Total si se cuenta la salida** | **~858 (4.29%)** | **~1,212 (6.06%)** | 696 (3.48%) con R = 6 |
+| Salida: USD→MXN (Wise, 1.14% sobre lo que queda) | ~221 (1.10%) | ~217 (1.08%) | 0 |
+| **Total si se cuenta la salida** | **~857 (4.29%)** | **~1,207 (6.04%)** | 696 (3.48%) con R = 6 |
 | **Total solo con la entrada** | **194 (0.97%)** | **194 (0.97%)** | 696 (3.48%) con R = 6 |
 
 **Punto de equilibrio contra GBM** (idas y vueltas por temporada a partir de las cuales el bróker extranjero sale más barato):
 - **Contando solo la entrada:** 0.97 / 0.58 ≈ **1.7**.
 - **Contando la salida,** Firstrade: 4.29 / 0.58 ≈ **7.4**.
-- **Contando la salida,** tastytrade: 6.06 / 0.58 ≈ **10.5**.
+- **Contando la salida,** tastytrade: 6.04 / 0.58 ≈ **10.4**.
 
-B1 estima además un costo cambiario implícito de ~0.1% a 0.3% por lado en el SIC. Si se suma, la ida y vuelta en GBM cuesta ~0.8% a 1.2%, y los equilibrios bajan a **~0.8 a 1.2** (solo entrada) y **~3.6 a 5.4** (Firstrade con salida).
+B1 estima además un costo cambiario implícito de ~0.1% a 0.3% por lado en el SIC. Si se suma, la ida y vuelta en GBM cuesta ~0.8% a 1.2%, y los equilibrios bajan a **~0.8 a 1.2** (solo entrada) y **~3.6 a 5.5** (Firstrade con salida).
 
 - **[I]** Con el ritmo que presupuestó B2 (R = 6 a 9), **Firstrade empata o le gana a GBM aunque se cuente la salida**, y le gana con holgura si solo se cuenta la entrada. Pero solo cubre EUA, sin BMV.
 - **[I] La exposición al peso es la misma en ambas rutas.** Una acción de EUA en el SIC cotiza en MXN igual a su precio en USD por el tipo de cambio, así que el TWR en MXN de una cuenta en USD es económicamente equivalente. Lo que cambia es el costo de convertir, no el riesgo cambiario.

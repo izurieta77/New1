@@ -756,3 +756,560 @@ def bloque_sma(D: dict) -> dict:
             b = simular(base, I, ("bh",), "T0", (2007, mi), mf)
             out["posthoc"][k] = {"sma": metricas(s["filas"]), "bh": metricas(b["filas"])}
     return out
+
+# ============================================================== comparacion automatica con el README
+
+TOL = {  # tolerancias (unidades del README)
+    "media": 0.01,   # %/mes (medias y limites de IC)
+    "x12": 0.12,     # pp/anio (media x 12; equivale a 0.01 pp/mes)
+    "t": 0.05,
+    "pct": 0.1,      # pp: CAGR, caida maxima, cambio %, volatilidad, tiempo invertido, dividendos, FX
+    "sharpe": 0.01,  # Sharpe anual y SR0 anual
+    "prob": 0.005,   # PSR, DSR
+    "corr": 0.01,
+    "costo": 0.01,   # pp/anio
+    "nivel": 0.01,   # niveles (tipo de cambio, precios)
+    "sic": 0.01,     # pp (diferencia de conversion)
+    "entero": 0,
+}
+
+
+def _limpiar(s: str) -> str:
+    return s.replace("−", "-").replace("**", "").replace("*", "").replace(",", "")
+
+
+def num_txt(s: str) -> tuple:
+    """(valor, decimales) del primer numero de s."""
+    m = re.search(r"[-+]?\d+(?:\.\d+)?", _limpiar(s))
+    if not m:
+        raise ValueError(f"sin numero en {s!r}")
+    t = m.group(0)
+    return float(t), (len(t.split(".")[1]) if "." in t else 0)
+
+
+def clave_var(s: str) -> str:
+    """'SMA10-MXN-T1' -> 'sma10_mxn_T1'."""
+    a, b, c = s.replace("*", "").strip().split("-")
+    return f"{a.lower()}_{b.lower()}_{c}"
+
+
+def nums_txt(s: str) -> list:
+    return [(float(t), len(t.split(".")[1]) if "." in t else 0)
+            for t in re.findall(r"[-+]?\d+(?:\.\d+)?", _limpiar(s))]
+
+
+class Comparador:
+    def __init__(self, texto: str):
+        self.texto = texto
+        self.lineas = texto.splitlines()
+        self.filas = []
+
+    # ---- registro
+    def num(self, bloque, fila, campo, tipo, reportado, propio, dec=None):
+        if isinstance(reportado, str):
+            rep, d = num_txt(reportado)
+        else:
+            rep, d = reportado
+        dec = d if dec is None else dec
+        dif = propio - rep
+        tol = TOL[tipo]
+        ok = abs(dif) <= tol + 1e-9
+        fmt = lambda x: f"{x + 0.0:.{dec}f}".replace("-0." + "0" * dec, "0." + "0" * dec) if dec else str(round(x))
+        exacto = fmt(propio) == fmt(rep)
+        self.filas.append({"bloque": bloque, "fila": fila, "campo": campo, "tipo": tipo,
+                           "reportado": rep, "propio": propio, "dif": dif, "tolerancia": tol,
+                           "ok": ok, "exacto_al_redondeo": exacto})
+
+    def cat(self, bloque, fila, campo, reportado, propio):
+        ok = reportado == propio
+        self.filas.append({"bloque": bloque, "fila": fila, "campo": campo, "tipo": "categoria",
+                           "reportado": reportado, "propio": propio, "dif": "", "tolerancia": "igual",
+                           "ok": ok, "exacto_al_redondeo": ok})
+
+    # ---- lectura
+    def tabla(self, marcador: str) -> list:
+        i = next(k for k, l in enumerate(self.lineas) if marcador in l)
+        j = next(k for k in range(i + 1, len(self.lineas)) if self.lineas[k].startswith("|"))
+        filas = []
+        while j < len(self.lineas) and self.lineas[j].startswith("|"):
+            filas.append([c.strip() for c in self.lineas[j].strip().strip("|").split("|")])
+            j += 1
+        return filas[2:]
+
+    def buscar(self, patron: str) -> tuple:
+        m = re.search(patron, self.texto)
+        if not m:
+            raise ValueError(f"No se encontro en el README: {patron!r}")
+        return m.groups()
+
+
+def comparar(texto: str, R: dict) -> list:
+    C = Comparador(texto)
+    B, SV, DV, AM, A4, SMA = R["benchmarks"], R["sens_ventana"], R["dividendos"], R["amortiguador"], R["a4"], R["sma"]
+    V, NW, DSR, SE, PH = SMA["variantes"], SMA["nw"], SMA["dsr"], SMA["sens"], SMA["posthoc"]
+    P = lambda x: 100 * x
+
+    # ---------- 1. tabla A1-A3
+    claves = ["spy_dex", "spy_fix", "spy_mxnx", "sptr_dex", "spy_net30_dex", "gspc_dex", "spy_usd",
+              "naftrac_adj", "naftrac_close", "mxx", "cetes", "eww_adj_dex", "eww_close_dex"]
+    filas = C.tabla("### 1. A1-A3")
+    assert len(filas) == len(claves), len(filas)
+    for fila, k in zip(filas, claves):
+        for w, celda in zip(("W1", "W2", "W3", "W4"), fila[1:]):
+            C.num("1. CAGR A1-A3", fila[0][:40], w, "pct", celda, P(B["cagr"][f"{k}|{w}"]))
+    g = C.buscar(r"Con partición mensual \(tasa de la última subasta ≤ inicio de mes\): ([\d.]+)%")
+    C.num("1. CAGR A1-A3", "CETES particion mensual", "W1", "pct", g[0], P(B["cagr"]["cetes_particion|W1"]))
+    g = C.buscar(r"INTGSTMXM193N`, tasa/1200, de 2008-01 a 2026-07\): ([\d.]+)%")
+    C.num("1. CAGR A1-A3", "FMI tasa/1200", "2008-01 a 2026-07", "pct", g[0], P(B["cagr"]["fmi|2008-01_2026-07"]))
+
+    # ---------- 1b. sensibilidad de inicio
+    mapa = {"S&P TR en MXN": "sp_mxn", "NAFTRAC": "naftrac", "CETES 28": "cetes", "S&P TR en USD": "sp_usd"}
+    for fila in C.tabla("**Sensibilidad a la fecha de inicio"):
+        k = next(v for n, v in mapa.items() if fila[0].startswith(n))
+        for col, extremo in ((1, "min"), (2, "max")):
+            (val, dec), = nums_txt(fila[col].split("(")[0])
+            mes_rep = re.search(r"inicio (\d{4}-\d{2})", fila[col]).group(1)
+            mes_p, v_p = SV["inicio"][f"{k}_{extremo}"]
+            C.num("1b. Sensibilidad de inicio", fila[0], extremo, "pct", (val, dec), P(v_p))
+            C.cat("1b. Sensibilidad de inicio", fila[0], f"mes del {extremo}", mes_rep, mes_p)
+        for mes_rep, val in re.findall(r"(\d{4}-\d{2}): \**([\d.]+)%", fila[3]):
+            C.num("1b. Sensibilidad de inicio", fila[0], mes_rep, "pct", val, P(SV["inicio"][k][mes_rep]))
+
+    # ---------- 1c. sensibilidad de fin
+    mapa = {"S&P TR en MXN": "sp_mxn", "NAFTRAC": "naftrac", "CETES": "cetes"}
+    for fila in C.tabla("**Sensibilidad a la fecha de fin**"):
+        k = mapa[fila[0]]
+        for f, celda in zip(("2025-12-31", "2026-06-30", "2026-08-31", "2026-09-18"), fila[1:]):
+            C.num("1c. Sensibilidad de fin", fila[0], f, "pct", celda, P(SV["fin"][f"{k}|{f}"]))
+
+    # ---------- 1d. dividendos de NAFTRAC, EWW y ^MXX
+    nd = DV["NAFTRAC"]
+    g = C.buscar(r"Vale \*\*(0\.00)% en 2008, 2009, 2010, 2011, 2012 y 2021\*\*")
+    for a in ("2008", "2009", "2010", "2011", "2012", "2021"):
+        C.num("1d. Dividendos", "NAFTRAC implicito", a, "pct", g[0], P(nd[a]))
+        C.cat("1d. Dividendos", "NAFTRAC eventos en Yahoo", a, 0, DV["NAFTRAC_eventos_por_anio"][a])
+    otros = {a: v for a, v in nd.items() if a not in ("2008", "2009", "2010", "2011", "2012", "2021")}
+    g = C.buscar(r"En los otros años va de ([\d.]+)% a ([\d.]+)%, por ejemplo 2019 = ([\d.]+)%, 2023 = ([\d.]+)% y 2025 = ([\d.]+)%")
+    C.num("1d. Dividendos", "NAFTRAC otros anios", "minimo", "pct", g[0], P(min(otros.values())))
+    C.num("1d. Dividendos", "NAFTRAC otros anios", "maximo", "pct", g[1], P(max(otros.values())))
+    for a, val in zip(("2019", "2023", "2025"), g[2:]):
+        C.num("1d. Dividendos", "NAFTRAC implicito", a, "pct", val, P(nd[a]))
+    g = C.buscar(r"que en USD fue de ([\d.]+)%, ([\d.]+)%, ([\d.]+)%, ([\d.]+)%, ([\d.]+)% y ([\d.]+)%")
+    for a, val in zip(("2008", "2009", "2010", "2011", "2012", "2021"), g):
+        C.num("1d. Dividendos", "EWW implicito (USD)", a, "pct", val, P(DV["EWW"][a]))
+    g = C.buscar(r"NAFTRAC en W1 pasaría de ([\d.]+)% a \*\*([\d.]+)%\*\*")
+    C.num("1d. Dividendos", "NAFTRAC W1", "sin imputar", "pct", g[0], P(B["cagr"]["naftrac_adj|W1"]))
+    C.num("1d. Dividendos", "NAFTRAC W1", "con dividendos de EWW imputados", "pct", g[1], P(R["naftrac_imputado"]))
+    g = C.buscar(r"Su \"benchmark\" da (−?[\d.]+)%, (−?[\d.]+)%, (−?[\d.]+)% y (−?[\d.]+)%")
+    for a, val in zip(("2022", "2023", "2024", "2025"), g):
+        C.num("1d. Dividendos", "^MXX precio, anio calendario", a, "pct", val, P(R["mxx_anual"][a]))
+
+    # ---------- 1e. pruebas NW de benchmarks
+    mapa = {"S&P MXN − CETES, 2008-01 a 2026-08": "sp_menos_cetes|2008-01_2026-08",
+            "S&P MXN − CETES, 1995-01 a 2007-12": "sp_menos_cetes|1995-01_2007-12",
+            "S&P MXN − NAFTRAC, 2008-02 a 2026-08": "sp_menos_naftrac|2008-02_2026-08",
+            "NAFTRAC − CETES, 2008-02 a 2026-08": "naftrac_menos_cetes|2008-02_2026-08"}
+    for fila in C.tabla("**Pruebas Newey-West (6 rezagos) sobre diferencias mensuales en MXN:**"):
+        x = R["pruebas_benchmarks"][mapa[fila[0]]]
+        b = "1e. NW benchmarks"
+        C.num(b, fila[0], "n", "entero", fila[1], x["n"])
+        C.num(b, fila[0], "media %/mes", "media", fila[2], P(x["media"]))
+        C.num(b, fila[0], "x12", "x12", fila[3], P(x["x12"]))
+        C.num(b, fila[0], "t NW(6)", "t", fila[4], x["t"])
+        C.num(b, fila[0], "t IID", "t", fila[5], x["t_iid"])
+        (lo, dlo), (hi, dhi) = nums_txt(fila[6])
+        C.num(b, fila[0], "IC95 inferior", "media", (lo, dlo), P(x["ic95"][0]))
+        C.num(b, fila[0], "IC95 superior", "media", (hi, dhi), P(x["ic95"][1]))
+        C.cat(b, fila[0], "veredicto", fila[7].replace("*", ""), x["veredicto"])
+
+    # ---------- 1f. amortiguador
+    b = "1f. Amortiguador"
+    g = C.buscar(r"variación de MXN/USD es \*\*(−[\d.]+)\*\*")
+    C.num(b, "W1", "correlacion S&P USD vs MXN/USD", "corr", g[0], AM["corr_usd_fx"])
+    g = C.buscar(r"En los (\d+) meses con el S&P en USD por debajo de −5% \(media (−[\d.]+)%\), el peso se depreció en promedio \*\*\+([\d.]+)%\*\*, y el S&P en MXN cayó en promedio (−[\d.]+)%")
+    C.num(b, "W1", "meses con S&P USD < -5%", "entero", g[0], AM["n_meses_usd_menor_-5"])
+    C.num(b, "W1", "media S&P USD en esos meses", "pct", g[1], P(AM["media_usd_en_malos"]))
+    C.num(b, "W1", "media MXN/USD en esos meses", "pct", g[2], P(AM["media_fx_en_malos"]))
+    C.num(b, "W1", "media S&P MXN en esos meses", "pct", g[3], P(AM["media_mxn_en_malos"]))
+    g = C.buscar(r"La caída máxima mensual en W1 fue (−[\d.]+)% en USD y \*\*(−[\d.]+)% en MXN\*\*. La volatilidad anual fue ([\d.]+)% en USD y ([\d.]+)% en MXN")
+    C.num(b, "W1", "MDD mensual USD", "pct", g[0], P(AM["mdd_usd_mensual"]))
+    C.num(b, "W1", "MDD mensual MXN", "pct", g[1], P(AM["mdd_mxn_mensual"]))
+    C.num(b, "W1", "vol anual USD", "pct", g[2], P(AM["vol_usd"]))
+    C.num(b, "W1", "vol anual MXN", "pct", g[3], P(AM["vol_mxn"]))
+    g = C.buscar(r"MXN/USD pasó de ([\d.]+) a ([\d.]+), un CAGR de \*\*\+([\d.]+)%\*\*")
+    C.num(b, "W1", "MXN/USD inicial", "nivel", g[0], AM["fx_inicio"])
+    C.num(b, "W1", "MXN/USD final", "nivel", g[1], AM["fx_fin"])
+    C.num(b, "W1", "CAGR MXN/USD", "pct", g[2], P(AM["cagr_fx"]))
+    g = C.buscar(r"entre el S&P en MXN \(([\d.]+)%\) y en USD \(([\d.]+)%\), porque ([\d.]+) × ([\d.]+) − 1 = ([\d.]+)%")
+    C.num(b, "W1", "S&P MXN", "pct", g[0], P(B["cagr"]["spy_dex|W1"]))
+    C.num(b, "W1", "S&P USD", "pct", g[1], P(B["cagr"]["spy_usd|W1"]))
+    C.num(b, "W1", "(1+USD)(1+FX)-1", "pct", g[4], P((1 + B["cagr"]["spy_usd|W1"]) * (1 + AM["cagr_fx"]) - 1))
+    g = C.buscar(r"NAFTRAC en W1 tuvo volatilidad de ([\d.]+)% y caída máxima mensual de (−[\d.]+)%")
+    C.num(b, "W1", "vol NAFTRAC", "pct", g[0], P(AM["vol_naftrac"]))
+    C.num(b, "W1", "MDD mensual NAFTRAC", "pct", g[1], P(AM["mdd_naftrac_mensual"]))
+
+    # ---------- 1g. controles de datos citados en el texto
+    b = "1g. Controles de datos"
+    g = C.buscar(r"Reconstruir SPY con cierre \+ dividendos brutos da ([\d.]+)% en W1")
+    C.num(b, "SPY TR reconstruido x DEXMXUS", "W1", "pct", g[0], P(B["cagr"]["spy_tr_reconstruido_dex|W1"]))
+    g = C.buscar(r"En (\d+) meses el cierre de mes usado no fue el último día de SPY")
+    C.num(b, "cierres E_m distintos del ultimo dia de SPY", "numero", "entero", g[0], len(R["cierres_distintos"]["todos"]))
+    g = C.buscar(r"La mediana de la diferencia absoluta es ([\d.]+)% con DEXMXUS y ([\d.]+)% con FIX, y el percentil 90 es ([\d.]+)%. Con MXN=X la mediana es ([\d.]+)%")
+    S = R["sic"]
+    C.num(b, "SPY.MX vs SPY x FX (2016-)", "mediana DEXMXUS", "sic", g[0], P(S["dex"]["mediana"]))
+    C.num(b, "SPY.MX vs SPY x FX (2016-)", "mediana FIX", "sic", g[1], P(S["fix"]["mediana"]))
+    C.num(b, "SPY.MX vs SPY x FX (2016-)", "p90 DEXMXUS", "sic", g[2], P(S["dex"]["p90"]))
+    C.num(b, "SPY.MX vs SPY x FX (2016-)", "mediana MXN=X", "sic", g[3], P(S["mxnx"]["mediana"]))
+    g = C.buscar(r"por ejemplo, ([\d.]+) el 2008-08-29 y ([\d,.]+) el 2008-09-01, con (\d+) saltos mayores a 30%")
+    C.num(b, "SPY.MX adjclose", "2008-08-29", "nivel", g[0], S["spymx_adj_2008-08-29"])
+    C.num(b, "SPY.MX adjclose", "2008-09-01", "nivel", g[1], S["spymx_adj_2008-09-01"])
+    C.num(b, "SPY.MX adjclose", "saltos > 30%", "entero", g[2], S["spymx_saltos_30|adj"])
+
+    # ---------- 2. A4
+    b = "2. A4 (2008)"
+    cols = ["spy_usd", "sptr_usd", "gspc_usd", "spy_mxn", "sptr_mxn", "gspc_mxn", "spy_mxn_fix"]
+    medidas = ["cambio_2008", "mdd_diaria_2008", "mdd_mensual_2008", "mdd_diaria_crisis", "mdd_mensual_crisis"]
+    filas = C.tabla("### 2. A4: 2008, medida por medida")
+    assert len(filas) == 5
+    for fila, med in zip(filas, medidas):
+        for col, celda in zip(cols, fila[1:]):
+            x = A4[f"{col}|{med}"]
+            C.num(b, med, col, "pct", celda.split("(")[0], P(x[0] if isinstance(x, list) else x))
+    for col in cols:
+        x = A4[f"{col}|mdd_diaria_2008"]
+        C.cat(b, "mdd_diaria_2008 (pico, valle)", col, "2007-12-31 a 2008-11-20", f"{x[1]} a {x[2]}")
+        C.cat(b, "mdd_mensual_2008 (mes del valle)", col, "2008-11", A4[f"{col}|mdd_mensual_2008"][2][:7])
+    mes_txt = {"ene": "01", "feb": "02", "mar": "03", "abr": "04", "may": "05", "jun": "06", "jul": "07",
+               "ago": "08", "sep": "09", "oct": "10", "nov": "11", "dic": "12"}
+    for fila, med in ((filas[3], "mdd_diaria_crisis"), (filas[4], "mdd_mensual_crisis")):
+        for col, celda in zip(cols, fila[1:]):
+            m = re.search(r"\((.+) a (.+)\)", celda)
+            if not m:
+                continue
+            x = A4[f"{col}|{med}"]
+            if med == "mdd_diaria_crisis":
+                C.cat(b, f"{med} (pico, valle)", col, f"{m.group(1)} a {m.group(2)}", f"{x[1]} a {x[2]}")
+            else:
+                conv = lambda s: f"{s.split('-')[1]}-{mes_txt[s.split('-')[0]]}"
+                C.cat(b, f"{med} (mes pico, mes valle)", col, f"{conv(m.group(1))} a {conv(m.group(2))}",
+                      f"{x[1][:7]} a {x[2][:7]}")
+    g = C.buscar(r"\^GSPC × FIX (−[\d.]+)%\)")
+    C.num(b, "cambio_2008", "gspc_mxn_fix", "pct", g[0], P(A4["gspc_mxn_fix|cambio_2008"]))
+    # coincidencias dentro de +-1.0 pp
+    usd = [k for k in A4 if "_usd|" in k and abs(abs(P(A4[k][0] if isinstance(A4[k], list) else A4[k])) - 47) <= 1.0]
+    mxn = [k for k in A4 if "_mxn" in k and abs(abs(P(A4[k][0] if isinstance(A4[k], list) else A4[k])) - 21.6) <= 1.0]
+    C.cat(b, "coincidencias con 47% (USD)", "lista", "spy_usd|mdd_diaria_2008; sptr_usd|mdd_diaria_2008", "; ".join(sorted(usd)))
+    C.cat(b, "coincidencias con 21.6% (MXN)", "lista", "gspc_mxn_fix|cambio_2008; gspc_mxn|cambio_2008", "; ".join(sorted(mxn)))
+
+    # ---------- 3a. tabla principal 2008-2026 y 3b. 1995-2007
+    def clave_regla(fila):
+        r, ej = fila[0].replace("*", ""), fila[1].replace("*", "")
+        if r.startswith("Comprar"):
+            return f"bh_{ej}"
+        if r.startswith("100% CETES"):
+            return "cetes_T0"
+        return f"sma10_{'usd' if 'USD' in r else 'mxn'}_{ej}"
+
+    for marcador, seg, campos in (("**Tabla principal. 2008-2026**", "2008-2026",
+                                   ["cagr", "vol", "sharpe", "mdd", "tiempo", "cambios", "costo_anual"]),
+                                  ("**1995-2007** (fuera de la ventana", "1995-2007",
+                                   ["cagr", "vol", "sharpe", "mdd", "cambios"])):
+        b = f"3. SMA tabla {seg}"
+        for fila in C.tabla(marcador):
+            k = clave_regla(fila)
+            x = V[k][seg]
+            for campo, celda in zip(campos, fila[2:]):
+                if celda.strip("* ") == "—":
+                    continue
+                if campo == "cambios":
+                    C.num(b, k, campo, "entero", celda, x[campo])
+                elif campo == "sharpe":
+                    C.num(b, k, campo, "sharpe", celda, x[campo])
+                elif campo == "costo_anual":
+                    C.num(b, k, campo, "costo", celda, P(x[campo]))
+                else:
+                    C.num(b, k, campo, "pct", celda, P(x[campo]))
+
+    # ---------- 3c. 16 variantes
+    b = "3c. 16 variantes"
+    for fila in C.tabla("**Las 16 variantes de prueba**"):
+        nombre = fila[0].strip("*").strip()
+        k = {"comprar y mantener T0": "bh_T0", "comprar y mantener T1": "bh_T1"}.get(nombre, nombre)
+        for seg, celda in zip(("1995-2007", "2008-2026", "1995-2026"), fila[1:]):
+            partes = [p.strip() for p in celda.split("/")]
+            x = V[k][seg]
+            C.num(b, k, f"{seg} CAGR", "pct", partes[0], P(x["cagr"]))
+            C.num(b, k, f"{seg} MDD", "pct", partes[1], P(x["mdd"]))
+            if len(partes) > 2:
+                C.num(b, k, f"{seg} Sharpe", "sharpe", partes[2], x["sharpe"])
+    # afirmaciones sobre las parejas USD/MXN
+    parejas = [(n, ej) for n in (6, 8, 10, 12) for ej in ("T0", "T1")]
+    mxn_gana_08 = sum(1 for n, ej in parejas if V[f"sma{n}_mxn_{ej}"]["2008-2026"]["cagr"] > V[f"sma{n}_usd_{ej}"]["2008-2026"]["cagr"])
+    usd_gana_95 = [f"sma{n}_{ej}" for n, ej in parejas if V[f"sma{n}_usd_{ej}"]["1995-2007"]["cagr"] > V[f"sma{n}_mxn_{ej}"]["1995-2007"]["cagr"]]
+    g = C.buscar(r"En 2008-2026, las (\d) parejas USD/MXN favorecen a la señal en MXN")
+    C.num(b, "parejas 2008-2026 que favorecen MXN", "numero", "entero", g[0], mxn_gana_08)
+    g = C.buscar(r"En 1995-2007 la señal en USD tuvo más CAGR en (\d) de las 8 parejas")
+    C.num(b, "parejas 1995-2007 con mas CAGR en USD", "numero", "entero", g[0], len(usd_gana_95))
+    C.cat(b, "parejas 1995-2007 con mas CAGR en USD", "lista",
+          "sma10_T0, sma10_T1, sma12_T0, sma12_T1, sma6_T1, sma8_T1", ", ".join(sorted(usd_gana_95)))
+    # rangos de caida maxima (Resumen 8)
+    for seg, patron in (("2008-2026", r"En 2008-2026 va de (−[\d.]+)% a (−[\d.]+)%, contra (−[\d.]+)% y (−[\d.]+)%"),
+                        ("1995-2007", r"En 1995-2007 va de (−[\d.]+)% a (−[\d.]+)%, contra (−[\d.]+)% y (−[\d.]+)%")):
+        g = C.buscar(patron)
+        mdds = [V[k][seg]["mdd"] for k, _, _ in reglas_prueba()]
+        bh = sorted([V["bh_T0"][seg]["mdd"], V["bh_T1"][seg]["mdd"]], reverse=True)
+        C.num(b, f"rango MDD 16 variantes {seg}", "menos profunda", "pct", g[0], P(max(mdds)))
+        C.num(b, f"rango MDD 16 variantes {seg}", "mas profunda", "pct", g[1], P(min(mdds)))
+        C.num(b, f"MDD comprar y mantener {seg}", "menos profunda", "pct", g[2], P(bh[0]))
+        C.num(b, f"MDD comprar y mantener {seg}", "mas profunda", "pct", g[3], P(bh[1]))
+        C.cat(b, f"las 16 con MDD menor que comprar y mantener ({seg})", "todas", True,
+              all(m > max(V["bh_T0"][seg]["mdd"], V["bh_T1"][seg]["mdd"]) for m in mdds))
+
+    # ---------- 3d. prueba principal NW
+    b = "3d. NW SMA10 - comprar y mantener"
+    for fila in C.tabla("**Prueba principal pre-registrada"):
+        k = clave_var(fila[0]) + "|" + fila[1].replace("*", "")
+        x = NW[k]
+        C.num(b, k, "n", "entero", fila[2], x["n"])
+        C.num(b, k, "media %/mes", "media", fila[3], P(x["media"]))
+        C.num(b, k, "x12", "x12", fila[4], P(x["x12"]))
+        C.num(b, k, "t NW(6)", "t", fila[5], x["t"])
+        (lo, dlo), (hi, dhi) = nums_txt(fila[6])
+        C.num(b, k, "IC95 inferior", "media", (lo, dlo), P(x["ic95"][0]))
+        C.num(b, k, "IC95 superior", "media", (hi, dhi), P(x["ic95"][1]))
+        C.cat(b, k, "veredicto", fila[7].replace("*", ""), x["veredicto"])
+
+    # ---------- 3e. DSR
+    b = "3e. Sharpe deflactado"
+    for fila in C.tabla("**Sharpe deflactado** (`sharpe_deflactado_de_registro`"):
+        seg, var = fila[0], fila[1].replace("*", "")
+        if var.startswith("Mejor variante"):
+            nombre = re.search(r"\((\w+)\)", var).group(1)
+            C.cat(b, seg, "mejor variante", nombre, DSR[f"{seg}|mejor"])
+            k = f"{seg}|{DSR[f'{seg}|mejor']}|N16"
+        else:
+            base_ = clave_var(var.split(" ")[0])
+            k = f"{seg}|{base_}|N{100 if 'N = 100' in var else 16}"
+            if "además es la mejor" in var:
+                C.cat(b, seg, "mejor variante", base_, DSR[f"{seg}|mejor"])
+        x = DSR[k]
+        C.num(b, k, "Sharpe anual", "sharpe", fila[2], x["sharpe_anual"])
+        C.num(b, k, "SR0 anual", "sharpe", fila[3], x["sr0_anual"])
+        C.num(b, k, "PSR", "prob", fila[4], x["psr"])
+        C.num(b, k, "DSR", "prob", fila[5], x["dsr"])
+        C.cat(b, k, ">= 0.95", fila[6].replace("*", "") == "sí", x["dsr"] >= 0.95)
+    g = C.buscar(r"comprar y mantener tiene PSR de \*\*([\d.]+) \(T0\) y ([\d.]+) \(T1\) en 2008-2026\*\*, y de ([\d.]+) y ([\d.]+) en 1995-2007")
+    for val, seg, ej in zip(g, ("2008-2026", "2008-2026", "1995-2007", "1995-2007"), ("T0", "T1", "T0", "T1")):
+        C.num(b, f"PSR comprar y mantener {ej}", seg, "prob", val, DSR[f"{seg}|psr_bh_{ej}"])
+
+    # ---------- 3f. sensibilidades
+    b = "3f. Sensibilidades SMA10 2008-2026"
+    mapa = [("Base", "base"), ("Sin costos", "sin_costos"), ("Spread medio", "spread_medio"),
+            ("Doble pierna", "doble_pierna"), ("^SP500TR", "sp500tr"), ("FIX en vez", "fix"),
+            ("MXN=X", "mxnx"), ("Señal sobre precio", "senal_close"), ("Dividendos netos", "div_net30"),
+            ("CETES con partición", "cetes_particion"), ("Corrida aislada", "aislada_2008"),
+            ("Búsqueda de origen", "origen_2008_11")]
+    cols = ["mxn_T1", "usd_T1", "bh_T1", "mxn_T0", "bh_T0"]
+    for fila in C.tabla("**Sensibilidades de SMA10, 2008-2026**"):
+        caso = next(v for n, v in mapa if fila[0].startswith(n))
+        for col, celda in zip(cols, fila[1:]):
+            if celda.strip() == "—":
+                continue
+            partes = [p.strip() for p in celda.split("/")]
+            x = SE[caso][col]
+            C.num(b, caso, f"{col} CAGR", "pct", partes[0], P(x["cagr"]))
+            C.num(b, caso, f"{col} MDD", "pct", partes[1], P(x["mdd"]))
+    g = C.buscar(r"comprar y mantener \*\*le gana\*\* a la SMA10-MXN: ([\d.]+)% contra ([\d.]+)% en T1")
+    C.num(b, "origen_2008_11", "bh_T1 CAGR (texto)", "pct", g[0], P(SE["origen_2008_11"]["bh_T1"]["cagr"]))
+    C.num(b, "origen_2008_11", "mxn_T1 CAGR (texto)", "pct", g[1], P(SE["origen_2008_11"]["mxn_T1"]["cagr"]))
+
+    # ---------- 3g. comparacion con las cifras recibidas
+    b = "3g. Cifras recibidas de A5"
+    fuentes = [lambda: (V["sma10_mxn_T0"]["2008-2026"], V["bh_T0"]["2008-2026"]),
+               lambda: (V["sma10_mxn_T1"]["2008-2026"], V["bh_T1"]["2008-2026"]),
+               lambda: (SE["aislada_2008"]["mxn_T0"], SE["aislada_2008"]["bh_T0"]),
+               lambda: (SE["origen_2008_11"]["mxn_T0"], SE["origen_2008_11"]["bh_T0"]),
+               lambda: (PH["2007-01_2026-08"]["sma"], PH["2007-01_2026-08"]["bh"]),
+               lambda: (PH["2007-07_2026-08"]["sma"], PH["2007-07_2026-08"]["bh"]),
+               lambda: (PH["2007-10_2026-08"]["sma"], PH["2007-10_2026-08"]["bh"]),
+               lambda: (PH["2007-01_2026-06"]["sma"], PH["2007-01_2026-06"]["bh"])]
+    filas = C.tabla("**Comparación con las cifras recibidas.**")
+    assert len(filas) == len(fuentes)
+    for fila, fuente in zip(filas, fuentes):
+        s, h = fuente()
+        etiqueta = fila[0].replace("*", "")
+        (sc, dsc), (sm, dsm) = nums_txt(fila[1])
+        (hc, dhc), (hm, dhm) = nums_txt(fila[2])
+        C.num(b, etiqueta, "SMA10-MXN CAGR", "pct", (sc, dsc), P(s["cagr"]))
+        C.num(b, etiqueta, "SMA10-MXN MDD", "pct", (sm, dsm), P(s["mdd"]))
+        C.num(b, etiqueta, "B&H CAGR", "pct", (hc, dhc), P(h["cagr"]))
+        C.num(b, etiqueta, "B&H MDD", "pct", (hm, dhm), P(h["mdd"]))
+        banderas_rep = [x.strip().replace("*", "") == "sí" for x in fila[3].split(",")]
+        propias = [abs(P(s["cagr"]) - 14.6) <= 0.30 + 1e-9, abs(P(h["cagr"]) - 13.5) <= 0.30 + 1e-9,
+                   abs(P(s["mdd"]) + 12) <= 1.0 + 1e-9, abs(P(h["mdd"]) + 31) <= 1.0 + 1e-9]
+        C.cat(b, etiqueta, "dentro de tolerancia (4 banderas)", banderas_rep, propias)
+    trimestrales = [f"2007-{m:02d}_{f}" for m in (1, 4, 7, 10) for f in ("2026-06", "2026-08")]
+    reproducen = sum(1 for k in trimestrales if abs(P(PH[k]["sma"]["cagr"]) - 14.6) <= 0.30
+                     and abs(P(PH[k]["bh"]["cagr"]) - 13.5) <= 0.30 and abs(P(PH[k]["sma"]["mdd"]) + 12) <= 1.0
+                     and abs(P(PH[k]["bh"]["mdd"]) + 31) <= 1.0)
+    g = C.buscar(r"En la búsqueda post-hoc, (\d) de las (\d) ventanas que empiezan en 2007 reproducen las cuatro cifras")
+    C.num(b, "post-hoc: ventanas que reproducen (inicios ene/abr/jul/oct x fin jun/ago, inferido)", "numero",
+          "entero", g[0], reproducen)
+
+    # ---------- 4. cifras citadas en Resumen, calificacion y conclusiones
+    b = "4. Texto (Resumen y conclusiones)"
+    T = [
+        (r"S&P cayó (\d+\.\d)% en dólares y (\d+\.\d)% en pesos", [("enero 2008 USD", "pct", -P(AM["enero_2008_usd"])),
+                                                                     ("enero 2008 MXN", "pct", -P(AM["enero_2008_mxn"]))]),
+        (r"entre ene-2007 y dic-2009 el CAGR va de \*\*([\d.]+)% a ([\d.]+)%\*\*", [("inicio min", "pct", P(SV["inicio"]["sp_mxn_min"][1])),
+                                                                                  ("inicio max", "pct", P(SV["inicio"]["sp_mxn_max"][1]))]),
+        (r"el resultado cambia ([\d.]+) pp o menos", [("max |dif| SP500TR/FIX/MXN=X vs SPY x DEX, W1-W4", "pct", R["max_dif_fuentes"])]),
+        (r"se reproduce \(([\d.]+)% en W1; ([\d.]+)% si se corta en jun-2026\)", [("NAFTRAC W1", "pct", P(B["cagr"]["naftrac_adj|W1"])),
+                                                                                   ("NAFTRAC fin jun-2026", "pct", P(SV["fin"]["naftrac|2026-06-30"]))]),
+        (r"rindió probablemente \*\*~([\d.]+)-([\d.]+)%\*\*", [("IPC con dividendos, extremo bajo (EWW x DEX)", "pct", P(B["cagr"]["eww_adj_dex|W1"])),
+                                                            ("IPC con dividendos, extremo alto (imputado)", "pct", P(R["naftrac_imputado"]))]),
+        (r"da \*\*([\d.]+)%\*\* en W1. Cualquier fecha de inicio entre 2007 y 2009 da entre ([\d.]+)% y ([\d.]+)%",
+         [("CETES W1", "pct", P(B["cagr"]["cetes|W1"])), ("CETES inicio min", "pct", P(SV["inicio"]["cetes_min"][1])),
+          ("CETES inicio max", "pct", P(SV["inicio"]["cetes_max"][1]))]),
+        (r"en USD \(−([\d.]+)%, del 31-dic-2007 al 20-nov-2008\)", [("A4 caida diaria 2008 USD", "pct", -P(A4["spy_usd|mdd_diaria_2008"][0]))]),
+        (r"en MXN \*\*sin dividendos\*\* \(−([\d.]+)%\)", [("A4 cambio 2008 ^GSPC MXN", "pct", -P(A4["gspc_mxn|cambio_2008"]))]),
+        (r"Año calendario: \*\*−([\d.]+)% en USD contra −([\d.]+)% en MXN\*\*", [("A4 cambio 2008 USD", "pct", -P(A4["spy_usd|cambio_2008"])),
+                                                                                 ("A4 cambio 2008 MXN", "pct", -P(A4["spy_mxn|cambio_2008"]))]),
+        (r"Caída diaria dentro de 2008: \*\*−([\d.]+)% contra −([\d.]+)%\*\*", [("A4 diaria 2008 USD", "pct", -P(A4["spy_usd|mdd_diaria_2008"][0])),
+                                                                                ("A4 diaria 2008 MXN", "pct", -P(A4["spy_mxn|mdd_diaria_2008"][0]))]),
+        (r"Caída mensual de la crisis: \*\*−([\d.]+)% contra −([\d.]+)%\*\*", [("A4 mensual crisis USD", "pct", -P(A4["spy_usd|mdd_mensual_crisis"][0])),
+                                                                               ("A4 mensual crisis MXN", "pct", -P(A4["spy_mxn|mdd_mensual_crisis"][0]))]),
+        (r"da \*\*([\d.]+)% contra ([\d.]+)%\*\* de comprar y mantener, con caída máxima de \*\*−([\d.]+)% contra −([\d.]+)%\*\*",
+         [("SMA10-MXN-T0 CAGR", "pct", P(V["sma10_mxn_T0"]["2008-2026"]["cagr"])), ("B&H T0 CAGR", "pct", P(V["bh_T0"]["2008-2026"]["cagr"])),
+          ("SMA10-MXN-T0 MDD", "pct", -P(V["sma10_mxn_T0"]["2008-2026"]["mdd"])), ("B&H T0 MDD", "pct", -P(V["bh_T0"]["2008-2026"]["mdd"]))]),
+        (r"la principal\) da \*\*([\d.]+)% contra ([\d.]+)%\*\*, con caída de \*\*−([\d.]+)% contra −([\d.]+)%\*\*",
+         [("SMA10-MXN-T1 CAGR", "pct", P(V["sma10_mxn_T1"]["2008-2026"]["cagr"])), ("B&H T1 CAGR", "pct", P(V["bh_T1"]["2008-2026"]["cagr"])),
+          ("SMA10-MXN-T1 MDD", "pct", -P(V["sma10_mxn_T1"]["2008-2026"]["mdd"])), ("B&H T1 MDD", "pct", -P(V["bh_T1"]["2008-2026"]["mdd"]))]),
+        (r"de jul-2007 a ago-2026 da ([\d.]+)% contra ([\d.]+)% y −([\d.]+)% contra −([\d.]+)%",
+         [("post-hoc jul-2007 SMA CAGR", "pct", P(PH["2007-07_2026-08"]["sma"]["cagr"])), ("post-hoc jul-2007 B&H CAGR", "pct", P(PH["2007-07_2026-08"]["bh"]["cagr"])),
+          ("post-hoc jul-2007 SMA MDD", "pct", -P(PH["2007-07_2026-08"]["sma"]["mdd"])), ("post-hoc jul-2007 B&H MDD", "pct", -P(PH["2007-07_2026-08"]["bh"]["mdd"]))]),
+        (r"da \*\*\+([\d.]+) pp al año, con t NW\(6\) = ([\d.]+)\*\*", [("NW SMA10-MXN-T1 2008-2026 x12", "x12", P(NW["sma10_mxn_T1|2008-2026"]["x12"])),
+                                                                       ("NW SMA10-MXN-T1 2008-2026 t", "t", NW["sma10_mxn_T1|2008-2026"]["t"])]),
+        (r"También es inconcluso en 1995-2007 \(t = ([\d.]+)\) y en 1995-2026 \(t = ([\d.]+)\)",
+         [("NW SMA10-MXN-T1 1995-2007 t", "t", NW["sma10_mxn_T1|1995-2007"]["t"]), ("NW SMA10-MXN-T1 1995-2026 t", "t", NW["sma10_mxn_T1|1995-2026"]["t"])]),
+        (r"En 1995-2007 la SMA10 con señal en USD rindió ([\d.]+)% y la de MXN ([\d.]+)%, con caídas de −([\d.]+)% y −([\d.]+)% \(T1\)",
+         [("SMA10-USD-T1 1995-2007 CAGR", "pct", P(V["sma10_usd_T1"]["1995-2007"]["cagr"])), ("SMA10-MXN-T1 1995-2007 CAGR", "pct", P(V["sma10_mxn_T1"]["1995-2007"]["cagr"])),
+          ("SMA10-USD-T1 1995-2007 MDD", "pct", -P(V["sma10_usd_T1"]["1995-2007"]["mdd"])), ("SMA10-MXN-T1 1995-2007 MDD", "pct", -P(V["sma10_mxn_T1"]["1995-2007"]["mdd"]))]),
+        (r"\(([\d.]+)% contra ([\d.]+)%\)\.\n8\.", [("SMA10-USD-T1 2008-2026 CAGR", "pct", P(V["sma10_usd_T1"]["2008-2026"]["cagr"])),
+                                                     ("B&H T1 2008-2026 CAGR", "pct", P(V["bh_T1"]["2008-2026"]["cagr"]))]),
+        (r"SMA10-MXN-T1 da DSR = \*\*([\d.]+)\*\* en 2008-2026 y \*\*([\d.]+)\*\* en 1995-2007", [("DSR 2008-2026", "prob", DSR["2008-2026|sma10_mxn_T1|N16"]["dsr"]),
+                                                                                                 ("DSR 1995-2007", "prob", DSR["1995-2007|sma10_mxn_T1|N16"]["dsr"])]),
+        (r"Comprar y mantener tiene PSR de ([\d.]+) en el mismo tramo", [("PSR B&H T1 2008-2026", "prob", DSR["2008-2026|psr_bh_T1"])]),
+        (r"el diferencial fue de \+([\d.]+) pp al año como media × 12, con t = ([\d.]+)", [("S&P MXN - CETES x12", "x12", P(R["pruebas_benchmarks"]["sp_menos_cetes|2008-01_2026-08"]["x12"])),
+                                                                                         ("S&P MXN - CETES t", "t", R["pruebas_benchmarks"]["sp_menos_cetes|2008-01_2026-08"]["t"])]),
+        (r"De 1995 a 2007, CETES rindió ([\d.]+)% anual y el S&P en MXN ([\d.]+)%, con t = ([\d.]+)",
+         [("CETES 1995-2007", "pct", P(V["cetes_T0"]["1995-2007"]["cagr"])), ("S&P MXN 1995-2007 (B&H T0)", "pct", P(V["bh_T0"]["1995-2007"]["cagr"])),
+          ("S&P MXN - CETES 1995-2007 t", "t", R["pruebas_benchmarks"]["sp_menos_cetes|1995-01_2007-12"]["t"])]),
+        (r"en el límite de la tolerancia \(\+([\d.]+) pp\)", [("CETES W1 - 6.1", "pct", P(B["cagr"]["cetes|W1"]) - 6.1)]),
+        (r"Ninguna definición nuestra baja de ([\d.]+)%", [("CETES minimo (inicio 2007-2009)", "pct", P(SV["inicio"]["cetes_min"][1]))]),
+        (r"inconclusa en todos los tramos \(t de ([\d.]+) a ([\d.]+)\)", [("t minima SMA10-MXN", "t", R["t_rango_sma10_mxn"][0]),
+                                                                          ("t maxima SMA10-MXN", "t", R["t_rango_sma10_mxn"][1])]),
+        (r"correlación de (−[\d.]+) y caída máxima mensual de (−\d+)% en MXN contra (−\d+)% en USD en W1",
+         [("correlacion", "corr", AM["corr_usd_fx"]), ("MDD MXN W1", "pct", P(AM["mdd_mxn_mensual"])), ("MDD USD W1", "pct", P(AM["mdd_usd_mensual"]))]),
+        (r"Con dividendos netos de 30% de retención baja a \*\*([\d.]+)%\*\*", [("S&P net30 W1", "pct", P(B["cagr"]["spy_net30_dex|W1"]))]),
+        (r"con una depreciación del peso de ([\d.]+)% anual", [("CAGR MXN/USD W1", "pct", P(AM["cagr_fx"]))]),
+    ]
+    for patron, specs in T:
+        g = C.buscar(patron)
+        for val, (desc, tipo, propio) in zip(g, specs):
+            C.num(b, desc, "texto", tipo, val, propio)
+    return C.filas
+
+
+# ============================================================== main
+
+def a_json(x):
+    if isinstance(x, dict):
+        return {str(k): a_json(v) for k, v in x.items()}
+    if isinstance(x, (list, tuple)):
+        return [a_json(v) for v in x]
+    if isinstance(x, date):
+        return str(x)
+    if isinstance(x, float):
+        return round(x, 12)
+    return x
+
+
+def main() -> int:
+    huellas = revisar_huellas()
+    D = cargar()
+    R = {"huellas_ok": huellas}
+    R["benchmarks"], S = benchmarks(D)
+    R["sens_ventana"] = sensibilidades_ventana(D, S)
+    R["dividendos"] = dividendos_implicitos(D)
+    R["naftrac_imputado"] = naftrac_imputado(D, S, R["dividendos"])
+    R["mxx_anual"] = mxx_anual(D)
+    R["pruebas_benchmarks"] = pruebas_benchmarks(D, S)
+    R["amortiguador"] = amortiguador(D, S)
+    R["cierres_distintos"] = meses_cierre_distinto(D, S)["todos"] and meses_cierre_distinto(D, S)
+    R["a4"] = a4(D)
+    R["sic"] = control_sic(D)
+    R["sma"] = bloque_sma(D)
+    c = R["benchmarks"]["cagr"]
+    R["max_dif_fuentes"] = max(abs(100 * (c[f"{k}|{w}"] - c[f"spy_dex|{w}"]))
+                               for k in ("sptr_dex", "spy_fix", "spy_mxnx") for w in W)
+    ts = [R["sma"]["nw"][f"sma10_mxn_{ej}|{s}"]["t"] for ej in ("T0", "T1")
+          for s in ("2008-2026", "1995-2007", "1995-2026") if not (ej == "T0" and s == "1995-2026")]
+    R["t_rango_sma10_mxn"] = [min(ts), max(ts)]
+    # tercera comprobacion del error estandar NW con la herramienta del repo
+    sys.path.insert(0, str(RAIZ))
+    try:
+        from herramientas.estadistica import newey_west
+    except Exception:  # pragma: no cover
+        newey_west = None
+    difs = []
+    todas = list(R["pruebas_benchmarks"].values()) + list(R["sma"]["nw"].values())
+    R["nw_max_dif_formula1_vs_2"] = max(abs(x["se"] - x["se_formula2"]) for x in todas)
+    R["nw_n_pruebas"] = len(todas)
+
+    texto = (AQUI / "README.md").read_text()
+    corte = texto.find("## Doble ejecución independiente")
+    texto_rep = texto if corte < 0 else texto[:corte]
+    filas = comparar(texto_rep, R)
+    with open(AQUI / "independiente-comparacion.csv", "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=["bloque", "fila", "campo", "tipo", "reportado", "propio", "dif",
+                                           "tolerancia", "ok", "exacto_al_redondeo"])
+        w.writeheader()
+        for f in filas:
+            g = dict(f)
+            if isinstance(g["propio"], float):
+                g["propio"] = f"{g['propio']:.6f}"
+            if isinstance(g["dif"], float):
+                g["dif"] = f"{g['dif']:.6f}"
+            w.writerow(g)
+    resumen = {}
+    for f in filas:
+        r = resumen.setdefault(f["bloque"], {"cifras": 0, "ok": 0, "exactas": 0, "max_dif": {}})
+        r["cifras"] += 1
+        r["ok"] += f["ok"]
+        r["exactas"] += f["exacto_al_redondeo"]
+        if isinstance(f["dif"], float):
+            r["max_dif"][f["tipo"]] = max(r["max_dif"].get(f["tipo"], 0.0), abs(f["dif"]))
+    R["comparacion"] = {"total": len(filas), "ok": sum(f["ok"] for f in filas),
+                        "exactas": sum(f["exacto_al_redondeo"] for f in filas),
+                        "numericas": sum(1 for f in filas if f["tipo"] != "categoria"),
+                        "categoricas": sum(1 for f in filas if f["tipo"] == "categoria"),
+                        "por_bloque": resumen,
+                        "fuera_de_tolerancia": [f for f in filas if not f["ok"]],
+                        "no_exactas": [f for f in filas if f["ok"] and not f["exacto_al_redondeo"]]}
+    (AQUI / "independiente-resultados.json").write_text(json.dumps(a_json(R), ensure_ascii=False, indent=1) + "\n")
+    print(f"Cifras comparadas: {len(filas)} | dentro de tolerancia: {R['comparacion']['ok']} | "
+          f"identicas al redondeo: {R['comparacion']['exactas']}")
+    for bloque, r in resumen.items():
+        print(f"  {bloque:40s} {r['cifras']:4d} {r['ok']:4d} {r['exactas']:4d} "
+              + ", ".join(f"{k}: {v:.4f}" for k, v in r["max_dif"].items()))
+    for f in R["comparacion"]["fuera_de_tolerancia"]:
+        print("FUERA:", f)
+    for f in R["comparacion"]["no_exactas"]:
+        print("NO EXACTA:", f["bloque"], f["fila"], f["campo"], f["reportado"], round(f["propio"], 5))
+    print(f"NW: max |se formula 1 - se formula 2| = {R['nw_max_dif_formula1_vs_2']:.1e} en {R['nw_n_pruebas']} pruebas")
+    return 0 if R["comparacion"]["ok"] == len(filas) else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

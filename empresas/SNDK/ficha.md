@@ -1,0 +1,133 @@
+# Sandisk Corporation (SNDK) — ficha al 2026-09-25
+
+> Nasdaq (EUA) · Tecnología / memoria NAND flash, SSD y almacenamiento · Moneda de reporte: USD (US GAAP; año fiscal de 52/53 semanas; **FY26 tuvo 53 semanas al 3-jul-2026, con el 1T de 14 semanas**; el 1T FY27 tiene 13) · Disponible en SIC: no verificado (Yahoo SNDK.MX no devuelve datos [11]) · Estado de conocimiento: Documentado
+> Precio: US$1,753.62 (24-sep-2026); cierres de 52 semanas 94.29-2,335.00; 12m +1,548%; 3m −24.9%; volatilidad 1a de 116.7%; beta 1a de 4.10; capitalización US$256.8 mil M (146.4 M acciones); valor empresa US$252.0 mil M [9]. Escindida de Western Digital el 21-feb-2025. Fase 0: investigación, no recomendación.
+
+## 1. Negocio y segmentos
+Diseña y vende NAND (tecnología BiCS), SSD empresariales y de cliente, tarjetas y memorias USB. La capacidad de obleas viene de Flash Ventures, las empresas conjuntas con Kioxia en Japón (49.9% Sandisk) [3].
+- FY26 por mercado final [4]: Datacenter US$5,153 M (25.4%), Edge US$12,160 M (60.1%) y Consumer US$2,935 M (14.5%).
+- 4T FY26 por mercado final [1]: Datacenter 33.2%, Edge 60.6% y Consumer 6.2%.
+- FY26 por geografía [4]:
+  - EUA US$3,714 M (18.3%).
+  - China US$4,503 M (22.2%) y Hong Kong US$5,126 M (25.3%): **China más Hong Kong suman 47.6%**.
+  - Resto de Asia US$4,612 M (22.8%), EMEA 8.6% y otros 2.8%.
+- Ningún cliente superó el 10% de los ingresos [3].
+
+## 2. Último reporte: 4T FY26 (13 semanas al 3-jul-2026; publicado el 5-ago-2026) [1]
+- Ingresos de US$8,965 M (+51% t/t; +372% a/a), contra una guía de US$7.75-8.25 mil M [2]: +12.1% sobre el punto medio.
+- Margen bruto de 84.6% (guía non-GAAP de 79-81%) y margen operativo GAAP de 78.5% (non-GAAP 79.3%).
+- UPA non-GAAP de US$39.25 contra una guía de US$30-33 y un consenso de US$34.52 (Yahoo), una sorpresa de +13.7% [10].
+- UPA GAAP de US$43.97. Incluye una ganancia de US$804 M en valores de capital. Inferencia: viene sobre todo de la participación en Nanya.
+- **Guía 1T FY27** [1]:
+  - Ingresos de US$10.3-10.8 mil M.
+  - Margen bruto non-GAAP de 83-85%.
+  - Gastos de operación non-GAAP de US$520-540 M y tasa de 15%.
+  - UPA non-GAAP de US$44-46 con ~155 M acciones.
+- Datos operativos [1]:
+  1. El crecimiento t/t vino ~1/3 de volumen y ~2/3 de precio.
+  2. Diez acuerdos NBM (*New Business Model*) firmados, con prepagos de clientes.
+  3. Datacenter +103% t/t y Consumer −32% t/t.
+
+## 3. Tabla financiera (US$ M; XBRL de la SEC vía `dossier.py` [9])
+| Trim. | Ingresos (a/a) | Mg bruto | Mg oper | UN | UPA dil. | FCF | SBC/ing | Deuda neta | Acc. dil. (M) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1T FY25 | 1,883 (n.d.) | 38.6% | 15.5% | 211 | 1.46 | −198 | 2.2% | −322 | 145 |
+| 2T FY25 | 1,876 (12.7%) | 32.3% | 10.4% | 104 | 0.72 | 47 | 2.6% | −804 | 145 |
+| 3T FY25 | 1,695 (−0.6%) | 22.5% | −111.0% | −1,933 | −13.33 | −18 | 2.6% | 440 | 145 |
+| 4T FY25 | 1,901 (8.0%) | 26.2% | 0.9% | −23 | −0.16 | 49 | 2.6% | 368 | 145 |
+| 1T FY26 | 2,308 (22.6%) | 29.8% | 7.6% | 112 | 0.75 | 438 | 2.3% | −91 | 149 |
+| 2T FY26 | 3,025 (61.2%) | 50.9% | 35.2% | 803 | 5.15 | 980 | 1.9% | −936 | 156 |
+| 3T FY26 | 5,950 (251%) | 78.4% | 69.1% | 3,615 | 23.03 | 2,993 | 0.9% | −3,735 | 157 |
+| 4T FY26 | 8,965 (372%) | 84.6% | 78.5% | 6,903 | 43.97 | 7,083 | 0.7% | −4,762 | 157 |
+
+| Año | Ingresos (a/a) | Mg bruto | Mg oper | UN | UPA dil. | FCF | SBC/ing | Deuda neta | Acc. dil. (M) |
+|---|---|---|---|---|---|---|---|---|---|
+| FY22 | n.d. | | | | | | | | |
+| FY23 | 6,086 | 7.1% | −33.4% | −2,143 | −14.78 | −932 | 2.7% | −292 | 145 |
+| FY24 | 6,663 (9.5%) | 16.1% | −7.0% | −672 | −4.63 | −475 | 2.2% | −328 | 145 |
+| FY25 | 7,355 (10.4%) | 30.1% | −18.7% | −1,641 | −11.32 | −120 | 2.5% | 368 | 145 |
+| FY26 | 20,248 (175%) | 71.5% | 61.2% | 11,433 | 73.76 | 11,494 | 1.1% | −4,762 | 155 |
+
+GAAP. Antes de la escisión, las cifras son estados combinados (*carve-out*) y las acciones son pro forma. El FY22 no está en XBRL. La UPA del 4T FY26 viene del comunicado [1]. El 3T FY25 incluye un cargo no recurrente (Inferencia: deterioro de crédito mercantil; no verificado). La deuda neta es sólo efectivo; excluye US$1,777 M en valores de capital [1].
+
+## 4. Expediente de 10 puntos
+1. **Utilidad vs efectivo:** FCF FY26 de US$11,494 M, igual a 1.01x la UN. El FCF ajustado de la empresa, que excluye prepagos NBM y suma Flash Ventures, fue de US$8,743 M. La UN del 4T incluye la ganancia no operativa de US$804 M [1].
+2. **Deuda:** cero. Prepagó el crédito de US$2.0 mil M el 4-mar-2026 (pérdida de US$46 M) [5]. El revolvente de US$1.5 mil M se extendió al 9-sep-2031 a SOFR+1.375% [6]. Fuera de balance: garantías de US$923 M de arrendamientos de Flash Ventures y US$1.2 mil M de pagos a Kioxia en 2026-2029 [7].
+3. **Dilución:** acciones diluidas de 145 a 157 M (+9% a/a; alerta activa), contra 146.4 M en circulación. Inferencia: la brecha son premios de capital valuados a un precio alto (no verificado). Recompró US$4,524 M en el 4T y tiene autorizados US$15.5 mil M [1].
+4. **Capital de trabajo:** cuentas por cobrar de US$4,708 M (~48 días), inventario de US$2,698 M y pasivos contractuales de US$1,242 M [1].
+5. **Competidores:** Samsung, SK hynix, Kioxia (también socio), Micron y YMTC [3].
+6. **Concentración:** baja en clientes. Alta en suministro: Flash Ventures es ~80% de la capacidad en plantas de Kioxia en Japón; compras netas de US$3.6 mil M en FY26 [3][7].
+7. **Regulación:** investigaciones 232 y 301, licencias de exportación, política china de sustitución [3] y 47.6% de ingresos en China y Hong Kong [4].
+8. **Promesas vs resultados:** sorpresas de UPA contra consenso de +36.9%, +75.0%, +59.7% y +13.7% en FY26 [10]; se están achicando.
+9. **Partes relacionadas:** Kioxia (Flash Ventures, extendida al 31-dic-2034) y Unis Venture (48%, ~1% de ingresos). Western Digital dejó de ser parte relacionada el 3-jul-2026 [7].
+10. **Asignación de capital:** capex propio de US$177 M (0.9% de ingresos), porque la fábrica es la JV. Compró 3.9% de Nanya por ~US$1.0 mil M con bloqueo de 3 años y suministro de DRAM [8]. Recompras de US$4.5 mil M.
+
+## 5. Cadenas causales vigentes
+1. **Ciclo de precios NAND:** TrendForce prevé contratos NAND de +10-15% t/t en el 3T26, en moderación porque "los precios récord agotaron la capacidad de compra del consumidor" [12] → 2/3 del alza del 4T fue precio → margen de 84.6% → UPA → el P/U de 8.2x sobre la UPA FY27 de consenso descuenta que FY27 es el pico. La caída de Consumer (−32% t/t) es la primera señal de destrucción de demanda.
+2. **China, Hong Kong, YMTC y la tregua EUA-China hasta el 10-ene-2027** [13] → 47.6% de los ingresos → riesgo de volumen, represalias y capacidad china subsidiada en 2027-28 → margen → múltiplo cíclico.
+3. **Acuerdos NBM y extensión de Kioxia a 2034** → visibilidad y prepagos → menos volatilidad de caja → deberían bajar la prima de riesgo. Inferencia: el mercado aún no lo cree, porque SNDK cotiza en línea con MU.
+
+## 6. Qué descuenta el precio
+| Múltiplo | Hoy | Historia (desde feb-2025) | Pares (P/U próximo año fiscal) |
+|---|---|---|---|
+| P/U GAAP TTM | 22.5x | n.d. (pérdidas hasta 2T FY26) | — |
+| P/Ventas TTM | 12.7x | 0.9x-13.6x (fines de trimestre) | — |
+| P/U FY27e / FY28e (US$213.90 / US$263.49) | 8.2x / 6.7x | n.d. | MU 6.8, Kioxia 5.3, Samsung 4.0, SK hynix 3.9, WDC 14.2, STX 16.4 |
+
+Cálculo propio con XBRL y Yahoo [9][10][11]. No existe historia de 5 años como emisora independiente.
+**DCF inverso** (valor de la empresa US$252.0 mil M; perpetuidad de 3%):
+- (a) Con el FCF TTM de US$11.5 mil M, el precio implica un crecimiento de 6.4/8.4/10.4% anual con tasas de 9/10/11%.
+- (b) Supuesto propio: un FCF FY27 de ~US$30 mil M (UPA de consenso × 155 M, menos ajustes). Con él, el precio implica una **caída** de −6.6/−4.8/−3.1% anual por 10 años.
+- (c) A 15x de P/U de mitad de ciclo, el precio implica una UPA normalizada de ~US$117.
+- Lectura: el precio ya supone que las utilidades de FY27 no se sostienen.
+
+## 7. Escenarios de negocio a 12 meses
+| Escenario | Prob. | Descripción |
+|---|---|---|
+| Bajista | 30% | Los precios NAND tocan techo en 4T26-1T27 por el consumidor y la capacidad nueva. Margen bruto de 55-65% en el 2S FY27; UPA FY27 < US$170 |
+| Base | 45% | Meseta alta sostenida por NBM y SSD empresariales; UPA FY27 de US$190-240 |
+| Alcista | 25% | La inferencia de IA mantiene la escasez en 2027; UPA FY27 > US$240 |
+
+Dato que cambia de escenario: los contratos NAND del 4T26 de TrendForce (oct-2026) y la guía de margen del 2T FY27. Precios ≤ +5% t/t o una guía de margen < 83% mueven al bajista.
+
+## 8. Pronósticos registrados — 1T FY27 (13 semanas; cierre ~2-oct-2026)
+Fecha estimada del reporte: **6-nov-2026, después del cierre** (Yahoo `calendarEvents` la marca como estimada; el 1T FY26 se reportó el 6-nov-2025 según EDGAR [9]; no confirmada). Consenso: Yahoo Finance, consultado el 2026-09-25 [10].
+
+| Variable | Punto | p10-p90 (80%) | Consenso |
+|---|---|---|---|
+| Ingresos (US$ mil M) | 10.90 | 10.35-11.55 | 10.68 (18 analistas) |
+| UPA non-GAAP diluida (US$) | 48.0 | 44.0-52.5 | 46.18 (18 analistas) |
+
+Base del cálculo (supuestos propios):
+- Guía media de US$10.55 mil M más +3.3%, menor que el +12% del 4T porque TrendForce ve precios más moderados.
+- Mezcla hacia Datacenter; margen bruto de 84.5%, gastos de operación de US$530 M, tasa de 15% y 155 M acciones.
+- El consenso ya está arriba del tope de UPA guiado.
+
+Binarios:
+- Ingresos > US$10.68 mil M: **p = 0.64**.
+- UPA non-GAAP > US$46.18: **p = 0.64**.
+
+## 9. Catalizadores y riesgos
+- Oct-2026: contratos NAND del 4T26 de TrendForce.
+- ~6-nov-2026: 1T FY27 y guía del 2T. El consenso del 2T es de US$12.23 mil M [10].
+- 10-ene-2027: vence la tregua EUA-China [13].
+- Riesgos:
+  - El pico del ciclo con beta de 4.1 y volatilidad de 117%.
+  - Exposición de 47.6% a China y Hong Kong.
+  - Concentración de manufactura en Japón.
+  - Capacidad de YMTC y Samsung.
+
+## 10. Fuentes
+1. Sandisk, comunicado 4T FY26 (8-K ex. 99.1), 5-ago-2026: https://www.sec.gov/Archives/edgar/data/2023554/000162828026053346/sndkq4-26ex991xpressrelease.htm
+2. Sandisk, comunicado 3T FY26 (guía del 4T), 30-abr-2026: https://www.sec.gov/Archives/edgar/data/2023554/000162828026028879/sndkq3-26ex991xpressrelease.htm
+3. Sandisk, 10-K FY26, 17-ago-2026: https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm
+4. 10-K FY26, desagregación de ingresos (R42): https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/R42.htm
+5. 10-K FY26, nota de deuda (R16): https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/R16.htm
+6. Sandisk, 8-K 1.01 (revolvente), 11-sep-2026: https://www.sec.gov/Archives/edgar/data/2023554/000119312526389293/d138343d8k.htm
+7. 10-K FY26, partes relacionadas y Flash Ventures (R18): https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/R18.htm
+8. Sandisk, 8-K 1.01 (Nanya), 25-mar-2026: https://www.sec.gov/Archives/edgar/data/2023554/000119312526122705/d136592d8k.htm
+9. `dossier.py SNDK` (SEC companyfacts + Yahoo chart), 2026-09-25: empresas/SNDK/dossier-2026-09-25.md
+10. Yahoo quoteSummary SNDK (consenso y calendario) y pares (MU, WDC, STX, 285A.T, 005930.KS, 000660.KS), 2026-09-25: https://query1.finance.yahoo.com/v10/finance/quoteSummary/SNDK
+11. Yahoo chart SNDK.MX (sin datos), 2026-09-25: https://query1.finance.yahoo.com/v8/finance/chart/SNDK.MX
+12. TrendForce, precios contrato 3T26, 3-jul-2026: https://www.trendforce.com/presscenter/news/20260703-13134.html
+13. Conocimiento cap. 23 §4.5 (tregua al 10-ene-2027): conocimiento/23-geopolitica-y-riesgo-politico-global.md
