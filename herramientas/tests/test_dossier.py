@@ -1,6 +1,8 @@
 """Pruebas de herramientas/dossier.py sin red (fuentes simuladas con mock)."""
 from __future__ import annotations
 
+import contextlib
+import io
 import json
 import tempfile
 import unittest
@@ -183,7 +185,9 @@ class TestGenerar(unittest.TestCase):
             p.start()
         try:
             with tempfile.TemporaryDirectory() as tmp:
-                codigo = dossier.main(["DEMO", "--fecha", "2026-09-25", "--salida-dir", tmp])
+                with contextlib.redirect_stdout(io.StringIO()) as salida:
+                    codigo = dossier.main(["DEMO", "--fecha", "2026-09-25", "--salida-dir", tmp])
+                self.assertIn("Dossier escrito en", salida.getvalue())
                 ruta = Path(tmp) / "DEMO" / "dossier-2026-09-25.md"
                 self.assertEqual(codigo, 0)
                 self.assertTrue(ruta.exists())

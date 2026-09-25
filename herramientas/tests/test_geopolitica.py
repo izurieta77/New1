@@ -78,10 +78,10 @@ class TestDta(unittest.TestCase):
             geo.leer_dta(b"\xd0\xcf\x11\xe0 esto es un xls")
         with self.assertRaises(geo.ErrorFuente):
             geo.leer_dta(construir_dta([("x", "f", "%9.0g", "")], [(1.0,)], version=115))
-        truncado = construir_dta([("x", "d", "%9.0g", "")], [(1.0,), (2.0,)]).replace(b"</data>", b"")
-        truncado = truncado[:truncado.index(b"<data>") + 6 + 4]
+        completo = construir_dta([("x", "d", "%9.0g", "")], [(1.0,), (2.0,)])
+        truncado = completo[:completo.index(b"<data>") + 6 + 4]     # 4 de los 16 bytes de datos
         with self.assertRaises(geo.ErrorFuente):
-            geo.leer_dta(truncado + b"</data></stata_dta>")
+            geo.leer_dta(truncado)
 
 
 class TestResumenGpr(unittest.TestCase):

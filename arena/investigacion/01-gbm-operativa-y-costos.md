@@ -273,16 +273,18 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 - [R] **Horarios de ejecución:** evitar los primeros 15 minutos y el día hábil mexicano en que NYSE está cerrado (SIC sin liquidez). **Recalibrar todas las rutinas el mar 3-nov-2026**, cuando el horario cambia a 8:30–15:00.
 - [R] Las órdenes limitadas en el SIC con precio más de 5% arriba del último hecho van a rebotar por el filtro de GBM [10]. Hay que usar precios realistas.
 - [R] La vigencia máxima de 30 días obliga a **reponer los stops de largo plazo cada mes**. Conviene agregarlo a la rutina mensual.
-- [R] La liquidez ociosa va en Smart Cash (disponible de inmediato para invertir [19]). Solo si se prevé ≥ 28 días sin operar conviene un CETE 28 (6.15% contra 4.00%).
+- [R] La liquidez ociosa va en Smart Cash (disponible de inmediato para invertir [19]). Solo si se prevé ≥ 28 días sin operar conviene un CETE 28 (6.15% contra 4.00%), **siempre que la app permita comprarlo dentro de la cuenta (no verificado; ver sección 7)**.
 - [R] **No tramitar el W-8BEN del SIC** (su costo es ~7.6% de la cuenta).
 
 ### D. Checklist que el dueño debe verificar en la app antes de fondear
 
-1. Buscar TQQQ, SOXL, UPRO/SPXL, QLD y SSO en Trading MX (SIC): ¿se pueden comprar? ¿Pide algún perfil o carta de riesgo?
+1. Buscar TQQQ, SOXL, UPRO/SPXL, QLD y SSO en Trading MX (SIC): ¿se pueden comprar? ¿Pide algún perfil o carta de riesgo? (TQQQ, SOXL y SPXL ya están confirmados como listados y activos en la BMV [35][43][44]; lo que falta es la habilitación en GBM y la liquidez real del libro en pesos.)
 2. Hacer una orden de prueba chica en el SIC y anotar la comisión cobrada, el IVA y si aplica un mínimo de 20 MXN.
 3. En Trading USA: cotizar la compra de 100 USD y comparar el tipo de cambio que muestra contra el spot del momento. Así se obtiene el spread s real.
 4. Revisar si el SIC acepta Stop Limitada y OCA para tickers extranjeros. La FAQ no distingue BMV de SIC [8].
 5. Revisar si Trading USA muestra un contador de day trades (PDT).
+6. Revisar si la app permite comprar un CETE 28 directo dentro de la cuenta, o si la única vía es Smart Cash.
+7. En la primera operación de Trading USA, revisar si la comisión de 0.25% lleva IVA.
 
 ---
 
@@ -322,7 +324,7 @@ Todas se consultaron el 2026-09-25, salvo que se indique otra fecha.
 30. CNBV, "IPAB, Seguro de Depósito". https://www.gob.mx/cnbv/acciones-y-programas/ipab-seguro-de-deposito
 31. El CEO, "Usuarios de GBM reportan caída de aplicación móvil" (16-dic-2024). https://elceo.com/mercados/usuarios-de-gbm-reportan-caida-de-aplicacion-movil/
 32. Investing.com México, "¿Eres usuario de GBM y no puedes entrar a la plataforma?" (26-jun-2024). https://mx.investing.com/news/stock-market-news/eres-usuario-de-gbm-y-no-puedes-entrar-a-la-plataforma-aqui-la-explicacion-2814358
-33. SDP Noticias, "GBM advierte de intermitencias en inversiones por falla en CrowdStrike y Microsoft" (jul-2024; visto en el listado de búsqueda). https://www.sdpnoticias.com/negocios/falla-en-crowdstrike-y-microsoft-afecta-inversiones-en-gbm/
+33. SDP Noticias, "GBM advierte de intermitencias en inversiones por falla en CrowdStrike y Microsoft" (19-jul-2024; texto consultado el 2026-09-25). https://www.sdpnoticias.com/negocios/falla-en-crowdstrike-y-microsoft-afecta-inversiones-en-gbm/
 34. FINRA, Regulatory Notice 26-10 (aprobación de la SEC el 14-abr-2026; vigencia 4-jun-2026; implementación hasta 20-oct-2027). https://www.finra.org/rules-guidance/notices/26-10
 35. Grupo BMV, estadísticas de la emisora TQQQ * (ProShares UltraPro QQQ, TRAC extranjero, estatus ACTIVA). https://www.bmv.com.mx/es/emisoras/estadisticas/TQQQ%20*-35397
 36. Asesores Inversión, "ETFs en pesos o en dólares desde México: SIC vs. cuenta en dólares" (jul-2026). https://asesoresinversion.com/academia/mercado-accionario/comprar-etf-pesos-o-dolares-mexico/
