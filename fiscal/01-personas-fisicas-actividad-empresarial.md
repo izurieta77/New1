@@ -19,7 +19,7 @@
 | Base del impuesto | Ingresos efectivamente cobrados, **sin deducción alguna** | Ingresos cobrados **menos** deducciones autorizadas (flujo de efectivo, art. 102) |
 | Tasa | Tabla de 1.00% a 2.50% sobre el ingreso total del periodo (art. 113-E/113-F; no es marginal: la tasa de la tabla se aplica al ingreso total una vez que éste cae en ese rango) | Tarifa progresiva del art. 152 (mensual: art. 106; anual: art. 152), de 1.92% a 35% sobre la **utilidad fiscal** |
 | Pagos mensuales | Definitivos, a más tardar el 17 del mes siguiente (art. 113-E) | Provisionales a cuenta del impuesto anual, mismo plazo (art. 106) |
-| Declaración anual | Sí, en abril, con la tabla anual del art. 113-F, acreditando pagos mensuales y retenciones (art. 113-F). El art. 113-I señala que **omitir la declaración anual** es causa de salida del régimen, lo que confirma que la obligación de presentarla existe — contrario a lo que afirman algunos blogs fiscales sobre una supuesta "liberación total" en 2026 (no verificado como cambio de ley; el texto de los arts. 113-E a 113-J no fue reformado en el Paquete Económico 2026, ver §6.1) | Sí, en abril, tarifa del art. 152, con derecho a deducciones personales (art. 151) |
+| Declaración anual | Sí, en abril, con la tabla anual del art. 113-F, acreditando pagos mensuales y retenciones (art. 113-F). El art. 113-I señala que **omitir la declaración anual** es causa de salida del régimen, lo que confirma que la obligación de presentarla existe — contrario a lo que afirman algunos blogs fiscales sobre una supuesta "liberación total" en 2026 (no verificado como cambio de ley; el texto de los arts. 113-E a 113-J no fue reformado en el Paquete Económico 2026 — la única reforma verificada de 2026 al marco de este capítulo es la del CFF, art. 29-A y 113 Bis, ver §3.2) | Sí, en abril, tarifa del art. 152, con derecho a deducciones personales (art. 151) |
 | Quién no puede tributar aquí | Socios, accionistas o integrantes de personas morales; quienes reciban ingresos de regímenes fiscales preferentes (REFIPRE); quienes tengan ingresos exceptuados por la ley (art. 113-E, penúltimo y último párrafos) | Cualquier persona física con actividad empresarial o profesional |
 | Retención de clientes persona moral | 1.25% sobre el pago (sin IVA), con carácter de pago definitivo del ISR (art. 113-J) | 10% de retención si el cliente es persona moral y el ingreso es por servicios profesionales (honorarios), acreditable contra el pago provisional (art. 106, penúltimo párrafo) |
 
@@ -57,12 +57,12 @@ Fuente primaria: LISR vigente, [diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf](https
 
 ## 2. Obligaciones formales
 
-1. **CFDI 4.0.** Obligatorio para toda actividad empresarial. Requisitos de forma en **art. 29 y 29-A CFF**. **Cambio verificado y vigente desde el 1-ene-2026:** el Decreto de reforma al CFF, publicado en el DOF el 7-nov-2025 (edición vespertina) — [texto en diputados.gob.mx](https://www.diputados.gob.mx/LeyesBiblio/ref/cff/CFF_ref62_07nov25.pdf) — adicionó la **fracción IX al art. 29-A**: los CFDI deben amparar **operaciones existentes, verdaderas o actos jurídicos reales**; los que no lo hagan **se consideran falsos para todos los efectos del CFF**. Se agregó también el **art. 49 Bis**, un procedimiento de visita domiciliaria expedita (máximo 24 días hábiles) para verificar la materialidad de los comprobantes, con facultad del SAT de suspender la capacidad de facturar mientras dura la revisión. Esto endurece directamente la sección 3 (materialidad/EFOS).
-2. **Contabilidad electrónica.** Art. 28 CFF: llevar la contabilidad por medios electrónicos y enviar mensualmente al SAT, vía buzón tributario, la balanza de comprobación y el catálogo de cuentas. Multa por incumplimiento: de $7,110 a $21,310 (Hecho reportado en fuentes secundarias sobre el art. 28; el monto exacto de la multa está en el art. 84, fracción IV CFF — **(no verificado el monto exacto de la multa contra el texto del art. 84 en esta sesión)**.
-3. **Declaraciones provisionales mensuales.** RESICO: definitivas, art. 113-E, día 17 del mes siguiente. Régimen general: provisionales a cuenta del anual, mismo plazo, art. 106. La utilidad fiscal del periodo se calcula por **flujo de efectivo real** (ingresos cobrados menos deducciones pagadas, acumulados desde enero), **no** con el coeficiente de utilidad que usan las personas morales (ver §5.6).
-4. **Declaración anual.** Abril del año siguiente (art. 150 para el régimen general; art. 113-F para RESICO). Obligatoria salvo ingresos exentos o de tasa definitiva sin acumulación.
-5. **DIOT — Declaración Informativa de Operaciones con Terceros.** Fundamento: **art. 32, fracción VIII LIVA**. Sigue vigente en 2026, mensual, ahora en la plataforma ampliada del SAT (54 campos) desde agosto de 2025. **Cambio 2026:** las **personas morales** del RESICO quedaron relevadas de presentarla; las **personas físicas** con actividad empresarial en régimen general y en RESICO **siguen obligadas** si son sujetos de IVA con operaciones con proveedores. Fuente: [sat.gob.mx/declaracion/74295](https://www.sat.gob.mx/declaracion/74295/presenta-tu-declaracion-informativa-de-operaciones-con-terceros-(diot)-).
-6. **Buzón tributario.** Obligatorio para toda persona física o moral inscrita en el RFC (art. 17-K CFF). Debe consultarse dentro de los 3 días siguientes a un aviso electrónico del SAT. No habilitarlo o mantener medios de contacto desactualizados se entiende como **oposición a la notificación**, y el SAT puede notificar por estrados (art. 134, fracción III CFF). Fuente: [sat.gob.mx/articulo/20961](https://www.sat.gob.mx/articulo/20961/articulo-17-k).
+1. **CFDI 4.0.** Requisitos de forma en **arts. 29 y 29-A CFF**. **Cambio vigente desde el 1-ene-2026** (reforma DOF 7-nov-2025, [diputados.gob.mx](https://www.diputados.gob.mx/LeyesBiblio/ref/cff/CFF_ref62_07nov25.pdf)): nueva **fracción IX al art. 29-A** — los CFDI deben amparar **operaciones existentes, verdaderas o actos jurídicos reales**; los que no lo hagan **se consideran falsos**. Se agregó el **art. 49 Bis**: visita domiciliaria expedita (máximo 24 días hábiles) de materialidad, con facultad del SAT de suspender la facturación mientras dura. Endurece directamente §3.
+2. **Contabilidad electrónica.** Art. 28 CFF: contabilidad por medios electrónicos, con envío mensual al SAT (vía buzón) de la balanza de comprobación y el catálogo de cuentas.
+3. **Declaraciones provisionales mensuales.** RESICO: definitivas, art. 113-E, día 17 del mes siguiente. Régimen general: provisionales, mismo plazo, art. 106, sobre **flujo de efectivo real** (ingresos cobrados menos deducciones pagadas, acumulado desde enero) — no con coeficiente de utilidad (ver §5.4).
+4. **Declaración anual.** Abril del año siguiente (art. 150 general; art. 113-F RESICO).
+5. **DIOT.** Fundamento: **art. 32, fracción VIII LIVA**. Vigente en 2026, mensual, en la plataforma ampliada del SAT (54 campos) desde agosto de 2025. Cambio 2026: las personas morales de RESICO quedaron relevadas; las **personas físicas siguen obligadas**. Fuente: [sat.gob.mx/declaracion/74295](https://www.sat.gob.mx/declaracion/74295/presenta-tu-declaracion-informativa-de-operaciones-con-terceros-(diot)-).
+6. **Buzón tributario.** Obligatorio (art. 17-K CFF); consultarlo dentro de 3 días de un aviso. No habilitarlo se entiende como oposición y el SAT notifica por estrados (art. 134-III CFF).
 
 ---
 
@@ -89,10 +89,10 @@ Fuentes: CFF texto vigente y reforma, [diputados.gob.mx](https://www.diputados.g
 
 ### 3.3 Deducción inmediata de inversiones — Decreto "Plan México"
 
-- **Hecho.** El "Decreto por el que se otorgan estímulos fiscales para apoyar la estrategia nacional denominada Plan México" se publicó en el **DOF el 21-ene-2025** y sustituye, para quien lo elija, los porcentajes máximos de depreciación anual de los **arts. 34, 35 y 209 LISR** por una **deducción inmediata** de un porcentaje del monto original de la inversión, en el ejercicio en que se realiza.
-- **Vigencia y porcentajes.** Aplica a activos fijos nuevos adquiridos entre la publicación del decreto y septiembre de 2030. Para inversiones de **2025 y 2026**, los porcentajes van de **41% a 91%** según el tipo de activo y su uso industrial; para 2027-2030 bajan a 35%-89%. **(no verificado el porcentaje exacto por tipo de activo aplicable a maquinaria de carpintería/herrería o vehículos de construcción — requiere consultar el Anexo del Decreto por giro industrial; no se hizo en esta sesión).**
-- **Beneficio adicional.** Deducción extra de **25% del incremento** en gastos de capacitación de personal o de innovación, para 2025-2030.
-- **Regla:** para un taller de herrería o carpintería que compre maquinaria nueva (dobladoras, cortadoras CNC, extrusoras para PVC), la deducción inmediata puede bajar la utilidad fiscal del año de la compra de forma drástica — pero **sólo aplica al régimen general**, no a RESICO (que ya no tiene deducciones de ningún tipo). Antes de comprar equipo grande, calcular si conviene salir de RESICO ese ejercicio para capturar el estímulo.
+- **Hecho.** El Decreto de estímulos fiscales "Plan México", **DOF 21-ene-2025**, sustituye para quien lo elija los porcentajes máximos de depreciación anual (**arts. 34, 35 y 209 LISR**) por una **deducción inmediata** de un % del monto original de la inversión, en el ejercicio en que se realiza.
+- **Vigencia y porcentajes.** Activos fijos nuevos adquiridos entre la publicación y septiembre de 2030. Para **2025-2026**: **41% a 91%** según tipo de activo y uso industrial; 2027-2030: 35%-89%. **(no verificado el porcentaje exacto por tipo de activo para maquinaria de carpintería/herrería o vehículos de construcción — requiere el Anexo del Decreto por giro industrial).**
+- **Beneficio adicional.** Deducción extra de **25% del incremento** en gastos de capacitación o innovación, 2025-2030.
+- **Regla:** comprar maquinaria nueva (dobladoras, cortadoras CNC, extrusoras PVC) con este estímulo puede bajar drásticamente la utilidad fiscal del año — pero **sólo aplica al régimen general**, no a RESICO (sin deducciones). Antes de comprar equipo grande, calcular si conviene salir de RESICO ese ejercicio.
 
 Fuente: [Decreto DOF, vía SHCP](https://www.estimulosfiscales.hacienda.gob.mx/es/efiscales_mediante_decreto/Plan_Mexico); resumen verificado en [BDO México](https://www.bdomexico.com/es-mx/publicaciones/flash-fiscal/2025/decreto-sobre-deduccion-inmedita).
 
@@ -115,10 +115,10 @@ Cuatro requisitos acumulativos: (1) que el IVA corresponda a bienes, servicios o
 
 ### 4.3 Venta de combustibles: no hay tasa 0%, y el requisito de pago es más estricto
 
-**Hecho, corrigiendo otra idea común:** no existe una tasa de 0% de IVA para la venta de gasolina o diésel al público. La venta de combustibles **se grava a la tasa general del 16%**, sobre un precio que **ya incluye el IEPS** (Impuesto Especial sobre Producción y Servicios, cuota fija por litro: en 2026, $6.7001/litro para gasolina menor a 91 octanos, $5.6579/litro para 91 octanos o más, $7.3634/litro para diésel — cuotas sujetas a estímulos fiscales temporales que las reducen, incluso a cero, según acuerdos semanales de la SHCP). El IEPS lo paga Pemex o el importador en la cadena de producción/importación, no la estación de servicio directamente; la estación traslada el IVA sobre el precio final. **(no verificado en esta sesión el mecanismo exacto de causación del IEPS a nivel de estación de servicio franquiciada, p. ej. si hay retenciones específicas entre distribuidor y estación bajo contratos de franquicia Pemex/Exxon — requiere revisar la LIEPS y contratos de suministro, no hecho aquí).**
-- **Lo que sí es distinto para combustibles, y ya cubierto en §3.1:** el requisito de pago no en efectivo del **art. 27, fracción III LISR** aplica **sin importar el monto**, a diferencia de la regla general de $2,000. Es la protección fiscal más relevante, en la práctica, para quien compra o vende combustible: cualquier venta de combustible cobrada en efectivo **no es deducible para el comprador**, lo cual en la práctica empuja a las estaciones a exigir tarjeta, transferencia o monedero electrónico para ventas a empresas.
+**Hecho, corrigiendo otra idea común:** no existe tasa 0% de IVA para gasolina o diésel al público. La venta de combustibles **se grava al 16% general**, sobre un precio que **ya incluye el IEPS** (cuota fija por litro; en 2026: $6.7001 gasolina <91 octanos, $5.6579 ≥91 octanos, $7.3634 diésel — sujetas a estímulos temporales que las reducen, incluso a cero, por acuerdos semanales de la SHCP). El IEPS lo paga Pemex o el importador en la cadena, no la estación directamente; la estación traslada el IVA sobre el precio final. **(no verificado el mecanismo exacto de causación del IEPS a nivel de estación franquiciada Pemex/Exxon).**
+- **Lo distinto para combustibles (ya visto en §3.1):** el requisito de pago no en efectivo del **art. 27-III LISR** aplica **sin importar el monto** — cualquier compra de combustible en efectivo **no es deducible**, lo que empuja a las estaciones a exigir tarjeta, transferencia o monedero electrónico en ventas a empresas.
 
-Fuente cuotas IEPS 2026: [Pluxee, con cifras contrastadas contra cuota LIEPS vigente](https://www.pluxee.mx/blog/ieps-gasolina/) — **cuotas nominales (no verificadas línea por línea contra el texto del art. 2-A LIEPS en esta sesión; sí verificado que no existe tasa 0% de IVA para combustibles, contra el texto del art. 2-A LIVA, que no incluye a los combustibles automotrices en su lista taxativa de bienes y servicios a tasa 0%)**.
+Fuente cuotas IEPS 2026: [Pluxee](https://www.pluxee.mx/blog/ieps-gasolina/) — **cifras no verificadas línea por línea contra el art. 2-A LIEPS; sí verificado que el art. 2-A LIVA no incluye combustibles automotrices en su lista de tasa 0%**.
 
 ---
 
@@ -147,9 +147,9 @@ Todo lo que sigue es planeación dentro del marco legal vigente: usar figuras, t
 
 ### 5.4 Coeficiente de utilidad: por qué la persona moral no funciona como la persona física
 
-- **Hecho.** El coeficiente de utilidad (art. 14, fracción I LISR) **sólo aplica a personas morales** (Título II): se calcula como utilidad fiscal del último ejercicio de 12 meses declarado, dividida entre los ingresos nominales de ese mismo ejercicio, con 4 decimales (redondeo a diezmilésimos, art. 10 del Reglamento de la LISR). Los pagos provisionales del año en curso se estiman multiplicando ese coeficiente **histórico** por los ingresos nominales acumulados del periodo — **no** por la utilidad real del periodo.
-- **Contraste con persona física.** El art. 106 LISR usa la utilidad fiscal **real y acumulada** del ejercicio en curso (ingresos cobrados menos deducciones pagadas menos PTU pagada menos pérdidas pendientes), sin coeficiente estimado.
-- **Implicación para migrar a persona moral.** Si el negocio se mueve a persona moral, en el primer año sin coeficiente de utilidad histórico **no hay pagos provisionales** (porque no hay coeficiente que aplicar); a partir del segundo ejercicio, los pagos provisionales se calculan con el coeficiente del año anterior, que puede **sobreestimar** la utilidad real si el negocio es estacional (como suele serlo la construcción) y generar pagos provisionales altos en meses de poca actividad. Existe la posibilidad de solicitar una **reducción de pagos provisionales** ante el SAT cuando el coeficiente proyectado exceda claramente la utilidad real esperada (mecanismo del Reglamento de la LISR, vía autorización expresa) — **(no verificado el número exacto del artículo del Reglamento LISR que regula esta solicitud de disminución en esta sesión).**
+- **Hecho.** El coeficiente de utilidad (art. 14-I LISR) **sólo aplica a personas morales** (Título II): utilidad fiscal del último ejercicio de 12 meses declarado entre ingresos nominales de ese mismo ejercicio, a 4 decimales (art. 10 Reglamento LISR). Los pagos provisionales del año en curso multiplican ese coeficiente **histórico** por los ingresos nominales acumulados — **no** la utilidad real del periodo.
+- **Contraste con persona física.** El art. 106 LISR usa la utilidad fiscal **real y acumulada** del ejercicio en curso, sin coeficiente estimado.
+- **Implicación para migrar a persona moral.** En el primer año sin coeficiente histórico no hay pagos provisionales; desde el segundo, se calculan con el coeficiente del año anterior, que puede **sobreestimar** la utilidad real en negocios estacionales como la construcción. Existe la posibilidad de solicitar una **reducción de pagos provisionales** ante el SAT cuando el coeficiente proyectado exceda la utilidad real esperada — **(no verificado el artículo exacto del Reglamento LISR que regula esta solicitud).**
 
 ### 5.5 Persona física contra persona moral: cuándo migrar
 
@@ -195,36 +195,38 @@ Con base en el ejemplo numérico de §1.3:
 
 ## 8. Fuentes
 
-1. Ley del Impuesto sobre la Renta, texto vigente — Cámara de Diputados. https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf — consultado 25-sep-2026.
-2. Código Fiscal de la Federación, texto vigente y reforma del 7-nov-2025 (DOF, edición vespertina) — Cámara de Diputados. https://www.diputados.gob.mx/LeyesBiblio/ref/cff/CFF_ref62_07nov25.pdf — consultado 25-sep-2026.
-3. Ley del Impuesto al Valor Agregado — portal SAT, artículo 9. https://wwwmatnp.sat.gob.mx/articulo/46858/articulo-9 — consultado 25-sep-2026.
-4. Ley del Impuesto al Valor Agregado, art. 5 (acreditamiento) — portal SAT. https://www.sat.gob.mx/articulo/46936/articulo-5 — consultado 25-sep-2026.
-5. Reglamento de la Ley del IVA, art. 29 (construcción de casa habitación) — BADO, compilación normativa. https://bado.mx/articulos/1877/reglamento-de-la-ley-del-iva/articulo-29-requisito-para-considerar-enajenacion-de-bienes-por/ — consultado 25-sep-2026.
-6. LISR, art. 113-E (RESICO, tasas y límite de ingresos) — portal SAT. https://wwwmatnp.sat.gob.mx/articulo/58780/articulo-113-e — consultado 25-sep-2026.
-7. LISR, art. 113-I (salida del RESICO) — portal SAT. https://wwwmatnp.sat.gob.mx/articulo/59398/articulo-113-i — consultado 25-sep-2026.
-8. LISR, art. 113-J (retención del 1.25% a RESICO) — portal SAT. https://www.sat.gob.mx/articulo/59511/articulo-113-j — consultado 25-sep-2026.
-9. LISR, art. 27 (requisitos de deducciones) — portal SAT. https://wwwmat.sat.gob.mx/articulo/05481/articulo-27 — consultado 25-sep-2026.
-10. LISR, art. 106 (pagos provisionales, actividad empresarial y profesional) — portal SAT. https://wwwmat.sat.gob.mx/articulo/36658/articulo-106 — consultado 25-sep-2026.
-11. LISR, art. 14 (coeficiente de utilidad, personas morales) — portal SAT. https://wwwmat.sat.gob.mx/articulo/36326/articulo-14 — consultado 25-sep-2026.
-12. LISR, art. 151 (deducciones personales y PPR) — portal SAT. https://wwwmat.sat.gob.mx/articulo/82615/articulo-151 — consultado 25-sep-2026.
-13. LISR, art. 150 (declaración anual, obligación general) — portal SAT. https://wwwmat.sat.gob.mx/articulo/83662/articulo-150 — consultado 25-sep-2026.
-14. LISR, art. 93 y previsión social — resumen contrastado contra la ley, SDV Asesores (compendio comentado, usado para localizar fracciones; límites de UMA verificados por cálculo propio). https://sdv.com.mx/compendio/ley-isr/articulo-93/ — consultado 25-sep-2026.
-15. LISR, Título VII, Capítulo VII, arts. 194-195 (sociedades cooperativas de producción) y decreto de diferimiento DOF 26-mar-2015 — resumen contrastado, Contador Contado. https://contadorcontado.com/2019/03/08/isr-de-sociedades-cooperativas/ — consultado 25-sep-2026.
-16. CFF, art. 17-K (buzón tributario) — portal SAT. https://www.sat.gob.mx/articulo/20961/articulo-17-k — consultado 25-sep-2026.
-17. CFF, art. 28 (contabilidad electrónica) — Gobierno de México / SAT. https://www.gob.mx/sat/acciones-y-programas/articulo-28-del-codigo-fiscal-de-la-federacion-144607 — consultado 25-sep-2026.
-18. CFF, art. 29-A y reforma de la fracción IX sobre materialidad (vigente 1-ene-2026) — resumen técnico contrastado contra el decreto del DOF, ContadorMx. https://contadormx.com/reformas-cff-2026/ — consultado 25-sep-2026.
-19. CFF, art. 42 (facultades de comprobación) y art. 49 Bis (visita expedita de materialidad) — resumen técnico, sdv.com.mx y ContadorMx (citados arriba); texto de la reforma verificado contra el PDF oficial de diputados.gob.mx (fuente 2).
-20. CFF, art. 59, fracción III (presunción de ingresos por depósitos bancarios) — resumen contrastado, La Comunidad del Conocimiento. https://www.c2.org.mx/?p=6549 — consultado 25-sep-2026.
-21. CFF, art. 69-B (EFOS/EDOS) y listado de contribuyentes — Blog Aduanero, con referencia a publicación DOF 13-mar-2026. https://blog.cjaduanero.com/sat-publica-listado-definitivo-de-contribuyentes-con-operaciones-inexistentes-efos-conforme-al-articulo-69-b-del-cff-dof-13-de-marzo-de-2026/ — consultado 25-sep-2026.
-22. CFF, art. 113 Bis (delito de facturación falsa, reforma 7-nov-2025) — Facturando.mx, resumen técnico. https://www.facturando.mx/blog/index.php/2026/08/19/delito-por-facturas-falsas/ — consultado 25-sep-2026.
-23. LIVA, art. 1-A, fracción IV (retención del 6% en subcontratación especializada) — SAT, preguntas frecuentes oficiales. http://omawww.sat.gob.mx/documentossat/Documents/PreguntasFrecuentesRetencion_1-A_LIVA.pdf — consultado 25-sep-2026.
-24. LIVA, art. 32, fracción VIII (DIOT) y su vigencia 2026 — SAT, trámite oficial. https://www.sat.gob.mx/declaracion/74295/presenta-tu-declaracion-informativa-de-operaciones-con-terceros-(diot)- — consultado 25-sep-2026.
-25. Ley Federal del Trabajo, art. 15-A y reforma de subcontratación (DOF 23-abr-2021) — Secretaría del Trabajo y Previsión Social. https://www.gob.mx/stps/articulos/reforma-en-materia-de-subcontratacion?idiom=es — consultado 25-sep-2026.
-26. Decreto por el que se otorgan estímulos fiscales "Plan México" (DOF 21-ene-2025, deducción inmediata de inversiones) — SHCP, estímulos fiscales. https://www.estimulosfiscales.hacienda.gob.mx/es/efiscales_mediante_decreto/Plan_Mexico — consultado 25-sep-2026.
-27. Anexo 8 de la RMF 2026 (DOF 28-dic-2025), tarifas de los arts. 96 y 152 LISR — ElConta.mx, tabla transcrita y usada para los cálculos de §1.3. https://elconta.mx/tablas-isr-sat-ejercicio-2026-anexo-8-rmf/ — consultado 25-sep-2026.
-28. Valor de la UMA 2026 — INEGI / DOF 9-ene-2026. https://dof.gob.mx/nota_detalle.php?codigo=5778072&fecha=09%252F01%252F2026 — consultado 25-sep-2026.
-29. Cuotas de IEPS a gasolina y diésel 2026 — Pluxee, blog técnico (cifras no verificadas línea por línea contra el art. 2-A LIEPS en esta sesión). https://www.pluxee.mx/blog/ieps-gasolina/ — consultado 25-sep-2026.
-30. CFF, art. 5-A (cláusula general antiabuso / razón de negocios) — LSI Consultores, resumen técnico usado como advertencia general sobre planeación agresiva (no citado en el cuerpo de un artículo específico de este capítulo, pero relevante como límite a toda estrategia de §5). https://www.lsiconsultores.com/razon-de-negocios-articulo-5-a-del-cff/ — consultado 25-sep-2026.
+Todas consultadas el 25-sep-2026.
+
+1. LISR, texto vigente — Cámara de Diputados. https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf
+2. CFF, texto vigente y reforma 7-nov-2025 (DOF vespertina) — Cámara de Diputados. https://www.diputados.gob.mx/LeyesBiblio/ref/cff/CFF_ref62_07nov25.pdf
+3. LIVA, art. 9 — portal SAT. https://wwwmatnp.sat.gob.mx/articulo/46858/articulo-9
+4. LIVA, art. 5 (acreditamiento) — portal SAT. https://www.sat.gob.mx/articulo/46936/articulo-5
+5. Reglamento LIVA, art. 29 (construcción de casa habitación) — BADO. https://bado.mx/articulos/1877/reglamento-de-la-ley-del-iva/articulo-29-requisito-para-considerar-enajenacion-de-bienes-por/
+6. LISR, art. 113-E (RESICO, tasas y límite) — portal SAT. https://wwwmatnp.sat.gob.mx/articulo/58780/articulo-113-e
+7. LISR, art. 113-I (salida del RESICO) — portal SAT. https://wwwmatnp.sat.gob.mx/articulo/59398/articulo-113-i
+8. LISR, art. 113-J (retención 1.25%) — portal SAT. https://www.sat.gob.mx/articulo/59511/articulo-113-j
+9. LISR, art. 27 (requisitos de deducciones) — portal SAT. https://wwwmat.sat.gob.mx/articulo/05481/articulo-27
+10. LISR, art. 106 (pagos provisionales AE y profesionales) — portal SAT. https://wwwmat.sat.gob.mx/articulo/36658/articulo-106
+11. LISR, art. 14 (coeficiente de utilidad, PM) — portal SAT. https://wwwmat.sat.gob.mx/articulo/36326/articulo-14
+12. LISR, art. 151 (deducciones personales y PPR) — portal SAT. https://wwwmat.sat.gob.mx/articulo/82615/articulo-151
+13. LISR, art. 150 (declaración anual) — portal SAT. https://wwwmat.sat.gob.mx/articulo/83662/articulo-150
+14. LISR, art. 93 y previsión social — SDV Asesores (compendio comentado; límites UMA por cálculo propio). https://sdv.com.mx/compendio/ley-isr/articulo-93/
+15. LISR, arts. 194-195 y decreto diferimiento DOF 26-mar-2015 — Contador Contado. https://contadorcontado.com/2019/03/08/isr-de-sociedades-cooperativas/
+16. CFF, art. 17-K (buzón tributario) — portal SAT. https://www.sat.gob.mx/articulo/20961/articulo-17-k
+17. CFF, art. 28 (contabilidad electrónica) — SAT/gob.mx. https://www.gob.mx/sat/acciones-y-programas/articulo-28-del-codigo-fiscal-de-la-federacion-144607
+18. CFF, art. 29-A, fracción IX (materialidad, vigente 1-ene-2026) — ContadorMx. https://contadormx.com/reformas-cff-2026/
+19. CFF, art. 42 y art. 49 Bis (facultades y visita expedita) — texto verificado contra fuente 2; resumen en sdv.com.mx y ContadorMx (fuente 18).
+20. CFF, art. 59-III (presunción por depósitos bancarios) — La Comunidad del Conocimiento. https://www.c2.org.mx/?p=6549
+21. CFF, art. 69-B (EFOS/EDOS) y listado DOF 13-mar-2026 — Blog Aduanero. https://blog.cjaduanero.com/sat-publica-listado-definitivo-de-contribuyentes-con-operaciones-inexistentes-efos-conforme-al-articulo-69-b-del-cff-dof-13-de-marzo-de-2026/
+22. CFF, art. 113 Bis (delito de facturación falsa, reforma 7-nov-2025) — Facturando.mx. https://www.facturando.mx/blog/index.php/2026/08/19/delito-por-facturas-falsas/
+23. LIVA, art. 1-A-IV (retención 6% subcontratación) — SAT, preguntas frecuentes oficiales. http://omawww.sat.gob.mx/documentossat/Documents/PreguntasFrecuentesRetencion_1-A_LIVA.pdf
+24. LIVA, art. 32-VIII (DIOT, vigencia 2026) — SAT, trámite oficial. https://www.sat.gob.mx/declaracion/74295/presenta-tu-declaracion-informativa-de-operaciones-con-terceros-(diot)-
+25. LFT, art. 15-A y reforma de subcontratación (DOF 23-abr-2021) — STPS. https://www.gob.mx/stps/articulos/reforma-en-materia-de-subcontratacion?idiom=es
+26. Decreto de estímulos "Plan México" (DOF 21-ene-2025, deducción inmediata) — SHCP. https://www.estimulosfiscales.hacienda.gob.mx/es/efiscales_mediante_decreto/Plan_Mexico
+27. Anexo 8 RMF 2026 (DOF 28-dic-2025), tarifas arts. 96 y 152 LISR, usadas en §1.3 — ElConta.mx. https://elconta.mx/tablas-isr-sat-ejercicio-2026-anexo-8-rmf/
+28. Valor UMA 2026 — INEGI/DOF 9-ene-2026. https://dof.gob.mx/nota_detalle.php?codigo=5778072&fecha=09%252F01%252F2026
+29. Cuotas IEPS gasolina/diésel 2026 (no verificadas línea por línea contra el art. 2-A LIEPS) — Pluxee. https://www.pluxee.mx/blog/ieps-gasolina/
+30. CFF, art. 5-A (razón de negocios/antiabuso), límite general a la planeación de §5 — LSI Consultores. https://www.lsiconsultores.com/razon-de-negocios-articulo-5-a-del-cff/
 
 ---
 
