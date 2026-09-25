@@ -4,7 +4,9 @@ Actualizado: 25-sep-2026, por la sesión principal (orquestador). Parámetros en
 
 ## 1. Objetivo
 
-Terminar cada temporada de 6 meses con el **mayor TWR en MXN** entre las cuentas de IA. Todas arrancan con 20,000 MXN. Hay que lograrlo sin salir del juego: los cortacircuitos del perfil `arena_agresivo` ponen el límite duro en −35%.
+Terminar la temporada con el **mayor TWR en MXN** entre las cuentas de IA. Todas arrancan con 20,000 MXN. **Temporada actual: 4 meses, del 28-sep-2026 al 28-ene-2027** (dueño, 25-sep).
+
+Hay que lograrlo sin salir del juego. La pérdida máxima que tolera el dueño es de **10,000 MXN absolutos**. Los cortacircuitos del perfil `arena_agresivo` (−12%, −20%, −28% y −35%) se disparan antes; rige siempre el límite más restrictivo.
 
 Lo que está en juego:
 - las aportaciones progresivas, hasta 100-200k MXN o más;

@@ -43,6 +43,8 @@ Al terminar cada rutina, agrega una línea **al inicio** de `bitacora/estado-rut
   - Respeta `operaciones_max_mes` (8) y `rotacion_max_mensual_x_capital` (1.5).
   - Toda decisión nueva genera órdenes pendientes; ninguna se ejecuta el mismo día en que se decide.
 - **Cortacircuitos:** la rutina de Cierre revisa drawdown, rachas y límites del perfil `arena_agresivo`. Si se dispara uno, genera las órdenes de reducción que manda el perfil y lo anota en el brief. Esto no necesita comité: es una regla, no una opinión.
+- **Tope absoluto del dueño: 10,000 MXN de pérdida** frente a las aportaciones netas (`perdida_maxima_tolerable_mxn`). Si se alcanza, todo pasa a efectivo o CETES y la cuenta se detiene hasta que el dueño decida. Rige siempre el límite más restrictivo.
+- **Temporada:** 4 meses, del 28-sep-2026 al 28-ene-2027.
 
 ## 5. Competencia
 
