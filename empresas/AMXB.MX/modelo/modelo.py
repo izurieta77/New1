@@ -459,6 +459,17 @@ def _en_visor(R: dict, per: str, bloque: str, k: str, v):
         if k in mapa and anio in R[nombre] and mapa[k] in R[nombre][anio]:
             return int(R[nombre][anio][mapa[k]]) == int(v)
         return None
+    notas = {"ppe": "R83_ppe_total", "derecho_uso": "R109_derecho_uso", "deuda": "R136_cambios_financiamiento_deuda"}
+    if bloque in notas:
+        tab = R[notas[bloque]].get(anio)
+        if tab and k in tab:
+            return int(tab[k]) == int(v)
+        return None
+    if bloque == "emisor" and anio in R["R3_resultados"]:
+        r3 = R["R3_resultados"][anio]
+        return round((r3["Operating income"] + r3["Depreciation and amortization"]) / 1000) == int(v)
+    if bloque == "capital" and k == "utilidad_neta_total" and anio in R["R3_resultados"]:
+        return int(R["R3_resultados"][anio]["Net profit for the year"]) == int(v)
     if bloque == "capital":
         cap = R["R4_capital_saldos_finales"]
         eq = {"capital_total_final": (anio, "Total equity"), "ure_final_columna": (anio, "Retained earnings (column)"),

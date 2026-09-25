@@ -12539,13 +12539,13 @@
       "nota": "companyfacts solo trae hechos ifrs-full no dimensionales: las columnas del estado de variaciones, las etiquetas propias del emisor y varios renglones de notas no aparecen"
     },
     "D_visor_R": {
-      "comparadas": 309,
-      "ok": 309,
+      "comparadas": 347,
+      "ok": 347,
       "diferencias": []
     },
     "cobertura_independiente": {
       "cifras": 463,
-      "con_C_o_D": 388,
+      "con_C_o_D": 422,
       "solo_pdf_e_identidades": [
         "FY2023.balance.inversiones_capital_vr_ori_y_otras_cp",
         "FY2023.balance.utilidades_retenidas_anos_anteriores",
@@ -12566,7 +12566,6 @@
         "FY2023.deuda.inicial",
         "FY2023.deuda.flujo_de_efectivo",
         "FY2023.deuda.cambiario_y_otros",
-        "FY2023.emisor.ebitda",
         "FY2024.capital.dividendos_decretados_controladora",
         "FY2024.capital.dividendos_decretados_no_controladora",
         "FY2024.capital.recompra_capital_social",
@@ -12581,10 +12580,6 @@
         "FY2024.derecho_uso.pasivo_combinacion",
         "FY2024.derecho_uso.pasivo_modificaciones",
         "FY2024.derecho_uso.pasivo_conversion",
-        "FY2024.deuda.flujo_de_efectivo",
-        "FY2024.deuda.cambiario_y_otros",
-        "FY2024.emisor.ebitda",
-        "FY2025.capital.utilidad_neta_total",
         "FY2025.capital.dividendos_decretados_controladora",
         "FY2025.capital.dividendos_decretados_no_controladora",
         "FY2025.capital.recompra_capital_social",
@@ -12592,36 +12587,7 @@
         "FY2025.capital.traspaso_superavit_revaluacion_a_ure",
         "FY2025.capital.perdida_transaccion_bajo_control_comun_ure",
         "FY2025.capital.otras_adquisiciones_no_controladora_ure",
-        "FY2025.capital.otras_adquisiciones_no_controladora_nci",
-        "FY2025.ppe.inicial",
-        "FY2025.ppe.adiciones",
-        "FY2025.ppe.retiros",
-        "FY2025.ppe.combinaciones_de_negocios",
-        "FY2025.ppe.revaluacion",
-        "FY2025.ppe.transferencias",
-        "FY2025.ppe.conversion_e_hiperinflacion",
-        "FY2025.ppe.depreciacion",
-        "FY2025.ppe.final",
-        "FY2025.derecho_uso.activo_inicial",
-        "FY2025.derecho_uso.activo_altas_y_bajas",
-        "FY2025.derecho_uso.activo_combinacion",
-        "FY2025.derecho_uso.activo_modificaciones",
-        "FY2025.derecho_uso.activo_depreciacion",
-        "FY2025.derecho_uso.activo_conversion",
-        "FY2025.derecho_uso.activo_final",
-        "FY2025.derecho_uso.pasivo_inicial",
-        "FY2025.derecho_uso.pasivo_altas_y_bajas",
-        "FY2025.derecho_uso.pasivo_combinacion",
-        "FY2025.derecho_uso.pasivo_modificaciones",
-        "FY2025.derecho_uso.pasivo_intereses",
-        "FY2025.derecho_uso.pasivo_pagos",
-        "FY2025.derecho_uso.pasivo_conversion",
-        "FY2025.derecho_uso.pasivo_final",
-        "FY2025.deuda.inicial",
-        "FY2025.deuda.flujo_de_efectivo",
-        "FY2025.deuda.cambiario_y_otros",
-        "FY2025.deuda.final",
-        "FY2025.emisor.ebitda"
+        "FY2025.capital.otras_adquisiciones_no_controladora_nci"
       ]
     },
     "detalle": [
@@ -13559,7 +13525,7 @@
         "pagina": "F1 p. PDF [101]",
         "B_texto": true,
         "C_xbrl": true,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2023.capital.dividendos_decretados_controladora",
@@ -13847,7 +13813,7 @@
         "pagina": "F5 p. PDF [8]",
         "B_texto": true,
         "C_xbrl": false,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2024.resultados.ingresos_servicios",
@@ -14791,7 +14757,7 @@
         "pagina": "F1 p. PDF [101]",
         "B_texto": true,
         "C_xbrl": true,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2024.capital.dividendos_decretados_controladora",
@@ -15063,7 +15029,7 @@
         "pagina": "F1 p. PDF [169]",
         "B_texto": true,
         "C_xbrl": true,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2024.deuda.flujo_de_efectivo",
@@ -15071,7 +15037,7 @@
         "pagina": "F1 p. PDF [169]",
         "B_texto": true,
         "C_xbrl": false,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2024.deuda.cambiario_y_otros",
@@ -15079,7 +15045,7 @@
         "pagina": "F1 p. PDF [169]",
         "B_texto": true,
         "C_xbrl": false,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2024.deuda.final",
@@ -15087,7 +15053,7 @@
         "pagina": "F1 p. PDF [169]",
         "B_texto": true,
         "C_xbrl": true,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2024.emisor.ebitda",
@@ -15095,7 +15061,7 @@
         "pagina": "F4 p. PDF [8]",
         "B_texto": true,
         "C_xbrl": false,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.resultados.ingresos_servicios",
@@ -16015,7 +15981,7 @@
         "pagina": "F1 p. PDF [101]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.capital.dividendos_decretados_controladora",
@@ -16103,7 +16069,7 @@
         "pagina": "F1 p. PDF [137]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.ppe.adiciones",
@@ -16111,7 +16077,7 @@
         "pagina": "F1 p. PDF [137]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.ppe.retiros",
@@ -16119,7 +16085,7 @@
         "pagina": "F1 p. PDF [137]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.ppe.combinaciones_de_negocios",
@@ -16127,7 +16093,7 @@
         "pagina": "F1 p. PDF [137]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.ppe.revaluacion",
@@ -16135,7 +16101,7 @@
         "pagina": "F1 p. PDF [137]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.ppe.transferencias",
@@ -16143,7 +16109,7 @@
         "pagina": "F1 p. PDF [137]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.ppe.conversion_e_hiperinflacion",
@@ -16151,7 +16117,7 @@
         "pagina": "F1 p. PDF [137]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.ppe.depreciacion",
@@ -16159,7 +16125,7 @@
         "pagina": "F1 p. PDF [137]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.ppe.final",
@@ -16167,7 +16133,7 @@
         "pagina": "F1 p. PDF [137]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.activo_inicial",
@@ -16175,7 +16141,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.activo_altas_y_bajas",
@@ -16183,7 +16149,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.activo_combinacion",
@@ -16191,7 +16157,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.activo_modificaciones",
@@ -16199,7 +16165,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.activo_depreciacion",
@@ -16207,7 +16173,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.activo_conversion",
@@ -16215,7 +16181,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.activo_final",
@@ -16223,7 +16189,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.pasivo_inicial",
@@ -16231,7 +16197,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.pasivo_altas_y_bajas",
@@ -16239,7 +16205,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.pasivo_combinacion",
@@ -16247,7 +16213,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.pasivo_modificaciones",
@@ -16255,7 +16221,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.pasivo_intereses",
@@ -16263,7 +16229,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.pasivo_pagos",
@@ -16271,7 +16237,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.pasivo_conversion",
@@ -16279,7 +16245,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.derecho_uso.pasivo_final",
@@ -16287,7 +16253,7 @@
         "pagina": "F1 p. PDF [156]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.deuda.inicial",
@@ -16295,7 +16261,7 @@
         "pagina": "F1 p. PDF [169]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.deuda.flujo_de_efectivo",
@@ -16303,7 +16269,7 @@
         "pagina": "F1 p. PDF [169]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.deuda.cambiario_y_otros",
@@ -16311,7 +16277,7 @@
         "pagina": "F1 p. PDF [169]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.deuda.final",
@@ -16319,7 +16285,7 @@
         "pagina": "F1 p. PDF [169]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       },
       {
         "cifra": "FY2025.emisor.ebitda",
@@ -16327,7 +16293,7 @@
         "pagina": "F4 p. PDF [8]",
         "B_texto": true,
         "C_xbrl": null,
-        "D_visor": null
+        "D_visor": true
       }
     ]
   },
