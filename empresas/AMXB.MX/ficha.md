@@ -1,7 +1,7 @@
 # América Móvil (AMXB.MX) — ficha al 2026-09-25
 
 > BMV (AMX B; ADS AMX en NYSE, 1 ADS = 20 acciones) · Servicios de comunicación / telecomunicaciones móviles y fijas · Moneda de reporte: MXN (IFRS) · Disponible en SIC: no aplica (emisora mexicana; cotiza en BMV) · Estado de conocimiento: Documentado
-> Precio: Ps 19.60 (24-sep-2026); 52 semanas 17.56-23.92; +3.9% a 1 año y −14.5% a 3 meses [13]. Fase 0: investigación, no recomendación.
+> Precio: Ps 19.60 (24-sep-2026); 52 semanas 17.56-23.92; +3.9% a 1 año y −14.8% a 3 meses (23.00 el 24-jun) [13]. Fase 0: investigación, no recomendación.
 
 ## 1. Negocio y segmentos
 Mayor operador de telecomunicaciones de Latinoamérica; a jun-26 tenía 414.5 M de accesos: 334.3 M móviles (149.8 M pospago) y 80.2 M fijos (37.8 M de banda ancha) [1]. Ingresos 2025: Ps 943,638 M [3]. Ingresos externos por segmento en 2025 [5]: México 37.4% (Telcel 260,861 + Telmex 91,809), Brasil 18.8%, Europa (A1 Telekom, 61%) 12.8%, Colombia 8.3%, región andina 6.1%, Centroamérica 6.0%, Caribe 3.9%, Argentina 3.9% y resto del Cono Sur 2.9%. México genera 57% de la utilidad de operación (108,395 de 191,404 M; cálculo propio [5][3]).
@@ -54,8 +54,8 @@ La UN de 2021 incluye partidas extraordinarias (venta de Tracfone; no verificado
 10. **Asignación de capital.** Dividendo de Ps 0.54 en dos pagos de 0.27 (15-jul y 11-nov-2026) [11]. Recompras de Ps 11,944 M en 2025 y 4,568 M en 1S26 [7][1]. Compra de WOW Perú (anunciada el 21-jul) [1]. Capex 2025 de 130,817 M (13.9% de los ingresos) [3].
 
 ## 5. Cadena causal
-**A. Registro obligatorio de líneas.** Al 25-jun sólo 39.1% del universo estaba registrado (~98 M de líneas pendientes). Las suspensiones van por último dígito del 31-ago al 31-dic-2026 [15]. Telcel tiene 84.5 M líneas, en su mayoría de prepago → se esperan bajas netas en 3T26-4T26. *Inferencia:* el ingreso cae menos que las líneas porque muchas son inactivas → ingreso por servicio móvil en México → México es 57% del EBIT → precio −14.5% en 3 meses. *Inferencia:* el precio ya descuenta una parte.
-**B. Peso y cambiario.** ~73% de la deuda no está en MXN. El USD/MXN pasó de 17.49 (30-jun) a 17.71 (25-sep) [13]. En 2T26 la apreciación del peso dio una ganancia cambiaria de Ps 8,275 M, 34% de la UN [1]. *Inferencia:* en 3T26 el signo se invierte y la UPA baja contra el 2T26. En la conversión, el USD y el EUR restan; el COP, +16% a/a contra el MXN, suma (cálculo propio [13]).
+**A. Registro obligatorio de líneas.** Al 25-jun sólo 39.1% del universo estaba registrado (~98 M de líneas pendientes). Las suspensiones van por último dígito del 31-ago al 31-dic-2026 [15]; el reporte 2T26 de AMX dice del 15-ago al 31-dic [1]. La suspensión se revierte al registrar la línea [1], así que suspender una línea no equivale a darla de baja. Solo los plazos del 31-ago y el 15-sep suspenden dentro del 3T; los del 30-sep suspenden en octubre, porque hay 72 h de margen [15]. Telcel tiene 84.5 M líneas, en su mayoría de prepago → se esperan bajas netas en 3T26-4T26. *Inferencia:* el ingreso cae menos que las líneas porque muchas son inactivas → ingreso por servicio móvil en México → México es 57% del EBIT → precio −14.8% en 3 meses. *Inferencia:* el precio ya descuenta una parte.
+**B. Peso y cambiario.** ~73% de la deuda no está en MXN. El USD/MXN pasó de 17.49 (30-jun) a 17.68 (25-sep, intradía) [13]. En 2T26 la apreciación del peso dio una ganancia cambiaria de Ps 8,275 M, 34% de la UN [1]. *Inferencia:* en 3T26 el signo se invierte y la UPA baja contra el 2T26. En la conversión, el USD y el EUR restan; el COP, +16% a/a contra el MXN, suma (cálculo propio [13]).
 **C. Espectro.** La CRT prepara licitaciones 5G para 2S26 y la CNA decidirá si Telcel puede participar [14] (detalles no verificados). El espectro costó ~7% de los ingresos móviles de Telcel contra 20.4% para AT&T (2024) [12] → capex y derechos → FCF.
 
 ## 6. Qué descuenta el precio
@@ -63,16 +63,16 @@ Capitalización ≈ Ps 1,178 mil M. P/U de 12 meses: **13.2x** (UPA 1.49). VE/EB
 **DCF inverso:** FCF de 12 meses de Ps 104.9 mil M (rendimiento de 8.9%); normalizado, 85 mil M (7.2%). Con costo de capital de 11.5%, el crecimiento perpetuo implícito es 2.4-4.0%; con 12.5%, 3.3-4.9% (cálculo propio). *Inferencia:* el precio descuenta un crecimiento nominal parecido a la inflación.
 
 ## 7. Escenarios a 12 meses
-- **Bajista (25%)**: bajas masivas por el registro de líneas, peso débil con pérdidas cambiarias, competencia en Brasil y CRT/CNA más duras. UPA 2027 ≈ 1.2-1.3 (pronóstico).
+- **Bajista (25%)**: bajas masivas por el registro de líneas, peso débil con pérdidas cambiarias, competencia en Brasil y CRT/CNA más duras. UPA 2027 ≈ 1.2-1.3 (pronóstico). *Nota del verificador: este escenario se mide en UPA 2027 y el base en UPA 2026, así que no son comparables directamente.*
 - **Base (55%)**: servicios +5% a tipo de cambio constante, margen EBITDA ~40% y 1.2-1.3x de apalancamiento. UPA 2026 ≈ 1.45-1.55.
 - **Alcista (20%)**: espectro barato, menos asimetría regulatoria, precios reparados en Brasil y recompra ejecutada.
 - **Qué cambiaría el escenario:** bajas de Telcel mayores a 2 M líneas en 3T26-4T26, las reglas de la licitación 5G y un USD/MXN arriba de 19.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha estimada: 20-oct-2026** (Investing [8]; MarketBeat: 13-oct [10]; 3T25 se reportó el 14/15-oct-2025). No confirmada.
-- **Ingresos:** punto Ps 243,000 M; intervalo de 80%: 238,000-248,000. Consenso: **243,980** (Investing, 25-sep-2026) [8]. Supuesto: servicios +5% a tipo de cambio constante. El efecto cambiario contra 2T26 es casi neutro: BRL −2.5%, EUR −1.9%, COP +12.3% y USD −0.9% contra el MXN (cálculo propio [13]).
-- **UPA:** punto Ps 0.33; intervalo de 80%: 0.25-0.41. Consenso: **0.344** (Investing) [8]. Supuestos: EBIT ~52 mil M, intereses netos ~11.8 mil M, otros financieros ~6.5 mil M, cambiario entre −3 y +1 mil M y tasa efectiva ~36%.
-- **Binarios:** (1) ingresos mayores a Ps 243,980 M: **p = 0.45**; AMX superó el consenso de ingresos en los últimos 6 trimestres [8]. (2) Líneas de Telcel al 30-sep menores a 84.53 M (pérdida neta trimestral): **p = 0.60**.
+- **Fecha probable: 13-oct-2026.** El calendario de Yahoo la marca como no estimada para el ADS [17] y MarketBeat da la misma fecha [10]. Investing dice 20-oct [8]. El 3T25 se publicó el martes 14-oct-2025, con llamada el 15-oct [2]; el 13-oct-2026 también es martes. El sitio de relación con inversionistas no se pudo consultar (403). No confirmada en fuente primaria. *(Corregido por el verificador: antes decía 20-oct.)*
+- **Ingresos:** punto Ps 243,000 M; intervalo de 80%: 238,000-248,000. Consenso: **243,980** (Investing, 25-sep-2026) [8]; Yahoo, 244,756 (5 analistas, 25-sep) [17]. Supuesto: servicios +5% a tipo de cambio constante. El efecto cambiario contra 2T26 es casi neutro: BRL −2.5%, EUR −1.9%, COP +12.3% y USD −0.9% contra el MXN (cálculo propio [13]).
+- **UPA:** punto Ps 0.33; intervalo de 80%: 0.25-0.41. Consenso: **0.344** (Investing) [8]. Otras fuentes al 25-sep [17]: AMXB.MX 0.38 (2 analistas; rango 0.36-0.40) y ADS US$0.475 (4 analistas; rango 0.414-0.54), que equivale a ≈ Ps 0.42 por acción a 17.68 (cálculo propio). El punto propio (0.33) queda debajo de todas las fuentes. Supuestos: EBIT ~52 mil M, intereses netos ~11.8 mil M, otros financieros ~6.5 mil M, cambiario entre −3 y +1 mil M y tasa efectiva ~36%.
+- **Binarios:** (1) ingresos mayores a Ps 243,980 M: **p = 0.45**. AMX superó el consenso de ingresos de Investing en los últimos 7 trimestres (4T24-2T26), con sorpresas de +0.1% a +2.8% y promedio de +1.2% [8]. *Nota del verificador:* el 0.45 va contra esa tasa base; se mantiene porque el modelo propio (+0.8% t/t) es coherente con el efecto cambiario verificado, pero es la apuesta más expuesta de la ficha. (2) Líneas de Telcel al 30-sep menores a 84.53 M (pérdida neta trimestral): **p = 0.50** *(corregido por el verificador; antes 0.60)*. La suspensión es reversible [1] y dentro del 3T solo caen dos cohortes. Además, en el 3T25 Telcel ganó 235 mil líneas (84,110 → 84,345) [2].
 
 ## 9. Catalizadores y riesgos
 **Catalizadores:** 28-29 sep, T-MEC; 30-sep/15-oct/31-oct, suspensiones de líneas; ~20-oct, reporte 3T26; 5-nov, Banxico; 11-nov, dividendo; 2S26, licitación 5G; 31-dic, cierre del registro. **Riesgos:** peso, con un diferencial Banxico-Fed de 250 pb [16]; inflación por petróleo (guerra de Irán) [1][16]; Argentina (IAS 29); regulación; Brasil.
@@ -94,3 +94,4 @@ Capitalización ≈ Ps 1,178 mil M. P/U de 12 meses: **13.2x** (UPA 1.49). VE/EB
 14. Yahoo Noticias, CRT y licitaciones 5G (resumen, no verificado a detalle): https://es-us.noticias.yahoo.com/crt-licitaciones-espectro-5g-suerte-160000807.html
 15. Expansión, calendario del registro de líneas (27-ago-2026): https://expansion.mx/empresas/2026/08/27/calendario-registro-lineas-fecha-limite
 16. `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.8-4.11 y `conocimiento/23-geopolitica-y-riesgo-politico-global.md` §4.3 (25-sep-2026).
+17. Yahoo Finance quoteSummary (calendarEvents y earningsTrend) de AMX y AMXB.MX (25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMX?modules=calendarEvents,earningsTrend

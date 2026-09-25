@@ -10,7 +10,7 @@ Ventas y otros ingresos 2025: **US$67,589 M** [3]. Por segmento (externas, US$ M
 - Ventas **US$20,543 M** (+24%) contra consenso US$19.24-19.34 mil M (Investing.com/MarketBeat) [2][9]: +6-7%. Volumen +US$3.1 mil M y precio +US$595 M [1].
 - Margen operativo 20.9% (ajustado **21.9%** contra 17.6%) [1]. Incluye **US$392 M de recuperaciones esperadas de aranceles IEEPA** (la Corte Suprema anuló IEEPA el 20-feb-2026 [11]); la empresa no espera más en el 2S26 [2].
 - UPA GAAP US$7.77; **UPA ajustada US$8.17 contra consenso US$6.19-6.22**: +32% [2][9].
-- Guía [2][4]: ventas 2026 con crecimiento "de mediados a altos de un dígito doble" (antes menor); margen operativo ajustado cerca del **piso del rango meta de 18-22%**, sin las recuperaciones IEEPA; costo neto de aranceles ~US$2.2 mil M (antes 2.5); para el 3T26, "fuerte crecimiento de ventas" en los tres segmentos y margen ajustado mayor al del 3T25; FCF de maquinaria en la mitad alta de US$6-15 mil M; capex ~US$3.5 mil M.
+- Guía [2][4][7]: ventas 2026 con crecimiento "mid-to-high teens" (≈15-19%; antes menor); margen operativo ajustado cerca del **piso del rango meta de 18-22%**, sin las recuperaciones IEEPA; costo neto de aranceles ~US$2.2 mil M (antes 2.5); para el 3T26, "fuerte crecimiento de ventas" en los tres segmentos, margen ajustado mayor al del 3T25 y **costos arancelarios de ~US$600 M, similares a los del 3T25** (10-Q [7]); FCF de maquinaria en la mitad alta de US$6-15 mil M; capex ~US$3.5 mil M.
 - Tres datos operativos: backlog récord de **US$72.1 mil M** (+92% a/a; 59% entregable en 12 meses) [4]; ventas de generación eléctrica a usuarios +72% [4]; Norteamérica +37% y Asia/Pacífico +4% [1].
 
 ## 3. Tabla financiera
@@ -67,9 +67,9 @@ P/U GAAP de 12 meses **34.6x** (UPA 23.24); sobre consenso 2026 (US$27.19) **29.
 - **Dato que cambia el escenario:** pedidos y backlog del 3T26 (una caída secuencial del backlog apunta al bajista); guías de capex de los hiperescaladores en octubre; margen de P&E.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha estimada: 29-oct-2026** (Yahoo la marca como confirmada; MarketBeat estima el 4-nov; no encontré el aviso de la emisora; el 3T25 se reportó el 29-oct-2025) [9][14].
-- **Ventas y otros ingresos 3T26:** punto **US$20,800 M**; intervalo de 80%: **19,900-21,800**. Consenso **US$20,399 M** (Yahoo, 12 analistas, rango 19,956-21,043) [9]. Supuestos: +18% a/a (2T26 +24%; guía anual de +15-19%), precio positivo pero menor que en el 2T26.
-- **UPA ajustada 3T26:** punto **US$7.05**; intervalo de 80%: **6.35-7.85**. Consenso **US$6.92** (Yahoo, 21 analistas; MarketBeat 6.57) [9]. Supuestos: margen ajustado ~19% (mayor que el 17.5% del 3T25 [6], sin IEEPA), utilidad neta ≈ 82% de la operativa, ~459 M acciones.
+- **Fecha estimada: 29-oct-2026** (no confirmada por la emisora: su canal de comunicados al 25-sep no tiene aviso del 3T26, y el del 2T26 salió el 21-jul para el 4-ago. Yahoo la marca como confirmada. MarketBeat y Nasdaq/Zacks estiman el 4-nov, pero MarketBeat registra el 3T25 el 3-nov-2025 cuando el 8-K lo fecha el 29-oct-2025 [6][9][14]).
+- **Ventas y otros ingresos 3T26:** punto **US$20,800 M**; intervalo de 80%: **19,800-22,200** (ampliado en la verificación; antes 19,900-21,800). Consenso **US$20,399 M** (Yahoo, 12 analistas, rango 19,956-21,043) [9]. Supuestos: +18% a/a (2T26 +24%; guía anual de +15-19%), precio positivo pero menor que en el 2T26.
+- **UPA ajustada 3T26:** punto **US$7.05**; intervalo de 80%: **6.35-8.30** (p90 ampliado en la verificación; antes 7.85). Consenso **US$6.92** (Yahoo, 21 analistas; MarketBeat 6.57) [9]. Supuestos: margen ajustado ~19% (mayor que el 17.5% del 3T25 [6], sin IEEPA), utilidad neta ≈ 82% de la operativa (83.7% en el 2T26, con ayuda de otros ingresos por US$398 M [1]; tasa efectiva de 23%), ~459 M acciones.
 - **Binarios:** (1) ventas 3T26 > US$20,399 M: **p = 0.68**; (2) UPA ajustada 3T26 > US$6.92: **p = 0.58**.
 
 ## 9. Catalizadores y riesgos
@@ -82,7 +82,7 @@ P/U GAAP de 12 meses **34.6x** (UPA 23.24); sobre consenso 2026 (US$27.19) **29.
 4. Investing.com, láminas del 2T26 (backlog, rango meta, márgenes de segmento): https://www.investing.com/news/company-news/caterpillar-q2-2026-slides-record-205b-sales-backlog-soars-92-93CH-4835041
 5. SEC companyfacts CIK 18230 vía `herramientas/dossier.py` y `edgar.py` (empresas/CAT/dossier-2026-09-25.md; consultado 25-sep-2026): https://data.sec.gov/api/xbrl/companyfacts/CIK0000018230.json
 6. CAT, resultados del 3T25 (29-oct-2025; margen ajustado 17.5%, UPA ajustada 4.95): https://www.sec.gov/Archives/edgar/data/18230/000001823025000043/ex991toformcat3q2025earnin.htm
-7. CAT 10-Q 2T26 (5-ago-2026), R4, balance: https://www.sec.gov/Archives/edgar/data/18230/000001823026000046/R4.htm
+7. CAT 10-Q 2T26 (5-ago-2026), R4, balance: https://www.sec.gov/Archives/edgar/data/18230/000001823026000046/R4.htm · documento principal (MD&A: perspectivas del 3T26 y de 2026, backlog, IEEPA): https://www.sec.gov/Archives/edgar/data/18230/000001823026000046/cat-20260630.htm
 8. CAT 10-K 2025, R108, vencimientos de deuda: https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/R108.htm
 9. Yahoo Finance quoteSummary de CAT, DE, CNH, KMTUY, ETN y PCAR (consultado 25-sep-2026): https://query1.finance.yahoo.com/v10/finance/quoteSummary/CAT?modules=earningsTrend · MarketBeat: https://www.marketbeat.com/stocks/NYSE/CAT/earnings/
 10. Yahoo Finance chart de CAT y CAT.MX (precios y dividendos, consultado 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/CAT

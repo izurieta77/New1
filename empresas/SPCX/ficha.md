@@ -105,6 +105,6 @@ Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 2T26 (ínte
 - UPA del 1T26 (−1.27): Yahoo y MarketBeat; la tabla la deja como n.d.
 - Fecha del 3T26: estimaciones de 3-nov (Yahoo, Zacks) y 5-nov (Investing); ir.spacex.com bloqueó la consulta.
 
-**Calibración (para el post-mortem):** el punto de ingresos queda 13.6% debajo del consenso. La tesis es que el consenso sobreestima el arranque de los contratos de nube en el 3T26. Si Anthropic factura el trimestre completo y Connectivity repite el +32% t/t del 2T26, el resultado rondaría 12.5 mil M, cerca del p90. El binario de UPA > 0 (0.65) es coherente con el intervalo (probabilidad implícita de ≈0.70).
+**Calibración (para el post-mortem):** el punto de ingresos queda 13.6% debajo del consenso. La tesis es que el consenso sobreestima el arranque de los contratos de nube en el 3T26. Si Anthropic factura el trimestre completo y Connectivity repite el +32% t/t del 2T26 (≈5.7 mil M), el resultado rondaría 12.0 mil M, todavía debajo del p90 (13.0) y del consenso. El binario de UPA > 0 (0.65) es coherente con el intervalo (probabilidad implícita de ≈0.70).
 
 **Veredicto:** confiable con correcciones. Los datos del 2T26 cuadran con el 8-K y el 10-Q. Hubo un error de dato (acciones de la oferta), un punto de ingresos incoherente con sus supuestos y un supuesto de intereses con el signo del último trimestre invertido. Todo quedó corregido en la ficha y en `pronosticos.csv`.
