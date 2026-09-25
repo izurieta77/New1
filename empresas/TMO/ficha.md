@@ -48,7 +48,7 @@ Notas: Org. = crecimiento orgánico. El margen bruto no está en XBRL; según el
 
 ## 5. Cadena causal
 **A. Relocalización farmacéutica por la 232 y los acuerdos MFN.** Hay arancel de 100% a fármacos importados sin acuerdo, y 26 acuerdos MFN con promesas de inversión en EUA (AbbVie, por ejemplo, promete US$100 mil M) [13] → LPBS (CDMO, llenado estéril, bioproceso) es 53.5% de las ventas → más demanda de capacidad y consumibles en EUA → orgánico de 5% en el 2T, con farma y biotecnología "fuertes" [3] → mayor utilidad por apalancamiento operativo → *inferencia:* el +38% en 3 meses descuenta un ciclo de inversión de capital.
-**B. Financiamiento académico y gubernamental.** El presupuesto de NIH y la incertidumbre fiscal en EUA pesan: el segmento cayó en 2025 y estuvo plano en 1S26 [3][4] → afecta a LSS y AI → riesgo de recorte en el 4T y en 2027 (*inferencia*).
+**B. Financiamiento académico y gubernamental.** El presupuesto de NIH y la incertidumbre fiscal en EUA pesan: ese mercado cayó en 2025 y estuvo plano en 1S26 [3][4] → afecta a LSS y AI → riesgo de recorte en el 4T y en 2027 (*inferencia*).
 **C. China y tipo de cambio.** Asia-Pacífico es 17.7% de las ventas y China creció en el 2T [3] → hay riesgo de represalias o de preferencia por proveedor local [4]. El 57.5% de la deuda está en EUR, CHF y JPY → un dólar débil sube los ingresos (+1% en el 2T) y la deuda en USD equivalentes; la cobertura es natural.
 
 ## 6. Qué descuenta el precio

@@ -142,7 +142,7 @@ Convención de etiquetas:
 | FCF / utilidad neta sin OpenAI (F3) | — | **0.679** | **0.520** |
 
 - **Hecho.** El interés de arrendamientos financieros (2,547) ya está **dentro** del CFO (flujo operativo, Nota 13). Restarlo otra vez cuenta dos veces el costo.
-- **Hecho.** El principal está dentro de "Other, net" del financiamiento, que suma −2,839. **Inferencia:** el estado de flujo no tiene renglón propio para el principal. En la base se separa, y el resto de "Other, net" queda en +262.
+- **Hecho.** El estado de flujo no tiene renglón propio para el principal (3,101), y "Other, net" del financiamiento suma −2,839. **Inferencia:** el principal está dentro de "Other, net". En la base se separa, y el resto de "Other, net" queda en +262.
 - **Regla del sistema (cálculo; conocimiento/03 §6.1, veto "FCF/UN < 0.7 dos años seguidos"):**
   - con la utilidad GAAP se cumple **un** año (FY2025 = 0.703, apenas arriba del umbral);
   - con la utilidad sin OpenAI se cumplen **dos** años (0.679 y 0.520).
