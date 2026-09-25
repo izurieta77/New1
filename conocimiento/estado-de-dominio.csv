@@ -15,7 +15,7 @@ Apalancados y filtro de tendencia,07/14,Replicado,R06 (con _verificacion),2026-0
 Pronóstico y puntuación Brier,08,Documentado,Capítulo 08; herramientas/pronosticos.py; bitacora/pronosticos.csv n=0 resueltos,2026-09-25,Calibración con los primeros 50 resueltos
 Timing SMA10 (Faber),14,Replicado,R01 (misma fuente A y B),2026-09-25,Segunda fuente independiente (Shiller) y versión MXN (V04)
 Momentum de series de tiempo,14,Replicado,R02,2026-09-25,Auditor-de-replicas con segunda fuente
-Efecto Halloween,14,Replicado,R04 (A); AC-04 en curso 2026-09-25,2026-09-25,Terminar AC-04 (código independiente y segunda fuente)
+Efecto Halloween,14,Contrastado,"R04 (A) y AC-04 (B, código y fuente independientes): concuerdan fuera de muestra; el estado histórico de EUA depende de CRSP",2026-09-25,Decisión del dueño sobre el estado de la ficha R04; versión NAFTRAC neta en MXN
 Efecto cambio de mes,14,Replicado,R09 (con _verificacion),2026-09-25,Segunda fuente independiente
 Eventos corporativos e insiders,15,Documentado,Capítulo 15,2026-09-25,Estudio de evento propio Form 4
 Peso mexicano y acciones para inversionista en MXN,16,Replicado,R08 (sin _verificacion),2026-09-25,Doble ejecución independiente

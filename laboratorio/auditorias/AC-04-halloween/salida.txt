@@ -1,0 +1,70 @@
+AC-04 efecto Halloween: ejecucion B independiente. Consulta: 2026-09-25
+Shiller ie_data.xls sha256[:16]=0df9392b7dacf91f hojas=['Data', 'Disclaimer', 'Excess CAPE Yield (ECY)', 'Index Plot', 'PE (CAPE) Plot'] meses=1833 primero=1871-01 ultimo_con_P=2023-09 ultimo_con_D=2023-06
+Yahoo ^SP500TR: diario 1988-01-04..2026-09-21 sha256[:16]=3cafbf81685118eb meses_con_nivel=464 primer_rend=1988-02 ultimo_rend=2026-08
+Yahoo ^GSPC: diario 1927-12-30..2026-09-21 sha256[:16]=1879229a224b38d8 meses_con_nivel=1185 primer_rend=1928-01 ultimo_rend=2026-08
+Yahoo ^MXX: diario 1991-11-08..2026-09-21 sha256[:16]=ffa7d78c2ded1ed4 meses_con_nivel=418 primer_rend=1991-12 ultimo_rend=2026-08
+Yahoo EWW: diario 1996-03-18..2026-09-21 sha256[:16]=024f5f14c66104f1 meses_con_nivel=366 primer_rend=1996-04 ultimo_rend=2026-08
+Hibrido ^GSPC fin de mes + D Shiller/12: 1928-01..2023-06; French Mkt-RF+RF 1926-07..2026-07 sha256[:16]=b840dba55d319f48
+FRED TB3MS 1934-01..2026-08 sha256[:16]=ebf04b1ae5bc5729; INTGSTMXM193N 1986-10..2026-07 sha256[:16]=6ffbf4e5f6682a53
+
+1. Regresion y_t = mu + alfa1*S_t (y = 100 ln(1+R), % mensual)
+ EUA
+  US_Shiller_1970-01_1998-08         1970-01..1998-08 n= 344 (faltan 0)  mu=+0.7118  alfa1=+0.6187  t_MCO=+1.63  t_NW12=+1.49
+  US_Shiller_1926-07_2002-12         1926-07..2002-12 n= 918 (faltan 0)  mu=+0.6196  alfa1=+0.3912  t_MCO=+1.29  t_NW12=+1.20
+  US_Shiller_1926-07_1969-12         1926-07..1969-12 n= 522 (faltan 0)  mu=+0.7922  alfa1=-0.0186  t_MCO=-0.04  t_NW12=-0.04
+  US_Shiller_1973-01_1996-12         1973-01..1996-12 n= 288 (faltan 0)  mu=+0.7255  alfa1=+0.4689  t_MCO=+1.13  t_NW12=+1.03
+  US_Shiller_2003-01_finD            2003-01..2023-06 n= 246 (faltan 0)  mu=+0.5835  alfa1=+0.4297  t_MCO=+0.90  t_NW12=+1.01
+  US_ShillerPrecio_1970-01_1998-08   1970-01..1998-08 n= 344 (faltan 0)  mu=+0.4086  alfa1=+0.6175  t_MCO=+1.62  t_NW12=+1.48
+  DIAG_Hibrido_1970-01_1998-08       1970-01..1998-08 n= 344 (faltan 0)  mu=+0.4989  alfa1=+0.9699  t_MCO=+2.03  t_NW12=+2.44
+  DIAG_Hibrido_1928-01_2002-12       1928-01..2002-12 n= 900 (faltan 0)  mu=+0.5253  alfa1=+0.5080  t_MCO=+1.35  t_NW12=+1.53
+  DIAG_French_1970-01_1998-08        1970-01..1998-08 n= 344 (faltan 0)  mu=+0.4454  alfa1=+1.0377  t_MCO=+2.09  t_NW12=+2.32
+  DIAG_French_1926-07_2002-12        1926-07..2002-12 n= 918 (faltan 0)  mu=+0.4467  alfa1=+0.6819  t_MCO=+1.86  t_NW12=+2.07
+  DIAG_French_2003-01_2026-07        2003-01..2026-07 n= 283 (faltan 0)  mu=+0.7872  alfa1=+0.2886  t_MCO=+0.56  t_NW12=+0.70
+  US_SP500TR_1988-02_1998-08         1988-02..1998-08 n= 127 (faltan 0)  mu=+0.8928  alfa1=+0.7630  t_MCO=+1.15  t_NW12=+1.19
+  US_SP500TR_1988-02_2002-12         1988-02..2002-12 n= 179 (faltan 0)  mu=+0.4266  alfa1=+0.9273  t_MCO=+1.45  t_NW12=+1.77
+  US_SP500TR_2003-01_2026-07         2003-01..2026-07 n= 283 (faltan 0)  mu=+0.7754  alfa1=+0.2767  t_MCO=+0.55  t_NW12=+0.71
+  US_GSPCprecio_2003-01_2026-07      2003-01..2026-07 n= 283 (faltan 0)  mu=+0.6193  alfa1=+0.2740  t_MCO=+0.55  t_NW12=+0.70
+ Mexico
+  MX_MXX_1991-12_2002-12             1991-12..2002-12 n= 133 (faltan 0)  mu=-0.0326  alfa1=+2.2850  t_MCO=+1.45  t_NW12=+1.54
+  MX_MXX_1991-12_1998-08             1991-12..1998-08 n=  81 (faltan 0)  mu=+0.0122  alfa1=+1.8558  t_MCO=+0.86  t_NW12=+0.81
+  MX_MXX_2003-01_2026-07             2003-01..2026-07 n= 283 (faltan 0)  mu=+0.4905  alfa1=+0.7063  t_MCO=+1.27  t_NW12=+1.60
+  MX_EWW_1996-05_2002-12             1996-05..2002-12 n=  80 (faltan 0)  mu=-1.9819  alfa1=+4.8049  t_MCO=+2.15  t_NW12=+2.72
+  MX_EWW_2003-01_2026-07             2003-01..2026-07 n= 283 (faltan 0)  mu=+0.2506  alfa1=+1.1349  t_MCO=+1.35  t_NW12=+1.62
+
+  Diferencia anual pareada D_y (invierno - verano, suma de 6 meses, %)
+  US_Shiller_1970-01_1998-08         D_y: anios=27 media=+3.40 t=+1.34 IC95=[-1.48, +8.22] positivos=17/27
+  US_Shiller_1926-07_2002-12         D_y: anios=76 media=+2.39 t=+1.11 IC95=[-1.85, +6.51] positivos=46/76
+  DIAG_Hibrido_1970-01_1998-08       D_y: anios=27 media=+5.45 t=+2.35 IC95=[+1.08, +9.90] positivos=18/27
+  DIAG_French_2003-01_2026-07        D_y: anios=22 media=+2.39 t=+0.87 IC95=[-2.82, +7.59] positivos=16/22
+  US_SP500TR_2003-01_2026-07         D_y: anios=22 media=+2.19 t=+0.83 IC95=[-2.92, +7.14] positivos=16/22
+  MX_MXX_1991-12_2002-12             D_y: anios=10 media=+10.80 t=+1.23 IC95=[-5.56, +26.48] positivos=7/10
+  MX_MXX_2003-01_2026-07             D_y: anios=22 media=+4.86 t=+1.62 IC95=[-0.75, +10.60] positivos=15/22
+  MX_EWW_2003-01_2026-07             D_y: anios=22 media=+7.09 t=+1.37 IC95=[-2.95, +16.76] positivos=15/22
+
+2. Estrategia 2003-01..2026-07, costo 0.34% por lado, compra inicial cargada
+ US ^SP500TR / TB3MS (USD)
+  nov_abr                            n=283 CAGR=  6.73%  vol=10.45%  Sharpe=+0.512  MDD= -30.87%  operaciones=48
+  comprar_mantener                   n=283 CAGR= 11.58%  vol=14.49%  Sharpe=+0.714  MDD= -50.95%  operaciones=1
+  efectivo                           n=283 CAGR=  1.73%  vol= 0.53%  Sharpe=+nan  MDD=   0.00%  operaciones=0
+ DIAG US French Mkt / TB3MS (USD)
+  nov_abr                            n=283 CAGR=  6.88%  vol=10.80%  Sharpe=+0.512  MDD= -30.44%  operaciones=48
+  comprar_mantener                   n=283 CAGR= 11.82%  vol=14.95%  Sharpe=+0.711  MDD= -50.31%  operaciones=1
+  efectivo                           n=283 CAGR=  1.73%  vol= 0.53%  Sharpe=+nan  MDD=   0.00%  operaciones=0
+ MX ^MXX / CETES (MXN)
+  nov_abr                            n=283 CAGR= 10.11%  vol=12.02%  Sharpe=+0.337  MDD= -21.66%  operaciones=48
+  comprar_mantener                   n=283 CAGR= 10.65%  vol=16.15%  Sharpe=+0.316  MDD= -44.48%  operaciones=1
+  efectivo                           n=283 CAGR=  6.54%  vol= 0.67%  Sharpe=+nan  MDD=   0.00%  operaciones=0
+ MX EWW / TB3MS (USD)
+  nov_abr                            n=283 CAGR=  8.89%  vol=17.15%  Sharpe=+0.487  MDD= -39.26%  operaciones=48
+  comprar_mantener                   n=283 CAGR= 10.32%  vol=23.66%  Sharpe=+0.468  MDD= -61.22%  operaciones=1
+  efectivo                           n=283 CAGR=  1.73%  vol= 0.53%  Sharpe=+nan  MDD=   0.00%  operaciones=0
+
+3. Criterios pre-registrados de R04 aplicados a B
+  (i)   EUA 1970-01..1998-08 alfa=+0.6187 (|dif vs 1.0349|=0.4162) t_MCO=+1.63 -> NO CUMPLE
+  (ii)  EUA 1926-07..2002-12 alfa=+0.3912 t_NW=+1.20 -> NO CUMPLE
+  (iii) EUA 2003-01..2026-07 alfa=+0.2767 -> CUMPLE
+  (iv)  MX  2003-01..2026-07 alfa=+0.7063 -> CUMPLE
+  Fuera de muestra US_SP500TR_2003-01_2026-07: mismo signo, no significativo
+  Fuera de muestra MX_MXX_2003-01_2026-07: mismo signo, no significativo
+  Fuera de muestra MX_EWW_2003-01_2026-07: mismo signo, no significativo
+  ESTADO B: Replicado con diferencias
