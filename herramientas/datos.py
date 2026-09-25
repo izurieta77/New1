@@ -3,6 +3,9 @@
 Todas las funciones devuelven listas ordenadas por fecha de tuplas (fecha, valor)
 con fecha tipo datetime.date (datetime.datetime para intervalos intradia).
 Errores de red o de formato se reportan como ErrorDatos tras reintentar.
+
+User-Agent: FRED corta la conexion con UA de navegador ("Mozilla/5.0") y responde con el
+UA por defecto de urllib; Yahoo exige UA de navegador. Por eso el UA se fija por fuente.
 """
 from __future__ import annotations
 
@@ -22,7 +25,7 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from herramientas.parametros import DIR_CACHE
 
-AGENTE = "Mozilla/5.0"
+UA_NAVEGADOR = {"User-Agent": "Mozilla/5.0"}  # requerido por Yahoo; FRED lo rechaza
 TIMEOUT_S = 20
 REINTENTOS = 3
 ESPERA_BASE_S = 1.5
@@ -45,12 +48,15 @@ def _ruta_cache(url: str) -> Path:
 
 def descargar(url: str, encabezados: dict | None = None, timeout: float = TIMEOUT_S,
               reintentos: int = REINTENTOS, cache_horas: float | None = None) -> str:
-    """GET con reintentos exponenciales; cache opcional en datos/cache con vigencia en horas."""
+    """GET con reintentos exponenciales; cache opcional en datos/cache con vigencia en horas.
+
+    Sin encabezados se usa el User-Agent por defecto de urllib (el unico que acepta FRED).
+    """
     if cache_horas:
         ruta = _ruta_cache(url)
         if ruta.exists() and (time.time() - ruta.stat().st_mtime) < cache_horas * 3600:
             return ruta.read_text(encoding="utf-8")
-    encabezados = {"User-Agent": AGENTE, **(encabezados or {})}
+    encabezados = dict(encabezados or {})
     ultimo_error: Exception | None = None
     for intento in range(reintentos):
         try:
@@ -155,7 +161,7 @@ def yahoo_grafica(ticker: str, rango: str = "2y", intervalo: str = "1d",
     """Serie y metadatos (moneda, bolsa) de Yahoo para un ticker."""
     url = (URL_YAHOO + urllib.parse.quote(ticker, safe="") + "?"
            + urllib.parse.urlencode({"range": rango, "interval": intervalo}))
-    resultado = parsear_yahoo_json(descargar(url, cache_horas=cache_horas), intervalo)
+    resultado = parsear_yahoo_json(descargar(url, UA_NAVEGADOR, cache_horas=cache_horas), intervalo)
     if not resultado["serie"]:
         raise ErrorDatos(f"Yahoo {ticker}: serie vacia")
     return resultado

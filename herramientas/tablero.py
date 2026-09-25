@@ -230,12 +230,10 @@ def _cambio(x, tipo: str) -> str:
     return f"{x:+.2f}"
 
 
-def _num(x: float) -> str:
-    if abs(x) >= 1000:
+def _num(x: float, tipo: str) -> str:
+    if tipo != "precio" or abs(x) >= 50:
         return f"{x:,.2f}"
-    if abs(x) >= 10:
-        return f"{x:.2f}"
-    return f"{x:.4f}" if abs(x) < 1 else f"{x:.3f}"
+    return f"{x:.4f}"
 
 
 def fila_markdown(nombre: str, fuente: str, r: dict, tipo: str) -> str:
@@ -246,7 +244,7 @@ def fila_markdown(nombre: str, fuente: str, r: dict, tipo: str) -> str:
     if r["anios_ventana"] < 4.9:
         pctl += f" ({r['anios_ventana']:.1f}a)"
     sma = _pct(r["dist_sma200"]) if r["dist_sma200"] is not None else "-"
-    return (f"| {nombre} | {fuente} | {_num(r['ultimo'])} | {fecha} | {_cambio(r['cambios']['1s'], tipo)} | "
+    return (f"| {nombre} | {fuente} | {_num(r['ultimo'], tipo)} | {fecha} | {_cambio(r['cambios']['1s'], tipo)} | "
             f"{_cambio(r['cambios']['1m'], tipo)} | {_cambio(r['cambios']['3m'], tipo)} | {sma} | {pctl} |")
 
 
