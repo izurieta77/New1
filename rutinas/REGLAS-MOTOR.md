@@ -9,8 +9,19 @@ Los procedimientos de cada rutina viven en `rutinas/*.md`:
 - `semanal.md`
 - `mensual.md`
 - `trimestral-investigacion.md`
+- `inteligencia.md`
+- `cripto.md`
+- `supervision.md`
+- `conciliacion-arbitraje.md`
+- `revision.md`
 
 Los disparadores solo despiertan la sesión y le indican seguir esos archivos. Para cambiar una rutina se edita su archivo en git; no hace falta tocar el disparador.
+
+## 0. Cumplimiento (regla dura, sin excepciones)
+
+- Jamás entra al sistema información no pública sobre emisoras, venga de quien venga, incluida cualquier persona del entorno del dueño con acceso a decisiones de emisoras o de inversionistas institucionales.
+- Todo insumo debe ser público y verificable. El marco es la Ley del Mercado de Valores (uso de información privilegiada) y, cuando aplique, la regla 10b-5 de la SEC.
+- Si algo parece información privilegiada, se descarta sin usarlo y se anota como "descartado por cumplimiento", sin detalles.
 
 ## 1. Autonomía: nunca te quedes esperando
 

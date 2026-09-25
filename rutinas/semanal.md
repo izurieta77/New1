@@ -18,6 +18,8 @@ Este procedimiento escrito manda sobre el texto del disparador, que ya indica se
    - métricas: TWR, drawdown y Sharpe.
 6. **Comité semanal de cartera:**
    - Solo si la última decisión de cartera tiene al menos 5 días hábiles. Corre la skill `comite-de-inversion` sobre la cartera vigente: mantener, ajustar o rotar.
+   - Lo preside el agente `decisor`. Si tu sesión no lo reconoce, aplica el rol de `.claude/agents/decisor.md`. Suma los insumos semanales de `bitacora/inteligencia/`, `bitacora/cripto/`, `bitacora/supervision/` y `bitacora/arbitraje/`, y un dictamen del `analista-cripto` si la cartera toca o considera cripto.
+   - El decisor escribe las boletas reales en `bitacora/boletas/`.
    - Aplica el modo torneo de `arena_agresivo`: adelante del mejor rival reportado, reducir varianza; atrás, subir exposición dentro de los límites.
    - Las órdenes van a `bitacora/ordenes-pendientes.csv` para la apertura del siguiente día hábil. Respeta `operaciones_max_mes` y `rotacion_max_mensual_x_capital`.
 7. **Plan:** actualiza la sección "Avance" de `PLAN.md` con números (REGLAS §6).
