@@ -1,7 +1,7 @@
-Motor de rutinas activo — 2026-09-25 05:22 UTC
+# Estado de las rutinas (la más reciente arriba)
 
-```
-a4144f3 V01 adenda: momentum internacional verificado (emergentes 9.6%/12.3%, Japon y Norteamerica inconclusos)
-8d4ddba Avance de agentes (capitulos, verificacion, empresas)
-6d27626 Avance de agentes (capitulos, replicas, empresas)
-```
+2026-09-25 20:20 UTC · orquestador · OK · (este commit) · reglas del motor en rutinas/REGLAS-MOTOR.md; portafolio de papel pendiente de comité
+2026-09-25 17:55 UTC · laboratorio · PARCIAL · 02d2c27 · AC-04 auditoría ciega de R04; quedó esperando respuesta del dueño (resuelta en REGLAS-MOTOR §7)
+2026-09-25 17:50 UTC · laboratorio · OK · 04c36a7 · ficha Kelly fraccional, estado de dominio
+2026-09-25 12:55 UTC · pre-apertura · OK · 0c1c87d · brief, tablero y 5 pronósticos (P0001-P0005)
+2026-09-25 05:22 UTC · orquestador · OK · d66f45a · prueba de arranque del motor

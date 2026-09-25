@@ -1,0 +1,1 @@
+id,fecha_decision,hora_decision_utc,decision_ref,ticker,lado,monto_mxn,moneda_instrumento,clase,regla_precio,fecha_ejecucion,estado,precio_ejecucion,cantidad_ejecutada,commit_ejecucion,notas
