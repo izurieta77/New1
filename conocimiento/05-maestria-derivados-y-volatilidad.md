@@ -1,6 +1,6 @@
 # Módulo 05 — Derivados y volatilidad: futuros, opciones, prima de volatilidad y qué usos le sirven a un inversionista individual
 
-> Nivel: maestría · Actualizado: 2026-09-25 · Grado de evidencia global: **B**. La teoría de no arbitraje (acarreo, paridad put-call, Black-Scholes-Merton) es exacta bajo sus supuestos. Que las opciones de índice han estado históricamente caras es un hecho de grado A (Coval-Shumway 2001; Bakshi-Kapadia 2003). Pero esa prima **se comprimió**: Dew-Becker y Giglio (2025) encuentran alfas de opciones de índice indistinguibles de cero en los últimos 15 años. En cambio, que casi todos los usos minoristas típicos destruyen valor (comprar opciones cortas, 0DTE, ETPs de VIX largos) es evidencia A.
+> Nivel: maestría · Actualizado: 2026-09-25 · Grado de evidencia global: **B**. La teoría de no arbitraje es exacta y el sobreprecio histórico de las opciones de índice es A, pero esa prima se comprimió (alfas ≈ 0 en los últimos 15 años, Dew-Becker y Giglio 2025). Que los usos minoristas típicos (opciones cortas compradas, 0DTE, ETPs largos de VIX) destruyen valor es A.
 
 ---
 
@@ -75,7 +75,7 @@ Extensiones con la cita confirmada:
 - **Skew del índice:** los puts OTM del S&P 500 tienen una IV mucho mayor que los calls OTM. Hay dos explicaciones con evidencia:
   - **riesgo de salto o *crash*:** Bates (2000) documenta "*post-'87 crash fears*" en las opciones sobre futuros del S&P 500, y Jackwerth y Rubinstein (1996) recuperan las distribuciones neutrales al riesgo implícitas en esos precios;
   - **presión de demanda:** en Bollen y Whaley (2004) los cambios de la IV del S&P 500 responden sobre todo a la compra neta de puts de índice por el público, y las estrategias de venta delta-neutral generan rendimientos anormales del tamaño de la brecha entre la IV y la volatilidad realizada. Gârleanu, Pedersen y Poteshman (2009) formalizan el precio basado en demanda (hallazgo cuantitativo no verificado aquí).
-- En acciones individuales la demanda dominante es de calls (Bollen-Whaley 2004). Por eso el skew es menos pronunciado.
+- En acciones individuales los cambios de la IV los domina la demanda de calls (Bollen-Whaley 2004). *Inferencia:* por eso su skew es menos pronunciado que el del índice.
 
 ### 2.5 La volatility risk premium (VRP)
 
@@ -153,7 +153,7 @@ Evidencia confirmada:
 | Eraker, Wu | 2017 | Explaining the negative returns to volatility claims | JFE 125(1):72-98 | Futuros de VIX de 1 mes: **≈−30%/año** (2006-2013) | 10.1016/j.jfineco.2017.04.007 | A |
 | Koijen, Moskowitz, Pedersen, Vrugt | 2018 | Carry | JFE 127(2):197-225 | El carry predice rendimientos en muchas clases de activos (incluidas opciones de índice); falla en recesiones globales | 10.1016/j.jfineco.2017.11.002 | A |
 | Israelov | 2018 | Pathetic Protection: The Elusive Benefits of Protective Puts | J. Alt. Inv. 21(3):6-33 | Los puts protectores dan beneficios "elusivos" (cifras no verificadas) | 10.3905/jai.2018.1.066 | B |
-| Harvey, Hoyle, Rattray, Sargaison, Taylor, van Hemert | 2019 | The Best of Strategies for the Worst of Times | JPM 45(5):7-28 | 1985-2018, 8 peores drawdowns: los puts son caros y el trend es defensivo (detalle no verificado) | 10.3905/jpm.2019.45.5.007 | B |
+| Harvey, Hoyle, Rattray, Sargaison, Taylor, van Hemert | 2019 | The Best of Strategies for the Worst of Times | JPM 45(5):7-28 | Evalúa estrategias defensivas en los peores drawdowns de 1985-2018 (conclusiones no verificadas en esta sesión) | 10.3905/jpm.2019.45.5.007 | B |
 | Muravyev, Pearson | 2020 | Options Trading Costs Are Lower than You Think | RFS 33(11):4973-5014 | Quien temporiza paga un spread efectivo **<40%** del convencional | 10.1093/rfs/hhaa010 | A |
 | Baltussen, Da, Lammers, Martens | 2021 | Hedging demand and market intraday momentum | JFE 142(1):377-403 | Momentum intradía en más de 60 futuros (1974-2020), ligado a la cobertura de gamma | 10.1016/j.jfineco.2021.04.029 | A |
 | Ilmanen, Thapar, Tummala, Villalon | 2021 | Tail Risk Hedging: Contrasting Put and Trend Strategies | J. Systematic Inv. 1(1):111-124 | La ventaja de costo favorece el trend sobre los puts | 10.52354/jsi.1.1.vi | B |
@@ -249,7 +249,7 @@ El índice PUT vende puts ATM del S&P 500 colateralizados en T-bills. Descripci�
 
 **En contra (sistemático):**
 - Ilmanen, Thapar, Tummala y Villalon (2021): el put cuesta más en el largo plazo y el trend sale mejor en costo.
-- Harvey et al. (2019), con 8 drawdowns de 1985-2018: los puts son caros y las estrategias de trend y de calidad son las defensas más eficientes (detalle numérico no verificado).
+- Harvey et al. (2019) evalúan las defensas en los peores drawdowns de 1985-2018. Su conclusión habitualmente citada (puts caros, trend defensivo) no se verificó en esta sesión, por lo que no se usa como evidencia.
 - Szado (2009): en 2008 los calls de VIX dieron diversificación más eficiente que los puts del SPX, pero es un solo episodio.
 
 **Grado C** para "el tail hedging mejora el CAGR del portafolio". Depende de puts muy OTM, de un timing de monetización y de una ejecución institucional que no se pueden verificar.
@@ -314,7 +314,7 @@ El índice PUT vende puts ATM del S&P 500 colateralizados en T-bills. Descripci�
 - **R3 — Nada de riesgo indefinido.** Prohibidas las ventas descubiertas de calls o puts y los ETPs inversos de volatilidad sin R1. Las ventas de volatilidad solo se hacen como spreads de riesgo definido, cuya pérdida máxima es el riesgo de la operación.
 - **R4 — 0DTE descalificados por validación.** `validacion_estrategias.backtest_min_anios = 10`. Los vencimientos diarios del SPX existen desde el 16-may-2022, así que **ninguna estrategia 0DTE puede validarse antes de 2032**. Comprar 0DTE también está excluido por la evidencia A de pérdidas.
 - **R5 — ETPs largos de VIX (VXX, UVXY).** Nunca se mantienen como posición. Solo se admiten como cobertura táctica con horizonte de días y con presupuesto contado como prima (R2). Si hace falta estar largo en volatilidad, se prefiere la opción de riesgo acotado, cuando haya acceso.
-- **R6 — Filtro de régimen con VIX.** Ya es vigente en `filtro_apalancados`: VIX < 25 y subyacente sobre su media de 200 días. **Propuesta para el comité (no vigente):** tratar como estrés, y no abrir apalancados nuevos, cuando VIX > VIX3M. Esa curva invertida se observó en solo ≈12% de los meses desde 2006 y es un indicador de estrés de mercado (cálculo propio).
+- **R6 — Filtro de régimen con VIX.** Ya es vigente en `filtro_apalancados`: VIX < 25 y subyacente sobre su media de 200 días. **Propuesta para el comité (no vigente):** tratar como estrés, y no abrir apalancados nuevos, cuando VIX > VIX3M. Esa curva invertida se observó en solo ≈12% de los cierres mensuales desde 2006 (cálculo propio). *Inferencia:* marca episodios de estrés.
 - **R7 — ETFs de covered call o "income".** Excluidos del núcleo, del satélite y de la arena mientras el objetivo sea el CAGR. La evidencia es de 6.4 a 11.3 pp anuales por debajo de su subyacente (JEPI 2020-2026; QYLD y XYLD 2016-2026; cálculo propio).
 - **R8 — Sin protección permanente con puts.** La defensa del sistema son los `cortacircuitos_drawdown`, las `rachas` y el filtro de tendencia, que son más baratos según Ilmanen et al. (2021) y AQR (2012). Si el comité quiere una cobertura puntual antes de un evento binario (elección, decisión de Banxico o Fed), su costo se registra como prima (R2).
 - **R9 — Divisa.** El núcleo **no cubre el USD** por defecto. La cobertura cuesta ≈2.7% al año y elimina el colchón del peso en las crisis (+35% en 2020, +25.5% en 2008). Se revisa si el diferencial de tasas cambia más de 2 pp o si el dueño tiene pasivos en USD.
@@ -457,7 +457,7 @@ El índice PUT vende puts ATM del S&P 500 colateralizados en T-bills. Descripci�
 76. FRED: DEXMXUS, DTB3, TB3MS e IR3TIB01MXM156N — https://fred.stlouisfed.org/series/DEXMXUS ; https://fred.stlouisfed.org/series/IR3TIB01MXM156N
 
 **Pendiente de verificación:**
-- las cifras exactas de Whaley (2002), Goyal-Saretto (2009), Israelov (2018) y Harvey et al. (2019);
+- las cifras exactas de Whaley (2002), Goyal-Saretto (2009) e Israelov (2018), y las conclusiones de Harvey et al. (2019);
 - la metodología exacta de los índices PUT y BXM en la documentación de Cboe;
 - la oferta de derivados de GBM para personas físicas;
 - el margen vigente de los contratos de MexDer;

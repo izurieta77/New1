@@ -237,7 +237,7 @@ Lo transferible (FKP): un portafolio sistemático *value* + calidad + bajo beta 
 
 **Bill Miller.** Concentró en financieras (Bear Stearns, entre otras) y perdió más de US$100 millones personales en Bear [27]. El patrón de muerte fue **promediar a la baja** una tesis de "barato" en un sector apalancado.
 
-**Carlos Slim.** En la crisis de 1982 compró empresas mexicanas líderes a valuaciones deprimidas: minería, cobre, aluminio, llantas y comercio [28]. En 1990 compró Telmex en la privatización. Hacia 2006 controlaba ~90% de las líneas fijas y Telcel ~80% de los celulares [28]. En ene-2009 prestó US$250 millones al NYT [28], cuya acción tocó su mínimo el 19-feb-2009 con −92.1% desde 2002. Desde el 20-ene-2009 subió +120% a ene-2015 y +232% a dic-2017 (cálculo propio). *Inferencia:* hay dos ventajas distintas. Comprar a quien debe vender es transferible. El control y las rentas reguladas no lo son.
+**Carlos Slim.** En la crisis de 1982 compró empresas mexicanas líderes a valuaciones deprimidas: minería, cobre, aluminio, llantas y comercio [28]. En 1990 compró Telmex en la privatización. Hacia 2006 Telmex tenía ~90% de las líneas fijas y Telcel ~80% de los celulares [28]. En ene-2009 prestó US$250 millones al NYT [28], cuya acción tocó su mínimo el 19-feb-2009 con −92.1% desde 2002. Desde el 20-ene-2009 subió +120% a ene-2015 y +232% a dic-2017 (cálculo propio). *Inferencia:* hay dos ventajas distintas. Comprar a quien debe vender es transferible. El control y las rentas reguladas no lo son.
 
 ### 5.3 Los que se hundieron: mecanismo de muerte
 
@@ -263,7 +263,7 @@ Lo transferible (FKP): un portafolio sistemático *value* + calidad + bajo beta 
 | **Estilo** | Constante con una ventaja que se puede explicar: Buffett (calidad), Simons (estadística) | Desvío: LTCM hacia volatilidad, Paulson hacia oro, Amaranth hacia gas |
 | **Crecimiento de activos** | Devolver capital: Greenblatt 1995, Medallion 1993, Druckenmiller 2010 | Crecer en la cima: ARK en 2021, Value Trust, Magellan después de Lynch |
 | **Cortos** | Cortos como cobertura con pérdida acotada: *puts* y CDS (Ackman 2020, Burry 2007) | Cortos concentrados de pérdida ilimitada: Melvin, Herbalife |
-| **Humildad estadística** | Miller: "95% suerte"; Thorp detectó a Madoff por imposible | Paulson tras 2007; Hwang tras Tiger Asia |
+| **Humildad estadística** | Miller: "95% suerte"; Thorp desconfió de Madoff desde 1991 | Paulson tras 2007; Hwang tras Tiger Asia |
 | **Caídas sobrevividas** | Buffett (−49% y −52%), AQR (−41%), Citadel (−55%, con retiros congelados) | Los que tuvieron que vender en el mínimo |
 
 *Inferencia (síntesis):* los que duran tienen **tres cosas**: una ventaja económica explicable, estructura que impide la venta forzada y tamaño subordinado a la liquidez. Los que explotan tienen **una**: apalancamiento o concentración que convierte una racha buena en un solo evento de ruina. El coeficiente intelectual es igual de alto en ambos grupos: dos premios Nobel en LTCM.
@@ -355,7 +355,7 @@ Supuestos: movimiento browniano geométrico diario, 126 días, 20,000 simulacion
 9. ¿Cuál es el precio de invalidación?
 10. ¿Qué nivel de auditabilidad tiene la evidencia que uso?
 
-Si 3 y 7 no pasan o 4 falla, no se opera.
+Si la respuesta a 3 o a 7 es "sí", o si 4 falla, no se opera.
 
 ---
 
