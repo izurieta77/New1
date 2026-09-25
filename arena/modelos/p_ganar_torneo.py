@@ -90,27 +90,41 @@ def tabla_analitica():
 #    Costos: comision GBM 0.29% por lado (0.25% + IVA) + 0.10% de spread; ETF apalancado 1%/ano; ETF 1x 0.1%/ano.
 # ---------------------------------------------------------------------------
 COM = 0.0029 + 0.0010
-def simula(n, semilla=7):
+# Mezcla "rival tipo Grok" (supuesto, ver documento 03): 40% concentrado, 25% 3x, 20% trader activo, 15% conservador
+PESOS_RIVAL_GROK = (0.40, 0.25, 0.20, 0.15)
+REGIMENES = {
+    # A: estres corto y volatil (tendencia poco persistente). mu incondicional ~ +8%, vol ~ 21%
+    "A_estres_corto": dict(mu_c=0.16, sd_c=0.13, mu_s=-0.15, sd_s=0.35, p_cs=1 / 120, p_sc=1 / 40),
+    # B: mercados bajistas persistentes (lo que explota el filtro SMA200). mu incondicional ~ +8%, vol ~ 18%
+    "B_bajista_persistente": dict(mu_c=0.20, sd_c=0.12, mu_s=-0.30, sd_s=0.30, p_cs=1 / 250, p_sc=1 / 80),
+}
+def simula(n, semilla=7, regimen="A_estres_corto"):
     rng = random.Random(semilla)
-    mu_c, sd_c = 0.16 / 252, 0.13 / math.sqrt(252)
-    mu_s, sd_s = -0.15 / 252, 0.35 / math.sqrt(252)
-    p_cs, p_sc = 1 / 120, 1 / 40
+    g = REGIMENES[regimen]
+    mu_c, sd_c = g["mu_c"] / 252, g["sd_c"] / math.sqrt(252)
+    mu_s, sd_s = g["mu_s"] / 252, g["sd_s"] / math.sqrt(252)
+    p_cs, p_sc = g["p_cs"], g["p_sc"]
     nombres_c = ["C0 efectivo", "C1 indice 1x", "C2 2x comprar-mantener", "C3 3x comprar-mantener",
                  "C4 2x con filtro SMA200", "C5 3x con filtro SMA200", "C6 barbell 60% cash + 40% 3x filtro",
-                 "C7 momentum concentrado (1.3x, s=20%, alfa 4%)"]
+                 "C7 momentum concentrado (1.3x, s=20%, alfa 4%)", "C7b igual que C7 pero alfa 0%",
+                 "C8 2x con filtro SMA200 y banda 3%"]
     nombres_r = ["R1 concentrado (1.3x, s=30%)", "R2 3x comprar-mantener", "R3 trader sin ventaja (0-2x semanal)",
                  "R4 conservador (0.6x)"]
     finales_c = {c: [] for c in nombres_c}
     finales_r = {r: [] for r in nombres_r}
     for _ in range(n):
         # 200 dias de historia para la SMA200, luego 126 dias de temporada
-        estado = 0
-        precios = [100.0]
-        for _d in range(200):
-            if estado == 0 and rng.random() < p_cs: estado = 1
-            elif estado == 1 and rng.random() < p_sc: estado = 0
-            mu, sd = (mu_c, sd_c) if estado == 0 else (mu_s, sd_s)
-            precios.append(precios[-1] * math.exp(mu - sd * sd / 2 + sd * rng.gauss(0, 1)))
+        # Historia condicionada al estado actual (hecho al 24-sep-2026): precio entre +4% y +10% sobre su SMA200
+        while True:
+            estado = 0
+            precios = [100.0]
+            for _d in range(200):
+                if estado == 0 and rng.random() < p_cs: estado = 1
+                elif estado == 1 and rng.random() < p_sc: estado = 0
+                mu, sd = (mu_c, sd_c) if estado == 0 else (mu_s, sd_s)
+                precios.append(precios[-1] * math.exp(mu - sd * sd / 2 + sd * rng.gauss(0, 1)))
+            if 1.04 <= precios[-1] / (sum(precios[-200:]) / 200) <= 1.10:
+                break
         estado = 0  # arranque en calma
         v = {c: 1.0 for c in nombres_c}
         w = {r: 1.0 for r in nombres_r}
@@ -118,6 +132,7 @@ def simula(n, semilla=7):
         for c in nombres_c[1:]: v[c] *= (1 - COM)
         for r in nombres_r: w[r] *= (1 - COM)
         dentro = {"C4": None, "C5": None, "C6": None}
+        dentro_c8 = True  # arranca dentro (precio +4% a +10% sobre SMA200)
         exp_r3 = 1.0
         sleeve_letf, sleeve_cash = 0.4 * v["C6 barbell 60% cash + 40% 3x filtro"], 0.6 * v["C6 barbell 60% cash + 40% 3x filtro"]
         for d in range(DIAS):
@@ -131,10 +146,16 @@ def simula(n, semilla=7):
                     if clave == "C4": v["C4 2x con filtro SMA200"] *= (1 - COM)
                     if clave == "C5": v["C5 3x con filtro SMA200"] *= (1 - COM)
                     if clave == "C6": sleeve_letf *= (1 - COM)
+            # C8: sale solo si cierra >3% debajo de la SMA200; reentra al cerrar arriba de la SMA200
+            if dentro_c8 and precios[-1] < 0.97 * sma:
+                dentro_c8 = False; v["C8 2x con filtro SMA200 y banda 3%"] *= (1 - COM)
+            elif (not dentro_c8) and precios[-1] > sma:
+                dentro_c8 = True; v["C8 2x con filtro SMA200 y banda 3%"] *= (1 - COM)
             if d % 5 == 0:  # R3 cambia exposicion cada semana al azar
                 nueva = rng.choice((0.0, 1.0, 2.0))
-                if nueva != exp_r3:
-                    w["R3 trader sin ventaja (0-2x semanal)"] *= (1 - COM * abs(nueva - exp_r3) / 2)
+                if nueva != exp_r3:  # a/desde efectivo = 1 lado; cambio de instrumento = 2 lados
+                    lados = 1 if 0.0 in (nueva, exp_r3) else 2
+                    w["R3 trader sin ventaja (0-2x semanal)"] *= (1 - COM * lados)
                     exp_r3 = nueva
             if estado == 0 and rng.random() < p_cs: estado = 1
             elif estado == 1 and rng.random() < p_sc: estado = 0
@@ -150,6 +171,8 @@ def simula(n, semilla=7):
             if dentro["C6"]: sleeve_letf *= max(0.0, 1 + 3 * r - f2)
             e7 = 0.20 / math.sqrt(252) * rng.gauss(0, 1)
             v["C7 momentum concentrado (1.3x, s=20%, alfa 4%)"] *= max(0.0, (1 + 1.3 * r) * math.exp(e7 - 0.20**2 / 504) + 0.04 / 252 - f1)
+            v["C7b igual que C7 pero alfa 0%"] *= max(0.0, (1 + 1.3 * r) * math.exp(e7 - 0.20**2 / 504) - f1)
+            if dentro_c8: v["C8 2x con filtro SMA200 y banda 3%"] *= max(0.0, 1 + 2 * r - f2)
             e1 = 0.30 / math.sqrt(252) * rng.gauss(0, 1)
             w["R1 concentrado (1.3x, s=30%)"] *= max(0.0, (1 + 1.3 * r) * math.exp(e1 - 0.30**2 / 504) - f1)
             w["R2 3x comprar-mantener"] *= max(0.0, 1 + 3 * r - f2)
@@ -160,16 +183,17 @@ def simula(n, semilla=7):
         for r_ in nombres_r: finales_r[r_].append(w[r_] - 1)
     return nombres_c, nombres_r, finales_c, finales_r
 
-def reporte_mc(n):
-    nc, nr, fc, fr = simula(n)
-    print(f"\n=== 6) Monte Carlo, {n} trayectorias, 6 meses (rendimiento en exceso de efectivo) ===")
-    print(f"{'estrategia':46s} {'mediana':>8s} {'p5':>8s} {'p95':>8s} {'P(<-35%)':>9s}  " + "  ".join(f"vs {r[:2]}" for r in nr) + "  promedio")
+def reporte_mc(n, regimen):
+    nc, nr, fc, fr = simula(n, regimen=regimen)
+    print(f"\n=== 6) Monte Carlo [{regimen}], {n} trayectorias, 6 meses (rendimiento en exceso de efectivo) ===")
+    print(f"{'estrategia':46s} {'mediana':>8s} {'p5':>8s} {'p95':>8s} {'P(<-35%)':>9s}  " + "  ".join(f"vs {r[:2]}" for r in nr) + "  promedio  mezcla_grok")
     for c in nc:
         xs = sorted(fc[c])
         med, p5, p95 = xs[n // 2], xs[int(0.05 * n)], xs[int(0.95 * n)]
         ruina = sum(1 for x in xs if x < -0.35) / n
-        ps = [sum(1 for a, b in zip(fc[c], fr[r]) if a > b) / n for r in nr]
-        print(f"{c:46s} {med:8.1%} {p5:8.1%} {p95:8.1%} {ruina:9.1%}  " + "  ".join(f"{p:5.1%}" for p in ps) + f"  {statistics.mean(ps):6.1%}")
+        ps = [sum(1.0 if a > b else (0.5 if a == b else 0.0) for a, b in zip(fc[c], fr[r])) / n for r in nr]  # empate = 1/2
+        mezcla = sum(wi * pi for wi, pi in zip(PESOS_RIVAL_GROK, ps))
+        print(f"{c:46s} {med:8.1%} {p5:8.1%} {p95:8.1%} {ruina:9.1%}  " + "  ".join(f"{p:5.1%}" for p in ps) + f"  {statistics.mean(ps):6.1%}  {mezcla:6.1%}")
     print("\nRivales (referencia):")
     for r in nr:
         xs = sorted(fr[r])
@@ -178,4 +202,5 @@ def reporte_mc(n):
 if __name__ == "__main__":
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 10000
     tabla_analitica()
-    reporte_mc(n)
+    for reg in REGIMENES:
+        reporte_mc(n, reg)

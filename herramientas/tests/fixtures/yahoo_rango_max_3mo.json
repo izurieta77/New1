@@ -1,0 +1,38 @@
+{
+ "chart": {
+  "error": null,
+  "result": [
+   {
+    "meta": {
+     "currency": "USD",
+     "symbol": "^GSPC",
+     "gmtoffset": -14400,
+     "dataGranularity": "3mo",
+     "range": "max"
+    },
+    "timestamp": [
+     470725200,
+     478501200
+    ],
+    "indicators": {
+     "quote": [
+      {
+       "close": [
+        181.18,
+        189.55
+       ]
+      }
+     ],
+     "adjclose": [
+      {
+       "adjclose": [
+        181.18,
+        189.55
+       ]
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

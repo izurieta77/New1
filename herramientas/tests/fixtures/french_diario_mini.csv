@@ -1,0 +1,12 @@
+This file was created by using the 202607 CRSP database.
+The Tbill return is the simple daily rate that, over the number of trading days
+compounds to 1-month TBill rate.
+
+,Mkt-RF,SMB,HML,RF
+20260727,    0.50,   -0.10,    0.20,    0.02
+20260728,   -1.00,    0.30,   -0.40,    0.02
+20260729,   -1.52,    0.31,    0.31,    0.02
+20260730,    1.59,   -0.70,   -1.36,    0.02
+20260731,    0.68,   -0.49,   -0.59,    0.02
+
+Copyright 2026 Eugene F. Fama and Kenneth R. French

@@ -1,0 +1,51 @@
+{
+ "chart": {
+  "error": null,
+  "result": [
+   {
+    "meta": {
+     "currency": "USD",
+     "symbol": "SPY",
+     "exchangeTimezoneName": "America/New_York",
+     "gmtoffset": -14400,
+     "regularMarketTime": 1790348400,
+     "dataGranularity": "1d",
+     "currentTradingPeriod": {
+      "regular": {
+       "start": 1790343000,
+       "end": 1790366400
+      }
+     }
+    },
+    "timestamp": [
+     1790083800,
+     1790170200,
+     1790256600,
+     1790343000
+    ],
+    "indicators": {
+     "quote": [
+      {
+       "close": [
+        760.0,
+        765.0,
+        767.18,
+        768.0
+       ]
+      }
+     ],
+     "adjclose": [
+      {
+       "adjclose": [
+        758.0,
+        763.0,
+        767.18,
+        768.0
+       ]
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

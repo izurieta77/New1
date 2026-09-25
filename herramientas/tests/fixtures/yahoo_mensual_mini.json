@@ -1,0 +1,70 @@
+{
+ "chart": {
+  "error": null,
+  "result": [
+   {
+    "meta": {
+     "currency": "USD",
+     "symbol": "^GSPC",
+     "exchangeTimezoneName": "America/New_York",
+     "gmtoffset": -14400,
+     "regularMarketTime": 1790282212,
+     "dataGranularity": "1mo",
+     "range": "",
+     "currentTradingPeriod": {
+      "regular": {
+       "start": 1790343000,
+       "end": 1790366400
+      }
+     }
+    },
+    "timestamp": [
+     1767243600,
+     1769922000,
+     1772341200,
+     1775016000,
+     1777608000,
+     1780286400,
+     1782878400,
+     1785556800,
+     1788235200,
+     1790282212
+    ],
+    "indicators": {
+     "quote": [
+      {
+       "close": [
+        100.0,
+        102.0,
+        null,
+        101.0,
+        105.0,
+        104.0,
+        108.0,
+        110.0,
+        111.0,
+        110.5
+       ]
+      }
+     ],
+     "adjclose": [
+      {
+       "adjclose": [
+        100.0,
+        102.0,
+        null,
+        101.0,
+        105.0,
+        104.0,
+        108.0,
+        110.0,
+        111.0,
+        110.5
+       ]
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

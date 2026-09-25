@@ -66,13 +66,14 @@ CACHE_HECHOS_H = 12
 CACHE_PRESENTACIONES_H = 6
 
 FORMAS_VALIDAS = {"10-K", "10-K/A", "10-Q", "10-Q/A", "10-KT", "10-KT/A",
-                  "20-F", "20-F/A", "40-F", "40-F/A"}
+                  "20-F", "20-F/A", "40-F", "40-F/A", "6-K", "6-K/A"}
 FORMAS_ANUALES = {"10-K", "10-K/A", "10-KT", "10-KT/A", "20-F", "20-F/A", "40-F", "40-F/A"}
 RANGO_TRIMESTRE = (80, 100)     # dias entre inicio y fin (13-14 semanas)
 RANGO_ACUMULADO = (170, 285)    # 6M y 9M
 RANGO_ANUAL = (350, 380)        # 52/53 semanas o anio calendario
 FACTORES_SPLIT = (1.5, 2, 3, 4, 5, 6, 7, 8, 10, 12, 15, 20, 25, 30, 40, 50, 100)
 TOLERANCIA_SPLIT = 0.015
+RAZON_ACCIONES_SOSPECHOSA = (0.2, 5.0)   # cambio a/a de acciones fuera de este rango = dato sospechoso
 
 # Campos: clase y conceptos alternativos (taxonomia, concepto) en orden de prioridad.
 # clase: flujo (sumable), por_accion (UPA, aprox. sumable), promedio (acciones promedio), saldo (balance).
@@ -713,6 +714,12 @@ def calcular_metricas(fila: dict, previa: dict | None) -> None:
     fila["crec_upa"] = _crecimiento(fila.get("upa_diluida"), p.get("upa_diluida"))
     fila["crec_fcf"] = _crecimiento(fila.get("fcf"), p.get("fcf"))
     fila["dilucion_anual"] = _crecimiento(fila.get("acciones_diluidas"), p.get("acciones_diluidas"))
+    if fila["dilucion_anual"] is not None and not (RAZON_ACCIONES_SOSPECHOSA[0] <= 1 + fila["dilucion_anual"]
+                                                   <= RAZON_ACCIONES_SOSPECHOSA[1]):
+        fila.setdefault("origen", {})["dilucion_anual"] = (
+            f"descartada: acciones pasan de {p.get('acciones_diluidas'):,.0f} a {fila.get('acciones_diluidas'):,.0f} "
+            "sin split detectado (probable error de escala en el XBRL; revisar el documento)")
+        fila["dilucion_anual"] = None
     fila["cambio_margen_operativo"] = (fila["margen_operativo"] - p["margen_operativo"]
                                        if fila["margen_operativo"] is not None and p.get("margen_operativo") is not None
                                        else None)
@@ -754,23 +761,24 @@ def extraer_estados(hechos_json: dict, periodo: str = "anual") -> dict:
         hs, _ = hechos_concepto(hechos_json, tax, concepto, "promedio")
         splits_hechos += hs
     eventos = eventos_split(splits_hechos)
+    moneda = moneda_principal(hechos_json)
 
     por_concepto: dict = {}
-    monedas = set()
-    claves_calendario = set()
+    formas_por_clave: dict = defaultdict(set)
+    formas_presentadas: set = set()
     for campo, spec in CAMPOS.items():
         for tax, concepto in spec["conceptos"]:
-            hs, unidad = hechos_concepto(hechos_json, tax, concepto, spec["clase"])
+            hs, _ = hechos_concepto(hechos_json, tax, concepto, spec["clase"], moneda)
             if not hs:
                 continue
             hs = ajustar_por_split(hs, eventos, spec["clase"])
-            dedup = deduplicar(hs)
-            por_concepto[(campo, tax, concepto)] = dedup
-            if spec["clase"] == "flujo" and unidad:
-                monedas.add(unidad)
+            por_concepto[(campo, tax, concepto)] = deduplicar(hs)
             if spec["clase"] in ("flujo", "por_accion"):
-                claves_calendario.update(k for k in dedup if k[0] is not None)
-    calendario = construir_calendario(claves_calendario)
+                for h in hs:
+                    formas_presentadas.add(h.forma)
+                    if h.inicio is not None:
+                        formas_por_clave[(h.inicio, h.fin)].add(h.forma)
+    calendario = construir_calendario(dict(formas_por_clave))
 
     datos: dict = defaultdict(dict)        # clave_periodo -> campo -> valor
     origenes: dict = defaultdict(dict)
@@ -811,6 +819,9 @@ def extraer_estados(hechos_json: dict, periodo: str = "anual") -> dict:
                 fila = {"etiqueta": f"FY{a['anio']} Q{k}", "anio_fiscal": a["anio"], "trimestre": k,
                         "inicio": inicio, "fin": f}
                 fila.update({c: datos[clave].get(c) for c in CAMPOS})
+                if all(fila.get(c) is None for c in ("ingresos", "utilidad_operativa", "utilidad_neta",
+                                                      "flujo_operativo")):
+                    continue            # solo saldos (p. ej. cierre anual de una emisora 20-F): no es trimestre
                 fila["origen"] = dict(origenes[clave])
                 filas.append(fila)
     for fila in filas:
@@ -827,18 +838,23 @@ def extraer_estados(hechos_json: dict, periodo: str = "anual") -> dict:
             ttm_previo = _ttm(filas[:-4]) if len(filas) >= 8 else None
             calcular_metricas(ttm, ttm_previo)
     notas = []
-    if len(monedas) > 1:
-        notas.append(f"Varias unidades monetarias en conceptos de flujo: {sorted(monedas)}")
+    if moneda and moneda != "USD":
+        notas.append(f"Moneda de reporte {moneda}: montos en millones de {moneda}; se ignoran traducciones "
+                     "de conveniencia a otra moneda")
+    if periodo == "trimestral" and formas_presentadas and not formas_presentadas & {"10-Q", "10-Q/A"}:
+        notas.append("Emisora sin 10-Q (20-F/40-F): la SEC no recibe trimestres en XBRL; usar reportes "
+                     "trimestrales del emisor (6-K o su bolsa local)")
     for ev in eventos:
         notas.append(f"Split detectado: factor {ev['factor']:g} entre {ev['limite_pre']} y {ev['limite_post']} "
                      f"({ev['pares']} periodos reexpresados); acciones y UPA previas ajustadas")
     if not filas:
-        notas.append("Sin datos financieros utilizables en companyfacts (sin us-gaap/ifrs-full o sin formas 10-K/10-Q/20-F)")
+        notas.append(f"Sin filas de periodo {periodo} en companyfacts (sin us-gaap/ifrs-full utilizables "
+                     "o sin formas 10-K/10-Q/20-F con esos periodos)")
     return {
         "cik": hechos_json.get("cik"),
         "nombre": hechos_json.get("entityName", ""),
         "periodo": periodo,
-        "moneda": sorted(monedas)[0] if monedas else None,
+        "moneda": moneda,
         "filas": filas,
         "ttm": ttm,
         "splits": eventos,
@@ -864,6 +880,25 @@ def acciones_en_circulacion(hechos_json: dict) -> dict | None:
     fecha = max(f["end"] for f in mismos)
     total = sum(float(f["val"]) for f in mismos if f["end"] == fecha)
     return {"valor": total, "fecha": fecha}
+
+
+def verificar_vigencia(estados: dict, sub_json: dict) -> str | None:
+    """Aviso si companyfacts va atrasado frente al ultimo reporte periodico presentado (10-K/10-Q/20-F/40-F).
+
+    Caso real (2026-09-25): AMX presento su 20-F FY2025 el 2026-04-28 y companyfacts seguia en FY2024.
+    """
+    tipos = ("10-K", "10-Q", "20-F", "40-F") if estados.get("periodo") == "trimestral" else ("10-K", "20-F", "40-F")
+    reportes = [p for p in parsear_presentaciones(sub_json, tipos, None) if p.get("fecha_reporte")]
+    if not reportes:
+        return None
+    ultimo = max(reportes, key=lambda p: p["fecha_reporte"])
+    fin_datos = estados["filas"][-1]["fin"] if estados.get("filas") else None
+    fin_reporte = _fecha(ultimo["fecha_reporte"])
+    if fin_reporte and (fin_datos is None or (fin_reporte - fin_datos).days > 20):
+        return (f"ATENCION: companyfacts llega a {fin_datos or 'sin datos'} pero existe un {ultimo['forma']} "
+                f"del periodo {ultimo['fecha_reporte']} presentado el {ultimo['fecha']} ({ultimo['url']}). "
+                "Tomar las cifras recientes del documento, no de esta tabla.")
+    return None
 
 
 def estados_financieros(ticker: str, periodo: str = "anual", cache_horas: float | None = CACHE_HECHOS_H) -> dict:
@@ -1099,6 +1134,12 @@ def main(argv: list[str] | None = None) -> int:
         return 1
     n = args.n or (5 if args.periodo == "anual" else 8)
     filas = estados["filas"][-n:]
+    try:
+        aviso = verificar_vigencia(estados, presentaciones_json(estados["ticker"], cache))
+        if aviso:
+            estados["notas"].append(aviso)
+    except ErrorSEC as e:
+        estados["notas"].append(f"No se pudo verificar vigencia contra presentaciones: {e}")
     if args.json:
         salida = dict(estados)
         salida["filas"] = filas
