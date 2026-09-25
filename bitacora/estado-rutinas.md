@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-25 23:20 UTC · auditoría semanal 2026-W39 · OK · (este commit) · 3 afirmaciones auditadas (2 corregidas en decisión y brief), abogado del diablo se abstiene sobre cartera A (agenda 2-oct), radar 5 papers C, PLAN Avance; sin comité por regla
 2026-09-25 22:23 UTC · cripto · OK · (este commit) · pulso 16:17 CDMX en bitacora/cripto/2026-09-25.md (BTC ~85,200, ETH ~2,738, tendencia alcista sobre SMA200, flujos ETF positivos); sin órdenes vencidas ni alertas
 
 2026-09-25 21:45 UTC · cierre · OK · (este commit) · papel sin fondear (0 MXN), sin órdenes vencidas; ningún reporte del universo hoy; marcador sin datos; R04 → Replicado con diferencias (§7)

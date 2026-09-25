@@ -117,7 +117,6 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
 
 ## 7. Pendientes para la próxima rutina (se borran al cumplirse)
 
-- [ ] **Auditoría del viernes 25-sep-2026: NO corras comité de cartera.** La cartera inicial la decide el orquestador ese mismo día (`bitacora/decisiones/2026-09-25-CARTERA-inicial.md`). El primer comité semanal toca el viernes 2-oct-2026.
 - [ ] **Pre-apertura del lunes 28-sep-2026:** hay boletas reales para ese día en `bitacora/boletas/2026-09-28.md`. Copia las boletas al inicio del brief, para que el dueño las vea primero, con el estado de futuros del S&P y del VIX a esa hora. La condición de validez formal se evalúa a las 08:45.
 - [ ] **Supervisión de las 08:40 del lunes 28-sep (y del martes 29-sep si quedó EN ESPERA):**
   - Evalúa la condición de validez de la boleta GBM con Yahoo (intervalo 1m): SPYM > 88.98 USD y ^VIX < 25.

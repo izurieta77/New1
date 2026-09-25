@@ -16,13 +16,14 @@ Por eso la cartera es beta de EUA sin apalancar (S&P 500 más Nasdaq-100), con l
 
 **Se refuta si, al 28-dic-2026:**
 - la cuenta toca −12%. El modelo daba ~3% de probabilidad suponiendo stops por línea. Sin ellos, que es lo que se ejecuta tras la enmienda del gestor de riesgo, da 15-17%. Ver abajo. O bien
+  - **[Corregido 2026-09-25, auditoría 2026-W39]** El 3% (M1 con stops, 3.4%) y el 15-17% (M3 sin stops: 15.2% en 1999-2026 y 16.7% antes de 2016) salen de métodos distintos; la brecha no es solo el efecto de los stops. Mismo método, sin stops → con stops: M1 5.6% → 3.4%; M2 8.9% → 4.5%; M3 15.2% → 4.7%; M3c 6.5% → 2.9%. Sin stops el rango honesto es **6-15%** según el método (16.4% en un recálculo independiente con SPY/QQQ × DEXMXUS 2000-2026; 9.1% con 2011-2026). Además, el modelo mide 4 meses (85 días, al 28-ene-2027), no al 28-dic-2026 (64 días). Ver `bitacora/semanal/2026-W39-verificacion.md`.
 - quedamos 3 pp o más atrás de un rival con beta ≤ 1.2 sin que haya un choque de mercado que lo explique.
 
 ## Dictámenes (3 líneas cada uno)
 
 - **Macro, confianza 60. Voto: B, variante con SPYM 7 + SPXL 1 + efectivo.**
   - Régimen mixto: tendencia y crédito a favor; bono de 10 años en ~5.18% (máximo desde 2007) y tasa real de 2.76% en contra.
-  - Cada +100 pb del bono restó 7.9% al S&P en 2026 (cálculo propio, grado C).
+  - ~~Cada +100 pb del bono restó 7.9% al S&P en 2026 (cálculo propio, grado C).~~ **[Corregido 2026-09-25, auditoría 2026-W39]** Sensibilidad de alta frecuencia, no efecto acumulado: en 2026 el bono subió ~+99 pb y el S&P **ganó** +12.3% (FRED DGS10 y SP500, 2-ene a 24-sep). La pendiente depende de la especificación: cambios diarios −8.1% por +100 pb (t NW −4.8); cambios semanales −6.2% (viernes, t −1.6, no significativa) a −8.7% (miércoles, t −3.1); cambios mensuales −3.6% (n = 8, t −0.7); en niveles diarios el signo se invierte (+18%, correlación espuria de tendencias). Cálculo propio, grado C. Ver `bitacora/semanal/2026-W39-verificacion.md`.
   - El USD amortigua en MXN.
 - **Geopolítico, confianza 55. Voto: C, con SPYM 5 + TQQQ 4 + XLE 5.**
   - El eje de riesgo es Ormuz → WTI → Fed → tasa real → NDX; XLE funcionó como cobertura en 2026.
