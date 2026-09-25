@@ -7,7 +7,7 @@
 | Fecha de publicación (primera versión pública) | Working paper de 2006 (la portada de 2013 dice "May 2006"; el PDF de 2006 dice "July 2006"). Revista: primavera de 2007. |
 | Pre-registro escrito el | 2026-09-25, alrededor de las 05:21 UTC, **antes de cualquier corrida de backtest**. Antes de escribirlo solo se descargaron los datos y se revisaron metadatos (versión, rango y faltantes). No se calculó ninguna métrica de ninguna regla. |
 | Responsable | Claude (laboratorio de réplicas, fase 0). Mandato: Eduardo Iván Izurieta Martínez |
-| Estado | Pendiente (se llena al final) |
+| Estado | **Replicado con diferencias** (2026-09-25). Veredicto fuera de muestra: **"Se sostiene"**, con matices en la sección 14 |
 
 ---
 
@@ -236,6 +236,9 @@ Los escenarios de costos alternativos son los del bloque C.
 | Fecha | Qué cambió | Por qué | ¿Invalida el tramo de prueba? |
 |---|---|---|---|
 | 2026-09-25, ~05:30 UTC, **antes de la primera corrida** | Se operacionaliza la cláusula de la sección 2 que dice "el efecto aparece solo en algunos subperiodos". Se usan 9 ventanas dentro de muestra: 1927-07 a 1929-12, las décadas de 1930 a 1990 y 2000-01 a 2006-12. Si la reducción relativa del MDD neto de la SMA de 10 meses contra comprar y mantener es mayor que 0 en **menos de 5 de las 9**, el efecto se considera "solo en algunos subperiodos" y el estado queda como "Replicado con diferencias". | La cláusula del pre-registro no tenía un umbral. Se fija antes de ver resultados para que no haya discreción después. Referencia: Faber (2013, p. 28) dice que el timing mejora el drawdown "in all but two decades". | No: se fijó antes de cualquier corrida |
+| 2026-09-25, 05:25 UTC, antes de la primera corrida | Los tres zips de French se copiaron a `replicas/R01-datos/` (202607, 202407 y 200607), con el manifiesto `SHA256SUMS.txt`. El script los lee de ahí y se detiene si una huella no coincide. El zip 202607 es byte a byte el mismo del caché (sha256 `b840dba5…`). | Reproducibilidad: el caché `datos/cache/` está en `.gitignore`, y French publica una versión nueva cada mes. Se sigue el precedente de V01. Las condiciones de redistribución siguen pendientes de verificar. | No (mismos bytes) |
+| 2026-09-25, 05:30 UTC, **después** de la corrida 1 (05:28 UTC) | (1) Se agregó a `R01.py` un **análisis post-hoc no pre-registrado**: bootstrap pareado de bloques de 12 meses (2000 repeticiones, semilla 20260925) de la diferencia de Sharpe y de la reducción del MDD de sma10 contra comprar y mantener y contra mom12. (2) Se agregó el conteo de operaciones. (3) Se volvió a correr el script completo (corrida 2). | Medir la incertidumbre de la diferencia de Sharpe, que el DSR no mide porque contrasta contra 0 y no contra comprar y mantener. | No cambia ninguna regla, variante, corte ni criterio. La corrida 2 registró otra vez las mismas 49 configuraciones (el CSV tiene 98 corridas; el DSR deduplica por variante y parámetros, así que N sigue en 5). `diff` de `R01-salida.txt` entre las corridas 1 y 2: solo cambian la marca de tiempo y las líneas agregadas; todas las demás cifras son idénticas, incluidos los datos de Yahoo y FRED. El bootstrap se reporta como post-hoc y **no** entra en el estado ni en el veredicto |
+| 2026-09-25, 05:33 UTC | Se agregó `R01_verificacion.py`, una doble implementación de sma10 y de comprar y mantener sin el motor. | Auditoría del motor. | No es una variante nueva ni se registra. La diferencia máxima contra el motor es 1.28e-15 |
 
 ### 10. Variantes probadas
 

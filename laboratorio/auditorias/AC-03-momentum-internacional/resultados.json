@@ -1,0 +1,4617 @@
+{
+ "id": "AC-03-momentum-internacional",
+ "especificacion": {
+  "unidades": "% mensual, USD",
+  "nw": "Bartlett, 6 rezagos, correccion n/(n-1)",
+  "ic": "media +/- 1.96*EE_NW",
+  "veredicto": "apoyo si IC95 NW inferior > 0; contraria si superior < 0; si no inconcluso",
+  "ventanas": {
+   "V1": [
+    "2000-01 a ultimo mes",
+    200001,
+    null
+   ],
+   "V2": [
+    "2010-01 a ultimo mes",
+    201001,
+    null
+   ],
+   "V3": [
+    "2016-01 a 2025-12",
+    201601,
+    202512
+   ]
+  },
+  "media_x12": "aritmetica x12; NO es CAGR",
+  "compuesto": "(prod(1+r))^(12/n)-1; compuesto de la serie largo-corto; NO es el rendimiento de una cuenta",
+  "tolerancia_afirmacion_pp": 0.15
+ },
+ "archivos": {
+  "Asia_Pacific_ex_Japan_6_Portfolios_ME_Prior_12_2_CSV.zip": {
+   "sha256": "444e6541b1feb14cbc3be563bc3ed2180408863a50ad892e0ee17785a666f753",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database. It contains"
+  },
+  "Asia_Pacific_ex_Japan_MOM_Factor_CSV.zip": {
+   "sha256": "c98274f919299a5893509a3aabe0589fc6707d605a4e715430e60c37fe73eeb5",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database."
+  },
+  "Developed_ex_US_6_Portfolios_ME_Prior_12_2_CSV.zip": {
+   "sha256": "89dffd6c640704889b4b7f116d2964f36303be6ee7e1ec8722da88f7a29ec237",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database. It contains"
+  },
+  "Developed_ex_US_MOM_Factor_CSV.zip": {
+   "sha256": "0b0941b3e504f4cc145e96deb066fb4bba9ae1b462f9270f37a14af63c4e63b3",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database."
+  },
+  "Emerging_MOM_Factor_CSV.zip": {
+   "sha256": "5316f98a394947be155ba97f860366a14b214140d37b75c7eb93ad08bda92735",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database."
+  },
+  "Emerging_Markets_6_Portfolios_ME_Prior_12_2_CSV.zip": {
+   "sha256": "faaa649bceb8a6cf06f566d81d401fe89de5e79a5c565168af85eb3b5db410ce",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database. It contains"
+  },
+  "Europe_6_Portfolios_ME_Prior_12_2_CSV.zip": {
+   "sha256": "d3f22b90145365c0dd9436a605528ed6682850414fe64d7576852fe790093079",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database. It contains"
+  },
+  "Europe_MOM_Factor_CSV.zip": {
+   "sha256": "38cbf8df4023c25852a6e7a8df0614cfefd0676aae353cb01d08eed0a45a04b3",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database."
+  },
+  "Japan_6_Portfolios_ME_Prior_12_2_CSV.zip": {
+   "sha256": "11e022524a8c47a393ea64c506f529b077bd95d1cc41a636e2d28998369d626b",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database. It contains"
+  },
+  "Japan_MOM_Factor_CSV.zip": {
+   "sha256": "5bd944de3db4e38c26d9caf5f393b5f250513fd02476426e42b36db4efa88045",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database."
+  },
+  "North_America_6_Portfolios_ME_Prior_12_2_CSV.zip": {
+   "sha256": "08fd499d01d86d98d57f00ba2a2327ddb94859f00a335acad395e67987cb3a13",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database. It contains"
+  },
+  "North_America_MOM_Factor_CSV.zip": {
+   "sha256": "ce4f77574542c6a71d77ad9d54ce6c2629e5587a21b2c439b0102891fb11050c",
+   "version_cabecera": "This file was created using the 202608 Bloomberg database."
+  },
+  "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx": {
+   "sha256": "b98d9ce68033e9ac38812737ab7444e6883348bcae6e4573abcdaa94fd164514",
+   "version_cabecera": "This file contains monthly self-financing returns of equity Up Minus Down (UMD) factors. / Data updated and maintained by AQR, www.aqr.com.  / The portfolio construction is based on Fama and French (1996), Asness and Frazzini (2013) and Asness, Frazzini and Pedersen (2013), however there can be differences in data sources and methodology. / See the Sources and Definitions tab for details. / Data is updated as it becomes available. AQR reconstructs the full history each time the portfolios are updated. / Please see disclosures on the Disclosures tab."
+  }
+ },
+ "series": {
+  "A|Emerging": {
+   "fuente": "A French MOM/WML",
+   "archivo": "Emerging_MOM_Factor_CSV.zip",
+   "columna": "WML",
+   "primer_mes": "1990-01",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.798813,
+     "desv_est_pct": 3.103429,
+     "t_iid": 4.604452,
+     "ee_nw_pct": 0.189643,
+     "t_nw": 4.212189,
+     "ic95_nw_pct": [
+      0.427112,
+      1.170513
+     ],
+     "media_x12_pct_no_es_CAGR": 9.58575,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.374364,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -16.84
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 12.84
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.0246,
+     "desv_est_pct": 3.02182,
+     "t_iid": 4.795134,
+     "ee_nw_pct": 0.187144,
+     "t_nw": 5.474941,
+     "ic95_nw_pct": [
+      0.657799,
+      1.391401
+     ],
+     "media_x12_pct_no_es_CAGR": 12.2952,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 12.395277,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -16.84
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 12.84
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.860417,
+     "desv_est_pct": 2.519689,
+     "t_iid": 3.740697,
+     "ee_nw_pct": 0.228903,
+     "t_nw": 3.758867,
+     "ic95_nw_pct": [
+      0.411766,
+      1.309067
+     ],
+     "media_x12_pct_no_es_CAGR": 10.325,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.411134,
+     "peor_mes": {
+      "fecha": "2022-11",
+      "pct": -9.15
+     },
+     "mejor_mes": {
+      "fecha": "2021-01",
+      "pct": 7.03
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "B|Emerging": {
+   "fuente": "B reconstruccion French 2x3 VW",
+   "archivo": "Emerging_Markets_6_Portfolios_ME_Prior_12_2_CSV.zip",
+   "columna": "0.5*(SMALL HiPRIOR+BIG HiPRIOR)-0.5*(SMALL LoPRIOR+BIG LoPRIOR)",
+   "primer_mes": "1990-01",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.798516,
+     "desv_est_pct": 3.102317,
+     "t_iid": 4.604391,
+     "ee_nw_pct": 0.189528,
+     "t_nw": 4.213186,
+     "ic95_nw_pct": [
+      0.427041,
+      1.16999
+     ],
+     "media_x12_pct_no_es_CAGR": 9.582188,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.370952,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -16.835
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 12.84
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.024,
+     "desv_est_pct": 3.020542,
+     "t_iid": 4.794354,
+     "ee_nw_pct": 0.186953,
+     "t_nw": 5.477313,
+     "ic95_nw_pct": [
+      0.657572,
+      1.390428
+     ],
+     "media_x12_pct_no_es_CAGR": 12.288,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 12.387775,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -16.835
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 12.84
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.860333,
+     "desv_est_pct": 2.518335,
+     "t_iid": 3.742346,
+     "ee_nw_pct": 0.228672,
+     "t_nw": 3.762307,
+     "ic95_nw_pct": [
+      0.412137,
+      1.30853
+     ],
+     "media_x12_pct_no_es_CAGR": 10.324,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.410477,
+     "peor_mes": {
+      "fecha": "2022-11",
+      "pct": -9.15
+     },
+     "mejor_mes": {
+      "fecha": "2021-01",
+      "pct": 7.02
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "A|Developed_ex_US": {
+   "fuente": "A French MOM/WML",
+   "archivo": "Developed_ex_US_MOM_Factor_CSV.zip",
+   "columna": "WML",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.584406,
+     "desv_est_pct": 3.511526,
+     "t_iid": 2.977104,
+     "ee_nw_pct": 0.226073,
+     "t_nw": 2.585035,
+     "ic95_nw_pct": [
+      0.141304,
+      1.027509
+     ],
+     "media_x12_pct_no_es_CAGR": 7.012875,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 6.434641,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -22.52
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 10.06
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.7083,
+     "desv_est_pct": 2.731061,
+     "t_iid": 3.66776,
+     "ee_nw_pct": 0.167993,
+     "t_nw": 4.216245,
+     "ic95_nw_pct": [
+      0.379034,
+      1.037566
+     ],
+     "media_x12_pct_no_es_CAGR": 8.4996,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.354957,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -12.31
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 7.21
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.478833,
+     "desv_est_pct": 2.568177,
+     "t_iid": 2.042443,
+     "ee_nw_pct": 0.2114,
+     "t_nw": 2.26506,
+     "ic95_nw_pct": [
+      0.06449,
+      0.893177
+     ],
+     "media_x12_pct_no_es_CAGR": 5.746,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 5.482217,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -12.31
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 7.21
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "B|Developed_ex_US": {
+   "fuente": "B reconstruccion French 2x3 VW",
+   "archivo": "Developed_ex_US_6_Portfolios_ME_Prior_12_2_CSV.zip",
+   "columna": "0.5*(SMALL HiPRIOR+BIG HiPRIOR)-0.5*(SMALL LoPRIOR+BIG LoPRIOR)",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.583406,
+     "desv_est_pct": 3.50969,
+     "t_iid": 2.973564,
+     "ee_nw_pct": 0.225998,
+     "t_nw": 2.581472,
+     "ic95_nw_pct": [
+      0.140451,
+      1.026361
+     ],
+     "media_x12_pct_no_es_CAGR": 7.000875,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 6.422752,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -22.52
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 10.055
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.7072,
+     "desv_est_pct": 2.72866,
+     "t_iid": 3.665285,
+     "ee_nw_pct": 0.167831,
+     "t_nw": 4.213766,
+     "ic95_nw_pct": [
+      0.378251,
+      1.036149
+     ],
+     "media_x12_pct_no_es_CAGR": 8.4864,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.341593,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -12.31
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 7.215
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.477958,
+     "desv_est_pct": 2.566218,
+     "t_iid": 2.040268,
+     "ee_nw_pct": 0.211193,
+     "t_nw": 2.263139,
+     "ic95_nw_pct": [
+      0.064021,
+      0.891896
+     ],
+     "media_x12_pct_no_es_CAGR": 5.7355,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 5.471813,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -12.31
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 7.215
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "A|Europe": {
+   "fuente": "A French MOM/WML",
+   "archivo": "Europe_MOM_Factor_CSV.zip",
+   "columna": "WML",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.748938,
+     "desv_est_pct": 4.084694,
+     "t_iid": 3.279903,
+     "ee_nw_pct": 0.245657,
+     "t_nw": 3.048713,
+     "ic95_nw_pct": [
+      0.26745,
+      1.230425
+     ],
+     "media_x12_pct_no_es_CAGR": 8.98725,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.245066,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -26.09
+     },
+     "mejor_mes": {
+      "fecha": "2002-09",
+      "pct": 13.65
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.8506,
+     "desv_est_pct": 3.083851,
+     "t_iid": 3.90074,
+     "ee_nw_pct": 0.178198,
+     "t_nw": 4.773347,
+     "ic95_nw_pct": [
+      0.501332,
+      1.199868
+     ],
+     "media_x12_pct_no_es_CAGR": 10.2072,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.063386,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.39
+     },
+     "mejor_mes": {
+      "fecha": "2012-04",
+      "pct": 8.94
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.617833,
+     "desv_est_pct": 3.076361,
+     "t_iid": 2.20001,
+     "ee_nw_pct": 0.229267,
+     "t_nw": 2.694816,
+     "ic95_nw_pct": [
+      0.168469,
+      1.067197
+     ],
+     "media_x12_pct_no_es_CAGR": 7.414,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 7.047984,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.39
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 8.5
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "B|Europe": {
+   "fuente": "B reconstruccion French 2x3 VW",
+   "archivo": "Europe_6_Portfolios_ME_Prior_12_2_CSV.zip",
+   "columna": "0.5*(SMALL HiPRIOR+BIG HiPRIOR)-0.5*(SMALL LoPRIOR+BIG LoPRIOR)",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.748594,
+     "desv_est_pct": 4.083342,
+     "t_iid": 3.279483,
+     "ee_nw_pct": 0.245568,
+     "t_nw": 3.048422,
+     "ic95_nw_pct": [
+      0.267281,
+      1.229906
+     ],
+     "media_x12_pct_no_es_CAGR": 8.983125,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.241363,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -26.085
+     },
+     "mejor_mes": {
+      "fecha": "2002-09",
+      "pct": 13.655
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.850125,
+     "desv_est_pct": 3.082542,
+     "t_iid": 3.900217,
+     "ee_nw_pct": 0.178192,
+     "t_nw": 4.770836,
+     "ic95_nw_pct": [
+      0.500869,
+      1.199381
+     ],
+     "media_x12_pct_no_es_CAGR": 10.2015,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.057685,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.39
+     },
+     "mejor_mes": {
+      "fecha": "2012-04",
+      "pct": 8.93
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.617417,
+     "desv_est_pct": 3.07543,
+     "t_iid": 2.199192,
+     "ee_nw_pct": 0.229285,
+     "t_nw": 2.692787,
+     "ic95_nw_pct": [
+      0.168017,
+      1.066816
+     ],
+     "media_x12_pct_no_es_CAGR": 7.409,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 7.043012,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.39
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 8.495
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "A|Asia_Pacific_ex_Japan": {
+   "fuente": "A French MOM/WML",
+   "archivo": "Asia_Pacific_ex_Japan_MOM_Factor_CSV.zip",
+   "columna": "WML",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.888969,
+     "desv_est_pct": 3.509119,
+     "t_iid": 4.531723,
+     "ee_nw_pct": 0.243093,
+     "t_nw": 3.656913,
+     "ic95_nw_pct": [
+      0.412507,
+      1.36543
+     ],
+     "media_x12_pct_no_es_CAGR": 10.667625,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.377913,
+     "peor_mes": {
+      "fecha": "2009-05",
+      "pct": -18.03
+     },
+     "mejor_mes": {
+      "fecha": "2013-04",
+      "pct": 7.99
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.03995,
+     "desv_est_pct": 3.052683,
+     "t_iid": 4.817767,
+     "ee_nw_pct": 0.20842,
+     "t_nw": 4.989689,
+     "ic95_nw_pct": [
+      0.631447,
+      1.448453
+     ],
+     "media_x12_pct_no_es_CAGR": 12.4794,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 12.599851,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -8.37
+     },
+     "mejor_mes": {
+      "fecha": "2013-04",
+      "pct": 7.99
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.751417,
+     "desv_est_pct": 2.860626,
+     "t_iid": 2.877467,
+     "ee_nw_pct": 0.220398,
+     "t_nw": 3.409364,
+     "ic95_nw_pct": [
+      0.319437,
+      1.183396
+     ],
+     "media_x12_pct_no_es_CAGR": 9.017,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.87305,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -8.37
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 7.65
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "B|Asia_Pacific_ex_Japan": {
+   "fuente": "B reconstruccion French 2x3 VW",
+   "archivo": "Asia_Pacific_ex_Japan_6_Portfolios_ME_Prior_12_2_CSV.zip",
+   "columna": "0.5*(SMALL HiPRIOR+BIG HiPRIOR)-0.5*(SMALL LoPRIOR+BIG LoPRIOR)",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.888125,
+     "desv_est_pct": 3.507785,
+     "t_iid": 4.529144,
+     "ee_nw_pct": 0.243004,
+     "t_nw": 3.65477,
+     "ic95_nw_pct": [
+      0.411836,
+      1.364414
+     ],
+     "media_x12_pct_no_es_CAGR": 10.6575,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.367438,
+     "peor_mes": {
+      "fecha": "2009-05",
+      "pct": -18.025
+     },
+     "mejor_mes": {
+      "fecha": "2013-04",
+      "pct": 7.99
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.038925,
+     "desv_est_pct": 3.051077,
+     "t_iid": 4.815552,
+     "ee_nw_pct": 0.208307,
+     "t_nw": 4.98746,
+     "ic95_nw_pct": [
+      0.630642,
+      1.447208
+     ],
+     "media_x12_pct_no_es_CAGR": 12.4671,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 12.586775,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -8.375
+     },
+     "mejor_mes": {
+      "fecha": "2013-04",
+      "pct": 7.99
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.7505,
+     "desv_est_pct": 2.859199,
+     "t_iid": 2.875391,
+     "ee_nw_pct": 0.220248,
+     "t_nw": 3.407527,
+     "ic95_nw_pct": [
+      0.318814,
+      1.182186
+     ],
+     "media_x12_pct_no_es_CAGR": 9.006,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.861666,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -8.375
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 7.635
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "A|Japan": {
+   "fuente": "A French MOM/WML",
+   "archivo": "Japan_MOM_Factor_CSV.zip",
+   "columna": "WML",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": -0.020312,
+     "desv_est_pct": 3.957609,
+     "t_iid": -0.091813,
+     "ee_nw_pct": 0.234897,
+     "t_nw": -0.086474,
+     "ic95_nw_pct": [
+      -0.48071,
+      0.440085
+     ],
+     "media_x12_pct_no_es_CAGR": -0.24375,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": -1.19316,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -18.28
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 14.8
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.08185,
+     "desv_est_pct": 3.40349,
+     "t_iid": 0.340102,
+     "ee_nw_pct": 0.207037,
+     "t_nw": 0.39534,
+     "ic95_nw_pct": [
+      -0.323942,
+      0.487642
+     ],
+     "media_x12_pct_no_es_CAGR": 0.9822,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 0.279755,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -18.28
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 14.3
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": -0.089917,
+     "desv_est_pct": 2.891853,
+     "t_iid": -0.340608,
+     "ee_nw_pct": 0.245134,
+     "t_nw": -0.366806,
+     "ic95_nw_pct": [
+      -0.57038,
+      0.390546
+     ],
+     "media_x12_pct_no_es_CAGR": -1.079,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": -1.570181,
+     "peor_mes": {
+      "fecha": "2016-08",
+      "pct": -8.5
+     },
+     "mejor_mes": {
+      "fecha": "2016-06",
+      "pct": 8.44
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "B|Japan": {
+   "fuente": "B reconstruccion French 2x3 VW",
+   "archivo": "Japan_6_Portfolios_ME_Prior_12_2_CSV.zip",
+   "columna": "0.5*(SMALL HiPRIOR+BIG HiPRIOR)-0.5*(SMALL LoPRIOR+BIG LoPRIOR)",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": -0.020719,
+     "desv_est_pct": 3.955576,
+     "t_iid": -0.093698,
+     "ee_nw_pct": 0.234803,
+     "t_nw": -0.088239,
+     "ic95_nw_pct": [
+      -0.480932,
+      0.439495
+     ],
+     "media_x12_pct_no_es_CAGR": -0.248625,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": -1.196999,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -18.265
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 14.79
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.081525,
+     "desv_est_pct": 3.401268,
+     "t_iid": 0.338973,
+     "ee_nw_pct": 0.206912,
+     "t_nw": 0.394008,
+     "ic95_nw_pct": [
+      -0.324022,
+      0.487072
+     ],
+     "media_x12_pct_no_es_CAGR": 0.9783,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 0.276781,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -18.265
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 14.295
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": -0.090167,
+     "desv_est_pct": 2.889641,
+     "t_iid": -0.341816,
+     "ee_nw_pct": 0.244901,
+     "t_nw": -0.368176,
+     "ic95_nw_pct": [
+      -0.570173,
+      0.389839
+     ],
+     "media_x12_pct_no_es_CAGR": -1.082,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": -1.572394,
+     "peor_mes": {
+      "fecha": "2016-08",
+      "pct": -8.495
+     },
+     "mejor_mes": {
+      "fecha": "2016-06",
+      "pct": 8.425
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "A|North_America": {
+   "fuente": "A French MOM/WML",
+   "archivo": "North_America_MOM_Factor_CSV.zip",
+   "columna": "WML",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.247875,
+     "desv_est_pct": 4.92618,
+     "t_iid": 0.900114,
+     "ee_nw_pct": 0.248569,
+     "t_nw": 0.997208,
+     "ic95_nw_pct": [
+      -0.23932,
+      0.73507
+     ],
+     "media_x12_pct_no_es_CAGR": 2.9745,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 1.505078,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -25.0
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 29.32
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.3482,
+     "desv_est_pct": 3.290766,
+     "t_iid": 1.496397,
+     "ee_nw_pct": 0.200093,
+     "t_nw": 1.740193,
+     "ic95_nw_pct": [
+      -0.043982,
+      0.740382
+     ],
+     "media_x12_pct_no_es_CAGR": 4.1784,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 3.582019,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -12.98
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 11.35
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.164333,
+     "desv_est_pct": 3.318365,
+     "t_iid": 0.542491,
+     "ee_nw_pct": 0.28243,
+     "t_nw": 0.581856,
+     "ic95_nw_pct": [
+      -0.389229,
+      0.717896
+     ],
+     "media_x12_pct_no_es_CAGR": 1.972,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 1.317154,
+     "peor_mes": {
+      "fecha": "2023-01",
+      "pct": -12.72
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 6.94
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "B|North_America": {
+   "fuente": "B reconstruccion French 2x3 VW",
+   "archivo": "North_America_6_Portfolios_ME_Prior_12_2_CSV.zip",
+   "columna": "0.5*(SMALL HiPRIOR+BIG HiPRIOR)-0.5*(SMALL LoPRIOR+BIG LoPRIOR)",
+   "primer_mes": "1990-11",
+   "ultimo_mes": "2026-08",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-08",
+     "n": 320,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.247344,
+     "desv_est_pct": 4.924492,
+     "t_iid": 0.898493,
+     "ee_nw_pct": 0.248476,
+     "t_nw": 0.995444,
+     "ic95_nw_pct": [
+      -0.239669,
+      0.734356
+     ],
+     "media_x12_pct_no_es_CAGR": 2.968125,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 1.499685,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -24.995
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 29.32
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-08",
+     "n": 200,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.347875,
+     "desv_est_pct": 3.28973,
+     "t_iid": 1.495471,
+     "ee_nw_pct": 0.20005,
+     "t_nw": 1.738942,
+     "ic95_nw_pct": [
+      -0.044223,
+      0.739973
+     ],
+     "media_x12_pct_no_es_CAGR": 4.1745,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 3.578422,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -12.975
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 11.355
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.164583,
+     "desv_est_pct": 3.317379,
+     "t_iid": 0.543477,
+     "ee_nw_pct": 0.282424,
+     "t_nw": 0.582752,
+     "ic95_nw_pct": [
+      -0.388969,
+      0.718135
+     ],
+     "media_x12_pct_no_es_CAGR": 1.975,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 1.320594,
+     "peor_mes": {
+      "fecha": "2023-01",
+      "pct": -12.72
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 6.945
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|AUS": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "AUS",
+   "primer_mes": "1986-11",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.448971,
+     "desv_est_pct": 4.308548,
+     "t_iid": 6.006536,
+     "ee_nw_pct": 0.266557,
+     "t_nw": 5.435881,
+     "ic95_nw_pct": [
+      0.92652,
+      1.971422
+     ],
+     "media_x12_pct_no_es_CAGR": 17.387653,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 17.542338,
+     "peor_mes": {
+      "fecha": "2000-04",
+      "pct": -17.194262
+     },
+     "mejor_mes": {
+      "fecha": "2013-04",
+      "pct": 14.787177
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.382575,
+     "desv_est_pct": 3.792134,
+     "t_iid": 5.143177,
+     "ee_nw_pct": 0.235111,
+     "t_nw": 5.880512,
+     "ic95_nw_pct": [
+      0.921757,
+      1.843393
+     ],
+     "media_x12_pct_no_es_CAGR": 16.590898,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 16.922872,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -13.477198
+     },
+     "mejor_mes": {
+      "fecha": "2013-04",
+      "pct": 14.787177
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.953173,
+     "desv_est_pct": 3.378433,
+     "t_iid": 3.090631,
+     "ee_nw_pct": 0.196325,
+     "t_nw": 4.855073,
+     "ic95_nw_pct": [
+      0.568376,
+      1.33797
+     ],
+     "media_x12_pct_no_es_CAGR": 11.438077,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.29882,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -13.477198
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 9.279627
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|AUT": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "AUT",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.57119,
+     "desv_est_pct": 5.76248,
+     "t_iid": 1.770379,
+     "ee_nw_pct": 0.408548,
+     "t_nw": 1.398095,
+     "ic95_nw_pct": [
+      -0.229565,
+      1.371945
+     ],
+     "media_x12_pct_no_es_CAGR": 6.854276,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 4.81124,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -39.69244
+     },
+     "mejor_mes": {
+      "fecha": "2008-11",
+      "pct": 21.556486
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.624736,
+     "desv_est_pct": 4.868326,
+     "t_iid": 1.81027,
+     "ee_nw_pct": 0.400333,
+     "t_nw": 1.56054,
+     "ic95_nw_pct": [
+      -0.159917,
+      1.409389
+     ],
+     "media_x12_pct_no_es_CAGR": 7.49683,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 6.230278,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -23.05829
+     },
+     "mejor_mes": {
+      "fecha": "2026-05",
+      "pct": 16.095442
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": -0.017339,
+     "desv_est_pct": 4.525342,
+     "t_iid": -0.041972,
+     "ee_nw_pct": 0.472791,
+     "t_nw": -0.036673,
+     "ic95_nw_pct": [
+      -0.94401,
+      0.909332
+     ],
+     "media_x12_pct_no_es_CAGR": -0.208065,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": -1.472937,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -23.05829
+     },
+     "mejor_mes": {
+      "fecha": "2025-05",
+      "pct": 7.685919
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|BEL": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "BEL",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.73549,
+     "desv_est_pct": 5.139667,
+     "t_iid": 2.555862,
+     "ee_nw_pct": 0.326408,
+     "t_nw": 2.253284,
+     "ic95_nw_pct": [
+      0.09573,
+      1.37525
+     ],
+     "media_x12_pct_no_es_CAGR": 8.825885,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 7.422259,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -30.975561
+     },
+     "mejor_mes": {
+      "fecha": "2008-10",
+      "pct": 19.335052
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.613254,
+     "desv_est_pct": 4.260647,
+     "t_iid": 2.030445,
+     "ee_nw_pct": 0.259553,
+     "t_nw": 2.362733,
+     "ic95_nw_pct": [
+      0.10453,
+      1.121977
+     ],
+     "media_x12_pct_no_es_CAGR": 7.359047,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 6.437951,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -19.034238
+     },
+     "mejor_mes": {
+      "fecha": "2012-04",
+      "pct": 12.802229
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.342601,
+     "desv_est_pct": 4.050776,
+     "t_iid": 0.92649,
+     "ee_nw_pct": 0.361584,
+     "t_nw": 0.947499,
+     "ic95_nw_pct": [
+      -0.366104,
+      1.051306
+     ],
+     "media_x12_pct_no_es_CAGR": 4.111212,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 3.152894,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -19.034238
+     },
+     "mejor_mes": {
+      "fecha": "2018-01",
+      "pct": 12.578283
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|CAN": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "CAN",
+   "primer_mes": "1985-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.320101,
+     "desv_est_pct": 5.853475,
+     "t_iid": 4.027993,
+     "ee_nw_pct": 0.383705,
+     "t_nw": 3.440409,
+     "ic95_nw_pct": [
+      0.56804,
+      2.072162
+     ],
+     "media_x12_pct_no_es_CAGR": 15.841212,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 14.633076,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -29.323712
+     },
+     "mejor_mes": {
+      "fecha": "2001-02",
+      "pct": 22.571484
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.453196,
+     "desv_est_pct": 5.175713,
+     "t_iid": 3.960778,
+     "ee_nw_pct": 0.373827,
+     "t_nw": 3.887353,
+     "ic95_nw_pct": [
+      0.720496,
+      2.185896
+     ],
+     "media_x12_pct_no_es_CAGR": 17.43835,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 17.017432,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -19.004971
+     },
+     "mejor_mes": {
+      "fecha": "2015-07",
+      "pct": 16.053374
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.115806,
+     "desv_est_pct": 4.963077,
+     "t_iid": 2.462796,
+     "ee_nw_pct": 0.493301,
+     "t_nw": 2.261918,
+     "ic95_nw_pct": [
+      0.148937,
+      2.082676
+     ],
+     "media_x12_pct_no_es_CAGR": 13.389677,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 12.556304,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -19.004971
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 12.7554
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|CHE": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "CHE",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.77999,
+     "desv_est_pct": 4.681034,
+     "t_iid": 2.976065,
+     "ee_nw_pct": 0.265317,
+     "t_nw": 2.939845,
+     "ic95_nw_pct": [
+      0.259969,
+      1.30001
+     ],
+     "media_x12_pct_no_es_CAGR": 9.359878,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.322096,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -25.279505
+     },
+     "mejor_mes": {
+      "fecha": "2001-09",
+      "pct": 22.692045
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.721557,
+     "desv_est_pct": 3.375741,
+     "t_iid": 3.015284,
+     "ee_nw_pct": 0.183779,
+     "t_nw": 3.926223,
+     "ic95_nw_pct": [
+      0.36135,
+      1.081764
+     ],
+     "media_x12_pct_no_es_CAGR": 8.658687,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.266763,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -16.674753
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 9.470647
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.516071,
+     "desv_est_pct": 3.509753,
+     "t_iid": 1.610733,
+     "ee_nw_pct": 0.243134,
+     "t_nw": 2.12258,
+     "ic95_nw_pct": [
+      0.039529,
+      0.992614
+     ],
+     "media_x12_pct_no_es_CAGR": 6.192855,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 5.583532,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -16.674753
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 9.470647
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|DEU": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "DEU",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.425135,
+     "desv_est_pct": 5.587106,
+     "t_iid": 4.555798,
+     "ee_nw_pct": 0.329319,
+     "t_nw": 4.327525,
+     "ic95_nw_pct": [
+      0.77967,
+      2.0706
+     ],
+     "media_x12_pct_no_es_CAGR": 17.101624,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 16.301262,
+     "peor_mes": {
+      "fecha": "2009-08",
+      "pct": -23.212707
+     },
+     "mejor_mes": {
+      "fecha": "2008-10",
+      "pct": 26.888382
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.398805,
+     "desv_est_pct": 3.526594,
+     "t_iid": 5.595365,
+     "ee_nw_pct": 0.238505,
+     "t_nw": 5.864885,
+     "ic95_nw_pct": [
+      0.931335,
+      1.866276
+     ],
+     "media_x12_pct_no_es_CAGR": 16.785665,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 17.267694,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -15.153536
+     },
+     "mejor_mes": {
+      "fecha": "2026-01",
+      "pct": 11.290941
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.958382,
+     "desv_est_pct": 3.662278,
+     "t_iid": 2.86667,
+     "ee_nw_pct": 0.283908,
+     "t_nw": 3.375679,
+     "ic95_nw_pct": [
+      0.401922,
+      1.514841
+     ],
+     "media_x12_pct_no_es_CAGR": 11.50058,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.22617,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -15.153536
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 11.127834
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|DNK": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "DNK",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.441468,
+     "desv_est_pct": 4.931963,
+     "t_iid": 5.22012,
+     "ee_nw_pct": 0.277666,
+     "t_nw": 5.191381,
+     "ic95_nw_pct": [
+      0.897243,
+      1.985693
+     ],
+     "media_x12_pct_no_es_CAGR": 17.297616,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 17.026027,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -22.250206
+     },
+     "mejor_mes": {
+      "fecha": "2022-04",
+      "pct": 14.145116
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.553971,
+     "desv_est_pct": 4.651603,
+     "t_iid": 4.712668,
+     "ee_nw_pct": 0.305171,
+     "t_nw": 5.092128,
+     "ic95_nw_pct": [
+      0.955836,
+      2.152107
+     ],
+     "media_x12_pct_no_es_CAGR": 18.647655,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 18.816646,
+     "peor_mes": {
+      "fecha": "2022-05",
+      "pct": -14.633953
+     },
+     "mejor_mes": {
+      "fecha": "2022-04",
+      "pct": 14.145116
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.292878,
+     "desv_est_pct": 5.003331,
+     "t_iid": 2.830668,
+     "ee_nw_pct": 0.434159,
+     "t_nw": 2.97789,
+     "ic95_nw_pct": [
+      0.441926,
+      2.14383
+     ],
+     "media_x12_pct_no_es_CAGR": 15.514536,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 14.971439,
+     "peor_mes": {
+      "fecha": "2022-05",
+      "pct": -14.633953
+     },
+     "mejor_mes": {
+      "fecha": "2022-04",
+      "pct": 14.145116
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|ESP": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "ESP",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.824895,
+     "desv_est_pct": 5.334815,
+     "t_iid": 2.761688,
+     "ee_nw_pct": 0.307897,
+     "t_nw": 2.679126,
+     "ic95_nw_pct": [
+      0.221417,
+      1.428373
+     ],
+     "media_x12_pct_no_es_CAGR": 9.89874,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.422669,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -28.872055
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 14.891646
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.165909,
+     "desv_est_pct": 5.302543,
+     "t_iid": 3.101752,
+     "ee_nw_pct": 0.384988,
+     "t_nw": 3.028428,
+     "ic95_nw_pct": [
+      0.411332,
+      1.920487
+     ],
+     "media_x12_pct_no_es_CAGR": 13.990913,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 12.956897,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -28.872055
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 14.891646
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.854153,
+     "desv_est_pct": 4.909344,
+     "t_iid": 1.905912,
+     "ee_nw_pct": 0.456084,
+     "t_nw": 1.872799,
+     "ic95_nw_pct": [
+      -0.039771,
+      1.748077
+     ],
+     "media_x12_pct_no_es_CAGR": 10.249837,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.090394,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -28.872055
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 14.891646
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|FIN": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "FIN",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.858254,
+     "desv_est_pct": 5.269655,
+     "t_iid": 2.908902,
+     "ee_nw_pct": 0.260924,
+     "t_nw": 3.289292,
+     "ic95_nw_pct": [
+      0.346844,
+      1.369664
+     ],
+     "media_x12_pct_no_es_CAGR": 10.29905,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.003097,
+     "peor_mes": {
+      "fecha": "2001-10",
+      "pct": -19.05528
+     },
+     "mejor_mes": {
+      "fecha": "2001-08",
+      "pct": 26.092455
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.883213,
+     "desv_est_pct": 3.860455,
+     "t_iid": 3.227407,
+     "ee_nw_pct": 0.252225,
+     "t_nw": 3.501684,
+     "ic95_nw_pct": [
+      0.388852,
+      1.377575
+     ],
+     "media_x12_pct_no_es_CAGR": 10.598562,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.158987,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -10.093657
+     },
+     "mejor_mes": {
+      "fecha": "2012-04",
+      "pct": 13.103516
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.54282,
+     "desv_est_pct": 3.29937,
+     "t_iid": 1.802252,
+     "ee_nw_pct": 0.233074,
+     "t_nw": 2.328962,
+     "ic95_nw_pct": [
+      0.085995,
+      0.999645
+     ],
+     "media_x12_pct_no_es_CAGR": 6.513841,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 6.030861,
+     "peor_mes": {
+      "fecha": "2025-07",
+      "pct": -8.195945
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 11.838827
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|FRA": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "FRA",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.886664,
+     "desv_est_pct": 4.897294,
+     "t_iid": 3.233687,
+     "ee_nw_pct": 0.272766,
+     "t_nw": 3.250638,
+     "ic95_nw_pct": [
+      0.352042,
+      1.421285
+     ],
+     "media_x12_pct_no_es_CAGR": 10.639962,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.557843,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -26.670408
+     },
+     "mejor_mes": {
+      "fecha": "2002-09",
+      "pct": 20.65503
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.934832,
+     "desv_est_pct": 3.399053,
+     "t_iid": 3.879735,
+     "ee_nw_pct": 0.172883,
+     "t_nw": 5.407308,
+     "ic95_nw_pct": [
+      0.595981,
+      1.273683
+     ],
+     "media_x12_pct_no_es_CAGR": 11.217983,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.026533,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -21.277735
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 7.999606
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.813729,
+     "desv_est_pct": 3.588142,
+     "t_iid": 2.48428,
+     "ee_nw_pct": 0.230718,
+     "t_nw": 3.526937,
+     "ic95_nw_pct": [
+      0.361521,
+      1.265936
+     ],
+     "media_x12_pct_no_es_CAGR": 9.764743,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.338717,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -21.277735
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 7.999606
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|GBR": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "GBR",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.015827,
+     "desv_est_pct": 5.001649,
+     "t_iid": 3.627455,
+     "ee_nw_pct": 0.329474,
+     "t_nw": 3.083177,
+     "ic95_nw_pct": [
+      0.370058,
+      1.661597
+     ],
+     "media_x12_pct_no_es_CAGR": 12.189926,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.112042,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -34.187716
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 12.460561
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.171405,
+     "desv_est_pct": 3.892478,
+     "t_iid": 4.245289,
+     "ee_nw_pct": 0.277069,
+     "t_nw": 4.227846,
+     "ic95_nw_pct": [
+      0.62835,
+      1.714459
+     ],
+     "media_x12_pct_no_es_CAGR": 14.056854,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 13.922666,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -26.213415
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 10.852061
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.754895,
+     "desv_est_pct": 3.99249,
+     "t_iid": 2.071254,
+     "ee_nw_pct": 0.356276,
+     "t_nw": 2.118848,
+     "ic95_nw_pct": [
+      0.056594,
+      1.453197
+     ],
+     "media_x12_pct_no_es_CAGR": 9.058743,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.341353,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -26.213415
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 10.852061
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|GRC": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "GRC",
+   "primer_mes": "1989-09",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.518277,
+     "desv_est_pct": 7.499413,
+     "t_iid": 1.234328,
+     "ee_nw_pct": 0.428437,
+     "t_nw": 1.209695,
+     "ic95_nw_pct": [
+      -0.321458,
+      1.358013
+     ],
+     "media_x12_pct_no_es_CAGR": 6.21933,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 2.652707,
+     "peor_mes": {
+      "fecha": "2012-01",
+      "pct": -35.930126
+     },
+     "mejor_mes": {
+      "fecha": "2015-08",
+      "pct": 35.151867
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.759288,
+     "desv_est_pct": 7.96941,
+     "t_iid": 1.344024,
+     "ee_nw_pct": 0.534673,
+     "t_nw": 1.420099,
+     "ic95_nw_pct": [
+      -0.288671,
+      1.807247
+     ],
+     "media_x12_pct_no_es_CAGR": 9.111461,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 5.235764,
+     "peor_mes": {
+      "fecha": "2012-01",
+      "pct": -35.930126
+     },
+     "mejor_mes": {
+      "fecha": "2015-08",
+      "pct": 35.151867
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.045846,
+     "desv_est_pct": 5.525406,
+     "t_iid": 0.090892,
+     "ee_nw_pct": 0.497769,
+     "t_nw": 0.092102,
+     "ic95_nw_pct": [
+      -0.929781,
+      1.021472
+     ],
+     "media_x12_pct_no_es_CAGR": 0.550149,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": -1.338039,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -25.055099
+     },
+     "mejor_mes": {
+      "fecha": "2016-06",
+      "pct": 17.449471
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|HKG": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "HKG",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.802174,
+     "desv_est_pct": 5.461399,
+     "t_iid": 2.623372,
+     "ee_nw_pct": 0.323043,
+     "t_nw": 2.48318,
+     "ic95_nw_pct": [
+      0.16901,
+      1.435338
+     ],
+     "media_x12_pct_no_es_CAGR": 9.626086,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.01561,
+     "peor_mes": {
+      "fecha": "2009-05",
+      "pct": -28.432087
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 20.720597
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.927224,
+     "desv_est_pct": 4.667179,
+     "t_iid": 2.802573,
+     "ee_nw_pct": 0.276834,
+     "t_nw": 3.349393,
+     "ic95_nw_pct": [
+      0.384631,
+      1.469818
+     ],
+     "media_x12_pct_no_es_CAGR": 11.126692,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.220159,
+     "peor_mes": {
+      "fecha": "2024-09",
+      "pct": -22.090332
+     },
+     "mejor_mes": {
+      "fecha": "2024-01",
+      "pct": 12.06957
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.869926,
+     "desv_est_pct": 4.851066,
+     "t_iid": 1.964426,
+     "ee_nw_pct": 0.352387,
+     "t_nw": 2.468669,
+     "ic95_nw_pct": [
+      0.179248,
+      1.560603
+     ],
+     "media_x12_pct_no_es_CAGR": 10.439109,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.337638,
+     "peor_mes": {
+      "fecha": "2024-09",
+      "pct": -22.090332
+     },
+     "mejor_mes": {
+      "fecha": "2024-01",
+      "pct": 12.06957
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|IRL": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "IRL",
+   "primer_mes": "1989-11",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.712527,
+     "desv_est_pct": 10.555519,
+     "t_iid": 1.205639,
+     "ee_nw_pct": 0.594418,
+     "t_nw": 1.198697,
+     "ic95_nw_pct": [
+      -0.452533,
+      1.877587
+     ],
+     "media_x12_pct_no_es_CAGR": 8.550328,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 0.95558,
+     "peor_mes": {
+      "fecha": "2011-10",
+      "pct": -59.456619
+     },
+     "mejor_mes": {
+      "fecha": "2009-02",
+      "pct": 37.557069
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.741574,
+     "desv_est_pct": 9.73136,
+     "t_iid": 1.074998,
+     "ee_nw_pct": 0.608837,
+     "t_nw": 1.218018,
+     "ic95_nw_pct": [
+      -0.451746,
+      1.934894
+     ],
+     "media_x12_pct_no_es_CAGR": 8.898891,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 2.292981,
+     "peor_mes": {
+      "fecha": "2011-10",
+      "pct": -59.456619
+     },
+     "mejor_mes": {
+      "fecha": "2014-01",
+      "pct": 30.762856
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": -0.234153,
+     "desv_est_pct": 7.1335,
+     "t_iid": -0.359574,
+     "ee_nw_pct": 0.524948,
+     "t_nw": -0.446051,
+     "ic95_nw_pct": [
+      -1.263051,
+      0.794744
+     ],
+     "media_x12_pct_no_es_CAGR": -2.809842,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": -5.816647,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -28.506636
+     },
+     "mejor_mes": {
+      "fecha": "2016-05",
+      "pct": 20.408557
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|ISR": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "ISR",
+   "primer_mes": "1996-02",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.372565,
+     "desv_est_pct": 4.852507,
+     "t_iid": 5.051986,
+     "ee_nw_pct": 0.295546,
+     "t_nw": 4.644165,
+     "ic95_nw_pct": [
+      0.793295,
+      1.951836
+     ],
+     "media_x12_pct_no_es_CAGR": 16.470782,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 16.098669,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -24.661149
+     },
+     "mejor_mes": {
+      "fecha": "2008-06",
+      "pct": 12.998954
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.611656,
+     "desv_est_pct": 4.31412,
+     "t_iid": 5.269954,
+     "ee_nw_pct": 0.328291,
+     "t_nw": 4.909227,
+     "ic95_nw_pct": [
+      0.968205,
+      2.255107
+     ],
+     "media_x12_pct_no_es_CAGR": 19.339877,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 19.816951,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.617633
+     },
+     "mejor_mes": {
+      "fecha": "2017-08",
+      "pct": 12.10253
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.4262,
+     "desv_est_pct": 4.121296,
+     "t_iid": 3.790856,
+     "ee_nw_pct": 0.440213,
+     "t_nw": 3.239792,
+     "ic95_nw_pct": [
+      0.563382,
+      2.289018
+     ],
+     "media_x12_pct_no_es_CAGR": 17.1144,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 17.325196,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.617633
+     },
+     "mejor_mes": {
+      "fecha": "2017-08",
+      "pct": 12.10253
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|ITA": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "ITA",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.009361,
+     "desv_est_pct": 5.059191,
+     "t_iid": 3.56337,
+     "ee_nw_pct": 0.28084,
+     "t_nw": 3.594085,
+     "ic95_nw_pct": [
+      0.458916,
+      1.559807
+     ],
+     "media_x12_pct_no_es_CAGR": 12.112336,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.086349,
+     "peor_mes": {
+      "fecha": "2009-03",
+      "pct": -21.122239
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 20.093897
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.351033,
+     "desv_est_pct": 4.457533,
+     "t_iid": 4.275609,
+     "ee_nw_pct": 0.25889,
+     "t_nw": 5.218567,
+     "ic95_nw_pct": [
+      0.843609,
+      1.858457
+     ],
+     "media_x12_pct_no_es_CAGR": 16.212397,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 16.089253,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.875391
+     },
+     "mejor_mes": {
+      "fecha": "2010-11",
+      "pct": 14.892354
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.529642,
+     "desv_est_pct": 4.360172,
+     "t_iid": 3.843057,
+     "ee_nw_pct": 0.344254,
+     "t_nw": 4.443359,
+     "ic95_nw_pct": [
+      0.854905,
+      2.204379
+     ],
+     "media_x12_pct_no_es_CAGR": 18.355706,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 18.629853,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.875391
+     },
+     "mejor_mes": {
+      "fecha": "2016-06",
+      "pct": 12.683082
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|JPN": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "JPN",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.087024,
+     "desv_est_pct": 3.84926,
+     "t_iid": 0.403791,
+     "ee_nw_pct": 0.232522,
+     "t_nw": 0.374261,
+     "ic95_nw_pct": [
+      -0.368719,
+      0.542767
+     ],
+     "media_x12_pct_no_es_CAGR": 1.044287,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 0.141392,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -17.490308
+     },
+     "mejor_mes": {
+      "fecha": "2004-03",
+      "pct": 11.916422
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.11429,
+     "desv_est_pct": 3.228642,
+     "t_iid": 0.499362,
+     "ee_nw_pct": 0.200326,
+     "t_nw": 0.570521,
+     "ic95_nw_pct": [
+      -0.278349,
+      0.506929
+     ],
+     "media_x12_pct_no_es_CAGR": 1.371482,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 0.744472,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -14.413507
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 11.552319
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": -0.055987,
+     "desv_est_pct": 2.908977,
+     "t_iid": -0.210831,
+     "ee_nw_pct": 0.249175,
+     "t_nw": -0.224688,
+     "ic95_nw_pct": [
+      -0.544369,
+      0.432396
+     ],
+     "media_x12_pct_no_es_CAGR": -0.67184,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": -1.173954,
+     "peor_mes": {
+      "fecha": "2021-02",
+      "pct": -8.763823
+     },
+     "mejor_mes": {
+      "fecha": "2016-06",
+      "pct": 8.717599
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|NLD": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "NLD",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.486087,
+     "desv_est_pct": 5.7192,
+     "t_iid": 1.518007,
+     "ee_nw_pct": 0.325848,
+     "t_nw": 1.49176,
+     "ic95_nw_pct": [
+      -0.152575,
+      1.124748
+     ],
+     "media_x12_pct_no_es_CAGR": 5.83304,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 3.867916,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -31.166156
+     },
+     "mejor_mes": {
+      "fecha": "2013-02",
+      "pct": 17.875878
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.645193,
+     "desv_est_pct": 4.931858,
+     "t_iid": 1.845463,
+     "ee_nw_pct": 0.329361,
+     "t_nw": 1.95892,
+     "ic95_nw_pct": [
+      -0.000356,
+      1.290741
+     ],
+     "media_x12_pct_no_es_CAGR": 7.742312,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 6.45799,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -21.38833
+     },
+     "mejor_mes": {
+      "fecha": "2013-02",
+      "pct": 17.875878
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.618449,
+     "desv_est_pct": 4.88398,
+     "t_iid": 1.387141,
+     "ee_nw_pct": 0.461511,
+     "t_nw": 1.340054,
+     "ic95_nw_pct": [
+      -0.286112,
+      1.52301
+     ],
+     "media_x12_pct_no_es_CAGR": 7.421389,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 6.123155,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -21.38833
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 12.002076
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|NOR": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "NOR",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.553401,
+     "desv_est_pct": 5.633764,
+     "t_iid": 4.924704,
+     "ee_nw_pct": 0.324072,
+     "t_nw": 4.793386,
+     "ic95_nw_pct": [
+      0.91822,
+      2.188581
+     ],
+     "media_x12_pct_no_es_CAGR": 18.640808,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 18.082191,
+     "peor_mes": {
+      "fecha": "2001-11",
+      "pct": -22.43836
+     },
+     "mejor_mes": {
+      "fecha": "2002-12",
+      "pct": 20.119584
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.480021,
+     "desv_est_pct": 4.682786,
+     "t_iid": 4.458513,
+     "ee_nw_pct": 0.353921,
+     "t_nw": 4.181785,
+     "ic95_nw_pct": [
+      0.786336,
+      2.173706
+     ],
+     "media_x12_pct_no_es_CAGR": 17.76025,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 17.734853,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -19.981032
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 16.216177
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.527328,
+     "desv_est_pct": 4.629819,
+     "t_iid": 3.613756,
+     "ee_nw_pct": 0.456681,
+     "t_nw": 3.344408,
+     "ic95_nw_pct": [
+      0.632233,
+      2.422422
+     ],
+     "media_x12_pct_no_es_CAGR": 18.327931,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 18.432888,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -19.981032
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 16.216177
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|NZL": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "NZL",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.239975,
+     "desv_est_pct": 3.520752,
+     "t_iid": 6.290322,
+     "ee_nw_pct": 0.186315,
+     "t_nw": 6.655269,
+     "ic95_nw_pct": [
+      0.874798,
+      1.605152
+     ],
+     "media_x12_pct_no_es_CAGR": 14.879702,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 15.10098,
+     "peor_mes": {
+      "fecha": "2014-04",
+      "pct": -11.104635
+     },
+     "mejor_mes": {
+      "fecha": "2001-09",
+      "pct": 13.95615
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.298897,
+     "desv_est_pct": 3.517622,
+     "t_iid": 5.208971,
+     "ee_nw_pct": 0.234362,
+     "t_nw": 5.542275,
+     "ic95_nw_pct": [
+      0.839548,
+      1.758245
+     ],
+     "media_x12_pct_no_es_CAGR": 15.586759,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 15.906905,
+     "peor_mes": {
+      "fecha": "2014-04",
+      "pct": -11.104635
+     },
+     "mejor_mes": {
+      "fecha": "2020-12",
+      "pct": 11.09976
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.247014,
+     "desv_est_pct": 3.738652,
+     "t_iid": 3.653817,
+     "ee_nw_pct": 0.289758,
+     "t_nw": 4.303638,
+     "ic95_nw_pct": [
+      0.679088,
+      1.814939
+     ],
+     "media_x12_pct_no_es_CAGR": 14.964163,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 15.09513,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -9.431975
+     },
+     "mejor_mes": {
+      "fecha": "2020-12",
+      "pct": 11.09976
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|PRT": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "PRT",
+   "primer_mes": "1989-03",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.972274,
+     "desv_est_pct": 6.128123,
+     "t_iid": 2.833716,
+     "ee_nw_pct": 0.321411,
+     "t_nw": 3.025016,
+     "ic95_nw_pct": [
+      0.342308,
+      1.602239
+     ],
+     "media_x12_pct_no_es_CAGR": 11.667282,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.801608,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -23.966877
+     },
+     "mejor_mes": {
+      "fecha": "2011-10",
+      "pct": 18.016917
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.085863,
+     "desv_est_pct": 6.476266,
+     "t_iid": 2.365249,
+     "ee_nw_pct": 0.406719,
+     "t_nw": 2.669814,
+     "ic95_nw_pct": [
+      0.288694,
+      1.883031
+     ],
+     "media_x12_pct_no_es_CAGR": 13.030355,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.016268,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -23.966877
+     },
+     "mejor_mes": {
+      "fecha": "2011-10",
+      "pct": 18.016917
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.594527,
+     "desv_est_pct": 6.612402,
+     "t_iid": 0.984924,
+     "ee_nw_pct": 0.486193,
+     "t_nw": 1.22282,
+     "ic95_nw_pct": [
+      -0.358412,
+      1.547466
+     ],
+     "media_x12_pct_no_es_CAGR": 7.134322,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 4.573178,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -23.966877
+     },
+     "mejor_mes": {
+      "fecha": "2020-03",
+      "pct": 16.376946
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|SGP": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "SGP",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.851389,
+     "desv_est_pct": 4.339483,
+     "t_iid": 3.50417,
+     "ee_nw_pct": 0.282989,
+     "t_nw": 3.008553,
+     "ic95_nw_pct": [
+      0.296729,
+      1.406048
+     ],
+     "media_x12_pct_no_es_CAGR": 10.216663,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.398097,
+     "peor_mes": {
+      "fecha": "2009-05",
+      "pct": -31.699799
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 14.52356
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.027127,
+     "desv_est_pct": 3.239062,
+     "t_iid": 4.473336,
+     "ee_nw_pct": 0.191456,
+     "t_nw": 5.364825,
+     "ic95_nw_pct": [
+      0.651874,
+      1.402381
+     ],
+     "media_x12_pct_no_es_CAGR": 12.325528,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 12.34896,
+     "peor_mes": {
+      "fecha": "2013-10",
+      "pct": -9.073947
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 14.52356
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.907388,
+     "desv_est_pct": 3.216168,
+     "t_iid": 3.090616,
+     "ee_nw_pct": 0.230283,
+     "t_nw": 3.94031,
+     "ic95_nw_pct": [
+      0.456033,
+      1.358743
+     ],
+     "media_x12_pct_no_es_CAGR": 10.888656,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.777606,
+     "peor_mes": {
+      "fecha": "2016-03",
+      "pct": -9.004321
+     },
+     "mejor_mes": {
+      "fecha": "2020-07",
+      "pct": 14.52356
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|SWE": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "SWE",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.056741,
+     "desv_est_pct": 5.790875,
+     "t_iid": 3.259265,
+     "ee_nw_pct": 0.324541,
+     "t_nw": 3.256112,
+     "ic95_nw_pct": [
+      0.420641,
+      1.692841
+     ],
+     "media_x12_pct_no_es_CAGR": 12.680892,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.1306,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -29.427048
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 22.361819
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.205317,
+     "desv_est_pct": 3.27391,
+     "t_iid": 5.193511,
+     "ee_nw_pct": 0.172348,
+     "t_nw": 6.993501,
+     "ic95_nw_pct": [
+      0.867515,
+      1.543119
+     ],
+     "media_x12_pct_no_es_CAGR": 14.463804,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 14.744347,
+     "peor_mes": {
+      "fecha": "2012-01",
+      "pct": -10.628622
+     },
+     "mejor_mes": {
+      "fecha": "2021-07",
+      "pct": 13.156729
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.000163,
+     "desv_est_pct": 3.376281,
+     "t_iid": 3.245061,
+     "ee_nw_pct": 0.209843,
+     "t_nw": 4.766246,
+     "ic95_nw_pct": [
+      0.588871,
+      1.411456
+     ],
+     "media_x12_pct_no_es_CAGR": 12.00196,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.945801,
+     "peor_mes": {
+      "fecha": "2022-01",
+      "pct": -7.18353
+     },
+     "mejor_mes": {
+      "fecha": "2021-07",
+      "pct": 13.156729
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|USA": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "USA",
+   "primer_mes": "1927-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.274975,
+     "desv_est_pct": 5.049214,
+     "t_iid": 0.97267,
+     "ee_nw_pct": 0.27929,
+     "t_nw": 0.984553,
+     "ic95_nw_pct": [
+      -0.272432,
+      0.822383
+     ],
+     "media_x12_pct_no_es_CAGR": 3.299705,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 1.677944,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -34.615365
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 17.010519
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.385626,
+     "desv_est_pct": 3.696108,
+     "t_iid": 1.471798,
+     "ee_nw_pct": 0.228473,
+     "t_nw": 1.687843,
+     "ic95_nw_pct": [
+      -0.06218,
+      0.833432
+     ],
+     "media_x12_pct_no_es_CAGR": 4.627511,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 3.858955,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -16.765852
+     },
+     "mejor_mes": {
+      "fecha": "2015-07",
+      "pct": 10.401581
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.052495,
+     "desv_est_pct": 3.895718,
+     "t_iid": 0.147612,
+     "ee_nw_pct": 0.317815,
+     "t_nw": 0.165175,
+     "ic95_nw_pct": [
+      -0.570422,
+      0.675412
+     ],
+     "media_x12_pct_no_es_CAGR": 0.62994,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": -0.302851,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -16.765852
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 8.484594
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|Global": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "Global",
+   "primer_mes": "1985-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.550692,
+     "desv_est_pct": 4.167998,
+     "t_iid": 2.359809,
+     "ee_nw_pct": 0.245993,
+     "t_nw": 2.238646,
+     "ic95_nw_pct": [
+      0.068545,
+      1.03284
+     ],
+     "media_x12_pct_no_es_CAGR": 6.608308,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 5.658213,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -28.479497
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 14.159254
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.648627,
+     "desv_est_pct": 3.076824,
+     "t_iid": 2.973849,
+     "ee_nw_pct": 0.18725,
+     "t_nw": 3.463959,
+     "ic95_nw_pct": [
+      0.281617,
+      1.015637
+     ],
+     "media_x12_pct_no_es_CAGR": 7.783525,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 7.450039,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -14.722628
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 7.771741
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.337268,
+     "desv_est_pct": 3.178347,
+     "t_iid": 1.162423,
+     "ee_nw_pct": 0.254781,
+     "t_nw": 1.323753,
+     "ic95_nw_pct": [
+      -0.162104,
+      0.836639
+     ],
+     "media_x12_pct_no_es_CAGR": 4.047212,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 3.484769,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -14.722628
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 7.771741
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|Global Ex USA": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "Global Ex USA",
+   "primer_mes": "1985-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.838345,
+     "desv_est_pct": 3.60843,
+     "t_iid": 4.149537,
+     "ee_nw_pct": 0.239522,
+     "t_nw": 3.500077,
+     "ic95_nw_pct": [
+      0.368882,
+      1.307807
+     ],
+     "media_x12_pct_no_es_CAGR": 10.060135,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 9.659653,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -23.528159
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 11.094969
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.95285,
+     "desv_est_pct": 2.637416,
+     "t_iid": 5.096504,
+     "ee_nw_pct": 0.163656,
+     "t_nw": 5.822262,
+     "ic95_nw_pct": [
+      0.632083,
+      1.273616
+     ],
+     "media_x12_pct_no_es_CAGR": 11.434198,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.588224,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -12.05604
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 6.915284
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.721413,
+     "desv_est_pct": 2.572482,
+     "t_iid": 3.072009,
+     "ee_nw_pct": 0.206205,
+     "t_nw": 3.498524,
+     "ic95_nw_pct": [
+      0.317251,
+      1.125575
+     ],
+     "media_x12_pct_no_es_CAGR": 8.656961,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 8.577124,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -12.05604
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 6.915284
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|Europe": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "Europe",
+   "primer_mes": "1987-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.006418,
+     "desv_est_pct": 4.221296,
+     "t_iid": 4.258218,
+     "ee_nw_pct": 0.261557,
+     "t_nw": 3.847792,
+     "ic95_nw_pct": [
+      0.493766,
+      1.51907
+     ],
+     "media_x12_pct_no_es_CAGR": 12.077016,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 11.534453,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -27.064975
+     },
+     "mejor_mes": {
+      "fecha": "2002-09",
+      "pct": 14.61644
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 1.12302,
+     "desv_est_pct": 2.929799,
+     "t_iid": 5.407246,
+     "ee_nw_pct": 0.168645,
+     "t_nw": 6.659071,
+     "ic95_nw_pct": [
+      0.792475,
+      1.453564
+     ],
+     "media_x12_pct_no_es_CAGR": 13.476238,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 13.744553,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.875874
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 8.612901
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.854502,
+     "desv_est_pct": 2.992635,
+     "t_iid": 3.127881,
+     "ee_nw_pct": 0.214798,
+     "t_nw": 3.978162,
+     "ic95_nw_pct": [
+      0.433498,
+      1.275507
+     ],
+     "media_x12_pct_no_es_CAGR": 10.254029,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 10.138906,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -18.875874
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 8.612901
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|North America": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "North America",
+   "primer_mes": "1985-01",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.342987,
+     "desv_est_pct": 5.007234,
+     "t_iid": 1.22342,
+     "ee_nw_pct": 0.280614,
+     "t_nw": 1.222275,
+     "ic95_nw_pct": [
+      -0.207016,
+      0.89299
+     ],
+     "media_x12_pct_no_es_CAGR": 4.115847,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 2.540856,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -34.164037
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 16.654588
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.459816,
+     "desv_est_pct": 3.69548,
+     "t_iid": 1.755254,
+     "ee_nw_pct": 0.229325,
+     "t_nw": 2.005088,
+     "ic95_nw_pct": [
+      0.01034,
+      0.909293
+     ],
+     "media_x12_pct_no_es_CAGR": 5.517795,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 4.784712,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -16.882791
+     },
+     "mejor_mes": {
+      "fecha": "2015-07",
+      "pct": 10.768864
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.110044,
+     "desv_est_pct": 3.887238,
+     "t_iid": 0.31011,
+     "ee_nw_pct": 0.31855,
+     "t_nw": 0.345452,
+     "ic95_nw_pct": [
+      -0.514315,
+      0.734403
+     ],
+     "media_x12_pct_no_es_CAGR": 1.320528,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 0.391781,
+     "peor_mes": {
+      "fecha": "2020-11",
+      "pct": -16.882791
+     },
+     "mejor_mes": {
+      "fecha": "2019-05",
+      "pct": 8.479752
+     },
+     "veredicto": "inconcluso",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  },
+  "C|Pacific": {
+   "fuente": "C AQR UMD",
+   "archivo": "AQR_Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+   "columna": "Pacific",
+   "primer_mes": "1986-11",
+   "ultimo_mes": "2026-07",
+   "ventanas": {
+    "V1": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n": 319,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.484525,
+     "desv_est_pct": 3.39083,
+     "t_iid": 2.552145,
+     "ee_nw_pct": 0.226833,
+     "t_nw": 2.136038,
+     "ic95_nw_pct": [
+      0.039931,
+      0.929118
+     ],
+     "media_x12_pct_no_es_CAGR": 5.814297,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 5.231164,
+     "peor_mes": {
+      "fecha": "2009-04",
+      "pct": -17.469344
+     },
+     "mejor_mes": {
+      "fecha": "2000-02",
+      "pct": 11.417283
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2000-01 a ultimo mes"
+    },
+    "V2": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n": 199,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.617054,
+     "desv_est_pct": 2.780105,
+     "t_iid": 3.131039,
+     "ee_nw_pct": 0.182364,
+     "t_nw": 3.383635,
+     "ic95_nw_pct": [
+      0.25962,
+      0.974488
+     ],
+     "media_x12_pct_no_es_CAGR": 7.404648,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 7.164732,
+     "peor_mes": {
+      "fecha": "2026-07",
+      "pct": -10.743407
+     },
+     "mejor_mes": {
+      "fecha": "2026-04",
+      "pct": 8.356048
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2010-01 a ultimo mes"
+    },
+    "V3": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n": 120,
+     "meses_faltantes": 0,
+     "media_mensual_pct": 0.453587,
+     "desv_est_pct": 2.538683,
+     "t_iid": 1.957232,
+     "ee_nw_pct": 0.219006,
+     "t_nw": 2.071117,
+     "ic95_nw_pct": [
+      0.024335,
+      0.882838
+     ],
+     "media_x12_pct_no_es_CAGR": 5.443038,
+     "compuesto_anual_pct_serie_largo_corto_no_es_rendimiento_de_cuenta": 5.175968,
+     "peor_mes": {
+      "fecha": "2024-09",
+      "pct": -7.459686
+     },
+     "mejor_mes": {
+      "fecha": "2024-01",
+      "pct": 7.838305
+     },
+     "veredicto": "apoyo",
+     "etiqueta": "2016-01 a 2025-12"
+    }
+   }
+  }
+ },
+ "diagnostico_A_vs_B": {
+  "Emerging": {
+   "V1": {
+    "desde": "2000-01",
+    "hasta": "2026-08",
+    "n_comun": 320,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 9.58575,
+    "media_x12_2_pct": 9.582188,
+    "media_dif_mensual_pct": 0.000297,
+    "max_abs_dif_pct": 0.015
+   },
+   "V2": {
+    "desde": "2010-01",
+    "hasta": "2026-08",
+    "n_comun": 200,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 12.2952,
+    "media_x12_2_pct": 12.288,
+    "media_dif_mensual_pct": 0.0006,
+    "max_abs_dif_pct": 0.015
+   },
+   "V3": {
+    "desde": "2016-01",
+    "hasta": "2025-12",
+    "n_comun": 120,
+    "correlacion": 0.999998,
+    "media_x12_1_pct": 10.325,
+    "media_x12_2_pct": 10.324,
+    "media_dif_mensual_pct": 8.3e-05,
+    "max_abs_dif_pct": 0.015
+   },
+   "historia_completa": {
+    "desde": "1990-01",
+    "hasta": "2026-08",
+    "n_comun": 440,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 10.180909,
+    "media_x12_2_pct": 10.176,
+    "media_dif_mensual_pct": 0.000409,
+    "max_abs_dif_pct": 0.02
+   }
+  },
+  "Developed_ex_US": {
+   "V1": {
+    "desde": "2000-01",
+    "hasta": "2026-08",
+    "n_comun": 320,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 7.012875,
+    "media_x12_2_pct": 7.000875,
+    "media_dif_mensual_pct": 0.001,
+    "max_abs_dif_pct": 0.02
+   },
+   "V2": {
+    "desde": "2010-01",
+    "hasta": "2026-08",
+    "n_comun": 200,
+    "correlacion": 0.999998,
+    "media_x12_1_pct": 8.4996,
+    "media_x12_2_pct": 8.4864,
+    "media_dif_mensual_pct": 0.0011,
+    "max_abs_dif_pct": 0.02
+   },
+   "V3": {
+    "desde": "2016-01",
+    "hasta": "2025-12",
+    "n_comun": 120,
+    "correlacion": 0.999998,
+    "media_x12_1_pct": 5.746,
+    "media_x12_2_pct": 5.7355,
+    "media_dif_mensual_pct": 0.000875,
+    "max_abs_dif_pct": 0.02
+   },
+   "historia_completa": {
+    "desde": "1990-11",
+    "hasta": "2026-08",
+    "n_comun": 430,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 7.947907,
+    "media_x12_2_pct": 7.935767,
+    "media_dif_mensual_pct": 0.001012,
+    "max_abs_dif_pct": 0.02
+   }
+  },
+  "Europe": {
+   "V1": {
+    "desde": "2000-01",
+    "hasta": "2026-08",
+    "n_comun": 320,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 8.98725,
+    "media_x12_2_pct": 8.983125,
+    "media_dif_mensual_pct": 0.000344,
+    "max_abs_dif_pct": 0.015
+   },
+   "V2": {
+    "desde": "2010-01",
+    "hasta": "2026-08",
+    "n_comun": 200,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 10.2072,
+    "media_x12_2_pct": 10.2015,
+    "media_dif_mensual_pct": 0.000475,
+    "max_abs_dif_pct": 0.015
+   },
+   "V3": {
+    "desde": "2016-01",
+    "hasta": "2025-12",
+    "n_comun": 120,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 7.414,
+    "media_x12_2_pct": 7.409,
+    "media_dif_mensual_pct": 0.000417,
+    "max_abs_dif_pct": 0.015
+   },
+   "historia_completa": {
+    "desde": "1990-11",
+    "hasta": "2026-08",
+    "n_comun": 430,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 10.292093,
+    "media_x12_2_pct": 10.283721,
+    "media_dif_mensual_pct": 0.000698,
+    "max_abs_dif_pct": 0.015
+   }
+  },
+  "Asia_Pacific_ex_Japan": {
+   "V1": {
+    "desde": "2000-01",
+    "hasta": "2026-08",
+    "n_comun": 320,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 10.667625,
+    "media_x12_2_pct": 10.6575,
+    "media_dif_mensual_pct": 0.000844,
+    "max_abs_dif_pct": 0.02
+   },
+   "V2": {
+    "desde": "2010-01",
+    "hasta": "2026-08",
+    "n_comun": 200,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 12.4794,
+    "media_x12_2_pct": 12.4671,
+    "media_dif_mensual_pct": 0.001025,
+    "max_abs_dif_pct": 0.02
+   },
+   "V3": {
+    "desde": "2016-01",
+    "hasta": "2025-12",
+    "n_comun": 120,
+    "correlacion": 0.999998,
+    "media_x12_1_pct": 9.017,
+    "media_x12_2_pct": 9.006,
+    "media_dif_mensual_pct": 0.000917,
+    "max_abs_dif_pct": 0.015
+   },
+   "historia_completa": {
+    "desde": "1990-11",
+    "hasta": "2026-08",
+    "n_comun": 430,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 10.239628,
+    "media_x12_2_pct": 10.229721,
+    "media_dif_mensual_pct": 0.000826,
+    "max_abs_dif_pct": 0.02
+   }
+  },
+  "Japan": {
+   "V1": {
+    "desde": "2000-01",
+    "hasta": "2026-08",
+    "n_comun": 320,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": -0.24375,
+    "media_x12_2_pct": -0.248625,
+    "media_dif_mensual_pct": 0.000406,
+    "max_abs_dif_pct": 0.015
+   },
+   "V2": {
+    "desde": "2010-01",
+    "hasta": "2026-08",
+    "n_comun": 200,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 0.9822,
+    "media_x12_2_pct": 0.9783,
+    "media_dif_mensual_pct": 0.000325,
+    "max_abs_dif_pct": 0.015
+   },
+   "V3": {
+    "desde": "2016-01",
+    "hasta": "2025-12",
+    "n_comun": 120,
+    "correlacion": 0.999998,
+    "media_x12_1_pct": -1.079,
+    "media_x12_2_pct": -1.082,
+    "media_dif_mensual_pct": 0.00025,
+    "max_abs_dif_pct": 0.015
+   },
+   "historia_completa": {
+    "desde": "1990-11",
+    "hasta": "2026-08",
+    "n_comun": 430,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 0.980372,
+    "media_x12_2_pct": 0.975628,
+    "media_dif_mensual_pct": 0.000395,
+    "max_abs_dif_pct": 0.015
+   }
+  },
+  "North_America": {
+   "V1": {
+    "desde": "2000-01",
+    "hasta": "2026-08",
+    "n_comun": 320,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 2.9745,
+    "media_x12_2_pct": 2.968125,
+    "media_dif_mensual_pct": 0.000531,
+    "max_abs_dif_pct": 0.02
+   },
+   "V2": {
+    "desde": "2010-01",
+    "hasta": "2026-08",
+    "n_comun": 200,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 4.1784,
+    "media_x12_2_pct": 4.1745,
+    "media_dif_mensual_pct": 0.000325,
+    "max_abs_dif_pct": 0.015
+   },
+   "V3": {
+    "desde": "2016-01",
+    "hasta": "2025-12",
+    "n_comun": 120,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 1.972,
+    "media_x12_2_pct": 1.975,
+    "media_dif_mensual_pct": -0.00025,
+    "max_abs_dif_pct": 0.015
+   },
+   "historia_completa": {
+    "desde": "1990-11",
+    "hasta": "2026-08",
+    "n_comun": 430,
+    "correlacion": 0.999999,
+    "media_x12_1_pct": 6.173023,
+    "media_x12_2_pct": 6.16507,
+    "media_dif_mensual_pct": 0.000663,
+    "max_abs_dif_pct": 0.02
+   }
+  }
+ },
+ "diagnostico_vs_C": {
+  "Europe~Europe": {
+   "nota": "misma region nominal; AQR = promedio ponderado de factores por pais",
+   "V1": {
+    "A_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.971399,
+     "media_x12_1_pct": 9.042132,
+     "media_x12_2_pct": 12.077016,
+     "media_dif_mensual_pct": -0.252907,
+     "max_abs_dif_pct": 3.348344
+    },
+    "B_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.971412,
+     "media_x12_1_pct": 9.038182,
+     "media_x12_2_pct": 12.077016,
+     "media_dif_mensual_pct": -0.253236,
+     "max_abs_dif_pct": 3.358344
+    }
+   },
+   "V2": {
+    "A_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.949117,
+     "media_x12_1_pct": 10.301307,
+     "media_x12_2_pct": 13.476238,
+     "media_dif_mensual_pct": -0.264578,
+     "max_abs_dif_pct": 3.322297
+    },
+    "B_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.949171,
+     "media_x12_1_pct": 10.295879,
+     "media_x12_2_pct": 13.476238,
+     "media_dif_mensual_pct": -0.26503,
+     "max_abs_dif_pct": 3.322297
+    }
+   },
+   "V3": {
+    "A_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.958715,
+     "media_x12_1_pct": 7.414,
+     "media_x12_2_pct": 10.254029,
+     "media_dif_mensual_pct": -0.236669,
+     "max_abs_dif_pct": 3.322297
+    },
+    "B_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.958772,
+     "media_x12_1_pct": 7.409,
+     "media_x12_2_pct": 10.254029,
+     "media_dif_mensual_pct": -0.237086,
+     "max_abs_dif_pct": 3.322297
+    }
+   }
+  },
+  "Japan~JPN": {
+   "nota": "mismo pais",
+   "V1": {
+    "A_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.979859,
+     "media_x12_1_pct": -0.240752,
+     "media_x12_2_pct": 1.044287,
+     "media_dif_mensual_pct": -0.107087,
+     "max_abs_dif_pct": 3.871273
+    },
+    "B_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.979857,
+     "media_x12_1_pct": -0.245266,
+     "media_x12_2_pct": 1.044287,
+     "media_dif_mensual_pct": -0.107463,
+     "max_abs_dif_pct": 3.876273
+    }
+   },
+   "V2": {
+    "A_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.986271,
+     "media_x12_1_pct": 0.993166,
+     "media_x12_2_pct": 1.371482,
+     "media_dif_mensual_pct": -0.031526,
+     "max_abs_dif_pct": 3.866493
+    },
+    "B_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.98628,
+     "media_x12_1_pct": 0.989849,
+     "media_x12_2_pct": 1.371482,
+     "media_dif_mensual_pct": -0.031803,
+     "max_abs_dif_pct": 3.851493
+    }
+   },
+   "V3": {
+    "A_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.986492,
+     "media_x12_1_pct": -1.079,
+     "media_x12_2_pct": -0.67184,
+     "media_dif_mensual_pct": -0.03393,
+     "max_abs_dif_pct": 1.635678
+    },
+    "B_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.986516,
+     "media_x12_1_pct": -1.082,
+     "media_x12_2_pct": -0.67184,
+     "media_dif_mensual_pct": -0.03418,
+     "max_abs_dif_pct": 1.635678
+    }
+   }
+  },
+  "North_America~North America": {
+   "nota": "misma region nominal; AQR = USA+CAN ponderado",
+   "V1": {
+    "A_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.934757,
+     "media_x12_1_pct": 3.180188,
+     "media_x12_2_pct": 4.115847,
+     "media_dif_mensual_pct": -0.077972,
+     "max_abs_dif_pct": 12.665412
+    },
+    "B_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.934732,
+     "media_x12_1_pct": 3.173793,
+     "media_x12_2_pct": 4.115847,
+     "media_dif_mensual_pct": -0.078505,
+     "max_abs_dif_pct": 12.665412
+    }
+   },
+   "V2": {
+    "A_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.918921,
+     "media_x12_1_pct": 4.514171,
+     "media_x12_2_pct": 5.517795,
+     "media_dif_mensual_pct": -0.083635,
+     "max_abs_dif_pct": 9.802791
+    },
+    "B_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.918873,
+     "media_x12_1_pct": 4.510251,
+     "media_x12_2_pct": 5.517795,
+     "media_dif_mensual_pct": -0.083962,
+     "max_abs_dif_pct": 9.802791
+    }
+   },
+   "V3": {
+    "A_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.899062,
+     "media_x12_1_pct": 1.972,
+     "media_x12_2_pct": 1.320528,
+     "media_dif_mensual_pct": 0.054289,
+     "max_abs_dif_pct": 9.802791
+    },
+    "B_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.89904,
+     "media_x12_1_pct": 1.975,
+     "media_x12_2_pct": 1.320528,
+     "media_dif_mensual_pct": 0.054539,
+     "max_abs_dif_pct": 9.802791
+    }
+   }
+  },
+  "Developed_ex_US~Global Ex USA": {
+   "nota": "aproximado; universos de paises distintos",
+   "V1": {
+    "A_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.971026,
+     "media_x12_1_pct": 6.981442,
+     "media_x12_2_pct": 10.060135,
+     "media_dif_mensual_pct": -0.256558,
+     "max_abs_dif_pct": 3.079478
+    },
+    "B_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.971066,
+     "media_x12_1_pct": 6.969404,
+     "media_x12_2_pct": 10.060135,
+     "media_dif_mensual_pct": -0.257561,
+     "max_abs_dif_pct": 3.084478
+    }
+   },
+   "V2": {
+    "A_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.954219,
+     "media_x12_1_pct": 8.456683,
+     "media_x12_2_pct": 11.434198,
+     "media_dif_mensual_pct": -0.248126,
+     "max_abs_dif_pct": 2.76385
+    },
+    "B_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.954279,
+     "media_x12_1_pct": 8.443417,
+     "media_x12_2_pct": 11.434198,
+     "media_dif_mensual_pct": -0.249232,
+     "max_abs_dif_pct": 2.74885
+    }
+   },
+   "V3": {
+    "A_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.948588,
+     "media_x12_1_pct": 5.746,
+     "media_x12_2_pct": 8.656961,
+     "media_dif_mensual_pct": -0.24258,
+     "max_abs_dif_pct": 2.299058
+    },
+    "B_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.948649,
+     "media_x12_1_pct": 5.7355,
+     "media_x12_2_pct": 8.656961,
+     "media_dif_mensual_pct": -0.243455,
+     "max_abs_dif_pct": 2.299058
+    }
+   }
+  },
+  "Asia_Pacific_ex_Japan~Pacific": {
+   "nota": "NO equivalente: AQR Pacific incluye Japon",
+   "V1": {
+    "A_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.657398,
+     "media_x12_1_pct": 10.467085,
+     "media_x12_2_pct": 5.814297,
+     "media_dif_mensual_pct": 0.387732,
+     "max_abs_dif_pct": 10.882488
+    },
+    "B_vs_C": {
+     "desde": "2000-01",
+     "hasta": "2026-07",
+     "n_comun": 319,
+     "correlacion": 0.657387,
+     "media_x12_1_pct": 10.456928,
+     "media_x12_2_pct": 5.814297,
+     "media_dif_mensual_pct": 0.386886,
+     "max_abs_dif_pct": 10.887488
+    }
+   },
+   "V2": {
+    "A_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.677474,
+     "media_x12_1_pct": 12.167035,
+     "media_x12_2_pct": 7.404648,
+     "media_dif_mensual_pct": 0.396866,
+     "max_abs_dif_pct": 8.350991
+    },
+    "B_vs_C": {
+     "desde": "2010-01",
+     "hasta": "2026-07",
+     "n_comun": 199,
+     "correlacion": 0.677487,
+     "media_x12_1_pct": 12.154673,
+     "media_x12_2_pct": 7.404648,
+     "media_dif_mensual_pct": 0.395835,
+     "max_abs_dif_pct": 8.355991
+    }
+   },
+   "V3": {
+    "A_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.580582,
+     "media_x12_1_pct": 9.017,
+     "media_x12_2_pct": 5.443038,
+     "media_dif_mensual_pct": 0.29783,
+     "max_abs_dif_pct": 8.350991
+    },
+    "B_vs_C": {
+     "desde": "2016-01",
+     "hasta": "2025-12",
+     "n_comun": 120,
+     "correlacion": 0.58059,
+     "media_x12_1_pct": 9.006,
+     "media_x12_2_pct": 5.443038,
+     "media_dif_mensual_pct": 0.296913,
+     "max_abs_dif_pct": 8.355991
+    }
+   }
+  }
+ },
+ "sensibilidad_emergentes_fin_de_ventana": {
+  "A|2000-01..2025-12": {
+   "n": 312,
+   "media_x12_pct": 8.966923,
+   "compuesto_pct": 8.836199,
+   "t_nw": 4.096357,
+   "veredicto": "apoyo"
+  },
+  "A|2000-01..2026-07": {
+   "n": 319,
+   "media_x12_pct": 9.314107,
+   "compuesto_pct": 9.088052,
+   "t_nw": 4.058568,
+   "veredicto": "apoyo"
+  },
+  "A|2000-01..2026-08": {
+   "n": 320,
+   "media_x12_pct": 9.58575,
+   "compuesto_pct": 9.374364,
+   "t_nw": 4.212189,
+   "veredicto": "apoyo"
+  },
+  "A|2010-01..2025-12": {
+   "n": 192,
+   "media_x12_pct": 11.4025,
+   "compuesto_pct": 11.624634,
+   "t_nw": 5.744408,
+   "veredicto": "apoyo"
+  },
+  "A|2010-01..2026-07": {
+   "n": 199,
+   "media_x12_pct": 11.873367,
+   "compuesto_pct": 11.939335,
+   "t_nw": 5.170247,
+   "veredicto": "apoyo"
+  },
+  "A|2010-01..2026-08": {
+   "n": 200,
+   "media_x12_pct": 12.2952,
+   "compuesto_pct": 12.395277,
+   "t_nw": 5.474941,
+   "veredicto": "apoyo"
+  },
+  "B|2000-01..2025-12": {
+   "n": 312,
+   "media_x12_pct": 8.963077,
+   "compuesto_pct": 8.83244,
+   "t_nw": 4.09707,
+   "veredicto": "apoyo"
+  },
+  "B|2000-01..2026-07": {
+   "n": 319,
+   "media_x12_pct": 9.310345,
+   "compuesto_pct": 9.084448,
+   "t_nw": 4.059407,
+   "veredicto": "apoyo"
+  },
+  "B|2000-01..2026-08": {
+   "n": 320,
+   "media_x12_pct": 9.582188,
+   "compuesto_pct": 9.370952,
+   "t_nw": 4.213186,
+   "veredicto": "apoyo"
+  },
+  "B|2010-01..2025-12": {
+   "n": 192,
+   "media_x12_pct": 11.394688,
+   "compuesto_pct": 11.616413,
+   "t_nw": 5.747201,
+   "veredicto": "apoyo"
+  },
+  "B|2010-01..2026-07": {
+   "n": 199,
+   "media_x12_pct": 11.865829,
+   "compuesto_pct": 11.931514,
+   "t_nw": 5.172172,
+   "veredicto": "apoyo"
+  },
+  "B|2010-01..2026-08": {
+   "n": 200,
+   "media_x12_pct": 12.288,
+   "compuesto_pct": 12.387775,
+   "t_nw": 5.477313,
+   "veredicto": "apoyo"
+  }
+ },
+ "afirmaciones": {
+  "emergentes": {
+   "A|V1": {
+    "afirmado_pct": 9.6,
+    "media_x12_pct": 9.58575,
+    "compuesto_pct": 9.374364,
+    "coincide_media_x12": true,
+    "coincide_compuesto": false,
+    "veredicto_nw": "apoyo",
+    "t_nw": 4.212189
+   },
+   "A|V2": {
+    "afirmado_pct": 12.3,
+    "media_x12_pct": 12.2952,
+    "compuesto_pct": 12.395277,
+    "coincide_media_x12": true,
+    "coincide_compuesto": true,
+    "veredicto_nw": "apoyo",
+    "t_nw": 5.474941
+   },
+   "B|V1": {
+    "afirmado_pct": 9.6,
+    "media_x12_pct": 9.582188,
+    "compuesto_pct": 9.370952,
+    "coincide_media_x12": true,
+    "coincide_compuesto": false,
+    "veredicto_nw": "apoyo",
+    "t_nw": 4.213186
+   },
+   "B|V2": {
+    "afirmado_pct": 12.3,
+    "media_x12_pct": 12.288,
+    "compuesto_pct": 12.387775,
+    "coincide_media_x12": true,
+    "coincide_compuesto": true,
+    "veredicto_nw": "apoyo",
+    "t_nw": 5.477313
+   },
+   "C": "AQR BAB/UMD no publica serie de emergentes: la fuente C no puede evaluar esta afirmacion."
+  },
+  "japon_norteamerica": {
+   "Japon|A": {
+    "serie": "A|Japan",
+    "veredictos": {
+     "V1": "inconcluso",
+     "V2": "inconcluso",
+     "V3": "inconcluso"
+    },
+    "t_nw": {
+     "V1": -0.086474,
+     "V2": 0.39534,
+     "V3": -0.366806
+    },
+    "inconcluso_en_V1_y_V2": true
+   },
+   "Japon|B": {
+    "serie": "B|Japan",
+    "veredictos": {
+     "V1": "inconcluso",
+     "V2": "inconcluso",
+     "V3": "inconcluso"
+    },
+    "t_nw": {
+     "V1": -0.088239,
+     "V2": 0.394008,
+     "V3": -0.368176
+    },
+    "inconcluso_en_V1_y_V2": true
+   },
+   "Japon|C": {
+    "serie": "C|JPN",
+    "veredictos": {
+     "V1": "inconcluso",
+     "V2": "inconcluso",
+     "V3": "inconcluso"
+    },
+    "t_nw": {
+     "V1": 0.374261,
+     "V2": 0.570521,
+     "V3": -0.224688
+    },
+    "inconcluso_en_V1_y_V2": true
+   },
+   "Norteamerica|A": {
+    "serie": "A|North_America",
+    "veredictos": {
+     "V1": "inconcluso",
+     "V2": "inconcluso",
+     "V3": "inconcluso"
+    },
+    "t_nw": {
+     "V1": 0.997208,
+     "V2": 1.740193,
+     "V3": 0.581856
+    },
+    "inconcluso_en_V1_y_V2": true
+   },
+   "Norteamerica|B": {
+    "serie": "B|North_America",
+    "veredictos": {
+     "V1": "inconcluso",
+     "V2": "inconcluso",
+     "V3": "inconcluso"
+    },
+    "t_nw": {
+     "V1": 0.995444,
+     "V2": 1.738942,
+     "V3": 0.582752
+    },
+    "inconcluso_en_V1_y_V2": true
+   },
+   "Norteamerica|C": {
+    "serie": "C|North America",
+    "veredictos": {
+     "V1": "inconcluso",
+     "V2": "apoyo",
+     "V3": "inconcluso"
+    },
+    "t_nw": {
+     "V1": 1.222275,
+     "V2": 2.005088,
+     "V3": 0.345452
+    },
+    "inconcluso_en_V1_y_V2": false
+   },
+   "Norteamerica|C-complemento USA": {
+    "serie": "C|USA",
+    "veredictos": {
+     "V1": "inconcluso",
+     "V2": "inconcluso",
+     "V3": "inconcluso"
+    },
+    "t_nw": {
+     "V1": 0.984553,
+     "V2": 1.687843,
+     "V3": 0.165175
+    },
+    "inconcluso_en_V1_y_V2": true
+   },
+   "Norteamerica|C-complemento CAN": {
+    "serie": "C|CAN",
+    "veredictos": {
+     "V1": "apoyo",
+     "V2": "apoyo",
+     "V3": "apoyo"
+    },
+    "t_nw": {
+     "V1": 3.440409,
+     "V2": 3.887353,
+     "V3": 2.261918
+    },
+    "inconcluso_en_V1_y_V2": false
+   }
+  }
+ }
+}

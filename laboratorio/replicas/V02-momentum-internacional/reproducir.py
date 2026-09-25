@@ -383,6 +383,21 @@ for etf, bench, reg, desde in PARES:
         filas_var.append(["ETF-dif", clave, var, d["desde"], d["hasta"], d["n"], d["media"], d["t"],
                           d["ic95"][0], d["ic95"][1], d["veredicto"], d["x12"], r["dif_cagr_mxn_neto_pp"]])
 
+# ---------------------------------------------------------------- 6. DESCRIPTIVO, NO PRE-REGISTRADO
+# (a) meses de 2026 de WML emergente: explican la diferencia entre W1/W2 y W1b/W2b.
+# (b) misma ventana que los ETFs (2016-04 a 2026-08): WML y pierna larga academica, para separar
+#     "periodo" de "implementacion". No lleva veredicto y no cambia ningun resultado pre-registrado.
+res["descriptivo_no_preregistrado"] = {
+    "wml_emerging_2026": {k: WML["Emerging"][k] for k in sorted(WML["Emerging"]) if k >= 202601},
+    "ventana_etf_2016_04_2026_08": {}}
+for reg in ("Emerging", "Developed_ex_US"):
+    exceso = {k: BIGHI[reg][k] - (MKT[reg][k] + RF[reg][k]) for k in BIGHI[reg] if k in MKT[reg]}
+    w_ = estad(recortar(WML[reg], VENTANA_COMUN, FIN_ETF))
+    l_ = estad(recortar(exceso, VENTANA_COMUN, FIN_ETF))
+    res["descriptivo_no_preregistrado"]["ventana_etf_2016_04_2026_08"][reg] = {
+        "wml": {k: w_[k] for k in ("n", "media", "t", "x12", "cagr")},
+        "bighigh_menos_mkt": {k: l_[k] for k in ("n", "media", "t", "x12", "cagr")}}
+
 # ---------------------------------------------------------------- salida
 with open(os.path.join(AQUI, "resultados.json"), "w") as f:
     json.dump(res, f, indent=1, default=str)
@@ -444,5 +459,6 @@ for clave, vs in res["etf"].items():
               f"{r['comparable']['riqueza_final_mxn']:,.0f} | {r['etf']['vol_anual_mxn']:.1f}% | {r['comparable']['vol_anual_mxn']:.1f}% | "
               f"{r['etf']['caida_max_mxn']:.1f}% | {r['comparable']['caida_max_mxn']:.1f}% | {d['media']:+.3f} | {d['t']:.2f} | "
               f"{fmt_ic(d['ic95'])} | {d['veredicto']} | {r['beta_dif_sobre_wml']:.2f} |")
+print("\n## Descriptivo NO pre-registrado:", json.dumps(res["descriptivo_no_preregistrado"], default=str))
 print("\n## Controles:", json.dumps(res["controles"], default=str, indent=0))
 print(f"\nFilas en variantes.csv: {len(filas_var)}")

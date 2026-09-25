@@ -20,3 +20,13 @@
 
 - Rutina diaria de laboratorio: una ficha, un avance de réplica, actualización de `estado-de-dominio.csv` y del registro de errores.
 - Nivel de acceso por fuente en la bibliografía consolidada (consulta directa o indexada; lectura íntegra o solo del hallazgo principal).
+
+## Segunda tanda (documento compartido el 25-sep-2026)
+
+12. **Modelo integrado de tres estados con controles contables** (activo = pasivo + capital, caja inicial + flujos = caja final, roll-forward del capital, puente utilidad → CFO, entre otros). Se construye como `herramientas/modelo_integrado.py` y se aplica a MSFT, NVDA, TSM, AMX y WALMEX. Los resultados van en `empresas/<TICKER>/modelo/`.
+13. **Lectura de notas del 10-K/20-F**: arrendamientos (reconocidos, no iniciados y condicionados), PPE por pagar, concentración de clientes, SBC y costo no reconocido, recompras frente a retenciones fiscales. Regla: no sumar compromisos no iniciados a la deuda descontada, y no restar dos veces los intereses de arrendamientos que ya pasan por el CFO.
+14. **FCF en dos medidas**: CFO − capex, y además después del principal de arrendamientos financieros.
+15. **Sensibilidad geopolítica reproducible** con rejilla completa (fracción restringida × sustitución × margen perdido), sin elegir solo los casos favorables. Además, no restar otra vez la dilución de margen que ya contiene el margen base.
+16. **Tolerancias de reconciliación derivadas del redondeo** publicado (por ejemplo, ≤ 0.015 pp cuando cuatro entradas vienen al centésimo), fijadas antes de ver los resultados.
+17. **Declarar el estimador exacto.** HAC con o sin corrección de muestra finita, y 1.96 o 1.959964. Así no se comparan como iguales errores estándar que vienen de estimadores distintos.
+18. **Taxonomía de transmisión de un control de exportación**: retraso, cancelación sin sustituto, cancelación con sustituto y costo de cumplimiento. Cada una tiene una ruta distinta en los estados financieros.
