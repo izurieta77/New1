@@ -32,7 +32,7 @@ La etiqueta responde a una sola pregunta: **¿hay una ventaja que el sistema pue
 | R01 | SMA de 10 meses (Faber) sobre el mercado de EUA | Replicado con diferencias; reduce caídas fuera de muestra; rinde menos que comprar y mantener | oportunidad investigable |
 | R02 | Momentum de series de tiempo (TSMOM) | Replicado con diferencias; post-publicación no significativo; la versión operable no supera a 1/N | descartada |
 | R03 | Primas de factores antes y después de publicarse | en curso | — |
-| R04 | Efecto Halloween en EUA y México | Replicado según la ficha (A). La auditoría AC-04 (B) sale "Replicado con diferencias": el criterio (ii) solo se cumple con CRSP/French. Fuera de muestra, mismo signo y no significativo en A y B | descartada
+| R04 | Efecto Halloween en EUA y México | Replicado con diferencias (ficha actualizada el 2026-09-25; A daba "Replicado", AC-04 no): el criterio (ii) solo se cumple con CRSP/French. Fuera de muestra, mismo signo y no significativo en A y B | descartada
 | V01 | MOM y RMW de EUA (cifras recibidas) | Replicado con diferencias (tras AC-01 y AC-02) | descartada |
 | V02 | Momentum internacional: factor y ETFs | Factor replicado; ETFs sin ventaja; SIC no verificado | oportunidad investigable |
 | V03 | Anomalías de EUA long-only frente a largo-corto | Cifras replicadas con diferencias; 0 de 16 pruebas primarias con apoyo | descartada |

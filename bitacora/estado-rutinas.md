@@ -1,5 +1,7 @@
 # Estado de las rutinas (la más reciente arriba)
 
+
+2026-09-25 21:45 UTC · cierre · OK · (este commit) · papel sin fondear (0 MXN), sin órdenes vencidas; ningún reporte del universo hoy; marcador sin datos; R04 → Replicado con diferencias (§7)
 2026-09-25 21:12 UTC · inteligencia · OK · (este commit) · 15 señales A-D en bitacora/inteligencia/2026-09-25.md (sesión 15:05 CDMX); sin alertas, sin novedad en cumplimiento
 2026-09-25 20:41 UTC · arranque inteligencia-y-cripto · OK · b88da18 · sesión lista
 2026-09-25 20:40 UTC · arranque supervision-conciliacion-revision · OK · b88da18 · sesión lista

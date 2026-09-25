@@ -10,7 +10,7 @@
 | Fecha de publicación | Número de diciembre de 2002 del AER. Versión de trabajo circulando desde noviembre de 1997 (SSRN 76248) |
 | Pre-registro escrito el | 2026-09-25, antes de calcular rendimientos estacionales o de estrategia |
 | Responsable | Claude (laboratorio del sistema). Revisión independiente pendiente (`auditor-de-replicas`) |
-| Estado | **Replicado** según la regla pre-registrada (sección 16). Fuera de muestra: mismo signo, **no significativo**. No es candidata para dinero (sección 17) |
+| Estado | **Replicado con diferencias** (actualizado el 2026-09-25 por decisión del orquestador; rige la más conservadora de las ejecuciones A y B). La ejecución A da "Replicado" según la regla pre-registrada (sección 16); la segunda ejecución independiente (AC-04, sección 18) no cumple el criterio (ii) fuera de CRSP/French. Fuera de muestra: mismo signo, **no significativo** en A y B. No es candidata para dinero (sección 17). Etiqueta: descartada |
 
 **Conocimiento previo declarado.** Este pre-registro no es ciego. Antes de escribirlo ya conocía:
 
@@ -756,3 +756,15 @@ Efecto en NAFTRAC:
    - Su DSR es de 0.3457 dentro de muestra y 0.7560 fuera de muestra.
    - No descuenta impuestos anuales.
    - Si se retoma, será como capa de reducción de drawdown, con nuevo pre-registro, papel y capa fiscal. No como fuente de rendimiento.
+
+### 18. Segunda ejecución independiente (AC-04), 2026-09-25
+
+> Sección agregada el 2026-09-25 (rutina de cierre), por decisión del orquestador registrada en `rutinas/REGLAS-MOTOR.md` §7. No cambia la regla pre-registrada ni las cifras de A (secciones 1 a 17).
+
+- **Qué es:** auditoría ciega con código escrito desde cero (`AC04.py`, sin importar `R04.py`) y segunda fuente de datos. Detalle, fuentes y huellas sha256 en [`laboratorio/auditorias/AC-04-halloween/README.md`](../auditorias/AC-04-halloween/README.md).
+- **Criterio (i), EUA 1970-01 a 1998-08:** con Shiller (precio **promedio** mensual), α₁ = 0.619 (t MCO 1.63): **no se cumple**. El promedio mensual reparte la caída de octubre de 1987 entre octubre y noviembre. Con cierres de fin de mes de `^GSPC` + dividendos de Shiller, α₁ = 0.970 (t 2.03): se cumple.
+- **Criterio (ii), EUA 1926-07 a 2002-12:** Shiller 0.391 (t NW12 1.20) y fin de mes desde 1928-01 0.508 (t NW12 1.53). **No se cumple con ninguna fuente distinta de CRSP/French** (A: 0.682, t NW12 2.07, apenas sobre 2). La diferencia viene de 1928-1969.
+- **Fuera de muestra, 2003-01 a 2026-07 (A y B coinciden):** EUA `^SP500TR` 0.277 (t NW12 0.71; A 0.289, 0.70); México `^MXX` 0.706 (1.60; idéntico a A); EWW 1.135 (1.62). Mismo signo, no significativo; ningún IC95 bootstrap excluye el cero.
+- **Estrategia neta fuera de muestra:** diferencias con A menores a 0.25 pp de CAGR y 0.005 de Sharpe (TB3MS en vez de la RF de French, CETES/12 en vez de días/360 y costo de la compra inicial). Con los datos de French, el código B reproduce A al cuarto decimal: la discrepancia es de **fuente**, no de código.
+- **Consecuencia:** estado **Replicado con diferencias**. La significancia histórica del efecto en EUA depende de la construcción CRSP. La etiqueta en `laboratorio/tabla-maestra.md` sigue **descartada**.
+
