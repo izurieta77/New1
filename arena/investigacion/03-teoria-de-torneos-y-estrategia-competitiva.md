@@ -277,8 +277,14 @@ Qué implica [I]:
 | IPC (^MXX) | 64,264 | **−4.4%** | −10.2% | +6.1% | 12.2% |
 | NAFTRAC | 64.01 | −4.4% | −10.0% | +10.6% | 13.1% |
 | USD/MXN | 17.73 | +1.8% | −5.1% | −8.1% | 6.6% |
-| BTC-USD | 84,227 | +18.9% | −11.8% | −14.9% | 35.2% |
+| BTC-USD | 84,227 | +18.9% | **−32.5%** | **−30.7%** | **42.3%** |
 | **VIX** | **15.67** | −13.3% | −49.5% | — | — |
+
+*(Corregido el 25-sep-2026 por el fact-checker del comité cripto. La fila de BTC decía −11.8%, −14.9% y 35.2%. Esas cifras salían de contar 252 filas como si fueran días hábiles, pero BTC cotiza 24/7 en Yahoo. Con calendario corrido, BTC-USD de Yahoo chart v8 y el precio de 84,227:*
+- *vs máx. 52 sem.: −32.5% contra el cierre de 124,752.53 del 6-oct-2025. El −11.8% era contra el máximo de las últimas 252 filas: 95,525 desde el 16-ene-2026.*
+- *Momentum 12-1: −30.7%, precio de hace 30 días entre el de hace 365. El −14.9% usaba 21 y 252 filas, unos 8 meses.*
+- *Vol. realizada: 42.3%, con 63 rendimientos diarios anualizados con √365. El 35.2% usaba √252. Con 91 días corridos (≈63 hábiles), 38.8%.*
+- *vs SMA200: correcta.)*
 
 [I] Qué implica:
 - **El filtro de `parametros.json` (subyacente arriba de su SMA200 y VIX < 25) hoy está en "verde" para S&P y Nasdaq, y en "rojo" para el IPC.** La temporada arranca en "estado de calma", no de pánico: el riesgo de momentum crash es bajo al inicio [25].

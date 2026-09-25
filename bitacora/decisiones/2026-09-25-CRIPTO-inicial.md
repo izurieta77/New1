@@ -4,7 +4,7 @@
 - **Ejecución:** lunes 28-sep-2026, en real, por el dueño en la app de Binance. Solo spot. Decisión del dueño del 25-sep-2026: 10,000 MXN por IA, que cuentan para la competencia.
 - **Temporada:** 28-sep-2026 a 28-ene-2027.
 - **Perfil:** `cripto_binance`. Tope del dueño: pérdida de 5,000 MXN.
-- **Estado de este documento:** decisión del comité tomada. Faltan el dimensionamiento del gestor de riesgo (con veto) y el informe del verificador, que se agregan abajo.
+- **Estado de este documento:** decisión del comité tomada y verificada. Falta el dimensionamiento del gestor de riesgo (con veto), que se agrega abajo.
 
 ## Tesis y cómo se refutaría
 
@@ -43,7 +43,7 @@ Por eso la cuenta cripto se juega por **supervivencia y desempate por menor caí
   - Simulación en `arena/modelos/cripto_inicial_simulacion.py`.
 - **Geopolítico, confianza 60. Voto: K3 con destino 65% BTC / 35% MXN, sin ETH.**
   - Escalonado: 4,000 MXN el 28-sep, 1,500 tras el FOMC del 28-oct y 1,000 tras el 4-nov. BTC no fue refugio en 10 choques militares (2022-26).
-  - Contraparte: el DOJ investiga a Binance por sanciones a Irán, sin cargos (Bloomberg vía CryptoTimes, pendiente de verificar). Binance no tiene licencia mexicana (inferencia).
+  - Contraparte: el DOJ investiga a Binance por sanciones a Irán, sin cargos. Según el verificador, es solo un reporte de Bloomberg del 22-sep, leído vía CoinDesk; no hay fuente primaria. El exchange no está autorizado en México y no puede estarlo; ver la verificación.
   - Contingencia: abrir y probar Bitso, con disparadores definidos.
 
 ## Votos y regla aplicada (por componente, como en la cartera de GBM)
@@ -68,7 +68,11 @@ Por eso la cuenta cripto se juega por **supervivencia y desempate por menor caí
 
 ## Riesgos no de mercado y contingencia
 
-- **[I] Regulación en México:** Binance no tiene licencia mexicana. El SPEI pasa por Medá, su IFPE [H, FAQ de Binance].
+- **[H] Regulación en México** (verificador; filing regulatorio):
+  - Los pesos pasan por **Medá**, IFPE autorizada por la CNBV (oficio P112/2021; DOF del 12-may-2022; PES clave 65-030), solo en moneda nacional.
+  - **El exchange no está supervisado en México y no puede estarlo.** Le faltaría la autorización de Banxico como ITF (Ley Fintech, art. 30), y la disposición 3.a de la Circular 4/2019 excluye prestar a clientes servicios de intercambio, transmisión o custodia de activos virtuales.
+  - Solo le aplica el régimen de actividad vulnerable de la LFPIORPI (art. 17, fr. XVI).
+  - La nota de Excélsior es del 10-abr-2024, anterior a Medá.
 - **[H] Precedentes:**
   - UE: "solo retiros" desde el 1-jul-2026, con 6 días de aviso;
   - Brasil, 2022: 18 días sin PIX.
@@ -92,6 +96,29 @@ Por eso la cuenta cripto se juega por **supervivencia y desempate por menor caí
 
 *Pendiente del gestor de riesgo, con veto. Se agrega en este mismo archivo.*
 
-## Verificación de cifras
+## Verificación de cifras (verificador, 25-sep-2026, 21:16-21:40 UTC)
 
-*Pendiente del verificador. Se agrega en este mismo archivo.*
+**Resultado:** de 21 afirmaciones, 16 se sostienen tal cual o con una precisión, 3 tenían una cifra imprecisa y a 1 le falta un dato: el costo del SPEI. **Ninguna corrección cambia la decisión.**
+
+**Las precisiones que importan para ejecutar:**
+
+| Tema | Hecho verificado | Tipo |
+|---|---|---|
+| Precio de BTC | 84,045.67 (20:29 UTC) y 84,084.40 (20:48 UTC) son fotos de 1 minuto, no cierres. Último cierre completo: 84,379.06 (24-sep). SMA200 con días completos: 70,850.90. La base de P0015 es la foto de las 20:29 y el pronóstico queda como se registró. | base estadística |
+| Mínimo del ciclo | Cierre: 58,558.86 (30-jun-2026). Intradía: 57,747.77 (1-jul-2026). Los cortacircuitos y P0015 usan el de cierre; los stops, el intradía. | cálculo propio |
+| Peor caída en 4 meses | −67.5% **en MXN** (dic-2017 a abr-2018); en USD, −66.0% de cierre a cierre | cálculo propio |
+| Liquidez de BTCMXN | Diferencial de 0.19%, no 0.40%. 0.98 BTC al día. Del lado de compra del libro solo hay 18,786 MXN a ±0.5% del precio medio. | base estadística |
+| Costo de comprar | BTCMXN con límite en el precio de compra: +0.10% si se llena. Por MXN→USDT→BTC: +0.20%. Tomando precio en BTCMXN: +0.29%. | cálculo propio |
+| Pares y órdenes | BTCMXN, USDTMXN y ETHMXN en TRADING, con LIMIT, STOP_LOSS_LIMIT y OCO. Tick de BTCMXN: 1 MXN; paso: 0.000001 BTC; mínimo: 150 MXN. | base estadística |
+| Comisión | 0.10%; con BNB, 0.075% (no vale la pena) | reporte narrativo |
+| SPEI | Depósito en ≤30 min; retiro en 1-3 días hábiles; costo no verificado | reporte narrativo |
+| Migración del 29-sep | De Funding a Spot; el anuncio no menciona MXN. Antes de ordenar, confirmar que los MXN estén en Spot. | reporte narrativo |
+| CLARITY | Cloture rechazada 49-50 el 15-sep (votación nominal 234 del Senado) | filing regulatorio |
+| Flujos a ETFs | BTC: +2,565 M USD del 1 al 24-sep. ETH: +746.7 M en 5 sesiones (SoSoValue) | base estadística |
+| 10-oct-2025 | Mínimo de BTCUSDT de 102,000: −13.0% desde el máximo de las 20:44. Binance compensó ~283 M USD. Las pérdidas de paridad fueron en USDe, BNSOL y WBETH, no en USDT. | reporte narrativo y cálculo propio |
+
+**Errores de nuestra base, corregidos en sitio y registrados en `conocimiento/registro-de-errores.md`:**
+- el capítulo 24 negaba la votación de cloture, que sí ocurrió;
+- la fila de BTC de `arena/investigacion/03-teoria-de-torneos-y-estrategia-competitiva.md` §6 usaba 252 días. Lo correcto es −32.5%, −30.7% y 42.3% con √365.
+
+**Confiabilidad:** alta en datos de mercado y regulación; media en microestructura, que cambia con el tiempo.
