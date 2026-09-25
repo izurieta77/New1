@@ -90,8 +90,8 @@ Fecha estimada del reporte: **6-nov-2026, después del cierre** (Yahoo `calendar
 Base del cálculo (supuestos propios): guía media de US$10.55 mil M más +3.3% (menos que el +12% del 4T, porque TrendForce ve precios más moderados); margen bruto de 84.5%, gastos de US$530 M, tasa de 15% y 155 M acciones. El consenso ya está arriba del tope de UPA guiado.
 
 Binarios:
-- Ingresos > US$10.68 mil M: **p = 0.64**.
-- UPA non-GAAP > US$46.18: **p = 0.64**.
+- Ingresos > US$10.68 mil M: **p = 0.66**.
+- UPA non-GAAP > US$46.18: **p = 0.67**.
 
 ## 9. Catalizadores y riesgos
 - Oct-2026: contratos NAND del 4T26 (TrendForce). ~6-nov-2026: 1T FY27 y guía del 2T (consenso US$12.23 mil M [10]). 10-ene-2027: vence la tregua EUA-China [13].

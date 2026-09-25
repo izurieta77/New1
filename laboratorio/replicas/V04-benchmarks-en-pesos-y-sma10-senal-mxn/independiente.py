@@ -241,15 +241,26 @@ def nw_sumas_moviles(x: list, L: int = 6) -> float:
     return math.sqrt(omega / n * n / (n - 1))
 
 
+def _se_herramienta(x: list):
+    """Tercera comprobacion (no se usa para ningun resultado): herramientas/estadistica.newey_west."""
+    try:
+        sys.path.insert(0, str(RAIZ))
+        from herramientas.estadistica import newey_west
+        return newey_west(x, 6)["se"]
+    except Exception:
+        return None
+
+
 def prueba_nw(x: list) -> dict:
     n = len(x)
     m = sum(x) / n
     se1 = nw_autocov(x)
     se2 = nw_sumas_moviles(x)
+    se3 = _se_herramienta(x)
     sd = statistics.stdev(x)
     lo, hi = m - Z95 * se1, m + Z95 * se1
     ver = "apoyo" if lo > 0 else ("contraria" if hi < 0 else "inconcluso")
-    return {"n": n, "media": m, "x12": 12 * m, "se": se1, "se_formula2": se2, "t": m / se1,
+    return {"n": n, "media": m, "x12": 12 * m, "se": se1, "se_formula2": se2, "se_herramienta": se3, "t": m / se1,
             "t_iid": m / (sd / math.sqrt(n)), "ic95": [lo, hi], "veredicto": ver}
 
 
@@ -589,6 +600,26 @@ def control_sic(D: dict) -> dict:
     out["spymx_adj_2008-09-01"] = s["adj"].get(date(2008, 9, 1))
     return out
 
+def estructura(D: dict) -> dict:
+    """Hechos de estructura que el pre-registro cita (rangos de fechas, dividendos)."""
+    out = {
+        "DEXMXUS": [str(min(D["DEX"])), str(max(D["DEX"]))],
+        "FIX": [str(min(D["FIX"])), str(max(D["FIX"]))],
+        "MXN=X inicio": str(min(D["FX_MXNX"])),
+        "CETES": [str(min(D["CETES_SUB"])), str(max(D["CETES_SUB"]))],
+        "SPY": [str(min(D["SPY"]["adj"])), str(max(D["SPY"]["adj"]))],
+        "NAFTRAC inicio": str(min(D["NAFTRAC"]["adj"])),
+        "SPY.MX inicio": str(min(D["SPYMX"]["close"])),
+        "IVV.MX inicio": str(min(D["IVVMX"]["close"])),
+        "SPY barras sin precio": 0,
+    }
+    for k in ("SPYMX", "IVVMX"):
+        dv = D[k]["div"]
+        out[f"{k} dividendo maximo antes de 2016"] = max(v for f, v in dv.items() if f.year < 2016)
+        out[f"{k} dividendo minimo desde 2016"] = min(v for f, v in dv.items() if f.year >= 2016)
+    return out
+
+
 # ============================================================== bloque 3: SMA mensual (A5), simulador propio
 
 COMISION = 0.0025 * 1.16   # 0.29% por lado (Guia GBM V1025)
@@ -851,6 +882,38 @@ def comparar(texto: str, R: dict) -> list:
     B, SV, DV, AM, A4, SMA = R["benchmarks"], R["sens_ventana"], R["dividendos"], R["amortiguador"], R["a4"], R["sma"]
     V, NW, DSR, SE, PH = SMA["variantes"], SMA["nw"], SMA["dsr"], SMA["sens"], SMA["posthoc"]
     P = lambda x: 100 * x
+
+    # ---------- 0. estructura de los datos citada en el pre-registro
+    b = "0. Estructura de datos (pre-registro)"
+    E_ = R["estructura"]
+    g = C.buscar(r"`DEXMXUS` \(FRED\) va de (\d{4}-\d{2}-\d{2}) a (\d{4}-\d{2}-\d{2}). FIX de Banxico \(SF43718\) va de (\d{4}-\d{2}-\d{2}) a (\d{4}-\d{2}-\d{2}). `MXN=X` \(Yahoo\) empieza en (\d{4}-\d{2}-\d{2})")
+    C.cat(b, "DEXMXUS", "rango", f"{g[0]} a {g[1]}", " a ".join(E_["DEXMXUS"]))
+    C.cat(b, "FIX", "rango", f"{g[2]} a {g[3]}", " a ".join(E_["FIX"]))
+    C.cat(b, "MXN=X", "inicio", g[4], E_["MXN=X inicio"])
+    g = C.buscar(r"va de 1982 a la subasta del (\d{4}-\d{2}-\d{2}). SPY en Yahoo va de (\d{4}-\d{2}-\d{2}) a (\d{4}-\d{2}-\d{2}), sin barras vacías")
+    C.cat(b, "CETES", "ultima subasta", g[0], E_["CETES"][1])
+    C.cat(b, "SPY", "rango", f"{g[1]} a {g[2]}", " a ".join(E_["SPY"]))
+    # la seccion PRE-REGISTRO del README es copia literal de prerregistro.md (encabezados un nivel abajo)
+    ini = C.texto.index("## PRE-REGISTRO")
+    fin = C.texto.index("## RESULTADOS (después de correr)")
+    copia = C.texto[ini:fin].split("\n")
+    k0 = next(i for i, l in enumerate(copia) if l.startswith("> Escrito el 2026-09-25"))
+    copia = "\n".join(copia[k0:]).strip().rstrip("-").strip()
+    original = (AQUI / "prerregistro.md").read_text().split("\n")
+    original = "\n".join(original[2:]).strip()
+    original = re.sub(r"(?m)^## ", "### ", original)
+    C.cat(b, "PRE-REGISTRO del README", "identico a prerregistro.md (huella 84aabaa6...)", True, copia == original)
+    C.buscar(r"el CSV de CETES se exportó desde 1990")
+    C.cat(b, "CETES", "primer dato del CSV (nota menor del README)", "1990", E_["CETES"][0][:4])
+    g = C.buscar(r"`NAFTRAC.MX` en Yahoo \*\*empieza el (\d{4}-\d{2}-\d{2})\*\*")
+    C.cat(b, "NAFTRAC", "inicio", g[0], E_["NAFTRAC inicio"])
+    g = C.buscar(r"`SPY.MX` e `IVV.MX` \(cotización del SIC en MXN\) empiezan en (\d{4}-\d{2}-\d{2})")
+    C.cat(b, "SPY.MX", "inicio", g[0], E_["SPY.MX inicio"])
+    C.cat(b, "IVV.MX", "inicio", g[0], E_["IVV.MX inicio"])
+    C.buscar(r"sus dividendos en Yahoo están en \*\*USD hasta 2015 y en MXN desde 2016\*\*")
+    for k in ("SPYMX", "IVVMX"):
+        C.cat(b, k, "dividendos: todos < 5 antes de 2016 y > 5 desde 2016 (USD luego MXN)", True,
+              E_[f"{k} dividendo maximo antes de 2016"] < 5 < E_[f"{k} dividendo minimo desde 2016"])
 
     # ---------- 1. tabla A1-A3
     claves = ["spy_dex", "spy_fix", "spy_mxnx", "sptr_dex", "spy_net30_dex", "gspc_dex", "spy_usd",
@@ -1327,6 +1390,17 @@ def main() -> int:
     todas = list(R["pruebas_benchmarks"].values()) + list(R["sma"]["nw"].values())
     R["nw_max_dif_formula1_vs_2"] = max(abs(x["se"] - x["se_formula2"]) for x in todas)
     R["nw_n_pruebas"] = len(todas)
+    R["nw_max_dif_formula1_vs_herramienta"] = max(abs(x["se"] - x["se_herramienta"]) for x in todas
+                                                  if x["se_herramienta"] is not None)
+    # robustez: el tramo 2008-2026 de la sensibilidad MXN=X no depende del mes de arranque
+    Pm = preparar(D["SPY"]["adj"], D["FX_MXNX"])
+    difs = []
+    for m0 in ((2004, 12), (2005, 1), (2006, 1)):
+        for regla, ej in ((("sma", 10, "mxn"), "T1"), (("sma", 10, "mxn"), "T0"), (("bh",), "T1")):
+            sim = simular(Pm, D["CETES"], regla, ej, m0, (2026, 8))
+            difs.append(metricas(tramo(sim, (2008, 1), (2026, 8)))["cagr"])
+    R["mxnx_arranque_max_dif_cagr_2008_2026"] = max(abs(difs[i] - difs[i % 3]) for i in range(len(difs)))
+    R["estructura"] = estructura(D)
 
     texto = (AQUI / "README.md").read_text()
     corte = texto.find("## Doble ejecución independiente")
@@ -1368,7 +1442,11 @@ def main() -> int:
         print("FUERA:", f)
     for f in R["comparacion"]["no_exactas"]:
         print("NO EXACTA:", f["bloque"], f["fila"], f["campo"], f["reportado"], round(f["propio"], 5))
-    print(f"NW: max |se formula 1 - se formula 2| = {R['nw_max_dif_formula1_vs_2']:.1e} en {R['nw_n_pruebas']} pruebas")
+    print(f"NW: max |se formula 1 - se formula 2| = {R['nw_max_dif_formula1_vs_2']:.1e}; "
+          f"formula 1 - herramienta = {R['nw_max_dif_formula1_vs_herramienta']:.1e} ({R['nw_n_pruebas']} pruebas)")
+    print(f"MXN=X: max dif de CAGR 2008-2026 al mover el arranque (2004-12, 2005-01, 2006-01) = "
+          f"{R['mxnx_arranque_max_dif_cagr_2008_2026']:.1e}")
+    print("Estructura:", R["estructura"])
     return 0 if R["comparacion"]["ok"] == len(filas) else 1
 
 

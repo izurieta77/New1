@@ -1,7 +1,7 @@
 # Quálitas Controladora (Q.MX) — ficha al 2026-09-25
 
 > BMV (Q*) · Servicios financieros / seguro de autos · Moneda de reporte: MXN (criterios contables CNSF) · Disponible en SIC: no aplica (emisora mexicana; cotiza en BMV) · Estado de conocimiento: Documentado
-> Precio: Ps 152.79 (cierre 24-sep-2026). Rango de cierres en 52 semanas: 149.00-191.09. Precio −7.8% a 1 año, sin dividendos (Yahoo con ajuste: −2.5%; ese ajuste no está verificado para .MX). Bajo su media de 200 días (−8.1%) [10]. Fase 0: investigación, no recomendación.
+> Precio: Ps 152.79 (cierre 24-sep-2026). Rango de cierres en 52 semanas: 149.00-191.09. Precio −7.8% a 1 año sin dividendos (−2.5% con el ajuste de Yahoo, no verificado para .MX) [10]. Fase 0: investigación, no recomendación.
 
 ## 1. Negocio y segmentos
 Es el líder del seguro de autos en México: 34.2% de la prima emitida, 37.4% de la devengada y 45.4% en equipo pesado (AMIS, 1T26). Asegura 6.14 millones de unidades [1][2].
@@ -13,7 +13,7 @@ Es el líder del seguro de autos en México: 34.2% de la prima emitida, 37.4% de
 
 **Geografía:** México aporta ~95% de la prima. El resto viene de Costa Rica, Perú, El Salvador, Colombia (20 oficinas) y EUA, este último en salida del negocio de camiones transfronterizos [1].
 
-**Otros negocios:** verticales de refacciones, salvamentos y cristales, con Ps 456 M de ventas en el 2T26 [1].
+**Otros negocios:** verticales (refacciones, salvamentos y cristales; Ps 456 M en el 2T26) [1].
 
 **Utilidad:** técnica más financiera, sobre un portafolio de Ps 53,430 M (85.7% renta fija con duración de 2.6 años; ~21% en USD) [1][2].
 
@@ -32,10 +32,7 @@ Es el líder del seguro de autos en México: 34.2% de la prima emitida, 37.4% de
   - Índice combinado en el extremo superior de 92-94% o un poco arriba.
   - RIF "consistente" con 2025.
   - En julio se reiteró un ROE de largo plazo cercano o superior a 20%, "incluyendo 2026" [2].
-- **Datos operativos:**
-  1. Frecuencia de 6.6% (−23 pb a/a).
-  2. Robos −15.3%, con recuperación de 49.4% contra 43.2% de la industria.
-  3. El IVA pesó ~320-340 pb en la siniestralidad del 1S26 [1][2].
+- **Datos operativos:** frecuencia de 6.6% (−23 pb); robos −15.3%, con recuperación de 49.4% (industria 43.2%); el IVA pesó ~320-340 pb en la siniestralidad del 1S26 [1][2].
 
 ## 3. Tabla financiera
 Trimestral (Ps M). La UPA es la utilidad neta entre 400 M de acciones, la misma convención de TradingView [3]:
@@ -70,17 +67,15 @@ Sin deuda financiera [1]. Acciones: 400 M (406 M en 2021), con ~6.2 M en tesorer
 1. **Utilidad contra efectivo.** Las primas por cobrar suben más rápido que la emisión: Ps 49,737 M (+17.5% a/a) contra +7.7% de prima emitida en el 1S26. Los adeudos de dependencias federales pasaron de Ps 94 M a 1,365 M. Las reservas técnicas suben +12.5% [1]. *Inferencia:* hay más prima financiada y más cobro al gobierno; hay que vigilar la estimación para castigos (Ps 194 M).
 2. **Deuda.** No tiene. La solvencia es de 341%: margen de Ps 15,984 M sobre un requerimiento de 6,646 M [1].
 3. **Dilución.** No hay. Tiene recompra con un fondo de Ps 800 M para 2026 [6].
-4. **Capital de trabajo.** Ver el punto 1. Las reservas (Ps 69,240 M) dan el float del que sale el RIF.
-5. **Competidores.** GNP, AXA, Chubb, HDI, Mapfre y las aseguradoras de los bancos. La dirección describe una competencia de precios "profunda y agresiva" [2].
+4. **Capital de trabajo.** Ver el punto 1; las reservas (Ps 69,240 M) dan el float.
+5. **Competidores.** GNP, AXA, Chubb, HDI, Mapfre y las aseguradoras bancarias, en una competencia de precios "profunda y agresiva" [2].
 6. **Concentración.** El canal de instituciones financieras (automotrices y bancos) pesa 32%, y una cuenta multianual grande movió el trimestre. No se revela el peso de cada cliente [1].
-7. **Regulación.** Desde el 1-ene-2026 el IVA de los proveedores de siniestros no es acreditable (Ley de Ingresos 2026). La emisora estimó ~Ps 2,000 M de impacto no recurrente en 2025. El real fue de ~Ps 1,683 M: utilidad de 6,778 sin IVA contra 5,095 reportada [4][7]. La solvencia la supervisa la CNSF.
+7. **Regulación.** Desde el 1-ene-2026 el IVA de los proveedores de siniestros no es acreditable (Ley de Ingresos 2026). Se estimó un impacto no recurrente de ~Ps 2,000 M en 2025 y el real fue de ~1,683 M (6,778 sin IVA contra 5,095) [4][7]. Supervisa la CNSF.
 8. **Promesas contra resultados.** En el 1S26 [1][4]:
    - **Cumple la guía:** prima emitida +7.7% e índice combinado de 92.8%.
    - **No cumple:** el RIF cae −15% (2,337 contra 2,751), contra un RIF "consistente", y el ROE de 12 meses es de 18.3%, contra "≥20%".
 9. **Partes relacionadas.** 5 de los 12 consejeros son relacionados, incluidos el presidente ejecutivo y el director general. Los negocios verticales se consolidan [6]. No se verificaron los montos de operaciones con partes relacionadas.
-10. **Asignación de capital.**
-    - **Dividendo:** Ps 3,600 M (Ps 9.00 por acción), pagado en dos partes: el 13-may y el 5-nov-2026 [6].
-    - **Destino del resto:** Colombia, verticales y recompra.
+10. **Asignación de capital.** Dividendo de Ps 3,600 M (Ps 9.00 por acción) en dos pagos, el 13-may y el 5-nov-2026 [6]; el resto va a Colombia, verticales y recompra.
 
 ## 5. Cadena causal
 **A. IVA no acreditable en siniestros.**
@@ -101,8 +96,7 @@ Sin deuda financiera [1]. Acciones: 400 M (406 M en 2021), con ~6.2 M en tesorer
   - Banxico en 6.50% contra 8.0% en el 2T25; RSI de 7.4% contra 8.4% [1][11].
   - ~21% del portafolio está en USD, y cada peso de movimiento en el USD/MXN vale ~Ps 665 M al año [2].
 - **Efecto económico:** el peso promedió 17.23 en el 3T26, contra 17.39 en el 2T26 [10].
-- **Estado financiero:** RIF plano o a la baja.
-- **Valuación:** le quita soporte a la utilidad.
+- **Estado financiero y valuación:** RIF plano o a la baja, con menos soporte para la utilidad.
 
 ## 6. Qué descuenta el precio
 Capitalización de ≈Ps 60,258 M (394.4 M acciones netas de tesorería × 152.79).
@@ -143,9 +137,7 @@ El P/VL actual está debajo del promedio de 2.55x.
 - **Qué haría cambiar de escenario:** la prima emitida del 3T26 (+5% o más, alcista; negativa, bajista) y su siniestralidad (más de 67%, bajista).
 
 ## 8. Pronósticos registrados (3T26)
-**Fecha estimada:** 20-21-oct-2026 (no confirmada).
-- Yahoo: 20-oct. TradingView e Investing: 15-oct [9].
-- Patrón de la emisora: el 3T25 se reportó el 21-oct-2025 y el 2T26 el 21-jul-2026 [1][5].
+**Fecha estimada:** 20-21-oct-2026 (no confirmada). Yahoo da 20-oct; TradingView e Investing, 15-oct [9]. El 3T25 salió el 21-oct-2025 y el 2T26 el 21-jul-2026 [1][5].
 
 **Ingresos del 3T26 (prima devengada + RIF, definición de TradingView):**
 - **Punto:** Ps 19,700 M. **Intervalo de 80%:** 18,900-20,350.

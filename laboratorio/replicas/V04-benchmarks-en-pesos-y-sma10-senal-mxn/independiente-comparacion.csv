@@ -1,4 +1,16 @@
 bloque,fila,campo,tipo,reportado,propio,dif,tolerancia,ok,exacto_al_redondeo
+0. Estructura de datos (pre-registro),DEXMXUS,rango,categoria,1993-11-08 a 2026-09-18,1993-11-08 a 2026-09-18,,igual,True,True
+0. Estructura de datos (pre-registro),FIX,rango,categoria,1991-11-12 a 2026-09-24,1991-11-12 a 2026-09-24,,igual,True,True
+0. Estructura de datos (pre-registro),MXN=X,inicio,categoria,2003-12-01,2003-12-01,,igual,True,True
+0. Estructura de datos (pre-registro),CETES,ultima subasta,categoria,2026-09-24,2026-09-24,,igual,True,True
+0. Estructura de datos (pre-registro),SPY,rango,categoria,1993-01-29 a 2026-09-24,1993-01-29 a 2026-09-24,,igual,True,True
+0. Estructura de datos (pre-registro),PRE-REGISTRO del README,identico a prerregistro.md (huella 84aabaa6...),categoria,True,True,,igual,True,True
+0. Estructura de datos (pre-registro),CETES,primer dato del CSV (nota menor del README),categoria,1990,1990,,igual,True,True
+0. Estructura de datos (pre-registro),NAFTRAC,inicio,categoria,2008-01-02,2008-01-02,,igual,True,True
+0. Estructura de datos (pre-registro),SPY.MX,inicio,categoria,2008-01-02,2008-01-02,,igual,True,True
+0. Estructura de datos (pre-registro),IVV.MX,inicio,categoria,2008-01-02,2008-01-02,,igual,True,True
+0. Estructura de datos (pre-registro),SPYMX,dividendos: todos < 5 antes de 2016 y > 5 desde 2016 (USD luego MXN),categoria,True,True,,igual,True,True
+0. Estructura de datos (pre-registro),IVVMX,dividendos: todos < 5 antes de 2016 y > 5 desde 2016 (USD luego MXN),categoria,True,True,,igual,True,True
 1. CAGR A1-A3,**S&P 500 TR en MXN: SPY `adjclose` × DE,W1,pct,13.97,13.965313,-0.004687,0.1,True,True
 1. CAGR A1-A3,**S&P 500 TR en MXN: SPY `adjclose` × DE,W2,pct,14.47,14.472232,0.002232,0.1,True,True
 1. CAGR A1-A3,**S&P 500 TR en MXN: SPY `adjclose` × DE,W3,pct,14.05,14.049131,-0.000869,0.1,True,True

@@ -2,6 +2,8 @@
 
 > Fecha: 25-sep-2026. Estado: **Replicado con diferencias**. Calificación de la afirmación recibida: **confirmada con matices**. Esto no es una recomendación ni una regla operable. Es fase 0.
 >
+> **Doble ejecución independiente (2026-09-25):** `independiente.py` se escribió sin leer `reproducir.py` y reproduce las 871 cifras comparadas, todas dentro de tolerancia e idénticas al redondeo impreso. No se corrigió nada. Detalle al final.
+>
 > Para reproducir, desde la raíz del repo: `python3 laboratorio/replicas/V04-benchmarks-en-pesos-y-sma10-senal-mxn/reproducir.py`. El script no usa red. Los datos están congelados en `datos/` y sus huellas, junto con la del pre-registro (`84aabaa6…`, fijada a las 05:40:32 UTC antes de la primera corrida), en `SHA256SUMS.txt`. La salida `resultados.json` es determinista (dos corridas dan la misma huella). El registro del motor, `V04-variantes.csv`, solo agrega filas.
 
 ## Resumen
@@ -452,7 +454,7 @@ En la búsqueda post-hoc, 7 de las 8 ventanas que empiezan en 2007 reproducen la
 1. S&P/BMV IPC Total Return oficial (S&P DJI) o historial de distribuciones de NAFTRAC (BlackRock o Emisnet) para 2008-2012 y 2021, que cierra la alerta #1.
 2. El spread cambiario implícito del SIC en GBM.
 3. La capa de impuestos (ISR de 10% SIC, W-8BEN, retención de CETES).
-4. Doble ejecución independiente por `auditor-de-replicas`.
+4. ~~Doble ejecución independiente por `auditor-de-replicas`.~~ Hecha el 2026-09-25: las 871 cifras comparadas coinciden. Ver "Doble ejecución independiente (2026-09-25)".
 5. Replicar la SMA en MXN sobre el mercado de EUA de French (1926-) convertido a MXN, para tener una muestra más larga que 1995-2026. Solo es posible desde 1993 con DEXMXUS; antes, con FIX desde 1991.
 
 **Archivos:**
@@ -464,6 +466,7 @@ En la búsqueda post-hoc, 7 de las 8 ventanas que empiezan en 2007 reproducen la
 - `SHA256SUMS.txt`
 - `resultados.json`
 - `V04-variantes.csv`
+- `independiente.py`, `independiente-comparacion.csv` e `independiente-resultados.json` (doble ejecución independiente; sin red)
 
 **Fuentes verificadas el 2026-09-25:**
 
@@ -476,3 +479,94 @@ En la búsqueda post-hoc, 7 de las 8 ventanas que empiezan en 2007 reproducen la
 - EWW: inicio el 12-mar-1996, gasto de 0.50% (https://www.ishares.com/us/products/239670/ishares-msci-mexico-capped-etf).
 - Faber (2007): ver la ficha R01.
 - Costos de GBM: `arena/investigacion/01-gbm-operativa-y-costos.md`.
+
+## Doble ejecución independiente (2026-09-25)
+
+**Resultado: las 871 cifras comparadas están dentro de tolerancia, y las 871 son idénticas al redondeo impreso. No se corrigió nada.** Son 789 cifras numéricas y 82 categóricas: veredictos, n, fechas de pico y valle, meses de mínimos y máximos, banderas de tolerancia, listas y la copia del pre-registro. Cubren todas las tablas de RESULTADOS y las cifras que el texto cita en el Resumen, los controles, la calificación, las conclusiones y las metas. No hubo nada que anotar en `conocimiento/registro-de-errores.md`.
+
+### Cómo se hizo
+
+- **Qué se leyó.** El `auditor-de-replicas` escribió `independiente.py` **sin leer `reproducir.py`**. Solo leyó la sección PRE-REGISTRO de este README y los datos congelados en `datos/`. No leyó `resultados.json` ni `V04-variantes.csv`. De `herramientas/` leyó `backtest.py`, `metricas.py` y `estadistica.py`, solo para conocer las convenciones que el pre-registro cita: costos sobre |Δw| con la entrada inicial pagada, métricas y DSR de registro. Las implementó por su cuenta. Solo importa `estadistica.newey_west`, como tercera comprobación del error estándar.
+- **Huellas.** Las 17 huellas de `SHA256SUMS.txt` coinciden, incluida la de `prerregistro.md` (`84aabaa6…`). La sección PRE-REGISTRO de este README es idéntica a `prerregistro.md`, con los encabezados un nivel abajo.
+- **Todo el cálculo es propio (solo biblioteca estándar):**
+  - **Lectores.** Yahoo JSON, con la fecha local de la bolsa según `exchangeTimezoneName` (`MXN=X` usa la hora de Londres). FRED CSV. Banxico CSV en latin-1, que omite el único `N/E` de CETES (1998-09-03).
+  - **Alineación.** E_m y G_m (último y primer día del mes) se toman solo entre fechas con precio **y** tipo de cambio del mismo día.
+  - **Índice de CETES.** Interés simple entre subastas y capitalización en cada colocación.
+  - **Rendimiento total neto de 30%.** Se reconstruye con cierre + 0.7 × dividendo.
+  - **Simulador mensual de la SMA.** T0 y T1, costos de 0.29% + 0.05% por lado sobre |Δw| y r_neto = (1 − c)(1 + r_bruto) − 1.
+  - **Métricas.** CAGR con días/365.25, volatilidad muestral × √12, Sharpe del exceso sobre CETES, caída máxima contando el valor inicial como pico, tiempo invertido, cambios y costo anual.
+  - **Estadística.** PSR, SR0 y DSR (Bailey y López de Prado) con la varianza muestral de los 16 Sharpe por periodo.
+- **Newey-West(6) con dos fórmulas propias distintas.** (1) Autocovarianzas con pesos de Bartlett. (2) Identidad de sumas móviles: con los residuos rellenados con ceros, Σ S_t² / 7 = n·Ω. Las dos usan la corrección n/(n − 1). En las 17 pruebas, la diferencia máxima del error estándar entre las dos es de 8.0e-18. `herramientas/estadistica.newey_west` se usó solo como tercera comprobación, con diferencia de 0.
+- **El README se lee de forma automática.** Cada tabla se ubica por su título y cada cifra citada en el texto por su frase. Si el texto cambia, el script falla en lugar de comparar contra otra cosa. Salidas: `independiente-comparacion.csv` (una fila por cifra, con reportado, propio, diferencia y tolerancia) e `independiente-resultados.json`. El script no usa red, y dos corridas dan archivos idénticos.
+- **Alcance.** Es una doble ejecución del cálculo **con los mismos datos**, no una segunda fuente.
+
+**Tolerancias:**
+
+- 0.01 pp en medias mensuales y en límites de IC (%/mes).
+- 0.12 pp en media × 12.
+- 0.05 en t.
+- 0.1 pp en CAGR, caída máxima, cambios porcentuales, volatilidad, tiempo invertido y dividendos.
+- 0.01 en Sharpe anual y SR0, 0.005 en PSR y DSR y 0.01 en correlación, costo anual y niveles.
+- Igualdad exacta en n, cambios de señal, conteos, fechas, meses, veredictos y listas.
+- Una cifra impresa sin decimales (p. ej. "−28%") se compara con tolerancia de 0.5.
+
+Además se revisó si la cifra propia, redondeada a los decimales impresos, es **idéntica** a la del README.
+
+### Comparación por bloque
+
+| Bloque del README | Cifras comparadas | Dentro de tolerancia | Idénticas al redondeo impreso | Mayor diferencia absoluta |
+|---|---|---|---|---|
+| 0. Estructura de los datos citada en el pre-registro (rangos de fechas, dividendos del SIC) y copia literal del pre-registro | 12 | 12 | 12 | categóricas: todas iguales |
+| 1. CAGR A1-A3 (13 series × 4 ventanas, CETES por partición y FMI) | 54 | 54 | 54 | pp: 0.0050 |
+| 1b. Sensibilidad a la fecha de inicio (mín., máx., mes y 18 inicios seleccionados) | 36 | 36 | 36 | pp: 0.0047 |
+| 1c. Sensibilidad a la fecha de fin | 12 | 12 | 12 | pp: 0.0047 |
+| 1d. Dividendos implícitos (NAFTRAC, eventos de Yahoo, EWW, imputación, ^MXX 2022-2025) | 29 | 29 | 29 | pp: 0.0125 (cifra impresa con 1 decimal) |
+| 1e. Pruebas NW de benchmarks (n, media, × 12, t NW, t IID, IC, veredicto) | 32 | 32 | 32 | %/mes: 0.0005; × 12: 0.0049; t: 0.0045 |
+| 1f. Amortiguador del peso | 19 | 19 | 19 | corr.: 0.0001; pp: 0.0421 (1 decimal); nivel: 0.0031 |
+| 1g. Controles de datos citados (TR reconstruido, cierres E_m, SIC, SPY.MX) | 9 | 9 | 9 | pp: 0.0004; SIC: 0.0040; nivel: 0.0005 |
+| 2. A4: 2008 medida por medida (35 cifras, fechas de pico y valle, coincidencias) | 57 | 57 | 57 | pp: 0.0176 (1 decimal); en la tabla, 0.0050 |
+| 3a. SMA: tabla principal 2008-2026 | 48 | 48 | 48 | pp: 0.0286 (tiempo invertido, 1 decimal); Sharpe: 0.0004; costo: 0.0001 |
+| 3b. SMA: tabla 1995-2007 | 34 | 34 | 34 | pp: 0.0049; Sharpe: 0.0004 |
+| 3c. Las 16 variantes y las referencias (CAGR, caída máx., Sharpe; parejas y rangos) | 157 | 157 | 157 | pp: 0.0438 (rangos del Resumen, 1 decimal); Sharpe: 0.0005 |
+| 3d. Prueba principal NW(6): SMA10 − comprar y mantener | 63 | 63 | 63 | %/mes: 0.0005; × 12: 0.0048; t: 0.0049 |
+| 3e. Sharpe deflactado y PSR de referencia | 41 | 41 | 41 | Sharpe: 0.0005; PSR/DSR: 0.0019 |
+| 3f. Sensibilidades de la SMA10 en 2008-2026 | 118 | 118 | 118 | pp: 0.0132 ("15.9%" del texto, 1 decimal); en la tabla, 0.0050 |
+| 3g. Comparación con las cifras recibidas de A5 (incluye post-hoc) | 44 | 44 | 44 | pp: 0.0048 |
+| 4. Cifras del texto: Resumen, calificación, conclusiones y metas | 106 | 106 | 106 | pp: 0.4342 ("−28%", impresa sin decimales); × 12: 0.0409 ("+7.8 pp"); t: 0.0049; PSR/DSR: 0.0020 |
+| **Total** | **871** | **871** | **871** | |
+
+### Cifras clave, lado a lado
+
+| Cifra | README | Ejecución independiente |
+|---|---|---|
+| A1: S&P 500 TR en MXN, W1 / W2 | 13.97% / 14.47% | 13.9653% / 14.4722% |
+| A2: NAFTRAC `adjclose`, W1 | 6.11% | 6.1114% |
+| A3: CETES 28, W1 | 6.37% | 6.3724% |
+| A4: caída diaria dentro de 2008, SPY en USD | −47.58% (2007-12-31 a 2008-11-20) | −47.5796% (2007-12-31 a 2008-11-20) |
+| A4: cambio del año 2008, ^GSPC × DEXMXUS | −22.06% | −22.0599% |
+| A5: SMA10-MXN-T1, 2008-2026 (CAGR / caída máx.) | 15.50% / −12.71% | 15.5039% / −12.7079% |
+| A5: SMA10-MXN-T0, 2008-2026 | 15.23% / −12.23% | 15.2327% / −12.2276% |
+| Comprar y mantener T0 / T1, 2008-2026 | 13.97% / −28.43% y −29.50% | 13.9653% / −28.4342% y −29.5048% |
+| NW(6) SMA10-MXN-T1 − comprar y mantener, 2008-2026 | 0.082 %/mes; t 0.55; IC [−0.212, 0.377]; inconcluso | 0.0823; t 0.547; IC [−0.2125, 0.3770]; inconcluso |
+| NW(6) S&P MXN − CETES, 2008-01 a 2026-08 | 0.653 %/mes; t 2.39; IC [0.117, 1.190]; apoyo | 0.6534; t 2.386; IC [0.1166, 1.1902]; apoyo |
+| DSR SMA10-MXN-T1 (N = 16), 2008-2026 / 1995-2007 | 0.9966 / 0.322 | 0.99662 / 0.32201 |
+| Post-hoc T0, ene-2007 a ago-2026: SMA10-MXN / comprar y mantener | 14.74% / −12.23% contra 13.54% / −31.15% | 14.7366% / −12.2276% contra 13.5388% / −31.1501% (pico 2007-09, valle 2009-02) |
+
+### Precisiones (no son errores)
+
+- **"En 4 meses el cierre de mes usado no fue el último día de SPY".** Los 4 son 1993-12, 2010-12, 2021-12 y 2026-09. 2026-09 es un mes incompleto. Dentro de la muestra de evaluación (1994-01 a 2026-08) solo 2010-12 y 2021-12 afectan los resultados.
+- **"7 de las 8 ventanas que empiezan en 2007".** El README no dice cuáles son las 8. Con inicios trimestrales (ene, abr, jul, oct) y fin en jun o ago de 2026, la ejecución independiente obtiene 7 de 8, igual que el README. La que no reproduce es abr-2007 a jun-2026, cuyo CAGR de la SMA es 14.9005%: se sale del límite de 14.90% por 0.0005 pp. Es un resultado al filo de la tolerancia. Con los 12 inicios mensuales de 2007 y los 2 fines, reproducen 17 de 24. Sugerencia: listar las 8 ventanas en el README.
+- **"En 1995-2007 la de USD tuvo [...] menos caída en SMA10 y SMA12".** Es cierto, pero se queda corto: la señal en USD tuvo menos caída máxima en **las 8 parejas** de 1995-2007, incluidas SMA6 y SMA8, con T0 y con T1. La conclusión se refuerza.
+- **MXN=X "desde 2004" en el pre-registro y "muestra desde 2005" en la tabla.** No importa para las cifras reportadas: el tramo 2008-2026 da el mismo CAGR con arranque en 2004-12, 2005-01 o 2006-01 (diferencia de 0).
+- **"1.1129 × 1.0240 − 1 = 13.96%".** La aritmética es correcta con los factores impresos. Con precisión completa da 13.9653%, que es el 13.97% de W1.
+- **"El percentil 90 es 0.63%".** El README no dice con qué tipo de cambio. Con DEXMXUS da 0.6296% y con FIX 0.6291%; las dos redondean a 0.63%.
+
+### Qué no cubre
+
+- Los controles internos de `reproducir.py`: igualdad de parsers, motor contra simulador (2.3e-15), NW contra forma cuadrática (6.1e-18) y las 104 corridas del registro. Son diagnósticos de ese script.
+- Las cifras de la página de BlackRock (NAV total return de NAFTRAC). No están en `datos/`. Sí se verificó que el ^MXX de precio da −9.03%, 18.41%, −13.72% y 29.88% en 2022-2025.
+- La búsqueda de origen (ii) con SPY.MX `adjclose` ("caída de −100%, CAGR de 33%"). El README no define la corrida y declara la serie inservible. Sí se verificaron el defecto (104.48 y 1,083.44) y los 95 saltos mayores a 30%.
+- Hechos externos (gasto de SPY, fecha de inicio de NAFTRAC, Guía GBM). La comisión de 0.25% + IVA = 0.29% por lado coincide con `arena/investigacion/01-gbm-operativa-y-costos.md` §2.1.
+- No hay segunda fuente de datos. Son los mismos archivos de Yahoo, FRED y Banxico.
+
+**Estado después de la doble ejecución:** sin cambios. Las cifras de V04 se reproducen con código independiente. El estado ("Replicado con diferencias"), la calificación ("confirmada con matices"), la conclusión operable (la SMA10 en MXN es control de riesgo, no fuente de rendimiento) y las metas en MXN quedan igual.

@@ -66,8 +66,8 @@ Geografía FY25 por lugar de facturación [3]: EUA 29.8%, China 24.0%, Singapur 
 10. **Asignación de capital:** prioriza capex, financiado con capital nuevo (colocación de ago-2026) y deuda; sin dividendo (el 10-Q no registra ninguno) [2][10].
 
 ## 5. Cadenas causales vigentes
-1. **IA agéntica que demanda CPU de servidor** → DCAI +24% t/t, 10 contratos de largo plazo [6] y alzas de precio → margen bruto non-GAAP de 41.8% → UPA → el precio (P/U fwd 2027 de 62x) descuenta que el alza es estructural y no un faltante temporal.
-2. **Inflación de la memoria** (TrendForce 3T26: DRAM +13-18% [16]) → caída de dos dígitos bajos en el mercado de PC en 2026 [4] → volumen de CCPG (55% de Intel Products), compensado por mezcla y precio → margen → riesgo en la guía del 4T.
+1. **IA agéntica que demanda CPU de servidor** → DCAI +24% t/t [4], 10 contratos de largo plazo (secundaria [6]; no verificado en fuente primaria) y alzas de precio → margen bruto non-GAAP de 41.8% → UPA → el precio (P/U fwd 2027 de 62x) descuenta que el alza es estructural y no un faltante temporal.
+2. **Inflación de la memoria** (TrendForce, 9-jul-2026: DRAM de servidor +13-18% t/t en 3T26 [16]; la nota del 3-jul da lo mismo para DRAM convencional) → caída de dos dígitos bajos en el mercado de PC en 2026 [4] → volumen de CCPG (55% de Intel Products), compensado por mezcla y precio → margen → riesgo en la guía del 4T.
 3. **Decisión de clientes sobre 14A en el 2S26** (PDK 0.9 en octubre [4]) y gobierno accionista → sin un cliente externo ancla, un capex > US$20 mil M con 2027 aún mayor no tiene retorno → FCF negativo → el valor depende de la opción de fundición; la prensa espera un cliente antes de 2027 [8]. China es 24% de los ingresos y la tregua vence el 10-ene-2027 [17].
 
 ## 6. Qué descuenta el precio
@@ -94,20 +94,21 @@ P/U GAAP TTM n.s. (pérdida). Cálculo propio y Yahoo [11].
 Dato que cambia de escenario: un cliente externo de 14A con compromiso de capacidad (o su ausencia) y el margen bruto del 3T contra el 42% guiado.
 
 ## 8. Pronósticos registrados — 3T26 (trimestre al ~26-sep-2026)
-Fecha estimada del reporte: **22-oct-2026**, no confirmada (Yahoo: estimada; una fuente secundaria la da por confirmada) [11][18]. Consenso: Yahoo Finance, consultado el 2026-09-25 [11].
+Fecha estimada del reporte: **22-oct-2026**, no confirmada (Yahoo: estimada; una fuente secundaria la da por confirmada [18], pero el calendario de IR de Intel no mostraba ningún evento próximo al 25-sep-2026) [11]. Consenso: Yahoo Finance, consultado el 2026-09-25 [11].
 
 | Variable | Punto | p10-p90 (80%) | Consenso |
 |---|---|---|---|
-| Ingresos (US$ mil M) | 16.95 | 16.20-17.80 | 16.43 (35 analistas) |
-| UPA non-GAAP diluida (US$) | 0.44 | 0.36-0.53 | 0.391 (35 analistas) |
+| Ingresos (US$ mil M) | 16.95 | 16.20-18.30 | 16.43 (35 analistas) |
+| UPA non-GAAP diluida (US$) | 0.44 | 0.36-0.58 | 0.391 (35 analistas) |
 
 Base del cálculo:
 - Superación de +4% sobre el punto medio, menor que el +11-13% del 1S: la oferta llega "skewed toward the end of Q3" [4].
+- Verificación (2026-09-25): el p90 se amplió de 17.80 a 18.30 (ingresos) y de 0.53 a 0.58 (UPA). Las superaciones de la guía de los 3 últimos trimestres fueron +2.8%, +11.3% y +12.8% en ingresos, y +0.07, +0.29 y +0.22 en UPA [1][5][9][19]; dos de tres quedaban arriba del p90 original (+9.2% sobre la guía). Además, Intel dijo que su producción de obleas "exceeded expectations from 90 days ago" [4], el mismo mecanismo de las superaciones del 1S.
 - Margen bruto de 42.5%, gastos de operación de US$4.15 mil M, tasa de 11%, NCI de US$0.25 mil M y ~5.43 mil M de acciones (incluye el promedio ponderado de la colocación de agosto, no contemplada en la guía, más ~US$0.1 mil M de intereses sobre los recursos).
 - La UPA GAAP dependerá del precio de cierre por las Escrowed Shares. Inferencia: ~US$1.4 mil M por cada US$10 (143 M acciones; método de valuación no verificado).
 
 Binarios:
-- Ingresos > US$16.43 mil M: **p = 0.72**.
+- Ingresos > US$16.43 mil M: **p = 0.78**. Verificación: se registró 0.72; el intervalo propio (p10 de 16.20, punto de 16.95) implica ~0.81 y la empresa superó el punto medio de la guía en los 3 últimos trimestres; se alinea a 0.78.
 - UPA non-GAAP > US$0.391: **p = 0.74**.
 
 ## 9. Catalizadores y riesgos
@@ -135,3 +136,91 @@ Binarios:
 16. TrendForce, precios contrato 3T26, 9-jul-2026: https://www.trendforce.com/presscenter/news/20260709-13140.html
 17. Conocimiento cap. 23 §4.5 (tregua al 10-ene-2027): conocimiento/23-geopolitica-y-riesgo-politico-global.md
 18. TipRanks, calendario INTC, consultado 2026-09-25: https://www.tipranks.com/stocks/intc/earnings
+19. Intel, comunicado 3T25 (guía del 4T25: US$12.8-13.8 mil M; UPA non-GAAP US$0.08), 23-oct-2025: https://www.sec.gov/Archives/edgar/data/50863/000005086325000169/q325earningsrelease.htm
+
+## Verificación (2026-09-25)
+Verificador adversarial. Nivel de acceso:
+- Comunicados 8-K ex. 99.1 del 3T25, 4T25, 1T26 y 2T26: sección pertinente, incluidas las tablas de conciliación del 2T.
+- Comentarios preparados del 2T26: lectura íntegra del texto del PDF.
+- 8-K de la colocación del 12-ago-2026: sección pertinente.
+- 10-Q del 2T26 y 10-K FY25: búsqueda de texto completo de EDGAR para cada cifra citada.
+- Calendario de IR de Intel: lectura íntegra.
+- Yahoo: descarga propia.
+
+Aritmética recalculada con Python.
+
+**Confirmado contra fuente primaria**
+- 2T26 [1]:
+  - Ingresos: US$16.1 mil M (XBRL: US$16,128 M; +25%).
+  - Margen bruto non-GAAP: 41.8%.
+  - Margen operativo: non-GAAP 17.2% (US$2,770 M) y GAAP 11.1%.
+  - UPA: non-GAAP US$0.42 y GAAP −US$2.16, con una pérdida de US$12,529 M por las Escrowed Shares (US$2.45 por acción).
+  - CCPG: US$8.9 mil M, con utilidad operativa de US$2,343 M. DCAI: US$6,262 M y US$2,474 M; los comentarios dicen "40 percent of revenue".
+  - Foundry: pérdida de US$2,089 M, con ingresos externos de US$293 M.
+  - FCF ajustado: −US$8,419 M.
+- Guía del 3T26 [1][4]:
+  - Ingresos: US$15.8-16.8 mil M.
+  - Margen bruto: non-GAAP 42% (GAAP 41%).
+  - Tasa: 11%.
+  - UPA: non-GAAP US$0.38 (GAAP US$0.31).
+  - Interés minoritario (NCI): ~US$250 M en el 3T y en el 4T.
+  - Gastos de operación non-GAAP: ~US$16.5 mil M en el año.
+- Guías previas: 12.8-13.8 [19], 11.7-12.7 [9] y 13.8-14.8 mil M [5]. UPA guiada: 0.08, 0.00 y 0.20.
+- Comentarios preparados [4]:
+  - DCAI creció +24% t/t.
+  - La producción de 18A está ~25% arriba de la meta.
+  - El PDK 0.9 de 14A llega en octubre.
+  - Esperan que el consumo de PC caiga "low double digits" en 2026.
+  - La oferta viene "skewed towards the end of Q3".
+  - Capex de más de US$20 mil M en 2026; el de 2027 "significantly above".
+  - La PC con IA es 2/3 de los ingresos de cliente.
+- Colocación [10]: 210,526,315 + 31,578,947 acciones (opción ejercida el 11-ago) = 242.1 M a US$95, ~US$23 mil M brutos.
+- 10-Q y 10-K: el texto completo contiene "Escrowed Shares", "14.2 billion", 50,537, "20.00 per share" y 293; el 10-K, 19% y 43%.
+- Consenso (Yahoo, consulta propia del 2026-09-25):
+  - Ingresos: US$16,428 M (35 analistas; rango 16.28-17.03 mil M).
+  - UPA: US$0.39065 (35; rango 0.37-0.48), en base ajustada (el real del 2T en Yahoo es 0.42, igual al non-GAAP).
+  - Ingresos del 4T: US$16.99 mil M.
+  - UPA 2026: US$1.52. UPA 2027: US$2.06.
+- Precio de US$127.39 e INTC.MX de MXN 2,251.92: coinciden con Yahoo chart.
+
+**Revisiones de forma**
+- Periodo:
+  - El 3T26 cierra el sábado 26-sep-2026.
+  - Todo en USD.
+  - La UPA es non-GAAP atribuible a Intel en el pronóstico, el consenso y el criterio del CSV.
+- Fecha del reporte: **22-oct-2026, no confirmada**. En Yahoo, isEarningsDateEstimate = true, y el calendario de IR de Intel no tenía eventos próximos. La fuente secundaria [18] que la da por confirmada no se sostiene. El 3T25 se reportó el 23-oct-2025.
+- Escenarios: 30 + 50 + 20 = 100%.
+- **Intervalos de 80%: eran demasiado estrechos del lado alto.**
+  - Las superaciones de la guía de los 3 últimos trimestres fueron +2.8%, +11.3% y +12.8% en ingresos. El p90 original quedaba a +9.2%, así que 2 de 3 quedaban fuera.
+  - En UPA fueron +US$0.07, +0.29 y +0.22 sobre la guía, y +0.22, +0.07, +0.28 y +0.20 contra el consenso de Yahoo. El p90 original (0.53) quedaba a +0.14 del consenso, así que 3 de 4 quedaban fuera.
+  - **Se amplió el p90 a US$18.30 mil M en ingresos y a US$0.58 en UPA**, en la ficha y en el CSV. Con 18.3 y margen bruto de 44%, la UPA es de ~US$0.58.
+  - El punto y el p10 no cambian.
+- Coherencia de los binarios:
+  - Ingresos: se registró 0.72, pero el intervalo implica ~0.81. **Se corrigió a 0.78**.
+  - UPA: 0.74 contra ~0.76 implícito está dentro de la tolerancia.
+- Acciones:
+  - La UPA non-GAAP del 2T implica ~5.23 mil M acciones diluidas (2,197 / 0.42).
+  - Sumando ~122 M ponderados de la colocación, el 3T daría ~5.35 mil M. La ficha usa 5.43 mil M.
+  - Ese supuesto resta ~US$0.01 a la UPA: es un sesgo conservador y no se cambia el punto.
+- Aritmética:
+  - Capitalización: 127.39 × 5,286 M = US$673.4 mil M.
+  - P/U fwd: 61.8x y 83.8x.
+  - Sensibilidad de las Escrowed Shares: 143 M × US$10 = US$1.43 mil M.
+  - El "12m +334%" usa la ventana de 252 sesiones del dossier. Con el cierre del 24-sep-2025 (US$31.22), el cambio es de +308%.
+- Recomendaciones de compra o venta: ninguna.
+
+**Correcciones**
+1. p90 de ingresos: de 17.80 a 18.30 mil M.
+2. p90 de UPA: de 0.53 a 0.58.
+3. Binario de ingresos: de 0.72 a 0.78.
+4. TrendForce: "DRAM" se cambió a "DRAM de servidor" en la nota del 9-jul. La DRAM convencional también sube +13-18% según la nota del 3-jul.
+5. "10 contratos de largo plazo" quedó marcado como secundario y no verificado. No aparece en los comentarios preparados.
+6. Fecha del reporte: se precisó con el calendario de IR.
+7. Se agregó la fuente [19].
+
+**Sigue sin verificar:**
+- El consenso LSEG (secundario).
+- El método de valuación de las Escrowed Shares.
+- La expectativa de un cliente de 14A antes de 2027 (Motley Fool).
+
+**Veredicto:** confiable en datos. El pronóstico original era sobreconfiado del lado alto; ya se corrigió.

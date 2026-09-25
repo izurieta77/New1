@@ -19,7 +19,7 @@ Geografía FY25 por sede del cliente [3]: EUA US$24,113 M (64.5%), Taiwán 15.2%
 - Datos operativos [2]:
   1. DRAM +67% t/t, con ASP en el rango bajo de 60% y bits en un dígito bajo.
   2. NAND +99% t/t, con ASP a la mitad del rango de 80%.
-  3. Acuerdos estratégicos (SCA): take-or-pay con compromisos de US$22 mil M, de los cuales ~US$18 mil M son depósitos en efectivo. Los mayores tienen un **techo de precio de ~2T calendario 2026** y un piso.
+  3. Acuerdos estratégicos (SCA): take-or-pay con compromisos de US$22 mil M, de los cuales ~US$18 mil M son depósitos en efectivo. Los mayores tienen un **techo de precio de ~2T calendario 2026** y un piso. Precisión de la verificación: los compromisos incluyen acuerdos firmados después del cierre del 28-may. A esa fecha, las obligaciones de desempeño remanentes eran de ~US$5 mil M y el pasivo contractual de sólo US$422 M, así que la mayor parte de los depósitos aún no estaba en el balance del 3T [2].
 
 ## 3. Tabla financiera (US$ M; XBRL de la SEC vía `dossier.py` [10])
 | Trim. | Ingresos (a/a) | Mg bruto | Mg oper | UN | UPA dil. | FCF | SBC/ing | Deuda neta* | Acc. dil. (M) |
@@ -88,12 +88,13 @@ Fecha del reporte: **30-sep-2026, después del cierre**, confirmada por Micron [
 
 | Variable | Punto | p10-p90 (80%) | Consenso |
 |---|---|---|---|
-| Ingresos (US$ mil M) | 51.6 | 49.4-54.8 | 51.20 (35 analistas) |
-| UPA non-GAAP diluida (US$) | 32.1 | 29.9-34.8 | 31.56 (33 analistas) |
+| Ingresos (US$ mil M) | 51.6 | 49.4-57.0 | 51.20 (35 analistas) |
+| UPA non-GAAP diluida (US$) | 32.1 | 29.9-36.5 | 31.56 (33 analistas) |
 
 Base del cálculo:
 - La guía de +20.6% t/t ya incluye la semana 14 (+7.7% de días) y precios de +12-15%.
 - Supuesto de superación de +3% sobre el punto medio, menor que en trimestres previos por la moderación de precios [8] y los techos de los SCA.
+- Verificación (2026-09-25): el p90 se amplió de 54.8 a 57.0 (ingresos) y de 34.8 a 36.5 (UPA). Las superaciones de la guía de los 2 trimestres previos (+27.6% y +23.7% en ingresos; +44.9% y +31.1% en UPA [1][4][14]) y 3 de las 4 últimas sorpresas de UPA contra consenso (+21%, +33%, +21%) quedaban muy por encima del p90 original (+9.6% sobre la guía). El nuevo p90 (+14%) sigue descontando los techos de los SCA; el máximo de los analistas es US$59.8 mil M y US$37.44 [10].
 - Margen bruto de 86.5%, gastos de operación de US$1.65 mil M, tasa non-GAAP implícita en la guía de ~14.3% y 1.148 mil M de acciones.
 
 Binarios:
@@ -127,3 +128,78 @@ Binarios:
 11. Yahoo Finance chart MU.MX, 2026-09-25: https://query1.finance.yahoo.com/v8/finance/chart/MU.MX
 12. Conocimiento cap. 23 §4.5 (tregua al 10-ene-2027): conocimiento/23-geopolitica-y-riesgo-politico-global.md
 13. Micron, 8-K Item 5.02, 26-ago-2026: https://www.sec.gov/Archives/edgar/data/723125/000110465926101067/tm2624017d1_8k.htm
+14. Micron, comunicado 1T FY26 (guía del 2T: US$18.70 ± 0.40 mil M; UPA non-GAAP US$8.42 ± 0.20), 17-dic-2025: https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/a2026q1ex991-pressrelease.htm
+
+## Verificación (2026-09-25)
+Verificador adversarial. Nivel de acceso:
+- Comunicados 8-K ex. 99.1 del 1T, 2T y 3T FY26: sección pertinente, con estado de resultados, balance y tabla de guía.
+- 10-Q del 3T FY26: sección pertinente, más búsqueda de texto completo de EDGAR frase por frase.
+- Comunicado de Micron IR sobre la fecha del reporte: lectura íntegra.
+- TrendForce del 3 y del 9-jul-2026: sección pertinente.
+- Yahoo quoteSummary y chart: descarga propia.
+
+Aritmética recalculada con Python.
+
+**Confirmado contra fuente primaria**
+- 3T FY26 al 28-may-2026 [1]:
+  - Ingresos: US$41,456 M (2T: US$23,860 M; año anterior: US$9,301 M).
+  - Margen bruto non-GAAP: 84.9%.
+  - Margen operativo: GAAP 80.4% (US$33,318 M) y non-GAAP 81.2% (US$33,681 M).
+  - UPA: non-GAAP US$25.11 y GAAP US$24.67.
+  - Unidades de negocio y sus márgenes: coinciden.
+  - FCF ajustado: US$18,304 M.
+  - Deuda neta: US$582 + 5,140 M de deuda menos US$24,995 + 1,027 M de efectivo e inversiones de corto plazo = −US$20,300 M.
+  - Acciones diluidas non-GAAP: 1,149 M.
+- Guía del 4T FY26 [1]:
+  - Ingresos: US$50.0 ± 1.0 mil M.
+  - Margen bruto: ~86%.
+  - Gastos de operación non-GAAP: US$1.65 mil M.
+  - UPA: non-GAAP US$31.00 ± 1.00 y GAAP US$30.73.
+  - Guías previas: US$18.70 mil M [14] y US$33.5 mil M [4].
+- 10-Q [2]:
+  - Dice textualmente: "Fiscal year 2026 contains 53 weeks… Our fourth quarter of fiscal year 2026 contains 14 weeks". También "take-or-pay" y "minimum and maximum pricing".
+  - La búsqueda de texto completo encuentra en el documento: "22 billion", "18 billion", "second calendar quarter", "low-60", "mid-80", "99%", "Cyberspace Administration", "6.4 billion", "27 billion", "7.84 billion", "650 million", 31,328, 9,943 y 5,722.
+  - El 10-K FY25 contiene el 17% de concentración [3].
+- Fecha del reporte: **30-sep-2026, confirmada** por Micron (comunicado del 26-ago-2026; llamada a las 2:30 p.m. hora de la montaña) [5]. En Yahoo, isEarningsDateEstimate = false.
+- Consenso (Yahoo, consulta propia del 2026-09-25):
+  - Ingresos: US$51,200 M (35 analistas; rango 46.9-59.8 mil M).
+  - UPA: US$31.56 (33 analistas; rango 28.04-37.44), en base ajustada (el real del 3T en Yahoo es 25.11, igual al non-GAAP).
+  - UPA FY26: US$73.57. UPA FY27: US$159.12.
+  - Ingresos del 1T FY27: US$57.4 mil M.
+- Cadena causal: TrendForce (3-jul-2026) da +13-18% t/t para la DRAM convencional y +10-15% para la NAND en el 3T26 [7]. Los SCA con precios mínimos y máximos están confirmados en el 10-Q.
+
+**Revisiones de forma**
+- Periodo:
+  - El 4T FY26 tiene 14 semanas y cierra el ~3-sep-2026.
+  - La etiqueta de Yahoo (endDate 2026-08-31) es nominal.
+  - Todo en USD.
+  - Pronóstico y consenso en non-GAAP.
+- Escenarios: 25 + 50 + 25 = 100%.
+- **Intervalos de 80%: eran demasiado estrechos del lado alto.**
+  - El p90 original de ingresos (US$54.8 mil M) quedaba a +9.6% sobre la guía.
+  - Las superaciones de la guía de los 2 trimestres previos fueron de +27.6% y +23.7%.
+  - En UPA fueron de +44.9% y +31.1%. Las sorpresas contra el consenso de Yahoo fueron +5.9%, +20.6%, +33.2% y +21.4%, así que 3 de 4 quedaban fuera del p90 original (+10% sobre el consenso).
+  - **Se amplió el p90 a US$57.0 mil M en ingresos y a US$36.5 en UPA**, en la ficha y en el CSV. Con 57.0 y margen bruto de 87.5%, la UPA es de ~US$36.0.
+  - No se amplió más, por los techos de los SCA y el menor ritmo de precios del 3T26 (+13-18% contra alzas mucho mayores en trimestres previos).
+  - El punto y el p10 no cambian.
+- Coherencia de los binarios: en ingresos se registró 0.56 contra ~0.59 implícito, y en UPA 0.58 contra ~0.62. Ambos están dentro de la tolerancia y no se cambian.
+  - Nota: la tasa base es de 0.78 para UPA y hubo 4 de 4 superaciones recientes. El 0.58 es una apuesta explícita a la moderación que se evaluará con el Brier.
+- Aritmética:
+  - UPA: (51.6 × 0.865 − 1.65) × 0.857 / 1.148 = US$32.09.
+  - P/U fwd: 6.8x.
+  - Capitalización: US$1.22 billones.
+  - El "12m +550%" usa la ventana de 252 sesiones del dossier. Con el cierre del 24-sep-2025 (US$161.71), el cambio es de +568%.
+- Recomendaciones de compra o venta: ninguna.
+
+**Correcciones**
+1. p90 de ingresos: de 54.8 a 57.0 mil M.
+2. p90 de UPA: de 34.8 a 36.5.
+3. Precisión sobre los SCA: los US$22/18 mil M incluyen acuerdos posteriores al 28-may. A esa fecha, las RPO eran de ~US$5 mil M y el pasivo contractual de US$422 M.
+4. Se agregó la fuente [14].
+
+**Sigue sin verificar (ya marcado):**
+- La cita sobre la "moderación" de precios (TradingKey [8]).
+- El consenso LSEG del 3T.
+- Si el techo de los SCA aplica a "los mayores" acuerdos: la frase "second calendar quarter" está en el 10-Q, pero no se leyó el párrafo completo.
+
+**Veredicto:** confiable en datos. El pronóstico original era sobreconfiado del lado alto; ya se corrigió.

@@ -1,0 +1,23 @@
+{
+ "ishares-CSPX-253743.txt": {
+  "url": "https://www.ishares.com/uk/individual/en/products/253743/ishares-sp-500-b-ucits-etf-acc-fund",
+  "descarga_utc": "2026-09-25 ~06:30",
+  "html_sha256": "147fe2328171b9e8ae09d44ce057ca5aa5aae3e338252ab000392f314b2138f4",
+  "html_bytes": 3042860,
+  "nota": "texto visible (etiquetas HTML quitadas); el HTML completo no se guardo por tamano"
+ },
+ "ishares-IUSA-251900.txt": {
+  "url": "https://www.ishares.com/uk/individual/en/products/251900/ishares-sp-500-ucits-etf-inc-fund",
+  "descarga_utc": "2026-09-25 ~06:30",
+  "html_sha256": "98e8ae486b21774c04fa67c70f4c7947d6c51768c2a083d09d772082676e55d2",
+  "html_bytes": 3645175,
+  "nota": "texto visible (etiquetas HTML quitadas); el HTML completo no se guardo por tamano"
+ },
+ "diputados-lisr-ref.txt": {
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/ref/lisr.htm",
+  "descarga_utc": "2026-09-25 ~06:30",
+  "html_sha256": "197ab5cf502880699cc963474e234ad301246a6ed243c1353887ba65fe96f1cf",
+  "html_bytes": 43349,
+  "nota": "texto visible (etiquetas HTML quitadas); el HTML completo no se guardo por tamano"
+ }
+}

@@ -54,11 +54,11 @@ Geografía FY25 por lugar de facturación [3]: EUA 32.8%, China con Hong Kong 22
 ## 4. Expediente de 10 puntos
 1. **Utilidad vs efectivo:** FCF/UN TTM de 1.31 [11], inflado porque la UN GAAP carga amortización de Xilinx y ZT. En el 2T la conversión bajó a 0.68 por mayor capex e inventario. La UN GAAP del 2T incluye US$483 M de ganancias en inversiones, partida no operativa (§5.3 del cap. 25) [1].
 2. **Deuda:** US$3,226 M al 2T más US$4.75 mil M emitidos en agosto (4.600-5.500%, vencimientos 2029-2036, en USD) [5]. Inferencia: ~US$8.0 mil M pro forma contra US$13.1 mil M de caja e inversiones.
-3. **Dilución:** +1.8% a/a y SBC de 4.4%. **Warrants a OpenAI (oct-2025) y a Meta (feb-2026) por hasta 160 M acciones cada uno a US$0.01.** Se liberan por hitos de compra de GPU y metas de precio de la acción; en OpenAI la última meta es de US$600 [2][8]. El total potencial de 320 M acciones es el 19.6% de las acciones en circulación. Al 27-jun ninguno había vestido [2].
+3. **Dilución:** +1.8% a/a y SBC de 4.4%. **Warrants a OpenAI (oct-2025) y a Meta (feb-2026) por hasta 160 M acciones cada uno a US$0.01.** Se liberan por hitos de compra de GPU y metas de precio de la acción; en OpenAI la última meta es de US$600 [2][8]. El total potencial de 320 M acciones es el 19.6% de las acciones en circulación. Al 27-jun ninguno había vestido [2]. Inferencia (verificación 2026-09-25): con la acción en US$629, por arriba de la meta final de US$600 del warrant de OpenAI [8], la barrera que queda son los hitos de compra de GW (si la meta de precio exige sostenerse un periodo no se verificó).
 4. **Capital de trabajo:** inventario de US$8,468 M contra US$7,920 M al cierre de FY25; cuentas por cobrar de US$7,281 M, con DSO de ~57 días [2].
 5. **Competidores y sustitutos:** Nvidia (GPU y CUDA), Intel (x86), ASIC de Broadcom y Marvell, y CPU Arm propias de los hiperescaladores (Graviton, Axion).
 6. **Concentración:** ningún cliente ≥10% en FY25 [3]. La tesis de IA sí depende de pocos compradores: OpenAI, Meta, Anthropic, Microsoft y Oracle [1]. La producción depende de TSMC.
-7. **Regulación:** licencias de exportación del MI308 a China, con algunas otorgadas y envíos desde finales de FY25 [2]. Arancel 232 de 25% a chips de la clase MI325X que no vayan a centros de datos de EUA [13].
+7. **Regulación:** licencias de exportación del MI308 a China, con algunas otorgadas y envíos desde finales de FY25 [2]. Arancel 232 de 25% (proclamación del 14-ene-2026) a chips lógicos en bandas específicas de TPP y ancho de banda de DRAM, con exenciones para uso en centros de datos de EUA, I+D y otros usos [13]. Inferencia: la banda corresponde a la clase MI325X/H200; EY no nombra modelos.
 8. **Promesas vs resultados:** el 2T superó la guía en +3.0%. La UPA superó al consenso en los últimos 4 trimestres, por +2.5%, +16.0%, +5.8% y +3.2% [11].
 9. **Partes relacionadas y fuera de balance:**
    - Inversión de hasta US$5 mil M en Anthropic, que también es cliente de 2 GW (Inferencia: financiamiento circular) [9].
@@ -106,7 +106,7 @@ Base del cálculo:
 - El riesgo a la baja está en el momento de los primeros envíos de Helios.
 
 Binarios:
-- Ingresos > US$13.00 mil M: **p = 0.76**.
+- Ingresos > US$13.00 mil M: **p = 0.80**. Verificación: se registró 0.76; el intervalo propio (p10 de 12.90, punto de 13.35) implica ~0.84 y las 3 últimas superaciones de la guía fueron +7.0%, +4.6% y +3.0% [1][4][16][17]; se alinea a 0.80.
 - UPA non-GAAP > US$1.926: **p = 0.72**.
 
 ## 9. Catalizadores y riesgos
@@ -135,6 +135,81 @@ Binarios:
 10. CNBC, asistentes a la cena de Estado Trump-Xi, 25-sep-2026: https://www.cnbc.com/2026/09/25/heres-who-is-attending-the-trump-xi-state-dinner.html
 11. `herramientas/dossier.py AMD` (SEC companyfacts + Yahoo chart) y Yahoo quoteSummary, 2026-09-25: empresas/AMD/dossier-2026-09-25.md
 12. Yahoo Finance chart AMD.MX, 2026-09-25: https://query1.finance.yahoo.com/v8/finance/chart/AMD.MX
-13. EY, proclamación 232, 9-feb-2026: https://globaltaxnews.ey.com/news/2026-0209-us-section-232-proclamation-imposes-25-percent-tariff-on-certain-semiconductors
+13. EY, resumen de la proclamación 232 del 14-ene-2026 (publicado 9-feb-2026): https://globaltaxnews.ey.com/news/2026-0209-us-section-232-proclamation-imposes-25-percent-tariff-on-certain-semiconductors
 14. Conocimiento cap. 23 §4.5 (tregua al 10-ene-2027): conocimiento/23-geopolitica-y-riesgo-politico-global.md
 15. Wall Street Horizon, calendario AMD, consultado 2026-09-25: https://www.wallstreethorizon.com/amd-earnings-calendar
+16. AMD, comunicado 4T25 (guía del 1T26: US$9.8 ± 0.3 mil M), 3-feb-2026: https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm
+17. AMD, comunicado 3T25 (guía del 4T25: US$9.6 ± 0.3 mil M), 4-nov-2025: https://www.sec.gov/Archives/edgar/data/2488/000000248825000163/q32025991.htm
+
+## Verificación (2026-09-25)
+Verificador adversarial. Nivel de acceso:
+- Comunicados 8-K ex. 99.1 del 3T25, 4T25, 1T26 y 2T26: sección pertinente.
+- 10-Q del 2T26 y 8-K de bonos: búsqueda de texto completo de EDGAR para cada cifra citada.
+- 8-K de OpenAI (5-oct-2025) y comunicado de Anthropic en IR de AMD (22-jul-2026): sección pertinente.
+- Calendario de IR de AMD: lectura íntegra.
+- Yahoo: descarga propia.
+
+Aritmética recalculada con Python.
+
+**Confirmado contra fuente primaria**
+- 2T26 [1]:
+  - Ingresos: US$11,536 M (+50%; año anterior US$7,685 M).
+  - Margen bruto non-GAAP: 56%.
+  - Utilidad operativa: GAAP US$1,990 M (17.3%) y non-GAAP US$3,094 M (26.8%).
+  - UPA: non-GAAP US$1.66 y GAAP US$1.38, con una ganancia de US$483 M en inversiones.
+  - Data Center: US$6,718 M (+107%), con utilidad operativa de US$2,103 M.
+  - Client: US$3,062 M (+23%). Gaming: US$779 M (−31%). Embedded: US$977 M (+19%).
+  - FCF: US$1,558 M.
+  - Acciones diluidas non-GAAP: 1,659 M.
+- Guía del 3T26 [1]:
+  - Ingresos: ~US$13.0 ± 0.3 mil M (+41% a/a; +13% t/t).
+  - Margen bruto non-GAAP: ~56%.
+  - Los gastos de operación, otros ingresos, la tasa y las acciones vienen de la transcripción secundaria [7]. La UPA implícita de US$1.93 cuadra con esos supuestos.
+- Superaciones de la guía:
+  - 4T25: +7.0% (10,270 contra 9.6 mil M [17]).
+  - 1T26: +4.6% (10,253 contra 9.8 mil M [16]).
+  - 2T26: +3.0% (11,536 contra 11.2 mil M [4]).
+- 10-Q [2]: el texto completo contiene "160 million", "4.1 billion", "9.2 billion", "in exchange for warrants", 8,468 y 7,281.
+- Bonos de ago-2026 [5]: la tasa de 4.600% se encontró en el 8-K; el resto de los términos no se revisó a fondo.
+- Warrant de OpenAI [8]: 160 M acciones a US$0.01. El primer tramo se libera tras 1 GW de MI450 y el total con 6 GW, con metas de precio "that escalate to $600 per share for the final tranche".
+- Anthropic [9]: hasta 2 GW, con el primer GW desde el 1S27 y una inversión de capital de AMD de hasta US$5 mil M.
+- Consenso (Yahoo, consulta propia del 2026-09-25):
+  - Ingresos: US$12,998 M (39 analistas; rango 12.1-14.02 mil M).
+  - UPA: US$1.926 (39; rango 1.72-2.03), en base ajustada (el real del 2T en Yahoo es 1.66, igual al non-GAAP).
+  - Ingresos del 4T26: US$16.1 mil M.
+  - UPA 2027: US$15.57.
+- Precio de US$629.26 y AMD.MX de MXN 11,138.89: coinciden con Yahoo chart.
+
+**Revisiones de forma**
+- Periodo:
+  - El 3T26 cierra el sábado 26-sep-2026.
+  - Todo en USD.
+  - Pronóstico y consenso en non-GAAP.
+- Fecha del reporte: **3-nov-2026, estimada y no confirmada**. En Yahoo, isEarningsDateEstimate = true, y el calendario de IR de AMD no tenía eventos próximos al 25-sep. El 3T25 se reportó el 4-nov-2025 (8-K).
+- Escenarios: 25 + 50 + 25 = 100%.
+- Intervalos de 80%:
+  - Ingresos: −0.8% a +6.9% sobre la guía. De las superaciones históricas (+3.0%, +4.6% y +7.0%), 2 caen dentro y la tercera en el borde.
+  - UPA: −3.4% a +13.2% contra el consenso. De las sorpresas históricas (+2.5%, +16.0%, +5.8% y +3.2%), 3 de 4 caen dentro.
+  - Los dos intervalos son aceptables y no se cambian.
+- Coherencia de los binarios:
+  - Ingresos: se registró 0.76, pero el intervalo propio implica ~0.84. **Se corrigió a 0.80** en la ficha y en el CSV.
+  - UPA: 0.72 contra ~0.75 implícito está dentro de la tolerancia.
+- Aritmética:
+  - Con los supuestos declarados (56.0%, 3.67, +0.055, 13% y 1.662), la UPA da US$2.02. La ficha registra 2.00 porque omite los otros ingresos: es un sesgo conservador de ~1%, dentro del intervalo, y no se cambia.
+  - Los warrants equivalen a 320/1,632.5 = 19.6%.
+  - P/U fwd: 40.4x.
+- Recomendaciones de compra o venta: ninguna.
+
+**Correcciones**
+1. Arancel 232: se corrigió el alcance. La proclamación es del 14-ene-2026 y cubre bandas de TPP y ancho de banda con exenciones. Que corresponda a la clase MI325X es inferencia, porque EY no nombra modelos.
+2. Fuente [13]: se corrigió la fecha.
+3. Binario de ingresos: de 0.76 a 0.80.
+4. Se agregó una inferencia sobre los warrants: con la acción en US$629, por arriba de la meta final de US$600, la barrera restante son los GW comprados.
+5. Se agregaron las fuentes [16] y [17].
+
+**Sigue sin verificar (ya marcado o secundario):**
+- Consenso LSEG.
+- "EPYC +80% en el 2S26" y "later this quarter" de Helios, que vienen de la transcripción.
+- La presencia de Lisa Su en la cena de Estado (CNBC).
+
+**Veredicto:** confiable. Los datos coinciden con las fuentes primarias. Las correcciones fueron de alcance regulatorio y de coherencia de probabilidades.

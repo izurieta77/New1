@@ -9,41 +9,21 @@
 **Verificación.** Cada URL, endpoint y cifra se abrió el 25-sep-2026 con WebFetch, con la API de Crossref o con llamadas directas a los endpoints. El buscador web no estuvo disponible en esta sesión (se agotó su cuota). Lo que no se pudo abrir va marcado **(no verificado)**.
 
 **Enlaces (no se repite aquí):**
-- **Cap. 25:**
-  - §2.2: caída de la literatura "el LLM le gana al analista" (retiro de KMN 2024, retracción de Kim-Nikolaev en el JAR, Expresión de Preocupación en la RFS), memorización y Look-Ahead-Bench.
-  - §6.7: `companyfacts`/`frames`, plazos de la Circular Única de Emisoras y XBRL `ifrsxbrl` de la BMV.
-- **Cap. 15 R7:** filtros de Form 4, 13F y eventos relevantes.
-- **Cap. 06 y 20:** decaimiento post-publicación, DSR, PBO y pruebas múltiples.
-- **Cap. 07:** backtesting.
-- **Cap. 04 y 16:** series macro de EUA y del peso.
-- **Cap. 23:** PRisk (riesgo político medido en llamadas) y GPR.
-- **En redacción:** 08 (conductuales), 09 (IA/ML), 11 (México), 12 (alternativos) y 13 (estado del mercado). Este capítulo se limita a fuentes, flujo de trabajo y control de calidad.
+- **Cap. 25:** caída de la literatura "el LLM le gana al analista", memorización y Look-Ahead-Bench (§2.2); `companyfacts`/`frames`, plazos de la CUE y XBRL `ifrsxbrl` (§6.7).
+- **Cap. 15 R7:** Form 4, 13F y eventos relevantes. **Cap. 06, 07 y 20:** decaimiento, backtesting, DSR y PBO. **Cap. 04 y 16:** macro de EUA y del peso. **Cap. 23:** PRisk y GPR.
+- **En redacción:** 08, 09, 11, 12 y 13. Este capítulo se limita a fuentes, flujo de trabajo y control de calidad.
 
 ---
 
 ## 1. Objetivos de dominio
 
 Quien se titula en este módulo sabe:
-1. **Dónde está la ventaja de una IA, y dónde no,** con 20 mil pesos, ejecución manual en GBM y 0.58% de comisión por vuelta. Está en la atención y la cobertura; no está en la velocidad ni en datos privados.
-2. **Extraer de EDGAR sin usar la memoria del modelo:**
-   - historial de filings con hora de aceptación;
-   - hechos XBRL;
-   - búsqueda de texto completo;
-   - Form 4, 13F y datasets masivos.
-
-   Todo respetando 10 solicitudes/s y un User-Agent declarado.
-3. **Obtener lo mismo para emisoras mexicanas:** el sitio público de la BMV (que alimenta Emisnet), BIVA y la CNBV.
-4. **Montar la capa macro** con Banxico SIE, INEGI, FRED/ALFRED, calendarios oficiales y el COT de la CFTC. Sabe cuándo se publica cada dato y cuándo se revisa.
-5. **Usar Kenneth French y Damodaran** sabiendo que French reescribe su historia cada mes y Damodaran se actualiza una vez al año.
-6. **Cuantificar la evidencia de las señales de texto y de atención:**
-   - Tetlock, Loughran-McDonald, Da-Engelberg-Gao y Lazy Prices;
-   - tono y voz de las llamadas de resultados;
-   - datos alternativos y COT.
-
-   Separa in-sample de out-of-sample, pre de post publicación y bruto de neto.
-7. **Explicar la evidencia 2023-2026 con LLMs:** qué muestra, qué se cayó y por qué el costo de transacción mata la señal de titulares para nosotros.
-8. **Ejecutar** el flujo de investigación de una empresa en 60 minutos y el monitoreo macro diario, con fuentes exactas.
-9. **Aplicar** el checklist anti-alucinación y anti look-ahead a cualquier agente, incluido este.
+1. **Dónde está la ventaja de una IA, y dónde no,** con 20 mil pesos, ejecución manual en GBM y 0.58% de comisión por vuelta: en la atención y la cobertura, no en la velocidad ni en datos privados.
+2. **Extraer de EDGAR sin memoria del modelo** (filings con hora de aceptación, XBRL, texto completo, Form 4, 13F y datasets) con ≤ 10 solicitudes/s y User-Agent; y lo mismo para emisoras mexicanas en BMV, BIVA y CNBV.
+3. **Montar la capa macro** con Banxico SIE, INEGI, FRED/ALFRED, calendarios y el COT, sabiendo cuándo se publica y cuándo se revisa cada dato. Usar French y Damodaran sabiendo que cambian.
+4. **Cuantificar la evidencia** de texto, atención, llamadas, datos alternativos y COT, separando IS/OOS, pre/post publicación y bruto/neto.
+5. **Explicar la evidencia 2023-2026 con LLMs:** qué muestra, qué se cayó y por qué los costos matan la señal de titulares para nosotros.
+6. **Ejecutar** el flujo de una empresa en 60 minutos y el monitoreo macro diario, y **aplicar** los checklists anti-alucinación y anti look-ahead a cualquier agente, incluido este.
 
 ---
 
@@ -53,16 +33,12 @@ Quien se titula en este módulo sabe:
 
 | Ventaja | Qué es | Evidencia | ¿Es nuestra? |
 |---|---|---|---|
-| Informacional | Datos que otros no tienen (satélite, tarjetas, geolocalización) | Froot et al. (2017): una medida de ventas en tiempo real dentro del trimestre genera **3.4%** de retorno excedente promedio al anuncio [38]. Katona et al.: las imágenes satelitales dieron estrategias rentables a inversionistas sofisticados, sobre todo con malas noticias [40] | **No.** Cuestan y ya las tienen los fondos. Lo que compran ya está en el precio el día del reporte |
+| Informacional | Datos que otros no tienen (satélite, tarjetas, geolocalización) | Froot et al. (2017): una medida de ventas en tiempo real dentro del trimestre genera **3.4%** de retorno excedente promedio al anuncio [38]. Katona et al.: las imágenes satelitales dieron estrategias rentables a inversionistas sofisticados, sobre todo con malas noticias [40] | **No.** Cuestan y ya las tienen los fondos. **Inferencia:** lo que miden ya está en el precio el día del reporte |
 | Velocidad | Actuar primero sobre información pública | Lopez-Lira y Tang: la estrategia de GPT-4 sobre titulares **deja de ser rentable a 20 pb por vuelta** [50] | **No.** GBM cobra 58 pb por vuelta más spread y el dueño ejecuta a mano |
 | Atención y cobertura | Procesar lo público que nadie lee | Lazy Prices: los cambios en 10-K/10-Q predicen retornos **sin reacción al anuncio** [32]. Tetlock (2011): hay sobrerreacción a noticias viejas [25]. Da et al.: atención minorista [30] | **Sí**, en horizontes de semanas a meses. Una IA lee el 100% de los filings a costo marginal casi nulo |
-| Control de calidad | No alucinar, no usar datos del futuro, no sobreoperar | FinanceBench: 81% de fallas del mejor sistema de 2023 [64]. El mejor agente de 2026 acierta 64.37% [65] | **Sí**. No da alfa por sí solo, pero evita pérdidas. **Inferencia:** con capital igual entre IAs, la que no se equivoca de dato gana en términos relativos |
+| Control de calidad | No alucinar, no usar datos del futuro, no sobreoperar | FinanceBench: GPT-4-Turbo con recuperación falló o se negó en 81% (2023) [64]. El mejor agente de 2026 acierta 64.37% [65] | **Sí**. No da alfa por sí solo, pero evita pérdidas. **Inferencia:** con capital igual entre IAs, la que no se equivoca de dato gana en términos relativos |
 
-**Inferencia (marco Grossman-Stiglitz, AER 1980; cita no verificada en esta sesión).** En equilibrio, la información costosa rinde apenas lo que cuesta. Un LLM abarata procesar texto para todos, así que la renta de "leer" se comprime conforme todos leen con LLM. Hay evidencia directa: el Sharpe anual de la estrategia de GPT-4 bajó de **6.54** (4T-2021) a **3.68** (2022), **2.33** (2023) y **1.22** (ene-may 2024) [50]. La ventaja que queda está en lo **lento y tedioso**:
-- comparar el 10-K contra el del año anterior;
-- leer la sesión de preguntas y respuestas;
-- cruzar Form 4 con eventos;
-- verificar cada cifra.
+**Inferencia (marco Grossman-Stiglitz, AER 1980; cita no verificada en esta sesión).** La información costosa rinde en equilibrio apenas lo que cuesta. El LLM abarata leer para todos y comprime esa renta: el Sharpe anual de la estrategia de GPT-4 bajó de **6.54** (4T-2021) a **3.68** (2022), **2.33** (2023) y **1.22** (ene-may 2024) [50]. Queda ventaja en lo **lento y tedioso**: comparar el 10-K con el del año anterior, leer la sesión de preguntas, cruzar Form 4 con eventos y verificar cada cifra.
 
 ### 2.2 Jerarquía de fuentes
 
@@ -88,11 +64,11 @@ Una decisión en t solo puede usar datos con t_publicación ≤ t, **en la versi
 1. **Form 4 fuera de horario.** El JSON `submissions` de Apple muestra un Form 4 aceptado el `2026-09-24T22:30:07.000Z`. Eso es 18:30 ET, después del cierre, así que el primer precio ejecutable fue la apertura del 25-sep.
 2. **`frames` con un valor posterior.** El frame `us-gaap/Revenues/USD/CY2025Q2` devuelve para Acme United un valor con número de acceso `0001193125-26-338211`, es decir, presentado en **2026** para un trimestre de 2025. La SEC documenta que `frames` toma "one fact for each reporting entity that is last filed" [1]. Un backtest que "sabía" ese número en agosto de 2025 usa un dato del futuro.
 
-**Trampa adicional verificada.** En `companyconcept` de Apple, el concepto `Revenues` se detiene en 2018. Después la empresa reporta con otra etiqueta (`RevenueFromContractWithCustomerExcludingAssessedTax`, tras ASC 606). Si falta el concepto no significa que falte el dato. Un LLM que "no lo encuentra" tiende a rellenarlo.
+**Trampa adicional verificada.** En `companyconcept` de Apple, el concepto `Revenues` se detiene en 2018. Después la empresa reporta con `RevenueFromContractWithCustomerExcludingAssessedTax`, desde el 10-K presentado el 31-oct-2019 (último dato: 3T fiscal 2026, presentado el 31-jul-2026). Que falte el concepto no significa que falte el dato. Un LLM que "no lo encuentra" tiende a rellenarlo.
 
 ### 2.4 Texto como dato: cuatro generaciones
 
-1. **Diccionarios.** Loughran-McDonald (2011) muestra que casi **tres cuartas partes** de las palabras "negativas" del Harvard Dictionary no son negativas en finanzas (10-K, 1994-2008) [27]. Es transparente, auditable y barato. La versión vigente del diccionario es de **marzo de 2026** y cubre 1993-2025 [20].
+1. **Diccionarios.** Loughran-McDonald (2011) muestra que casi **tres cuartas partes** de las palabras "negativas" del Harvard Dictionary no son negativas en finanzas (10-K, 1994-2008) [27]. Es transparente, auditable y barato; sus trampas de implementación están en la encuesta de los mismos autores [28]. La versión vigente del diccionario es de **marzo de 2026** y cubre 1993-2025 [20].
 2. **Ponderación y ML supervisado.**
    - Jegadeesh y Wu (2013): el esquema de ponderación importa tanto o más que la lista de palabras [29].
    - Ke, Kelly y Xiu (NBER 2019): puntaje supervisado sobre Dow Jones Newswires, explotable "net of transaction costs" con rotación razonable [46].
@@ -103,11 +79,9 @@ Una decisión en t solo puede usar datos con t_publicación ≤ t, **en la versi
 
 ### 2.5 La ecuación de costos que filtra todo
 
-Una señal pasa si: alfa bruto esperado − (0.58% de comisión por vuelta + spread + 10% de ISR sobre la ganancia en BMV, según cap. 07) ≥ el umbral del sistema.
-
-En la arena, `nota_rotacion` exige un **movimiento esperado ≥ 5%**, con `operaciones_max_mes` = 8 y `orden_minima_mxn` = 5,000. Con 20 mil pesos caben como máximo 4 posiciones simultáneas. Consecuencias:
-- **Descartadas:** las señales de 1-2 días. El drift post-titular de GPT-4 fue de **34 pb/día bruto** [50].
-- **Candidatas, primero como veto:** las señales mensuales o trimestrales. Por ejemplo, el cambio en el 10-K, el tono de la sesión de preguntas y respuestas o los clústeres de insiders.
+Una señal pasa si: alfa bruto esperado − (0.58% de comisión por vuelta + spread + 10% de ISR sobre la ganancia en BMV, cap. 07) ≥ umbral. En la arena, `nota_rotacion` exige **movimiento esperado ≥ 5%**, con `operaciones_max_mes` = 8 y `orden_minima_mxn` = 5,000: caben como máximo 4 posiciones. Consecuencias:
+- **Descartadas:** señales de 1-2 días (el drift post-titular de GPT-4 fue de **34 pb/día bruto** [50]).
+- **Candidatas, primero como veto:** señales mensuales o trimestrales (cambio en el 10-K, tono de la sesión de preguntas, clústeres de insiders).
 
 ---
 
@@ -118,13 +92,12 @@ En la arena, `nota_rotacion` exige un **movimiento esperado ≥ 5%**, con `opera
 | Tetlock (2007), JF 62(3):1139-1168 | Alto pesimismo en la columna del WSJ predice presión bajista seguida de **reversión a fundamentales**; el pesimismo extremo predice volumen | IS; efecto transitorio | [23] | B |
 | Tetlock, Saar-Tsechansky y Macskassy (2008), JF 63(3):1437-1467 | La fracción de palabras negativas en noticias de la empresa predice **utilidades bajas**. El precio subreacciona brevemente | IS | [24] | B |
 | Tetlock (2011), RFS 24(5):1481-1512 | Las noticias "viejas" (similares a las 10 anteriores) mueven menos el precio, pero el retorno de ese día **predice negativamente** el de la semana siguiente. Es sobrerreacción minorista | IS | [25] | B |
-| Engelberg y Parsons (2011), JF 66(1):67-97 | La cobertura de medios locales **causa** operación local tras resultados del S&P 500 (identificación por regiones y clima) | Causal | [26] | A (mecanismo) |
-| Loughran y McDonald (2011), JF 66(1):35-65 | ~3/4 de las "negativas" de Harvard no son negativas en finanzas. Seis listas propias ligadas a retornos, volumen, fraude y debilidad material | IS 1994-2008; replicado como herramienta | [27] | A (medición) · C (alfa) |
-| Loughran y McDonald (2016), JAR 54(4) | Encuesta: el análisis textual es "substantially less precise" que los métodos cuantitativos. Documenta sus trampas | — | [28] | A (guía) |
+| Engelberg y Parsons (2011), JF 66(1):67-97 | Los medios locales **causan** operación local tras resultados del S&P 500 | Causal | [26] | A (mecanismo) |
+| Loughran y McDonald (2011), JF 66(1):35-65 | ~3/4 de las "negativas" de Harvard no lo son en finanzas; seis listas propias ligadas a retornos, volumen y fraude | IS 1994-2008 | [27] | A (medición) · C (alfa) |
 | Da, Engelberg y Gao (2011), JF 66(5):1461-1499 | Russell 3000, 2004-2008: el SVI de Google sube → **precios más altos 2 semanas y reversión dentro del año**. Mide atención minorista | IS | [30] | C |
 | Bijl et al. (2016), IRFA 45:150-156 | 2008-2013: el signo **se invierte** (búsquedas altas → retornos negativos). La estrategia **no es rentable con costos** | OOS temporal | [31] | C (contra) |
 | Cohen, Malloy y Nguyen (2020), JF 75(3):1371-1415 | Vender "changers" y comprar "nonchangers" rinde hasta **188 pb/mes de alfa (>22%/año)**. Los cambios en el 10-K predicen utilidades y quiebras. **No hay efecto al anuncio** | IS | [32] | B |
-| Sadlo (2021), SSRN (réplica) | S&P 1500, 1996-jun 2020: el quintil menos similar tiene alfa **de hasta −5.12%/año**. Es **asimétrico**: los changers pierden, pero los nonchangers no ganan. Persiste en el S&P 500 | Réplica independiente; en parte post-publicación | [33] | B |
+| Sadlo (2021), SSRN (réplica) | S&P 1500, 1996-jun 2020: el quintil menos similar tiene alfa **de hasta −5.12%/año**. Es **asimétrico**: los changers pierden, pero los nonchangers no ganan. Persiste en el S&P 500 | Réplica independiente; muestra hasta jun-2020 | [33] | B |
 | Price, Doran, Peterson y Bliss (2012), JBF 36(4):992-1011 | El tono de la llamada predice retornos anormales y volumen, y **domina a la sorpresa de utilidades en los 60 días hábiles siguientes**. La sesión de preguntas y respuestas explica el drift, sobre todo en empresas sin dividendo | IS | [34] | B/C |
 | Matsumoto, Pronk y Roelofsen (2011), TAR 86(4) | Más de 10,000 transcripciones: la **sesión de preguntas y respuestas es más informativa** que la presentación, sobre todo con mal desempeño | IS | [35] | B |
 | Mayew y Venkatachalam (2012), JF 67(1):1-43 | El afecto vocal de los directivos en las llamadas predice fundamentales. Los analistas no incorporan el afecto negativo | IS | [36] | C |
@@ -132,13 +105,11 @@ En la arena, `nota_rotacion` exige un **movimiento esperado ≥ 5%**, con `opera
 | Froot, Kang, Ozik y Sadka (2017), JFE 125(1):143-162 | Ventas en tiempo real con unos 50 millones de dispositivos: **3.4%** de retorno excedente al anuncio | IS | [38] | B (contenido) · D (para nosotros) |
 | Zhu (2019), RFS 32(5):2021-2061 | Los datos alternativos (transacciones y satélite) **aumentan la informatividad del precio** y reducen el trading oportunista de los directivos | Natural experiment | [39] | B |
 | Katona, Painter, Patatoukas y Zeng (JFQA 60(2), en línea 2024) | Los satélites dieron estrategias rentables a los sofisticados, más ventas en corto informadas, peor timing minorista y **menos liquidez** en los reportes | Natural experiment | [40] | B |
-| Mukherjee, Panayotov y Shon (2021), JFE 141(1):234-254 | Algunas estimaciones satelitales (crudo en EUA, PMI de China) son tan buenas que **el mercado ya no se sorprende** con el dato oficial (identificación por nubosidad) | Causal | [41] | B |
+| Mukherjee, Panayotov y Shon (2021), JFE 141(1):234-254 | Con algunas estimaciones satelitales (crudo en EUA, PMI de China), **el mercado ya no se sorprende** con el dato oficial (identificación por nubosidad) | Causal | [41] | B |
 | Dessaint, Foucault y Frésard (2024), JF 79(3):2237-2287 | Los datos alternativos mejoran el pronóstico de **corto** plazo y **empeoran** el de largo plazo de los analistas (efecto horizonte) | Teoría + evidencia | [42] | B |
 | Wang (2003), JFM 23(1):1-31 | En 15 futuros de EUA, las posiciones de especuladores se correlacionan positivamente con retornos anormales siguientes, pero **por presión de cobertura**, no por habilidad | IS | [43] | C |
 | Kang, Rouwenhorst y Tang (2020), JF 75(1):377-417 | Commodities: los cambios de corto plazo (liquidez de no comerciales) y el nivel de largo plazo (cobertura de comerciales) predicen retornos **con signos opuestos** | IS | [44] | B |
 | Tornell y Yuan (2012), JFM 32(2):122-151 | Divisas: los **picos y valles** de posiciones netas predicen el spot. Las demás medidas, poco. Especuladores → continuación; coberturistas → reversión | IS | [45] | C |
-| Ke, Kelly y Xiu (2019), NBER w26186 | Texto supervisado en newswires: la información entra al precio con retraso (más en empresas chicas y volátiles) y es explotable con costos | OOS en la muestra | [46] | B |
-| Huang, Wang y Yang (2023), CAR 40(2):806-841 | FinBERT > LM y > ML clásico en sentimiento; +18% de informatividad de las llamadas | OOS en la clasificación | [47] | B |
 | McLean y Pontiff (2016), JF 71(1):5-32 | 97 predictores: **−26% fuera de muestra, −58% post-publicación** | OOS y post | [48] | A |
 | Hou, Xue y Zhang (2020), RFS 33(5):2019-2133 | **65% de 452 anomalías** no pasan \|t\| ≥ 1.96 con cortes NYSE y ponderación por valor; con t ≥ 2.78, **82%** | Réplica | [49] | A |
 
@@ -155,29 +126,22 @@ En la arena, `nota_rotacion` exige un **movimiento esperado ≥ 5%**, con `opera
 | Estudio | Qué encontró | Estado y lectura crítica | Enlace | Grado |
 |---|---|---|---|---|
 | Lopez-Lira y Tang, "Can ChatGPT Forecast Stock Price Movements?" (arXiv v6, 28-oct-2025) | Muestra oct-2021 a may-2024, **posterior al corte** de `gpt-4-0314` (sep-2021): 159,137 observaciones y 4,123 empresas. Acierto diario de portafolio de **93.3% (nocturno) y 88.8% (intradía)** en la reacción inicial, que **no es operable**. Drift: aciertos de 58%/55%, 34/50 pb diarios, **Sharpe 2.97/2.63 antes de costos**. Rotación de ~190%/día. A **5 pb** por vuelta la ganancia acumulada es >300%; a **10 pb**, >100%; a **20 pb, no es rentable**. El Sharpe cae de 6.54 a 1.22 conforme se adoptan los LLM. FinBERT: 90% en la reacción inicial, 48% en el drift (Sharpe −0.33) | Sobrevive en OOS de fecha de corte. Muere con costos minoristas | [50] | B (información) · **D para GBM** |
-| Kirtac y Germano, FRL 62 (2024) | 965,375 noticias 2010-2023. Precisión: OPT 74.4%, BERT 72.5%, FinBERT 72.2%, LM 50.1%. Sharpe long-short: OPT **3.05**, LM 1.23 | La muestra **se traslapa** con el entrenamiento de OPT. Sin corrección de look-ahead | [51] | C |
+| Kirtac y Germano, FRL 62 (2024) | 965,375 noticias 2010-2023. Precisión: OPT 74.4%, BERT 72.5%, FinBERT 72.2%, LM 50.1%. Sharpe long-short: OPT **3.05**, LM 1.23 | **Inferencia:** la muestra termina en 2023 y OPT se publicó en 2022 (fecha no verificada en esta sesión), así que hay traslape con el entrenamiento. Sin corrección de look-ahead | [51] | C |
 | Jha, Qian, Weber y Yang, "ChatGPT and Corporate Policies" (NBER w32161, feb-2024) | Un puntaje de inversión que ChatGPT extrae de las llamadas predice el capex **hasta 9 trimestres**. Los puntajes altos tienen **retornos anormales futuros negativos** | IS. Útil como **medición**, no como estrategia validada | [52] | B/C |
 | de Kok, Management Science 71(9) (2025) | Detecta **no-respuestas** en llamadas con **96% de precisión** y baja 70% el error frente a Gow et al. (2021) | Validación de medición. El mejor uso documentado del LLM: clasificar texto con criterios explícitos | [53] | B |
 | Kim, Muhn y Nikolaev, "Bloated Disclosures" (arXiv 2306.10224) | Afirmaba que los resúmenes de ChatGPT son más cortos y más informativos | **Retirado (v5, 9-oct-2025):** "A co-author attempted to independently replicate key results… the analyses did not yield results supporting the reported findings" | [54] | D |
-| Kim, Muhn y Nikolaev, "From Transcripts to Insights" (arXiv 2310.17721, v2 19-mar-2025) | Medidas de riesgo político, climático y de IA a partir de llamadas | Sin retiro a la fecha. **Inferencia:** hay dos trabajos de los mismos autores retirados o retractados (este cap. y cap. 25), así que queda en D hasta una réplica independiente | [55] | D |
+| Kim, Muhn y Nikolaev, "From Transcripts to Insights" (arXiv 2310.17721, v2 19-mar-2025) | Medidas de riesgo político, climático y de IA a partir de llamadas | Sin retiro a la fecha. **Inferencia:** otros tres trabajos de estos autores (o de parte de ellos) están retirados o retractados (arriba y cap. 25), así que queda en D hasta una réplica independiente | [55] | D |
 
 ### 4.2 Look-ahead, memoria y cronología: el problema central de 2025-2026
 
-- **Glasserman y Lin (arXiv 2309.17322, 2023).**
-  - Titulares anonimizados **superan** a los que llevan el nombre. El "efecto distracción" (el nombre de la empresa sesga al modelo) pesa más que el look-ahead in-sample, sobre todo en empresas grandes.
-  - Fuera de muestra, el look-ahead deja de ser el problema; la distracción persiste [56].
-- **Wu, Yang, Ying y Zhou, "Anonymization and Information Loss" (arXiv 2511.15364, rev. 5-sep-2026).** Anonimizar **destruye información**: el texto crudo supera al anonimizado al predecir degradaciones de S&P, y la brecha no se debe al look-ahead. Anonimizar no es gratis [60].
-- **He, Lv, Manela y Wu, "Chronologically Consistent LLMs" (arXiv 2502.21206, rev. jul-2025).** ChronoBERT y ChronoGPT se entrenan solo con texto disponible en cada fecha. Predicen el retorno del día siguiente con Sharpe comparable a un Llama mucho mayor, así que en esa aplicación **el look-ahead es "modest"**. El sesgo depende del modelo y de la aplicación [57].
-- **Wongchamcharoen y Glasserman (arXiv 2511.14214, nov-2025).** GPT-4.1, Claude 3.7 Sonnet y GPT-5 conservan el orden local pero **fallan en una línea de tiempo global** al alargar las secuencias. Un presupuesto explícito de razonamiento ayuda: GPT-5 con esfuerzo máximo no tuvo errores [58].
-- **Merchant y Levy (arXiv 2512.06607, v2 23-sep-2026).** Método en inferencia para "olvidar" conocimiento posterior a una fecha, ajustando logits con dos modelos chicos [59]. Es prometedor y sin réplica: C.
-- **Li et al., "Profit Mirage" (arXiv 2510.07920, oct-2025).** Los agentes financieros con LLM brillan en el backtest y **su ventaja se desvanece al terminar la ventana de conocimiento del modelo** [61].
-- **Kong, Lee, ... Lopez-Lira, ... Zohren (arXiv 2602.14233, feb-2026).** Revisaron 164 papers 2023-2025 con cinco sesgos (look-ahead, supervivencia, narrativa, objetivo y costo). **Ningún sesgo se discute en más del 28% de los estudios** [62].
-- **Gençay (arXiv 2608.27734, 27-ago-2026).** Evaluación "honesta" (sin fuga por construcción y ajustada por la intensidad de búsqueda) en 453 acciones de EUA y 39 ETFs:
-  - certifica a los benchmarks pasivos y **rechaza todas las estrategias descubiertas por LLM**;
-  - lo hace con dos modelos de frontera, hasta 100 candidatos y 5 corridas;
-  - un "oráculo" con fuga deliberada y Sharpe de 35 tampoco pasó las pruebas [63].
-
-  Es un solo estudio reciente sin revisión (C), pero converge con [48][49][61][62].
+- **Glasserman y Lin (2023).** Los titulares anonimizados **superan** a los que llevan nombre: el "efecto distracción" pesa más que el look-ahead in-sample, sobre todo en empresas grandes. Fuera de muestra el look-ahead deja de ser el problema; la distracción persiste [56].
+- **Wu, Yang, Ying y Zhou (rev. 5-sep-2026).** Anonimizar **destruye información**: el texto crudo predice mejor las degradaciones de S&P, y la brecha no viene del look-ahead [60].
+- **He, Lv, Manela y Wu (2025).** ChronoBERT/ChronoGPT, entrenados solo con texto disponible en cada fecha, logran en noticias → retorno del día siguiente un Sharpe comparable a un Llama mucho mayor: ahí el look-ahead es "modest" y depende de la aplicación [57].
+- **Wongchamcharoen y Glasserman (nov-2025).** GPT-4.1, Claude 3.7 Sonnet y GPT-5 conservan el orden local pero **fallan en la línea de tiempo global** en secuencias largas; el razonamiento explícito lo corrige (GPT-5 con esfuerzo máximo: sin errores) [58].
+- **Merchant y Levy (v2 23-sep-2026).** "Olvido" en inferencia ajustando logits con dos modelos chicos; sin réplica, C [59].
+- **Li et al., "Profit Mirage" (oct-2025).** La ventaja de los agentes con LLM **se desvanece al terminar su ventana de conocimiento** [61].
+- **Kong et al. (feb-2026).** En 164 papers 2023-2025, **ningún sesgo** (look-ahead, supervivencia, narrativa, objetivo, costo) **se discute en más del 28%** [62].
+- **Gençay (27-ago-2026).** Con evaluación sin fuga por construcción y ajustada por intensidad de búsqueda (453 acciones y 39 ETFs, dos modelos de frontera, hasta 100 candidatos, 5 corridas) se **rechazan todas las estrategias descubiertas por LLM** y se certifican los pasivos; ni un "oráculo" con fuga y Sharpe 35 pasó [63]. Un solo estudio sin revisión (C), pero converge con [48][49][61][62].
 
 ### 4.3 Alucinación en tareas de analista
 
@@ -187,15 +151,8 @@ En la arena, `nota_rotacion` exige un **movimiento esperado ≥ 5%**, con `opera
 
 ### 4.4 Cambios en fuentes
 
-- **Google Trends API en alfa, con acceso por solicitud** [19]:
-  - ventana móvil de 5 años;
-  - datos "consistently scaled", que se pueden unir entre consultas;
-  - agregación diaria, semanal, mensual y anual.
-
-  La interfaz pública sigue siendo una **muestra** normalizada de 0 a 100 [19].
-- **French:** hay datos hasta julio de 2026. "We reconstruct the full history of returns each month… Historical returns can change, for example, if CRSP revises its database". Los archivos FIZ de CRSP se descontinuaron después de la entrega de diciembre de 2024 [16].
-- **Damodaran:** datos al 9-ene-2026 (primas por país al 5-ene-2026). Se actualiza una vez al año, en las dos primeras semanas de enero, con cifras de los últimos 12 meses al 3T del año previo [17].
-- **Diccionario Loughran-McDonald:** versión de marzo de 2026 que cubre 1993-2025, más una lista de complejidad de 2024 [20].
+- **Google Trends API** en alfa, con acceso por solicitud: 5 años móviles, datos "consistently scaled" que se pueden unir entre consultas. La interfaz pública sigue siendo una **muestra** normalizada de 0 a 100 [19].
+- **French** reconstruye toda su historia cada mes ("Historical returns can change, for example, if CRSP revises its database") [16]. **Damodaran** publica una vez al año (9-ene-2026) [17]. **Loughran-McDonald** tiene versión de marzo de 2026 [20]. Detalle y uso en §6.1.
 
 ---
 
@@ -217,11 +174,11 @@ En la arena, `nota_rotacion` exige un **movimiento esperado ≥ 5%**, con `opera
 | LLM como extractor con verificación | Acelera la lectura; clasifica con criterios explícitos | 96% en no-respuestas [53] | Falla 1 de cada 3 tareas de analista [65] | Sí, con el checklist §6.4 | B |
 | LLM como oráculo (pronostica o elige acciones) | — | — | La literatura insignia está retirada o retractada (cap. 25); se desvanece post-corte [61]; la evaluación honesta lo rechaza [63] | **Prohibido** | D |
 
-**Magnitudes que el sistema debe recordar:**
-- 58 pb por vuelta en GBM contra los **20 pb** que ya matan la señal de titulares [50]. Ese punto de quiebre queda **2.9×** debajo de nuestra comisión.
-- −58% post-publicación en promedio [48].
+**Cinco números para memorizar:**
+- 58 pb por vuelta en GBM contra los **20 pb** que ya matan la señal de titulares (2.9×) [50].
+- −58% de rendimiento post-publicación [48].
 - 82% de las anomalías fallan con t ≥ 2.78 [49].
-- 81% de fallas con RAG en 2023 [64] y 64% de aciertos del mejor agente en 2026 [65].
+- 64% de aciertos del mejor agente en 2026 [65].
 - Ningún sesgo se discute en más del 28% de los papers de LLM en finanzas [62].
 
 ---
@@ -239,7 +196,7 @@ En la arena, `nota_rotacion` exige un **movimiento esperado ≥ 5%**, con `opera
 | Corte transversal | `https://data.sec.gov/api/xbrl/frames/us-gaap/<Concepto>/USD/CY2025Q2.json` (`CY####`, `CY####Q#`, `CY####Q#I`) | Un hecho por entidad, el **último presentado** | < 1 min | Incluye cifras reexpresadas posteriores → look-ahead (§2.3) |
 | Masivos | `companyfacts.zip` y `submissions.zip` | Todo EDGAR XBRL e historial | Nocturno, ~3:00 a.m. ET [1] | — |
 | Texto completo | Interfaz `https://www.sec.gov/edgar/search/` · JSON `https://efts.sec.gov/LATEST/search-index?q="going concern"&forms=10-K&dateRange=custom&startdt=2026-09-01&enddt=2026-09-24` | Filings **y anexos desde 2001**. Admite frase exacta, NOT, OR, NEAR y comodín final `*`. No admite lenguaje natural [3] | Casi inmediato | Prueba de hoy: 45 resultados. El endpoint JSON no está documentado como API oficial: tratarlo como frágil |
-| Últimos filings | `https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent` · RSS XBRL `https://www.sec.gov/Archives/edgar/usgaap.rss.xml` | Flujo en vivo | Minutos | EDGAR acepta de 6:00 a 22:00 ET en días hábiles [2] |
+| Últimos filings [9] | `https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent` · RSS XBRL `https://www.sec.gov/Archives/edgar/usgaap.rss.xml` | Flujo en vivo | Minutos | EDGAR acepta de 6:00 a 22:00 ET en días hábiles [2] |
 | Índices | `/Archives/edgar/daily-index/` y `/Archives/edgar/full-index/` | Índices por día y por trimestre | Nocturno, ~22:00 ET [2] | — |
 | Form 3/4/5 | Por emisora vía `submissions`. Dataset: `https://www.sec.gov/data-research/sec-markets-data/insider-transactions-data-sets` | Transacciones de insiders | Form 4 en **2 días hábiles** [7]. Dataset trimestral, ene-2006 a jun-2026 [4] | Ventas en planes 10b5-1 = ruido (cap. 15) |
 | 13F | Dataset: `https://www.sec.gov/data-research/sec-markets-data/form-13f-data-sets` | Posiciones largas en valores 13(f) de gestores con ≥ US$100 millones | Hasta **45 días** tras el trimestre; tratamiento confidencial de hasta 1 año [6]. Dataset de jul-2013 a ago-2026 [5] | Sin cortos ni opciones vendidas; foto vieja |
@@ -250,27 +207,27 @@ En la arena, `nota_rotacion` exige un **movimiento esperado ≥ 5%**, con `opera
 
 | Fuente | URL o endpoint | Qué da | Rezago | Trampa |
 |---|---|---|---|---|
-| BMV: información de emisoras | `https://www.bmv.com.mx/es/emisoras/informacion-de-emisoras`. Patrones por emisora vistos en el propio sitio: `.../es/emisoras/eventosrelevantes/<CLAVE>-<id>-CGEN_CAPIT` (p. ej. `BOLSA-7029-CGEN_CAPIT`) e `.../es/emisoras/informacionfinanciera/<CLAVE>-<id>-CGEN_CAPIT` | Eventos relevantes, información periódica, XBRL | Plazos de la CUE: cap. 25 §6.7 | **Emisnet** (`emisnet.bmv.com.mx`) es el portal de envío de las emisoras, con login. El público lee en bmv.com.mx |
-| BMV XBRL | `https://www.bmv.com.mx/es/empresas-listadas/informacion-financiera-xbrl` | Archivos `ifrsxbrl` (cap. 25) | Con el reporte trimestral | El comunicado de RI sale antes que el XBRL |
-| BIVA | `https://www.biva.mx/` (secciones de emisoras: eventos relevantes, banco de información) | Lo mismo para emisoras de BIVA | — | Es una aplicación JS. Las rutas internas `/emisoras/eventos-relevantes` y `/emisoras/banco-informacion/rss` se observaron en el código del portal, **no documentadas como API**. Las emisoras envían por DIV (`div.biva.mx`) |
+| BMV: información de emisoras [10] | `https://www.bmv.com.mx/es/emisoras/informacion-de-emisoras`. Patrones por emisora vistos en el propio sitio: `.../es/emisoras/eventosrelevantes/<CLAVE>-<id>-CGEN_CAPIT` (p. ej. `BOLSA-7029-CGEN_CAPIT`) e `.../es/emisoras/informacionfinanciera/<CLAVE>-<id>-CGEN_CAPIT` | Eventos relevantes, información periódica, XBRL | Plazos de la CUE: cap. 25 §6.7 | **Emisnet** (`emisnet.bmv.com.mx`) es el portal de envío de las emisoras, con login. El público lee en bmv.com.mx |
+| BMV XBRL [10] | `https://www.bmv.com.mx/es/empresas-listadas/informacion-financiera-xbrl` | Archivos `ifrsxbrl` (cap. 25) | Con el reporte trimestral | El comunicado de RI sale antes que el XBRL |
+| BIVA [11] | `https://www.biva.mx/` (secciones de emisoras: eventos relevantes, banco de información) | Lo mismo para emisoras de BIVA | — | Es una aplicación JS. Las rutas internas `/emisoras/eventos-relevantes` y `/emisoras/banco-informacion/rss` se observaron en el código del portal, **no documentadas como API**. Las emisoras envían por DIV (`div.biva.mx`) |
 | CNBV / STIV | `https://www.gob.mx/cnbv` | Regulación y consulta de emisoras | — | Consulta STIV **(no verificado: falló TLS)** |
-| Banxico SIE | Portal `https://www.banxico.org.mx/SieInternet/`. API `https://www.banxico.org.mx/SieAPIRest/service/v1/series/<id>/datos/oportuno` | Series oficiales | Diario | **Requiere token**: la API responde "Token inválido" y remite a `/SieAPIRest/service/v1/token`. Nombre del encabezado `Bmx-Token` **(no verificado)** |
+| Banxico SIE [12] | Portal `https://www.banxico.org.mx/SieInternet/`. API `https://www.banxico.org.mx/SieAPIRest/service/v1/series/<id>/datos/oportuno` | Series oficiales | Diario | **Requiere token**: la API responde "Token inválido" y remite a `/SieAPIRest/service/v1/token`. Nombre del encabezado `Bmx-Token` **(no verificado)** |
 | Series Banxico (verificadas en los cuadros CF101, CF102 y CF107) | `SF61745` tasa objetivo · `SF331451` TIIE de fondeo a un día · `SF43783` TIIE 28 · `SF43718` FIX (fecha de determinación) · `SF60653` FIX (fecha de liquidación) · `SF43936` rendimiento en subasta desde 1982 (CETES 28; el plazo se **infiere** del orden del cuadro y de la fecha inicial) · `SF43939` desde 1978 (CETES 91, inferido) | — | — | Para CETES 28 no usar el proxy mensual del FMI salvo que falle Banxico (hoy `herramientas/` lo usa por falta de token) |
-| Banxico: encuestas y decisiones | `https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialis/encuestas-expectativas-del-se.html` · `.../anuncios-de-las-decisiones-de-politica-monetaria/anuncios-politica-monetaria-t.html` | Expectativas del sector privado y comunicados | Según calendario | — |
-| INEGI | API `https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/<id>/es/00/false/BIE/2.0/<token>?type=json` · calendario `https://www.inegi.org.mx/app/saladeprensa/calendario/` | Indicadores BIE/BISE en JSON o XML | Según calendario | **Token** obligatorio. Los identificadores se buscan en el constructor de consultas; no se inventan |
+| Banxico: encuestas y decisiones [13] | `https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialis/encuestas-expectativas-del-se.html` · `.../anuncios-de-las-decisiones-de-politica-monetaria/anuncios-politica-monetaria-t.html` | Expectativas del sector privado y comunicados | Según calendario | — |
+| INEGI [14] | API `https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/<id>/es/00/false/BIE/2.0/<token>?type=json` · calendario `https://www.inegi.org.mx/app/saladeprensa/calendario/` | Indicadores BIE/BISE en JSON o XML | Según calendario | **Token** obligatorio. Los identificadores se buscan en el constructor de consultas; no se inventan |
 
 **Macro global y bases académicas.**
 
 | Fuente | URL o endpoint | Qué da | Rezago | Trampa |
 |---|---|---|---|---|
 | FRED / ALFRED | `https://fred.stlouisfed.org/docs/api/fred/` (`series/observations`, `release/dates`, `series/vintagedates`) · `https://alfred.stlouisfed.org/` · calendario `https://fred.stlouisfed.org/releases/calendar` | Series y **vintages**: `realtime_start` y `realtime_end` reconstruyen "lo que se sabía" en una fecha [15] | Según la fuente | La API pide llave. El CSV `fredgraph.csv` que usa `herramientas/` no, pero da la **última revisión** |
-| Calendarios EUA | BLS `https://www.bls.gov/schedule/news_release/` · BEA `https://www.bea.gov/news/schedule` · FOMC `https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm` · subastas `https://www.treasurydirect.gov/auctions/upcoming/` | Fechas de publicación | — | — |
+| Calendarios EUA [22] | BLS `https://www.bls.gov/schedule/news_release/` · BEA `https://www.bea.gov/news/schedule` · FOMC `https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm` · subastas `https://www.treasurydirect.gov/auctions/upcoming/` | Fechas de publicación | — | — |
 | Kenneth French | `https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html` | Factores FF3 y FF5, momentum, regiones | Mensual (hay datos hasta jul-2026) | **La historia cambia cada mes**: congelar con hash (`herramientas/huellas.py`) |
 | Damodaran | `https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html` | ERP, costo de capital por industria, primas por país, márgenes y múltiplos | Anual (9-ene-2026) | Datos al 3T del año previo. Fecha de disponibilidad = fecha de publicación |
 | CFTC COT | `https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm` · API PRE `https://publicreporting.cftc.gov/` | Legacy, Disaggregated, **TFF** (divisas, bonos del Tesoro, VIX) y Supplemental | Datos del **martes**, publicados el **viernes a las 15:30 ET** [18] | Clasificación autodeclarada; lo reportable es solo 70-90% del interés abierto [18] |
 | Google Trends | `https://trends.google.com/trends/` · API alfa `https://developers.google.com/search/apis/trends` | Índice de atención 0-100 | Casi en tiempo real | **Muestra**: descargas distintas dan valores distintos. Horario UTC en rangos ≥ 30 días [19] |
 | Loughran-McDonald | `https://sraf.nd.edu/loughranmcdonald-master-dictionary/` | Listas de sentimiento (negativo, positivo, incertidumbre, litigioso, modales fuertes y débiles, restrictivo) | Anual | Usar la versión congelada con fecha |
-| Transcripciones | `https://www.fool.com/earnings-call-transcripts/` (gratuitas para las empresas que cubre; p. ej. SNX, PAYX y CTAS del 24-sep-2026) · sitio de RI de la emisora | Texto de la llamada | Horas | Nivel 4: toda cifra citada se confirma en el comunicado o el 10-Q |
+| Transcripciones [21] | `https://www.fool.com/earnings-call-transcripts/` (gratuitas para las empresas que cubre; p. ej. SNX, PAYX y CTAS del 24-sep-2026) · sitio de RI de la emisora | Texto de la llamada | Horas | Nivel 4: toda cifra citada se confirma en el comunicado o el 10-Q |
 
 ### 6.2 Flujo estándar: investigación de una empresa en 60 minutos
 
@@ -350,7 +307,7 @@ Cada respuesta de un agente que contenga cifras pasa estas 14 verificaciones:
 2. **Macro con vintages.** En backtests se usa ALFRED (`realtime_start`/`realtime_end`); nunca la serie revisada de hoy.
 3. **`frames` y `companyfacts`** traen reexpresiones posteriores (§2.3). Para backtest se filtra por `filed ≤ t` y por `accn` original.
 4. **Rezagos legales:** Form 4 = 2 días hábiles; 13F ≤ 45 días; COT del martes al viernes; reporte trimestral BMV = 20 días hábiles (40 en el 4T, cap. 25). La señal empieza **después** de la publicación.
-5. **Precio ejecutable:** un filing aceptado después de las 16:00 ET (14:00 CDMX) se opera a la apertura siguiente. En la arena, el dueño ejecuta a mano: se suma al menos 1 día de retraso realista.
+5. **Precio ejecutable:** un filing aceptado después de las 16:00 ET (14:00 CDMX en verano de EUA, 15:00 en invierno) se opera a la apertura siguiente. En la arena, el dueño ejecuta a mano: se suma al menos 1 día de retraso realista.
 6. **Precios ajustados:** se recalculan hacia atrás con cada dividendo o split. Las señales se calculan con precios de la fecha y eventos corporativos conocidos en t.
 7. **Universo point-in-time:** miembros del IPC, S&P o SIC en t, incluidos los deslistados (sesgo de supervivencia).
 8. **Bases que se reescriben:** French cada mes y Damodaran cada año. Se congelan con hash y fecha de descarga; nunca se mezclan versiones.
@@ -373,67 +330,52 @@ Cada respuesta de un agente que contenga cifras pasa estas 14 verificaciones:
   2. No-respuesta en la sesión de preguntas sobre el motor central de la tesis → no hay compra nueva hasta el siguiente reporte.
   3. Cifra clave sin verificación doble → no hay decisión.
 - **R4. Horizonte:** tesis de 3 a 12 meses con movimiento esperado ≥ 5% (`nota_rotacion`). Se descartan titulares, drifts de 1-2 días y apuestas binarias al reporte cuando el sector está cubierto por datos alternativos [41].
-- **R5. Presupuesto:** ≤ 8 operaciones al mes y como máximo 4 posiciones (orden mínima de 5,000 sobre 20,000). Con eso, el cuello de botella es la **calidad** de 4 tesis, no la cantidad de ideas. Se hacen como máximo 10 flujos de 60 minutos por semana; el resto es monitoreo.
+- **R5. Presupuesto:** ≤ 8 operaciones al mes y como máximo 4 posiciones (orden mínima de 5,000 sobre 20,000): el cuello de botella es la **calidad** de 4 tesis, no la cantidad de ideas. Criterio: ≤ 10 flujos de 60 minutos por semana.
 - **R6. Pronósticos:** cada ficha deja 2 a 4 pronósticos con criterio verificable en fuente de nivel 1. Brier objetivo ≤ 0.20 con ≥ 50 pronósticos (`pronosticos`).
 - **R7. Fuentes caídas:** si falla el nivel 1, se degrada a "vigilar". Una fuente de nivel 4-5 no sustituye a una de nivel 1.
-- **R8. Torneo.** Todas las IAs rivales tienen el mismo capital y, probablemente, acceso a las mismas fuentes públicas. **Inferencia:** la diferencia sostenible es menos errores de dato y de fecha, más la disciplina de costos. No hay ventaja en velocidad ni en datos exclusivos.
+- **R8. Torneo.** Las IAs rivales tienen el mismo capital y, probablemente, las mismas fuentes públicas. **Inferencia:** la diferencia sostenible es cometer menos errores de dato y de fecha y cuidar los costos.
 
 ---
 
 ## 7. Trampas y errores comunes
 
-1. **Pedirle cifras al modelo.** Es la fuente de nivel 6. Aunque acierte, no hay forma de saber cuándo alucina (81% de fallas con RAG en 2023 [64]).
-2. **Usar `filingDate` o el periodo en vez de `acceptanceDateTime` o `filed`:** look-ahead de horas a trimestres.
-3. **Backtest con `frames` o `companyfacts` sin filtrar `filed`:** se mezclan reexpresiones posteriores (el caso de Acme en §2.3).
-4. **Concluir que "no hay dato"** porque cambió la etiqueta XBRL (Apple `Revenues`).
-5. **Serie macro revisada en backtest:** usar FRED de hoy en vez del vintage de ALFRED.
-6. **French sin congelar:** el mismo backtest da otro número el mes siguiente porque la historia se reconstruyó [16].
-7. **Operar el titular:** ignorar que 20 pb ya matan la señal [50] y que GBM cuesta 58 pb más spread.
-8. **Creer el Sharpe de un paper con LLM** cuya muestra se traslapa con el entrenamiento (p. ej. OPT 2010-2023 [51]) o cuyo resultado fue retirado [54].
-9. **Anonimizar y creer que se resolvió todo:** se pierde información [60] y la distracción persiste [56].
-10. **Google Trends como señal de compra:** el signo se invirtió fuera de muestra y no paga costos [31]. Además, la interfaz es una muestra que cambia entre descargas [19].
-11. **13F como gatillo:** foto de hasta 45 días, sin cortos [6].
-12. **COT sin rezago:** el dato es del martes y se publica el viernes. Cubre 70-90% del interés abierto y la clasificación es autodeclarada [18].
-13. **Lazy Prices del lado largo:** la réplica dice que ganar con los nonchangers no se sostiene [33]. Es un veto, no una compra.
-14. **Leer solo la presentación de la llamada:** la sesión de preguntas y respuestas es la que informa [35].
-15. **Transcripción de terceros como cifra:** es nivel 4; se confirma en el comunicado o el 10-Q.
-16. **Confundir Emisnet con el sitio de consulta:** Emisnet es el portal de envío de las emisoras; el público lee en bmv.com.mx.
-17. **Inventar identificadores de series** (INEGI o Banxico). Se buscan en el cuadro o el constructor, se verifican y se anotan.
+Las trampas de fecha y de extracción ya están en los checklists (§6.4 y §6.5). Aquí van las de juicio y las que más se repiten:
+
+1. **Pedirle cifras al modelo.** Es la fuente de nivel 6. Aunque acierte, no hay forma de saber cuándo alucina (81% de fallas de GPT-4-Turbo con RAG en 2023 [64]).
+2. **Backtest con `frames` o `companyfacts` sin filtrar `filed`**, o con la serie macro revisada de hoy en vez del vintage de ALFRED: resultados que no se podían conocer en su momento.
+3. **Concluir que "no hay dato"** porque cambió la etiqueta XBRL (Apple `Revenues`).
+4. **French sin congelar:** el mismo backtest da otro número el mes siguiente porque la historia se reconstruyó [16].
+5. **Operar el titular:** ignorar que 20 pb ya matan la señal [50] y que GBM cuesta 58 pb más spread.
+6. **Creer el Sharpe de un paper con LLM** cuya muestra se traslapa con el entrenamiento [51] o cuyo resultado fue retirado [54].
+7. **Anonimizar y dar el problema por resuelto:** se pierde información [60] y la distracción persiste [56].
+8. **Señales lentas usadas como gatillo:**
+   - Google Trends: el signo se invirtió fuera de muestra, no paga costos y la interfaz es una muestra que cambia entre descargas [19][31].
+   - 13F: foto de hasta 45 días y sin cortos [6].
+   - COT: dato del martes publicado el viernes, con 70-90% del interés abierto y clasificación autodeclarada [18].
+9. **Lazy Prices del lado largo:** en la réplica, los nonchangers no ganan [33]. Es un veto, no una compra.
+10. **Leer solo la presentación de la llamada:** la sesión de preguntas y respuestas es la que informa [35]. Además, una transcripción de terceros es nivel 4 y sus cifras se confirman en el comunicado.
+11. **Confundir Emisnet con el sitio de consulta:** Emisnet es el portal de envío de las emisoras; el público lee en bmv.com.mx.
+12. **Inventar identificadores de series** de INEGI o Banxico. Se buscan en el cuadro o el constructor, se verifican y se anotan.
 
 ---
 
 ## 8. Examen de titulación
 
-1. **¿Por qué la señal de titulares de GPT-4 de Lopez-Lira y Tang no sirve para la arena, si tiene Sharpe de 2.97?**
-   El 2.97 es **antes de costos**, con rotación de ~190%/día. Con 20 pb por vuelta ya no es rentable, y GBM cuesta 58 pb más spread con ejecución manual. Además, el Sharpe cayó de 6.54 a 1.22 conforme se adoptaron los LLM [50].
-2. **¿Qué endpoint da la hora exacta en que un filing se hizo público y por qué importa?**
-   `data.sec.gov/submissions/CIK##########.json`, campo `acceptanceDateTime`. Define el primer precio ejecutable. Por ejemplo, el Form 4 de Apple aceptado a las 22:30Z (18:30 ET) solo se pudo operar a la apertura siguiente.
-3. **¿Qué trampa tiene `frames` para un backtest?**
-   Devuelve un hecho por entidad, el **último presentado**. Puede ser una reexpresión o comparativo de un filing posterior (Acme: valor de 2T-2025 con un `accn` de 2026). Hay que filtrar por `filed ≤ t`.
-4. **Límites de acceso a EDGAR.**
-   ≤ 10 solicitudes/s, User-Agent con nombre y correo, sin llave ni CORS. `submissions` se actualiza en < 1 s; XBRL en < 1 min; los zip masivos cada noche hacia las 3:00 a.m. ET [1][2].
-5. **¿Qué encontró Loughran-McDonald (2011) y cómo se usa hoy?**
-   ~3/4 de las "negativas" del Harvard Dictionary no son negativas en 10-K. Hoy se usa como línea base barata y auditable (versión de marzo de 2026) contra la que un LLM debe ganar fuera de muestra [27][20].
-6. **Da-Engelberg-Gao contra Bijl et al.: ¿qué concluyes?**
-   2004-2008: el SVI predice alza 2 semanas y reversión. 2008-2013: signo inverso y no rentable neto de costos. Conclusión: termómetro de atención, no estrategia (C) [30][31].
-7. **Lazy Prices: magnitud original, réplica y uso.**
-   Hasta 188 pb/mes (>22%/año) de alfa IS sin efecto al anuncio. La réplica en S&P 1500 da −5.12%/año en changers, y los nonchangers no ganan. Uso: veto de compra [32][33].
-8. **¿Qué parte de la llamada de resultados es más informativa y qué se mide con LLM de forma validada?**
-   La sesión de preguntas y respuestas (Matsumoto et al.). Con LLM: no-respuestas, con 96% de precisión (de Kok, MS 2025) [35][53].
-9. **¿Por qué los datos alternativos no son nuestra ventaja, aunque "funcionan"?**
-   Los tienen los sofisticados (Katona et al.), el mercado ya no se sorprende con el dato oficial cuando el satélite lo ve (Mukherjee et al.) y cuestan. **Inferencia:** evitar apuestas binarias al reporte y buscar horizonte largo, que los analistas descuidan (Dessaint et al.) [40][41][42].
-10. **COT: fecha del dato, publicación y evidencia.**
-    Posiciones del martes, publicadas el viernes a las 15:30 ET. Cubre 70-90% del interés abierto. En divisas, los extremos predicen el spot (Tornell-Yuan). En commodities, la cobertura y la liquidez tienen primas de signo opuesto (Kang-Rouwenhorst-Tang). Grado C [18][44][45].
-11. **Serie de Banxico para el FIX, la tasa objetivo y la TIIE de fondeo, y requisito de la API.**
-    `SF43718`, `SF61745` y `SF331451`. La API exige token (`/SieAPIRest/service/v1/token`).
-12. **¿Cómo evitas el look-ahead macro en un backtest?**
-    Con ALFRED (`realtime_start`/`realtime_end`) para usar el vintage vigente en t, no la serie revisada [15].
-13. **¿Qué dicen Glasserman-Lin y Wu et al. sobre anonimizar?**
-    Anonimizar mejora el resultado in-sample porque quita la distracción del nombre. Pero pierde información real (degradaciones de S&P). No es una solución gratuita [56][60].
-14. **¿Qué porcentaje de papers de LLM en finanzas discute cada sesgo y qué pasó con las estrategias descubiertas por LLM en la evaluación honesta?**
-    Ninguno supera el 28% (164 papers, 2023-2025). La evaluación sin fuga y ajustada por búsqueda rechazó todas las estrategias de LLM y certificó a los pasivos [62][63].
-15. **¿Cuál es la regla mínima para usar una cifra extraída por un LLM?**
-    Fuente de nivel 1-2 con URL, ubicación y fecha. Reconciliación contra XBRL (0.5%). Cita literal verificable. Segundo agente en las cifras que sostienen la decisión. El mejor agente de 2026 acierta solo 64% [65].
+1. **¿Por qué la señal de titulares de GPT-4 (Sharpe 2.97) no sirve en la arena?** Es antes de costos, con rotación de ~190%/día; a 20 pb por vuelta ya no es rentable y GBM cuesta 58 pb más spread con ejecución manual. Además el Sharpe cayó de 6.54 a 1.22 al difundirse los LLM [50].
+2. **¿Qué campo da la hora exacta en que un filing se hizo público?** `acceptanceDateTime` en `data.sec.gov/submissions/CIK##########.json`. Define el primer precio ejecutable (Form 4 de Apple a las 18:30 ET → apertura siguiente).
+3. **¿Qué trampa tiene `frames`?** Da el hecho **último presentado**, que puede venir de un filing posterior (Acme: 2T-2025 con `accn` de 2026). Filtrar `filed ≤ t`.
+4. **Límites de EDGAR.** ≤ 10 solicitudes/s, User-Agent con nombre y correo, sin llave ni CORS; `submissions` < 1 s, XBRL < 1 min, zips cada noche ~3:00 a.m. ET [1][2].
+5. **Loughran-McDonald (2011) y su uso hoy.** ~3/4 de las "negativas" de Harvard no lo son en 10-K; hoy es la línea base auditable (versión mar-2026) que un LLM debe superar fuera de muestra [27][20].
+6. **Da-Engelberg-Gao contra Bijl et al.** 2004-2008: alza 2 semanas y reversión; 2008-2013: signo inverso y no rentable neto. Termómetro de atención, no estrategia (C) [30][31].
+7. **Lazy Prices: magnitud, réplica y uso.** Hasta 188 pb/mes IS sin efecto al anuncio; réplica S&P 1500: −5.12%/año en changers, nonchangers sin ganancia. Uso: veto de compra [32][33].
+8. **¿Qué parte de la llamada informa más y qué se mide validadamente con LLM?** La sesión de preguntas y respuestas; con LLM, las no-respuestas (96%, de Kok) [35][53].
+9. **¿Por qué los datos alternativos no son nuestra ventaja?** Los tienen los sofisticados, el mercado ya no se sorprende con el dato oficial cuando el satélite lo ve, y cuestan. Inferencia: evitar apuestas binarias al reporte y buscar horizonte largo [40][41][42].
+10. **COT: fecha, publicación y evidencia.** Martes → viernes 15:30 ET, 70-90% del interés abierto; en divisas los extremos predicen el spot; en commodities, primas de cobertura y liquidez con signo opuesto. Grado C [18][44][45].
+11. **Series Banxico de FIX, tasa objetivo y TIIE de fondeo, y requisito de la API.** `SF43718`, `SF61745`, `SF331451`; token obligatorio (`/SieAPIRest/service/v1/token`).
+12. **¿Cómo evitas el look-ahead macro?** Con ALFRED (`realtime_start`/`realtime_end`): el vintage vigente en t, no la serie revisada [15].
+13. **¿Qué dicen Glasserman-Lin y Wu et al. sobre anonimizar?** Quita la distracción del nombre, pero pierde información real. No es gratis [56][60].
+14. **Sesgos en papers de LLM y evaluación honesta.** Ningún sesgo en más del 28% de 164 papers; la evaluación sin fuga rechazó todas las estrategias de LLM [62][63].
+15. **Regla mínima para usar una cifra extraída por LLM.** Fuente nivel 1-2 con URL, ubicación y fecha; reconciliación con XBRL (0.5%); cita literal verificable; segundo agente en las cifras decisivas. El mejor agente de 2026 acierta 64% [65].
 
 ---
 
