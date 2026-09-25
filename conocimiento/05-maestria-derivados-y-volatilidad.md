@@ -80,7 +80,7 @@ Extensiones con la cita confirmada:
 ### 2.5 La volatility risk premium (VRP)
 
 **Definición:** VRP = E^Q[RV] − E^P[RV], es decir, la varianza neutral al riesgo menos la varianza física esperada.
-- El **variance swap rate** puede replicarse con una franja de opciones OTM, sin necesidad de un modelo (Demeterfi, Derman, Kamal y Zou, 1999; Britten-Jones y Neuberger, 2000). Carr y Wu (2009) usan esa réplica sintética para medir la VRP en 5 índices y 35 acciones.
+- El **variance swap rate** puede replicarse con una franja de opciones OTM, sin necesidad de un modelo (Demeterfi, Derman, Kamal y Zou, 1999; Britten-Jones y Neuberger, 2000). Carr y Wu (2009) usan esa réplica sintética para medir la VRP en 5 índices y 35 acciones. **Resultado (adenda 2026-09-25, examen diagnóstico S1-10):** la varianza realizada queda en promedio por debajo de la tasa sintética del variance swap, así que la **VRP es fuertemente negativa en el S&P 500** (con magnitud menor, pero también negativa, en acciones individuales). https://academic.oup.com/rfs/article-abstract/22/3/1311/1581057
 - El **VIX** es, en esencia, la raíz de la tasa de un variance swap a 30 días sobre el S&P 500.
 - Bakshi y Kapadia (2003): las carteras de opciones del S&P 500 cubiertas en delta rinden por debajo de cero, y rinden peor cuando la volatilidad es mayor. Es evidencia de una prima de riesgo de volatilidad negativa, que el comprador paga.
 - Coval y Shumway (2001): los straddles ATM de beta cero sobre el S&P pierden **≈3% por semana**. Algún factor adicional, como la volatilidad estocástica sistemática, está siendo pagado.
