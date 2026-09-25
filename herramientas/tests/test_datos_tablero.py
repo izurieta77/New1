@@ -1,4 +1,5 @@
 import json
+import re
 import unittest
 from datetime import date, timedelta
 
@@ -78,7 +79,7 @@ class TestTablero(unittest.TestCase):
         self.assertEqual(reg["diagnostico"], "RISK-ON")
         md = tablero.construir_markdown(series, res, ["X: fallo"], reg, tablero.datetime(2026, 9, 25))
         self.assertIn("## Fuentes con error", md)
-        self.assertNotIn("nan", md.lower())
+        self.assertIsNone(re.search(r"\bnan\b", md.lower()))
 
     def test_regimen_sin_datos(self):
         reg = tablero.diagnostico_regimen({}, {})

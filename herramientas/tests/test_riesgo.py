@@ -67,8 +67,9 @@ class TestSizing(unittest.TestCase):
 class TestCortacircuitos(unittest.TestCase):
     def test_niveles(self):
         self.assertIsNone(riesgo.estado_cortacircuitos([100, 105, 110])["nivel_activado"])
-        e = riesgo.estado_cortacircuitos([100, 120, 110])
+        e = riesgo.estado_cortacircuitos([100, 120, 115])  # -4.2%
         self.assertIsNone(e["nivel_activado"])
+        self.assertAlmostEqual(riesgo.estado_cortacircuitos([100, 120, 110])["nivel_activado"], -0.08)  # -8.3%
         self.assertAlmostEqual(e["siguiente_nivel"], -0.08)
         e = riesgo.estado_cortacircuitos([100, 90])
         self.assertAlmostEqual(e["nivel_activado"], -0.08)

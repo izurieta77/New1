@@ -5,6 +5,7 @@ Uso:
     python3 herramientas/portafolio.py registrar --fecha 2026-09-25 --ticker SPY --lado compra \\
         --cantidad 10 --precio 767.18 --moneda USD [--comision 1] [--stop 700] [--tesis-id T001] \\
         [--estrategia nucleo] [--notas "..."]
+    (compras/ventas se validan antes contra parametros.json; --clase, --fase, --forzar)
     python3 herramientas/portafolio.py posiciones
     python3 herramientas/portafolio.py valuar [--reconstruir] [--sin-guardar]
     python3 herramientas/portafolio.py reporte [--tasa-cetes 0.07] [--salida ruta.md]
@@ -255,6 +256,27 @@ def registrar(ruta: str | Path, fecha, ticker: str, lado: str, cantidad: float, 
     with open(ruta, "a", newline="", encoding="utf-8") as f:
         csv.DictWriter(f, fieldnames=COLUMNAS_OPS).writerow(fila)
     return fila
+
+
+def validar_contra_libro(operaciones: list[dict], orden: dict, fx_hist: FuncionFX | None,
+                         clase: str = "otro", fase: int = 1) -> dict:
+    """Valida una compra/venta con riesgo.validar_orden usando el libro valuado A COSTO.
+
+    Tactica = estrategia distinta de '' y 'nucleo'. Sin precios de mercado ni P&L del
+    periodo: revisa apalancamiento bruto, satelite, riesgo al stop y limites por clase.
+    """
+    libro = construir_libro(operaciones, fx_hist)
+    capital = libro.efectivo_mxn + sum(p["costo_mxn"] for p in libro.posiciones.values())
+    if capital <= 0:
+        raise ErrorPortafolio("Capital nulo o negativo: registre primero un deposito")
+    posiciones = {t: {"valor_mxn": p["costo_mxn"], "clase": "otro",
+                      "tactica": p["estrategia"] not in ("", "nucleo")} for t, p in libro.posiciones.items()}
+    fx = 1.0 if orden["moneda"] == "MXN" else fx_hist(orden["fecha"])
+    return riesgo.validar_orden(
+        {"capital": capital, "fase": fase, "posiciones": posiciones},
+        {"ticker": orden["ticker"], "lado": orden["lado"], "cantidad": orden["cantidad"], "precio": orden["precio"],
+         "tipo_cambio": fx, "clase": clase, "tactica": orden.get("estrategia", "") not in ("", "nucleo"),
+         "stop": orden.get("stop")})
 
 
 # ---------------------------------------------------------------- valuacion
@@ -546,6 +568,11 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--tesis-id", default="")
     r.add_argument("--estrategia", default="")
     r.add_argument("--notas", default="")
+    r.add_argument("--clase", default="otro", choices=sorted(riesgo.CLASES_VALIDAS),
+                   help="clase del activo para limites de concentracion")
+    r.add_argument("--fase", type=int, default=1, help="fase del sistema para el tope de apalancamiento")
+    r.add_argument("--forzar", action="store_true",
+                   help="registra aunque viole limites (queda marcado en notas)")
     sub.add_parser("posiciones", help="posiciones a costo")
     v = sub.add_parser("valuar", help="valuacion a mercado y snapshot en equity.csv")
     v.add_argument("--reconstruir", action="store_true", help="reconstruye equity.csv diario desde la 1a operacion")
@@ -558,8 +585,27 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         if args.comando == "registrar":
+            notas = args.notas
+            if args.lado in ("compra", "venta"):
+                previas = leer_operaciones(args.operaciones)
+                orden = {"fecha": date.fromisoformat(args.fecha), "ticker": args.ticker, "lado": args.lado,
+                         "cantidad": args.cantidad, "precio": args.precio, "moneda": args.moneda,
+                         "stop": args.stop, "estrategia": args.estrategia}
+                usa_usd = args.moneda != "MXN" or _requiere_fx(previas)
+                inicio = min([o["fecha"] for o in previas] + [orden["fecha"]])
+                val = validar_contra_libro(previas, orden, proveedor_fx_yahoo(inicio) if usa_usd else None,
+                                           args.clase, args.fase)
+                for a in val["advertencias"]:
+                    print(f"Advertencia: {a}")
+                if val["violaciones"]:
+                    for v in val["violaciones"]:
+                        print(f"VIOLACION: {v}", file=sys.stderr)
+                    if not args.forzar:
+                        print("Operacion NO registrada (use --forzar para registrarla marcada).", file=sys.stderr)
+                        return 2
+                    notas = (notas + " | FORZADA: " + "; ".join(val["violaciones"])).strip(" |")
             fila = registrar(args.operaciones, args.fecha, args.ticker, args.lado, args.cantidad, args.precio,
-                             args.moneda, args.comision, args.stop, args.tesis_id, args.estrategia, args.notas)
+                             args.moneda, args.comision, args.stop, args.tesis_id, args.estrategia, notas)
             print(f"Registrado: {fila['fecha']} {fila['lado']} {fila['cantidad']} {fila['ticker']} @ "
                   f"{fila['precio']} {fila['moneda']}")
             return 0
