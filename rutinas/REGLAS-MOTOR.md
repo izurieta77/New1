@@ -79,6 +79,9 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
 
 ## 7. Pendientes para la próxima rutina (se borran al cumplirse)
 
+- [ ] **Auditoría del viernes 25-sep-2026: NO corras comité de cartera.** La cartera inicial la decide el orquestador ese mismo día (`bitacora/decisiones/2026-09-25-CARTERA-inicial.md`). El primer comité semanal toca el viernes 2-oct-2026.
+- [ ] **Pre-apertura del lunes 28-sep-2026:** hay boletas reales para ese día. Verifica sus condiciones (§5b) y copia las boletas vigentes al inicio del brief, para que el dueño las vea primero.
+
 - [ ] **R04, decisión del orquestador (25-sep-2026): sí.**
   - Cambia el estado de `laboratorio/replicas/R04-efecto-halloween.md` a **"Replicado con diferencias"**, porque rige la más conservadora de las ejecuciones A y B.
   - Agrega una sección fechada "Segunda ejecución (AC-04)" que enlace `laboratorio/auditorias/AC-04-halloween/README.md` y explique:
