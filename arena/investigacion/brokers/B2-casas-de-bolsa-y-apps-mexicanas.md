@@ -84,7 +84,7 @@
 
 **Qué implica cada tipo [I]:**
 - **Casa de bolsa mexicana (CNBV):** custodia en Indeval, acceso al SIC en pesos, régimen del art. 129 con constancia anual [33]. **El IPAB no cubre casas de bolsa** (A1 §9). Los valores están a nombre del cliente en Indeval.
-- **Broker-dealer extranjero (Hapi, la parte de EUA de Webull, y aparentemente Revolut):** custodia fuera de México, protección SIPC hasta los límites de EUA [26], sin constancia mexicana del art. 129 (no verificado para cada uno) y con W-8BEN. **La fracción I del art. 129 exige que la venta se haga en bolsas concesionadas conforme a la LMV** [33], así que la venta directa en NYSE/Nasdaq probablemente no entra ahí (inferencia; lo trata el frente de brókers extranjeros).
+- **Broker-dealer extranjero (Hapi, la parte de EUA de Webull, y aparentemente Revolut):** custodia fuera de México, protección SIPC hasta los límites de EUA [26], sin constancia mexicana del art. 129 (no verificado para cada uno) y con W-8BEN. ~~La fracción I del art. 129 exige que la venta se haga en bolsas concesionadas conforme a la LMV [33], así que la venta directa en NYSE/Nasdaq probablemente no entra ahí (inferencia; lo trata el frente de brókers extranjeros).~~ **Corregido el 2026-09-25 (ver B4 §1.2 y `../05-comparativa-brokers.md`):** para **acciones extranjeras listadas en el SIC**, el criterio normativo 37/ISR/N (Anexo 7 RMF 2026, DOF 09-01-2026) aplica el 10% del art. 129 fr. I "con independencia de que su enajenación no se realice a través de un intermediario del mercado de valores mexicano". Siguen abiertos los ETFs vendidos fuera de México y los valores no listados en el SIC (B4 §1.3–1.4).
 
 ---
 

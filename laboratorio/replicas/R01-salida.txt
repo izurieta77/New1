@@ -1,4 +1,4 @@
-R01 - Faber (2007) SMA de 10 meses. Corrida 2026-09-25T05:30:38Z. Pre-registro sha256 679f434ac371d0a8 verificado.
+R01 - Faber (2007) SMA de 10 meses. Corrida 2026-09-25T07:10:59Z. Pre-registro sha256 679f434ac371d0a8 verificado.
 French CRSP 202607: 1926-07-31 a 2026-07-31 (1201 meses), sha256 b840dba55d319f4818fc7300e65c52eff5f64870c8d495fa58ff5d4cd749f5eb, laboratorio/replicas/R01-datos/202607/F-F_Research_Data_Factors_CSV.zip
 French CRSP 202407: 1926-07-31 a 2024-07-31 (1177 meses), sha256 0b04328f5d25a6037281de3d7778ebd3932aebffba6fd4eb3fdfec44d4ba5a06, laboratorio/replicas/R01-datos/202407/F-F_Research_Data_Factors_CSV.zip
 French CRSP 200607: 1926-07-31 a 2006-07-31 (961 meses), sha256 6e240321b8b0d53e262e1b00f9750af828a09a66b5335fad0bdcbc8e45674ebb, laboratorio/replicas/R01-datos/200607/F-F_Research_Data_Factors_TXT.zip

@@ -75,8 +75,8 @@ Notas:
 - **Qué cambiaría el escenario:** margen ajustado del 3T y guía FY28.
 
 ## 8. Pronósticos registrados (3T FY27, trimestre al 31-oct-2026)
-- **Fecha: 19-nov-2026**, según Yahoo calendarEvents (no estimada) [7].
-- **Ingresos totales:** punto de **US$187,800 M**; intervalo de 80%: 185,800-189,700. Consenso de 187,210 M (Yahoo, 28 analistas, 25-sep-2026). Yahoo compara contra 177.77 mil M, que son ventas netas; se asume que el consenso es de ingresos totales [7]. Supuestos:
+- **Fecha: 19-nov-2026**, según Yahoo calendarEvents (no estimada) [7]. La emisora aún no la publica: su aviso de eventos del 1-sep solo lista conferencias de septiembre y Zacks no tiene fecha [8][11]. *Inferencia:* es jueves, igual que el 3T FY26 (20-nov-2025) [6].
+- **Ingresos totales:** punto de **US$187,800 M**; intervalo de 80%: 185,800-**190,300** (p90 ampliado por el verificador desde 189,700; ver §Verificación). Consenso de 187,210 M (Yahoo, 28 analistas, 25-sep-2026). Yahoo compara contra 177.77 mil M, que son ventas netas; se asume que el consenso es de ingresos totales [7]. Supuestos:
   - Ventas netas cc +3.9% sobre 177,769 (en 1T y 2T terminó en el techo de la guía o arriba).
   - Tipo de cambio: +US$1.2 mil M (USD/MXN −7.8% y USD/CNY −5.8%, contra USD/INR +8.3%; promedios de ago-sep-2026 contra ago-oct-2025) [7].
   - Membresías y otros: ~1.92 mil M (+11%).
@@ -97,3 +97,4 @@ Notas:
 8. Nasdaq/Zacks, pronósticos y sorpresas (consultados el 25-sep-2026): https://api.nasdaq.com/api/analyst/WMT/earnings-forecast · https://api.nasdaq.com/api/company/WMT/earnings-surprise
 9. Conocimiento interno `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.1 y §4.4 (25-sep-2026).
 10. Conocimiento interno `conocimiento/23-geopolitica-y-riesgo-politico-global.md`, cronología de la guerra de Irán (25-sep-2026).
+11. Walmart, "Walmart Leadership to Participate in Upcoming Investor Events" (1-sep-2026): https://corporate.walmart.com/news/2026/09/q3-leadership-investor-events · 8-K, comunicado 4T FY26, guía del 1T FY27 (19-feb-2026): véase [3].

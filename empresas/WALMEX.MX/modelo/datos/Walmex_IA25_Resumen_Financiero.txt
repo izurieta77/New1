@@ -1,0 +1,120 @@
+
+=====PAGINA 1=====
+2025 2024 2023 2022 2021 2020 2019 2018 (6) 2018 2017 (5) 2017 2016 (3) 2015 (2) 2015 (1)
+PIB México (Crecimiento anual, %) 0.8 1.3 3.1 3.1 5.0 (8.5) (0.1) 2.0 2.0 2.1 2.1 2.3 2.5 2.5
+Inflación México (Anual, %) 3.7 4.2 4.7 7. 8 7.4 3.2 2.8 4.8 4.8 6.8 6.8 3.4 2.1 2.1
+Depreciación (Anual, %) (13.8) 22.5 (12.7) (5.6) 2.9 5.6 (4.0) (0.4) (0.4) (4.5) (4.5) 19.2 1 7. 7 1 7. 7
+Tipo de Cambio  (Promedio, pesos por dólar)  18.1  18.3  17 .7  20.1  20.3  21.5  19.3  19.3  19.3  18.9  18.9  18.7  15.9  15.9 
+Tipo de Cambio  (Fin de periodo, pesos por dólar)  18.0  20.6  17 .0  19.5  20.5  19.9  18.9  19.7  19.7  19.7  19.7  20.7  17 .4  17 .4 
+Tasas de interés México (Cetes 28 días, Promedio anual, %) 8.2 10.7 11.1 7. 7  4.4 5.3 7. 8  7.6  7.6  6.7 6.7 4.2 3.0 3.0 
+ESTADO DE RESUL TADOS
+VENTAS NETAS 1,004,494 951,642 880,122 813,060 730,352 696,711 641,825 612,186 612,186 569,015 569,367 528,571 472,460 485,864
+           % de crecimiento vs. año anterior, U. T otales  5.6  8.1  8.2  11.3  4.8 8.6 4.8 7.6 7.6 NA 7. 7 11.9 11.3 11.0
+           % de crecimiento vs. año anterior, U. Iguales 3.9 6.6 6.8 10.1 3.6 7.0 3.3 5.7 5.7 5.9 5.9 10.3 9.1 8.9
+OTROS INGRESOS 7 ,104 6,865 6,401 6,109 5,692 5,023 5,021 4,724 4,724 4,356 3,898 3,813 3,451 3,503
+           % de crecimiento vs. año anterior 3.5 7. 2 4.8 7. 3 13.3 0.0 6.3 8.4 8.4 NA 2.3 10.5 NA 5.2
+TOTAL INGRESOS 1,011,598 958,507 886,523 819,169 736,044 701,734 646,846 616,910 616,910 573,371 573,265 532,384 475,911 489,367
+           % de crecimiento vs. año anterior 5.5 8.1 8.2 11.3 4.9 8.5 4.9 7.6 7.6 NA 7. 7 11.9 NA 11.0
+UTILIDAD BRUTA 245,198 231,473 210,558 191,398 171,840 162,040 148,051 141,647 141,586 131,072 127 ,695 117 ,484 102,603 107 ,380
+           % de margen de utilidad 24.2 24.1 23.8 23.4 23.3 23.1 22.9 23.0 23.0 22.9 22.3 22.1 21.6 21.9 
+GASTOS GENERALES 168,044 156,085 136,747 124,694 110,181 105,042 94,427 90,276 92,597 86,921 83,684 77 ,834 69,548 72,235
+           % sobre total de ingresos 16.6 16.3 15.4 15.2 15.0 15.0 14.6 14.6 15.0 15.2 14.6 14.6 14.6 14.8 
+UTILIDAD DE OPERACIÓN 78,494 77 ,359 73,276 68,011 62,908 5 7,4 4 7 54,003 51,572 49,190 43,838 43,838 39,455 32,828 34,969
+           % sobre total de ingresos 7 .8 8.1 8.3 8.3 8.5 8.2 8.3 8.4 8.0 7.6  7.6  7.4  6.9 7.1  
+           % de crecimiento vs. año anterior  1.5  5.6  7 .7  8.1  9.5  6.4  9.8  NA 12.2 11.1 11.1 20.2 NA 0.7
+FLUJO OPERATIVO (EBITDA) 103,447 99,998 93,853 87, 3 70 81,214 75,387 71,005 67 ,148 61,747 55,482 55,482 50,149 42,592 44,993
+           % sobre total de ingresos 10.2 10.4 10.6 10.7 11.0 10.7 11.0 10.9 10.0 9.7 9.7 9.4 8.9 9.2 
+INGRESOS (GASTOS) FINANCIEROS - NETO 9,617 8,428 4,669 4,645 5,612 7 ,983 (4,801) (4,242) (330) (548) (548) (323) 89 55
+UTILIDAD ANTES DE IMPUESTOS A LA UTILIDAD 68,877 68,931 68,607 63,366 57 ,296 49,464 49,202 47 ,330 48,860 43,290 43,290 39,132 32,917 35,024
+IMPUESTOS A LA UTILIDAD 18,986 15,104 17 ,017 14,392 13,158 16,029 11,304 11,724 12,107 10,900 10,900 10,623 9,473 10,087
+OPERACIONES DISCONTINUAS  -     -     -     -     -     -     -     -     -    7,4 7 5 7,4 7 5 4,842 2,935 1,442
+UTILIDAD NETA (PARTICIPACIÓN CONTROLADORA) 49,891 53,827 51,590 48,974 44,138 33,435 37 ,898 35,606 36,753 39,865 39,865 33,352 26,376 26,376
+           % de crecimiento vs. año anterior (7 .3) 4.3 5.3 11.0 32.0 (11.8) 3.1 NA (7 .8) 19.5 19.5 26.5 (13.3) (13.3)
+POSICION FINANCIERA
+CAJA 28,591 36,514 40,669 47 ,427 42,817 35,670 30,857 38,830 38,830 35,596 35,596 2 7, 976 24,791 24,791
+INVENTARIOS 107 ,451 110,695 95,088 89,462 80,317 68,360 67 ,553 63,344 63,344 59,463 59,463 53,665 49,749 49,749
+OTROS ACTIVOS 58,571 54,962 43,887 3 7,6 7 1 35,269 31,401 27 ,179 25,891 25,144 22,742 22,742 30,881 15,831 15,831
+ACTIVO FIJO 262,759 249,025 222,606 208,634 200,219 191,455 188,439 177 ,891 144,222 140,082 140,082 136,349 130,222 130,222
+CRÉDITO MERCANTIL 37 ,901 42,697 34,297 35,614 35,767 34,997 35,145 34,989 34,989 37 ,373 37 ,373 39,421 33,057 33,057
+TOTAL ACTIVO 495,273 493,893 436,547 418,808 394,389 361,883 349,173 340,945 306,529 295,256 295,256 288,292 253,650 253,650
+34,989 34,989 34,989 34,989 34,989
+PROVEEDORES 123,904 121,971 114,430 98,956 96,638 92,356 87 ,116 85,327 85,327 80,099 80,099 65,919 56,396 56,396
+OTROS PASIVOS 135,789 139,047 123,031 117 ,384 111,869 100,408 93,912 91,038 56,288 55,623 55,623 55,347 45,433 45,433
+CAPITAL CONTABLE 235,580 232,875 199,086 202,468 185,882 169,119 168,145 164,580 164,914 159,534 159,534 167 ,026 151,795 151,795
+PARTICIPACIÓN NO CONTROLADORA  -  -  -  -  -  -  -  -  -  -  -  -  26 26
+TOTAL PASIVO, CAPITAL CONTABLE Y
+PARTICIPACIÓN NO CONTROLADORA 495,273 493,893 436,547 418,808 394,389 361,883 349,173 340,945 306,529 295,256 295,256 288,292 253,650 253,650
+Resultados financieros
+SASB FB-FR-000.A, CG-MR-000.A
+(MXN millones)
+Nuestro Negocio
+Prioridades de Negocio
+Valor Financiero
+Mensaje
+Desempeño
+Cifras Relevantes
+Creando Valor
+Inversiones
+Estados de Resultados 
+y Balance General
+Valor Compartido
+Anexos
+Descargas
+INFORME 2025
+61
+
+
+=====PAGINA 2=====
+2025 2024 2023 2022 2021 2020 2019 2018 (6) 2018 2017 (5) 2017 2016 (3) 2015 (2) 2015 (1)
+NUMERO DE UNIDADES MÉXICO 495,273
+Bodega Aurrerá 2,698 2,553 2,419 2,292 2,198 2,088 2,035 1,910 1,910 1,820 1,820 1,763 1,719 1,719
+Walmart Supercenter 338 327 316 303 294 287 280 274 274 270 270 262 256 256
+Sam's Club 176 173 170 167 165 164 163 163 163 162 162 160 160 160
+Superama 0 0 0 0 14 89 93 91 91 94 94 96 95 95
+Walmart Express 104 101 102 101  85  6  -     -     -     -     -     -     -     -    
+Suburbia  -  -  -  -  -  -  -  -  -  -  -  -  117 117
+Farmacias Medimart  -  -  -  -  -  -  -  -  - 10 10 10 10 10
+Restaurantes Vips  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+TOTAL UNIDADES 3,316 3,154 3,007 2,863 2,756 2,634 2,571 2,438 2,438 2,356 2,356 2,291 2,357 2,357
+NUMERO DE UNIDADES CENTROAMÉRICA
+Tiendas de Descuento 636 618 595 583 572 563 549 540 540 522 522 495 484 484
+Supermercados 99 98 98 98 98 100 99 97 97 94 94 92 99 99
+Bodegas 175 172 167 165 158 157 155 143 143 133 133 117 102 102
+Walmarts 39 37 36 36 36 35 33 31 31 29 29 27 24 24
+Clubes de Precios  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+TOTAL UNIDADES 949 925 896 882 864 855 836 811 811 778 778 731 709 709
+Banco Walmart
+Sucursales bancarias  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+OTROS DATOS AL FIN DE AÑO
+Número de asociados 240,779 241,172 237 ,605 233,594 231,259 231,271 238,972 234,431 234,431 237 ,055 237 ,055 228,854(4) 231,996 231,996
+Precio de la acción (pesos) 56.13 54.89 71.57 68.59 76.09 55.98 54.15 49.97 49.97 48.19 48.19 3 7.0 5 43.49 43.49
+Número de acciones en circulación (millones) 17 ,292 17 ,446 17 ,446 17 ,461 17 ,461 17 ,461 17 ,461 17 ,461 17 ,461 17 ,461 17 ,461 17 ,461 17 ,461 17 ,461
+Valor de mercado  970,600  957 ,611  1,248,610  1,197 ,650  1,328,607  977 ,467  945,513  872,526  872,526 841,446 841,446 646,930 759,379 759,379
+Utilidad por acción (pesos)  2.873  3.085  2.955  2.805  2.528  1.915  2.170  2.105  2.105  2.283  2.283  1.910  1.508  1.508 
+Dividendo pagado 28,923 37 ,399 46,349 29,558 28,189 30,934 35,957 25,582 25,582 42,756 42,756 28,972 31,562 31,562
+Número de acciones recompradas (millones)  154  -  15  -  -  -  -  -  -  -  -  -  47 47
+Inversión en recompra de acciones  8,800  -  988  -  -  -  -  -  -  -  -  -  1,825 1,825
+ 
+1 Los resultados de Banco Walmart y su venta, se presentan en Operaciones Discontinuas.
+2 Los resultados de Suburbia así como los resultados de Banco Walmart y su venta se presentan en Operaciones Discontinuas.
+3 Los resultados de Suburbia se presentan en Operaciones Discontinuas. Posición financiera presenta algunas reclasificaciones por presentación, con fines de comparabilidad únicamente con 2017 .
+4 No incluye asociados de Suburbia.
+5 Información con adecuaciones, derivado de la Norma de Ingresos que aplica a partir de 2018.
+6 Información con adecuaciones, derivado de la Norma de Arrendamientos que aplica a partir de 2019
+NA = No Aplica.
+ADQUISICIONES DE INMUEBLES Y EQUIPO 38,982 34,763 28,792 21,304 20,466 16,728 20,575 17 ,933 17 ,933 17 ,426 17 ,426 14,335 12,526 12,526
+Nuestro Negocio
+Prioridades de Negocio
+Valor Financiero
+Mensaje
+Desempeño
+Cifras Relevantes
+Creando Valor
+Inversiones
+Estados de Resultados 
+y Balance General
+Valor Compartido
+Anexos
+Descargas
+INFORME 2025
+62

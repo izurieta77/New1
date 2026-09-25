@@ -8,8 +8,8 @@
 | Artículo | Moskowitz, T. J., Ooi, Y. H. y Pedersen, L. H. (2012). "Time series momentum". *Journal of Financial Economics* 104(2), 228–250. doi:10.1016/j.jfineco.2011.11.003. Versión consultada: PDF de la versión publicada (23 páginas) en https://w4.stern.nyu.edu/facdir/lpederse/papers/TimeSeriesMomentum.pdf, consultado el 2026-09-25 con WebSearch/WebFetch y leído con `pypdf` |
 | Fecha de publicación | Recibido el 16-ago-2010, revisado el 11-jul-2011, aceptado el 12-ago-2011, **disponible en línea el 11-dic-2011** y publicado en el número de mayo de 2012 (datos de la primera página del PDF). Hubo una versión de trabajo en 2010 (presentada en la AFA de enero de 2011, según los agradecimientos) |
 | Pre-registro escrito el | 2026-09-25, antes de descargar los ETFs y antes de calcular cualquier rendimiento de las estrategias |
-| Responsable | Claude (laboratorio del sistema). Revisión independiente pendiente (`auditor-de-replicas`) |
-| Estado | Pendiente (se asigna en la sección 16) |
+| Responsable | Claude (laboratorio del sistema). Revisión independiente hecha el 2026-09-25 (sección "Verificacion independiente (2026-09-25)", al final; script `laboratorio/replicas/R02_verificacion.py`) |
+| Estado | **Replicado con diferencias** (regla pre-registrada, sección 16). Confirmado por la verificación independiente del 2026-09-25: las cifras se reproducen exactamente con una segunda implementación. Fuera de muestra, no significativo; la versión operable no supera a 1/N ni a 1/N-SMA10. No es candidata para dinero (sección 17) |
 
 **Conocimiento previo declarado.** El pre-registro no es "ciego" a la historia pública. Antes de correr ya sabía cuatro cosas. (1) Los CTAs de tendencia tuvieron un periodo débil entre 2012 y 2019 y uno fuerte en 2022. (2) El S&P 500 subió mucho entre 2012 y 2026. (3) El capítulo 14 del sistema reporta al SG Trend Index con −15.05% en los 12 meses a junio de 2025. (4) Existen críticas publicadas (Huang et al. 2020; Kim-Tse-Wald 2016). Las hipótesis se escriben igual, con el signo que predice el artículo.
 
@@ -202,10 +202,12 @@ Antes de cualquier corrida con datos reales, el script comprueba que `backtest_c
 | 2026-09-25 | **Primera ejecución: las 81 corridas quedaron registradas y el script falló al imprimir el reporte.** La falla fue una división entre cero en `estadistica.newey_west`: el exceso de `A_ref_efectivo` es idéntico a 0 y su desviación estándar es 0. Se agregó una guarda **solo** en la función de reporte `ventana` (t = NA si el exceso es constante) y se re-ejecutó todo el script. | Error de código del reporte | **No.** No cambian reglas, datos ni corridas. El CSV conserva las dos ejecuciones (486 filas = 2 × 81 corridas × 3 segmentos). Las 243 parejas (variante, parámetros, segmento) son idénticas en cagr, sharpe, mdd, vol_anual, sharpe_periodo, huella_datos, n_periodos y fechas: 0 diferencias. `sharpe_deflactado_de_registro` deduplica por variante + parámetros, así que N sigue en 15 |
 | 2026-09-25 | **Aclaración del DSR.** El pre-registro fijó N = 15, pero no qué varianza V de los Sharpes usar. Se reportan dos lecturas: V de las 15 variantes (el valor por defecto de la función) y V por familia (A o B). **Para decidir se aplica el DSR menor.** | Las familias tienen muestras de muy distinta longitud dentro de muestra: 1,014 meses en (a) y 58 en (b). Mezclarlas infla V | No: se toma la lectura más conservadora |
 | 2026-09-25 | **Aclaración de "órdenes por mes".** Cuenta los activos con \|ΔW\| > 0 e incluye el rebalanceo de la deriva hacia el peso objetivo, porque el motor rebalancea cada mes. Con las bandas de `rebalanceo` de `parametros.json` habría menos órdenes; eso no se probó. | Definición del diagnóstico | No |
+| 2026-09-25 (verificación, UTC 07:03) | **Tercera ejecución de `R02.py` por el verificador independiente.** Agregó 81 corridas al CSV (729 filas = 3 × 81 × 3 segmentos). | Re-ejecución exigida por la verificación | **No.** Las 243 parejas (variante, parámetros, segmento) son idénticas en las tres ejecuciones en cagr, sharpe, mdd, vol_anual, sharpe_periodo, sortino, rotación, costo, asimetría, curtosis, psr, huella_datos, n_periodos y fechas: 0 diferencias. N sigue en 15 |
+| 2026-09-25 (verificación) | **Recálculos fuera del registro con datos reales**, hechos por el verificador con `R02_verificacion.py` (no registra): (1) segunda implementación de 11 variantes y referencias ya registradas; (2) prueba de look-ahead por perturbación; (3) un **diagnóstico post hoc** que no estaba en la lista de diagnósticos: la caída de una mezcla estática (activo + efectivo) con la misma exposición media del tramo que la regla. | Verificar las cifras y una afirmación de la sección 14 (conclusión 7) | **No.** Ninguno es variante candidata ni se usó para elegir nada; (3) se usa solo para corregir la redacción de la conclusión 7 y de la sección 12 |
 
 ### 10. Variantes probadas
 
-- **Archivo.** `laboratorio/replicas/R02-variantes.csv`: 486 filas, 2 ejecuciones idénticas.
+- **Archivo.** `laboratorio/replicas/R02-variantes.csv`: 486 filas, 2 ejecuciones idénticas. (Tras la verificación independiente: 729 filas, 3 ejecuciones idénticas.)
 - **Corridas por ejecución: 81.**
   - 15 variantes candidatas y 10 referencias, con 3 escenarios de costo cada una: 75.
   - Más 6 corridas en MXN.
@@ -409,6 +411,8 @@ Muestra común de 2006-03-31 a 2026-07-31 (245 meses). El primer mes evaluado es
 
 En MXN la ventaja de drawdown del filtro casi desaparece. `B_lo_vt10_L12` tiene un MDD de −24.64% frente a −27.20% de 1/N, cuando en USD era −6.69% frente a −19.22%. El tipo de cambio domina la volatilidad. En MXN, H4 también falla en Sharpe (0.4410 frente a 0.4739).
 
+> **Nota de la verificación independiente (2026-09-25).** El Sharpe en MXN de esta tabla es contra la T-bill en USD convertida a MXN. Con esa definición, el exceso mensual en MXN es exactamente el exceso en USD multiplicado por el factor cambiario del mes (comprobado: diferencia máxima 2.9e-16). Por eso ese Sharpe casi no ve el tipo de cambio y **no** es el Sharpe de un inversionista en pesos contra CETES. En MXN, las cifras informativas son CAGR y MDD.
+
 **Subperiodos de la parte (a), por décadas** (Sharpe neto con costos por defecto; en la década de 1920 solo hay 30 meses):
 
 | década | A_ls_vt40_L12 | A_lo_L12 | A_ref_comprar_mantener |
@@ -458,6 +462,18 @@ En MXN la ventaja de drawdown del filtro casi desaparece. `B_lo_vt10_L12` tiene 
 
 **Fuera de muestra, la covarianza de *timing* es negativa en todas las variantes solo-largos.** Lo que protegen esas reglas después de 2012 viene de estar menos invertidas, no de acertar el momento. Dentro de muestra el *timing* fue positivo (+1.69% anual en `A_lo_L12`).
 
+> **Corrección (verificación independiente, 2026-09-25).** La descomposición es de la **media** del rendimiento, no del drawdown. Una covarianza de *timing* negativa dice que el filtro costó rendimiento medio; no prueba que la menor caída venga solo de la menor exposición. El diagnóstico post hoc del verificador (mezcla estática con la misma exposición media del tramo, costos por defecto; `R02_verificacion.py`, sección 7; no registrado) da, fuera de muestra, MDD de la regla frente a MDD de la mezcla estática:
+>
+> | regla | exposición media | MDD regla | MDD mezcla estática | Sharpe regla | Sharpe mezcla estática |
+> |---|---|---|---|---|---|
+> | `A_lo_L12` | 0.8457 | −0.2452 | −0.2119 | 0.7052 | 0.9268 |
+> | `A_ref_sma10` | 0.8400 | −0.1931 | −0.2105 | 0.8032 | 0.9267 |
+> | `B_lo_vt10_L12` | 0.4229 | −0.0669 | −0.0817 | 0.4874 | 0.5393 |
+> | `B_lo_L12` | 0.5893 | −0.0852 | −0.1146 | 0.5591 | 0.5399 |
+> | `B_ref_1N_sma10` | 0.6436 | −0.0696 | −0.1251 | 0.4906 | 0.5400 |
+>
+> En (a), `A_lo_L12` cayó **más** que la mezcla estática de igual exposición: ahí la frase se sostiene y es incluso optimista. En (b), las tres reglas cayeron **menos** que su mezcla estática, así que parte de la protección de drawdown sí vino del momento de salida, aunque en promedio el filtro costó rendimiento. Dentro de muestra en (a), `A_lo_L12` tuvo MDD −0.4517 contra −0.6886 de su mezcla estática (exposición 0.6824). La mezcla usa la exposición media del tramo, que no se conoce de antemano: es un diagnóstico, no una estrategia.
+
 **Otros diagnósticos:**
 
 - **Apalancamiento de (b).** `B_ls_vt40_*` y `B_ref_largo_vt40` tienen una exposición bruta media de 2.968, con máximo 5.090. El tope de 10/N se activó en 9 activo-meses.
@@ -499,7 +515,7 @@ Alcance: USD, costos GBM declarados (el spread es un supuesto), frecuencia mensu
    - **No supera** a 1/N ni a 1/N-SMA10 en el criterio doble, neto de costos GBM.
    - En bruto sí supera a 1/N (0.6036 frente a 0.5515), pero no a 1/N-SMA10 (0.6211). La desventaja neta frente a 1/N viene de los costos.
    - Sí supera al control 1/N con volatilidad objetivo y sin filtro (0.4373; −11.08%).
-7. **Fuera de muestra, la reducción de drawdown de las reglas solo-largos se explica por menor exposición.** La covarianza de *timing* es negativa en todas.
+7. ~~**Fuera de muestra, la reducción de drawdown de las reglas solo-largos se explica por menor exposición.**~~ **Corregida en la verificación del 2026-09-25:** fuera de muestra la covarianza de *timing* es negativa en todas las reglas solo-largos, es decir, el filtro costó rendimiento medio. Sobre el drawdown, el resultado se divide: en (a), `A_lo_L12` cayó más que una mezcla estática de igual exposición media (−24.52% frente a −21.19%); en (b), `B_lo_vt10_L12`, `B_lo_L12` y `B_ref_1N_sma10` cayeron menos que la suya (−6.69% frente a −8.17%, −8.52% frente a −11.46% y −6.96% frente a −12.51%). Diagnóstico post hoc, no registrado (sección 12).
 8. **Ninguna variante alcanza DSR ≥ 0.95** en la lectura conservadora (N = 15, V de todas).
 
 ### 15. Conclusiones que NO se sostienen
@@ -507,7 +523,7 @@ Alcance: USD, costos GBM declarados (el spread es un supuesto), frecuencia mensu
 - "TSMOM tiene un Sharpe mayor que 1": esa cifra es de 58 futuros diversificados, brutos, en 1985–2009. Con 8 ETFs y costos GBM, fuera de muestra, el Sharpe fue 0.21.
 - "TSMOM funciona igual después de su publicación": fuera de muestra ninguna variante largo/corto es significativa.
 - "El filtro TSMOM-12 mejora el rendimiento ajustado por riesgo de un portafolio 1/N de ETFs": neto de costos GBM, no lo hizo en 2012–2026 (criterio doble), ni en USD ni en MXN.
-- "TSMOM-12 es mejor filtro que la media de 10 meses": fuera de muestra no lo fue en EUA (pierde en Sharpe y MDD) ni en (b), donde hubo un empate técnico.
+- "TSMOM-12 es mejor filtro que la media de 10 meses": fuera de muestra no lo fue en EUA (pierde en Sharpe y MDD) ni en (b), donde hubo un empate técnico. *Precisión de la verificación (2026-09-25):* el empate es en la comparación pre-registrada (`B_lo_vt10_L12` frente a `B_ref_1N_sma10`: Sharpe 0.4874 frente a 0.4906 y MDD −6.69% frente a −6.96%). En la comparación de filtros binarios equivalentes (`B_lo_L12` frente a `B_ref_1N_sma10`), TSMOM-12 tuvo más Sharpe (0.5591 frente a 0.4906) y más caída (−8.52% frente a −6.96%): resultado mixto, no superioridad.
 - "Reduce el drawdown en pesos": en MXN la reducción fue de −27.20% a −24.64%, muy inferior a la reducción en USD.
 - "Hay alfa por factores": no se estimó la regresión contra MSCI World, bonos, GSCI, SMB, HML y UMD.
 - "La réplica prueba que el efecto desapareció": los intervalos post-2012 son amplios. Con 175 meses, un Sharpe verdadero de 0.3 a 0.4 no se distingue de cero.
@@ -522,20 +538,21 @@ Alcance: USD, costos GBM declarados (el spread es un supuesto), frecuencia mensu
   - (iii) no cumple la significancia: Sharpe neto 0.2071 > 0, pero t 0.88 < 2 en 2012–2026 con 8 ETFs.
   - Además, el efecto es débil o nulo en el tramo post-publicación.
 - **Estado del concepto "momentum de series de tiempo":** Replicado con diferencias, por esta ficha.
+- **Verificación independiente (2026-09-25): estado confirmado, Replicado con diferencias.** La re-ejecución coincide con todas las cifras del documento y una segunda implementación reproduce las variantes clave con diferencia máxima de 4.77e-15. No se encontraron errores de código; se corrigió la redacción de la conclusión 7 y se agregaron precisiones (ver la sección final).
 - **Pendientes:**
   - Estimar el alfa por factores, como la Tabla 3.
   - Probar un universo con divisas o futuros.
   - Ejecutar en la apertura siguiente.
   - Usar CETES como efectivo en MXN.
-  - Hacer la revisión independiente (`auditor-de-replicas`).
+  - ~~Hacer la revisión independiente (`auditor-de-replicas`).~~ Hecha el 2026-09-25 (sección final).
   - Verificar las condiciones de uso de French y Yahoo.
-- **Comando:** `python3 laboratorio/replicas/R02.py` desde `/home/user/New1`. Tarda unos 7 s con caché y agrega 81 corridas al CSV.
+- **Comando:** `python3 laboratorio/replicas/R02.py` desde `/home/user/New1`. Tarda unos 7 s con caché y agrega 81 corridas al CSV. Verificación: `python3 laboratorio/replicas/R02_verificacion.py` (unos 4 s con caché; no registra).
 - **Huellas:**
   - `huella_datos`: (a) `e85ac74d630dff95`; (b) USD `0e6d3baabe3fe595`; (b) MXN `b25e21ccd88eba01`.
   - French mensual (CRSP 202607): sha256 `b840dba55d319f4818fc7300e65c52eff5f64870c8d495fa58ff5d4cd749f5eb`.
   - French diario (CRSP 202607): sha256 `1916d331c2c51d2aee3d00215897d2b8e5995cb387f1f4569ba46bff5fb049a8`.
   - Yahoo: descarga del 2026-09-25, sin huella propia. Una re-ejecución puede cambiar si Yahoo re-ajusta el adjclose.
-- **Fecha de la corrida final:** 2026-09-25 (segunda ejecución, UTC 05:28).
+- **Fecha de la corrida final:** 2026-09-25 (segunda ejecución, UTC 05:28). Re-ejecución de verificación: 2026-09-25, UTC 07:03, con las mismas huellas de datos y cifras idénticas.
 
 ### 17. Conclusión operable
 
@@ -551,7 +568,7 @@ No se modificó `config/parametros.json`.
    - **Se confirma como filtro de drawdown histórico:** en EUA 1927–2011 bajó el MDD de −83.65% a −45.17% con mayor Sharpe, neto de costos GBM.
    - **No se confirma como fuente de rendimiento ajustado por riesgo después de 2012.** En EUA perdió contra comprar y mantener y contra SMA10. En los 8 ETFs, neto de costos, no superó a 1/N ni a 1/N-SMA10, y la covarianza de *timing* fue negativa.
    - **Propuesta para el autor del capítulo** (no aplicada): bajar el rol "diversificador multiactivo" a grado C, porque no mostró valor neto post-publicación en ETFs, y dejar "filtro de drawdown" en B, advirtiendo que su efecto viene de reducir la exposición.
-2. **Regla R1 (filtro de SMA de 10 meses): se mantiene.** R02 no da razón para sustituirla por TSMOM-12. SMA10 fue igual o mejor fuera de muestra en EUA (Sharpe 0.8032 frente a 0.7052; MDD −19.31% frente a −24.52%). En (b) quedaron empatadas.
+2. **Regla R1 (filtro de SMA de 10 meses): se mantiene.** R02 no da razón para sustituirla por TSMOM-12. SMA10 fue igual o mejor fuera de muestra en EUA (Sharpe 0.8032 frente a 0.7052; MDD −19.31% frente a −24.52%). En (b) quedaron empatadas (en la comparación pre-registrada; con filtros binarios equivalentes el resultado es mixto, ver sección 15).
 3. **Se descarta para el sistema la versión largo/corto con 40%/σ (la del artículo).**
    - Fuera de muestra, neta de costos GBM, da Sharpe 0.2071 (t 0.88) en ETFs y 0.3790 (t 1.23) en EUA.
    - Con 3 meses es negativa en ETFs.

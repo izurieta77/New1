@@ -106,3 +106,27 @@ Capitalización ≈ Ps 335.7 mil M (1,698 M × 197.71); VE ≈ Ps 402 mil M (má
 12. IEPS 2026: El CEO https://elceo.com/negocios/arca-continental-ieps-refrescos-reporte-4t25/ · El Universal https://www.eluniversal.com.mx/cartera/arca-continental-preve-aumentar-10-precio-de-sus-productos-en-2026-por-alza-del-ieps/ (secundarias)
 13. Conocimiento interno `conocimiento/23-geopolitica-y-riesgo-politico-global.md` §4.3 (Brent) y `24-politica-publica-regulacion-y-mercados.md` §4.11 (Sección 232), 25-sep-2026.
 14. Ficha interna `empresas/KOFUBL.MX/ficha.md` (25-sep-2026), múltiplos de KOF y KO.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: reporte trimestral del 2T26 (PDF íntegro), reporte del 3T25 (base del trimestre comparable), invitación a la llamada del 3T26 y presentación corporativa del 2T26. Se consultaron de nuevo el 25-sep TradingView y el chart de Yahoo.
+
+**Correcto (hecho verificado):**
+- 2T26 [1]: ventas netas de Ps 63,489 M (+0.1%; sin ingresos fuera de territorio en EUA). EBITDA de 13,133 (20.7%, −0.2%), margen bruto de 47.8% y utilidad de operación de 10,308 (16.2%). Resultado integral de financiamiento de −1,129 (intereses netos de −1,213, +29%). Impuestos de 2,936 (32.3%), minoritario de 1,215 y utilidad neta mayoritaria de **4,952** (−9.4%), que da **Ps 2.92 por acción** con 1,698 M acciones, igual que el "reportado" de TradingView. México: volumen sin garrafón −3.0% (sabores −8.7% y agua personal −13.4%), precio por caja de Ps 94.4 (+4.5%) y EBITDA de 7,307 (24.5%). EUA: volumen −2.3%, precio de US$10.52 (+4.5%) y ventas de −4.4% en pesos. Perú: volumen +17.8%. Deuda de 61,889, deuda neta de 33,433 (0.67x) y el perfil de vencimientos coinciden. Moody's cambió la perspectiva de A3 a estable el 13-may. Dividendo de 4.28 + 2.50 = Ps 6.78.
+- 3T25 [4]: ventas de 62,920 (México 30,164; EUA 23,566 con USD promedio de 18.68; Sudamérica 9,190), EBITDA de 12,831 (20.4%), minoritario de 1,124 y utilidad mayoritaria de 5,311. Los supuestos del pronóstico reconstruyen bien: México +1.5% ≈ 30,600; EUA +6% en USD a 17.25 ≈ 23,070; Sudamérica +6.5% ≈ 9,790; total ≈ 63,470.
+- Guía [8]: capex de ~7% de los ingresos en 2026 y política de dividendo de al menos 30% de la utilidad, ambos en la presentación corporativa.
+- Fecha: la invitación confirma el reporte del 3T26 el **viernes 30-oct-2026 antes de la apertura**, la llamada a las 9:00 (hora de Monterrey) y el periodo de silencio desde el 19-oct [7].
+- Cadena causal: el USD/MXN promedio fue de 17.54 en el 2T26 contra 19.51 en el 2T25 (tabla del reporte) [1]; la caída de 4.4% en pesos de las ventas de EUA con +6.3% en USD es consistente. El IEPS de 1.6451 a 3.0818 por litro (+87.3%) es aritméticamente correcto, pero la fuente es secundaria.
+- Consenso: TradingView da Ps 64.52 mil M y Ps 3.20, y fecha el 22-oct (la empresa confirma el 30-oct). En el 2T26 tenía 63.26 mil M y 3.30 (sorpresa de −11.62%).
+- Escenarios: 25 + 55 + 20 = 100%. Periodo correcto: trimestre jul-sep, en MXN; utilidad mayoritaria IFRS entre 1,698 M, la misma base que TradingView. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **Criterio de resolución de la UPA** en `pronosticos.csv`: decía "Net Profit / 1,698 M, **o** UPA reportada en BMV si se publica", un criterio doble que podía dar dos resultados. Ahora es único: utilidad mayoritaria del trimestre entre 1,698 M, denominador fijo y la base del consenso. Todos los criterios especifican la columna del trimestre, no el acumulado de 9 meses.
+
+**No verificado o pendiente:**
+- El número histórico de acciones (la ficha ya lo marca como inferencia), el dividendo de 2025 (Ps 8.62) y la cifra de 2021 no se cotejaron.
+- La cobertura de aluminio (LME y 97% Midwest) viene de la transcripción, que es secundaria.
+- No se obtuvo el historial de sorpresas de UPA de más de un trimestre (Investing no tiene página para AC). La amplitud del intervalo de UPA (±11%) se juzgó contra la variación anual de la utilidad mayoritaria: −9.4%, −8.5%, −11.5% y +3.5% en los últimos cuatro trimestres. La única sorpresa conocida (−11.6%), aplicada a 3.20, da 2.83, dentro del intervalo.
+
+**Calibración (para el post-mortem):** el binario de ventas (p = 0.22) queda algo arriba de lo que implica el intervalo propio (~0.17 con una normal centrada en 63,500). Es tolerable como sesgo por asimetría y no se cambió. El intervalo de ventas (±2.1%) es razonable: en pesos, las ventas se movieron entre −0.6% y +0.5% anual en los últimos cuatro trimestres, y el tipo de cambio del trimestre ya está casi completo.
+
+**Veredicto:** confiable. Las cifras, la base del 3T25, la guía de capex, la fecha confirmada y el consenso coinciden con la fuente primaria. Solo se corrigió la ambigüedad del criterio de resolución.

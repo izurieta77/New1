@@ -54,7 +54,7 @@ Anual (FCF = flujo operativo − capex; los arrendamientos se restan aparte) [2]
 10. **Asignación de capital.** Capex 2026 de Ps 43 mil M: 42% remodelaciones, 26% tiendas nuevas, 24% cadena de suministro y 8% tecnología. Dividendo ordinario de Ps 1.16 (0.58 el 18-nov y 0.58 el 9-dic), recompra de hasta Ps 10 mil M y un dividendo extraordinario con lo que quede sin usar al 30-nov [7].
 
 ## 5. Cadena causal
-**A. Consumo débil.** ANTAD autoservicio a tiendas iguales cayó −0.9% en julio (con Mundial) y −0.7% en agosto, el peor agosto desde 2020 [9]. Las remesas cayeron −4.6% en 2025 [14] → exposición: 83% de los ingresos en México, en formatos de ingreso bajo → efecto: tráfico negativo (−1.1%) y gastos generales creciendo por arriba de los ingresos (México +4.6% contra +3.1%) → estado financiero: margen EBITDA −10 a −20 pb → valuación: la UPA de 12 meses está plana contra 2022 → precio: P/U de 15.9x, el mínimo de 5 años.
+**A. Consumo débil.** ANTAD autoservicio a tiendas iguales cayó −0.9% en julio, con Mundial (boletín de ANTAD), y −0.7% en agosto (Milenio, secundaria; el boletín de ANTAD de agosto solo publica el total: +1.7% tiendas iguales y +4.2% totales). Milenio lo llamó el peor agosto de ANTAD en cinco años [9]. Las remesas cayeron −4.6% en 2025 [14] → exposición: 83% de los ingresos en México, en formatos de ingreso bajo → efecto: tráfico negativo (−1.1%) y gastos generales creciendo por arriba de los ingresos (México +4.6% contra +3.1%) → estado financiero: margen EBITDA −10 a −20 pb → valuación: la UPA de 12 meses está plana contra 2022 → precio: P/U de 15.9x, el mínimo de 5 años.
 **B. Costo laboral 2027.** La jornada baja de 48 a 46 h el 1-ene-2027, además del ajuste al salario mínimo (dic-2026) [13] → exposición: operación intensiva en mano de obra → efecto: más horas pagadas por turno → estado financiero: presión sobre los gastos generales de 2027. *Inferencia:* −20 a −40 pb de margen EBITDA si no se compensa con productividad o automatización (24% del capex va a la cadena de suministro).
 **C. Peso fuerte (USD/MXN promedio de 17.22 en el 3T26 contra 18.62 en el 3T25) [11].** Exposición: Centroamérica (17% de los ingresos) y mercancía importada → efecto: Centroamérica se convierte a menos pesos (−7 pp en el 2T26) y las compras en USD salen más baratas → estado financiero: ingresos consolidados creciendo ~1.3 pp menos que a moneda constante (1.9% contra 3.2% en el 2T26) → precio: neutral a negativo.
 
@@ -74,8 +74,8 @@ Capitalización ≈ Ps 791 mil M (17,236 M acciones × 45.92); VE con arrendamie
 
 ## 8. Pronósticos registrados (3T26)
 - **Fecha estimada de reporte: 27-oct-2026 (no confirmada).** Coinciden TradingView, Investing y MarketBeat [10]. El 3T25 se reportó el 28-oct-2025 [3].
-- **Ingresos del 3T26:** punto Ps 246,000 M; intervalo de 80%: 243,000-249,500. Consenso Ps 250,630 M (TradingView e Investing, 25-sep-2026) [10]. Supuestos: México +2.5-3.0% (mismas tiendas ~1% según ANTAD jul-ago más 1.6 pp de tiendas nuevas) y Centroamérica −2% en pesos (+3% a moneda constante, −5% por tipo de cambio). El consenso quedó arriba del real en 3 de los últimos 5 trimestres [10].
-- **UPA del 3T26:** punto Ps 0.715; intervalo de 80%: 0.665-0.765. Consenso Ps 0.727 (Investing; TradingView 0.72) [10]. Supuestos: margen EBITDA de 10.3%, depreciación de ~6,700, financieros de −2,300, tasa efectiva de 24.5% y ~17,200 M acciones.
+- **Ingresos del 3T26:** punto Ps 246,000 M; intervalo de 80%: 242,000-250,000 (ampliado por el verificador; antes 243,000-249,500). Consenso Ps 250,630 M (TradingView e Investing, 25-sep-2026) [10]. Supuestos: México +2.5-3.0% (mismas tiendas ~1% según ANTAD jul-ago más 1.6 pp de tiendas nuevas) y Centroamérica −2% en pesos (+3% a moneda constante, −5% por tipo de cambio). El consenso quedó arriba del real en 3 de los últimos 5 trimestres [10].
+- **UPA del 3T26:** punto Ps 0.715; intervalo de 80%: 0.650-0.765 (el verificador amplió la cola baja; antes 0.665-0.765). Consenso Ps 0.727 (Investing; TradingView 0.72) [10]. Supuestos: margen EBITDA de 10.3%, depreciación de ~6,700, financieros de −2,300, tasa efectiva de 24.5% y ~17,200 M acciones.
 - **Binarios:** (1) ingresos del 3T26 mayores a Ps 250,630 M: **p = 0.10**; (2) UPA del 3T26 mayor a Ps 0.727: **p = 0.38**.
 
 ## 9. Catalizadores y riesgos
@@ -96,3 +96,29 @@ Capitalización ≈ Ps 791 mil M (17,236 M acciones × 45.92); VE con arrendamie
 12. La Silla Rota (14-ene-2026): https://lasillarota.com/negocios/2026/1/14/walmart-pierde-en-tribunales-por-doble-partida-490870.html · El Informador (dic-2024): https://www.informador.mx/mexico/Cofece-sanciona-a-Walmart-con-multa-millonaria-por-practicas-monopolicas-20241213-0122.html
 13. Reforma de 40 horas: El Informador (11-feb-2026) https://www.informador.mx/mexico/Trabajo-Avalan-en-comisiones-reforma-laboral-de40-horas-con-una-disminucion-paulatina-20260211-0035.html · Milenio: https://www.milenio.com/comunidad/jornada-laboral-40-horas-mexico-esto-sabemos-avances-beneficios
 14. Conocimiento interno `conocimiento/16-macro-global-divisas-y-el-peso.md` §4.5 (remesas) y `24-politica-publica-regulacion-y-mercados.md` §4.7, §4.11 y §6.3 (25-sep-2026).
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: comunicado del 2T26 (PDF íntegro: estados financieros, México, Centroamérica y consejo), comunicado del 3T25 (base del trimestre comparable) y el comunicado del Programa de Inversión 2026, con la propuesta de dividendos y recompra (25-mar-2026). Se consultaron de nuevo el 25-sep Investing.com, TradingView, el boletín de ANTAD de julio y agosto y el chart de Yahoo.
+
+**Correcto (hecho verificado):**
+- 2T26 [1]: ingresos de Ps 250,948 M (+1.9%): México 209,188 (+3.1%) y Centroamérica 41,760 (−3.7% en pesos, +3.6% a moneda constante). Margen bruto de 24.0%, gastos generales de 17.4% (+3.0%; en México +4.6%), utilidad de operación de 17,020 (6.8%) y EBITDA de 23,641 (9.4%). Utilidad neta de 11,152 y **UPA de Ps 0.647** (+0.3%). En México: mismas tiendas +1.8%, ticket +2.9% y tráfico −1.1%; comercio electrónico con ventas netas +16.2%, bajo demanda +21.1%, GMV +11.5% y marketplace −6.6%. En total opera 4,305 unidades. El 1S26 tuvo flujo operativo de 23,282, capex de 11,701 y recompras de 3,999. Knapp y Scott fueron nombrados consejeros provisionales el 22-jul.
+- 3T25 [3]: ingresos de 241,520 (México 200,567; Centroamérica 40,953), EBITDA de 25,266 (10.5%) y UPA de 0.678. Incluyó una provisión laboral no recurrente y una tasa efectiva de ~28%, así que es una base baja para la UPA.
+- Guía y asignación de capital [7]: capex de ~Ps 43 mil M (+10%) con 42/26/24/8%; tiendas nuevas que aportan 1.5-1.7 pp al crecimiento; dividendo de Ps 1.16 (0.58 el 18-nov y 0.58 el 9-dic); recompra de hasta Ps 10 mil M; y dividendo extraordinario con el remanente al 30-nov. La guía de ventas revisada (+3.5-4.5% a moneda constante) no está en el comunicado; sigue siendo secundaria [8], como ya decía la ficha.
+- Cadena causal: el boletín de ANTAD confirma autoservicio −0.9% a tiendas iguales en julio (total +1.0%) [9]. El USD/MXN promedió 17.22 en el 3T26 (al 25-sep) y 18.62 en el 3T25 (Yahoo).
+- Consenso: Investing da 250.63 mil M y 0.727, con fecha del 27-oct. TradingView da 250.63 mil M y 0.72, también con fecha del 27-oct. En el 2T26: TradingView 250.19 mil M y 0.64; Investing 250.59 mil M y 0.643.
+- Escenarios: 30 + 50 + 20 = 100%. Periodo correcto: trimestre jul-sep, en MXN; UPA reportada (IFRS), la misma base que el consenso. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **ANTAD de agosto:** el −0.7% de autoservicio y "el peor agosto" vienen de Milenio (secundaria); el boletín de ANTAD solo publica el total (+1.7% tiendas iguales, +4.2% totales). Se corrigió la atribución en la cadena A. La frase "peor agosto en cinco años" de Milenio se refiere a ANTAD, no necesariamente al autoservicio.
+2. **Intervalo de 80% de ingresos:** pasa de 243,000-249,500 a **242,000-250,000**. El pronóstico es direccional (−1.85% contra el consenso). Aun así, un intervalo de ±1.35% era estrecho frente a la incertidumbre del propio modelo: ±1.5 pp en mismas tiendas de México equivale a ±1.25% del total, y el tipo de cambio de Centroamérica agrega ±0.35%. El p90 queda justo debajo del consenso (250,630), coherente con el binario de 0.10.
+3. **Intervalo de 80% de la UPA:** pasa de 0.665-0.765 a **0.650-0.765**. Las sorpresas de UPA contra Investing en los últimos 7 trimestres (+0.7%, −0.6%, −9.0%, −10.3%, −9.5%, −7.1% y −3.3%), aplicadas a 0.727, dan 0.732, 0.723, 0.662, 0.652, 0.658, 0.675 y 0.703: tres de siete quedaban debajo del p10 anterior. El binario de 0.38 sigue coherente (probabilidad implícita de ~0.39).
+4. **Criterios de resolución:** en `pronosticos.csv` se especificó la columna del trimestre, porque el comunicado del 3T también trae el acumulado de 9 meses.
+
+**No verificado o pendiente:**
+- El diferencial de "180 pb arriba de ANTAD" y el crecimiento de Bait: el comunicado muestra "40% revenue growth" en una lámina sin la marca legible.
+- La fecha del 27-oct no está confirmada por la empresa.
+- Los pagos a Walmart Inc. y el litigio con la Cofece vienen de fuentes secundarias.
+
+**Calibración (para el post-mortem):** el binario de ingresos (p = 0.10) es la apuesta más agresiva de este lote. La tasa base de superar el consenso de ingresos es de ~2 de 7 trimestres, y las fallas históricas fueron de −0.9% a −2.1%. La ficha la justifica con ANTAD de julio y agosto y el tipo de cambio de Centroamérica. Si el 3T26 supera 250,630, revisar si el error fue de mismas tiendas (ANTAD no incluye a Walmex) o de tipo de cambio.
+
+**Veredicto:** confiable. Las cifras del 2T26, la base del 3T25, el consenso y la asignación de capital coinciden con la fuente primaria. Se corrigió la atribución de un dato de ANTAD y se ampliaron ambos intervalos.

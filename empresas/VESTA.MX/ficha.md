@@ -73,8 +73,8 @@ Capitalización ≈ US$3.07 mil M (~937 M acciones × US$3.27); VE ≈ US$3.84 m
 - **Qué haría cambiar de escenario:** la ocupación total del 3T26 (≥92.5% apunta al alcista, <90.5% al bajista), los pies² nuevos arrendados (≥1 M) y el resultado de la 4ª ronda del T-MEC.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha estimada de reporte: 22-oct-2026 (no confirmada).** MarketBeat da el 22-oct [9] y FXEmpire el 21-oct [10]. El 6-K del 3T25 se presentó el 23-oct-2025 [4].
-- **Ingresos totales del 3T26:** punto US$80.4 M; intervalo de 80%: 78.6-82.4. Consenso US$81.3 M (FXEmpire, 6 analistas, consultado el 25-sep-2026) [10]. Supuestos: ocupación promedio de ~92% y energía de US$2.5 M. FXEmpire sobreestimó el 2T26 en 2.5%.
+- **Fecha estimada de reporte: 22-oct-2026 (no confirmada).** MarketBeat da el 22-oct, después del cierre [9]; FXEmpire, el 21-oct [10]; y TradingView, el 15-oct [14]. El 6-K del 3T25 se presentó el 23-oct-2025 [4].
+- **Ingresos totales del 3T26:** punto US$80.4 M; intervalo de 80%: 78.0-83.0 (ampliado por el verificador; antes 78.6-82.4). Consenso US$81.3 M (FXEmpire, 6 analistas, consultado el 25-sep-2026) [10]; TradingView da Ps 1.40 mil M (≈US$79.2 M a 17.68) [14]. Supuestos: ocupación promedio de ~92% y energía de US$2.5 M. FXEmpire sobreestimó el 2T26 en 2.5%.
 - **UPA diluida del 3T26:** punto US$0.060 por acción; intervalo de 80%: 0.005-0.120. Consenso US$0.04 (FXEmpire [10]; TradingView da Ps 0.75 ≈ US$0.042 [14]). Supuestos: EBITDA de ~US$65 M, intereses netos de −US$14 M, *make-whole* de ~−US$2.5 M (inferencia), revaluación de +US$20 M e impuestos de −US$10 M. El intervalo es amplio a propósito.
 - **Binarios:** (1) ingresos del 3T26 mayores a US$81.3 M: **p = 0.30**; (2) UPA diluida del 3T26 mayor a US$0.04: **p = 0.62**.
 
@@ -97,3 +97,27 @@ Capitalización ≈ US$3.07 mil M (~937 M acciones × US$3.27); VE ≈ US$3.84 m
 13. Expansión (21-abr-2026): https://expansion.mx/economia/2026/04/21/nearshoring-pausa-norte-espera-definicion-clave-t-mec · Inmobiliare (2026): https://inmobiliare.com/nearshoring-2-energia-infraestructura-mexico-2026/
 14. TradingView, pronóstico de VESTA (consultado el 25-sep-2026): https://es.tradingview.com/symbols/BMV-VESTA/forecast/
 15. Conocimiento interno `conocimiento/16-macro-global-divisas-y-el-peso.md` §4.4-4.5 y `24-politica-publica-regulacion-y-mercados.md` §4.11 y §6.3 (actualizados el 25-sep-2026).
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: 6-K ex. 99.1 del 2T26 (íntegro), del 4T25 (guía 2026 y cierre de 2025) y del 3T25; 6-K del prepago (9-sep-2026) y de S&P (24-ago-2026); índice de presentaciones de EDGAR (CIK 1969373). Se consultaron de nuevo el 25-sep FXEmpire, MarketBeat, TradingView y el chart de Yahoo.
+
+**Correcto (hecho verificado):**
+- 2T26 [1]: ingresos totales US$78.5 M (+16.7%), sin energía US$76.0 M (+16.2%) y UPA diluida US$0.1047 por acción (promedio de 933.6 M acciones). Revaluación de US$49.6 M, impuesto diferido de +US$18.9 M, Vesta FFO de US$46.1 M (US$0.0493 por acción, −1.8%) y FFO después de impuestos de US$0.0324 (−26.2%). Ocupación total de 91.7%, estabilizada de 93.7% y mismas propiedades de 95.0%. Arrendamiento de 2.4 M pies² (0.9 M nuevos), *spread* de 12 meses de 10.3%, NOI de mismas propiedades +5.9% y 89.3% de las rentas en USD. La oferta fue de 58,054,784 acciones más 1,199,285 ADS, a los que se sumaron 774,920 ADS de sobreasignación (1.97 M ADS en total); los recursos brutos fueron ~US$269 M.
+- Guía 2026 [2]: ingresos por rentas de +10.0-11.0%, margen NOI ajustado de ~93.5% y margen EBITDA ajustado de ~83%. En 2025 los ingresos sin energía crecieron 11.8%, arriba del rango de 10-11%.
+- Historia: el 3T25 tuvo UPA de 0.0322, diferido de −21.6 y revaluación de 4.8 [4]; el 4T25, UPA de 0.2008 y diferido de +111.8 [2].
+- Cadena causal: el prepago del 9-sep fue de US$60 M de notas serie B al 5.31% con vencimiento el 22-sep-2027 y US$45 M del tramo B al 5.85% con vencimiento el 31-may-2028, con pago de *make-whole* (el monto no se revela) [5]. S&P subió la calificación a BBB estable desde BBB− con perspectiva positiva (acción del 21-ago) [6]. El USD/MXN pasó de 17.49 (30-jun) a 17.68 (Yahoo, 25-sep).
+- Consenso: FXEmpire da US$81.3 M y US$0.04 por acción (6 analistas) y fecha el 21-oct; MarketBeat da el 22-oct, después del cierre y "no confirmada"; TradingView da Ps 0.75 por acción. Precio de Ps 57.97, rango de 52 semanas y +12.9% a 1 año: correctos.
+- Escenarios: 25 + 55 + 20 = 100%. Periodo correcto: trimestre jul-sep, en USD; UPA diluida IFRS por acción ordinaria (no por ADS). Es la misma base que FXEmpire, que registró 0.11 en el 2T26. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **Intervalo de 80% de ingresos:** pasa de 78.6-82.4 a **78.0-83.0**, aquí y en `pronosticos.csv`. Las sorpresas de ingresos contra el consenso fueron de +4.7% (1T26, MarketBeat), +1.9% o −2.5% (2T26, según la fuente) y −1.9% (4T24). Aplicadas al consenso actual, dan 85.1, 82.8, 79.3 y 79.8: dos de cuatro quedaban arriba del p90 anterior. Además, el cambio trimestral de los ingresos osciló entre +0.4% y +7.6% en los últimos cuatro trimestres. Con el intervalo nuevo, la probabilidad implícita de superar 81.3 es de ~0.32, así que el binario de 0.30 se mantiene.
+2. **Consenso y fecha:** se agregan la estimación de ingresos de TradingView (Ps 1.40 mil M, ≈US$79.2 M) y su fecha estimada (15-oct). El punto de US$80.4 M queda entre las dos fuentes.
+
+**No verificado o pendiente:**
+- La fecha del reporte no está confirmada por la empresa; las tres fuentes dan tres fechas distintas (15, 21 y 22-oct).
+- El monto del *make-whole* (~US$2.5 M) es inferencia; el 6-K no lo revela. *Inferencia del verificador:* con cupones de 5.31% y 5.85% y plazos remanentes de ~1 y ~1.7 años, podría ser menor (~US$1-2 M).
+- La concentración por inquilino, los vencimientos de deuda y la mezcla de ABR por región no se cotejaron. La mezcla sí se revisó por pies² estabilizados (Bajío 47.4%, Norte 32.2% y Centro 20.4%), que no es exactamente el ABR.
+
+**Calibración (para el post-mortem):** el intervalo de UPA (0.005-0.120) es amplio a propósito y coherente con la historia. Aplicadas al consenso de 0.04, las sorpresas de los trimestres que no son 4T dan 0.099, 0.125, 0.022, 0.027 y 0.007; solo una queda fuera, apenas arriba del p90. Ojo: en el 3T26 el peso se depreció ~1.1%, y por el mecanismo de la base fiscal en MXN eso tiende a generar gasto por impuesto diferido. Con eso, sería un sesgo a la baja frente al 2T26.
+
+**Veredicto:** confiable. Las cifras del último reporte, la guía y los hechos de la cadena causal coinciden con la fuente primaria. El intervalo de ingresos era estrecho frente a la dispersión de sorpresas y se amplió. No se encontraron errores de dato.

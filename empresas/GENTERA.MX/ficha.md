@@ -1,7 +1,7 @@
 # Gentera (GENTERA.MX) — ficha al 2026-09-25
 
 > BMV (GENTERA*) · Servicios financieros / microfinanzas y crédito de bajos ingresos (México y Perú) · Moneda de reporte: MXN (criterios CNBV; NIF convergentes con NIIF 9) · Disponible en SIC: no aplica (emisora de la BMV) · Estado de conocimiento: Documentado
-> Precio: Ps 36.51 (24-sep-2026); 52 semanas 35.72-53.24 (cierres); −21.2% a 12 meses y −24.3% a 6 meses; capitalización ~Ps 57.7 mil M (1,579.2 M acciones) [1][10]. Fase 0: investigación, no recomendación.
+> Precio: Ps 36.51 (24-sep-2026); 52 semanas 35.72-53.24 (cierres); −23.7% a 12 meses (adjclose del 24-sep-2025, que sí incorpora los dividendos de nov-2025 y abr-2026; Yahoo 52WeekChange: −21.0%) y −24.3% a 6 meses; capitalización ~Ps 57.7 mil M (1,579.2 M acciones) [1][10]. Fase 0: investigación, no recomendación.
 
 ## 1. Negocio y segmentos
 Tenedora de Banco Compartamos (México), Compartamos Banco (Perú), ConCrédito (crédito vía distribuidoras), ATERNA (seguros) y Yastás (corresponsales). Cartera 2T26 de Ps 94,682 M (+13.1%): Banco Compartamos 62,519 (66.0%), Perú 25,690 (27.1%; +14.5% en soles) y ConCrédito 6,472 (6.9%) [1]. UN 2T26: Compartamos México 1,479 M, Perú 430.8 M y ConCrédito 312.4 M [1]. Banco Compartamos genera 73.1% de los ingresos por intereses [1]. *Inferencia:* por cartera, ~73% México y ~27% Perú. Tasa activa ~56.1%; 6.79 M de usuarios; en el banco mexicano, la metodología grupal es 60.5% de la cartera y la individual 39.5% [1].
@@ -46,7 +46,7 @@ Fondeo a 2T26: captación de 25,499, CEBURES de 17,133, préstamos interbancario
 5. **Competidores.** *Inferencia:* bancos de nicho y fintech en México; Mibanco y cajas municipales en Perú (no verificado).
 6. **Concentración.** No hay deudores relevantes; el riesgo está en la mezcla (individual 39.5% en México) y en el fondeo interbancario (27.1 mil M) [1].
 7. **Regulación.** CNBV y Banxico en México, SBS en Perú [1]. No se verificó ninguna iniciativa de topes a tasas.
-8. **Promesas contra resultados.** Guías de UPA contra resultado: 2022, 2.05-2.15 → 2.88; 2023, 3.14-3.24 → 2.99 (falló); 2024, 3.5-3.6 → 3.80; 2025, 4.55-4.70 → 5.20 [2][5]. En 1S26 lleva 2.98, 50.3% del punto medio de 2026. La cartera 2025 se guió en 13-16% y creció 13.1%.
+8. **Promesas contra resultados.** Guías de UPA contra resultado: 2022, 2.05-2.15 → 2.88; 2023, 3.14-3.24 → 2.99 (falló); 2024, 3.5-3.6 → 3.80; 2025, 4.55-4.70 → 5.20 [2][5]. En 1S26 lleva 2.98, 50.1% del punto medio de 2026 (5.955). La cartera 2025 se guió en 13-16% y creció 13.1%.
 9. **Partes relacionadas.** Propuso aportar hasta 3% de la UN a Fundación Compartamos (abr-2026) [3]. Notas no revisadas.
 10. **Asignación de capital.** Dividendo de 40% de la UN 2025 (Ps 3,285.9 M, ~Ps 2.08 por acción, ~5.7%): mitad el 23-abr y mitad a más tardar el **27-nov-2026**; nueva política de hasta 45% [3].
 
@@ -68,7 +68,7 @@ Fondeo a 2T26: captación de 25,499, CEBURES de 17,133, préstamos interbancario
 - **Qué cambiaría el escenario:** etapa 3 y costo de riesgo del 3T26, y guía 2027.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha: 21-oct-2026** (Yahoo calendarEvents [10]); consistente con reportes del 22-oct-2025, 22-abr y 22-jul-2026 [1][3][4].
+- **Fecha: 21-oct-2026**, confirmada por la emisora: "Resultados Trimestrales: 21 de octubre 2026; Conferencia de Resultados: 22 de octubre 2026" [13]. Coincide con Yahoo calendarEvents [10] y con el patrón de reportes del 22-oct-2025, 22-abr y 22-jul-2026 [1][3][4].
 - **Ingresos totales de la operación**ᵃ: punto de **Ps 13,250 M**; intervalo de 80%: 12,900-13,600. Consenso de 13,210 M (Yahoo, 4 analistas, 25-sep-2026) [10]. Supuestos: ingresos por intereses de ~13.2 mil M, margen financiero de ~11.4 mil M y comisiones netas de ~1.6 mil M.
 - **UPA controladora:** punto de **Ps 1.45**; intervalo de 80%: 1.32-1.58. Consenso de 1.46 (Yahoo, 5; era 1.53 hace 30 días) [10]. Supuestos: provisiones de 3.3-3.5 mil M, gastos de ~6.4 mil M (+5-6%) y tasa efectiva de ~31%.
 - **Binarios:** (1) ingresos mayores a 13,210 M: **p = 0.53**; (2) UPA mayor a 1.46: **p = 0.45** (empate = no).
@@ -90,3 +90,4 @@ Fondeo a 2T26: captación de 25,499, CEBURES de 17,133, préstamos interbancario
 10. Yahoo Finance quoteSummary y chart de GENTERA.MX y pares (consultados el 25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/GENTERA.MX · https://query1.finance.yahoo.com/v8/finance/chart/GENTERA.MX
 11. Conocimiento interno `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.1, §4.7 y §4.8 (25-sep-2026).
 12. Conocimiento interno `conocimiento/23-geopolitica-y-riesgo-politico-global.md`, cronología de la guerra de Irán (25-sep-2026).
+13. Gentera, Relación con Inversionistas, calendario (consultado el 25-sep-2026): https://www.gentera.com.mx/gentera/relacion-inversionistas

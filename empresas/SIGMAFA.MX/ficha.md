@@ -10,7 +10,7 @@ Produce carnes frías, carnes secas, quesos y yogurt. Tiene más de 100 marcas (
 - **Ingresos:** US$2,435 M (+6%; Ps 42,376 M). En moneda local, el volumen subió 1% y los precios bajaron 1%. No hay consenso de ingresos público (Investing no lo publica [8]).
 - **Márgenes:** bruto de 32.4% (+290 pb); operativo de 9.1% (−110 pb, porque el 2T25 tuvo ganancias extraordinarias). UAFIDA de US$296 M; la comparable fue 288 M (+17%; margen de 11.8%).
 - **Utilidad:** controladora de US$94 M (Ps 1,634 M). UPA de Ps 0.29 contra 0.44 de consenso: −34% (Investing [8]). BX+ calificó la operación "en línea con el consenso" [7].
-- **Guía 2026 [3]:** ingresos de US$9.9 mil M y UAFIDA de US$1.1 mil M (comparable +5-10%), reafirmada "con mayor confianza" [1].
+- **Guía 2026 [3]:** en base de tipo de cambio neutral, ingresos +4% y UAFIDA +5% (comparable +5-10%). A un tipo de cambio de referencia de Ps 18/US$ ("Specific FX") equivale a ingresos de US$9.9 mil M y UAFIDA de US$1.1 mil M. La reafirmó "con mayor confianza" [1]. *Inferencia:* con el peso en ~17.2, la cifra en US$ queda holgada.
 - **Operación:** volumen de 463 mil t (+1%). México: ingresos en pesos +2% y UAFIDA +11%. Europa: ingresos en euros −5% y UAFIDA comparable +8%. EUA: volumen orgánico −5%; compró Roger Wood Foods [2].
 
 ## 3. Tabla financiera
@@ -27,7 +27,7 @@ Trimestral (US$ M; UPA en Ps de Yahoo/Investing, incluye discontinuadas) [1]-[5]
 | 1T26 | 2,372 | 31.9% | 8.1% | 69 | 0.22 | 260 | 2,832 |
 | 2T26 | 2,435 | 32.4% | 9.1% | 94 | 0.29 | 296 | 2,910 |
 
-\*3T24 corresponde a Sigma Alimentos, la subsidiaria operativa [5]. FCF (flujo operativo − capex): −US$59 M en el 1T26 y +170 M en el 2T26 [2]; los demás trimestres, n.d. Acciones: 5,558.5 M en 2025 [4] y ~5,555 M a jun-26 (el fideicomiso NAFIN tiene 2,198.7 M acciones, 39.58% [2]). SBC: n.d.
+\*3T24 corresponde a Sigma Alimentos, la subsidiaria operativa [5]. FCF (flujo operativo − capex): −US$59 M en el 1T26 y +170 M en el 2T26 [2]; los demás trimestres, n.d. Acciones: 5,558.5 M en 2025 [4] y ~5,555 M a jun-26 (inversionistas extranjeros tienen 2,198.7 M acciones, 39.58%, a través del fideicomiso de inversión neutra de NAFIN [2]). SBC: n.d.
 
 Anual (US$ M; 2021-2022 son de Sigma Alimentos [6]; FCF en Ps M) [3][4]:
 
@@ -48,18 +48,18 @@ Anual (US$ M; 2021-2022 son de Sigma Alimentos [6]; FCF en Ps M) [3][4]:
 4. **Capital de trabajo:** estacional; consumo alto en 1S26 [2].
 5. **Competidores:** productores locales (no verificados) y proteína fresca.
 6. **Concentración:** 640,000 puntos de venta en 3 canales [1]. Insumos: cerdo, pavo (su precio se estabilizó en el 4T25 [3]) y leche.
-7. **Regulación y comercio:** etiquetado frontal. En México se discute un IEPS por sodio, que no viene en la iniciativa oficial [10]. China aplica aranceles antidumping de 4.9-19.8% al cerdo de la UE desde el 17-dic-2025 (9.8% a la mayoría de España) [11], y la peste porcina africana en España cerró mercados de Asia [12].
+7. **Regulación y comercio:** etiquetado frontal. En México se discute un IEPS por sodio, que no viene en la iniciativa oficial [10]. China aplica aranceles antidumping de 4.9-19.8% al cerdo de la UE desde el 17-dic-2025, por cinco años [11] (la tasa específica para las empresas españolas, no verificada), y la peste porcina africana en España cerró mercados de Asia [12].
 8. **Promesas vs. resultados:** cumplió la guía de 2025 (UAFIDA comparable de Sigma de 1,008 M) [3] y en 1S26 lleva 548 M contra una guía anual de 1,100 M. En UPA falló contra el consenso en el 1T26 (−48%) y el 2T26 (−34%) [8].
 9. **Partes relacionadas:** no verificadas en esta sesión.
 10. **Asignación de capital:** dividendo 2026 de US$150 M en dos pagos de US$0.0135 por acción (7-abr y 6-oct) [2][3]. Capex y adquisiciones de 156 M en 1S26. La nueva planta de Valencia arranca en 2027 [2].
 
 ## 5. Cadena causal
-**A. Peso fuerte:** el USD/MXN promedió 17.22 en el 3T26 contra 18.62 (−7.5%) [9] → México es 52% de los ingresos y 69% de la UAFIDA → sube lo reportado en US$ (México +15% en US$ y +2% en pesos en el 2T26) y se abaratan los insumos importados → la guía en US$ queda holgada → +23.5% en un año. *Inferencia:* parte del alza es cambiaria.
+**A. Peso fuerte:** el USD/MXN promedió 17.22 en el 3T26 (1-jul a 25-sep) contra 18.62 (−7.5%) [9] → México es 52% de los ingresos y 69% de la UAFIDA → sube lo reportado en US$ (México +15% en US$ y +2% en pesos en el 2T26) y se abaratan los insumos importados → la guía en US$ queda holgada → +23.5% en un año. *Inferencia:* parte del alza es cambiaria.
 **B. Cerdo barato en Europa** (peste porcina en España y aranceles de China) [11][12] → Europa es 23% de los ingresos → baja el precio de la carne fresca (ingresos en euros −5%), pero se abarata la materia prima de los elaborados → la UAFIDA comparable de Europa sube 8% → se recupera el margen, con más capacidad en La Bureba y Valencia [2].
 **C. Tasas y refinanciamiento:** 57% de la deuda es variable, ahora en pesos, con Banxico en 6.50% [13] → el gasto financiero neto subió 15% [2] → la UN falla contra el consenso. *Inferencia:* el mercado valúa la UAFIDA, no la UN.
 
 ## 6. Qué descuenta el precio
-Capitalización de Ps 100.3 mil M (~US$5.67 mil M a 17.71). VE de ~US$8.58 mil M (la deuda neta incluye arrendamientos). **VE/UAFIDA de 12 meses: 7.9x** (US$1,079 M reportada) y 7.8x sobre la guía. **P/U de 12 meses: 13.4x** (UPA de Ps 1.35, con discontinuadas; ~17x solo continuas, cálculo aproximado). Historia corta: VE/UAFIDA comparable de ~7.5x al cierre de 2025 (cálculo propio); BX+ da 7.5x contra 6.6x de promedio de 3 años, y P/U de 15.0x contra 14.8x [7]. Pares (Yahoo, 22-23 sep-2026): Hormel 32.1x P/U (12.9x a futuro) y 14.8x VE/UAFIDA; Tyson 32.0x (11.2x) y 9.8x [9].
+Capitalización de Ps 100.3 mil M (~US$5.67 mil M a 17.71). VE de ~US$8.58 mil M (la deuda neta incluye arrendamientos). **VE/UAFIDA de 12 meses: 7.9x** (US$1,079 M reportada) y 7.8x sobre la guía. **P/U de 12 meses: 13.4x** (UPA de Ps 1.35). Los 12 meses del 3T25 al 2T26 ya no incluyen a Alpek, que se desconsolidó el 3-abr-2025, así que todo es operación continua. Historia corta: VE/UAFIDA comparable de ~7.5x al cierre de 2025 (cálculo propio); BX+ da 7.5x contra 6.6x de promedio de 3 años, y P/U de 15.0x contra 14.8x [7]. Pares (Yahoo, 22-23 sep-2026): Hormel 32.1x P/U (12.9x a futuro) y 14.8x VE/UAFIDA; Tyson 32.0x (11.2x) y 9.8x [9].
 **DCF inverso (US$):** WACC de 8.3% ±150 pb (Ke de 9.8% = 4.9% + 0.8 × 4.09% + CRP ponderado de 1.66%; Kd de 8.5% × 0.7; D/V de 38%). FCFF = UAFIDA de 1,100 (guía) − capex de ~380 − impuestos de ~300 = **US$420 M** (4.9% del VE). El crecimiento implícito es **3.2% nominal en US$** (1.8-4.7%), en línea con 2023-2025. *Inferencia:* el precio supone que la conversión de caja se normaliza.
 
 ## 7. Escenarios de negocio a 12 meses
@@ -70,7 +70,7 @@ Capitalización de Ps 100.3 mil M (~US$5.67 mil M a 17.71). VE de ~US$8.58 mil M
 
 ## 8. PRONÓSTICOS REGISTRADOS (3T26)
 - **Fecha estimada: 21-22 oct-2026, no confirmada.** El 3T25 salió el 22-oct-2025, con llamada el 23-oct [8][14]. El plazo de la BMV vence el 28-oct.
-- **Ingresos:** punto de **US$2,515 M**; p10-p90 de 2,420-2,610. Consenso: n.d. (no está en fuentes abiertas; no verificado). Ancla: la guía implica ~US$2.55 mil M por trimestre en el 2S26. Supuestos: México +3% en pesos y +8.1% por tipo de cambio; Europa −4% en euros y −1.5% por EUR/USD; EUA +2% (con Roger Wood); Latam +4.5%.
+- **Ingresos:** punto de **US$2,515 M**; p10-p90 de 2,420-2,610. Consenso: n.d. (no está en fuentes abiertas; no verificado). Ancla: la guía a Ps 18/US$ implica ~US$2.55 mil M por trimestre en el 2S26 (9,900 − 4,806 del 1S26). Supuestos: México +3% en pesos y +8.1% por tipo de cambio; Europa −4% en euros y −1.5% por EUR/USD; EUA +2% (con Roger Wood); Latam +4.5%.
 - **UPA (Ps; controladora entre acciones):** punto de **0.27**; p10-p90 de 0.17-0.37. Consenso: n.d.; el de Investing para el 2T26 era 0.44 y falló [8]. Supuestos: UAFIDA de ~US$290 M, D&A de ~75, gasto financiero neto de ~70, tasa de 40%, tipo de cambio de 17.22 y 5,553 M acciones.
 - **Binarios:** (1) UAFIDA comparable mayor a US$250 M (la del 3T25): **p = 0.85**; (2) ingresos mayores a US$2,500 M: **p = 0.55**.
 

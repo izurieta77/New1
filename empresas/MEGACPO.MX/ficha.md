@@ -9,7 +9,7 @@ Operador de cable y fibra con operación 100% en México. A jun-26: 19.76 M de c
 ## 2. Último reporte: 2T26 (30-jul-2026) [1]
 - Ingresos Ps 9,330 M (+7.2%), 1.6% abajo del consenso de 9.48 mil M (Investing) [9].
 - Margen UAFIDA 44.9% (−50 pb) y margen operativo 17.5%. Los gastos de operación subieron 11.5% por mano de obra.
-- Utilidad neta mayoritaria Ps 852 M (+11.0%): Ps 0.993 por CPO contra un consenso de 0.980 (+1.3%) [9]. La acción cayó 3.6% el día del reporte [11].
+- Utilidad neta mayoritaria Ps 852 M (+11.0%): Ps 0.993 por CPO contra un consenso de 0.980 (+1.3%) [9]. La acción cayó 5.5% al cierre del 31-jul, la primera sesión tras el reporte (61.90 → 58.47, Yahoo [11]). *(Corregido por el verificador: antes decía −3.6%.)*
 - Guía (llamada, fuente secundaria [10]): capex de 23-25% de los ingresos en 2026 (antes, más alto) y de 22-24% en 2027; 100-150 mil altas netas de internet por trimestre; margen de largo plazo de 47-48%. La promoción del Buen Fin (un mes gratis, reconocido en may-jun) restó crecimiento: sin ella, los ingresos habrían subido ~8.7-9% y la UAFIDA ~8.5-8.7%.
 - Datos operativos: +112 mil suscriptores de internet (+8.5% a/a); ARPU de Ps 430.8 (−1% a/a, −2% t/t); líneas móviles +26% a/a [1].
 
@@ -69,10 +69,10 @@ Capitalización ≈ Ps 45.1 mil M (858.0 M CPOs). P/U de 12 meses: **14.8x** (UP
 - **Qué cambiaría el escenario:** el ARPU del 3T26 (debe dejar de caer sin la promoción), las altas netas y el margen del 3T26 contra 44.2% del 3T25.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha estimada: 22-oct-2026** (Investing [9]; el 3T25 se reportó el 23-oct-2025). No confirmada.
-- **Ingresos:** punto Ps 9,610 M; intervalo de 80%: 9,430-9,790. Consenso: **9,590** (Investing, 25-sep-2026) [9]. Supuestos: +7.7% a/a sin la promoción, Empresarial +3-5% y móvil +25%.
-- **UPA por CPO:** punto Ps 1.00; intervalo de 80%: 0.87-1.12. Consenso: **0.989** [9]. Supuestos: margen de 44.6%, depreciación de ~2,590 M, costo financiero de ~430 M y tasa efectiva de 30%.
-- **Binarios:** (1) ingresos mayores a Ps 9,590 M: **p = 0.55**. (2) Margen UAFIDA del 3T26 mayor a 44.2% (el del 3T25): **p = 0.65**.
+- **Fecha estimada: 22-oct-2026** (Investing [9]; el 3T25 se reportó el 23-oct-2025). No confirmada: ni Yahoo ni el sitio de RI la listan al 25-sep.
+- **Ingresos:** punto Ps 9,610 M; intervalo de 80%: 9,430-9,790. Consenso: **9,590** (Investing, 25-sep-2026) [9]; Yahoo, 9,566 (3 analistas, 25-sep) [16]. Supuestos: +7.7% a/a sin la promoción, Empresarial +3-5% y móvil +25%.
+- **UPA por CPO:** punto Ps 1.00; intervalo de 80%: 0.87-1.12. Consenso: **0.989** [9]; Yahoo, 0.992 (3 analistas; rango 0.957-1.050) [16]. Base: utilidad mayoritaria por CPO. Investing usó esa base desde el 4T25; hasta el 3T25 su dato "real" era la utilidad total por CPO (0.96 contra 0.89 mayoritaria en el 2T25). Supuestos: margen de 44.6%, depreciación de ~2,590 M, costo financiero de ~430 M y tasa efectiva de 30%.
+- **Binarios:** (1) ingresos mayores a Ps 9,590 M: **p = 0.55**. (2) Margen UAFIDA del 3T26 mayor a 44.23% (3T25: 3,945.5 / 8,921.0 [2]): **p = 0.65**. *(Umbral precisado por el verificador: 44.2% redondeado era ambiguo.)*
 
 ## 9. Catalizadores y riesgos
 **Catalizadores:** 8-oct, minuta de Banxico; 22-oct, reporte 3T26; 5-nov, Banxico; nov-2026, Buen Fin (la promoción afectaría el 2T27); 1-ene-2027, jornada de 46 h; feb-2027, reporte 4T26 y guía de 2027; abr-2027, asamblea y dividendo. **Riesgos:** guerra de precios en fibra, costo laboral, regulación (CRT, cableado) y consumo débil.
@@ -93,3 +93,32 @@ Capitalización ≈ Ps 45.1 mil M (858.0 M CPOs). P/U de 12 meses: **14.8x** (UP
 13. Jentel, IFT y el poder sustancial de Megacable (11-abr-2024): https://www.jentel.mx/2024/04/11/ift-impone-a-megacable-cargas-regulatorias-por-poder-sustancial-de-mercado-la-concesionaria-responde/
 14. Infobae, reforma de 40 horas (13-may-2026): https://www.infobae.com/mexico/2026/05/13/reforma-laboral-40-horas-que-deben-hacer-las-empresas-antes-de-que-arranque-la-reduccion-en-enero-de-2027/
 15. `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.8 (Banxico, 25-sep-2026).
+16. Yahoo Finance quoteSummary (earningsTrend) de MEGACPO.MX (25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MEGACPO.MX?modules=earningsTrend,calendarEvents
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: Reporte Trimestral 2T26 (íntegro, 9 páginas), reportes 1T26 y 3T25 (resultados consolidados). Consultados de nuevo el 25-sep: Investing (historial de consenso), la transcripción del 2T26 en Investing (guía; secundaria), Yahoo chart y quoteSummary, e Infobae (reforma de 40 horas).
+
+**Correcto (hecho verificado):**
+- 2T26 [1]: ingresos de Ps 9,329.9 M (+7.2%), Masivo 7,977.9 (+7.9%, incluye 274 M de móvil), Empresarial 1,352.0 (Telecom 1,265.4; Contenido 86.6). UAFIDA de 4,186.2 (44.9%), utilidad de operación de 1,631.8 (17.5%) y utilidad mayoritaria de 852.1 (+11.0%), que da 0.993 por CPO sobre 857.96 M CPOs. Capex de 2,185 (23.4%; 22.3% en 1S26). Deuda con costo de 26,232.7 y deuda neta de 21,582.4 (1.31x). ARPU de 430.8 (−1% a/a, −2% t/t). Internet: 6.02 M (+112 mil). Plantilla: 33,236. Precio de 62.73 al 30-jun, según el propio reporte (Refinitiv).
+- Filas 3T25 (8,921.0 / 44.2% / 627.8) y 1T26 (9,356.8 / 46.2% / 841.1) de la tabla [2].
+- Consenso de Investing al 25-sep: 9.59 mil M y 0.989 para el 3T26; 9.48 mil M y 0.980 para el 2T26. Fecha: 22-oct [9].
+- Guía de la llamada (secundaria): capex de 23-25% (2026) y 22-24% (2027); 100-150 mil altas de internet por trimestre; margen de 47-48% a largo plazo. El Buen Fin restó crecimiento: sin él, ingresos +8.7-9% y UAFIDA +8.5-8.7% [10].
+- Cadena causal: la reforma de 40 horas se publicó en el DOF el 3-mar-2026, con 46 h en 2027 y 40 h en 2030 y sin reducir salarios (Infobae) [14]. El RIF bajó 15% a/a en el 2T26 [1]. Banxico está en 6.50% [15].
+- Precio de 52.61 al 24-sep y −9.9% a 1 año. P/U de 12 meses de 14.8x (UPA 3.545). Dividendo de 3.70 el 20-may (Yahoo).
+- Escenarios: 25 + 55 + 20 = 100%. Periodo correcto: trimestre, MXN, UPA mayoritaria por CPO, la misma base que el consenso actual de Investing. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. Reacción al 2T26: fue −5.5% al cierre del 31-jul, no −3.6%.
+2. Binario de margen: el umbral pasa a **44.23%** (3,945.5/8,921.0), porque "> 44.2%" era ambiguo frente al redondeo. El CSV se actualizó.
+3. Se agregan el consenso de Yahoo (UPA 0.992, n = 3, rango 0.957-1.050; ingresos 9,566, n = 3) y la advertencia sobre la base de Investing: antes del 4T25 su UPA "real" era la utilidad total, no la mayoritaria.
+
+**No verificado o pendiente:**
+- La fecha del 22-oct no está confirmada: no aparece en Yahoo ni en el sitio de RI.
+- No se verificaron en fuente primaria el costo implícito de la deuda, la proporción a tasa variable ni la "guía anterior" de capex más alta. El dividendo de 3.70 solo tiene fuente en Yahoo.
+- Los pronósticos no están en `bitacora/pronosticos.csv`.
+
+**Calibración (para el post-mortem):**
+- UPA (0.87-1.12): de las 9 sorpresas históricas de Investing aplicadas a 0.989, 2 quedan fuera del intervalo (0.80 y 1.20). Esa cobertura de ~78% es coherente con un intervalo de 80%, aunque la base de Investing cambió en el 4T25.
+- Ingresos (±1.9%): la desviación estándar de las sorpresas de ingresos es de ~0.9%, así que el intervalo es holgado. El punto de +3.0% t/t depende de que se revierta el efecto del Buen Fin (~140 M en el 2T26, inferencia).
+
+**Veredicto:** confiable. Las cifras del 2T26, la tabla y la guía coinciden con las fuentes. Hubo una reacción de precio mal citada y un umbral binario ambiguo, y ambos quedaron corregidos.

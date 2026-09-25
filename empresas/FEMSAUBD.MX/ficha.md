@@ -20,7 +20,7 @@ Otros negocios (Spin, Bara), corporativo y eliminaciones suman Ps 2,590 M. FEMSA
 - **Ingresos** Ps 231,002 M (+9.3%; +10.1% comparable). Superaron el consenso de TradingView (226.57 mil M, +2.0%) y el de Investing.com (225.78 mil M) [11].
 - **Márgenes:** bruto 40.1% (−60 pb) y operativo 8.3% (−10 pb). La utilidad de operación creció 7.2% (+11.7% comparable) y el EBITDA ajustado 12.7%.
 - **UPA:** utilidad mayoritaria de Ps 5,536 M, **Ps 1.62 por unidad** (+107.7%), abajo del consenso de Ps 1.87 (TradingView e Investing) [11]. Tasa efectiva de 34.8% por pérdidas no acreditables de Spin y Salud.
-- **Guía:** capex de 5-6% de las ventas en 2026; segundo semestre "más moderado" sin el Mundial; SSS normalizadas "de un dígito medio"; distribuciones por ~Ps 41 mil M entre mar-2026 y mar-2027 [10].
+- **Guía:** no hay una guía anual de capex en el comunicado ni en la transcripción del 2T26 (no verificado); el capex fue de 3.8% de las ventas en el 2T26 y de 3.4% en el 1S26 [1]. Segundo semestre "más moderado" sin el Mundial [1]; SSS normalizadas "de un dígito medio" (inflación más 1 pp); distribuciones por ~Ps 41 mil M entre mar-2026 y mar-2027 [10].
 - **Datos operativos:** (1) OXXO México con SSS +9.5% (ticket +7.4%, tráfico +2.0%, el primero positivo en varios trimestres); (2) 253 tiendas netas abiertas, para 24,708; (3) Spin by OXXO con 11.5 M de usuarios activos (+22.1%) [1].
 
 ## 3. Tabla financiera
@@ -84,7 +84,7 @@ Capitalización ≈ Ps 707 mil M (3,387.2 M unidades × 208.77). La participaci�
 ## 8. Pronósticos registrados (3T26)
 - **Fecha estimada de reporte: 27-oct-2026 (no confirmada).** Es la estimación de MarketBeat; TradingView e Investing dan el 23-oct y FXEmpire el 26-oct [11]. El 3T25 se reportó el 28-oct-2025 y el 3T24 el 28-oct-2024 [4].
 - **Ingresos del 3T26:** punto Ps 230,000 M; intervalo de 80%: 225,000-235,500. Consenso Ps 228,760 M (TradingView, 25-sep-2026) [11]; otras fuentes dan 224,450 (Investing) y 235,760 (FXEmpire). Supuestos: OXXO México +8%, KOF ~75,400, Américas +20% (por la consolidación de Brasil) y Europa −3% en MXN.
-- **UPA del 3T26 (utilidad mayoritaria por unidad):** punto Ps 1.80; intervalo de 80%: 1.30-2.30. Consenso Ps 2.03 (TradingView) [11]; Investing da 2.09. Supuestos: EBIT ~19,000, intereses netos −4,100, cambiaria +300, tasa de impuestos de 34% y minoritario de ~3,650.
+- **UPA del 3T26 (utilidad mayoritaria por unidad):** punto Ps 1.80; intervalo de 80%: 1.15-2.30 (el verificador amplió la cola baja; antes 1.30-2.30). Consenso Ps 2.03 (TradingView) [11]; Investing da 2.09. Supuestos: EBIT ~19,000, intereses netos −4,100, cambiaria +300, tasa de impuestos de 34% y minoritario de ~3,650.
 - **Binarios:** (1) ingresos del 3T26 mayores a Ps 228,760 M: **p = 0.60**; (2) UPA por unidad del 3T26 mayor a Ps 2.03: **p = 0.30**.
 
 ## 9. Catalizadores y riesgos
@@ -106,3 +106,28 @@ Capitalización ≈ Ps 707 mil M (3,387.2 M unidades × 208.77). La participaci�
 13. Ficha interna `empresas/KOFUBL.MX/ficha.md` (25-sep-2026): IEPS, múltiplos de KOF y participación de FEMSA (secundaria: https://femsa.gcs-web.com/company-profile/corporate-structure)
 14. SEC companyfacts, CIK 1061736 (SBC 2021-2024): https://data.sec.gov/api/xbrl/companyfacts/CIK0001061736.json
 15. El CEO, sobre la licencia bancaria de Spin (2026, secundaria): https://elceo.com/negocios/femsa-duena-de-oxxo-evalua-retomar-su-plan-de-licencia-bancaria-para-spin/
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: 6-K ex. 99.1 del 2T26 (íntegro, con el anexo de KOF) y del 4T25 (búsqueda de guía); 6-K del ASR (14-sep-2026), del bono en CHF (23-sep-2026) y de la propuesta de dividendos (27-feb-2026); índice de presentaciones de EDGAR (CIK 1061736). Se consultaron de nuevo el 25-sep TradingView, Investing.com, la transcripción de Investing del 2T26 y el chart de Yahoo.
+
+**Correcto (hecho verificado):**
+- 2T26 [1]: ingresos de Ps 231,002 M (+9.3%; +10.1% comparable), margen bruto de 40.1% (−60 pb) y utilidad de operación de 19,110 (+7.2%; +11.7% comparable). Utilidad mayoritaria de 5,536 y **Ps 1.62 por unidad** (+107.7%), con 3,412.7 M unidades (1.63 con la proforma sin tesorería, 3,387.2 M). Tasa efectiva de 34.8%, intereses cobrados de 1,508 (−26.5%) y pérdida cambiaria de 655 (4,102 en el 2T25). OXXO México: SSS +9.5%, ticket +7.4%, tráfico +2.0%, 253 tiendas netas, 24,708 en total y margen bruto de 44.8% (−70 pb). Spin tiene 11.5 M de usuarios activos (+22.1%). La deuda neta sin KOF es de 90,020 (1.15x contra 0.93x). Los ingresos por segmento (86,708 / 76,318 / 28,567 / 22,328 / 14,491) coinciden.
+- Guía cualitativa: el 2S26 "más moderado" está en el comunicado [1]; las distribuciones de ~Ps 41 mil M (mar-2026 a mar-2027), el IEPS que "seguirá unos trimestres" y la provisión de ~Ps 408 M por EPS Sanitas están en la transcripción [10].
+- Cadena causal: el ASR es de hasta US$280 M en ADS y se liquida antes de fin de año [7]. El bono es de CHF 300 M a 5 años, con rendimiento de 1.73% (+107 pb) y calificaciones BBB+ (S&P) y A (Fitch) [8]. El dividendo trimestral es de 1.1880 + 2.014925 por unidad BD (Ps 12.81 al año) [9]. El USD/MXN promedió 17.22 en el 3T26 (al 25-sep) y 18.62 en el 3T25 (Yahoo).
+- Consenso: TradingView da Ps 228.76 mil M y Ps 2.03 por unidad, con fecha del 23-oct. Investing da 224.45 mil M y 2.09, también con fecha del 23-oct. En el 2T26, TradingView tenía 226.57 mil M y 1.87 (sorpresa de −12.65%).
+- Escenarios: 25 + 50 + 25 = 100%. Periodo correcto: trimestre jul-sep, en MXN; UPA reportada (IFRS) por unidad, que es la base de TradingView. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **Guía de capex:** la ficha decía "capex de 5-6% de las ventas en 2026" y citaba la transcripción [10]. Ni la transcripción ni los comunicados del 2T26 y del 4T25 contienen esa guía. Ahora dice "no verificado" y da el dato real: 3.8% de las ventas en el 2T26 y 3.4% en el 1S26 [1].
+2. **Intervalo de 80% de la UPA:** pasa de 1.30-2.30 a **1.15-2.30**, aquí y en `pronosticos.csv`. Aplicadas al consenso de 2.03, las sorpresas de UPA de los últimos 8 trimestres sin la ganancia única del 1T26 (−33%, −39%, +1%, −65%, −68%, −13% y −13%, reportado contra el pronóstico de Investing) dan 1.36, 1.24, 2.05, 0.71, 0.65, 1.77 y 1.77. Tres de siete quedaban debajo del p10 anterior. No se amplía más porque las pérdidas de 2025 vinieron sobre todo de la cambiaria con un peso apreciándose, y en el 3T26 el peso se depreció ~1.3% frente al cierre de junio que usa FEMSA (17.449). El binario de 0.30 sigue coherente.
+3. **Criterio de resolución de la UPA:** ahora dice que se usa la cifra *As Reported* (1.62 en el 2T26), no la proforma sin tesorería (1.63) que registra TradingView. Con un resultado cercano a 2.03, la diferencia de ~0.75% puede decidir el binario.
+
+**No verificado o pendiente:**
+- La fecha del reporte no está confirmada: TradingView e Investing dan el 23-oct y MarketBeat el 27-oct. En 2024 y 2025 reportó el 28-oct.
+- El consenso de FXEmpire (235.76 mil M) y la fecha de MarketBeat no se volvieron a consultar.
+- La participación de ~47% en KOF viene de una fuente secundaria.
+- La licencia bancaria de Spin: el 4T25 [3] confirma que se pospuso ("we will delay the application"); que se reconsidere viene de prensa [15].
+
+**Calibración (para el post-mortem):** el pronóstico de ingresos (+0.5% sobre TradingView y +2.5% sobre Investing) es coherente con la historia: las sorpresas de ingresos contra Investing en 8 trimestres promediaron +0.6%, en un rango de −3.0% a +2.3%. El intervalo de ±2.3% cubre 7 de 8. En la UPA, el sesgo del punto (−11% contra el consenso) sigue el patrón de fallas, pero parte de las fallas históricas fue cambiaria y no se repetiría con el peso de este trimestre.
+
+**Veredicto:** confiable con una corrección de dato. Las cifras del 2T26, el consenso y los hechos de la cadena causal coinciden con la fuente primaria. Se eliminó una guía de capex sin respaldo y se amplió la cola baja del intervalo de UPA.

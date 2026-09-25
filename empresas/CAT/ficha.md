@@ -90,3 +90,31 @@ P/U GAAP de 12 meses **34.6x** (UPA 23.24); sobre consenso 2026 (US$27.19) **29.
 12. CAT 8-K, líneas de crédito (1-sep-2026): https://www.sec.gov/Archives/edgar/data/18230/000110465926104197/tm2624321d1_8k.htm
 13. 24/7 Wall St. (14-sep-2026): https://247wallst.com/investing/2026/09/14/caterpillar-falls-4-while-deere-edges-higher-is-the-data-center-power-trade-unwinding/ · Ad-hoc News (sep-2026, moratorias): https://www.ad-hoc-news.de/boerse/news/corporate-news/caterpillar-stock-extends-pullback-as-ai-demand-fears-meet-strong-order/70110929
 14. Caterpillar, aviso del 3T25 (fecha histórica): https://investors.caterpillar.com/news/news-details/2025/Caterpillar-Inc--to-Announce-Third-Quarter-2025-Financial-Results-Oct--29/default.aspx
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 2T26 (resultados, segmentos, regiones, utilidad por segmento, otros ingresos y tasa) [1], 10-Q del 2T26 (MD&A: perspectivas del 3T26 y de 2026, backlog e IEEPA) [7], 8-K ex. 99.1 del 3T25 [6] y el canal de comunicados y eventos de investors.caterpillar.com (consultado el 25-sep). La guía oral se cotejó con la transcripción de Investing.com [2] (fuente secundaria). Consenso consultado de nuevo el 25-sep en Yahoo quoteSummary, Nasdaq/Zacks y MarketBeat.
+
+**Correcto (hecho verificado):**
+- 2T26: ventas de US$20,543 M (+24%; volumen +3.1 mil M y precio +595 M), margen operativo de 20.9% (ajustado 21.9%), UPA de 7.77 y ajustada de 8.17 [1]. La utilidad operativa incluye US$392 M de recuperaciones esperadas de IEEPA. El ajuste solo excluye reestructura, así que los US$392 M **sí están** en la UPA ajustada [1][7].
+- Segmentos del 2T26: P&E de 2,027/8,238 (margen 24.6%) [1]. Norteamérica +37% y Asia/Pacífico +4% [1].
+- Backlog de US$72.1 mil M (+9.4 mil M t/t), del cual 29.2 mil M no se entregará en 12 meses; es decir, ~59% sí se entregará [7].
+- Margen ajustado del 3T25 de 17.5% y UPA ajustada de 4.95 [6].
+- Guía, confirmada en el 10-Q [7]: ventas 2026 "mid-to-high teens"; aranceles 2026 de ~US$2.2 mil M sin IEEPA adicional en el 2S26; capex de ~US$3.5 mil M; fuerte crecimiento en los tres segmentos en el 3T26 y un aumento leve del inventario de concesionarios. El margen ajustado de 2026 "cerca del piso del rango meta" sin IEEPA viene de la transcripción [2].
+- Dividendo de 1.51 → 1.63 (ex-dividendo 20-jul-2026) [10]. Caída de −4.2% el 14-sep, de 818.57 a 784.00, con el S&P 500 en −0.5% [10].
+- Consenso de Yahoo: ingresos de 20,399 M (12 analistas, rango 19,956-21,043) y UPA ajustada de 6.92 (21 analistas, rango 6.23-7.96), en la misma base que la cifra reportada (Yahoo registra 8.17 como real del 2T26). Zacks: 6.95 (10 analistas).
+- Escenarios: 25 + 50 + 25 = 100%. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **Intervalo de ventas: de 19,900-21,800 a 19,800-22,200.** Las sorpresas de ingresos de los últimos cuatro trimestres (MarketBeat: +5.5%, +7.4%, +5.4% y +6.2%) aplicadas al consenso dan 21,500-21,910, todas en el borde o arriba del p90 anterior. Las negativas del 3T24 al 1T25 (−1.6% a −2.7%) dan 19,850-20,070. El binario (0.68) no cambia porque el punto no cambia.
+2. **Intervalo de UPA ajustada: p90 de 7.85 a 8.30.** Con las sorpresas de 8 trimestres (MarketBeat: −3.0%, +3.4%, −2.3%, −3.3%, +9.5%, +10.5%, +19.1% y +31.4%), el consenso de 6.92 da 6.69-9.09: dos de ocho (8.24 y 9.09) quedaban arriba del p90 anterior. El binario (0.58) no cambia.
+3. Fecha: la emisora no ha publicado su aviso (al 25-sep, su canal de comunicados no lo trae). El 4-nov de MarketBeat se apoya en una fecha errónea del 3T25 (3-nov-2025 contra el 29-oct-2025 del 8-K [6]), así que el 29-oct sigue siendo la mejor estimación.
+4. Se agregó el dato del 10-Q de **~US$600 M de aranceles en el 3T26**, similar al 3T25, y se tradujo mejor "mid-to-high teens" (≈15-19%).
+
+**No verificado o pendiente:**
+- El rango meta de margen ajustado de 18-22% para el nivel de ventas de 2026 viene de las láminas vía Investing.com [4]; no lo cotejé con la presentación de la emisora.
+- "Generación eléctrica +72%" y el motor de 10 MW vienen de la transcripción y las láminas (secundarias).
+- El consenso de MarketBeat (6.57) no aparece en la página consultada el 25-sep.
+
+**Calibración (para el post-mortem):** el punto de UPA (7.05) queda solo +1.9% sobre el consenso, contra sorpresas de +9.5% a +31% en los últimos cuatro trimestres. En contra de repetir esas sorpresas hay tres razones: el 2T26 traía ~US$0.65 por acción de IEEPA, que no se repite; la guía anual implica un margen del 2S26 menor que el del 1S26 (20.1% ajustado en el 1S con IEEPA, ≈19.1% sin él [7]); y el 10-Q prevé aranceles de US$600 M en el trimestre. *Inferencia:* el sesgo del punto es conservador. Si CAT vuelve a sorprender por más de 10%, el resultado caerá cerca del nuevo p90, no fuera del intervalo.
+
+**Veredicto:** confiable. Las cifras del 2T26, el backlog y la guía cuadran con el 8-K y el 10-Q. Los intervalos eran estrechos frente al historial de sorpresas y se ampliaron; los puntos y los binarios no cambiaron.

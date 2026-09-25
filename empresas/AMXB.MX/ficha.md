@@ -95,3 +95,34 @@ Capitalización ≈ Ps 1,178 mil M. P/U de 12 meses: **13.2x** (UPA 1.49). VE/EB
 15. Expansión, calendario del registro de líneas (27-ago-2026): https://expansion.mx/empresas/2026/08/27/calendario-registro-lineas-fecha-limite
 16. `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.8-4.11 y `conocimiento/23-geopolitica-y-riesgo-politico-global.md` §4.3 (25-sep-2026).
 17. Yahoo Finance quoteSummary (calendarEvents y earningsTrend) de AMX y AMXB.MX (25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMX?modules=calendarEvents,earningsTrend
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: reporte 2T26 (íntegro: estado de resultados, deuda, suscriptores y eventos relevantes), reportes 1T26 y 3T25 (estado de resultados y suscriptores) y el 6-K de la asamblea del 23-abr-2026. También se volvieron a consultar el 25-sep Investing (historial de consenso), Yahoo chart y quoteSummary (precios, tipos de cambio, calendario y consenso) y Expansión (calendario del registro de líneas).
+
+**Correcto (hecho verificado):**
+- 2T26 [1]: ingresos de Ps 241,071 M (+3.1%), EBITDA de 95,908 M (39.8%), EBIT de 51,814 M (21.5%), utilidad neta de 24,332 M (+9.2%) y UPA de Ps 0.40 (US$0.47 por ADS). Servicios +5.1% a tipo de cambio constante; EBITDA +6.7% sin la multa. Ganancia cambiaria de 8,275 M. Deuda de 476,927, caja de 75,943 y deuda neta de 400,984 (1.31x). Telcel con 84,531 mil líneas y servicio móvil en México +6.6%. Anuncio de WOW Perú.
+- Filas 3T25 (232,919 / 22,700 / 0.38) y 1T26 (236,844 / 23,401 / 0.39) de la tabla [2].
+- Consenso de Investing al 25-sep: ingresos de 243,980 M y UPA de 0.344 para el 3T26; 240,560 M y 0.426 para el 2T26 [8].
+- Fondo de recompra de Ps 21,042.6 M y dividendo de 0.27 + 0.27 (15-jul y 11-nov) en el 6-K [11].
+- Cadena causal: 39.1% de líneas registradas y 98 M pendientes al 25-jun [15]. Tipos de cambio promedio del 3T26 contra el 2T26: USD −0.9%, EUR −1.9%, BRL −2.5% y COP +12.2%; COP +16.1% a/a (Yahoo, cálculo del verificador).
+- Precio de 19.60 al 24-sep y +3.9% a 1 año. Capitalización ≈ 1,178 mil M y P/U de 12 meses de 13.2x (UPA 1.49).
+- Escenarios: 25 + 55 + 20 = 100%. Periodo correcto: trimestre jul-sep, MXN, UPA IFRS reportada, la misma base que el consenso de Investing. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **Fecha del reporte:** pasa de 20-oct a **13-oct-2026**. Yahoo la marca como no estimada para el ADS, MarketBeat coincide y el patrón es de martes (14-oct-2025). La `fecha_resolucion` del CSV también pasa a 2026-10-13.
+2. **Binario de líneas de Telcel:** pasa de p = 0.60 a **0.50**. El reporte 2T26 aclara que la suspensión se revierte al registrarse, así que una línea suspendida no es necesariamente una baja. Además, solo dos cohortes se suspenden dentro del 3T y en el 3T25 Telcel ganó 235 mil líneas.
+3. Rendimiento a 3 meses: pasa de −14.5% a −14.8% (23.00 → 19.60). USD/MXN del 25-sep: 17.68, no 17.71.
+4. Se agregan las otras fuentes de consenso (Yahoo), porque el consenso de UPA varía mucho: 0.344 en Investing, 0.38 en AMXB.MX y ≈ 0.42 en el ADS.
+5. El historial de sorpresas de ingresos es de 7 trimestres arriba del consenso, no 6. El calendario del registro según AMX va del 15-ago al 31-dic. Se anota que los escenarios mezclan UPA 2026 y 2027.
+
+**No verificado o pendiente:**
+- La fecha no está confirmada en el sitio de RI (403). La multa a Telmex de Ps 1.3 mil M viene de la transcripción (secundaria): el reporte dice "one-off charge" sin monto.
+- La UPA "real" que Investing da para el 1T26 (0.338) no coincide con la reportada (0.39), así que el historial de sorpresas de UPA de ese agregador tiene ruido.
+- No se verificaron la re-expresión del 4T24 ni la causa del NT 20-F. Los pronósticos no están en `bitacora/pronosticos.csv`, que está vacío para todo el sistema.
+
+**Calibración (para el post-mortem):**
+- Intervalo de UPA (0.25-0.41, ±24%): al aplicar las sorpresas de Investing de 2T25 a 2T26 (−11%, +12%, −8%, −19% y −6%) a 0.344 salen 0.280-0.385, todas dentro del intervalo. No es estrecho. El riesgo está arriba: si el peso cierra septiembre por debajo de 17.5 y hay ganancia cambiaria, la UPA puede superar 0.41.
+- Intervalo de ingresos (±2.1%): cubre con holgura la dispersión de las sorpresas (desviación estándar de ~1.1%).
+- El punto de ingresos (243,000) y el binario (0.45) van contra la tasa base de 7/7 sorpresas positivas. Si AMX vuelve a superar el consenso por ~1%, habrá sido un sesgo pesimista.
+
+**Veredicto:** confiable con correcciones. Las cifras del 2T26 y la tabla coinciden con la fuente primaria. Los errores estaban en la fecha del próximo reporte y en un binario cuya lógica (suspensión = baja) contradecía al propio reporte de AMX.

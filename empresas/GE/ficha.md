@@ -10,8 +10,8 @@ Ingresos GAAP 2025: **US$45,855 M** [3]. Commercial Engines & Services (CES) 33,
 - Ingreso ajustado **US$12.6 mil M (+24%)**; GAAP US$13.3 mil M (+21%). Pedidos US$16.5 mil M (+17%) [1].
 - Margen de utilidad operativa (non-GAAP) **21.7%** (−130 pb); margen GAAP 21.0% [1].
 - **UPA ajustada US$2.02 contra consenso US$1.86** (Yahoo, +8.6%) [9]; UPA continua GAAP US$2.30. FCF US$3.0 mil M (+43%) [1].
-- Guía 2026 elevada [1][2]: utilidad operativa US$10.55-10.75 mil M (antes 9.85-10.25), **UPA ajustada US$7.65-7.85** (antes 7.10-7.40), FCF US$8.9-9.2 mil M (antes 8.0-8.4); ingreso ajustado con crecimiento "high teens" (parte alta de 10-19%; redacción de la llamada, la cifra exacta no la verifiqué en el comunicado); CES ~+20% y DPT de dígito doble bajo. Para el 2S26: servicios con crecimiento de doble dígito bajo contra bases difíciles y crecimiento secuencial del 1S al 2S [2].
-- Tres datos operativos: entregas de LEAP +24% (guía anual: "high teens", antes 15%) [1][2]; visitas a taller internas +25% y refacciones +25% [1]; salidas de vuelos globales "aproximadamente planas" en el 1S26 [2].
+- Guía 2026 elevada [1][2]: utilidad operativa US$10.55-10.75 mil M (antes 9.85-10.25), **UPA ajustada US$7.65-7.85** (antes 7.10-7.40), FCF US$8.9-9.2 mil M (antes 8.0-8.4); ingreso ajustado con crecimiento "high teens" (antes "LDD", dígito doble bajo), confirmado en la tabla de guía del comunicado sobre una base de US$42.3 mil M en 2025 [1]; CES ~+20% y DPT de dígito doble bajo. Para el 2S26: servicios con crecimiento de doble dígito bajo contra bases difíciles y crecimiento secuencial del 1S al 2S [2].
+- Tres datos operativos: entregas de LEAP +24% (guía anual: "high teens", antes 15%) [1][2]; ingresos por visitas a taller internas +25% y por refacciones de más de +25% [1]; salidas de vuelos globales "aproximadamente planas" en el 1S26 [2].
 
 ## 3. Tabla financiera
 Trimestral (US$ M; ingresos GAAP; margen = antes de impuestos de operaciones continuas/ingresos; UPA diluida neta XBRL) [5][1][9]:
@@ -43,7 +43,7 @@ Anual [5][3]:
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad vs efectivo.** FCF/UN 0.94x en 12 meses y 0.83x en 2025 [5]; la empresa guía conversión >100% en 2026 [1]. La UN GAAP incluye ganancias no operativas; comparar con la ajustada.
-2. **Deuda.** Deuda ~US$17.2-20.2 mil M, caja US$9.3 mil M, deuda neta ~US$7.8 mil M (jun-26) [5][9]. La compra de CPP (US$11.75 mil M: 7 mil M de caja y el resto con deuda nueva) la subirá en 2027 [7]. Vencimientos y monedas: 10-K R91 no revisado (no verificado).
+2. **Deuda.** Deuda ~US$17.2-20.2 mil M, caja US$9.3 mil M, deuda neta ~US$7.8 mil M (jun-26) [5][9]. La compra de CPP (US$11.75 mil M en efectivo, financiada "con caja existente y deuda nueva" [7]; la división de 7 mil M de caja y el resto con deuda no está verificada en fuente primaria) la subirá en 2027. Vencimientos y monedas: 10-K R91 no revisado (no verificado).
 3. **Dilución.** Negativa: acciones diluidas −2.2% a/a por recompras [5].
 4. **Capital de trabajo.** Anticipos de clientes y contratos de servicio de largo plazo (RPO de US$190.6 mil M) financian la operación [3]; los inventarios suben con la rampa del LEAP.
 5. **Competidores.** Pratt & Whitney (RTX, GTF), Rolls-Royce (fuselaje ancho), Safran (socio en CFM). Sin sustituto de corto plazo: el LEAP es el motor exclusivo del 737 MAX y opción en el A320neo.
@@ -55,7 +55,7 @@ Anual [5][3]:
 
 ## 5. Cadena causal
 **A. Guerra con Irán y turbosina.** Acontecimiento: cierre de Ormuz y del espacio aéreo regional desde el 28-feb-2026; el monitor de IATA llegó a marcar la turbosina más de 90% arriba de su promedio anual (citado por la Royal Aeronautical Society) [11] → exposición: Medio Oriente y África es el 10% de los ingresos [3]; las salidas en la región cayeron a tasa de un dígito alto en el 1T26 y GE bajó su supuesto de salidas globales 2026 a entre plano y un dígito bajo (antes un dígito medio) [11] → efecto económico: menos horas de vuelo y aerolíneas difiriendo mantenimiento ("se empuja la demanda, no se pierde") → estado financiero: ingresos de servicios de CES (75% de CES) con rezago de trimestres → valuación: el mercado paga por el flujo de servicios del LEAP → precio: −12.5% a 3 meses. *Inferencia:* con el Brent de nuevo arriba de US$100 en septiembre, el riesgo pasa del 2026 al 1S27.
-**B. Compra de CPP (8-sep-2026) [7].** Exposición: fundiciones de álabes, cuello de botella del LEAP y la defensa → efecto: más capacidad y control de costos a partir de 2028; salida de US$7 mil M de caja y más deuda → estado financiero: FCF 2027 (compra) y apalancamiento → valuación: *inferencia:* un múltiplo de 26x UAFIDA sin sinergias reduce el retorno sobre capital en el corto plazo y compite con las recompras.
+**B. Compra de CPP (8-sep-2026) [7].** Exposición: fundiciones de álabes, cuello de botella del LEAP y la defensa → efecto: más capacidad y control de costos a partir de 2028; salida de caja y más deuda (US$11.75 mil M en total; mezcla no verificada) → estado financiero: FCF 2027 (compra) y apalancamiento → valuación: *inferencia:* un múltiplo de 26x UAFIDA sin sinergias reduce el retorno sobre capital en el corto plazo y compite con las recompras.
 
 ## 6. Qué descuenta el precio
 P/U sobre UPA ajustada de 12 meses (US$7.11 = 1.66+1.57+1.86+2.02) **45.0x**; sobre consenso 2026 (US$7.91) **40.4x** y 2027 (US$9.69) **33.0x**; P/U GAAP de 12 meses 37.8x; VE/UAFIDA 29.8x [9]. Historia comparable corta (el negocio actual existe desde abr-2024): P/U GAAP al cierre de 2024 27.8x y de 2025 37.8x (cálculo propio [5][10]). Pares, P/U 2026e (Yahoo, 25-sep): Safran 32.1x, RTX 26.0x, Honeywell 25.5x, Lockheed 17.2x [9].
@@ -69,8 +69,8 @@ P/U sobre UPA ajustada de 12 meses (US$7.11 = 1.66+1.57+1.86+2.02) **45.0x**; so
 
 ## 8. Pronósticos registrados (3T26)
 - **Fecha: 20-oct-2026** (webcast confirmado por GE Aerospace, 7:30 ET) [6].
-- **Ingreso ajustado 3T26:** punto **US$12,850 M**; intervalo de 80%: **12,350-13,400**. Consenso **US$12,829 M** (Yahoo, 13 analistas, rango 12,554-13,117; la base del año previo, 11,305, confirma que es ingreso ajustado) [9]. Supuestos: servicios de CES +11%, equipo +20%, DPT +11%; ≈ +13-14% a/a.
-- **UPA ajustada 3T26:** punto **US$2.06**; intervalo de 80%: **1.92-2.20**. Consenso **US$1.99** (Yahoo, 17 analistas, rango 1.90-2.09) [9]. Supuestos: la guía implica US$3.77-3.97 para el 2S26; historial de sorpresas de +9% a +16%.
+- **Ingreso ajustado 3T26:** punto **US$12,850 M**; intervalo de 80%: **12,350-13,800** (p90 ampliado en la verificación; antes 13,400). Consenso **US$12,829 M** (Yahoo, 13 analistas, rango 12,554-13,117; la base del año previo, 11,305, confirma que es ingreso ajustado) [9]. Supuestos: servicios de CES +11%, equipo +20%, DPT +11%; ≈ +13-14% a/a.
+- **UPA ajustada 3T26:** punto **US$2.06**; intervalo de 80%: **1.92-2.32** (p90 ampliado en la verificación; antes 2.20). Consenso **US$1.99** (Yahoo, 17 analistas, rango 1.90-2.09) [9]. Supuestos: la guía implica US$3.77-3.97 para el 2S26; historial de sorpresas de +9% a +16%.
 - **Binarios:** (1) ingreso ajustado 3T26 > US$12,829 M: **p = 0.53**; (2) UPA ajustada 3T26 > US$1.99: **p = 0.70**.
 
 ## 9. Catalizadores y riesgos
@@ -89,3 +89,32 @@ P/U sobre UPA ajustada de 12 meses (US$7.11 = 1.66+1.57+1.86+2.02) **45.0x**; so
 10. Yahoo Finance chart de GE y GE.MX (precios y dividendos, consultado 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/GE
 11. Leeham News (21-abr-2026): https://leehamnews.com/2026/04/21/ge-aerospace-q1-2026-earnings-conflict-in-the-middle-east-overshadows-strong-start-to-2026/ · FlightGlobal: https://www.flightglobal.com/archive/2026/04/ge-warns-iran-war-fallout-could-hurt-aftermarket-business-but-maintains-2026-guidance/ · Royal Aeronautical Society (turbosina): https://www.aerosociety.com/news/airlines-and-the-iran-war-a-perfect-storm/ · conocimiento interno `conocimiento/23-geopolitica-y-riesgo-politico-global.md`.
 12. Zacks vía Yahoo (autorización de US$20 mil M, recompras del 1T26): https://finance.yahoo.com/markets/stocks/articles/ge-aerospaces-robust-capital-position-155600843.html
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99 del 2T26 (tabla de resultados, guía, segmentos y conciliación de ingreso ajustado) [1], 8-K y ex. 99.1 de la compra de CPP del 8-sep-2026 [7] y la página del webcast del 3T26 en geaerospace.com [6]. Revisé la lista de filings de la SEC al 25-sep. Consenso consultado de nuevo el 25-sep en Yahoo quoteSummary, Nasdaq/Zacks y MarketBeat.
+
+**Correcto (hecho verificado):**
+- 2T26: ingreso ajustado de US$12,634 M (+24%) y GAAP de 13,349 (+21%; la diferencia es Insurance, 715); pedidos de 16.5 mil M (+17%) [1].
+- Márgenes y UPA del 2T26: utilidad operativa de 2,746 (margen de 21.7%, −130 pb) y margen GAAP de 21.0%; UPA ajustada de 2.02 (+22%) y UPA continua GAAP de 2.30; FCF de 3,027 (+43%) [1].
+- CES: ingresos de 9,731 (+27%), margen de 27.3%, servicios +26% y LEAP +24% en unidades [1].
+- Guía 2026 [1]: utilidad operativa de US$10.55-10.75 mil M; UPA ajustada de 7.65-7.85 (antes 7.10-7.40); FCF de 8.9-9.2 mil M; ingreso ajustado "high teens" (antes "LDD"); CES ~+20% con servicios "low 20s" y equipo ~+20%.
+- Fecha: **20-oct-2026, 7:30-8:20 a.m. EDT**, confirmada en geaerospace.com [6]; Nasdaq/Zacks la marca como "expected".
+- Consenso de Yahoo: ingreso ajustado de 12,829 (13 analistas, rango 12,554-13,117; el año previo de 11,305 confirma la base ajustada) y UPA ajustada de 1.99 (17 analistas, rango 1.90-2.09). Zacks: 2.01 (7 analistas). La base (ajustada) coincide con la del pronóstico.
+- Cadena causal, hecho 1: CPP por US$11.75 mil M en efectivo, a ~26x la UAFIDA de 2027 sin sinergias y ~18x con ~US$200 M de sinergias netas; cierre esperado en el 2S27 y financiamiento "con caja existente y deuda nueva" [7]. Hecho 2: Medio Oriente y África son el 10.0% de los ingresos de 2025 (4,575/45,855) [3].
+- Escenarios: 20 + 55 + 25 = 100%. P/U de 45.0x sobre la UPA ajustada de 12 meses (7.11) y de 37.7-37.8x sobre la GAAP (8.48). No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **Intervalo de UPA ajustada: p90 de 2.20 a 2.32.** GE superó el consenso en 8 de 8 trimestres (MarketBeat: +1.8%, +25.7%, +15.5%, +16.1%, +13.7%, +9.8%, +16.3% y +8.6%). Aplicar esas sorpresas al consenso de 1.99 da 2.03-2.50: cinco de ocho quedaban arriba del p90 anterior y ahora solo una. El binario (0.70) no cambia.
+2. **Intervalo de ingreso ajustado: p90 de 13,400 a 13,800.** En los seis trimestres con base comparable (4T24 y 2T25-2T26; MarketBeat compara el 3T24 y el 1T25 contra ingresos GAAP), las sorpresas fueron de +2.1%, +7.0%, +9.9%, +5.6%, 0.0% y +6.4%. Sobre el consenso dan 12,829-14,099: cuatro de seis quedaban arriba del p90 anterior y ahora solo una.
+3. La guía "high teens" ya está verificada en el comunicado; la ficha decía que no.
+4. "Visitas a taller internas +25%" era en realidad **ingreso** por visitas a taller internas; las refacciones crecieron más de 25%.
+5. La división "7 mil M de caja y el resto con deuda" de CPP no aparece en el 8-K ni en el ex. 99.1; se marcó como no verificada.
+
+**No verificado o pendiente:**
+- El recorte del supuesto de salidas de vuelos de 2026 (a entre plano y un dígito bajo) y la caída en Medio Oriente vienen de Leeham y FlightGlobal sobre la llamada del 1T26 (secundarias) [11].
+- LEAP 2026 "high teens" (antes 15%) y los reembolsos arancelarios de US$100 M vienen de la transcripción [2].
+- UPA GAAP del 4T25: derivada, 2.39; MarketBeat reporta 2.40 (diferencia entre UPA continua y neta; inmaterial).
+
+**Calibración (para el post-mortem):** los puntos están casi en el consenso: ingreso +0.2% y UPA +3.5%. El historial dice que GE supera el consenso de UPA por una mediana de +14.6% y el de ingreso ajustado por ~+5% en promedio. El argumento a favor del punto es fuerte: la guía de "high teens" implica un crecimiento del 2S26 de solo +9% a +13% (24.25 mil M en el 1S26 contra 42.3 × 1.17-1.19 en el año y 23.17 mil M en el 2S25), mientras que el consenso del 3T26 (+13.5% a/a) ya está en el techo de la guía. *Inferencia:* el binario de ingresos (0.53) es el pronóstico con más riesgo de quedar mal calibrado, porque la tasa base de sorpresas positivas es de 5 de 6. Si GE vuelve a superar el consenso por ≥5%, el post-mortem debe registrarlo como sesgo de anclaje a la guía.
+
+**Veredicto:** confiable. Las cifras del 2T26, la guía y la fecha cuadran con fuentes primarias. Los errores eran menores (redacción de un dato operativo y una cifra de financiamiento sin fuente), y los intervalos, estrechos frente a 8 trimestres de sorpresas positivas, se ampliaron hacia arriba.

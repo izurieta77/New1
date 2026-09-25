@@ -36,7 +36,7 @@ Dos segmentos; ventas 2025 US$94,193 M [3]: Innovative Medicine 60,401 (64%; mar
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad vs efectivo.** FCF/UN 0.73x en 2025 (distorsionado por el talco) y 0.81x en 1S26 (FCF 8.76 mil M) [5]; FCF plano desde 2021 (~US$17-20 mil M).
-2. **Deuda.** US$49.0 mil M a jun-26, de los cuales 11.7 mil M son de corto plazo; caja y valores por 20.8 mil M y deuda neta de 28.2 mil M [5]. Hay notas listadas con cupón de 1.15%-3.20% (2028-2033; *inferencia:* en EUR, no verificado). Calificación AAA (no verificado en esta sesión).
+2. **Deuda.** US$49.0 mil M a jun-26, de los cuales 11.7 mil M son de corto plazo; caja y valores por 20.8 mil M y deuda neta de 28.2 mil M [5]. Hay 10 series de notas listadas en la NYSE con cupón de 1.15%-3.70% y vencimientos de 2028 a 2055 (portada del 8-K del 29-jul-2026 [6]; *inferencia:* en EUR, no verificado). Calificación AAA (no verificado en esta sesión).
 3. **Dilución.** Acciones diluidas +0.9% anual; SBC de 1.2-1.8% de las ventas.
 4. **Capital de trabajo.** Cuentas por cobrar +US$1.9 mil M e inventarios +1.0 mil M en 1S26 [5].
 5. **Competidores.** Biosimilares de Stelara; Skyrizi de AbbVie contra Tremfya; en MedTech, Medtronic, Boston Scientific (ablación de campo pulsado), Stryker e Intuitive (robótica, donde compite Ottava).
@@ -64,7 +64,7 @@ Capitalización de US$652.3 mil M y VE de 680.6 mil M [9]. P/U ajustada de 12 me
 ## 8. Pronósticos registrados (3T26)
 - **Fecha: 13-oct-2026**, antes de la apertura, confirmada por la empresa el 31-ago-2026 [8].
 - **Ventas:** punto **US$25,550 M**; intervalo de 80%: 25,050-26,050. Consenso de US$25,291 M (Yahoo, 6 analistas, 25-sep-2026) [9]. Supuestos: +7% operacional (implícito en la guía del 2S) y FX de −0.5%. En el 3T, el EUR/USD promedió 1.152 contra 1.169 un año antes, el yen se depreció 8% y el yuan se apreció 6% (Yahoo).
-- **UPA ajustada:** punto **US$2.46**; intervalo de 80%: 2.32-2.60. Consenso de US$2.45 (Yahoo, 6; hace 90 días era 3.02) y 2.96 (Zacks, 6; *inferencia:* no incorpora el IPR&D) [9][13]. Supuestos: UPA subyacente de ~3.03 (+8% sobre 2.80) menos ~0.57 de IPR&D de Firefly (US$1 mil M) y del pago inicial de Sail [6].
+- **UPA ajustada:** punto **US$2.46**; intervalo de 80%: 2.32-2.60. Consenso de US$2.45 (Yahoo, 6; hace 90 días era 3.02) y 2.96 (Zacks, 6; *inferencia:* no incorpora el IPR&D) [9][13]. Supuestos: UPA subyacente de ~3.03 (+8% sobre 2.80) menos ~0.57 de IPR&D de Firefly (US$1 mil M) y del pago inicial de Sail [6]. La empresa estima −US$0.64 en todo 2026 (0.46 de Firefly, cuyo IPR&D de ~US$1 mil M cae en el 3T26, y 0.18 de Sail, con pagos iniciales de US$785 M, de los cuales 465 M son inversión de capital) [6]; el reparto de 0.57 en el 3T es inferencia.
 - **Binarios:** (1) ventas mayores a US$25,291 M: **p = 0.72**; (2) UPA ajustada mayor a US$2.45: **p = 0.55**.
 
 ## 9. Catalizadores y riesgos
@@ -76,7 +76,7 @@ Capitalización de US$652.3 mil M y VE de 680.6 mil M [9]. P/U ajustada de 12 me
 3. 10-K 2025 (11-feb-2026): https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/jnj-20251228.htm
 4. 8-K, comunicado 1T26 (14-abr-2026): https://www.sec.gov/Archives/edgar/data/200406/000020040626000076/a2026q1exhibit991.htm
 5. 10-Q 2T26 (23-jul-2026): https://www.sec.gov/Archives/edgar/data/200406/000020040626000153/jnj-20260628.htm
-6. 8-K con la guía actualizada, Firefly y Sail (29-jul-2026): https://www.sec.gov/Archives/edgar/data/200406/000020040626000163/jnj-20260729.htm · https://www.sec.gov/Archives/edgar/data/200406/000020040626000163/exhibit991firefly.htm
+6. 8-K con la guía actualizada, Firefly y Sail (29-jul-2026): https://www.sec.gov/Archives/edgar/data/200406/000020040626000163/jnj-20260729.htm · https://www.sec.gov/Archives/edgar/data/200406/000020040626000163/exhibit991firefly.htm · https://www.sec.gov/Archives/edgar/data/200406/000020040626000163/exhibit992sail.htm
 7. 8-K, resolución del talco de ovario (27-jul-2026): https://www.sec.gov/Archives/edgar/data/200406/000020040626000155/exhibit991.htm
 8. J&J, convocatoria al call del 3T (31-ago-2026): https://www.nasdaq.com/press-release/johnson-johnson-host-investor-conference-call-third-quarter-results-2026-08-31
 9. Yahoo Finance quoteSummary y chart de JNJ, pares y FX (consultados el 25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/JNJ
@@ -85,3 +85,44 @@ Capitalización de US$652.3 mil M y VE de 680.6 mil M [9]. P/U ajustada de 12 me
 12. J&J, acuerdo con el gobierno de EUA (8-ene-2026): https://www.jnj.com/media-center/press-releases/johnson-johnson-reaches-agreement-with-u-s-government-to-improve-access-to-medicines-and-lower-costs-for-millions-of-americans-delivers-on-u-s-manufacturing-and-innovation-investments
 13. Nasdaq/Zacks, fecha y consenso (consultado el 25-sep-2026): https://www.nasdaq.com/market-activity/stocks/jnj/earnings
 14. Conocimiento interno `conocimiento/24-politica-publica...md` §4.4 (Sección 232 a fármacos), 25-sep-2026.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Nivel de acceso: comunicado 8-K del 2T26 (lectura íntegra de resultados, segmentos y guía); 8-K del 29-jul-2026 con los anexos de Firefly y Sail (íntegros); 8-K del talco del 27-jul-2026 (íntegro); 10-Q del 2T26 (talco, deuda y liquidez; descarga propia de sec.gov); convocatoria al call del 3T [8]; Yahoo quoteSummary (descarga propia); API de Nasdaq/Zacks. Aritmética recalculada con Python.
+
+**Confirmado contra fuente primaria**
+- 2T26 [1]:
+  - Ventas de US$25,310 M (+6.6%; +5.6% operacional). EUA US$14,533 M (+7.3%).
+  - Innovative Medicine US$16,384 M (+6.8% operacional; Stelara resta ~760 pb). MedTech US$8,926 M (+3.6% operacional).
+  - UPA GAAP US$2.27 y ajustada US$2.90 (+4.7%). FCF del 1S de ~US$8.7 mil M.
+- Guía:
+  - Ventas reportadas de 100.8-101.4 mil M.
+  - UPA ajustada de 11.60-11.75 el 15-jul [1]. El 29-jul bajó a **10.96-11.11** por −US$0.64: 0.46 de Firefly y 0.18 de Sail [6].
+  - Firefly se registra como compra de activos, con IPR&D de ~US$1 mil M en el 3T26 [6]. Sail: pagos iniciales de US$785 M (465 M de inversión de capital) y opción de compra por US$2.58 mil M [6].
+- Talco [7][5]:
+  - Compromiso de US$5.5 mil M. El primer pago es de hasta US$3 mil M en 2027 y no hay otro antes de 2028.
+  - Requiere la participación de ≥95% de los reclamos (~76 mil).
+  - La reserva era de ~US$3.7 mil M a jun-26. Deuda de 49.0 mil M, caja y valores de 20.8 mil M y deuda neta de 28.2 mil M.
+- Fecha: **13-oct-2026**, con call a las 8:30 a.m. ET, confirmada por J&J el 31-ago [8].
+- Consenso (Yahoo, consulta propia del 25-sep): UPA ajustada de US$2.45 (6; rango 2.31-2.66; hace 90 días, 3.02). Ventas de US$25,291 M (6; rango 25,036-25,696). Zacks da US$2.96 (6).
+  - La base es ajustada: Yahoo registra 2.90 como real.
+  - La diferencia de 0.51 entre Yahoo y Zacks equivale al impacto del IPR&D. La ficha ya la marcaba como inferencia.
+- Precio de US$270.68: coincide con Yahoo. P/U ajustada de 12 meses de 24.9x (10.86), 2027e de 22.3x (12.14) y GAAP de 31.4x (8.62).
+
+**Revisiones de forma**
+- Periodo: 3T fiscal 2026. J&J cierra sus trimestres en domingo. Todo en USD. La UPA ajustada, que incluye el IPR&D adquirido, es la misma en el pronóstico, el consenso de Yahoo y el criterio.
+- Escenarios: 20 + 60 + 20 = 100%.
+- Intervalos de 80%:
+  - UPA: 2.32-2.60 (−5% a +6%). Las sorpresas de Yahoo (+1.5%, −0.1%, +0.85% y +1.6%) aplicadas a 2.453 dan 2.49, 2.45, 2.47 y 2.49, todas dentro del intervalo.
+  - Ventas: 25,050-26,050 (−1% a +3%). La sorpresa del 2T26 (+1.0%) da 25,544, dentro del intervalo.
+  - Ninguno es estrecho frente a la dispersión histórica. La incertidumbre principal es el reparto del efecto de Sail entre el 3T y el 4T.
+- Coherencia de los binarios: el intervalo implica ~0.71 en ventas (registrado 0.72) y ~0.53 en UPA (registrado 0.55).
+- DCF inverso: se reprodujo contra la capitalización (6.1/9.0/11.6%). Contra el VE da 6.6/9.5/12.1%.
+- Recomendaciones de compra o venta: ninguna.
+
+**Correcciones**
+1. Notas listadas: decía "cupón de 1.15%-3.20% (2028-2033)". La portada del 8-K [6] muestra 10 series de 1.15% a 3.70%, con vencimientos de 2028 a 2055.
+2. Supuesto de UPA: se agregó el desglose de la empresa (0.46 + 0.18 en todo 2026; pagos iniciales de Sail). Se aclaró que el reparto de ~0.57 en el 3T es inferencia. El punto no cambia.
+3. Se agregó a las fuentes el anexo 99.2 (Sail).
+
+**Sigue sin verificar (ya marcado):** calificación AAA; precios de la IRA para Stelara y Xarelto; inversión de US$55 mil M (comunicado de J&J [12], que no se volvió a leer); divisa de las notas.
+**Veredicto:** confiable. Resultados, guía, fecha, consenso y cadena causal (talco y Stelara) coinciden con la fuente primaria. Solo hubo correcciones menores de detalle, y los pronósticos están bien calibrados frente a la historia de sorpresas.

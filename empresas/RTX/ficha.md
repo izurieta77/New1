@@ -47,13 +47,13 @@ Notas: 2023 incluye el cargo del *powder metal* (US$5.4 mil M en ventas) [3]. La
 10. **Asignación de capital.** Capex de ~US$2.6 mil M al año. Dividendo elevado en 2026 (monto no verificado). Desinversiones: *actuation* y Simmonds en 2025, Blue Canyon por US$620 M en 2026 [1].
 
 ## 5. Cadena causal
-**A. Guerra de Irán (desde el 28-feb-2026) y consumo de interceptores [14].** Exposición: Raytheon, con Patriot, SM y LTAMDS → pedidos internacionales de defensa por US$10 mil M en 1S26, el doble que un año antes, incluidos US$5 mil M de GEM-T [12] → cartera de defensa de US$119 mil M y ventas de Raytheon +18% con margen de 12.6% → más visibilidad del FCF 2027-28 → *inferencia:* el mercado paga por RTX 24x UPA 2027, contra 16-18x de las defensivas puras, porque combina defensa y posventa.
+**A. Guerra de Irán (desde el 28-feb-2026) y consumo de interceptores [14].** Exposición: Raytheon, con Patriot, SM y LTAMDS → pedidos internacionales de defensa por más de US$10 mil M en 1S26, incluidos más de US$5 mil M de GEM-T [12] (la comparación "el doble que un año antes" no se confirmó en la transcripción) → cartera de defensa de US$119 mil M y ventas de Raytheon +18% con margen de 12.6% → más visibilidad del FCF 2027-28 → *inferencia:* el mercado paga por RTX 24x UPA 2027, contra 16-18x de las defensivas puras, porque combina defensa y posventa.
 **B. Brent en US$103 y turbosina [14].** Las aerolíneas pierden margen → se entregan menos aviones y se vuela la flota vieja por más tiempo → la posventa de Pratt, que creció 25%, se sostiene mientras el tráfico aguante → riesgo en 2027 si la demanda cae en rutas del Golfo. La posventa es la línea de mayor margen (*inferencia*).
 **C. Fiscal en EUA.** La CR vence el 11-dic y las elecciones intermedias son el 3-nov, con 46% de probabilidad de un Congreso demócrata completo en Kalshi [14] → *inferencia:* una CR retrasa más los pagos (flujo) que las ventas → el FCF del 4T26 y el tono de la guía 2027 quedan en riesgo.
 
 ## 6. Qué descuenta el precio
 Capitalización de US$254.2 mil M y VE de 282.6 mil M [9]. P/U ajustada de 12 meses de **27.3x** (UPA de US$6.92) y P/U 2027e de **24.0x** (consenso de 7.85 [9]). VE/EBITDA de 18.0x. Historia de P/U GAAP al cierre de año: 33.6x, 28.8x, 37.7x, 32.6x y 37.0x de 2021 a 2025; con UPA ajustada, 29.2x en 2025. Hoy cotiza por debajo de ese 29.2x ajustado. Pares a P/U futuro (Yahoo, 25-sep): GE Aerospace 35.2x, Lockheed 16.0x, Northrop 16.7x y General Dynamics 18.1x [9].
-**DCF inverso** (FCF inicial de US$8.6 mil M, punto medio de la guía 2026; 10 años; crecimiento terminal de 3%): con tasa de 8% el crecimiento implícito es **7.6% anual**, con 9% es **10.1%** y con 10% es **12.4%**. El FCF creció 12.2% anual entre 2021 y 2025. *Inferencia:* con un WACC de ~8.5% el precio pide ~9%, alcanzable si la posventa y los misiles sostienen el ciclo, pero con poco margen para un tropiezo del GTF.
+**DCF inverso** (FCF inicial de US$8.6 mil M, punto medio de la guía 2026; 10 años; crecimiento terminal de 3%): con tasa de 8% el crecimiento implícito es **7.6% anual**, con 9% es **10.1%** y con 10% es **12.4%** (contra la capitalización; contra el VE de 282.6 mil M, que es lo coherente con un WACC, sube a 8.9%, 11.5% y 13.8%). El FCF creció 12.2% anual entre 2021 y 2025. *Inferencia:* con un WACC de ~8.5% el precio pide ~9% sobre la capitalización y ~10% sobre el VE, alcanzable si la posventa y los misiles sostienen el ciclo, pero con poco margen para un tropiezo del GTF.
 
 ## 7. Escenarios de negocio a 12 meses
 - **Bajista (20%)**: la turbosina cara y la desaceleración recortan la posventa; una CR larga o un cierre de gobierno en diciembre; un problema técnico nuevo en el GTF.
@@ -62,9 +62,9 @@ Capitalización de US$254.2 mil M y VE de 282.6 mil M [9]. P/U ajustada de 12 me
 - **Qué cambiaría el escenario:** la posventa comercial del 3T26 (menos de 10% apunta al bajista); el *book-to-bill* de Raytheon; la resolución de la CR el 11-dic.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha estimada: 20-oct-2026** (Yahoo [9] y Nasdaq/Zacks [13]; Investing.com dice 27-oct). La empresa no la ha confirmado; en 2025 reportó el 21-oct [6].
-- **Ventas:** punto **US$24,100 M**; intervalo de 80%: 23,300-24,900. Consenso de US$24,013 M (Yahoo, 18 analistas, 25-sep-2026) [9]. La dirección espera ~5% orgánico en el 2S [12]; la supera históricamente y el 3T25 creció 12%.
-- **UPA ajustada:** punto **US$1.84**; intervalo de 80%: 1.72-1.96. Consenso de US$1.77 (Yahoo, 18) y 1.75 (Zacks, 5) [9][13].
+- **Fecha estimada: 20-oct-2026** (Yahoo [9] y Nasdaq/Zacks [13]; Investing.com dice 27-oct). La empresa no la ha confirmado: no hay comunicado de RTX sobre el call del 3T en PR Newswire al 24-sep-2026 [15] (Nasdaq la marca como estimada por algoritmo); en 2025 reportó el 21-oct [6].
+- **Ventas:** punto **US$24,100 M**; intervalo de 80%: 23,300-25,300 (p90 ampliado en la verificación; antes 24,900). Consenso de US$24,013 M (Yahoo, 18 analistas, 25-sep-2026) [9]. La dirección espera ~5% orgánico en el 2S [12]; la supera históricamente (1T26 +10% y 2T26 +16% orgánico, con guía anual de 5-6% en abril [1][4]), el 3T25 creció 12% y en el 2T26 las ventas superaron el consenso por +8.2% [10].
+- **UPA ajustada:** punto **US$1.84**; intervalo de 80%: 1.72-2.10 (p90 ampliado en la verificación; antes 1.96). Consenso de US$1.77 (Yahoo, 18) y 1.75 (Zacks, 5) [9][13]. La guía implica ~US$1.72-1.79 por trimestre en el 2S (7.10-7.25 menos 3.67 del 1S), pero en los últimos 4 trimestres la UPA superó el consenso por +5% a +21% (Yahoo [9]).
 - **Binarios:** (1) UPA ajustada del 3T26 mayor a US$1.77: **p = 0.72**; (2) ventas mayores a US$24,013 M: **p = 0.55**.
 
 ## 9. Catalizadores y riesgos
@@ -85,3 +85,37 @@ Capitalización de US$254.2 mil M y VE de 282.6 mil M [9]. P/U ajustada de 12 me
 12. Motley Fool, transcripción del call del 2T26 (24-jul-2026): https://www.fool.com/earnings/call-transcripts/2026/07/24/rtx-rtx-q2-2026-earnings-call-transcript/
 13. Nasdaq/Zacks, fecha y consenso (consultado el 25-sep-2026): https://www.nasdaq.com/market-activity/stocks/rtx/earnings
 14. Conocimiento interno `conocimiento/23-geopolitica...md` §4.3 y §6.6, y `24-politica-publica...md` §4.3 (25-sep-2026).
+15. Lista de comunicados de RTX en PR Newswire (consultada el 25-sep-2026; sin aviso de fecha del 3T26): https://www.prnewswire.com/news/rtx/
+
+## Verificación (2026-09-25)
+Verificador adversarial. Nivel de acceso: comunicados 8-K del 1T26 y 2T26 (lectura íntegra de resumen, segmentos y guía, descarga propia de sec.gov); 8-K del 15-sep-2026 (Item 5.02, íntegro); Yahoo quoteSummary (descarga propia); API de Nasdaq/Zacks; lista de comunicados de RTX en PR Newswire; transcripción del call del 2T26 [12] (sección pertinente, fuente secundaria). Aritmética recalculada con Python.
+
+**Confirmado contra fuente primaria**
+- 2T26 [1]: ventas US$24,708 M (+14%; +16% orgánico); UPA GAAP US$1.57; UPA ajustada US$1.89 (+21%); UN US$2,139 M; utilidad operativa US$2,811 M (11.4%); FCF US$2,878 M; cartera US$289 mil M (170 comercial y 119 defensa); Raytheon con ventas de US$8,269 M (+18%) y ROS de 12.6%; ajustes contables de adquisiciones por US$474 M.
+- Guía 2026 [1]: ventas ajustadas 95.0-96.0 mil M, orgánico 8-9%, UPA ajustada 7.10-7.25 y FCF 8.50-8.75 mil M. Guías previas: 6.60-6.80 (ene) y 6.70-6.90 (abr) [4]. En el 1T26, las ventas fueron US$22.1 mil M (+10% orgánico) y la UPA ajustada US$1.78 [4].
+- Consenso (Yahoo, consulta propia del 25-sep): UPA ajustada US$1.77 (18; rango 1.69-1.84) y ventas US$24,013 M (18; rango 23,493-24,479). Zacks: US$1.75 (5). La base es ajustada: Yahoo registra 1.89 como real del 2T26.
+- Relevo en Pratt [7]: Albertelli sustituye a Eddy el 1-ene-2027.
+- Cadena causal (transcripción [12], secundaria): Raytheon con pedidos de US$19.9 mil M, *book-to-bill* de 2.42 y cartera de 86 mil M; pedidos internacionales de más de US$10 mil M en el 1S26, incluidos más de US$5 mil M de GEM-T; posventa +18% (Pratt +25%); AOG del GTF −25% en el año; ~5% orgánico en el 2S.
+- Precio de US$188.61: coincide con Yahoo. P/U de 27.3x (UPA de 12 meses de 6.92) y de 24.0x (7.85).
+
+**Revisiones de forma**
+- Periodo: 3T26 (3 meses), en USD. La UPA ajustada se usa en el pronóstico, en el consenso y en el criterio de resolución.
+- Fecha: 20-oct **no confirmada**. Yahoo la marca como no estimada, pero Nasdaq dice que la calcula un algoritmo, y no hay comunicado de RTX en PR Newswire al 24-sep [15].
+- Escenarios: 20 + 55 + 25 = 100%.
+- Intervalos de 80%:
+  - **UPA:** antes era 1.72-1.96. Las sorpresas de Yahoo (+20.6%, +5.3%, +17.0% y +13.7%; Nasdaq da +19.7%, +6.2%, +17.1% y +13.9%) aplicadas a 1.767 dan 2.13, 1.86, 2.07 y 2.01. Tres de cuatro quedaban arriba del p90, así que era estrecho: es el mismo sesgo del registro de errores (AAPL y MSFT). El p90 se fijó en **2.10**, con lo que queda un análogo de cuatro por encima.
+  - **Ventas:** antes era 23,300-24,900. La única sorpresa verificada (+8.2% en el 2T26 [10]) daría 25,982. Un crecimiento orgánico de 10-16% como el del 1S, con ~1% de efecto de desinversiones, da 24.5-25.8 mil M. El p90 se fijó en **25,300**.
+- Coherencia de los binarios: el intervalo implica 0.73 para UPA (registrado 0.72) y 0.54 para ventas (registrado 0.55). La mitad inferior no cambió, así que los binarios se mantienen.
+- Observación, sin corregir: el punto de UPA (1.84, +4% sobre el consenso) queda por debajo de la sorpresa mediana de +15%. Puede haber sesgo a la baja (lección del registro de errores). Es juicio del analista.
+- DCF inverso: se reprodujo contra la capitalización (7.6/10.1/12.4%). Contra el VE, que es lo coherente con un WACC, da 8.9/11.5/13.8%, y se agregó a la ficha.
+- Recomendaciones de compra o venta: ninguna.
+
+**Correcciones**
+1. p90 de UPA ajustada: de 1.96 a **2.10** (ficha y CSV).
+2. p90 de ventas: de 24,900 a **25,300** (ficha y CSV), con su justificación.
+3. DCF inverso: se agregaron las tasas implícitas contra el VE, y la inferencia de "~9%" se precisó como ~9% sobre la capitalización y ~10% sobre el VE.
+4. Cadena causal A: "el doble que un año antes" se marcó como no confirmado (la transcripción solo dice "más de US$10 mil M").
+5. Fecha: se documentó que no hay confirmación de la emisora (fuente [15]).
+
+**Sigue sin verificar (ya marcado):** calificación crediticia; monto de la recompra acelerada de 2023-2024; dividendo de 2026; historial de sorpresas de ingresos anterior al 2T26; probabilidad de Kalshi (conocimiento interno).
+**Veredicto:** confiable en hechos. Resultados, guía, consenso y cadena causal coinciden con la fuente primaria o con la transcripción. El defecto material era de calibración: los dos intervalos de 80% estaban cerrados por arriba frente a un historial de superaciones de doble dígito. Se corrigió el p90 y no cambia la tesis.

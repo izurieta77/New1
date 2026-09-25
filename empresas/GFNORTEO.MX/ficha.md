@@ -10,7 +10,7 @@ Grupo financiero mexicano con operación casi exclusivamente doméstica. Tiene 9
 - Ingresos totales (margen financiero + ingresos no financieros) de Ps 43,147 M (+12%) contra un consenso de 39.79 mil M en Investing (+8.4%; la base del agregador es heterogénea) [6].
 - Eficiencia de 36.2%. Utilidad de operación de 21,465 M, 49.7% de los ingresos. NIM de 6.1% para el grupo y 6.9% para el banco (+57 pb a/a). Costo de riesgo de 1.9%. ROE de 25.7%.
 - UN de Ps 15,550 M (+6%). UPA de 5.528 contra un consenso de 5.60 (−1.3%) [6].
-- Guía 2026 sin cambios [2]: cartera sin gobierno +8-11%; NIM de 6.2-6.5% (banco 6.4-6.8%); costo de riesgo de 1.8-2.1%; eficiencia de 36-37.5%; tasa de impuestos de 27-29%; **UN de 62-64 mil M**; ROE de 22-24%. Supuestos: PIB de 1.4%, inflación de 4.2-4.6% y Banxico en 6.5% al cierre.
+- Guía 2026 sin cambios [2]: cartera +8-11% (sin gobierno +10-12%) *(corregido por el verificador; antes decía "sin gobierno +8-11%")*; NIM de 6.2-6.5% (banco 6.4-6.8%); costo de riesgo de 1.8-2.1%; eficiencia de 36-37.5%; tasa de impuestos de 27-29%; **UN de 62-64 mil M**; ROE de 22-24%. Supuestos: PIB de 1.4%, inflación de 4.2-4.6% y Banxico en 6.5% al cierre.
 - Datos operativos: cartera +8% (auto +26%, nómina +14%); IMOR de 1.50% (+38 pb a/a) con cobertura de 134% (antes 158%); CET1 de 12.55% e ICAP de 21.48% [1].
 
 ## 3. Tabla financiera
@@ -69,9 +69,9 @@ Capitalización ≈ Ps 545 mil M. P/U de 12 meses: **9.1x** (UPA 21.29). P/U con
 - **Qué cambiaría el escenario:** un costo de riesgo en 3T26 arriba de 2.2% (bajista), el NIM del banco y el anuncio de un dividendo extraordinario.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha estimada: 27-oct-2026** (Investing [6]). No confirmada.
-- **Ingresos totales:** punto Ps 43,300 M; intervalo de 80%: 41,300-45,300. Consenso: **42,240** (Investing, 25-sep-2026) [6]. Supuestos: margen financiero estable (Banxico sin cambios) y el efecto de rentas vitalicias neutral en los ingresos totales.
-- **UPA:** punto Ps 5.62 (UN 15,800 M); intervalo de 80%: 5.10-6.05. Consenso: **5.65** [6]. Supuestos: provisiones de ~6.0 mil M, eficiencia de ~36% y tasa de 28%. La cola baja corresponde a eventos aislados, como el 3T25.
+- **Fecha: 27-oct-2026** (Investing [6]). Yahoo da la misma fecha y la marca como no estimada [10]. No se confirmó en el sitio de RI.
+- **Ingresos totales:** punto Ps 43,300 M; intervalo de 80%: 41,300-45,300. Consenso: **42,240** (Investing, 25-sep-2026) [6]; Yahoo, 43,733 (3 analistas, 25-sep) [10]. Supuestos: margen financiero estable (Banxico sin cambios) y el efecto de rentas vitalicias neutral en los ingresos totales.
+- **UPA:** punto Ps 5.62 (UN 15,800 M); intervalo de 80%: 5.10-6.05. Consenso: **5.65** [6]; Yahoo, 5.637 (3 analistas; rango 5.59-5.67) [10]. La UPA de Investing usa las acciones del RNV (su 2T26 = 5.53 = 5.528 reportado). La "UPA real" de Yahoo para el 2T26 (5.60) usa otra base de acciones. Supuestos: provisiones de ~6.0 mil M, eficiencia de ~36% y tasa de 28%. La cola baja corresponde a eventos aislados, como el 3T25.
 - **Binarios:** (1) ingresos totales mayores a Ps 42,240 M: **p = 0.70**; en los últimos 4 trimestres superaron el consenso del agregador [6]. (2) UPA mayor a 5.65: **p = 0.45**.
 
 ## 9. Catalizadores y riesgos
@@ -87,3 +87,33 @@ Capitalización ≈ Ps 545 mil M. P/U de 12 meses: **9.1x** (UPA 21.29). P/U con
 7. Bloomberg Línea, compra de RappiCard: https://www.bloomberglinea.com/latinoamerica/mexico/banorte-compra-todo-el-negocio-de-rappicard-por-us50-millones/ · Expansión, deterioro por Bineo (5-nov-2025): https://expansion.mx/economia/2025/11/05/banorte-plazo-recuperar-perdidas-venta-bineo
 8. Yahoo Finance, chart de GFNORTEO.MX y quote de BBAJIOO.MX, RA.MX, GFINBURO.MX y GENTERA.MX (25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/GFNORTEO.MX
 9. `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.8, §4.10 y §4.11, y `conocimiento/16-macro-global-divisas-y-el-peso.md` §4.4 (25-sep-2026).
+10. Yahoo Finance quoteSummary (calendarEvents y earningsTrend) de GFNORTEO.MX (25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/GFNORTEO.MX?modules=calendarEvents,earningsTrend
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: Financial Results 2Q26 (estado de resultados, share data, cartera por producto, calidad de activos y capital), presentación de la llamada 2Q26 (lámina de guía) y transcripción 2Q26 (LSEG, publicada por Banorte). Consultados de nuevo el 25-sep: Investing (historial de consenso) y Yahoo chart y quoteSummary.
+
+**Correcto (hecho verificado):**
+- 2T26 [1]: ingresos totales de Ps 43,147 M (+12% a/a), margen financiero de 37,614 (+6%), gasto de 15,603, provisiones de 6,079 y utilidad de operación de 21,465 (49.7%). UN de 15,550 (+6%) y UPA de 5.528 (RNV, 2,813.2 M acciones). Eficiencia de 36.2%, ROE de 25.7%, NIM de 6.1% (grupo) y 6.9% (banco), costo de riesgo de 1.9%, cobertura de 134.2% (158.5% un año antes), CET1 de 12.55% e ICAP de 21.48%. VL por acción de 87.99. Dividendo de 10.45 (payout de 50%). ORI de 1S26: −14 M contra 4,453 M en 1S25.
+- Cartera en etapas 1 y 2 de 1,273,193 M: consumo 43.5%, comercial 25.6%, corporativo 18.1% (+2%) y gobierno 12.8%; hipotecario 297.7, nómina 98.8 (+14%) y tarjeta 80.6 [1]. La fila 1T25 = 1S25 − 2T25 (40,142 / 15,288 / 5.435) reproduce las cifras.
+- Guía 2026 [2]: NIM de 6.2-6.5% (banco 6.4-6.8%), costo de riesgo de 1.8-2.1%, eficiencia de 36-37.5%, tasa de 27-29%, UN de 62-64 mil M y ROE de 22-24%. Supuestos: PIB de 1.4%, inflación de 4.2-4.6% y Banxico en 6.5%. AT1 por US$1.35 mil M, ~65 pb de CET1 por el cambio de modelos, balance "much more liability sensitive" y espacio para un dividendo extraordinario o recompra [3].
+- Consenso de Investing al 25-sep: 42.24 mil M y 5.65 para el 3T26 (27-oct); 39.79 mil M y 5.60 para el 2T26 [6].
+- Cadena causal: Banxico en 6.50% con tercera pausa el 24-sep y 250 pb contra la Fed; Moody's Baa3, S&P BBB negativa y Fitch BBB− (`conocimiento/24`, con fuentes Banxico y agencias) [9].
+- Precio de 193.89 al 24-sep, +7.7% a 1 año, P/VL de 2.20x y P/U de 12 meses de 9.1x (UPA 21.29).
+- Escenarios: 20 + 60 + 20 = 100%. Periodo correcto: trimestre, MXN, UPA sobre acciones del RNV, la misma base que Investing. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **Guía de cartera:** la lámina da cartera **+8-11%** y **sin gobierno +10-12%**. La ficha atribuía el 8-11% a la cartera sin gobierno. La transcripción confirma el 8-11% total ("is going to grow from 8% to 11%").
+2. Fecha: Yahoo también da el 27-oct y la marca como no estimada; se agrega a la ficha.
+3. Se agrega el consenso de Yahoo (UPA 5.637, n = 3; ingresos 43,733, n = 3) y la nota sobre la base de acciones.
+
+**No verificado o pendiente:**
+- No se cotejaron con el PDF los créditos relacionados (27.41 mil M), la fecha de cierre de RappiCard ni el deterioro de Bineo (1,307 M, prensa).
+- La fecha del 3T25 que da Investing (5-nov-2025) no se contrastó.
+- Los pronósticos no están en `bitacora/pronosticos.csv`.
+
+**Calibración (para el post-mortem):**
+- UPA (5.10-6.05): de las sorpresas limpias de Investing (+0.4, 0, −0.4, −5.7, −10.8, +7.4, −1.4 y −1.3%) aplicadas a 5.65, 2 de 8 quedan fuera (5.04 y 6.07), ~25% contra el 20% nominal. Es aceptable, aunque justo, en ambas colas. Se excluyó el 2T25 de Investing (6.14 "real" contra 5.196 reportado, un dato erróneo del agregador).
+- Ingresos (±4.6%): las sorpresas de ingresos van de −2.5% a +8.4% contra un consenso heterogéneo. El intervalo cubre 5 de 7. El 2T26 (+8.4%) habría quedado fuera por arriba.
+- El binario de ingresos (0.70) es coherente con el punto (43,300) y con Yahoo (43,733).
+
+**Veredicto:** confiable con una corrección. Las cifras del 2T26 y la tabla coinciden con la fuente primaria. Había un error de etiqueta en la guía de cartera, que quedó corregido.
