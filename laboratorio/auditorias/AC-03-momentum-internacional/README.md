@@ -84,6 +84,27 @@ disponible" se reporta por serie.
 - `auditoria.py` (Python 3.11, solo biblioteca estandar; xlsx leido con zipfile +
   xml.etree) recalcula todo sin red desde `datos/` y escribe `resultados.json`.
 
+### 2.7 Adenda 1 (2026-09-25, despues de descargar y ANTES de calcular cualquier estadistico)
+
+Al inspeccionar solo cabeceras y rangos de fechas de los archivos descargados:
+
+1. La hoja UMD de AQR SI tiene columna "North America" (ademas de USA y CAN). Por 2.1
+   ("Norteamerica si existe") se usa "North America" como comparable de North_America de
+   French; USA y CAN se reportan aparte como complemento. Esto sustituye la frase de 2.5 que
+   suponia que no existia.
+2. Los archivos de French (base "202608 Bloomberg") terminan en 2026-08; el archivo de AQR
+   termina en 2026-07. Las ventanas V1/V2 terminan, por especificacion, en el ultimo mes de
+   cada serie. Diagnostico adicional (no cambia veredictos): para comparar fuentes se reporta
+   la media x12 de A, B y C sobre los meses comunes (interseccion de fechas) de cada par
+   comparable, y las metricas de concordancia (correlacion mensual, media de la diferencia,
+   max |dif|).
+3. Diagnostico de sensibilidad del final de ventana (no cambia veredictos): para Emerging (A y B)
+   se reporta media x12 y compuesto desde 2000-01 y 2010-01 terminando en 2025-12, 2026-07 y
+   2026-08, para poder explicar una posible diferencia con las cifras afirmadas.
+4. Pares comparables A/B vs C (definiciones no identicas): Europe-Europe, Japan-JPN,
+   North_America-North America, Developed_ex_US-"Global Ex USA",
+   Asia_Pacific_ex_Japan-"Pacific" (AQR Pacific incluye Japon; French no: NO equivalentes).
+
 ## 3. Resultados
 
 (pendiente — se completa despues de descargar y calcular)
