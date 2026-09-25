@@ -260,7 +260,7 @@ for h in (30, 90, 120):                    # tasa base: dias con MVRV a +-0.10 d
   - el minorista no puede canjear (mínimo de US$100 mil en USDT);
   - las pérdidas de paridad son cortas pero reales;
   - DeFi puede congelar liquidez;
-  - Tether no tiene auditoría completa (FMI, p. 44).
+  - Tether no tiene auditoría completa (FMI, p. 44). **Adenda (25-sep-2026, G4):** desactualizado desde el 13-ago-2026; Tether tiene una opinión sin salvedades de KPMG EUA sobre 2025. No cambia la decisión de reserva en MXN: ver `conocimiento/cripto/04-riesgos-fraude-hackeos-y-seguridad.md`, contradicción #11.
   - **Por eso la reserva va en MXN.**
 - **Regulación:**
   - GENIUS: reservas líquidas, sin intereses, emisores extranjeros con régimen comparable, bancos solo por medio de una subsidiaria (FMI, pp. 40-44).

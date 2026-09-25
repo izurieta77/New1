@@ -111,6 +111,7 @@
   - El otro es el **contagio del ecosistema**: USDT con Terra en 2022.
   - Hay un tercero que el FMI no cubre: la **congelación de liquidez en DeFi**. En abr-2026, el exploit de KelpDAO dejó los mercados de USDC y USDT de Aave al 100% de utilización ≈ 135 horas, según CoinDesk del 20 y 21-abr-2026. La stablecoin mantuvo su paridad, pero el depósito quedó atrapado.
   - [I, nuestra] Para la cuenta de Binance, **la reserva va en MXN** (decisión del comité) y USDT se usa solo de paso en la ruta MXN→USDT→BTC. El FMI da dos motivos: el canje mínimo de US$100 mil y la falta de auditoría completa de Tether (pp. 9 y 44).
+  - **Adenda (25-sep-2026, G4):** el dato del FMI (dic-2025) quedó desactualizado el 13-ago-2026, cuando Tether anunció una opinión sin salvedades de KPMG EUA sobre sus estados de 2025 (confirmada por KPMG). No cambia la decisión: el colchón de Tether sigue delgado (2.2% de sus pasivos) y una caída conjunta de 16.7% en BTC y oro lo borra (ver `conocimiento/cripto/04-riesgos-fraude-hackeos-y-seguridad.md`, contradicción #11). El canje mínimo de US$100 mil sí sigue vigente.
 - **Las stablecoins miden la liquidez en dólares dentro de cripto.**
   - Con DefiLlama, la oferta creció **+49.6% en 2025** (205.9 → 308.0 mil M) y **+1.9% en 2026** al 25-sep (313.9), con pico de 322.4 el 17-may-2026.
   - [I, nuestra] Una oferta plana significa que no entran dólares nuevos. Glassnode (semana 37) usa una banda de crecimiento a 30 días de 1.5-2.9% como "combustible"; eso es grado C.

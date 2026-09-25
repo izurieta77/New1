@@ -38,6 +38,10 @@
 - las atestaciones y la auditoría de Tether;
 - las distribuciones de FTX.
 
+**Precisiones sobre esas fuentes:**
+- **Tether:** leí su comunicado del 2T-2026, con las cifras exactas que "afirma la administración" y que BDO atestigua, más la cobertura de CoinDesk. **No abrí el PDF de BDO.**
+- **SBF:** de la sentencia leí solo la hoja 1 (culpable de 7 cargos; imposición el 28-mar-2024). La pena de 25 años la confirman el DOJ (resultado de búsqueda), Al Jazeera (leída) y la prensa.
+
 **Nivel: resumen.** Nada de esta ficha afirma lo que dice un capítulo concreto del libro, salvo lo que describen la editorial, el autor en su entrevista o las reseñas, y siempre se indica cuál.
 
 ## 3. Lo esencial
