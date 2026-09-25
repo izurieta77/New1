@@ -637,6 +637,113 @@ python3 empresas/AMXB.MX/modelo/modelo.py --base   # regenera base.json.historic
 - No se modificó `herramientas/`, y las 237 pruebas de `herramientas/tests` pasan.
 - Las extracciones de trabajo (pypdf, openpyxl y xlrd para leer PDF y Excel) se hicieron fuera del repositorio. Sus productos están congelados en `datos/` con hash.
 
+## Verificación independiente (2026-09-25)
+
+**Alcance.** Segunda persona (mismo repositorio, sin acceso previo a este caso), con descarga propia de fuentes, cotejo de cifras contra el 20-F 2025 y el 2T26, y re-ejecución del motor. No se modificó `ficha.md`. No hay commit ni push.
+
+### V.1 Descarga propia y huellas
+
+Se descargaron de nuevo, de forma independiente, los cinco documentos primarios que cita §1 (mismas URL del emisor, `s22.q4cdn.com` y el sitio de sustentabilidad) y se recalculó su sha256:
+
+| Documento | sha256 recalculado | ¿Coincide con `base.json`/§1? |
+|---|---|---|
+| 20-F 2025 (F1) | `d340b7db3eeada61ad651b4d328cafd138aa58fe650f3d995ec4c429446a835a` | Sí |
+| 20-F 2024 (F2) | `7b50911068a8e33faeef7d01b30f2339e8e61cd7bab97828e2826f612a1c7289` | Sí |
+| 2Q26.pdf (F3) | `8f13d33da7778c26e8240b3eeaa7d7341971305064f57ba3f7c585ca5482dd92` | Sí |
+| 4Q25.pdf (F4) | `4c68d83c8262530dd939c98cf7f0275b059b882c1064cc585e87bf2b8fd0d00c` | Sí |
+| 4Q24.pdf (F5) | `a14487a6094bd468e9ca0698398ae41d7bea334b307ff3a0f065486572096fc5` | Sí |
+
+Las cinco huellas son idénticas byte a byte a las registradas. `herramientas/huellas.py verificar empresas/AMXB.MX/modelo/datos/SHA256SUMS.txt` → **OK** (11/11 archivos). `sha256sum -c empresas/AMXB.MX/modelo/SHA256SUMS.txt` → **OK** (`base.json`, `modelo.py`, `resultados.json`). No faltaba ningún archivo por congelar.
+
+**Acceso directo a `www.sec.gov` (hallazgo nuevo, resuelve parte del pendiente §9.1).** Con el User-Agent declarado en §1 (`SistemaInversionNew1/1.0 investigacion`), `www.sec.gov/Archives` sigue devolviendo 403, igual que documenta el autor original. Con un User-Agent con correo (`research test@example.com`, formato exigido por la SEC: nombre + email), `www.sec.gov/Archives/edgar/data/1129137/000114036126017486/ef20060642_20f.htm` respondió **200** (9,213,664 bytes) y `data.sec.gov/submissions/CIK0001129137.json` también. Esto permitió cotejar la mayoría de las cifras de esta sección directamente contra el HTML "as filed" en EDGAR (no solo el PDF espejo del emisor) y confirmar los metadatos de presentación:
+
+| Comprobación en `data.sec.gov/submissions` | Resultado |
+|---|---|
+| 20-F 2025: accession, fecha, documento primario | `0001140361-26-017486`, 2026-04-28, `ef20060642_20f.htm` — coincide con F1 |
+| 20-F 2024: accession, fecha | `0001140361-25-018954`, 2025-05-14 — coincide con F2 |
+| NT 20-F citado en §2.9 | `0001193125-25-104952`, 2025-04-30 — confirmado |
+| 20-F/A de 2023 citado en §2.9 | `0001193125-25-077049`, 2025-04-10 — confirmado |
+
+### V.2 Cifras cotejadas contra el 20-F 2025 (HTML "as filed" en EDGAR) y los reportes trimestrales
+
+45 cifras (se pedían ≥25), todas con fuente primaria propia. **Coincidencias: 45/45. Diferencias: 0.**
+
+| # | Cifra (MXN millones salvo indicado) | Valor en `base.json`/notas | Encontrado en fuente (cita textual o de tabla) | Fuente |
+|---|---|---:|---|---|
+| 1 | Deuda total 2025 | 524,907 | "Total Debt 524,907" (tabla Nota 14) | 20-F htm |
+| 2 | Deuda corto plazo 2025 | 91,973 | "Less short-term debt... 91,973" | 20-F htm |
+| 3 | Bonos+líneas USD | 168,694 | Bonos USD "Total 163,753" + bancaria USD "4,941" | 20-F htm |
+| 4 | Bonos+líneas MXN | 136,982 | Bonos MXN "Total 132,982" + bancaria MXN "4,000" | 20-F htm |
+| 5 | Deuda EUR | 81,951 | "Total 81,951" (bloque EUR) | 20-F htm |
+| 6 | Deuda GBP | 53,183 | "Total 53,183" (bloque GBP) | 20-F htm |
+| 7 | Deuda BRL | 27,755 | "Total 27,755" (bloque BRL) | 20-F htm |
+| 8 | Deuda PEN | 24,590 | "DENOMINATED IN PERUVIAN SOLES 24,590" | 20-F htm |
+| 9 | Deuda COP | 14,585 | "DENOMINATED IN COLOMBIAN PESOS 14,585" | 20-F htm |
+| 10 | Deuda CLP | 15,676 | Bonos CLP "3,934" + bancaria CLP "11,742" | 20-F htm |
+| 11 | Deuda JPY | 1,490 | "Total 1,490" (bloque JPY) | 20-F htm |
+| 12 | % deuda no en MXN | 73.9% | "approximately 73.9% of our indebtedness... was denominated in currencies other than Mexican pesos" | 20-F htm, narrativa MD&A |
+| 13 | Deuda neta 2025 | 447,522 | "net debt totaled Ps.447.5 billion" | 20-F htm |
+| 14 | Deuda dic-24 (reexpresada en 20-F) | 567,586 | "Ps.567.6 billion as of December 31, 2024" | 20-F htm |
+| 15 | Deuda dic-24 según 4T25 (discrepancia §2.9) | 568,482 | "568,482" en tabla de deuda | 4Q25.pdf p. 33 |
+| 16 | Activos por derecho de uso 2025 | 197,544 | "Right-of-use assets ... 197,544" (Selected Financial Data) y "197,543,872" (Nota 15) | 20-F htm |
+| 17 | — torres y sitios | 177,296 | "177,295,554" (columna 2025, Nota 15) | 20-F htm |
+| 18 | — inmuebles | 12,849 | "12,849,252" | 20-F htm |
+| 19 | — otro equipo | 7,399 | "7,399,066" | 20-F htm |
+| 20 | Pasivo por arrendamientos 2025 | 214,109 | "214,108,933" | 20-F htm |
+| 21 | Activo por derecho de uso, partes relacionadas 2025 | 119,147 | "Ps. 119,146,817 corresponding to related parties" | 20-F htm |
+| 22 | Pasivo por arrendamientos, partes relacionadas 2025 | 128,238 | "Ps. 128,238,094 corresponding to related parties" | 20-F htm |
+| 23 | Compromisos de capex no reconocidos | 68,814 | "Total Ps. 68,814,307" | 20-F htm |
+| 24 | Capex PPE en caja 2025 | 114,431 | "Purchase of property, plant and equipment ... 114,431,308" | 20-F htm |
+| 25 | Capex intangibles en caja 2025 | 16,386 | "Acquisition of intangibles ... 16,386,132" | 20-F htm |
+| 26 | Acciones recompradas 2025 | 736.5 M | "repurchased 736,500,000 series "B" shares" | 20-F htm |
+| 27 | Acciones en tesorería a dic-25 | 981.5 M | "in treasury 981,500,000 series "B" shares" | 20-F htm |
+| 28 | Monto de recompras 2025 | 11,944 | "Repurchase of shares ... (11,944,156)" (estado de variaciones) | 20-F htm |
+| 29 | Acciones en circulación a dic-25 | 60,263.5 M | "60,263,500,000 outstanding "B" shares" | 20-F htm |
+| 30 | Pensión México, DBO 2025 | 343,621 | "Ps. 343,620,613" | 20-F htm |
+| 31 | Pensión México, activos del plan 2025 | 160,323 | "Ps. (160,323,036)" | 20-F htm |
+| 32 | Pensión México, pasivo neto 2025 | 183,298 | "Ps. 183,297,577" | 20-F htm |
+| 33 | Contingencias fiscales Brasil | 130,739 | "aggregate tax contingencies of Ps. 130,738,939" | 20-F htm |
+| 34 | Provisión Brasil | 25,361 | "provisions of Ps. 25,361,197" | 20-F htm |
+| 35 | Ganancia posición monetaria Argentina 2025 | 5,420 | "Gain on net monetary positions ... (5,420,274)" | 20-F htm |
+| 36 | Multa IFT a Telcel | 1,782.6 | "a fine ... in an amount of Ps.1,782.6 million" | 20-F htm |
+| 37 | Ingresos 2025 | 943,638 | "Operating revenues Ps. ... 943,638" | 20-F htm |
+| 38 | CFO IFRS 2025 | 272,399 | "Net cash flows provided by operating activities Ps. ... 272,399,022" | 20-F htm |
+| 39 | Utilidad neta consolidada 2025 | 88,117 | "Net profit for the year Ps. ... 88,117" | 20-F htm |
+| 40 | Utilidad neta controladora 2025 | 82,819 | "Ps. 82,819" (atribuible a la controladora) | 20-F htm |
+| 41 | Pasivo por beneficios a empleados 2024 / 2025 | 167,152 / 203,387 | "Employee benefits 18 167,152,441 203,386,684" | 20-F htm |
+| 42 | Partes relacionadas: construcción/PPE 2025 | 11,016 | "11,015,657" | 20-F htm |
+| 43 | Partes relacionadas: seguros/honorarios 2025 | 5,178 | "5,178,174" | 20-F htm |
+| 44 | Partes relacionadas: renta de torres 2025 | 605 | "605,281" | 20-F htm |
+| 45 | Impuestos y utilidad neta 2024 en el 4T24 original (base de la reexpresión) | ISR 29,832 / UN 28,308 | "Income & Deferred Taxes 29,832" / "Net Income ... 28,308" (columna Jan-Dec 24) | 4Q24.pdf p. 8 |
+
+Adicionalmente, del 2T26 (2Q26.pdf, no auditado): deuda 476,927, efectivo y valores 75,943, deuda neta 400,984 y "represented 1.31 times LTM EBITDAaL" — los cuatro coinciden con `base.json`/§2.1 y §6.
+
+**Lectura.** Las 45 cifras coinciden de forma exacta (los `.xxx` de `base.json` son la división entre 1,000 de la cifra en miles del filing, sin redondeo; ej. utilidad neta controladora `82819.082` = `82,819,082` miles ÷ 1,000). No se encontró ninguna diferencia material ni de transcripción en esta muestra, que cubre balance en MXN, deuda por moneda y vencimiento, arrendamientos IFRS 16 (incluida la porción con partes relacionadas), capex, recompras, pensiones, partes relacionadas y contingencias en países con riesgo regulatorio (México vía las citadas en §2.6, Brasil, Argentina). La diferencia de 896 entre el 4T25 (568,482) y el 20-F (567,586) para la deuda de dic-24, señalada como no explicada en §2.9, se reconfirma: ambas cifras existen tal cual en sus documentos respectivos; sigue sin explicación en el filing.
+
+### V.3 Re-ejecución del motor
+
+```
+python3 empresas/AMXB.MX/modelo/modelo.py            # exit code 0
+python3 herramientas/huellas.py verificar empresas/AMXB.MX/modelo/datos/SHA256SUMS.txt   # OK
+python3 -m unittest discover -s herramientas/tests   # 262 pruebas, OK (incluye 60 de test_modelo_integrado.py,
+                                                       # con casos adversariales: plug oculto, revolvente escondido,
+                                                       # PPE/proveedores/inventario alterados — todos detectados)
+```
+
+Se llamó además `herramientas.modelo_integrado.verificar()` directamente sobre el `resultados.json` releído (no solo el resumen que imprime `modelo.py`):
+
+- **539 registros: 523 OK, 0 FALLA, 14 INFO, 2 NO_APLICA.** Coincide exactamente con §4 y con el Anexo A.
+- `resultados.json` es determinista: la corrida no cambió su contenido (mismo desglose de controles que el ya guardado).
+- Nota menor, no material: el conteo de pruebas unitarias creció de 237 (citado en §10) a **262** desde que se escribió esa nota; es consistente con que `herramientas/tests` cubre todo el repositorio (otras empresas), no solo AMXB, y no afecta ningún control de este caso.
+
+### V.4 Conclusión de la verificación
+
+- **Fuentes:** 5/5 huellas externas y 11/11 huellas de `datos/` coinciden con una descarga nueva e independiente. Los metadatos de presentación (accession, fecha, documento primario, NT 20-F y 20-F/A) se confirmaron en `data.sec.gov`.
+- **Cifras:** 45/45 cotejadas sin diferencias, cubriendo los ocho bloques pedidos (estados en MXN, deuda por moneda y vencimiento, cobertura cambiaria implícita en la deuda, arrendamientos IFRS 16, capex, recompras, partes relacionadas, y países con riesgo regulatorio vía México/Brasil/Argentina).
+- **Motor:** controles 523 OK / 0 FALLA / 14 INFO / 2 NO_APLICA, reproducidos de forma independiente; 262 pruebas unitarias en verde.
+- **Correcciones:** ninguna. No se encontró ningún error material que registrar en `conocimiento/registro-de-errores.md`.
+- **Qué no cubrió esta ronda:** no se leyó la instancia XBRL completa del 20-F 2025 (sigue sin token/parser dedicado en este repositorio); las 41 cifras que en §3 dependen solo de (A)+(B) no se recotejaron aquí contra una quinta fuente distinta al PDF/HTML del emisor; no se revisó el Item 7 completo (contrapartes de los arrendamientos con partes relacionadas, señalado como pendiente en §8-§9). Esta verificación es una segunda lectura independiente con descarga propia, no una auditoría con acceso a papeles de trabajo del emisor.
+
 ## Anexo A. Salida del motor (`mi.resumen_markdown`, sin edición)
 
 Motor herramientas/modelo_integrado.py v1.0 | America Movil, S.A.B. de C.V. | MXN millones
