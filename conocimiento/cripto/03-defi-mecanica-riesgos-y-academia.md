@@ -119,7 +119,7 @@
 ### 2.5 MEV
 
 - **[H] Definición.** Es el valor que puede extraer quien ordena, incluye o excluye transacciones: front-running, back-running, sándwich, liquidaciones, arbitraje y censura.
-- **[H] Tamaño** (Qin, Zhou y Gervais): en 32 meses (dic-2018 a ago-2021) sumó **540.54 M USD**: sándwiches 174.34 M, liquidaciones 89.18 M y arbitraje 277.02 M. Finematics estima más de 320,000 ETH desde el Merge hasta oct-2023 (~786 ETH/día, verificado).
+- **[H] Tamaño** (Qin, Zhou y Gervais): en 32 meses (dic-2018 a ago-2021) sumó **540.54 M USD**: sándwiches 174.34 M, liquidaciones 89.18 M y arbitraje 277.02 M. Finematics estima más de 320,000 ETH desde el Merge hasta oct-2023. Eso da ~786 ETH/día en 407 días (mi cálculo); la cifra total no la verifiqué con otra fuente.
 - **[H] Arquitectura.** Se pasó de subastas públicas de gas (PGA) a Flashbots (~90% del hashrate) y luego a MEV-Boost y PBS (~90% de los validadores). Cinco *builders* construían ~90% de los bloques (Finematics, oct-2023).
 - **[I] Regla del sándwich** (simulación, apéndice A): el atacante puede extraer, aproximadamente, **la tolerancia de deslizamiento por el monto de la víctima**.
   - $50k con 1% de tolerancia en un pool de $2M con comisión de 0.30%: ~$448.
@@ -227,7 +227,7 @@ Mismo choque, resultados muy distintos: lo que decide es cuánto apalancamiento 
 - **Mandato.** Solo spot: sin DeFi, sin préstamos y sin staking con bloqueo. Esto no es una opinión: es la regla.
 - **[I] Incluso sin la regla, la apuesta es asimétrica.**
   - 5% anual sobre 5,000 MXN son 250 MXN al año, unos 21 MXN al mes.
-  - Un evento de −20% (la pérdida impermanente con el precio ×4, o la caída de USDC) cuesta 1,000 MXN: cuatro años de rendimiento.
+  - Un evento de −20% (la pérdida impermanente con el precio ×4) cuesta 1,000 MXN: cuatro años de rendimiento. La caída de USDC a su mínimo (−13%) habría costado ~650 MXN.
   - Un hackeo o una corrida (Terra, Fei/Rari, Beanstalk) puede costar 100%.
 - **[H] Los rendimientos altos suelen ser subsidios.** Anchor pagaba 19.5% financiado con emisión (NBER). Iron Finance pagaba 500% y 1,700% (Finematics).
 - **[H] Las auditorías no bastan.** "*The majority of hacked protocols had a security audit*" (rekt.news, citado por Finematics). "*DeFi attacks stole over $1B in 2021*" (MOOC, clase 1).
@@ -276,7 +276,7 @@ Los umbrales son **tentativos, míos y sin prueba histórica**. Sirven para abri
 | Mínimo de UST el 9-may-2022 | Harvey y CoinDesk: $0.35 | NBER: $0.75 la noche del 9-may | Posibles mínimos intradía por mercado. **No resuelto** |
 | Pérdida de Terra | Harvey: ~$40 mil M | NBER: $50 mil M de valuación previa | Miden cosas distintas: pérdida contra valuación |
 | Pérdida impermanente con "+500%" | Finematics: 25% | Fórmula: 25.46% es 5 veces (+400%); +500% da 30.0% | Error de redacción de Finematics |
-| Escalabilidad | Harvey (2021) y Coursera (2026): "15 TPS"; los rollups optimistas "*have yet to deliver*" | Finematics (ago-2021): rollups de 1,000-4,000 TPS; Optimism y Arbitrum en uso | El dato de Harvey envejeció y el curso vigente no lo actualizó |
+| Escalabilidad | Harvey (2021) y Coursera (2026): "15 TPS"; los rollups optimistas "*have yet to deliver*" | Finematics (ago-2021): rollups de 1,000-4,000 TPS; presenta Optimism y Arbitrum como "*the most popular options*" | El dato de Harvey envejeció y el curso vigente no lo actualizó |
 | Estabilidad financiera | Harvey (2024): con un TVL de $57 mil M, DeFi "*not in the realm of a financial stability concern*" | MOOC (Gudgeon et al.): prueba de estrés de crisis DeFi; NBER: Terra desató las caídas de Celsius y Three Arrows y contribuyó a la de FTX | El contagio ocurrió por canales cripto-cripto y de CeFi cripto. El TVL mide mal el riesgo |
 | Descentralización y regulación | a16z (Walden y Kupor): con descentralización suficiente, el token "*can change from security to non-security*" | Harvey: dictamen de la SEC sobre The DAO (2017), cierre de Basis y escrutinio a los tokens de gobernanza | Tesis de un fondo interesado frente a riesgo regulatorio documentado |
 | Inclusión | Harvey: "1.7 mil millones de no bancarizados" como argumento | La mecánica de todos los recursos exige sobrecolateralización | [I] El préstamo DeFi no atiende a quien no tiene colateral |

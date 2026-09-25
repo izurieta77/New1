@@ -224,7 +224,7 @@ Explica por qué la distinción importa en nuestros documentos y en el umbral E5
 4. **Acusado principal del caso Genesis:** **se declaró culpable** de conspiración RICO el 8-sep-2026 y **espera sentencia**. Hay 18 acusados y 3 coacusados ya sentenciados.
 5. **Operador de Mango Markets:** un jurado lo había declarado culpable, pero **el 23-may-2025 el juez anuló las condenas** por fraude y manipulación y lo **absolvió** de un tercer cargo.
 6. **Presidente de Prince Group:** **acusado** en EUA y **designado** por OFAC. Fue arrestado en Camboya y **extraditado a China** (ene-2026). No tiene sentencia en EUA.
-7. **LayerZero:** **demandado** en un proceso civil en Columbia Británica (25-sep-2026). LayerZero dice que la demanda "no tiene mérito".
+7. **LayerZero:** **demandado** en un proceso civil en Columbia Británica (demanda del 24-sep-2026, reportada el 25). LayerZero dice que la demanda "no tiene mérito".
 8. **Binance frente a Irán:** es una **investigación reportada por la prensa** (Bloomberg, 22-sep-2026). No hay acusación ni fuente primaria del DOJ.
 
 **Por qué importa:**

@@ -115,7 +115,7 @@ Etiquetas: [H] hecho con fuente · [I] inferencia · [O] opinión del autor.
     - DAI: $1.5 mil M.
     - Las algorítmicas se describen como modelos de señoreaje con bonos; el problema de una stablecoin descentralizada que escale "*is still an open problem*". Aquí es donde aparece Fei, el conflicto de interés de §1.
 16. **[H] MEV** (deck 3, láminas 9-11): "*Miner extractable value... a measure of the profit that the miner could make by including, excluding or re-ordering transactions... a drawback to the proof-of-work model*". Se mitiga ocultando transacciones; cita a Paradigm Research.
-17. **[H] Escalabilidad** (deck 6): "*Ethereum is currently limited to a maximum of 15 TPS*", contra 65,000 de Visa; "*Optimistic rollups have yet to deliver functional mainnets*" (mar-2021). Envejeció rápido: en ago-2021 Finematics ya presentaba Optimism y Arbitrum como las opciones más usadas ([03](03-finematics.md)).
+17. **[H] Escalabilidad** (deck 6): "*Ethereum is currently limited to a maximum of 15 TPS*", contra 65,000 de Visa; "*Optimistic rollups have yet to deliver functional mainnets*" (mar-2021). Envejeció rápido: en ago-2021 Finematics ya presentaba Optimism y Arbitrum como "*the most popular options*" entre los rollups optimistas ([03](03-finematics.md)).
 18. **[H] Custodia** (deck 6): hackeos de exchanges:
     - Mt. Gox (2011-2014): 850k BTC;
     - Bitfinex (2016): 120k BTC;
