@@ -55,7 +55,7 @@ Anual [3][4]:
 ## 5. Cadena causal
 **A. Consumo débil en México y competencia.** Exposición: México es 47% de las ventas → efecto: sell-in −4.4% y reducción de inventario en el canal → estado financiero: desapalancamiento operativo con margen UAFIDA de 21.8% → valuación: P/U de 8x → precio: −32% en 12 meses. *Inferencia:* el mercado descuenta un deterioro estructural, no cíclico, contra la tesis de la dirección [3].
 **B. IEPS a bebidas no calóricas (2026).** Exposición: bebidas (Suerox) son 19% de las ventas de 2T26 → efecto: precio relativo al alza, compensado con productividad → estado financiero: margen bruto de 64.6% (+106 pb) [1] → neutral hasta hoy.
-**C. Peso fuerte y Argentina.** USD/MXN promedió 17.22 en 3T26 contra 18.39 en 3T25 (−6.4%) [10] → las ventas en EUA pierden ~6% por conversión. La depreciación del peso argentino (−24% contra el MXN en 2T26 [1]) resta ventas bajo IAS 29.
+**C. Peso fuerte y Argentina.** USD/MXN promedió 17.22 en 3T26 a la fecha (Yahoo [10]) contra 18.64 en 3T25 (promedio de Banxico según el reporte de 3T25 de GCC), −7.6% → las ventas en EUA pierden ~7.6% por conversión. La depreciación del peso argentino (−24% contra el MXN en 2T26 [1]) resta ventas bajo IAS 29.
 **D. Cambio de CEO (17-sep).** Exposición: ejecución de los lanzamientos → efecto: incertidumbre sobre la continuidad del plan de Sparvieri → *inferencia:* la estrategia 2027 dependerá de Genomma Day (3-dic).
 
 ## 6. Qué descuenta el precio
@@ -91,3 +91,25 @@ Historia (P/U al cierre del año): 13.3x en 2023, 12.1x en 2024 y 11.1x en 2025.
 10. Yahoo Finance chart y quote de LABB.MX, KVUE, HLN, KIMBERA.MX y MXN=X (consultados el 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/LABB.MX · `herramientas/dossier.py` (empresas/LABB.MX/dossier-2026-09-25.md)
 11. HR Ratings, reporte de Genomma Lab (11-dic-2025): https://www.hrratings.com/pdf/Reporte_Genomma_Lab_2025_sl.pdf
 12. Conocimiento interno `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.4 (sección 232 a fármacos), actualizado el 25-sep-2026.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: reporte 2Q26 de Genomma Lab (íntegro: resumen, regiones y unidades, capital de trabajo, razones de deuda y eventos posteriores), 3Q25 (UPA proforma y fecha), 3Q24 (fecha), 4Q24 y 4Q25 (UPA y utilidad neta), y el comunicado de PR Newswire del 17-sep-2026 sobre la transición de CEO. También se consultaron de nuevo la tabla de resultados de Investing.com y Yahoo chart el 25-sep. La transcripción del call de 2T26 es de Investing.com: fuente secundaria.
+
+**Correcto (hecho verificado):**
+- 2T26: ventas netas de Ps 4,397.0 M (−6.0%; −3.6% comparable), UAFIDA de 958.6 (21.8%), utilidad de operación de 877.2 (19.9%; 22.0% en 2T25), utilidad neta de 374.5 (+5.5%) y UPA de **Ps 0.37** [1]. México 2,074.2 (−4.4%), Latam 1,989.1 (−2.7%; +3.9% comparable) y EUA 333.7 (−27.7%). Bebidas: 853.2 (19.4%).
+- Consenso (Investing.com, 25-sep, en MXN): 3T26 con UPA de Ps 0.460, sin consenso de ingresos, y fecha del 28-oct. En 2T26 fue de 0.54 y 4.47 mil M (−31.5% y −1.6%). En 3T25, Investing registró como real la UPA proforma de 0.63; la ficha ya lo advierte y el pronóstico se resuelve con la UPA reportada.
+- Fecha: no hay calendario de la emisora. La página de calendario del sitio de RI está comprometida con contenido ajeno (spam de casino), así que no sirve como fuente. Los reportes de 3T25 y 3T24 están fechados el 22-oct-2025 y el 23-oct-2024. La ventana de 21 a 28 de octubre es razonable.
+- Guía (call, 23-jul): margen UAFIDA "en el rango de 21% a 22% durante 2026" y recuperación gradual hacia 23-24% en 2027. Sell-out positivo esperado en México en 3T y "cinco lanzamientos adicionales" en 2S26 [8].
+- Cadena causal: (1) sell-out en México de −4.0%, brecha de 43 pb frente al sell-in y +2.4% en las dos primeras semanas de julio, con contracción de isotónicos (−6.6%) y OTC (−6.3%) [1]; (2) margen bruto de 64.6% (+106 pb) con el nuevo impuesto a bebidas no calóricas "fully-absorbed" [1]. También: crédito con Bancomext por Ps 1,500 M firmado el 13-jul (~50% dispuesto), ciclo de conversión de efectivo de 129 días, DN/UAFIDA de 1.38x y DSCR de 5.23x. Rodrigo Herrera Aspra será director general interino desde el 1-ene-2027, por 12 a 18 meses, y el Genomma Day será el 3-dic-2026 en Nueva York [5].
+- La UPA de 4T24 de 0.37 es la del reporte (Investing registra 0.47: error del agregador). Utilidad neta de 3T25: 434.1.
+- Escenarios: 35 + 45 + 20 = 100%. Periodo trimestral, en MXN, con UPA reportada (el consenso puede mezclar proforma, como ya advierte la ficha). No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. §5.C, tipo de cambio de 3T25: decía 18.39 (−6.4%), que es el tipo de cambio de cierre del 30-sep-2025 (18.3825), no el promedio. El promedio de 3T25 fue de **18.64** (Banxico, según el reporte de 3T25 de GCC): la variación es **−7.6%**, y la pérdida de ventas de EUA por conversión es de ~7.6%, no de ~6%. El supuesto de EUA de −25% en MXN no cambia, porque ya incluía la caída en moneda local.
+2. `pronosticos.csv`: los criterios ahora piden la columna trimestral y no la de nueve meses.
+
+**Revisado sin cambio:** los intervalos de 80% son adecuados. En UPA, 0.28-0.52 (−32%/+27%) contra una sorpresa histórica de −31%, +9%, −38%, +19% (proforma), −33%, +4%, −20%, +22% y 0%: aplicada al consenso de 0.46, dos de nueve análogos (0.55 y 0.56) quedan arriba del p90 y ninguno debajo del p10. En ventas, ±6.6% contra una sorpresa con desviación estándar de ~4.9% (80% ≈ ±6.3%). Los binarios concuerdan con los intervalos: P(ventas > 4,441.4) implícita de 0.43 contra 0.42 registrada, y P(UPA > 0.46) de 0.28 contra 0.30. La conversión de utilidad de operación a neta de ~48% supera el promedio de los últimos 6 trimestres (~45%). Con 45%, la UPA sería de ~0.38, dentro del intervalo.
+
+**No verificado o pendiente:** los "16 pagos consecutivos" de dividendo; la mezcla de monedas de la deuda; las acciones en circulación de Yahoo (977.8 M contra ~1,012 M promedio en el reporte, lo que sube ~3.5% la capitalización y el VE si se usa la cifra de la emisora); el precio objetivo del agregador.
+
+**Veredicto:** confiable. Las cifras del último reporte, el consenso, la guía y la cadena causal son correctas. El único error material fue el tipo de cambio promedio de 3T25 (se usó el cierre), y no cambia los pronósticos.
