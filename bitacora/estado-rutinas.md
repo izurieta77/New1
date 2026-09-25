@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-25 20:41 UTC · arranque inteligencia-y-cripto · OK · b88da18 · sesión lista
 2026-09-25 20:40 UTC · arranque supervision-conciliacion-revision · OK · b88da18 · sesión lista
 2026-09-25 20:20 UTC · orquestador · OK · (este commit) · reglas del motor en rutinas/REGLAS-MOTOR.md; portafolio de papel pendiente de comité
 2026-09-25 17:55 UTC · laboratorio · PARCIAL · 02d2c27 · AC-04 auditoría ciega de R04; quedó esperando respuesta del dueño (resuelta en REGLAS-MOTOR §7)
