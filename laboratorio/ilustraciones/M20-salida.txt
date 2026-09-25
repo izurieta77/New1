@@ -1,0 +1,21 @@
+French diario: 1926-07-01 -> 2026-07-31 version 202607
+
+== Colas: Mercado EUA diario (French, log) (n=26296)  media=0.00037 sd=0.01079 asim=-0.46 curtosis=20.0
+  |z|>3: observados=463  esperados normal=70.9938  razon=7
+  |z|>4: observados=192  esperados normal=1.6657  razon=115
+  |z|>5: observados=104  esperados normal=0.0151  razon=6899
+  |z|>7: observados=32  esperados normal=0.0000  razon=475407571
+  |z|>10: observados=5  esperados normal=0.0000  razon=inf
+  peor dia=-0.1913  z=-17.8  P_normal~0.0e+00
+  Hill cola izquierda k=131 (0.5% de n): alfa=3.14
+  Hill cola izquierda k=262 (1.0% de n): alfa=2.95
+  Hill cola izquierda k=657 (2.5% de n): alfa=2.74
+
+French mensual: 1926-07-31 -> 2026-07-31
+  Exceso mensual: media=0.00694 (8.329%/a) sd=0.0530 (18.36%/a) SR anual=0.454 anos=100.1
+  EE media anual = sd_anual/sqrt(T) = 1.836%; t=SR*sqrt(T)=4.54
+  t iid=4.54 t NW(6)=4.39
+  1926-1955: prima anual=10.86%  EE=4.48%  SR=0.45
+  1956-1985: prima anual=4.85%  EE=2.68%  SR=0.33
+  1986-2015: prima anual=7.68%  EE=2.83%  SR=0.50
+  1996-2025: prima anual=8.94%  EE=2.87%  SR=0.57

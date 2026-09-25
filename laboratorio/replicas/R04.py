@@ -545,7 +545,21 @@ def main() -> dict:
     # ------------------------------------------------ pruebas del efecto
     rf_us_d = dict(rf_us)
     cetes_d = dict(cetes)
-    log_us, log_mx, log_naf = a_log_pct(mercado), a_log_pct(mxx), a_log_pct(naf)
+    # Mexico y NAFTRAC: solo meses comunes con CETES (pre-registro, seccion 6: "hasta el ultimo mes
+    # comun con CETES"); ^MXX llega a 2026-08 y CETES a 2026-07.
+    log_us = a_log_pct(mercado)
+    log_mx = [(f, v) for f, v in a_log_pct(mxx) if f in cetes_d]
+    log_naf = [(f, v) for f, v in a_log_pct(naf) if f in cetes_d]
+    print(f"- Muestra comun ^MXX-CETES: {log_mx[0][0]} a {log_mx[-1][0]} (n={len(log_mx)}); "
+          f"NAFTRAC-CETES: {log_naf[0][0]} a {log_naf[-1][0]} (n={len(log_naf)})")
+    # chequeo de datos de NAFTRAC contra ^MXX (Yahoo reporta para NAFTRAC una fecha de referencia vieja)
+    mxx_d = dict(mxx)
+    pares = [(r, mxx_d[f]) for f, r in naf if f in mxx_d]
+    ra, rb = [p[0] for p in pares], [p[1] for p in pares]
+    print(f"- Chequeo NAFTRAC vs ^MXX (rendimientos mensuales comunes, n={len(pares)}): correlacion="
+          f"{statistics.correlation(ra, rb):.4f}; media NAFTRAC - media ^MXX = {statistics.fmean(ra) - statistics.fmean(rb):.5f} "
+          f"por mes; meses con NAFTRAC exactamente 0: {sum(1 for r in ra if r == 0.0)}; "
+          f"ultimo precio NAFTRAC {hn['fechas'][-1]} = {hn['precios'][-1]:.4f}")
     efecto = {"US": {}, "MX": {}}
     for nombre, f0, f1 in VENTANAS_EFECTO["US"]:
         efecto["US"][nombre] = pruebas_efecto(log_us, rf_us_d, f0, f1)
