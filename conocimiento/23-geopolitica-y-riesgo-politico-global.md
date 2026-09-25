@@ -2,7 +2,7 @@
 
 > Nivel: experto · Actualizado 2026-09-25 · Grado global: **B** (la medición y los efectos promedio están bien documentados; el *timing* táctico alrededor de eventos es **C**)
 
-Capítulos relacionados, que aquí no se repiten: [04 Renta fija y macro](04-maestria-renta-fija-tasas-macro.md) · [11 México](11-mexico.md) · [13 Estado del mercado](13-estado-del-mercado.md) · [15 Eventos corporativos](15-eventos-corporativos-y-situaciones-especiales.md) · [16 Macro, FX y peso](16-macro-global-divisas-y-el-peso.md) · [17 Crisis](17-crisis-burbujas-libro-de-patrones.md) · [22 Fuentes de datos con IA](22-fuentes-de-datos-ia.md) (11, 13 y 22 aún en redacción; verificar el nombre final del archivo). Los parámetros de riesgo salen de `config/parametros.json`.
+Capítulos relacionados, que aquí no se repiten: [04 Renta fija y macro](04-maestria-renta-fija-tasas-macro.md) · [11 México](11-mexico-mercado-instrumentos-fiscalidad.md) · [Estado del mercado: tablero más reciente](../bitacora/briefs/) · [15 Eventos corporativos](15-eventos-corporativos-y-situaciones-especiales.md) · [16 Macro, FX y peso](16-macro-global-divisas-y-el-peso.md) · [17 Crisis](17-crisis-burbujas-libro-de-patrones.md) · [22 Fuentes de datos con IA](22-fuentes-de-datos-y-flujo-de-investigacion-con-ia.md) (11, 13 y 22 aún en redacción; verificar el nombre final del archivo). Los parámetros de riesgo salen de `config/parametros.json`.
 
 **Convenciones.** Hecho = fecha y fuente. "Inferencia:" = razonamiento propio. "Regla:" = recomendación operable. "(no verificado)" = cifra no confirmada en esta sesión.
 
