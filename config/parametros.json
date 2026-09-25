@@ -229,19 +229,19 @@
       "cortacircuitos_drawdown": [
         {
           "nivel": -0.2,
-          "accion": "Reducir 50% la exposición a altcoins; conservar BTC/ETH"
+          "accion": "Reducir la exposición cripto a 50% del valor de la cuenta (vender BTC/ETH a MXN)"
         },
         {
           "nivel": -0.3,
-          "accion": "Solo BTC y ETH spot; nada nuevo fuera de ellos"
+          "accion": "Reducir la exposición cripto a 25% del valor de la cuenta"
         },
         {
           "nivel": -0.4,
-          "accion": "Pausa 1 semana + post-mortem escrito"
+          "accion": "Pausa 1 semana con exposición máxima de 25% + post-mortem escrito"
         },
         {
           "nivel": -0.5,
-          "accion": "Límite duro = tope del dueño: todo a stablecoin/MXN hasta revisión con el dueño"
+          "accion": "Límite duro = tope del dueño: todo a MXN hasta revisión con el dueño"
         }
       ],
       "riesgo_por_operacion": 0.1,
@@ -260,7 +260,8 @@
       "estructura": {
         "nucleo_min": 0.0,
         "satelite_max": 1.0
-      }
+      },
+      "nota_cortacircuitos": "25-sep-2026: corregidos a propuesta del abogado del diablo del comité cripto; la versión anterior solo reducía altcoins y no vendía BTC/ETH antes del -50%."
     }
   },
   "prioridad_actual": {
