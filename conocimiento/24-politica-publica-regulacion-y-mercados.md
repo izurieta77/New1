@@ -474,12 +474,60 @@ T+0: si no hay orden publicada, el instrumento es frágil y no se vende en páni
 - El Financiero, peso en 2024: https://www.elfinanciero.com.mx/economia/2024/06/07/por-que-el-peso-y-los-mercados-enloquecieron-despues-de-las-elecciones-2024/
 - CNN/EFE, peso en 2024: https://cnnespanol.cnn.com/2025/01/01/mexico/fin-superpeso-moneda-mexicana-se-deprecia-efe
 
+**Agregadas en la verificación (2026-09-25)**
+- Bloomberg, *Fixed Income Index Methodology* (8-ene-2026): https://assets.bbhub.io/professional/sites/10/Bloomberg-Index-Publications-Fixed-Income-Index-Methodology.pdf
+- Fed, SEP 16-sep-2026: https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm
+- Wikipedia, Kevin Warsh: https://en.wikipedia.org/wiki/Kevin_Warsh
+- Federal Register, Proclamación 11020 (fármacos): https://www.federalregister.gov/documents/full_text/text/2026/04/09/2026-06956.txt
+- Federal Register, Proclamaciones 11056 y 11063 (Sección 338, Canadá): https://www.federalregister.gov/documents/full_text/text/2026/08/24/2026-17294.txt y https://www.federalregister.gov/documents/full_text/text/2026/09/14/2026-18837.txt
+- Federal Register, propuesta CFTC (texto): https://www.federalregister.gov/documents/full_text/text/2026/06/12/2026-11854.txt
+- Wikipedia, *Learning Resources v. Trump*: https://en.wikipedia.org/wiki/Learning_Resources_v._Trump
+- Wikipedia, Google ad tech: https://en.wikipedia.org/wiki/United_States_v._Google_LLC_(2023)
+- Wikipedia, Paramount-WBD: https://en.wikipedia.org/wiki/Acquisition_of_Warner_Bros._Discovery_by_Paramount_Skydance
+- Polymarket, Senado 2026 (consulta 25-sep-2026): https://polymarket.com/event/which-party-will-win-the-senate-in-2026
+- Banxico, comunicado del 24-sep-2026: https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/%7B7D0BDB6E-E519-9C69-04AA-ABD4D31E4850%7D.pdf
+- Wikipedia, elecciones federales de México de 2027: https://es.wikipedia.org/wiki/Elecciones_federales_de_M%C3%A9xico_de_2027
+- La Silla Rota, pagos de Elektra: https://lasillarota.com/negocios/2026/5/25/grupo-elektra-liquida-primera-parte-de-deuda-fiscal-por-32-mil-mdp-ante-sat-588858.html
+- Belmont et al. (JPubE 2022): https://ideas.repec.org/a/eee/pubeco/v207y2022ics0047272722000044.html
+- Cooper-Gulen-Ovtchinnikov (JF 2010): https://ideas.repec.org/a/bla/jfinan/v65y2010i2p687-724.html
+
 **Literatura académica:** los enlaces están en la tabla de la sección 3.
 
-### Registro de verificación (25-sep-2026)
+---
 
-- **Corrección:** Chen-Parsley-Yang (2015) se publicó en el *Journal of Business Finance & Accounting*, no en el JFQA.
-- **Corrección:** la pausa de Banxico del 24-sep es la **tercera** consecutiva según el listado oficial, no la "cuarta" que reporta Expansión.
-- **Discrepancia:** el tipo de cambio del Paquete 2027 aparece como 17.9 y como 18.0. Queda pendiente confirmarlo en los Criterios Generales.
-- **Discrepancia:** una fuente fecha la aprobación de la Comisión Antimonopolio en Diputados el 31-mar-2026. Aquí se adopta jul-2025, según la prensa de 2025.
-- **No verificado:** la regla de calificación intermedia de los índices; el balance primario y la SHRFSP en fuente primaria; la magnitud de retornos en Cooper-Gulen-Ovtchinnikov.
+## Registro de verificación (2026-09-25)
+
+**Método.** Verificador adversarial. El presupuesto de WebSearch de la sesión ya estaba agotado (200/200), así que todo se contrastó con **WebFetch** directo a fuentes primarias (Fed, Tesoro, Federal Register, SEC, FDA, USTR, Banxico, SHCP, opinión de la SCOTUS, metodología de Bloomberg) o a prensa y bases académicas con fecha: unas 75 consultas y **58 elementos** revisados. No se pudo acceder a CNBC, CNN, Crowell, SSRN, Wiley, La Jornada, el portal de Hacienda ni Kalshi (403, 451 o 503).
+
+**Confirmados (selección).** FOMC del 16-sep: 3.75-4.00%, 12-0, "*inflation remains elevated*", "*timelier return*" (Fed). SEP con 18 participantes y reparto 4/12/2 para 2026. Warsh confirmado 54-45 el 13-may, juró el 22-may y no entregó punto. *Trump v. Cook* 5-4 el 29-jun (opinión primaria). *Slaughter* 6-3 el 29-jun. Calendario FOMC 2026-2027. *Refunding* del 5-ago (58/42/25, US$28.7 mil millones de efectivo nuevo, TGA de US$950 mil millones y US$1.05 billones, próximo anuncio el 4-nov). CR al 11-dic (90-6, 370-48, firma el 2-sep). IEEPA 6-3 el 20-feb. Sección 301 del 24-jul (10/12.5%, 60 economías, México 10% con exención T-MEC y 232). 26 acuerdos MFN (~89%). Remedios de Google del 2-sep sin desinversión. SEC Formulario 10-S del 5-may. FDA séptima CNPV el 8-may. Intel: 433.3 millones de acciones a US$20.47 (9.9%). MP Materials 15%. Paquete 2027: PIB 1.5-2.5%, RFSP 3.9%, tributarios 15.9%, costo financiero 17.2%, Pemex −70%, inflación 3.0%, tasa 6.0%. Banxico: todas las decisiones de 2026, calendario, unanimidad, 4T-2027 y "no ... mecánica". USTR 1-jul. Rondas del T-MEC y 4ª tentativa. Exigencia de 50% de contenido estadounidense. Reforma electoral 259-234-1. Elección judicial en 2028. Intermedias de México el 6-jun-2027. FinCEN 25-jun-2025. Freno a los ataques aéreos (NYT, vía El Financiero, 23-sep). Polos de Bienestar US$17,491.8 millones. Aranceles mexicanos (DOF 29-dic-2025). Comisión Antimonopolio en Diputados el 1-jul-2025 (323-125). Elektra: 48.3 / 32.1 / 13.98, hasta jul-2027. Calificaciones: Moody's Baa3 (20-may), S&P BBB negativa (12-may).
+Literatura con resumen o texto consultado: Bernanke-Kuttner, Lucca-Moench (49 pb, ~80%, 1994-2011), Kurov-Wolfe-Gilbert, Cieslak-Morse-Vissing-Jorgensen, Santa-Clara-Valkanov (9 y 16 pp), Pastor-Veronesi 2020, Snowberg-Wolfers-Zitzewitz (2-3%), Wagner-Zeckhauser-Ziegler, Faccio 2006, Goldman-Rocholl-So 2009, Acemoglu et al. (6% y 12%), Cohen-Coval-Malloy, Chen-Parsley-Yang (JBFA), Belmont et al. (−26 pb a 6 meses, 2012-2020) y Nakamura-Steinsson.
+
+**Corregidos en sitio.**
+1. **Regla de índices:** se confirmó la calificación intermedia ("dos de tres") en la metodología de Bloomberg. Se añadió el umbral Baa3/BBB-/BBB- y la advertencia de moneda local.
+2. **Tipo de cambio del Paquete 2027:** queda 18.00 (Investing). La nota de adn40 no contiene 17.9 ni ninguna cifra de tipo de cambio.
+3. **Balance primario y SHRFSP:** la SHRFSP (~55%) coincide en dos fuentes secundarias (Investing y adn40). Sigue sin fuente primaria.
+4. **Pemex:** decía "hasta US$10 mil millones al año". Moody's dice "**al menos**" US$10 mil millones al año durante cinco años.
+5. **CLARITY:** la votación de cloture 49-50 del 15-sep no se sostiene. DWT dice que no llegó al pleno tras el estancamiento del 13-sep.
+6. **Reembolsos IEEPA:** los US$128.68 mil millones no aparecen en las fuentes citadas. Se sustituyeron por US$166 mil millones sujetos a reembolso, US$23 mil millones aprobados más US$95 mil millones en cola al 9-jun y ~US$81 mil millones distribuidos hacia julio.
+7. **Sección 122:** entró en vigor el 24-feb, no el 20-feb.
+8. **Fármacos 232:** el corte no es por tamaño. Aplica desde el 31-jul a las empresas del Anexo III y desde el 29-sep a las demás. Se añadieron las tasas diferenciadas y el 0% hasta el 20-ene-2029 para acuerdos MFN. La fecha de corte "antes del 2-abr" no se sostiene. MFN al 31-ago, no al 4-sep.
+9. ***Slaughter*:** no excluye a la Fed; reserva la cuestión.
+10. **CFTC:** no prohíbe por categoría; enumera actividades que la Comisión "*may determine*". Publicada el 12-jun.
+11. **Paramount-WBD:** el acuerdo es con California y el WGA; no se confirmó que se sumaran los 11 estados restantes. La "moción" fue una emergencia de *Block the Merger* admitida el 24-sep para presentar *amicus*. Cierre esperado hacia el 5-oct según Ellison; no había cerrado al 25-sep.
+12. **Comisión Antimonopolio:** la discrepancia se resolvió a favor del 1-jul-2025 (323-125).
+13. **Fitch:** última acción en abr-2026 (Bloomberg Línea), no en mar-2026.
+14. **Moody's "18 meses":** es la lectura de un analista, no un texto de Moody's.
+15. **Peso 2024:** la fuente citada sólo sostiene 17.88 → 18.36 (−2.65%) el 7-jun. El resto queda como no verificado.
+16. **Intel:** el pago incluye US$3.2 mil millones de Secure Enclave, no sólo CHIPS. USA Rare Earth: US$1.6 mil millones, participación de 8% a 16%.
+17. **FDA:** que Prasad encabece el comité queda sin verificar. Pazdur habló en nov-2025.
+18. **Elektra:** se precisaron los ejercicios (2008-2010, 2012, 2013), la fecha (13-nov-2025) y la unanimidad.
+19. **Amparo:** la redacción es "real y diferenciada". La garantía para la suspensión fiscal queda como no verificada.
+20. **SEP:** el texto decía "16 esperan otra alza y 4 esperan dos". Se reemplazó por el reparto exacto: 12 ven una alza más, 4 ven dos y 2 ninguna.
+21. **Omisión relevante añadida:** la **Sección 338 contra Canadá** (aranceles de hasta 50% vigentes desde el 22-ago y veto a importaciones desde el 29-sep-2026). Se reflejó en 2.4, 4.4, 4.11 y 6.3.
+22. **Intermedias de México:** el 6-jun-2027 se confirmó con la regla de la LGIPE y con fuente secundaria (500 diputaciones y 17 gubernaturas).
+23. **4ª ronda del T-MEC:** se confirmó que sigue siendo tentativa. Economía pidió tratar la fecha como provisional.
+24. **Polymarket:** 63% de Senado demócrata en la consulta directa del 25-sep-2026. El 55% de Kalshi y el 59% de Polymarket del 16-sep se atribuyen a CNBC sin verificación directa.
+
+**Sigue sin verificar:** balance primario y SHRFSP en los Criterios Generales; la magnitud de Cooper-Gulen-Ovtchinnikov (el resumen no la da); el resumen de Eggers-Hainmueller; la cita de Trump a Warsh (CNBC); la cita "*two-way street*" de Warsh; la encuesta de CNBC (49/19); el nivel B1 de Pemex y el apoyo de ~US$35 mil millones en 2025; la instalación de la CRT el 17-oct-2025 y la sectorización de la Comisión Antimonopolio; los datos del peso en 2024 de CNN/EFE; el número de 1,463 fracciones; el litigio de la CFTC con estados; el calendario del INE.
+
+**Inferencias que no se pueden verificar:** la ponderación entre señal costosa y señal barata (6.1, paso 5) y las vidas medias de la tabla 2.4 son inferencias del panel. Se calibran con el *ledger* (N ≥ 30 por tipo) y no son hechos.

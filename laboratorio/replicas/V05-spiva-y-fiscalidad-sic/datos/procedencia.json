@@ -1,0 +1,34 @@
+{
+ "nota": "Origen de cada archivo congelado en datos/. Descargas del 2026-09-25 entre 05:40 y 06:00 UTC. spglobal.com responde 403 a clientes no navegador (curl y WebFetch); por eso los PDF de SPIVA se tomaron de capturas del Internet Archive (Wayback Machine) de las URL oficiales de S&P DJI, con el sufijo id_ (bytes originales). Los PDF de EUA venian con codificacion gzip de transporte guardada en la captura y se descomprimieron con gunzip; ningun otro cambio. Los .txt de spiva/ y legal/ son extracciones de texto hechas con pypdf 6.19.0 (ver extraer_texto.py).",
+ "spiva": {
+  "spiva-us-mid-year-2026.pdf": {"url_oficial": "https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-mid-year-2026.pdf", "captura_wayback": "20260917211754", "metadatos_pdf": "Title 'SPIVA U.S. Mid-Year 2026'; CreationDate 2026-09-16"},
+  "spiva-us-year-end-2025.pdf": {"url_oficial": "https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-year-end-2025.pdf", "captura_wayback": "20260905062445", "metadatos_pdf": "Title vacio; Author 'Anu Ganti;Davide Di Gioia;Nick Didio;liam.flaherty@spglobal.com'; CreationDate 2026-07-28 (regenerado por S&P; la edicion es de marzo de 2026 segun resumenes de busqueda)"},
+  "spiva-us-mid-year-2025.pdf": {"url_oficial": "https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-mid-year-2025.pdf", "captura_wayback": "20260123170442", "metadatos_pdf": "Title 'SPIVA U.S. Scorecard Mid-Year 2025'; CreationDate 2025-10-15"},
+  "spiva-us-year-end-2024.pdf": {"url_oficial": "https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-year-end-2024.pdf", "captura_wayback": "20251205141232", "metadatos_pdf": "Title 'SPIVA U.S. Scorecard Year-End 2024'; CreationDate 2025-10-15 (regenerado)"},
+  "spiva-us-mid-year-2024.pdf": {"url_oficial": "https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-mid-year-2024.pdf", "captura_wayback": "20250126103314", "metadatos_pdf": "Title 'SPIVA U.S. Focus'; formato corto sin Report 1a"},
+  "spiva-us-year-end-2023.pdf": {"url_oficial": "https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-year-end-2023.pdf", "captura_wayback": "20250404111236", "metadatos_pdf": "Title 'SPIVA U.S. Scorecard Year-End 2023'; CreationDate 2024-03-05"},
+  "spiva-latin-america-mid-year-2025-es.pdf": {"url_oficial": "https://www.spglobal.com/spdji/es/documents/spiva/spiva-latin-america-mid-year-2025-es.pdf", "captura_wayback": "20251029180813", "metadatos_pdf": "Title 'Scorecard SPIVA para America Latina: Primer semestre de 2025'; CreationDate 2025-10-20"},
+  "spiva-latin-america-year-end-2024.pdf": {"url_oficial": "https://www.spglobal.com/spdji/en/documents/spiva/spiva-latin-america-year-end-2024.pdf", "captura_wayback": "20251217093755", "metadatos_pdf": "Title 'SPIVA Latin America Year-End 2024 Scorecard'; CreationDate 2025-04-08"},
+  "spiva-latin-america-scorecard-year-end-2023.pdf": {"url_oficial": "https://www.spglobal.com/spdji/en/documents/spiva/spiva-latin-america-scorecard-year-end-2023.pdf", "captura_wayback": "20240523005738", "metadatos_pdf": "Title 'SPIVA Latin America Year-End 2023 Scorecard'; CreationDate 2024-04-26"},
+  "no_obtenidos": {
+   "spiva-latin-america-year-end-2025.pdf": "403 en spglobal.com (curl y WebFetch) y sin captura en Wayback. Solo hay resumenes de buscador (no verificados).",
+   "spiva-latin-america-mid-year-2024.pdf": "sin captura en Wayback; no se busco mas porque no cambia el veredicto",
+   "spiva-latin-america-mid-year-2025.pdf (ingles)": "sin captura; se uso la version oficial en espanol"
+  }
+ },
+ "legal": {
+  "LISR-texto-vigente-ult-ref-DOF-2024-04-01.pdf": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LISR.pdf (texto vigente compilado por la Camara de Diputados; ultima reforma DOF 01-04-2024)",
+  "LIF_2026.pdf": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LIF_2026.pdf (Nueva Ley DOF 07-11-2025; vigente desde 01-01-2026)",
+  "irs-tratado-eua-mexico.pdf": "https://www.irs.gov/pub/irs-trty/mexico.pdf",
+  "irs-tratado-eua-irlanda.pdf": "https://www.irs.gov/pub/irs-trty/ireland.pdf",
+  "irs-instrucciones-706NA.html": "https://www.irs.gov/instructions/i706na (Revised 09/2025)",
+  "ecfr-26CFR20.2104-1.html": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-26?part=20&section=20.2104-1",
+  "gbm_*.txt": "texto visible de https://gbm.com/faqs/<nombre>/ (las paginas HTML completas pesan ~450 KB cada una y no se guardaron)"
+ },
+ "mercado": {
+  "yahoo_*_1mo_max.json": "https://query1.finance.yahoo.com/v8/finance/chart/<TICKER>?range=max&interval=1mo&events=div (User-Agent Mozilla/5.0)",
+  "yahoo_*_1d_1y.json": "https://query1.finance.yahoo.com/v8/finance/chart/<TICKER>?range=1y&interval=1d",
+  "yahoo_SPY_1d_2y_div.json": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?range=2y&interval=1d&events=div",
+  "fred_DEXMXUS.csv": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXMXUS (ultima observacion 2026-09-18)"
+ }
+}

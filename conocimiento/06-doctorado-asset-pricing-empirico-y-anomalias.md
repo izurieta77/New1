@@ -182,12 +182,12 @@ El rendimiento esperado se descompone en **carry** (lo que se gana si el precio 
 
 - **He-Krishnamurthy (2013).** El inversionista marginal es un intermediario con restricción de capital. Cuando esa restricción se activa, las primas suben de forma no lineal. Inyectar capital a los intermediarios es la política más efectiva.
 - **Adrian-Etula-Muir (2014).** Un solo factor, choques al apalancamiento de los broker-dealers, valúa portafolios de tamaño, B/M, momentum y bonos con **R² de 77% y un error promedio de 1% anual**.
-- **He-Kelly-Manela (2017).** Los choques al capital de los *primary dealers* tienen un precio de riesgo positivo y de magnitud similar en acciones, bonos soberanos y corporativos, derivados, materias primas y divisas. Su factor es procíclico, lo que implica apalancamiento contracíclico. Mide capital a valor de mercado, a diferencia del apalancamiento contable de AEM.
+- **He-Kelly-Manela (2017).** Los choques al capital de los *primary dealers* tienen un precio de riesgo positivo y de magnitud similar en acciones, bonos soberanos y corporativos, derivados, materias primas y divisas. Su factor es procíclico, lo que implica apalancamiento contracíclico.
 - **Haddad-Muir (JEL, 2026).** Revisan la evidencia: exceso de volatilidad, diferencias entre clases de activos, arbitrajes rotos y el papel de la política monetaria y regulatoria.
 
 ### 2.13 Demand-system asset pricing y mercados inelásticos
 
-- **Koijen-Yogo (2019).** Demanda por características, heterogénea entre inversionistas, estimada con variables instrumentales sobre tenencias 13F.
+- **Koijen-Yogo (2019).** Demanda por características, heterogénea entre inversionistas, estimada con variables instrumentales y diseñada para ajustar las tenencias de instituciones y hogares.
 - **Gabaix-Koijen (NBER w28967, 2021).** **US$1 de flujo al mercado accionario sube su valor en ≈ US$5.** Los precios los mueven flujos de instituciones con mandatos rígidos.
 - **Haddad-Huebner-Loualiche (AER 2025).** La respuesta estratégica de otros inversionistas solo compensa **dos tercios** de un cambio de conducta. El auge pasivo hizo la demanda por acciones individuales **11% más inelástica**.
 - **Koijen-Richmond-Yogo (REStud 2024).** La migración de activo a pasivo tuvo un impacto grande en precios y pequeño en la informatividad.
@@ -232,7 +232,7 @@ El rendimiento esperado se descompone en **carry** (lo que se gana si el precio 
 | Barroso, Santa-Clara | 2015 | Momentum Has Its Moments | JFE 116(1):111-120 | Gestionar el riesgo casi duplica el Sharpe | 10.1016/j.jfineco.2014.11.010 | B |
 | Harvey, Liu, Zhu | 2016 | …and the Cross-Section of Expected Returns | RFS 29(1):5-68 | Vara de t > 3.0 | 10.1093/rfs/hhv059 | A (método) |
 | McLean, Pontiff | 2016 | Does Academic Research Destroy… Predictability? | JF 71(1):5-32 | 97 predictores: −26% fuera de muestra y −58% después de publicarse | 10.1111/jofi.12365 | A |
-| Novy-Marx, Velikov | 2016 | A Taxonomy of Anomalies and Their Trading Costs | RFS 29(1):104-147 | Rotación < 50%/mes suele sobrevivir; el buy/hold spread es la mejor mitigación | 10.1093/rfv063 → 10.1093/rfs/hhv063 | A |
+| Novy-Marx, Velikov | 2016 | A Taxonomy of Anomalies and Their Trading Costs | RFS 29(1):104-147 | Rotación < 50%/mes suele sobrevivir; el buy/hold spread es la mejor mitigación | 10.1093/rfs/hhv063 | A |
 | Daniel, Moskowitz | 2016 | Momentum Crashes | JFE 122(2):221-247 | Crashes en pánico. La estrategia dinámica duplica el Sharpe | 10.1016/j.jfineco.2015.12.002 | A (patrón) |
 | Cederburg, O'Doherty | 2016 | Does It Pay to Bet Against Beta? | JF 71(2):737-774 | El CAPM condicional resuelve la anomalía de beta | 10.1111/jofi.12383 | B |
 | Martin | 2017 | What Is the Expected Return on the Market? | QJE 132(1):367-433 | Piso SVIX ≈ 5% promedio, > 20% en 2008 | 10.1093/qje/qjw034 | B/C |
@@ -262,8 +262,6 @@ El rendimiento esperado se descompone en **carry** (lo que se gana si el precio 
 | Novy-Marx, Velikov | 2022 | Betting Against Betting Against Beta | JFE 143(1):80-106 | US$1.05 en el 1% más chico. Neto de costos se explica por profitability e investment | 10.1016/j.jfineco.2021.05.023 | A (crítica) |
 | Dong, Li, Rapach, Zhou | 2022 | Anomalies and the Expected Market Return | JF 77(1):639-681 | 100 anomalías predicen el mercado fuera de muestra | 10.1111/jofi.13099 | C |
 
-(Fe de erratas de la fila Novy-Marx-Velikov 2016: el DOI correcto es 10.1093/rfs/hhv063.)
-
 ---
 
 ## 4. Lo más reciente 2023-2026
@@ -271,7 +269,7 @@ El rendimiento esperado se descompone en **carry** (lo que se gana si el precio 
 | Fecha | Trabajo | Qué aporta | Grado |
 |---|---|---|---|
 | ene-2023 (RFS 36(8)) | Arnott, Kalesnik, Linnainmaa, "Factor Momentum" | El momentum transversal de factores subsume al de industria y se concentra en los factores de mayor eigenvalor | B |
-| ene-2023 (JF 78(1)) | Bryzgalova, Huang, Julliard, "Bayesian Solutions for the Factor Zoo" | 2.25 cuatrillones de modelos; el BMA-SDF supera a los modelos existentes | B (método) |
+| 2023 (JF 78(1)) | Bryzgalova, Huang, Julliard, "Bayesian Solutions for the Factor Zoo" | 2.25 cuatrillones de modelos; el BMA-SDF supera a los modelos existentes | B (método) |
 | abr-2023 (JF 78(3)) | Detzel, Novy-Marx, Velikov | Con costos, FF5 domina a q y a Barillas-Shanken | A (método) |
 | 2023 (JFQA 58(3)) | Chen, Velikov, "Zeroing In…" | 204 anomalías: **4 pb/mes** netas en la era moderna | A |
 | jun-2023 (JF 78(5)) | Jensen, Kelly, Pedersen | 153 factores, 13 temas, 93 países. Versión NBER: tasa de replicación de 35% (HXZ) → 56.9% en su muestra → 64.7% sin los nunca significativos → **84.9%** con alfas CAPM. Alfa promedio de 0.45%/mes dentro de muestra y 0.31% fuera | A (bruto) |
@@ -293,7 +291,7 @@ El rendimiento esperado se descompone en **carry** (lo que se gana si el precio 
 | 2026 (JEL 64(3)) | Haddad, Muir, "Intermediaries and Asset Prices" | Revisión del enfoque de intermediarios | B |
 | jul-2026 (NBER w35413) | Haddad, He, Huebner, Kondor, Loualiche | Qué identifican los experimentos naturales en demanda de activos | B (método) |
 | jul-2026 (NBER w35431) | Koijen, Levy | Benchmark en tiempo real para IA agéntica: R² en anuncios de resultados de 8% → ≈ 20% | C |
-| jul-2026 (French, CRSP 202607) | Dato propio | UMD **−12.2%** en julio de 2026, 15° peor mes desde 1927, **fuera** del estado bear | Hecho |
+| jul-2026 (French, CRSP 202607) | Dato propio | UMD **−12.2%** en julio de 2026, 15° peor mes desde mediados de 1928, **fuera** del estado bear | Hecho |
 
 ---
 
@@ -346,7 +344,7 @@ El rendimiento esperado se descompone en **carry** (lo que se gana si el precio 
 
 ### 5.4 Momentum y crashes: cifras propias (French, CRSP 202607)
 
-El estado bear se define como rendimiento acumulado del mercado de t−24 a t−1 menor a 0 (indicador de Daniel-Moskowitz). Cubre 16.2% de los meses desde 1929.
+El estado bear se define como rendimiento acumulado del mercado de t−24 a t−1 menor a 0 (indicador de Daniel-Moskowitz). Cubre 16.2% de los meses desde mediados de 1928.
 
 | UMD | n | Media %/mes | t NW(6) |
 |---|---|---|---|
