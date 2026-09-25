@@ -9,7 +9,11 @@ Fuente: Yahoo Finance chart v8 (cierre ajustado por splits y dividendos cuando e
 via herramientas/datos.py. Tipo de cambio: MXN=X (MXN por USD), mismo endpoint.
 
 Metodo (todo sobre la serie en MXN):
-  * Serie USD -> MXN: precio_usd(d) * USDMXN(ultimo dato <= d). Series .MX ya estan en MXN.
+  * Serie USD -> MXN: precio_usd(d) * USDMXN al cierre de EUA de d (16:00 Nueva York), tomado
+    de las velas de 1 hora de MXN=X. Motivo: la vela DIARIA de MXN=X fechada d es una foto
+    de ~23:00 UTC de d-1 (inicio del dia de Londres), o sea, va un dia atrasada respecto al
+    cierre de EUA (verificado el 25-sep-2026 contra velas horarias). Respaldo si falta la
+    vela horaria: vela diaria fechada d+1. Series .MX ya estan en MXN.
   * Corte: ultimo dia comun de la sesion de EUA (o --corte). Nada posterior al corte se usa.
   * Retornos por calendario: 1m, 3m, 6m = P(t)/P(t-n meses) - 1; 12-1 = P(t-1m)/P(t-12m) - 1.
   * Vol 60d = desviacion estandar de 60 rendimientos log diarios * sqrt(252).
@@ -24,18 +28,21 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import math
 import statistics
 import sys
 import time
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 RAIZ = Path(__file__).resolve().parents[2]
 if str(RAIZ) not in sys.path:
     sys.path.insert(0, str(RAIZ))
 
-from herramientas.datos import ErrorDatos, valor_en_o_antes, yahoo_grafica  # noqa: E402
+from herramientas.datos import (UA_NAVEGADOR, URL_YAHOO, ErrorDatos, descargar,  # noqa: E402
+                                valor_en_o_antes, yahoo_grafica)
 
 # ------------------------------------------------------------------ universo
 # (ticker, categoria, etiqueta). Las etiquetas de acciones son propias, no GICS.
@@ -105,6 +112,49 @@ def descargar_serie(ticker: str, cache_horas: float | None) -> dict:
                 continue
             raise
     raise ErrorDatos(f"{ticker}: agotados reintentos")
+
+
+def fx_cierre_eua(cache_horas: float | None) -> list[tuple[date, float]]:
+    """USDMXN a las 16:00 de Nueva York de cada dia habil, de velas horarias de MXN=X.
+
+    Toma el cierre de la vela horaria que termina a las 16:00 NY (inicia a las 15:00 NY);
+    si falta, la ultima vela iniciada en las 6 horas previas. Respaldo: vela diaria de d+1.
+    """
+    ny = ZoneInfo("America/New_York")
+    url = URL_YAHOO + "MXN%3DX?range=2y&interval=1h"
+    horas: dict[datetime, float] = {}
+    for intento in range(REINTENTOS_429 + 1):
+        try:
+            r = json.loads(descargar(url, UA_NAVEGADOR, cache_horas=cache_horas))["chart"]["result"][0]
+            break
+        except ErrorDatos as e:
+            if "429" in str(e) and intento < REINTENTOS_429:
+                time.sleep(ESPERA_429_S * (intento + 1))
+                continue
+            raise
+    for t, c in zip(r.get("timestamp") or [], r["indicators"]["quote"][0].get("close") or []):
+        if c is not None:
+            horas[datetime.fromtimestamp(t, tz=timezone.utc)] = float(c)
+    por_dia: dict[date, list[tuple[datetime, float]]] = {}
+    for k, v in horas.items():
+        por_dia.setdefault(k.astimezone(ny).date(), []).append((k, v))
+    serie = {}
+    for d, velas in por_dia.items():
+        objetivo = datetime(d.year, d.month, d.day, 16, 0, tzinfo=ny).astimezone(timezone.utc)
+        exacta = [v for k, v in velas if k == objetivo - timedelta(hours=1)]
+        if exacta:
+            serie[d] = exacta[0]
+            continue
+        previas = sorted((k, v) for k, v in velas if objetivo - timedelta(hours=6) <= k < objetivo)
+        if previas:
+            serie[d] = previas[-1][1]
+    time.sleep(PAUSA_S)
+    diaria = yahoo_grafica(TICKER_FX, "2y", "1d", cache_horas=cache_horas)["serie"]
+    for i in range(len(diaria) - 1):
+        d = diaria[i][0]
+        if d not in serie and d.weekday() < 5:
+            serie[d] = diaria[i + 1][1]  # foto de ~23:00 UTC de d
+    return sorted(serie.items())
 
 
 # ------------------------------------------------------------------ utilidades
@@ -191,7 +241,8 @@ def rangos(valores: dict[str, float]) -> dict[str, float]:
 
 def correr(corte_arg: date | None, cache_horas: float | None, verbose: bool = True) -> tuple[list[dict], dict]:
     crudos, errores = {}, {}
-    todos = [TICKER_FX] + [t for t, _, _ in UNIVERSO]
+    fx_eua = fx_cierre_eua(cache_horas)
+    todos = [t for t, _, _ in UNIVERSO]
     for i, t in enumerate(todos):
         try:
             crudos[t] = descargar_serie(t, cache_horas)
@@ -201,15 +252,15 @@ def correr(corte_arg: date | None, cache_horas: float | None, verbose: bool = Tr
             errores[t] = str(e)
             print(f"[{i + 1}/{len(todos)}] {t}: ERROR {e}", file=sys.stderr)
         time.sleep(PAUSA_S)
-    if TICKER_FX not in crudos:
+    if not fx_eua:
         raise SystemExit("Sin tipo de cambio MXN=X: no se puede convertir a MXN")
-    fx = crudos[TICKER_FX]["serie"]
+    fx = fx_eua
 
     # Corte: ultimo dia de sesion comun de EUA (SPY) salvo que se indique.
     if corte_arg:
         corte = corte_arg
     else:
-        ref = crudos.get("SPY") or next(v for k, v in crudos.items() if k != TICKER_FX)
+        ref = crudos.get("SPY") or next(iter(crudos.values()))
         corte = ref["serie"][-1][0]
     fx = [x for x in fx if x[0] <= corte]
 
@@ -245,8 +296,8 @@ def correr(corte_arg: date | None, cache_horas: float | None, verbose: bool = Tr
         notas = []
         if local[-1][0] < corte:
             notas.append(f"ultimo dato {local[-1][0].isoformat()} < corte")
-        if m["max_salto_diario"] > math.log(1.4):
-            notas.append("salto diario >40%: revisar ajuste")
+        if m["max_salto_diario"] > math.log(1.5):
+            notas.append("movimiento diario >+50% o <-33% en 12m: revisar ajuste")
         fila["nota"] = "; ".join(notas)
         fila["estado"] = "ok"
         filas.append(fila)

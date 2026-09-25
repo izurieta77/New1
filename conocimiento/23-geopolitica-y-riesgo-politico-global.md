@@ -4,7 +4,7 @@
 
 Capítulos relacionados, que aquí no se repiten: [04 Renta fija y macro](04-renta-fija-y-macro.md) · [11 México](11-mexico.md) · [13 Estado del mercado](13-estado-del-mercado.md) · [15 Eventos corporativos](15-eventos-corporativos.md) · [16 Macro, FX y peso](16-macro-fx-peso.md) · [17 Crisis](17-crisis.md) · [22 Fuentes de datos con IA](22-fuentes-de-datos-ia.md). Los parámetros de riesgo salen de `config/parametros.json`.
 
-**Convenciones.** Los hechos llevan fecha y fuente. "Inferencia:" marca razonamiento propio. "Regla:" marca una recomendación operable. "(no verificado)" marca una cifra que no se confirmó contra una fuente en esta sesión.
+**Convenciones.** Hecho = fecha y fuente. "Inferencia:" = razonamiento propio. "Regla:" = recomendación operable. "(no verificado)" = cifra no confirmada en esta sesión.
 
 ---
 
@@ -71,7 +71,7 @@ Caldara-Iacoviello encuentran que tanto la amenaza como la realización deprimen
 | Caldara & Iacoviello (2022), AER 112(4):1194-1225, "Measuring Geopolitical Risk" | Índice de noticias desde 1900. Un GPR más alto anticipa menor inversión y empleo, mayor probabilidad de desastre y más riesgo a la baja. Importan tanto la amenaza como el acto. La inversión cae más en industrias expuestas | https://www.aeaweb.org/articles?id=10.1257/aer.20191823 | A (medición); B (efectos en retornos) |
 | Caldara, Conlisk, Iacoviello & Penn (2026), JIE 159, "Do geopolitical risks raise or lower inflation?" | En 44 economías desde 1900, el GPR anticipa **más inflación y menor actividad**, más gasto militar, más deuda y menos comercio. Los *acts* tienen efectos mayores y más persistentes que los *threats* | https://www.matteoiacoviello.com/research_files/JIE_2026.pdf | A-/B |
 | Baker, Bloom & Davis (2016), QJE, "Measuring Economic Policy Uncertainty" | Con empresas, la EPU se asocia con más volatilidad de la acción y menos inversión y empleo en sectores sensibles a la política (defensa, salud, finanzas, infraestructura). A nivel macro, las innovaciones de EPU anticipan caídas de inversión, producto y empleo (EUA y un panel de 12 países) | https://www.policyuncertainty.com/ | A (medición); B (efectos) |
-| Pastor & Veronesi (2012), JF, "Uncertainty about Government Policy and Stock Prices" | Los precios caen en promedio al anunciarse cambios de política. La caída es mayor con más incertidumbre, y después suben la volatilidad y las correlaciones | https://onlinelibrary.wiley.com/journal/15406261 | B |
+| Pastor & Veronesi (2012), JF 67(4):1219-1264, "Uncertainty about Government Policy and Stock Prices" | Los precios caen en promedio al anunciarse cambios de política. La caída es mayor con más incertidumbre o si al cambio lo precede una recesión corta o poco profunda. Después suben la volatilidad y las correlaciones, y la prima por riesgo de salto es positiva | https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2012.01746.x | B |
 | Pastor & Veronesi (2013), JFE 110:520-545, "Political Uncertainty and Risk Premia" | La prima por incertidumbre política es **mayor en economías débiles**. Las acciones se vuelven más volátiles y más correlacionadas. Baja el valor del *put* implícito del gobierno | https://www.nber.org/papers/w17464 | B |
 | Kelly, Pastor & Veronesi (2016), JF 71(5):2417-2480, "The Price of Political Uncertainty" | Las opciones cuya vida abarca elecciones nacionales o cumbres globales son **más caras** porque protegen contra riesgo de precio, varianza y cola. El efecto es mayor con economía débil y se contagia entre países | https://www.nber.org/papers/w19812 | A- |
 | Hassan, Hollander, van Lent & Tahoun (2019), QJE 134(4):2135-2202, "Firm-Level Political Risk" | PRisk se construye con transcripciones de *earnings calls*. Las empresas con más riesgo político **recortan contratación e inversión** y hacen más *lobbying* y donaciones. La mayor parte de la varianza es idiosincrática, no agregada | https://www.nber.org/papers/w24029 · datos: https://www.firmlevelrisk.com | A- (medición) |
@@ -108,7 +108,7 @@ Archivo mensual oficial: https://www.matteoiacoviello.com/gpr_files/data_gpr_exp
 
 Contexto histórico calculado con el mismo archivo: marzo de 2026 es el **6º mes más alto desde 1985**. Está por encima de mar-2022 (319.0, invasión de Ucrania) y por debajo de mar-2003 (358.7, Irak), ene-1991 (379.2, Golfo) y sep/oct-2001 (498.6/512.5). Índices por país en 2026 contra su promedio 1985-2019: Taiwán 0.529 en may-2026 contra 0.04 (unas 13 veces), México 0.261 en may-2026 contra 0.095 (unas 2.7 veces), EUA 8.68 en mar-2026 contra 2.32.
 
-**Inferencia:** el GPR agregado volvió en agosto a niveles "normales altos" (alrededor de 118), aunque la guerra sigue sin resolverse y el Brent pasa de US$100. El índice mide la **atención de la prensa**, no el daño económico. Usarlo como señal de "ya pasó" en un *shock* tipo B es un error.
+**Inferencia:** en agosto el GPR volvió a alrededor de 118 con la guerra sin resolver y el Brent arriba de US$100. Mide **atención de prensa**, no daño económico; no sirve como señal de "ya pasó" en un *shock* tipo B.
 
 ### 4.2 Choque arancelario de abril de 2025 (tipo C)
 
@@ -126,7 +126,7 @@ Cronología verificada:
 - **2-mar:** la Guardia Revolucionaria cierra Ormuz al tráfico de EUA y aliados.
 - **18-mar:** ataque a Ras Laffan. Qatar declara *force majeure* en GNL, el TTF casi se duplica a más de €60/MWh y el GNL spot en Asia sube más de 140%.
 - **31-mar:** Brent en **US$118.35** (máximo). La AIE lo llamó "la mayor interrupción de oferta en la historia del mercado petrolero".
-- **8-abr:** alto al fuego mediado por Pakistán, con reapertura parcial. Iran vuelve a restringir el paso el 19-abr.
+- **8-abr:** alto al fuego mediado por Pakistán, con reapertura parcial. Irán vuelve a restringir el paso el 19-abr.
 - **Junio:** memorándum de 14 puntos EUA-Irán con una ventana de negociación de 60 días (el mercado de Polymarket de "peace deal" resolvió Sí el 15-jun). El Brent baja a **US$71.57 el 1-jul**.
 - **7-jul:** se reanudan los ataques. Bloqueo estadounidense e Irán atacando buques "no conformes".
 - **11/12-sep:** drones hutíes golpean el oleoducto saudí Este-Oeste (Petroline), que movía de 4 a 5 millones de b/d desviados de Ormuz hacia Yanbu. Se cierra "por precaución" y queda fuera de servicio por semanas. El Brent vuelve a pasar de US$100.
@@ -172,7 +172,7 @@ Reacción de mercados:
 
 - **China:** el pronóstico de crecimiento para 2026 va de 4.3% a 4.8% (consenso, UBS y Goldman). Los indicadores inmobiliarios siguen entre 50% y 80% debajo del pico de 2020-2021, y el PPI lleva más de 3 años en deflación. Eurasia (#7 "China's deflation trap") espera que China siga exportando deflación y que eso desate respuestas antidumping.
 - **Europa:** el diferencial OAT-Bund a 10 años ronda **105 pb**, el primero arriba de 100 desde 2012 (CNBC, 24-sep-2026). La deuda francesa proyectada es de 119.3% del PIB en 2026 y la pelea presupuestal amenaza con tumbar otro gobierno. Alemania ejecuta su paquete fiscal de infraestructura y defensa. Eurasia #4: "Europe under siege".
-- **India:** el acuerdo del 2-feb-2026 bajó el arancel recíproco de 25% a 18% y retiró el castigo de 25% por comprar petróleo ruso. La anulación de IEEPA y la Sección 301 cambiaron después la base; hoy India está en el grupo de 10%.
+- **India:** el acuerdo del 2-feb-2026 bajó el arancel recíproco de 25% a 18% y retiró el castigo de 25% por petróleo ruso. Tras la anulación de IEEPA, hoy India está en el grupo de 10% de la Sección 301.
 - **EUA:** Eurasia #1 es "US political revolution" y #6 "State capitalism with American characteristics", es decir, un gobierno que elige ganadores y perdedores. Elecciones intermedias del 3-nov-2026: mercados de predicción a mediados de septiembre dan a los demócratas alrededor de **89-90% para la Cámara** y **55-60% para el Senado** (CNBC y Econbrowser, sep-2026).
 - **Norteamérica (detalle en el cap. 11):** en la revisión del **1-jul-2026** EUA **no** aceptó extender el T-MEC 16 años, lo que activa revisiones anuales hasta 2036 (White & Case). Eurasia #9: "Zombie USMCA". Trump dijo el 9-ene-2026 que EUA empezaría a "golpear en tierra" a los cárteles en México, y Sheinbaum lo rechaza. Eurasia #3: "Donroe Doctrine".
 
@@ -194,7 +194,7 @@ Reacción de mercados:
 | LPL, guerras y operaciones militares | −7% promedio | — | alrededor de 55 días |
 | LPL, eventos geopolíticos en general | −4.5% promedio (mediana −2.9%) | menos de 1 mes | — |
 | Choque petrolero de 1973 (DB) | profundo | — | **1,475 días hábiles** |
-| Aranceles, abr-2025 | alrededor de −10% en 2 días (mínimo alrededor de 4,982) | ~5 días desde el anuncio | máximo previo superado en menos de 20 semanas (BIS) |
+| Aranceles, abr-2025 | alrededor de −10% en 2 días (mínimo alrededor de 4,982) | 4 sesiones desde el anuncio | máximo previo superado en menos de 20 semanas (BIS) |
 | Guerra de Irán, 2026 | −9.8% desde el máximo de enero | alrededor de 30 días desde el inicio (30-mar) | récord el 15-abr |
 | Venezuela, ene-2026 | casi nula | — | — |
 
@@ -284,7 +284,6 @@ Umbrales de confirmación para el tipo B: el Brent sube más de 25% en 10 días 
 - **Reglas:** Federal Register, BIS, USTR, avisos CSMS de la CBP, OFAC, MOFCOM y el DOF.
 - **Conflictos:** ISW (Rusia-Ucrania), CFR Global Conflict Tracker, ACLED y CSIS.
 - **Empresas:** búsqueda de texto completo en EDGAR ("Strait of Hormuz", "export control", "rare earth") en 8-K y 10-Q.
-- **Anuales:** Eurasia Group Top Risks, el WEF Global Risks Report y el GFSR del FMI.
 
 ### 6.6 Mapa de riesgos vigente al 25-sep-2026
 
@@ -304,10 +303,10 @@ Umbrales de confirmación para el tipo B: el Brent sube más de 25% en 10 días 
 
 ## 7. Trampas
 
-1. **Vender el titular.** La mediana histórica se recupera en semanas. Vender en el mínimo de un tipo A es el error más caro y más frecuente.
+1. **Vender el titular.** La mediana se recupera en semanas; vender en el mínimo de un tipo A es el error más caro y frecuente.
 2. **Extrapolar "comprar la guerra" a un tipo B.** En 1973 la recuperación tardó 1,475 días hábiles. En 2026 el índice se recuperó, pero el oro, los bonos y los emergentes importadores no.
 3. **Creer que los refugios son constantes.** En abr-2025 fallaron el USD y los Treasuries, y en 2026 falló el oro. El refugio depende del tipo de *shock*.
-4. **Leer el GPR como termómetro de daño.** Mide cobertura de prensa. En agosto de 2026 estaba en 118 con Ormuz prácticamente cerrado.
+4. **Leer el GPR como termómetro de daño.** En ago-2026 marcó 118 con Ormuz prácticamente cerrado.
 5. **Comprar protección cuando ya está cara.** Kelly-Pastor-Veronesi muestran que las opciones que abarcan eventos políticos cuestan más. La cobertura se pone con VIX bajo, no con VIX en 40.
 6. **Confiar en una probabilidad sin leer la regla.** "Ceasefire" resolvió Sí por una tregua de 3 días, y "Ormuz normal" depende de un umbral de tránsitos en PortWatch.
 7. **Confundir el pronóstico del evento con el pronóstico de la reacción.** Acertar que habría guerra con Irán no servía para ganar con acciones de EUA, que marcaron récord 47 días después.

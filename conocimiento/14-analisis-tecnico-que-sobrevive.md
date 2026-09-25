@@ -1,6 +1,6 @@
 # Módulo 14 — Análisis técnico: qué sobrevive a la evidencia
 
-> Nivel: maestría aplicada / doctorado de practicante · Actualizado: 2026-09-25 · Grado de evidencia global: **B/D (bimodal)**. Sobrevive, fuera de muestra y neto de costos pero con magnitudes modestas y decaimiento, la **tendencia de mediano plazo** (medias móviles lentas, momentum de series de tiempo, cercanía al máximo de 52 semanas, indicadores técnicos agregados como predictores de la prima de mercado): **B**. No sobrevive a la corrección por *data snooping* ni a costos: reglas diarias de corto plazo en índices maduros, velas japonesas, patrones gráficos a ojo, Fibonacci, Elliott y métodos de practicante vendidos como paquete: **D**. Las señales de *machine learning* sobre gráficas son potentes en bruto pero dependen de rotación alta y microcaps: **C** para una cuenta de MXN 20,000 ejecutada a mano.
+> Nivel: maestría aplicada / doctorado de practicante · Actualizado: 2026-09-25 · Grado de evidencia global: **B/D (bimodal)**. Sobrevive, fuera de muestra y neto de costos pero con magnitudes modestas y decaimiento, la **tendencia de mediano plazo** (medias móviles lentas, momentum de series de tiempo, cercanía al máximo de 52 semanas, indicadores técnicos agregados como predictores de la prima de mercado): **B**. No sobrevive a la corrección por *data snooping* ni a costos: reglas diarias de corto plazo en índices maduros, velas japonesas, patrones gráficos a ojo, Fibonacci, Elliott y métodos de practicante vendidos como paquete: **D**. Las señales de *machine learning* sobre gráficas son potentes en bruto pero dependen de rotación alta y de ponderar igual a las acciones pequeñas: **C** para una cuenta de MXN 20,000 ejecutada a mano.
 
 ---
 
@@ -8,16 +8,16 @@
 
 Quien apruebe este módulo debe poder, con números y sin ayuda:
 
-1. Formular cualquier regla técnica como lo que es: una función de precios y volúmenes pasados que pronostica E[r | historia], y decir qué hipótesis de eficiencia contradice y en qué horizonte.
-2. Distinguir los cinco mecanismos que pueden generar predictibilidad técnica real (subreacción/aprendizaje, anclaje, microestructura de órdenes, flujos de cobertura, primas de riesgo variables) de los tres que la fabrican (data snooping, trading no sincrónico, look-ahead).
-3. Reproducir el arco histórico BLL 1992 → Bessembinder-Chan 1998 → Sullivan-Timmermann-White 1999 → Ready 2002 → Bajgrowicz-Scaillet 2012 → Rink 2023, con las cifras clave de cada eslabón.
-4. Calcular el costo de equilibrio (*break-even cost*) de una regla y descartarla si no cubre al menos 3 veces el costo real por lado en GBM.
-5. Explicar por qué una media móvil sobre el índice mejora más el drawdown que el CAGR, y cuantificarlo (Faber: drawdown de 83.66% → 42.24%; CAGR 9.32% → 10.18%, bruto).
-6. Ubicar cada señal de sección cruzada (52 semanas, volumen, MAD, *trend factor*, CNN sobre imágenes) en su grado de evidencia y su viabilidad en una cuenta chica.
-7. Explicar por qué los patrones (H&S, velas, Fibonacci, Elliott) fallan como sistema, qué información marginal sí contienen y por qué están prohibidos como señal de decisión.
-8. Diseñar y auditar un backtest de regla técnica que cumpla `config/parametros.json` → `validacion_estrategias` (10 años, costos, DSR ≥ 0.95, PBO ≤ 0.25, 3 meses de papel y 30 operaciones).
-9. Justificar con evidencia el `filtro_apalancados` de la cuenta arena (subyacente sobre su media de 200 días y VIX < 25) y proponer mejoras falsables.
-10. Recitar la lista de indicadores permitidos (con grado y función) y la lista de prohibidos.
+1. Formular una regla técnica como pronóstico E[r | historia] y separar su ganancia en timing, menor exposición y costos.
+2. Distinguir los mecanismos que generan predictibilidad real (aprendizaje, anclaje, microestructura de órdenes, cobertura gamma, prima de riesgo variable) de los que la fabrican (data snooping, trading no sincrónico, look-ahead).
+3. Reproducir el arco BLL 1992 → Bessembinder-Chan 1998 → STW 1999 → Ready 2002 → Bajgrowicz-Scaillet 2012 → Rink 2023 con sus cifras clave.
+4. Calcular el costo de equilibrio de una regla y descartarla si no cubre 3 veces el costo por lado en GBM.
+5. Cuantificar por qué una media móvil sobre el índice mejora más el drawdown que el CAGR (Faber: 83.66% → 42.24%; 9.32% → 10.18%, bruto).
+6. Graduar cada señal de sección cruzada (52 semanas, volumen, MAD, *trend factor*, CNN) y su viabilidad en una cuenta chica.
+7. Explicar por qué velas, figuras, Fibonacci y Elliott están prohibidos como señal de decisión.
+8. Auditar un backtest técnico contra `validacion_estrategias` de `config/parametros.json`.
+9. Justificar con evidencia el `filtro_apalancados` de la cuenta arena y proponer mejoras falsables.
+10. Recitar la lista de indicadores permitidos (grado y función) y la de prohibidos.
 
 ---
 
@@ -27,7 +27,7 @@ Quien apruebe este módulo debe poder, con números y sin ayuda:
 
 Una regla técnica es un mapeo S_t = f(P_{t}, P_{t-1}, …, V_t, V_{t-1}, …) → {exposición}. Su ganancia esperada frente a *buy-and-hold* es, por construcción:
 
-E[R_regla] − E[R_B&H] = Cov(S_t, r_{t+1}) + (E[S] − 1)·E[r] − costos
+E[R_regla] − E[R_B&H] = Cov(S_t, r_{t+1}) + (E[S] − 1)·E[r] − costos, con r = rendimiento en exceso sobre efectivo (CETES) y S entre 0 y 1.
 
 El primer término es el único "alfa de timing"; el segundo es simplemente estar menos invertido (y ganar menos prima en promedio); el tercero casi siempre se subestima. Cualquier backtest que no separe estos tres términos no dice nada. La forma débil de eficiencia (Fama 1970; ver Cap. 01) predice Cov(S_t, r_{t+1}) ≈ 0 después de costos.
 
@@ -35,7 +35,7 @@ El primer término es el único "alfa de timing"; el segundo es simplemente esta
 
 | Mecanismo | Predicción | Evidencia ancla |
 |---|---|---|
-| Aprendizaje racional gradual / incertidumbre sobre parámetros | Las medias móviles agregan valor a reglas de asignación fija cuando hay predictibilidad o incertidumbre del modelo | Zhu-Zhou 2009 (teoría); Detzel et al. 2021 (modelo de equilibrio + Bitcoin y acciones difíciles de valuar) |
+| Aprendizaje racional gradual / incertidumbre sobre parámetros | Las medias móviles agregan valor a reglas de asignación fija cuando hay predictibilidad o incertidumbre del modelo | Zhu-Zhou 2009 [13] (teoría); Detzel et al. 2021 [63] (modelo de equilibrio + Bitcoin y acciones difíciles de valuar) |
 | Anclaje | Precio cercano al máximo de 52 semanas → subreacción a buenas noticias | George-Hwang 2004 |
 | Microestructura de órdenes | Órdenes *stop-loss* y *take-profit* agrupadas en números redondos: *take-profit* frena tendencias en soportes/resistencias; *stop-loss* las acelera al romperlos | Osler 2000, 2003 |
 | Flujos de cobertura | La cobertura gamma de *market makers* de opciones y ETFs apalancados empuja el cierre en la dirección del día | Baltussen-Da-Lammers-Martens 2021 |
@@ -64,11 +64,7 @@ BETC por operación (un sentido) = exceso de rendimiento anual bruto / número d
 
 ### 2.6 Taxonomía que usa el sistema
 
-- **Time-series (TS):** timing de un activo contra efectivo (media móvil, signo del rendimiento de 12 meses, ruptura de rango).
-- **Cross-section (CS):** ordenar activos por una métrica técnica (momentum 12-1, 52 semanas, MAD, volumen).
-- **Intradía/microestructura:** momentum intradía, overnight vs intradía, soportes y resistencias en FX.
-- **Patrones y narrativas:** velas, figuras chartistas, Fibonacci, Elliott.
-- **Contexto:** amplitud (*breadth*) y sentimiento.
+**Time-series** (timing de un activo contra efectivo: medias móviles, signo del rendimiento de 12 meses, rupturas de rango) · **cross-section** (ordenar activos: momentum 12-1, 52 semanas, MAD, volumen) · **intradía/microestructura** (momentum intradía, overnight vs intradía, soportes y resistencias) · **patrones y narrativas** (velas, figuras, Fibonacci, Elliott) · **contexto** (amplitud y sentimiento).
 
 ---
 
@@ -87,7 +83,6 @@ BETC por operación (un sentido) = exceso de rendimiento anual bruto / número d
 | Hsu-Kuan 2005 (SSRN) | DJIA, S&P 500, NASDAQ, Russell 2000 | Con Reality Check: reglas rentables en NASDAQ y Russell 2000, no en DJIA ni S&P 500 | IS y OOS, neto | B− | [10] |
 | Hsu-Hsu-Kuan 2010, JEF 17(3) | Índices de crecimiento y emergentes y sus ETFs | *Stepwise* SPA: poder predictivo significativo que **se debilita tras la introducción de los ETFs** | IS/OOS | A (el patrón de decaimiento) | [11] |
 | Bajgrowicz-Scaillet 2012, JFE 106(3) | Dow 1897-2011, FDR | Nadie habría podido elegir ex ante las mejores reglas futuras; aun dentro de muestra, costos bajos eliminan el desempeño | IS/OOS, neto | A | [12] |
-| Zhu-Zhou 2009, JFE 92(3) | Teoría | La media móvil agrega valor a reglas de asignación fija cuando hay predictibilidad o incertidumbre de parámetros | Teoría | — | [13] |
 | Neely-Rapach-Tu-Zhou 2014, MS 60(7) | S&P 500 1950:12-2011:12; 14 indicadores (MA(s,l) s=1,2,3, l=9,12 meses; MOM 9 y 12; OBV) | Los 14 tienen R²_OS > 0 (1966-2011); PC-TECH R²_OS 0.65%; PC-ALL (técnicos + macro) 1.79%, **11.24% en recesiones y −2.80% en expansiones**; ganancia CER hasta 317 pb, hasta 282 pb neta de 50 pb por operación | IS y OOS, neto | B+ | [14][15] |
 | Faber 2007/2013 | S&P 500 1901-2012, SMA 10 meses mensual | CAGR 10.18% vs 9.32%; DD 42.24% vs 83.66%; ~70% invertido; < 1 ida y vuelta al año | Bruto (sin costos ni impuestos) | B (drawdown) / C (CAGR) | [16] |
 | Zakamulin (SSRN 2743119) | S&P 500, *forward testing*, costos | Sin look-ahead, la media móvil apenas supera a B&H e **indistinguible estadísticamente** | OOS, neto | A (corrección) | [17] |
@@ -136,13 +131,13 @@ BETC por operación (un sentido) = exceso de rendimiento anual bruto / número d
 
 1. **Rink 2023, *Financial Markets and Portfolio Management* 37(4).** 6,406 reglas, 23 mercados desarrollados y 18 emergentes, hasta 66 años de datos, prueba SPA de última generación. Dentro de muestra, mayoría de mercados con reglas superiores a B&H, más en emergentes; **la predictibilidad cae drásticamente con el tiempo en todos los mercados**; muy sensible a costos moderados; fuera de muestra, las reglas recientemente ganadoras rinden **significativamente peor** que B&H [47]. Es la mejor síntesis vigente: el análisis técnico sobre índices amplios es una anomalía histórica en extinción.
 2. **Goyal-Welch-Zafirov 2024, RFS 37(11).** Reexaminan 29 predictores publicados después de 2008 más los 17 originales, con datos a 2021: más de un tercio ya no es significativo ni dentro de muestra y la mitad de los que sí lo son fallan fuera de muestra [48]. En la presentación de los autores, los **14 indicadores técnicos de Neely et al.** aparecen entre sus "favoritos", el ~10% de variables que siguen funcionando [49]. Esto sube la regla de tendencia agregada a B+: sobrevive a publicación y a la prueba más hostil de la literatura, con R² de un dígito bajo.
-3. **Jiang-Kelly-Xiu 2023, JF 78(6).** Redes convolucionales sobre imágenes OHLC + volumen + media móvil de 5, 20 y 60 días. Deciles long-short con Sharpe **bruto** fuera de muestra de hasta 7.2 equiponderado y 1.7 ponderado por valor; los mejores rivales tradicionales (TREND y reversión semanal) logran 2.9 y 2.8 equiponderado (0.7 y 0.8 por valor) [50][51]. Lectura correcta: hay estructura no lineal en las gráficas, pero la cifra espectacular vive en microcaps con rotación semanal; neta y en una cuenta chica, no aplica.
+3. **Jiang-Kelly-Xiu 2023, JF 78(6).** Redes convolucionales sobre imágenes de 5, 20 y 60 días con OHLC, volumen y media móvil. Deciles long-short con Sharpe **bruto** fuera de muestra de hasta 7.2 equiponderado y 1.7 ponderado por valor; los mejores rivales tradicionales (TREND y reversión semanal) logran 2.9 y 2.8 equiponderado (0.7 y 0.8 por valor) [50][51]. Lectura correcta: hay estructura no lineal en las gráficas, pero *inferencia* (por la brecha entre equiponderado y ponderado por valor): la cifra espectacular vive en acciones pequeñas con rotación semanal; neta y en una cuenta chica, no aplica.
 4. **Murray-Xia-Xiao 2024, JFE 153 ("Charting by machines").** ML sobre rendimientos pasados predice la sección cruzada **incluso entre las 500 mayores acciones**; no linealidades estables en el tiempo y distintas de momentum, reversión y señales técnicas conocidas [52]. Es la evidencia más fuerte a favor de que "la gráfica contiene información"; no de que un humano o un LLM la extraiga mirando.
 5. **Réplica del momentum intradía (Limkriangkrai-Chai-Zheng 2023, PBFJ 80).** EUA 1996-2013: R² dentro de muestra 1.7% con la primera media hora; R²_OS 1.7% y 2.3% combinando la penúltima media hora; persiste en EUA durante el COVID. En Asia-Pacífico solo China y Japón; nada en Hong Kong ni Singapur [53].
 6. **Overnight drift: descubrimiento y muerte.** Boyarchenko-Larsen-Whelan (RFS 2023) documentan que casi toda la prima de renta variable de EUA se ganaba entre 2:00 y 3:00 a.m. ET, en la apertura europea [54]. Los mismos autores (Liberty Street, julio 2026): ~3.7% anualizado en esa ventana en 1998-2020 (más del 60% del 5.9% anual cierre a cierre del futuro), **cerca de cero desde 2021**; la dispersión del desequilibrio de órdenes al cierre cayó de 6.5% a 2.9%; dos ETFs lanzados en 2022 para capturarlo cerraron a los 14 meses [55]. Caso de libro de decaimiento post-publicación.
 7. **Sentimiento AAII (Gómez-Martínez et al. 2026, IREF).** 25 años semanales, reglas contrarias sobre el diferencial alcista-bajista, netas de costos: utilidades positivas en los extremos y mejor eficiencia de drawdown, pero **ninguna supera el Sharpe de estar largo pasivo** [56].
-8. **Tendencia multiactivo en vivo.** El SG Trend Index (los 10 mayores CTAs de tendencia) cerró 2024 en +2.4%; a junio de 2025, pérdida de −15.05% en 12 meses y drawdown de 20.61%; rendimiento anualizado desde 2000 de 4.90% [57]. La tendencia diversifica crisis largas, no es una máquina de rendimiento.
-9. **LLMs y modelos de visión leyendo gráficas.** Un benchmark de 2026 sobre velas: exactitud direccional de 49% a 53.5% (el mejor, Claude Sonnet 4.5 con razonamiento, 53.48%, vs XGBoost 50.87%), IC ≈ 0.05 en el mejor caso, más correlación con el rendimiento a 5 días que a 30 aunque se pidió 30 [58]. LiveTradeBench (2025): 21 LLMs, 50 días en vivo; un puntaje alto en LMArena no implica mejores resultados de trading [59]. *Inferencia:* los rivales de la arena que "lean gráficas" con un LLM tienen, en el mejor caso, una ventaja direccional de 1 a 3 puntos, que las comisiones de GBM se comen.
+8. **Tendencia multiactivo en vivo.** SG Trend Index (10 mayores CTAs de tendencia): +2.4% en 2024; −15.05% en los 12 meses a junio de 2025, con drawdown de 20.61%; 4.90% anualizado desde 2000 [57]. Diversifica crisis largas; no es una máquina de rendimiento.
+9. **LLMs y modelos de visión leyendo gráficas.** Benchmark de 2026 sobre velas: exactitud direccional de 49% a 53.5% (mejor: Claude Sonnet 4.5 con razonamiento, 53.48%, vs XGBoost 50.87%), IC ≈ 0.05 en el mejor caso, y más correlación con el rendimiento a 5 días que a 30 aunque se pidió 30 [58]. LiveTradeBench (2025): 21 LLMs, 50 días en vivo; un puntaje alto en LMArena no implica mejor trading [59]. *Inferencia:* un rival de la arena que "lea gráficas" con un LLM tiene, en el mejor caso, 1 a 3 puntos de ventaja direccional, que las comisiones se comen.
 
 ---
 
@@ -151,22 +146,22 @@ BETC por operación (un sentido) = exceso de rendimiento anual bruto / número d
 ### 5.1 Tendencia lenta sobre índices (TS): B
 
 - **Funciona para lo que realmente hace:** cortar la cola izquierda. Faber: drawdown a la mitad (83.66% → 42.24%) con CAGR similar o apenas mayor, bruto. Zakamulin: sin look-ahead y con costos, rendimiento estadísticamente indistinguible de B&H. *Inferencia:* su valor está en la **geometría** (menos varianza, menos drawdown, más supervivencia en torneo), no en la media.
-- **Como predictor de prima:** Neely et al., R²_OS 0.65% (técnicos) y 1.79% (con macro); concentrado en recesiones (11.24%) y negativo en expansiones (−2.80%). Sobrevive a Goyal-Welch-Zafirov 2024. Magnitud económica: cientos de puntos base de CER para un inversionista media-varianza con aversión de 5, netos de 50 pb por operación.
+- **Como predictor de prima:** R² fuera de muestra de 0.65% a 1.79% (Neely et al.), concentrado en recesiones; sobrevive a Goyal-Welch-Zafirov 2024; ganancias de CER de cientos de puntos base, netas de costos, para un inversionista media-varianza con aversión relativa de 5.
 - **Costo de la tendencia:** latigazos (*whipsaws*) en mercados laterales, meses fuera durante rebotes en V. Faber: el timing queda por debajo del índice en ~la mitad de los años.
 
 ### 5.2 Reglas diarias de corto plazo sobre índices maduros: D
 
-BLL fue real como hecho estadístico en 1897-1986, pero: (i) STW ya no la encuentran fuera de muestra 1987-1996 (p = 0.341) ni en futuros (p = 0.908); (ii) BETC de 0.22% por lado desde 1975, debajo de costos reales; (iii) Ready: no ejecutable al precio de la señal y en caída; (iv) Bajgrowicz-Scaillet: sin persistencia; (v) Rink: sin persistencia en 41 mercados. **Veredicto: prohibidas.**
+Hecho estadístico real en 1897-1986 (BLL), muerto después: sin significancia fuera de muestra (STW), BETC debajo de costos (Bessembinder-Chan), no ejecutable al precio de la señal (Ready), sin persistencia (Bajgrowicz-Scaillet; Rink en 41 mercados). **Prohibidas.**
 
 ### 5.3 Tendencia multiactivo (TSMOM): B
 
-Siglo de evidencia positiva (Hurst et al.), pero la significancia activo por activo es débil (Huang et al. 2020) y el desempeño 2023-2025 de los CTAs fue pobre. Se usa como **filtro y diversificador**, no como fuente principal de rendimiento (detalle en Cap. 06 y Cap. 12).
+Siglo de evidencia positiva (Hurst et al.), pero la significancia activo por activo es débil (Huang et al. 2020) y el desempeño 2024-2025 de los CTAs fue pobre. Se usa como **filtro y diversificador**, no como fuente principal de rendimiento (detalle en Cap. 06 y Cap. 12).
 
 ### 5.4 Sección cruzada técnica: B/C
 
 - **52 semanas:** B. Domina al momentum clásico en la muestra original y no revierte. Barato de calcular y compatible con pocas operaciones al mes.
 - **MAD 21/200:** B−. ~9% de alfa ponderado por valor, sobrevive costos institucionales; más fuerte del lado largo, justo el único lado que opera una cuenta sin cortos.
-- **Trend factor:** C+. Cifras brutas y de rebalanceo mensual sobre universo amplio; útil como idea de combinar horizontes, no como estrategia para 20k.
+- **Trend factor:** C+. Cifras brutas sobre universo amplio; útil como idea (combinar horizontes), no como estrategia para 20k.
 - **MA sobre deciles de volatilidad (HYZ):** C. Opera sobre portafolios con componentes ilíquidos (autocorrelación mecánica); en acciones individuales la evidencia es no concluyente [22].
 - **CNN sobre imágenes:** C. Enorme en bruto y equiponderado; en valor, Sharpe 1.7 bruto con rotación semanal. Para nosotros: conocimiento, no operación.
 
@@ -213,10 +208,10 @@ La amplitud predice a corto plazo entre países e industrias (Zaremba et al.), c
 |---|---|---|---|---|
 | SMA 10 meses sobre S&P 500 | DD −50% relativo; CAGR +0.9 pp (bruto) | Sí con < 1 ida y vuelta al año (inferencia) | CAGR indistinguible sin look-ahead; drawdown robusto | B |
 | 14 técnicos NRTZ (prima de mercado) | R²_OS 0.65%; CER de PC-TECH 2.49 pp bruto; individuales hasta 2.82 pp neto | Sí (50 pb) | Sobrevive en GWZ 2024 | B+ |
-| 52 semanas (CS) | ~0.45-0.65% mensual | No reportado | Robusto internacionalmente según literatura posterior | B |
-| MAD 21/200 (CS) | ~9% anual de alfa VW | Sí (institucional) | Sin réplica independiente conocida | B− |
+| 52 semanas (CS) | ~0.45-0.65% mensual | No reportado | Hay réplicas internacionales publicadas (no revisadas en detalle aquí) | B |
+| MAD 21/200 (CS) | ~9% anual de alfa VW | Sí (institucional) | No se encontró réplica independiente | B− |
 | Reglas diarias BLL | +12% vs −7% anual (compra vs venta) | No (BETC 0.22% desde 1975) | Muertas desde 1987 | D |
-| Momentum intradía | R²_OS ~1.7-2.3% | Solo con costos institucionales | Persiste en EUA; débil en APAC | C (para nosotros D) |
+| Momentum intradía | R²_OS ~1.7-2.3% | Requiere costos institucionales y ejecución al cierre (inferencia) | Persiste en EUA; débil en APAC | C (para nosotros D) |
 | Overnight drift | ~3.7% anual (1998-2020) | — | ≈0 desde 2021 | D |
 | Velas japonesas | 0 frente a aleatorio | — | — | D |
 | CAN SLIM / IBD 50 | +1.81% mensual IS 1984-92; FFTY 3.47% anual en vivo | En vivo, bajo el mercado | Fracaso en vivo | D |
@@ -316,17 +311,17 @@ Obligatorio, en este orden, con los valores de `validacion_estrategias`:
 1. **Confundir significancia nominal con real.** La mejor de 7,846 reglas siempre se ve genial (STW: p nominal 0.004 → p ajustado 0.341).
 2. **Look-ahead.** Señal y rendimiento del mismo cierre. Ya invalidó resultados publicados (Zakamulin).
 3. **Portafolios con precios rancios.** Timing sobre índices equiponderados, de small caps o de mercados emergentes ilíquidos "funciona" por autocorrelación mecánica (Bessembinder-Chan; HYZ en acciones individuales).
-4. **Bruto vs neto.** Sharpe 7.2 bruto equiponderado con rotación semanal no es un Sharpe que exista en tu cuenta.
+4. **Bruto vs neto.** Un Sharpe de 7.2 bruto, equiponderado y con rotación semanal no existe en una cuenta de GBM.
 5. **Confundir reducción de riesgo con alfa.** La media móvil vende seguro contra colas; su "costo" son los latigazos. Evaluar con drawdown, Calmar y CAGR en MXN, no con la media.
-6. **Olvidar el régimen.** La predictibilidad técnica de la prima vive en recesiones (R²_OS +11.24%) y es negativa en expansiones (−2.80%). Años enteros de bajo desempeño son normales.
-7. **Decaimiento post-publicación.** Overnight drift: de ~3.7% anual a cero; reglas de índice tras los ETFs; Rink: caída en todos los mercados. Suponer la media histórica como esperanza futura es error de novato.
+6. **Olvidar el régimen.** La predictibilidad técnica de la prima vive en recesiones; años enteros de bajo desempeño son normales.
+7. **Decaimiento post-publicación.** Overnight drift a cero; reglas de índice tras los ETFs; Rink: caída en todos los mercados. La media histórica no es la esperanza futura.
 8. **Backtest del vendedor.** IBD 50: +9% anual en la reconstrucción, 3.47% anual en vivo.
 9. **Optimizar el parámetro.** "La de 187 días es la mejor" = sobreajuste. Si 150-250 no dan resultados parecidos, no hay regla.
 10. **Stops donde están todos.** Números redondos y mínimos obvios son imanes de liquidez (Osler 2003).
 11. **Narrativa sobre la gráfica.** Elliott y Fibonacci siempre "funcionan" ex post porque el analista elige el conteo y el punto de anclaje.
 12. **Tendencia + apalancamiento en mercado lateral.** Latigazos × 3 con drag de volatilidad = la peor combinación; por eso la histéresis propuesta en R2 y el tope de 8 operaciones al mes.
-13. **Medir en USD y reportar en MXN.** El filtro en USD puede sacarte justo cuando el peso se deprecia y amortigua la caída; evaluar siempre en MXN.
-14. **Creer que "la IA ve patrones".** Los modelos que sí extraen información de gráficas (CNN, redes neuronales) se entrenan con millones de observaciones y validación estricta; un LLM mirando una imagen no es eso.
+13. **Medir en USD y reportar en MXN.** *Inferencia:* el filtro en USD puede sacarte justo cuando el peso se deprecia y amortigua la caída; evaluar siempre en MXN.
+14. **Creer que "la IA ve patrones".** Los modelos que sí extraen información de gráficas (CNN, redes neuronales) se entrenan con décadas de datos de miles de acciones y se validan fuera de muestra; un LLM mirando una imagen no es eso.
 
 ---
 
