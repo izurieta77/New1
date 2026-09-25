@@ -172,7 +172,7 @@ Etiquetas: [H] hecho con fuente · [I] inferencia · [O] opinión del autor.
 
 - **[I] Cómo una cascada llega al BTC spot.** Si el precio cae, bajan los HF; los liquidadores venden colateral (ETH, WBTC) en DEX y CEX; el arbitraje transmite esa presión al spot; y eso activa más liquidaciones. Es la espiral de las viñetas 10 y 11.
   - El 10-oct-2025 la cascada vino sobre todo de los **perpetuos**:
-    - más de $19 mil millones liquidados en 24 horas (CoinGlass, citado por [CNN](https://www.cnn.com/2025/10/11/business/trump-tariffs-crypto-selloff) y [CoinShares](https://coinshares.com/corp/insights/knowledge/billions-in-liquidations-what-happened/));
+    - más de $19 mil millones liquidados el 10 y 11-oct (CoinGlass, citado por [CoinShares](https://coinshares.com/corp/insights/knowledge/billions-in-liquidations-what-happened/) y [CoinGecko](https://www.coingecko.com/learn/october-10-crypto-crash-explained)). [CNN](https://www.cnn.com/2025/10/11/business/trump-tariffs-crypto-selloff) daba $18.28 mil M en su corte del 11-oct;
     - Aave liquidó ~$180 M en una hora ([CoinDesk](https://www.coindesk.com/markets/2025/10/11/aave-sees-64-flash-crash-as-defi-protocol-endures-largest-stress-test)), menos de 1% del total;
     - el BTC bajó de $122,574 a $104,782 dentro del día: −14.5% ([CoinGecko](https://www.coingecko.com/learn/october-10-crypto-crash-explained), CoinShares).
   - Para el BTC spot, el termómetro de apalancamiento es el interés abierto y el *funding* de los perpetuos. El TVL de DeFi no sirve para eso.

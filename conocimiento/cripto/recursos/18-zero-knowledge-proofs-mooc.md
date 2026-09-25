@@ -108,7 +108,7 @@ print({lam: round(k-lam,1) for lam in [80,100,128]})   # log2 de la probabilidad
 - **"Poscuántico" se juzga en el sistema completo, no solo en la prueba.**
   - StarkWare admite que las pruebas STARK ya lo son, porque se basan en hashes.
   - En cambio, las firmas de cuentas de Starknet, el puente con Ethereum y los datos en *blobs* todavía no lo son (The Quantum Insider, 30-jun-2026).
-  - Para BTC el riesgo cuántico está en las firmas ECDSA/Schnorr, no en la prueba de trabajo.
+  - Para BTC, la exposición cuántica relevante está en las firmas ECDSA/Schnorr, no en la prueba de trabajo. Es inferencia mía, no verificada en esta sesión; corresponde a G1.
 - **Para la cartera actual** (solo BTC spot en Binance), ZK no es una posición. Sirve para vigilar:
   - rotaciones narrativas hacia privacidad, como ZEC: US$1,534 y capitalización de US$26,000 M según CoinGecko al 25-sep-2026;
   - las L2 de Ethereum.

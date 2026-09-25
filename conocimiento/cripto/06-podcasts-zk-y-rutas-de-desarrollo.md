@@ -71,7 +71,7 @@ Estas reglas salen de lo que encontré en 5 episodios de The Chopping Block y 4 
 - **R4. La narrativa sigue al precio: úsala como termómetro contrario.**
   - El 7-ago-2026, con BTC en US$64.9 k, Bankless decía que el ciclo "no se ve terminado" y que podía faltar medio año.
   - El 6-ago, en The Chopping Block, Haseeb decía que "retail is genuinely not here" y que la volatilidad tardaría "9, 12, maybe 18 months" en volver.
-  - Siete semanas después, con BTC en US$83.9 k (+29%), ambos hablaban de reflexividad y de "early bull".
+  - Tres semanas después (28-ago), Haseeb ya hablaba en Bankless de reflexividad y de vendedores agotados. A las siete semanas, con BTC en US$83.9 k (+29%), Bankless hablaba de "early bull".
   - Cuando todos los analistas de ciclo coinciden ("85% probability"), hasta el anfitrión admite que eso "raise[s] an eyebrow".
 - **R5. Enfriamiento de 48 horas.** Ninguna idea escuchada en un podcast llega al comité antes de 48 horas, y nunca sin fuente primaria ni sin pasar por `gestor-de-riesgo`.
 - **R6. Contrastar siempre dos podcasts y una fuente primaria.** The Chopping Block y Bankless se contradicen en cifras y en tesis (§6). La contradicción es información.
@@ -93,7 +93,7 @@ Estas reglas salen de lo que encontré en 5 episodios de The Chopping Block y 4 
 
 Una prueba ZK demuestra que un cálculo es correcto sin revelar los datos. En blockchain tiene **dos usos distintos** (MOOC, clase 2):
 
-1. **Escalar o verificar cómputo** (zkRollups, zkBridges, zkEVM). Aquí no hace falta conocimiento cero, solo **sucintez**: la L1 verifica en milisegundos un lote que costó mucho calcular. Los datos se publican.
+1. **Escalar o verificar cómputo** (zkRollups, zkBridges, zkEVM). Aquí no hace falta conocimiento cero, solo **sucintez**: la L1 verifica rápido y barato un lote que costó mucho calcular. Los datos se publican.
 2. **Privacidad:** Zcash, Tornado Cash, Aztec, pruebas de solvencia de un exchange sin revelar cuentas.
 
 "ZK" en un folleto no dice cuál de los dos es. Casi siempre es el primero.
@@ -128,7 +128,7 @@ MOOC, clases 5 y 8:
   - STRK (Starknet, la red de StarkWare, "empresa de US$8,000 M" según el libro 31) cotiza a **US$0.040**, **−99.1%** contra su máximo del 20-feb-2024 (CoinGecko, 25-sep-2026).
   - La valuación de US$8,000 M es una ronda privada de 2022, no un precio.
 - **"STARK = poscuántico".** Es solo en parte. Las pruebas lo son (hashes), pero StarkWare admite que las firmas de cuentas de Starknet y el puente y los *blobs* de Ethereum todavía no (The Quantum Insider, 30-jun-2026).
-  - Para BTC, el riesgo cuántico está en las firmas ECDSA/Schnorr, no en la prueba de trabajo.
+  - Para BTC, la exposición cuántica relevante está en las firmas (ECDSA/Schnorr), no en la prueba de trabajo. Esto es inferencia mía, no verificada en esta sesión; corresponde a G1.
 - **"Privacidad = narrativa ganadora".** En 2026, ZEC llegó a US$26,000 M de capitalización (US$1,534, CoinGecko 25-sep-2026). Bankless lo presenta como el nuevo aspirante a reserva de valor. Es una rotación narrativa sin historial auditado y con riesgo regulatorio propio.
 - **"Una prueba ZK elimina el riesgo".** No. Los circuitos pueden tener bugs (clase 14, verificación formal), y el riesgo operativo (llaves de actualización, secuenciador) suele ser mayor que el criptográfico.
 
@@ -180,7 +180,7 @@ MOOC, clases 5 y 8:
    - La SEC dio una exención de 5 años para acciones tokenizadas en AMMs, con topes de 0.25% y 2.5% del volumen.
    - La SEC propuso Regulation Crypto Assets: US$5 M una vez cada 4 años y US$75 M por año con estados financieros; comentarios hasta el 20-oct-2026.
    - Lo que hace una agencia lo puede revertir la siguiente administración. Hay que descontar ese riesgo político.
-10. **El dinero del minorista migra a donde está la volatilidad.** En Robinhood (2T-2026), los contratos de eventos (US$156 M) ya superan a acciones (US$129 M) y cripto (US$100 M, −38% anual). Para BTC, el comprador marginal es institucional (ETFs, tesorerías) y el minorista es intermitente. Los flujos se miden con datos (G5), no con podcasts.
+10. **El dinero del minorista migra a donde está la volatilidad.** En Robinhood (2T-2026), los contratos de eventos (US$156 M) ya superan a acciones (US$129 M) y cripto (US$100 M, −38% anual). The Chopping Block (6-ago) sostuvo que los institucionales amortiguaron la volatilidad de cripto y que el minorista se fue. Es una hipótesis: quién es el comprador marginal de BTC se mide con flujos de ETFs y datos en cadena (G5), no con podcasts.
 
 ## 6. Contradicciones entre recursos
 
@@ -194,7 +194,7 @@ MOOC, clases 5 y 8:
 | STARK contra SNARK | Libro 31 (según la reseña): la configuración de los SNARKs "puede ser fuente de problemas"; los STARKs "pueden ser más eficientes" | MOOC 18: STARKs transparentes pero con pruebas de "cientos de KB"; seguridad de FRI bajo conjetura; Groth16, las pruebas más cortas | Es un intercambio de ventajas, no una superioridad. El MOOC es la fuente neutral. |
 | Inmutabilidad | Libro 31, cap. 1: "they simply can't" cambiar lo escrito | EIP-8363 cita la bifurcación de The DAO (EIP-779) como precedente de que la capa social anula reglas | El libro exagera. La inmutabilidad es social y económica, no absoluta. |
 | Cronología de StarkEx | Sitio del libro 31: "2019 StarkEx Goes Live… dYdX migrates" | Documentación de StarkWare: en red principal desde **jun-2020**; dYdX desde **abr-2021** | Manda la documentación. El sitio promocional comprime la historia. |
-| Régimen de mercado (ago-2026) | Chopping Block (6-ago, Haseeb): "retail is genuinely not here"; 9-18 meses para que vuelva la volatilidad | Bankless (21-ago): "Is the Bull Market Back?"; (18-sep) "earliest innings" | BTC: US$64.9 k (7-ago) → US$83.9 k (25-sep). Haseeb cambió a "reflexivity breeds reflexivity" el 28-ago. Ambos siguen al precio. |
+| Régimen de mercado (ago-2026) | Chopping Block (6-ago, Haseeb): "retail is genuinely not here"; 9-18 meses para que vuelva la volatilidad | Bankless (21-ago): "Is the Bull Market Back?"; (18-sep) "earliest innings" | BTC: US$64.9 k (7-ago) → US$83.9 k (25-sep). Haseeb cambió a "reflexivity breeds reflexivity" el 28-ago (en Bankless). Ambos siguen al precio. |
 | Acciones tokenizadas | Bankless (David): las *offshore* sin KYC son mejores; las permitidas por la SEC son "strictly an inferior product" | Chopping Block (Robert Leshner, CEO de Superstate, empresa de tokenización): el fracaso de CLARITY "changes nothing for tokenization"; Haseeb (en Bankless): los *tokens* de acciones "not that big of a deal", hay más demanda de derivados | Opiniones con conflicto (Superstate; $HOOD en tenencias de David). Dato: la exención de la SEC limita el volumen (0.25% o 2.5%), así que en el corto plazo pesa más lo *offshore*. |
 | Cifras de Alchemy University | Cabecera: "91 lessons" | Temario: "96 lessons, 14 videos" (las secciones suman 96 lecciones y 8 videos) | Inconsistencia interna de marketing. |
 | Duración del curso de Collins | freeCodeCamp: "30-hour course" (texto) | Título: "32-Hour Course"; Chainlink: "30+ hour" | Según el índice, la lección 18 empieza a las 31:28:32. "~32 h" es lo correcto. |
@@ -202,7 +202,7 @@ MOOC, clases 5 y 8:
 ## 7. Qué hacer con esto en el sistema
 
 - **Pronósticos externos a registrar como práctica** (autor externo, no del comité):
-  - BTC arriba de US$60,000 al 31-dic-2026 (Haseeb, 28-ago-2026).
+  - BTC no toca menos de US$60,000 (mínimo diario en Coinbase) entre el 28-ago y el 31-dic-2026. Operacionaliza el "very unlikely that we tread below 60 this year" de Haseeb (28-ago-2026).
   - EIP-8363 sin activarse en la red principal al 31-dic-2026 (Ryan Sean Adams, 7-ago-2026).
   - S&P 500 > 8,200 al 31-dic-2026 (Tom Lee, citado el 18-sep-2026).
 - **Vigilancia de riesgo para BTC** (no son órdenes):

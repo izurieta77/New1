@@ -171,4 +171,47 @@ Un protocolo presume ser "auditado por OpenZeppelin". En Etherscan ves que el co
 
 ## P8. Un episodio histórico contra lo que pasó (10 pts)
 
-*Pendiente de completar con la lectura íntegra del episodio 418 de The Chopping Block (9-nov-2022). Ver la sección final.*
+En el ep. 418 de The Chopping Block (9-nov-2022), grabado el día de la carta de intención de Binance para comprar FTX, los participantes hicieron cinco afirmaciones:
+
+1. "60% probability that the deal closes";
+2. "FTX US is fine";
+3. lo ocurrido "is likely going to be criminal";
+4. el valor empresarial de FTX es negativo y sin Binance "FTX is probably toast";
+5. Solana "has exit velocity".
+
+(a) Califica cada una como acierto o fallo, con fecha y fuente.
+(b) Si en ese momento tenías 1 BTC en FTX, ¿cuánto vale hoy tu recuperación medida en BTC?
+(c) ¿Qué regla de custodia se deriva para la cuenta actual?
+
+**Respuesta de referencia.**
+
+- **(a)**
+  1. **Fallo.** Binance se retiró ese mismo 9-nov-2022 (CoinDesk, TechCrunch, CNBC).
+  2. **Fallo.** FTX US (West Realm Shires Services) suspendió retiros el 10-nov-2022 y entró al Capítulo 11 el 11-nov-2022 (Georgia DBF y otros reguladores estatales).
+  3. **Acierto.** SBF fue condenado en nov-2023 y sentenciado a 25 años el 28-mar-2024 (DOJ).
+  4. **Acierto.** Nadie compró y FTX pidió el Capítulo 11 el 11-nov-2022.
+  5. **Acierto en el largo plazo, con un camino brutal.** SOL pasó de US$13.97 (9-nov-2022) a US$8.00 (29-dic-2022) y a ~US$121.6 (25-sep-2026).
+
+  Balance: 3 aciertos y 2 fallos. Los *insiders* también admitieron que una semana antes creían que FTX "would be fine".
+- **(b)** El plan (confirmado el 7-oct-2024) paga ~119% del reclamo al 98% de los acreedores, valuado al precio del 11-nov-2022 (BTC US$16,871). 1.19 × 16,871 = **US$20,076**. Con BTC a ~US$83,920, eso es **23.9% de un BTC**.
+- **(c)** El saldo en un exchange es un **reclamo en dólares** contra el exchange, no propiedad de la moneda:
+  - mantener en el exchange solo lo necesario para operar;
+  - revisar la prueba de reservas, sabiendo su límite: no prueba la ausencia de otros pasivos;
+  - para retirar a autocustodia, aplicar la lección de Coldcard: proveedor de *hardware* serio, firmware verificado y semilla generada con buena entropía.
+
+*Fuentes:* transcripción propia del audio público del ep. 418 (RSS de Unchained); DOJ, 28-mar-2024; comunicado de confirmación del plan de FTX, 7-oct-2024; Bitcoin.com, 28-dic-2023 (tabla de conversión); velas diarias de Coinbase; ficha [09](../recursos/09-the-chopping-block.md).
+
+---
+
+## Clave rápida
+
+| P | Tema | Cifra o dato ancla |
+|---|---|---|
+| 1 | Verificar votos | CLARITY 49-50 (votación 234, 15-sep-2026) |
+| 2 | Conflictos | oDAO de Rocket Pool y RPL; EtherFi; "we are all investors in Lighter… HYPE" |
+| 3 | Ultra Sound Money | ETH/BTC −57.6%; oferta +1.29% sobre The Merge |
+| 4 | Folleto ZK | Sucintez ≠ privacidad; el esquema de compromiso decide lo poscuántico |
+| 5 | Grinding | 2^−10; ~15.6 días de red; 34 consultas FRI |
+| 6 | Regulación por agencias | 0.25%/75 y 2.5%/250; 5 años; US$5 M y US$75 M |
+| 7 | Contrato *proxy* | *Admin* EOA sin *timelock* = riesgo que la auditoría no cubre |
+| 8 | FTX | 3 aciertos y 2 fallos; 23.9% de un BTC |

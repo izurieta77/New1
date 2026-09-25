@@ -115,7 +115,8 @@
     - clientes de FTX.com y de EUA: **105% acumulado**;
     - acreedores generales: 103%;
     - "conveniencia": 120%.
-    - Los reclamos se valuaron **en USD a la fecha de la petición** (11-nov-2022), con **BTC a US$16,871** (tabla de conversión propuesta por los deudores; CoinDesk y Protos).
+    - Los reclamos se valuaron **en USD a la fecha de la petición** (11-nov-2022), con **BTC a US$16,871**.
+    - El juez de quiebras aceptó ese criterio: "el uso de la fecha de la petición... es apropiado" ([Protos, 1-feb-2024](https://protos.com/ftx-customers-to-be-repaid-at-16871-bitcoin-prices/)).
 16. [I] **En BTC, el 105% es una pérdida:** 1.05 × 16,871 = US$17,715 por BTC reclamado, contra ~US$84,000 hoy. **Recuperó 21% en términos de BTC.** La quiebra convirtió monedas en un reclamo en dólares.
 
 ### Juicios de terceros
