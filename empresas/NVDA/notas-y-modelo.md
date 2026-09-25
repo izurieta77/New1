@@ -19,6 +19,8 @@
 
 **Congelamiento.** Los insumos se hashearon con `herramientas/huellas.py` (el manifiesto se verificó con `huellas.py verificar`: OK). La huella de cada documento está en `base.json` → `fuentes.F*.sha256`, y `base.json` a su vez está en `modelo/SHA256SUMS.txt`. El CDN de la SEC agrega al final de cada HTML una etiqueta `<script>` que varía, así que el hash se calcula sin esa etiqueta. El tamaño resultante coincide byte a byte con el `index.json` de EDGAR (por ejemplo, 1,967,816 bytes para F1). Manifiesto de insumos:
 
+**Actualización (25-sep-2026, verificación independiente).** Los HTML crudos de F1 (10-K FY2026) y F3 (10-Q 2T FY2027) ya están congelados como archivos, no solo como huella: `empresas/NVDA/modelo/datos/nvda-20260125.htm` y `nvda-20260726.htm`, con manifiesto propio en `empresas/NVDA/modelo/datos/SHA256SUMS.txt` (`huellas.py verificar`: OK). Se descargaron de nuevo, de forma independiente, desde `www.sec.gov` con el User-Agent `SistemaInversionNew1/1.0 investigacion (izurieta77@gmail.com)` (funcionó sin 403; ver pendiente 8 más abajo) y, tras quitar la misma etiqueta `<script>` del CDN, el SHA-256 coincidió byte a byte con el de `base.json` para F1 y F3. Detalle en §11.
+
 ```
 73d81f5a111abcf72426c840871e76f5f5edc9631f436d495a86b6f87306d58b  nvda-20260125.htm   (F1)
 dae19486be264fd26eb00a7f920dc641041a261c81bc8c03b678eea947de4856  nvda-20250126.htm   (F2)
@@ -390,12 +392,81 @@ Las 27 celdas completas, sin agrupar, están en `resultados.json`. Las filas con
 5. **Extender el motor.** Modelar inversiones de capital, garantías y compromisos como flujos de escenario exige cambiar `herramientas/modelo_integrado.py`, que es compartido. No se hizo.
 6. **Reglas de exportación.** Leer directamente la regla del BIS de ene-2026 (2026-00789) y la propuesta RASA (F3 p. 37) antes de usar cualquier fracción restringida que no sea hipotética.
 7. **Actualizaciones.** Actualizar la β (Damodaran ene-2026) y la ERP cuando cambien. El precio es el cierre del 24-sep-2026 y no se usó la cotización del SIC en MXN.
-8. **Acceso a la SEC.** `www.sec.gov` respondió 403 al User-Agent `SistemaInversionNew1/1.0 investigacion`. La descarga funcionó con un User-Agent descriptivo y un contacto de marcador no enrutable (`sec-contacto@sistemainversionnew1.invalid`). Conviene definir `SEC_USER_AGENT` con un correo real del sistema.
+8. **Acceso a la SEC — resuelto el 25-sep-2026.** `www.sec.gov` respondió 403 al User-Agent `SistemaInversionNew1/1.0 investigacion` sin correo. Con `SistemaInversionNew1/1.0 investigacion (izurieta77@gmail.com)` (correo real entre paréntesis, formato que la SEC pide en `sec.gov/os/accessing-edgar-data`) tanto `www.sec.gov/Archives/...` como `data.sec.gov/submissions/...` respondieron 200. Conviene fijar ese formato como `SEC_USER_AGENT` por defecto del sistema.
 
-## 10. Reproducción
+## 11. Verificación independiente (2026-09-25)
+
+**Quién y con qué.** Un segundo agente, sin reutilizar el trabajo de campo del primero, descargó de nuevo F1 (10-K FY2026) y F3 (10-Q 2T FY2027) directamente de `www.sec.gov` (CIK 1045810), los congeló en `empresas/NVDA/modelo/datos/` con `herramientas/huellas.py`, y cotejó `base.json` contra el texto de esos dos documentos. No se volvió a descargar F2, F4, F5, F6, F7 ni F8: quedan fuera del alcance de esta verificación y su huella no se re-comprobó.
+
+**1. Autenticidad de los documentos ya usados.** Los dos HTML descargados de forma independiente, tras quitar la etiqueta `<script>` que agrega el CDN de la SEC (114 bytes al final, en ambos casos, antes de `</body></html>`), dan el mismo SHA-256 que `base.json` registra para F1 y F3:
+
+| Doc | SHA-256 (stripped), esta verificación | SHA-256 en `base.json` | Coincide |
+|---|---|---|---|
+| F1 (10-K FY2026) | `73d81f5a111abcf72426c840871e76f5f5edc9631f436d495a86b6f87306d58b` | igual | Sí |
+| F3 (10-Q 2T FY2027) | `e2634e509c241c5f45e3f6c115dc38a85645e5fdbee760b4a04f5e9035f6f7a9` | igual | Sí |
+
+Esto confirma que el emisor y la fecha de los documentos que sustentan `base.json` son los correctos (10-K FY2026, accession 0001045810-26-000021; 10-Q 2T FY2027, accession 0001045810-26-000075) y que el archivo no fue editado después de descargarse: es el mismo byte a byte que el que la SEC sirve hoy. Se confirmó además contra `data.sec.gov/submissions/CIK0001045810.json` que no hay un 10-Q más reciente que F3 al 25-sep-2026 (el siguiente, del 3T FY2027, aún no se presenta).
+
+**2. Cotejo de cifras.** Se extrajo el texto de ambos HTML (conversión propia HTML→texto, sin reutilizar `herramientas/edgar.py`) y se buscaron a mano las cifras de `base.json` en el estado de resultados, el balance, el flujo de efectivo, el estado de variaciones del capital y las notas. Se cotejaron **72 cifras individuales en 35 categorías** (mínimo pedido: 25); todas coincidieron, **cero discrepancias**:
+
+| Categoría | Cifras cotejadas (FY2026 / FY2025 / FY2024 salvo que se indique) | Página del documento | Resultado |
+|---|---|---|---|
+| Ingresos, costo de ventas, utilidad bruta | 215,938 / 130,497 / 60,922 — 62,475 / 32,639 / 16,621 — 153,463 / 97,858 / 44,301 | F1 p. 51 | Coincide |
+| Utilidad operativa y gastos operativos | 130,387 / 81,453 / 32,972 — 23,076 / 16,405 / 11,329 | F1 p. 51 | Coincide |
+| Intereses, otros ingresos, UAI, impuestos, utilidad neta | 259/247/257 — 2,300/1,786/866 — 9,022/1,034/237 — 141,450/84,026/33,818 — 21,383/11,146/4,058 — 120,067/72,880/29,760 | F1 p. 51 | Coincide |
+| Caja, inversiones cp, cuentas por cobrar, inventario | 10,605/8,589 — 51,951/34,621 — 38,466/23,065 — 21,403/10,080 | F1 p. 53 | Coincide |
+| PPE neto, activo total | 10,383/6,283 — 206,803/111,601 | F1 p. 53 | Coincide |
+| Proveedores, deuda, pasivo total, capital, utilidades retenidas | 9,812/6,310 — (999+7,469=)8,468/(0+8,463=)8,463 — 49,510/32,274 — 157,293/79,327 — 146,973/68,038 | F1 p. 53 | Coincide |
+| Otros activos LP (componentes) | 2,867+20,832+3,306+13,258+22,251+8,301 = 70,815 (FY2026) | F1 p. 53 | Coincide |
+| Otros pasivos LP (componentes) | 2,572+7,306 = 9,878 (FY2026) | F1 p. 53 | Coincide |
+| D&A, SBC, CFO, capex | 2,843/1,864/1,508 — 6,386/4,737/3,549 — 102,718/64,089/28,090 — 6,042/3,236/1,069 | F1 p. 55 | Coincide |
+| CFI, CFF | −52,228/−20,421/−10,566 — −48,474/−42,359/−13,633 | F1 p. 55 | Coincide |
+| Dividendos y recompras pagados (flujo) | 974/834/395 — 40,086/33,706/9,533 | F1 p. 55 | Coincide |
+| Estado de variaciones del capital (FY2026) | capital inicial 79,327; UR inicial 68,038; SBC 6,387; dividendos declarados 974; recompras 40,388; emisión 644; ORI 150; retención RSU −7,948; recompras contra UR 40,158 | F1 p. 54 | Coincide |
+| Concentración de clientes (ingresos, directos) | FY2026: 22%, 14%; FY2025: 12%, 11%, 11%; FY2024: 13% | F1 p. 78 | Coincide |
+| Concentración de cuentas por cobrar | FY2026: 25%, 18%, 13% (tres clientes) | F1 p. 78 | Coincide |
+| Cargo H20 1T FY2026 y efecto en margen bruto | $4.5 mil M; −2.6 pp FY2026, −2.3 pp FY2025 | F1 p. 36 y p. 41 | Coincide |
+| Compromisos (manufactura/suministro/capacidad, nube, inversión, otros) | 95.2 / 27 / 11.4 / 3.4 mil M | F1 Nota 12 p. 70 | Coincide |
+| Tasa efectiva de impuestos | 15.1% FY2026, 13.3% FY2025 | F1 p. 73 | Coincide |
+| SBC no devengada | $14.8 mil M, 2.3 años | F1 Nota 3 p. 61 | Coincide |
+| Recompras (acciones y monto) | 282 M por $40.4 mil M (FY2026); 310 M por $34.0 mil M (FY2025) | F1 Nota 14 p. 76 | Coincide |
+| Segmentos (ingresos y utilidad) | Compute & Networking 193,479/130,141; Graphics 22,459/9,156 | F1 Nota 16 p. 77 | Coincide |
+| Geografía por sede del cliente | EUA 149,617; Taiwán 42,345; China+HK 19,677; Otros 4,299 | F1 Nota 16 p. 78 | Coincide |
+| Atribución de uso final Taiwán→EUA/Europa | 76% | F1 p. 78 nota 2 | Coincide |
+| Mercado final (Data Center, cómputo, networking) | 193,737 / 162,361 / 31,376 | F1 p. 79 | Coincide |
+| Arancel al H200 | 25% | F1 p. 36 | Coincide |
+| Ingresos y utilidades del 1S y 2T FY2027 | Ingresos 96,221 (2T) / 177,837 (1S) / 90,805 (1S FY2026); utilidad bruta 133,299/60,521; utilidad operativa 117,270/50,078 | F3 p. 3 | Coincide |
+| SBC del 1S y 2T FY2027 | 3,954 (1S FY2027) / 3,099 (1S FY2026) | F3 p. 10 | Coincide |
+| Balance al 26-jul-2026 (caja, deuda, valores) | caja 22,443; deuda 1,000+32,366=33,366; valores de deuda 34,143; valores de capital negociables 42,783; valores no negociables 51,157 | F3 p. 5 | Coincide |
+| Inventario y cuentas por cobrar al 26-jul-2026 | 31,575; 63,059 | F3 p. 5 | Coincide |
+| Compromisos de suministro y capacidad | $279 mil M (contra $119 mil M el trimestre anterior) | F3 Nota 10 p. 18 | Coincide |
+| Garantías (SB Energy y AI clouds) | $105 mil M; $3.5 mil M | F3 Nota 10 p. 19 | Coincide |
+| Tasa efectiva de impuestos 1S/2T FY2027 | 16.5% (2T y 1S) | F3 p. 21 | Coincide |
+| Deuda: principal agregado | $33.5 mil M | F3 p. 17 | Coincide |
+| Autorización y saldo de recompra | +$80 mil M el 18-may-2026; $99.3 mil M disponibles al 26-jul-2026 | F3 p. 21 | Coincide |
+| Dividendo por acción y pago del 2T | $0.25; $6,047 | F3 p. 6 y p. 21 | Coincide |
+| Recompra del 2T (acciones) | 94.4 M | F3 p. 40 (tabla mensual) | Coincide |
+
+Las 72 cifras (contando cada celda por año/trimestre) cubren las 35 categorías de la tabla; todas están en `base.json` con la misma página que cita `fuentes_campos`, y ninguna requirió corrección.
+
+**3. Reejecución del modelo.** `python3 empresas/NVDA/modelo/modelo.py` se corrió de nuevo de forma independiente: código de salida 0, 540 registros (520 OK, 0 FALLA, 16 INFO, 4 NO_APLICA), auditoría de `resultados.json` releído coincide con la corrida, DCF inverso base 20.2105% (OK) y sensibilidad geopolítica con error de identidad 0.0 en las 27 celdas — exactamente lo que documenta §4. `SHA256SUMS.txt` de `base.json`, `modelo.py` y `resultados.json` salió idéntico al que ya existía (el motor es determinista y no se tocó ningún archivo), así que no hubo que regenerar nada.
+
+Revisión dirigida a los puntos que pide esta verificación:
+- **Concentración de clientes:** confirmada palabra por palabra contra F1 Nota 16 p. 78 (§2.1 de este documento). Sin cambios.
+- **Compromisos de compra/suministro:** confirmados los tres montos de F1 Nota 12 ($95.2/$27/$11.4/$3.4 mil M) y el de F3 Nota 10 ($279 mil M, antes $119 mil M). Sin cambios.
+- **Controles de exportación (D:5) y su efecto en inventario/cargos:** el texto de F1 pp. 10, 26 y 36 confirma el cargo de $4.5 mil M del H20 (1T FY2026) y el arancel de 25% al H200; el efecto de −2.6 pp / −2.3 pp en margen bruto por provisiones de inventario está en F1 p. 41, tal como cita §2.3. Sin cambios.
+- **SBC:** $6,386 M (FY2026) en el estado de resultados/flujo coincide exactamente; la SBC no devengada de $14.8 mil M a 2.3 años (F1 Nota 3 p. 61) y de $3,954 M en el 1S FY2027 (F3 p. 10) también. Sin cambios.
+- **Recompras:** 282 M de acciones por $40.4 mil M en FY2026 (F1 Nota 14 p. 76) y 94.4 M en el 2T FY2027 (F3 p. 40) confirmados. Sin cambios.
+
+**4. Errores encontrados.** Ninguno. No se registró ninguna fila nueva en `conocimiento/registro-de-errores.md`: las 72 cifras cotejadas coinciden con `base.json`, y los controles y la reconciliación (C01-C16, C13) reproducen exactamente lo que ya documentaba §4. No se modificó `base.json`, `modelo.py` ni `resultados.json`.
+
+**Límites de esta verificación.** Solo se re-descargaron y cotejaron F1 y F3, que son los dos documentos primarios de los que sale casi toda la base histórica y los insumos del DCF y la sensibilidad; no se volvió a verificar F2 (10-K FY2025, usado solo para el balance de apertura de FY2024 y la deuda inicial), F4 y F5 (comunicados de prensa, FCF y non-GAAP), F6 (precio de Yahoo, fuente viva), F7 (beta de Damodaran) ni F8 (tasa libre de riesgo y ERP citadas de `conocimiento/03`). Tampoco se leyó el 10-Q completo palabra por palabra: el cotejo fue dirigido a las cifras que `base.json` transcribe, no una lectura exhaustiva de todas las notas. Sigue pendiente, como decía §9.2, leer la transcripción de la llamada y el comentario del CFO, y descargar el 10-K FY2024 para la apertura de FY2023.
+
+## 12. Reproducción
 ```
 cd /home/user/New1
-python3 empresas/NVDA/modelo/modelo.py                               # código 0: controles OK y auditoría coincide
+python3 empresas/NVDA/modelo/modelo.py                                          # código 0: controles OK y auditoría coincide
 python3 herramientas/huellas.py verificar empresas/NVDA/modelo/SHA256SUMS.txt   # OK
+python3 herramientas/huellas.py verificar empresas/NVDA/modelo/datos/SHA256SUMS.txt   # OK (10-K FY2026 y 10-Q 2T FY2027 congelados)
 ```
-Solo usa la biblioteca estándar de Python 3.11. Para volver a verificar un insumo, se descarga la URL de F1-F5, se quita la etiqueta `<script ...></script>` que la SEC agrega antes de `</body>` y se compara el SHA-256 con `base.json`.
+Solo usa la biblioteca estándar de Python 3.11. Para volver a verificar un insumo, se descarga la URL de F1-F5 (para F1 y F3, también sirven las copias congeladas en `empresas/NVDA/modelo/datos/`), se quita la etiqueta `<script ...></script>` que la SEC agrega antes de `</body>` y se compara el SHA-256 con `base.json`. Para descargar de `www.sec.gov` o `data.sec.gov`, el User-Agent debe llevar un correo real entre paréntesis, p. ej. `SistemaInversionNew1/1.0 investigacion (correo@dominio.real)`; sin correo, la SEC responde 403.
