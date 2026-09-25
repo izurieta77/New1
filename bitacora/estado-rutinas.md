@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-25 22:23 UTC · cripto · OK · (este commit) · pulso 16:17 CDMX en bitacora/cripto/2026-09-25.md (BTC ~85,200, ETH ~2,738, tendencia alcista sobre SMA200, flujos ETF positivos); sin órdenes vencidas ni alertas
 
 2026-09-25 21:45 UTC · cierre · OK · (este commit) · papel sin fondear (0 MXN), sin órdenes vencidas; ningún reporte del universo hoy; marcador sin datos; R04 → Replicado con diferencias (§7)
 2026-09-25 21:12 UTC · inteligencia · OK · (este commit) · 15 señales A-D en bitacora/inteligencia/2026-09-25.md (sesión 15:05 CDMX); sin alertas, sin novedad en cumplimiento
