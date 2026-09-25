@@ -1,0 +1,779 @@
+{
+ "control_extraccion_pdf": "re-extraccion identica en los 9 PDF",
+ "A1_eua": [
+  {
+   "edicion": "SPIVA U.S. Year-End 2023",
+   "archivo": "spiva-us-year-end-2023.txt",
+   "corte": "2023-12-31",
+   "publicacion": "marzo 2024 (citado asi en SPIVA U.S. Focus Mid-Year 2024, nota 1)",
+   "diez_anios": 87.42,
+   "columnas": [
+    "1",
+    "3",
+    "5",
+    "10",
+    "15",
+    "20"
+   ],
+   "valores": [
+    59.68,
+    79.78,
+    78.68,
+    87.42,
+    87.98,
+    93.03
+   ]
+  },
+  {
+   "edicion": "SPIVA U.S. Focus Mid-Year 2024",
+   "archivo": "spiva-us-mid-year-2024.txt",
+   "corte": "2024-06-30",
+   "publicacion": "~oct-nov 2024 (PDF creado 2024-10-29)",
+   "diez_anios": null,
+   "nota": "formato 'Focus' sin Report 1a: la cifra a 10 anios solo aparece en una grafica"
+  },
+  {
+   "edicion": "SPIVA U.S. Year-End 2024",
+   "archivo": "spiva-us-year-end-2024.txt",
+   "corte": "2024-12-31",
+   "publicacion": "~marzo 2025 (primera captura Wayback 2025-03-24)",
+   "diez_anios": 84.34,
+   "columnas": [
+    "1",
+    "3",
+    "5",
+    "10",
+    "15",
+    "20"
+   ],
+   "valores": [
+    65.24,
+    84.96,
+    76.26,
+    84.34,
+    89.5,
+    91.99
+   ]
+  },
+  {
+   "edicion": "SPIVA U.S. Mid-Year 2025",
+   "archivo": "spiva-us-mid-year-2025.txt",
+   "corte": "2025-06-30",
+   "publicacion": "~sep 2025 (primera captura Wayback 2025-09-05)",
+   "diez_anios": 85.98,
+   "columnas": [
+    "YTD",
+    "1",
+    "3",
+    "5",
+    "10",
+    "15",
+    "20"
+   ],
+   "valores": [
+    54.31,
+    72.61,
+    64.87,
+    86.91,
+    85.98,
+    88.29,
+    91.03
+   ]
+  },
+  {
+   "edicion": "SPIVA U.S. Year-End 2025",
+   "archivo": "spiva-us-year-end-2025.txt",
+   "corte": "2025-12-31",
+   "publicacion": "marzo 2026 (resumen de buscador; no hay fecha impresa en el PDF)",
+   "diez_anios": 85.59,
+   "columnas": [
+    "1",
+    "3",
+    "5",
+    "10",
+    "15",
+    "20"
+   ],
+   "valores": [
+    78.78,
+    66.84,
+    88.96,
+    85.59,
+    89.93,
+    92.89
+   ]
+  },
+  {
+   "edicion": "SPIVA U.S. Mid-Year 2026",
+   "archivo": "spiva-us-mid-year-2026.txt",
+   "corte": "2026-06-30",
+   "publicacion": "~16-17 sep 2026 (PDF creado 2026-09-16; captura Wayback 2026-09-17)",
+   "diez_anios": 83.33,
+   "columnas": [
+    "YTD",
+    "1",
+    "3",
+    "5",
+    "10",
+    "15",
+    "20"
+   ],
+   "valores": [
+    67.18,
+    78.69,
+    76.63,
+    89.32,
+    83.33,
+    90.49,
+    92.61
+   ]
+  }
+ ],
+ "A2_mexico": [
+  {
+   "edicion": "SPIVA Latin America Year-End 2023",
+   "archivo": "spiva-latin-america-scorecard-year-end-2023.txt",
+   "corte": "2023-12-31",
+   "publicacion": "abril 2024 (PDF creado 2024-04-26)",
+   "indice": "S&P/BMV IRT (IPC con dividendos)",
+   "columnas": [
+    "1",
+    "3",
+    "5",
+    "10"
+   ],
+   "valores": [
+    90.7,
+    79.07,
+    77.78,
+    87.8
+   ],
+   "diez_anios": 87.8,
+   "supervivencia_10_anios": {
+    "fondos_iniciales": 41,
+    "pct": 78.05
+   }
+  },
+  {
+   "edicion": "SPIVA Latin America Year-End 2024",
+   "archivo": "spiva-latin-america-year-end-2024.txt",
+   "corte": "2024-12-31",
+   "publicacion": "abril 2025 (PDF creado 2025-04-08)",
+   "indice": "S&P/BMV IRT (IPC con dividendos)",
+   "columnas": [
+    "1",
+    "3",
+    "5",
+    "10"
+   ],
+   "valores": [
+    18.6,
+    46.51,
+    62.79,
+    82.93
+   ],
+   "diez_anios": 82.93,
+   "supervivencia_10_anios": {
+    "fondos_iniciales": 41,
+    "pct": 78.05
+   }
+  },
+  {
+   "edicion": "Scorecard SPIVA para America Latina: Primer semestre de 2025",
+   "archivo": "spiva-latin-america-mid-year-2025-es.txt",
+   "corte": "2025-06-30",
+   "publicacion": "octubre 2025 (PDF creado 2025-10-20)",
+   "indice": "S&P/BMV IRT (IPC con dividendos)",
+   "columnas": [
+    "YTD",
+    "1",
+    "3",
+    "5",
+    "10"
+   ],
+   "valores": [
+    63.64,
+    50.0,
+    60.47,
+    69.05,
+    73.17
+   ],
+   "diez_anios": 73.17,
+   "supervivencia_10_anios": {
+    "fondos_iniciales": 41,
+    "pct": 82.93
+   }
+  }
+ ],
+ "contexto_mxn": [
+  {
+   "edicion": "SPIVA Latin America Year-End 2023",
+   "fondos_eua_en_mxn_vs_sp500_mxn_10a": null,
+   "fondos_globales_mxn_vs_sp_world_mxn_10a": null
+  },
+  {
+   "edicion": "SPIVA Latin America Year-End 2024",
+   "fondos_eua_en_mxn_vs_sp500_mxn_10a": 86.67,
+   "fondos_globales_mxn_vs_sp_world_mxn_10a": 100.0
+  },
+  {
+   "edicion": "Scorecard SPIVA para America Latina: Primer semestre de 2025",
+   "fondos_eua_en_mxn_vs_sp500_mxn_10a": 86.67,
+   "fondos_globales_mxn_vs_sp_world_mxn_10a": 100.0
+  }
+ ],
+ "A2_mexico_no_obtenidas": [
+  {
+   "edicion": "SPIVA Latin America Year-End 2025",
+   "corte": "2025-12-31",
+   "motivo": "spglobal.com devuelve 403; sin captura en Wayback",
+   "cifra_segun_resumen_de_buscador_no_verificada": {
+    "1": 75.6,
+    "3": 69.8,
+    "5": 77.3,
+    "10": 75.6
+   }
+  }
+ ],
+ "veredicto_A1": {
+  "afirmada": 85.6,
+  "ediciones_que_coinciden": [
+   "SPIVA U.S. Year-End 2025"
+  ],
+  "edicion_mas_reciente_obtenida": "SPIVA U.S. Mid-Year 2026",
+  "cifra_mas_reciente_obtenida": 83.33,
+  "matices_de_etiqueta": [
+   "'fondos grandes' en el reporte es 'All Large-Cap Funds' (fondos que invierten en empresas grandes, no fondos de mucho patrimonio)"
+  ],
+  "veredicto": "confirmada con matices"
+ },
+ "veredicto_A2": {
+  "afirmada": 82.9,
+  "ediciones_que_coinciden": [
+   "SPIVA Latin America Year-End 2024"
+  ],
+  "edicion_mas_reciente_obtenida": "Scorecard SPIVA para America Latina: Primer semestre de 2025",
+  "cifra_mas_reciente_obtenida": 73.17,
+  "matices_de_etiqueta": [
+   "el indice de SPIVA es el S&P/BMV IRT (IPC con dividendos reinvertidos), no el IPC de precio",
+   "existe una edicion posterior no obtenida (Year-End 2025) y en Mid-Year 2025 el 82.93% es la tasa de SUPERVIVENCIA a 10 anios, no la de bajo desempenio"
+  ],
+  "veredicto": "confirmada con matices"
+ },
+ "A3_ganadores_mexico": {
+  "fuente": "SPIVA Latin America Year-End 2024, paginas 7-8 y Exhibit 8 (datos al 31-dic-2024)",
+  "periodo_de_los_ganadores": "where only 18.6% of funds underperformed in 2024",
+  "no_benchmark_promedio_cuartil_superior_pct": 74.3,
+  "fondos_indexados_y_etfs_extranjeros_texto_pct": 16.4,
+  "exhibit8_grafica_pct": {
+   "no_benchmark": 74.3,
+   "valores_offshore": 16.8,
+   "fondos_indexados_y_etfs": 16.2
+  },
+  "discrepancia_texto_vs_grafica_pp": 0.2,
+  "veredicto": "confirmada con matices",
+  "matices": [
+   "se refiere al cuartil superior de 2024 (horizonte de 1 anio), no a los fondos que ganaron a 10 anios",
+   "S&P mide peso fuera del indice (cota inferior del active share), no el active share",
+   "el texto dice 16.4% y la grafica 16.2% en fondos indexados y ETFs extranjeros"
+  ]
+ },
+ "B_preregistrado": {
+  "ventana": "2015-01 a 2024-12",
+  "n_meses": 120,
+  "cagr_ipc_naftrac_pct": 3.525330349497313,
+  "cagr_sp500_mxn_pct": 16.980487394231105,
+  "carteras": [
+   {
+    "peso_sp500": 0.0,
+    "cagr_pct": 3.525330349497313,
+    "ventaja_vs_ipc_pp": 0.0
+   },
+   {
+    "peso_sp500": 0.1,
+    "cagr_pct": 4.975731776391501,
+    "ventaja_vs_ipc_pp": 1.4504014268941878
+   },
+   {
+    "peso_sp500": 0.2,
+    "cagr_pct": 6.404762958511712,
+    "ventaja_vs_ipc_pp": 2.8794326090143985
+   },
+   {
+    "peso_sp500": 0.3,
+    "cagr_pct": 7.8116991118188706,
+    "ventaja_vs_ipc_pp": 4.286368762321557
+   },
+   {
+    "peso_sp500": 0.5,
+    "cagr_pct": 10.556378497853135,
+    "ventaja_vs_ipc_pp": 7.031048148355822
+   }
+  ],
+  "peso_sp500_para_compensar_gastos": {
+   "1pp": 0.06894642968887219,
+   "2pp": 0.13845952278594714,
+   "3pp": 0.20856949981007986
+  },
+  "diferencia_mensual_sp500mxn_menos_ipc": {
+   "n": 120,
+   "media": 1.0178715494289696,
+   "se": 0.5120339514411013,
+   "t": 1.9878985496258723,
+   "ic95": [
+    0.014303445742680054,
+    2.021439653115259
+   ],
+   "veredicto": "apoyo"
+  },
+  "control_contra_spiva": {
+   "spiva_ye2024_irt_10a_anualizado_pct": 4.14,
+   "spiva_ye2024_sp500_mxn_10a_anualizado_pct": 17.08,
+   "fuente": "SPIVA Latin America Year-End 2024, Report 3 (fila de indices)"
+  }
+ },
+ "B_exploratorio": {
+  "anio_2024 (no pre-registrado; se agrego tras leer A3)": {
+   "ventana": "2024-01 a 2024-12",
+   "n_meses": 12,
+   "cagr_ipc_naftrac_pct": -10.269946241237582,
+   "cagr_sp500_mxn_pct": 54.11983766414126,
+   "carteras": [
+    {
+     "peso_sp500": 0.0,
+     "cagr_pct": -10.269946241237582,
+     "ventaja_vs_ipc_pp": 0.0
+    },
+    {
+     "peso_sp500": 0.1,
+     "cagr_pct": -5.048515557852696,
+     "ventaja_vs_ipc_pp": 5.221430683384886
+    },
+    {
+     "peso_sp500": 0.164,
+     "cagr_pct": -1.5785419396710076,
+     "ventaja_vs_ipc_pp": 8.691404301566575
+    },
+    {
+     "peso_sp500": 0.2,
+     "cagr_pct": 0.4183781574246037,
+     "ventaja_vs_ipc_pp": 10.688324398662186
+    },
+    {
+     "peso_sp500": 0.3,
+     "cagr_pct": 6.139723766812288,
+     "ventaja_vs_ipc_pp": 16.409670008049872
+    },
+    {
+     "peso_sp500": 0.5,
+     "cagr_pct": 18.382921233595706,
+     "ventaja_vs_ipc_pp": 28.652867474833286
+    }
+   ],
+   "peso_sp500_para_compensar_gastos": {
+    "1pp": 0.019151839038715958,
+    "2pp": 0.038303678077431916,
+    "3pp": 0.05745551711614788
+   },
+   "diferencia_mensual_sp500mxn_menos_ipc": {
+    "n": 12,
+    "media": 4.604306291137516,
+    "se": 0.8401895078823904,
+    "t": 5.4800806817288015,
+    "ic95": [
+     2.957565115499599,
+     6.251047466775433
+    ],
+    "veredicto": "apoyo"
+   }
+  },
+  "2016-2025 (no pre-registrado; ventana de la edicion Year-End 2025)": {
+   "ventana": "2016-01 a 2025-12",
+   "n_meses": 120,
+   "cagr_ipc_naftrac_pct": 6.499786058448742,
+   "cagr_sp500_mxn_pct": 15.24520272777794,
+   "carteras": [
+    {
+     "peso_sp500": 0.0,
+     "cagr_pct": 6.499786058448742,
+     "ventaja_vs_ipc_pp": 0.0
+    },
+    {
+     "peso_sp500": 0.1,
+     "cagr_pct": 7.535896803066167,
+     "ventaja_vs_ipc_pp": 1.0361107446174245
+    },
+    {
+     "peso_sp500": 0.2,
+     "cagr_pct": 8.537388732868312,
+     "ventaja_vs_ipc_pp": 2.0376026744195697
+    },
+    {
+     "peso_sp500": 0.3,
+     "cagr_pct": 9.503763175889057,
+     "ventaja_vs_ipc_pp": 3.003977117440315
+    },
+    {
+     "peso_sp500": 0.5,
+     "cagr_pct": 11.329208887795495,
+     "ventaja_vs_ipc_pp": 4.829422829346753
+    }
+   ],
+   "peso_sp500_para_compensar_gastos": {
+    "1pp": 0.09651477944756204,
+    "2pp": 0.19624533425576396,
+    "3pp": 0.2995884496460933
+   },
+   "diferencia_mensual_sp500mxn_menos_ipc": {
+    "n": 120,
+    "media": 0.6571221569585551,
+    "se": 0.5466651382600923,
+    "t": 1.202056086931063,
+    "ic95": [
+     -0.414321825634835,
+     1.7285661395519454
+    ],
+    "veredicto": "inconcluso"
+   }
+  }
+ },
+ "sic_ucits": [
+  {
+   "ticker": "CSPXN.MX",
+   "nombre": "iShares VII Public Limited Company - iShares Core S&P 500 UCITS ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 14725.5,
+   "sesiones": 252,
+   "sesiones_con_volumen": 249,
+   "mediana_valor_diario_mxn": 47066414,
+   "ultima_sesion": "2026-09-24"
+  },
+  {
+   "ticker": "VUAAN.MX",
+   "nombre": "Vanguard Funds Public Limited Company - Vanguard S&P 500 UCITS ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 2630.0,
+   "sesiones": 252,
+   "sesiones_con_volumen": 251,
+   "mediana_valor_diario_mxn": 5269476,
+   "ultima_sesion": "2026-09-24"
+  },
+  {
+   "ticker": "IUSAN.MX",
+   "nombre": "iShares Public Limited Company - iShares S&P 500 UCITS ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 1304.43,
+   "sesiones": 213,
+   "sesiones_con_volumen": 14,
+   "mediana_valor_diario_mxn": 0,
+   "ultima_sesion": "2026-09-24"
+  },
+  {
+   "ticker": "IWDAN.MX",
+   "nombre": "iShares III Public Limited Company - iShares Core MSCI World UCITS ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 2603.9,
+   "sesiones": 249,
+   "sesiones_con_volumen": 155,
+   "mediana_valor_diario_mxn": 40049,
+   "ultima_sesion": "2026-09-24"
+  },
+  {
+   "ticker": "VWRAN.MX",
+   "nombre": "Vanguard Funds Public Limited Company - Vanguard FTSE All-World UCITS ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 3413.86,
+   "sesiones": 252,
+   "sesiones_con_volumen": 239,
+   "mediana_valor_diario_mxn": 641284,
+   "ultima_sesion": "2026-09-24"
+  },
+  {
+   "ticker": "ISACN.MX",
+   "nombre": "iShares V Public Limited Company - iShares MSCI ACWI UCITS ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 2192.08,
+   "sesiones": 252,
+   "sesiones_con_volumen": 199,
+   "mediana_valor_diario_mxn": 670349,
+   "ultima_sesion": "2026-09-24"
+  },
+  {
+   "ticker": "EIMIN.MX",
+   "nombre": "iShares Public Limited Company - iShares Core MSCI EM IMI UCITS ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 979.0,
+   "sesiones": 250,
+   "sesiones_con_volumen": 195,
+   "mediana_valor_diario_mxn": 754376,
+   "ultima_sesion": "2026-09-24"
+  },
+  {
+   "ticker": "CNDXN.MX",
+   "nombre": "iShares VII Public Limited Company -  iShares NASDAQ 100 UCITS ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 31040.0,
+   "sesiones": 252,
+   "sesiones_con_volumen": 209,
+   "mediana_valor_diario_mxn": 4812577,
+   "ultima_sesion": "2026-09-24"
+  }
+ ],
+ "sic_eua": [
+  {
+   "ticker": "IVV.MX",
+   "nombre": "iShares Core S&P 500 ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 13673.23,
+   "sesiones": 252,
+   "sesiones_con_volumen": 250,
+   "mediana_valor_diario_mxn": 73814940,
+   "ultima_sesion": "2026-09-24"
+  },
+  {
+   "ticker": "VOO.MX",
+   "nombre": "Vanguard S&P 500 ETF",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 12552.41,
+   "sesiones": 252,
+   "sesiones_con_volumen": 250,
+   "mediana_valor_diario_mxn": 35557601,
+   "ultima_sesion": "2026-09-24"
+  },
+  {
+   "ticker": "SPY.MX",
+   "nombre": "State Street SPDR S&P 500 ETF Trust",
+   "bolsa": "MEX",
+   "moneda": "MXN",
+   "precio_mxn": 13617.49,
+   "sesiones": 252,
+   "sesiones_con_volumen": 250,
+   "mediana_valor_diario_mxn": 19440541,
+   "ultima_sesion": "2026-09-24"
+  }
+ ],
+ "fuga_por_dividendos": {
+  "spy_dividendos_12m_usd": 7.583,
+  "n_pagos": 4,
+  "precio_usd": 767.18,
+  "rendimiento_div_pct": 0.9884251414270446,
+  "fuga_anual_pp": {
+   "ETF_EUA_en_SIC_sin_W8BEN_30pct": 0.29652754242811336,
+   "ETF_EUA_con_W8BEN_10pct": 0.09884251414270447,
+   "UCITS_irlandes_15pct_dentro_del_fondo": 0.14826377121405668
+  },
+  "nota": "Solo la retencion de EUA. No incluye el 10% adicional de Mexico ni la acumulacion anual de dividendos (art. 140/142 LISR), que solo aplican a dividendos distribuidos: un UCITS de acumulacion no distribuye."
+ },
+ "citas_legales": [
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 129 LISR: 10% definitivo",
+   "frase": "aplicando la tasa del 10% a las ganancias obtenidas en el ejercicio",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 129 fr. I incluye acciones extranjeras cotizadas (SIC)",
+   "frase": "acciones emitidas por sociedades extranjeras cotizadas en dichas bolsas de valores",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 129 fr. II: ETFs de indices accionarios",
+   "frase": "títulos que representen índices accionarios enajenados en las bolsas de",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 129: perdidas contra ganancias del mismo tipo, 10 anios",
+   "frase": "en el ejercicio o en los diez siguientes",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 129: si no se aplica la perdida pudiendo, se pierde",
+   "frase": "perderá el derech o a hacerlo en los ejercicios posteriores",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 129: el intermediario calcula y entrega constancia",
+   "frase": "deberán hacer el cálculo de la ganancia o pérdida del ejercicio",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 140: 10% adicional dividendos mexicanos",
+   "frase": "tasa adicional del 10% sobre los dividendos o utilidades distribuidos por las p ersonas morales residentes en",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 142 fr. V: 10% adicional dividendos extranjeros",
+   "frase": "la tasa del 10%, al monto al cual tengan derecho",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 93 fr. XXII: herencias exentas de ISR en Mexico",
+   "frase": "XXII. Los que se reciban por herencia o legado.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
+   "tema": "Art. 176: REFIPRE solo con control efectivo",
+   "frase": "sólo será aplicable cuando el contribuyente ejerza el control efectivo",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LIF_2026.txt",
+   "tema": "Art. 24 LIF 2026",
+   "frase": "la tasa de retención anual a que se refieren los artículos 54 y 135",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LIF_2026.txt",
+   "tema": "Art. 24 LIF 2026: 0.90%",
+   "frase": "de la Ley del Impuesto sobre la Renta será del 0.90 por ciento.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/irs-instrucciones-706NA.txt",
+   "tema": "706-NA: umbral de 60,000 USD",
+   "frase": "exceeds the filing threshold of $60,000",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/irs-instrucciones-706NA.txt",
+   "tema": "706-NA: credito unificado 13,000 USD",
+   "frase": "In general, the maximum unified credit is $13,000.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/irs-instrucciones-706NA.txt",
+   "tema": "706-NA: situs de acciones",
+   "frase": "Generally, no matter where stock certificates are physically located, stock of corporations organized in or under U.S. law is property located in the United States, and all other corporate stock is property located outside the United States.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/irs-instrucciones-706NA.txt",
+   "tema": "706-NA: excepcion RIC solo 2005-2011",
+   "frase": "For an NRNC decedent who died after 2004 and before 2012, a portion of stock in a RIC",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/irs-instrucciones-706NA.txt",
+   "tema": "706-NA: lista de tratados sucesorios (Mexico no aparece)",
+   "frase": "Australia Ireland Austria Italy Canada* Japan Denmark Netherlands Finland South Africa France Switzerland Germany United Kingdom Greece",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/ecfr-26CFR20.2104-1.txt",
+   "tema": "26 CFR 20.2104-1(a)(5)",
+   "frase": "Shares of stock issued by a domestic corporation, irrespective of the location of the certificates",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/irs-tratado-eua-mexico.txt",
+   "tema": "Tratado EUA-Mexico art. 10: 10%",
+   "frase": "b) 10 percent of the gross amount of the dividends in other cases.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/irs-tratado-eua-irlanda.txt",
+   "tema": "Tratado EUA-Irlanda art. 10: 15%",
+   "frase": "b) 15 percent of the gross amount of the dividends in all other cases.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/gbm_como-funcionan-los-impuestos-por-las-acciones-de-empresas-extranjeras-en-el-sic.txt",
+   "tema": "GBM: SIC sin retencion, 10% anual",
+   "frase": "No tiene ninguna retención. Pago del ISR anual del 10% sobre las ganancias.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/gbm_como-funcionan-los-impuestos-sobre-los-dividendos-en-trading-mx.txt",
+   "tema": "GBM: 10% sobre neto en dividendos SIC",
+   "frase": "La segunda retención es en México del 10%, sobre monto neto, después del impuesto retenido en el extranjero.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/gbm_como-y-donde-recibo-los-comprobantes-fiscales-o-cfdi-por-mis-ganancias.txt",
+   "tema": "GBM: constancias 2025 en la app",
+   "frase": "Tus Constancias Fiscales (o CFDI) por las ganancias del 2025 ya están disponibles en tu app GBM.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/usc-26-2102.txt",
+   "tema": "26 USC 2102(b)(1): credito de 13,000 USD",
+   "frase": "A credit of $13,000 shall be allowed against the tax imposed by section 2101.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/usc-26-2105.txt",
+   "tema": "26 USC 2105(d)(3): excepcion RIC vencida",
+   "frase": "This subsection shall not apply to estates of decedents dying after December 31, 2011",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/usc-26-2001.txt",
+   "tema": "26 USC 2001(c): tasa marginal maxima 40%",
+   "frase": "Over $1,000,000 $345,800, plus 40 percent of the excess of such amount over $1,000,000.",
+   "encontrada": true
+  }
+ ],
+ "impuesto_sucesorio_ilustracion": {
+  "supuestos": "activos con situs en EUA (acciones y ETFs domiciliados en EUA), sin deducciones, sin donaciones previas; credito unificado 13,000 USD; tarifa 26 USC 2001(c)",
+  "tipo_de_cambio_mxn_por_usd": 17.2454,
+  "mes_tipo_de_cambio": "2026-09",
+  "umbral_60k_usd_en_mxn": 1034724.0,
+  "casos": [
+   {
+    "valor_usd": 1159.7295510686909,
+    "valor_mxn": 20000.0,
+    "impuesto_usd": 0.0,
+    "tasa_efectiva_pct": 0.0
+   },
+   {
+    "valor_usd": 60000,
+    "valor_mxn": 1034724.0,
+    "impuesto_usd": 0.0,
+    "tasa_efectiva_pct": 0.0
+   },
+   {
+    "valor_usd": 100000,
+    "valor_mxn": 1724540.0,
+    "impuesto_usd": 10800.0,
+    "tasa_efectiva_pct": 10.8
+   },
+   {
+    "valor_usd": 250000,
+    "valor_mxn": 4311350.0,
+    "impuesto_usd": 57800.0,
+    "tasa_efectiva_pct": 23.12
+   },
+   {
+    "valor_usd": 500000,
+    "valor_mxn": 8622700.0,
+    "impuesto_usd": 142800.0,
+    "tasa_efectiva_pct": 28.56
+   },
+   {
+    "valor_usd": 1000000,
+    "valor_mxn": 17245400.0,
+    "impuesto_usd": 332800.0,
+    "tasa_efectiva_pct": 33.28
+   }
+  ]
+ }
+}

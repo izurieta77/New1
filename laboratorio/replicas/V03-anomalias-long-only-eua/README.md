@@ -2,6 +2,8 @@
 
 > Fecha: 25-sep-2026. Estado: **Replicado con diferencias** en las cifras recibidas, pero **sin versión long-only con apoyo estadístico** en 2000-2025, después de la publicación ni en MXN. No es una estrategia operable ni una recomendación.
 >
+> **Doble ejecución independiente (2026-09-25):** `independiente.py` se escribió sin leer `reproducir.py` y reproduce las 849 cifras comparadas dentro de tolerancia. 841 son idénticas al redondeo impreso; las otras 8 son límites inferiores del bootstrap y difieren por la convención del cuantil. No se corrigió nada. Detalle al final.
+>
 > Para reproducir, desde la raíz del repo: `python3 laboratorio/replicas/V03-anomalias-long-only-eua/reproducir.py`. El script no usa red. Los datos están congelados en `datos/` y sus huellas, junto con la del pre-registro, en `SHA256SUMS.txt`. Las salidas son `resultados.json` y `variantes.csv`: 103 pruebas registradas y 8 exploratorias marcadas con `es_prueba=0`.
 
 ## Resumen
@@ -426,7 +428,119 @@ Todas valen para EUA, carteras de French CRSP 202607, sin costos salvo que se in
 2. ETFs concretos disponibles en el SIC para cada estilo. La disponibilidad no está verificada. Habría que medir su historia real en MXN con costos de GBM.
 3. Costo cambiario de GBM (no publicado).
 4. Impuestos (10% sobre la ganancia en el SIC y retención de dividendos).
-5. Ejecución por el `auditor-de-replicas`.
+5. ~~Ejecución por el `auditor-de-replicas`.~~ Hecha el 2026-09-25: las 849 cifras comparadas coinciden. Ver "Doble ejecución independiente (2026-09-25)".
+
+## Doble ejecución independiente (2026-09-25)
+
+**Resultado: las 849 cifras comparadas están dentro de tolerancia y ninguna se corrigió.** Son todas las cifras de las tablas 1 a 9 de RESULTADOS y 34 cifras citadas en el texto. Coinciden el veredicto de las 103 pruebas, las 25 con apoyo (la misma lista), los rangos de meses, las n y las coincidencias con las afirmaciones recibidas. No hubo nada que anotar en `conocimiento/registro-de-errores.md`.
+
+### Cómo se hizo
+
+- El `auditor-de-replicas` escribió `independiente.py` **sin leer `reproducir.py`**. Solo leyó la sección PRE-REGISTRO de este README y los datos congelados en `datos/`. Las huellas se revisaron al inicio con `hashlib` y las 9 coinciden con `SHA256SUMS.txt`.
+- **Todo el cálculo es propio:**
+  - **Datos.** Parser de los zip de French: cada sección se detecta por su línea de encabezados y se elige por título, porque OP e INV dicen "Average Value Weight" y NI, VAR y RESVAR dicen "Value Weighted". Lector de `DEXMXUS` que toma la última observación no vacía de cada mes.
+  - **Series.** Alineación por índice de mes, diferenciales y conversión a MXN.
+  - **Inferencia.** IC95 con z = 1.959964, veredicto y bootstrap de bloques móviles (12 meses, 5000 repeticiones, semilla 7, cuantil por rango más cercano).
+  - **Descriptivo.** CAGR geométrico; volatilidad con desviación muestral × √12; caída máxima contando el capital inicial como pico; τ\* y neto.
+- **Newey-West(6) con dos fórmulas propias distintas.** (1) Suma de autocovarianzas con pesos de Bartlett. (2) Identidad de sumas móviles: con los residuos rellenados con ceros, Σ_t S_t² / (L+1) = n·Ω, donde S_t es la suma de L+1 = 7 residuos consecutivos. Diferencia máxima del error estándar entre las dos: 2.8e-16. `herramientas/estadistica.newey_west` se usó solo como tercera comprobación: 2.2e-16.
+- **El README se lee de forma automática.** El script toma cada cifra de las tablas de RESULTADOS y la compara con la propia. Salidas: `independiente-comparacion.csv` (una fila por cifra, con valor reportado, valor propio, diferencia y tolerancia) e `independiente-resultados.json`. No usa red.
+- **Alcance.** Es una doble ejecución del cálculo **con los mismos datos**, no una segunda fuente.
+
+**Tolerancias:**
+
+- 0.01 pp en medias mensuales y en límites de IC, que están en %/mes.
+- 0.12 pp en media × 12 y en neto (equivale a 0.01 pp/mes).
+- 0.05 en t.
+- 0.1 pp en CAGR, diferencia de CAGR, volatilidad y caída máxima.
+- 1 pp en τ\*.
+- Igualdad exacta en n, meses, veredictos, negritas (= apoyo) y listas.
+
+Además se revisó si la cifra propia, redondeada a los decimales impresos, es **idéntica** a la del README.
+
+### Comparación por bloque
+
+| Bloque del README | Cifras comparadas | Dentro de tolerancia | Idénticas al redondeo impreso | Mayor diferencia absoluta |
+|---|---|---|---|---|
+| 1. Long-only VW en USD (× 12, t, negrita, último mes pre) | 80 | 80 | 80 | × 12: 0.0048; t: 0.0049 |
+| 2. Largo-corto VW | 80 | 80 | 80 | × 12: 0.0048; t: 0.0050 |
+| 3. Largo-corto EW, RMW y CMA | 96 | 96 | 96 | × 12: 0.0050; t: 0.0050 |
+| 4. Detalle de las 16 primarias (n, media, × 12, t, IC NW, IC bootstrap, veredicto) | 160 | 160 | **152** | media: 0.0005; t: 0.0044; IC: 0.0021 (bootstrap) |
+| 5. Variantes de fecha de publicación | 48 | 48 | 48 | × 12: 0.0045; t: 0.0046; IC: 0.0005 |
+| 6. Exceso long-only en MXN | 120 | 120 | 120 | media: 0.0004; t: 0.0049; IC: 0.0004 |
+| 7. Descriptivo (CAGR, dif. CAGR, vol., caída máx.; USD y MXN) | 147 | 147 | 147 | CAGR: 0.0050; vol.: 0.0495; caída: 0.0495 |
+| 8. Costos (× 12, τ\*, neto) | 36 | 36 | 36 | × 12: 0.0048; τ\*: 0.49 |
+| 9. Afirmaciones: exploratorio post-hoc (n, × 12, dif. CAGR, t, IC) | 48 | 48 | 48 | × 12: 0.0035; t: 0.0047 |
+| Texto (Resumen, Controles, secciones 9 y 10, conclusiones) | 34 | 34 | 34 | Solo por redondeo (p. ej., "0.8" contra 0.84) |
+| **Total** | **849** | **849** | **841** | |
+
+De las 849, 668 son numéricas y 181 son categóricas: veredictos, negritas, rangos de meses, último mes pre y listas.
+
+### Las 16 pruebas primarias, lado a lado
+
+| Serie y ventana | n | Media %/mes README / propia | t NW(6) README / propia | IC95 NW README | IC95 NW propio | Veredicto README / propio |
+|---|---|---|---|---|---|---|
+| OP-LO-VW 2000-2025 | 312 / 312 | 0.089 / 0.0886 | 1.21 / 1.210 | [−0.055, 0.232] | [−0.0549, 0.2321] | inconcluso / inconcluso |
+| OP-LO-VW post | 135 / 135 | 0.060 / 0.0598 | 0.56 / 0.560 | [−0.150, 0.269] | [−0.1496, 0.2692] | inconcluso / inconcluso |
+| OP-LS-VW 2000-2025 | 312 / 312 | 0.423 / 0.4229 | 1.89 / 1.890 | [−0.016, 0.862] | [−0.0157, 0.8616] | inconcluso / inconcluso |
+| OP-LS-VW post | 135 / 135 | 0.270 / 0.2697 | 0.79 / 0.794 | [−0.396, 0.936] | [−0.3965, 0.9359] | inconcluso / inconcluso |
+| NI-LO-VW 2000-2025 | 312 / 312 | 0.108 / 0.1081 | 1.34 / 1.344 | [−0.050, 0.266] | [−0.0496, 0.2657] | inconcluso / inconcluso |
+| NI-LO-VW post | 219 / 219 | 0.040 / 0.0399 | 0.72 / 0.724 | [−0.068, 0.148] | [−0.0681, 0.1478] | inconcluso / inconcluso |
+| NI-LS-VW 2000-2025 | 312 / 312 | 0.409 / 0.4089 | 1.87 / 1.870 | [−0.020, 0.837] | [−0.0196, 0.8374] | inconcluso / inconcluso |
+| NI-LS-VW post | 219 / 219 | 0.337 / 0.3367 | 1.31 / 1.314 | [−0.165, 0.839] | [−0.1654, 0.8387] | inconcluso / inconcluso |
+| VAR-LO-VW 2000-2025 | 312 / 312 | 0.070 / 0.0700 | 0.52 / 0.520 | [−0.194, 0.334] | [−0.1940, 0.3339] | inconcluso / inconcluso |
+| VAR-LO-VW post | 245 / 245 | 0.012 / 0.0122 | 0.09 / 0.092 | [−0.249, 0.273] | [−0.2490, 0.2735] | inconcluso / inconcluso |
+| VAR-LS-VW 2000-2025 | 312 / 312 | 0.226 / 0.2255 | 0.51 / 0.506 | [−0.648, 1.099] | [−0.6482, 1.0992] | inconcluso / inconcluso |
+| VAR-LS-VW post | 245 / 245 | −0.010 / −0.0100 | −0.02 / −0.021 | [−0.949, 0.929] | [−0.9488, 0.9288] | inconcluso / inconcluso |
+| INV-LO-VW 2000-2025 | 312 / 312 | 0.175 / 0.1745 | 1.42 / 1.423 | [−0.066, 0.415] | [−0.0658, 0.4149] | inconcluso / inconcluso |
+| INV-LO-VW post | 215 / 215 | 0.046 / 0.0462 | 0.32 / 0.320 | [−0.237, 0.329] | [−0.2370, 0.3295] | inconcluso / inconcluso |
+| INV-LS-VW 2000-2025 | 312 / 312 | 0.208 / 0.2080 | 0.93 / 0.934 | [−0.228, 0.644] | [−0.2284, 0.6445] | inconcluso / inconcluso |
+| INV-LS-VW post | 215 / 215 | −0.079 / −0.0789 | −0.33 / −0.330 | [−0.548, 0.390] | [−0.5476, 0.3897] | inconcluso / inconcluso |
+
+### Las 8 cifras que no son idénticas al redondeo: convención del cuantil del bootstrap
+
+Las 8 son límites **inferiores** del IC bootstrap y están dentro de tolerancia. Los 16 límites superiores coinciden.
+
+| Serie y ventana | Límite inferior README | Propio | Diferencia (%/mes) |
+|---|---|---|---|
+| OP-LS-VW post | −0.330 | −0.3313 | −0.0013 |
+| NI-LO-VW 2000-2025 | −0.048 | −0.0491 | −0.0011 |
+| NI-LO-VW post | −0.073 | −0.0736 | −0.0006 |
+| NI-LS-VW 2000-2025 | −0.012 | −0.0134 | −0.0014 |
+| NI-LS-VW post | −0.243 | −0.2440 | −0.0010 |
+| VAR-LS-VW 2000-2025 | −0.561 | −0.5630 | −0.0020 |
+| INV-LO-VW post | −0.232 | −0.2331 | −0.0011 |
+| INV-LS-VW 2000-2025 | −0.297 | −0.2991 | −0.0021 |
+
+- **Causa.** La ejecución independiente toma el límite inferior con el rango más cercano: la media ordenada número 125 de 5000 (índice 124). `herramientas/estadistica.ic_bootstrap_bloques` usa el índice int(0.025 × 5000) = 125, es decir, la número 126. El pre-registro fija el bloque, las repeticiones y la semilla, pero no la convención del cuantil.
+- **Prueba.** Con el índice 125, el script reproduce **32 de 32** límites idénticos al redondeo impreso. Las secuencias de remuestreo son las mismas.
+- **Efecto.** Ninguno. El bootstrap es robustez secundaria, ningún límite cambia de signo y el único bootstrap que excluye el cero sigue siendo OP-LS-VW 2000-2025 ([0.018, 0.913] en el README; [0.0176, 0.9125] propio). No es un error: son dos convenciones válidas.
+
+### Otras comprobaciones
+
+- **Recuento.**
+  - 103 pruebas, 25 con apoyo (la misma lista que la sección 10) y 0 contrarias.
+  - 0 de 16 primarias y 0 de 15 en MXN tienen apoyo.
+  - En las ventanas post, incluidas las variantes NM13 y FF15, la única con apoyo es NI-LS-EW.
+- **Afirmaciones (±0.30 pp).** Coinciden las mismas definiciones:
+  - "Rentables 4.5%": RMW en 2000-2025 (4.76) y en 2000-ult (4.48), y OP-LS-VW en 2000-ult (4.26).
+  - "Recompras 5.3%": NI-LS-VW en 2000-ult (5.29).
+  - "Baja volatilidad 3.6%": ninguna.
+  
+  También se revisó la diferencia de CAGR de las LS (pierna larga menos corta) en las tres afirmaciones y no agrega coincidencias.
+- **Estructura de los datos.**
+  - Los 7 zip de French son CRSP 202607.
+  - La huella del archivo de 5 factores es igual a la de V01 (`b8653b41…`).
+  - El NI promedio VW de "Lo 20" es positivo en los 64 años (mínimo 0.039), lo que confirma que los quintiles de NI se forman solo con emisores positivos.
+  - No hay ningún −99.99 ni −999 en las series usadas.
+  - Todas las series empiezan en 1963-07. El mercado va de 1926-07 a 2026-07 y DEXMXUS de 1993-11-08 a 2026-09-18.
+- **Fechas de publicación.** Se consultó de nuevo la API de Crossref el 2026-09-25, fuera del script. Los meses de número impreso son 2013-04 (Novy-Marx), 2015-04 (Fama-French), 2008-04 (Pontiff-Woodgate), 2006-02 (Ang et al.) y 2008-08 (Cooper et al.). Coinciden con la sección 4 del pre-registro.
+- **Precisión en el texto, no es error.** El rango "t entre 0.52 y 1.42" de la conclusión 3 corresponde a las 4 LO-VW primarias en 2000-2025. En 2000-ult, la t máxima es 1.49 (INV). La conclusión "ninguna tiene apoyo" vale en las dos ventanas.
+- **Qué no cubre.**
+  - No hay segunda fuente de datos: son las mismas carteras de French.
+  - No se revisaron los controles internos de `reproducir.py` (5.6e-17 del parser y 7.2e-16 del error estándar), porque son diagnósticos de ese script.
+  - Las cifras recibidas siguen siendo lo que dice la sección 9: medias × 12 largo-corto sin costos, no rendimientos operables.
+
+**Estado después de la doble ejecución:** sin cambios. Las cifras de V03 se reproducen con código independiente. Las conclusiones permitidas y las que no se sostienen quedan igual.
 
 ## Fuentes
 

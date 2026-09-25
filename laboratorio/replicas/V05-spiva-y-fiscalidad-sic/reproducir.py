@@ -311,10 +311,38 @@ CITAS = [
     ("legal/gbm_como-funcionan-los-impuestos-por-las-acciones-de-empresas-extranjeras-en-el-sic.txt", "No tiene ninguna retención. Pago del ISR anual del 10% sobre las ganancias.", "GBM: SIC sin retencion, 10% anual"),
     ("legal/gbm_como-funcionan-los-impuestos-sobre-los-dividendos-en-trading-mx.txt", "La segunda retención es en México del 10%, sobre monto neto, después del impuesto retenido en el extranjero.", "GBM: 10% sobre neto en dividendos SIC"),
     ("legal/gbm_como-y-donde-recibo-los-comprobantes-fiscales-o-cfdi-por-mis-ganancias.txt", "Tus Constancias Fiscales (o CFDI) por las ganancias del 2025 ya están disponibles en tu app GBM.", "GBM: constancias 2025 en la app"),
+    ("legal/usc-26-2102.txt", "A credit of $13,000 shall be allowed against the tax imposed by section 2101.", "26 USC 2102(b)(1): credito de 13,000 USD"),
+    ("legal/usc-26-2105.txt", "This subsection shall not apply to estates of decedents dying after December 31, 2011", "26 USC 2105(d)(3): excepcion RIC vencida"),
+    ("legal/usc-26-2001.txt", "Over $1,000,000 $345,800, plus 40 percent of the excess of such amount over $1,000,000.", "26 USC 2001(c): tasa marginal maxima 40%"),
 ]
 res["citas_legales"] = [{"archivo": a, "tema": tema, "frase": fr, "encontrada": contiene(a, fr)} for a, fr, tema in CITAS]
 assert all(c["encontrada"] for c in res["citas_legales"]), [c for c in res["citas_legales"] if not c["encontrada"]]
 assert "Mexico" not in re.search(r"Australia Ireland.*?Greece", leer("legal/irs-instrucciones-706NA.txt")).group(0)
+
+# ---------------------------------------------------------------- 7. Impuesto sucesorio de EUA: ilustracion
+# Tarifa de 26 USC 2001(c); cada tramo se verifica contra el texto congelado antes de usarlo.
+TRAMOS = [(0, 0, 18), (10_000, 1_800, 20), (20_000, 3_800, 22), (40_000, 8_200, 24), (60_000, 13_000, 26),
+          (80_000, 18_200, 28), (100_000, 23_800, 30), (150_000, 38_800, 32), (250_000, 70_800, 34),
+          (500_000, 155_800, 37), (750_000, 248_300, 39), (1_000_000, 345_800, 40)]
+t2001 = re.sub(r"\s+", " ", leer("legal/usc-26-2001.txt"))
+for base, fijo, tasa in TRAMOS[1:]:
+    assert f"${fijo:,}" in t2001 and f"{tasa} percent of the excess of such amount over ${base:,}" in t2001, (base, fijo, tasa)
+
+
+def impuesto_sucesorio_nra(valor_usd):
+    base, fijo, tasa = max(t for t in TRAMOS if t[0] <= valor_usd)
+    tentativo = fijo + tasa / 100 * (valor_usd - base)
+    return max(0.0, tentativo - 13_000)
+
+
+fx_ult_fecha = max(fx)
+tc = fx[fx_ult_fecha]
+res["impuesto_sucesorio_ilustracion"] = {
+    "supuestos": "activos con situs en EUA (acciones y ETFs domiciliados en EUA), sin deducciones, sin donaciones previas; credito unificado 13,000 USD; tarifa 26 USC 2001(c)",
+    "tipo_de_cambio_mxn_por_usd": tc, "mes_tipo_de_cambio": f"{fx_ult_fecha[0]}-{fx_ult_fecha[1]:02d}",
+    "umbral_60k_usd_en_mxn": 60_000 * tc,
+    "casos": [{"valor_usd": v, "valor_mxn": v * tc, "impuesto_usd": impuesto_sucesorio_nra(v),
+               "tasa_efectiva_pct": 100 * impuesto_sucesorio_nra(v) / v} for v in (20_000 / tc, 60_000, 100_000, 250_000, 500_000, 1_000_000)]}
 
 with open(os.path.join(AQUI, "resultados.json"), "w", encoding="utf-8") as f:
     json.dump(res, f, indent=1, ensure_ascii=False)
@@ -342,3 +370,7 @@ for r in res["sic_ucits"] + res["sic_eua"]:
 print("\nFuga por dividendos:", {k: (round(v, 3) if isinstance(v, float) else v) for k, v in res["fuga_por_dividendos"]["fuga_anual_pp"].items()},
       f"(rend. div SPY 12m {res['fuga_por_dividendos']['rendimiento_div_pct']:.2f}%)")
 print("Citas legales encontradas:", sum(c["encontrada"] for c in res["citas_legales"]), "de", len(res["citas_legales"]))
+isu = res["impuesto_sucesorio_ilustracion"]
+print(f"\nImpuesto sucesorio EUA (no residente), TC {isu['tipo_de_cambio_mxn_por_usd']} MXN/USD; umbral 60k USD = {isu['umbral_60k_usd_en_mxn']:,.0f} MXN")
+for c in isu["casos"]:
+    print(f"  {c['valor_usd']:>12,.0f} USD ({c['valor_mxn']:>14,.0f} MXN) -> impuesto {c['impuesto_usd']:>10,.0f} USD  ({c['tasa_efectiva_pct']:.1f}%)")
