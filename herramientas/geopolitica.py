@@ -192,7 +192,13 @@ def leer_dta(contenido: bytes) -> dict:
         else:
             raise ErrorFuente(f"Tipo de variable .dta desconocido: {t}")
     ancho = sum(a for _, a in especificacion)
-    i = seccion(b"data")
+    # El bloque <map> trae 14 offsets; el 10o apunta a <data>. Si es valido se usa (mas robusto que buscar).
+    j = seccion(b"map")
+    mapa = struct.unpack(orden + "14Q", contenido[j:j + 112]) if j + 112 <= len(contenido) else ()
+    if len(mapa) == 14 and 0 < mapa[9] < len(contenido) and contenido[mapa[9]:mapa[9] + 6] == b"<data>":
+        i = mapa[9] + 6
+    else:
+        i = seccion(b"data")
     if i + ancho * n > len(contenido):
         raise ErrorFuente("Archivo .dta truncado")
     filas = []

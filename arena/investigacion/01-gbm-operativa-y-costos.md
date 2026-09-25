@@ -15,15 +15,15 @@
 ## Resumen ejecutivo
 
 1. **Comisión de corretaje en Trading MX (BMV y SIC): 0.25% por operación más IVA, o sea 0.29% por lado**, para montos de hasta 1,000,000 MXN (el escalón baja hasta 0.10% arriba de 10 MXN millones) [1][2]. La Guía de Servicios de GBM dice expresamente que a las comisiones "se le aumentará el IVA" [2]. **Ida y vuelta: 0.58% del monto operado**, antes del spread.
-2. **No encontré un plan de suscripción ni un plan sin comisión vigente para personas físicas.** El mínimo de 20 MXN por operación que citan algunos sitios no aparece en la guía oficial (no verificado). Sin mínimo, el costo en % es el mismo para 2,000, 5,000 o 10,000 MXN.
+2. **No encontré un plan de suscripción ni un plan sin comisión vigente para personas físicas.** El mínimo de 20 MXN por operación que citan algunos sitios no aparece en la guía oficial ni en la FAQ de comisiones (no verificado). Un resumen de búsqueda del 2026-09-25 lo atribuye solo a "operaciones en corto" (no verificado). [I] Es probable que el "20 MXN" venga del monto mínimo de inversión de Trading Global en 2022 ("desde MXN$20" [11]), que no es una comisión. Sin mínimo, el costo en % es el mismo para 2,000, 5,000 o 10,000 MXN.
 3. **Trading USA** (cuenta en dólares, custodia en DriveWealth) cobra 0.25% por compra o venta [3][28]. Permite **fracciones desde 1 USD** [5], pero **solo tiene órdenes a mercado y limitadas, sin stops** [9]. La conversión MXN→USD se hace aparte desde Smart Cash y tarda 1 día hábil en liquidar [6]. **El spread cambiario no está publicado** (no verificado).
 4. **En el SIC solo se compran títulos completos** [36]. Trading MX tiene el menú de órdenes completo: mercado, limitada, MPL, Stop Market, Stop Limitada, Trailing Stop, OCA y OTA [8]. **La vigencia máxima de una orden es de 30 días** [10].
 5. **Horario:** la BMV opera de 7:30 a 14:00 (hora CDMX) del 9 de marzo al 30 de octubre de 2026. **Regresa a 8:30–15:00 el martes 3 de noviembre de 2026**, porque el lunes 2 es inhábil [13][38]. **La liquidación en México es T+1** desde el 27 de mayo de 2024 [15].
-6. **Apalancamiento:** GBM ofrece **margen intradía y venta en corto** bajo contrato y a solicitud. La venta en corto pide un mínimo de 10,000 MXN, solo en emisoras que GBM selecciona, y aparta 2 pesos de garantía por cada peso vendido [39] (parcialmente verificado). Futuros y opciones de MexDer existen en la Guía [2], pero no como función estándar de la app (no verificado). **TQQQ está listado y activo en el SIC** [35]. Que GBM permita comprarlo desde la app: no verificado.
+6. **Apalancamiento:** GBM ofrece **margen intradía y venta en corto** bajo contrato y a solicitud. La venta en corto pide un mínimo de 10,000 MXN, solo en emisoras que GBM selecciona, y aparta 2 pesos de garantía por cada peso vendido [39] (parcialmente verificado). Futuros y opciones de MexDer existen en la Guía [2], pero no como función estándar de la app (no verificado). **TQQQ, SOXL y SPXL están listados con estatus ACTIVA en la BMV (SIC)** [35][43][44]. Que GBM permita comprarlos desde la app, y con qué perfil: no verificado.
 7. **Liquidez ociosa:** Smart Cash paga de 4.00% a 4.75% anual según el nivel. Con menos de 300 mil MXN paga 4.00% [17][18]. En cambio, el **CETE 28 cerró en 6.15%** en la subasta del 22-sep-2026 [22] y la tasa de Banxico está en 6.50% [21]. La retención de ISR sobre intereses subió a **0.90% anual sobre el capital** en 2026 [29].
-8. **Impuestos:** 10% definitivo sobre la ganancia en BMV y SIC, sin retención en la venta y pagado en la declaración anual [26]. Los dividendos del SIC pagan 30% en EUA (10% con W-8BEN) y luego 10% en México [27]. **El W-8BEN para el SIC cuesta 75 USD + IVA**, alrededor de 7.6% de una cuenta de 20k [24][25]. En Trading USA es gratis [24].
+8. **Impuestos:** 10% definitivo sobre la ganancia en BMV y SIC, sin retención en la venta y pagado en la declaración anual [26]. Los dividendos del SIC pagan 30% en EUA (10% con W-8BEN) y luego 10% en México [27]. **El W-8BEN para el SIC cuesta 75 USD + IVA** (confirmado en la FAQ oficial de GBM [45]), alrededor de 7.6% de una cuenta de 20k [24][25][45]. En Trading USA es gratis [24].
 9. **Protección:** GBM está supervisado por la CNBV. **El IPAB no cubre casas de bolsa** [30].
-10. **Caídas registradas:** 26-jun-2024 (~1 h), 19-jul-2024 (CrowdStrike) y dos caídas en menos de 5 días en dic-2024 [31][32][33]. No encontré reportes de prensa de caídas en 2025–2026 (ausencia de evidencia, no prueba de estabilidad).
+10. **Caídas registradas:** 26-jun-2024 (resuelta a las 12:30; inicio no reportado), 19-jul-2024 (CrowdStrike), dos caídas en menos de 5 días en dic-2024, **7-abr-2025 ("lunes negro" arancelario): más de 5 horas sin poder comprar ni vender en plena sesión de pánico**, y 20-oct-2025 (intermitencias por la caída de AWS) [31][32][33][46][47]. [I] La caída más larga documentada ocurrió en el día de mayor volatilidad, que es justo el escenario en el que una cuenta apalancada necesita operar. Para 2026 no encontré notas de prensa (ausencia de evidencia, no prueba de estabilidad).
 11. **Implicación central:** con 0.58% por vuelta más el spread, **cada rotación completa de la cuenta cuesta de 0.7% a 1.2% del capital**. El presupuesto sano es **≤1 rotación completa al mes (~3.5% en la temporada)**. Solo conviene tomar operaciones con un movimiento esperado de **≥5%**, donde el costo se come ≤25% del edge.
 
 ---
@@ -36,7 +36,7 @@
 | Trading USA | Acceso directo a NYSE/Nasdaq. Acciones, ETFs y ADRs | EUA vía DriveWealth | **USD** (dolarizada desde el 31-mar-2025) | **Sí** | Desde 1 USD | [4][5][6][28] |
 | Smart Cash | Liquidez invertida en reportos a 1 día hábil | Dinero | MXN | n/a | 100 MXN | [19][41] |
 | Smart Cash Dólares | Fondo GBMDOL en instrumentos en USD | Dinero USD | USD | n/a | 100 MXN | [7][1] |
-| Bonos/CETES | CETES, Bonos M, Udibonos | Deuda gubernamental | MXN | n/a | Desde 100 MXN | [23] |
+| Bonos/CETES | CETES, Bonos M, Udibonos | Deuda gubernamental | MXN | n/a | La ruta que documenta GBM para "invertir en CETES" es Smart Cash, desde 100 MXN [23][53]. GBM también ofrece "Deuda gubernamental" como cuenta gestionada, sin corretaje [54]. **Compra directa de un CETE a plazo desde la app: no verificado** | [23][53][54] |
 | Fondos GBM | Fondos de renta fija y variable | Varios | MXN/USD | n/a | Varía | [1] |
 
 [H] Trading USA dejó de operar en pesos. El dinero se pasa de Smart Cash a Trading USA para comprar dólares y regresa a Smart Cash para venderlos. **La liquidación de dólares toma 1 día hábil** [6].
@@ -60,7 +60,7 @@
 - [H] Los topes máximos de la Guía son 0.75% en ejecución general de renta variable y 0.25% "a través de las plataformas GBM y GBM+" [2].
 - [H] **Mínimo por operación:** la Guía no menciona un mínimo en pesos [2]. Algunos resúmenes secundarios citan "20 MXN por operación" **(no verificado; no lo encontré en la fuente oficial)**.
 - [H] **Planes sin comisión o por suscripción:** no hay ninguno en la FAQ oficial ni en la Guía [1][2]. Un resumen de búsqueda mencionó un "plan Smart 0.20%" **(no verificado)**. La nota de 2022 sobre "0% en fracciones" de Trading Global [11] **ya no aplica**: la FAQ vigente de Trading USA dice 0.25% por compra o venta [3].
-- [I] Con 20,000 MXN la cuenta queda en el escalón de 0.25% sin importar si el escalón se mide por monto operado [2] o por inversión total [1].
+- [H] Tanto la Guía [2] como la FAQ [1] miden el escalón por el "monto operado promedio de los últimos 3 meses" (algunos resúmenes secundarios dicen "inversión total", lo cual es incorrecto). [I] Con 20,000 MXN de capital la cuenta queda en el escalón de 0.25%: habría que operar en promedio más de 1,000,000 MXN para bajar al siguiente.
 
 ### 2.2 Otras comisiones relevantes
 
@@ -73,7 +73,7 @@
 | Fondos GBM | Arancel anual de 1% a 2.75%, descontado diario | [1] |
 | Fondos de renta fija | Sin corretaje (sí llevan arancel) | [1] |
 | CETES/bonos gubernamentales | Sin comisión; corporativos 1% | resumen de búsqueda (no verificado) |
-| W-8BEN para Trading MX/SIC | 75 USD + IVA, trámite vía Indeval | [25] (la FAQ oficial confirma que "tiene costo" [24]) |
+| W-8BEN para Trading MX/SIC | 75 USD + IVA, trámite vía Indeval, confirmación en máx. 72 h | [45] (FAQ oficial "¿Cómo registro el W8-BEN para Trading MX y SIC?"), [24][25] |
 | W-8BEN para Trading USA | Gratis desde la app | [24] |
 | Crédito de margen (tope) | Hasta TIIE + 10 puntos anual | [2] |
 | Préstamo de valores (prestatario) | Prima base de hasta 500 MXN semanales | [2] |
@@ -130,7 +130,8 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 
 - [H] **Vigencia:** si no se indica, dura un día. **No puede pasar de 30 días.** Las órdenes no ejecutadas se reingresan cada día hábil con folio nuevo [10].
 - [H] **Recepción:** las plataformas reciben órdenes 24/7. Fuera de sesión se registran al inicio de la siguiente [10].
-- [H] **Filtros de precio en la plataforma (sin posibilidad de cambiarlos):** si compras arriba o vendes abajo del último hecho, el filtro salta con una variación de 3% en emisoras locales y 5% en SIC. Si compras abajo o vendes arriba, salta con 6% en locales y 10% en SIC [10]. Esto limita las órdenes limitadas "agresivas" en mercados rápidos.
+- [H] **Filtros de precio (sin posibilidad de cambiarlos desde la plataforma):** si compras arriba o vendes abajo del último hecho, el filtro salta con una variación de 3% en emisoras locales y 5% en SIC. Si compras abajo o vendes arriba, salta con 6% en locales y 10% en SIC [10]. El folleto los define para "la plataforma GBMHomebroker" (nombre anterior); [I] que apliquen igual en la app GBM actual es inferencia (no verificado). Vía apoderado (mesa) los filtros son más amplios (hasta 10% y 20% en SIC) [10]. Esto limita las órdenes limitadas "agresivas" en mercados rápidos.
+- [H] El sistema de la BMV contempla de forma nativa la "Postura Activada al Nivel" y la PCP (limitada + activada al nivel) (manual operativo BMV, visto en resumen de búsqueda [52]; parcialmente verificado). Pero las órdenes de GBM con vigencia mayor a un día se cancelan al cierre y **GBM las reingresa cada día hábil con folio nuevo** [10].
 
 ---
 
@@ -154,7 +155,7 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 - [H] Los dólares en Trading USA ↔ Smart Cash liquidan en 1 día hábil [6].
 - [H] Retiros de Smart Cash y Trading MX: se solicitan en días hábiles de 7:30 a 13:30 y llegan "en minutos". Fuera de ese horario pasan al siguiente día hábil. Smart Cash Dólares tarda 2 o 3 días hábiles [20].
 - [H] **Regla de permanencia:** los depósitos a Smart Cash se invierten en reportos a 1 día hábil. Si depositas antes de las 13:30, puedes retirar al día hábil siguiente; si depositas después, a los 2 días hábiles. Ese dinero **sí se puede usar para invertir** mientras tanto [19].
-- [H] Depósitos por SPEI a la CLABE única de GBM, de lunes a viernes de 06:00 a 18:00. La validación de la cuenta bancaria tarda hasta 48 h (resumen de búsqueda del centro de ayuda de GBM; la página oficial devolvió 404 el 2026-09-25, **parcialmente verificado**).
+- [H] Depósitos por SPEI a la CLABE única de GBM: **"en cualquier momento para que el efectivo llegue en minutos"** según la FAQ oficial [48] (la versión anterior de este documento decía "lunes a viernes de 06:00 a 18:00"; eso no se sostiene). El alta de una cuenta bancaria para retiros tarda hasta 48 h en validarse (resumen de búsqueda del centro de ayuda de GBM, **parcialmente verificado**).
 
 ---
 
@@ -162,13 +163,13 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 
 | Herramienta | Disponible para persona física | Condiciones | Fuente |
 |---|---|---|---|
-| Margen intradía | Sí, bajo contrato y a solicitud (correo a plus@gbm.com) | Solo intradía; la posición se cierra el mismo día | [39] (parcialmente verificado: la página oficial dio 404 al consultarla) |
+| Margen intradía | Sí, bajo contrato y a solicitud (correo a plus@gbm.com) | Solo intradía; la posición se cierra el mismo día. Un resumen de búsqueda menciona hasta 2.5 veces lo que se tiene en acciones y hasta 3 veces el efectivo, solo en ciertas emisoras y sin costo si se devuelve a tiempo (no verificado) | [39] (parcialmente verificado: la página oficial dio 404 al consultarla, y las páginas de GBM Academy sobre margen dieron 503 el 2026-09-25) |
 | Venta en corto | Sí, con margen intradía activado | **Mínimo 10,000 MXN.** Solo emisoras que GBM selecciona. Garantía de 2 MXN por cada 1 MXN vendido | [39] (parcialmente verificado) |
 | Crédito de margen (overnight) | Aparece en la Guía | Hasta TIIE + 10 | [2]. Si está disponible en la app para retail: no verificado |
-| Préstamo de valores (como prestamista) | Sí, en Trading USA ("genera intereses mensuales") | | [5] |
+| Préstamo de valores (como prestamista) | Sí, en Trading USA ("genera intereses mensuales") | Reparto del ingreso: 50% DriveWealth, 30% GBM y **20% el cliente**. Garantía del 100%; se puede vender en cualquier momento | [5] |
 | Futuros/opciones MexDer | En la Guía, con tabla de comisiones 4T25 | Vía cuenta global o mesa, no como función estándar de la app | [2], [40] (no verificado) |
-| ETFs apalancados en SIC | **TQQQ está listado y activo en BMV** (TRAC extranjero, ISIN US74347X8314) | Si GBM permite comprarlo desde la app y con qué perfil: **no verificado** | [35] |
-| Regla PDT en Trading USA | En 2022 GBM la limitaba a 3 day trades cada 5 días hábiles | FINRA eliminó el requisito de 25k con vigencia al 4-jun-2026. Los brokers tienen hasta el 20-oct-2027 para implementarlo, y solo aplica a cuentas de margen. Si GBM/DriveWealth ya lo cambió: **no verificado** | [11][34] |
+| ETFs apalancados en SIC | **TQQQ (ISIN US74347X8314), SOXL (US25459W4583) y SPXL (US25459W8626) están listados como TRACs extranjeros con estatus ACTIVA en la BMV** | Si GBM permite comprarlos desde la app y con qué perfil: **no verificado**. UPRO, QLD y SSO: listado en la BMV no verificado. La frase "los ETFs adquiridos en el SIC no podrán ser ni sintéticos ni apalancados" que circula en búsquedas viene del prospecto de un fondo de inversión GBM, no es una regla para personas físicas | [35][43][44] |
+| Regla PDT en Trading USA | En 2022 GBM la limitaba a 3 day trades cada 5 días hábiles, con exención arriba de 25,000 USD [11]. La FAQ vigente de GBM "¿Qué es un day trade?" repite el límite de 3 en 5 días y dice que la app muestra un contador (resumen de búsqueda; la URL dio 404 el 2026-09-25, parcialmente verificado) [51] | FINRA eliminó el requisito de 25k con vigencia al 4-jun-2026. Los brokers tienen hasta el 20-oct-2027 para implementarlo, y solo aplica a cuentas de margen. Si GBM/DriveWealth ya lo cambió: **no verificado** | [11][34][51] |
 
 [I] Para la cuenta arena, el apalancamiento práctico que se puede sostener de un día para otro son los **ETFs apalancados vía SIC**, si GBM los habilita, o vía Trading USA, sin stops. El margen de GBM es solo intradía.
 
@@ -179,12 +180,13 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 | Instrumento | Tasa o costo | Fecha | Fuente |
 |---|---|---|---|
 | Tasa objetivo de Banxico | 6.50% (sin cambio, decisión unánime) | 24-sep-2026 | [21] |
-| CETE 28 / 91 / 182 / 364 | 6.15% / 6.59% / 6.91% / 7.24% (brutas) | subasta del 22-sep-2026 | [22] (cita SIE Banxico; no lo verifiqué directamente en Banxico) |
+| CETE 28 / 91 / 182 / 364 | 6.15% / 6.59% / 6.91% / 7.24% (brutas). El CETE 28 bajó 10 pb desde 6.25% | subasta del 22-sep-2026 | [22][50] (cetes.app cita SIE Banxico; Imagen Radio confirma el 6.15%; no lo verifiqué directamente en Banxico) |
 | Smart Cash (<300 mil MXN) | 4.00% anual | verificado al 24-sep-2026 | [17][18] |
 | Smart Cash (rango total) | 4.00%–4.75% según inversión total | vigente | [17] |
 | Retención de ISR sobre intereses | 0.90% anual sobre el capital (LIF 2026, art. 24) | 2026 | [29] |
 
 - [I] El diferencial CETE 28 − Smart Cash es de ~2.15 pp. Para dinero que vaya a quedarse quieto ≥28 días, el CETE rinde más que Smart Cash. Para dinero en espera entre operaciones, Smart Cash es la opción líquida.
+- [H] **Advertencia:** no encontré en fuentes de GBM la compra directa de un CETE a plazo desde la app. GBM presenta Smart Cash como su vía para "invertir en CETES" [23][53]. Cetesdirecto es externo y exigiría sacar dinero de la cuenta arena. Que el CETE 28 esté disponible dentro de la cuenta: **no verificado**.
 - [I] Neto de la retención de 0.90%, Smart Cash rinde ~3.1%, o sea ~0.26% al mes. Frente a un rival que juega a ganar, la liquidez ociosa casi no aporta al marcador.
 
 ---
@@ -194,7 +196,7 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 | Concepto | Tratamiento | Quién lo retiene o declara | Fuente |
 |---|---|---|---|
 | Ganancia por venta en BMV y SIC | ISR definitivo de 10% sobre la ganancia neta del año (art. 129 LISR) | **Sin retención en la venta.** Se paga en la declaración anual con la constancia de GBM | [26] |
-| Ganancia en Trading USA | GBM indica 10% anual | Autodeclaración. GBM no emite CFDI; DriveWealth entrega la forma 1042-S "solo como guía" | [28], resumen de búsqueda [42] (no verificado si el art. 129 aplica sin intermediario mexicano) |
+| Ganancia en Trading USA | **Tasa no verificada.** [28] trata solo de dividendos y no menciona 10% sobre ganancias; [42] redirige a una página genérica. Que aplique el 10% del art. 129 sin intermediario mexicano: no verificado | Autodeclaración. GBM no emite CFDI por Trading USA; DriveWealth entrega la forma 1042-S "solo como guía" [27][28] | [28], [42] (no verificado) |
 | Dividendos de emisoras mexicanas | Retención de 10% (utilidades desde 2014) | Emisora o intermediario | [27] |
 | Dividendos SIC (fuente EUA) | 30% en EUA (10% con W-8BEN vigente) y después 10% en México sobre el neto | GBM | [27] |
 | Dividendos Trading USA | 30% (10% con W-8BEN), después 10% en México | DriveWealth / GBM | [28] |
@@ -210,7 +212,7 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 
 - [H] El seguro del IPAB cubre depósitos bancarios hasta 400 mil UDIS y "No garantiza [...] las inversiones en fondos de inversión, aseguradoras y casas de bolsa" [30].
 - [H] En Trading MX, los valores se custodian en S.D. Indeval a nombre del cliente [36]. [I] Si la casa de bolsa quiebra, los valores no forman parte de su patrimonio (el principio de segregación lo describen fuentes secundarias; el texto legal no lo verifiqué).
-- [H] En Trading USA la custodia la lleva DriveWealth (EUA) [28][36]. Si hay cobertura SIPC y en qué términos: **no verificado**.
+- [H] En Trading USA la custodia la lleva DriveWealth (EUA) [28][36]. DriveWealth, LLC es broker-dealer "member of FINRA and SIPC" y el 5-nov-2025 anunció cobertura Excess SIPC para "DriveWealth partners and their customers" de hasta 49 MUSD en valores y 1 MUSD en efectivo por cuenta [49]. Si la cobertura SIPC aplica a los clientes mexicanos de GBM y en qué términos: **no verificado**.
 - [H] GBM aparece como casa de bolsa supervisada por la CNBV [25].
 
 ---
@@ -219,13 +221,16 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 
 | Fecha | Evento | Duración o efecto | Fuente |
 |---|---|---|---|
-| 26-jun-2024 | Intermitencias en GBM+ y GBM App | ~1 h. Resuelto a las 12:30 CDMX | [32] |
-| 19-jul-2024 | Falla global de CrowdStrike/Microsoft afecta a GBM | Intermitencias | [33] (visto solo en el listado de búsqueda) |
+| 26-jun-2024 | Intermitencias en GBM+ y GBM App | Nota publicada a las 11:18 y resuelta a las 12:30 CDMX; la hora de inicio no se reporta (≥ ~1 h) | [32] |
+| 19-jul-2024 | Falla global de CrowdStrike/Microsoft afecta a GBM | Intermitencias por "falla global de un proveedor" | [33] |
 | dic-2024 (nota del 16-dic) | Caída de la app móvil en horario de mercado, con "internal server error" | **Segunda falla en menos de 5 días** | [31] |
-| 2025–2026 | No encontré notas de prensa sobre caídas | — | búsquedas del 2026-09-25 |
+| **7-abr-2025** (el lunes que cita la nota del 8-abr) | "Lunes negro" por aranceles: falla de la plataforma GBM | **Más de 5 horas sin poder comprar ni vender** en una de las sesiones más volátiles en años | [46] |
+| 20-oct-2025 | Caída global de AWS: "Mifel y GBM tuvieron reportes de intermitencia" | Intermitencias | [47] |
+| 2026 | No encontré notas de prensa sobre caídas | — | búsquedas del 2026-09-25 |
 
 - [I] El riesgo real para la cuenta arena es **no poder cerrar o ajustar una posición apalancada durante un movimiento fuerte**.
-- [R] Toda posición en Trading MX/SIC lleva un **stop o una OCA registrados en el sistema desde la entrada**, porque viven en el libro de la bolsa y no dependen de que la app funcione. En Trading USA no hay stops, así que ahí no se meten posiciones apalancadas que requieran un stop estricto. Respaldo telefónico de GBM: 55 5480 5846; WhatsApp: 55 2690 5840 [6].
+- [I] El 7-abr-2025 muestra que la falla más larga coincidió con el día de más volatilidad. Es el peor caso para una posición en ETF 3x.
+- [R] Toda posición en Trading MX/SIC lleva un **stop o una OCA registrados en el sistema desde la entrada**, porque no dependen de que la app esté disponible en ese momento. Matiz: la BMV admite posturas activadas al nivel y PCP [52], pero una orden de varios días la reingresa GBM cada mañana [10], así que depende de los sistemas internos de GBM. **Que un stop ya registrado se haya ejecutado durante la caída del 7-abr-2025: no verificado.** En Trading USA no hay stops, así que ahí no se meten posiciones apalancadas que requieran un stop estricto. Respaldo telefónico de GBM: 55 5480 5846; WhatsApp: 55 2690 5840 [6].
 
 ---
 
@@ -244,7 +249,7 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 | 2.0 | 232 MXN (1.16%) | 7.0% |
 | 3.0 | 348 MXN (1.74%) | 10.4% |
 
-3. **El parámetro provisional `operaciones_max_mes: 8`** equivale a 8 vueltas de 10,000 MXN al mes. **Solo en comisiones cuesta 2.32% al mes y ~13.9% en la temporada.** Con 8 vueltas de 5,000 MXN cuesta 1.16% al mes y ~7% en la temporada. [R] Hay que redefinirlo como **presupuesto de rotación ≤ 1.0–1.5× el capital al mes**, que da ~4 a 6 vueltas de 5,000 o ~2 a 3 de 10,000. El costo total de la temporada queda en **≤ 3.5%–5%**.
+3. **El parámetro provisional `operaciones_max_mes: 8`** equivale a 8 vueltas de 10,000 MXN al mes. **Solo en comisiones cuesta 2.32% al mes y ~13.9% en la temporada.** Con 8 vueltas de 5,000 MXN cuesta 1.16% al mes y ~7% en la temporada. [R] Hay que redefinirlo como **presupuesto de rotación ≤ 1.0–1.5× el capital al mes**, que da ~4 a 6 vueltas de 5,000 o ~2 a 3 de 10,000. El costo total de la temporada queda en **≤ 3.5%–5.2%** (solo comisión).
 4. **Edge mínimo por operación:** con un costo de 0.68% a 1.18%, un objetivo de movimiento de 2% pierde de 34% a 59% del edge en costos; uno de 5%, de 14% a 24%; y uno de 10%, de 7% a 12%. [R] **Solo se entra en operaciones con un movimiento esperado ≥ 5%** (swing de días a semanas). El scalping o intradía con 20k en GBM tiene un edge negativo neto de costos.
 5. **Tamaño mínimo de posición:** sin comisión mínima, el costo porcentual no depende del tamaño. [R] Si se confirma un mínimo de 20 MXN, **ninguna orden va por debajo de 8,000 MXN**. Mientras no se verifique, conviene que las órdenes sean de **≥ 5,000 MXN**, con lo que hay 2 a 4 posiciones simultáneas como máximo.
 6. **Granularidad del SIC:** solo títulos completos. [I] Un ETF de ~690 USD (~12,000 MXN) ocuparía el 60% de la cuenta en un solo título [36]. [R] En el SIC hay que preferir tickers con precio por título ≤ 5,000 MXN, o usar Trading USA con fracciones para los tickers caros.
@@ -257,8 +262,8 @@ La fórmula es: comisión por lado = monto × 0.25% × 1.16, más el spread o sl
 | Conversión cambiaria | Implícita en el precio del SIC, en cada operación (no verificado) | Explícita; se puede hacer una sola vez por temporada |
 | Stops, OCA, trailing | **Sí** | **No** |
 | Fracciones | No | Sí |
-| ETFs apalancados | TQQQ listado en el SIC [35]; habilitación en GBM sin verificar | Sin verificar |
-| Riesgo operativo si la app se cae | Bajo: el stop vive en el libro | **Alto: no hay stop** |
+| ETFs apalancados | TQQQ, SOXL y SPXL listados y activos en el SIC [35][43][44]; habilitación en GBM sin verificar | Sin verificar |
+| Riesgo operativo si la app se cae | Menor: el stop ya está registrado (depende de los sistemas de GBM, no de la app [10][52]) | **Alto: no hay stop** |
 
 [R] **Ruta por defecto: Trading MX/SIC con OCA o stop limitada en cada entrada.** Trading USA solo para posiciones sin apalancamiento en tickers caros o que no están en el SIC, con **una sola conversión** de MXN a USD al inicio de la temporada.
 

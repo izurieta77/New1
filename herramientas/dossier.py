@@ -431,12 +431,13 @@ def seccion_valuacion(val: dict, moneda: str | None, tasas, g_terminal: float) -
     return lineas
 
 
-def seccion_alertas(alertas: list[dict], presentaciones: list[dict]) -> list[str]:
+def seccion_alertas(alertas: list[dict], presentaciones: list[dict], hoy: date | None = None) -> list[str]:
+    hoy = hoy or date.today()
     lineas = ["## 5. Alertas automaticas", "", "| Alerta | Valor | Umbral | Estado | Base |", "|---|---|---|---|---|"]
     for a in alertas:
         estado = f"**{a['estado']}**" if a["estado"] == "ACTIVA" else a["estado"]
         lineas.append(f"| {a['alerta']} | {a['valor']} | {a['umbral']} | {estado} | {a['detalle']} |")
-    corte = (date.today() - timedelta(days=365)).isoformat()
+    corte = (hoy - timedelta(days=365)).isoformat()
     graves = [p for p in presentaciones if p["alerta"] and p["fecha"] >= corte]
     lineas.append(f"| 8-K con items de alerta o enmiendas (12 meses) | {len(graves)} | > 0 | "
                   f"{'**ACTIVA**' if graves else 'ok'} | items 1.03, 1.05, 2.04-2.06, 3.01, 4.01, 4.02, 5.01 o /A |")
@@ -449,12 +450,13 @@ def seccion_alertas(alertas: list[dict], presentaciones: list[dict]) -> list[str
 
 
 def seccion_presentaciones(presentaciones: list[dict], formas4: list[dict], resumen4: dict | None,
-                           error4: str | None) -> list[str]:
+                           error4: str | None, hoy: date | None = None) -> list[str]:
+    hoy = hoy or date.today()
     lineas = ["## 6. Presentaciones recientes (EDGAR)", ""]
     if not presentaciones:
         return lineas + ["Sin presentaciones disponibles.", ""]
     lineas += edgar.tabla_presentaciones(presentaciones[:15]) + [""]
-    corte = (date.today() - timedelta(days=90)).isoformat()
+    corte = (hoy - timedelta(days=90)).isoformat()
     n90 = sum(1 for p in formas4 if p["fecha"] >= corte)
     lineas.append(f"Form 4 (insiders) en 90 dias: {n90}" + (f"; ultimo {formas4[0]['fecha']}" if formas4 else "") + ".")
     if resumen4:
@@ -862,8 +864,8 @@ def generar(ticker: str, fecha: date | None = None, cache_horas: float | None = 
         lineas += seccion_mexico(ticker, meta, anual, ticker_sec)
         if anual:
             lineas += seccion_valuacion(val, (anual or {}).get("moneda"), tasas, g_terminal)
-            lineas += seccion_alertas(alertas, presentaciones)
-            lineas += seccion_presentaciones(presentaciones, formas4, None, None)
+            lineas += seccion_alertas(alertas, presentaciones, fecha)
+            lineas += seccion_presentaciones(presentaciones, formas4, None, None, fecha)
         else:
             lineas += ["## 4. Valuacion", "", "Capitalizacion = precio x acciones en circulacion (reporte BMV). "
                        "Reverse DCF: `from herramientas.dossier import crecimiento_implicito` con capitalizacion y FCF "
@@ -872,8 +874,8 @@ def generar(ticker: str, fecha: date | None = None, cache_horas: float | None = 
     else:
         lineas += seccion_estados(anual, trimestral)
         lineas += seccion_valuacion(val, (trimestral or anual or {}).get("moneda"), tasas, g_terminal)
-        lineas += seccion_alertas(alertas, presentaciones)
-        lineas += seccion_presentaciones(presentaciones, formas4, resumen4, error4)
+        lineas += seccion_alertas(alertas, presentaciones, fecha)
+        lineas += seccion_presentaciones(presentaciones, formas4, resumen4, error4, fecha)
     lineas += secciones_analista(ticker, nombre, trimestral, anual, presentaciones, precio, moneda_precio, es_mx, fecha)
     lineas += ["## 15. Fuentes", ""]
     lineas.append(f"- Yahoo Finance chart: https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(ticker)}?range=5y&interval=1d")
