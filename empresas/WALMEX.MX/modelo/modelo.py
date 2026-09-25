@@ -283,7 +283,7 @@ def construir_flujo(cf: dict, utilidad_neta_millones: float) -> dict:
         "interes_por_pasivos_de_arrendamiento_(nota_9)": cf["int_arrendamiento"],
         "efecto_cambiario_no_realizado": cf["fx_no_realizado"], "provision_obligaciones_laborales": cf["prov_laboral"],
         "interes_a_cargo_(reverso_no_monetario)": cf["int_a_cargo"],
-        "diferencia_isr_devengado_vs_isr_pagado_en_efectivo": -(cf["isr_pagado"] - isr_devengado),
+        "diferencia_isr_devengado_vs_isr_pagado_en_efectivo": cf["isr_pagado"] + isr_devengado,
         "beneficios_a_empleados_pagados": cf["beneficios_pagados"],
     }
     capex = -cf["capex"]
