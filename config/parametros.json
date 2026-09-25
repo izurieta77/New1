@@ -206,5 +206,16 @@
     "descripcion": "Otras IAs, cada una con su propia cuenta en GBM y el mismo capital inicial. El dueno reporta solo resultados (valor de la cuenta y fecha), nunca posiciones.",
     "registro": "competencia/rivales.csv",
     "capital_inicial_mxn": 20000
+  },
+  "escalamiento_capital": {
+    "fecha_captura": "2026-09-25",
+    "regla": "Las tres cuentas (arena-claude y cada rival) arrancan con el mismo capital_inicial_mxn (20,000). El dueno ira aportando mas capital de forma progresiva a la cuenta que vaya rindiendo, hasta un rango de 100,000-200,000 MXN o mas, no de golpe.",
+    "criterio_de_decision": "Al final de cada temporada (temporada_meses en arena_agresivo, actualmente 6 meses) el dueno decide, por cuenta, si cancela o continua la suscripcion de esa IA segun el TWR en MXN desde el fondeo frente a las demas cuentas. La cuenta que no rinda fruto se puede quedar sin mas aportaciones o perder la suscripcion.",
+    "implicacion_para_el_sistema": "Cada aportacion adicional es un deposito (lado=deposito en herramientas/portafolio.py) y se mide con el mismo indice time-weighted que ya usa el portafolio, para no premiar ni castigar el tamano ni el momento de las aportaciones. No cambia el criterio_salida de fase 0: no se propone ni la primera peseta real hasta cumplirlo.",
+    "pendiente_de_definir_por_el_dueno": [
+      "montos y fechas exactas de cada aportacion adicional",
+      "el TWR minimo o el ranking que dispara una aportacion o un recorte",
+      "que pasa si dos cuentas empatan al cierre de temporada"
+    ]
   }
 }
