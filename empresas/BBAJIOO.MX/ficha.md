@@ -4,7 +4,7 @@
 > Precio: Ps 56.60 (cierre 24-sep-2026). Rango de cierres en 52 semanas: 44.13-60.67. Precio +20.7% a 1 año, sin dividendos. Yahoo con ajuste da +31.6%, pero ese ajuste de emisoras .MX no está verificado [9]. Fase 0: investigación, no recomendación.
 
 ## 1. Negocio y segmentos
-BanBajío es el 8º banco del país por cartera y el 5º en crédito a empresas (CNBV, dic-2025). Opera en 29 estados con 333 sucursales y más de 1.1 millones de clientes [4].
+8º banco por cartera y 5º en crédito a empresas (CNBV, dic-2025), con 333 sucursales en 29 estados y más de 1.1 millones de clientes [4].
 - **Cartera (2T26):** Ps 296,354 M. Empresas 86.1%, gobierno 5.7%, entidades financieras 4.3%, consumo 2.8% e hipotecario 1.1% [1].
 - **Sectores de la cartera empresarial:** servicios 25%, comercio 24%, manufactura 16%, agro 10% y construcción 9% [2].
 - **Mezcla de ingresos (2T26):** margen financiero 87% e ingresos no financieros 13% [1].

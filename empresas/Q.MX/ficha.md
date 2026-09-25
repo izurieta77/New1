@@ -15,7 +15,7 @@ Es el líder del seguro de autos en México: 34.2% de la prima emitida, 37.4% de
 
 **Otros negocios:** verticales de refacciones, salvamentos y cristales, con Ps 456 M de ventas en el 2T26 [1].
 
-**Utilidad:** técnica más financiera. El portafolio es de Ps 53,430 M: 85.7% renta fija con duración de 2.6 años, 14.3% renta variable y ~21% en USD [1][2].
+**Utilidad:** técnica más financiera, sobre un portafolio de Ps 53,430 M (85.7% renta fija con duración de 2.6 años; ~21% en USD) [1][2].
 
 ## 2. Último reporte: 2T26 (21-jul-2026) [1][2]
 - **Prima emitida:** Ps 17,329 M (−0.5% a/a). Sin el cambio de cobertura de una cuenta multianual habría crecido +3.4%.
@@ -25,7 +25,7 @@ Es el líder del seguro de autos en México: 34.2% de la prima emitida, 37.4% de
 - **RIF:** Ps 1,161 M, con RSI de 7.4%.
 - **Utilidad neta:** Ps 1,389 M (−1.3%).
 - **UPA:** Ps 3.47 (utilidad ÷ 400 M acciones), contra un consenso de 3.84 [9].
-- **Ingresos:** TradingView y Investing reportan 18.55 mil M, que equivale a prima devengada más RIF. El consenso era de 19.14-19.20 mil M [9].
+- **Ingresos (TradingView e Investing):** 18.55 mil M, igual a prima devengada más RIF, contra 19.14-19.20 mil M de consenso [9].
 - **Guía 2026 (ene-2026)** [4]:
   - Prima emitida de un dígito alto a dos dígitos bajos.
   - Siniestralidad dentro o un poco arriba del rango de 62-65%.
@@ -64,10 +64,7 @@ Anual [3][4]:
 | 2024 | 69,276 | 92.1% | 4.6% | 5,119 | 12.80 | 24,667 | 22.1% |
 | 2025 | 75,804 | 94.1% | 3.3% | 5,095 | 12.74 | 25,716 | 20.2% |
 
-Notas a la tabla anual:
-- **Deuda:** no tiene deuda financiera ("financiamientos obtenidos" y "emisión de deuda" están en cero) [1].
-- **Acciones:** 400 M. En 2021 eran 406 M; al 2T26 hay ~6.2 M en tesorería [1][3].
-- **FCF y SBC:** no se revelan (n.d.). Para una aseguradora, el FCF equivale a la variación de reservas más la utilidad.
+Sin deuda financiera [1]. Acciones: 400 M (406 M en 2021), con ~6.2 M en tesorería al 2T26 [1][3]. FCF y SBC: n.d.; en una aseguradora el FCF es la utilidad más la variación de reservas.
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad contra efectivo.** Las primas por cobrar suben más rápido que la emisión: Ps 49,737 M (+17.5% a/a) contra +7.7% de prima emitida en el 1S26. Los adeudos de dependencias federales pasaron de Ps 94 M a 1,365 M. Las reservas técnicas suben +12.5% [1]. *Inferencia:* hay más prima financiada y más cobro al gobierno; hay que vigilar la estimación para castigos (Ps 194 M).
@@ -143,7 +140,7 @@ El P/VL actual está debajo del promedio de 2.55x.
 - **Bajista (30%):** la guerra de precios se profundiza, la prima emitida de 2026 crece menos de 5% y la siniestralidad del 2S supera 66% por lluvias y costo medio. El ROE 2026 queda abajo de 17%.
 - **Base (50%):** emisión +5-8%, combinado de 93-95%, RIF de ~Ps 4,600 M y ROE de 19-21%.
 - **Alcista (20%):** la competencia se racionaliza, la frecuencia se mantiene baja y el combinado baja de 92%. El ROE supera 22%.
-- **Qué haría cambiar de escenario:** el crecimiento de la prima emitida del 3T26 (+5% o más apunta al alcista; negativo, al bajista) y la siniestralidad del 3T26 (más de 67% apunta al bajista).
+- **Qué haría cambiar de escenario:** la prima emitida del 3T26 (+5% o más, alcista; negativa, bajista) y su siniestralidad (más de 67%, bajista).
 
 ## 8. Pronósticos registrados (3T26)
 **Fecha estimada:** 20-21-oct-2026 (no confirmada).
@@ -169,21 +166,9 @@ El P/VL actual está debajo del promedio de 2.55x.
 2. UPA del 3T26 mayor a Ps 3.53: **p = 0.37**.
 
 ## 9. Catalizadores y riesgos
-**Catalizadores:**
-- Oct: datos de la AMIS y ventas de autos de la AMDA.
-- 20 y 31-oct: Ley de Ingresos 2027 [11].
-- ~20-oct: reporte del 3T26.
-- 5-nov: pago del segundo dividendo (Ps 4.50).
-- 5-nov y 17-dic: decisiones de Banxico.
-- Ene-2027: guía 2027.
+**Catalizadores:** oct, datos de la AMIS y la AMDA; ~20-oct, reporte del 3T26; 20 y 31-oct, Ley de Ingresos 2027 [11]; 5-nov, segundo dividendo (Ps 4.50); 5-nov y 17-dic, Banxico; ene-2027, guía 2027.
 
-**Riesgos:**
-- Guerra de precios.
-- Huracanes y lluvias en sep-oct.
-- Costo de refacciones y mano de obra, por el salario mínimo.
-- Tasas más bajas.
-- Cobranza a dependencias.
-- Desaceleración de las ventas de autos.
+**Riesgos:** guerra de precios, huracanes y lluvias (sep-oct), costo de refacciones y mano de obra, tasas más bajas, cobranza a dependencias y menos venta de autos.
 
 ## 10. Fuentes
 1. Quálitas, Reporte Trimestral 2T26 (21-jul-2026): https://qinversionistas.qualitas.com.mx/storage/informes/2026/trimestral/2T/mx/Q%20-%20Reporte%20Trimestral%202T26%20VFF2.pdf
