@@ -638,7 +638,7 @@ def backtest_senal(activo, efectivo, senal: Callable[[Historia], float], *,
             giro = abs(w - w_pre)
             c = giro * (comision_por_lado + spread_por_lado)
             rb = w * ra + (1 - w) * re_
-            rn = (1 - c) * (1 + rb) - 1
+            rn = rb - c * (1 + rb)  # = (1 - c)(1 + rb) - 1, exacto cuando c = 0
             exposicion.append(w)
             rotacion.append(giro)
             costo.append(c)

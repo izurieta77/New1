@@ -59,3 +59,22 @@ Rivales (referencia):
   R2 3x comprar-mantener                   mediana  10.4%  p5 -51.9%  p95 100.6%
   R3 trader sin ventaja (0-2x semanal)     mediana  -5.0%  p5 -31.9%  p95  23.2%
   R4 conservador (0.6x)                    mediana   2.9%  p5 -12.0%  p95  16.1%
+
+=== 6) Monte Carlo [B_bajista_persistente], 20000 trayectorias, 6 meses (rendimiento en exceso de efectivo) ===
+estrategia                                      mediana       p5      p95  P(<-35%)  vs R1  vs R2  vs R3  vs R4  promedio  mezcla_grok
+C0 efectivo                                        0.0%     0.0%     0.0%      0.0%  41.8%  29.3%  58.1%  26.8%   39.0%   39.7%
+C1 indice 1x                                       7.4%   -17.4%    26.1%      0.5%  51.6%  30.7%  87.0%  73.5%   60.7%   56.7%
+C2 2x comprar-mantener                            14.1%   -33.6%    57.3%      4.6%  59.2%  31.6%  84.7%  71.1%   61.6%   59.2%
+C3 3x comprar-mantener                            20.7%   -47.8%    95.3%      8.5%  63.6%  50.0%  79.4%  70.0%   65.8%   64.3%
+C4 2x con filtro SMA200                           11.6%   -22.7%    57.0%      0.7%  58.9%  19.9%  81.8%  65.8%   56.6%   54.7%
+C5 3x con filtro SMA200                           17.1%   -31.7%    94.8%      3.5%  63.4%  41.9%  77.4%  64.2%   61.7%   60.9%
+C6 barbell 60% cash + 40% 3x filtro                6.6%   -12.9%    37.7%      0.0%  53.3%  23.8%  85.0%  65.7%   56.9%   54.1%
+C7 momentum concentrado (1.3x, s=20%, alfa 4%)     9.9%   -26.0%    51.1%      2.0%  55.7%  37.8%  76.5%  62.2%   58.0%   56.3%
+C7b igual que C7 pero alfa 0%                      7.8%   -27.5%    48.1%      2.3%  52.4%  34.7%  72.7%  57.6%   54.4%   52.8%
+C8 2x con filtro SMA200 y banda 3%                13.4%   -22.2%    57.2%      0.6%  60.4%  23.2%  85.1%  68.8%   59.4%   57.3%
+
+Rivales (referencia):
+  R1 concentrado (1.3x, s=30%)             mediana   5.7%  p5 -33.7%  p95  60.4%
+  R2 3x comprar-mantener                   mediana  20.7%  p5 -47.8%  p95  95.3%
+  R3 trader sin ventaja (0-2x semanal)     mediana  -2.5%  p5 -28.0%  p95  20.4%
+  R4 conservador (0.6x)                    mediana   4.3%  p5 -10.7%  p95  14.9%

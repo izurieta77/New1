@@ -44,6 +44,7 @@ import urllib.parse
 import urllib.request
 import zipfile
 from datetime import date, datetime, timedelta, timezone
+from decimal import Decimal
 from pathlib import Path
 
 if __package__ in (None, ""):
@@ -266,11 +267,12 @@ def tabla_french(texto: str, frecuencia: str = "mensual", seccion: int | str | N
     """Tabla elegida de un CSV ya descomprimido -> {'fechas', 'columnas', ...} (ver french)."""
     doc = parsear_french_csv(texto)
     t = _elegir_tabla(doc["tablas"], frecuencia, seccion)
-    escala = 100.0 if t["porcentaje"] else 1.0
+    escala = Decimal(100) if t["porcentaje"] else Decimal(1)
     columnas = {c: [] for c in t["columnas"]}
     for fila in t["filas"]:
         for c, v in zip(t["columnas"], fila):
-            columnas[c].append(None if v is None else v / escala)
+            # division decimal: 0.57 -> 0.0057 exacto (0.57 / 100 en binario da 0.005699999999999999)
+            columnas[c].append(None if v is None else float(Decimal(repr(v)) / escala))
     fechas = [_fecha_french(p) for p in t["periodos"]]
     if any(b <= a for a, b in zip(fechas, fechas[1:])):
         raise ErrorDatos("Fechas French no estrictamente crecientes")
@@ -377,13 +379,15 @@ def parsear_yahoo_historia(texto: str, intervalo: str = "1d",
     ref_fecha = _fecha_local(int(ref_ts), desfase)[0] if ref_ts else date.today()
 
     por_periodo: dict = {}
+    sin_precio: list[date] = []
     for i, ts in enumerate(tiempos):
         cierre = cierres[i] if i < len(cierres) else None
         ajustado = ajustados[i] if ajustados and i < len(ajustados) else None
         precio = ajustado if ajustado is not None else cierre
-        if precio is None:
-            continue
         dia, _ = _fecha_local(ts, desfase)
+        if precio is None:
+            sin_precio.append(dia)  # hueco de Yahoo: el rendimiento siguiente abarca 2 periodos
+            continue
         if intervalo == "1mo":
             clave = (dia.year, dia.month)
         elif intervalo == "1wk":
@@ -440,6 +444,7 @@ def parsear_yahoo_historia(texto: str, intervalo: str = "1d",
                            "1d": "dia de negociacion"}[intervalo],
         "fecha_referencia": ref_fecha,
         "descartes": descartes,
+        "fechas_sin_precio": sin_precio,
     }
 
 
@@ -449,7 +454,8 @@ def yahoo_historia(ticker: str, intervalo: str = "1d", solo_periodos_completos: 
 
     Devuelve dict con 'fechas', 'precios' (adjclose si existe, si no close), 'cierres',
     'moneda', 'usa_adjclose', 'adjclose_difiere_de_close' (False en indices como ^GSPC:
-    NO incluyen dividendos), 'descartes' y 'url'.
+    NO incluyen dividendos), 'descartes', 'fechas_sin_precio' (barras con cierre nulo que se
+    omitieron: el rendimiento siguiente abarca dos periodos; revisar antes de un backtest) y 'url'.
     """
     params = {"period1": YAHOO_PERIODO_1, "period2": YAHOO_PERIODO_2, "interval": intervalo,
               "events": "div,split"}
@@ -535,7 +541,7 @@ def _prueba_en_vivo() -> None:
         h = yahoo_historia("^GSPC", intervalo)
         print(f"Yahoo ^GSPC [{intervalo}]: {h['fechas'][0]} a {h['fechas'][-1]}, n={len(h['fechas'])}, "
               f"adjclose={h['usa_adjclose']}, adjclose!=close={h['adjclose_difiere_de_close']}, "
-              f"descartes={h['descartes']}")
+              f"descartes={h['descartes']}, sin_precio={h['fechas_sin_precio']}")
     fx = fred("DEXMXUS")
     print(f"FRED DEXMXUS: {fx[0][0]} a {fx[-1][0]}, n={len(fx)}")
     v = alfred("GDPC1", "2008-10-31")

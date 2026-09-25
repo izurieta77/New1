@@ -836,7 +836,10 @@ def extraer_estados(hechos_json: dict, periodo: str = "anual") -> dict:
         ttm = _ttm(filas)
         if ttm:
             ttm_previo = _ttm(filas[:-4]) if len(filas) >= 8 else None
+            if ttm_previo:
+                calcular_metricas(ttm_previo, None)
             calcular_metricas(ttm, ttm_previo)
+            ttm["ttm_previo"] = ttm_previo
     notas = []
     if moneda and moneda != "USD":
         notas.append(f"Moneda de reporte {moneda}: montos en millones de {moneda}; se ignoran traducciones "

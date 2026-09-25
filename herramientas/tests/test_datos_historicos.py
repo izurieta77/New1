@@ -141,6 +141,7 @@ class TestYahoo(unittest.TestCase):
                                        date(2026, 6, 30), date(2026, 7, 31), date(2026, 8, 31)])
         self.assertEqual(h["precios"][-1], 110.0)
         self.assertTrue(h["descartes"])
+        self.assertEqual(h["fechas_sin_precio"], [date(2026, 3, 1)])  # el hueco se reporta, no se oculta
         self.assertTrue(h["usa_adjclose"])
         self.assertFalse(h["adjclose_difiere_de_close"])  # indice de precio: sin dividendos
 
