@@ -1,0 +1,28 @@
+tema,capitulo,estado,evidencia,fecha,siguiente_prueba
+Crecimiento geométrico y matemática del compuesto,01,Documentado,Capítulo 01 escrito con fuentes,2026-09-25,Ejercicio propio volatility drag con datos French
+Portafolio media-varianza y CAPM,02,Documentado,Capítulo 02,2026-09-25,Frontera eficiente con ETFs SIC en MXN
+Primas de factores y decaimiento post-publicación,02/06,Replicado,V01; AC-01; AC-02; AC-03; V03; R03 en curso,2026-09-25,Completar R03 (McLean-Pontiff) con prueba de diferencia entre ventanas
+Valuación DCF y DCF inverso,03,Documentado,Capítulo 03; herramientas/modelo_integrado.py,2026-09-25,DCF inverso de 3 emisoras contra precio y auditoría
+Renta fija: duración y curva,04,Documentado,Capítulo 04,2026-09-25,Comprobar duración/convexidad de un bono M con precio Banxico
+Curva invertida y recesión,04,Replicado,R07 (con _verificacion),2026-09-25,Segunda fuente independiente
+Derivados y prima de volatilidad,05,Documentado,Capítulo 05,2026-09-25,Réplica VRP con VIX vs realizada
+Anomalías long-only EUA,06,Replicado,V03,2026-09-25,Versión en MXN con costos GBM
+Kelly y Kelly fraccional (kelly.fraccion_max),07,Comprendido con comprobación,fichas/2026-09-25-kelly-fraccional.md (fórmula + Monte Carlo + binario),2026-09-25,Contrastar con rendimientos históricos y μ estimado en ventana móvil
+Cortacircuitos de drawdown y rachas,07,Documentado,Capítulo 07; herramientas/riesgo.py; metricas.prob_racha_perdedora,2026-09-25,Backtest de los niveles -8/-12/-15/-20% sobre R01 y 60/40 MXN
+Deflated Sharpe / PSR / MinBTL,07/20,Documentado,Capítulo 07; herramientas/metricas.py; usado en R04,2026-09-25,Ficha con derivación y ejercicio numérico
+Volatilidad gestionada,07,Replicado,R05 (con _verificacion),2026-09-25,Auditoría con segunda fuente (Xu 2026 vs Cederburg)
+Apalancados y filtro de tendencia,07/14,Replicado,R06 (con _verificacion),2026-09-25,Segunda fuente independiente
+Pronóstico y puntuación Brier,08,Documentado,Capítulo 08; herramientas/pronosticos.py; bitacora/pronosticos.csv n=0 resueltos,2026-09-25,Calibración con los primeros 50 resueltos
+Timing SMA10 (Faber),14,Replicado,R01 (misma fuente A y B),2026-09-25,Segunda fuente independiente (Shiller) y versión MXN (V04)
+Momentum de series de tiempo,14,Replicado,R02,2026-09-25,Auditor-de-replicas con segunda fuente
+Efecto Halloween,14,Replicado,R04 (A); AC-04 en curso 2026-09-25,2026-09-25,Terminar AC-04 (código independiente y segunda fuente)
+Efecto cambio de mes,14,Replicado,R09 (con _verificacion),2026-09-25,Segunda fuente independiente
+Eventos corporativos e insiders,15,Documentado,Capítulo 15,2026-09-25,Estudio de evento propio Form 4
+Peso mexicano y acciones para inversionista en MXN,16,Replicado,R08 (sin _verificacion),2026-09-25,Doble ejecución independiente
+Benchmarks en pesos,16,Localizado,V04 pre-registro,2026-09-25,Ejecutar V04
+Crisis y burbujas,17,Documentado,Capítulo 17,2026-09-25,Ficha de patrones con 3 casos medidos
+SPIVA y gestión activa,10/19,Contrastado,V05 (doble ejecución independiente),2026-09-25,Actualizar con SPIVA Latinoamérica/México
+Geopolítica y GPR,23,Documentado,Capítulo 23; herramientas/geopolitica.py,2026-09-25,Replicar Caldara-Iacoviello: GPR alto → rendimiento siguiente
+Política pública y regulación,24,Documentado,Capítulo 24,2026-09-25,Estudio de evento de anuncios arancelarios
+Pronóstico de resultados empresariales,25,Documentado,Capítulo 25; empresas/*/pronosticos.csv,2026-09-25,Puntuar MU 4TFY26 (2026-10-01)
+Fiscalidad 2026 y SIC,11/27,Documentado,Capítulos 11 y 27; V05,2026-09-25,Cálculo de ISR sobre ganancia SIC con caso numérico verificado
