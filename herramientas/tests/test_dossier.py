@@ -57,6 +57,8 @@ class TestPreciosYValuacion(unittest.TestCase):
         self.assertAlmostEqual(val["capitalizacion"], 10.0 * 103.5e6)
         self.assertAlmostEqual(val["ev"], 10.0 * 103.5e6 + 120 - 80 - 25)
         self.assertAlmostEqual(val["pu"], 10.0 * 103.5e6 / 112)
+        self.assertNotIn("aviso", dossier.valuacion(10.0, "USD", estados, None, date(2025, 9, 1)))
+        self.assertIn("aviso", dossier.valuacion(10.0, "USD", estados, None, date(2026, 9, 25)))
         otra = dossier.valuacion(10.0, "MXN", estados, None)
         self.assertIsNone(otra.get("capitalizacion"))
         self.assertIn("distinta", otra["nota"])

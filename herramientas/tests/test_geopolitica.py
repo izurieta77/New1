@@ -112,6 +112,33 @@ class TestResumenGpr(unittest.TestCase):
         self.assertEqual(filas[0]["GPR"], 117.9)
 
 
+class TestAiGpr(unittest.TestCase):
+    def test_csv_y_resumen(self):
+        mensual = geo.parsear_csv_fechado((FIX / "aigpr_mensual_mini.csv").read_text())
+        tipos = geo.parsear_csv_fechado((FIX / "aigpr_tipos_mini.csv").read_text())
+        paises = geo.parsear_csv_fechado((FIX / "aigpr_paises_mini.csv").read_text())
+        self.assertEqual(mensual[-1]["fecha"], date(2026, 8, 1))
+        self.assertIsNone(paises[-1]["Saudi Arabia_all"])                     # "NA" -> None
+        res = geo.resumen_ai_gpr(mensual, tipos, paises, ["MEX", "IRN", "SAU", "ZZZ"], diario=mensual)
+        total = next(x for x in res["series"] if x["clave"] == "GPR_AI")
+        self.assertEqual(total["ultimo"], 152.04)
+        self.assertEqual(total["percentil"], 75.0)                            # 1984 queda fuera de la base
+        self.assertEqual({t["clave"] for t in res["tipos"]}, set(geo.TIPOS_EVENTO_AI))
+        por_pais = {p["pais"]: p for p in res["paises"]}
+        self.assertEqual(por_pais["MEX"]["ultimo"], 1.8)
+        self.assertEqual(por_pais["SAU"]["ultimo"], 1.2)                      # ultimo dato valido
+        self.assertNotIn("ZZZ", por_pais)
+        self.assertEqual(res["diario"]["fecha"], date(2026, 8, 1))
+        with self.assertRaises(geo.ErrorFuente):
+            geo.resumen_ai_gpr([])
+
+    def test_descarga_anota_fallas(self):
+        registro = []
+        with mock.patch.object(geo, "_get", side_effect=geo.ErrorFuente("HTTP 404")):
+            self.assertEqual(geo.descargar_ai_gpr(None, registro), {})
+        self.assertEqual(len(registro), len(geo.ARCHIVOS_AI_GPR))
+
+
 class TestPalabrasYProbabilidades(unittest.TestCase):
     def test_coincidencias(self):
         self.assertTrue(geo.coincide("Bank of Mexico rate decision", "Mexico"))
@@ -201,6 +228,8 @@ class TestGenerar(unittest.TestCase):
              ("GPRA", "f", "%5.2fc", "A"), ("GPRC_MEX", "f", "%5.2fc", "Mexico")],
             [(float(m), 100.0 + m % 7, 100.0, 100.0, 0.2) for m in range(300, 800)]))
         with mock.patch.object(geo, "descargar_gpr", return_value={"mensual": {"formato": "dta", **dta}}), \
+                mock.patch.object(geo, "descargar_ai_gpr", return_value={
+                    "mensual": geo.parsear_csv_fechado((FIX / "aigpr_mensual_mini.csv").read_text())}), \
                 mock.patch.object(geo, "_get_json", side_effect=self._router), \
                 mock.patch.object(geo.time, "sleep"):
             md, datos = geo.generar(["Mexico"], ["MEX"], volumen_min=1000, cache_horas=None, fecha=date(2026, 9, 25))
@@ -210,12 +239,15 @@ class TestGenerar(unittest.TestCase):
         self.assertIn("Bank of Mexico rate decision in November - Maintain current rate", md)
         self.assertIn("## 5. Fuentes primarias para revisar", md)
         self.assertEqual(datos["gpr"]["mensual"]["fecha"], date(2026, 8, 1))
+        self.assertIn("### 1b. AI-GPR", md)
+        self.assertIn("Petroleo (Oil GPR)", md)
 
     def test_fuentes_caidas_no_rompen(self):
         with mock.patch.object(geo, "_get", side_effect=geo.ErrorFuente("sin red")), \
                 mock.patch.object(geo.time, "sleep"):
             md, datos = geo.generar(["Fed"], ["MEX"], cache_horas=None, fecha=date(2026, 9, 25))
-        self.assertIn("GPR no disponible", md)
+        self.assertIn("GPR clasico no disponible", md)
+        self.assertIn("AI-GPR no disponible", md)
         self.assertIn("## 6. Estado de las fuentes", md)
         self.assertTrue(any("sin red" in r for r in datos["registro"]))
         self.assertTrue(any("Kalshi" in r for r in datos["registro"]))

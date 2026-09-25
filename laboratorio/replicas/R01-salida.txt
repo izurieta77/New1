@@ -1,0 +1,309 @@
+R01 - Faber (2007) SMA de 10 meses. Corrida 2026-09-25T05:30:38Z. Pre-registro sha256 679f434ac371d0a8 verificado.
+French CRSP 202607: 1926-07-31 a 2026-07-31 (1201 meses), sha256 b840dba55d319f4818fc7300e65c52eff5f64870c8d495fa58ff5d4cd749f5eb, laboratorio/replicas/R01-datos/202607/F-F_Research_Data_Factors_CSV.zip
+French CRSP 202407: 1926-07-31 a 2024-07-31 (1177 meses), sha256 0b04328f5d25a6037281de3d7778ebd3932aebffba6fd4eb3fdfec44d4ba5a06, laboratorio/replicas/R01-datos/202407/F-F_Research_Data_Factors_CSV.zip
+French CRSP 200607: 1926-07-31 a 2006-07-31 (961 meses), sha256 6e240321b8b0d53e262e1b00f9750af828a09a66b5335fad0bdcbc8e45674ebb, laboratorio/replicas/R01-datos/200607/F-F_Research_Data_Factors_TXT.zip
+Yahoo ^GSPC diario: (datetime.date(1927, 12, 30), datetime.date(2026, 9, 24)) n=24799; fin de mes 1927-12-31 a 2026-08-31 (1185 meses); usa_adjclose=True adjclose!=close=False; sin precio=['2026-09-22']; huella ddd4ca74000cd68c
+FRED DEXMXUS (datetime.date(1993, 11, 8), datetime.date(2026, 9, 18)) n=8239 huella 3a677532a76a7d0e; INTGSTMXM193N (fin de mes, /1200) (datetime.date(1986, 10, 31), datetime.date(2026, 7, 31)) n=478 huella db8f6e0293183ed1
+
+Corridas registradas en esta ejecucion: 49 (es_prueba=1: 5)
+huella_datos por bloque: [('A', 'e85ac74d630dff95'), ('B', 'e85ac74d630dff95'), ('C', 'e85ac74d630dff95'), ('D', 'e85ac74d630dff95'), ('E', '7f6330f17d9d7c84'), ('E', 'b3166f196d4ffb98'), ('F', 'baac3d2ceaf0f92a'), ('G', '3e07a4896babbbd8'), ('G', '6f7a2f88fb30b19e')]
+
+================ RESULTADOS PRINCIPALES (neto de costos GBM por defecto: 0.29% + 0.05% por lado) ================
+
+--- Bloques A y B [completo] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma6                               1927-06-30 2026-07-31 1189   8.60%  12.81%   0.455   0.700  -46.97%   0.183   70.6%   2.19   0.745%   217  1.000
+sma8                               1927-06-30 2026-07-31 1189   8.40%  12.32%   0.454   0.663  -54.61%   0.154   71.2%   1.77   0.600%   175  1.000
+sma10                              1927-06-30 2026-07-31 1189   9.22%  12.52%   0.510   0.756  -43.50%   0.212   73.0%   1.48   0.504%   147  1.000
+sma12                              1927-06-30 2026-07-31 1189   9.45%  12.60%   0.525   0.785  -46.26%   0.204   73.3%   1.32   0.450%   131  1.000
+mom12                              1927-06-30 2026-07-31 1189   9.61%  12.58%   0.536   0.808  -45.17%   0.213   70.6%   0.88   0.299%    87  1.000
+comprar_y_mantener                 1927-06-30 2026-07-31 1189  10.26%  18.41%   0.447   0.676  -83.65%   0.123  100.0%   0.01   0.003%     1  1.000
+efectivo                           1927-06-30 2026-07-31 1189   3.29%   0.86%   0.000   0.000   -0.09%  36.531    0.0%   0.00   0.000%     0     NA
+
+--- Bloques A y B [dentro_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma6                               1927-06-30 2006-12-31  954   8.49%  13.33%   0.403   0.617  -46.97%   0.181   69.6%   2.25   0.765%   179  1.000
+sma8                               1927-06-30 2006-12-31  954   8.06%  12.70%   0.386   0.555  -54.61%   0.148   69.7%   1.82   0.620%   145  0.999
+sma10                              1927-06-30 2006-12-31  954   9.31%  12.91%   0.472   0.694  -43.50%   0.214   71.7%   1.47   0.500%   117  1.000
+sma12                              1927-06-30 2006-12-31  954   9.73%  12.92%   0.502   0.746  -46.26%   0.210   72.0%   1.30   0.440%   103  1.000
+mom12                              1927-06-30 2006-12-31  954   9.82%  12.61%   0.517   0.774  -45.17%   0.217   68.4%   0.89   0.304%    71  1.000
+comprar_y_mantener                 1927-06-30 2006-12-31  954  10.07%  18.98%   0.408   0.616  -83.65%   0.120  100.0%   0.01   0.004%     1  1.000
+efectivo                           1927-06-30 2006-12-31  954   3.73%   0.88%   0.000   0.000   -0.09%  41.441    0.0%   0.00   0.000%     0     NA
+
+--- Bloques A y B [fuera_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma6                               2006-12-31 2026-07-31  235   9.04%  10.43%   0.737   1.177  -16.79%   0.538   74.5%   1.94   0.660%    38  0.999
+sma8                               2006-12-31 2026-07-31  235   9.79%  10.64%   0.790   1.282  -13.76%   0.712   77.0%   1.53   0.521%    30  1.000
+sma10                              2006-12-31 2026-07-31  235   8.85%  10.82%   0.699   1.098  -19.31%   0.458   78.3%   1.53   0.521%    30  0.998
+sma12                              2006-12-31 2026-07-31  235   8.30%  11.19%   0.636   0.982  -19.31%   0.430   78.7%   1.43   0.486%    28  0.997
+mom12                              2006-12-31 2026-07-31  235   8.75%  12.51%   0.615   0.952  -24.52%   0.357   79.6%   0.82   0.278%    16  0.996
+comprar_y_mantener                 2006-12-31 2026-07-31  235  11.02%  15.91%   0.645   0.969  -50.31%   0.219  100.0%   0.00   0.000%     0  0.996
+efectivo                           2006-12-31 2026-07-31  235   1.51%   0.54%   0.000   0.000    0.00%     inf    0.0%   0.00   0.000%     0     NA
+
+--- comparar() del motor [fuera_muestra] ---
+variante                          cagr  vol_anual    sharpe   sortino       mdd    calmar  exposicion_media  rotacion_anual  costo_anual
+sma6                            0.0904     0.1043    0.7372    1.1773   -0.1679    0.5381            0.7447          1.9406       0.0066
+sma8                            0.0979     0.1064    0.7900    1.2820   -0.1376    0.7118            0.7702          1.5321       0.0052
+sma10                           0.0885     0.1082    0.6987    1.0976   -0.1931    0.4582            0.7830          1.5321       0.0052
+sma12                           0.0830     0.1119    0.6358    0.9815   -0.1931    0.4299            0.7872          1.4299       0.0049
+mom12                           0.0875     0.1251    0.6148    0.9519   -0.2452    0.3568            0.7957          0.8171       0.0028
+comprar_y_mantener              0.1102     0.1591    0.6452    0.9693   -0.5031    0.2191            1.0000          0.0000       0.0000
+efectivo                        0.0151     0.0054    0.0000    0.0000    0.0000       inf            0.0000          0.0000       0.0000
+
+================ TRAMO DEL ARTICULO (sin costos, como Faber) ================
+
+--- 1927-07_a_2005-12 ---
+variante                        CAGR media a. sd anual vol mens Sh rf4%  Sharpe      MDD    MAR   Ulcer  invert  sal/a   %op+   mejor     peor
+sma6|sin_costos                9.26%   10.20%   15.93%   13.41%    0.39   0.455  -46.11%   0.20  12.88%   69.5%   1.12    53%  50.31%  -21.06%
+sma8|sin_costos                8.68%    9.67%   16.35%   12.77%    0.35   0.431  -53.85%   0.16  15.31%   69.4%   0.90    50%  50.31%  -21.81%
+sma10|sin_costos               9.79%   10.80%   16.35%   12.97%    0.42   0.506  -42.94%   0.23  12.67%   71.3%   0.74    47%  50.31%  -21.81%
+sma12|sin_costos              10.15%   11.12%   16.13%   12.98%    0.44   0.531  -45.36%   0.22  12.88%   71.7%   0.65    48%  50.31%  -22.35%
+mom12|sin_costos              10.09%   10.77%   14.03%   12.69%    0.48   0.535  -44.23%   0.23  13.15%   68.0%   0.45    81%  42.98%  -19.16%
+comprar_y_mantener|sin_costo  10.01%   11.81%   20.43%   19.09%    0.38   0.404  -83.65%   0.12  23.00%  100.0%   0.00   100%  56.80%  -43.76%
+anios calendario completos: (1928, 2005, 78)
+sma6|sin_costos        reduccion MDD=0.4488  dif CAGR=-0.746 pp  dif media arit=-1.608 pp  % anios debajo de B&H=60.3%  operaciones=89
+sma8|sin_costos        reduccion MDD=0.3563  dif CAGR=-1.332 pp  dif media arit=-2.135 pp  % anios debajo de B&H=51.3%  operaciones=72
+sma10|sin_costos       reduccion MDD=0.4867  dif CAGR=-0.216 pp  dif media arit=-1.012 pp  % anios debajo de B&H=42.3%  operaciones=59
+sma12|sin_costos       reduccion MDD=0.4578  dif CAGR=+0.147 pp  dif media arit=-0.685 pp  % anios debajo de B&H=41.0%  operaciones=52
+mom12|sin_costos       reduccion MDD=0.4713  dif CAGR=+0.079 pp  dif media arit=-1.041 pp  % anios debajo de B&H=39.7%  operaciones=36
+
+--- 1927-07_a_2012-12 ---
+variante                        CAGR media a. sd anual vol mens Sh rf4%  Sharpe      MDD    MAR   Ulcer  invert  sal/a   %op+   mejor     peor
+sma6|sin_costos                9.28%   10.18%   15.55%   13.13%    0.40   0.476  -46.11%   0.20  12.45%   69.0%   1.11    54%  50.31%  -21.06%
+sma8|sin_costos                8.55%    9.49%   15.86%   12.54%    0.35   0.440  -53.85%   0.16  14.76%   69.2%   0.91    52%  50.31%  -21.81%
+sma10|sin_costos               9.59%   10.55%   15.87%   12.74%    0.41   0.512  -42.94%   0.22  12.26%   71.3%   0.73    49%  50.31%  -21.81%
+sma12|sin_costos               9.74%   10.66%   15.68%   12.75%    0.42   0.522  -45.36%   0.21  12.53%   71.5%   0.64    50%  50.31%  -22.35%
+mom12|sin_costos               9.88%   10.53%   13.62%   12.60%    0.48   0.536  -44.23%   0.22  12.74%   68.5%   0.43    82%  42.98%  -19.16%
+comprar_y_mantener|sin_costo   9.55%   11.39%   20.40%   18.92%    0.36   0.393  -83.65%   0.11  22.65%  100.0%   0.00   100%  56.80%  -43.76%
+anios calendario completos: (1928, 2012, 85)
+sma6|sin_costos        reduccion MDD=0.4488  dif CAGR=-0.273 pp  dif media arit=-1.214 pp  % anios debajo de B&H=60.0%  operaciones=96
+sma8|sin_costos        reduccion MDD=0.3563  dif CAGR=-1.002 pp  dif media arit=-1.903 pp  % anios debajo de B&H=51.8%  operaciones=79
+sma10|sin_costos       reduccion MDD=0.4867  dif CAGR=+0.044 pp  dif media arit=-0.849 pp  % anios debajo de B&H=43.5%  operaciones=63
+sma12|sin_costos       reduccion MDD=0.4578  dif CAGR=+0.192 pp  dif media arit=-0.734 pp  % anios debajo de B&H=42.4%  operaciones=56
+mom12|sin_costos       reduccion MDD=0.4713  dif CAGR=+0.329 pp  dif media arit=-0.867 pp  % anios debajo de B&H=38.8%  operaciones=38
+
+Cifras del articulo, 2006 (Tabla 2, 1900-2005): CAGR 9.75% vs 10.66%; sd 19.91% vs 15.38%; Sharpe 0.29 vs 0.43; MDD 83.66% vs 49.98% (texto: 42.24%); MAR 0.14 vs 0.23; Ulcer 20.33% vs 11.70%; invertido 69.77%; 0.67 RT/anio; 63% op+; mejor 52.88% vs 52.40%; peor -43.86% vs -26.69%; media arit. 11.66% vs 11.72%; ~40% anios debajo
+Cifras del articulo, 2013 (1901-2012): CAGR 9.32% vs 10.18%; media arit. 11.26% vs 11.22%; MDD 83.66% vs 42.24%; ~70% invertido; <1 RT/anio; ~50% anios debajo
+
+================ CRITERIOS PRE-REGISTRADOS ================
+C1 reduccion relativa del MDD (1927-07..2005-12, sin costos) = 0.4867 en [0.30, 0.60]? True
+C2 dif CAGR sma10 - B&H = -0.216 pp en (0, +1.91 pp]? False
+C3 tiempo invertido = 0.7134 en [0.60, 0.80]? True
+C4 salidas por anio = 0.7388 en [0.40, 1.00]? True
+Refutacion a) dentro_muestra neto: reduccion MDD = 0.4800 < 0.20? False
+Refutacion b) dentro_muestra neto: Sharpe sma10 0.4723 <= Sharpe B&H 0.4078? False
+Subperiodos (adenda): reduccion MDD > 0 en 7 de 9 ventanas dentro de muestra; 'solo en algunos subperiodos' (< 5)? False
+ESTADO segun reglas pre-registradas: Replicado con diferencias
+Fuera de muestra (2007-01..2026-07, neto): reduccion MDD = 0.6162; Sharpe sma10 0.6987 vs B&H 0.6452 -> veredicto: Se sostiene
+
+--- Subperiodos: sma10 vs comprar y mantener (neto, costos por defecto) ---
+ventana                   CAGR sma10  CAGR B&H Sh sma10  Sh B&H MDD sma10  MDD B&H  red MDD  invert
+1927-07 a 1929-12             21.00%    15.29%     0.84    0.57   -23.71%  -33.25%    0.287     93%
+1930-01 a 1939-12              2.13%    -0.26%     0.18    0.15   -29.36%  -79.37%    0.630     51%
+1940-01 a 1949-12              6.21%     9.49%     0.50    0.64   -27.78%  -27.98%    0.007     67%
+1950-01 a 1959-12             15.66%    18.35%     1.24    1.40   -16.73%  -14.94%   -0.120     86%
+1960-01 a 1969-12              6.43%     8.26%     0.31    0.39   -14.05%  -23.07%    0.391     72%
+1970-01 a 1979-12              8.21%     6.06%     0.21    0.07   -15.88%  -46.51%    0.659     65%
+1980-01 a 1989-12             13.90%    16.87%     0.39    0.51   -24.84%  -29.85%    0.168     76%
+1990-01 a 1999-12             12.81%    17.99%     0.63    0.93   -19.20%  -17.32%   -0.108     86%
+2000-01 a 2006-12              6.08%     1.60%     0.38   -0.02   -14.33%  -44.99%    0.682     63%
+2007-01 a 2009-12              9.56%    -4.85%     0.88   -0.25    -5.16%  -50.31%    0.897     53%
+2010-01 a 2019-12              7.58%    13.60%     0.69    1.01   -19.31%  -17.66%   -0.093     87%
+2020-01 a 2026-07             10.47%    15.02%     0.65    0.73   -13.76%  -24.84%    0.446     77%
+
+--- Diferencia mensual de rendimientos netos, media y error estandar Newey-West (6 rezagos) ---
+sma10 - comprar_y_mantener                         dentro_muestra  n=954   media=-0.1370%/mes (x12 -1.64%) t_NW6=-1.03 IC95=[-0.3968, +0.1228]%/mes
+sma10 - comprar_y_mantener                         fuera_muestra   n=235   media=-0.2234%/mes (x12 -2.68%) t_NW6=-0.94 IC95=[-0.6873, +0.2405]%/mes
+sma10 - comprar_y_mantener                         completo        n=1189  media=-0.1541%/mes (x12 -1.85%) t_NW6=-1.33 IC95=[-0.3818, +0.0737]%/mes
+mom12 - comprar_y_mantener                         dentro_muestra  n=954   media=-0.1016%/mes (x12 -1.22%) t_NW6=-0.78 IC95=[-0.3580, +0.1547]%/mes
+mom12 - comprar_y_mantener                         fuera_muestra   n=235   media=-0.2145%/mes (x12 -2.57%) t_NW6=-0.93 IC95=[-0.6672, +0.2381]%/mes
+mom12 - comprar_y_mantener                         completo        n=1189  media=-0.1240%/mes (x12 -1.49%) t_NW6=-1.08 IC95=[-0.3483, +0.1003]%/mes
+sma10 - mom12                                      dentro_muestra  n=954   media=-0.0353%/mes (x12 -0.42%) t_NW6=-0.51 IC95=[-0.1724, +0.1017]%/mes
+sma10 - mom12                                      fuera_muestra   n=235   media=-0.0088%/mes (x12 -0.11%) t_NW6=-0.06 IC95=[-0.3095, +0.2918]%/mes
+sma10 - mom12                                      completo        n=1189  media=-0.0301%/mes (x12 -0.36%) t_NW6=-0.47 IC95=[-0.1551, +0.0949]%/mes
+sma10|sin_costos - comprar_y_mantener|sin_costos   dentro_muestra  n=954   media=-0.0954%/mes (x12 -1.14%) t_NW6=-0.73 IC95=[-0.3525, +0.1618]%/mes
+sma10|sin_costos - comprar_y_mantener|sin_costos   fuera_muestra   n=235   media=-0.1798%/mes (x12 -2.16%) t_NW6=-0.78 IC95=[-0.6338, +0.2741]%/mes
+sma10|sin_costos - comprar_y_mantener|sin_costos   completo        n=1189  media=-0.1121%/mes (x12 -1.34%) t_NW6=-0.98 IC95=[-0.3370, +0.1129]%/mes
+
+--- POST-HOC (no pre-registrado): bootstrap pareado de bloques de 12 meses, 2000 repeticiones ---
+sma10 vs comprar_y_mantener    dentro_muestra  dif Sharpe obs=+0.065 IC95=[-0.134, +0.275] frac<=0=0.306 | red MDD obs=+0.480 IC95=[-0.061, +0.617] frac<0.20=0.191
+sma10 vs comprar_y_mantener    fuera_muestra   dif Sharpe obs=+0.054 IC95=[-0.348, +0.523] frac<=0=0.416 | red MDD obs=+0.616 IC95=[-0.334, +0.753] frac<0.20=0.217
+sma10 vs mom12                 dentro_muestra  dif Sharpe obs=-0.044 IC95=[-0.180, +0.089] frac<=0=0.749 | red MDD obs=+0.037 IC95=[-0.768, +0.269] frac<0.20=0.939
+sma10 vs mom12                 fuera_muestra   dif Sharpe obs=+0.084 IC95=[-0.179, +0.412] frac<=0=0.231 | red MDD obs=+0.213 IC95=[-0.377, +0.552] frac<0.20=0.540
+
+================ SENSIBILIDAD ================
+
+--- Bloque C (costos) [dentro_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma6                               1927-06-30 2006-12-31  954   8.49%  13.33%   0.403   0.617  -46.97%   0.181   69.6%   2.25   0.765%   179  1.000
+sma6|sin_costos                    1927-06-30 2006-12-31  954   9.32%  13.34%   0.460   0.711  -46.11%   0.202   69.6%   2.25   0.000%   179  1.000
+sma6|spread_medio                  1927-06-30 2006-12-31  954   8.24%  13.33%   0.386   0.589  -47.24%   0.175   69.6%   2.25   0.991%   179  1.000
+sma6|spread_iliquido               1927-06-30 2006-12-31  954   7.88%  13.33%   0.360   0.548  -47.63%   0.165   69.6%   2.25   1.328%   179  0.999
+sma6|doble_pierna                  1927-06-30 2006-12-31  954   7.66%  13.34%   0.345   0.523  -47.87%   0.160   69.6%   2.25   1.531%   179  0.999
+sma8                               1927-06-30 2006-12-31  954   8.06%  12.70%   0.386   0.555  -54.61%   0.148   69.7%   1.82   0.620%   145  0.999
+sma8|sin_costos                    1927-06-30 2006-12-31  954   8.73%  12.71%   0.435   0.629  -53.85%   0.162   69.7%   1.82   0.000%   145  1.000
+sma8|spread_medio                  1927-06-30 2006-12-31  954   7.86%  12.70%   0.372   0.533  -54.84%   0.143   69.7%   1.82   0.802%   145  0.999
+sma8|spread_iliquido               1927-06-30 2006-12-31  954   7.56%  12.70%   0.350   0.501  -55.18%   0.137   69.7%   1.82   1.076%   145  0.999
+sma8|doble_pierna                  1927-06-30 2006-12-31  954   7.39%  12.70%   0.337   0.481  -55.38%   0.133   69.7%   1.82   1.240%   145  0.998
+sma10                              1927-06-30 2006-12-31  954   9.31%  12.91%   0.472   0.694  -43.50%   0.214   71.7%   1.47   0.500%   117  1.000
+sma10|sin_costos                   1927-06-30 2006-12-31  954   9.86%  12.91%   0.512   0.755  -42.94%   0.230   71.7%   1.47   0.000%   117  1.000
+sma10|spread_medio                 1927-06-30 2006-12-31  954   9.15%  12.92%   0.461   0.676  -43.67%   0.210   71.7%   1.47   0.648%   117  1.000
+sma10|spread_iliquido              1927-06-30 2006-12-31  954   8.91%  12.93%   0.443   0.648  -44.43%   0.200   71.7%   1.47   0.868%   117  1.000
+sma10|doble_pierna                 1927-06-30 2006-12-31  954   8.76%  12.93%   0.433   0.632  -45.08%   0.194   71.7%   1.47   1.001%   117  1.000
+sma12                              1927-06-30 2006-12-31  954   9.73%  12.92%   0.502   0.746  -46.26%   0.210   72.0%   1.30   0.440%   103  1.000
+sma12|sin_costos                   1927-06-30 2006-12-31  954  10.22%  12.92%   0.536   0.801  -45.36%   0.225   72.0%   1.30   0.000%   103  1.000
+sma12|spread_medio                 1927-06-30 2006-12-31  954   9.59%  12.93%   0.492   0.730  -46.53%   0.206   72.0%   1.30   0.570%   103  1.000
+sma12|spread_iliquido              1927-06-30 2006-12-31  954   9.38%  12.93%   0.477   0.706  -46.93%   0.200   72.0%   1.30   0.764%   103  1.000
+sma12|doble_pierna                 1927-06-30 2006-12-31  954   9.25%  12.94%   0.467   0.692  -47.17%   0.196   72.0%   1.30   0.881%   103  1.000
+mom12                              1927-06-30 2006-12-31  954   9.82%  12.61%   0.517   0.774  -45.17%   0.217   68.4%   0.89   0.304%    71  1.000
+mom12|sin_costos                   1927-06-30 2006-12-31  954  10.15%  12.63%   0.540   0.811  -44.23%   0.230   68.4%   0.89   0.000%    71  1.000
+mom12|spread_medio                 1927-06-30 2006-12-31  954   9.72%  12.60%   0.510   0.763  -45.44%   0.214   68.4%   0.89   0.393%    71  1.000
+mom12|spread_iliquido              1927-06-30 2006-12-31  954   9.57%  12.60%   0.499   0.746  -45.85%   0.209   68.4%   0.89   0.527%    71  1.000
+mom12|doble_pierna                 1927-06-30 2006-12-31  954   9.48%  12.60%   0.493   0.736  -46.10%   0.206   68.4%   0.89   0.607%    71  1.000
+comprar_y_mantener                 1927-06-30 2006-12-31  954  10.07%  18.98%   0.408   0.616  -83.65%   0.120  100.0%   0.01   0.004%     1  1.000
+comprar_y_mantener|sin_costos      1927-06-30 2006-12-31  954  10.07%  18.98%   0.408   0.617  -83.65%   0.120  100.0%   0.01   0.000%     1  1.000
+comprar_y_mantener|spread_medio    1927-06-30 2006-12-31  954  10.07%  18.98%   0.408   0.616  -83.65%   0.120  100.0%   0.01   0.006%     1  1.000
+comprar_y_mantener|spread_iliquido 1927-06-30 2006-12-31  954  10.07%  18.98%   0.408   0.616  -83.65%   0.120  100.0%   0.01   0.007%     1  1.000
+comprar_y_mantener|doble_pierna    1927-06-30 2006-12-31  954  10.06%  18.98%   0.408   0.616  -83.65%   0.120  100.0%   0.01   0.009%     1  1.000
+
+--- Bloque C (costos) [fuera_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma6                               2006-12-31 2026-07-31  235   9.04%  10.43%   0.737   1.177  -16.79%   0.538   74.5%   1.94   0.660%    38  0.999
+sma6|sin_costos                    2006-12-31 2026-07-31  235   9.76%  10.41%   0.803   1.290  -15.07%   0.647   74.5%   1.94   0.000%    38  1.000
+sma6|spread_medio                  2006-12-31 2026-07-31  235   8.82%  10.44%   0.718   1.144  -17.29%   0.510   74.5%   1.94   0.854%    38  0.999
+sma6|spread_iliquido               2006-12-31 2026-07-31  235   8.50%  10.46%   0.689   1.093  -18.04%   0.472   74.5%   1.94   1.145%    38  0.998
+sma6|doble_pierna                  2006-12-31 2026-07-31  235   8.31%  10.48%   0.671   1.063  -18.48%   0.450   74.5%   1.94   1.320%    38  0.998
+sma8                               2006-12-31 2026-07-31  235   9.79%  10.64%   0.790   1.282  -13.76%   0.712   77.0%   1.53   0.521%    30  1.000
+sma8|sin_costos                    2006-12-31 2026-07-31  235  10.36%  10.62%   0.841   1.375  -12.57%   0.824   77.0%   1.53   0.000%    30  1.000
+sma8|spread_medio                  2006-12-31 2026-07-31  235   9.62%  10.65%   0.775   1.255  -14.10%   0.682   77.0%   1.53   0.674%    30  0.999
+sma8|spread_iliquido               2006-12-31 2026-07-31  235   9.37%  10.67%   0.752   1.213  -14.62%   0.641   77.0%   1.53   0.904%    30  0.999
+sma8|doble_pierna                  2006-12-31 2026-07-31  235   9.22%  10.68%   0.738   1.188  -14.93%   0.618   77.0%   1.53   1.042%    30  0.999
+sma10                              2006-12-31 2026-07-31  235   8.85%  10.82%   0.699   1.098  -19.31%   0.458   78.3%   1.53   0.521%    30  0.998
+sma10|sin_costos                   2006-12-31 2026-07-31  235   9.42%  10.80%   0.749   1.184  -17.64%   0.534   78.3%   1.53   0.000%    30  0.999
+sma10|spread_medio                 2006-12-31 2026-07-31  235   8.68%  10.83%   0.684   1.072  -19.79%   0.439   78.3%   1.53   0.674%    30  0.998
+sma10|spread_iliquido              2006-12-31 2026-07-31  235   8.43%  10.85%   0.662   1.034  -20.51%   0.411   78.3%   1.53   0.904%    30  0.998
+sma10|doble_pierna                 2006-12-31 2026-07-31  235   8.28%  10.86%   0.648   1.011  -20.95%   0.395   78.3%   1.53   1.042%    30  0.997
+sma12                              2006-12-31 2026-07-31  235   8.30%  11.19%   0.636   0.982  -19.31%   0.430   78.7%   1.43   0.486%    28  0.997
+sma12|sin_costos                   2006-12-31 2026-07-31  235   8.83%  11.16%   0.681   1.058  -17.64%   0.500   78.7%   1.43   0.000%    28  0.998
+sma12|spread_medio                 2006-12-31 2026-07-31  235   8.14%  11.20%   0.622   0.959  -19.79%   0.411   78.7%   1.43   0.629%    28  0.996
+sma12|spread_iliquido              2006-12-31 2026-07-31  235   7.91%  11.22%   0.602   0.925  -20.51%   0.386   78.7%   1.43   0.844%    28  0.995
+sma12|doble_pierna                 2006-12-31 2026-07-31  235   7.77%  11.23%   0.590   0.905  -20.95%   0.371   78.7%   1.43   0.972%    28  0.994
+mom12                              2006-12-31 2026-07-31  235   8.75%  12.51%   0.615   0.952  -24.52%   0.357   79.6%   0.82   0.278%    16  0.996
+mom12|sin_costos                   2006-12-31 2026-07-31  235   9.05%  12.52%   0.637   0.987  -23.22%   0.390   79.6%   0.82   0.000%    16  0.997
+mom12|spread_medio                 2006-12-31 2026-07-31  235   8.66%  12.51%   0.608   0.941  -24.90%   0.348   79.6%   0.82   0.360%    16  0.995
+mom12|spread_iliquido              2006-12-31 2026-07-31  235   8.53%  12.51%   0.598   0.926  -25.46%   0.335   79.6%   0.82   0.482%    16  0.995
+mom12|doble_pierna                 2006-12-31 2026-07-31  235   8.45%  12.51%   0.593   0.916  -25.80%   0.327   79.6%   0.82   0.556%    16  0.994
+comprar_y_mantener                 2006-12-31 2026-07-31  235  11.02%  15.91%   0.645   0.969  -50.31%   0.219  100.0%   0.00   0.000%     0  0.996
+comprar_y_mantener|sin_costos      2006-12-31 2026-07-31  235  11.02%  15.91%   0.645   0.969  -50.31%   0.219  100.0%   0.00   0.000%     0  0.996
+comprar_y_mantener|spread_medio    2006-12-31 2026-07-31  235  11.02%  15.91%   0.645   0.969  -50.31%   0.219  100.0%   0.00   0.000%     0  0.996
+comprar_y_mantener|spread_iliquido 2006-12-31 2026-07-31  235  11.02%  15.91%   0.645   0.969  -50.31%   0.219  100.0%   0.00   0.000%     0  0.996
+comprar_y_mantener|doble_pierna    2006-12-31 2026-07-31  235  11.02%  15.91%   0.645   0.969  -50.31%   0.219  100.0%   0.00   0.000%     0  0.996
+
+--- Bloque D (rezago de ejecucion) [dentro_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10                              1927-06-30 2006-12-31  954   9.31%  12.91%   0.472   0.694  -43.50%   0.214   71.7%   1.47   0.500%   117  1.000
+sma10|rezago1m                     1927-06-30 2006-12-31  954   8.81%  13.16%   0.431   0.621  -51.02%   0.173   71.7%   1.47   0.500%   117  1.000
+comprar_y_mantener                 1927-06-30 2006-12-31  954  10.07%  18.98%   0.408   0.616  -83.65%   0.120  100.0%   0.01   0.004%     1  1.000
+
+--- Bloque D (rezago de ejecucion) [fuera_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10                              2006-12-31 2026-07-31  235   8.85%  10.82%   0.699   1.098  -19.31%   0.458   78.3%   1.53   0.521%    30  0.998
+sma10|rezago1m                     2006-12-31 2026-07-31  235   9.45%  11.94%   0.692   1.109  -21.53%   0.439   78.3%   1.53   0.521%    30  0.998
+comprar_y_mantener                 2006-12-31 2026-07-31  235  11.02%  15.91%   0.645   0.969  -50.31%   0.219  100.0%   0.00   0.000%     0  0.996
+
+--- Bloque E (vintages de French) [completo] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10|vintage202407|defecto        1927-06-30 2024-07-31 1165   9.21%  12.57%   0.509   0.754  -43.52%   0.212   72.7%   1.47   0.501%   143  1.000
+comprar_y_mantener|vintage202407|d 1927-06-30 2024-07-31 1165  10.08%  18.51%   0.438   0.660  -83.71%   0.120  100.0%   0.01   0.004%     1  1.000
+sma10|vintage202407|sin_costos     1927-06-30 2024-07-31 1165   9.76%  12.56%   0.550   0.818  -42.97%   0.227   72.7%   1.47   0.000%   143  1.000
+comprar_y_mantener|vintage202407|s 1927-06-30 2024-07-31 1165  10.09%  18.52%   0.439   0.661  -83.71%   0.121  100.0%   0.01   0.000%     1  1.000
+sma10|vintage200607|defecto        1927-06-30 2006-07-31  949   9.36%  12.89%   0.477   0.701  -43.17%   0.217   71.5%   1.40   0.477%   111  1.000
+comprar_y_mantener|vintage200607|d 1927-06-30 2006-07-31  949   9.92%  18.93%   0.401   0.605  -83.72%   0.118  100.0%   0.01   0.004%     1  1.000
+sma10|vintage200607|sin_costos     1927-06-30 2006-07-31  949   9.89%  12.88%   0.514   0.759  -42.61%   0.232   71.5%   1.40   0.000%   111  1.000
+comprar_y_mantener|vintage200607|s 1927-06-30 2006-07-31  949   9.92%  18.93%   0.402   0.605  -83.72%   0.119  100.0%   0.01   0.000%     1  1.000
+
+--- Bloque E (vintages de French) [dentro_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10|vintage202407|defecto        1927-06-30 2006-12-31  954   9.30%  12.91%   0.472   0.692  -43.52%   0.214   71.7%   1.47   0.500%   117  1.000
+comprar_y_mantener|vintage202407|d 1927-06-30 2006-12-31  954  10.06%  18.99%   0.407   0.616  -83.71%   0.120  100.0%   0.01   0.004%     1  1.000
+sma10|vintage202407|sin_costos     1927-06-30 2006-12-31  954   9.85%  12.91%   0.511   0.753  -42.97%   0.229   71.7%   1.47   0.000%   117  1.000
+comprar_y_mantener|vintage202407|s 1927-06-30 2006-12-31  954  10.07%  18.99%   0.408   0.616  -83.71%   0.120  100.0%   0.01   0.000%     1  1.000
+sma10|vintage200607|defecto        1927-06-30 2006-07-31  949   9.36%  12.89%   0.477   0.701  -43.17%   0.217   71.5%   1.40   0.477%   111  1.000
+comprar_y_mantener|vintage200607|d 1927-06-30 2006-07-31  949   9.92%  18.93%   0.401   0.605  -83.72%   0.118  100.0%   0.01   0.004%     1  1.000
+sma10|vintage200607|sin_costos     1927-06-30 2006-07-31  949   9.89%  12.88%   0.514   0.759  -42.61%   0.232   71.5%   1.40   0.000%   111  1.000
+comprar_y_mantener|vintage200607|s 1927-06-30 2006-07-31  949   9.92%  18.93%   0.402   0.605  -83.72%   0.119  100.0%   0.01   0.000%     1  1.000
+
+--- Bloque E (vintages de French) [fuera_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10|vintage202407|defecto        2006-12-31 2024-07-31  211   8.79%  10.91%   0.716   1.126  -19.42%   0.453   77.3%   1.48   0.503%    26  0.998
+comprar_y_mantener|vintage202407|d 2006-12-31 2024-07-31  211  10.18%  16.23%   0.607   0.898  -50.39%   0.202  100.0%   0.00   0.000%     0  0.992
+sma10|vintage202407|sin_costos     2006-12-31 2024-07-31  211   9.34%  10.87%   0.765   1.210  -17.75%   0.526   77.3%   1.48   0.000%    26  0.999
+comprar_y_mantener|vintage202407|s 2006-12-31 2024-07-31  211  10.18%  16.23%   0.607   0.898  -50.39%   0.202  100.0%   0.00   0.000%     0  0.992
+sma10|vintage200607|defecto        (sin datos en el segmento)
+comprar_y_mantener|vintage200607|defecto (sin datos en el segmento)
+sma10|vintage200607|sin_costos     (sin datos en el segmento)
+comprar_y_mantener|vintage200607|sin_costos (sin datos en el segmento)
+
+Vintages en el tramo del articulo 1927-07..2005-12 (sin costos):
+  CRSP 202607: CAGR 9.79% vs 10.01% (dif -0.216 pp); MDD -42.94% vs -83.65% (reduccion 0.4867); invertido 71.3%; salidas/anio 0.739; Sharpe 0.506 vs 0.404
+  CRSP 202407: CAGR 9.78% vs 10.00% (dif -0.220 pp); MDD -42.97% vs -83.71% (reduccion 0.4867); invertido 71.3%; salidas/anio 0.739; Sharpe 0.505 vs 0.404
+  CRSP 200607: CAGR 9.92% vs 9.95% (dif -0.036 pp); MDD -42.61% vs -83.72% (reduccion 0.4911); invertido 71.3%; salidas/anio 0.701; Sharpe 0.516 vs 0.403
+  Senal sma10 CRSP 202607 vs 202407: 0 de 1165 meses con exposicion distinta: []
+  Senal sma10 CRSP 202607 vs 200607: 4 de 949 meses con exposicion distinta: ['1948-10-31', '1953-06-30', '1965-08-31', '2000-06-30']
+
+--- Bloque F (senal sobre ^GSPC precio) [completo] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10|muestra1928                  1928-12-31 2026-07-31 1171   8.79%  12.45%   0.480   0.705  -43.50%   0.202   72.6%   1.51   0.512%   147  1.000
+sma10_precio_gspc|muestra1928      1928-12-31 2026-07-31 1171   9.25%  11.80%   0.536   0.809  -46.26%   0.200   67.9%   1.51   0.512%   147  1.000
+comprar_y_mantener|muestra1928     1928-12-31 2026-07-31 1171   9.84%  18.44%   0.426   0.641  -83.65%   0.118  100.0%   0.01   0.003%     1  1.000
+
+--- Bloque F (senal sobre ^GSPC precio) [dentro_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10|muestra1928                  1928-12-31 2006-12-31  936   8.77%  12.83%   0.435   0.631  -43.50%   0.202   71.2%   1.50   0.510%   117  1.000
+sma10_precio_gspc|muestra1928      1928-12-31 2006-12-31  936   9.45%  11.99%   0.508   0.764  -46.26%   0.204   65.4%   1.47   0.501%   115  1.000
+comprar_y_mantener|muestra1928     1928-12-31 2006-12-31  936   9.54%  19.03%   0.381   0.573  -83.65%   0.114  100.0%   0.01   0.004%     1  1.000
+
+--- Bloque F (senal sobre ^GSPC precio) [fuera_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10|muestra1928                  2006-12-31 2026-07-31  235   8.85%  10.82%   0.699   1.098  -19.31%   0.458   78.3%   1.53   0.521%    30  0.998
+sma10_precio_gspc|muestra1928      2006-12-31 2026-07-31  235   8.48%  10.99%   0.659   1.014  -24.17%   0.351   77.9%   1.63   0.556%    32  0.997
+comprar_y_mantener|muestra1928     2006-12-31 2026-07-31  235  11.02%  15.91%   0.645   0.969  -50.31%   0.219  100.0%   0.00   0.000%     0  0.996
+  Meses con exposicion distinta (TR vs precio): 61 de 1171
+
+--- Bloque G (MXN) [completo] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10|mxn|rf_usd                   1993-11-30 2026-07-31  392  15.67%  15.58%   0.646   0.977  -24.01%   0.653   76.8%   1.50   0.510%    49  1.000
+comprar_y_mantener|mxn|rf_usd      1993-11-30 2026-07-31  392  16.94%  16.69%   0.538   0.769  -39.86%   0.425  100.0%   0.03   0.010%     1  0.998
+efectivo|mxn|rf_usd                1993-11-30 2026-07-31  392   7.99%  14.06%   0.000   0.000  -27.37%   0.292    0.0%   0.00   0.000%     0     NA
+sma10|mxn|cetes                    1993-11-30 2026-07-31  392  15.75%  11.75%   0.420   0.666  -14.31%   1.101   76.8%   1.50   0.510%    49  0.992
+comprar_y_mantener|mxn|cetes       1993-11-30 2026-07-31  392  16.94%  16.69%   0.395   0.674  -39.86%   0.425  100.0%   0.03   0.010%     1  0.993
+efectivo|mxn|cetes                 1993-11-30 2026-07-31  392  11.02%   2.85%   0.000   0.000    0.00%     inf    0.0%   0.00   0.000%     0     NA
+
+--- Bloque G (MXN) [dentro_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10|mxn|rf_usd                   1993-11-30 2006-12-31  157  22.20%  18.15%   0.620   0.920  -13.37%   1.661   74.5%   1.45   0.494%    19  0.977
+comprar_y_mantener|mxn|rf_usd      1993-11-30 2006-12-31  157  21.90%  20.40%   0.486   0.685  -39.86%   0.549  100.0%   0.08   0.026%     1  0.950
+efectivo|mxn|rf_usd                1993-11-30 2006-12-31  157  14.27%  16.70%   0.000   0.000  -10.90%   1.310    0.0%   0.00   0.000%     0     NA
+sma10|mxn|cetes                    1993-11-30 2006-12-31  157  20.56%  12.94%   0.204   0.300  -13.13%   1.566   74.5%   1.45   0.494%    19  0.768
+comprar_y_mantener|mxn|cetes       1993-11-30 2006-12-31  157  21.90%  20.40%   0.237   0.420  -39.86%   0.549  100.0%   0.08   0.026%     1  0.825
+efectivo|mxn|cetes                 1993-11-30 2006-12-31  157  18.45%   3.68%   0.000   0.000    0.00%     inf    0.0%   0.00   0.000%     0     NA
+
+--- Bloque G (MXN) [fuera_muestra] ---
+variante                               inicio        fin    n    CAGR     vol  Sharpe Sortino      MDD  Calmar  invert  rot/a  costo/a  camb    PSR
+sma10|mxn|rf_usd                   2006-12-31 2026-07-31  235  11.51%  13.53%   0.663   1.019  -24.01%   0.479   78.3%   1.53   0.521%    30  0.997
+comprar_y_mantener|mxn|rf_usd      2006-12-31 2026-07-31  235  13.73%  13.63%   0.569   0.822  -29.97%   0.458  100.0%   0.00   0.000%     0  0.991
+efectivo|mxn|rf_usd                2006-12-31 2026-07-31  235   3.99%  11.88%   0.000   0.000  -27.37%   0.146    0.0%   0.00   0.000%     0     NA
+sma10|mxn|cetes                    2006-12-31 2026-07-31  235  12.64%  10.83%   0.586   1.000  -14.31%   0.884   78.3%   1.53   0.521%    30  0.995
+comprar_y_mantener|mxn|cetes       2006-12-31 2026-07-31  235  13.73%  13.63%   0.562   0.913  -29.97%   0.458  100.0%   0.00   0.000%     0  0.993
+efectivo|mxn|cetes                 2006-12-31 2026-07-31  235   6.32%   0.69%   0.000   0.000    0.00%     inf    0.0%   0.00   0.000%     0     NA
+
+  Mismo periodo que MXN en USD (1993-12-31 a 2026-07-31), neto:
+  sma10                CAGR 9.75% vol 10.94% Sharpe 0.686 MDD -19.31%
+  comprar_y_mantener   CAGR 10.95% vol 15.41% Sharpe 0.597 MDD -50.31%
+
+================ SHARPE DEFLACTADO ================
+sma10 dentro_muestra N=registradas             variante=sma10  DSR=0.9996 cumple(>= 0.95)=True N=5 (registradas 5) V=2.871e-04 SR=0.1363/mes (0.472 anual) SR0=0.0202/mes (0.070 anual) T=954 asim=-0.725 curt=9.038 PSR=1.0000
+mejor variante dentro_muestra N=registradas    variante=mom12  DSR=0.9999 cumple(>= 0.95)=True N=5 (registradas 5) V=2.871e-04 SR=0.1492/mes (0.517 anual) SR0=0.0202/mes (0.070 anual) T=954 asim=-0.652 curt=9.633 PSR=1.0000
+sma10 dentro_muestra N=20                      variante=sma10  DSR=0.9987 cumple(>= 0.95)=True N=20 (registradas 5) V=2.871e-04 SR=0.1363/mes (0.472 anual) SR0=0.0322/mes (0.112 anual) T=954 asim=-0.725 curt=9.038 PSR=1.0000
+sma10 fuera_muestra N=registradas              variante=sma10  DSR=0.9953 cumple(>= 0.95)=True N=5 (registradas 5) V=4.325e-04 SR=0.2017/mes (0.699 anual) SR0=0.0248/mes (0.086 anual) T=235 asim=-0.275 curt=4.230 PSR=0.9985
+sma10 completo N=registradas                   variante=sma10  DSR=1.0000 cumple(>= 0.95)=True N=5 (registradas 5) V=1.268e-04 SR=0.1473/mes (0.510 anual) SR0=0.0134/mes (0.047 anual) T=1189 asim=-0.677 curt=8.664 PSR=1.0000

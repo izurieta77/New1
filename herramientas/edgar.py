@@ -108,7 +108,9 @@ CAMPOS: dict[str, dict] = {
         ("us-gaap", "EarningsPerShareDiluted"),
         ("us-gaap", "EarningsPerShareBasicAndDiluted"),
         ("us-gaap", "IncomeLossFromContinuingOperationsPerDilutedShare"),
-        ("ifrs-full", "DilutedEarningsLossPerShare")]},
+        ("ifrs-full", "DilutedEarningsLossPerShare"),
+        ("ifrs-full", "BasicAndDilutedEarningsLossPerShare"),
+        ("ifrs-full", "BasicEarningsLossPerShare")]},       # IFRS: ultimo recurso (basica); se ve en conceptos usados
     "flujo_operativo": {"clase": "flujo", "conceptos": [
         ("us-gaap", "NetCashProvidedByUsedInOperatingActivities"),
         ("us-gaap", "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"),

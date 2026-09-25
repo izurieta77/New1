@@ -45,6 +45,7 @@ UMBRAL_CAIDA_MARGEN = 0.02
 TASAS_DCF = (0.08, 0.09, 0.10, 0.11)
 CRECIMIENTO_TERMINAL = 0.03
 ANIOS_DCF = 10
+MESES_BASE_VIGENTE = 13        # base de multiplos mas vieja que esto se marca como desactualizada
 DIAS_HABILES = {"1m": 21, "3m": 63, "6m": 126, "12m": 252}
 
 # Emisoras de la BMV que presentan 20-F en la SEC (verificado en EDGAR y Yahoo el 2026-09-25).
@@ -186,7 +187,8 @@ def crecimiento_implicito(valor_mercado: float, fcf0: float, r: float, g_termina
     return (bajo + alto) / 2
 
 
-def valuacion(precio: float | None, moneda_precio: str | None, estados_t: dict | None, estados_a: dict | None) -> dict:
+def valuacion(precio: float | None, moneda_precio: str | None, estados_t: dict | None, estados_a: dict | None,
+              hoy: date | None = None) -> dict:
     """Capitalizacion, EV y multiplos TTM; vacio si no hay acciones o si las monedas no coinciden."""
     res: dict = {"nota": None}
     if precio is None or not estados_t:
@@ -207,6 +209,10 @@ def valuacion(precio: float | None, moneda_precio: str | None, estados_t: dict |
     if not acciones or base is None:
         res["nota"] = "Sin acciones en circulacion (dei) o sin base TTM/anual"
         return res
+    fin_base = base.get("fin")
+    if isinstance(fin_base, date) and (hoy or date.today()) - fin_base > timedelta(days=MESES_BASE_VIGENTE * 31):
+        res["aviso"] = (f"ATENCION: la base de los multiplos cierra el {fin_base} (mas de {MESES_BASE_VIGENTE} meses); "
+                        "no describe el presente. Actualizar con el ultimo reporte antes de usar estos multiplos.")
     cap = precio * acciones
     res["acciones"] = acciones
     res["fecha_acciones"] = (estados_t.get("acciones_en_circulacion") or {}).get("fecha")
@@ -395,6 +401,8 @@ def seccion_valuacion(val: dict, moneda: str | None, tasas, g_terminal: float) -
     lineas = ["## 4. Valuacion de mercado y reverse DCF", ""]
     if val.get("nota") and not val.get("capitalizacion"):
         return lineas + [val["nota"], ""]
+    if val.get("aviso"):
+        lineas += [f"**{val['aviso']}**", ""]
     lineas += [
         f"Base: {val.get('base')}. Acciones en circulacion (portada del ultimo reporte, fecha {val.get('fecha_acciones')}): "
         f"{val['acciones'] / 1e6:,.1f} millones. Con varias series se suman; si hay ADR o series con distinto "
@@ -627,7 +635,9 @@ def secciones_analista(ticker: str, nombre: str, trimestral: dict | None, anual:
         "|---|---|---|---|---|---|",
         "| | | | | | |",
         "",
-        "- Regulacion: antimonopolio, privacidad, subsidios/CHIPS, T-MEC (revision 2026), licencias de exportacion.",
+        "- Regulacion: antimonopolio, privacidad, subsidios/CHIPS, licencias de exportacion, aranceles. T-MEC: en la "
+        "revision conjunta del 1-jul-2026 EUA no acepto extenderlo; sigue vigente con revisiones anuales hasta 2036 "
+        "(USTR, jul-2026). Evaluar exposicion a reglas de origen automotrices.",
         "- Probabilidades de mercados de prediccion: correr `python3 herramientas/geopolitica.py` y copiar aqui las "
         "que muevan la tesis.",
         "",
@@ -819,8 +829,8 @@ def generar(ticker: str, fecha: date | None = None, cache_horas: float | None = 
     nombre = (anual or {}).get("nombre") or perfil.get("nombre") or meta.get("longName") or ticker
     if es_mx:
         nombre = meta.get("longName") or nombre
-    val = valuacion(precio, moneda_precio, trimestral, anual) if not es_mx else (
-        valuacion(precio, moneda_precio, anual, anual) if anual else {"nota": "Sin EDGAR: valuacion a capturar"})
+    val = valuacion(precio, moneda_precio, trimestral, anual, fecha) if not es_mx else (
+        valuacion(precio, moneda_precio, anual, anual, fecha) if anual else {"nota": "Sin EDGAR: valuacion a capturar"})
     alertas = alertas_financieras(anual, trimestral) if (anual or trimestral) else []
     activas = [a["alerta"] for a in alertas if a["estado"] == "ACTIVA"]
     resumen.update({"nombre": nombre, "alertas_activas": activas,
@@ -849,7 +859,8 @@ def generar(ticker: str, fecha: date | None = None, cache_horas: float | None = 
                       f"conversion {_num(ttm.get('conversion_caja'))}, dilucion {_pct(ttm.get('dilucion_anual'))}.")
     if val.get("capitalizacion"):
         lineas.append(f"- Capitalizacion {_grande(val['capitalizacion'], moneda_precio)}; P/U {_num(val.get('pu'), 1)}; "
-                      f"P/FCF {_num(val.get('p_fcf'), 1)}; FCF yield {_pct(val.get('fcf_yield'))}.")
+                      f"P/FCF {_num(val.get('p_fcf'), 1)}; FCF yield {_pct(val.get('fcf_yield'))}"
+                      + (" (base desactualizada: ver seccion 4)." if val.get("aviso") else "."))
     lineas.append(f"- Alertas activas: {', '.join(activas) if activas else 'ninguna'}" if alertas else
                   "- Alertas: sin datos financieros automaticos (capturar del reporte).")
     if perfil:

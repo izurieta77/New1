@@ -1,0 +1,895 @@
+{
+  "id": "AC-02-rentabilidad-eua",
+  "especificacion": {
+    "ventanas": {
+      "W1": [
+        "1963-07",
+        "1999-12"
+      ],
+      "W2": [
+        "2000-01",
+        "2025-12"
+      ],
+      "W3": [
+        "2015-01",
+        "2025-12"
+      ],
+      "W4": [
+        "2016-01",
+        "2025-12"
+      ]
+    },
+    "newey_west": {
+      "rezagos": 6,
+      "kernel": "Bartlett w_j=1-j/(L+1)",
+      "correccion": "n/(n-1)",
+      "z": 1.96
+    },
+    "veredicto": "apoyo si IC95 NW inferior > 0; contraria si superior < 0; inconcluso en otro caso",
+    "compuesto": "(prod(1+r_t/100))^(12/n)-1",
+    "rango_nivel_afirmacion_pct": [
+      4.0,
+      5.3
+    ]
+  },
+  "sha256": {
+    "6_Portfolios_ME_OP_2x3_CSV.zip": "f96cdb010130d9991479f18fe9a8cafddefbce1c2038e0c5629587223efc06d5",
+    "F-F_Research_Data_5_Factors_2x3_CSV.zip": "b8653b411cc5e28917e7ef643bb42f6d2d3703f84bc170eb6ae38d5267c65807",
+    "q5_factors_monthly_2025.csv": "8b2e2f1364890f8f5876da20e6bfad0acd8d272425de3b65c725f54b51128f6a",
+    "Quality-Minus-Junk-Factors-Monthly.xlsx": "b5453aec115f37fa79caa1b8e3fb7dca9c6ebc9d486e4c10aaf4270d9790a8f6",
+    "french_f-f_5_factors_2x3.html": "1d794afe7fb55290e7046c57fc03fd6b113954ad47c2eaec67e04bc603e7050c",
+    "french_six_portfolios_me_op.html": "ea1947933293e239948a02657d765ec1ce7b421cfb6fa6940ea4d901de57b514",
+    "globalq_factors_page.html": "114f786bafe61687d21e17d0a5f5721af85e194a89c841414c4f5d44e50d6b5e",
+    "aqr_qmj_page.html": "52c3898fe262edfceccea36208bf49fb601fe98a0967ecb639cd18f050c24533"
+  },
+  "fuentes": {
+    "A_FF5_RMW": {
+      "archivo": "F-F_Research_Data_5_Factors_2x3_CSV.zip",
+      "miembro": "F-F_Research_Data_5_Factors_2x3.csv",
+      "fecha_interna_zip": [
+        2026,
+        9,
+        2,
+        16,
+        59,
+        22
+      ],
+      "cabecera": "This file was created using the 202607 CRSP database.",
+      "columna": "RMW",
+      "unidades": "% mensual",
+      "primer_mes": "1963-07",
+      "ultimo_mes": "2026-07"
+    },
+    "B_reconstruccion_6P_ME_OP": {
+      "archivo": "6_Portfolios_ME_OP_2x3_CSV.zip",
+      "miembro": "6_Portfolios_ME_OP_2x3.csv",
+      "fecha_interna_zip": [
+        2026,
+        9,
+        2,
+        17,
+        1,
+        56
+      ],
+      "cabecera": "This file was created using the 202607 CRSP database.",
+      "seccion": "Average Value Weighted Returns -- Monthly",
+      "columnas_usadas": [
+        "SMALL HiOP",
+        "BIG HiOP",
+        "SMALL LoOP",
+        "BIG LoOP"
+      ],
+      "formula": "0.5*(SMALL HiOP + BIG HiOP) - 0.5*(SMALL LoOP + BIG LoOP)",
+      "meses_con_faltantes_excluidos": 0,
+      "unidades": "% mensual",
+      "primer_mes": "1963-07",
+      "ultimo_mes": "2026-07"
+    },
+    "C1_HXZ_R_ROE": {
+      "archivo": "q5_factors_monthly_2025.csv",
+      "cabecera": "year,month,R_F,R_MKT,R_ME,R_IA,R_ROE,R_EG",
+      "columna": "R_ROE",
+      "unidades": "% mensual",
+      "version": "global-q.org, 'Latest Release, 7/30/2026' (pagina guardada en datos/globalq_factors_page.html); archivo muestra 1967-2025",
+      "primer_mes": "1967-01",
+      "ultimo_mes": "2025-12"
+    },
+    "C2_AQR_QMJ_USA": {
+      "archivo": "Quality-Minus-Junk-Factors-Monthly.xlsx",
+      "hoja": "QMJ Factors",
+      "titulo": "AQR Capital Management, LLC — Quality Minus Junk: Factors, Monthly",
+      "columna": "USA",
+      "unidades": "decimal en archivo; convertido a % mensual (x100)",
+      "version": "sin sello de version en el archivo; AQR reconstruye el historico en cada actualizacion; version identificada por SHA256 y ultimo mes",
+      "primer_mes": "1957-07",
+      "ultimo_mes": "2026-07"
+    }
+  },
+  "estadisticos": {
+    "A_FF5_RMW": {
+      "W1": {
+        "ventana_pedida": "1963-07 a 1999-12",
+        "ventana_efectiva": "1963-07 a 1999-12",
+        "n": 438,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.17262557077625573,
+        "desv_est_mensual_pct": 1.6003562822669586,
+        "t_iid": 2.257488277282362,
+        "ee_nw_mensual_pct": 0.09077484022950486,
+        "t_nw6": 1.9016896128906284,
+        "ic95_nw_mensual_pct": [
+          -0.0052931160735737726,
+          0.3505442576260852
+        ],
+        "ic95_nw_x12_pct": [
+          -0.06351739288288527,
+          4.206531091513023
+        ],
+        "media_x12_pct": 2.071506849315069,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 1.9348019823221874,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "1999-12",
+          "pct": -8.07
+        },
+        "mejor_mes": {
+          "mes": "1974-05",
+          "pct": 5.01
+        },
+        "veredicto": "inconcluso"
+      },
+      "W2": {
+        "ventana_pedida": "2000-01 a 2025-12",
+        "ventana_efectiva": "2000-01 a 2025-12",
+        "n": 312,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.3967948717948712,
+        "desv_est_mensual_pct": 2.872267215036179,
+        "t_iid": 2.440161139835576,
+        "ee_nw_mensual_pct": 0.16353039429737068,
+        "t_nw6": 2.426428881919788,
+        "ic95_nw_mensual_pct": [
+          0.07627529897202467,
+          0.7173144446177178
+        ],
+        "ic95_nw_x12_pct": [
+          0.9153035876642961,
+          8.607773335412613
+        ],
+        "media_x12_pct": 4.761538461538454,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 4.348475471865831,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2000-02",
+          "pct": -18.93
+        },
+        "mejor_mes": {
+          "mes": "2000-11",
+          "pct": 13.04
+        },
+        "veredicto": "apoyo"
+      },
+      "W3": {
+        "ventana_pedida": "2015-01 a 2025-12",
+        "ventana_efectiva": "2015-01 a 2025-12",
+        "n": 132,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.2737878787878788,
+        "desv_est_mensual_pct": 2.1290006006844036,
+        "t_iid": 1.4774928866193173,
+        "ee_nw_mensual_pct": 0.1721313109997551,
+        "t_nw6": 1.5905756901384918,
+        "ic95_nw_mensual_pct": [
+          -0.06358949077164117,
+          0.6111652483473988
+        ],
+        "ic95_nw_x12_pct": [
+          -0.763073889259694,
+          7.333982980168786
+        ],
+        "media_x12_pct": 3.2854545454545456,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 3.059708022644192,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2025-10",
+          "pct": -5.25
+        },
+        "mejor_mes": {
+          "mes": "2021-11",
+          "pct": 7.19
+        },
+        "veredicto": "inconcluso"
+      },
+      "W4": {
+        "ventana_pedida": "2016-01 a 2025-12",
+        "ventana_efectiva": "2016-01 a 2025-12",
+        "n": 120,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.29608333333333337,
+        "desv_est_mensual_pct": 2.1970952159510935,
+        "t_iid": 1.476235707861992,
+        "ee_nw_mensual_pct": 0.188891797832527,
+        "t_nw6": 1.5674758604174188,
+        "ic95_nw_mensual_pct": [
+          -0.07414459041841953,
+          0.6663112570850862
+        ],
+        "ic95_nw_x12_pct": [
+          -0.8897350850210344,
+          7.9957350850210345
+        ],
+        "media_x12_pct": 3.5530000000000004,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 3.3174609157139434,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2025-10",
+          "pct": -5.25
+        },
+        "mejor_mes": {
+          "mes": "2021-11",
+          "pct": 7.19
+        },
+        "veredicto": "inconcluso"
+      }
+    },
+    "B_reconstruccion_6P_ME_OP": {
+      "W1": {
+        "ventana_pedida": "1963-07 a 1999-12",
+        "ventana_efectiva": "1963-07 a 1999-12",
+        "n": 438,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.17265102739726035,
+        "desv_est_mensual_pct": 1.6003087049031028,
+        "t_iid": 2.257888308193442,
+        "ee_nw_mensual_pct": 0.0907709836974142,
+        "t_nw6": 1.9020508577145527,
+        "ic95_nw_mensual_pct": [
+          -0.005260100649671473,
+          0.35056215544419217
+        ],
+        "ic95_nw_x12_pct": [
+          -0.06312120779605768,
+          4.206745865330306
+        ],
+        "media_x12_pct": 2.071812328767124,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 1.9351222777927113,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "1999-12",
+          "pct": -8.0676
+        },
+        "mejor_mes": {
+          "mes": "1974-05",
+          "pct": 5.0129
+        },
+        "veredicto": "inconcluso"
+      },
+      "W2": {
+        "ventana_pedida": "2000-01 a 2025-12",
+        "ventana_efectiva": "2000-01 a 2025-12",
+        "n": 312,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.396991506410257,
+        "desv_est_mensual_pct": 2.872304872075923,
+        "t_iid": 2.44133837230491,
+        "ee_nw_mensual_pct": 0.1635184860048863,
+        "t_nw6": 2.427808109710568,
+        "ic95_nw_mensual_pct": [
+          0.07649527384067983,
+          0.7174877389798342
+        ],
+        "ic95_nw_x12_pct": [
+          0.917943286088158,
+          8.609852867758011
+        ],
+        "media_x12_pct": 4.763898076923084,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 4.350912356490699,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2000-02",
+          "pct": -18.93245
+        },
+        "mejor_mes": {
+          "mes": "2000-11",
+          "pct": 13.0439
+        },
+        "veredicto": "apoyo"
+      },
+      "W3": {
+        "ventana_pedida": "2015-01 a 2025-12",
+        "ventana_efectiva": "2015-01 a 2025-12",
+        "n": 132,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.27358143939393925,
+        "desv_est_mensual_pct": 2.1289401578849425,
+        "t_iid": 1.4764207549073511,
+        "ee_nw_mensual_pct": 0.17214690444018224,
+        "t_nw6": 1.589232407539478,
+        "ic95_nw_mensual_pct": [
+          -0.06382649330881796,
+          0.6109893720966965
+        ],
+        "ic95_nw_x12_pct": [
+          -0.7659179197058155,
+          7.331872465160357
+        ],
+        "media_x12_pct": 3.282977272727271,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 3.0571735730036798,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2025-10",
+          "pct": -5.2509500000000005
+        },
+        "mejor_mes": {
+          "mes": "2021-11",
+          "pct": 7.18615
+        },
+        "veredicto": "inconcluso"
+      },
+      "W4": {
+        "ventana_pedida": "2016-01 a 2025-12",
+        "ventana_efectiva": "2016-01 a 2025-12",
+        "n": 120,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.2959662499999999,
+        "desv_est_mensual_pct": 2.1969482509612703,
+        "t_iid": 1.4757506583442148,
+        "ee_nw_mensual_pct": 0.18891115418784968,
+        "t_nw6": 1.566695472654286,
+        "ic95_nw_mensual_pct": [
+          -0.07429961220818548,
+          0.6662321122081852
+        ],
+        "ic95_nw_x12_pct": [
+          -0.8915953464982258,
+          7.994785346498222
+        ],
+        "media_x12_pct": 3.5515949999999985,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 3.3160489950146754,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2025-10",
+          "pct": -5.2509500000000005
+        },
+        "mejor_mes": {
+          "mes": "2021-11",
+          "pct": 7.18615
+        },
+        "veredicto": "inconcluso"
+      }
+    },
+    "C1_HXZ_R_ROE": {
+      "W1": {
+        "ventana_pedida": "1963-07 a 1999-12",
+        "ventana_efectiva": "1967-01 a 1999-12",
+        "n": 396,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.6641222222222222,
+        "desv_est_mensual_pct": 2.1438898183503845,
+        "t_iid": 6.164433098739087,
+        "ee_nw_mensual_pct": 0.09941794783626783,
+        "t_nw6": 6.680103911579126,
+        "ic95_nw_mensual_pct": [
+          0.46926304446313727,
+          0.8589813999813071
+        ],
+        "ic95_nw_x12_pct": [
+          5.631156533557647,
+          10.307776799775684
+        ],
+        "media_x12_pct": 7.969466666666666,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 7.971036176932733,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "1975-01",
+          "pct": -11.5874
+        },
+        "mejor_mes": {
+          "mes": "1980-11",
+          "pct": 9.0793
+        },
+        "veredicto": "apoyo"
+      },
+      "W2": {
+        "ventana_pedida": "2000-01 a 2025-12",
+        "ventana_efectiva": "2000-01 a 2025-12",
+        "n": 312,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.33570416666666647,
+        "desv_est_mensual_pct": 3.094448973323601,
+        "t_iid": 1.9162435363382009,
+        "ee_nw_mensual_pct": 0.18218631285641895,
+        "t_nw6": 1.8426420810834179,
+        "ic95_nw_mensual_pct": [
+          -0.02138100653191466,
+          0.6927893398652476
+        ],
+        "ic95_nw_x12_pct": [
+          -0.2565720783829759,
+          8.313472078382972
+        ],
+        "media_x12_pct": 4.028449999999998,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 3.5023283215814827,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2020-11",
+          "pct": -14.3262
+        },
+        "mejor_mes": {
+          "mes": "2000-11",
+          "pct": 10.3676
+        },
+        "veredicto": "inconcluso"
+      },
+      "W3": {
+        "ventana_pedida": "2015-01 a 2025-12",
+        "ventana_efectiva": "2015-01 a 2025-12",
+        "n": 132,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.3616507575757576,
+        "desv_est_mensual_pct": 2.884787930859035,
+        "t_iid": 1.440331478676999,
+        "ee_nw_mensual_pct": 0.28048050632207244,
+        "t_nw6": 1.289397121810948,
+        "ic95_nw_mensual_pct": [
+          -0.18809103481550438,
+          0.9113925499670196
+        ],
+        "ic95_nw_x12_pct": [
+          -2.2570924177860525,
+          10.936710599604234
+        ],
+        "media_x12_pct": 4.339809090909091,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 3.904574289098428,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2020-11",
+          "pct": -14.3262
+        },
+        "mejor_mes": {
+          "mes": "2021-11",
+          "pct": 8.3929
+        },
+        "veredicto": "inconcluso"
+      },
+      "W4": {
+        "ventana_pedida": "2016-01 a 2025-12",
+        "ventana_efectiva": "2016-01 a 2025-12",
+        "n": 120,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.3203675,
+        "desv_est_mensual_pct": 2.9431883799762644,
+        "t_iid": 1.1923973853345495,
+        "ee_nw_mensual_pct": 0.3025225051748206,
+        "t_nw6": 1.0589873299339077,
+        "ic95_nw_mensual_pct": [
+          -0.27257661014264833,
+          0.9133116101426484
+        ],
+        "ic95_nw_x12_pct": [
+          -3.27091932171178,
+          10.95973932171178
+        ],
+        "media_x12_pct": 3.8444100000000003,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 3.371126394854773,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2020-11",
+          "pct": -14.3262
+        },
+        "mejor_mes": {
+          "mes": "2021-11",
+          "pct": 8.3929
+        },
+        "veredicto": "inconcluso"
+      }
+    },
+    "C2_AQR_QMJ_USA": {
+      "W1": {
+        "ventana_pedida": "1963-07 a 1999-12",
+        "ventana_efectiva": "1963-07 a 1999-12",
+        "n": 438,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.3355850934975995,
+        "desv_est_mensual_pct": 1.7594045679774113,
+        "t_iid": 3.9918480503465807,
+        "ee_nw_mensual_pct": 0.09287258786337223,
+        "t_nw6": 3.6133922960269964,
+        "ic95_nw_mensual_pct": [
+          0.15355482128538994,
+          0.517615365709809
+        ],
+        "ic95_nw_x12_pct": [
+          1.8426578554246793,
+          6.2113843885177085
+        ],
+        "media_x12_pct": 4.027021121971194,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 3.910679269248307,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "1975-01",
+          "pct": -5.76746357934
+        },
+        "mejor_mes": {
+          "mes": "1998-08",
+          "pct": 7.328618858070973
+        },
+        "veredicto": "apoyo"
+      },
+      "W2": {
+        "ventana_pedida": "2000-01 a 2025-12",
+        "ventana_efectiva": "2000-01 a 2025-12",
+        "n": 312,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.3507603270716051,
+        "desv_est_mensual_pct": 2.974418512482717,
+        "t_iid": 2.0829828197281017,
+        "ee_nw_mensual_pct": 0.19375530517054226,
+        "t_nw6": 1.8103263121640356,
+        "ic95_nw_mensual_pct": [
+          -0.02900007106265773,
+          0.7305207252058679
+        ],
+        "ic95_nw_x12_pct": [
+          -0.34800085275189274,
+          8.766248702470413
+        ],
+        "media_x12_pct": 4.209123924859261,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 3.7439312466912122,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2002-11",
+          "pct": -8.896877588476206
+        },
+        "mejor_mes": {
+          "mes": "2000-11",
+          "pct": 12.08372809778332
+        },
+        "veredicto": "inconcluso"
+      },
+      "W3": {
+        "ventana_pedida": "2015-01 a 2025-12",
+        "ventana_efectiva": "2015-01 a 2025-12",
+        "n": 132,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.24929057430944038,
+        "desv_est_mensual_pct": 2.870337022648242,
+        "t_iid": 0.9978377521610796,
+        "ee_nw_mensual_pct": 0.2630793055668956,
+        "t_nw6": 0.94758716871423,
+        "ic95_nw_mensual_pct": [
+          -0.26634486460167506,
+          0.7649260132205558
+        ],
+        "ic95_nw_x12_pct": [
+          -3.1961383752201007,
+          9.179112158646669
+        ],
+        "media_x12_pct": 2.9914868917132846,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 2.526971022288227,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2020-11",
+          "pct": -8.765278034318651
+        },
+        "mejor_mes": {
+          "mes": "2016-01",
+          "pct": 7.61361192308834
+        },
+        "veredicto": "inconcluso"
+      },
+      "W4": {
+        "ventana_pedida": "2016-01 a 2025-12",
+        "ventana_efectiva": "2016-01 a 2025-12",
+        "n": 120,
+        "huecos_en_ventana_efectiva": 0,
+        "media_mensual_pct": 0.16951990458358931,
+        "desv_est_mensual_pct": 2.95051184086155,
+        "t_iid": 0.6293814815496086,
+        "ee_nw_mensual_pct": 0.2688215247286445,
+        "t_nw6": 0.6306039099908654,
+        "ic95_nw_mensual_pct": [
+          -0.35737028388455394,
+          0.6964100930517326
+        ],
+        "ic95_nw_x12_pct": [
+          -4.288443406614647,
+          8.356921116620791
+        ],
+        "media_x12_pct": 2.0342388550030717,
+        "media_x12_etiqueta": "media aritmetica x12; no es CAGR",
+        "compuesto_anual_pct": 1.5236506471363764,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2020-11",
+          "pct": -8.765278034318651
+        },
+        "mejor_mes": {
+          "mes": "2016-01",
+          "pct": 7.61361192308834
+        },
+        "veredicto": "inconcluso"
+      }
+    }
+  },
+  "comparacion_A_vs_B": {
+    "W1": {
+      "ventana_efectiva": "1963-07 a 1999-12",
+      "n_comun": 438,
+      "correlacion": 0.9999983288958301,
+      "dif_media_B_menos_A_pct_mensual": 2.5456621004606362e-05,
+      "dif_media_B_menos_A_x12_pct": 0.00030547945205527634,
+      "desv_est_dif_pct": 0.0029260679009233755,
+      "max_abs_dif_pct": 0.0050000000000002265,
+      "mes_max_abs_dif": "1983-10",
+      "meses_abs_dif_mayor_0p01": 0,
+      "meses_abs_dif_mayor_0p5": 0,
+      "t_nw6_de_la_diferencia": 0.19408292455367554
+    },
+    "W2": {
+      "ventana_efectiva": "2000-01 a 2025-12",
+      "n_comun": 312,
+      "correlacion": 0.9999994873011213,
+      "dif_media_B_menos_A_pct_mensual": 0.00019663461538460916,
+      "dif_media_B_menos_A_x12_pct": 0.00235961538461531,
+      "desv_est_dif_pct": 0.0029087759253249175,
+      "max_abs_dif_pct": 0.005000000000000782,
+      "mes_max_abs_dif": "2001-02",
+      "meses_abs_dif_mayor_0p01": 0,
+      "meses_abs_dif_mayor_0p5": 0,
+      "t_nw6_de_la_diferencia": 1.2225277433167059
+    },
+    "W3": {
+      "ventana_efectiva": "2015-01 a 2025-12",
+      "n_comun": 132,
+      "correlacion": 0.9999990327072332,
+      "dif_media_B_menos_A_pct_mensual": -0.00020643939393942635,
+      "dif_media_B_menos_A_x12_pct": -0.0024772727272731163,
+      "desv_est_dif_pct": 0.0029617884870632503,
+      "max_abs_dif_pct": 0.0049500000000000655,
+      "mes_max_abs_dif": "2015-03",
+      "meses_abs_dif_mayor_0p01": 0,
+      "meses_abs_dif_mayor_0p5": 0,
+      "t_nw6_de_la_diferencia": -0.7579911960772499
+    },
+    "W4": {
+      "ventana_efectiva": "2016-01 a 2025-12",
+      "n_comun": 120,
+      "correlacion": 0.9999991018547207,
+      "dif_media_B_menos_A_pct_mensual": -0.00011708333333336063,
+      "dif_media_B_menos_A_x12_pct": -0.0014050000000003276,
+      "desv_est_dif_pct": 0.002948240436882564,
+      "max_abs_dif_pct": 0.0049000000000001265,
+      "mes_max_abs_dif": "2024-05",
+      "meses_abs_dif_mayor_0p01": 0,
+      "meses_abs_dif_mayor_0p5": 0,
+      "t_nw6_de_la_diferencia": -0.400818465390724
+    },
+    "muestra_comun_completa": {
+      "ventana_efectiva": "1963-07 a 2026-07",
+      "n_comun": 757,
+      "correlacion": 0.9999991859041255,
+      "dif_media_B_menos_A_pct_mensual": 0.00010204755614269149,
+      "dif_media_B_menos_A_x12_pct": 0.0012245706737122979,
+      "desv_est_dif_pct": 0.0029127772993517804,
+      "max_abs_dif_pct": 0.005000000000000782,
+      "mes_max_abs_dif": "2001-02",
+      "meses_abs_dif_mayor_0p01": 0,
+      "meses_abs_dif_mayor_0p5": 0,
+      "t_nw6_de_la_diferencia": 1.01009505882836
+    }
+  },
+  "correlaciones": {
+    "W1": {
+      "A_FF5_RMW~B_reconstruccion_6P_ME_OP": {
+        "n_comun": 438,
+        "desde": "1963-07",
+        "hasta": "1999-12",
+        "r": 0.9999983288958301
+      },
+      "A_FF5_RMW~C1_HXZ_R_ROE": {
+        "n_comun": 396,
+        "desde": "1967-01",
+        "hasta": "1999-12",
+        "r": 0.5706818602780253
+      },
+      "A_FF5_RMW~C2_AQR_QMJ_USA": {
+        "n_comun": 438,
+        "desde": "1963-07",
+        "hasta": "1999-12",
+        "r": 0.603008788991102
+      },
+      "B_reconstruccion_6P_ME_OP~C1_HXZ_R_ROE": {
+        "n_comun": 396,
+        "desde": "1967-01",
+        "hasta": "1999-12",
+        "r": 0.5707314792859858
+      },
+      "B_reconstruccion_6P_ME_OP~C2_AQR_QMJ_USA": {
+        "n_comun": 438,
+        "desde": "1963-07",
+        "hasta": "1999-12",
+        "r": 0.603050240350858
+      },
+      "C1_HXZ_R_ROE~C2_AQR_QMJ_USA": {
+        "n_comun": 396,
+        "desde": "1967-01",
+        "hasta": "1999-12",
+        "r": 0.5216264167445814
+      }
+    },
+    "W2": {
+      "A_FF5_RMW~B_reconstruccion_6P_ME_OP": {
+        "n_comun": 312,
+        "desde": "2000-01",
+        "hasta": "2025-12",
+        "r": 0.9999994873011213
+      },
+      "A_FF5_RMW~C1_HXZ_R_ROE": {
+        "n_comun": 312,
+        "desde": "2000-01",
+        "hasta": "2025-12",
+        "r": 0.7210141863103156
+      },
+      "A_FF5_RMW~C2_AQR_QMJ_USA": {
+        "n_comun": 312,
+        "desde": "2000-01",
+        "hasta": "2025-12",
+        "r": 0.7257536880688907
+      },
+      "B_reconstruccion_6P_ME_OP~C1_HXZ_R_ROE": {
+        "n_comun": 312,
+        "desde": "2000-01",
+        "hasta": "2025-12",
+        "r": 0.7209438228169673
+      },
+      "B_reconstruccion_6P_ME_OP~C2_AQR_QMJ_USA": {
+        "n_comun": 312,
+        "desde": "2000-01",
+        "hasta": "2025-12",
+        "r": 0.7257071058964746
+      },
+      "C1_HXZ_R_ROE~C2_AQR_QMJ_USA": {
+        "n_comun": 312,
+        "desde": "2000-01",
+        "hasta": "2025-12",
+        "r": 0.7808112913072452
+      }
+    },
+    "W3": {
+      "A_FF5_RMW~B_reconstruccion_6P_ME_OP": {
+        "n_comun": 132,
+        "desde": "2015-01",
+        "hasta": "2025-12",
+        "r": 0.9999990327072332
+      },
+      "A_FF5_RMW~C1_HXZ_R_ROE": {
+        "n_comun": 132,
+        "desde": "2015-01",
+        "hasta": "2025-12",
+        "r": 0.6596670139431307
+      },
+      "A_FF5_RMW~C2_AQR_QMJ_USA": {
+        "n_comun": 132,
+        "desde": "2015-01",
+        "hasta": "2025-12",
+        "r": 0.6657773631278976
+      },
+      "B_reconstruccion_6P_ME_OP~C1_HXZ_R_ROE": {
+        "n_comun": 132,
+        "desde": "2015-01",
+        "hasta": "2025-12",
+        "r": 0.6595191319108438
+      },
+      "B_reconstruccion_6P_ME_OP~C2_AQR_QMJ_USA": {
+        "n_comun": 132,
+        "desde": "2015-01",
+        "hasta": "2025-12",
+        "r": 0.6657059924502139
+      },
+      "C1_HXZ_R_ROE~C2_AQR_QMJ_USA": {
+        "n_comun": 132,
+        "desde": "2015-01",
+        "hasta": "2025-12",
+        "r": 0.7473687818468018
+      }
+    },
+    "W4": {
+      "A_FF5_RMW~B_reconstruccion_6P_ME_OP": {
+        "n_comun": 120,
+        "desde": "2016-01",
+        "hasta": "2025-12",
+        "r": 0.9999991018547207
+      },
+      "A_FF5_RMW~C1_HXZ_R_ROE": {
+        "n_comun": 120,
+        "desde": "2016-01",
+        "hasta": "2025-12",
+        "r": 0.6788004565233233
+      },
+      "A_FF5_RMW~C2_AQR_QMJ_USA": {
+        "n_comun": 120,
+        "desde": "2016-01",
+        "hasta": "2025-12",
+        "r": 0.684551290976134
+      },
+      "B_reconstruccion_6P_ME_OP~C1_HXZ_R_ROE": {
+        "n_comun": 120,
+        "desde": "2016-01",
+        "hasta": "2025-12",
+        "r": 0.678707534527281
+      },
+      "B_reconstruccion_6P_ME_OP~C2_AQR_QMJ_USA": {
+        "n_comun": 120,
+        "desde": "2016-01",
+        "hasta": "2025-12",
+        "r": 0.684521778396978
+      },
+      "C1_HXZ_R_ROE~C2_AQR_QMJ_USA": {
+        "n_comun": 120,
+        "desde": "2016-01",
+        "hasta": "2025-12",
+        "r": 0.7493738563024483
+      }
+    }
+  },
+  "evaluacion_afirmacion": {
+    "A_FF5_RMW": {
+      "W2_apoyo": true,
+      "W3_inconcluso": true,
+      "W4_inconcluso": true,
+      "patron_significancia_se_sostiene": true,
+      "W2_media_x12_en_rango_4.0_5.3": true,
+      "W2_compuesto_en_rango_4.0_5.3": true,
+      "se_sostiene_con_media_x12": true,
+      "se_sostiene_con_compuesto": true
+    },
+    "B_reconstruccion_6P_ME_OP": {
+      "W2_apoyo": true,
+      "W3_inconcluso": true,
+      "W4_inconcluso": true,
+      "patron_significancia_se_sostiene": true,
+      "W2_media_x12_en_rango_4.0_5.3": true,
+      "W2_compuesto_en_rango_4.0_5.3": true,
+      "se_sostiene_con_media_x12": true,
+      "se_sostiene_con_compuesto": true
+    },
+    "C1_HXZ_R_ROE": {
+      "W2_apoyo": false,
+      "W3_inconcluso": true,
+      "W4_inconcluso": true,
+      "patron_significancia_se_sostiene": false,
+      "W2_media_x12_en_rango_4.0_5.3": true,
+      "W2_compuesto_en_rango_4.0_5.3": false,
+      "nota": "constructo distinto de RMW: nivel reportado pero no exigido (seccion 6)",
+      "se_sostiene_con_media_x12": false,
+      "se_sostiene_con_compuesto": false
+    },
+    "C2_AQR_QMJ_USA": {
+      "W2_apoyo": false,
+      "W3_inconcluso": true,
+      "W4_inconcluso": true,
+      "patron_significancia_se_sostiene": false,
+      "W2_media_x12_en_rango_4.0_5.3": true,
+      "W2_compuesto_en_rango_4.0_5.3": false,
+      "nota": "constructo distinto de RMW: nivel reportado pero no exigido (seccion 6)",
+      "se_sostiene_con_media_x12": false,
+      "se_sostiene_con_compuesto": false
+    }
+  }
+}

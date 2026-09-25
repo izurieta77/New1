@@ -1,0 +1,546 @@
+{
+  "auditoria": "AC-01-momentum-eua",
+  "especificacion": {
+    "ventanas": {
+      "W1": [
+        "1984-01",
+        "2006-09"
+      ],
+      "W2": [
+        "2006-10",
+        "2025-12"
+      ],
+      "W3": [
+        "2006-10",
+        "2015-12"
+      ],
+      "W4": [
+        "2016-01",
+        "2025-12"
+      ]
+    },
+    "nw_rezagos": 6,
+    "nw_kernel": "Bartlett 1-j/(L+1)",
+    "nw_correccion": "n/(n-1)",
+    "z_ic95": 1.96,
+    "desv_est": "muestral, divisor n-1",
+    "veredicto": "apoyo si IC95NW_inf>0; contraria si IC95NW_sup<0; inconcluso en otro caso",
+    "unidades": "% mensual salvo indicacion"
+  },
+  "sha256": {
+    "6_Portfolios_ME_Prior_12_2_CSV.zip": "de72138105e55deda9b44e187c3119d93c4af6b190e514eb4b8bb1fed8a90110",
+    "Betting-Against-Beta-Equity-Factors-Monthly.xlsx": "b98d9ce68033e9ac38812737ab7444e6883348bcae6e4573abcdaa94fd164514",
+    "F-F_Momentum_Factor_CSV.zip": "7ee14e892b0f7044902fdbc4e25cfaf175b73d4eda0ae6f4a0354a4433afe065"
+  },
+  "fuentes": {
+    "A_French_Mom": {
+      "archivo": "F-F_Momentum_Factor_CSV.zip",
+      "miembro": "F-F_Momentum_Factor.csv",
+      "version": "CRSP 202607",
+      "cabecera": "This file was created using the 202607 CRSP database.  It",
+      "columna": "Mom",
+      "seccion": "mensual (primer bloque)",
+      "rango_total": "1927-01 a 2026-07",
+      "n_total": 1195
+    },
+    "B_French_reconstruccion_6P_VW": {
+      "archivo": "6_Portfolios_ME_Prior_12_2_CSV.zip",
+      "miembro": "6_Portfolios_ME_Prior_12_2.csv",
+      "version": "CRSP 202607",
+      "cabecera": "This file was created by using the 202607 CRSP database.",
+      "seccion": "Average Value Weighted Returns -- Monthly",
+      "formula": "1/2(SMALL HiPRIOR + BIG HiPRIOR) - 1/2(SMALL LoPRIOR + BIG LoPRIOR)",
+      "rango_total": "1927-01 a 2026-07",
+      "n_total": 1195
+    },
+    "C_AQR_UMD_USA": {
+      "archivo": "Betting-Against-Beta-Equity-Factors-Monthly.xlsx",
+      "hoja": "UMD",
+      "columna": "USA",
+      "version": "AQR BAB Equity Factors Monthly, datos hasta 2026-07",
+      "marcas_internas_xlsx": [
+        "2026-09-17 04:47"
+      ],
+      "unidades_originales": "fraccion decimal (x100 para %)",
+      "rango_total": "1927-01 a 2026-07",
+      "n_total": 1195
+    }
+  },
+  "estadisticos": {
+    "A_French_Mom": {
+      "W1": {
+        "inicio": "1984-01",
+        "fin": "2006-09",
+        "n": 273,
+        "n_esperado": 273,
+        "cobertura_completa": true,
+        "primer_mes": "1984-01",
+        "ultimo_mes": "2006-09",
+        "media_mensual_pct": 0.798388,
+        "desv_est_mensual_pct": 4.34484,
+        "t_iid": 3.036139,
+        "ee_nw_pct": 0.236574,
+        "t_nw6": 3.374791,
+        "ic95_nw_pct": [
+          0.334703,
+          1.262074
+        ],
+        "media_x12_pct": 9.580659,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": 8.760063,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2001-01",
+          "valor_pct": -25.36
+        },
+        "mejor_mes": {
+          "mes": "2000-02",
+          "valor_pct": 18.05
+        },
+        "veredicto": "apoyo"
+      },
+      "W2": {
+        "inicio": "2006-10",
+        "fin": "2025-12",
+        "n": 231,
+        "n_esperado": 231,
+        "cobertura_completa": true,
+        "primer_mes": "2006-10",
+        "ultimo_mes": "2025-12",
+        "media_mensual_pct": 0.087922,
+        "desv_est_mensual_pct": 4.50095,
+        "t_iid": 0.296893,
+        "ee_nw_pct": 0.333792,
+        "t_nw6": 0.263403,
+        "ic95_nw_pct": [
+          -0.566311,
+          0.742155
+        ],
+        "media_x12_pct": 1.055065,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": -0.264501,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2009-04",
+          "valor_pct": -34.36
+        },
+        "mejor_mes": {
+          "mes": "2008-06",
+          "valor_pct": 12.73
+        },
+        "veredicto": "inconcluso"
+      },
+      "W3": {
+        "inicio": "2006-10",
+        "fin": "2015-12",
+        "n": 111,
+        "n_esperado": 111,
+        "cobertura_completa": true,
+        "primer_mes": "2006-10",
+        "ultimo_mes": "2015-12",
+        "media_mensual_pct": 0.151892,
+        "desv_est_mensual_pct": 5.134551,
+        "t_iid": 0.311669,
+        "ee_nw_pct": 0.613961,
+        "t_nw6": 0.247396,
+        "ic95_nw_pct": [
+          -1.051473,
+          1.355256
+        ],
+        "media_x12_pct": 1.822703,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": 0.050061,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2009-04",
+          "valor_pct": -34.36
+        },
+        "mejor_mes": {
+          "mes": "2008-06",
+          "valor_pct": 12.73
+        },
+        "veredicto": "inconcluso"
+      },
+      "W4": {
+        "inicio": "2016-01",
+        "fin": "2025-12",
+        "n": 120,
+        "n_esperado": 120,
+        "cobertura_completa": true,
+        "primer_mes": "2016-01",
+        "ultimo_mes": "2025-12",
+        "media_mensual_pct": 0.02875,
+        "desv_est_mensual_pct": 3.844231,
+        "t_iid": 0.081925,
+        "ee_nw_pct": 0.30948,
+        "t_nw6": 0.092898,
+        "ic95_nw_pct": [
+          -0.57783,
+          0.63533
+        ],
+        "media_x12_pct": 0.345,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": -0.554591,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2023-01",
+          "valor_pct": -16.21
+        },
+        "mejor_mes": {
+          "mes": "2020-03",
+          "valor_pct": 8.2
+        },
+        "veredicto": "inconcluso"
+      }
+    },
+    "B_French_reconstruccion_6P_VW": {
+      "W1": {
+        "inicio": "1984-01",
+        "fin": "2006-09",
+        "n": 273,
+        "n_esperado": 273,
+        "cobertura_completa": true,
+        "primer_mes": "1984-01",
+        "ultimo_mes": "2006-09",
+        "media_mensual_pct": 0.798059,
+        "desv_est_mensual_pct": 4.344848,
+        "t_iid": 3.03488,
+        "ee_nw_pct": 0.236603,
+        "t_nw6": 3.372981,
+        "ic95_nw_pct": [
+          0.334316,
+          1.261801
+        ],
+        "media_x12_pct": 9.576703,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": 8.755803,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2001-01",
+          "valor_pct": -25.355
+        },
+        "mejor_mes": {
+          "mes": "2000-02",
+          "valor_pct": 18.05
+        },
+        "veredicto": "apoyo"
+      },
+      "W2": {
+        "inicio": "2006-10",
+        "fin": "2025-12",
+        "n": 231,
+        "n_esperado": 231,
+        "cobertura_completa": true,
+        "primer_mes": "2006-10",
+        "ultimo_mes": "2025-12",
+        "media_mensual_pct": 0.088398,
+        "desv_est_mensual_pct": 4.501338,
+        "t_iid": 0.298475,
+        "ee_nw_pct": 0.333792,
+        "t_nw6": 0.26483,
+        "ic95_nw_pct": [
+          -0.565835,
+          0.742631
+        ],
+        "media_x12_pct": 1.060779,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": -0.259065,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2009-04",
+          "valor_pct": -34.365
+        },
+        "mejor_mes": {
+          "mes": "2008-06",
+          "valor_pct": 12.725
+        },
+        "veredicto": "inconcluso"
+      },
+      "W3": {
+        "inicio": "2006-10",
+        "fin": "2015-12",
+        "n": 111,
+        "n_esperado": 111,
+        "cobertura_completa": true,
+        "primer_mes": "2006-10",
+        "ultimo_mes": "2015-12",
+        "media_mensual_pct": 0.152117,
+        "desv_est_mensual_pct": 5.134895,
+        "t_iid": 0.31211,
+        "ee_nw_pct": 0.613937,
+        "t_nw6": 0.247773,
+        "ic95_nw_pct": [
+          -1.0512,
+          1.355434
+        ],
+        "media_x12_pct": 1.825405,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": 0.052442,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2009-04",
+          "valor_pct": -34.365
+        },
+        "mejor_mes": {
+          "mes": "2008-06",
+          "valor_pct": 12.725
+        },
+        "veredicto": "inconcluso"
+      },
+      "W4": {
+        "inicio": "2016-01",
+        "fin": "2025-12",
+        "n": 120,
+        "n_esperado": 120,
+        "cobertura_completa": true,
+        "primer_mes": "2016-01",
+        "ultimo_mes": "2025-12",
+        "media_mensual_pct": 0.029458,
+        "desv_est_mensual_pct": 3.844692,
+        "t_iid": 0.083934,
+        "ee_nw_pct": 0.309509,
+        "t_nw6": 0.095178,
+        "ic95_nw_pct": [
+          -0.57718,
+          0.636096
+        ],
+        "media_x12_pct": 0.3535,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": -0.546346,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2023-01",
+          "valor_pct": -16.21
+        },
+        "mejor_mes": {
+          "mes": "2020-03",
+          "valor_pct": 8.2
+        },
+        "veredicto": "inconcluso"
+      }
+    },
+    "C_AQR_UMD_USA": {
+      "W1": {
+        "inicio": "1984-01",
+        "fin": "2006-09",
+        "n": 273,
+        "n_esperado": 273,
+        "cobertura_completa": true,
+        "primer_mes": "1984-01",
+        "ultimo_mes": "2006-09",
+        "media_mensual_pct": 0.850956,
+        "desv_est_mensual_pct": 4.135814,
+        "t_iid": 3.399597,
+        "ee_nw_pct": 0.226367,
+        "t_nw6": 3.759191,
+        "ic95_nw_pct": [
+          0.407277,
+          1.294635
+        ],
+        "media_x12_pct": 10.211472,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": 9.556434,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2001-01",
+          "valor_pct": -25.457218
+        },
+        "mejor_mes": {
+          "mes": "2000-02",
+          "valor_pct": 17.010519
+        },
+        "veredicto": "apoyo"
+      },
+      "W2": {
+        "inicio": "2006-10",
+        "fin": "2025-12",
+        "n": 231,
+        "n_esperado": 231,
+        "cobertura_completa": true,
+        "primer_mes": "2006-10",
+        "ultimo_mes": "2025-12",
+        "media_mensual_pct": 0.139555,
+        "desv_est_mensual_pct": 4.568328,
+        "t_iid": 0.464294,
+        "ee_nw_pct": 0.33904,
+        "t_nw6": 0.411616,
+        "ic95_nw_pct": [
+          -0.524965,
+          0.804074
+        ],
+        "media_x12_pct": 1.674655,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": 0.308719,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2009-04",
+          "valor_pct": -34.615365
+        },
+        "mejor_mes": {
+          "mes": "2008-06",
+          "valor_pct": 11.107597
+        },
+        "veredicto": "inconcluso"
+      },
+      "W3": {
+        "inicio": "2006-10",
+        "fin": "2015-12",
+        "n": 111,
+        "n_esperado": 111,
+        "cobertura_completa": true,
+        "primer_mes": "2006-10",
+        "ultimo_mes": "2015-12",
+        "media_mensual_pct": 0.233673,
+        "desv_est_mensual_pct": 5.215451,
+        "t_iid": 0.472039,
+        "ee_nw_pct": 0.621836,
+        "t_nw6": 0.375779,
+        "ic95_nw_pct": [
+          -0.985125,
+          1.452471
+        ],
+        "media_x12_pct": 2.804076,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": 0.974097,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2009-04",
+          "valor_pct": -34.615365
+        },
+        "mejor_mes": {
+          "mes": "2008-06",
+          "valor_pct": 11.107597
+        },
+        "veredicto": "inconcluso"
+      },
+      "W4": {
+        "inicio": "2016-01",
+        "fin": "2025-12",
+        "n": 120,
+        "n_esperado": 120,
+        "cobertura_completa": true,
+        "primer_mes": "2016-01",
+        "ultimo_mes": "2025-12",
+        "media_mensual_pct": 0.052495,
+        "desv_est_mensual_pct": 3.895718,
+        "t_iid": 0.147612,
+        "ee_nw_pct": 0.317815,
+        "t_nw6": 0.165175,
+        "ic95_nw_pct": [
+          -0.570422,
+          0.675412
+        ],
+        "media_x12_pct": 0.62994,
+        "media_x12_etiqueta": "no es CAGR",
+        "compuesto_anual_pct": -0.302851,
+        "compuesto_etiqueta": "compuesto de la serie largo-corto; no es el rendimiento de una cuenta",
+        "peor_mes": {
+          "mes": "2020-11",
+          "valor_pct": -16.765852
+        },
+        "mejor_mes": {
+          "mes": "2019-05",
+          "valor_pct": 8.484594
+        },
+        "veredicto": "inconcluso"
+      }
+    }
+  },
+  "comparaciones": {
+    "B_vs_A": {
+      "total_comun": {
+        "periodo": "1927-01 a 2026-07",
+        "n_comunes": 1195,
+        "correlacion": 1.0,
+        "dif_media_pct": -0.0,
+        "max_dif_abs_pct": 0.01,
+        "mes_max_dif": "1933-09",
+        "meses_dif_abs_mayor_0_015": 0
+      },
+      "W1": {
+        "periodo": "1984-01 a 2006-09",
+        "n_comunes": 273,
+        "correlacion": 1.0,
+        "dif_media_pct": -0.00033,
+        "max_dif_abs_pct": 0.01,
+        "mes_max_dif": "1998-08",
+        "meses_dif_abs_mayor_0_015": 0
+      },
+      "W2": {
+        "periodo": "2006-10 a 2025-12",
+        "n_comunes": 231,
+        "correlacion": 1.0,
+        "dif_media_pct": 0.000476,
+        "max_dif_abs_pct": 0.01,
+        "mes_max_dif": "2008-02",
+        "meses_dif_abs_mayor_0_015": 0
+      },
+      "W3": {
+        "periodo": "2006-10 a 2015-12",
+        "n_comunes": 111,
+        "correlacion": 1.0,
+        "dif_media_pct": 0.000225,
+        "max_dif_abs_pct": 0.01,
+        "mes_max_dif": "2008-02",
+        "meses_dif_abs_mayor_0_015": 0
+      },
+      "W4": {
+        "periodo": "2016-01 a 2025-12",
+        "n_comunes": 120,
+        "correlacion": 0.999999,
+        "dif_media_pct": 0.000708,
+        "max_dif_abs_pct": 0.01,
+        "mes_max_dif": "2018-01",
+        "meses_dif_abs_mayor_0_015": 0
+      }
+    },
+    "C_vs_A": {
+      "total_comun": {
+        "periodo": "1927-01 a 2026-07",
+        "n_comunes": 1195,
+        "correlacion": 0.986147,
+        "dif_media_pct": 0.043841,
+        "max_dif_abs_pct": 4.806167,
+        "mes_max_dif": "2021-01",
+        "meses_dif_abs_mayor_0_015": 1170
+      },
+      "W1": {
+        "periodo": "1984-01 a 2006-09",
+        "n_comunes": 273,
+        "correlacion": 0.99143,
+        "dif_media_pct": 0.052568,
+        "max_dif_abs_pct": 2.540796,
+        "mes_max_dif": "1999-12",
+        "meses_dif_abs_mayor_0_015": 269
+      },
+      "W2": {
+        "periodo": "2006-10 a 2025-12",
+        "n_comunes": 231,
+        "correlacion": 0.980106,
+        "dif_media_pct": 0.051632,
+        "max_dif_abs_pct": 4.806167,
+        "mes_max_dif": "2021-01",
+        "meses_dif_abs_mayor_0_015": 229
+      },
+      "W3": {
+        "periodo": "2006-10 a 2015-12",
+        "n_comunes": 111,
+        "correlacion": 0.989313,
+        "dif_media_pct": 0.081781,
+        "max_dif_abs_pct": 2.061752,
+        "mes_max_dif": "2008-03",
+        "meses_dif_abs_mayor_0_015": 111
+      },
+      "W4": {
+        "periodo": "2016-01 a 2025-12",
+        "n_comunes": 120,
+        "correlacion": 0.964924,
+        "dif_media_pct": 0.023745,
+        "max_dif_abs_pct": 4.806167,
+        "mes_max_dif": "2021-01",
+        "meses_dif_abs_mayor_0_015": 118
+      }
+    },
+    "nota": "dif = otra - A. 'meses_dif_abs_mayor_0_015' cuenta meses con |dif| > 0.015 pp, cota maxima atribuible solo a redondeo a 2 decimales (relevante para B vs A)."
+  }
+}

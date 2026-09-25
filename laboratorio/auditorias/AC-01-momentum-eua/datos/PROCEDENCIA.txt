@@ -1,0 +1,22 @@
+Procedencia de los archivos congelados (AC-01-momentum-eua)
+Descarga: 2026-09-25 ~05:25 UTC (cabecera HTTP Date: Fri, 25 Sep 2026 05:25:56 GMT), con curl a traves del proxy del entorno.
+Los archivos se guardaron sin modificar; hashes en SHA256SUMS.txt (verificar con: sha256sum -c SHA256SUMS.txt).
+
+1) F-F_Momentum_Factor_CSV.zip
+   URL: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Momentum_Factor_CSV.zip
+   HTTP Last-Modified: Fri, 04 Sep 2026 14:47:40 GMT ; ETag "2a94c7557c3cdd1:0" ; 5596 bytes
+   Miembro: F-F_Momentum_Factor.csv (marca interna del zip 2026-09-02 17:03:54)
+   Cabecera: "This file was created using the 202607 CRSP database."  -> version CRSP 202607
+
+2) 6_Portfolios_ME_Prior_12_2_CSV.zip
+   URL: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/6_Portfolios_ME_Prior_12_2_CSV.zip
+   HTTP Last-Modified: Fri, 04 Sep 2026 14:47:43 GMT ; ETag "6093ab577c3cdd1:0" ; 127559 bytes
+   Miembro: 6_Portfolios_ME_Prior_12_2.csv (marca interna del zip 2026-09-02 17:03:38)
+   Cabecera: "This file was created by using the 202607 CRSP database."  -> version CRSP 202607
+
+3) Betting-Against-Beta-Equity-Factors-Monthly.xlsx  (AQR, "Betting Against Beta: Equity Factors, Monthly")
+   URL: https://www.aqr.com/-/media/AQR/Documents/Insights/Data-Sets/Betting-Against-Beta-Equity-Factors-Monthly.xlsx
+   HTTP Last-Modified: Thu, 17 Sep 2026 08:47:06 GMT ; 2501890 bytes
+   Marcas internas de los miembros del xlsx: 2026-09-17 04:47
+   Hoja usada: "UMD", columna "USA". Ultimo mes con dato: 07/31/2026 (-> version "AQR BAB-EF mensual, datos hasta 2026-07").
+   Nota del archivo: "AQR reconstructs the full history each time the portfolios are updated."

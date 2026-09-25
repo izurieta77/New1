@@ -12,6 +12,8 @@ GPR (https://www.matteoiacoviello.com/gpr.htm): verificado el 2026-09-25, el sit
 (data_gpr_export.csv responde 404); publica .xls (BIFF8/OLE2, no legible con la biblioteca estandar)
 y .dta de Stata (formato abierto, documentado). Se intenta CSV primero por si aparece; luego se lee el
 .dta con un lector propio (versiones 117-119). El .xls se omite con aviso.
+AI-GPR (https://www.matteoiacoviello.com/ai_gpr.html): version con LLM del mismo autor que SI publica CSV
+(mensual, diario, por tipo de evento y por pais, incluido Iran y un sub-indice de petroleo).
 
 Polymarket: gamma-api /public-search (busqueda por texto, eventos activos); respaldo /markets ordenado
 por volumen con filtro local. Kalshi: API oficial trade-api v2 (/series por categoria con volumen ->
@@ -41,12 +43,26 @@ from herramientas.parametros import DIR_CACHE
 
 AGENTE = "Mozilla/5.0"
 TIMEOUT_S = 30
-REINTENTOS = 3
+REINTENTOS = 4
 PAUSA_S = 0.25
 
 URL_GPR_PAGINA = "https://www.matteoiacoviello.com/gpr.htm"
 URL_GPR_BASE = "https://www.matteoiacoviello.com/gpr_files/"
 ARCHIVOS_GPR = {"mensual": "data_gpr_export", "diario": "data_gpr_daily_recent"}
+
+URL_AI_GPR_PAGINA = "https://www.matteoiacoviello.com/ai_gpr.html"
+URL_AI_GPR_BASE = "https://www.matteoiacoviello.com/ai_gpr_files/"
+ARCHIVOS_AI_GPR = {"mensual": "ai_gpr_data_monthly.csv", "tipos": "ai_gpr_eventtype_monthly.csv",
+                   "paises": "ai_gpr_country_monthly.csv", "diario": "ai_gpr_data_daily.csv"}
+SERIES_AI_GPR = [("GPR_AI", "AI-GPR total"), ("THREATS_GPR_AI", "Amenazas"), ("ACTS_GPR_AI", "Actos"),
+                 ("GPR_OIL", "Petroleo (Oil GPR)"), ("GPR_NONOIL", "Sin petroleo")]
+TIPOS_EVENTO_AI = {"military_conflict": "Conflicto militar", "diplomatic_tension": "Tension diplomatica",
+                   "terrorism": "Terrorismo", "civil_war": "Guerra civil", "nuclear_threat": "Amenaza nuclear",
+                   "coup": "Golpe de Estado", "sanctions": "Sanciones", "other": "Otros"}
+ISO3_A_AI_GPR = {"MEX": "Mexico", "USA": "USA", "CHN": "China", "TWN": "Taiwan", "RUS": "Russia",
+                 "UKR": "Ukraine", "ISR": "Israel", "SAU": "Saudi Arabia", "KOR": "South Korea", "JPN": "Japan",
+                 "DEU": "Germany", "IND": "India", "VEN": "Venezuela", "TUR": "Turkey", "IRN": "Iran",
+                 "PRK": "North Korea", "CAN": "Canada", "BRA": "Brazil", "GBR": "UK", "FRA": "France"}
 
 URL_POLY = "https://gamma-api.polymarket.com"
 URL_POLY_EVENTO = "https://polymarket.com/event/{slug}"
@@ -59,7 +75,7 @@ EXCLUSIONES = {"mexico": ["new mexico"], "oil": ["oilers"], "china": ["china ope
 ETIQUETAS_RUIDO_POLY = {"weather", "sports", "parlays", "daily temperature", "esports", "games", "soccer",
                         "basketball", "football", "tennis", "mentions", "nba", "nfl", "mlb", "nhl"}
 CATEGORIAS_KALSHI = ["Economics", "Politics", "World", "Financials", "Commodities", "Elections"]
-PAISES_DEFECTO = ["MEX", "USA", "CHN", "TWN", "RUS", "UKR", "ISR", "SAU", "KOR", "JPN", "DEU", "IND", "VEN", "TUR"]
+PAISES_DEFECTO = ["MEX", "USA", "CHN", "TWN", "RUS", "UKR", "ISR", "IRN", "SAU", "KOR", "JPN", "DEU", "IND", "VEN", "TUR"]
 
 FUENTES_PRIMARIAS = [
     ("Mexico", "Banxico: anuncios de politica monetaria y calendario", "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/anuncios-politica-monetaria-t.html"),
@@ -116,10 +132,12 @@ def _get(url: str, aceptar: str = "application/json", cache_nombre: str | None =
             if e.code not in (429, 500, 502, 503, 504):
                 raise ErrorFuente(f"HTTP {e.code} en {url}") from e
             espera = float(e.headers.get("Retry-After") or 0) if e.headers else 0
-            time.sleep(max(espera, 1.5 * (intento + 1)))
+            if intento < reintentos - 1:     # Kalshi no manda Retry-After en 429: backoff exponencial
+                time.sleep(max(espera, 1.5 * (2 ** intento)))
         except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
             ultimo = e
-            time.sleep(1.0 * (intento + 1))
+            if intento < reintentos - 1:
+                time.sleep(1.0 * (intento + 1))
     raise ErrorFuente(f"No se pudo descargar {url}: {ultimo!r}")
 
 
@@ -363,6 +381,85 @@ def descargar_gpr(cache_horas: float | None, registro: list[str]) -> dict:
     return salida
 
 
+def parsear_csv_fechado(texto: str, columna_fecha: str = "Date") -> list[dict]:
+    """CSV con columna de fecha AAAA-MM-DD -> [{'fecha': date, col: float|None}] ordenado."""
+    filas = []
+    for fila in csv.DictReader(io.StringIO(texto)):
+        try:
+            fecha = date.fromisoformat(str(fila.get(columna_fecha, ""))[:10])
+        except ValueError:
+            continue
+        limpia = {"fecha": fecha}
+        for k, v in fila.items():
+            if k == columna_fecha:
+                continue
+            try:
+                limpia[k] = float(v) if v not in ("", None, "NA", "nan") else None
+            except ValueError:
+                limpia[k] = None
+        filas.append(limpia)
+    return sorted(filas, key=lambda f: f["fecha"])
+
+
+def _estadistica(filas: list[dict], columna: str, desde_anio: int = 1985) -> dict | None:
+    """Ultimo valor, promedio 12m y percentil contra la historia desde 'desde_anio'."""
+    valores = [(f["fecha"], f.get(columna)) for f in filas if f.get(columna) is not None]
+    if not valores:
+        return None
+    historia = [v for d, v in valores if d.year >= desde_anio]
+    fecha, ultimo = valores[-1]
+    return {"fecha": fecha, "ultimo": ultimo, "prom_12m": statistics.fmean(v for _, v in valores[-12:]),
+            "percentil": _percentil(historia, ultimo) if historia else None}
+
+
+def resumen_ai_gpr(mensual: list[dict], tipos: list[dict] | None = None, paises_filas: list[dict] | None = None,
+                   paises_iso3: list[str] | None = None, diario: list[dict] | None = None) -> dict:
+    """Resumen del AI-GPR: series agregadas, tipos de evento, paises (rol 'all') y ultimos 30 dias."""
+    if not mensual:
+        raise ErrorFuente("AI-GPR mensual vacio")
+    res = {"fecha": mensual[-1]["fecha"], "series": [], "tipos": [], "paises": [], "diario": None}
+    for col, nombre in SERIES_AI_GPR:
+        est = _estadistica(mensual, col)
+        if est:
+            res["series"].append({"clave": col, "nombre": nombre, **est})
+    for col, nombre in TIPOS_EVENTO_AI.items():
+        est = _estadistica(tipos or [], col)
+        if est:
+            res["tipos"].append({"clave": col, "nombre": nombre, **est})
+    for iso in paises_iso3 or []:
+        nombre = ISO3_A_AI_GPR.get(iso)
+        est = _estadistica(paises_filas or [], f"{nombre}_all") if nombre else None
+        if est:
+            res["paises"].append({"pais": iso, "nombre": nombre, **est})
+    if diario:
+        ultimos = [f for f in diario if f["fecha"] > diario[-1]["fecha"] - timedelta(days=30)]
+        res["diario"] = {
+            "fecha": diario[-1]["fecha"],
+            "gpr_ai_30d": statistics.fmean(f["GPR_AI"] for f in ultimos if f.get("GPR_AI") is not None),
+            "gpr_oil_30d": statistics.fmean(f["GPR_OIL"] for f in ultimos if f.get("GPR_OIL") is not None)
+            if any(f.get("GPR_OIL") is not None for f in ultimos) else None,
+            "maximo_30d": max(ultimos, key=lambda f: f.get("GPR_AI") or 0),
+        }
+    return res
+
+
+def descargar_ai_gpr(cache_horas: float | None, registro: list[str], con_diario: bool = True) -> dict:
+    """Descarga los CSV del AI-GPR; cada archivo que falle se anota y se omite."""
+    salida = {}
+    for clave, archivo in ARCHIVOS_AI_GPR.items():
+        if clave == "diario" and not con_diario:
+            continue
+        try:
+            texto = _get(URL_AI_GPR_BASE + archivo, aceptar="text/csv", cache_nombre=f"aigpr_{archivo}",
+                         cache_horas=cache_horas).decode("utf-8", "replace")
+            if texto.lstrip().startswith("<"):
+                raise ErrorFuente("respuesta HTML en lugar de CSV")
+            salida[clave] = parsear_csv_fechado(texto)
+        except ErrorFuente as e:
+            registro.append(f"AI-GPR {archivo}: {e}")
+    return salida
+
+
 # ---------------------------------------------------------------- palabras clave
 
 def patron_palabra(palabra: str) -> re.Pattern:
@@ -445,8 +542,12 @@ def mercado_polymarket(m: dict, evento: dict | None = None) -> dict | None:
     if not precios or precios[0] is None:
         return None
     etiqueta = resultados[0] if resultados else "Si"
-    prob = precios[0]
     compra, venta = _float(m.get("bestBid")), _float(m.get("bestAsk"))
+    # Regla de Polymarket para el precio mostrado: punto medio si el diferencial es <= 0.10; si no, ultimo precio.
+    prob = probabilidad_implicita(compra, venta, _float(m.get("lastTradePrice"))) if (
+        compra is not None and venta is not None) else None
+    if prob is None:
+        prob = precios[0]
     evento = evento or ((m.get("events") or [None])[0]) or {}
     pregunta = m.get("question") or evento.get("title") or ""
     return {
@@ -718,10 +819,37 @@ def construir_markdown(fecha: date, gpr: dict | None, poly: dict | None, kal: di
             l += ["", "Eventos anotados recientes: " + "; ".join(f"{e['fecha']} {e['evento']}" for e in d["eventos_anotados"])]
         l.append("")
     if not gpr or (not gpr.get("mensual") and not gpr.get("diario")):
-        l += ["GPR no disponible en esta corrida (ver estado de las fuentes).", ""]
-    l += ["Lectura: GPR alto predice menor inversion y empleo y mayor riesgo a la baja en acciones (Caldara e "
-          "Iacoviello, AER 2022); el componente de amenazas suele anticipar al de actos. Usarlo como variable de "
-          "regimen, no como senal de compra/venta aislada.", ""]
+        l += ["GPR clasico no disponible en esta corrida (ver estado de las fuentes).", ""]
+    l += ["Lectura (Caldara e Iacoviello, AER 2022, 112(4): 1194-1225): un GPR alto anticipa menor inversion y "
+          "empleo y se asocia con mayor probabilidad de desastre y mayor riesgo a la baja; los efectos adversos "
+          "vienen tanto de las amenazas como de los actos. Usarlo como variable de regimen, no como senal aislada.", ""]
+    ai = (gpr or {}).get("ai")
+    l += ["### 1b. AI-GPR (Iacoviello, clasificacion con LLM; CSV)", "",
+          f"Fuente: {URL_AI_GPR_PAGINA} (articulos puntuados por un LLM; media 100 en 1985-2019). Percentil contra "
+          "la historia desde 1985.", ""]
+    if ai:
+        l += [f"Ultimo mes: {ai['fecha'].strftime('%Y-%m')}.", "",
+              "| Serie | Ultimo | Prom. 12m | Percentil |", "|---|---|---|---|"]
+        for s_ in ai["series"]:
+            l.append(f"| {s_['nombre']} | {_n(s_['ultimo'])} | {_n(s_['prom_12m'])} | {_n(s_['percentil'], 0)} |")
+        if ai["tipos"]:
+            l += ["", "Por tipo de evento (contribucion al indice):", "", "| Tipo | Ultimo | Prom. 12m | Percentil |",
+                  "|---|---|---|---|"]
+            for t in sorted(ai["tipos"], key=lambda x: -(x["ultimo"] or 0)):
+                l.append(f"| {t['nombre']} | {_n(t['ultimo'])} | {_n(t['prom_12m'])} | {_n(t['percentil'], 0)} |")
+        if ai["paises"]:
+            l += ["", "Por pais (rol: iniciador + respondiente + contagio):", "",
+                  "| Pais | Ultimo | Prom. 12m | Percentil |", "|---|---|---|---|"]
+            for pa in sorted(ai["paises"], key=lambda x: -(x["percentil"] or 0)):
+                l.append(f"| {pa['nombre']} | {_n(pa['ultimo'], 2)} | {_n(pa['prom_12m'], 2)} | {_n(pa['percentil'], 0)} |")
+        if ai.get("diario"):
+            d = ai["diario"]
+            l += ["", f"Diario al {d['fecha']}: AI-GPR promedio 30 dias {_n(d['gpr_ai_30d'])}; Oil GPR promedio 30 "
+                  f"dias {_n(d['gpr_oil_30d'])}; maximo 30 dias {_n(d['maximo_30d'].get('GPR_AI'))} el "
+                  f"{d['maximo_30d']['fecha']}."]
+        l.append("")
+    else:
+        l += ["AI-GPR no disponible en esta corrida.", ""]
     for titulo, datos in (("## 2. Polymarket", poly), ("## 3. Kalshi (API oficial v2)", kal)):
         l += [titulo, ""]
         if datos is None:
@@ -733,7 +861,12 @@ def construir_markdown(fecha: date, gpr: dict | None, poly: dict | None, kal: di
             l += (tabla_mercados(mercados) if mercados else ["Sin mercados abiertos que cumplan filtros."]) + [""]
     l += ["## 4. Como leer estos precios", "",
           "- Precio de 0.30 en un contrato Si/No = el mercado asigna ~30% (menos comisiones y prima de riesgo). "
-          "Los extremos (<5% y >95%) suelen estar sesgados (favorito-longshot).",
+          "Probabilidad mostrada = punto medio compra/venta si el diferencial es <= 0.10; si no, ultimo precio "
+          "(regla documentada por Polymarket; aqui se aplica igual a Kalshi).",
+          "- Sesgo favorito-longshot: en Polymarket las compras por debajo de 10 centavos pierden ~19 centavos por "
+          "dolar y las de 90 centavos o mas ganan ~0.8 (arXiv 2609.12878, 2026, 588 millones de operaciones); en "
+          "Kalshi los contratos baratos ganan menos de lo que su precio implica tras comisiones. Leer los extremos "
+          "con descuento.",
           "- Diferencial compra/venta amplio o volumen bajo = probabilidad poco informativa.",
           "- Leer el criterio de resolucion exacto (fecha, fuente, definicion) antes de compararlo con un pronostico propio.",
           "- Diferencias grandes entre Polymarket y Kalshi para el mismo evento suelen deberse a criterios distintos, "
@@ -750,7 +883,8 @@ def construir_markdown(fecha: date, gpr: dict | None, poly: dict | None, kal: di
 
 def generar(palabras: list[str] | None = None, paises: list[str] | None = None, max_por_palabra: int = 6,
             volumen_min: float = 10000.0, cache_horas: float | None = 6, con_gpr: bool = True,
-            con_poly: bool = True, con_kalshi: bool = True, fecha: date | None = None) -> tuple[str, dict]:
+            con_poly: bool = True, con_kalshi: bool = True, fecha: date | None = None,
+            con_ai_gpr: bool = True) -> tuple[str, dict]:
     palabras = palabras or PALABRAS_DEFECTO
     paises = paises or PAISES_DEFECTO
     fecha = fecha or date.today()
@@ -775,6 +909,14 @@ def generar(palabras: list[str] | None = None, paises: list[str] | None = None, 
                 gpr["diario"] = resumen_gpr_diario(serie_diaria_gpr(crudo["diario"]))
         except (ErrorFuente, ValueError, KeyError, TypeError) as e:
             registro.append(f"GPR diario: no se pudo resumir: {e!r}")
+        if con_ai_gpr:
+            crudo_ai = descargar_ai_gpr(cache_horas, registro)
+            try:
+                if crudo_ai.get("mensual"):
+                    gpr["ai"] = resumen_ai_gpr(crudo_ai["mensual"], crudo_ai.get("tipos"), crudo_ai.get("paises"),
+                                               paises, crudo_ai.get("diario"))
+            except (ErrorFuente, ValueError, KeyError, TypeError, statistics.StatisticsError) as e:
+                registro.append(f"AI-GPR: no se pudo resumir: {e!r}")
     poly = kal = None
     if con_poly:
         try:
@@ -805,7 +947,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--max-por-palabra", type=int, default=6)
     ap.add_argument("--volumen-min", type=float, default=10000.0, help="volumen minimo (USD o contratos)")
     ap.add_argument("--cache-horas", type=float, default=6.0, help="0 = sin cache")
-    ap.add_argument("--sin-gpr", action="store_true")
+    ap.add_argument("--sin-gpr", action="store_true", help="omite GPR clasico y AI-GPR")
+    ap.add_argument("--sin-ai-gpr", action="store_true", help="omite solo el AI-GPR (CSV de ~6 MB)")
     ap.add_argument("--sin-polymarket", action="store_true")
     ap.add_argument("--sin-kalshi", action="store_true")
     ap.add_argument("--salida", default=None, help="ruta del markdown (si se omite, imprime)")
@@ -814,7 +957,8 @@ def main(argv: list[str] | None = None) -> int:
     palabras = [p.strip() for p in args.palabras.split(",") if p.strip()]
     paises = [p.strip().upper() for p in args.paises.split(",") if p.strip()]
     markdown, datos = generar(palabras, paises, args.max_por_palabra, args.volumen_min, args.cache_horas or None,
-                              not args.sin_gpr, not args.sin_polymarket, not args.sin_kalshi)
+                              not args.sin_gpr, not args.sin_polymarket, not args.sin_kalshi,
+                              con_ai_gpr=not args.sin_ai_gpr)
     if args.json:
         print(json.dumps(datos, default=_json_por_defecto, ensure_ascii=False, indent=1))
         return 0

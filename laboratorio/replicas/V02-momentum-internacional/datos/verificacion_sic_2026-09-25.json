@@ -1,0 +1,29 @@
+{
+ "fecha_consulta_utc": "2026-09-25T05:2xZ",
+ "criterio_preregistrado": "verificado si hay pagina/aviso BMV con serie * o si Yahoo <TICKER>.MX tiene precios en 2026 con bolsa MEX",
+ "yahoo_MX": {
+  "EEMO.MX": "404 No data found",
+  "IMTM.MX": "404 No data found",
+  "IDMO.MX": "404 No data found",
+  "IMOM.MX": "404 No data found",
+  "PIE.MX": "200, simbolo existe (exchangeName MEX, shortName 'POWERSHARES DWA EMERGING MARKET') pero SIN precios (quote vacio, regularMarketPrice 0)",
+  "PIZ.MX": "200, simbolo existe (exchangeName MEX, shortName 'POWERSHARES DWA DEVELOPED MARKE') pero SIN precios",
+  "EEM.MX": "200, precios en MXN en 2026 (184 dias, 175 con volumen > 0)",
+  "EFA.MX": "200, precios en MXN en 2026 (184 dias, 52 con volumen > 0)",
+  "VEA.MX": "200, precios en MXN en 2026 (184 dias, 183 con volumen > 0)"
+ },
+ "tradingview_BMV": {
+  "EEMO": 404,
+  "PIE": 404,
+  "IMTM": 404,
+  "PIZ": 404,
+  "IDMO": 404,
+  "IMOM": 404,
+  "EEM": "200 'BMV:EEM'",
+  "EFA": "200 'BMV:EFA'",
+  "VEA": "200 'BMV:VEA'"
+ },
+ "stockanalysis_BMV": "403 (Cloudflare) con curl; 404 via WebFetch para IMTM y EEMO",
+ "bmv_buscador": "POST doSearch devolvio HTTP 500; no se pudo consultar el catalogo oficial",
+ "busqueda_web": "sin avisos de derechos SIC para EEMO, IMTM, IDMO, IMOM, PIE, PIZ"
+}

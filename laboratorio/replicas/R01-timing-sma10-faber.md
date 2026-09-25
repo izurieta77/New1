@@ -235,6 +235,7 @@ Los escenarios de costos alternativos son los del bloque C.
 
 | Fecha | Qué cambió | Por qué | ¿Invalida el tramo de prueba? |
 |---|---|---|---|
+| 2026-09-25, ~05:30 UTC, **antes de la primera corrida** | Se operacionaliza la cláusula de la sección 2 que dice "el efecto aparece solo en algunos subperiodos". Se usan 9 ventanas dentro de muestra: 1927-07 a 1929-12, las décadas de 1930 a 1990 y 2000-01 a 2006-12. Si la reducción relativa del MDD neto de la SMA de 10 meses contra comprar y mantener es mayor que 0 en **menos de 5 de las 9**, el efecto se considera "solo en algunos subperiodos" y el estado queda como "Replicado con diferencias". | La cláusula del pre-registro no tenía un umbral. Se fija antes de ver resultados para que no haya discreción después. Referencia: Faber (2013, p. 28) dice que el timing mejora el drawdown "in all but two decades". | No: se fijó antes de cualquier corrida |
 
 ### 10. Variantes probadas
 

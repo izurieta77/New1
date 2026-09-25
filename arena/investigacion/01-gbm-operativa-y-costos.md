@@ -20,7 +20,7 @@
 4. **En el SIC solo se compran títulos completos** [36]. Trading MX tiene el menú de órdenes completo: mercado, limitada, MPL, Stop Market, Stop Limitada, Trailing Stop, OCA y OTA [8]. **La vigencia máxima de una orden es de 30 días** [10].
 5. **Horario:** la BMV opera de 7:30 a 14:00 (hora CDMX) del 9 de marzo al 30 de octubre de 2026. **Regresa a 8:30–15:00 el martes 3 de noviembre de 2026**, porque el lunes 2 es inhábil [13][38]. **La liquidación en México es T+1** desde el 27 de mayo de 2024 [15].
 6. **Apalancamiento:** GBM ofrece **margen intradía y venta en corto** bajo contrato y a solicitud. La venta en corto pide un mínimo de 10,000 MXN, solo en emisoras que GBM selecciona, y aparta 2 pesos de garantía por cada peso vendido [39] (parcialmente verificado). Futuros y opciones de MexDer existen en la Guía [2], pero no como función estándar de la app (no verificado). **TQQQ, SOXL y SPXL están listados con estatus ACTIVA en la BMV (SIC)** [35][43][44]. Que GBM permita comprarlos desde la app, y con qué perfil: no verificado.
-7. **Liquidez ociosa:** Smart Cash paga de 4.00% a 4.75% anual según el nivel. Con menos de 300 mil MXN paga 4.00% [17][18]. En cambio, el **CETE 28 cerró en 6.15%** en la subasta del 22-sep-2026 [22] y la tasa de Banxico está en 6.50% [21]. La retención de ISR sobre intereses subió a **0.90% anual sobre el capital** en 2026 [29].
+7. **Liquidez ociosa:** Smart Cash paga de 4.00% a 4.75% anual según el nivel. Con menos de 300 mil MXN paga 4.00% [17][18]. En cambio, el **CETE 28 cerró en 6.15%** en la subasta del 22-sep-2026 [22][50] (comprarlo directo dentro de la cuenta GBM: no verificado) y la tasa de Banxico está en 6.50% [21]. La retención de ISR sobre intereses subió a **0.90% anual sobre el capital** en 2026 [29].
 8. **Impuestos:** 10% definitivo sobre la ganancia en BMV y SIC, sin retención en la venta y pagado en la declaración anual [26]. Los dividendos del SIC pagan 30% en EUA (10% con W-8BEN) y luego 10% en México [27]. **El W-8BEN para el SIC cuesta 75 USD + IVA** (confirmado en la FAQ oficial de GBM [45]), alrededor de 7.6% de una cuenta de 20k [24][25][45]. En Trading USA es gratis [24].
 9. **Protección:** GBM está supervisado por la CNBV. **El IPAB no cubre casas de bolsa** [30].
 10. **Caídas registradas:** 26-jun-2024 (resuelta a las 12:30; inicio no reportado), 19-jul-2024 (CrowdStrike), dos caídas en menos de 5 días en dic-2024, **7-abr-2025 ("lunes negro" arancelario): más de 5 horas sin poder comprar ni vender en plena sesión de pánico**, y 20-oct-2025 (intermitencias por la caída de AWS) [31][32][33][46][47]. [I] La caída más larga documentada ocurrió en el día de mayor volatilidad, que es justo el escenario en el que una cuenta apalancada necesita operar. Para 2026 no encontré notas de prensa (ausencia de evidencia, no prueba de estabilidad).
@@ -334,3 +334,76 @@ Todas se consultaron el 2026-09-25, salvo que se indique otra fecha.
 40. Finantres, "¿Se puede operar con opciones con GBM en México?" (visto en el listado de búsqueda). https://finantres.mx/opciones-gbm/
 41. Rankia México, "Análisis de GBM+: apertura de cuenta, comisiones y opiniones" (10-nov-2025). https://www.rankia.mx/blog/casas-de-bolsa-de-mexico/7057487-analisis-gbm-apertura-cuenta-comisiones-opiniones
 42. GBM App, Centro de ayuda: "Los impuestos por la venta de acciones en Trading USA" (redirige; contenido tomado del resumen de búsqueda). https://about.appgbm.com/faqs/impuestos-por-venta-de-acciones-en-trading-usa/
+43. Grupo BMV, estadísticas de la emisora SOXL * (Direxion Daily Semiconductor Bull 3X ETF, TRAC extranjero, ISIN US25459W4583, estatus ACTIVA). https://www.bmv.com.mx/es/emisoras/estadisticas/SOXL%20*-33387
+44. Grupo BMV, perfil de la emisora SPXL (Direxion Daily S&P 500 Bull 3X ETF, TRAC extranjero, ISIN US25459W8626, estatus ACTIVA, listado en BMV desde el 23-may-2017). https://www.bmv.com.mx/es/emisoras/perfil/SPXL-32632
+45. GBM, Centro de ayuda: "¿Cómo registro el W8-BEN para Trading MX y SIC?" (costo de 75 USD + IVA; confirmación en máx. 72 h). https://gbm.com/faqs/como-registro-el-w8-ben-para-trading-mx-y-sic/
+46. El CEO, "¿Inversionistas 'atrapados'? GBM falla en 'lunes negro'" (8-abr-2025). https://elceo.com/opinion/informacionconfidencial-inversionistas-atrapados-gbm-falla-en-lunes-negro/
+47. Jointly News, "Caída global de Amazon: ¿qué pasó y qué servicios se cayeron en México?" (caída de AWS del 20-oct-2025). https://news.jointly.mx/caida-global-de-amazon-que-paso-y-que-servicios-se-cayeron-en-mexico/
+48. GBM, Centro de ayuda: "¿Cuál es el horario para realizar depósitos en GBM?". https://gbm.com/faqs/cual-es-el-horario-para-realizar-depositos-en-gbm/
+49. DriveWealth, "DriveWealth Releases Enhanced SIPC Insurance Coverage" (5-nov-2025). https://www.drivewealth.com/2025/11/drivewealth-releases-enhanced-sipc-insurance-coverage/
+50. Imagen Radio, "Cetes: así quedaron las tasas en la semana del 22 al 29 de septiembre del 2026" (visto en el listado de búsqueda). https://www.imagenradio.com.mx/finanzas/cetes-quedaron-tasas-semana-22-29-septiembre-2026
+51. GBM, Centro de ayuda: "¿Qué es un Day Trade?". Contenido tomado del resumen de búsqueda; la URL devolvió 404 al consultarla. https://gbm.com/faqs/que-es-un-day-trade/
+52. Grupo BMV, Reglamento interior y manual de reglas operativas (Postura Activada al Nivel y PCP en el sistema de negociación). Contenido tomado del resumen de búsqueda. https://www.bmv.com.mx/es/mercados/reglamento-y-manual-de-bolsa
+53. GBM Academy, "Smart Cash de GBM vs CETES. Diferencias clave" (24-ago-2022, actualizado). https://gbm.com/media/the-academy/diferencia-entre-smart-cash-y-cetes/
+54. GBM, "Deuda gubernamental" (cuenta gestionada; "el cliente no paga comisiones por operación y corretaje"). https://gbm.com/soluciones-de-inversion/cuentas-gestionadas/detalle/deuda-gubernamental/
+
+---
+
+## Registro de verificacion (2026-09-25)
+
+Verificador adversarial. Revisé contra fuentes primarias (PDFs y FAQs de GBM, BMV, FINRA, CNBV) cada comisión, regla, instrumento y cifra con impacto en decisiones. Extraje el texto completo de la Guía de Servicios V1025 y del Folleto de órdenes con `pypdf`. Este documento no contiene citas académicas ni resultados de Alpha Arena, así que no hubo nada que verificar en esos rubros.
+
+### Confirmado en fuente primaria (sin cambios)
+
+| Afirmación | Fuente revisada |
+|---|---|
+| Corretaje de 0.25% a 0.10% por escalón, por "monto operado promedio de los últimos 3 meses"; tope de 0.25% en plataformas GBM y GBM+; "el uso de la plataforma no tiene costo"; se agrega IVA; "la única comisión que se cobra es la de corretaje" | Texto de la Guía V1025, págs. 14 a 16 [2]; FAQ [1] |
+| Crédito de margen hasta TIIE + 10; préstamo de valores con prima de hasta 500 MXN semanales; futuros y opciones MexDer según la tabla 4T25 | Guía V1025 [2] |
+| Trading USA: 0.25% por compra o venta; solo órdenes a mercado y limitadas | FAQ [3][9] |
+| Trading MX: mercado, limitada, MPL (mín. 100 títulos; MPVO 2,000), stop, stop limitada, trailing, OCA y OTA | FAQ [8] |
+| Vigencia máxima de 30 días; reingreso diario con folio nuevo; recepción 24/7; banda de ~0.20% en órdenes a mercado (también en SIC); PCP = stop-loss / take-profit; filtros de 3%/5% y 6%/10% | Texto del Folleto [10] |
+| Dolarización de Trading USA el 31-mar-2025; liquidación de dólares en 1 día hábil; teléfono 55 5480 5846 y WhatsApp 55 2690 5840 | Release [6] |
+| Valmer Spot 48 h en Smart Cash Dólares; spread no publicado | FAQ [7] |
+| Fracciones desde 1 USD; Trading MX desde 100 MXN y hasta 10 cuentas | [5] |
+| En el SIC solo títulos completos; custodia en Indeval; VOO ~690 USD ≈ 12,000 MXN | [36] |
+| Smart Cash de 4.00% a 4.75%, sin comisión; Smart Cash Dólares 1.5% + IVA; fondos GBM de 1% a 2.75% | [1][17][18] |
+| Banxico en 6.50%, por unanimidad (24-sep-2026) | [21] |
+| CETES 6.15 / 6.59 / 6.91 / 7.24 (22-sep-2026) | [22], corroborado por [50] |
+| Retención de ISR de 0.90% en 2026 (0.50% en 2025), art. 24 LIF | [29] |
+| BMV de 7:30 a 14:00 del 9-mar al 30-oct-2026; regresa el mar 3-nov-2026 | [12][13][14] |
+| T+1 desde el 27-may-2024 | [15] |
+| Inhábiles 4T-2026: 2-nov, 16-nov, 25-dic | [38] |
+| Fechas 2027 (1-feb, 15-mar, 25 y 26-mar, Thanksgiving 26-nov-2026, MLK 18-ene, Presidents 15-feb, horario de verano de EUA el 14-mar-2027) | Recalculadas con calendario; Pascua 2027 = 28-mar. Siguen sin cotejo contra el calendario oficial CNBV 2027 |
+| Impuestos del SIC (10% anual, sin retención en la venta) y dividendos (30%/10% + 10% en México) | [26][27][28] |
+| IPAB no cubre casas de bolsa | [30] |
+| FINRA 26-10: SEC 14-abr-2026, vigencia 4-jun-2026, implementación hasta 20-oct-2027, elimina el mínimo de 25k USD en cuentas de margen | [34] |
+| TQQQ listado y ACTIVA en la BMV | [35] |
+| Caídas del 26-jun-2024, 19-jul-2024 y dic-2024 | [31][32][33] |
+| Aritmética de las tablas de costos (0.29%, 0.58%, escenarios con spread, mínimo de 20 MXN, rotaciones y edge mínimo) | Recalculada: correcta |
+
+### Correcciones aplicadas
+
+1. **Caídas en 2025 (error material):** el documento decía "no encontré reportes de caídas en 2025–2026". Sí los hay: la falla de más de 5 horas del lunes 7-abr-2025, en plena sesión de pánico por aranceles [46], y las intermitencias por la caída de AWS del 20-oct-2025 [47]. Agregué ambas al resumen, a la tabla y a la sección de riesgo.
+2. **Depósitos SPEI:** el horario "lun-vie de 06:00 a 18:00" no se sostiene. La FAQ oficial dice "en cualquier momento" [48].
+3. **Base del escalón de comisión:** el documento atribuía a [1] el criterio "inversión total". [1] y [2] dicen "monto operado promedio de los últimos 3 meses".
+4. **Duración de la caída del 26-jun-2024:** "~1 h" no se sostiene tal cual. La nota se publicó a las 11:18 y la falla quedó resuelta a las 12:30; la hora de inicio no se reporta.
+5. **ISR en ganancias de Trading USA:** "GBM indica 10%" no está en [28], que solo trata dividendos. Lo marqué como no verificado.
+6. **CETE 28 dentro de GBM:** [23] describe la inversión en CETES vía Smart Cash, no la compra directa de un CETE. La compra directa desde la app queda como no verificada, y la recomendación de usar CETE 28 queda condicionada a ella.
+7. **"El stop vive en el libro y no depende de la app":** lo matizo. La BMV sí admite posturas activadas al nivel y PCP [52], pero las órdenes de varios días las reingresa GBM cada mañana [10], así que dependen de los sistemas de GBM. No hay evidencia de que los stops funcionaran durante la caída del 7-abr-2025.
+8. **ETFs apalancados:** además de TQQQ, SOXL y SPXL están listados y activos en la BMV [43][44]. Aclaré que la frase "los ETFs del SIC no pueden ser apalancados" viene del prospecto de un fondo, no de una regla para personas físicas.
+9. **Filtros de precio:** el Folleto los define para "GBMHomebroker". Que apliquen igual en la app actual queda como inferencia.
+10. **W-8BEN del SIC:** los 75 USD + IVA ahora están confirmados en la FAQ oficial de GBM [45], no solo en Finantres.
+11. **SIPC:** DriveWealth es miembro de FINRA y SIPC y tiene Excess SIPC [49]. Si cubre a los clientes de GBM sigue sin verificarse.
+12. Detalles menores: el reparto del préstamo de valores en Trading USA es 20% para el cliente [5]; el rango de costo de la temporada pasa de "≤3.5%–5%" a "≤3.5%–5.2%"; agregué dos puntos al checklist (CETE directo e IVA en Trading USA).
+
+### Sigue sin verificar (pendiente para el dueño o para la siguiente revisión)
+
+- Mínimo de 20 MXN por operación: ninguna fuente primaria lo menciona. Un resumen de búsqueda lo liga solo a ventas en corto.
+- Spread cambiario en Trading USA y costo cambiario implícito en el SIC.
+- Si Trading USA cobra IVA sobre el 0.25%.
+- Habilitación de TQQQ, SOXL y SPXL en la app y si piden algún perfil.
+- Condiciones de margen intradía y venta en corto: la FAQ oficial da 404 y GBM Academy dio 503.
+- Regla PDT vigente en GBM/DriveWealth después de FINRA 26-10.
+- Compra directa de CETES dentro de la cuenta.
+- Tratamiento fiscal de las ganancias en Trading USA.
+- Calendario oficial CNBV 2027.
