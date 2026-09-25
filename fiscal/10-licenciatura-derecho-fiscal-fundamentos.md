@@ -147,7 +147,7 @@ El domicilio fiscal es la coordenada que determina, entre otras cosas, dónde de
 
 Texto verificado, fracciones I a IV y párrafo sobre directores/administradores (última reforma DOF 09-04-2026) [8]:
 
-> "Artículo 26.- Son responsables solidarios con los contribuyentes: I. Los retenedores y las personas a quienes las leyes impongan la obligación de recaudar contribuciones a cargo de los contribuyentes, hasta por el monto de dichas contribuciones. II. Las personas que estén obligadas a efectuar pagos provisionales por cuenta del contribuyente, hasta por el monto de estos pagos. III. Los liquidadores y síndicos por las contribuciones que debieron pagar a cargo de la sociedad en liquidación o quiebra [...]. [Un párrafo posterior de esta fracción agrega:] La persona o personas cualquiera que sea el nombre con que se les designe, que tengan conferida la dirección general, la gerencia general, o la administración única de las personas morales, serán responsables solidarios por las contribuciones causadas o no retenidas por dichas personas morales durante su gestión [...], cuando dicha persona moral incurra en cualquiera de los supuestos a que se refieren los incisos a) al i) de la fracción X de este artículo. IV. Los adquirentes de negociaciones, respecto de las contribuciones que se hubieran causado en relación con las actividades realizadas en la negociación, cuando pertenecía a otra persona, sin que la responsabilidad exceda del valor de la misma."
+> "Artículo 26.- Son responsables solidarios con los contribuyentes: I. Los retenedores y las personas a quienes las leyes impongan la obligación de recaudar contribuciones [...], hasta por el monto de dichas contribuciones. II. Las personas que estén obligadas a efectuar pagos provisionales por cuenta del contribuyente [...]. III. Los liquidadores y síndicos por las contribuciones que debieron pagar a cargo de la sociedad en liquidación o quiebra [...]. [Párrafo posterior de la misma fracción:] La persona o personas [...] que tengan conferida la dirección general, la gerencia general, o la administración única de las personas morales, serán responsables solidarios por las contribuciones causadas o no retenidas [...] durante su gestión [...], cuando dicha persona moral incurra en cualquiera de los supuestos [...] de la fracción X de este artículo. IV. Los adquirentes de negociaciones, respecto de las contribuciones [...] causadas en relación con las actividades realizadas en la negociación [...], sin que la responsabilidad exceda del valor de la misma."
 
 **Doctrina/Inferencia:** la responsabilidad solidaria de directores, gerentes y administradores únicos **no es automática por el solo cargo**; requiere que la persona moral haya incurrido en alguno de los supuestos calificados de la fracción X del mismo artículo (desocupar el domicilio sin aviso, no llevar contabilidad, cambiar de domicilio durante una auditoría, entre otros), y que el interés fiscal no alcance a cubrirse con los bienes de la persona moral. "Ser director general" no basta por sí solo.
 
@@ -159,7 +159,7 @@ Texto verificado, fracciones I a IV y párrafo sobre directores/administradores 
 
 El art. 42 CFF, primer párrafo y fracciones I a V, texto verificado (última reforma DOF 09-04-2026) [8]:
 
-> "Artículo 42. Las autoridades fiscales a fin de comprobar que los contribuyentes, los responsables solidarios, los terceros con ellos relacionados, los asesores fiscales, las instituciones financieras [...] han cumplido con las disposiciones fiscales y aduaneras y, en su caso, determinar las contribuciones omitidas o los créditos fiscales, así como para comprobar la comisión de delitos fiscales y para proporcionar información a otras autoridades fiscales, estarán facultadas para: I.- Rectificar los errores aritméticos, omisiones u otros que aparezcan en las declaraciones [...]. II. Requerir a los contribuyentes [...] que exhiban en su domicilio, establecimientos, en las oficinas de las propias autoridades o dentro del buzón tributario [...] la contabilidad, así como que proporcionen los datos, otros documentos o informes que se les requieran a efecto de llevar a cabo su revisión. III.- Practicar visitas a los contribuyentes [...] y revisar su contabilidad, bienes y mercancías. IV. Revisar los dictámenes formulados por contadores públicos sobre los estados financieros de los contribuyentes [...]. V. Practicar visitas domiciliarias a los contribuyentes, a fin de verificar que cumplan con [obligaciones específicas de CFDI, marbetes, precintos, cajetillas de cigarros, mercancía de importación, entre otras] [...]."
+> "Artículo 42. Las autoridades fiscales a fin de comprobar que los contribuyentes [...] han cumplido con las disposiciones fiscales y aduaneras y, en su caso, determinar las contribuciones omitidas o los créditos fiscales [...] estarán facultadas para: I.- Rectificar los errores aritméticos, omisiones u otros que aparezcan en las declaraciones [...]. II. Requerir [...] que exhiban en su domicilio, establecimientos, en las oficinas de las propias autoridades o dentro del buzón tributario [...] la contabilidad [...]. III.- Practicar visitas a los contribuyentes [...] y revisar su contabilidad, bienes y mercancías. IV. Revisar los dictámenes formulados por contadores públicos [...]. V. Practicar visitas domiciliarias [...] a fin de verificar [obligaciones específicas de CFDI, marbetes, precintos, cajetillas de cigarros, mercancía de importación, entre otras] [...]."
 
 Las tres modalidades clásicas de facultades de comprobación, con su fundamento:
 
@@ -315,50 +315,50 @@ Para que **cualquier** acto de autoridad fiscal (una orden de visita, un requeri
 
 ## 9. Autoevaluación
 
-1. **Transcribe el art. 31 fracción IV CPEUM y señala los cuatro mandatos que la doctrina y la jurisprudencia derivan de él.**
-   "Contribuir para los gastos públicos, así de la Federación, como de los Estados, de la Ciudad de México y del Municipio en que residan, de la manera proporcional y equitativa que dispongan las leyes." Los cuatro mandatos: destino al gasto público, proporcionalidad, equidad y legalidad.
+1. **Transcribe el art. 31-IV CPEUM y los cuatro mandatos que de él derivan.**
+   "Contribuir para los gastos públicos [...] de la manera proporcional y equitativa que dispongan las leyes." Mandatos: destino al gasto público, proporcionalidad, equidad, legalidad.
 
-2. **¿Cuál es la diferencia entre proporcionalidad y equidad tributaria, con cita de tesis?**
-   Proporcionalidad (P./J. 10/2003, registro 184291) exige congruencia entre el tributo y la capacidad contributiva del propio sujeto. Equidad (P./J. 41/97, registro 198403) exige trato idéntico entre sujetos en la misma hipótesis de causación, salvo distinción objetiva y razonable.
+2. **Diferencia proporcionalidad y equidad, con tesis.**
+   Proporcionalidad (P./J. 10/2003, reg. 184291): congruencia tributo-capacidad contributiva del sujeto. Equidad (P./J. 41/97, reg. 198403): trato idéntico entre sujetos en la misma hipótesis de causación, salvo distinción objetiva y razonable.
 
-3. **¿Qué significa que la reserva de ley en materia tributaria sea "relativa" según la tesis P./J. 106/2006?**
-   Que basta con que los elementos esenciales del tributo estén descritos en la ley; pueden desarrollarse en normas de rango inferior, siempre que la ley marque el límite de contenido para esas normas secundarias.
+3. **¿Qué significa que la reserva de ley tributaria sea "relativa" (P./J. 106/2006)?**
+   Que basta con que los elementos esenciales estén en la ley; pueden desarrollarse en normas de rango inferior si la ley marca el límite de contenido.
 
-4. **Da el fundamento constitucional de la facultad exclusiva federal sobre comercio exterior.**
-   Art. 73 fracción XXIX, inciso 1o., CPEUM: "Para establecer contribuciones: 1o. Sobre el comercio exterior".
+4. **Fundamento de la facultad exclusiva federal sobre comercio exterior.**
+   Art. 73-XXIX-1o. CPEUM.
 
-5. **¿Qué es el Sistema Nacional de Coordinación Fiscal y con qué instrumento legal se crea?**
-   El mecanismo por el que las entidades federativas se adhieren, vía convenio con la SHCP, a cambio de participar del Fondo General de Participaciones (20% de la recaudación federal participable), comprometiéndose a no duplicar ciertas fuentes ya gravadas por la Federación. Se crea con la Ley de Coordinación Fiscal (art. 1).
+5. **¿Qué es el SNCF y con qué ley se crea?**
+   El mecanismo por el que las entidades se adhieren, vía convenio con la SHCP, a cambio de participar del Fondo General de Participaciones (20% de la recaudación federal participable), comprometiéndose a no duplicar fuentes ya gravadas por la Federación. Ley de Coordinación Fiscal, art. 1.
 
-6. **Clasifica, según el art. 2 CFF, las cuotas obrero-patronales al IMSS y una cuota por pavimentación cobrada solo a los predios colindantes con la obra.**
-   Las cuotas al IMSS son aportaciones de seguridad social (fracción II); la cuota por pavimentación a los predios beneficiados es una contribución de mejoras (fracción III).
+6. **Clasifica (art. 2 CFF) las cuotas al IMSS y una cuota de pavimentación a predios colindantes.**
+   Aportaciones de seguridad social (fr. II) y contribución de mejoras (fr. III), respectivamente.
 
-7. **¿Qué normas fiscales son de aplicación estricta según el art. 5 CFF?**
-   Las que establecen cargas a los particulares (sujeto, objeto, base, tasa o tarifa), las que señalan excepciones a esas cargas, y las que fijan infracciones y sanciones.
+7. **¿Qué normas fiscales son de aplicación estricta (art. 5 CFF)?**
+   Las que establecen cargas (sujeto, objeto, base, tasa o tarifa), sus excepciones, y las que fijan infracciones y sanciones.
 
-8. **¿Cuál es la tasa del ISR para personas morales y en qué artículo está?**
+8. **Tasa del ISR para personas morales y artículo.**
    30%, art. 9 LISR, sobre el resultado fiscal del ejercicio.
 
-9. **¿Cuál es la tasa general del IVA y qué establece el decreto de la región fronteriza norte respecto de esa tasa legal?**
-   16% (art. 1 LIVA). El decreto no modifica la tasa legal; otorga un estímulo fiscal (crédito) equivalente al 50% del impuesto causado a esa tasa.
+9. **Tasa general del IVA y efecto del decreto fronterizo sobre ella.**
+   16% (art. 1 LIVA); el decreto no modifica la tasa legal, otorga un crédito fiscal del 50%.
 
 10. **Distingue caducidad (art. 67 CFF) de prescripción (art. 146 CFF).**
-    Caducidad extingue la facultad de la autoridad para determinar contribuciones omitidas y sus accesorios o imponer sanciones (5 o 10 años, no se interrumpe, solo se suspende en supuestos tasados). Prescripción extingue el crédito fiscal ya determinado y exigible (5 años, se interrumpe con cada gestión de cobro, tope absoluto de 10 años).
+    Caducidad: extingue la facultad de la autoridad de determinar contribuciones omitidas (5-10 años, no se interrumpe, solo se suspende). Prescripción: extingue el crédito ya determinado y exigible (5 años, se interrumpe, tope de 10).
 
-11. **¿En qué supuestos se eleva a diez años el plazo de caducidad del art. 67 CFF?**
-    Cuando el contribuyente no se inscribió en el RFC, no llevó contabilidad o no la conservó durante el plazo legal, o no presentó alguna declaración del ejercicio estando obligado a hacerlo.
+11. **¿Cuándo se eleva a diez años la caducidad del art. 67 CFF?**
+    Sin inscripción en el RFC, sin contabilidad o sin conservarla, o sin declaración del ejercicio estando obligado.
 
-12. **¿Es obligatorio agotar el recurso de revocación antes de acudir al juicio contencioso administrativo?**
-    No; el art. 120 CFF lo establece como optativo para el interesado.
+12. **¿Es obligatorio el recurso de revocación antes del juicio contencioso?**
+    No; art. 120 CFF lo hace optativo.
 
-13. **¿Cuál es el plazo general para presentar la demanda de juicio contencioso administrativo y cuál el del recurso de revocación?**
-    Ambos son de treinta días: art. 13 LFPCA para el juicio, art. 121 CFF para el recurso de revocación, contados a partir de que surtió efectos la notificación de la resolución impugnada.
+13. **Plazo general del juicio contencioso administrativo y del recurso de revocación.**
+    Treinta días ambos (art. 13 LFPCA y art. 121 CFF), desde que surte efectos la notificación.
 
-14. **¿Qué diferencia hay entre una norma fiscal autoaplicativa y una heteroaplicativa para efectos del plazo de amparo indirecto?**
-    La autoaplicativa obliga desde su sola entrada en vigor y da 30 días para impugnarla; la heteroaplicativa requiere un acto posterior individualizado de aplicación para causar perjuicio, y el plazo general de 15 días corre desde ese acto de aplicación.
+14. **Autoaplicativa vs. heteroaplicativa para el plazo de amparo indirecto.**
+    La autoaplicativa obliga desde su entrada en vigor (30 días); la heteroaplicativa requiere un acto posterior individualizado (15 días desde ese acto).
 
-15. **¿Qué es la negativa ficta y en qué artículo se regula?**
-    La ficción legal de que, transcurridos tres meses sin que la autoridad resuelva una instancia o petición, el silencio se entiende como resolución negativa, impugnable desde ese momento. Art. 37 CFF.
+15. **¿Qué es la negativa ficta y dónde se regula?**
+    Transcurridos tres meses sin resolución de una instancia o petición, el silencio se entiende negativo e impugnable. Art. 37 CFF.
 
 ---
 
@@ -380,4 +380,4 @@ Para que **cualquier** acto de autoridad fiscal (una orden de visita, un requeri
 14. Ley de Amparo, Reglamentaria de los artículos 103 y 107 de la Constitución Política de los Estados Unidos Mexicanos, texto vigente, Cámara de Diputados, arts. 17 y 107 (verificados por extracción directa del PDF). https://www.diputados.gob.mx/LeyesBiblio/pdf/LAmp.pdf — encabezado: "Última Reforma DOF 16-10-2025". Consultado el 25-sep-2026.
 15. Segundo Tribunal Colegiado del Sexto Circuito, jurisprudencia VI.2o.J/248, "FUNDAMENTACION Y MOTIVACION DE LOS ACTOS ADMINISTRATIVOS", Octava Época, Gaceta del Semanario Judicial de la Federación, número 64, abril de 1993, p. 43, registro digital 216534. Grado de verificación: B (rubro, datos de fuente y doctrina reportados por búsqueda que cita el texto original; no se accedió al renderizado directo del Semanario). Consultado el 25-sep-2026.
 
-**Nota metodológica.** Las fuentes [1], [6], [8], [9], [10], [11], [13] y [14] se verificaron descargando el PDF oficial de texto vigente de la Cámara de Diputados (leyesbiblio) y extrayendo el texto con la librería `pypdf` en Python, contrastando cada cita contra el texto extraído línea por línea; el encabezado de cada PDF trae su propia fecha de "Última Reforma DOF", que se reporta tal como aparece en el documento. Las tesis de la SCJN ([3], [4], [5], [15]) no pudieron verificarse por renderizado directo de `sjf2.scjn.gob.mx` porque es una aplicación de JavaScript que WebFetch no ejecuta (devuelve la página vacía) y porque `bj.scjn.gob.mx` y `sjf.scjn.gob.mx` devolvieron error HTTP 403 a las solicitudes automatizadas en esta sesión; su rubro, registro, época, instancia y localización se tomaron de los resultados de búsqueda que citan y reproducen esos datos de la fuente oficial, por lo que se marcan con un grado de verificación B y quedan pendientes de contraste directo contra el Semanario Judicial de la Federación en una sesión con acceso a ese sitio. El principio de "destino al gasto público" (§2.5) y el art. 131 CPEUM sobre comercio exterior (§5.4) quedan explícitamente marcados "(no verificado)" y no deben tratarse como citas confirmadas.
+**Nota metodológica.** Fuentes [1], [6], [8], [9], [10], [11], [13] y [14]: PDF oficial de texto vigente de la Cámara de Diputados, texto extraído con `pypdf` en Python y contrastado línea por línea; cada encabezado trae su propia fecha de "Última Reforma DOF". Tesis de la SCJN ([3], [4], [5], [15]): no verificables por renderizado directo (`sjf2.scjn.gob.mx` es una SPA que WebFetch no ejecuta; `bj.scjn.gob.mx` y `sjf.scjn.gob.mx` devolvieron 403); su rubro, registro, época e instancia se tomaron de resultados de búsqueda que citan la fuente oficial, con grado de verificación **B**, pendiente de contraste directo. "Destino al gasto público" (§2.5) y el art. 131 CPEUM (§5.4) quedan marcados "(no verificado)".
