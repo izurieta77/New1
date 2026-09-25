@@ -18,7 +18,7 @@ Es la mayor panificadora del mundo: 250 plantas, más de 55,000 rutas y operaci�
 - **Márgenes:** operativo de 8.4% (+50 pb); UAFIDA ajustada de Ps 15,113 M, con margen de 14.4% (+50 pb).
 - **Utilidad:** neta mayoritaria de Ps 2,935 M (+3.9%). UPA de Ps 0.682 contra un consenso de 0.745: −8.5% [8]. El costo financiero (Ps 3,464 M, +4.2%) subió por las coberturas de energía (VPPA); tasa efectiva de 37%.
 - **Guía 2026 (call [9]):** ventas crecen a un dígito medio sin efecto cambiario, planas o a la baja de un dígito bajo en pesos. Margen UAFIDA +70-120 pb (antes +60-110). Capex de US$1.0-1.2 mil M (antes 1.2-1.4). Inflación de insumos de US$70-90 M (antes US$50 M) por trigo, resinas y energía, que "podría persistir" en 2027.
-- **Operación:** Norteamérica ganó participación en todas las categorías de EUA por primera vez desde 2020. En México ayudó el Mundial. Deuda neta/UAFIDA de 2.5x [1].
+- **Operación:** Norteamérica ganó participación en todas las categorías de EUA (primera vez desde 2020); en México ayudó el Mundial [1].
 
 ## 3. Tabla financiera
 Trimestral (Ps M) [1]-[5]. UPA = UN entre las acciones diluidas promedio de Yahoo [11] ("~" = aproximada):
@@ -61,7 +61,7 @@ Anual [3][5][6]; UPA, FCF y acciones de Yahoo [11]:
 10. **Asignación de capital:** hizo cinco adquisiciones en 2025 (Wickbold) y compró Bonel en el 1T26. Devolvió Ps 5.6 mil M en 2025 y 5.3 mil M en 1S26 [3][1].
 
 ## 5. Cadena causal
-**A. Peso fuerte:** el USD/MXN promedió 17.22 en el 3T26 contra 18.62 (−7.5%), y el EUR/MXN bajó 8.9% [11] → ~2/3 de las ventas están fuera de México → la conversión resta 5-6 pp (en el 2T26 restó 6.7 pp) → caen las ventas y la UPA en pesos → el precio baja 13% en un año. Contrapeso: la deuda en USD y EUR (54%) también baja en pesos.
+**A. Peso fuerte:** el USD/MXN promedió 17.22 en el 3T26 contra 18.62 (−7.5%), y el EUR/MXN bajó 8.9% [11] → ~2/3 de las ventas están fuera de México → la conversión resta 5-6 pp (6.7 pp en el 2T26) → caen las ventas y la UPA en pesos → el precio cae 13% en un año. Contrapeso: la deuda en USD y EUR (54%) también baja.
 **B. Energía (Brent en US$103 [13])** → diésel de las rutas, resinas, energía de las plantas y VPPA → suben el costo de ventas, el gasto de distribución y el costo financiero → la dirección subió su estimado de inflación a US$70-90 M [9] → la expansión de margen de 2027 está en riesgo.
 **C. Transformación de Norteamérica:** el margen UAFIDA de la región pasó de 9.0% a 10.0% [1] → cada 100 pb valen ~Ps 1.8 mil M de UAFIDA (1% de ~Ps 180 mil M de ventas) → a 6.7x equivalen a ~Ps 12 mil M, o ~Ps 2.8 por acción. *Inferencia:* el precio le da poco crédito.
 

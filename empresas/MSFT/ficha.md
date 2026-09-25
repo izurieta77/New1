@@ -42,9 +42,7 @@ La UPA non-GAAP sin OpenAI del FY26 fue de 4.13, 4.14, 4.27 y 4.74 por trimestre
 | FY26 | 331,839 | 67.9% | 46.8% | 133,749 | 17.95 | 66,987 | 3.7% | −36,549 | 7,453 |
 
 ## 4. Expediente de 10 puntos
-1. **Utilidad vs. efectivo.** La razón FCF/UN bajó a 0.50 en el FY26, desde 0.90 en el FY22, por un capex de US$115.9 mil M (35% de los ingresos) [4]. Además, la UN incluye 6.5 mil M de ganancia por la dilución en OpenAI [3]. El flujo operativo (182.9 mil M, 1.37 veces la UN) está sano: la brecha es inversión, no calidad contable.
-   - Desde el FY27 los edificios y centros de datos se deprecian a 25 años en lugar de 15, y más contratos se registran como arrendamiento operativo. Eso baja ~US$15 mil M el capex reportado de 2026 sin cambiar la inversión real [6].
-   - *Inferencia:* para comparar el FCF entre años hay que sumar los arrendamientos.
+1. **Utilidad vs. efectivo.** FCF/UN de 0.50 en el FY26 (0.90 en el FY22) por un capex de US$115.9 mil M (35% de los ingresos) [4]; la UN incluye además 6.5 mil M de ganancia por dilución en OpenAI [3]. El flujo operativo (182.9 mil M, 1.37 veces la UN) está sano: la brecha es inversión. Desde el FY27 los edificios se deprecian a 25 años en vez de 15 y más contratos serán arrendamiento operativo, lo que baja ~US$15 mil M el capex reportado de 2026 sin cambiar la inversión real [6]. *Inferencia:* para comparar el FCF hay que sumar arrendamientos.
 2. **Deuda.** Deuda de largo plazo de US$46.1 mil M, con vencimientos de 9.25 mil M en el FY27, 2.0 en el FY29, 0.5 en el FY31 y 34.4 después [3]. Pero hay **US$329.1 mil M en arrendamientos aún no iniciados** (FY27-FY33, de hasta 20 años) [3]: el pasivo económico es muy superior a la deuda financiera.
 3. **Dilución.** Acciones −0.3% a/a. Recompró 16.7 mil M en el FY26 y le quedan 40.6 de los 60 mil M autorizados. SBC de 3.5% de ingresos en el 4T [3][4].
 4. **Capital de trabajo.** No es un tema. El RPO comercial crece más rápido que los ingresos [1].
