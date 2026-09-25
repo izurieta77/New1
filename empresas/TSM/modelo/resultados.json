@@ -12222,6 +12222,65 @@
         "ingresos_ano_final_usd_m": 1214319.4329183705,
         "residuo": -0.00027775648050010204,
         "alertas": []
+      },
+      "margen FCF - SBC de 2030E del escenario tension": {
+        "wacc": 0.11475340436593508,
+        "g_terminal": 0.03,
+        "margen_fcf": 0.37780086089097215,
+        "deuda_neta_usd_m": -66437.70112773085,
+        "precio_usd_ads": 451.15,
+        "estado": "OK",
+        "crecimiento_implicito": 0.20466491412662435,
+        "peso_terminal": 0.6269946363420649,
+        "multiplo_terminal_fcf": 12.152904154183897,
+        "ingresos_ano_final_usd_m": 919996.1516126639,
+        "residuo": 0.0003104270435869694,
+        "alertas": []
+      },
+      "margen FCF - SBC de 2030E del escenario intermedio": {
+        "wacc": 0.11475340436593508,
+        "g_terminal": 0.03,
+        "margen_fcf": 0.38733098859009724,
+        "deuda_neta_usd_m": -66437.70112773085,
+        "precio_usd_ads": 451.15,
+        "estado": "OK",
+        "crecimiento_implicito": 0.20115926607104484,
+        "peso_terminal": 0.6243476319793363,
+        "multiplo_terminal_fcf": 12.152904154183897,
+        "ingresos_ano_final_usd_m": 893571.5905742683,
+        "residuo": 6.58007338643074e-05,
+        "alertas": []
+      },
+      "margen FCF - SBC de 2030E del escenario eficiencia": {
+        "wacc": 0.11475340436593508,
+        "g_terminal": 0.03,
+        "margen_fcf": 0.4170830380384388,
+        "deuda_neta_usd_m": -66437.70112773085,
+        "precio_usd_ads": 451.15,
+        "estado": "OK",
+        "crecimiento_implicito": 0.19075875885027926,
+        "peso_terminal": 0.6163091861736947,
+        "multiplo_terminal_fcf": 12.152904154183897,
+        "ingresos_ano_final_usd_m": 819145.8606789617,
+        "residuo": 0.0006745373830199242,
+        "alertas": []
+      }
+    },
+    "comparacion_con_escenarios": {
+      "tension": {
+        "margen_fcf_menos_sbc_2030E": 0.37780086089097215,
+        "ingresos_2030E_usd_m_a_32": 144263.05792752316,
+        "cagr_usd_desde_12m_a_2030E_4_5_anos": 0.002065112583770956
+      },
+      "intermedio": {
+        "margen_fcf_menos_sbc_2030E": 0.38733098859009724,
+        "ingresos_2030E_usd_m_a_32": 264095.70318292896,
+        "cagr_usd_desde_12m_a_2030E_4_5_anos": 0.1461801315543627
+      },
+      "eficiencia": {
+        "margen_fcf_menos_sbc_2030E": 0.4170830380384388,
+        "ingresos_2030E_usd_m_a_32": 317724.83037940384,
+        "cagr_usd_desde_12m_a_2030E_4_5_anos": 0.19424947325399144
       }
     }
   },

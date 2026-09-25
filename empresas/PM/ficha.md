@@ -5,12 +5,12 @@
 
 ## 1. Negocio y segmentos
 - **Segmentos desde 2026 (1S26, US$21,338 M) [2]:** International Smoke-Free 7,713 (36.1%), International Combustibles 12,147 (56.9%) y EUA 1,478 (6.9%; ZYN, cigarros y Wellness). Los productos libres de humo (SFP: IQOS, ZYN, VEEV) fueron ~42% de los ingresos del 2T26 [1].
-- **Geografía 2025 (US$40,648 M) [3]:** Europa 42.1%, SSEA-CIS-MEA 29.6%, Asia Oriental-Australia-GTR 16.3% y Américas 11.9%. Japón es el mayor mercado de IQOS.
-- Los ingresos netos excluyen impuestos especiales (US$27.8 mil M en el 1S26) [2].
+- **Geografía 2025 (US$40,648 M) [3]:** Europa 42.1%, SSEA-CIS-MEA 29.6%, Asia Oriental-Australia-GTR 16.3% y Américas 11.9%. En Japón, IQOS tenía 31.7% del total de nicotina (3T25) [7].
+- Ingresos netos sin impuestos especiales (27.8 mil M en el 1S26) [2].
 
 ## 2. Último reporte: 2T26 (22-jul-2026) [1]
 - **Ingresos netos:** US$11,192 M (+10.4%; orgánicos +7.6%). Consenso de ingresos: no verificado.
-- **Margen operativo:** 40.5% GAAP; ajustado 42.6% (+0.7 pp).
+- **Margen operativo:** 40.5% GAAP y 42.6% ajustado (+0.7 pp).
 - **UPA:** GAAP de 1.80, con un deterioro no monetario de 0.33 por RBH en Canadá. **Ajustada de 2.20 (+15.2%) contra 2.05 de consenso (Yahoo): +7.3%**. La guía del trimestre era de 2.02-2.07 [1][7][9].
 - **Guía 2026, actualizada el 8-sep solo por tipo de cambio [4]:**
   - UPA ajustada de **US$8.35-8.50**; sin tipo de cambio, +7.5-9.5%, igual desde febrero. Ingresos orgánicos +5-7%.
@@ -18,7 +18,7 @@
   - **3T26: UPA ajustada de 2.29-2.34**, con +1 centavo de tipo de cambio.
 - **Datos operativos:**
   1. Embarques de SFP +7.5%. IQOS llegó a 9.2% del mercado de cigarros más HTU donde está presente (+0.2 pp).
-  2. Embarques de ZYN en EUA +1.8% (2.9 mil M de bolsas), con consumo plano en una categoría que crece.
+  2. Embarques de ZYN en EUA +1.8% (2.9 mil M de bolsas); consumo plano en una categoría que crece.
   3. Precio de combustibles +10.0% y volumen de cigarros +1.1% [1].
 
 ## 3. Tabla financiera (US$ M; EDGAR XBRL [2], dossier interno y comunicados [1][7])
@@ -89,7 +89,7 @@ Notas: FCF = flujo operativo − capex (el 1T es estacionalmente negativo). SBC 
 - **Bajista (20%)**: IQOS se frena (Japón, sabores en la UE) y ZYN pierde participación; UPA ajustada 2027 <8.9.
 - **Base (55%)**: UPA ajustada 2026 de 8.40-8.55, ingresos orgánicos de +6-7% y 2027 de 9.1-9.3.
 - **Alcista (25%)**: ZYN se recupera, IQOS ILUMA llega a EUA y UPA 2027 >9.4.
-- **Qué cambiaría el escenario:** IQOS en Japón tras el 1-oct, ZYN y la guía 2027.
+- **Qué cambiaría el escenario:** IQOS en Japón, ZYN y la guía 2027.
 
 ## 8. Pronósticos registrados (3T26)
 - **Fecha: 21-oct-2026.** Yahoo la marca como confirmada; Zacks dice 20-oct [9][10]. El comunicado de la empresa no se verificó; el 3T25 se reportó el 21-oct-2025 [7].

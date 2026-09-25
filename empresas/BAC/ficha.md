@@ -76,8 +76,8 @@ Múltiplos: P/U de 12 meses de 12.9x (UPA 4.34); adelantado 12.1x para 2026 y 10
 ## 8. Pronósticos registrados (3T26)
 - **Fecha de reporte: 14-oct-2026, antes de la apertura.** Yahoo la marca como no estimada y Nasdaq/Zacks como "expected" [9][11]. Al 25-sep no se encontró el comunicado de BAC [13]; la fecha del 2T se anunció el 30-jun, 14 días antes [21].
 - **Ingresos del 3T26 (netos de gasto por intereses, GAAP):** punto US$30,350 M; intervalo de 80%: 29,600-31,200. Consenso US$31,157 M (Yahoo, 9 analistas, rango 30,054-32,051, 25-sep) [9]; la base (GAAP o FTE) no se verificó. Supuestos: NII de 16.35 mil M (sube la tasa y reprecia HTM) y comisiones de 14.0 mil M = 15.56 del 2T − 1.4 de S&T − 0.4 de IB + 0.2 de GWIM y tarjetas. En la comparación a/a: 3T25 reexpresado de 29,040, así que +4.5%.
-- **UPA diluida del 3T26:** punto US$1.12; intervalo de 80%: 1.04-1.21. Consenso US$1.165 (Yahoo, 16, rango 1.01-1.25) y 1.16 (Zacks, 6) [9][11]. Supuestos: gasto de 18.30 mil M, provisión de 1.40, tasa de 20.5%, preferentes de 0.40 y 7,190 M de acciones: (30.35 − 18.30 − 1.40) × 0.795 − 0.40 = 8.07 mil M / 7,190 = 1.12.
-- **Binarios:** ingresos > US$31,157 M: **p = 0.15**; UPA > US$1.16: **p = 0.37**. Me aparto de la tasa base de beat (78%) porque la guía del 14-sep es posterior a parte del consenso. Es la apuesta más contraria del lote.
+- **UPA diluida del 3T26:** punto US$1.13; intervalo de 80%: 1.05-1.22. Consenso US$1.165 (Yahoo, 16, rango 1.01-1.25) y 1.16 (Zacks, 6) [9][11]. Supuestos: gasto de 18.30 mil M, provisión de 1.40, tasa de 20% (19.9% en el 3T25 reexpresado), preferentes de 0.40 y 7,190 M de acciones: (30.35 − 18.30 − 1.40) × 0.80 − 0.40 = 8.12 mil M / 7,190 = 1.13.
+- **Binarios:** ingresos > US$31,157 M: **p = 0.13**; UPA > US$1.16: **p = 0.33**. Me aparto de la tasa base de beat (78%) porque la guía del 14-sep es posterior a parte del consenso. Es la apuesta más contraria del lote.
 
 ## 9. Catalizadores con fecha y riesgos
 **Catalizadores:** 14-oct, reporte del 3T26; 27-28 oct, FOMC; 3-nov, elecciones intermedias [20]; mediados de ene-2027, 4T26 con guía de NII 2027; sin fecha, reglas finales de capital.

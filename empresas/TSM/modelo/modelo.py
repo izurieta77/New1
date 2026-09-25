@@ -204,7 +204,7 @@ def wacc_bottom_up(d: dict, e_usd: float, deuda_usd: float, lam: float) -> dict:
             "naturaleza": "calculo con insumos citados; beta, ERP, CRP y lambda son estimaciones o supuestos, no hechos del emisor"}
 
 
-def dcf_inverso_tsm(base: dict, t12: dict) -> dict:
+def dcf_inverso_tsm(base: dict, t12: dict, escenarios: dict | None = None) -> dict:
     d = base["insumos_complementarios"]["dcf_inverso"]
     b = d["balance_30jun2026"]
     fx = _v(d, "tipo_cambio")
@@ -245,6 +245,15 @@ def dcf_inverso_tsm(base: dict, t12: dict) -> dict:
     variantes = {f"deuda neta: {k}": correr(w0, g0, margen_base, v_) for k, v_ in variantes_dn.items() if not k.startswith("base")}
     variantes["lambda por ingresos (sede Taiwan 1S26)"] = correr(w_ing["wacc"], g0, margen_base, dn_base)
     variantes["precio local 2330.TW convertido a ADS (sin prima del ADR)"] = correr(w0, g0, margen_base, dn_base, precio_local_ads)
+    comparacion = {}
+    fx_ref = base["insumos_complementarios"]["anclas_escenarios"]["guia_3T26"]["tipo_cambio"]
+    for n, e in (escenarios or {}).items():
+        ult = e["periodos"][-1]
+        m_esc = (ult["flujo"]["fcf"] - ult["resultados"]["sbc"]) / ult["resultados"]["ingresos"]
+        variantes[f"margen FCF - SBC de 2030E del escenario {n}"] = correr(w0, g0, m_esc, dn_base)
+        ing_2030_usd = ult["resultados"]["ingresos"] / fx_ref
+        comparacion[n] = {"margen_fcf_menos_sbc_2030E": m_esc, "ingresos_2030E_usd_m_a_32": ing_2030_usd,
+                          "cagr_usd_desde_12m_a_2030E_4_5_anos": (ing_2030_usd / ing_usd) ** (1 / 4.5) - 1}
     g_impl = base_run["crecimiento_implicito"]
     ingresos_4_5 = ing_usd * (1 + g_impl) ** 4.5 if g_impl is not None else None
     return {
@@ -270,6 +279,7 @@ def dcf_inverso_tsm(base: dict, t12: dict) -> dict:
         "sensibilidad": rejilla,
         "rango_sensibilidad": [min(r["crecimiento_implicito"] for r in rejilla), max(r["crecimiento_implicito"] for r in rejilla)],
         "variantes": variantes,
+        "comparacion_con_escenarios": comparacion,
     }
 
 
@@ -443,7 +453,7 @@ def main() -> int:
                     "esperado": 0.0, "obtenido": geo["control_max_error_identidad"], "diferencia": geo["control_max_error_identidad"],
                     "tolerancia": 0.0, "estado": "OK" if geo["control_ok"] else "FALLA", "detalle": "Decimal exacto"})
     res["ttm"] = t12
-    res["dcf_inverso"] = dcf_inverso_tsm(base, t12)
+    res["dcf_inverso"] = dcf_inverso_tsm(base, t12, res["escenarios"])
     res["sensibilidad_geopolitica"] = geo
     res["puente_margen_bruto"] = puente_tabla
     res["punto_de_quiebre_financiamiento"] = punto_de_quiebre(base)

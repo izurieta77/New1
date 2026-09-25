@@ -98,7 +98,7 @@ Notas: la UPA non-GAAP excluye SBC, activos digitales, SpaceX y partidas fiscale
 ## 8. Pronósticos registrados (3T26)
 - **Fecha: ~21-oct-2026, estimada** (Yahoo; Zacks estima 28-oct) [7][8]. El 3T25 se reportó el 22-oct-2025 [5]. Tesla anuncia la fecha con su reporte de entregas (así lo hizo en el 1T y el 2T [4]).
 - **Ingresos totales:** punto de **US$27,800 M**; intervalo de 80%: 26,000-29,500. Consenso de 27,524 M (Yahoo, 27 analistas, 25-sep-2026) [7]. Supuestos:
-  - Entregas de ~465 mil (430-500 mil). El cuello de botella son las baterías y la producción del 2T fue de 452 mil.
+  - Entregas de ~465 mil (430-500 mil); las baterías limitan y la producción del 2T fue de 452 mil.
   - Ingreso automotriz de ~US$42 mil por unidad (41.7 mil en el 2T); energía de 3.2-3.6 mil M; servicios y otros de 4.6-4.8 mil M.
 - **UPA non-GAAP:** punto de **US$0.38**; intervalo de 80%: 0.26-0.50. Consenso de 0.4556 (Yahoo, 25 analistas). Zacks da 0.26 (11), con una base que no se pudo conciliar (no verificado) [7][8]. Supuestos:
   - Margen bruto de 17.5-18.5%, sin el cargo de garantía del 2T.
