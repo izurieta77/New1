@@ -651,6 +651,8 @@ def metricas(filas: list) -> dict:
     for r in rn:
         curva.append(curva[-1] * (1 + r))
     a = anios(d0, d1)
+    fechas_curva = [d0] + [f["d1"] for f in filas]
+    mdd, ip, iv = mdd_curva(curva)
     sd_ex = statistics.stdev(ex)
     sr_p = statistics.fmean(ex) / sd_ex if sd_ex > 0 else None
     g3, g4 = asim_curt(ex) if sd_ex > 0 else (None, None)
@@ -661,7 +663,7 @@ def metricas(filas: list) -> dict:
         "sharpe": sr_p * math.sqrt(12) if sr_p is not None else None,
         "sr_periodo": sr_p, "asimetria": g3, "curtosis": g4,
         "psr": psr(sr_p, len(ex), g3, g4) if sr_p is not None else None,
-        "mdd": mdd_curva(curva)[0],
+        "mdd": mdd, "mdd_pico": str(fechas_curva[ip]), "mdd_valle": str(fechas_curva[iv]),
         "tiempo": sum(1 for f in filas if f["w"] != 0) / len(filas),
         "cambios": sum(1 for f in filas if f["w"] != f["w_prev"]),
         "costo_anual": sum(f["c"] for f in filas) / a,
@@ -812,7 +814,8 @@ class Comparador:
             rep, d = reportado
         dec = d if dec is None else dec
         dif = propio - rep
-        tol = TOL[tipo]
+        # una cifra impresa con menos decimales (p. ej. "-28%") no puede ser mas precisa que su redondeo
+        tol = max(TOL[tipo], 0.5 * 10 ** (-dec)) if tipo != "entero" else 0
         ok = abs(dif) <= tol + 1e-9
         fmt = lambda x: f"{x + 0.0:.{dec}f}".replace("-0." + "0" * dec, "0." + "0" * dec) if dec else str(round(x))
         exacto = fmt(propio) == fmt(rep)
@@ -943,7 +946,10 @@ def comparar(texto: str, R: dict) -> list:
     g = C.buscar(r"entre el S&P en MXN \(([\d.]+)%\) y en USD \(([\d.]+)%\), porque ([\d.]+) × ([\d.]+) − 1 = ([\d.]+)%")
     C.num(b, "W1", "S&P MXN", "pct", g[0], P(B["cagr"]["spy_dex|W1"]))
     C.num(b, "W1", "S&P USD", "pct", g[1], P(B["cagr"]["spy_usd|W1"]))
-    C.num(b, "W1", "(1+USD)(1+FX)-1", "pct", g[4], P((1 + B["cagr"]["spy_usd|W1"]) * (1 + AM["cagr_fx"]) - 1))
+    C.num(b, "W1", "factor 1 + CAGR USD", "nivel", g[2], 1 + B["cagr"]["spy_usd|W1"], dec=4)
+    C.num(b, "W1", "factor 1 + CAGR MXN/USD", "nivel", g[3], 1 + AM["cagr_fx"], dec=4)
+    C.num(b, "W1", "aritmetica del README con sus factores impresos", "pct", g[4],
+          P(float(g[2]) * float(g[3]) - 1))
     g = C.buscar(r"NAFTRAC en W1 tuvo volatilidad de ([\d.]+)% y caída máxima mensual de (−[\d.]+)%")
     C.num(b, "W1", "vol NAFTRAC", "pct", g[0], P(AM["vol_naftrac"]))
     C.num(b, "W1", "MDD mensual NAFTRAC", "pct", g[1], P(AM["mdd_naftrac_mensual"]))
@@ -998,8 +1004,14 @@ def comparar(texto: str, R: dict) -> list:
     # coincidencias dentro de +-1.0 pp
     usd = [k for k in A4 if "_usd|" in k and abs(abs(P(A4[k][0] if isinstance(A4[k], list) else A4[k])) - 47) <= 1.0]
     mxn = [k for k in A4 if "_mxn" in k and abs(abs(P(A4[k][0] if isinstance(A4[k], list) else A4[k])) - 21.6) <= 1.0]
-    C.cat(b, "coincidencias con 47% (USD)", "lista", "spy_usd|mdd_diaria_2008; sptr_usd|mdd_diaria_2008", "; ".join(sorted(usd)))
-    C.cat(b, "coincidencias con 21.6% (MXN)", "lista", "gspc_mxn_fix|cambio_2008; gspc_mxn|cambio_2008", "; ".join(sorted(mxn)))
+    C.buscar(r"\*\*47% en USD:\*\* solo la caída diaria dentro de 2008 \(SPY (−[\d.]+)% y \^SP500TR (−[\d.]+)%\)")
+    C.cat(b, "coincidencias con 47% (USD), README: 'solo la caida diaria dentro de 2008 (SPY y ^SP500TR)'", "lista",
+          sorted(["spy_usd|mdd_diaria_2008", "sptr_usd|mdd_diaria_2008"]), sorted(usd))
+    C.buscar(r"\*\*21.6% en MXN:\*\* solo el cambio entre fechas fijas del año calendario \*\*sin dividendos\*\* \(\^GSPC × DEXMXUS (−[\d.]+)%; \^GSPC × FIX (−[\d.]+)%\)")
+    C.cat(b, "coincidencias con 21.6% (MXN), README: 'solo el cambio de fechas fijas sin dividendos (^GSPC x DEXMXUS y x FIX)'", "lista",
+          sorted(["gspc_mxn|cambio_2008", "gspc_mxn_fix|cambio_2008"]), sorted(mxn))
+    g = C.buscar(r"Con dividendos da (−[\d.]+)%\.")
+    C.num(b, "cambio_2008 con dividendos (SPY TR MXN)", "texto", "pct", g[0], P(A4["spy_mxn|cambio_2008"]))
 
     # ---------- 3a. tabla principal 2008-2026 y 3b. 1995-2007
     def clave_regla(fila):
@@ -1152,6 +1164,11 @@ def comparar(texto: str, R: dict) -> list:
     reproducen = sum(1 for k in trimestrales if abs(P(PH[k]["sma"]["cagr"]) - 14.6) <= 0.30
                      and abs(P(PH[k]["bh"]["cagr"]) - 13.5) <= 0.30 and abs(P(PH[k]["sma"]["mdd"]) + 12) <= 1.0
                      and abs(P(PH[k]["bh"]["mdd"]) + 31) <= 1.0)
+    C.buscar(r"El −31% de comprar y mantener es la caída del pico de septiembre de 2007 al valle de febrero de 2009")
+    for k in ("2007-01_2026-08", "2007-07_2026-08", "2007-01_2026-06"):
+        h = PH[k]["bh"]
+        C.cat(b, f"post-hoc {k}: pico y valle del -31% de comprar y mantener", "meses", "2007-09 a 2009-02",
+              f"{h['mdd_pico'][:7]} a {h['mdd_valle'][:7]}")
     g = C.buscar(r"En la búsqueda post-hoc, (\d) de las (\d) ventanas que empiezan en 2007 reproducen las cuatro cifras")
     C.num(b, "post-hoc: ventanas que reproducen (inicios ene/abr/jul/oct x fin jun/ago, inferido)", "numero",
           "entero", g[0], reproducen)
@@ -1213,6 +1230,50 @@ def comparar(texto: str, R: dict) -> list:
          [("correlacion", "corr", AM["corr_usd_fx"]), ("MDD MXN W1", "pct", P(AM["mdd_mxn_mensual"])), ("MDD USD W1", "pct", P(AM["mdd_usd_mensual"]))]),
         (r"Con dividendos netos de 30% de retención baja a \*\*([\d.]+)%\*\*", [("S&P net30 W1", "pct", P(B["cagr"]["spy_net30_dex|W1"]))]),
         (r"con una depreciación del peso de ([\d.]+)% anual", [("CAGR MXN/USD W1", "pct", P(AM["cagr_fx"]))]),
+        # seccion 4 (calificacion)
+        (r"\| ([\d.]+)% \(W1\); ([\d.]+)% \(W2\) \|", [("sec.4 A1 W1", "pct", P(B["cagr"]["spy_dex|W1"])),
+                                                        ("sec.4 A1 W2", "pct", P(B["cagr"]["spy_dex|W2"]))]),
+        (r"Rango según el inicio: ([\d.]+)-([\d.]+)%", [("sec.4 A1 inicio min", "pct", P(SV["inicio"]["sp_mxn_min"][1])),
+                                                       ("sec.4 A1 inicio max", "pct", P(SV["inicio"]["sp_mxn_max"][1]))]),
+        (r"\| ([\d.]+)% \(W1\); ([\d.]+)% con fin en jun-2026 \|", [("sec.4 A2 W1", "pct", P(B["cagr"]["naftrac_adj|W1"])),
+                                                                     ("sec.4 A2 fin jun-2026", "pct", P(SV["fin"]["naftrac|2026-06-30"]))]),
+        (r"La estimación post-hoc con dividendos es ~([\d.]+)-([\d.]+)%", [("sec.4 A2 extremo bajo", "pct", P(B["cagr"]["eww_adj_dex|W1"])),
+                                                                          ("sec.4 A2 extremo alto", "pct", P(R["naftrac_imputado"]))]),
+        (r"\| A3: CETES \| [\d.]+% \| ([\d.]+)% \|", [("sec.4 A3 CETES W1", "pct", P(B["cagr"]["cetes|W1"]))]),
+        (r"\| (−[\d.]+)% \(caída diaria dentro de 2008, USD\); (−[\d.]+)% \(cambio del año calendario, MXN, precio\)",
+         [("sec.4 A4 USD", "pct", P(A4["spy_usd|mdd_diaria_2008"][0])), ("sec.4 A4 MXN precio", "pct", P(A4["gspc_mxn|cambio_2008"]))]),
+        (r"Con la misma medida: (−[\d.]+)% contra (−[\d.]+)%, o (−[\d.]+)% contra (−[\d.]+)%",
+         [("sec.4 A4 cambio USD", "pct", P(A4["spy_usd|cambio_2008"])), ("sec.4 A4 cambio MXN", "pct", P(A4["spy_mxn|cambio_2008"])),
+          ("sec.4 A4 diaria USD", "pct", P(A4["spy_usd|mdd_diaria_2008"][0])), ("sec.4 A4 diaria MXN", "pct", P(A4["spy_mxn|mdd_diaria_2008"][0]))]),
+        (r"\| ([\d.]+)-([\d.]+)% / (−[\d.]+) a (−[\d.]+)% contra ([\d.]+)% / (−[\d.]+) a (−[\d.]+)% \|",
+         [("sec.4 A5 SMA T0 CAGR", "pct", P(V["sma10_mxn_T0"]["2008-2026"]["cagr"])), ("sec.4 A5 SMA T1 CAGR", "pct", P(V["sma10_mxn_T1"]["2008-2026"]["cagr"])),
+          ("sec.4 A5 SMA T0 MDD", "pct", P(V["sma10_mxn_T0"]["2008-2026"]["mdd"])), ("sec.4 A5 SMA T1 MDD", "pct", P(V["sma10_mxn_T1"]["2008-2026"]["mdd"])),
+          ("sec.4 A5 B&H CAGR", "pct", P(V["bh_T0"]["2008-2026"]["cagr"])), ("sec.4 A5 B&H T0 MDD", "pct", P(V["bh_T0"]["2008-2026"]["mdd"])),
+          ("sec.4 A5 B&H T1 MDD", "pct", P(V["bh_T1"]["2008-2026"]["mdd"]))]),
+        (r"La ventaja de rendimiento no es significativa \(t = ([\d.]+)\) y el DSR en 1995-2007 es ([\d.]+)\.",
+         [("sec.4 A5 t", "t", NW["sma10_mxn_T1|2008-2026"]["t"]), ("sec.4 A5 DSR 1995-2007", "prob", DSR["1995-2007|sma10_mxn_T1|N16"]["dsr"])]),
+        # conclusiones permitidas y seccion 5
+        (r"con rendimiento total en MXN rindió \*\*([\d.]+)%\*\* anual antes de impuestos. Si se empieza un mes después, \*\*([\d.]+)%\*\*. El resultado depende mucho de la fecha de inicio: ([\d.]+)-([\d.]+)%",
+         [("concl. S&P W1", "pct", P(B["cagr"]["spy_dex|W1"])), ("concl. S&P W2", "pct", P(B["cagr"]["spy_dex|W2"])),
+          ("concl. inicio min", "pct", P(SV["inicio"]["sp_mxn_min"][1])), ("concl. inicio max", "pct", P(SV["inicio"]["sp_mxn_max"][1]))]),
+        (r"le ganó a CETES con significancia \(t NW = ([\d.]+)\). En 1995-2007 no: CETES rindió ([\d.]+)% y el S&P en MXN ([\d.]+)%",
+         [("concl. t S&P-CETES", "t", R["pruebas_benchmarks"]["sp_menos_cetes|2008-01_2026-08"]["t"]),
+          ("concl. CETES 1995-2007", "pct", P(V["cetes_T0"]["1995-2007"]["cagr"])), ("concl. S&P MXN 1995-2007", "pct", P(V["bh_T0"]["1995-2007"]["cagr"]))]),
+        (r"el contraste correcto para 2008 es \*\*−([\d.]+)% contra −([\d.]+)%\*\* \(año calendario\) o \*\*−([\d.]+)% contra −([\d.]+)%\*\*",
+         [("concl. cambio USD", "pct", -P(A4["spy_usd|cambio_2008"])), ("concl. cambio MXN", "pct", -P(A4["spy_mxn|cambio_2008"])),
+          ("concl. diaria USD", "pct", -P(A4["spy_usd|mdd_diaria_2008"][0])), ("concl. diaria MXN", "pct", -P(A4["spy_mxn|mdd_diaria_2008"][0]))]),
+        (r"NAFTRAC rindió ≥ ([\d.]+)% anual", [("concl. NAFTRAC piso", "pct", P(B["cagr"]["naftrac_adj|W1"]))]),
+        (r"Los CETES 28 de Banxico rindieron ([\d.]+)% anual en W1", [("concl. CETES W1", "pct", P(B["cagr"]["cetes|W1"]))]),
+        (r"Es ([\d.]+)% desde el cierre de 2007, y ([\d.]+)% solo empezando a fin de enero de 2008",
+         [("concl. NO: S&P W1", "pct", P(B["cagr"]["spy_dex|W1"])), ("concl. NO: S&P W2", "pct", P(B["cagr"]["spy_dex|W2"]))]),
+        (r"Que un DSR de ([\d.]+) en 2008-2026 valide la regla. Mide el Sharpe contra cero en un tramo en el que comprar y mantener también pasa \(PSR de ([\d.]+)\). En 1995-2007 el DSR es ([\d.]+)\.",
+         [("concl. NO: DSR 2008-2026", "prob", DSR["2008-2026|sma10_mxn_T1|N16"]["dsr"]), ("concl. NO: PSR B&H", "prob", DSR["2008-2026|psr_bh_T1"]),
+          ("concl. NO: DSR 1995-2007", "prob", DSR["1995-2007|sma10_mxn_T1|N16"]["dsr"])]),
+        (r"S&P 500 con rendimiento total vía SPY: \*\*([\d.]+)%\*\* anual", [("sec.5 meta S&P", "pct", P(B["cagr"]["spy_dex|W1"]))]),
+        (r"CETES 28: \*\*([\d.]+)%\*\*", [("sec.5 meta CETES", "pct", P(B["cagr"]["cetes|W1"]))]),
+        (r"IPC: \*\*al menos ([\d.]+)%\*\*, probablemente ([\d.]+)-([\d.]+)% con dividendos",
+         [("sec.5 meta IPC piso", "pct", P(B["cagr"]["naftrac_adj|W1"])), ("sec.5 IPC extremo bajo", "pct", P(B["cagr"]["eww_adj_dex|W1"])),
+          ("sec.5 IPC extremo alto", "pct", P(R["naftrac_imputado"]))]),
     ]
     for patron, specs in T:
         g = C.buscar(patron)

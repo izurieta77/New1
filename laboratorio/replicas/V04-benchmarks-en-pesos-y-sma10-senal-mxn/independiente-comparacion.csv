@@ -176,7 +176,9 @@ bloque,fila,campo,tipo,reportado,propio,dif,tolerancia,ok,exacto_al_redondeo
 1f. Amortiguador,W1,CAGR MXN/USD,pct,2.4,2.403671,0.003671,0.1,True,True
 1f. Amortiguador,W1,S&P MXN,pct,13.97,13.965313,-0.004687,0.1,True,True
 1f. Amortiguador,W1,S&P USD,pct,11.29,11.290261,0.000261,0.1,True,True
-1f. Amortiguador,W1,(1+USD)(1+FX)-1,pct,13.96,13.965313,0.005313,0.1,True,False
+1f. Amortiguador,W1,factor 1 + CAGR USD,nivel,1.1129,1.112903,0.000003,0.01,True,True
+1f. Amortiguador,W1,factor 1 + CAGR MXN/USD,nivel,1.024,1.024037,0.000037,0.01,True,True
+1f. Amortiguador,W1,aritmetica del README con sus factores impresos,pct,13.96,13.960960,0.000960,0.1,True,True
 1f. Amortiguador,W1,vol NAFTRAC,pct,16.1,16.057885,-0.042115,0.1,True,True
 1f. Amortiguador,W1,MDD mensual NAFTRAC,pct,-45.0,-45.026474,-0.026474,0.1,True,True
 1g. Controles de datos,SPY TR reconstruido x DEXMXUS,W1,pct,13.97,13.969612,-0.000388,0.1,True,True
@@ -242,13 +244,14 @@ bloque,fila,campo,tipo,reportado,propio,dif,tolerancia,ok,exacto_al_redondeo
 2. A4 (2008),"mdd_mensual_crisis (mes pico, mes valle)",spy_usd,categoria,2007-10 a 2009-02,2007-10 a 2009-02,,igual,True,True
 2. A4 (2008),"mdd_mensual_crisis (mes pico, mes valle)",spy_mxn,categoria,2007-09 a 2009-02,2007-09 a 2009-02,,igual,True,True
 2. A4 (2008),cambio_2008,gspc_mxn_fix,pct,-22.05,-22.048493,0.001507,0.1,True,True
-2. A4 (2008),coincidencias con 47% (USD),lista,categoria,spy_usd|mdd_diaria_2008; sptr_usd|mdd_diaria_2008,sptr_usd|mdd_diaria_2008; spy_usd|mdd_diaria_2008,,igual,False,False
-2. A4 (2008),coincidencias con 21.6% (MXN),lista,categoria,gspc_mxn_fix|cambio_2008; gspc_mxn|cambio_2008,gspc_mxn_fix|cambio_2008; gspc_mxn|cambio_2008,,igual,True,True
+2. A4 (2008),"coincidencias con 47% (USD), README: 'solo la caida diaria dentro de 2008 (SPY y ^SP500TR)'",lista,categoria,"['sptr_usd|mdd_diaria_2008', 'spy_usd|mdd_diaria_2008']","['sptr_usd|mdd_diaria_2008', 'spy_usd|mdd_diaria_2008']",,igual,True,True
+2. A4 (2008),"coincidencias con 21.6% (MXN), README: 'solo el cambio de fechas fijas sin dividendos (^GSPC x DEXMXUS y x FIX)'",lista,categoria,"['gspc_mxn_fix|cambio_2008', 'gspc_mxn|cambio_2008']","['gspc_mxn_fix|cambio_2008', 'gspc_mxn|cambio_2008']",,igual,True,True
+2. A4 (2008),cambio_2008 con dividendos (SPY TR MXN),texto,pct,-19.9,-19.917587,-0.017587,0.1,True,True
 3. SMA tabla 2008-2026,bh_T0,cagr,pct,13.97,13.965313,-0.004687,0.1,True,True
 3. SMA tabla 2008-2026,bh_T0,vol,pct,13.46,13.464199,0.004199,0.1,True,True
 3. SMA tabla 2008-2026,bh_T0,sharpe,sharpe,0.579,0.579107,0.000107,0.01,True,True
 3. SMA tabla 2008-2026,bh_T0,mdd,pct,-28.43,-28.434219,-0.004219,0.1,True,True
-3. SMA tabla 2008-2026,bh_T0,tiempo,pct,100.0,100.000000,0.000000,0.1,True,True
+3. SMA tabla 2008-2026,bh_T0,tiempo,pct,100.0,100.000000,0.000000,0.5,True,True
 3. SMA tabla 2008-2026,bh_T0,cambios,entero,0.0,0,0.000000,0,True,True
 3. SMA tabla 2008-2026,bh_T0,costo_anual,costo,0.0,0.000000,0.000000,0.01,True,True
 3. SMA tabla 2008-2026,sma10_usd_T0,cagr,pct,12.26,12.256145,-0.003855,0.1,True,True
@@ -269,7 +272,7 @@ bloque,fila,campo,tipo,reportado,propio,dif,tolerancia,ok,exacto_al_redondeo
 3. SMA tabla 2008-2026,bh_T1,vol,pct,14.38,14.377484,-0.002516,0.1,True,True
 3. SMA tabla 2008-2026,bh_T1,sharpe,sharpe,0.552,0.552183,0.000183,0.01,True,True
 3. SMA tabla 2008-2026,bh_T1,mdd,pct,-29.5,-29.504802,-0.004802,0.1,True,True
-3. SMA tabla 2008-2026,bh_T1,tiempo,pct,100.0,100.000000,0.000000,0.1,True,True
+3. SMA tabla 2008-2026,bh_T1,tiempo,pct,100.0,100.000000,0.000000,0.5,True,True
 3. SMA tabla 2008-2026,bh_T1,cambios,entero,0.0,0,0.000000,0,True,True
 3. SMA tabla 2008-2026,bh_T1,costo_anual,costo,0.0,0.000000,0.000000,0.01,True,True
 3. SMA tabla 2008-2026,sma10_usd_T1,cagr,pct,12.16,12.157937,-0.002063,0.1,True,True
@@ -289,9 +292,9 @@ bloque,fila,campo,tipo,reportado,propio,dif,tolerancia,ok,exacto_al_redondeo
 3. SMA tabla 2008-2026,cetes_T0,cagr,pct,6.37,6.372391,0.002391,0.1,True,True
 3. SMA tabla 2008-2026,cetes_T0,vol,pct,0.72,0.722973,0.002973,0.1,True,True
 3. SMA tabla 2008-2026,cetes_T0,mdd,pct,0.0,0.000000,0.000000,0.1,True,True
-3. SMA tabla 2008-2026,cetes_T0,tiempo,pct,0.0,0.000000,0.000000,0.1,True,True
+3. SMA tabla 2008-2026,cetes_T0,tiempo,pct,0.0,0.000000,0.000000,0.5,True,True
 3. SMA tabla 2008-2026,cetes_T0,cambios,entero,0.0,0,0.000000,0,True,True
-3. SMA tabla 2008-2026,cetes_T0,costo_anual,costo,0.0,0.000000,0.000000,0.01,True,True
+3. SMA tabla 2008-2026,cetes_T0,costo_anual,costo,0.0,0.000000,0.000000,0.5,True,True
 3. SMA tabla 1995-2007,bh_T0,cagr,pct,18.01,18.008689,-0.001311,0.1,True,True
 3. SMA tabla 1995-2007,bh_T0,vol,pct,15.85,15.850793,0.000793,0.1,True,True
 3. SMA tabla 1995-2007,bh_T0,sharpe,sharpe,0.058,0.057564,-0.000436,0.01,True,True
@@ -745,6 +748,9 @@ bloque,fila,campo,tipo,reportado,propio,dif,tolerancia,ok,exacto_al_redondeo
 3g. Cifras recibidas de A5,"POST-HOC T0, de ene-2007 a jun-2026",B&H CAGR,pct,13.66,13.657325,-0.002675,0.1,True,True
 3g. Cifras recibidas de A5,"POST-HOC T0, de ene-2007 a jun-2026",B&H MDD,pct,-31.15,-31.150093,-0.000093,0.1,True,True
 3g. Cifras recibidas de A5,"POST-HOC T0, de ene-2007 a jun-2026",dentro de tolerancia (4 banderas),categoria,"[True, True, True, True]","[True, True, True, True]",,igual,True,True
+3g. Cifras recibidas de A5,post-hoc 2007-01_2026-08: pico y valle del -31% de comprar y mantener,meses,categoria,2007-09 a 2009-02,2007-09 a 2009-02,,igual,True,True
+3g. Cifras recibidas de A5,post-hoc 2007-07_2026-08: pico y valle del -31% de comprar y mantener,meses,categoria,2007-09 a 2009-02,2007-09 a 2009-02,,igual,True,True
+3g. Cifras recibidas de A5,post-hoc 2007-01_2026-06: pico y valle del -31% de comprar y mantener,meses,categoria,2007-09 a 2009-02,2007-09 a 2009-02,,igual,True,True
 3g. Cifras recibidas de A5,"post-hoc: ventanas que reproducen (inicios ene/abr/jul/oct x fin jun/ago, inferido)",numero,entero,7.0,7,0.000000,0,True,True
 4. Texto (Resumen y conclusiones),enero 2008 USD,texto,pct,6.0,6.046074,0.046074,0.1,True,True
 4. Texto (Resumen y conclusiones),enero 2008 MXN,texto,pct,6.9,6.888629,-0.011371,0.1,True,True
@@ -801,7 +807,54 @@ bloque,fila,campo,tipo,reportado,propio,dif,tolerancia,ok,exacto_al_redondeo
 4. Texto (Resumen y conclusiones),t minima SMA10-MXN,texto,t,0.18,0.178195,-0.001805,0.05,True,True
 4. Texto (Resumen y conclusiones),t maxima SMA10-MXN,texto,t,0.64,0.641229,0.001229,0.05,True,True
 4. Texto (Resumen y conclusiones),correlacion,texto,corr,-0.56,-0.560093,-0.000093,0.01,True,True
-4. Texto (Resumen y conclusiones),MDD MXN W1,texto,pct,-28.0,-28.434219,-0.434219,0.1,False,True
-4. Texto (Resumen y conclusiones),MDD USD W1,texto,pct,-48.0,-48.218685,-0.218685,0.1,False,True
+4. Texto (Resumen y conclusiones),MDD MXN W1,texto,pct,-28.0,-28.434219,-0.434219,0.5,True,True
+4. Texto (Resumen y conclusiones),MDD USD W1,texto,pct,-48.0,-48.218685,-0.218685,0.5,True,True
 4. Texto (Resumen y conclusiones),S&P net30 W1,texto,pct,13.35,13.349600,-0.000400,0.1,True,True
 4. Texto (Resumen y conclusiones),CAGR MXN/USD W1,texto,pct,2.4,2.403671,0.003671,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A1 W1,texto,pct,13.97,13.965313,-0.004687,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A1 W2,texto,pct,14.47,14.472232,0.002232,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A1 inicio min,texto,pct,13.4,13.411844,0.011844,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A1 inicio max,texto,pct,17.2,17.175602,-0.024398,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A2 W1,texto,pct,6.11,6.111448,0.001448,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A2 fin jun-2026,texto,pct,6.29,6.288652,-0.001348,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A2 extremo bajo,texto,pct,6.4,6.421271,0.021271,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A2 extremo alto,texto,pct,6.7,6.656878,-0.043122,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A3 CETES W1,texto,pct,6.37,6.372391,0.002391,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A4 USD,texto,pct,-47.6,-47.579594,0.020406,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A4 MXN precio,texto,pct,-22.1,-22.059879,0.040121,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A4 cambio USD,texto,pct,-36.8,-36.794990,0.005010,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A4 cambio MXN,texto,pct,-19.9,-19.917587,-0.017587,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A4 diaria USD,texto,pct,-47.6,-47.579594,0.020406,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A4 diaria MXN,texto,pct,-34.9,-34.883243,0.016757,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A5 SMA T0 CAGR,texto,pct,15.23,15.232711,0.002711,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A5 SMA T1 CAGR,texto,pct,15.5,15.503874,0.003874,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A5 SMA T0 MDD,texto,pct,-12.2,-12.227587,-0.027587,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A5 SMA T1 MDD,texto,pct,-12.7,-12.707876,-0.007876,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A5 B&H CAGR,texto,pct,13.97,13.965313,-0.004687,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A5 B&H T0 MDD,texto,pct,-28.4,-28.434219,-0.034219,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A5 B&H T1 MDD,texto,pct,-29.5,-29.504802,-0.004802,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.4 A5 t,texto,t,0.55,0.547095,-0.002905,0.05,True,True
+4. Texto (Resumen y conclusiones),sec.4 A5 DSR 1995-2007,texto,prob,0.32,0.322008,0.002008,0.005,True,True
+4. Texto (Resumen y conclusiones),concl. S&P W1,texto,pct,13.97,13.965313,-0.004687,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. S&P W2,texto,pct,14.47,14.472232,0.002232,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. inicio min,texto,pct,13.4,13.411844,0.011844,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. inicio max,texto,pct,17.2,17.175602,-0.024398,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. t S&P-CETES,texto,t,2.39,2.385877,-0.004123,0.05,True,True
+4. Texto (Resumen y conclusiones),concl. CETES 1995-2007,texto,pct,18.3,18.326770,0.026770,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. S&P MXN 1995-2007,texto,pct,18.0,18.008689,0.008689,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. cambio USD,texto,pct,36.8,36.794990,-0.005010,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. cambio MXN,texto,pct,19.9,19.917587,0.017587,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. diaria USD,texto,pct,47.6,47.579594,-0.020406,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. diaria MXN,texto,pct,34.9,34.883243,-0.016757,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. NAFTRAC piso,texto,pct,6.1,6.111448,0.011448,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. CETES W1,texto,pct,6.37,6.372391,0.002391,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. NO: S&P W1,texto,pct,13.97,13.965313,-0.004687,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. NO: S&P W2,texto,pct,14.5,14.472232,-0.027768,0.1,True,True
+4. Texto (Resumen y conclusiones),concl. NO: DSR 2008-2026,texto,prob,0.997,0.996615,-0.000385,0.005,True,True
+4. Texto (Resumen y conclusiones),concl. NO: PSR B&H,texto,prob,0.99,0.991285,0.001285,0.005,True,True
+4. Texto (Resumen y conclusiones),concl. NO: DSR 1995-2007,texto,prob,0.32,0.322008,0.002008,0.005,True,True
+4. Texto (Resumen y conclusiones),sec.5 meta S&P,texto,pct,13.97,13.965313,-0.004687,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.5 meta CETES,texto,pct,6.37,6.372391,0.002391,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.5 meta IPC piso,texto,pct,6.11,6.111448,0.001448,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.5 IPC extremo bajo,texto,pct,6.4,6.421271,0.021271,0.1,True,True
+4. Texto (Resumen y conclusiones),sec.5 IPC extremo alto,texto,pct,6.7,6.656878,-0.043122,0.1,True,True
