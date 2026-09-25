@@ -70,7 +70,17 @@ Decisión del dueño (25-sep-2026): **10,000 MXN por IA**, que cuentan para la c
 - **Precios:** Yahoo `BTC-USD` y `ETH-USD` en USD, convertidos con `MXN=X`.
 - **Ejecución en papel:** el precio de ejecución es el cierre de la primera vela horaria completa posterior al commit de la decisión (Yahoo, intervalo 1h). Comisión: 0.1% por lado (tarifa spot estándar; verificar la tarifa real en la app).
 - **Boletas reales** en `bitacora/boletas/`, con: par tal como aparece en la app (BTC/MXN si existe; si no, BTC/USDT), tipo de orden (límite; stop-limit u OCO si la app lo permite), cantidad y precio.
-- **Cortacircuitos** (sobre el TWR de la cuenta cripto): −20%, −30% y −40%. El −50% equivale al tope de 5,000 MXN: todo a stablecoin o MXN y la cuenta se detiene hasta que el dueño decida.
+- **Cortacircuitos** (sobre el TWR de la cuenta cripto):
+  - −20%: exposición a 50%;
+  - −30%: exposición a 25%;
+  - −40%: pausa;
+  - −50% equivale al tope de 5,000 MXN: todo a MXN y la cuenta se detiene hasta que el dueño decida.
+- **Exposición, filtro de tendencia y stops** (gestor de riesgo, 25-sep-2026): `config/parametros.json` → `cripto_binance.exposicion`, `.filtro_tendencia` y `.stops`.
+  - 40% en BTC al inicio; tramos 2 y 3 solo por comité y con sus cuatro condiciones.
+  - Salida total con un cierre de BTC/USDT < SMA200 × 0.97; reentrada con un cierre > SMA200 × 1.03.
+  - Sin stop registrado en la app.
+- **Órdenes de papel cripto:** las filas de `bitacora/ordenes-pendientes.csv` con `clase=cripto` las ejecuta la **rutina cripto**, no la de Cierre, según su `regla_precio`, en `bitacora/papel-binance/`.
+- **Contingencia de contraparte:** `cripto_binance.contingencia_contraparte`. Si se cumple un disparador, alerta alta y boleta URGENTE.
 
 ## 5. Competencia
 
@@ -113,4 +123,8 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
   - Evalúa la condición de validez de la boleta GBM con Yahoo (intervalo 1m): SPYM > 88.98 USD y ^VIX < 25.
   - Calcula los límites exactos, precio NYSE × MXN=X × 1.003, de SPYM (7 títulos; 6 si 7 × límite > 12,000 MXN) y de QQQM (1 título).
   - Escribe al inicio de `bitacora/alertas.md` y de la boleta: VIGENTE o EN ESPERA, con los dos límites y la hora.
-- [ ] **Cierre del lunes 28-sep:** ejecuta en papel O0001 y O0002 según su `regla_precio` (vela de 1 minuto de las 14:45 UTC, no la apertura). Registra primero el depósito de 20,000 MXN.
+- [ ] **Cierre del lunes 28-sep:** ejecuta en papel O0001 y O0002 según su `regla_precio` (vela de 1 minuto de las 14:45 UTC, no la apertura). Registra primero el depósito de 20,000 MXN. La O0003 (cripto) no es tuya.
+- [ ] **Boleta de Binance del lunes 28-sep:**
+  - **Supervisión de las 08:40:** evalúa la condición de validez de C1 (BTC/USDT ≥ 77,000 y ningún cierre diario desde el 25-sep < SMA200 × 0.97, con klines de Binance). Calcula el tope sintético BTC/USDT × USDT/MXN × 1.003 y escribe VIGENTE o EN ESPERA en `bitacora/alertas.md` y al inicio de la sección de Binance de la boleta.
+  - **Rutina cripto de las 12:17:** ejecuta la O0003 en papel.
+  - **Rutina cripto de las 20:17 de cada día:** calcula el nivel de salida del filtro y lo publica en `bitacora/cripto/AAAA-MM-DD.md`.

@@ -219,7 +219,7 @@
       "nota_concentracion": "etf_indice_max (0.6) se aplica por posicion, no a la suma de ETF de indice; la exposicion total la topa el apalancamiento bruto <= 1.0x. QQQM (Nasdaq-100) se clasifica como ETF de indice amplio, no como sector (si se etiquetara 'tecnologia' fallaria sector_max de 0.25). herramientas/riesgo.py validar_orden aun no revisa etf_indice_max; se comprueba a mano (gestor de riesgo, 25-sep-2026)."
     },
     "cripto_binance": {
-      "estado": "Tope de pérdida fijado por el dueño (25-sep-2026). El resto es PROVISIONAL: lo calibran el analista-cripto y el gestor de riesgo.",
+      "estado": "Tope de pérdida fijado por el dueño (25-sep-2026). Exposición, filtro de tendencia y stops fijados por el gestor de riesgo del comité cripto (25-sep-2026). Límites de pérdida por periodo: PROVISIONALES del orquestador, a calibrar en el comité del 2-oct-2026.",
       "objetivo": "Aportar TWR en MXN a la cuenta combinada de la competencia sin rebasar el tope de pérdida de cripto.",
       "perdida_maxima_tolerable_mxn": {
         "valor": 5000,
@@ -262,7 +262,62 @@
         "nucleo_min": 0.0,
         "satelite_max": 1.0
       },
-      "nota_cortacircuitos": "25-sep-2026: corregidos a propuesta del abogado del diablo del comité cripto; la versión anterior solo reducía altcoins y no vendía BTC/ETH antes del -50%."
+      "nota_cortacircuitos": "25-sep-2026: corregidos a propuesta del abogado del diablo del comité cripto; la versión anterior solo reducía altcoins y no vendía BTC/ETH antes del -50%.",
+      "kelly_fraccion_max": 0.25,
+      "limites_perdida": {
+        "diaria": 0.05,
+        "semanal": 0.1,
+        "mensual": 0.18,
+        "accion": "Al tocar un límite: no hay compras nuevas (tramos ni reentradas) en lo que resta del periodo; las ventas por regla sí se ejecutan",
+        "nota": "Provisionales (orquestador, 25-sep-2026): iguales a los de arena_agresivo. Con 40-65% en BTC (volatilidad de 43% anual) equivalen a ~2-3 desviaciones estándar de la cuenta en cada periodo. Antes heredaba 2/4/6% del perfil estándar, que con cripto se tocarían por ruido."
+      },
+      "exposicion": {
+        "inicial": 0.4,
+        "maxima_aprobada": 0.65,
+        "tramos": [
+          {
+            "n": 1,
+            "mxn": 4000,
+            "cuando": "lunes 28-sep-2026, con la condición de validez de la boleta"
+          },
+          {
+            "n": 2,
+            "mxn": 1500,
+            "cuando": "comité, no antes del 30-oct-2026 (después del FOMC del 28-oct)"
+          },
+          {
+            "n": 3,
+            "mxn": 1000,
+            "cuando": "comité, no antes del 5-nov-2026 (después del refunding del 4-nov)"
+          }
+        ],
+        "condiciones_tramos_2_y_3": [
+          "filtro de tendencia encendido",
+          "ningún cortacircuitos disparado",
+          "volatilidad realizada de 30 días de BTC <= 45%",
+          "la cuenta combinada va al menos 5 pp detrás del mejor rival (con datos reportados por el dueño)"
+        ],
+        "fuente": "Gestor de riesgo del comité cripto, 25-sep-2026: el menor de tres métodos (stop, volatilidad objetivo, Kelly con tope 0.25); manda Kelly."
+      },
+      "filtro_tendencia": {
+        "dato": "Cierre diario de BTC/USDT en Binance (vela que cierra a las 00:00 UTC; data-api.binance.vision klines interval=1d)",
+        "media": "SMA de los últimos 200 cierres diarios (calendario 24/7)",
+        "salida": "Cierre < SMA200 x 0.97: vender el 100% del BTC al día siguiente, de 08:30 a 12:00 CDMX",
+        "reentrada": "Cierre > SMA200 x 1.03: recomprar hasta la exposición aprobada vigente, respetando cortacircuitos y límites",
+        "banda": "±3%: baja las salidas en falso de 36-51% a 16-31% con la misma P(tocar -20%) (gestor de riesgo, simulación propia)",
+        "vigilancia": "La rutina cripto de las 20:17 CDMX publica la boleta si se cumple la salida; la de las 08:17 la reconfirma. Los cortacircuitos se revisan cada 4 h."
+      },
+      "stops": "Sin stop registrado en la app: el stop es la regla de cierre del filtro de tendencia (enmienda del 25-sep-2026, gestor de riesgo). Un stop intradía al mismo nivel se dispara en 21-74% de las trayectorias y en 75-100% de esos casos el día cierra arriba; el 10-oct-2025 un stop de -10% se disparó a las 21:19 UTC y el día cerró en -3.4%; y el lado de compra de BTC/MXN es delgado (18,786 MXN a ±0.5%, verificador).",
+      "contingencia_contraparte": {
+        "disparadores": [
+          "aviso de Binance sobre México o sobre retiros",
+          "SPEI caído más de 48 h",
+          "acción de CNBV, FinCEN, OFAC o cargos del DOJ contra Binance"
+        ],
+        "respuesta": "Vender a MXN y retirar por SPEI; si falla, enviar BTC (o USDT) on-chain a una cuenta propia verificada en Bitso y retirar desde ahí.",
+        "requisito": "Cuenta propia en Bitso abierta y verificada (con una prueba de depósito y retiro) antes del 2-oct-2026.",
+        "limite": "El tope de 5,000 MXN no cubre el riesgo de contraparte: un congelamiento total arriesga los 10,000 MXN."
+      }
     }
   },
   "prioridad_actual": {
@@ -272,7 +327,7 @@
     "excepcion_cuenta_arena": {
       "fecha_decision": "2026-09-25",
       "decision_del_dueno": "Entrar ya: la cartera que apruebe el comite de inversion se replica en dinero real el lunes 28-sep-2026 en la cuenta arena-claude (20,000 MXN). Decision explicita del dueno en la sesion principal, 25-sep-2026.",
-      "alcance": "Solo la cuenta arena-claude. El patrimonio principal sigue en fase 0 con su criterio_salida completo.",
+      "alcance": "Las cuentas arena-claude (GBM, 20,000 MXN) y arena-claude-binance (Binance, 10,000 MXN; decisión del dueño del 25-sep-2026: 'le vamos a meter por cada IA 10 mil pesos extras'). El patrimonio principal sigue en fase 0 con su criterio_salida completo.",
       "reglas": [
         "Toda orden real sale de una decision del comite registrada en git antes de la ejecucion.",
         "El dueno captura manualmente cada orden en la app de GBM; el sistema nunca da por hecha una ejecucion real que el dueno no haya reportado.",
@@ -296,6 +351,16 @@
           "costo_reconocido": "P(tocar -12%) sube de ~3% (con stops) a 15-17% (sin stops, M3); P(tocar -20%) = 2.6%.",
           "si_se_revierte": "Stop limitada a precio de ejecución - 85 MXN por título de SPYM y - 598 MXN en QQQM (riesgo ~600 MXN = 3% por línea), renovada cada 30 días.",
           "evidencia": "bitacora/decisiones/2026-09-25-CARTERA-inicial.md (sección del gestor de riesgo) y arena/modelos/salida_cartera_inicial.txt"
+        },
+        {
+          "fecha": "2026-09-25",
+          "regla": "alcance de la excepción",
+          "antes": "Solo la cuenta arena-claude. El patrimonio principal sigue en fase 0 con su criterio_salida completo.",
+          "despues": "Las cuentas arena-claude (GBM, 20,000 MXN) y arena-claude-binance (Binance, 10,000 MXN; decisión del dueño del 25-sep-2026: 'le vamos a meter por cada IA 10 mil pesos extras'). El patrimonio principal sigue en fase 0 con su criterio_salida completo.",
+          "autor": "Orquestador, a propuesta del gestor de riesgo del comité cripto (cambio 3): la cuenta Binance ya era decisión del dueño, pero la excepción solo nombraba a arena-claude.",
+          "motivo": [
+            "La validación de fase 0 fallaba en lo documental para la cuenta cripto, aunque el dueño la aprobó el 25-sep-2026."
+          ]
         }
       ]
     }

@@ -9,6 +9,7 @@ Este procedimiento escrito manda sobre el texto del disparador, que ya indica se
    - **Depósito inicial:** 20,000 MXN el día de la primera ejecución.
    - **Cantidad:** los títulos se calculan como monto ÷ (precio × FX si cotiza en USD), redondeando hacia abajo a unidades enteras. El sobrante queda en efectivo.
    - **Registro:** marca cada orden como `ejecutada`, con precio, cantidad y commit.
+   - **Las filas con `clase=cripto` no son tuyas:** las ejecuta la rutina cripto en `bitacora/papel-binance/`.
 2. **Valúa el portafolio de papel al cierre:** corre `python3 herramientas/portafolio.py valuar` y `reporte` y actualiza `bitacora/equity.csv`.
 3. **Revisa límites y cortacircuitos** del perfil `arena_agresivo` (`herramientas/riesgo.py`). Si se dispara uno, genera en `ordenes-pendientes.csv` las órdenes de reducción que manda el perfil, para la apertura siguiente, y anótalo en el brief.
 4. **Empresas de `empresas/universo.csv` que reportaron hoy:**

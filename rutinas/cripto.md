@@ -12,9 +12,15 @@ Sesión: "Sistema de inversión · Inteligencia y cripto". Agente: `analista-cri
    - Actualiza `estado` y `acceso` en `conocimiento/cripto/recursos/indice.csv`.
    - Escribe la ficha en `conocimiento/cripto/fichas/AAAA-MM-DD-<tema>.md` y actualiza `conocimiento/estado-de-dominio.csv`.
 3. **Pronóstico** (en la corrida de las 08:17): uno binario de cripto, verificable, a 30 días o menos, con `autor=cripto`. En las demás corridas, resuelve los pronósticos cripto vencidos.
-4. **Contraparte:** una vez al día, en la corrida de las 08:17, revisa las "Señales para vigilar Binance hoy" de `conocimiento/cripto/lista-senales-de-alerta.md`. Si se cumple un disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`, genera una alerta alta.
-5. **Alertas:** si una posición abierta tiene cripto y hay un movimiento de 8% o más en 4 horas, o un evento de cola (exchange, stablecoin o regulación), agrégalo a `bitacora/alertas.md`.
-6. **Cierre de la rutina:**
+4. **Órdenes y filtro de la cuenta cripto** (cada corrida):
+   - **Órdenes de papel:** ejecuta en papel las filas de `bitacora/ordenes-pendientes.csv` con `clase=cripto` y `estado=pendiente` cuya hora de ejecución ya pasó, según su `regla_precio`. Usa `python3 herramientas/portafolio.py --perfil cripto_binance --operaciones bitacora/papel-binance/operaciones.csv --equity bitacora/papel-binance/equity.csv registrar ...` y marca la fila como `ejecutada` o `en_espera`.
+   - **Filtro de tendencia** (`config/parametros.json` → `cripto_binance.filtro_tendencia`):
+     - En la corrida de las 20:17, con los klines diarios de BTCUSDT de `data-api.binance.vision`, calcula la SMA200 de cierres completos, el nivel de salida (× 0.97) y el de reentrada (× 1.03), y anótalos en la bitácora del día.
+     - Si el último cierre quedó bajo el nivel de salida y hay BTC en la cuenta (real o papel), escribe la boleta de venta S en `bitacora/boletas/<día siguiente>.md` y una alerta alta.
+     - En la corrida de las 08:17, reconfírmala.
+5. **Contraparte:** una vez al día, en la corrida de las 08:17, revisa las "Señales para vigilar Binance hoy" de `conocimiento/cripto/lista-senales-de-alerta.md`. Si se cumple un disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`, genera una alerta alta.
+6. **Alertas:** si una posición abierta tiene cripto y hay un movimiento de 8% o más en 4 horas, o un evento de cola (exchange, stablecoin o regulación), agrégalo a `bitacora/alertas.md`.
+7. **Cierre de la rutina:**
    - latido;
    - commit `cripto: AAAA-MM-DD HH:MM`, pull --rebase y push, con hasta 4 reintentos;
    - respuesta final de 6 líneas o menos.

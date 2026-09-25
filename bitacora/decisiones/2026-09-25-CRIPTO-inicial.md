@@ -4,7 +4,7 @@
 - **Ejecución:** lunes 28-sep-2026, en real, por el dueño en la app de Binance. Solo spot. Decisión del dueño del 25-sep-2026: 10,000 MXN por IA, que cuentan para la competencia.
 - **Temporada:** 28-sep-2026 a 28-ene-2027.
 - **Perfil:** `cripto_binance`. Tope del dueño: pérdida de 5,000 MXN.
-- **Estado de este documento:** decisión del comité tomada y verificada. Falta el dimensionamiento del gestor de riesgo (con veto), que se agrega abajo.
+- **Estado de este documento:** completo. Comité, verificador y gestor de riesgo (aprueba con cambios, ya aplicados). Boletas en `bitacora/boletas/2026-09-28.md`.
 
 ## Tesis y cómo se refutaría
 
@@ -92,9 +92,90 @@ Por eso la cuenta cripto se juega por **supervivencia y desempate por menor caí
 | P0018 | cuantitativo | BTC-USD cae 20% o más desde su máximo acumulado antes del 28-ene-2027 | 0.70 | 28-ene-2027 |
 | P0019 | geopolítico | Se promulga una ley de estructura de mercado cripto en EUA antes del 1-ene-2027 | 0.04 | 1-ene-2027 |
 
-## Tamaño, stop, criterio de salida y boletas
+## Tamaño, stop, criterio de salida y boletas (gestor de riesgo, con veto)
 
-*Pendiente del gestor de riesgo, con veto. Se agrega en este mismo archivo.*
+**Veredicto: APRUEBA CON CAMBIOS.** Voto a favor, sin veto. Los seis cambios ya quedaron aplicados (ver abajo).
+
+**Estado al decidir:** libro vacío (P&L 0, drawdown 0, sin rachas). Margen al tope: 5,000 MXN.
+
+### Tamaño: 40% en BTC el lunes (4,000 MXN) y 6,000 MXN en MXN
+
+Se toma el menor de tres métodos (`herramientas/riesgo.py`, cálculo propio):
+
+| Método | Resultado |
+|---|---|
+| Por stop, con salida en SMA200 × 0.97 (≈68,970 USD) | Caben 5,644 MXN. 65% de golpe arriesga 11.5% y 100% arriesga 17.7%: los dos rebasan el 10% por operación |
+| Volatilidad objetivo de 20% (Regla 18.4) | No limita. Con 40%, la cuenta combinada queda en 11.2% |
+| Kelly con tope de 0.25 | 40% sobre la combinada (Sharpe 0.26) y 38-42% sobre la cuenta sola; con prima cero, 12%. **Es el que manda** |
+
+- **Resultado simulado con 40%** (7 métodos): P(tocar −20%) de 0 a 8%; P(tocar −30%) de 1.7% o menos; P(tope) de 0.00%. En la peor trayectoria la cuenta queda en 6,891 MXN, con 1,891 de margen.
+- **Aun con BTC en cero**, el tope no se toca: quedan 6,000 MXN.
+- **Costo frente a entrar con 65% y filtro:** de 0 a 2 pp de P(quedar primero); 10 pp en el régimen de hoy, pero ese régimen solo tiene ~7 temporadas de historia.
+- **Tramos 2 y 3** (+1,500 y +1,000 MXN, hasta 65%): los decide el comité, no antes del 30-oct y del 5-nov, y solo si se cumplen las cuatro condiciones:
+  1. filtro encendido;
+  2. sin cortacircuitos;
+  3. volatilidad de 30 días ≤ 45%;
+  4. la cuenta combinada va al menos 5 pp detrás del mejor rival.
+  - Con los tramos: P(tocar −20%) de 3 a 17% y margen mínimo de 1,588 MXN.
+
+### Filtro de tendencia: salida total con banda de ±3%
+
+- **Dato:** cierre diario de BTC/USDT en Binance (00:00 UTC) contra la media de sus últimos 200 cierres.
+- **Salida:** si el cierre queda **< SMA200 × 0.97** (≈68,970 el lunes; el nivel sube con la media), se vende el 100% al día siguiente, de 08:30 a 12:00 CDMX.
+- **Reentrada:** con un cierre **> SMA200 × 1.03** (≈73,200).
+- **Por qué la banda:** baja las salidas en falso de 36-51% a 16-31% con la misma P(tocar −20%). Pedir dos cierres de confirmación en vez de la banda las deja en 31-43%.
+- **Vigilancia:** la rutina cripto de las 20:17 publica la boleta y la de las 08:17 la reconfirma. Los cortacircuitos se revisan cada 4 h.
+
+### Stop: sin stop registrado; el stop es la regla de cierre
+
+Un stop intradía en el mismo nivel:
+- se dispara en 21-74% de las trayectorias;
+- en 75-100% de esos casos el día cierra arriba del nivel;
+- resta de 1 a 5 pp de P(quedar primero) y suma hasta 9.5 pp a P(tocar −20%).
+
+Ejemplo del 10-oct-2025: un stop de −10% se disparó a las 21:19 UTC y el día cerró en −3.4%.
+
+Además, el lado de compra del libro de BTC/MXN es delgado: 18,786 MXN a ±0.5% del precio medio (verificador).
+
+### Ruta: BTC/MXN directo, con orden límite
+
+- **Costo:** +0.10% a +0.29%, contra +0.20% por la ruta de USDT (verificador). A las 21:36 UTC el gestor midió un diferencial de 0.26%: +0.12% directo contra +0.22% por USDT.
+- **Ventaja:** una sola operación y no hay que tener USDT.
+- **Respaldo:** la ruta por USDT, si el diferencial de BTC/MXN pasa de 0.5%.
+
+### Validaciones (`validar_orden`, clase cripto)
+
+| Validación | Resultado |
+|---|---|
+| Tramo 1: cripto 40%, exposición bruta 0.40, riesgo 7.08% (708 MXN) | OK |
+| Tramos 2 y 3: riesgo de 2.3% y 1.5% | OK |
+| Límites de pérdida, tope y 8 operaciones al mes | OK |
+| Costos: ~0.3% por temporada | OK |
+| Fase 0 | Fallaba en lo documental; se resolvió con el cambio 3 |
+
+### Escenarios de cola, con 40% en BTC
+
+| Escenario | Efecto |
+|---|---|
+| Un día como el 10-oct-2025 | −181 MXN al cierre; −600 MXN en el mínimo del día |
+| Un mes de −30% | −7.5% si es gradual; −12.2% si llega en un hueco de 2 días; −18.1% si se parece a marzo de 2020 (con 65% en BTC, −29.5%) |
+| Retiros en MXN congelados | Se envía el BTC o el USDT on-chain a Bitso y se retira por SPEI desde ahí. **Un congelamiento total arriesga los 10,000 MXN: el tope no cubre el riesgo de contraparte.** |
+
+### Cambios pedidos por el gestor, ya aplicados
+
+1. **40% el lunes;** tramos 2 y 3 solo con las cuatro condiciones → `cripto_binance.exposicion`.
+2. **Enmienda de stops** → `cripto_binance.stops` y `cripto_binance.filtro_tendencia`.
+3. **Alcance de la excepción ampliado a `arena-claude-binance`** → `excepcion_cuenta_arena.alcance`, con la enmienda registrada.
+4. **Kelly y límites de pérdida declarados en el perfil cripto:**
+   - `kelly_fraccion_max` = 0.25;
+   - `limites_perdida` de 5, 10 y 18%, provisionales del orquestador, porque el gestor pidió declararlos pero no dio cifras. Se calibran en el comité del 2-oct.
+5. **Bitso verificada antes del 2-oct:** pendiente del dueño → `cripto_binance.contingencia_contraparte` y `PLAN.md`.
+6. **Registro sombra en papel con la misma condición de validez:** ejecuta en la vela de 1 h de las 15:00 UTC del lunes → orden O0003.
+
+### Boletas
+
+- **Reales:** `bitacora/boletas/2026-09-28.md`, sección Binance (C0, C1, C1-R y la plantilla de venta S).
+- **Sombra en papel:** O0003 en `bitacora/ordenes-pendientes.csv`, libro `bitacora/papel-binance/`.
 
 ## Verificación de cifras (verificador, 25-sep-2026, 21:16-21:40 UTC)
 

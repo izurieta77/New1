@@ -43,7 +43,7 @@ Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 2
 | Examen de titulación | ≥90% global y ≥85% por sección | Cumplido: 96.1% | 25-sep-2026 |
 | Cartera inicial de la arena | Aprobada por el comité y registrada en git antes de ejecutarse | **Cumplido:** cartera A (7 SPYM + 1 QQQM + liquidez); gestor de riesgo aprueba con cambios | 25-sep-2026 |
 | Arena en real (GBM) | El dueño captura las boletas en GBM si se cumple la condición de validez de las 08:45. Stop por línea solo en lo táctico o apalancado (enmienda del 25-sep) | Boletas listas en `bitacora/boletas/2026-09-28.md` | 28-sep-2026 |
-| Cartera cripto (Binance) | Comité cripto: solo spot, tope de 5,000 MXN | Comité en curso | 28-sep-2026 |
+| Cartera cripto (Binance) | Comité cripto: solo spot, tope de 5,000 MXN | **Cumplido:** 40% BTC (4,000 MXN) + 60% MXN, filtro SMA200 ±3%, sin ETH; gestor de riesgo aprueba con cambios. Boleta en `bitacora/boletas/2026-09-28.md` | 28-sep-2026 |
 | Pronósticos calibrados | ≥50 resueltos, Brier ≤ 0.20, 3 meses | 5 registrados, 0 resueltos | 25-dic-2026 |
 | Portafolio de papel (registro sombra) | 3 meses dentro de límites | Arranca el 28-sep | 28-dic-2026 |
 | Patrimonio principal en real | Fin de fase 0 con la regla completa | — | ~28-dic-2026 |
@@ -90,6 +90,7 @@ Los procedimientos están versionados en `rutinas/*.md` y se cambian ahí. La se
 2. **Fecha de fondeo de cada cuenta rival**, para saber cuándo empezó la temporada.
 3. **Cada ejecución real de la arena:** precio, títulos y hora de cada orden capturada en GBM, y el valor de la cuenta cada viernes.
 4. **Montos y fechas de las aportaciones adicionales**, y qué resultado las dispara (`escalamiento_capital.pendiente_de_definir_por_el_dueno`).
+5. **Cuenta propia en Bitso, abierta y verificada antes del 2-oct-2026** (con una prueba de depósito y retiro). Es la salida de emergencia si Binance restringe México o congela retiros (`cripto_binance.contingencia_contraparte`).
 
 ## 7. Límites prácticos de "todo el tiempo"
 
