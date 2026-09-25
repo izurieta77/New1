@@ -123,15 +123,9 @@ La casa de bolsa, como Entidad Financiera regulada por el art. 212 LMV, debe rep
 
 ### 4.5 El mecanismo de bloqueo: art. 115 LIC (y su espejo en el art. 212 LMV)
 
-El párrafo noveno del art. 115 LIC (adicionado DOF 10-01-2014) obliga a las instituciones de crédito a "suspender de forma inmediata la realización de actos, operaciones o servicios con los clientes o usuarios que la Secretaría de Hacienda y Crédito Público les informe mediante una lista de personas bloqueadas". Esa lista es **confidencial** y su finalidad es prevenir los supuestos del art. 115, fr. I (que remiten al art. 400 Bis CPF). El art. 212 LMV replica el mismo mecanismo para las casas de bolsa.
+El párrafo noveno del art. 115 LIC (adicionado DOF 10-01-2014) obliga a las instituciones de crédito a "suspender de forma inmediata la realización de actos, operaciones o servicios con los clientes o usuarios que la Secretaría de Hacienda y Crédito Público les informe mediante una lista de personas bloqueadas", confidencial, para prevenir los supuestos del art. 400 Bis CPF. El art. 212 LMV replica el mecanismo para casas de bolsa.
 
-Si el dueño llegara a ser incluido, el **Capítulo V LIC "De la Garantía de Audiencia"** (arts. 116 Bis 2 y siguientes, adicionado DOF 11-03-2022) le da un procedimiento para defenderse:
-
-1. Solicitar audiencia ante la **Unidad de Inteligencia Financiera** dentro de los 5 días hábiles siguientes a que el banco le notifique la causa de su inclusión.
-2. Presentar pruebas y alegatos dentro de los 10 días hábiles siguientes (ampliable una vez por igual plazo, de oficio o a petición de parte).
-3. La UIF resuelve en los 15 días hábiles siguientes a que el expediente esté integrado, y notifica la resolución dentro de los 10 días hábiles posteriores.
-
-Esta es la razón práctica más fuerte para llevar el expediente descrito en la sección 6 **antes** de que ocurra cualquier incidente: si se activa una alerta, el plazo para reaccionar es de días hábiles, no de meses, y la carga de probar el origen lícito recae en el interesado dentro de ese procedimiento.
+Si el dueño fuera incluido, el **Capítulo V LIC "De la Garantía de Audiencia"** (arts. 116 Bis 2 y ss., DOF 11-03-2022) da un procedimiento: (1) solicitar audiencia ante la **UIF** dentro de 5 días hábiles de notificada la causa; (2) presentar pruebas y alegatos en 10 días hábiles (ampliable una vez, igual plazo); (3) la UIF resuelve en 15 días hábiles desde que el expediente está integrado, y notifica en 10 días hábiles más. Esta es la razón práctica más fuerte para llevar el expediente de la sección 6 **antes** del incidente: el plazo para reaccionar es de días hábiles, y la carga de probar el origen lícito recae en el interesado.
 
 ---
 
