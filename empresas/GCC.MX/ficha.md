@@ -72,7 +72,7 @@ Historia al cierre de año, P/U y VE/UAFIDA: 2021 17.1x y 7.2x; 2022 11.8x y 5.2
 - **Fecha: 27-oct-2026** (publicación de resultados) y call el 28-oct, según el calendario de RI de GCC consultado el 25-sep-2026 [6]. Investing.com coincide en el 27-oct [7].
 - **Ventas 3T26:** punto US$475 M; intervalo de 80%: 445-505. Consenso Ps 8.05 mil M según Investing.com (25-sep-2026) [7], ≈ US$455-468 M según el tipo de cambio (17.71-17.22; conversión propia, no verificada). Supuestos: EUA +10% (horno nuevo y adquisiciones) y México +11% en USD.
 - **UPA 3T26:** punto US$0.28; intervalo de 80%: 0.24-0.325. Consenso Ps 5.29 ≈ US$0.30-0.31 (misma conversión) [7]. Supuestos: margen UAFIDA de ~33.5% por los costos de arranque de Odessa [8], D&A de ~US$32 M, tasa de 28% y 326 M acciones.
-- **Binarios:** (1) ventas de 3T26 mayores a US$455 M: **p = 0.75**; (2) margen UAFIDA de 3T26 mayor a 35.9% (el de 3T25): **p = 0.25**.
+- **Binarios:** (1) ventas de 3T26 mayores a US$455 M: **p = 0.78**; (2) margen UAFIDA de 3T26 mayor a 35.9% (el de 3T25): **p = 0.25**.
 
 ## 9. Catalizadores y riesgos
 **Catalizadores:** 27/28-oct, reporte y call de 3T26; ronda del T-MEC del 28-29 sep [11]; ultimátum iraní del 27-28 sep [11]; enero de 2027, 4T26 y guía 2027; ritmo de embarques de Odessa. **Riesgos:** importaciones de cemento, clima en 4T, caída del crudo (Pérmico), costo de energía, integración de adquisiciones y aranceles al cemento mexicano.
