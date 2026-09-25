@@ -1,0 +1,571 @@
+{
+  "empresa": "Wal-Mart de Mexico, S.A.B. de C.V. (Walmart de Mexico y Centroamerica)",
+  "ticker": "WALMEX.MX",
+  "moneda": "MXN",
+  "unidades": "millones",
+  "fecha_corte": "2026-09-25",
+  "aviso": "FASE 0 (formacion): no es recomendacion de compra o venta. Escenarios = supuestos de mecanismo, no pronosticos. WALMEX no reporta ante la SEC; fuente = BMV/Emisnet y walmex.mx (Relacion con Inversionistas).",
+  "fuentes": {
+    "F1": {
+      "documento": "WALMEX Reporte Anual 2025 (Informe Anual integrado, presentado en BMV/Emisnet; incluye los estados financieros consolidados auditados NIIF al 31-dic-2025 y 2024)",
+      "url": "https://www.walmex.mx (seccion Relacion con Inversionistas / Informe Anual 2025); copia congelada en datos/Walmex_Reporte_Anual_BMV_2025.pdf",
+      "fecha": "2026 (ejercicio 2025)",
+      "descargado": "2026-09-25"
+    },
+    "F2": {
+      "documento": "WALMEX Estados Financieros 4T25 estructurados (hoja de calculo publicada junto con el reporte trimestral 4T25 en BMV; mismas cifras que el Reporte Anual 2025, Nota de Estados Financieros)",
+      "url": "BMV/Emisnet, WALMEX 4T25; copia en datos/Walmex_Financial_Statements_4Q25.xlsx",
+      "fecha": "2026-02-18",
+      "descargado": "2026-09-25"
+    },
+    "F3": {
+      "documento": "WALMEX Reporte trimestral 2T26 (BMV, formato con notas NIIF condensadas)",
+      "url": "BMV/Emisnet, WALMEX 2T26; copia en datos/WALMEX_2T26_BMV.pdf y .txt",
+      "fecha": "2026-07 (periodo a 30-jun-2026)",
+      "descargado": "2026-09-25"
+    },
+    "F4": {
+      "documento": "WALMEX Estados Financieros 2T26 estructurados (hoja de calculo con balance a jun-2026 y flujo de 6 meses a jun-2026 y jun-2025)",
+      "url": "BMV/Emisnet, WALMEX 2T26; copia en datos/Walmex_Financial_Statements_2Q26.xlsx",
+      "fecha": "2026-07",
+      "descargado": "2026-09-25"
+    },
+    "F5": {
+      "documento": "WALMEX Reports Fourth Quarter and Full Year 2025 Results (earnings release en ingles)",
+      "url": "walmex.mx / BMV; copia en datos/Walmex_Earnings_Release_4Q25.pdf",
+      "fecha": "2026-02-18",
+      "descargado": "2026-09-25"
+    },
+    "F6": {
+      "documento": "WALMEX Informe Anual 2025 - Resumen Financiero 2015-2025 (paginas 61-62 del Informe Anual; extracto en texto)",
+      "url": "walmex.mx; copia en datos/Walmex_IA25_Resumen_Financiero.pdf",
+      "fecha": "2026",
+      "descargado": "2026-09-25"
+    },
+    "F7": {
+      "documento": "Walmart de Mexico y Centroamerica Anuncia su Programa de Inversion 2026 y su Propuesta de Pago de Dividendos y Recompra de Acciones (comunicado Walmex Day 2026)",
+      "url": "walmex.mx; copia en datos/Walmex_Programa_de_Inversion_2026.pdf",
+      "fecha": "2026-03-25",
+      "descargado": "2026-09-25"
+    },
+    "F8": {
+      "documento": "Yahoo Finance, WALMEX.MX, precios diarios 1 mes",
+      "url": "https://query1.finance.yahoo.com",
+      "fecha": "2026-09-25",
+      "descargado": "2026-09-25"
+    },
+    "F9": {
+      "documento": "A. Damodaran, Betas by industry (Emerging Markets), enero 2026",
+      "url": "https://pages.stern.nyu.edu/~adamodar/",
+      "fecha": "2026-01-07",
+      "descargado": "2026-09-25"
+    },
+    "F10": {
+      "documento": "A. Damodaran, Betas by industry (Global), enero 2026",
+      "url": "https://pages.stern.nyu.edu/~adamodar/",
+      "fecha": "2026-01-07",
+      "descargado": "2026-09-25"
+    },
+    "F11": {
+      "documento": "A. Damodaran, Country default spreads and risk premiums, julio 2026",
+      "url": "https://pages.stern.nyu.edu/~adamodar/",
+      "fecha": "2026-07-01",
+      "descargado": "2026-09-25"
+    }
+  },
+  "historico": [
+    {
+      "periodo": "FY2024",
+      "anio": 2024,
+      "fin": "2024-12-31",
+      "fuente": "F1 (Informe Anual 2025, comparativo 2024) / F2 (Estados Financieros 4T25 estructurados) / F5 (Earnings Release 4T25 p.2) / F6 (Resumen 2015-2025 p.61)",
+      "fuentes_campos": {
+        "resultados.ingresos": "F2/F1 P&L: Net Sales + Other revenues = Total revenues (asi calcula WALMEX su margen bruto; Earnings Release 4T25 F5 p.2 y Reporte Anual F1 Estados de Resultados)",
+        "resultados.costo_ventas": "F2/F5 P&L: Cost of sales",
+        "resultados.utilidad_bruta": "F2/F5 P&L: Gross profit (= Total revenues - Cost of sales)",
+        "resultados.gastos_operativos": "F2 P&L: General expenses - Other income + Other expenses (neto; asi Gross profit - gastos_operativos = Operating income, F5 p.2)",
+        "resultados.utilidad_operativa": "F2/F5 P&L: Operating income",
+        "resultados.gasto_intereses": "F2 P&L: Financial expenses (suma de los 4 trimestres; incluye interes de arrendamientos IFRS16, Nota 9/21 del Reporte Anual F1)",
+        "resultados.ingreso_intereses": "F2 P&L: Financial income (suma de los 4 trimestres)",
+        "resultados.utilidad_antes_impuestos": "F2/F5 P&L: Income before income taxes",
+        "resultados.impuestos": "F2/F5 P&L: implicito = UAI - utilidad neta (Taxes, F5 p.2)",
+        "resultados.utilidad_neta": "F2/F5 P&L: Consolidated net income (=utilidad neta controladora; WALMEX no tiene participacion no controladora, F1 Nota sobre participacion no controladora / IA25 tabla F6 p.61)",
+        "flujo.cfo": "F2/F4 Cash flow: 'Net cash flow operating activities'",
+        "flujo.capex": "F2/F4 Cash flow: 'Long-lived assets' (Investing activities); = 'ADQUISICIONES DE INMUEBLES Y EQUIPO' del resumen F6 p.61",
+        "flujo.cfi": "F2/F4 Cash flow: 'Net cash flow used in from investing activities'",
+        "flujo.cff": "F2/F4 Cash flow: 'Net cash flow used in investing activities' (asi rotulada por WALMEX; es la de financiamiento)",
+        "flujo.dividendos": "F2/F4 Cash flow: 'Dividend payment' (= 'Dividendo pagado' F6 p.61)",
+        "flujo.recompras": "F2/F4 Cash flow: 'Repurchase of shares' (= 'Inversion en recompra de acciones' F6 p.61)",
+        "flujo.principal_arrendamientos_financieros": "F2/F4 Cash flow: 'Payment of leases liability' (incluye principal + interes pagados en efectivo del pasivo por arrendamiento, Nota 9 F1 p.192: $4,170,343 + $9,115,155 = $13,285,498 en 2025)",
+        "flujo.depreciacion_amortizacion": "F2/F4 Cash flow: 'Depreciation and amortization' (=EBITDA - utilidad operativa, control interno)",
+        "flujo.sbc": "F2/F4 Cash flow: 'Stock option compensation expenses'",
+        "flujo.efecto_cambiario": "F2/F4 Cash flow: 'Effect of changes in the value of cash'",
+        "flujo.otros_operativos.interes_por_pasivos_de_arrendamiento_(nota_9)": "F2/F4 Cash flow: 'Interest on lease liabilities' (= Nota 9 'Intereses por pasivos por arrendamiento')",
+        "flujo.otros_operativos.diferencia_isr_devengado_vs_isr_pagado_en_efectivo": "calculo sobre hechos: 'Income tax paid' (Cash flow) menos ISR devengado implicito (Income before income taxes - Consolidated net income, mismo estado)"
+      },
+      "resultados": {
+        "ingresos": 958507.491,
+        "costo_ventas": 727034.273,
+        "utilidad_bruta": 231473.218,
+        "gastos_operativos": 154114.23,
+        "utilidad_operativa": 77358.988,
+        "gasto_intereses": 12100.332,
+        "ingreso_intereses": 3672.831,
+        "utilidad_antes_impuestos": 68931.487,
+        "impuestos": 15104.103,
+        "utilidad_neta": 53827.384,
+        "utilidad_neta_controladora": 53827.384
+      },
+      "balance": {
+        "caja": 36513.582,
+        "cuentas_por_cobrar": 24862.289,
+        "inventarios": 110694.942,
+        "otros_activos_circulantes": 1326.455,
+        "ppe_neto": 244673.083,
+        "otros_activos_lp": 75822.714,
+        "activo_total": 493893.065,
+        "proveedores": 121971.233,
+        "otros_pasivos_circulantes": 44087.395,
+        "deuda": 0.0,
+        "arrendamientos_financieros": 79729.904,
+        "revolvente": 0.0,
+        "otros_pasivos_lp": 15229.064,
+        "pasivo_total": 261017.596,
+        "capital_contable": 232875.469,
+        "utilidades_retenidas": 167447.963
+      },
+      "flujo": {
+        "depreciacion_amortizacion": 22639.474,
+        "sbc": 493.766,
+        "cfo": 72635.535,
+        "capex": 34763.789,
+        "cfi": -30534.76,
+        "cff": -49797.454,
+        "dividendos": 37399.452,
+        "recompras": 0.0,
+        "emision_deuda": 0.0,
+        "amortizacion_deuda": 0.0,
+        "principal_arrendamientos_financieros": 12355.1,
+        "emision_acciones": 0.0,
+        "efecto_cambiario": 3541.276,
+        "cambio_capital_trabajo": {
+          "cuentas_por_cobrar": -173.566,
+          "inventarios": -12543.798,
+          "pagos_anticipados_y_otros": -826.096,
+          "proveedores": 3057.479,
+          "otras_cuentas_por_pagar": 2121.813
+        },
+        "otros_operativos": {
+          "perdida_(utilidad)_baja_de_activos": -402.757,
+          "interes_ganado_(reverso_no_monetario)": -2657.187,
+          "interes_por_pasivos_de_arrendamiento_(nota_9)": 8593.484,
+          "efecto_cambiario_no_realizado": -62.852,
+          "provision_obligaciones_laborales": 574.29,
+          "interes_a_cargo_(reverso_no_monetario)": 42.902,
+          "diferencia_isr_devengado_vs_isr_pagado_en_efectivo": -1293.674,
+          "beneficios_a_empleados_pagados": -755.127
+        },
+        "otros_inversion": {
+          "interes_cobrado": 2657.187,
+          "venta_ppe": 872.57,
+          "fondo_plan_acciones": 699.272
+        },
+        "otros_financiamiento": {
+          "interes_pagado": 42.902
+        },
+        "caja_inicial": 40668.985,
+        "caja_final": 36513.582,
+        "utilidad_neta": 53827.384
+      },
+      "movimientos_ppe": {
+        "adiciones": 35183.78,
+        "depreciacion": 21382.35,
+        "otros": 13260.506,
+        "ppe_inicial": 217611.147,
+        "fuente": "Nota 8 + Nota 9, F1 p.199-200 y p.191-192 (roll-forward de costo y depreciacion acumulada)"
+      },
+      "movimientos_arrendamientos": {
+        "inicial": 75253.796,
+        "nuevos": 7070.32,
+        "principal": 4198.979,
+        "otros": 1604.766,
+        "fuente": "Nota 9, F1 p.192 (conciliacion de saldos del pasivo por arrendamiento)"
+      },
+      "ajustado": [
+        {
+          "nombre": "ebitda_emisor",
+          "base": "utilidad_operativa",
+          "ajustes": {
+            "depreciacion_y_amortizacion (F2/F5)": 22639.474
+          },
+          "valor_ajustado": 99998.0,
+          "fuente": "F5 p.2 / F6 p.61: EBITDA = utilidad de operacion + D&A (definicion del glosario del emisor, 'Flujo Operativo')"
+        }
+      ],
+      "memo": {
+        "ppe_sin_derecho_uso": 180715.011,
+        "activos_derecho_uso": 63958.072,
+        "arrendamiento_corto_plazo": 4735.116,
+        "arrendamiento_largo_plazo": 74994.788,
+        "leases_y_otros_pasivos_lp_total_bs": 84844.691,
+        "otros_dentro_de_leases_y_otros_lp": 9849.903,
+        "isr_diferido_activo": 21678.914,
+        "isr_pasivo_lp": 2381.292,
+        "beneficios_empleados_pasivo": 2997.869,
+        "unidades": "millones de MXN",
+        "capex_mexico_2024": 29219.848,
+        "capex_centroamerica_2024": 5543.941,
+        "ebitda_reportado": 99998,
+        "activos_mexico": 363070.453,
+        "activos_centroamerica": 88125.708,
+        "credito_mercantil": 42696.904,
+        "dividendo_por_accion_ordinario_2024_pesos": 1.18,
+        "dividendo_por_accion_extra_2024_pesos": 0.99,
+        "acciones_recompradas_2024_millones": 0.0
+      },
+      "notas": "Primer ejercicio de la base (no hay periodo previo en base.json para C13); movimientos_ppe y movimientos_arrendamientos SI traen saldo inicial (dic-2023, Nota 8/9), asi que C05/C06 corren igual para FY2024."
+    },
+    {
+      "periodo": "FY2025",
+      "anio": 2025,
+      "fin": "2025-12-31",
+      "fuente": "F1 (Informe Anual 2025, comparativo 2024) / F2 (Estados Financieros 4T25 estructurados) / F5 (Earnings Release 4T25 p.2) / F6 (Resumen 2015-2025 p.61)",
+      "fuentes_campos": {
+        "resultados.ingresos": "F2/F1 P&L: Net Sales + Other revenues = Total revenues (asi calcula WALMEX su margen bruto; Earnings Release 4T25 F5 p.2 y Reporte Anual F1 Estados de Resultados)",
+        "resultados.costo_ventas": "F2/F5 P&L: Cost of sales",
+        "resultados.utilidad_bruta": "F2/F5 P&L: Gross profit (= Total revenues - Cost of sales)",
+        "resultados.gastos_operativos": "F2 P&L: General expenses - Other income + Other expenses (neto; asi Gross profit - gastos_operativos = Operating income, F5 p.2)",
+        "resultados.utilidad_operativa": "F2/F5 P&L: Operating income",
+        "resultados.gasto_intereses": "F2 P&L: Financial expenses (suma de los 4 trimestres; incluye interes de arrendamientos IFRS16, Nota 9/21 del Reporte Anual F1)",
+        "resultados.ingreso_intereses": "F2 P&L: Financial income (suma de los 4 trimestres)",
+        "resultados.utilidad_antes_impuestos": "F2/F5 P&L: Income before income taxes",
+        "resultados.impuestos": "F2/F5 P&L: implicito = UAI - utilidad neta (Taxes, F5 p.2)",
+        "resultados.utilidad_neta": "F2/F5 P&L: Consolidated net income (=utilidad neta controladora; WALMEX no tiene participacion no controladora, F1 Nota sobre participacion no controladora / IA25 tabla F6 p.61)",
+        "flujo.cfo": "F2/F4 Cash flow: 'Net cash flow operating activities'",
+        "flujo.capex": "F2/F4 Cash flow: 'Long-lived assets' (Investing activities); = 'ADQUISICIONES DE INMUEBLES Y EQUIPO' del resumen F6 p.61",
+        "flujo.cfi": "F2/F4 Cash flow: 'Net cash flow used in from investing activities'",
+        "flujo.cff": "F2/F4 Cash flow: 'Net cash flow used in investing activities' (asi rotulada por WALMEX; es la de financiamiento)",
+        "flujo.dividendos": "F2/F4 Cash flow: 'Dividend payment' (= 'Dividendo pagado' F6 p.61)",
+        "flujo.recompras": "F2/F4 Cash flow: 'Repurchase of shares' (= 'Inversion en recompra de acciones' F6 p.61)",
+        "flujo.principal_arrendamientos_financieros": "F2/F4 Cash flow: 'Payment of leases liability' (incluye principal + interes pagados en efectivo del pasivo por arrendamiento, Nota 9 F1 p.192: $4,170,343 + $9,115,155 = $13,285,498 en 2025)",
+        "flujo.depreciacion_amortizacion": "F2/F4 Cash flow: 'Depreciation and amortization' (=EBITDA - utilidad operativa, control interno)",
+        "flujo.sbc": "F2/F4 Cash flow: 'Stock option compensation expenses'",
+        "flujo.efecto_cambiario": "F2/F4 Cash flow: 'Effect of changes in the value of cash'",
+        "flujo.otros_operativos.interes_por_pasivos_de_arrendamiento_(nota_9)": "F2/F4 Cash flow: 'Interest on lease liabilities' (= Nota 9 'Intereses por pasivos por arrendamiento')",
+        "flujo.otros_operativos.diferencia_isr_devengado_vs_isr_pagado_en_efectivo": "calculo sobre hechos: 'Income tax paid' (Cash flow) menos ISR devengado implicito (Income before income taxes - Consolidated net income, mismo estado)"
+      },
+      "resultados": {
+        "ingresos": 1011597.884,
+        "costo_ventas": 766399.989,
+        "utilidad_bruta": 245197.895,
+        "gastos_operativos": 166704.145,
+        "utilidad_operativa": 78493.75,
+        "gasto_intereses": 11464.697,
+        "ingreso_intereses": 1847.595,
+        "utilidad_antes_impuestos": 68876.648,
+        "impuestos": 18985.907,
+        "utilidad_neta": 49890.741,
+        "utilidad_neta_controladora": 49890.741
+      },
+      "balance": {
+        "caja": 28591.153,
+        "cuentas_por_cobrar": 26634.85,
+        "inventarios": 107450.921,
+        "otros_activos_circulantes": 1432.523,
+        "ppe_neto": 258625.347,
+        "otros_activos_lp": 72538.469,
+        "activo_total": 495273.263,
+        "proveedores": 123903.939,
+        "otros_pasivos_circulantes": 40625.831,
+        "deuda": 0.0,
+        "arrendamientos_financieros": 80848.147,
+        "revolvente": 0.0,
+        "otros_pasivos_lp": 14315.285,
+        "pasivo_total": 259693.202,
+        "capital_contable": 235580.061,
+        "utilidades_retenidas": 180017.034
+      },
+      "flujo": {
+        "depreciacion_amortizacion": 24953.131,
+        "sbc": 304.661,
+        "cfo": 82437.748,
+        "capex": 38981.955,
+        "cfi": -36319.949,
+        "cff": -51271.644,
+        "dividendos": 28922.976,
+        "recompras": 8799.988,
+        "emision_deuda": 0.0,
+        "amortizacion_deuda": 0.0,
+        "principal_arrendamientos_financieros": 13285.498,
+        "emision_acciones": 0.0,
+        "efecto_cambiario": -2768.584,
+        "cambio_capital_trabajo": {
+          "cuentas_por_cobrar": -1642.439,
+          "inventarios": 1249.411,
+          "pagos_anticipados_y_otros": -406.351,
+          "proveedores": 4755.799,
+          "otras_cuentas_por_pagar": -1571.215
+        },
+        "otros_operativos": {
+          "perdida_(utilidad)_baja_de_activos": 223.564,
+          "interes_ganado_(reverso_no_monetario)": -1327.64,
+          "interes_por_pasivos_de_arrendamiento_(nota_9)": 9115.155,
+          "efecto_cambiario_no_realizado": 857.863,
+          "provision_obligaciones_laborales": 1031.707,
+          "interes_a_cargo_(reverso_no_monetario)": 263.182,
+          "diferencia_isr_devengado_vs_isr_pagado_en_efectivo": -4588.764,
+          "beneficios_a_empleados_pagados": -671.057
+        },
+        "otros_inversion": {
+          "interes_cobrado": 1327.64,
+          "venta_ppe": 544.462,
+          "fondo_plan_acciones": 789.904
+        },
+        "otros_financiamiento": {
+          "interes_pagado": 263.182
+        },
+        "caja_inicial": 36513.582,
+        "caja_final": 28591.153,
+        "utilidad_neta": 49890.741
+      },
+      "movimientos_ppe": {
+        "adiciones": 40619.328,
+        "depreciacion": 23432.521,
+        "otros": -3234.543,
+        "fuente": "Nota 8 + Nota 9, F1 p.199-200 y p.191-192 (roll-forward de costo y depreciacion acumulada)"
+      },
+      "movimientos_arrendamientos": {
+        "inicial": 79729.903,
+        "nuevos": 7499.672,
+        "principal": 4123.847,
+        "otros": -2257.581,
+        "fuente": "Nota 9, F1 p.192 (conciliacion de saldos del pasivo por arrendamiento)"
+      },
+      "ajustado": [
+        {
+          "nombre": "ebitda_emisor",
+          "base": "utilidad_operativa",
+          "ajustes": {
+            "depreciacion_y_amortizacion (F2/F5)": 24953.131
+          },
+          "valor_ajustado": 103447.0,
+          "fuente": "F5 p.2 / F6 p.61: EBITDA = utilidad de operacion + D&A (definicion del glosario del emisor, 'Flujo Operativo')"
+        }
+      ],
+      "memo": {
+        "ppe_sin_derecho_uso": 195080.344,
+        "activos_derecho_uso": 63545.003,
+        "arrendamiento_corto_plazo": 5186.942,
+        "arrendamiento_largo_plazo": 75661.205,
+        "leases_y_otros_pasivos_lp_total_bs": 83988.302,
+        "otros_dentro_de_leases_y_otros_lp": 8327.097,
+        "isr_diferido_activo": 23189.157,
+        "isr_pasivo_lp": 2364.599,
+        "beneficios_empleados_pasivo": 3623.589,
+        "unidades": "millones de MXN",
+        "capex_mexico_2025": 33291.269,
+        "capex_centroamerica_2025": 5690.686,
+        "ebitda_reportado": 103447,
+        "activos_mexico": 381747.65,
+        "activos_centroamerica": 75624.168,
+        "credito_mercantil": 37901.445,
+        "dividendo_por_accion_ordinario_2025_pesos": 1.3,
+        "dividendo_por_accion_extra_2025_pesos": 0.39,
+        "acciones_recompradas_2025_millones": 154.0,
+        "cofece_multa_pesos_millones": 93.4
+      },
+      "notas": "Cierre del ejercicio anual mas reciente disponible."
+    },
+    {
+      "periodo": "1S2026",
+      "anio": 2026,
+      "fin": "2026-06-30",
+      "fuente": "F3 (Reporte trimestral 2T26 BMV) / F4 (Estados Financieros 2T26 estructurados)",
+      "fuentes_campos": {
+        "resultados.ingresos": "F2/F1 P&L: Net Sales + Other revenues = Total revenues (asi calcula WALMEX su margen bruto; Earnings Release 4T25 F5 p.2 y Reporte Anual F1 Estados de Resultados)",
+        "resultados.costo_ventas": "F2/F5 P&L: Cost of sales",
+        "resultados.utilidad_bruta": "F2/F5 P&L: Gross profit (= Total revenues - Cost of sales)",
+        "resultados.gastos_operativos": "F2 P&L: General expenses - Other income + Other expenses (neto; asi Gross profit - gastos_operativos = Operating income, F5 p.2)",
+        "resultados.utilidad_operativa": "F2/F5 P&L: Operating income",
+        "resultados.gasto_intereses": "F2 P&L: Financial expenses (suma de los 4 trimestres; incluye interes de arrendamientos IFRS16, Nota 9/21 del Reporte Anual F1)",
+        "resultados.ingreso_intereses": "F2 P&L: Financial income (suma de los 4 trimestres)",
+        "resultados.utilidad_antes_impuestos": "F2/F5 P&L: Income before income taxes",
+        "resultados.impuestos": "F2/F5 P&L: implicito = UAI - utilidad neta (Taxes, F5 p.2)",
+        "resultados.utilidad_neta": "F2/F5 P&L: Consolidated net income (=utilidad neta controladora; WALMEX no tiene participacion no controladora, F1 Nota sobre participacion no controladora / IA25 tabla F6 p.61)",
+        "flujo.cfo": "F2/F4 Cash flow: 'Net cash flow operating activities'",
+        "flujo.capex": "F2/F4 Cash flow: 'Long-lived assets' (Investing activities); = 'ADQUISICIONES DE INMUEBLES Y EQUIPO' del resumen F6 p.61",
+        "flujo.cfi": "F2/F4 Cash flow: 'Net cash flow used in from investing activities'",
+        "flujo.cff": "F2/F4 Cash flow: 'Net cash flow used in investing activities' (asi rotulada por WALMEX; es la de financiamiento)",
+        "flujo.dividendos": "F2/F4 Cash flow: 'Dividend payment' (= 'Dividendo pagado' F6 p.61)",
+        "flujo.recompras": "F2/F4 Cash flow: 'Repurchase of shares' (= 'Inversion en recompra de acciones' F6 p.61)",
+        "flujo.principal_arrendamientos_financieros": "F2/F4 Cash flow: 'Payment of leases liability' (incluye principal + interes pagados en efectivo del pasivo por arrendamiento, Nota 9 F1 p.192: $4,170,343 + $9,115,155 = $13,285,498 en 2025)",
+        "flujo.depreciacion_amortizacion": "F2/F4 Cash flow: 'Depreciation and amortization' (=EBITDA - utilidad operativa, control interno)",
+        "flujo.sbc": "F2/F4 Cash flow: 'Stock option compensation expenses'",
+        "flujo.efecto_cambiario": "F2/F4 Cash flow: 'Effect of changes in the value of cash'",
+        "flujo.otros_operativos.interes_por_pasivos_de_arrendamiento_(nota_9)": "F2/F4 Cash flow: 'Interest on lease liabilities' (= Nota 9 'Intereses por pasivos por arrendamiento')",
+        "flujo.otros_operativos.diferencia_isr_devengado_vs_isr_pagado_en_efectivo": "calculo sobre hechos: 'Income tax paid' (Cash flow) menos ISR devengado implicito (Income before income taxes - Consolidated net income, mismo estado)"
+      },
+      "resultados": {
+        "ingresos": 495966.33,
+        "costo_ventas": 376248.173,
+        "utilidad_bruta": 119718.157,
+        "gastos_operativos": 84226.897,
+        "utilidad_operativa": 35491.26,
+        "gasto_intereses": 5695.213,
+        "ingreso_intereses": 1134.986,
+        "utilidad_antes_impuestos": 30931.033,
+        "impuestos": 7279.1,
+        "utilidad_neta": 23651.933,
+        "utilidad_neta_controladora": 23651.933
+      },
+      "balance": {
+        "caja": 30118.253,
+        "cuentas_por_cobrar": 29276.926,
+        "inventarios": 107528.941,
+        "otros_activos_circulantes": 1729.352,
+        "ppe_neto": 262886.012,
+        "otros_activos_lp": 74407.106,
+        "activo_total": 505946.59,
+        "proveedores": 114233.228,
+        "otros_pasivos_circulantes": 55193.017,
+        "deuda": 0.0,
+        "arrendamientos_financieros": 83098.1,
+        "revolvente": 0.0,
+        "otros_pasivos_lp": 14808.451,
+        "pasivo_total": 267332.796,
+        "capital_contable": 238613.794,
+        "utilidades_retenidas": 180098.013
+      },
+      "flujo": {
+        "depreciacion_amortizacion": 13127.66,
+        "sbc": -23.393,
+        "cfo": 23281.751,
+        "capex": 11701.395,
+        "cfi": -10495.05,
+        "cff": -10962.887,
+        "dividendos": 0.0,
+        "recompras": 3998.809,
+        "emision_deuda": 0.0,
+        "amortizacion_deuda": 0.0,
+        "principal_arrendamientos_financieros": 6940.56,
+        "emision_acciones": 0.0,
+        "efecto_cambiario": -296.714,
+        "cambio_capital_trabajo": {
+          "cuentas_por_cobrar": -3152.488,
+          "inventarios": 172.045,
+          "pagos_anticipados_y_otros": 148.733,
+          "proveedores": -10012.535,
+          "otras_cuentas_por_pagar": -4160.702
+        },
+        "otros_operativos": {
+          "perdida_(utilidad)_baja_de_activos": 229.113,
+          "interes_ganado_(reverso_no_monetario)": -511.904,
+          "interes_por_pasivos_de_arrendamiento_(nota_9)": 4668.054,
+          "efecto_cambiario_no_realizado": 236.87,
+          "provision_obligaciones_laborales": 364.838,
+          "interes_a_cargo_(reverso_no_monetario)": 23.518,
+          "diferencia_isr_devengado_vs_isr_pagado_en_efectivo": -1299.581,
+          "beneficios_a_empleados_pagados": -180.41
+        },
+        "otros_inversion": {
+          "interes_cobrado": 511.904,
+          "venta_ppe": 183.055,
+          "fondo_plan_acciones": 511.386
+        },
+        "otros_financiamiento": {
+          "interes_pagado": 23.518
+        },
+        "caja_inicial": 28591.153,
+        "caja_final": 30118.253,
+        "utilidad_neta": 23651.933
+      },
+      "memo": {
+        "ppe_sin_derecho_uso": 197792.35,
+        "activos_derecho_uso": 65093.662,
+        "arrendamiento_corto_plazo": 5495.153,
+        "arrendamiento_largo_plazo": 77602.947,
+        "leases_y_otros_pasivos_lp_total_bs": 85994.789,
+        "otros_dentro_de_leases_y_otros_lp": 8391.842,
+        "isr_diferido_activo": 24410.677,
+        "isr_pasivo_lp": 2636.446,
+        "beneficios_empleados_pasivo": 3780.163,
+        "unidades": "millones de MXN",
+        "utilidad_operativa_mexico_1s2026": 30571.773,
+        "utilidad_operativa_ca_1s2026": 4919.487,
+        "utilidad_operativa_mexico_1s2025": 30292.604,
+        "utilidad_operativa_ca_1s2025": 5863.404,
+        "acciones_en_circulacion_millones": 17220.231803,
+        "acciones_recompradas_acum_2026": 71.98
+      },
+      "notas": "Periodo de 6 meses (no anual): resultados y flujo son del semestre, no anualizados. El reporte trimestral condensado NO trae roll-forward de PPE/derecho de uso ni del pasivo por arrendamiento con el detalle de la Nota 8/9 anual, asi que movimientos_ppe y movimientos_arrendamientos se omiten aqui (C05/C06 quedan en INFO para este periodo, no FALLA). El desglose de 'Leases and other long-term liabilities' en arrendamientos_lp + otros_pasivos_lp se obtuvo por diferencia contra el pasivo total por arrendamiento de la nota de arrendamientos del trimestre ($83,098,100) y se verifico por cuadre EXACTO del pasivo total del balance (ver _check_balance en modelo.py)."
+    }
+  ],
+  "supuestos": {
+    "anos": 5,
+    "caja_minima": 20000.0,
+    "nota": "Supuestos de escenario (mecanismo); no son pronosticos, guia del emisor ni consenso.",
+    "fuente_supuestos": "notas-y-modelo.md s4; niveles de partida = drivers implicitos FY2025 (base.json)",
+    "escenarios": {
+      "tension": {
+        "descripcion": "Consumo debil sostenido (entorno descrito por el propio emisor en 2T26, F3), compresion de margen por mayor promocionalidad, costo de fondeo de arrendamientos al alza, y respuesta defensiva: recorte de capex y pausa de recompras.",
+        "fuente_supuestos": "notas-y-modelo.md s4.1",
+        "crecimiento_ingresos": 0.02,
+        "margen_bruto": 0.237,
+        "margen_operativo": 0.07,
+        "tasa_impuestos": 0.3,
+        "da_ventas": 0.026,
+        "capex_ventas": 0.035,
+        "sbc_ventas": 0.0003,
+        "dias_cxc": 10.0,
+        "dias_inventario": 55.0,
+        "dias_proveedores": 55.0,
+        "tasa_interes": 0.11,
+        "tasa_arrendamientos_financieros": 0.115,
+        "tasa_revolvente": 0.13,
+        "nuevos_arrendamientos_financieros": 15000.0,
+        "dividendos_payout": 0.45,
+        "recompras": 0.0
+      },
+      "intermedio": {
+        "descripcion": "Continuidad de las tendencias 2024-2025 (crecimiento ~4-5%, margenes estables, capital de trabajo similar al historico reciente).",
+        "fuente_supuestos": "notas-y-modelo.md s4.2",
+        "crecimiento_ingresos": 0.045,
+        "margen_bruto": 0.242,
+        "margen_operativo": 0.078,
+        "tasa_impuestos": 0.27,
+        "da_ventas": 0.025,
+        "capex_ventas": 0.04,
+        "sbc_ventas": 0.0003,
+        "dias_cxc": 9.5,
+        "dias_inventario": 52.0,
+        "dias_proveedores": 59.0,
+        "tasa_interes": 0.1,
+        "tasa_arrendamientos_financieros": 0.11,
+        "tasa_revolvente": 0.12,
+        "nuevos_arrendamientos_financieros": 20000.0,
+        "dividendos_payout": 0.58,
+        "recompras": 8000.0
+      },
+      "eficiencia": {
+        "descripcion": "Aceleracion de e-commerce/On-Demand y automatizacion de cadena de suministro (Centros de Distribucion de Guanajuato y Tlaxcala anunciados para 2027, F7), apalancamiento operativo y mejor negociacion con proveedores (mas dias de cuentas por pagar).",
+        "fuente_supuestos": "notas-y-modelo.md s4.3",
+        "crecimiento_ingresos": 0.07,
+        "margen_bruto": 0.246,
+        "margen_operativo": 0.085,
+        "tasa_impuestos": 0.27,
+        "da_ventas": 0.024,
+        "capex_ventas": 0.043,
+        "sbc_ventas": 0.0003,
+        "dias_cxc": 9.0,
+        "dias_inventario": 48.0,
+        "dias_proveedores": 63.0,
+        "tasa_interes": 0.1,
+        "tasa_arrendamientos_financieros": 0.105,
+        "tasa_revolvente": 0.115,
+        "nuevos_arrendamientos_financieros": 22000.0,
+        "dividendos_payout": 0.6,
+        "recompras": 10000.0
+      }
+    }
+  }
+}

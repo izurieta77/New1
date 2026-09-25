@@ -325,11 +325,12 @@ FC_FLUJO = {
         "operativa, control interno)",
     "flujo.sbc": "F2/F4 Cash flow: 'Stock option compensation expenses'",
     "flujo.efecto_cambiario": "F2/F4 Cash flow: 'Effect of changes in the value of cash'",
-    "flujo.otros_operativos.interes_por_pasivos_de_arrendamiento_(nota_9)": "F2/F4 Cash flow: 'Interest on lease "
-        "liabilities' (= Nota 9 'Intereses por pasivos por arrendamiento')",
-    "flujo.otros_operativos.diferencia_isr_devengado_vs_isr_pagado_en_efectivo": "calculo sobre hechos: 'Income "
-        "tax paid' (Cash flow) menos ISR devengado implicito (Income before income taxes - Consolidated net "
-        "income, mismo estado)",
+    "flujo.otros_operativos": "F2/F4 Cash flow, seccion 'Operating activities': partidas no monetarias "
+        "(perdida en baja de activos, interes ganado y a cargo -reversos-, interes por pasivos de arrendamiento "
+        "Nota 9, efecto cambiario no realizado, provision de obligaciones laborales) mas la diferencia entre "
+        "ISR pagado en efectivo ('Income tax paid') y el ISR devengado implicito (Income before income taxes - "
+        "Consolidated net income del mismo estado), mas beneficios a empleados pagados; ver modelo.py "
+        "construir_flujo() para el detalle exacto de cada componente.",
 }
 
 
@@ -523,3 +524,331 @@ def construir_historico() -> list:
                        "nota de arrendamientos del trimestre ($83,098,100) y se verifico por cuadre EXACTO del "
                        "pasivo total del balance (ver _check_balance en modelo.py).")}
     return [p24, p25, p26h1]
+
+
+# ------------------------------------------------------------------ doble comprobacion (segunda lectura independiente)
+# Cifras anuales tal como aparecen en DOS documentos distintos de los usados para construir el historico:
+# el Earnings Release 4T25 en ingles (F5, pagina 2, tabla 'Results 2025 / 2024') y la tabla resumen 2015-2025
+# del Informe Anual (F6, paginas 61-62). Ambos son independientes del archivo estructurado F2 usado arriba
+# (formatos y layout distintos; mismo emisor). Si difieren de lo calculado aqui en mas que redondeo, es FALLA.
+
+SEGUNDA_LECTURA_F5_F6 = {
+    "FY2025": {"ventas_netas": 1004494, "otros_ingresos": 7104, "ingresos_totales": 1011598, "costo_ventas": 766400,
+               "utilidad_bruta": 245198, "utilidad_operativa": 78494, "ebitda": 103447, "utilidad_antes_impuestos": 68877,
+               "impuestos": 18986, "utilidad_neta": 49891, "activo_total": 495273,
+               "capital_contable": 235580, "capex": 38982, "dividendo_pagado": 28923, "recompra_pesos": 8800,
+               "acciones_recompradas_millones": 154, "caja": 28591, "inventarios": 107451, "proveedores": 123904},
+    "FY2024": {"ventas_netas": 951642, "otros_ingresos": 6865, "ingresos_totales": 958507, "costo_ventas": 727034,
+               "utilidad_bruta": 231473, "utilidad_operativa": 77359, "ebitda": 99998, "utilidad_antes_impuestos": 68931,
+               "impuestos": 15104, "utilidad_neta": 53827, "activo_total": 493893,
+               "capital_contable": 232875, "capex": 34764, "dividendo_pagado": 37399, "recompra_pesos": 0,
+               "acciones_recompradas_millones": 0, "caja": 36514, "inventarios": 110695, "proveedores": 121971},
+}
+
+
+def doble_comprobacion(hist: list) -> dict:
+    """Compara, para cada cifra anual clave, el valor construido en base.json (redondeado a millones enteros)
+    contra la segunda lectura independiente (F5 p.2 + F6 p.61-62). Tolerancia = 1 (redondeo de millones)."""
+    por_periodo = {p["periodo"]: p for p in hist}
+    filas = []
+
+    def chk(periodo, campo, calculado, segunda_lectura):
+        if segunda_lectura is None:
+            return
+        dif = round(calculado) - segunda_lectura
+        filas.append({"periodo": periodo, "campo": campo, "calculado_base_json": round(calculado, 3),
+                      "segunda_lectura_F5_F6": segunda_lectura, "diferencia_redondeo": dif,
+                      "ok": abs(dif) <= 1})
+
+    for per in ("FY2024", "FY2025"):
+        p = por_periodo[per]
+        sl = SEGUNDA_LECTURA_F5_F6[per]
+        r, b, f = p["resultados"], p["balance"], p["flujo"]
+        chk(per, "ingresos_totales", r["ingresos"], sl["ingresos_totales"])
+        chk(per, "costo_ventas", r["costo_ventas"], sl["costo_ventas"])
+        chk(per, "utilidad_bruta", r["utilidad_bruta"], sl["utilidad_bruta"])
+        chk(per, "utilidad_operativa", r["utilidad_operativa"], sl["utilidad_operativa"])
+        chk(per, "utilidad_antes_impuestos", r["utilidad_antes_impuestos"], sl["utilidad_antes_impuestos"])
+        chk(per, "impuestos", r["impuestos"], sl["impuestos"])
+        chk(per, "utilidad_neta", r["utilidad_neta"], sl["utilidad_neta"])
+        ebitda_calc = r["utilidad_operativa"] + f["depreciacion_amortizacion"]
+        chk(per, "ebitda", ebitda_calc, sl["ebitda"])
+        chk(per, "activo_total", b["activo_total"], sl["activo_total"])
+        chk(per, "capital_contable", b["capital_contable"], sl["capital_contable"])
+        chk(per, "caja", b["caja"], sl["caja"])
+        chk(per, "inventarios", b["inventarios"], sl["inventarios"])
+        chk(per, "proveedores", b["proveedores"], sl["proveedores"])
+        chk(per, "capex", f["capex"], sl["capex"])
+        chk(per, "dividendos_pagados", f["dividendos"], sl["dividendo_pagado"])
+        chk(per, "recompras", f["recompras"], sl["recompra_pesos"])
+    ok = sum(1 for x in filas if x["ok"])
+    return {"naturaleza": "doble comprobacion: mismas cifras leidas de DOS documentos independientes del emisor "
+                          "(Earnings Release 4T25 en ingles, F5 p.2; y tabla resumen 2015-2025 del Informe Anual, "
+                          "F6 p.61-62) contra lo transcrito a base.json desde el archivo de estados financieros "
+                          "estructurado (F2). Tolerancia = 1 (redondeo a millones enteros).",
+            "total": len(filas), "ok": ok, "fallas": [x for x in filas if not x["ok"]], "detalle": filas}
+
+
+# ------------------------------------------------------------------ costo de capital (WACC) y DCF inverso
+
+def leer_damodaran():
+    import xlrd
+    import openpyxl
+    import warnings
+    warnings.filterwarnings("ignore")
+
+    def beta_retail(archivo):
+        wb = xlrd.open_workbook(str(DATOS / archivo))
+        ws = wb.sheet_by_name("Industry Averages")
+        for r in range(10, ws.nrows):
+            if ws.cell_value(r, 0) == "Retail (Grocery and Food)":
+                return {"beta_bruta": ws.cell_value(r, 2), "de_ratio": ws.cell_value(r, 3),
+                        "beta_desapalancada": ws.cell_value(r, 5),
+                        "beta_desapalancada_corregida_caja": ws.cell_value(r, 7)}
+        raise KeyError("Retail (Grocery and Food) no encontrado")
+
+    beta_emerg = beta_retail("damodaran_betaemerg.xls")
+    beta_global = beta_retail("damodaran_betaGlobal.xls")
+    wb = openpyxl.load_workbook(DATOS / "damodaran_ctrypremJuly26.xlsx", data_only=True)
+    ws = wb["ERPs by country"]
+    erp_madura = None
+    for row in ws.iter_rows(values_only=True):
+        if row and row[0] == "Enter the current risk premium for the US =":
+            erp_madura = row[4]
+            break
+    crp_mexico = None
+    for row in ws.iter_rows(values_only=True):
+        if row and row[0] == "Mexico":
+            crp_mexico = {"default_spread": row[3], "erp_total": row[4], "crp_ajustada_volatilidad": row[5],
+                          "crp_cds": row[7] if len(row) > 7 else None}
+            break
+    return {"beta_emergentes_retail": beta_emerg, "beta_global_retail": beta_global,
+            "erp_madura_eua": erp_madura, "crp_mexico": crp_mexico,
+            "fuente": "F9/F10/F11: Damodaran, industria 'Retail (Grocery and Food)', beta desapalancada "
+                      "corregida por caja; CRP Mexico ajustada por volatilidad relativa de mercado (metodo "
+                      "estandar Damodaran, hoja 'ERPs by country')"}
+
+
+def tasa_libre_riesgo():
+    """FRED DGS10 (10-year Treasury, fecha reciente) y T5YIE (breakeven 5 anios) via herramientas.datos."""
+    from herramientas import datos
+    dgs10 = datos.fred_serie("DGS10", desde="2026-09-01")
+    t5yie = datos.fred_serie("T5YIE", desde="2026-09-01")
+    return {"rf_usd_10y": dgs10[-1][1] / 100, "fecha_rf_usd": str(dgs10[-1][0]),
+            "inflacion_esperada_eua_5y": t5yie[-1][1] / 100, "fecha_inflacion_eua": str(t5yie[-1][0]),
+            "fuente": "FRED DGS10 y T5YIE (ver herramientas/README.md 'Fuentes de datos')"}
+
+
+def costo_capital(dam: dict, rf: dict, inflacion_mx: float, beta_u: float, deuda_en_estructura: float,
+                  capitalizacion: float, tasa_marginal: float, kd_pretax: float) -> dict:
+    """WACC en MXN. beta relevered con Hamada (deuda = arrendamientos, unica 'deuda' de WALMEX);
+    r_f MXN = r_f USD ajustada por diferencial de inflacion esperada (Mexico vs EUA, metodo IFE aproximado);
+    Ke = r_f + beta_L x ERP madura + CRP Mexico (Damodaran, ajustada por volatilidad)."""
+    t = tasa_marginal
+    crp = dam["crp_mexico"]["crp_ajustada_volatilidad"]
+    erp = dam["erp_madura_eua"]
+    beta_l = beta_u * (1 + (1 - t) * deuda_en_estructura / capitalizacion) if capitalizacion else beta_u
+    rf_usd = rf["rf_usd_10y"]
+    ke_usd = rf_usd + beta_l * erp + crp
+    pi_mx, pi_us = inflacion_mx, rf["inflacion_esperada_eua_5y"]
+    rf_mxn = (1 + rf_usd) * (1 + pi_mx) / (1 + pi_us) - 1
+    ke_mxn = (1 + ke_usd) * (1 + pi_mx) / (1 + pi_us) - 1
+    e, d = capitalizacion, deuda_en_estructura
+    w = (e * ke_mxn + d * kd_pretax * (1 - t)) / (e + d) if (e + d) else ke_mxn
+    return {"beta_desapalancada": beta_u, "beta_relevered": beta_l, "deuda_en_estructura": d, "capitalizacion": e,
+            "rf_usd": rf_usd, "rf_mxn_estimada": rf_mxn, "erp_madura_eua": erp, "crp_mexico": crp,
+            "ke_usd": ke_usd, "ke_mxn": ke_mxn, "kd_antes_impuestos": kd_pretax,
+            "kd_despues_impuestos": kd_pretax * (1 - t), "tasa_marginal": t,
+            "inflacion_esperada_mx": pi_mx, "inflacion_esperada_eua": pi_us,
+            "peso_capital": e / (e + d) if (e + d) else 1.0, "wacc": w,
+            "naturaleza": "calculo con insumos citados (Damodaran, FRED); beta, ERP, CRP e inflacion esperada de "
+                          "Mexico son estimaciones de mercado, no hechos del emisor"}
+
+
+def construir_dcf_inverso(hist: list) -> dict:
+    p25, p26h1 = hist[1], hist[2]
+    ing_1s25 = 487228.410  # F4: Q1+Q2 2025 Total revenues (miles/1000), ver notas-y-modelo.md
+    ing_ttm = p25["resultados"]["ingresos"] - ing_1s25 + p26h1["resultados"]["ingresos"]
+
+    precio = 45.81      # Yahoo WALMEX.MX, cierre 2026-09-23 (ultimo cierre disponible al 2026-09-25; F8)
+    fecha_precio = "2026-09-23"
+    acciones = 17220.231803    # F3 p.34: 'Numero de acciones en circulacion' a 30-jun-2026 (no hay dilucion, F3 p.81)
+    caja_jun26 = p26h1["balance"]["caja"]
+    arr_jun26 = p26h1["balance"]["arrendamientos_financieros"]
+    deuda_neta_sin_arr = -caja_jun26
+    deuda_neta_con_arr = arr_jun26 - caja_jun26
+
+    dam = leer_damodaran()
+    rf = tasa_libre_riesgo()
+    inflacion_mx = 0.037   # F6 p.61: inflacion Mexico 2025 (hecho realizado, usado como proxy de esperada; supuesto)
+    tasa_marginal = 0.30   # F1 Nota 16: tasa ISR Mexico
+    capitalizacion = precio * acciones
+    int_arr_25 = 9115.155
+    arr_prom_25 = (79729.903 + 80848.147) / 2
+    kd_arrendamientos = int_arr_25 / arr_prom_25
+
+    w_arr = costo_capital(dam, rf, inflacion_mx, dam["beta_emergentes_retail"]["beta_desapalancada_corregida_caja"],
+                          arr_jun26, capitalizacion, tasa_marginal, kd_arrendamientos)
+    w_sin_arr = costo_capital(dam, rf, inflacion_mx, dam["beta_emergentes_retail"]["beta_desapalancada_corregida_caja"],
+                              0.0, capitalizacion, tasa_marginal, 0.0)
+    w_global = costo_capital(dam, rf, inflacion_mx, dam["beta_global_retail"]["beta_desapalancada_corregida_caja"],
+                             arr_jun26, capitalizacion, tasa_marginal, kd_arrendamientos)
+
+    def margen_fcf_despues_arr(p):
+        f = p["flujo"]
+        fcf = f["cfo"] - f["capex"] - f["principal_arrendamientos_financieros"]
+        return fcf / p["resultados"]["ingresos"]
+
+    m24, m25 = margen_fcf_despues_arr(hist[0]), margen_fcf_despues_arr(hist[1])
+    m_prom = (m24 + m25) / 2
+    anos, g0 = 10, 0.045
+    w0 = w_arr["wacc"]
+
+    def correr(w, g, m, dn, p=precio):
+        r = mi.dcf_inverso(p, acciones, dn, w, g, m, anos, ingresos_base=ing_ttm,
+                           tasa_libre_riesgo=w_arr["rf_mxn_estimada"])
+        sol = r.get("solucion") or {}
+        return {"wacc": w, "g_terminal": g, "margen_fcf": m, "deuda_neta": dn, "precio": p, "estado": r["estado"],
+                "crecimiento_implicito": r["crecimiento_implicito"], "peso_terminal": sol.get("peso_terminal"),
+                "residuo": r.get("residuo"), "alertas": r["alertas"],
+                "valor_por_accion_en_solucion": r.get("valor_por_accion_en_solucion")}
+
+    base_run = mi.dcf_inverso(precio, acciones, deuda_neta_con_arr, w0, g0, m25, anos, ingresos_base=ing_ttm,
+                              tasa_libre_riesgo=w_arr["rf_mxn_estimada"])
+    rejilla = []
+    for etq, m in (("FY2024", m24), ("FY2025", m25), ("promedio 2024-2025", m_prom)):
+        for w in (w0 - 0.01, w0, w0 + 0.01):
+            for g in (g0 - 0.01, g0, g0 + 0.01):
+                x = correr(w, g, m, deuda_neta_con_arr)
+                x["margen_etiqueta"] = etq
+                rejilla.append(x)
+    variantes = {
+        "sin_arrendamientos_como_deuda": correr(w_sin_arr["wacc"], g0, m25, deuda_neta_sin_arr),
+        "beta_global_en_vez_de_emergentes": correr(w_global["wacc"], g0, m25, deuda_neta_con_arr),
+        "margen_FCF_promedio_2024_2025": correr(w0, g0, m_prom, deuda_neta_con_arr),
+        "g_terminal_3.0pct": correr(w0, 0.03, m25, deuda_neta_con_arr),
+        "g_terminal_5.5pct": correr(w0, 0.055, m25, deuda_neta_con_arr),
+        "wacc_menos_100pb": correr(w0 - 0.01, g0, m25, deuda_neta_con_arr),
+        "wacc_mas_100pb": correr(w0 + 0.01, g0, m25, deuda_neta_con_arr),
+    }
+    return {
+        "naturaleza": "calculo: crecimiento anual constante de ingresos (10 anos) que descuenta el precio de "
+                      "cierre bajo supuestos EXPLICITOS de WACC, g terminal y margen FCF; NO es pronostico ni "
+                      "recomendacion de compra o venta (FASE 0).",
+        "insumos": {"precio": precio, "fecha_precio": fecha_precio, "acciones_millones": acciones,
+                    "capitalizacion": capitalizacion, "ingresos_base_ttm_jun26": ing_ttm,
+                    "ingresos_1s2025_para_ttm": ing_1s25, "caja_jun26": caja_jun26,
+                    "arrendamientos_jun26": arr_jun26, "deuda_neta_sin_arrendamientos": deuda_neta_sin_arr,
+                    "deuda_neta_con_arrendamientos": deuda_neta_con_arr, "g_terminal": g0, "anos": anos,
+                    "definicion_deuda_neta": "deuda financiera (=0, WALMEX no tiene deuda financiera) + "
+                                             "arrendamientos IFRS16 (si se cuentan como deuda) - caja, a jun-2026",
+                    "definicion_margen": "FCF despues de arrendamientos / ingresos totales = (CFO - capex - "
+                                         "principal de arrendamientos) / ingresos (mismo calculo que el control "
+                                         "C12 del motor sobre el historico reportado)"},
+        "damodaran": dam, "tasa_libre_riesgo": rf,
+        "wacc_con_arrendamientos_como_deuda": w_arr, "wacc_sin_arrendamientos": w_sin_arr,
+        "wacc_beta_global": w_global, "kd_arrendamientos_implicita": kd_arrendamientos,
+        "margen_fcf_fy2024": m24, "margen_fcf_fy2025": m25, "margen_fcf_promedio": m_prom,
+        "base": {k: base_run[k] for k in ("estado", "crecimiento_implicito", "residuo", "alertas")},
+        "base_valor_por_accion_en_solucion": base_run.get("valor_por_accion_en_solucion"),
+        "base_solucion": (base_run.get("solucion") or {}),
+        "sensibilidad": rejilla, "variantes": variantes,
+    }
+
+
+# ------------------------------------------------------------------ escenarios de mecanismo (supuestos explicitos)
+
+def construir_supuestos() -> dict:
+    """Tres escenarios de MECANISMO (no pronosticos): 'tension' (consumo debil sostenido + presion de costos +
+    disciplina de capital defensiva), 'intermedio' (continuidad de las tendencias 2024-2025), 'eficiencia'
+    (aceleracion de e-commerce/automatizacion de cadena de suministro segun el Programa de Inversion 2026, F7,
+    con apalancamiento operativo y mejor capital de trabajo). Los niveles de partida son los drivers implicitos
+    FY2025 (ver notas-y-modelo.md s3); las desviaciones y su razon se documentan ahi mismo."""
+    return {
+        "anos": 5, "caja_minima": 20000.0,
+        "nota": "Supuestos de escenario (mecanismo); no son pronosticos, guia del emisor ni consenso.",
+        "fuente_supuestos": "notas-y-modelo.md s4; niveles de partida = drivers implicitos FY2025 (base.json)",
+        "escenarios": {
+            "tension": {
+                "descripcion": "Consumo debil sostenido (entorno descrito por el propio emisor en 2T26, F3), "
+                    "compresion de margen por mayor promocionalidad, costo de fondeo de arrendamientos al alza, "
+                    "y respuesta defensiva: recorte de capex y pausa de recompras.",
+                "fuente_supuestos": "notas-y-modelo.md s4.1",
+                "crecimiento_ingresos": 0.020, "margen_bruto": 0.237, "margen_operativo": 0.070,
+                "tasa_impuestos": 0.30, "da_ventas": 0.026, "capex_ventas": 0.035, "sbc_ventas": 0.0003,
+                "dias_cxc": 10.0, "dias_inventario": 55.0, "dias_proveedores": 55.0,
+                "tasa_interes": 0.11, "tasa_arrendamientos_financieros": 0.115, "tasa_revolvente": 0.13,
+                "nuevos_arrendamientos_financieros": 15000.0, "dividendos_payout": 0.45, "recompras": 0.0,
+            },
+            "intermedio": {
+                "descripcion": "Continuidad de las tendencias 2024-2025 (crecimiento ~4-5%, margenes estables, "
+                    "capital de trabajo similar al historico reciente).",
+                "fuente_supuestos": "notas-y-modelo.md s4.2",
+                "crecimiento_ingresos": 0.045, "margen_bruto": 0.242, "margen_operativo": 0.078,
+                "tasa_impuestos": 0.27, "da_ventas": 0.025, "capex_ventas": 0.040, "sbc_ventas": 0.0003,
+                "dias_cxc": 9.5, "dias_inventario": 52.0, "dias_proveedores": 59.0,
+                "tasa_interes": 0.10, "tasa_arrendamientos_financieros": 0.11, "tasa_revolvente": 0.12,
+                "nuevos_arrendamientos_financieros": 20000.0, "dividendos_payout": 0.58, "recompras": 8000.0,
+            },
+            "eficiencia": {
+                "descripcion": "Aceleracion de e-commerce/On-Demand y automatizacion de cadena de suministro "
+                    "(Centros de Distribucion de Guanajuato y Tlaxcala anunciados para 2027, F7), apalancamiento "
+                    "operativo y mejor negociacion con proveedores (mas dias de cuentas por pagar).",
+                "fuente_supuestos": "notas-y-modelo.md s4.3",
+                "crecimiento_ingresos": 0.070, "margen_bruto": 0.246, "margen_operativo": 0.085,
+                "tasa_impuestos": 0.27, "da_ventas": 0.024, "capex_ventas": 0.043, "sbc_ventas": 0.0003,
+                "dias_cxc": 9.0, "dias_inventario": 48.0, "dias_proveedores": 63.0,
+                "tasa_interes": 0.10, "tasa_arrendamientos_financieros": 0.105, "tasa_revolvente": 0.115,
+                "nuevos_arrendamientos_financieros": 22000.0, "dividendos_payout": 0.60, "recompras": 10000.0,
+            },
+        },
+    }
+
+
+# ------------------------------------------------------------------ ensamblado de base.json y corrida
+
+def construir_base() -> dict:
+    hist = construir_historico()
+    return {
+        "empresa": "Wal-Mart de Mexico, S.A.B. de C.V. (Walmart de Mexico y Centroamerica)", "ticker": "WALMEX.MX",
+        "moneda": "MXN", "unidades": "millones", "fecha_corte": "2026-09-25",
+        "aviso": "FASE 0 (formacion): no es recomendacion de compra o venta. Escenarios = supuestos de "
+                 "mecanismo, no pronosticos. WALMEX no reporta ante la SEC; fuente = BMV/Emisnet y "
+                 "walmex.mx (Relacion con Inversionistas).",
+        "fuentes": FUENTES,
+        "historico": hist,
+        "supuestos": construir_supuestos(),
+    }
+
+
+def main(argv) -> int:
+    fallas_huellas = huellas.verificar(str(DATOS / "SHA256SUMS.txt"))
+    base = construir_base()
+    mi.guardar_json(base, AQUI / "base.json")
+    res = mi.construir_modelo(base)
+    dc = doble_comprobacion(base["historico"])
+    dcf = construir_dcf_inverso(base["historico"])
+    res["doble_comprobacion"] = dc
+    res["dcf_inverso"] = dcf
+    mi.guardar_json(res, AQUI / "resultados.json")
+    releido = mi.cargar_json(AQUI / "resultados.json")
+    auditoria = mi.resumir_controles(mi.verificar(releido))
+    coincide = all(auditoria[k] == res["resumen_controles"][k] for k in ("total", "OK", "FALLA", "INFO", "NO_APLICA"))
+    mi.escribir_sha256sums([AQUI / "base.json", AQUI / "modelo.py", AQUI / "resultados.json"], AQUI / "SHA256SUMS.txt")
+    print(mi.resumen_markdown(res))
+    print(f"\nDoble comprobacion (segunda lectura F5/F6): {dc['ok']}/{dc['total']} cifras OK")
+    if dc["fallas"]:
+        for x in dc["fallas"]:
+            print("  FALLA:", x)
+    print(f"DCF inverso: WACC (arrendamientos como deuda) {dcf['wacc_con_arrendamientos_como_deuda']['wacc']:.4%}, "
+          f"g terminal {dcf['insumos']['g_terminal']:.2%}, margen FCF FY2025 {dcf['margen_fcf_fy2025']:.4%} -> "
+          f"crecimiento implicito {dcf['base']['crecimiento_implicito']:.4%} ({dcf['base']['estado']})")
+    print(f"Huellas de datos/: {'OK' if not fallas_huellas else fallas_huellas}")
+    print(f"Auditoria de resultados.json releido: {'coincide' if coincide else 'NO COINCIDE'} "
+          f"({auditoria['total']} registros, FALLA {auditoria['FALLA']})")
+    ok = res["resumen_controles"]["todos_ok"] and coincide and not fallas_huellas and not dc["fallas"]
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv[1:]))
