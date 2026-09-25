@@ -105,6 +105,24 @@ def estado_cortacircuitos(curva_equity, parametros: dict | None = None) -> dict:
     }
 
 
+def estado_tope_perdida(equity_mxn: float, aportaciones_netas_mxn: float,
+                        parametros: dict | None = None) -> dict:
+    """Tope absoluto de perdida del dueno (perdida_maxima_tolerable_mxn del perfil activo).
+
+    Perdida = equity - aportaciones netas (MXN). Si el perfil no define tope, aplica=False.
+    """
+    p = parametros if parametros is not None else cargar_parametros()
+    tope = p.get("perdida_maxima_tolerable_mxn")
+    if not tope:
+        return {"aplica": False}
+    valor = float(tope["valor"] if isinstance(tope, dict) else tope)
+    pnl = float(equity_mxn) - float(aportaciones_netas_mxn)
+    return {"aplica": True, "tope_mxn": valor, "pnl_mxn": pnl, "activado": pnl <= -valor + 1e-9,
+            "margen_mxn": pnl + valor,
+            "accion": tope.get("accion", "Todo a efectivo y pausa hasta decision del dueno")
+            if isinstance(tope, dict) else "Todo a efectivo y pausa hasta decision del dueno"}
+
+
 def factor_por_rachas(resultados, parametros: dict | None = None) -> dict:
     """Factor de riesgo de una estrategia segun sus rachas (resultados en orden cronologico).
 

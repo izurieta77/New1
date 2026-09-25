@@ -9,7 +9,8 @@ Uso:
     python3 herramientas/portafolio.py posiciones
     python3 herramientas/portafolio.py valuar [--reconstruir] [--sin-guardar]
     python3 herramientas/portafolio.py reporte [--tasa-cetes 0.07] [--salida ruta.md]
-Opciones globales: --operaciones RUTA, --equity RUTA.
+Opciones globales: --operaciones RUTA, --equity RUTA, --perfil {arena_agresivo,estandar}.
+El libro por defecto es la cuenta arena-claude, asi que el perfil por defecto es arena_agresivo.
 
 Convenciones: moneda base MXN. Efectivo unico en MXN; operaciones en USD se convierten con
 USD/MXN (Yahoo MXN=X) del cierre en o antes de la fecha de la operacion. Costo promedio
@@ -31,7 +32,7 @@ from typing import Callable
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from herramientas import datos, metricas, riesgo
-from herramientas.parametros import DIR_BITACORA, obtener
+from herramientas.parametros import DIR_BITACORA, obtener, parametros_efectivos
 
 COLUMNAS_OPS = ["fecha", "ticker", "lado", "cantidad", "precio", "moneda", "comision", "stop",
                 "tesis_id", "estrategia", "notas"]
@@ -259,7 +260,7 @@ def registrar(ruta: str | Path, fecha, ticker: str, lado: str, cantidad: float, 
 
 
 def validar_contra_libro(operaciones: list[dict], orden: dict, fx_hist: FuncionFX | None,
-                         clase: str = "otro", fase: int = 1) -> dict:
+                         clase: str = "otro", fase: int = 1, parametros: dict | None = None) -> dict:
     """Valida una compra/venta con riesgo.validar_orden usando el libro valuado A COSTO.
 
     Tactica = estrategia distinta de '' y 'nucleo'. Sin precios de mercado ni P&L del
@@ -276,7 +277,7 @@ def validar_contra_libro(operaciones: list[dict], orden: dict, fx_hist: FuncionF
         {"capital": capital, "fase": fase, "posiciones": posiciones},
         {"ticker": orden["ticker"], "lado": orden["lado"], "cantidad": orden["cantidad"], "precio": orden["precio"],
          "tipo_cambio": fx, "clase": clase, "tactica": orden.get("estrategia", "") not in ("", "nucleo"),
-         "stop": orden.get("stop")})
+         "stop": orden.get("stop")}, parametros)
 
 
 # ---------------------------------------------------------------- valuacion
@@ -444,7 +445,7 @@ def _fmt(x, formato="{:+.2%}") -> str:
 
 def construir_reporte(operaciones: list[dict], equity: list[dict], libro: Libro,
                       benchmark: list[tuple[date, float]] | None, rf: float | None,
-                      notas_datos: list[str]) -> str:
+                      notas_datos: list[str], parametros: dict | None = None) -> str:
     """Reporte markdown: resumen, metricas vs benchmark, cortacircuitos, operaciones y rachas."""
     lineas = [f"# Reporte de portafolio en papel - {date.today().isoformat()}", ""]
     if not equity:
@@ -500,12 +501,19 @@ def construir_reporte(operaciones: list[dict], equity: list[dict], libro: Libro,
             lineas.append(f"\nMenos de {MIN_OBS_METRICAS} rendimientos: volatilidad y ratios no se calculan.")
         if not mb:
             lineas.append("\nBenchmark no disponible para todas las fechas de la curva.")
-        cc = riesgo.estado_cortacircuitos(curva)
-        lineas += ["", "## Cortacircuitos (sobre indice time-weighted)", "",
+        cc = riesgo.estado_cortacircuitos(curva, parametros)
+        perfil = (parametros or {}).get("perfil_activo", "estandar")
+        lineas += ["", f"## Cortacircuitos (perfil {perfil}, sobre indice time-weighted)", "",
                    f"- Drawdown actual: {cc['drawdown_actual']:.2%} desde el pico del {cc['fecha_pico']}",
                    f"- Nivel activado: {_fmt(cc['nivel_activado'], '{:.0%}')} -> {cc['accion']}",
                    f"- Siguiente nivel: {_fmt(cc['siguiente_nivel'], '{:.0%}')} "
                    f"(margen {_fmt(cc['distancia_siguiente'], '{:.2%}')})"]
+    tope = riesgo.estado_tope_perdida(ultimo["equity_mxn"], ultimo["aportaciones_netas_mxn"], parametros)
+    if tope.get("aplica"):
+        lineas += ["", "## Tope absoluto de perdida del dueno", "",
+                   f"- P&L vs aportaciones: {tope['pnl_mxn']:,.2f} MXN; tope -{tope['tope_mxn']:,.0f} MXN; "
+                   f"margen {tope['margen_mxn']:,.2f} MXN",
+                   f"- Estado: {'ACTIVADO -> ' + tope['accion'] if tope['activado'] else 'no activado'}"]
     cerradas = libro.cerradas
     lineas += ["", "## Operaciones cerradas", ""]
     if not cerradas:
@@ -518,7 +526,7 @@ def construir_reporte(operaciones: list[dict], equity: list[dict], libro: Libro,
                    "| Estrategia | n | Hit rate | Expectancy MXN | Estado rachas | Factor |", "|---|---|---|---|---|---|"]
         for est in sorted({c["estrategia"] or "(sin estrategia)" for c in cerradas}):
             sub = [c["pnl_mxn"] for c in cerradas if (c["estrategia"] or "(sin estrategia)") == est]
-            fr = riesgo.factor_por_rachas(sub)
+            fr = riesgo.factor_por_rachas(sub, parametros)
             lineas.append(f"| {est} | {len(sub)} | {metricas.hit_rate(sub):.1%} | {metricas.expectancy(sub):,.2f} | "
                           f"{fr['estado']} | {fr['factor']:.2f} |")
     vp = obtener("validacion_estrategias")
@@ -555,6 +563,8 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Portafolio en papel")
     ap.add_argument("--operaciones", default=str(RUTA_OPS))
     ap.add_argument("--equity", default=str(RUTA_EQUITY))
+    ap.add_argument("--perfil", default="arena_agresivo", choices=("arena_agresivo", "estandar"),
+                    help="perfil de riesgo de la cuenta del libro (por defecto la arena)")
     sub = ap.add_subparsers(dest="comando", required=True)
     r = sub.add_parser("registrar", help="agregar operacion al libro")
     r.add_argument("--fecha", default=date.today().isoformat())
@@ -582,6 +592,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--tasa-cetes", type=float, default=None, help="tasa anual constante (0.07); si no, proxy FRED")
     p.add_argument("--salida", default=None)
     args = ap.parse_args(argv)
+    params = parametros_efectivos(args.perfil)
 
     try:
         if args.comando == "registrar":
@@ -594,7 +605,7 @@ def main(argv: list[str] | None = None) -> int:
                 usa_usd = args.moneda != "MXN" or _requiere_fx(previas)
                 inicio = min([o["fecha"] for o in previas] + [orden["fecha"]])
                 val = validar_contra_libro(previas, orden, proveedor_fx_yahoo(inicio) if usa_usd else None,
-                                           args.clase, args.fase)
+                                           args.clase, args.fase, params)
                 for a in val["advertencias"]:
                     print(f"Advertencia: {a}")
                 if val["violaciones"]:
@@ -656,7 +667,7 @@ def main(argv: list[str] | None = None) -> int:
                     notas.append("S&P 500 TR = Yahoo ^SP500TR convertido con MXN=X; rebalanceo diario 50/50")
                 except datos.ErrorDatos as e:
                     notas.append(f"Benchmark no disponible: {e}")
-            texto = construir_reporte(ops, equity, libro, bench, rf, notas)
+            texto = construir_reporte(ops, equity, libro, bench, rf, notas, params)
             if args.salida:
                 Path(args.salida).parent.mkdir(parents=True, exist_ok=True)
                 Path(args.salida).write_text(texto, encoding="utf-8")

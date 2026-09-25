@@ -45,7 +45,44 @@ def obtener(clave: str, parametros: dict | None = None) -> Any:
     return nodo
 
 
+PERFIL_ESTANDAR = "estandar"
+
+
+def parametros_efectivos(perfil: str | None = None, parametros: dict | None = None) -> dict:
+    """Parametros de nivel superior con las sustituciones del perfil indicado.
+
+    El perfil 'estandar' (o None) es el nivel superior tal cual. Otro perfil, p. ej.
+    'arena_agresivo', sustituye cortacircuitos y combina rachas, limites de perdida,
+    concentracion y estructura; su riesgo por operacion (escalar) y su Kelly se traducen
+    al formato del nivel superior. Las claves que el perfil no trae se heredan.
+    """
+    base = json.loads(json.dumps(parametros if parametros is not None else cargar_parametros()))
+    if perfil in (None, "", PERFIL_ESTANDAR):
+        base["perfil_activo"] = PERFIL_ESTANDAR
+        return base
+    prof = obtener(f"perfiles_riesgo.{perfil}", base)
+    if not isinstance(prof, dict):
+        raise KeyError(f"Perfil de riesgo sin definicion: {perfil}")
+    if "cortacircuitos_drawdown" in prof:
+        base["cortacircuitos_drawdown"] = prof["cortacircuitos_drawdown"]
+    for clave in ("rachas", "limites_perdida", "concentracion", "estructura"):
+        if isinstance(prof.get(clave), dict):
+            base[clave] = {**base.get(clave, {}), **prof[clave]}
+    rpo = prof.get("riesgo_por_operacion")
+    if isinstance(rpo, (int, float)):
+        base["riesgo_por_operacion"] = {**base["riesgo_por_operacion"], "max_riesgo_pct_capital": float(rpo),
+                                        "max_riesgo_pct_capital_fase_prueba": float(rpo)}
+    elif isinstance(rpo, dict):
+        base["riesgo_por_operacion"] = {**base["riesgo_por_operacion"], **rpo}
+    if "kelly_fraccion_max" in prof:
+        base["kelly"] = {**base.get("kelly", {}), "fraccion_max": prof["kelly_fraccion_max"]}
+    if "perdida_maxima_tolerable_mxn" in prof:
+        base["perdida_maxima_tolerable_mxn"] = prof["perdida_maxima_tolerable_mxn"]
+    base["perfil_activo"] = perfil
+    return base
+
+
 def niveles_cortacircuitos(parametros: dict | None = None) -> list[dict]:
-    """Niveles de drawdown ordenados del mas leve (-0.08) al mas severo (-0.20)."""
+    """Niveles de drawdown del perfil recibido, del mas leve al mas severo."""
     niveles = obtener("cortacircuitos_drawdown", parametros)
     return sorted(niveles, key=lambda n: n["nivel"], reverse=True)
