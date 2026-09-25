@@ -50,7 +50,8 @@ REGLAS SIMULADAS (perfil arena_agresivo; interpretaciones marcadas con [I]):
     mientras dure, no se compran apalancados); -28% pausa 10 dias; -35% todo a CETES hasta el final.
     Se liberan al marcar un nuevo maximo [I: el perfil no define la liberacion].
   * Limites de perdida semanal (10%) y mensual (18%): bloquean compras tacticas 5 y 21 dias [I].
-  * Maximo 8 operaciones por bloque de 21 dias habiles (las ventas que reducen riesgo siempre pasan).
+  * Maximo 8 operaciones por mes (bloques de 21 dias en M3); las ventas que reducen riesgo siempre pasan.
+    Rotacion mensual = (compras + ventas) / 2 / valor, sin contar el fondeo inicial; se reporta P(> 1.5x).
   * Rivales sin cortacircuitos, comprar y mantener, con ruido idiosincratico N(0, 3 pp) en el
     rendimiento de la temporada [I].
 Todo es simulacion historica: no es pronostico ni recomendacion.
@@ -296,7 +297,7 @@ def simular(esp: dict, D: dict) -> dict:
         amt = w[j] * V * ok
         H[:, j] += amt * (1 - costo[j]); cash -= amt
         held[:, j] = ok
-        ops_tot += ok; ops_mes += ok; rot_mes += amt
+        ops_tot += ok; ops_mes += ok          # el fondeo inicial no cuenta como rotacion
         if stop_on[j]:
             stop_px[:, j] = np.where(ok, 1 - 0.03 * V / np.maximum(H[:, j], 1e-12), 0.0)
     ops_mes_max = np.maximum(ops_mes_max, ops_mes); rot_mes_max = np.maximum(rot_mes_max, rot_mes)
@@ -313,7 +314,7 @@ def simular(esp: dict, D: dict) -> dict:
             s = pend_sell * H
             cash += (s * (1 - costo)).sum(1); H -= s
             nv = (pend_sell > 0).sum(1)
-            ops_tot += nv; ops_mes += nv; rot_mes += s.sum(1) / Vpre
+            ops_tot += nv; ops_mes += nv; rot_mes += 0.5 * s.sum(1) / Vpre
             held &= ~(pend_sell >= 0.999)
             pend_sell[:] = 0.0
         if pend_buy.any():                                   # compras pendientes
@@ -331,7 +332,7 @@ def simular(esp: dict, D: dict) -> dict:
                 if stop_on[j]:
                     nuevo = px[:, j] * (1 - 0.03 * V / np.maximum(H[:, j], 1e-12))
                     stop_px[:, j] = np.where(comp, nuevo, stop_px[:, j])
-                ops_tot += comp; ops_mes += comp; rot_mes += amt / V
+                ops_tot += comp; ops_mes += comp; rot_mes += 0.5 * amt / V
             pend_buy[:] = False
         if stop_on.any():                                    # stops (mismo cierre)
             hit = held & stop_on[None, :] & (px <= stop_px)
@@ -341,7 +342,7 @@ def simular(esp: dict, D: dict) -> dict:
                 held &= ~hit
                 cooldown = np.where(hit, t + 10, cooldown)
                 nh = hit.sum(1)
-                ops_tot += nh; ops_mes += nh; rot_mes += s.sum(1) / Vpre; n_stops += nh
+                ops_tot += nh; ops_mes += nh; rot_mes += 0.5 * s.sum(1) / Vpre; n_stops += nh
         V = cash + H.sum(1)
         Vh[:, t] = V
         nuevo_max = V >= peak
@@ -403,7 +404,7 @@ def rend_mxn(x_usd_exceso: np.ndarray, r_fx: np.ndarray, rf_hoy: float, L: int =
 
 
 def construir_ventanas(B: dict, T: int, solo_regimen: bool = False, desde: date | None = None,
-                       hasta: date | None = None) -> dict:
+                       hasta: date | None = None, reales: bool = False) -> dict:
     """M3: ventanas historicas reales (una por dia de inicio)."""
     f = B["fechas"]
     N = len(f)
@@ -414,7 +415,7 @@ def construir_ventanas(B: dict, T: int, solo_regimen: bool = False, desde: date 
     if hasta:
         inicios = inicios[np.array([f[i] <= hasta for i in inicios])]
     if solo_regimen:
-        inicios = inicios[B["regimen"][inicios]]
+        inicios = inicios[B["regimen_hoy"][inicios]]
     P = len(inicios)
     idx = inicios[:, None] + np.arange(1, T + 1)[None, :]
     idx0 = inicios[:, None] + np.arange(0, T + 1)[None, :]
@@ -423,6 +424,9 @@ def construir_ventanas(B: dict, T: int, solo_regimen: bool = False, desde: date 
          "NDX1": rend_mxn(B["x"]["NDX"][idx], B["rfx"][idx], rfh),
          "SPX3": rend_mxn(B["x"]["SPX"][idx], B["rfx"][idx], rfh, 3, arr["SPX"]),
          "NDX3": rend_mxn(B["x"]["NDX"][idx], B["rfx"][idx], rfh, 3, arr["NDX"])}
+    if reales:   # SPXL y TQQQ reales (financiamiento y costos historicos), en MXN
+        R["SPX3"] = (1 + B["r_real"]["SPX3"][idx]) * (1 + B["rfx"][idx]) - 1
+        R["NDX3"] = (1 + B["r_real"]["NDX3"][idx]) * (1 + B["rfx"][idx]) - 1
     # sectores: los 2 mejores por 12-1 al inicio de cada ventana (sin mirar el futuro)
     niv_sec = np.stack([B["nivel"][s] for s in SECTORES])
     mom = niv_sec[:, inicios - 21] / niv_sec[:, inicios - 252] - 1
@@ -548,6 +552,12 @@ def carteras(precios_mxn: dict) -> tuple[dict, dict, dict]:
         c[f"{nombre} | r01"] = {"lineas": fn("r01"), "cb": True}
         c[f"{nombre} | sma_vix+st3 apal."] = {"lineas": fn("sma_vix", st_lev=True), "cb": True}
         c[f"{nombre} | sma_vix+st3 todas"] = {"lineas": fn("sma_vix", st_all=True), "cb": True}
+    B3 = lambda f, st_all=False: [
+        {"activo": "NDX3", "w": w("TQQQ", 4), "titulos": 4, "filtro": f, "tactica": True, "stop": st_all},
+        {"activo": "SPX1", "w": w("SPYM", 5), "titulos": 5, "stop": st_all},
+        {"activo": "NDX1", "w": w("QQQM", 1), "titulos": 1, "stop": st_all}]
+    c["B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix"] = {"lineas": B3("sma_vix"), "cb": True}
+    c["B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas"] = {"lineas": B3("sma_vix", True), "cb": True}
     C = [{"activo": "SPX1", "w": 0.50, "titulos": 6},
          {"activo": "SEC1", "w": 0.25, "titulos": 5, "tactica": True},
          {"activo": "SEC2", "w": 0.25, "titulos": 2, "tactica": True}]
@@ -589,7 +599,9 @@ def evaluar(cands: dict, rivales: dict, campos: dict, D: dict, semilla: int) -> 
                 "twr": r["twr"], "Vh": r["Vh"]}
         for cn, rv in campos.items():
             mx = np.max(np.stack([tw_r[k] for k in rv]), axis=0)
+            mn = np.min(np.stack([tw_r[k] for k in rv]), axis=0)
             fila[cn] = float(np.mean(r["twr"] > mx))
+            fila["ult " + cn] = float(np.mean(r["twr"] < mn))
         for k in rivales:
             fila["vs " + k[:2]] = float(np.mean(r["twr"] > tw_r[k]))
         out[nombre] = fila
@@ -604,15 +616,17 @@ def tabla(res: dict, campos: dict, titulo: str) -> str:
     print(f"\n### {titulo}", file=s)
     enc = (f"{'candidata':44s} {'mediana':>8s} {'p10':>7s} {'p90':>7s} {'media':>7s} {'P-12%':>6s} {'P-20%':>6s}"
            f" {'P-35%':>6s} {'P<0':>5s} " + " ".join(f"{c.split()[0] + ' 1o':>7s}" for c in campos) +
-           f" {'>R1':>5s} {'>R2':>5s} {'>R3':>5s} {'ops':>5s} {'stops':>5s} {'dia-5%':>6s}")
+           f" " + " ".join(f"{c.split()[0] + ' ult':>7s}" for c in campos) +
+           f" {'>R1':>5s} {'>R2':>5s} {'>R3':>5s} {'ops':>5s} {'stops':>5s} {'dia-5%':>6s} {'>8op':>5s} {'>1.5x':>5s}")
     print(enc, file=s)
     for k, f in res.items():
         if k.startswith("_"):
             continue
         print(f"{k:44s} {f['med']:+8.1%} {f['p10']:+7.1%} {f['p90']:+7.1%} {f['media']:+7.1%} {f['p12']:6.1%}"
               f" {f['p20']:6.1%} {f['p35']:6.1%} {f['pneg']:5.0%} " + " ".join(f"{f[c]:7.1%}" for c in campos) +
+              f" " + " ".join(f"{f['ult ' + c]:7.1%}" for c in campos) +
               f" {f['vs R1']:5.0%} {f['vs R2']:5.0%} {f['vs R3']:5.0%} {f['ops']:5.1f} {f['stops']:5.2f}"
-              f" {f['fdia']:6.1%}", file=s)
+              f" {f['fdia']:6.1%} {f['ops8']:5.1%} {f['rot15']:5.1%}", file=s)
     rr = res["_rivales"]
     for k, r in rr.items():
         print(f"  rival {k:36s} {np.median(r['twr']):+8.1%} {pct(r['twr'], 10):+7.1%} {pct(r['twr'], 90):+7.1%}"
@@ -675,6 +689,12 @@ def correr(caminos: int, semilla: int) -> None:
         fm = [i for i in range(N - 1) if f[i + 1].month != f[i].month]
         B["fin_mes_niveles"][k] = niveles[k][fm]
     B["vix"] = D["^VIX"]
+    B["r_real"] = {}
+    for k, tk in (("SPX3", "SPXL"), ("NDX3", "TQQQ")):
+        rr = np.full(N, np.nan)
+        rr[1:] = D[tk][1:] / D[tk][:-1] - 1
+        B["r_real"][k] = rr
+    B["regimen_hoy"] = B["sma"]["SPX"] & (B["vix"] < 20)                # estado al cierre del dia 0
     B["regimen"] = np.zeros(N, bool)
     B["regimen"][1:] = B["sma"]["SPX"][:-1] & (B["vix"][:-1] < 20)   # estado al cierre previo
     B["i_min"] = next(i for i in range(N) if not np.isnan(D["QQQ"][i]) and not np.isnan(D["XLK"][i])) + 252
@@ -742,6 +762,18 @@ def correr(caminos: int, semilla: int) -> None:
     print(f"\nM3c: {D3c['P']} ventanas en el regimen de hoy (SPY>SMA200 y VIX<20 al inicio)")
     resultados["M3c"] = evaluar(cands, rivales, campos, D3c, semilla + 3)
     print(tabla(resultados["M3c"], campos, "M3c ventanas moviles en el regimen de hoy"))
+    # validacion: SPXL y TQQQ reales contra sinteticos con tasas de hoy, mismas ventanas 2010-2026
+    Dr = construir_ventanas(B, T, desde=date(2011, 3, 1), reales=True)
+    Ds = construir_ventanas(B, T, desde=date(2011, 3, 1), reales=False)
+    sel = {k: v for k, v in cands.items() if k.endswith("| bh") or k.endswith("| sma_vix")}
+    print(f"\n### Validacion M3 2011-03 a 2026 ({Dr['P']} ventanas): apalancados REALES (financiamiento historico, "
+          f"casi cero en 2011-2021) vs SINTETICOS con tasas de hoy")
+    rr_, rs_ = evaluar(sel, rivales, campos, Dr, semilla + 5), evaluar(sel, rivales, campos, Ds, semilla + 5)
+    for k in sel:
+        a1, a2 = rr_[k], rs_[k]
+        print(f"  {k:44s} real: med {a1['med']:+.1%} P-12% {a1['p12']:.0%} P-20% {a1['p20']:.1%} F1 {a1['F1 {R1,R2}']:.0%}"
+              f" | sintetico: med {a2['med']:+.1%} P-12% {a2['p12']:.0%} P-20% {a2['p20']:.1%} F1 {a2['F1 {R1,R2}']:.0%}")
+    del Dr, Ds
     # dentro / fuera de muestra del filtro (Gayed-Bilello publicado en 2016-03)
     for et, (d0, d1) in (("antes de 2016-03 (dentro de muestra del filtro)", (None, date(2016, 3, 1))),
                          ("desde 2016-03 (fuera de muestra, post-publicacion)", (date(2016, 3, 1), None))):
@@ -877,27 +909,32 @@ def kelly(B, T, cands, caminos, semilla, cal) -> None:
         Dk = construir_bootstrap(B, T, min(caminos, 8000), semilla + 7, conservador=cons, condicionar=False, cal=cal)
         linea = []
         for k in ["A 7 SPYM + 1 QQQM (+CETES)", "B1 1 SPXL + 5 SPYM + 1 QQQM | bh", "B2 7 TQQQ + 6 SPYM | bh",
-                  "C 50% S&P + 2x25% sectores top 12-1"]:
+                  "B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix", "C 50% S&P + 2x25% sectores top 12-1"]:
             esp = {"lineas": [dict(l, filtro=None, stop=False) for l in cands[k]["lineas"]], "cb": False}
             Vh = simular(esp, Dk)["Vh"]
             rd = (Vh[:, 1:] / Vh[:, :-1] - 1).ravel() - Dk["cash_d"]
             mu, var = float(np.mean(rd)) * 252, float(np.var(rd)) * 252
             ks = mu / var if var > 0 else float("nan")
+            ks_r3 = 0.5 * mu / var if var > 0 else float("nan")
             linea.append(f"{k.split('|')[0].strip()[:26]}: mu_e {mu:+.1%} sigma {math.sqrt(var):.1%} k* {ks:.2f} "
-                         f"-> fraccion de Kelly {1 / ks if ks > 0 else float('inf'):.2f}")
+                         f"-> fraccion de Kelly {1 / ks if ks > 0 else float('inf'):.2f}"
+                         + (f"; con recorte R3 (prima x0.5): {1 / ks_r3 if ks_r3 > 0 else float('inf'):.2f}"
+                            if not cons else ""))
         print(f"  [{nombre}]")
         for x in linea:
             print("    " + x)
 
 
 def resumen_final(resultados: dict, campos: dict) -> None:
-    print("\n## 8. Resumen compacto (M1 | M2 | M3 | M3c): mediana, P(-12%), P(-20%), P(1o en F1), P(1o en F2)")
+    print("\n## 8. Resumen compacto (M1 | M2 | M3 | M3c): mediana, P(-12%), P(-20%), P(1o en F1), P(1o en F2), "
+          "P(ultimo en F1)")
     claves = [k for k in resultados["M1"] if not k.startswith("_")]
     for k in claves:
         partes = []
         for m in ("M1", "M2", "M3", "M3c"):
             f = resultados[m][k]
-            partes.append(f"{f['med']:+.1%} {f['p12']:.0%} {f['p20']:.0%} {f['F1 {R1,R2}']:.0%} {f['F2 {R2,R3}']:.0%}")
+            partes.append(f"{f['med']:+.1%} {f['p12']:.0%} {f['p20']:.0%} {f['F1 {R1,R2}']:.0%} {f['F2 {R2,R3}']:.0%}"
+                          f" ult {f['ult F1 {R1,R2}']:.0%}")
         print(f"{k:44s} " + " | ".join(partes))
 
 
