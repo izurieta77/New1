@@ -4,7 +4,7 @@
 > Precio: US$1,753.62 (24-sep-2026); cierres de 52 semanas 94.29-2,335.00; 12m +1,548%; 3m −24.9%; volatilidad 1a de 116.7%; beta 1a de 4.10; capitalización US$256.8 mil M (146.4 M acciones); valor empresa US$252.0 mil M [9]. Escindida de Western Digital el 21-feb-2025. Fase 0: investigación, no recomendación.
 
 ## 1. Negocio y segmentos
-Diseña y vende NAND (tecnología BiCS), SSD empresariales y de cliente, tarjetas y memorias USB. La capacidad de obleas viene de Flash Ventures, las empresas conjuntas con Kioxia en Japón (49.9% Sandisk) [3].
+Diseña y vende memoria NAND, SSD empresariales y de cliente, y productos de consumo. La capacidad de obleas viene de Flash Ventures, las empresas conjuntas con Kioxia en Japón (49.9% Sandisk) [3].
 - FY26 por mercado final [4]: Datacenter US$5,153 M (25.4%), Edge US$12,160 M (60.1%) y Consumer US$2,935 M (14.5%).
 - 4T FY26 por mercado final [1]: Datacenter 33.2%, Edge 60.6% y Consumer 6.2%.
 - FY26 por geografía [4]:

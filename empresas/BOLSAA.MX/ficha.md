@@ -94,7 +94,7 @@ Notas a la tabla anual:
 - **Exposición:** market data con tarifas en USD, Indeval global y SIF Chile.
 - **Efecto económico:** −Ps 98 M de ingresos y −71 M de EBITDA en el 1S26 [1].
 - **Estado financiero:** margen EBITDA de −138 pb.
-- **Valuación:** ~−5% de UPA 2026 (cálculo propio: 71 × 2 × 0.69 / ~1,650).
+- **Valuación:** ~−6% de UPA 2026 (cálculo propio: 71 × 2 × 0.69 / ~1,650).
 - **Qué descuenta el precio:** *Inferencia:* el precio no premia el crecimiento de volumen porque el tipo de cambio lo neutraliza.
 
 **B. Volatilidad y flujos.** Guerra de Irán en mar-2026 y rebalanceo récord de MSCI el 29-may-2026 [1][7].
