@@ -16,7 +16,7 @@
         "archivo": "tsm-20251231.htm",
         "bytes": 10355816,
         "sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b",
-        "alcance_leido": "Estados financieros pp. F-4 a F-12; notas 15, 16, 18, 19, 22, 24, 26, 30, 31, 33, 36, 37 y 38; Item 3.D (riesgos: aranceles, controles de exportacion, concentracion, tipo de cambio) pp. 4-12; Item 4 pp. 16-17 y 25-26; Item 5 pp. 26-35; Item 11 pp. 71-72",
+        "alcance_leido": "Estados financieros pp. F-4 a F-12; notas 15, 16, 18, 19, 22, 24, 26, 30, 31, 33, 36, 37 y 38; Item 3.D (riesgos: aranceles, controles de exportacion, concentracion, tipo de cambio) pp. 3-12; Item 4 pp. 16-17 y 25-26; Item 5 pp. 26-35; Item 11 pp. 71-72",
         "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR"
       },
       "F2": {

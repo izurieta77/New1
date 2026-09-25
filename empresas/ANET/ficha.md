@@ -83,14 +83,14 @@ Cálculo propio con cierres trimestrales de Yahoo y XBRL; ambos múltiplos está
 Dato que cambia de escenario: guía del 4T26 con t/t < +3% o diferidos a la baja → bajista.
 
 ## 8. Pronósticos registrados — 3T26 (trimestre al 30-sep-2026)
-Fecha estimada del reporte: **3-nov-2026, después del cierre** (Yahoo `calendarEvents` la marca como estimada; no confirmada por la empresa; el 3T25 se reportó el 4-nov-2025 [6]). Consenso: Yahoo Finance, consultado el 2026-09-25 [10].
+Fecha estimada del reporte: **3-nov-2026, después del cierre** (Yahoo `calendarEvents` la marca como estimada; Nasdaq/Zacks y MarketBeat también la estiman el 3-nov; no confirmada por la empresa al 2026-09-25; el 3T25 se reportó el 4-nov-2025 [6]). Consenso: Yahoo Finance, consultado el 2026-09-25 [10].
 
 | Variable | Punto | p10-p90 (80%) | Consenso |
 |---|---|---|---|
 | Ingresos (US$ mil M) | 3.45 | 3.31-3.58 | 3.327 (22 analistas) |
-| UPA non-GAAP diluida (US$) | 1.13 | 1.07-1.20 | 1.077 (25 analistas) |
+| UPA non-GAAP diluida (US$) | 1.13 | 1.07-1.22 | 1.077 (25 analistas) |
 
-Base del cálculo (supuestos propios): guía de ~US$3.3 mil M más +4.5% (las sorpresas recientes fueron de +4 a +8%, moderadas por la escasez de componentes); margen operativo non-GAAP de ~49.5%, otros ingresos de ~US$150 M, tasa de ~21.5% (consistente con el 2T [1]) y 1,280 M acciones.
+Base del cálculo (supuestos propios): guía de ~US$3.3 mil M más +4.5% (las sorpresas recientes fueron de +4 a +8%, moderadas por la escasez de componentes); margen operativo non-GAAP de ~49.5%, otros ingresos de ~US$125-150 M y tasa non-GAAP de ~20.3-21.5% (en el 2T fueron US$120 M sin ganancias de inversiones y 20.3% [1]; ambos efectos se compensan y dan ~US$1.14), y 1,280 M acciones. El p90 de UPA se amplió en la verificación (ver abajo).
 
 Binarios:
 - Ingresos > US$3.327 mil M: **p = 0.85**.
@@ -116,3 +116,56 @@ Binarios:
 12. Yahoo Finance chart ANET.MX, 2026-09-25: https://query1.finance.yahoo.com/v8/finance/chart/ANET.MX
 13. TrendForce, precios contrato 3T26, 3-jul-2026: https://www.trendforce.com/presscenter/news/20260703-13134.html
 14. Conocimiento cap. 23 §4.5 y cap. 24: conocimiento/23-geopolitica-y-riesgo-politico-global.md, conocimiento/24-politica-publica-regulacion-y-mercados.md
+
+## Verificación (2026-09-25)
+Verificador adversarial. Nivel de acceso:
+- Comunicados 8-K ex. 99.1 del 3T25, 4T25, 1T26 y 2T26: descarga propia desde EDGAR y lectura de estado de resultados, conciliación non-GAAP, balance, flujos y guía.
+- 10-Q del 2T26: descarga propia completa; búsqueda de las cifras citadas en el texto.
+- TrendForce del 3-jul-2026: lectura de la nota (WebFetch).
+- Yahoo quoteSummary (earningsTrend, calendarEvents, earningsHistory, price): descarga propia con crumb. Nasdaq/Zacks y MarketBeat: fecha del reporte.
+- Sin acceso: IR de Arista (403). WebSearch agotado.
+
+Aritmética recalculada con Python.
+
+**Confirmado contra fuente primaria**
+- 2T26 [1]:
+  - Ingresos: US$3,035.7 M (+37.7% a/a; +12.1% t/t). Producto: US$2,605.2 M. Servicios: US$430.5 M.
+  - Margen bruto: GAAP 62.9% y non-GAAP 63.4%. Margen operativo: GAAP 45.4% y non-GAAP 49.9%.
+  - UPA: GAAP US$0.95 y non-GAAP US$1.02, con 1,276.0 M acciones diluidas.
+  - Caja más valores: 2,290.2 + 11,053.1 = US$13,343 M. Diferidos: 5,100.7 + 1,765.2 = US$6,865.9 M (dic-2025: US$5,372.4 M). Inventario: US$2,535.3 M. Capex del 1S26: US$84.2 M. Sin recompras en el 1S26.
+- Guía del 3T26 [1]: ingresos de ~US$3.3 mil M, margen operativo non-GAAP de 48-49% y UPA non-GAAP de US$1.06-1.08. Sin guía anual.
+- Guías previas: 4T25 de US$2.3-2.4 mil M [6], 1T26 de ~US$2.6 mil M [5] y 2T26 de ~US$2.8 mil M con UPA de ~US$0.88 [4]. Superaciones del punto medio: +5.9%, +4.2% y +8.4%; la UPA del 2T superó la guía en +15.9%. Arista no dio guía de UPA antes del 2T26.
+- 10-Q [2]: compromisos no cancelables de US$9.7 mil M (US$9.4 mil M a 12 meses); inventario de evaluación de US$616.0 M (US$403.7 M en dic-2025); US$817.9 M restantes del programa de recompra; Américas US$2,337.9 M (77.0%), EMEA 14.4% y Asia-Pacífico 8.6%.
+- Fecha del reporte: **3-nov-2026, estimada** por Yahoo (isEarningsDateEstimate = true), Nasdaq/Zacks y MarketBeat. **No confirmada por la empresa.** La resolución se movió al 6-nov (ver Correcciones).
+- Consenso (Yahoo, consulta propia del 2026-09-25):
+  - 3T26: ingresos de US$3,326.5 M (22 analistas; rango 3,300-3,483) y UPA de US$1.0766 (25; rango 1.059-1.12).
+  - Base non-GAAP: el real del 2T en Yahoo es 1.02.
+  - Sorpresas de UPA: +5.0%, +8.2%, +7.7% y +15.2%.
+  - 4T26: US$3,586 M. 2026: UPA de US$4.112. 2027: UPA de US$5.187 e ingresos de US$16.23 mil M (+28.2%).
+- Cadena causal:
+  - El 10-Q repite la concentración: dos clientes finales con 26% y 16% de FY25 (20% y 15% en FY24) [2][3].
+  - TrendForce (3-jul-2026): DRAM convencional +13-18% y NAND +10-15% t/t en el 3T26 [13]. El 10-Q cita restricciones de suministro "particularly in the memory and silicon markets" y advierte que las medidas comerciales pueden elevar el costo de producto [2].
+- Precio (US$205.70) y capitalización (US$259.4 mil M): coinciden con Yahoo. P/U non-GAAP 2026e/2027e: 50.0x/39.7x. P/U GAAP TTM: 259.4 / 4.045 = 64.1x.
+
+**Revisiones de forma**
+- Periodo: 3T26 calendario (al 30-sep-2026), en USD. Pronóstico y consenso de UPA en non-GAAP.
+- Escenarios: 20 + 55 + 25 = 100%.
+- Intervalos de 80%:
+  - Ingresos (3.31-3.58): van de +0.3% a +8.5% sobre la guía y cubren las tres superaciones verificadas (+4.2% a +8.4%). No cambian.
+  - **UPA: el p90 era estrecho.** El p90 de 1.20 quedaba a +11.5% sobre el consenso; la sorpresa del 2T fue de +15.2% y la superación de la guía de +15.9%. **Se amplió el p90 a US$1.22** (+13.3% sobre el consenso), en la ficha y en el CSV. Es coherente con ingresos de 3.58 y un margen operativo de ~51% (el 2T superó el tope de la guía por 2.9 pp).
+- Base del cálculo: el 2T tuvo una tasa non-GAAP de 20.3% (332.3 / 1,634.0), no 21.5%, y otros ingresos non-GAAP de US$120 M, no 150. Se corrigió el texto; ambos efectos se compensan (US$1.138 contra 1.139) y el punto no cambia.
+- Coherencia de los binarios (CDF lineal por tramos): en ingresos, 0.85 registrado contra 0.85 implícito; en UPA, 0.83 contra 0.86. Dentro de tolerancia; no se cambian.
+- Recomendaciones de compra o venta: ninguna.
+
+**Correcciones**
+1. p90 de UPA: de 1.20 a 1.22 (ficha y CSV).
+2. Supuestos de tasa y otros ingresos del cálculo, precisados.
+3. Fecha: se agregó que Nasdaq/Zacks y MarketBeat también la estiman y que no hay confirmación de la empresa.
+4. `fecha_resolucion` del CSV: de 4-nov a **6-nov-2026**. Arista también reporta en jueves (4T25 el jueves 12-feb-2026 [5]), así que un reporte el 5-nov quedaba después de la fecha de resolución.
+
+**Sigue sin verificar (ya marcado):**
+- La identidad de los dos clientes (Microsoft y Meta).
+- La aplicación país por país de la Sección 301 a Malasia y Vietnam.
+- Las guías y sorpresas anteriores al 4T25.
+
+**Veredicto:** confiable en datos. El intervalo de UPA era algo estrecho del lado alto; ya se corrigió.

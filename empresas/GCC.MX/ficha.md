@@ -55,7 +55,7 @@ SBC/ingresos: no se revela (n.d.). Acciones: de ~331 M (2021) a ~326 M (2T26), c
 ## 5. Cadena causal
 **A. Precio del cemento en EUA bajo presión por importaciones.** Exposición: 74% de las ventas → efecto: precio −3.2% en 2T26 y guía de baja de un dígito bajo → estado financiero: margen UAFIDA −70 pb pese al volumen → valuación: VE/UAFIDA en 6.0x, en su media → precio: −13% a 3 meses tras el reporte. *Inferencia:* el mercado castiga que el crecimiento sea de volumen con precio a la baja.
 **B. Guerra de Irán (Brent en US$103) [11].** Exposición: cemento petrolero en el Pérmico, con Odessa como planta clave, y costos de combustible y fletes → efecto: más volumen de pozos y más costo de energía y transporte → estado financiero: ventas en EUA al alza con un margen neutral o menor → *inferencia:* si hay cese al fuego (ultimátum del 27-28 sep) y el crudo cae, se pierde parte del impulso del Pérmico.
-**C. Peso fuerte.** USD/MXN promedió 17.22 en 3T26 contra 18.39 en 3T25 [9] → las ventas de México en USD suben (+US$11.1 M por tipo de cambio en 2T26 [1]), pero bajan el ingreso financiero neto (US$0.3 M contra 8.5) y encarecen el SG&A [1].
+**C. Peso fuerte.** USD/MXN promedió 17.22 en 3T26 a la fecha (Yahoo [9]) contra 18.64 en 3T25 (promedio de Banxico según GCC [2]), −7.6% → las ventas de México en USD suben (+US$11.1 M por tipo de cambio en 2T26 [1]), pero bajan el ingreso financiero neto (US$0.3 M contra 8.5) y encarecen el SG&A [1].
 
 ## 6. Qué descuenta el precio
 Capitalización Ps 58,941 M = US$3,329 M (326.2 M acciones; a 17.707) y caja neta de US$185.8 M → VE de US$3,143 M. Cifras de 12 meses: UAFIDA 519.9 → **VE/UAFIDA 6.0x**; UPA 0.941 → **P/U 10.8x** [9].
@@ -70,7 +70,7 @@ Historia al cierre de año, P/U y VE/UAFIDA: 2021 17.1x y 7.2x; 2022 11.8x y 5.2
 
 ## 8. Pronósticos registrados (3T26)
 - **Fecha: 27-oct-2026** (publicación de resultados) y call el 28-oct, según el calendario de RI de GCC consultado el 25-sep-2026 [6]. Investing.com coincide en el 27-oct [7].
-- **Ventas 3T26:** punto US$475 M; intervalo de 80%: 445-505. Consenso Ps 8.05 mil M según Investing.com (25-sep-2026) [7], ≈ US$455-468 M según el tipo de cambio (17.71-17.22; conversión propia, no verificada). Supuestos: EUA +10% (horno nuevo y adquisiciones) y México +11% en USD.
+- **Ventas 3T26:** punto US$475 M; intervalo de 80%: 440-510 (ampliado por el verificador; antes 445-505). Consenso Ps 8.05 mil M según Investing.com (25-sep-2026) [7], ≈ US$455-468 M según el tipo de cambio (17.71-17.22; conversión propia, no verificada). Supuestos: EUA +10% (horno nuevo y adquisiciones) y México +11% en USD.
 - **UPA 3T26:** punto US$0.28; intervalo de 80%: 0.24-0.325. Consenso Ps 5.29 ≈ US$0.30-0.31 (misma conversión) [7]. Supuestos: margen UAFIDA de ~33.5% por los costos de arranque de Odessa [8], D&A de ~US$32 M, tasa de 28% y 326 M acciones.
 - **Binarios:** (1) ventas de 3T26 mayores a US$455 M: **p = 0.78**; (2) margen UAFIDA de 3T26 mayor a 35.9% (el de 3T25): **p = 0.25**.
 
@@ -89,3 +89,25 @@ Historia al cierre de año, P/U y VE/UAFIDA: 2021 17.1x y 7.2x; 2022 11.8x y 5.2
 9. Yahoo Finance chart y quote de GCC.MX, EXP, CX, MLM, VMC y MXN=X (consultados el 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/GCC.MX · `herramientas/dossier.py` (empresas/GCC.MX/dossier-2026-09-25.md)
 10. GlobeNewswire, "GCC Reports Second Quarter 2026 Results" (28-jul-2026): https://www.globenewswire.com/news-release/2026/07/28/3334759/0/en/GCC-Reports-Second-Quarter-2026-Results.html
 11. Conocimiento interno `conocimiento/23-geopolitica-y-riesgo-politico-global.md` §4.3 y `24-politica-publica-regulacion-y-mercados.md` §4.4 y §4.11, actualizados el 25-sep-2026.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: GCC Q2 2026 Earnings (íntegro), Q3 2025, Q1 2026, Q4 2025 y Q4 2024 (tablas principales, perspectivas y tipos de cambio), y la página de RI con los próximos eventos (25-sep). También se consultaron de nuevo la tabla de resultados de Investing.com (en MXN) y Yahoo chart (GCC.MX y MXN=X). La transcripción del call de 2T26 es de Investing.com: fuente secundaria, porque GCC no publica la transcripción.
+
+**Correcto (hecho verificado):**
+- 2T26: ventas de US$418.4 M (+15.0%; +11.9% sin efecto cambiario), UAFIDA de 132.9 (31.8%, −70 pb), utilidad de operación antes de otros gastos de 102.8 (24.6%; 25.0% en 2T25), utilidad neta de 74.3 y UPA de **US$0.2275** (+1.5%) [1]. EUA aportó 310.5 (74%) de las ventas y 78% de la UAFIDA del trimestre.
+- Consenso (Investing.com, 25-sep): 3T26 con UPA de Ps 5.29 e ingresos de Ps 8.05 mil M. En 2T26 el real fue de Ps 3.97 y 7.30 mil M contra 4.13 y 7.08 (−3.9% y +3.1%). Investing convierte los reales en USD a MXN; la conversión del consenso a USD es propia, como dice la ficha.
+- Fecha: la página de RI dice "October 27, 2026 Q3 2026 Earnings release" y "October 28, 2026 Q3 2026 Conference call".
+- Guía 2026 revisada: UAFIDA "mid-single digit increase", volumen de cemento en EUA de alza de un dígito alto, precio del cemento en EUA de baja de un dígito bajo, conversión de FCF mayor a 60%, capex de US$270 M (200 + 70) y deuda neta/UAFIDA negativa al cierre del año [1]. Guía 2025 de un dígito medio contra un real de −1.7% (491.8 contra 500.4) [3][5].
+- Cadena causal: (1) precio del cemento en EUA −3.2% con volumen +10.8%, e importaciones que "begin reaching inland markets" [1][8]; (2) +US$11.1 M de ventas por el tipo de cambio e ingreso financiero neto de US$0.3 M contra 8.5 [1]. Del call: embarques de Odessa "slowly and consistently in the latter part of the third quarter", costos de transición "more concentrated in the third quarter", y ~US$91 M invertidos en adquisiciones con ~US$11 M de UAFIDA [8].
+- Escenarios: 25 + 50 + 25 = 100%. Periodo trimestral, en USD, con UPA reportada. No hay recomendaciones de compra o venta; el precio objetivo del agregador aparece como dato y está marcado como no verificado.
+
+**Corregido:**
+1. §5.C, tipo de cambio de 3T25: decía 18.39, que es el **cierre** al 30-sep-2025 (18.3825). El **promedio** de 3T25 fue de **18.6401** (Banxico, según el reporte de 3T25 de GCC [2]). La apreciación contra 3T26 es de −7.6%, no de −6.4%. El supuesto de ventas en México (+11% en USD) sigue siendo razonable: el efecto cambiario solo aporta ~+8%.
+2. §8, intervalo de 80% de ventas: pasa de 445-505 a **440-510**. La sorpresa de ingresos de los últimos 7 trimestres (Investing, convertida con el tipo de cambio de cada trimestre: +3.1%, +5.1%, −5.1%, +5.6%, +4.0%, −12.2% y +2.1%) tiene una desviación estándar de ~6.1%. Un 80% equivale a ±7.8%, y el intervalo anterior cubría ±6.3%. El punto no cambia. El binario de ventas > 455 queda en 0.78 (el intervalo nuevo implica 0.77).
+3. `pronosticos.csv`: los criterios ahora piden la columna del trimestre y no la de nueve meses.
+
+**Revisado sin cambio:** el intervalo de UPA (0.24-0.325) cubre ±15%, contra una sorpresa histórica de ~±10% (80% ≈ ±13%). El punto de 0.28 queda ~8% debajo del consenso (0.30-0.31) por una razón documentada: los costos de arranque de Odessa se concentran en 3T. Si el trimestre carga menos costos, tres de siete análogos del consenso (0.336, 0.340 y 0.349) quedarían arriba del p90. Es la apuesta explícita de la ficha.
+
+**No verificado o pendiente:** el precio objetivo del agregador; el nombre de los competidores regionales; el detalle del grupo de control; los múltiplos históricos (cálculo propio con precio ajustado de Yahoo, que para emisoras .MX puede omitir dividendos).
+
+**Veredicto:** confiable. Las cifras del último reporte, el consenso, la fecha y la guía son correctas. Había un error de tipo de cambio (se usó el cierre en lugar del promedio), que no cambia los pronósticos, y el intervalo de ventas era algo estrecho.

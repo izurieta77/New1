@@ -25,7 +25,7 @@
 
 ## Resumen ejecutivo
 
-1. **[H] Hallazgo principal: B1 y B2 estaban mal en un punto.** B1 (§5) y B2 (§1) infirieron que vender en NYSE o Nasdaq con un bróker extranjero "no parece caber en el art. 129". **El SAT dice lo contrario para las acciones extranjeras listadas en el SIC.** El **criterio normativo 37/ISR/N** (Anexo 7 de la RMF 2026, DOF 09-01-2026) dice textualmente que las ganancias por vender acciones de sociedades extranjeras listadas en el SIC de la BMV o de BIVA "están sujetas a una tasa del 10% en los términos del artículo 129, fracción I de la Ley del ISR, **con independencia de que su enajenación no se realice a través de un intermediario del mercado de valores mexicano**" [4]. El mismo art. 129 prevé ese caso: quien opera con "entidades financieras extranjeras" no autorizadas por la LMV calcula su propia ganancia o pérdida y guarda los estados de cuenta [1].
+1. **[H] Hallazgo principal: B1 y B2 estaban mal en un punto.** B1 (§5) y B2 (§1) infirieron que vender en NYSE o Nasdaq con un bróker extranjero "no parece caber en el art. 129". **El SAT dice lo contrario para las acciones extranjeras listadas en el SIC.** El **criterio normativo 37/ISR/N** (Anexo 7 de la RMF 2026, DOF 09-01-2026) dice textualmente que las ganancias por vender acciones de sociedades extranjeras listadas en el SIC de la BMV o de BIVA "están sujetas a una tasa del 10% en los términos del artículo 129, fracción I de la Ley del ISR, **con independencia de que su enajenación no se realice a través de un intermediario del mercado de valores mexicano**" [4]. El mismo art. 129 prevé ese caso: quien opera con "entidades financieras extranjeras" no autorizadas por la LMV calcula su propia ganancia o pérdida y guarda los estados de cuenta [1]. *(Verificación: cita cotejada palabra por palabra en el PDF del Anexo 7 [43]. El criterio está publicado en el DOF, así que genera derechos para el contribuyente (art. 35 CFF) [42]. Queda un riesgo textual que el criterio no trata, el numeral 3 del último párrafo del art. 129 sobre ventas "fuera de las bolsas señaladas" (§1.2).)*
 2. **[H] ¿Hubo cambios en 2026?** La LISR **no se ha reformado desde el DOF 01-04-2024** (historial de reformas de la Cámara de Diputados) [2]. El Paquete Económico 2026 no tocó la LISR [2]. La RMF 2026 salió en el DOF el 28-12-2025 [3] y su Anexo 7 el 09-01-2026 [4]. **[I]** El art. 129 que leyeron B1 y B2 sigue vigente sin cambios.
 3. **Mapa fiscal por instrumento (persona física, ganancia por venta):**
 
@@ -204,7 +204,8 @@
 **Datos:**
 - **Wise MXN→USD** (cotización pública de su API, 25-sep-2026 06:15 UTC): 20,000 MXN pagados por transferencia bancaria → **1,119.05 USD**. Comisión de **193.84 MXN (0.97%)**, a una tasa media de 0.0564999 USD/MXN (**17.70 MXN/USD**) [36]. Con salida por SWIFT: 301.77 MXN (1.51%) → 1,112.95 USD [36].
 - **Wise USD→MXN** (06:17 UTC): 1,100 USD → 19,249.69 MXN, con comisión de **12.57 USD (1.14%)**, a una tasa media de 17.702 [37].
-- **Wire de salida:** US$25 en Firstrade [24] y US$45 en tastytrade [27].
+- *(Verificación, 06:47 UTC: la misma consulta pública de Wise da de nuevo **193.84 MXN** de comisión, con 170.33 variables y 23.51 fijos, y 1,119.72 USD recibidos a una tasa media de 0.0565339, o 17.69 MXN/USD. En USD→MXN, 1,100 USD pagados por transferencia bancaria o SWIFT cuestan **12.57 USD**. Si los USD llegan a un saldo de Wise y se convierten desde ahí, cuesta 6.26–6.48 USD (0.57%–0.59%). Si un residente mexicano puede recibir USD en Wise y cuánto cobra Wise por recibir un SWIFT: (no verificado).)*
+- **Wire de salida:** US$25 en Firstrade [24] y en Schwab International [41]; US$45 en tastytrade [27].
 - **GBM:** 0.29% por lado con IVA, o sea **0.58% por ida y vuelta** (B1, B2).
 
 **Supuestos:**
@@ -228,7 +229,8 @@
 
 B1 estima además un costo cambiario implícito de ~0.1% a 0.3% por lado en el SIC. Si se suma, la ida y vuelta en GBM cuesta ~0.8% a 1.2%, y los equilibrios bajan a **~0.8 a 1.2** (solo entrada) y **~3.6 a 5.5** (Firstrade con salida).
 
-- **[I]** Con el ritmo que presupuestó B2 (R = 6 a 9), **Firstrade empata o le gana a GBM aunque se cuente la salida**, y le gana con holgura si solo se cuenta la entrada. Pero solo cubre EUA, sin BMV.
+- ~~**[I]** Con el ritmo que presupuestó B2 (R = 6 a 9), **Firstrade empata o le gana a GBM aunque se cuente la salida**, y le gana con holgura si solo se cuenta la entrada. Pero solo cubre EUA, sin BMV.~~ **CORREGIDO (verificación del 2026-09-25):** la tabla de arriba lo contradice. **[C]** Contando la salida y solo comisiones, GBM cuesta 3.48% con R = 6, 4.06% con R = 7, 4.64% con R = 8 y 5.22% con R = 9, contra 4.29% de Firstrade (o de Schwab). **GBM gana con R = 6 y 7; Firstrade o Schwab ganan desde R = 8.** Si se suma la desviación implícita del SIC que mide B1 (~0.1%–0.3% por lado), el equilibrio baja a R ≈ 3.6–5.5 y el bróker extranjero gana en todo el rango de B2. Contando solo la entrada, el extranjero gana con holgura en todo el rango. En cualquier caso solo cubre EUA, sin BMV.
+- **[C] (Agregado en la verificación) Sensibilidad de la salida.** Si los USD pueden llegar a un saldo de Wise y convertirse desde ahí (0.59% en lugar de 1.14%, sin contar la comisión de recepción de Wise, no verificada), la salida de Firstrade o Schwab baja a ~114 MXN y el total a **~751 MXN (3.75%)**, con equilibrio en R ≈ 6.5. **[I]** El otro camino, un wire en USD a un banco mexicano, choca con que las personas físicas en general no pueden tener cuentas en dólares fuera de la franja fronteriza. El banco convertiría a su propio tipo de cambio y cobraría por recibir **(no verificado)**.
 - **[I] La exposición al peso es la misma en ambas rutas.** Una acción de EUA en el SIC cotiza en MXN igual a su precio en USD por el tipo de cambio, así que el TWR en MXN de una cuenta en USD es económicamente equivalente. Lo que cambia es el costo de convertir, no el riesgo cambiario.
 
 ---
@@ -253,7 +255,7 @@ B1 estima además un costo cambiario implícito de ~0.1% a 0.3% por lado en el S
    - Con 20k y dividendos de pocos pesos, **el costo de cumplimiento (tiempo o contador) puede ser mayor que el dividendo**. Por eso conviene favorecer emisoras sin dividendo o con dividendo bajo.
 4. **[R] Contribución de B4 a la decisión "escoge otra, lo importante es ganar más dinero":**
    - **Si la decisión final es un bróker extranjero,** B4 no descalifica a ninguno por motivos fiscales, siempre que se operen **acciones listadas en el SIC**.
-   - Entre los extranjeros de B4, **Firstrade** es la opción verificada más barata.
+   - Entre los extranjeros de B4, **Firstrade y Schwab International** empatan como la opción verificada más barata en acciones. Firstrade gana si se usan opciones (verificación del 2026-09-25).
    - **Si la estrategia necesita ETFs apalancados o emisoras de la BMV,** B4 empuja hacia una casa de bolsa mexicana (B2: Kuspit o Actinver Trade) o hacia IBKR (B3), si IBKR da acceso a la BMV y los ETFs se tienen vía SIC.
    - En cualquier caso, **antes de operar** hay que recalcular las réplicas con los costos del bróker elegido, como pediste.
 
@@ -265,7 +267,7 @@ B1 estima además un costo cambiario implícito de ~0.1% a 0.3% por lado en el S
 |---|---|---|
 | B1 §5 [I] y resumen, punto 8 | "Una venta en NYSE o Nasdaq [...] no entra en las fracciones I ni II" / "no parece caber en el art. 129" | **Incorrecto para acciones listadas en el SIC:** el criterio 37/ISR/N (Anexo 7 RMF 2026) aplica el 10% "con independencia de que su enajenación no se realice a través de un intermediario del mercado de valores mexicano" [4]. Sigue abierto para ETFs (§1.3) y para títulos no listados (§1.4) |
 | B1 tabla de impuestos y `01-gbm` §"Ganancia en Trading USA" | "Tasa no verificada" | **[I]** Para acciones de Trading USA (DriveWealth) que estén listadas en el SIC aplica el 10% por el criterio 37 [4]. El criterio no menciona a GBM ni a DriveWealth: la aplicación es mía |
-| B2 §1 | "la venta directa en NYSE/Nasdaq probablemente no entra ahí (inferencia)" | Mismo ajuste que B1 |
+| B2 §1 | "la venta directa en NYSE/Nasdaq probablemente no entra ahí (inferencia)" | Mismo ajuste que B1. *(Verificación: B1 y B3 ya aplicaron la corrección. **B2 todavía conserva la frase original** en su §1, línea 87, al 2026-09-25 06:50 UTC.)* |
 | B2, lista de no verificados | "Reformas al art. 129 posteriores al 01-04-2024" | **Resuelto:** no hay reformas a la LISR después del DOF 01-04-2024 [2] |
 | V05, puntos 5 y 6 del pre-registro | Umbral de 60,000 USD, *situs* y 15% de los UCITS (fuentes legales congeladas) | **Confirmado con fuentes de 2026:** página del IRS revisada el 27-jun-2026 [8] y SSGA del 02-jun-2026 [16] |
 | B1 §5 (W-8BEN no se paga solo) | Con 20k el W-8BEN del SIC no se recupera | **Nuevo matiz:** sin W-8BEN, el 20% de exceso sobre el tratado **tampoco se acredita en México** (art. 5 y criterio 5/ISR/N [1][4]). La pérdida es definitiva, no diferida. La conclusión de B1 se mantiene para 20k porque el monto es muy chico |
@@ -278,16 +280,19 @@ B1 estima además un costo cambiario implícito de ~0.1% a 0.3% por lado en el S
 2. **Estructura legal de TQQQ, SOXL, SPXL, QQQ y SPY** (*trust* contra *corporation*) y si para el SAT son "títulos que representan índices accionarios" siendo apalancados con *swaps*.
 3. **Pago provisional de 20% del art. 126** en ventas de títulos no listados en el SIC hechas con un bróker extranjero: si aplica en la práctica y si hay alguna facilidad.
 4. **Si el 10% de EUA se puede acreditar contra el 10% adicional mexicano** del art. 142 fr. V (que es "definitivo"), o solo contra el ISR del dividendo acumulado.
-5. **Tipo de cambio para calcular el costo en MXN** de compras y ventas en USD con un bróker extranjero (probablemente el del DOF del día anterior, art. 20 CFF; no verificado) y el trato de la ganancia cambiaria sobre el efectivo en USD que queda en el bróker (art. 142 fr. II).
-6. **Schwab International:** mínimo de apertura actual, costo del wire y si da W-8BEN y fracciones. El sitio devuelve 403 y las capturas de Wayback se cortaron.
+5. **Tipo de cambio para calcular el costo en MXN** de compras y ventas en USD con un bróker extranjero, y el trato de la ganancia cambiaria sobre el efectivo en USD que queda en el bróker (art. 142 fr. II). *(Parcialmente resuelto en la verificación: el art. 20 del CFF dice que "se considerará el tipo de cambio a que se haya adquirido la moneda extranjera de que se trate y no habiendo adquisición, se estará al tipo de cambio que el Banco de México publique en el Diario Oficial de la Federación el día anterior" [42]. **[I]** Si los USD se compraron con Wise, el tipo de cambio de esa compra sería el primero en aplicar. Cómo se combina con la actualización por inflación del art. 129 sigue abierto.)*
+6. **Schwab International:** ~~mínimo de apertura actual, costo del wire~~ **resueltos en la verificación** (sin mínimo; US$25 por wire de salida [41]). Siguen abiertos: si da W-8BEN electrónico, fracciones y su margen cambiario si se deposita en MXN.
 7. **tastytrade:** que México esté en la lista oficial de países (la página carga con JS; solo lo vi en el resumen del buscador) y el mínimo de apertura.
 8. **eToro:** la entidad que atiende a México, la tasa de conversión para depósitos en MXN y si custodia acciones reales o CFDs para México.
-9. **XTB:** si acepta a México, en qué entidad y si ofrece acciones reales.
+9. **XTB:** si acepta a México. *(La entidad para Latinoamérica, XTB International de Belice, y la oferta de acciones y ETFs reales quedaron resueltas en la verificación con su página oficial [45].)*
 10. **Webull México:** su margen cambiario MXN→USD y si emite algún documento fiscal mexicano por lo operado en EUA con Webull Financial LLC.
 11. **Fondeo con Wise:** si Firstrade, Schwab o tastytrade aceptan el depósito que llega desde Wise, y si un residente mexicano puede recibir en Wise los USD del wire de salida. La cotización mostró "multi currency account is currently not available in your country" para la opción de pagar desde saldo; el país lo infiere Wise y puede reflejar la IP del *proxy*.
-12. **Reciprocidad FATCA:** si los brókers de EUA reportan al SAT las cuentas de residentes mexicanos, y con qué alcance (solo fuente secundaria [38]).
+12. ~~**Reciprocidad FATCA**~~ **Resuelto en la verificación** con el texto oficial del acuerdo [38]: es recíproco y cubre intereses, dividendos de fuente de EUA y otros ingresos de fuente de EUA reportables, no el producto de las ventas.
 13. **Custodia SIC/Indeval y el impuesto sucesorio:** efecto práctico (no el legal) sobre el cobro.
-14. **Página del IRS sobre el *tax home* y la regla de los 183 días:** lo leí en el resumen del buscador de irs.gov y en la tabla de fuente del ingreso [9][10]. No leí completa la Pub. 519.
+14. **Regla de los 183 días:** la tabla de fuente del ingreso del IRS (revisada el 18-ago-2026) se leyó directo en la verificación y confirma "Sale of personal property: Seller's tax home" [9]. La excepción de los 183 días de la Pub. 519 no se leyó completa [10].
+15. **(Nuevo en la verificación) Numeral 3 del último párrafo del art. 129** ("fuera de las bolsas señaladas") aplicado a órdenes que un bróker de EUA ejecuta fuera de bolsa con creadores de mercado. El criterio 37 no lo trata (§1.2).
+16. **(Nuevo en la verificación) Cómo regresan los USD a México:** si un residente mexicano puede recibir en Wise el wire de salida y qué cobra, o qué tipo de cambio y comisión aplica un banco mexicano que recibe USD en una cuenta en pesos (§5).
+17. **(Nuevo en la verificación) Requisitos del Reglamento** para el "pago provisional menor" del art. 126 (§1.4).
 
 ---
 
@@ -299,11 +304,11 @@ B1 estima además un costo cambiario implícito de ~0.1% a 0.3% por lado en el S
 4. SAT/DOF, *Anexo 7 de la RMF 2026, Compilación de criterios normativos*, DOF 09-01-2026: criterios **37/ISR/N** (págs. 45-46) y **5/ISR/N**. https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_7_RMF2026-09012026.pdf
 5. Cámara de Diputados, *Código Fiscal de la Federación*, última reforma DOF 09-04-2026, art. 16-C. https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf
 6. (Referencia interna) GBM, FAQ de impuestos en el SIC y dividendos, citadas en B1 [14][15][16].
-7. IMCP, Comisión Fiscal, *Fisco Actualidades* 122, "Aspectos fiscales de la inversión en Exchange Traded Funds" (abr-2024), C.P.C. Allen Saracho Carrillo. https://imcp.org.mx/wp-content/uploads/2024/04/Fisco_122_24.pdf. El original dio 403; se leyó la captura de Wayback: https://web.archive.org/web/2025id_/https://imcp.org.mx/wp-content/uploads/2024/04/Fisco_122_24.pdf. **Fuente secundaria profesional, no del SAT.**
+7. IMCP, Comisión Fiscal, *Fisco Actualidades* 122, "Aspectos fiscales de la inversión en Exchange Traded Funds referidos a bitcoin" (abr-2024), C.P.C. Allen Saracho Carrillo. *(Título completado en la verificación: el artículo trata de ETFs de bitcoin; la tesis sobre el art. 129 fr. I, "no requiere que la enajenación de acciones emitidas por sociedades extranjeras se realice en bolsa de valores concesionada", se confirmó en el texto.)* https://imcp.org.mx/wp-content/uploads/2024/04/Fisco_122_24.pdf. El original dio 403; se leyó la captura de Wayback: https://web.archive.org/web/2025id_/https://imcp.org.mx/wp-content/uploads/2024/04/Fisco_122_24.pdf. **Fuente secundaria profesional, no del SAT.**
 8. IRS, "Some nonresidents with U.S. assets must file estate tax returns" (revisada el 27-jun-2026). https://www.irs.gov/individuals/international-taxpayers/some-nonresidents-with-us-assets-must-file-estate-tax-returns
 9. IRS, "Nonresident aliens – source of income" (revisada el 18-ago-2026): la venta de bienes muebles tiene su fuente en el "seller's tax home". https://www.irs.gov/individuals/international-taxpayers/nonresident-aliens-source-of-income
 10. IRS, "The taxation of capital gains of nonresident students, scholars and employees of foreign governments" y Pub. 519. https://www.irs.gov/individuals/international-taxpayers/the-taxation-of-capital-gains-of-nonresident-students-scholars-and-employees-of-foreign-governments ; https://www.irs.gov/publications/p519. **Solo resumen del buscador.**
-11. IRS, *Instructions for Form W-8BEN* (Rev. oct-2021), vigencia del formulario. https://www.irs.gov/instructions/iw8ben. **Resumen del buscador de la página oficial.**
+11. IRS, *Instructions for Form W-8BEN* (Rev. oct-2021; página revisada el 30-abr-2026), vigencia del formulario. https://www.irs.gov/instructions/iw8ben. *(Leída directo en la verificación; antes era resumen del buscador.)*
 12. IRS, Convenio EUA-México para evitar la doble tributación, art. 10 (10% "in other cases"). https://www.irs.gov/pub/irs-trty/mexico.pdf (congelado en V05, `datos/legal/irs-tratado-eua-mexico.txt`).
 13. IRS, Convenio EUA-Irlanda, art. 10 (15%). https://www.irs.gov/pub/irs-trty/ireland.pdf (congelado en V05).
 14. IRS, *Instructions for Form 706-NA* (rev. 09/2025): umbral de 60,000 USD, crédito de 13,000 USD, *situs* de acciones, excepción RIC 2005-2011 y lista de tratados. https://www.irs.gov/instructions/i706na (congelado en V05).
@@ -313,11 +318,11 @@ B1 estima además un costo cambiario implícito de ~0.1% a 0.3% por lado en el S
 18. Charles Schwab International, "Fees & Commissions" (captura de Wayback del 03-jun-2026). https://international.schwab.com/pricing → https://web.archive.org/web/20260603144902id_/https://international.schwab.com/pricing (el sitio en vivo da 403).
 19. Charles Schwab International, "Open an account – Step 2 (MEX)" (captura de Wayback del 17-abr-2026). https://web.archive.org/web/20260417022334id_/https://international.schwab.com/open-account-step-2MEX
 20. Charles Schwab International, página de países restringidos (captura del 21-ene-2026; texto genérico de rechazo, sin lista). https://web.archive.org/web/20260121154410id_/https://international.schwab.com/open-account-intro/restrict
-21. The Poor Swiss, "Charles Schwab International Review 2026", y EarlyRetireAbroad (mínimo de 25,000 USD eliminado en 2025). https://thepoorswiss.com/charles-schwab-international-review/ ; https://earlyretireabroad.com/charles-schwab-international-account/. **Secundarias.**
+21. The Poor Swiss, "Charles Schwab International Review 2026", y EarlyRetireAbroad (mínimo de 25,000 USD eliminado en 2025). https://thepoorswiss.com/charles-schwab-international-review/ ; https://earlyretireabroad.com/charles-schwab-international-account/. **Secundarias.** *(Ya no se necesitan: la fuente oficial [41] lo confirma.)*
 22. Firstrade Help Center, "Can I open an international account?" (actualizada el 07-may-2026). https://help.firstrade.info/en/articles/9268315-can-i-open-an-international-account
 23. Firstrade, "International Stock Investing Accounts". https://www.firstrade.com/accounts/international
 24. Firstrade Help Center, "What are the fees for wire transfers?" (actualizada el 15-jul-2024). https://help.firstrade.info/en/articles/9260062-what-are-the-fees-for-wire-transfers
-25. Firstrade, "Get a Wire Transfer Fee Rebate" (reembolso por wires de ≥10,000 USD desde 01/05/2026; solo resumen del buscador). https://www.firstrade.com/accounts/wire-fee-rebate
+25. Firstrade, "Get a Wire Transfer Fee Rebate" (vigente desde 01/05/2026). https://www.firstrade.com/accounts/wire-fee-rebate. *(Leída directo en la verificación: primer wire de "$2,500 or more" en los 30 días desde la apertura, reembolso "up to $25"; después, wires de "$10,000 or more", hasta US$25 cada uno y 3 al mes.)*
 26. tastytrade, "Pricing". https://tastytrade.com/pricing/
 27. tastytrade, "Commissions & Fees" (PDF, "Last updated July 30, 2026"). https://tastytrade.com/commissions-and-fees/ → https://assets.contentstack.io/v3/assets/blt7dc2e3d4a7071563/blt2b752fef372188fe/commissions-and-fees
 28. tastytrade, "International Accounts" (actualizada el 19-mar-2026). https://tastytrade.com/learn/accounts/account-types/international-account/
@@ -330,8 +335,101 @@ B1 estima además un costo cambiario implícito de ~0.1% a 0.3% por lado en el S
 35. BrokerChooser, "¿Está disponible XTB para inversores en México?". https://brokerchooser.com/es/broker-reviews/xtb-review/xtb-mexico. **Secundaria (resumen del buscador).**
 36. Wise, cotización pública MXN→USD por 20,000 MXN (API `POST https://api.wise.com/v3/quotes/`, rateTimestamp 2026-09-25T06:15:31Z; y `https://wise.com/gateway/v1/price?sourceAmount=20000&sourceCurrency=MXN&targetCurrency=USD`). Cotización anónima: el precio real para un residente mexicano puede variar.
 37. Wise, cotización pública USD→MXN por 1,100 USD (API `POST https://api.wise.com/v3/quotes/`, rateTimestamp 2026-09-25T06:16:32Z).
-38. Clearstream, "U.S.A.: FATCA: U.S.A. and Mexico sign new Model I Intergovernmental Agreement" (IGA del 09-abr-2014). https://www.luxcsd.com/luxcsd-en/products-and-services/assetservices/U.S.A.-FATCA-U.S.A.-and-Mexico-sign-new-Model-I-Intergovernmental-Agreement-1305594. **Secundaria. La reciprocidad es inferencia.**
+38. Clearstream, "U.S.A.: FATCA: U.S.A. and Mexico sign new Model I Intergovernmental Agreement" (IGA del 09-abr-2014). https://www.luxcsd.com/luxcsd-en/products-and-services/assetservices/U.S.A.-FATCA-U.S.A.-and-Mexico-sign-new-Model-I-Intergovernmental-Agreement-1305594. *(Verificación: sustituida por la fuente oficial.)* Departamento del Tesoro de EUA, *Agreement [...] to Improve International Tax Compliance including with respect to FATCA* (México, firmado en la Ciudad de México el 09-abr-2014): preámbulo ("reciprocal automatic exchange"), art. 1 inciso bb ("Mexican Reportable Account") y art. 2 (dividendos de fuente de EUA). https://home.treasury.gov/system/files/131/FATCA-Agreement-Mexico-4-17-2014.pdf ; lista de acuerdos: https://home.treasury.gov/policy-issues/tax-policy/foreign-account-tax-compliance-act
 39. El Fondo, "Impuestos por acciones y ETFs de EE. UU. desde México: SAT, W-8BEN y el 30% (2026)". https://www.el-fondo.com/es/articles/impuestos-acciones-etfs-eeuu-desde-mexico-sat-w8ben. **Secundaria (resumen del buscador).** Extiende el criterio 37 a los ETFs; el texto del criterio no lo dice.
 40. Documentos internos: `B1-gbm-linea-base-.md`, `B2-casas-de-bolsa-y-apps-mexicanas.md` y `../01-gbm-operativa-y-costos.md` (25-sep-2026).
+41. *(Agregada en la verificación)* Charles Schwab International, "U.S. investing brokerage account" (captura de Wayback del 03-feb-2026; la página en vivo da 403): "Open a brokerage account with $0 minimum deposit", "There is no minimum deposit required to open an individual or joint account", "A US$25 service fee will be charged for outgoing wire transfers" y "Schwab's Foreign Currency Wire Transfer Service, with competitive exchange rates, no transaction fees". https://web.archive.org/web/20260203153050id_/https://international.schwab.com/us-investing-brokerage-account
+42. *(Agregada en la verificación)* Cámara de Diputados, *Código Fiscal de la Federación* (última reforma DOF 09-04-2026), arts. 20 (tipo de cambio) y 35 (criterios publicados en el DOF). https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf
+43. *(Agregada en la verificación)* SAT/DOF, RMF 2026 (DOF 28-12-2025) y Anexo 7 (DOF 09-01-2026), descargados y leídos en texto completo el 25-sep-2026: se cotejaron las reglas 3.1.7, 3.2.12, 3.5.20, 3.5.22, 3.11.7, 3.11.9 y 3.15.10 y los criterios 5/ISR/N y 37/ISR/N (págs. 45-46 del PDF del Anexo 7).
+44. *(Agregada en la verificación)* IRS, *Instructions for Form 1040-NR* (2025), "Do You Have To File?". https://www.irs.gov/instructions/i1040nr
+45. *(Agregada en la verificación)* XTB Latinoamérica, "Cuenta y tarifas" y aviso legal (XTB International Limited, Belice, FSC núm. 6442514). https://www.xtb.com/lat/cuenta-y-tarifas ; https://www.xtb.com/lat
 
 **Búsquedas web realizadas:** 20 (art. 129 con bróker extranjero, RMF 2026, criterio 37/ISR/N, ETFs con bróker extranjero, reformas a la LISR 2026, Pub. 519 del IRS, retenciones de UCITS irlandeses, Schwab International, Firstrade (2), tastytrade (3), Saxo, eToro (2), Webull México, W-8BEN, XTB/Trading 212/moomoo, FATCA México). Además se consultaron páginas oficiales directamente: SAT (RMF y Anexo 7), Cámara de Diputados (LISR, CFF e historial), IRS (3), SSGA, Schwab (Wayback), Firstrade (3), tastytrade (3), Saxo, eToro, Webull México y la API pública de Wise (2).
+
+---
+
+## Verificacion (2026-09-25)
+
+**Método.** Verificación adversarial hecha el 25-sep-2026, entre las 06:40 y las 07:00 UTC. Cada tarifa, mínimo, costo de fondeo o retiro, tipo de cambio y regla fiscal se cotejó contra la fuente oficial:
+- **Fuentes mexicanas:** la RMF 2026 y su Anexo 7 se descargaron del SAT y se leyeron en texto completo. La LISR se leyó en la copia congelada de V05 (Diputados, DOF 01-04-2024). El CFF y el historial de reformas se leyeron en Diputados.
+- **Fuentes de EUA:** páginas del IRS, el acuerdo FATCA del Tesoro y el tratado congelado en V05.
+- **Brókers:** páginas de tarifas de cada uno. Para Schwab, capturas de Wayback de su página oficial, porque el sitio en vivo da 403.
+- **Cambio de divisas:** la API pública de Wise, consultada otra vez.
+
+**Resultado: 41 afirmaciones revisadas.**
+- **34 se confirman**, algunas con un matiz agregado.
+- **6 se actualizan con fuente oficial.** Antes estaban sin verificar, eran secundarias o estaban incompletas: el mínimo y el wire de Schwab, la recuperación del exceso de retención, FATCA, el tipo de cambio fiscal y XTB.
+- **1 conclusión era incorrecta** (C1).
+- **Además se agregaron 3 omisiones** (C4, C5 y C9).
+
+### Qué se confirmó
+
+| # | Afirmación de B4 | Fuente oficial revisada | Estado |
+|---|---|---|---|
+| 1 | Texto del criterio 37/ISR/N ("con independencia de que su enajenación no se realice a través de un intermediario del mercado de valores mexicano") y su ubicación en las págs. 45-46 | Anexo 7 RMF 2026, PDF del SAT (DOF 09-01-2026) [4][43] | **Confirmado palabra por palabra** |
+| 2 | Criterio 5/ISR/N: el exceso sobre el tratado solo se acredita si el procedimiento amistoso termina en acuerdo y el contribuyente lo acepta | Anexo 7 [43] | Confirmado |
+| 3 | La LISR no tiene reformas después del DOF 01-04-2024 | Diputados, `ref/lisr.htm` | Confirmado |
+| 4 | La RMF 2026 salió en el DOF el 28-12-2025 y el Anexo 7 el 09-01-2026 | Encabezados de los PDF del DOF [43] | Confirmado |
+| 5 | Art. 129: fr. I a III, el párrafo de las "entidades financieras extranjeras", la declaración anual y las pérdidas a 10 años | LISR (copia de V05) [1] | Confirmado |
+| 6 | Art. 126: pago provisional de 20% del monto total y plazo de 15 días si el adquirente no es residente | LISR [1] | Confirmado. **Se agregó el matiz** del "pago provisional menor" (§1.4) |
+| 7 | Arts. 120-121: la ganancia se divide entre hasta 20 años y las pérdidas se aplican en 3 años | LISR [1] | Confirmado |
+| 8 | Art. 142 fr. V: 10% adicional definitivo "sin incluir el monto del impuesto retenido", a más tardar el día 17 del mes siguiente | LISR [1] | Confirmado |
+| 9 | Art. 5: límite del acreditamiento por país, exceso sobre el tratado y documentación comprobatoria | LISR [1] | Confirmado |
+| 10 | Reglas 3.1.7, 3.2.12, 3.5.22, 3.11.7, 3.11.9 y 3.15.10 (contenido que les atribuye B4) | RMF 2026 [43] | Confirmado |
+| 11 | Art. 16-C fr. II del CFF y última reforma del CFF del DOF 09-04-2026 | Diputados, CFF [5][42] | Confirmado |
+| 12 | Tratado EUA-México, art. 10: 10% "in other cases" | Tratado del IRS (copia de V05) [12] | Confirmado. El Protocolo aplica también el 10% a los dividendos de RIC (ETFs) |
+| 13 | Impuesto sucesorio: umbral de 60,000 USD y *situs* de las acciones de EUA "even if [...] held the certificates abroad" | Página del IRS revisada el 27-jun-2026 [8] | Confirmado |
+| 14 | Ilustración de V05: 10,800 USD sobre 100,000 USD y 33.28% sobre 1 M USD | Aritmética con la tarifa del 26 USC 2001 menos el crédito de 13,000 USD | Confirmado |
+| 15 | La venta de bienes muebles tiene su fuente en el "Seller's tax home" | IRS, página revisada el 18-ago-2026 [9] | Confirmado |
+| 16 | El W-8BEN vale hasta el último día del tercer año calendario siguiente | IRS iw8ben (página revisada el 30-abr-2026) [11] | Confirmado directo (antes era resumen del buscador) |
+| 17 | UCITS irlandeses: 15% a nivel del fondo y sin retención al inversionista no residente | SSGA, 02-jun-2026 [16] | Confirmado |
+| 18 | Tesis del IMCP sobre la fr. I y los ETFs *grantor trust* | *Fisco Actualidades* 122 (Wayback) [7] | Confirmado. **Título corregido** ("...referidos a bitcoin") |
+| 19 | Firstrade: México está en la lista (07-may-2026), solo cuentas individuales y sin SSN/ITIN | Firstrade Help Center [22] | Confirmado. Pide pasaporte y W-8BEN |
+| 20 | Firstrade: US$0 en acciones, ETFs, opciones y fondos, y sin mínimo | firstrade.com/accounts/international [23] | Confirmado |
+| 21 | Firstrade: wire de entrada sin comisión y US$25 por wire de salida internacional | Firstrade Help Center (15-jul-2024) [24] | Confirmado |
+| 22 | Firstrade: reembolso de wires | Página oficial [25] | Confirmado directo. **No aplica a ~1,120 USD** |
+| 23 | Schwab International: US$0, US$0.65 por contrato y "Non-U.S. ETFs: Not available" | Pricing (Wayback 03-jun-2026) [18] | Confirmado |
+| 24 | Schwab International: flujo de apertura para México con credencial de elector o matrícula consular | Wayback 17-abr-2026 [19] | Confirmado |
+| 25 | tastytrade: US$0 + US$0.0008 por acción; opciones a US$1 al abrir (tope de US$10 por pierna) y US$0 al cerrar; US$45 por wire al extranjero | Hoja de comisiones (30-jul-2026) [27] | Confirmado. **Se agregó** el *clearing* de US$0.10 por contrato de opciones |
+| 26 | Saxo no atiende a México | Saxo Help Center (28-jul-2026) [30] | Confirmado |
+| 27 | eToro: US$1 o US$2 por operación en acciones, 0 en ETFs, US$5 por retiro y conversión sin tasa publicada | etoro.com/trading/fees [31] | Confirmado |
+| 28 | Webull México: cero comisiones, sin mínimo, custodia en Webull Financial LLC y tipo de cambio sin cifra | webull.com.mx [34] | Confirmado (su texto dice "bajas tarifas de cambio") |
+| 29 | Wise MXN→USD: 193.84 MXN (0.97%) por 20,000 MXN | API pública de Wise, consultada otra vez a las 06:47 UTC [36] | **Confirmado al centavo** (tasa media de 17.69) |
+| 30 | Wise USD→MXN: 12.57 USD (1.14%) por 1,100 USD | API pública de Wise [37] | Confirmado. **Se agregó** la sensibilidad desde un saldo de Wise (0.57%–0.59%) |
+| 31 | Aritmética de §5: 857 MXN (4.29%) y 1,207 MXN (6.04%); equilibrios de 1.7, 7.4 y 10.4, y de 0.8–1.2 y 3.6–5.5 con la desviación del SIC | Recalculada | Confirmada |
+| 32 | Tabla de dividendos (37 / 19 / 10 / 30) y diferencia de TWR de ~0.09% al año | Recalculada con el art. 142 fr. V (base "sin incluir el monto del impuesto retenido") | Confirmada |
+| 33 | GBM: 0.29% por lado con IVA y 0.58% por ida y vuelta | B1, ya verificado contra la Guía de jul-2026 | Confirmado (fuente de B1) |
+| 34 | Estado de las correcciones a B1, B2 y B3 | Lectura de los archivos | B1 y B3 ya corregidos. **B2, línea 87, sigue sin corregir** |
+
+### Qué se corrigió en el texto
+
+| # | Dónde | Qué decía | Qué dice ahora | Por qué |
+|---|---|---|---|---|
+| C1 | §5 y resumen, punto 9 | "Con R = 6 a 9, Firstrade empata o le gana a GBM aunque se cuente la salida" | **GBM gana con R = 6 y 7** si se cuenta la salida y solo las comisiones (3.48% y 4.06% contra 4.29%). Firstrade gana desde R = 8, o en todo el rango si se suma la desviación implícita del SIC | La propia tabla de B4 lo contradecía (equilibrio en R ≈ 7.4) |
+| C2 | Resumen, puntos 8 y 10; §4 (tabla y lecturas); §6.4 | Mínimo de Schwab "(no verificado)", salida "(no verificado)" y "Firstrade es el más barato" | **Schwab: sin mínimo y US$25 por wire de salida** (página oficial vía Wayback, 03-feb-2026) [41]. Firstrade y Schwab **empatan** en acciones; Firstrade gana en opciones | Hallada la fuente oficial |
+| C3 | Resumen, punto 4 | La retención en exceso "solo se recupera si un procedimiento amistoso termina en acuerdo" | En México, sí. En EUA se puede pedir la devolución con el 1040-NR [44] | Omisión |
+| C4 | §1.2 y resumen, punto 1 | Sin mención del numeral 3 del art. 129 | Se agregaron el riesgo de las ventas "fuera de las bolsas señaladas" (ejecución fuera de bolsa por creadores de mercado; **no verificado**) y la fuerza del criterio publicado (art. 35 CFF) | Omisión con peso en la decisión |
+| C5 | §1.4 | Pago provisional de 20% sin salida | El art. 126 permite un "pago provisional menor" con los requisitos del Reglamento (sin revisar) | Omisión del texto legal |
+| C6 | §1.5 y §8.12 | FATCA: "secundaria/inferencia" | **[H]** Acuerdo recíproco. EUA informa intereses, dividendos de fuente de EUA y otros ingresos reportables, **no el producto de las ventas** [38] | Fuente oficial del Tesoro |
+| C7 | §8.5 | Tipo de cambio fiscal "(no verificado)" | Art. 20 CFF: primero el tipo de cambio "a que se haya adquirido la moneda", y si no hay adquisición, el FIX del DOF del día anterior [42] | Texto legal |
+| C8 | Resumen, punto 8; §4 | XTB: todo secundario | Tarifas de la página oficial para Latinoamérica: 0% hasta 100,000 EUR al mes, 0.5% de conversión, entidad de Belice. **México sigue (no verificado)** | Fuente oficial |
+| C9 | §5 | Salida solo vía Wise con 1.14% | Sensibilidad agregada: 3.75% si se convierte desde un saldo de Wise. Advertencia: un wire en USD a un banco mexicano choca con la restricción de cuentas en dólares para personas físicas (**no verificado**) | Omisión práctica |
+
+### Lo que sigue sin verificar y pesa en la decisión
+
+1. **Aceptación de México en tastytrade** (página oficial ilegible por JavaScript) y en **XTB**, eToro y Webull para la parte fiscal.
+2. **Numeral 3 del art. 129** aplicado a órdenes ejecutadas fuera de bolsa por un bróker de EUA.
+3. **ETFs vendidos con un bróker extranjero** (fr. I o fr. II, o fuera del art. 129). Sigue siendo la mayor incertidumbre fiscal para una estrategia con TQQQ, SOXL o SPXL.
+4. **Ruta real de regreso de los USD a pesos** para un residente mexicano: si Wise recibe el wire y qué cobra, o cuánto cobra un banco mexicano.
+5. **Margen cambiario de Schwab** si se deposita en MXN con su *Foreign Currency Wire Transfer Service*.
+
+### Veredicto de la verificación
+
+**B4 se sostiene en lo que decide, con correcciones.**
+- **El hallazgo fiscal central se confirmó palabra por palabra en el PDF del SAT:** una acción extranjera listada en el SIC paga 10% del art. 129 aunque se venda con un bróker extranjero. Además tiene la fuerza del art. 35 del CFF.
+- **Todas las tarifas de brókers que B4 daba por verificadas coinciden con la fuente oficial.**
+- **Dos cambios mueven la recomendación:**
+  - **(C2)** Schwab International queda **empatado con Firstrade** como el extranjero más barato en acciones (sin mínimo y US$25 de salida).
+  - **(C1)** Con la rotación de B2 (R = 6 a 9) y contando la salida, **GBM todavía gana con R = 6 y 7** si solo se cuentan las comisiones. La ventaja del bróker extranjero depende de sumar la desviación implícita del SIC o de no liquidar a pesos.
+- **Riesgo nuevo que no estaba en B4:** el numeral 3 del art. 129 frente a la ejecución fuera de bolsa (C4). Es bajo pero no está resuelto.
+- **Para el dueño, la conclusión práctica no cambia.** Con un bróker extranjero, operar solo acciones listadas en el SIC, dejar los ETFs apalancados en la ruta SIC y recalcular las réplicas con los costos reales antes de operar.

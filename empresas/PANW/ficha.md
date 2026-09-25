@@ -14,7 +14,7 @@ Geografía FY26 [3]: Américas US$7,679 M (67%; EUA 7,108, 62%), EMEA US$2,428 M
 
 ## 2. Último reporte: 4T FY26 (publicado 1-sep-2026) [1]
 - **Ingresos:** US$3,410 M (+34% a/a), 1.8% arriba del punto medio de la guía (US$3.345-3.355 mil M) [2]. El consenso de ingresos previo no se verificó.
-- **Márgenes:** bruto GAAP de 67.6% (74.2% un año antes) por la amortización de intangibles adquiridos, y operativo GAAP de 5.0% [9].
+- **Márgenes:** bruto GAAP de 67.6% (73.2% un año antes) por la amortización de intangibles adquiridos, y operativo GAAP de 5.0% (utilidad operativa de US$172 M) [1]. La pérdida neta GAAP viene de otros gastos netos de US$441 M debajo de la utilidad operativa [1].
 - **UPA:** non-GAAP de US$1.02 contra una guía de 0.96-0.98 [2] y un consenso de US$0.977 (Yahoo, +4.4%) [9]. GAAP de −US$0.35.
 - **Guía [1]:**
   - 1T FY27: ingresos de US$3.300-3.310 mil M (+33-34%), NGS ARR de 9.54-9.56 mil M, RPO de 20.8-20.9 mil M y UPA non-GAAP de US$0.96-0.98 con 837-844 M acciones.
@@ -59,7 +59,7 @@ Las acciones y la UPA se ajustaron por los splits 3:1 (2022) y 2:1 (dic-2024). L
    - La línea revolvente no tenía saldo.
    - Caja e inversiones totales de ~US$7.9 mil M [4].
 3. **Dilución:** las acciones diluidas suben 17.4% a/a por CyberArk y el SBC es de 15.5%. Las recompras FY26 fueron de US$1.0 mil M (7.0 M acciones a US$147.70) [4].
-4. **Capital de trabajo:** cuentas por cobrar de US$3.63 mil M [4]. Hay dos clientes de 15% de los ingresos cada uno (Inferencia: distribuidores) y cuatro distribuidores con el 19% de las cuentas por cobrar (XBRL R51; reverificar en el texto) [4].
+4. **Capital de trabajo:** cuentas por cobrar de US$3.63 mil M [4]. Dos distribuidores representaron 15% y 15% de los ingresos FY26 (30% en conjunto), y un solo distribuidor el 19% de las cuentas por cobrar brutas al 31-jul-2026 (texto del 10-K) [3].
 5. **Competidores y sustitutos:** Fortinet, Cisco, Zscaler, CrowdStrike, Microsoft, Check Point; en identidad, Okta y Entra; en observabilidad, Datadog.
 6. **Concentración:** canal de distribución (punto 4). Inferencia: gobierno federal de EUA relevante (no cuantificado).
 7. **Regulación:**
@@ -72,7 +72,7 @@ Las acciones y la UPA se ajustaron por los splits 3:1 (2022) y 2:1 (dic-2024). L
 10. **Asignación de capital:** es intensiva en M&A [3][4]:
     - CyberArk: contraprestación de US$21.1 mil M, mayormente en acciones.
     - Chronosphere: US$2.95 mil M, con US$2.84 mil M en efectivo.
-    - Koi, Portkey, Embrace y Console (29-jul-2026).
+    - Koi (14-abr-2026), Portkey (29-may-2026), Embrace (27-ago-2026) y Console (1-sep-2026), según el 10-K [3].
     - El crédito mercantil (US$22.0 mil M) más los intangibles (7.0) suman US$29.0 mil M, contra un capital contable de US$27.5 mil M.
 
 ## 5. Cadenas causales vigentes
@@ -115,20 +115,20 @@ Cálculo propio: cierres de Yahoo a fin de trimestre × acciones diluidas XBRL a
 Dato que cambia de escenario: el NGS ARR del 1T contra la guía (9.54-9.56) y cualquier revelación del crecimiento orgánico. Un NGS ARR < US$9.5 mil M mueve al bajista.
 
 ## 8. Pronósticos registrados — 1T FY27 (trimestre al 31-oct-2026)
-Fecha estimada: **~19-nov-2026**. Yahoo la marca como estimada [9] y no se confirmó en fuente primaria. Consenso: Yahoo quoteSummary, consultado el 2026-09-25 [9].
+Fecha estimada: **~18-19-nov-2026**. Yahoo la marca como estimada el 19 [9] y Nasdaq/Zacks estima el 18 por algoritmo [12]; no se confirmó en fuente primaria. Patrón: el 1T FY26 se reportó el miércoles 19-nov-2025 y el 1T FY25 el miércoles 20-nov-2024 (8-K Item 2.02 en EDGAR), lo que apunta al miércoles 18-nov-2026. Consenso: Yahoo quoteSummary, consultado el 2026-09-25 [9].
 
 | Variable | Punto | p10-p90 (80%) | Consenso |
 |---|---|---|---|
-| Ingresos (US$ M) | 3,322 | 3,298-3,352 | 3,307.5 (45 analistas) |
-| UPA non-GAAP diluida (US$) | 1.00 | 0.97-1.04 | 0.9715 (45 analistas) |
+| Ingresos (US$ M) | 3,340 | 3,295-3,385 | 3,307.5 (45 analistas) |
+| UPA non-GAAP diluida (US$) | 1.03 | 0.98-1.08 | 0.9715 (45 analistas) |
 
 Base del cálculo:
-- En ingresos, punto medio de la guía +0.5%. La guía es estrecha y en el 4T la superó por +1.8%.
-- En UPA, la superación contra el consenso fue de +4% a +10% en los últimos 4 trimestres [9].
+- Ingresos (corregido en la verificación): contra el punto medio de la guía, PANW reportó +1.4%, +0.6%, +0.5%, +2.0% y +1.8% en los últimos 5 trimestres [1][2][13]. Aplicadas a 3,305 dan 3,323-3,371, y tres quedaban en el p90 original (3,352) o arriba de él. El punto es la guía +1.1%.
+- UPA (corregido en la verificación): la superación contra el consenso fue de +4.4%, +9.9%, +6.6% y +4.35% en los últimos 4 trimestres [9], y contra el punto medio de la guía de +8.0%, +4.5%, +9.6%, +7.6% y +5.2% en 5 trimestres. Aplicadas a 0.97 dan 1.01-1.06; el punto original (1.00) quedaba debajo de todas, y 3 de 5 arriba del p90 (1.04). El punto nuevo (1.03) es la mediana.
 
 Binarios:
-- Ingresos > US$3,307.5 M: **p = 0.78**.
-- UPA non-GAAP > US$0.9715: **p = 0.85**.
+- Ingresos > US$3,307.5 M: **p = 0.82** (antes 0.78).
+- UPA non-GAAP > US$0.9715: **p = 0.88** (antes 0.85). Requiere reportar 0.98 o más, el tope de la guía, que PANW alcanzó o superó en cada uno de los últimos 5 trimestres.
 
 ## 9. Catalizadores y riesgos
 - **~19-nov-2026: 1T FY27.**
@@ -155,5 +155,36 @@ Binarios:
 9. `herramientas/dossier.py PANW` (SEC companyfacts + Yahoo chart), Yahoo quoteSummary (consenso, fecha y pares) y cálculo propio de múltiplos y DCF inverso, 2026-09-25: empresas/PANW/dossier-2026-09-25.md
 10. Yahoo Finance chart PANW.MX, 2026-09-25: https://query1.finance.yahoo.com/v8/finance/chart/PANW.MX
 11. Conocimiento cap. 23 §4.3 (guerra de Irán) y cap. 24 §4.1 (Fed +25 pb el 16-sep-2026): conocimiento/23-geopolitica-y-riesgo-politico-global.md; conocimiento/24-politica-publica-regulacion-y-mercados.md
+12. Nasdaq, earnings date de PANW (Zacks: 18-nov-2026 estimada por algoritmo), consultado 2026-09-25: https://api.nasdaq.com/api/analyst/PANW/earnings-date
+13. PANW, comunicados 2T FY26 (17-feb-2026), 1T FY26 (19-nov-2025), 4T FY25 (18-ago-2025) y 3T FY25 (20-may-2025), para el historial de guía contra resultado: https://www.sec.gov/Archives/edgar/data/1327567/000132756726000003/ex991q226earningsrelease.htm ; https://www.sec.gov/Archives/edgar/data/1327567/000132756725000032/ex991q126earningsrelease.htm ; https://www.sec.gov/Archives/edgar/data/1327567/000132756725000024/ex991q425earningsrelease.htm ; https://www.sec.gov/Archives/edgar/data/1327567/000132756725000015/ex991q325earningsrelease.htm
 
 Nota de método: el presupuesto de WebSearch de la sesión estaba agotado. Las cifras vienen de EDGAR y Yahoo por consulta directa, sin prensa.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas de nuevo: 8-K ex. 99.1 del 4T FY26 (resumen, guía y estado de resultados), ex. 99.1 del 3T FY26 (guía del 4T y aporte adquirido), ex. 99.1 del 2T FY26, 1T FY26, 4T FY25 y 3T FY25 (guías) y texto del 10-K FY26 (portada, geografía, concentración y adquisiciones). Consenso: Yahoo quoteSummary y Nasdaq/Zacks consultados de nuevo el 25-sep.
+
+**Correcto (hecho verificado):**
+- Ingresos del 4T FY26 de US$3,410 M (producto 738 y suscripciones y soporte 2,672; +34%), UPA GAAP de −0.35 y non-GAAP de 1.02 [1]. FY26 de US$11,480 M, con UN de 307 y UPA de 0.40. Geografía FY26: EUA 7,108, Américas 7,679, EMEA 2,428 y APAC 1,373 [3].
+- Guía del 1T FY27: ingresos de 3,300-3,310, NGS ARR de 9.54-9.56 mil M, RPO de 20.8-20.9 mil M y UPA de 0.96-0.98 con 837-844 M acciones. FY27: ingresos de 14.10-14.20 mil M, NGS ARR de 11.075-11.175, margen operativo de 29.5%, UPA de 4.16-4.19 y margen de FCF ajustado de 38%. El FY28 se reitera en 40% [1]. La guía del 4T FY26 era de 3,345-3,355 y 0.96-0.98 [2].
+- Consenso del 1T: ingresos de 3,307.5 (45, rango 3,292-3,367) y UPA de 0.9715 (45, rango 0.95-1.01) en Yahoo. Sorpresas: +4.4%, +9.9%, +6.6% y +4.35%. Zacks publica 0.52 con "year-ago" de 0.53, en una base distinta; la base correcta es la de Yahoo, que coincide con la guía non-GAAP.
+- Cadena causal 1: CyberArk cerró el 11-feb-2026 y Chronosphere el 29-ene-2026 [3]; aportaron US$388 M en el 3T [2]. La guía de NGS ARR baja de +63% a +22-23% en FY27 [1].
+- Cadena causal 2: +13.1% el 14-sep y −9.3% el 2-sep (Yahoo chart, reconsultado).
+- Escenarios: 25 + 50 + 25 = 100%. Periodo: trimestre ago-oct, USD, UPA non-GAAP, que es la base del consenso de Yahoo y de la guía. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. Margen bruto GAAP del 4T FY25: decía 74.2% y es **73.2%** (1,857/2,536); 74.2% es el del 1T FY26. También se agregó que la pérdida neta viene de US$441 M de otros gastos netos [1].
+2. Concentración: decía "cuatro distribuidores con el 19% de las cuentas por cobrar", con los clientes de 15% como inferencia. El 10-K dice que **un distribuidor** tiene el 19% de las cuentas por cobrar brutas y que dos **distribuidores** (hecho, no inferencia) tienen 15% y 15% de los ingresos [3].
+3. Fechas de adquisiciones: no fueron todas el 29-jul-2026. Fueron Koi el 14-abr, Portkey el 29-may, Embrace el 27-ago y Console el 1-sep-2026 [3].
+4. Pronóstico de ingresos: el punto original (guía +0.5%) quedaba debajo de la mediana de 5 trimestres (+1.4%), y 3 de 5 analogías quedaban en el p90 o arriba. Punto: **3,322 → 3,340**. Intervalo: **3,298-3,352 → 3,295-3,385**. Binario: **0.78 → 0.82**.
+5. Pronóstico de UPA: la ficha citaba sorpresas de +4% a +10% y ponía el punto en +2.9% sobre el consenso, debajo de todas. Punto: **1.00 → 1.03**. Intervalo: **0.97-1.04 → 0.98-1.08**. Binario: **0.85 → 0.88**.
+6. Fecha: pasa a ~18-19-nov (patrón de miércoles verificado en EDGAR; Zacks estima el 18). Los criterios de `pronosticos.csv` ahora exigen la columna de tres meses.
+
+**No verificado o pendiente:**
+- La fecha exacta no se confirmó: el sitio de RI no responde.
+- El consenso de ingresos previo al 4T sigue sin fuente.
+- La causa de los US$441 M de otros gastos (Inferencia: valor razonable de los convertibles de CyberArk) no se revisó en la nota.
+- El beneficio fiscal de FY24 sigue marcado como no verificado.
+
+**Calibración (para el post-mortem):** PANW es la emisora de las cuatro con menor dispersión de sorpresas (ingresos de +0.5% a +2.0% contra la guía). El error original era de sesgo (puntos debajo de toda la evidencia), no de anchura. Si el 1T vuelve a caer en +0.5%, la lección es que la guía con CyberArk ya consolidado es más precisa y la sorpresa se comprime.
+
+**Veredicto:** confiable, con correcciones. Las cifras del último reporte, la guía, el consenso y la cadena de CyberArk están bien. Había tres errores de dato (margen del año previo, concentración y fechas de adquisiciones) y los dos pronósticos estaban sesgados a la baja contra la evidencia que la misma ficha citaba; todo quedó corregido.

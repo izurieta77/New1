@@ -1,0 +1,59 @@
+== E1. RF de los factores regionales de French
+  Japon: 433 meses comunes (199007-202607); RF identico en 431; distintos: [(199504, 0.45, 0.44), (202507, 0.35, 0.34)]
+  Europa: 433 meses comunes (199007-202607); RF identico en 431; distintos: [(199504, 0.45, 0.44), (202507, 0.35, 0.34)]
+  Japon USD 1991-01..2025-12: n=420; media RF=0.2118 %/mes (x12 2.541 %); CAGR de R=Mkt-RF+RF 3.386 %; CAGR del RF 2.569 %
+  media x12 de Mkt-RF (exceso sobre T-bill de EUA) = 2.377 %; de R = 4.919 %
+  contraste: tasa call de Japon (FRED IRSTCI01JPM156N) 1991-01..2025-12, n=420, media 0.632 % anual  vs  RF de French x12 2.541 %
+
+== E2. Peso de gamma_6 en Newey-West(6), HML de EUA 2007-01..2020-12
+  n=168  media=-0.4431  t_IID=-1.991  t_NW(6)=-1.7364  SE_NW=0.25519
+  j  gamma_j   rho_j   w_j(Bart)  2*w_j*gamma_j  | w_j(unif) 2*gamma_j
+  0    8.271   1.000   1.0000       8.271       |   1       8.271
+  1    1.602   0.194   0.8571       2.747       |   1       3.204
+  2    0.435   0.053   0.7143       0.622       |   1       0.871
+  3    0.174   0.021   0.5714       0.198       |   1       0.347
+  4   -0.461  -0.056   0.4286      -0.395       |   1      -0.921
+  5   -0.257  -0.031   0.2857      -0.147       |   1      -0.514
+  6   -1.472  -0.178   0.1429      -0.421       |   1      -2.944
+  S_Bartlett=10.875  t=-1.736   |   S_uniforme=8.313  t=-1.986
+  lag 6 / lag 1 (Bartlett) = -0.421 / 2.747 = -0.153;  (uniforme) = -2.944 / 3.204 = -0.919
+  rezagos 4-6 suman -0.962; rezagos 1-3 suman 3.567
+  Sin el rezago 6 (gamma_6 := 0): S=11.296, SE=0.26008, t=-1.704 (cambio de SE -1.88 %; de t -0.033)
+  d ln(SE)/d gamma_6 = (2/7)/(2S) = 0.00657 por unidad de gamma_6
+  Teorema 1 NW: e'Pe/(L+1) = 10.875135  vs S = 10.875135; eigenvalor minimo de P = 5.2669
+  Pesos de Bartlett: L, w_L=1/(L+1), participacion de w_L en suma w_1..w_L = 2/(L(L+1))
+    L= 1  w_L=0.5000  participacion=1.0000
+    L= 3  w_L=0.2500  participacion=0.1667
+    L= 4  w_L=0.2000  participacion=0.1000
+    L= 6  w_L=0.1429  participacion=0.0476
+    L=12  w_L=0.0769  participacion=0.0128
+    L=24  w_L=0.0400  participacion=0.0033
+
+== E3. Minimo de t sobre ventanas moviles de 168 meses bajo prima positiva
+  HML 1926-07..2026-07: N=1201, media=0.3550, sd=3.5520, t_IID=3.46, t_NW(6)=3.14; ventanas=1034
+  observado: t_IID de 2007-01..2020-12 = -1.991; minimo = -2.065 (200610..202009); rango de t en ventanas [-2.06, 3.54]
+  t_NW(6) por ventanas (cumsum) en 2007-01 = -1.7364 vs herramientas.newey_west = -1.7364; minimo t_NW = -1.764 (200610..202009)
+  analitico (normal): E[t] por ventana = 1.295; p1 = P(t < -1.96) = Phi(-3.255) = 0.00057
+    7 ventanas disjuntas: 1-(1-p1)^7 = 0.0040; cota de Bonferroni 1034*p1 = 0.586
+  bootstrap iid (B=4000, prima 0.355), t IID: P(min t < -1.96) = 0.0455 (+/- 0.0065); mediana del minimo = -0.741; P(t < -1.96) por ventana = 0.00076; pruebas independientes equivalentes = 61; P(min <= -2.06) = 0.034
+  bootstrap iid (B=4000, prima 0.355), t NW(6): P(min t < -1.96) = 0.0575 (+/- 0.0072); mediana del minimo = -0.773; P(t < -1.96) por ventana = 0.00105; pruebas independientes equivalentes = 56; P(min <= -1.76) = 0.093
+  bootstrap bloques circulares de 24 (B=4000, prima 0.355), t IID: P(min t < -1.96) = 0.1278 (+/- 0.0103); mediana del minimo = -1.037; P(t < -1.96) por ventana = 0.00225; pruebas independientes equivalentes = 61; P(min <= -2.06) = 0.101
+  bootstrap bloques circulares de 24 (B=4000, prima 0.355), t NW(6): P(min t < -1.96) = 0.0800 (+/- 0.0084); mediana del minimo = -0.936; P(t < -1.96) por ventana = 0.00142; pruebas independientes equivalentes = 59; P(min <= -1.76) = 0.126
+  bootstrap iid con prima 0.00 (B=2000), t IID: P(min t < -1.96) = 0.664
+  bootstrap iid con prima 0.10 (B=2000), t IID: P(min t < -1.96) = 0.400
+  bootstrap iid con prima 0.20 (B=2000), t IID: P(min t < -1.96) = 0.217
+
+== E4. Prueba de Fisher con benchmark BGL fijo (EUA vs Europa, 1990-07..2025-12)
+  n=426 rho=0.7948 n_down=154 rho_down=0.7574 BGL=0.6901 exceso=0.0674
+  Fisher con benchmark fijo: z=1.745, p bilateral=0.081; SE implicito en escala rho=(1-rho_down^2)/raiz(n_down-3)=0.0347
+  bootstrap iid de pares (B=5000): sd(rho_down)=0.0436  sd(BGL)=0.0400  corr=0.741  sd(exceso)=0.0303
+    formula: raiz(sd_r^2+sd_b^2-2 corr sd_r sd_b) = 0.0303; umbral corr* = sd_b/(2 sd_r) = 0.459
+    IC95 percentil del exceso = [0.0090, 0.1282]; P(exceso <= 0) = 0.0118
+    corr(rho_down, rho total) = 0.611
+    z con sd bootstrap del exceso = 2.226  vs  z de Fisher = 1.745
+  bootstrap bloques circulares de 12 (B=2000): sd(rho_down)=0.0490 sd(BGL)=0.0455 corr=0.835 sd(exceso)=0.0274; IC95 [0.0121, 0.1181]; umbral corr*=0.465
+  bootstrap bloques circulares de 24 (B=2000): sd(rho_down)=0.0492 sd(BGL)=0.0492 corr=0.800 sd(exceso)=0.0311; IC95 [0.0104, 0.1321]; umbral corr*=0.500
+  Monte Carlo H0 normal (rho=0.795, n=426, media de X = 0.354 sd, n_down medio=154.0, R=20000):
+    tamano real de Fisher al 5 % = 0.0197 (+/- 0.0030); sd(z de Fisher) = 0.843 (1 si el SE fuera correcto)
+    sd(rho_down)=0.0574 sd(BGL)=0.0343 corr=0.601 sd(exceso)=0.0459; media del exceso=-0.0003; umbral corr* = 0.299
+    media rho_down=0.5766 media BGL=0.5769; SE de Fisher implicito en escala rho = (1-0.577^2)/raiz(154-3) = 0.0543

@@ -70,7 +70,7 @@ Historia (VE/UAFIDA comparable al cierre de año, sin minoritario, cálculo prop
 
 ## 8. Pronósticos registrados (3T26)
 - **Fecha estimada: ~20-22-oct-2026** (no confirmada; Investing.com da 15-oct [7], pero antes erró en 2T26: dio 29-jul y el reporte salió el 22-jul; 3T25 salió el 21-oct-2025 [2]). Fecha de resolución: 22-oct-2026.
-- **Ingresos 3T26 (MXN):** punto Ps 34,000 M; intervalo de 80%: 30,800-37,200. Consenso Ps 33.77 mil M (Investing.com, 25-sep-2026) [7]. Supuestos: volumen de ~1,150 kt, precio por tonelada −8% contra 2T26 y tipo de cambio de ~17.2.
+- **Ingresos 3T26 (MXN):** punto Ps 34,000 M; intervalo de 80%: 30,800-37,200. Consenso Ps 33.77 mil M (Investing.com, 25-sep-2026) [7]. Supuestos: volumen de ~1,150 kt, precio por tonelada ~−6.5% contra 2T26 (US$1.83 mil/t en 2T26) y tipo de cambio de ~17.2, que dan ingresos de ~US$1,970 M (corregido por el verificador: con −8% el cálculo daba Ps ~33,400 M, no 34,000).
 - **UPA 3T26 (MXN):** punto Ps 0.60; intervalo de 80%: 0.10-1.20. Consenso Ps 0.442 (Investing.com) [7]. Supuestos: UAFIDA comparable de ~US$225 M (margen PET de US$215-240 y flete alto), D&A de ~68, gasto financiero de 35, impuestos de 28% y 11% minoritario.
 - **Binarios:** (1) ingresos de 3T26 mayores a Ps 33,770 M: **p = 0.53**; (2) UAFIDA comparable de 3T26 mayor a US$200 M: **p = 0.62**.
 
@@ -89,3 +89,23 @@ Historia (VE/UAFIDA comparable al cierre de año, sin minoritario, cálculo prop
 9. SunSirs, PX en China (2-sep-2026, 8,500 RMB/t; contexto): https://www.sunsirs.com/commodity-news/list-388-1.html
 10. Yahoo Finance chart y quote de ALPEKA.MX, IVL.BK, ORBIA.MX y MXN=X (consultados el 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/ALPEKA.MX · `herramientas/dossier.py` (empresas/ALPEKA.MX/dossier-2026-09-25.md)
 11. Conocimiento interno `conocimiento/23-geopolitica-y-riesgo-politico-global.md` §4.3 y §7, y `24-politica-publica-regulacion-y-mercados.md` §4.11, actualizados el 25-sep-2026.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: Alpek 2Q26 Results (íntegro: highlights, guía, EBITDA, estado de resultados en USD y MXN, flujo y deuda) y 3Q25 Results (fecha y tablas). También se consultaron de nuevo la tabla de resultados de Investing.com (en MXN) y Yahoo chart (ALPEKA.MX, BZ=F y MXN=X) el 25-sep. La transcripción del call de 2T26 es de Investing.com: fuente secundaria. El sitio de RI de Alpek devolvió 403/404, así que no se pudo consultar su calendario.
+
+**Correcto (hecho verificado):**
+- 2T26: ingresos de US$2,154 M (+28%) y Ps 37,483 M. UAFIDA comparable de 336 (+169%) y reportada de 407, con ajuste de inventario de 66 y "otros" de 4. Utilidad de operación de 369 (17.1%; 1.8% en 2T25). Utilidad controladora de US$238 M y Ps 4,143 M. UPA de US$0.11 con 2,084 M acciones promedio; en pesos, Ps 1.99 derivado [1]. Ingresos domésticos de 34.7% del total (en la ficha, 35%).
+- Consenso (Investing.com, 25-sep, en MXN): 3T26 con UPA de Ps 0.442 e ingresos de Ps 33.77 mil M, y fecha del 15-oct. Para 2T26, Investing registró UPA de 1.95 contra 0.690 e ingresos de 37.48 contra 37.80 mil M (−0.85%). También lista la fecha de 2T26 como 29-jul, aunque el reporte está fechado el 22-jul. Esto confirma que la fecha de Investing no es confiable. El reporte de 3T25 está fechado el 21-oct-2025.
+- Guía 2026 revisada: UAFIDA comparable de US$750-800 M (antes 450-550), volumen de 4.6 Mt, capex de 150 y FCF operativo de 300-350. Supuestos para 2S26: margen PET de US$170-200/t, PP de 17 cpp, flete de US$120-170/t y tipo de cambio de 18.00. La guía no incluye beneficios de aranceles adicionales en EUA ni de venta de activos [1].
+- Cadena causal: (1) margen PET en China de US$307/t (+54% trimestral) y flete a Sudamérica de US$225/t contra 76 en 1T26 (×2.96), con deuda neta/UAFIDA de 2.2x [1]; (2) los aranceles en EUA no están en la guía [1]. En el call: julio con margen PET de US$215/t y flete de US$268/t, sin dividendos en 2026, meta de US$30-50 M de venta de activos este año e insumos de EUA que cumplen el T-MEC [8]. Brent (Yahoo): 72.9 el 30-jun, 71.6 el 1-jul y 105.6 el 25-sep, con un promedio de 90.9 en 3T26 a la fecha.
+- Escenarios: 30 + 45 + 25 = 100%. Periodo trimestral, en MXN igual que el consenso, con UPA reportada (incluye ajustes de inventario). No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. §8, supuesto de ingresos: 1,150 kt × (US$2,154 M ÷ 1,175 kt) × (1 − 8%) × 17.22 da **Ps ~33,400 M**, no el punto de Ps 34,000 M. Se ajustó el supuesto a un precio por tonelada de ~−6.5% (Ps ~33,940 M), que concuerda con el punto registrado, el intervalo y el binario (P > 33,770 implícita = 0.54, registrada 0.53). El punto no cambia. Con Brent de 90.9 en promedio (−6% contra 2T26), una caída de ~6.5% en el precio por tonelada es tan defendible como la de 8%.
+2. `pronosticos.csv`: los criterios ahora piden la columna 3Q26 y no la YTD26, que el reporte presenta junto a ella.
+
+**Revisado sin cambio:** los intervalos de 80% son amplios y adecuados. En ingresos, ±9.4%, contra una sorpresa histórica de −0.9%, +3.9%, −14.5%, −12.4%, −2.8%, −5.0% y −1.0% (desviación estándar de ~6.5%, con sesgo negativo). En UPA, Ps 0.10-1.20: la sorpresa de UPA contra Investing ha ido de −2,201% a +183%, así que no sirve como referencia. Con los supuestos de la ficha (UAFIDA de 225, D&A de 68, gasto financiero de 35, tasa de 28% y 11% minoritario), la UPA sale en Ps ~0.65, dentro del intervalo. Nota: en 2T26 la diferencia entre UAFIDA reportada y utilidad de operación fue de solo US$38 M, así que la D&A real puede ser menor que 68. Esto sesga el punto hacia abajo, lo que va en la dirección prudente.
+
+**No verificado o pendiente:** la fecha de 3T26 (no hay calendario de la emisora accesible); las cifras de Brent antes de la guerra y de Polymarket (conocimiento interno [11]); el precio objetivo del agregador; las acciones en circulación de Yahoo (2,098.9 M contra 2,084 M promedio en el reporte, una diferencia de 0.7% en la capitalización).
+
+**Veredicto:** confiable. Las cifras del último reporte, el consenso, la guía y los hechos de la cadena causal son correctos. Había una incoherencia aritmética entre el punto de ingresos y su supuesto de precio, corregida en el supuesto sin mover el pronóstico.

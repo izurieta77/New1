@@ -821,7 +821,7 @@
       },
       "intermedio": {
         "descripcion": "Mecanismo intermedio: continuidad de 2025-1S26 (servicios +5% a tipo de cambio constante, margen de operacion ~21% como en 1S26, capex 13.5% como 2025, tasa efectiva 37%) con dividendo creciendo 4% y recompras de Ps 10 mil M; se refinancia 80% de los vencimientos.",
-        "fuente_supuestos": "notas-y-modelo.md s5; anclas: F3 p. 7-10 (1S26), F1 Nota 25 p. F-83 (dividendo 0.54 y fondo de recompra), F1 Nota 14",
+        "fuente_supuestos": "notas-y-modelo.md s5; anclas: F3 p. 7-10 (1S26), F1 Nota 25 p. F-82 (dividendo 0.54 y fondo de recompra), F1 Nota 14",
         "crecimiento_ingresos": [
           0.03,
           0.045,
@@ -978,7 +978,8 @@
             "pagos_arrendamientos": 39498.197,
             "capex": 156338.806,
             "gasto_intereses": 44545.241,
-            "intereses_arrendamientos": 10648.584
+            "intereses_arrendamientos": 10648.584,
+            "nuevos_arrendamientos": 51353.026
           },
           "2024": {
             "ingresos": 869220.584,
@@ -987,7 +988,8 @@
             "pagos_arrendamientos": 45285.61,
             "capex": 130835.027,
             "gasto_intereses": 56019.754,
-            "intereses_arrendamientos": 16594.964
+            "intereses_arrendamientos": 16594.964,
+            "nuevos_arrendamientos": 106426.973
           },
           "2025": {
             "ingresos": 943638.406,
@@ -996,10 +998,11 @@
             "pagos_arrendamientos": 51585.889,
             "capex": 130817.44,
             "gasto_intereses": 60318.857,
-            "intereses_arrendamientos": 16156.752
+            "intereses_arrendamientos": 16156.752,
+            "nuevos_arrendamientos": 43721.183
           }
         },
-        "fuente": "F1 p. F-6 y F-8; Nota 15 p. F-62 (intereses de arrendamientos)"
+        "fuente": "F1 p. F-6 y F-8; Nota 15 p. F-62 (intereses de arrendamientos; nuevos arrendamientos = altas y bajas + modificaciones del pasivo, sin combinaciones de negocios)"
       },
       "ttm_jun26": {
         "valor": {
@@ -1228,7 +1231,7 @@
           "pasivo_2025": 128238094,
           "costo_total_2025": 29791644
         },
-        "fuente": "F1 Nota 15 p. F-63 (miles)"
+        "fuente": "F1 Nota 15, p. F-62 (tablas en PDF 157) (miles)"
       },
       "deuda_por_moneda_dic25_miles": {
         "valor": {

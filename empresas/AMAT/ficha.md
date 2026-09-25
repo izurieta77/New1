@@ -31,7 +31,7 @@ Deuda neta = deuda financiera − efectivo − inversiones de corto plazo; negat
 | 1T FY25 (ene-25) | 7,166 (6.8%) | 48.8% | 30.4% | 1,185 | 1.45 | 544 | 2.7% | −1,953 | 819 |
 | 2T FY25 (abr-25) | 7,100 (6.8%) | 49.1% | 30.5% | 2,137 | 2.63 | 1,061 | 2.2% | −486 | 812 |
 | 3T FY25 (jul-25) | 7,302 (7.7%) | 48.8% | 30.6% | 1,779 | 2.22 | 2,050 | 2.2% | −752 | 802 |
-| 4T FY25 (oct-25) | 6,800 (−3.5%) | 48.0% | 25.2% | 1,897 | 2.37 | 2,043 | 2.3% | −2,018 | 799 |
+| 4T FY25 (oct-25) | 6,800 (−3.5%) | 48.0% | 25.2% | 1,897 | 2.38 | 2,043 | 2.3% | −2,018 | 799 |
 | 1T FY26 (ene-26) | 7,012 (−2.1%) | 49.0% | 26.1% | 2,026 | 2.54 | 1,040 | 3.0% | −1,958 | 799 |
 | 2T FY26 (abr-26) | 7,910 (11.4%) | 49.9% | 31.9% | 2,806 | 3.51 | 210 | 2.1% | −1,786 | 799 |
 | 3T FY26 (jul-26) | 9,115 (24.8%) | 50.3% | 33.7% | 2,538 | 3.17 | 2,330 | 1.9% | −2,689 | 800 |
@@ -44,7 +44,7 @@ Deuda neta = deuda financiera − efectivo − inversiones de corto plazo; negat
 | FY24 | 27,176 (2.5%) | 47.5% | 28.9% | 7,177 | 8.61 | 7,487 | 2.1% | −3,212 | 834 |
 | FY25 | 28,368 (4.4%) | 48.7% | 29.2% | 6,998 | 8.66 | 5,698 | 2.4% | −2,018 | 808 |
 
-Los 4T se derivan como el año menos 9 meses. La UPA GAAP del 2T FY26 (3.51) incluye partidas no operativas; la non-GAAP fue de 2.86 [3].
+Los 4T se derivan como el año menos 9 meses, salvo la UPA del 4T FY25, que es la reportada en el 8-K del 13-nov-2025 (2.38; la derivada daba 2.37) [5]. La UPA GAAP del 2T FY26 (3.51) incluye partidas no operativas; la non-GAAP fue de 2.86 [3].
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad vs efectivo:** el FCF/UN TTM es de 0.61, con alerta activa. En FY25 fue de 0.81. Lo explican el capex TTM de US$2.77 mil M (9% de ingresos) y el capital de trabajo del 2T, cuando el FCF fue de sólo US$210 M [10]. Inferencia: la utilidad es de calidad (SBC bajo), pero se está reinvirtiendo más que en FY21-FY24.
@@ -103,21 +103,22 @@ Fuente: cálculo propio con cierres de Yahoo al fin de cada trimestre, acciones 
 Dato que cambia de escenario: la guía del 1T FY27 del 12-nov (consenso de ingresos US$10.72 mil M y UPA de US$4.20 [10]) y la decisión de la BIS antes del 9-nov. Una guía < US$10.0 mil M, o la reactivación de la regla sin licencias, mueve al bajista.
 
 ## 8. Pronósticos registrados — 4T FY26 (trimestre al ~25-oct-2026)
-Fecha del reporte: **12-nov-2026**. Yahoo la marca como no estimada [10]; no se confirmó en el sitio de RI (503). Consenso: Yahoo quoteSummary earningsTrend, consultado el 2026-09-25 [10].
+Fecha del reporte: **12-nov-2026**, después del cierre. Yahoo la marca como no estimada [10] y Nasdaq/Zacks la da como "expected" (no algorítmica) [14]; no se confirmó en el sitio de RI (503 y timeout). Patrón: el 4T FY25 se reportó el jueves 13-nov-2025 y el 4T FY24 el jueves 14-nov-2024 (8-K Item 2.02 en EDGAR). Consenso: Yahoo quoteSummary earningsTrend, consultado el 2026-09-25 [10].
 
 | Variable | Punto | p10-p90 (80%) | Consenso |
 |---|---|---|---|
 | Ingresos (US$ M) | 10,450 | 10,050-10,850 | 10,307.6 (24 analistas) |
-| UPA non-GAAP diluida (US$) | 4.18 | 3.98-4.40 | 4.060 (25 analistas) |
+| UPA non-GAAP diluida (US$) | 4.27 | 4.00-4.45 | 4.060 (25 analistas; Zacks 4.06, 10) |
 
 Base del cálculo:
-- Punto medio de la guía más la superación promedio de FY26: +2.5% en ingresos y +4% en UPA.
+- Ingresos: punto medio de la guía más la superación promedio de FY26 (+2.4%, +3.4% y +1.8%; promedio +2.5%).
+- UPA (corregido en la verificación): la superación contra el punto medio de la guía en FY26 fue de +9.2%, +8.3% y +4.2% (promedio +7.2%, no +4%), y contra el consenso de Yahoo en los últimos 4 trimestres de +3.7%, +7.9%, +6.5% y +3.1% (promedio +5.3%) [1][3][4][10]. Aplicadas al consenso actual dan 4.19-4.38; el punto (4.27) es consenso × 1.053.
 - El intervalo cubre el rango de la guía menos la cola baja, porque ya no hubo sorpresas negativas en FY26.
 - Riesgo: los tiempos de aceptación de equipos de DRAM en China.
 
 Binarios:
 - Ingresos > US$10,307.6 M: **p = 0.70**.
-- UPA non-GAAP > US$4.06: **p = 0.74**.
+- UPA non-GAAP > US$4.06: **p = 0.82** (antes 0.74; se ajustó al nuevo punto e intervalo).
 
 ## 9. Catalizadores y riesgos
 - 30-sep-2026: Micron (lectura de capex de DRAM).
@@ -145,5 +146,33 @@ Binarios:
 11. Yahoo Finance chart AMAT.MX, 2026-09-25: https://query1.finance.yahoo.com/v8/finance/chart/AMAT.MX
 12. AMAT, 8-K del nombramiento de consejero, 27-ago-2026: https://www.sec.gov/Archives/edgar/data/6951/000162828026059257/amat-20260827.htm
 13. Conocimiento cap. 23 §4.5 (tregua al 10-ene-2027) y cap. 24 §4.1 (Fed +25 pb el 16-sep-2026): conocimiento/23-geopolitica-y-riesgo-politico-global.md; conocimiento/24-politica-publica-regulacion-y-mercados.md
+14. Nasdaq, earnings date de AMAT (dato de Zacks: 12-nov-2026 después del cierre; consenso de UPA de 4.06 con 10 analistas), consultado 2026-09-25: https://api.nasdaq.com/api/analyst/AMAT/earnings-date
 
 Nota de método: el presupuesto de WebSearch de la sesión estaba agotado. Todo se obtuvo por consulta directa a EDGAR, al Federal Register y a Yahoo, así que no se cita prensa.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas de nuevo: 8-K ex. 99.1 del 3T FY26 (íntegro: resumen, guía, segmentos, geografía), ex. 99.1 del 2T FY26, 1T FY26 y 4T FY25 (resumen y guía), 10-Q del 3T FY26 (clientes y recompras), 8-K del 2-oct-2025 (regla de afiliadas) y Federal Register 2025-19846 (API). Consenso: Yahoo quoteSummary y Nasdaq/Zacks consultados de nuevo el 25-sep.
+
+**Correcto (hecho verificado):**
+- Ingresos del 3T FY26 de US$9,115 M (+25%), UPA GAAP de 3.17 y non-GAAP de 3.50. Margen bruto de 50.3% GAAP y 50.4% non-GAAP; operativo de 33.7% y 34.0% [1]. Semiconductor Systems de US$7,040 M (fundición/lógica 67%, DRAM 26%, flash 7%; margen de 37.7%), AGS de 1,781 M (30.1%) y otros de 294 M con pérdida de 118 M. China de 28% (35%) y EUA de 15% (9%).
+- Guía del 4T: ingresos de US$10,250 ± 500 M y UPA non-GAAP de 4.02 ± 0.20, con US$0.05 de beneficio fiscal por transferencias de intangibles [1]. Guías previas: 8,950 ± 500 y 3.36 [3]; 7,650 ± 500 y 2.64 [4]; 6,850 ± 500 y 2.18 [5].
+- Consenso del 4T: ingresos de US$10,307.6 M (24 analistas, rango 10,250-10,705) y UPA de 4.060 (25, rango 4.02-4.25) en Yahoo; Zacks 4.06 (10) [10][14]. Historial de sorpresas de UPA: +3.7%, +7.9%, +6.5% y +3.1%.
+- Fecha del 12-nov-2026: Yahoo (no estimada) y Nasdaq/Zacks ("expected", después del cierre); coherente con el patrón de jueves de mediados de noviembre.
+- Cadena causal 1: la suspensión de la regla de afiliadas termina el 9-nov-2026 "absent a future extension" (Federal Register, en vigor desde el 10-nov-2025) [8], y AMAT estimó −US$600 M de ingresos en FY26 y −US$110 M en el 4T FY25 [7].
+- Cadena causal 2: el CFO espera "continued strong revenue growth" en el 2S calendario, "particularly in DRAM as well as leading-edge foundry-logic and advanced packaging" [1]. Dos clientes con 20% y 14% de los ingresos de 9M y recompras de 3 M acciones a US$343.16 en 9M [2].
+- Escenarios: 25 + 50 + 25 = 100%. Periodo: trimestre ago-oct, USD, UPA non-GAAP, que es la base del consenso de Yahoo y de la guía. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. UPA GAAP del 4T FY25: decía 2.37 (derivada) y es **2.38**, la reportada en el 8-K del 13-nov-2025 [5].
+2. Base del pronóstico de UPA: decía que la superación promedio de FY26 contra la guía fue de +4%, y fue de **+7.2%** (+9.2%, +8.3% y +4.2%). El punto de 4.18 quedaba debajo de las cuatro analogías históricas contra el consenso (4.19-4.38). Punto: **4.18 → 4.27** (consenso × sorpresa media de +5.3%). Intervalo: **3.98-4.40 → 4.00-4.45** (4.38, la analogía más alta, quedaba casi en el p90). Binario de UPA > 4.06: **0.74 → 0.82**, coherente con el nuevo intervalo (probabilidad implícita de ~0.83).
+3. `pronosticos.csv`: se actualizaron punto, p10, p90 y binario de UPA, y los criterios de resolución ahora exigen la columna de tres meses, porque el comunicado del 4T también trae la del año fiscal.
+
+**No verificado o pendiente:**
+- La fecha no se confirmó en ir.appliedmaterials.com (503 y timeout).
+- El consenso de ingresos previo al 3T sigue sin fuente.
+- Si la extensión de la tregua EUA-China del 24-sep cubre la regla de afiliadas.
+- Diferencia menor: el comunicado dice US$440 M de recompras en el 3T y el 10-Q, US$400 M (1 M acciones a US$455.43). Inferencia: el comunicado usa efectivo pagado y el 10-Q costo de las acciones recompradas.
+
+**Calibración (para el post-mortem):** el intervalo de ingresos (10,050-10,850) contiene las tres analogías verificadas de superación de la guía en FY26 (10,439-10,599) y su binario (0.70) es coherente con él (~0.68). En UPA, el riesgo principal del nuevo punto es que la guía del 4T ya trae US$0.05 de beneficio fiscal. Si AMAT reporta 4.10-4.20, el punto original habría sido mejor y la lección sería que la sorpresa se comprime cuando la guía sube más rápido.
+
+**Veredicto:** confiable, con correcciones. Las cifras del último reporte, la guía, el consenso y las dos cadenas causales están bien. Había un dato menor de la tabla mal (UPA del 4T FY25) y un error en la base del pronóstico de UPA que sesgaba el punto a la baja; los dos quedaron corregidos.

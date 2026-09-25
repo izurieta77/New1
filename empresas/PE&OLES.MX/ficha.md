@@ -8,7 +8,7 @@ Grupo minero integrado: minas propias, 74.99% de Fresnillo plc (LSE/BMV), el com
 
 ## 2. Último reporte: 2T26 (4-ago-2026) [1]
 - Ventas netas US$2,886.9 M (+38.9%), contra el consenso de US$3.12 mil M (Investing.com): −7.5% [7]. UAFIDA US$1,444.3 M (50.0%; +112.3%). Utilidad de operación US$1,285.0 M, con **margen operativo de 44.5%** (24.6% en 2T25). Utilidad neta controladora US$642.0 M: **UPA US$1.62** contra el consenso de 1.46 (+11%) [2][7].
-- Guía: Peñoles no publica guía. Fresnillo mantuvo su guía 2026 de 42.0-46.5 Moz de plata atribuible, con 22.0 Moz en 1S26 (−11.4%) (Fresnillo, 4-ago-2026; secundaria) [10].
+- Guía: Peñoles no publica guía. Fresnillo mantuvo su guía 2026 de 42.0-46.5 Moz de plata atribuible, con 22.0 Moz en 1S26 (−11.4%) (Fresnillo plc, Interim Results 1H26, 4-ago-2026) [10].
 - Tres datos operativos [1]: (1) producción minera de plata de 15,578 koz (+2.4%) y de oro de 175,039 oz (+6.5%), con Tizapa de vuelta tras la huelga de 2T25; (2) plata afinada −23.4% y zinc afinado −33.9% por paros no programados en la fundición y el mantenimiento anual de la planta de zinc; (3) precios promedio de plata US$73.42/oz (+118.6%) y oro US$4,506/oz (+37.4%), ambos con caída trimestral (−11.7% y −7.5%).
 - Se publicó con aviso de extemporaneidad para coincidir con Fresnillo, igual que en 4T25 [5].
 
@@ -42,7 +42,7 @@ SBC/ingresos: no se revela (n.d.; inferencia: inmaterial). Acciones diluidas: 39
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad contra efectivo.** En 2025 el flujo de operación (US$2,491.6 M) fue 1.31x la utilidad consolidada (1,899.8) [6][9]. En 1S26 bajó a 0.97x (1,821.8 contra 1,876.5), con uso de capital de trabajo [2].
-2. **Deuda.** 100% en USD. Bonos IPSAB al 4.15% con vencimiento en 2029 (US$649.5 M), IPSAB al 5.65% en 2049 y al 4.75% en 2050 (US$499.6 M), y Fresnillo al 4.25% en 2050 (US$830.5 M). No hay vencimientos en 2027-2028. El préstamo de corto plazo es de US$50 M al 4.25% [2].
+2. **Deuda.** 100% en USD. Bonos IPSAB al 4.15% con vencimiento en 2029 (US$649.5 M), IPSAB al 5.65% en 2049 (US$539.4 M) y al 4.75% en 2050 (US$499.6 M), y Fresnillo al 4.25% en 2050 (US$830.5 M). No hay vencimientos en 2027-2028. El préstamo de corto plazo es de US$50 M al 4.25% [2].
 3. **Dilución.** Nula [2].
 4. **Capital de trabajo.** En 1S26: cuentas por cobrar −US$127 M y proveedores −US$175 M. En 2T26 hubo un cargo de US$49.4 M por consumo de inventarios de Bal Holdings [1][2].
 5. **Competidores y sustitutos.** Fundidores globales de zinc y plomo. En 2025 las cuotas de tratamiento base cayeron 12.2% (zinc) y 88.2% (plomo), lo que presiona a Met-Mex [4]. Reciclaje de plata como sustituto (no verificado).
@@ -60,7 +60,7 @@ SBC/ingresos: no se revela (n.d.; inferencia: inmaterial). Acciones diluidas: 39
 ## 6. Qué descuenta el precio
 Capitalización Ps 357,215 M = US$20.17 mil M (a 17.707). UPA de 12 meses US$5.44 → **P/U 9.3x**. VE consolidado ≈ US$26.5 mil M (minoritario de Fresnillo a mercado, US$6.88 mil M, menos caja neta de 0.56) → **VE/UAFIDA de 12 meses (5,020) 5.3x** [13].
 Historia de P/U al cierre de año (precio en USD entre UPA): 11.7x, 26.5x, 39.5x, 69.8x y 15.2x de 2021 a 2025, distorsionado por utilidades deprimidas [13]. Pares (Yahoo, P/U de 12 meses, 25-sep): Fresnillo 12.2x y Grupo México 15.5x [13].
-**Descuento de holding.** El 74.99% de Fresnillo vale a mercado ~US$20.6 mil M (2,823p × 736.9 M acciones × 1.3218; el número de acciones sale del reporte 2023 y no se verificó para 2026) [13][14], ≈102% de la capitalización de Peñoles. *Inferencia:* el mercado asigna valor nulo o negativo a Met-Mex, a las minas propias y a químicos, neto de la deuda IPSAB.
+**Descuento de holding.** El 74.99% de Fresnillo vale a mercado ~US$20.6 mil M (2,823p × 736.9 M acciones × 1.3218; 736.9 M es el promedio ponderado de 1S26 según el reporte interino de Fresnillo) [10][13], ≈102% de la capitalización de Peñoles. *Inferencia:* el mercado asigna valor nulo o negativo a Met-Mex, a las minas propias y a químicos, neto de la deuda IPSAB.
 **DCF inverso.** Supuestos: WACC en USD de 9%, g = 0 y FCF consolidado. El precio requiere un FCF perpetuo de US$2.38 mil M (2.65 con WACC de 10%), contra US$2.35 mil M de FCF de 12 meses con plata promedio de ~US$64.3. *Inferencia:* el precio descuenta plata cerca del spot (~US$64) sostenida, sin crecimiento real.
 
 ## 7. Escenarios de negocio a 12 meses
@@ -70,10 +70,10 @@ Historia de P/U al cierre de año (precio en USD entre UPA): 11.7x, 26.5x, 39.5x
 - **Qué cambiaría el escenario:** el promedio de la plata en 4T26, el reporte de producción de Fresnillo de 3T26 contra su guía y la señal de la Fed.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha estimada: 26-oct-2026** (calendario de la emisora, marcada como tentativa [3]; Investing.com también da 26-oct [7]). Riesgo de cambio: en 4T25 y 2T26 se movió para coincidir con Fresnillo [5].
+- **Fecha estimada: 26-oct-2026** (calendario de la emisora, marcada como tentativa [3]; Investing.com también da 26-oct [7]). Riesgo de cambio: en 4T25 y 2T26 se movió para coincidir con Fresnillo [5]; el calendario también marcaba 27-abr para 1T26 y 27-jul para 2T26, y los reportes salieron el 30-abr y el 4-ago [1][3]. Si se mueve, los pronósticos se resuelven con la fecha real.
 - **Ventas netas 3T26:** punto US$2,750 M, intervalo de 80%: 2,450-3,050. Consenso de ingresos: no disponible (Investing.com no lo publica, consultado el 25-sep-2026) [7]. Supuestos: plata −14.5% y oro −5% trimestral, recuperación parcial de volumen afinado y zinc +35% por el fin del mantenimiento.
-- **UPA 3T26:** punto US$1.33, intervalo de 80%: 1.00-1.65. Consenso US$1.43 (Investing.com, 25-sep-2026) [7]. Supuestos: margen UAFIDA de ~48%, tasa efectiva de ~33% y participación minoritaria de ~30%.
-- **Binarios:** (1) UPA de 3T26 mayor a US$1.43: **p = 0.35**; (2) ventas de 3T26 menores a las de 2T26 (US$2,886.9 M): **p = 0.75**.
+- **UPA 3T26:** punto US$1.33, intervalo de 80%: 0.95-1.75 (ampliado por el verificador; antes 1.00-1.65). Consenso US$1.43 (Investing.com, 25-sep-2026) [7]. Supuestos: margen UAFIDA de ~48%, tasa efectiva de ~33% y participación minoritaria de ~30%.
+- **Binarios:** (1) UPA de 3T26 mayor a US$1.43: **p = 0.38** (antes 0.35; ajustado al intervalo nuevo); (2) ventas de 3T26 menores a las de 2T26 (US$2,886.9 M): **p = 0.75**.
 
 ## 9. Catalizadores y riesgos
 **Catalizadores:** ~22-oct, reporte de producción de Fresnillo de 3T26 (estimado por el patrón de 22-oct-2025 [10]); 26-oct, reporte de 3T26; reparación de Herradura en 4T26; ultimátum iraní del 27-28 sep [12]; reunión de la Fed de octubre; Paquete Económico 2027 (derechos mineros, no verificado). **Riesgos:** reversión de la plata, paros operativos, impuestos, huelgas (Tizapa en 2025) y gobierno corporativo.
@@ -93,3 +93,30 @@ Historia de P/U al cierre de año (precio en USD entre UPA): 11.7x, 26.5x, 39.5x
 12. Conocimiento interno `conocimiento/23-geopolitica-y-riesgo-politico-global.md` §4.3 (guerra de Irán, Brent), actualizado el 25-sep-2026.
 13. Yahoo Finance chart y quote de PE&OLES.MX, FRES.L, GMEXICOB.MX, SI=F, GC=F, HG=F, MXN=X y GBPUSD=X (consultados el 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/PE%26OLES.MX · `herramientas/dossier.py` (empresas/PE&OLES.MX/dossier-2026-09-25.md).
 14. Fresnillo plc, resultados FY2023 (736,893,589 acciones): https://www.fresnilloplc.com/media/0hvcpbrg/050324-fy23-prelim-report.pdf
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: Informe del Director 2T26 (íntegro), reporte trimestral BMV 2T26 en USD (estado de resultados, UPA, balance, flujo, ventas por producto y geografía, y nota de deuda), calendario financiero de Peñoles y Fresnillo plc Interim Results 1H26 (resumen, perspectivas y nota de acciones). También se consultaron de nuevo la tabla de resultados de Investing.com y Yahoo chart (SI=F, GC=F, MXN=X y PE&OLES.MX) el 25-sep.
+
+**Correcto (hecho verificado):**
+- 2T26: ventas netas de US$2,886.9 M (+38.9%), UAFIDA de 1,444.3 (50.0%), utilidad de operación de 1,285.0 (44.5%; 24.6% en 2T25) y utilidad controladora de 642.0. La UPA básica y diluida de 1.62 está en el reporte BMV [1][2]. Minoritario de US$291.3 M.
+- Consenso (Investing.com, 25-sep): UPA de 3T26 de US$1.43 sin consenso de ingresos. En 2T26 el consenso era de 1.46 y US$3.12 mil M, y la sorpresa fue de +11% y −7.5%. Son cifras en USD, en base reportada.
+- Fecha: el calendario de la emisora dice "3T 2026: 26 octubre 2026*", con la nota "*Fecha Estimada".
+- Guía: Peñoles no publica guía. La de Fresnillo (42.0-46.5 Moz de plata atribuible, 22.0 Moz en 1S26, −11.4%) se confirmó en el reporte interino de Fresnillo, que es fuente primaria.
+- Cadena causal: (1) el ~50% de los costos en pesos, el tipo de cambio promedio de 17.4052 en 2T26 y el cierre de 17.47 en junio, y el impuesto diferido de −US$57.1 M por la apreciación están en el Informe [1]; (2) energéticos +US$7.8 M (+7.8%) por diésel en Herradura y la fisura del molino de bolas, "que se espera sea corregida en el último trimestre", también [1]. En Yahoo, la plata de 3T26 a la fecha promedia US$62.83 (−14.4% contra 73.42) y el oro US$4,307 (−5.0% contra el promedio de GC=F de 2T26).
+- Escenarios: 30 + 45 + 25 = 100%. Periodo trimestral, en USD y con UPA reportada, igual que el consenso. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. §4.2, bonos: el texto asignaba US$499.6 M a los bonos 2049 y 2050 juntos. Son **US$539.4 M** (5.65%, 2049) y **US$499.6 M** (4.75%, 2050), según el reporte BMV [2].
+2. §6, acciones de Fresnillo: 736.9 M ya está verificado para 2026 (promedio ponderado de 1S26 en el reporte interino [10]). Se quitó la advertencia de "no verificado", y el reporte interino se recalificó como fuente primaria.
+3. §8, intervalo de 80% de la UPA: pasa de 1.00-1.65 a **0.95-1.75**. Aplicar las sorpresas de UPA de los últimos 7 trimestres (Investing: +11%, +14%, +38%, +32%, +91%, −10% y −35%) al consenso de 1.43 da 1.59, 1.64, 1.97, 1.89, 2.73, 1.29 y 0.93. Tres de siete quedaban arriba del p90 y uno debajo del p10. Aun con los precios del trimestre ya conocidos, el error en 2T26 y 1T26 fue de +11-14%. Partidas como inventarios (US$49.4 M en 2T26), impuesto diferido (±US$57 M) y el volumen de Met-Mex mueven la UPA ±0.15-0.25. El punto (1.33) no cambia. La probabilidad del binario UPA > 1.43 pasa de 0.35 a **0.38**, la que implica el intervalo nuevo.
+4. §8, fecha: también se movió en 1T26 (calendario 27-abr, real 30-abr) y en 2T26 (27-jul, real 4-ago). Se agregó que los pronósticos se resuelven con la fecha real.
+5. `pronosticos.csv`: los criterios ahora piden la columna trimestral de 3T26 y no el acumulado de 9 meses, que el reporte BMV presenta junto a ella. Se actualizaron el p10/p90 y el binario.
+
+**No verificado o pendiente:**
+- Tasas vigentes de los derechos minero especial y extraordinario, y la propuesta del Paquete Económico 2027.
+- Las columnas FCF y deuda neta de 2021-2025 no se recalcularon. Solo se cotejó la deuda neta de 2T26: −563.1 = 309.6 + 2,508.9 − 3,381.6.
+- El P/U histórico y el DCF inverso dependen de supuestos propios. No se recalcularon.
+
+**Calibración (para el post-mortem):** el punto queda 7% debajo del consenso porque la plata cayó 14% en el trimestre. En 5 de los últimos 6 trimestres Peñoles superó al consenso de Investing, pero esos trimestres coincidieron con alzas de metales, que dejaban atrás al consenso. Esta vez la caída puede dejar al consenso atrasado en la dirección contraria. Si la UPA sale arriba de 1.43, se sabrá si el sesgo de "superar al consenso" es estructural (maquila, coberturas o impuestos) o si solo seguía a los precios.
+
+**Veredicto:** confiable. Las cifras del último reporte, el consenso, la fecha y la guía de Fresnillo son correctas. Se corrigieron un error menor de deuda y una advertencia obsoleta, y el intervalo de UPA era estrecho frente a la dispersión histórica.

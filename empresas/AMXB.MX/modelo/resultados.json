@@ -2516,11 +2516,11 @@
     "intermedio": {
       "naturaleza": "supuesto de escenario: no es pronostico, guia ni consenso",
       "descripcion": "Mecanismo intermedio: continuidad de 2025-1S26 (servicios +5% a tipo de cambio constante, margen de operacion ~21% como en 1S26, capex 13.5% como 2025, tasa efectiva 37%) con dividendo creciendo 4% y recompras de Ps 10 mil M; se refinancia 80% de los vencimientos.",
-      "fuente_supuestos": "notas-y-modelo.md s5; anclas: F3 p. 7-10 (1S26), F1 Nota 25 p. F-83 (dividendo 0.54 y fondo de recompra), F1 Nota 14",
+      "fuente_supuestos": "notas-y-modelo.md s5; anclas: F3 p. 7-10 (1S26), F1 Nota 25 p. F-82 (dividendo 0.54 y fondo de recompra), F1 Nota 14",
       "notas": null,
       "supuestos_entrada": {
         "descripcion": "Mecanismo intermedio: continuidad de 2025-1S26 (servicios +5% a tipo de cambio constante, margen de operacion ~21% como en 1S26, capex 13.5% como 2025, tasa efectiva 37%) con dividendo creciendo 4% y recompras de Ps 10 mil M; se refinancia 80% de los vencimientos.",
-        "fuente_supuestos": "notas-y-modelo.md s5; anclas: F3 p. 7-10 (1S26), F1 Nota 25 p. F-83 (dividendo 0.54 y fondo de recompra), F1 Nota 14",
+        "fuente_supuestos": "notas-y-modelo.md s5; anclas: F3 p. 7-10 (1S26), F1 Nota 25 p. F-82 (dividendo 0.54 y fondo de recompra), F1 Nota 14",
         "crecimiento_ingresos": [
           0.03,
           0.045,
@@ -11489,7 +11489,7 @@
     },
     "wacc": {
       "capitalizacion": 1177960.0,
-      "deuda_en_pesos_de_pesos": 476927.0,
+      "deuda_en_la_estructura": 476927.0,
       "beta_desapalancada": 0.6141251965428087,
       "beta_reapalancada": 0.866419782798068,
       "rf_usd_ajustada": 0.04891364632180529,
@@ -11507,7 +11507,7 @@
     },
     "wacc_arrendamientos_como_deuda": {
       "capitalizacion": 1177960.0,
-      "deuda_en_pesos_de_pesos": 691327.0,
+      "deuda_en_la_estructura": 691327.0,
       "beta_desapalancada": 0.6141251965428087,
       "beta_reapalancada": 0.866419782798068,
       "rf_usd_ajustada": 0.04891364632180529,
@@ -11525,7 +11525,7 @@
     },
     "wacc_rf_local": {
       "capitalizacion": 1177960.0,
-      "deuda_en_pesos_de_pesos": 476927.0,
+      "deuda_en_la_estructura": 476927.0,
       "beta_desapalancada": 0.6141251965428087,
       "beta_reapalancada": 0.866419782798068,
       "rf_usd_ajustada": 0.04891364632180529,
@@ -11543,7 +11543,7 @@
     },
     "wacc_beta_global": {
       "capitalizacion": 1177960.0,
-      "deuda_en_pesos_de_pesos": 476927.0,
+      "deuda_en_la_estructura": 476927.0,
       "beta_desapalancada": 0.49625571682046693,
       "beta_reapalancada": 0.7001272261753176,
       "rf_usd_ajustada": 0.04891364632180529,
@@ -11564,24 +11564,30 @@
         "ingresos": 816012.844,
         "fcff_b": 37203.68589999999,
         "margen_b": 0.04559203470086555,
-        "fcff_a": 73507.3077,
-        "margen_a": 0.09008106703281255,
+        "fcff_a": 22154.281700000007,
+        "margen_a": 0.027149427687194597,
+        "fcff_a_ingenuo": 73507.3077,
+        "margen_a_ingenuo": 0.09008106703281255,
         "escudo_fiscal_deuda": 10168.997099999999
       },
       "2024": {
         "ingresos": 869220.584,
         "fcff_b": 47903.44700000002,
         "margen_b": 0.05511080602757564,
-        "fcff_a": 88210.5678,
-        "margen_a": 0.1014823733166448,
+        "fcff_a": -18216.405199999994,
+        "margen_a": -0.0209571719024086,
+        "fcff_a_ingenuo": 88210.5678,
+        "margen_a_ingenuo": 0.1014823733166448,
         "escudo_fiscal_deuda": 11827.437
       },
       "2025": {
         "ingresos": 943638.406,
         "fcff_b": 74242.84150000002,
         "margen_b": 0.0786772147338819,
-        "fcff_a": 120981.70490000003,
-        "margen_a": 0.12820769495047452,
+        "fcff_a": 77260.52190000002,
+        "margen_a": 0.08187513501861435,
+        "fcff_a_ingenuo": 120981.70490000003,
+        "margen_a_ingenuo": 0.12820769495047452,
         "escudo_fiscal_deuda": 13248.631500000001
       },
       "ttm_jun26": {
@@ -12139,7 +12145,21 @@
         "residuo": 0.0002546878531575203,
         "alertas": []
       },
-      "arrendamientos_como_deuda (FCFF antes de arrendamientos, WACC con arrendamientos)": {
+      "arrendamientos_como_deuda (FCFF antes de arrendamientos menos arrendamientos nuevos; WACC con arrendamientos)": {
+        "wacc": 0.10362758862299633,
+        "g_terminal": 0.035,
+        "margen_fcf": 0.08187513501861435,
+        "deuda_neta": 680986.111,
+        "precio": 19.6,
+        "estado": "OK",
+        "crecimiento_implicito": 0.09632758742372971,
+        "peso_terminal": 0.5940735048439948,
+        "multiplo_terminal_fcf": 15.081398323431449,
+        "ingresos_ano_final": 2397390.7710451838,
+        "residuo": 0.00028581032529473305,
+        "alertas": []
+      },
+      "TRAMPA arrendamientos_como_deuda sin restar arrendamientos nuevos (inconsistente; solo para mostrar el sesgo)": {
         "wacc": 0.10362758862299633,
         "g_terminal": 0.035,
         "margen_fcf": 0.12820769495047452,
@@ -12194,6 +12214,310 @@
         "ingresos_ano_final": 2230610.4227781775,
         "residuo": 4.6067871153354645e-06,
         "alertas": []
+      }
+    }
+  },
+  "puente_escenarios_dcf": {
+    "naturaleza": "calculo: consistencia entre escenarios (supuestos) y lo que descuenta el precio; no es valuacion ni pronostico",
+    "historico_2025": {
+      "fcff_b": 74242.84150000002,
+      "margen_fcff_b": 0.0786772147338819,
+      "componentes_pct_ingresos": {
+        "ebitda": 0.3944399344424309,
+        "impuestos": -0.0563768766317042,
+        "capex": -0.1386308984121615,
+        "arrendamientos (interes + principal)": -0.05466700875250303,
+        "capital_de_trabajo": -0.023881401876726917,
+        "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.0166937371347304,
+        "resto (pagos de pensiones, PTU, partidas no monetarias; residuo explicito)": -0.02551279690072296
+      },
+      "resto_detalle_millones": {
+        "beneficios_empleados_pagados": -21577.637,
+        "ptu_pagada": -3131.168,
+        "costo_neto_obligaciones_laborales_sumado": 21444.882,
+        "ptu_devengada_sumada": 4016.423
+      }
+    },
+    "definicion": "FCFF_B = FCF despues de arrendamientos + (1-t) x intereses de deuda y revolvente - (1-t) x ingreso por intereses",
+    "escenarios": {
+      "tension": {
+        "filas": [
+          {
+            "periodo": "2026E",
+            "ingresos": 953074.7900599999,
+            "fcff_b": 86580.8690628938,
+            "margen_fcff_b": 0.09084373017299428,
+            "ebitda_margen": 0.39,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.39,
+              "impuestos": -0.043395099965017704,
+              "capex": -0.135,
+              "arrendamientos (interes + principal)": -0.05725543809270695,
+              "capital_de_trabajo": -0.02101715522487709,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.013109979720709463,
+              "resto (otros resultados financieros del escenario)": -0.029378596823694484
+            },
+            "control_suma_componentes": 1.4551915228366852e-11
+          },
+          {
+            "periodo": "2027E",
+            "ingresos": 953074.7900599999,
+            "fcff_b": 68815.8080413597,
+            "margen_fcff_b": 0.07220399569799499,
+            "ebitda_margen": 0.375,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.375,
+              "impuestos": -0.037437342244038246,
+              "capex": -0.165,
+              "arrendamientos (interes + principal)": -0.05817876542145163,
+              "capital_de_trabajo": 0.0,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.012801299812820653,
+              "resto (otros resultados financieros del escenario)": -0.029378596823694484
+            },
+            "control_suma_componentes": 0.0
+          },
+          {
+            "periodo": "2028E",
+            "ingresos": 972136.2858612,
+            "fcff_b": 80035.31023483883,
+            "margen_fcff_b": 0.08232931061094673,
+            "ebitda_margen": 0.37,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.37,
+              "impuestos": -0.036033343396045366,
+              "capex": -0.15,
+              "arrendamientos (interes + principal)": -0.05794322818646697,
+              "capital_de_trabajo": -0.0025221595487510593,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.01236941235220709,
+              "resto (otros resultados financieros del escenario)": -0.028802545905582826
+            },
+            "control_suma_componentes": -8.731149137020111e-11
+          },
+          {
+            "periodo": "2029E",
+            "ingresos": 1001300.374437036,
+            "fcff_b": 87381.90790874089,
+            "margen_fcff_b": 0.08726842627804855,
+            "ebitda_margen": 0.37000000000000005,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.37000000000000005,
+              "impuestos": -0.03732336630216418,
+              "capex": -0.14499999999999996,
+              "arrendamientos (interes + principal)": -0.057134418502704155,
+              "capital_de_trabajo": -0.0037465088442611835,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.01156364327128523,
+              "resto (otros resultados financieros del escenario)": -0.027963636801536722
+            },
+            "control_suma_componentes": 5.820766091346741e-11
+          },
+          {
+            "periodo": "2030E",
+            "ingresos": 1031339.3856701471,
+            "fcff_b": 91127.43355462635,
+            "margen_fcff_b": 0.08835833753736969,
+            "ebitda_margen": 0.37,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.37,
+              "impuestos": -0.038806155010241095,
+              "capex": -0.145,
+              "arrendamientos (interes + principal)": -0.056323568601285325,
+              "capital_de_trabajo": -0.003746508844261237,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.010616268063603102,
+              "resto (otros resultados financieros del escenario)": -0.027149161943239537
+            },
+            "control_suma_componentes": 4.3655745685100555e-11
+          }
+        ],
+        "margen_fcff_b_promedio": 0.08420076005947083,
+        "tcac_ingresos": 0.01793301210143672,
+        "crecimiento_implicito_con_margen_del_escenario": 0.08951479555980768,
+        "estado": "OK"
+      },
+      "intermedio": {
+        "filas": [
+          {
+            "periodo": "2026E",
+            "ingresos": 971947.5581799999,
+            "fcff_b": 119650.79004535699,
+            "margen_fcff_b": 0.12310416239885058,
+            "ebitda_margen": 0.397,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.397,
+              "impuestos": -0.050793504252585976,
+              "capex": -0.135,
+              "arrendamientos (interes + principal)": -0.05400397880837032,
+              "capital_de_trabajo": -0.004408097549277659,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.011170739298309194,
+              "resto (otros resultados financieros del escenario)": -0.0185195176926063
+            },
+            "control_suma_componentes": -2.9103830456733704e-11
+          },
+          {
+            "periodo": "2027E",
+            "ingresos": 1015685.1982980999,
+            "fcff_b": 126561.86240277036,
+            "margen_fcff_b": 0.1246073710780069,
+            "ebitda_margen": 0.397,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.397,
+              "impuestos": -0.05300707602690115,
+              "capex": -0.135,
+              "arrendamientos (interes + principal)": -0.052273908710853495,
+              "capital_de_trabajo": -0.0047338926394442345,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.009655725044692448,
+              "resto (otros resultados financieros del escenario)": -0.017722026500101722
+            },
+            "control_suma_componentes": 7.275957614183426e-11
+          },
+          {
+            "periodo": "2028E",
+            "ingresos": 1061391.0322215143,
+            "fcff_b": 134114.91445614697,
+            "margen_fcff_b": 0.12635768570179226,
+            "ebitda_margen": 0.39699999999999996,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.39699999999999996,
+              "impuestos": -0.055219821849439035,
+              "capex": -0.135,
+              "arrendamientos (interes + principal)": -0.05059269741747073,
+              "capital_de_trabajo": -0.004733892639444202,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.008137025358263644,
+              "resto (otros resultados financieros del escenario)": -0.016958877033590166
+            },
+            "control_suma_componentes": -8.731149137020111e-11
+          },
+          {
+            "periodo": "2029E",
+            "ingresos": 1109153.6286714824,
+            "fcff_b": 141996.93286918374,
+            "margen_fcff_b": 0.12802278169460102,
+            "ebitda_margen": 0.397,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.397,
+              "impuestos": -0.05748011555656221,
+              "capex": -0.135,
+              "arrendamientos (interes + principal)": -0.048959345153874984,
+              "capital_de_trabajo": -0.004733892639444178,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.006575274492751905,
+              "resto (otros resultados financieros del escenario)": -0.01622859046276571
+            },
+            "control_suma_componentes": 2.9103830456733704e-11
+          },
+          {
+            "periodo": "2030E",
+            "ingresos": 1153519.7738183418,
+            "fcff_b": 149811.22241163615,
+            "margen_fcff_b": 0.12987312901948456,
+            "ebitda_margen": 0.39699999999999996,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.39699999999999996,
+              "impuestos": -0.059689334599524226,
+              "capex": -0.135,
+              "arrendamientos (interes + principal)": -0.047600601724446065,
+              "capital_de_trabajo": -0.004228134878819809,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.005004385871219803,
+              "resto (otros resultados financieros del escenario)": -0.01560441390650549
+            },
+            "control_suma_componentes": -2.9103830456733704e-11
+          }
+        ],
+        "margen_fcff_b_promedio": 0.12639302597854707,
+        "tcac_ingresos": 0.04098359885794478,
+        "crecimiento_implicito_con_margen_del_escenario": 0.033471468967036344,
+        "estado": "OK"
+      },
+      "eficiencia": {
+        "filas": [
+          {
+            "periodo": "2026E",
+            "ingresos": 981383.94224,
+            "fcff_b": 148847.0106160131,
+            "margen_fcff_b": 0.15167051773465046,
+            "ebitda_margen": 0.395,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.395,
+              "impuestos": -0.05086046594644359,
+              "capex": -0.125,
+              "arrendamientos (interes + principal)": -0.051555605302156714,
+              "capital_de_trabajo": 0.006141637846019622,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.009827418591368544,
+              "resto (otros resultados financieros del escenario)": -0.012227630271400313
+            },
+            "control_suma_componentes": 0.0
+          },
+          {
+            "periodo": "2027E",
+            "ingresos": 1035360.0590631999,
+            "fcff_b": 157886.52730423937,
+            "margen_fcff_b": 0.15249431917153156,
+            "ebitda_margen": 0.402,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.402,
+              "impuestos": -0.05579324981424105,
+              "capex": -0.12,
+              "arrendamientos (interes + principal)": -0.04921557745052011,
+              "capital_de_trabajo": -0.005128143868077642,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.0077785388222643866,
+              "resto (otros resultados financieros del escenario)": -0.011590170873365226
+            },
+            "control_suma_componentes": 2.9103830456733704e-11
+          },
+          {
+            "periodo": "2028E",
+            "ingresos": 1092304.862311676,
+            "fcff_b": 173452.31467767814,
+            "margen_fcff_b": 0.15879478400434477,
+            "ebitda_margen": 0.408,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.408,
+              "impuestos": -0.06037482068126301,
+              "capex": -0.12000000000000001,
+              "arrendamientos (interes + principal)": -0.04697941476466452,
+              "capital_de_trabajo": -0.0051281438680776704,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.005736892725853588,
+              "resto (otros resultados financieros del escenario)": -0.010985943955796423
+            },
+            "control_suma_componentes": 0.0
+          },
+          {
+            "periodo": "2029E",
+            "ingresos": 1146920.1054272598,
+            "fcff_b": 189460.0160311294,
+            "margen_fcff_b": 0.16519024745891106,
+            "ebitda_margen": 0.414,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.414,
+              "impuestos": -0.06498095072902793,
+              "capex": -0.12000000000000001,
+              "arrendamientos (interes + principal)": -0.04505618388889372,
+              "capital_de_trabajo": -0.004684148727984353,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.0036256654277577742,
+              "resto (otros resultados financieros del escenario)": -0.010462803767425163
+            },
+            "control_suma_componentes": 0.0
+          },
+          {
+            "periodo": "2030E",
+            "ingresos": 1204266.110698623,
+            "fcff_b": 205978.82494617,
+            "margen_fcff_b": 0.17104095441719014,
+            "ebitda_margen": 0.42000000000000004,
+            "componentes_pct_ingresos": {
+              "ebitda": 0.42000000000000004,
+              "impuestos": -0.06967377122651067,
+              "capex": -0.12,
+              "arrendamientos (interes + principal)": -0.043209588573253785,
+              "capital_de_trabajo": -0.0046841487279843655,
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -0.001426962038465616,
+              "resto (otros resultados financieros del escenario)": -0.009964575016595393
+            },
+            "control_suma_componentes": 8.731149137020111e-11
+          }
+        ],
+        "margen_fcff_b_promedio": 0.1598381645573256,
+        "tcac_ingresos": 0.04998566854302533,
+        "crecimiento_implicito_con_margen_del_escenario": 0.0005499482940649614,
+        "estado": "OK"
       }
     }
   },

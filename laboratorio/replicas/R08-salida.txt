@@ -1,4 +1,4 @@
-R08 - corrida 2026-09-25 06:52:21 UTC. Pre-registro verificado (sha256 b3364065cc61a703...)
+R08 - corrida 2026-09-25 06:56:23 UTC. Pre-registro verificado (sha256 b3364065cc61a703...)
 Datos: verificadas contra SHA256SUMS.txt
 French mensual CRSP 202607 sha256 b840dba55d319f4818fc7300e65c52eff5f64870c8d495fa58ff5d4cd749f5eb rango (datetime.date(1926, 7, 31), datetime.date(2026, 7, 31))
 French diario CRSP 202607 sha256 1916d331c2c51d2aee3d00215897d2b8e5995cb387f1f4569ba46bff5fb049a8 rango (datetime.date(1926, 7, 1), datetime.date(2026, 7, 31))
@@ -184,7 +184,7 @@ S8 diario, segmento fuera_muestra:
 | usd_referencia_diaria | 2007-05-31 | 2026-07-31 | 4822 | 10.83% | 20.10% | 0.539 | -54.57% | 0.199 | 1.50% | 0.000% |
 | mxn_h000_diaria | 2007-05-31 | 2026-07-31 | 4822 | 13.63% | 19.69% | 0.432 | -38.35% | 0.356 | 6.41% | 0.000% |
 | mxn_h100_diaria | 2007-05-31 | 2026-07-31 | 4822 | 15.21% | 20.17% | 0.496 | -51.66% | 0.294 | 6.41% | 0.000% |
-Correlacion diaria R vs x (asincronica: DEXMXUS al mediodia vs cierre): 0.744
+Correlacion diaria R vs x (asincronica: DEXMXUS al mediodia vs cierre): -0.228
 
 == S3b: cifras del capitulo 16 con ^GSPC (precio) x DEXMXUS ==
 | ventana | corr(r, Δln S) propia | capítulo | ±0.05 | vol USD / MXN propia | capítulo | ±0.5 pp |

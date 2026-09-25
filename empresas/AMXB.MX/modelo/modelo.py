@@ -545,7 +545,7 @@ def costo_capital(d: dict, beta_u: float, crp: float, con_arrendamientos: bool, 
     else:
         deuda, kd = deuda_fin, kd_fin
     w = (e * ke + deuda * kd * (1 - t)) / (e + deuda)
-    return {"capitalizacion": e, "deuda_en_pesos_de_pesos": deuda, "beta_desapalancada": beta_u, "beta_reapalancada": beta_l,
+    return {"capitalizacion": e, "deuda_en_la_estructura": deuda, "beta_desapalancada": beta_u, "beta_reapalancada": beta_l,
             "rf_usd_ajustada": rf_usd, "rf_mxn": rf_mxn, "crp_ponderada": crp, "ke_usd": ke_usd, "ke_mxn": ke,
             "kd_antes_impuestos": kd, "kd_despues_impuestos": kd * (1 - t), "peso_capital": e / (e + deuda), "wacc": w,
             "metodo_rf": "M-bono 10a - diferencial de default de Mexico" if rf_local else "USD + diferencial de inflacion",
@@ -580,9 +580,12 @@ def margenes_fcff(d: dict) -> dict:
         h = d["historico_fcff"]["valor"][anio]
         escudo_deuda = t * (h["gasto_intereses"] - h["intereses_arrendamientos"])
         fcff_b = h["cfo_ifrs"] - h["intereses_cobrados"] - h["pagos_arrendamientos"] - h["capex"] - escudo_deuda
-        fcff_a = h["cfo_ifrs"] - h["intereses_cobrados"] - h["capex"] - t * h["gasto_intereses"]
+        fcff_a_ingenuo = h["cfo_ifrs"] - h["intereses_cobrados"] - h["capex"] - t * h["gasto_intereses"]
+        fcff_a = fcff_a_ingenuo - h["nuevos_arrendamientos"]      # los arrendamientos nuevos son inversion (capex en especie)
         out[anio] = {"ingresos": h["ingresos"], "fcff_b": fcff_b, "margen_b": fcff_b / h["ingresos"],
-                     "fcff_a": fcff_a, "margen_a": fcff_a / h["ingresos"], "escudo_fiscal_deuda": escudo_deuda}
+                     "fcff_a": fcff_a, "margen_a": fcff_a / h["ingresos"],
+                     "fcff_a_ingenuo": fcff_a_ingenuo, "margen_a_ingenuo": fcff_a_ingenuo / h["ingresos"],
+                     "escudo_fiscal_deuda": escudo_deuda}
     tt = d["ttm_jun26"]["valor"]
     h25 = d["historico_fcff"]["valor"]["2025"]
     ing_ttm = h25["ingresos"] - tt["ingresos_6m25"] + tt["ingresos_6m26"]
@@ -643,8 +646,10 @@ def dcf_inverso_amx(base: dict) -> dict:
     variantes = {
         "precio_cierre_23sep_19.34": correr(w0, g0, m_base, dn_base, p=_v(d, "precio_alterno")),
         "sin_no_controladora_en_deuda_neta": correr(w0, g0, m_base, deuda_neta_fin),
-        "arrendamientos_como_deuda (FCFF antes de arrendamientos, WACC con arrendamientos)":
+        "arrendamientos_como_deuda (FCFF antes de arrendamientos menos arrendamientos nuevos; WACC con arrendamientos)":
             correr(w_arr["wacc"], g0, mg["2025"]["margen_a"], dn_base + arr),
+        "TRAMPA arrendamientos_como_deuda sin restar arrendamientos nuevos (inconsistente; solo para mostrar el sesgo)":
+            correr(w_arr["wacc"], g0, mg["2025"]["margen_a_ingenuo"], dn_base + arr),
         "pensiones_como_deuda (suma pagos de beneficios 2025 al FCFF y el pasivo neto a la deuda neta)":
             correr(w0, g0, fcff_pens / mg["2025"]["ingresos"], dn_base + pens),
         "rf_local_mbono (WACC con r_f MXN del M-bono)": correr(w_local["wacc"], g0, m_base, dn_base),
@@ -670,6 +675,62 @@ def dcf_inverso_amx(base: dict) -> dict:
         "sensibilidad": rejilla,
         "variantes": variantes,
     }
+
+
+def puente_escenarios(res: dict, base: dict) -> dict:
+    """Compara cada escenario con el DCF inverso: margen FCFF (opcion B) promedio 2026E-2030E y TCAC de ingresos,
+    y el crecimiento que el precio exigiria si el margen FCFF fuera el promedio del escenario (mismo WACC y g)."""
+    d = base["insumos_complementarios"]["dcf_inverso"]
+    dcf = res["dcf_inverso"]
+    t = _v(d, "tasa_marginal")
+    w0, g0, anos = dcf["wacc"]["wacc"], dcf["insumos"]["g_terminal"], dcf["insumos"]["anos"]
+    out = {}
+    for nombre, esc in res["escenarios"].items():
+        filas = []
+        for p in esc["periodos"]:
+            s, mv, r, f = p["supuestos"], p["movimientos"], p["resultados"], p["flujo"]
+            int_deuda = (s["tasa_interes"] * (mv["deuda"]["deuda_inicial"] + mv["deuda"]["deuda_final"]) / 2
+                         + s["tasa_revolvente"] * (mv["revolvente"]["inicial"] + mv["revolvente"]["final"]) / 2)
+            fcff = f["fcf_despues_arrendamientos"] + (1 - t) * int_deuda - (1 - t) * r["ingreso_intereses"]
+            filas.append({"periodo": p["periodo"], "ingresos": r["ingresos"], "fcff_b": fcff, "margen_fcff_b": fcff / r["ingresos"],
+                          "ebitda_margen": r["ebitda"] / r["ingresos"]})
+        for x, p in zip(filas, esc["periodos"]):
+            s_, mv, r, f = p["supuestos"], p["movimientos"], p["resultados"], p["flujo"]
+            int_deuda = (s_["tasa_interes"] * (mv["deuda"]["deuda_inicial"] + mv["deuda"]["deuda_final"]) / 2
+                         + s_["tasa_revolvente"] * (mv["revolvente"]["inicial"] + mv["revolvente"]["final"]) / 2)
+            int_arr = r["gasto_intereses"] - int_deuda
+            comp = {"ebitda": r["ebitda"], "impuestos": -r["impuestos"], "capex": -f["capex"],
+                    "arrendamientos (interes + principal)": -(int_arr + f["principal_arrendamientos_financieros"]),
+                    "capital_de_trabajo": f["cambio_capital_trabajo"],
+                    "ajuste_financiero (escudo de deuda e intereses cobrados)": -t * int_deuda + t * r["ingreso_intereses"],
+                    "resto (otros resultados financieros del escenario)": r["otros_ingresos"]}
+            x["componentes_pct_ingresos"] = {k: v / r["ingresos"] for k, v in comp.items()}
+            x["control_suma_componentes"] = sum(comp.values()) - x["fcff_b"]
+        m = sum(x["margen_fcff_b"] for x in filas) / len(filas)
+        r_ = mi.dcf_inverso(dcf["insumos"]["precio"], dcf["insumos"]["acciones_millones"], dcf["insumos"]["deuda_neta_base"],
+                            w0, g0, m, anos, ingresos_base=dcf["insumos"]["ingresos_base_ttm_jun26"])
+        out[nombre] = {"filas": filas, "margen_fcff_b_promedio": m, "tcac_ingresos": esc["resumen"]["cagr_ingresos"],
+                       "crecimiento_implicito_con_margen_del_escenario": r_["crecimiento_implicito"], "estado": r_["estado"]}
+    h = base["historico"][-1]
+    hf = d["historico_fcff"]["valor"]["2025"]
+    rr, ff = h["resultados"], h["flujo"]
+    mg25 = res["dcf_inverso"]["margenes_fcff"]["2025"]
+    comp25 = {"ebitda": rr["utilidad_operativa"] + ff["depreciacion_amortizacion"],
+              "impuestos": ff["otros_operativos"]["impuestos_pagados"], "capex": -ff["capex"],
+              "arrendamientos (interes + principal)": -hf["pagos_arrendamientos"],
+              "capital_de_trabajo": sum(ff["cambio_capital_trabajo"].values()),
+              "ajuste_financiero (escudo de deuda e intereses cobrados)": -mg25["escudo_fiscal_deuda"] - hf["intereses_cobrados"]}
+    comp25["resto (pagos de pensiones, PTU, partidas no monetarias; residuo explicito)"] = mg25["fcff_b"] - sum(comp25.values())
+    historico_2025 = {"fcff_b": mg25["fcff_b"], "margen_fcff_b": mg25["margen_b"],
+                      "componentes_pct_ingresos": {k: v / rr["ingresos"] for k, v in comp25.items()},
+                      "resto_detalle_millones": {"beneficios_empleados_pagados": ff["otros_operativos"]["beneficios_empleados_pagados"],
+                                                 "ptu_pagada": ff["otros_operativos"]["ptu_pagada"],
+                                                 "costo_neto_obligaciones_laborales_sumado": ff["otros_operativos"]["costo_neto_obligaciones_laborales"],
+                                                 "ptu_devengada_sumada": ff["otros_operativos"]["ptu"]}}
+    return {"naturaleza": "calculo: consistencia entre escenarios (supuestos) y lo que descuenta el precio; no es valuacion ni pronostico",
+            "historico_2025": historico_2025,
+            "definicion": "FCFF_B = FCF despues de arrendamientos + (1-t) x intereses de deuda y revolvente - (1-t) x ingreso por intereses",
+            "escenarios": out}
 
 
 # ------------------------------------------------------------------ sensibilidad geopolitica / regulatoria
@@ -805,6 +866,7 @@ def main(argv) -> int:
     dc = doble_comprobacion(T)
     res = mi.construir_modelo(base)
     res["dcf_inverso"] = dcf_inverso_amx(base)
+    res["puente_escenarios_dcf"] = puente_escenarios(res, base)
     res["sensibilidad_geopolitica"] = sensibilidad_geopolitica(base)
     res["doble_comprobacion"] = dc
     res["calculos_notas"] = calculos_notas(base, T)

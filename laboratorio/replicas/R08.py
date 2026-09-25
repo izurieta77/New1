@@ -878,7 +878,8 @@ def diario(d: dict, pr: dict, res: dict) -> None:
         P(tabla_variantes(list(rd.values()), seg))
     res["S8"] = {k: v.metricas for k, v in rd.items()}
     # correlacion diaria (asincronica: mediodia NY contra cierre) solo como referencia
-    x_d = [p["U"][k] / (1 + p["R"][k]) - 1 if k > 0 else 0.0 for k in range(len(dias))]
+    # x = (1 + U)/(1 + R) - 1 (corregido el 2026-09-25: las corridas 1 y 2 usaban U/(1 + R) - 1)
+    x_d = [(1 + p["U"][k]) / (1 + p["R"][k]) - 1 if k > 0 else 0.0 for k in range(len(dias))]
     res["corr_diaria_asincronica"] = corr(p["R"][1:], x_d[1:])
     P(f"Correlacion diaria R vs x (asincronica: DEXMXUS al mediodia vs cierre): {res['corr_diaria_asincronica']:.3f}")
 

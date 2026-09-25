@@ -33,11 +33,11 @@ Un solo segmento. 2T FY27 (trimestre al 31-jul-2026) [1][3]:
 | Trim. (cierre) | Ingresos (a/a) | Mg bruto | Mg oper | UN | UPA dil | FCF | SBC/ing | Deuda neta | Acc. dil (M) |
 |---|---|---|---|---|---|---|---|---|---|
 | 3T FY25 (oct-24) | 1,010 (28.5%) | 74.7% | −5.5% | −17 | −0.02 | 247 | 20.7% | −3,517 | 982 |
-| 4T FY25 (ene-25) | 1,059 (25.2%) | 74.2% | −7.7% | −88 | ≈−0.09 | 259 | 25.4% | −3,579 | ≈985 |
+| 4T FY25 (ene-25) | 1,059 (25.2%) | 74.2% | −7.7% | −86 | −0.09 | 259 | 25.4% | −3,579 | 988 |
 | 1T FY26 (abr-25) | 1,103 (19.8%) | 73.9% | −10.8% | −104 | −0.10 | 298 | 22.4% | −3,870 | 994 |
 | 2T FY26 (jul-25) | 1,169 (21.3%) | 73.6% | −9.0% | −70 | −0.07 | 302 | 23.9% | −4,228 | 1,000 |
 | 3T FY26 (oct-25) | 1,234 (22.2%) | 75.1% | −5.6% | −34 | −0.03 | 314 | 23.9% | −4,056 | 1,005 |
-| 4T FY26 (ene-26) | 1,305 (23.3%) | 76.1% | 1.1% | 59 | ≈0.06 | 395 | 21.0% | −4,485 | ≈1,010 |
+| 4T FY26 (ene-26) | 1,305 (23.3%) | 76.1% | 1.1% | 39 | 0.04 | 395 | 21.0% | −4,485 | 1,033 |
 | 1T FY27 (abr-26) | 1,386 (25.6%) | 75.3% | −2.2% | 28 | 0.03 | 493 | 21.5% | −3,807 | 1,032 |
 | 2T FY27 (jul-26) | 1,471 (25.8%) | 74.6% | −2.3% | 5 | 0.01 | 406 | 25.6% | −4,268 | 1,044 |
 
@@ -49,11 +49,11 @@ Un solo segmento. 2T FY27 (trimestre al 31-jul-2026) [1][3]:
 | FY25 | 3,954 (29.4%) | 75.0% | −2.9% | −15 | −0.02 | 1,127 | 21.8% | −3,579 | 979 |
 | FY26 | 4,812 (21.7%) | 74.7% | −6.1% | −163 | −0.16 | 1,310 | 22.8% | −4,485 | 1,002 |
 
-El FCF de la tabla es flujo operativo − compras de activo fijo. El FCF de la empresa también resta el software capitalizado: en el 2T fue de US$377 M contra 406 [1].
+Verificación: la UN, la UPA y las acciones del 4T FY25 y del 4T FY26 son las reportadas en el 8-K del 3-mar-2026 (UN atribuible de −86.3 y 38.7; UPA de −0.35 y 0.15 antes del split, −0.09 y 0.04 después) [12]. Antes decía 59 y ≈0.06 para el 4T FY26 (derivado). Por las revisiones de trimestres anteriores, los cuatro trimestres de FY26 ya no suman exactamente el año. El FCF de la tabla es flujo operativo − compras de activo fijo. El FCF de la empresa también resta el software capitalizado: en el 2T fue de US$377 M contra 406 [1].
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad vs efectivo:** FCF TTM de US$1.61 mil M contra una UN de US$58 M. El SBC es de 23.1% de los ingresos (~US$1.25 mil M TTM), así que el FCF − SBC es de ~US$0.36 mil M [9]. Inferencia: la rentabilidad "económica" depende de tratar el SBC como costo.
-2. **Deuda:** bonos senior de US$750 M al 3.00% (valor razonable de US$712.5 M), redimibles a la par desde el 15-feb-2026 [4]. El vencimiento no se confirmó en esta ronda. Caja de US$5.01 mil M y caja neta de US$4.27 mil M.
+2. **Deuda:** bonos senior de US$750 M al 3.00% que vencen en febrero de 2029 (valor razonable de US$712.5 M), redimibles a la par desde el 15-feb-2026 [3][4]. Caja de US$5.01 mil M y caja neta de US$4.27 mil M.
 3. **Dilución:** acciones diluidas de 1,044.5 M contra 999.6 M (+4.5% a/a) [3]. Autorización de recompra de US$1.5 mil M con US$1.3 mil M disponibles [5]. Inferencia: recompra marginal frente al SBC.
 4. **Capital de trabajo:** RPO de US$10.7 mil M, con 46% a reconocer en 12 meses [3]. Reconoció US$1.0 mil M de ingresos diferidos en el trimestre.
 5. **Competidores y sustitutos:** Microsoft Defender (empaquetado en E5), Palo Alto (Cortex), SentinelOne, Zscaler y Google/Wiz en la nube.
@@ -65,7 +65,7 @@ El FCF de la tabla es flujo operativo − compras de activo fijo. El FCF de la e
    - Superó la guía del 2T en ingresos (+2.2%) y UPA (+6%), y subió la guía FY27 de ingresos, UPA y crecimiento de ARR neto nuevo (+630 pb a ~34%) [1][2].
    - Superó el consenso de UPA en los últimos 4 trimestres, por +2.0%, +1.6%, +3.1% y +6.4% [9].
 9. **Partes relacionadas y gobierno:** PSU a Sentonas (presidente) por 100,000 unidades objetivo, ligadas al TSR relativo contra el S&P 500 de 2025 a 2028 [6]. Sin operaciones con partes relacionadas identificadas.
-10. **Asignación de capital:** M&A de módulos: SGNL (US$628 M), Seraphic (US$328 M), Pangea y Onum (en acciones) [3]. Recompras mínimas. La caja crece.
+10. **Asignación de capital:** M&A de módulos: SGNL (US$628 M), Seraphic (US$328 M), Pangea y Onum (en acciones) [3]. En jul-2026 firmó la compra de los activos tecnológicos de XM Cyber (Schwarz Digits): US$145.0 M en efectivo y acciones, más acciones adicionales que se fijan al cierre [3]. El 11-sep-2026 registró (S-3ASR) la reventa de hasta 2,118,022 acciones del vendedor [13]; a US$259.67 valen ~US$550 M (cálculo propio). Inferencia: la operación ya cerró y la contraprestación total supera los US$145 M. Recompras mínimas. La caja crece.
 
 ## 5. Cadenas causales vigentes
 1. **Falcon Flex (licencias por consumo).**
@@ -106,7 +106,7 @@ Cálculo propio: cierres de Yahoo × acciones diluidas XBRL ajustadas por split;
 Dato que cambia de escenario: el ARR neto nuevo del 3T. La guía implica ~US$345 M (6,186 − 5,840, cálculo propio). Menos de US$320 M mueve al bajista y más de 380 al alcista.
 
 ## 8. Pronósticos registrados — 3T FY27 (trimestre al 31-oct-2026)
-Fecha del reporte: **1-dic-2026**. Yahoo la marca como no estimada [9]; no se confirmó en el sitio de RI (503). Consenso: Yahoo quoteSummary, consultado el 2026-09-25 [9].
+Fecha del reporte: **1-dic-2026**. Yahoo la marca como no estimada [9] y Nasdaq/Zacks no tiene fecha; no se confirmó en el sitio de RI (503 y timeout). Patrón: el 3T FY26 se reportó el martes 2-dic-2025 y el 3T FY25 el martes 26-nov-2024 (8-K Item 2.02 en EDGAR); el 1-dic-2026 es martes. Consenso: Yahoo quoteSummary, consultado el 2026-09-25 [9].
 
 | Variable | Punto | p10-p90 (80%) | Consenso |
 |---|---|---|---|
@@ -117,7 +117,8 @@ Base del cálculo (propio):
 - La suscripción ha sido ~0.98-0.99 × ARR promedio / 4 (1T: 0.982; 2T: 0.987).
 - Con el ARR del punto medio de la guía (6,186), la suscripción sería de ~US$1,480 M, más ~US$72 M de servicios.
 - Resultado: ~US$1,550 M. Implica que la guía de ingresos es conservadora en ~1.5%, igual que en el 2T.
-- UPA: margen operativo de ~25% más intereses sobre US$5 mil M de caja, con una tasa de ~22.5%, da ~US$0.32.
+- UPA: margen operativo de ~25% más ~US$39 M de intereses (los que implica la guía), con la tasa non-GAAP de 21.0% de la guía [1] (antes decía ~22.5%) y 1,048 M acciones, da ~US$0.32.
+- Historial (verificación): la UN non-GAAP superó el punto medio de la guía en +2.1%, +1.7%, +2.6% y +6.9% en los últimos 4 trimestres [1][2][12]. Aplicado a la guía del 3T (326.65 M) da 0.317-0.333 por acción; reportar 0.32 exige superar la guía de UN en más de ~1.1%.
 
 Binarios:
 - Ingresos > US$1,527.9 M: **p = 0.87**.
@@ -147,5 +148,36 @@ Binarios:
 9. `herramientas/dossier.py CRWD` (SEC companyfacts + Yahoo chart), Yahoo quoteSummary (consenso, fecha, historial de sorpresas y pares) y cálculo propio de múltiplos y DCF inverso, 2026-09-25: empresas/CRWD/dossier-2026-09-25.md
 10. Yahoo Finance chart CRWD.MX, 2026-09-25: https://query1.finance.yahoo.com/v8/finance/chart/CRWD.MX
 11. Conocimiento cap. 23 §4.3 (guerra de Irán) y cap. 24 §4.1 (Fed +25 pb el 16-sep-2026): conocimiento/23-geopolitica-y-riesgo-politico-global.md; conocimiento/24-politica-publica-regulacion-y-mercados.md
+12. CrowdStrike, comunicados 4T FY26 (3-mar-2026) y 3T FY26 (2-dic-2025), para UN/UPA reportadas y el historial de guía: https://www.sec.gov/Archives/edgar/data/1535527/000153552726000007/crwd-20260303xex991.htm ; https://www.sec.gov/Archives/edgar/data/1535527/000153552725000030/crwd-20251202xex991.htm
+13. CrowdStrike, S-3ASR de reventa de 2,118,022 acciones del vendedor de XM Cyber, 11-sep-2026: https://www.sec.gov/Archives/edgar/data/1535527/000110465926107123/tm2625079-1_s3asr.htm
 
 Nota de método: el presupuesto de WebSearch de la sesión estaba agotado. Las cifras vienen de EDGAR y Yahoo por consulta directa, sin prensa. Las cifras por acción anteriores al 2-jul-2026 se dividieron entre 4.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas de nuevo: 8-K ex. 99.1 del 2T FY27 (resumen, guía y estado de resultados), ex. 99.1 del 1T FY27, 4T FY26, 3T FY26 y 2T FY26 (guías y UN non-GAAP), texto del 10-Q del 2T FY27 (deuda y eventos posteriores), XBRL R56 y el S-3ASR del 11-sep-2026. Consenso: Yahoo quoteSummary y Nasdaq/Zacks consultados de nuevo el 25-sep.
+
+**Correcto (hecho verificado):**
+- Ingresos del 2T FY27 de US$1,470.9 M (+26%): suscripción 1,400.3 y servicios 70.6. UPA GAAP de 0.01 y non-GAAP de 0.31; pérdida operativa GAAP de 33.2 M y utilidad non-GAAP de 371.6 M. ARR de 5.84 mil M (+25%), ARR neto nuevo de 332.8 M (+51%), Flex de 2.29 mil M (+101%), módulos 51%/35%/26%, FCF de 377.4 M y caja de 5.01 mil M [1].
+- Guía del 3T: ingresos de 1,523.2-1,529.2, ARR de 6,184.4-6,188.4, utilidad operativa non-GAAP de 372.7-375.9 y UPA de 0.31 con 1,048 M acciones y tasa de 21.0%. FY27: ingresos de 5,991.1-6,011.1 (antes 5,914.7-5,958.7), ARR de 6,603.0-6,611.9 y UPA de 1.25-1.26 (antes 4.88-4.96 antes del split) [1][2].
+- Consenso del 3T: ingresos de 1,527.9 (43, rango 1,525.5-1,554.7) y UPA de 0.311 (45, rango 0.309-0.33) en Yahoo. Consenso FY27 de 1.256 y FY28 de 1.606 [9]. Sorpresas: +2.0%, +1.6%, +3.1% y +6.4%.
+- Cadena causal 1: la guía implica +3.8% t/t en ingresos (1,526.2/1,470.9) y +5.9% en ARR (6,186.4/5,840) [1].
+- Cadena causal 2: +13.9% el 14-sep y +20.5% el 27-ago (Yahoo chart, reconsultado). La ficha decía "más de 13%" el 14-sep, lo cual es correcto.
+- Pronóstico: contra el punto medio de la guía, los ingresos superaron por +1.7%, +0.8%, +1.7% y +2.2% en 4 trimestres; aplicados a 1,526.2 dan 1,538-1,560, todos dentro de 1,528-1,566. En UPA, las analogías dan 0.32-0.33, dentro de 0.31-0.34. El punto, los intervalos y los binarios son coherentes.
+- Escenarios: 25 + 50 + 25 = 100%. Periodo: trimestre ago-oct, USD, UPA non-GAAP posterior al split 4:1, que es la base del consenso de Yahoo. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. Tabla, 4T FY26: la UN derivada (59) y la UPA (≈0.06) pasan a las reportadas, **38.7 M y 0.04** (0.15 antes del split), con 1,033 M acciones diluidas. El 4T FY25 pasa a −86 y 988 M [12].
+2. Base de la UPA: la tasa era "~22.5%" y la guía usa **21.0%** non-GAAP [1]. El resultado (~0.32) no cambia. Se agregó el historial de superación de la guía de UN y el umbral de redondeo (+1.1%).
+3. Deuda: el vencimiento de los bonos al 3.00% es **febrero de 2029** (10-Q) [3].
+4. Omisión: faltaba la compra de activos de XM Cyber (acuerdo de jul-2026 por US$145.0 M más acciones al cierre) y el S-3ASR del 11-sep-2026 para revender 2.12 M acciones del vendedor (~US$550 M a precio actual) [3][13].
+5. Fecha: patrón de martes verificado en EDGAR. Los criterios de `pronosticos.csv` ahora exigen la columna de tres meses.
+
+**No verificado o pendiente:**
+- La fecha del 1-dic no se confirmó en ir.crowdstrike.com.
+- Si XM Cyber ya cerró y a qué precio se fijaron las acciones adicionales.
+- La causa del +13.9% del 14-sep.
+- El litigio residual de jul-2024.
+
+**Calibración (para el post-mortem):** es la ficha con los pronósticos mejor calibrados de las cuatro. El riesgo del binario de UPA (0.76) es el redondeo: con 1,048 M acciones, una superación de la guía de UN menor a ~1.1% deja 0.31, y 3 de 4 analogías (0.317-0.320) quedan a menos de medio centavo del umbral. Si las acciones diluidas suben por XM Cyber, el umbral se endurece.
+
+**Veredicto:** confiable. Las cifras del último reporte, la guía, el consenso, las cadenas causales y los pronósticos están bien. Las correcciones son menores (una fila derivada de la tabla, la tasa de la base de UPA, el vencimiento de la deuda) y hay una omisión de M&A que quedó agregada.
