@@ -392,9 +392,9 @@ Muestra común de 2006-03-31 a 2026-07-31 (245 meses). El primer mes evaluado es
 | B_ref_1N_vt10 | 0.7201 | 0.7077 | 0.7618 | 0.4373 | 0.4282 | 0.4682 |
 | B_ref_largo_vt40 | 0.7487 | 0.7312 | 0.8082 | 0.4192 | 0.4045 | 0.4690 |
 
-- **Costos en las variantes largo/corto.** Pesan mucho: rotación anual de 8.6 a 23.9 veces el capital y costo anual de 2.9% a 8.1%. Por ejemplo, `B_ls_vt40_L3` pasa de 0.2231 bruto a −0.1380 neto fuera de muestra.
-- **Costos en las variantes solo-largos.** Cuestan de 0.29% a 1.04% al año. La costo-sensibilidad no cambia ninguna comparación relevante.
-- **Sin costos, H4 sigue fallando.** Brutas, `B_lo_vt10_L12` da 0.6036 frente a 0.5515 de 1/N y 0.6211 de 1/N-SMA10.
+- **Costos en las variantes largo/corto.** Pesan mucho: rotación anual de 7.4 a 23.9 veces el capital según el segmento y costo anual de 2.53% a 8.14%. Restan de 0.08 a 0.36 de Sharpe entre bruto y neto por defecto. Por ejemplo, `B_ls_vt40_L3` pasa de 0.2231 bruto a −0.1380 neto fuera de muestra.
+- **Costos en las variantes solo-largos.** Cuestan de 0.29% a 1.04% al año.
+- **Los costos sí cambian una comparación de H4.** En bruto, `B_lo_vt10_L12` supera a 1/N fuera de muestra en Sharpe (0.6036 frente a 0.5515) y en MDD (−0.0616 frente a −0.1914). Con los costos por defecto pierde en Sharpe (0.4874 frente a 0.5406). En bruto sigue sin superar a 1/N-SMA10 en Sharpe (0.6036 frente a 0.6211). Así que H4 falla también en bruto, por la comparación contra la regla sencilla, pero **la desventaja frente a 1/N se debe a los costos de GBM** (0.43% al año contra 0.10% de 1/N).
 
 **Moneda (MXN con DEXMXUS; efectivo = T-bill en USD convertida; costos por defecto), fuera de muestra 2012-01 a 2026-07:**
 
@@ -476,7 +476,7 @@ En MXN la ventaja de drawdown del filtro casi desaparece. `B_lo_vt10_L12` tiene 
 |---|---|---|---|
 | Datos / versión | 58 futuros y forwards (24 materias primas, 12 divisas, 9 índices accionarios, 13 bonos); rendimientos en exceso de futuros | (a) Mercado total de EUA de French, CRSP 202607, rendimiento total de contado. (b) 8 ETFs de Yahoo (adjclose), sin divisas | Sí: universo mucho menos diverso. El artículo atribuye buena parte del Sharpe > 1 a la diversificación entre clases de activos |
 | Periodo | 1985-01 a 2009-12 (y 1966–1985 como muestra antigua) | (a) 1927-07 a 2026-07. (b) 2007-03 a 2026-07 | Parcial: la ventana 1985–2009 de (a) coincide en el tiempo, pero es un solo instrumento |
-| Costos | Brutos (sin costos de transacción) | Netos de comisión GBM de 0.29% más spread de 0.05% por lado, más la sensibilidad bruta | Sí: en las variantes largo/corto los costos restan de 0.05 a 0.36 de Sharpe |
+| Costos | Brutos (sin costos de transacción) | Netos de comisión GBM de 0.29% más spread de 0.05% por lado, más la sensibilidad bruta | Sí: en las variantes largo/corto los costos restan de 0.08 a 0.36 de Sharpe |
 | Regla | sign(r_{t−12,t}) · 40%/σ_{t−1}, EWMA de 60 días de centro de masa y ×261 | Igual. Tres diferencias: el exceso se calcula como cociente compuesto contra RF; la σ de los ETFs usa rendimiento total diario; hay un tope de \|w\| ≤ 10 (inactivo en (a) y activo en 9 activo-meses en (b)) | No material para el signo; no medido |
 | Métrica | t del alfa contra MSCI World, bonos, GSCI, SMB, HML y UMD (Tabla 2), y Sharpe | Sharpe del exceso y t de Newey-West de la media del exceso. **No se estimó el alfa por factores** | Sí: un t de la media no es un t del alfa. Pendiente |
 | Comparación con el largo pasivo | "Positive alpha in 90% of the cases" frente a siempre largo con la misma escala (p. 236) | En EUA el Sharpe de TSMOM-12 es **menor** que el del largo con volatilidad objetivo en las tres ventanas: 1927–2011 da 0.3348 frente a 0.4395; 1985–2009 bruto da 0.4836 frente a 0.5580; 2012–2026 da 0.3790 frente a 0.8349. En (b), fuera de muestra y bruto: 0.4159 frente a 0.4690 | Es coherente con Kim-Tse-Wald (2016) y Huang et al. (2020). Aquí el signo no mejoró sobre el largo escalado por volatilidad en el Sharpe. El alfa por regresión no se calculó |
@@ -496,7 +496,8 @@ Alcance: USD, costos GBM declarados (el spread es un supuesto), frecuencia mensu
    - En 2012–2026 perdió contra SMA10 en Sharpe (0.8032) y en MDD (−19.31%).
 6. **Solo-largos multiactivo (`B_lo_vt10_L12`, pre-registrada como operable), fuera de muestra:**
    - Tiene MDD menor que 1/N (−6.69% frente a −19.22%), pero Sharpe menor (0.4874 frente a 0.5406) y CAGR de alrededor de la mitad (3.37% frente a 6.33%). La exposición media es de 0.42.
-   - **No supera** a 1/N ni a 1/N-SMA10 en el criterio doble.
+   - **No supera** a 1/N ni a 1/N-SMA10 en el criterio doble, neto de costos GBM.
+   - En bruto sí supera a 1/N (0.6036 frente a 0.5515), pero no a 1/N-SMA10 (0.6211). La desventaja neta frente a 1/N viene de los costos.
    - Sí supera al control 1/N con volatilidad objetivo y sin filtro (0.4373; −11.08%).
 7. **Fuera de muestra, la reducción de drawdown de las reglas solo-largos se explica por menor exposición.** La covarianza de *timing* es negativa en todas.
 8. **Ninguna variante alcanza DSR ≥ 0.95** en la lectura conservadora (N = 15, V de todas).
@@ -505,7 +506,7 @@ Alcance: USD, costos GBM declarados (el spread es un supuesto), frecuencia mensu
 
 - "TSMOM tiene un Sharpe mayor que 1": esa cifra es de 58 futuros diversificados, brutos, en 1985–2009. Con 8 ETFs y costos GBM, fuera de muestra, el Sharpe fue 0.21.
 - "TSMOM funciona igual después de su publicación": fuera de muestra ninguna variante largo/corto es significativa.
-- "El filtro TSMOM-12 mejora el rendimiento ajustado por riesgo de un portafolio 1/N de ETFs": no lo hizo en 2012–2026 (criterio doble), ni en USD ni en MXN.
+- "El filtro TSMOM-12 mejora el rendimiento ajustado por riesgo de un portafolio 1/N de ETFs": neto de costos GBM, no lo hizo en 2012–2026 (criterio doble), ni en USD ni en MXN.
 - "TSMOM-12 es mejor filtro que la media de 10 meses": fuera de muestra no lo fue en EUA (pierde en Sharpe y MDD) ni en (b), donde hubo un empate técnico.
 - "Reduce el drawdown en pesos": en MXN la reducción fue de −27.20% a −24.64%, muy inferior a la reducción en USD.
 - "Hay alfa por factores": no se estimó la regresión contra MSCI World, bonos, GSCI, SMB, HML y UMD.
@@ -548,13 +549,13 @@ No se modificó `config/parametros.json`.
 
 1. **Se modifica el indicador #3 del capítulo 14 (§6.6), "Signo del rendimiento de 12 meses (TSMOM): filtro y diversificador multiactivo, grado B".**
    - **Se confirma como filtro de drawdown histórico:** en EUA 1927–2011 bajó el MDD de −83.65% a −45.17% con mayor Sharpe, neto de costos GBM.
-   - **No se confirma como fuente de rendimiento ajustado por riesgo después de 2012.** En EUA perdió contra comprar y mantener y contra SMA10. En los 8 ETFs no superó a 1/N ni a 1/N-SMA10, y la covarianza de *timing* fue negativa.
+   - **No se confirma como fuente de rendimiento ajustado por riesgo después de 2012.** En EUA perdió contra comprar y mantener y contra SMA10. En los 8 ETFs, neto de costos, no superó a 1/N ni a 1/N-SMA10, y la covarianza de *timing* fue negativa.
    - **Propuesta para el autor del capítulo** (no aplicada): bajar el rol "diversificador multiactivo" a grado C, porque no mostró valor neto post-publicación en ETFs, y dejar "filtro de drawdown" en B, advirtiendo que su efecto viene de reducir la exposición.
 2. **Regla R1 (filtro de SMA de 10 meses): se mantiene.** R02 no da razón para sustituirla por TSMOM-12. SMA10 fue igual o mejor fuera de muestra en EUA (Sharpe 0.8032 frente a 0.7052; MDD −19.31% frente a −24.52%). En (b) quedaron empatadas.
 3. **Se descarta para el sistema la versión largo/corto con 40%/σ (la del artículo).**
    - Fuera de muestra, neta de costos GBM, da Sharpe 0.2071 (t 0.88) en ETFs y 0.3790 (t 1.23) en EUA.
    - Con 3 meses es negativa en ETFs.
-   - Rota de 8.6 a 23.9 veces el capital al año.
+   - Rota de 7.4 a 23.9 veces el capital al año, según el segmento.
    - Además no es implementable en fase 1.
 4. **Tensión con el objetivo del sistema.** El objetivo es maximizar el CAGR en MXN sujeto al drawdown. En MXN, la versión solo-largos con volatilidad objetivo redujo poco el drawdown (−24.64% frente a −27.20%) y sacrificó CAGR (4.92% frente a 7.93%). **No se recomienda usar TSMOM-12 multiactivo como núcleo del portafolio en MXN** con la evidencia actual.
 5. **Fuera del alcance de R02:** R2 (`filtro_apalancados`, media de 200 días más VIX, diaria, sobre ETFs apalancados). R02 ni lo confirma ni lo descarta.

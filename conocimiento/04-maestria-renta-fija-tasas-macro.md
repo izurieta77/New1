@@ -352,20 +352,19 @@ Todas las cifras de riesgo vienen de `config/parametros.json`. En **fase 0** (`p
 
 ## 7. Trampas y errores comunes
 
-1. **Usar la duración sin la convexidad en movimientos grandes.** Con +200 pb, la duración sola exagera la pérdida del 10 años en 1.4 pp y la del 30 años en más.
+1. **Usar la duración sin la convexidad en movimientos grandes.** La duración sola exagera la pérdida del 10 años en 1.4 pp con +200 pb, y la del 30 años en 1.6 pp con solo +100 pb.
 2. **Creer que los bonos siempre cubren a las acciones.** Eso solo vale con inflación procíclica y una Fed creíble. En 1970-1999 la correlación fue de +0.28; en 2022 el 60/40 perdió 16.1% y en 2026 la correlación es de +0.44.
 3. **Leer la curva invertida como fecha de recesión.** En 2022-2024 hubo 534 sesiones invertidas y ninguna recesión (a ago-2026). Además, el term premium negativo distorsiona la pendiente.
-4. **Confundir el term premium con un dato.** ACM y Kim-Wright difieren ~30 pb hoy; son salidas de modelos.
+4. **Tratar las salidas de modelos como datos.** El term premium de ACM y el de Kim-Wright difieren ~30 pb. El r* de HLW (1.0%), el de LW (1.65%) y el del SEP (≈1.2%) difieren ~0.6 pp y se revisan cada trimestre.
 5. **Tomar el breakeven como expectativa pura.** Lo contaminan la liquidez de los TIPS (mispricing de más de US$20 por cada 100) y la prima de riesgo inflacionario.
 6. **Comprar HY "por el rendimiento".** El HY equivale a 0.49 de beta accionaria, con un drawdown de −30% (2008) y alfa de −1.1%/año.
 7. **Extrapolar factores de bonos corporativos publicados.** 94% de las especificaciones no sobrevive a la corrección de datos (2026).
 8. **ETFs apalancados de bonos por "reversión a la media" de tasas.** TMF perdió 92.9% en seis años, y TBT llegó a −94.6% (2008-2020): el decaimiento por volatilidad actúa en ambos sentidos.
 9. **Olvidar el tipo de cambio.** Un Treasury comprado desde México es sobre todo una posición en USD/MXN en los años de movimientos cambiarios grandes (±13-22% por año en 2023-2025).
-10. **Usar el r* de un solo modelo para decidir.** HLW (1.0%), LW (1.65%) y el SEP (≈1.2%) difieren ~0.6 pp, y las estimaciones se revisan cada trimestre.
-11. **Suponer que el carry protege.** Hoy el colchón del 10 años es de ~14 pb por año, apenas ~0.2σ.
-12. **Suponer que los UDIBONOS o los TIPS protegen en el corto plazo.** El ETF TIP cayó 12.3% en 2022 porque dominó la duración real.
-13. **Ignorar la oferta y lo fiscal.** Déficits de 5.4-6.2% del PIB y el TBAC anticipando más cupones presionan el term premium, aunque de forma pequeña por unidad (4.4 pb por cada 1% del PIB).
-14. **Backtests de bonos sin el régimen de 1970-1981.** Las muestras que empiezan en 1982 o 2003 capturan un mercado alcista secular de 40 años.
+10. **Suponer que el carry protege.** Hoy el colchón del 10 años es de ~14 pb por año, apenas ~0.2σ.
+11. **Suponer que los UDIBONOS o los TIPS protegen en el corto plazo.** El ETF TIP cayó 12.3% en 2022 porque dominó la duración real.
+12. **Ignorar la oferta y lo fiscal.** Déficits de 5.4-6.2% del PIB y el TBAC anticipando más cupones presionan el term premium, aunque de forma pequeña por unidad (4.4 pb por cada 1% del PIB).
+13. **Backtests de bonos sin el régimen de 1970-1981.** Las muestras que empiezan en 1982 o 2003 capturan la caída secular del 10 años, de 15.84% (30-sep-1981) a 0.52% (4-ago-2020).
 
 ---
 
