@@ -476,7 +476,8 @@ def evaluar(filas: list) -> dict:
            "brier": statistics.fmean((a - b) ** 2 for a, b in zip(p, y)),
            "brier_clima_rec": statistics.fmean((a - b) ** 2 for a, b in zip(clim, y)),
            "brier_const_expost": statistics.fmean((n1 / n - b) ** 2 for b in y),
-           "auc": auc(p, y), "fallos_probit": sum(1 for f in filas if f.get("fallo"))}
+           "auc": auc(p, y), "fallos_probit": sum(1 for f in filas if f.get("fallo")),
+           "no_convergio": sum(1 for f in filas if f.get("noconv"))}
     for u in (0.3, 0.5):
         tp = sum(1 for a, b in zip(p, y) if a > u and b)
         fp = sum(1 for a, b in zip(p, y) if a > u and not b)
@@ -498,7 +499,8 @@ def pronosticos_mensuales(origenes, S: dict, usrec: dict, giros: list, modo: str
             p, clim, aj = prob_origen(m, S, lambda k, rec=rec: 1 if k in rec else 0)
         else:
             raise ValueError(modo)
-        filas.append({"origen": m, "p": p, "clim": clim, "y": usrec[m + H], "fallo": aj is None})
+        noconv = isinstance(aj, dict) and not aj["convergio"]
+        filas.append({"origen": m, "p": p, "clim": clim, "y": usrec[m + H], "fallo": aj is None, "noconv": noconv})
     return filas
 
 
@@ -507,12 +509,12 @@ def linea_eval(nombre: str, e: dict) -> str:
     return (f"| {nombre} | {e['n']} | {e['n1']} | {f4(e['r2_expost'])} | {f4(e['r2_recursiva'])} | "
             f"{f4(e['brier'])} | {f4(e['brier_clima_rec'])} | {f4(e['brier_const_expost'])} | {f4(e['auc'])} | "
             f"{u5['VP']}/{u5['FP']}/{u5['FN']}/{u5['VN']} | {u3['VP']}/{u3['FP']}/{u3['FN']}/{u3['VN']} | "
-            f"{e['fallos_probit']} |")
+            f"{e['fallos_probit']} / {e['no_convergio']} |")
 
 
 ENCABEZADO_EVAL = ("| Pronóstico | n | n recesión | pseudo R² (L_c ex post) | pseudo R² (L_c recursiva) | Brier | "
                    "Brier clima recursiva | Brier constante ex post | AUC | VP/FP/FN/VN (p>0.5) | "
-                   "VP/FP/FN/VN (p>0.3) | fallos probit |\n|---|---|---|---|---|---|---|---|---|---|---|---|")
+                   "VP/FP/FN/VN (p>0.3) | fallos / no convergió |\n|---|---|---|---|---|---|---|---|---|---|---|---|")
 
 
 # ================================================================ partes A
@@ -562,7 +564,7 @@ def parte_a2(d: dict, res: dict) -> None:
           "(cronologia final). L_c ex post = constante con la frecuencia de la ventana evaluada.\n")
     Sq, rq = d["Sq"], d["usrecq"]
     print("| k | n | n recesión | pseudo R² (L_c ex post) | Artículo | pseudo R² (L_c recursiva) | Brier | "
-          "Brier clima recursiva | AUC | fallos probit |")
+          "Brier clima recursiva | AUC | fallos / no convergió |")
     print("|---|---|---|---|---|---|---|---|---|---|")
     tabla = {}
     for k in range(1, 9):
@@ -574,11 +576,12 @@ def parte_a2(d: dict, res: dict) -> None:
             aj = probit_mv(xs, ys)
             clim = sum(ys) / len(ys)
             p = clim if aj is None else cdf(aj["a"] + aj["b"] * Sq[q])
-            filas.append({"origen": q, "p": p, "clim": clim, "y": rq[tau], "fallo": aj is None})
+            filas.append({"origen": q, "p": p, "clim": clim, "y": rq[tau], "fallo": aj is None,
+                          "noconv": aj is not None and not aj["convergio"]})
         e = evaluar(filas)
         tabla[k] = e
         print(f"| {k} | {e['n']} | {e['n1']} | {f4(e['r2_expost'], 3)} | {PAPER_OUT[k]} | {f4(e['r2_recursiva'], 3)} | "
-              f"{f4(e['brier'])} | {f4(e['brier_clima_rec'])} | {f4(e['auc'])} | {e['fallos_probit']} |")
+              f"{f4(e['brier'])} | {f4(e['brier_clima_rec'])} | {f4(e['auc'])} | {e['fallos_probit']} / {e['no_convergio']} |")
     res["A2"] = tabla
 
 

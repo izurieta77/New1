@@ -49,7 +49,7 @@ SBC: no revelado. FCF: n.d. (el flujo operativo de 2025 no se extrajo).
 5. **Competidores y sustitutos.** Cancún compite con Tulum (aeropuerto federal abierto en 2023; no verificado en esta sesión) y con el Caribe. En Brasil entra a concesiones licitadas por ANAC.
 6. **Concentración.** Cancún concentra ~69% de los pasajeros de México [4]. Participación por aerolínea: no verificada.
 7. **Regulación.** Tarifas máximas por quinquenio de la SICT en México; FAA y el contrato de arrendamiento en San Juan; la ANI en Colombia y la ANAC en Brasil (no verificado a detalle). También las sanciones del DOT a aerolíneas mexicanas [13].
-8. **Promesas contra resultados.** No hay guía. El consenso sobreestimó la UPA en 2T25, 3T25 y 2T26 (−12.8% a −37%) [9][10].
+8. **Promesas contra resultados.** No hay guía. El consenso sobreestimó la UPA en 2T25 y 3T25 (MarketBeat, por ADS: −37% y −27%) [14] y en 2T26 (−12.8% vs TradingView) [10].
 9. **Partes relacionadas.** ITA, vehículo del socio estratégico (Fernando Chico Pardo), cobraba asistencia técnica. Se internaliza fusionando ITA contra acciones, con JPMorgan como asesor y el comité de auditoría como revisor [6].
 10. **Asignación de capital.** Dividendos de Ps 80 por acción en 2025 (50 + 15 + 15) y de Ps 30 en 2026 (10 + 10 + 10) [12][6]. Adquisiciones de URW-EUA (dic-25) y CPC (VE de R$13.7 mil M ≈ 6.9x el EBITDA al 100% y 10.5x el proporcional) [5].
 
