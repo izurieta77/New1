@@ -37,6 +37,7 @@
 ## Conflictos de interés y antecedentes (verificados)
 
 - **Caso LUNA con la Fiscalía General de Nueva York (fuente primaria).**
+  - **En una línea:** en 2025, Galaxy cerró con **US$200 M** el caso de la Fiscalía General de Nueva York por su promoción de LUNA. Lo verifiqué en la fuente primaria; el monto se paga en 4 partes hasta 2028 (detalle abajo).
   - **Documento:** *Assurance of Discontinuance* No. 25-011 de la Fiscalía General de Nueva York (Letitia James), firmado por Galaxy el 24-mar-2025 y por la Fiscalía el **27-mar-2025**: https://ag.ny.gov/sites/default/files/settlements-agreements/galaxy-digital-holding-ltd-et-al-assurance-of-discontinuance-2025.pdf
   - **Acuerdo:** Galaxy Digital Holdings Ltd. y cuatro filiales pagan al Estado de Nueva York **US$200,000,000 como devolución de ganancias** para cerrar la investigación (¶122, p. 37 del PDF).
   - **Conducta investigada:** promovió LUNA mientras vendía sin revelar que tenía la intención de hacerlo. La ley aplicada es la Martin Act y el art. 63(12) de la Ley Ejecutiva de Nueva York. El periodo va del 27-oct-2020 al 18-may-2022.

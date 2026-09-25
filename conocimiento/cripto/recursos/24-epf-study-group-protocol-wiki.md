@@ -8,7 +8,7 @@
 | Campo | Dato |
 |---|---|
 | Año | 2024: el grupo de estudio arrancó en 2024. La wiki se sigue editando; el último commit que cloné es del 17-may-2026 |
-| Autor | Ethereum Protocol Fellowship (programa de la Ethereum Foundation), con Mario Havel a cargo y la comunidad del grupo de estudio. Ponentes del currículo original: Alex Stokes, lightclient, Hsiao-Wei Wang, Ben Edgington, Dankrad Feist, Barnabé Monnot, Piper Merriam, Francesco D'Amato, entre otros |
+| Autor | Ethereum Protocol Fellowship (programa de la Ethereum Foundation) y la comunidad del grupo de estudio. Ponentes del currículo original: Mario Havel (introducción y taller de clientes), Alex Stokes, lightclient, Hsiao-Wei Wang, Ben Edgington, Dankrad Feist, Barnabé Monnot, Piper Merriam, Francesco D'Amato, entre otros |
 | Tipo | Curso (clases grabadas en YouTube y StreamEth) más una wiki técnica comunitaria |
 | Nivel | Experto: pensado para quien quiere contribuir al núcleo del protocolo, no para programar dapps |
 | Costo | Gratis. Wiki bajo CC BY-SA 4.0 (archivo LICENSE del repositorio) |
