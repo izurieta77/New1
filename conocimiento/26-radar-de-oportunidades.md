@@ -24,7 +24,7 @@ Quien se titula en este módulo debe poder:
 
 ### 2.1 Una oportunidad es una transferencia de riqueza con causa identificable
 
-En un mercado sin fricciones, el rendimiento esperado de exceso es compensación por riesgo; todo lo que exceda eso sale del bolsillo de alguien. Si compras o vendes esperando un rendimiento de exceso, debes poder responder "¿quién está del otro lado?", y al responder especificas tu ventaja [1]. **Hecho:** la versión verificada es de BlueMountain (12-feb-2019) y solo la firma Mauboussin; la coautoría de Callahan queda **(no verificada)**.
+En un mercado sin fricciones, el rendimiento esperado de exceso es compensación por riesgo; todo lo que exceda eso sale del bolsillo de alguien. Si compras o vendes esperando un rendimiento de exceso, debes poder responder "¿quién está del otro lado?", y al responder especificas tu ventaja [1]. **Hecho:** la versión verificada (BlueMountain Investment Research, 12-feb-2019, 51 páginas, con presentación de Andrew Feldstein) la firma **solo** Michael J. Mauboussin, como *Director of Research*. Atribuirle coautoría a Dan Callahan **no tiene sustento** en esa versión (no verificado que exista otra).
 
 Las cuatro fuentes de ineficiencia [1]:
 
@@ -37,7 +37,7 @@ Las cuatro fuentes de ineficiencia [1]:
 
 **Hecho:** el *checklist* original [1] tiene 15 preguntas, una o más por fuente. Van desde "¿hay persecución de desempeño?" hasta "¿operas contra vendedores forzados?", "¿puedes tomar el otro lado de los flujos?" y "¿obtuviste **legalmente** información que otros no tienen?". El sistema lo adapta en §6.7.
 
-**Hecho:** según datos de Taiwán citados en [1], los institucionales ganan 1.5 pp de exceso y los individuos pierden 3.8 pp. Barber-Odean [27] estudian 66,465 hogares (1991-1996): los que más operan ganan 11.4% anual contra 17.9% del mercado, con una rotación de alrededor de 75% al año. **Inferencia:** el minorista promedio es la contraparte que los demás explotan. Este sistema debe dejar de serlo antes de pretender explotar a alguien.
+**Hecho:** según datos de Taiwán citados en [1], los institucionales ganan 1.5 pp de exceso y los individuos pierden 3.8 pp. Barber-Odean [27] estudian 66,465 hogares (1991-1996): los que más operan ganan 11.4% anual contra 17.9% del mercado. El hogar **promedio** gana 16.4% y rota 75% de su cartera al año; la rotación de los más activos es mucho mayor. **Inferencia:** el minorista promedio es la contraparte que los demás explotan. Este sistema debe dejar de serlo antes de pretender explotar a alguien.
 
 ### 2.2 Las ventajas reales de un inversionista pequeño asistido por IA
 
@@ -47,8 +47,8 @@ Las cuatro fuentes de ineficiencia [1]:
 | **Sin *benchmark* ni riesgo de carrera** | Puede concentrarse o quedarse en efectivo sin que lo despidan | Apéndice de agencia en [1] | El marcador de la arena sí es un *benchmark* (arena/investigacion/03) |
 | **Sin redenciones ni margen** | Compra cuando otros están obligados a vender | [2][5] | Solo si hay efectivo en el estrés |
 | **Horizonte flexible** | Arbitraje de tiempo contra quien se evalúa por trimestre | [1] | Se pierde si el sistema entra en pánico por su *drawdown* |
-| **Amplitud de análisis con LLM** | Lee estados financieros y documentos regulatorios a escala; supera al analista mediano en dirección de utilidades | Kim-Muhn-Nikolaev [29] | **No** es velocidad de ejecución: sin API, la orden en GBM es manual |
-| **Lectura político-regulatoria del dueño** | Proceso, tiempos e incentivos del gobierno (cap. 24 §6.2) | Cap. 24 | **Nunca** información privilegiada: la LMV sanciona su uso (artículos no verificados) |
+| **Amplitud de análisis con LLM** | Lee estados financieros y documentos regulatorios a escala | **Débil.** El estudio más citado, Kim-Muhn-Nikolaev [29], fue **retirado** por sus autores el 20-feb-2025 por "inconsistencias en los datos y análisis". Lopez-Lira-Tang [28] muestra deriva predecible, pero decreciente con la adopción. Grado C | **No** es velocidad de ejecución: sin API, la orden en GBM es manual |
+| **Lectura político-regulatoria del dueño** | Proceso, tiempos e incentivos del gobierno (cap. 24 §6.2) | Cap. 24 | **Nunca** información privilegiada. En la LMV (última reforma DOF 14-11-2025) [40], el art. 362 la define, el 363 presume quién la tiene (fr. X: quien opere fuera de su patrón histórico con acceso razonable a *insiders*) y el 364 prohíbe operar con ella. El art. 380 castiga transmitirla con 3-15 años de prisión y el 381 castiga operar con ella con 2-6 años, o 4-12 si el beneficio excede 100,000 días de salario |
 
 Desventajas que hay que asumir: no hay corto en el SIC (cap. 15), el SIC no permite fracciones y un solo título de una acción cara puede superar el tope de concentración (arena/investigacion/04), la comisión es de 0.25% + IVA por lado (≈0.58% de ida y vuelta, más un *spread* de 0.10-0.60%; arena/investigacion/01) y el tipo de cambio mete un ruido trimestral de ±8-11% en MXN (cap. 15 §5.2).
 
@@ -75,22 +75,22 @@ Una ineficiencia pasa por cuatro etapas: descubrimiento → publicación → arb
 | Obra | Hallazgo cuantificado | Enlace | Grado (para nosotros) |
 |---|---|---|---|
 | Mauboussin 2019, *Who Is On the Other Side?* | Taxonomía BAIT y *checklist* de 15 preguntas. Institucionales +1.5 pp vs individuos −3.8 pp (Taiwán) | [1] | B (marco) |
-| Coval-Stafford 2007, JFE | 1980-2003. Venta forzada (≥15% de dueños con salidas ≥5%): −10.1% anormal en el trimestre (t = −11.5) y +7.74% de rebote en los meses 4-12. Umbrales más duros: −18.1% y +15.0%. Estrategia *long-short* de adelantarse: 27.9-45.4% anual anormal, **factible solo 95 de 168 meses** y sin costos de información | [2] | B en teoría, C ejecutable |
+| Coval-Stafford 2007, JFE | 1980-2003. Venta forzada (≥15% de dueños con salidas ≥5%): −10.1% anormal en el trimestre (t = −11.5) y +7.74% de rebote en los meses 4-12. Con umbral más duro (≥25% de dueños): −18.1% de t−2 a t+3 y +15.0% en los tres trimestres siguientes. El *long-short* que compra ventas forzadas de hace 1-4 trimestres y vende en corto a quienes las sufren hoy rinde 27.9-45.4% anual anormal, pero **solo es factible 95 de 168 meses**. La versión **solo larga**, la única posible en GBM, va de 0.08% al mes (t = 0.14) a ~1.0% (t = 2.12), y solo es significativa con pesos iguales y control de momentum. Adelantarse con flujos pronosticados da 0.96-2.36% al mes, con significancia mixta, y la mitad si se controla por momentum. Nada de esto descuenta costos de información | [2] | B en teoría, C− ejecutable (solo largo) |
 | Wardlaw 2020, JF | La medida estándar de presión por flujos contiene mecánicamente el rendimiento realizado. Corregida, la caída trimestral es "bastante despreciable" y **sin reversión posterior** | [3] | A como crítica |
 | Lou 2012, RFS | Los flujos predecibles de fondos pronostican rendimientos a un año y luego revierten. Explican la persistencia de fondos, el *smart money* y parte del momentum | [4] | B |
 | Ellul-Jotikasthira-Lundblad 2011, JFE | Las aseguradoras tienen más de un tercio de los bonos corporativos grado inversión. Las degradaciones fuerzan ventas, con caída y reversión, mayores cuando la industria está en problemas | [5] | B (bonos; no accesible desde GBM) |
-| Hong-Lim-Stein 2000, JF | El momentum cae con el tamaño. Con baja cobertura residual de analistas rinde 1.13% al mes, contra 0.72% con alta cobertura (diferencia t = 3.50). El efecto es más fuerte en perdedores. Empresas sin analistas: 77.3% (1976) → 36.9% (1996) | [6] | B |
+| Hong-Lim-Stein 2000, JF 55(1) | Pasando las acciones más pequeñas, el momentum cae con el tamaño. Con baja cobertura residual de analistas rinde 1.13% al mes, contra 0.72% con alta cobertura (diferencia de 0.42 pp, t = 3.50). El efecto de la cobertura viene de los perdedores: las malas noticias viajan lento. Empresas sin analistas: 77.3% (1976) → 36.9% (1996) | [6] | B |
 | Chan-Jegadeesh-Lakonishok 1996, JF | El rendimiento pasado y la sorpresa de utilidades predicen derivas por separado. Los analistas ajustan lento, sobre todo en los perdedores | [23] | B |
-| Greenwood-Sammon 2025, JF | Inclusión en el S&P 500: 3.4% (80s) y 7.6% (90s) → 0.8% en 2010-2020 (versión NBER 2022); la versión publicada reporta 7.4% → 0.3%. Exclusiones: −0.6%. Causas: migraciones desde el MidCap, predictibilidad y *front-running* | [7] | A (como muerte) |
+| Greenwood-Sammon 2025, JF 80(2) | Inclusión en el S&P 500: 3.4% (80s) y 7.6% (90s) → 0.8% en 2010-2020 (versión NBER, dic-2022). La versión publicada (abr-2025) reporta 7.4% en los 90 → "menos de 1%" en la última década. Exclusiones en 2010-2020: −0.6% (NBER) y +0.1% promedio (JF). Causas: migraciones desde el MidCap, predictibilidad y *front-running*. El efecto también cayó en otras familias de índices | [7] | A (como muerte) |
 | Petajisto 2011, JEF | 1990-2005. Russell 2000: +4.7% en altas y −4.6% en bajas. S&P 500: +8.8% y −15.1%. Costo oculto para el fondo indexado: 38-77 pb al año (Russell 2000) y 21-28 pb (S&P 500) | [8] | B (histórico) |
-| Harvey-Mazzoleni-Melone 2025, NBER w33554 | US$20 billones en pensiones y *target date* rebalancean a pesos fijos. Con acciones sobreponderadas, el rendimiento accionario cae 17 pb al día siguiente. Costo de ~US$16 mil millones al año | [9] | B (C ejecutable) |
-| Alldredge-Blank 2019, JFR | 52,532 *insiders*, 1986-2014. Compras dentro de 2 días de la compra de un colega: +2.1% anormal el mes siguiente, 0.9 pp más que las compras solitarias | [15] | B bruto / C neto |
+| Harvey-Mazzoleni-Melone 2025, NBER w33554 | Los institucionales rebalancean billones de dólares por calendario o por bandas, sobre un mercado que "podría exceder US$20 billones" (activos de retiro en acciones y deuda). Con acciones sobreponderadas, el rendimiento accionario cae 17 pb al día siguiente. Costo de ~US$16 mil millones al año (~US$200 por hogar) | [9] | B (C ejecutable) |
+| Alldredge-Blank 2019, JFR 42(2) | Los *insiders* agrupan operaciones con colegas cercanos, más cuando hay baja atención y alta asimetría. Las compras agrupadas rinden **más de 2%** anormal el mes siguiente (resumen). Muestra de 52,532 *insiders* (1986-2014) y diferencia de 0.9 pp contra compras solitarias: **(no verificado en esta revisión)** | [15] | B bruto / C neto |
 | Brune-Hens-Rieger-Wang 2015 | "*War puzzle*": si hay fase previa, la probabilidad creciente de guerra baja los precios y el estallido los **sube**. Una guerra sorpresa los baja | [16] | B |
 | Berkman-Jacobsen-Lee 2011, JFE | 447 crisis políticas (1918-2006). El riesgo de crisis sube el E/P y el rendimiento por dividendo. Las industrias más expuestas pagan más | [17] | B |
 | Daniel-Moskowitz 2016, JFE | El momentum se desploma en estados de pánico, tras caídas y con alta volatilidad, **cuando el mercado rebota**. La versión dinámica duplica el Sharpe | [24] | A (como riesgo) |
 | Asness-Frazzini-Pedersen 2019, RAS | QMJ rinde en EUA y 24 países. La calidad se paga poco. La prima tocó mínimos en la burbuja de internet. Las valuaciones bajas de la calidad predicen más QMJ | [25] | B |
 | Keloharju-Linnainmaa-Nyberg 2016, JF | Comprar por el rendimiento histórico del mismo mes calendario: 13% anual | [18] | C (costos, rotación) |
-| Xu-McConnell 2008, FAJ | 1926-2005: todo el exceso de mercado ocurrió en los 4 días de cambio de mes. Se observa en 31 de 35 países | [20] | C hoy (ver §5.3) |
+| McConnell-Xu 2008, FAJ 64(2) | 1926-2005: fuera del cambio de mes, el inversionista no recibió premio por riesgo de mercado. Se observa en 31 de 35 países y no se explica por flujos de fin de mes | [20] | C hoy (ver §5.3) |
 | Lucca-Moench 2015 / Kurov et al. 2021 | +49 pb en las 24 h previas al FOMC (1994-2011). **Desaparece** después de 2015 | [22] | D |
 
 ---
@@ -99,17 +99,17 @@ Una ineficiencia pasa por cuatro etapas: descubrimiento → publicación → arb
 
 ### 4.1 Flujos mecánicos: más grandes, más predecibles, más disputados
 
-- **Hecho:** los activos pasivos en EUA llegaron a US$19.1 billones contra US$16.2 billones de los activos (oct-2025). En 2025 solo 38% de los fondos activos le ganó a su par pasivo, contra 42% en 2024. A 10 años, solo 21% sobrevivió y le ganó (Morningstar, vía [36]).
+- **(No verificado):** los activos pasivos en EUA habrían llegado a US$19.1 billones contra US$16.2 billones de los activos (oct-2025). En 2025 solo 38% de los fondos activos le habría ganado a su par pasivo, contra 42% en 2024, y a 10 años solo 21% habría sobrevivido y ganado (Morningstar, vía [36]). Las cifras vienen de resúmenes de búsqueda; Morningstar y CNBC bloquearon la lectura directa el 25-sep-2026. La dirección (pasivo mayor que activo y minoría de activos ganadores) es consistente con barómetros anteriores; las cifras exactas no se usan para decidir.
 - **Hecho:** la inclusión en el S&P 500 dejó de pagar [7], a pesar de que hay más dinero indexado que nunca. **Inferencia:** más dinero mecánico no significa más oportunidad. Significa más competencia para adelantarse, porque la regla es pública.
 - **Hecho:** desde 2026 el Russell se reconstituye **dos veces al año**. La reconstitución de diciembre, la primera en más de tres décadas, tiene *rank day* el 30-oct-2026, listas preliminares el 13-nov, bloqueo desde el 30-nov y entrada en vigor al cierre del 11-dic-2026 [11].
 - **Hecho:** el rebalanceo de pensiones a pesos fijos es predecible y cuesta ~US$16 mil millones al año [9].
-- **Hecho (arXiv, sin revisión de pares):** en Corea, en 2026, especuladores se adelantaron al rebalanceo de cierre de ETFs apalancados. Las acciones afectadas revierten ~75% de su reacción inicial al cierre siguiente, y a los tenedores minoristas les costó 17.6% de lo invertido [10]. **Inferencia:** los apalancados que permite el perfil arena tienen contraparte depredadora al cierre; no se opera en los últimos minutos del día en sus subyacentes.
+- **Hecho (arXiv, sin revisión de pares):** en Corea, en 2026, especuladores se adelantaron al rebalanceo de cierre de ETFs apalancados. Las acciones ligadas a esos ETFs revierten ~75% de su reacción inicial a noticias de EUA previas a la apertura al cierre siguiente; la volatilidad anualizada de SK Hynix pasó de 100.0% a 136.7% en nueve semanas, y a los tenedores, mayoritariamente minoristas, les costó 17.6% de lo invertido [10]. **Inferencia:** los apalancados que permite el perfil arena tienen contraparte depredadora al cierre; no se opera en los últimos minutos del día en sus subyacentes.
 
 ### 4.2 Desarmes de *crowding*: la venta forzada moderna
 
-- **Hecho:** entre el 1-jun y el 25-jul-2025 los *quants* de renta variable perdieron ~4.2% (Goldman Sachs, prima de corretaje, citado por MSCI). Ganaron las acciones de baja calidad, alta beta y mucho *short interest*. La interacción entre el *short interest* y los factores amplificó las pérdidas [32].
-- **Hecho:** en octubre de 2025 hubo otro desplome del momentum (Bloomberg, 24-oct-2025, titular) [35]. En la primera quincena de 2026 los *quants* perdieron alrededor de 1% según Goldman y 2.8% según UBS, en "el mayor desapalancamiento de un día desde fines de diciembre" (Hedgeweek, 22-ene-2026) [33].
-- **Hecho:** julio de 2026 fue el peor mes de la canasta VIP de *hedge funds* de Goldman contra el S&P 500 en más de 20 años (CNBC, 21-ago-2026, titular verificado) [34]. El detonante fue la reversión del *trade* de IA, no un deterioro de ingresos (fuente secundaria, no verificado).
+- **Hecho:** entre el 1-jun y el 25-jul-2025 los *quants* de renta variable perdieron 4.2% (Goldman Sachs, prime services, citado por MSCI el 30-oct-2025), mientras el mercado de EUA subía ~8% a máximos. Ganaron los factores de beta y liquidez (*short interest*, volatilidad residual, tamaño); perdieron rentabilidad y momentum. El 84% de las acciones más vendidas en corto (quintil superior) tenía alta exposición a esos factores. MSCI lo atribuye a la interacción entre factores en las acciones más vendidas en corto y a un desarme parcial de *crowding* [32].
+- **Hecho (solo titular):** en octubre de 2025 hubo otro desplome del momentum (Bloomberg, 24-oct-2025) [35]. Lo corrobora Hedgeweek, que en enero de 2026 habla de la "peor caída desde octubre" [33]. En la primera quincena de 2026 los *quants* perdieron alrededor de 1% según Goldman y 2.8% según UBS, en "el mayor desapalancamiento de un día desde fines de diciembre" (Hedgeweek, 22-ene-2026) [33].
+- **Hecho (titular de CNBC y fuente secundaria, 21-ago-2026):** julio de 2026 fue el peor mes de la canasta *Hedge Fund VIP* de Goldman contra el S&P 500 en más de dos décadas de datos [34]. Según la nota de estrategas de Goldman (Ben Snider) citada por WallStreetSync, los *hedge funds* llegaron al segundo trimestre "*all in on AI*", julio fue uno de los desapalancamientos más bruscos de la década, con ventas correlacionadas de semiconductores y megacaps, y aun después el apalancamiento y la exposición a IA seguían sobre su promedio de largo plazo. El cuerpo de la nota de CNBC no fue accesible (403); que el detonante no haya sido un deterioro de ingresos queda **(no verificado)**.
 - **Inferencia:** en 2025-2026 la venta forzada relevante para las acciones grandes del SIC la hacen los *hedge funds* que recortan apalancamiento bruto, no los fondos mutuos. Se reconoce porque las acciones más populares caen juntas, sin noticia de fundamentales, y las correlaciones se rompen [32]. Es la oportunidad técnica más frecuente del periodo y la trampa más frecuente para quien compra momentum tarde [24].
 
 ### 4.3 Caídas del mercado 2025-2026: qué pagó comprar
@@ -131,19 +131,19 @@ Una ineficiencia pasa por cuatro etapas: descubrimiento → publicación → arb
 - IPC en 64,264.2, **−10.2%** de su máximo del 11-feb-2026 (71,601.4).
 - VIX en 15.67.
 
-El contexto macro está en los caps. 16, 23 y 24: la Fed subió 25 pb el 16-sep y el bono a 10 años está en 5.11%.
+El contexto macro está en los caps. 16, 23 y 24. **Hecho:** la Fed subió 25 pb el 16-sep-2026, a 3.75-4.00%, con votación de 12-0 [41], y el bono del Tesoro a 10 años cerró en 5.11% el 23-sep, su nivel más alto desde julio de 2007 (FRED, DGS10) [42].
 
 ### 4.4 IA: la ventaja de velocidad sobre noticias públicas ya se compitió
 
 - **Hecho:** Lopez-Lira y Tang (v6, 28-oct-2025) encuentran que GPT-4 acierta ~90% en la reacción inicial, **no operable**, y predice la deriva siguiente, sobre todo en acciones chicas y noticias negativas. Pero los rendimientos de la estrategia **caen a medida que sube la adopción de LLMs** [28].
-- **Hecho:** con estados financieros anónimos, GPT-4 supera al analista mediano en la dirección de las utilidades, iguala a un modelo de ML especializado y produce estrategias con mayor Sharpe [29].
+- **Hecho:** el estudio de Kim-Muhn-Nikolaev [29], según el cual GPT-4 con estados financieros anónimos supera al analista en la dirección de las utilidades e iguala a un modelo de ML especializado, fue **retirado** de arXiv (v3, 20-feb-2025). La razón: un coautor encontró "inconsistencias en los datos y análisis" al intentar replicarlo. Al 25-sep-2026 no se encontró versión publicada. **No se usa como evidencia**; queda como hipótesis por probar con pronósticos propios fuera de muestra.
 - **Hecho:** los pronósticos de un LLM sobre periodos anteriores a su fecha de corte están contaminados por información del futuro. Esa "propensión de anticipación" colapsa a cero después del corte, y con ella la ventaja de precisión (Gao-Jiang-Yan, 29-dic-2025, revisado el 12-jun-2026) [30].
 - **Hecho:** un artículo de arXiv sobre el "decaimiento del alfa por *crowding*" (dic-2025) fue **retirado** a los 16 días por validación empírica insuficiente [31].
-- **Inferencia:** la IA no da ventaja por leer titulares más rápido; en eso compite contra todos. La ventaja está en leer lo **largo, complejo, local y en español** que casi nadie procesa: reportes a la BMV, eventos relevantes, DOF, iniciativas y resoluciones regulatorias (cap. 22). Además, hay que hacerlo con pronósticos fechados fuera de muestra y sin creerle al *backtest* de un LLM sobre fechas anteriores a su corte.
+- **Inferencia (grado C: hipótesis sin estudio replicado que la respalde, porque [29] fue retirado):** la IA no da ventaja por leer titulares más rápido; en eso compite contra todos. La ventaja posible está en leer lo **largo, complejo, local y en español** que casi nadie procesa: reportes a la BMV, eventos relevantes, DOF, iniciativas y resoluciones regulatorias (cap. 22). Además, hay que hacerlo con pronósticos fechados fuera de muestra y sin creerle al *backtest* de un LLM sobre fechas anteriores a su corte.
 
 ### 4.5 Cobertura de analistas
 
-- **Hecho:** tras MiFID II, la cobertura de las pymes europeas no cayó al principio, pero sí cayó después de que se permitió volver a agrupar el pago de investigación y ejecución (estudio de largo plazo, Springer 2024) [37]. **(No verificado:** las cifras de cobertura de emisoras mexicanas medianas en 2026).
+- **Hecho:** tras MiFID II, la cobertura cayó sobre todo en las grandes empresas y las pymes europeas no se vieron afectadas al principio. Su cobertura sí cayó después de que se permitió volver a agrupar el pago de investigación y ejecución, lo que sugiere que los intermediarios no usan esa opción (Bender, Cestonaro, Clapham y Gomber, *J. Business Economics*, en línea el 14-oct-2024) [37]. **(No verificado:** las cifras de cobertura de emisoras mexicanas medianas en 2026).
 - **Inferencia:** en la BMV hay emisoras con uno o ningún analista. Ahí aplica Hong-Lim-Stein [6], con dos matices: el efecto es más fuerte en **malas noticias** (las omisiones y los perdedores tardan más en reflejarse) y la liquidez puede comerse el *edge* (cap. 11).
 
 ---
@@ -154,9 +154,9 @@ El contexto macro está en los caps. 16, 23 y 24: la Fed subió 25 pb el 16-sep 
 
 | Oportunidad | Quién está del otro lado y por qué pierde | Magnitud documentada | Hoy, neta y ejecutable desde GBM | Grado |
 |---|---|---|---|---|
-| **Ventas forzadas de fondos** | Fondo con redenciones: vende lo líquido, no lo que quiere | −10.1% y +7.74% [2] | Tenencias con 45-60 días de rezago; Wardlaw [3] cuestiona la medida. Marco, no señal | C |
+| **Ventas forzadas de fondos** | Fondo con redenciones: vende lo líquido, no lo que quiere | −10.1% y +7.74% [2]; solo largo, de 0.08% a ~1.0% al mes | Tenencias con 45-60 días de rezago; Wardlaw [3] cuestiona la medida. Marco, no señal | C− |
 | **Desapalancamiento de *hedge funds*** | Fondo con límite de bruto o margen | Caídas agudas 2025-2026 [32]-[35] | Visible al día: las acciones "populares" caen sin noticia. Puede seguir cayendo | C |
-| **Rebalanceos e índices** | Fondo indexado que minimiza *tracking error* | S&P: 7.6% → 0.3-0.8% [7]; Russell 2000: ±4.7% [8]; pensiones: −17 pb [9] | El anuncio ya no paga. Anticipar exige modelar la elegibilidad | D (anuncio) / C |
+| **Rebalanceos e índices** | Fondo indexado que minimiza *tracking error* | S&P: 7.4-7.6% → < 1% [7]; Russell 2000: ±4.7% [8]; pensiones: −17 pb [9] | El anuncio ya no paga. Anticipar exige modelar la elegibilidad | D (anuncio) / C |
 | **Sobrerreacción geopolítica o política** | Volatilidad objetivo y paridad de riesgo que recortan por regla; minorista en pánico | Mediana −6% en 17 días hábiles (cap. 23); *war puzzle* [16] | Sirve en índices y *shocks* externos, no en *shocks* institucionales (§4.3) | B (índice) / C |
 | **Comprar tras caídas grandes** | Vendedores con límite de VaR, margen u horizonte corto | §5.2 | −10%: nada. −20%/−30%: mejor mediana, cola brutal | B− (índice) |
 | **Baja cobertura de analistas** | Nadie: atención limitada | +0.42 pp/mes de momentum [6] | BMV y mid caps del SIC; decide la liquidez | C |
@@ -169,7 +169,7 @@ El contexto macro está en los caps. 16, 23 y 24: la Fed subió 25 pb el 16-sep 
 
 ### 5.2 Comprar después de caídas: la evidencia completa (cálculo propio [38])
 
-Método. Un evento es el **primer cierre** que queda X% debajo del máximo histórico previo. No se cuenta otro evento del mismo umbral hasta que haya un máximo nuevo; por eso el periodo 1929-1954 aporta uno solo. Se usa el índice de precio y se reporta el rendimiento a H días hábiles.
+Método. Un evento es el **primer cierre** que queda X% debajo del máximo histórico previo. No se cuenta otro evento del mismo umbral hasta que haya un máximo nuevo; por eso el periodo 1929-1954 aporta uno solo. Se usa el índice de precio y se reporta el rendimiento a H días hábiles (3 meses = 63, 12 meses = 252, 3 años = 756). La **caída adicional** es el cierre mínimo de los 756 días hábiles siguientes contra el cierre del evento. Todas las cifras se replicaron el 25-sep-2026 con los mismos datos.
 
 **S&P 500 (1927-2026):**
 
@@ -209,13 +209,13 @@ Lectura (Inferencia):
 | | 2013-2025 | 6.0% vs 6.6%; el invierno gana 5 de 13 | **Invertido** |
 | Halloween en el IPC | 2009-2025 | 5.4% vs 2.2%; el invierno gana 9 de 17 | Moneda al aire |
 
-**Veredicto:** Xu-McConnell [20] y Bouman-Jacobsen [21] describen un mundo que ya no existe en EUA. La estacionalidad del mismo mes (Keloharju et al. [18], Heston-Sadka [19]) es transversal, exige rotación alta y queda fuera de alcance con los costos de GBM. **Grado D como señal de entrada.** Sirve, cuando mucho, para **no pelear** con flujos de fin de mes o de fin de año en el momento de ejecutar.
+**Veredicto:** McConnell-Xu [20] y Bouman-Jacobsen [21] describen un mundo que ya no existe en EUA. La estacionalidad del mismo mes (Keloharju et al. [18], Heston-Sadka [19]) es transversal, exige rotación alta y queda fuera de alcance con los costos de GBM. **Grado D como señal de entrada.** Sirve, cuando mucho, para **no pelear** con flujos de fin de mes o de fin de año en el momento de ejecutar.
 
 ### 5.4 Oportunidades que murieron o se volvieron trampas
 
 | Antes | Ahora | Causa | Fuente |
 |---|---|---|---|
-| Comprar el anuncio de inclusión en el S&P 500 | 0.3-0.8% | Predictibilidad y *front-running* | [7] |
+| Comprar el anuncio de inclusión en el S&P 500 | < 1% (0.8% en la versión NBER) | Predictibilidad y *front-running* | [7] |
 | Deriva pre-FOMC | Desaparecida después de 2015 | Publicación y menos incertidumbre | [22] |
 | TOM y Halloween en EUA | ≈0 o invertidos desde 2013 | Publicación | §5.3 |
 | Señales de titulares con LLM | Caen al subir la adopción | Competencia | [28] |
@@ -232,7 +232,7 @@ Lectura (Inferencia):
 
 1. **Sin contraparte nombrada no hay tesis.** Se escribe en una línea: "Del otro lado está ___, que opera por ___ (restricción, mandato, sesgo o falta de atención) y deja de hacerlo cuando ___".
 2. **Lo que la ventaja propia permite explotar:** restricciones ajenas (T), complejidad y abandono (I), horizonte (A). La velocidad no está en la lista.
-3. **El costo manda.** Umbral mínimo: *edge* neto esperado ≥ 2 × (0.58% de comisión de ida y vuelta + *spread* estimado + costo cambiario si hay conversión). Con una orden de 5,000 MXN y *spread* de 0.30%, el costo es 0.88%: se exige un *edge* neto ≥ 1.76%, es decir, bruto ≥ ≈2.6% por operación.
+3. **El costo manda.** Umbral mínimo: *edge* neto esperado ≥ 2 × (0.58% de comisión de ida y vuelta + *spread* estimado + costo cambiario si hay conversión). Con una orden de 5,000 MXN y *spread* de 0.30%, el costo es 0.88%: se exige un *edge* neto ≥ 1.76%, es decir, bruto ≥ ≈2.6% por operación. En la arena manda además `parametros.json`: solo se toman *swings* con movimiento esperado de **5% o más**, con orden mínima de 5,000 MXN y rotación máxima de **1.5 veces el capital al mes**. Rige el más estricto de los dos filtros.
 4. **Un pronóstico registrado antes de la operación**, siempre (`herramientas/pronosticos.py`).
 5. **Ningún dinero real en fase 0.** `prioridad_actual.fase = 0` en `config/parametros.json`.
 
@@ -270,7 +270,7 @@ Lectura (Inferencia):
 - **55-69:** vigilancia, con alerta del disparador que la subiría de rango.
 - **< 55:** descarte, registrado con su razón. Se revisa solo si cambia la contraparte o el catalizador.
 
-Máximo 8 operaciones al mes en la arena (`operaciones_max_mes`). Si hay más candidatos ≥ 70 que cupo, se elige por puntaje ajustado por correlación: se toma el mejor y se vuelve a puntuar el resto con la cartera nueva.
+En la arena, el límite es el menor entre 8 operaciones al mes (`operaciones_max_mes`) y una rotación de 1.5 veces el capital (`rotacion_max_mensual_x_capital`). Si hay más candidatos ≥ 70 que cupo, se elige por puntaje ajustado por correlación: se toma el mejor y se vuelve a puntuar el resto con la cartera nueva.
 
 ### 6.3 *Pipeline*
 
@@ -318,7 +318,7 @@ Máximo 8 operaciones al mes en la arena (`operaciones_max_mes`). Si hay más ca
 | **Estrés**: VIX > 30, *spreads* HY abriéndose rápido, correlaciones → 1, redenciones y llamadas de margen | **Ventas forzadas** [2][5]; primeras compras escalonadas en índices después de −20% (§5.2) o de un VIX ≥ 30 (cap. 17); *shocks* externos que no cambian instituciones (cap. 23) | B− (índice) | Comprar acciones individuales apalancadas; confiar en el bono largo si el *shock* es inflacionario (cap. 17) | Caída adicional de −25% o más; quedarse sin efectivo |
 | **Recuperación**: índice recupera la SMA200, *spreads* se cierran, amplitud > 60% | Calidad y valor castigados; *small caps* y baja cobertura [6]; volver a tendencia cuando se confirme | B | **Momentum**: su *crash* típico ocurre aquí [24] | Llegar tarde o quedarse defensivo |
 
-**Diagnóstico al 25-sep-2026 (Inferencia, a validar con `tablero.py` y el cap. 13):** EUA está en **expansión tardía con endurecimiento monetario**, en la frontera con la desaceleración: S&P a −1.2% del máximo, VIX en 15.7, Fed subiendo, bono a 10 años en máximos de 12 meses y desarmes de *crowding* recurrentes. México está en **corrección** (IPC −10.2%) sin señal de estrés. Consecuencias:
+**Diagnóstico al 25-sep-2026 (Inferencia, a validar con `tablero.py` y el cap. 13):** EUA está en **expansión tardía con endurecimiento monetario**, en la frontera con la desaceleración: S&P a −1.2% del máximo, VIX en 15.7, Fed subiendo, bono a 10 años en su máximo desde 2007 y desarmes de *crowding* recurrentes. México está en **corrección** (IPC −10.2%) sin señal de estrés. Consecuencias:
 - tendencia y momentum solo con penalización por *crowding*;
 - preparar efectivo y un protocolo para ventas forzadas;
 - ninguna compra "porque bajó 10%".
@@ -329,12 +329,12 @@ Máximo 8 operaciones al mes en la arena (`operaciones_max_mes`). Si hay más ca
 |---|---|---|---|
 | 30-oct-2026 | *Rank day* del Russell (diciembre) | Flujos de índice (T) | [11] |
 | 3-nov-2026 | Intermedias de EUA | *Shock* político tipo C | Caps. 23 y 24 |
-| 4-nov-2026 | *Refunding* del Tesoro | Tasas | Cap. 24 |
+| 4-nov-2026 | Anuncio trimestral de *refunding* del Tesoro (confirmado por el Tesoro el 5-ago) | Tasas | Cap. 24; [43] |
 | 13-nov-2026 | Listas preliminares del Russell | Flujos (T); en el SIC solo los nombres listados | [11] |
 | nov-dic 2026 | Venta de pérdidas fiscales en EUA | Estacionalidad (D como señal) | §5.3 |
 | 11-dic-2026 | Reconstitución efectiva del Russell al cierre | No operar al cierre de ese día | [11] |
 | dic-2026 | Rebalanceo trimestral del S&P (convención del tercer viernes: 18-dic; fecha no confirmada) | Flujos (D para anuncios) | [7] |
-| 10-ene-2027 | Vence la tregua arancelaria EUA-China | *Shock* tipo C/D en tecnología | Cap. 23 §6.6 |
+| 10-ene-2027 | Vence la extensión de dos meses de la tregua EUA-China acordada el 24-sep-2026; hasta esa fecha China aplaza sus restricciones a la exportación de tierras raras, "en pausa, no archivadas" | *Shock* tipo C/D en tecnología | Cap. 23 §6.6; [44] |
 | Continuo | Temporadas de reportes (oct-nov y ene-feb) | Revisiones y sorpresas (B compuesta) | Cap. 15 |
 | Disparadores | S&P o IPC en −20% o −30%; VIX ≥ 30; caída de las acciones populares entre *hedge funds* sin noticia | Estrés y ventas forzadas | §5.2, cap. 17 |
 
@@ -381,7 +381,7 @@ Máximo 8 operaciones al mes en la arena (`operaciones_max_mes`). Si hay más ca
 6. **Tratar un *shock* institucional como si fuera transitorio.** La reforma judicial de 2024 no revirtió en seis meses (§4.3).
 7. **Operar al cierre en días de rebalanceo con ETFs apalancados.** Ahí está el depredador [10].
 8. **Ignorar el tipo de cambio.** Un *edge* de 2-4% en USD puede desaparecer con ±8-11% trimestral de USDMXN (cap. 16).
-9. **Citar fuentes retiradas o sin revisión de pares como si fueran A** [31][10].
+9. **Citar fuentes retiradas o sin revisión de pares como si fueran A** [31][10]. Le pasó a este mismo capítulo con Kim-Muhn-Nikolaev [29], retirado en feb-2025 y citado como hecho hasta la verificación. Antes de citar un preprint se revisa su historial de versiones.
 10. **Confundir la ventaja política del dueño con información privilegiada.** La primera es análisis de procesos públicos; la segunda es delito.
 11. **Sobreoperar para "aprovechar todo".** Los que más operan pierden 6.5 pp al año contra el mercado [27]. En la arena, el tope es de 8 operaciones al mes.
 
@@ -393,10 +393,10 @@ Máximo 8 operaciones al mes en la arena (`operaciones_max_mes`). Si hay más ca
 R: Son las ineficiencias conductuales, analíticas, informacionales y técnicas [1]. La conductual es la más persistente, pero la más difícil de capturar. Para una cuenta chica sin mandato ni redenciones, las más explotables son la técnica (restricciones ajenas) y la informacional (lo complejo y local que nadie lee).
 
 **2. Da las magnitudes de Coval-Stafford y la crítica de Wardlaw.**
-R: En 1980-2003, las acciones con ventas forzadas generalizadas caen −10.1% anormal en el trimestre y rebotan +7.74% en los meses 4-12 (+15% con umbrales más duros). La estrategia *long-short* rinde 27.9-45.4% anual anormal, pero solo es factible en 95 de 168 meses y sin costos de información [2]. Wardlaw muestra que la medida contiene mecánicamente el rendimiento realizado; corregida, la presión es despreciable y sin reversión [3]. Grado para nosotros: C.
+R: En 1980-2003, las acciones con ventas forzadas generalizadas caen −10.1% anormal en el trimestre (t = −11.5) y rebotan +7.74% en los meses 4-12. Con el umbral más duro, caen −18.1% y rebotan +15.0%. El *long-short* (comprar ventas forzadas pasadas y vender en corto las actuales) rinde 27.9-45.4% anual anormal, pero solo es factible en 95 de 168 meses. La versión solo larga, la única posible en GBM, rinde de 0.08% a ~1.0% al mes y casi nunca es significativa. Nada descuenta costos de información [2]. Wardlaw muestra que la medida contiene mecánicamente el rendimiento realizado; corregida, la presión es despreciable y sin reversión [3]. Grado para nosotros: C−.
 
 **3. ¿Por qué desapareció el efecto de inclusión en el S&P 500 si hay más dinero indexado que nunca?**
-R: Porque las inclusiones se volvieron predecibles (muchas son migraciones desde el MidCap) y los arbitrajistas compran antes del anuncio. El efecto pasó de 7.4-7.6% en los 90 a 0.3-0.8% en 2010-2020 [7].
+R: Porque las inclusiones se volvieron predecibles (muchas son migraciones desde el MidCap) y los arbitrajistas compran antes del anuncio. El efecto pasó de 7.4-7.6% en los 90 a menos de 1% en 2010-2020 (0.8% en la versión NBER) [7].
 
 **4. ¿Qué encontró Hong-Lim-Stein y dónde aplica hoy?**
 R: El momentum es más fuerte en acciones con baja cobertura residual (1.13% contra 0.72% al mes) y el efecto se concentra en los perdedores: las malas noticias viajan lento [6]. Aplica a emisoras de la BMV y a mid caps del SIC poco cubiertas, siempre que la liquidez no se coma el *edge*.
@@ -414,7 +414,7 @@ R: Cuando hay una fase previa, la probabilidad creciente de guerra baja los prec
 R: Porque cambió las instituciones que generan los flujos (Estado de derecho, prima de riesgo), no solo el sentimiento. El IPC estaba en −3.9% seis meses después del 3-jun-2024. Tras el 8-abr-2025, en cambio, subió +38.3% en 12 meses (§4.3).
 
 **9. ¿Qué ventaja da la IA y cuál ya no?**
-R: Ya no da ventaja la velocidad sobre titulares públicos: su rendimiento cae con la adopción [28]. Sí la da el análisis amplio y profundo de información compleja o local [29], con pronósticos fuera de muestra. Hay que desconfiar de los *backtests* anteriores al corte del modelo [30].
+R: Ya no da ventaja la velocidad sobre titulares públicos: su rendimiento cae con la adopción [28]. La ventaja posible es el análisis amplio y profundo de información compleja o local, pero es una **hipótesis de grado C**: el estudio más citado a favor [29] fue retirado por inconsistencias en los datos. Se valida solo con pronósticos propios fuera de muestra. Hay que desconfiar de los *backtests* anteriores al corte del modelo [30].
 
 **10. Enumera las 6 puertas del sistema de puntuación.**
 R: Contraparte nombrada; evidencia ≥ C (papel) o ≥ B (real); ejecutable en GBM dentro del tope de concentración; *edge* ≥ 2× costos; salida definida (precio, tiempo y hecho que refuta); legalidad (cero información privilegiada).
@@ -438,46 +438,92 @@ R: Caben 8 operaciones al mes. Se toma el mejor, se vuelve a puntuar el resto co
 
 ## 9. Fuentes
 
-1. Mauboussin (12-feb-2019), *Who Is On the Other Side?*, BlueMountain. https://macro-ops.com/wp-content/uploads/2019/02/Who-Is-On-the-Other-Side.pdf
-2. Coval y Stafford (2007), *JFE* 86(2). https://www.sciencedirect.com/science/article/abs/pii/S0304405X07001158 · NBER w11357 (cifras del texto): https://www.nber.org/papers/w11357
-3. Wardlaw (2020), *JF* 75. https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12962
-4. Lou (2012), *RFS* 25(12). https://ideas.repec.org/a/oup/rfinst/v25y2012i12p3457-3489.html
-5. Ellul, Jotikasthira y Lundblad (2011), *JFE* 101(3). https://ideas.repec.org/a/eee/jfinec/v101y2011i3p596-620.html
-6. Hong, Lim y Stein (2000), *JF* 55(1). https://www.columbia.edu/~hh2679/jf-badnews.pdf
-7. Greenwood y Sammon (2025), *JF*. https://onlinelibrary.wiley.com/doi/10.1111/jofi.13410 · NBER w30748: https://www.nber.org/system/files/working_papers/w30748/w30748.pdf
-8. Petajisto (2011), *JEF* 18(2). https://ideas.repec.org/a/eee/empfin/v18y2011i2p271-288.html
-9. Harvey, Mazzoleni y Melone (2025, rev. ene-2026), NBER w33554. https://www.nber.org/papers/w33554
-10. Zhao (4-ago-2026), arXiv 2608.03703, sin revisión de pares. https://arxiv.org/abs/2608.03703
+1. Mauboussin (12-feb-2019), *Who Is On the Other Side? You Need Good BAIT to Land a Winner*, BlueMountain Investment Research; autor único. https://macro-ops.com/wp-content/uploads/2019/02/Who-Is-On-the-Other-Side.pdf
+2. Coval y Stafford (2007), *JFE* 86(2), 479-512. https://www.sciencedirect.com/science/article/abs/pii/S0304405X07001158 · NBER w11357 (cifras del texto): https://www.nber.org/papers/w11357
+3. Wardlaw (2020), *JF* 75(6), 3221-3243. https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12962
+4. Lou (2012), *RFS* 25(12), 3457-3489. https://ideas.repec.org/a/oup/rfinst/v25y2012i12p3457-3489.html
+5. Ellul, Jotikasthira y Lundblad (2011), *JFE* 101(3), 596-620. https://ideas.repec.org/a/eee/jfinec/v101y2011i3p596-620.html
+6. Hong, Lim y Stein (2000), *JF* 55(1), 265-295. https://www.columbia.edu/~hh2679/jf-badnews.pdf
+7. Greenwood y Sammon (2025), *JF* 80(2), 657-698. https://onlinelibrary.wiley.com/doi/10.1111/jofi.13410 · NBER w30748: https://www.nber.org/system/files/working_papers/w30748/w30748.pdf
+8. Petajisto (2011), *JEF* 18(2), 271-288. https://ideas.repec.org/a/eee/empfin/v18y2011i2p271-288.html
+9. Harvey, Mazzoleni y Melone (mar-2025, rev. ene-2026), NBER w33554. https://www.nber.org/papers/w33554
+10. Zhao (4-ago-2026), *Preying on Leveraged ETFs*, arXiv 2608.03703, sin revisión de pares. https://arxiv.org/abs/2608.03703
 11. FTSE Russell (1-sep-2026), calendario de la reconstitución de diciembre. https://www.lseg.com/en/media-centre/press-releases/ftse-russell/2026/ftse-russell-announces-december-2026-russell-us-indexes-reconstitution-schedule
-12. McLean y Pontiff (2016), *JF* 71(1). https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12365
-13. Harvey, Liu y Zhu (2016), *RFS* 29(1); NBER w20592. https://www.nber.org/papers/w20592
-14. Jensen, Kelly y Pedersen (2023), *JF*. https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13249
-15. Alldredge y Blank (2019), *JFR* 42(2). https://onlinelibrary.wiley.com/doi/abs/10.1111/jfir.12172
-16. Brune, Hens, Rieger y Wang (2015), *Int. Rev. Economics*. https://link.springer.com/article/10.1007/s12232-014-0215-7
-17. Berkman, Jacobsen y Lee (2011), *JFE* 101(2). https://ideas.repec.org/a/eee/jfinec/v101y2011i2p313-332.html
-18. Keloharju, Linnainmaa y Nyberg (2016), *JF* 71(4). https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12398
-19. Heston y Sadka (2008), *JFE* 87(2); magnitud no verificada. https://ideas.repec.org/a/eee/jfinec/v87y2008i2p418-445.html
-20. Xu y McConnell (2008), *FAJ* 64(2). https://www.tandfonline.com/doi/abs/10.2469/faj.v64.n2.11
-21. Bouman y Jacobsen (2002), *AER* 92(5); contrastado con el cálculo de §5.3. https://ideas.repec.org/a/aea/aecrev/v92y2002i5p1618-1635.html
-22. Lucca y Moench (2015), *JF*: https://onlinelibrary.wiley.com/doi/10.1111/jofi.12196 · Kurov, Wolfe y Gilbert (2021), *FRL*: https://www.sciencedirect.com/science/article/pii/S1544612320315956
-23. Chan, Jegadeesh y Lakonishok (1996), *JF* 51(5). https://ideas.repec.org/a/bla/jfinan/v51y1996i5p1681-1713.html
-24. Daniel y Moskowitz (2016), *JFE* 122(2). https://ideas.repec.org/a/eee/jfinec/v122y2016i2p221-247.html
-25. Asness, Frazzini y Pedersen (2019), *RAS* 24(1). https://ideas.repec.org/a/spr/reaccs/v24y2019i1d10.1007_s11142-018-9470-2.html
-26. Chen, Hong, Huang y Kubik (2004), *AER* 94(5). https://www.aeaweb.org/articles?id=10.1257%2F0002828043052277
-27. Barber y Odean (2000), *JF* 55(2). https://ideas.repec.org/a/bla/jfinan/v55y2000i2p773-806.html
+12. McLean y Pontiff (2016), *JF* 71(1), 5-32. https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12365
+13. Harvey, Liu y Zhu (2016), *RFS* 29(1), 5-68; NBER w20592. https://www.nber.org/papers/w20592
+14. Jensen, Kelly y Pedersen (2023), *JF* 78(5), 2465-2518. https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.13249
+15. Alldredge y Blank (2019), *JFR* 42(2), 331-360. https://onlinelibrary.wiley.com/doi/abs/10.1111/jfir.12172
+16. Brune, Hens, Rieger y Wang (2015), *International Review of Economics* 62(1), 1-21. https://link.springer.com/article/10.1007/s12232-014-0215-7
+17. Berkman, Jacobsen y Lee (2011), *JFE* 101(2), 313-332. https://ideas.repec.org/a/eee/jfinec/v101y2011i2p313-332.html
+18. Keloharju, Linnainmaa y Nyberg (2016), *JF* 71(4), 1557-1590. https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12398
+19. Heston y Sadka (2008), *JFE* 87(2), 418-445; magnitud no verificada (sin resumen en IDEAS, Crossref, OpenAlex ni Semantic Scholar). https://ideas.repec.org/a/eee/jfinec/v87y2008i2p418-445.html
+20. McConnell y Xu (2008), *FAJ* 64(2), 49-64. https://www.tandfonline.com/doi/abs/10.2469/faj.v64.n2.11
+21. Bouman y Jacobsen (2002), *AER* 92(5), 1618-1635; contrastado con el cálculo de §5.3. https://ideas.repec.org/a/aea/aecrev/v92y2002i5p1618-1635.html
+22. Lucca y Moench (2015), *JF*: https://onlinelibrary.wiley.com/doi/10.1111/jofi.12196 · Kurov, Wolfe y Gilbert (2021), *FRL* 40, 101781: https://www.sciencedirect.com/science/article/pii/S1544612320315956
+23. Chan, Jegadeesh y Lakonishok (1996), *JF* 51(5), 1681-1713. https://ideas.repec.org/a/bla/jfinan/v51y1996i5p1681-1713.html
+24. Daniel y Moskowitz (2016), *JFE* 122(2), 221-247. https://ideas.repec.org/a/eee/jfinec/v122y2016i2p221-247.html
+25. Asness, Frazzini y Pedersen (2019), *RAS* 24(1), 34-112. https://ideas.repec.org/a/spr/reaccs/v24y2019i1d10.1007_s11142-018-9470-2.html
+26. Chen, Hong, Huang y Kubik (2004), *AER* 94(5), 1276-1302. https://www.aeaweb.org/articles?id=10.1257%2F0002828043052277
+27. Barber y Odean (2000), *JF* 55(2), 773-806. https://ideas.repec.org/a/bla/jfinan/v55y2000i2p773-806.html
 28. Lopez-Lira y Tang (v6, 28-oct-2025), arXiv 2304.07619. https://arxiv.org/abs/2304.07619
-29. Kim, Muhn y Nikolaev (2024), arXiv 2407.17866. https://arxiv.org/abs/2407.17866
+29. Kim, Muhn y Nikolaev (2024), arXiv 2407.17866, **retirado** (v3, 20-feb-2025) por inconsistencias en datos y análisis; no usar como evidencia. https://arxiv.org/abs/2407.17866
 30. Gao, Jiang y Yan (29-dic-2025, rev. 12-jun-2026), arXiv 2512.23847. https://arxiv.org/abs/2512.23847
 31. Lee (dic-2025), arXiv 2512.11913, **retirado** el 27-dic-2025. https://arxiv.org/abs/2512.11913
-32. MSCI (2025), *Unraveling Summer 2025's Quant Fund Wobble*. https://www.msci.com/research-and-insights/blog-post/unraveling-summer-2025s-quant-fund-wobble
+32. MSCI, Sze, Doole, Gyugyi y Herrera (30-oct-2025), *Unraveling Summer 2025's Quant Fund Wobble*. https://www.msci.com/research-and-insights/blog-post/unraveling-summer-2025s-quant-fund-wobble
 33. Hedgeweek (22-ene-2026). https://www.hedgeweek.com/quant-hedge-funds-see-worst-drawdown-since-october-as-crowded-trades-unwind/
 34. CNBC (21-ago-2026), solo el titular verificado: https://www.cnbc.com/2026/08/21/goldman-hedge-funds-historic-underperformance-sp500-degrossing.html · Detalle secundario: https://www.wallstreetsync.com/the-ai-unwind-hedge-funds-wrong-side-best-trade-2026/
 35. Bloomberg, solo titulares (24-oct-2025): https://www.bloomberg.com/news/articles/2025-10-24/fast-money-quants-stumble-as-momentum-bust-roils-strategies · (6-jul-2026): https://www.bloomberg.com/news/articles/2026-07-06/quant-hedge-funds-extend-worst-run-since-2023-as-momentum-slides
 36. Morningstar, *Active/Passive Barometer* de cierre de 2025: https://www.morningstar.com/business/insights/research/active-passive-barometer · CNBC (25-feb-2026): https://www.cnbc.com/2026/02/25/active-managers-vs-index-funds.html (cifras vía resumen de búsqueda)
-37. Estudio de largo plazo sobre MiFID II (2024), *J. Business Economics*. https://link.springer.com/article/10.1007/s11573-024-01205-8
+37. Bender, Cestonaro, Clapham y Gomber, *A long-term analysis of research unbundling*, *J. Business Economics* 95(2-3), 333-384 (en línea 14-oct-2024). https://link.springer.com/article/10.1007/s11573-024-01205-8
 38. Cálculo propio: Yahoo Finance chart v8 (^GSPC desde 1927, ^MXX desde 1991, ^VIX), cierres al 24-sep-2026, con `herramientas/datos_historicos.yahoo_historia`. Índices de precio.
 39. Fidelity vía Motley Fool (8-sep-2026): +37% promedio a un año desde el **mínimo** (1950-2022). Grado D como regla, porque el mínimo se conoce después. https://www.fool.com/investing/2026/09/08/if-stock-market-drops-history-says-this-happen/
 
+40. Ley del Mercado de Valores, texto vigente, última reforma DOF 14-11-2025 (arts. 362-364, 380, 381 y 392), Cámara de Diputados. https://www.diputados.gob.mx/LeyesBiblio/pdf/LMV.pdf
+41. Fed, comunicado del FOMC (16-sep-2026). https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm
+42. FRED, DGS10 (serie diaria, consultada el 25-sep-2026). https://fred.stlouisfed.org/series/DGS10
+43. Tesoro de EUA, *refunding* trimestral (5-ago-2026), que anuncia el siguiente para el miércoles 4-nov-2026. https://home.treasury.gov/news/press-releases/sb0590
+44. Al Jazeera (24-sep-2026), *Hostile but hooked: What's behind the US-China trade truce extension*. https://www.aljazeera.com/news-analysis/2026/9/24/hostile-but-hooked-whats-behind-the-us-china-trade-truce-extension
+
 **Capítulos y archivos enlazados:** 01, 02, 03, 04, 11, 13, 14, 15, 16, 17, 22, 23 y 24; `arena/investigacion/01` a `04`.
 
-**No verificado:** la coautoría de Callahan en [1]; la magnitud de Heston-Sadka; el detalle de julio de 2026 más allá del titular; la cobertura de analistas de emisoras mexicanas en 2026; los artículos de la LMV sobre información privilegiada; la fecha del rebalanceo del S&P de diciembre de 2026.
+**No verificado:** la magnitud de Heston-Sadka; el cuerpo de la nota de CNBC del 21-ago-2026 y la afirmación de que no hubo deterioro de ingresos; el cuerpo de las notas de Bloomberg [35]; las cifras de Morningstar [36]; la muestra (52,532) y la diferencia de 0.9 pp de Alldredge-Blank; la cobertura de analistas de emisoras mexicanas en 2026; la fecha del rebalanceo del S&P de diciembre de 2026 (por convención, tercer viernes: 18-dic).
+
+---
+
+## Registro de verificación (2026-09-25)
+
+Verificador adversarial. Se revisaron **52 elementos**. Como el presupuesto de WebSearch de la sesión estaba agotado, se usaron fuentes primarias directas: PDFs de NBER, BlueMountain, NY Fed y Columbia; APIs de Crossref, OpenAlex y Semantic Scholar para metadatos y resúmenes; arXiv; LSEG; MSCI; Fed; FRED; Tesoro; Cámara de Diputados (LMV); Yahoo Finance chart v8 para replicar los cálculos propios.
+
+**Correcciones hechas en el texto:**
+
+| # | Dónde | Error | Corrección | Fuente |
+|---|---|---|---|---|
+| 1 | §2.2, §4.4, §8 P9, [29] | Kim-Muhn-Nikolaev citado como **hecho** a favor de la ventaja del LLM | Fue **retirado** de arXiv el 20-feb-2025 (v3) por "inconsistencias en los datos y análisis" detectadas por un coautor. No se encontró versión publicada. La ventaja por análisis con LLM baja a hipótesis de grado C | arxiv.org/abs/2407.17866v3 |
+| 2 | §3, §5.1, §8 P2 | El 27.9-45.4% de Coval-Stafford se presentaba como estrategia "de adelantarse" | Ese rendimiento es el *long-short* que compra ventas forzadas pasadas y vende en corto a quienes las sufren (95/168 meses). Adelantarse da 0.96-2.36% al mes, con significancia mixta. **Solo largo** da de 0.08% a ~1.0% al mes. Grado ejecutable: C → C− | NBER w11357, pp. 16-21 |
+| 3 | §3, §5.1, §5.4, §8 P3 | Greenwood-Sammon (JF): "7.4% → 0.3%" y exclusiones de −0.6% | El resumen publicado dice 7.4% → "menos de 1%" y exclusiones de **+0.1%** en 2010-2020; el −0.6% es de la versión NBER. El 0.3% no aparece en el resumen | Crossref, DOI 10.1111/jofi.13410 |
+| 4 | §2.1 | Barber-Odean: la rotación de 75% se atribuía a los que más operan | 75% es la del hogar **promedio**, que gana 16.4% | Resumen del JF 55(2) |
+| 5 | §3, §5.3, [20] | "Xu-McConnell" | El orden de autores es **McConnell y Xu**, *FAJ* 64(2), 49-64; se precisó el hallazgo | Crossref y OpenAlex |
+| 6 | §2.2 | "La LMV sanciona su uso (artículos no verificados)" | Arts. 362-364 (definición, presunción y prohibición), 380 (transmitir: 3-15 años) y 381 (operar: 2-6 o 4-12 años). La fr. X del 363 presume información privilegiada en quien opera fuera de su patrón histórico con acceso a *insiders*, algo relevante para un exfuncionario con relaciones | LMV, DOF 14-11-2025 |
+| 7 | §4.1 | Cifras de Morningstar presentadas como **Hecho** | Reetiquetadas como **(no verificado)**: Morningstar y CNBC devolvieron 403 | — |
+| 8 | §3 | Alldredge-Blank: 52,532 *insiders* y 0.9 pp como hecho | El resumen confirma "más de 2%"; lo demás queda como (no verificado) | Crossref y Semantic Scholar |
+| 9 | §3 | Harvey-Mazzoleni-Melone: "US$20 billones en pensiones y *target date*" | El texto dice un mercado que "podría exceder US$20 billones" (activos de retiro en acciones y deuda); se agregan los US$200 por hogar | NBER w33554, p. 3 |
+| 10 | §6.1, §6.2 | Faltaban restricciones de la arena en `parametros.json` | Movimiento esperado ≥ 5%, orden mínima de 5,000 MXN y rotación ≤ 1.5× el capital al mes | config/parametros.json |
+| 11 | §6.5 | "10 años en máximos de 12 meses" | 5.11% el 23-sep es su máximo desde **julio de 2007** | FRED DGS10 |
+| 12 | §4.2 | MSCI sin fecha y hallazgo simplificado | 30-oct-2025; el mercado subía ~8%; ganaron beta y liquidez y perdieron rentabilidad y momentum; 84% del quintil más vendido en corto estaba expuesto | MSCI |
+| 13 | §5.2 | Sin definición de "caída adicional" | Mínimo de cierre en los 756 días hábiles siguientes; se replicaron todas las cifras | Yahoo v8 |
+| 14 | §2.1 | Callahan como coautor "no verificado" | La versión de 51 páginas firma **solo** Mauboussin | PDF de BlueMountain |
+| 15 | §6.6 | Tregua EUA-China "vence el 10-ene-2027" sin matiz | Es una extensión de dos meses acordada el 24-sep-2026; las restricciones chinas a tierras raras quedan "en pausa" hasta el 10 de enero | Al Jazeera, 24-sep-2026 |
+
+**Confirmados sin cambio (selección):**
+- **Mauboussin:** taxonomía BAIT, *checklist* de **15** preguntas, Taiwán +1.5 pp y −3.8 pp, "la más persistente y la más difícil de capturar".
+- **Coval-Stafford:** −10.1% (t = −11.52), +7.74% (t = 4.43), −18.13% y +15.01%, 95 de 168 meses, 1980-2003.
+- **Wardlaw:** JF 75(6); la medida contiene el rendimiento realizado; corregida, la caída es despreciable y sin reversión.
+- **Otros artículos:** Lou, RFS 25(12). Ellul-Jotikasthira-Lundblad: más de un tercio del grado inversión; reversión mayor cuando la industria está en problemas. Hong-Lim-Stein: 1.13%, 0.72%, 0.42 pp, t = 3.50, 77.3% → 36.9%. Chan-Jegadeesh-Lakonishok. Greenwood-Sammon NBER: 3.4%, 7.6%, 0.8%, −0.6%; causas (migraciones del MidCap y *front-running*). Petajisto: +8.8/−15.1, +4.7/−4.6, 21-28 y 38-77 pb. Harvey-Mazzoleni-Melone: 17 pb y US$16 mil millones; publicado en mar-2025 y revisado en ene-2026. Brune et al.: *war puzzle*, IRE 62(1). Berkman-Jacobsen-Lee: 447 crisis, 1918-2006. Daniel-Moskowitz: duplica alfa y Sharpe. Asness-Frazzini-Pedersen: 24 países, mínimo en la burbuja. Keloharju-Linnainmaa-Nyberg: 13% anual. McConnell-Xu: 31 de 35 países. Lucca-Moench: 49 pb desde 1994. Kurov et al.: desaparece después de 2015. McLean-Pontiff: 97 predictores, 26% y 58%. Harvey-Liu-Zhu: t > 3.0. Jensen-Kelly-Pedersen: 13 temas, 93 países. Chen-Hong-Huang-Kubik. Barber-Odean: 66,465 hogares, 11.4% contra 17.9%. Bouman-Jacobsen.
+- **Preprints:** Lopez-Lira-Tang v6 (28-oct-2025): ~90%, no operable, rendimientos decrecientes con la adopción. Gao-Jiang-Yan (29-dic-2025, v2 del 12-jun-2026). Lee (arXiv 2512.11913): v1 del 11-dic-2025, retirado el 27-dic, 16 días. Zhao (4-ago-2026): 75% y 17.6%.
+- **Estudio MiFID II:** Bender et al.
+- **Hechos 2025-2026:** calendario del Russell de dic-2026 (comunicado de LSEG del 1-sep-2026: *rank day* 30-oct, listas 13-nov, consultas 16-27 nov, bloqueo desde 30-nov, efectivo al cierre del 11-dic, "primera reconstitución de diciembre en más de tres décadas"). Hedgeweek (22-ene-2026): ~1% según Goldman, 2.8% según UBS y "mayor desapalancamiento de un día desde fines de diciembre". Fed del 16-sep-2026: +25 pb a 3.75-4.00%, 12-0. FRED: 5.11% el 23-sep. Tesoro: *refunding* el 4-nov-2026. Intermedias: 3-nov-2026, un martes. Fidelity vía Motley Fool (8-sep-2026): +37% promedio en 1950-2022.
+- **Cálculos propios replicados con Yahoo v8:** los cinco episodios de §4.3 (a 1, 3, 6 y 12 meses); S&P 7,704.1 contra un máximo de cierre de 7,799.0 (13-ago-2026); IPC 64,264.2 contra 71,601.4 (11-feb-2026); VIX 15.67; las dos tablas de §5.2 completas; la tabla de §5.3 (TOM y Halloween, incluidas las estadísticas t).
+
+**Siguen sin verificar:** la magnitud de Heston-Sadka; el cuerpo de las notas de CNBC (21-ago-2026) y Bloomberg (24-oct-2025 y 6-jul-2026); las cifras de Morningstar; 52,532 y 0.9 pp de Alldredge-Blank; la cobertura de analistas en la BMV en 2026; la fecha exacta del rebalanceo del S&P de diciembre (S&P DJI devolvió 403). No se revisaron mercados de predicción porque el capítulo no cita probabilidades propias (remite al cap. 23).
+
+**Efecto en el grado global:** se mantiene en **B−**. Bajan dos piezas: la ventaja por análisis con LLM (de B implícito a C) y las ventas forzadas ejecutables solo en largo (de C a C−). El marco (contraparte, restricciones y costos) no cambia.

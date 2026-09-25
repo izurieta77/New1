@@ -23,7 +23,9 @@
   "irs-tratado-eua-irlanda.pdf": "https://www.irs.gov/pub/irs-trty/ireland.pdf",
   "irs-instrucciones-706NA.html": "https://www.irs.gov/instructions/i706na (Revised 09/2025)",
   "ecfr-26CFR20.2104-1.html": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-26?part=20&section=20.2104-1",
-  "gbm_*.txt": "texto visible de https://gbm.com/faqs/<nombre>/ (las paginas HTML completas pesan ~450 KB cada una y no se guardaron)"
+  "usc-26-2001.txt, usc-26-2102.txt, usc-26-2105.txt": "texto visible de https://www.law.cornell.edu/uscode/text/26/<seccion> (Cornell LII)",
+  "revenue-ie-cat-notas-guia-part09.txt": "texto (pypdf) de https://www.revenue.ie/en/tax-professionals/documents/notes-for-guidance/cat/2024/part09.pdf (Notes for Guidance CATCA 2003, hasta Finance Act 2024)",
+  "gbm_*.txt":"texto visible de https://gbm.com/faqs/<nombre>/ (las paginas HTML completas pesan ~450 KB cada una y no se guardaron)"
  },
  "mercado": {
   "yahoo_*_1mo_max.json": "https://query1.finance.yahoo.com/v8/finance/chart/<TICKER>?range=max&interval=1mo&events=div (User-Agent Mozilla/5.0)",

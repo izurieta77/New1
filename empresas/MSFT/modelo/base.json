@@ -1,0 +1,1288 @@
+{
+  "empresa": "Microsoft Corporation",
+  "ticker": "MSFT",
+  "moneda": "USD",
+  "unidades": "millones",
+  "fecha_corte": "2026-09-25",
+  "fuentes": {
+    "F1": {
+      "documento": "Microsoft Corp., Form 10-K ejercicio terminado el 30-jun-2026 (CIK 789019, accn 0001193125-26-323660). Leido en los visores XBRL R de la SEC (R2, R4, R6, R7, R11, R13, R14, R16, R21, R23, R25, R46, R73, R84, R88, R92, R97, R102, R104, R107, R109, R110) con la herramienta WebFetch el 2026-09-25",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "fecha": "2026-07-29"
+    },
+    "F2": {
+      "documento": "Microsoft Corp., Form 10-K ejercicio terminado el 30-jun-2025 (accn 0000950170-25-100235): saldos al 30-jun-2024 (visores R4, R72, R90)",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "fecha": "2025-07-30"
+    },
+    "F3": {
+      "documento": "Microsoft Corp., Form 8-K del 29-jul-2026, Exhibit 99.1 (comunicado de resultados FY26 Q4): conciliacion GAAP vs no GAAP (impacto de inversiones en OpenAI)",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "fecha": "2026-07-29"
+    },
+    "F4": {
+      "documento": "SEC companyfacts XBRL (hechos no dimensionales de F1 y F2): segunda lectura, automatica, para la doble comprobacion; extracto congelado en modelo/datos/xbrl_companyfacts_msft_extracto.json",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+      "fecha": "2026-09-25"
+    },
+    "F5": {
+      "documento": "Yahoo Finance chart v8 MSFT (cierre no ajustado 2026-09-24 16:00 ET = 497.93 USD); copia en modelo/datos/yahoo_msft_chart_1mo_2026-09-25.json",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=1mo&interval=1d",
+      "fecha": "2026-09-25"
+    },
+    "F6": {
+      "documento": "FRED DGS10 (bono del Tesoro a 10 anos), 5.11% al 2026-09-23; copia en modelo/datos/fred_dgs10_2026-09.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2026-09-01",
+      "fecha": "2026-09-25"
+    },
+    "F7": {
+      "documento": "Damodaran, Betas by Sector (US), datos a enero de 2026: Software (System & Application) beta desapalancada corregida por caja 1.25; extracto en modelo/datos/damodaran_betas_extracto.json",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+      "fecha": "2026-09-25"
+    },
+    "F8": {
+      "documento": "conocimiento/03 s2.3 y s6.1 regla 3 (fuente secundaria interna que cita a Damodaran, sep-2026): ERP 4.31% contra r_f ajustada; diferencial de default de EUA ~0.22%",
+      "url": "conocimiento/03-maestria-valuacion-y-analisis-fundamental.md",
+      "fecha": "2026-09-25"
+    }
+  },
+  "historico": [
+    {
+      "periodo": "FY2024",
+      "anio": 2024,
+      "fin": "2024-06-30",
+      "fuente": "F1 (resultados, flujo y variaciones de FY2024, columnas comparativas) y F2 (balance al 30-jun-2024)",
+      "fuentes_campos": {
+        "resultados.ingresos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.costo_ventas": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.utilidad_bruta": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2) ('Gross margin')",
+        "resultados.gastos_operativos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2): R&D + Sales and marketing + G&A",
+        "resultados.utilidad_operativa": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.gasto_intereses": "F1 Nota 3 Other Income (Expense), Net (visor R13) ('Interest expense')",
+        "resultados.ingreso_intereses": "F1 Nota 3 Other Income (Expense), Net (visor R13) ('Interest and dividends income')",
+        "resultados.otros_ingresos": "F1 Nota 3 Other Income (Expense), Net (visor R13): ganancias netas en inversiones + derivados + remedicion cambiaria + 'Other, net'",
+        "resultados.utilidad_antes_impuestos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.impuestos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2) ('Provision for income taxes')",
+        "resultados.utilidad_neta": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "flujo.depreciacion_amortizacion": "F1 Item 8, Cash Flows Statements (visor R6) ('Depreciation, amortization, and other')",
+        "flujo.sbc": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.cfo": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.capex": "F1 Item 8, Cash Flows Statements (visor R6) ('Additions to property and equipment')",
+        "flujo.cfi": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.cff": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.dividendos": "F1 Item 8, Cash Flows Statements (visor R6) ('Common stock cash dividends paid')",
+        "flujo.recompras": "F1 Item 8, Cash Flows Statements (visor R6) ('Common stock repurchased'; incluye retenciones fiscales de empleados, Nota 15)",
+        "flujo.emision_deuda": "F1 Item 8, Cash Flows Statements (visor R6): 'Proceeds from issuance of debt' + neto positivo de deuda <= 90 dias",
+        "flujo.amortizacion_deuda": "F1 Item 8, Cash Flows Statements (visor R6): 'Repayments of debt' + neto negativo de deuda <= 90 dias",
+        "flujo.principal_arrendamientos_financieros": "F1 Nota 13 Leases (visores R23 y R92) flujo suplementario ('Financing cash flows from finance leases')",
+        "flujo.emision_acciones": "F1 Item 8, Cash Flows Statements (visor R6) ('Common stock issued')",
+        "flujo.efecto_cambiario": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.cambio_capital_trabajo": "F1 Item 8, Cash Flows Statements (visor R6): 'Changes in operating assets and liabilities' (9 renglones)",
+        "flujo.otros_operativos": "F1 Item 8, Cash Flows Statements (visor R6): ganancias/perdidas en inversiones y derivados + impuestos diferidos",
+        "flujo.otros_inversion": "F1 Item 8, Cash Flows Statements (visor R6): adquisiciones, compras/vencimientos/ventas de inversiones, 'Other, net'",
+        "flujo.otros_financiamiento": "F1 Item 8, Cash Flows Statements (visor R6) 'Other, net' de financiamiento menos el principal de arrendamientos financieros (Inferencia: el estado de flujo no tiene renglon propio para ese principal)",
+        "flujo.caja_inicial": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.caja_final": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.utilidad_neta": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "movimientos_capital.dividendos_declarados": "F1 Item 8, Stockholders' Equity Statements (visor R7) (columna utilidades retenidas)",
+        "movimientos_capital.recompras": "F1 Item 8, Stockholders' Equity Statements (visor R7): capital pagado + utilidades retenidas",
+        "movimientos_capital.recompras_contra_utilidades_retenidas": "F1 Item 8, Stockholders' Equity Statements (visor R7)",
+        "movimientos_capital.ori": "F1 Item 8, Stockholders' Equity Statements (visor R7) ('Other comprehensive income')",
+        "movimientos_capital.otros": "F1 Item 8, Stockholders' Equity Statements (visor R7) ('Other, net')",
+        "balance.caja": "F2 Item 8, Balance Sheets (visor R4)",
+        "balance.inversiones_cp": "F2 Item 8, Balance Sheets (visor R4)",
+        "balance.cuentas_por_cobrar": "F2 Item 8, Balance Sheets (visor R4)",
+        "balance.inventarios": "F2 Item 8, Balance Sheets (visor R4)",
+        "balance.otros_activos_circulantes": "F2 Item 8, Balance Sheets (visor R4)",
+        "balance.ppe_neto": "F2 Item 8, Balance Sheets (visor R4) ('Property and equipment, net'; incluye activos por arrendamiento financiero, Nota 13 Leases (visores R23 y R92))",
+        "balance.otros_activos_lp": "F2 Item 8, Balance Sheets (visor R4): derecho de uso operativo + 'Equity and other investments' + goodwill + intangibles + 'Other long-term assets' (composicion en memo)",
+        "balance.activo_total": "F2 Item 8, Balance Sheets (visor R4)",
+        "balance.proveedores": "F2 Item 8, Balance Sheets (visor R4) ('Accounts payable'; incluye compras de PPE por pagar, Nota 6)",
+        "balance.deuda": "F2 Item 8, Balance Sheets (visor R4): deuda de corto plazo + porcion circulante + deuda de largo plazo",
+        "balance.arrendamientos_financieros": "F1/F2 Nota 13 Leases (visores R23 y R92) (dentro de 'Other current/long-term liabilities' del balance)",
+        "balance.otros_pasivos_circulantes": "F2 Item 8, Balance Sheets (visor R4): pasivo circulante - proveedores - deuda circulante - arrendamiento financiero circulante",
+        "balance.otros_pasivos_lp": "F2 Item 8, Balance Sheets (visor R4): pasivo de largo plazo - deuda de largo plazo - arrendamiento financiero de largo plazo",
+        "balance.pasivo_total": "F2 Item 8, Balance Sheets (visor R4)",
+        "balance.capital_contable": "F2 Item 8, Balance Sheets (visor R4)",
+        "balance.utilidades_retenidas": "F2 Item 8, Balance Sheets (visor R4)"
+      },
+      "resultados": {
+        "ingresos": 245122,
+        "costo_ventas": 74114,
+        "utilidad_bruta": 171008,
+        "gastos_operativos": 61575,
+        "utilidad_operativa": 109433,
+        "gasto_intereses": 2935,
+        "ingreso_intereses": 3157,
+        "otros_ingresos": -1868,
+        "utilidad_antes_impuestos": 107787,
+        "impuestos": 19651,
+        "utilidad_neta": 88136
+      },
+      "balance": {
+        "caja": 18315,
+        "inversiones_cp": 57228,
+        "cuentas_por_cobrar": 56924,
+        "inventarios": 1246,
+        "otros_activos_circulantes": 26021,
+        "ppe_neto": 135591,
+        "otros_activos_lp": 216838,
+        "activo_total": 512163,
+        "proveedores": 21996,
+        "otros_pasivos_circulantes": 91999,
+        "deuda": 51630,
+        "arrendamientos_financieros": 27145,
+        "revolvente": 0,
+        "otros_pasivos_lp": 50916,
+        "pasivo_total": 243686,
+        "capital_contable": 268477,
+        "utilidades_retenidas": 173144
+      },
+      "flujo": {
+        "depreciacion_amortizacion": 20958,
+        "sbc": 10734,
+        "cfo": 118548,
+        "capex": 44477,
+        "cfi": -96970,
+        "cff": -37757,
+        "dividendos": 21771,
+        "recompras": 17254,
+        "emision_deuda": 29645,
+        "amortizacion_deuda": 29070,
+        "principal_arrendamientos_financieros": 1286,
+        "emision_acciones": 2002,
+        "efecto_cambiario": -210,
+        "cambio_capital_trabajo": {
+          "Accounts receivable": -7191,
+          "Inventories": 1284,
+          "Other current assets": -1648,
+          "Other long-term assets": -6817,
+          "Accounts payable": 3545,
+          "Unearned revenue": 5348,
+          "Income taxes": 1687,
+          "Other current liabilities": 4867,
+          "Other long-term liabilities": 749
+        },
+        "otros_operativos": {
+          "Net recognized losses (gains) on investments and derivatives": 1634,
+          "Deferred income taxes": -4738
+        },
+        "otros_inversion": {
+          "Acquisition of companies, net of cash acquired, and purchases of intangible and other assets": -69132,
+          "Purchases of investments": -17732,
+          "Maturities of investments": 24775,
+          "Sales of investments": 10894,
+          "Other, net": -1298
+        },
+        "otros_financiamiento": {
+          "Other, net (reportado)": -1309,
+          "menos principal de arrendamientos financieros incluido en Other, net": 1286
+        },
+        "caja_inicial": 34704,
+        "caja_final": 18315,
+        "utilidad_neta": 88136
+      },
+      "movimientos_capital": {
+        "dividendos_declarados": 22293,
+        "recompras": 17259,
+        "capital_inicial": 206223,
+        "utilidades_retenidas_iniciales": 118848,
+        "sbc": 10734,
+        "emision_acciones": 2002,
+        "ori": 753,
+        "otros": 181,
+        "recompras_contra_utilidades_retenidas": 11547,
+        "fuente": "F1 Item 8, Stockholders' Equity Statements (visor R7): saldos al 30-jun-2023 (capital 206,223 = 93,718 + 118,848 - 6,343) y movimientos FY2024"
+      },
+      "memo": {
+        "emision_deuda_detalle": {
+          "Proceeds from issuance of debt": 24395,
+          "Proceeds from issuance (repayments) of debt, maturities of 90 days or less, net": 5250
+        },
+        "deuda_detalle_30jun2024": {
+          "Short-term debt (papel comercial)": 6693,
+          "Current portion of long-term debt": 2249,
+          "Long-term debt": 42688
+        },
+        "arrendamientos_30jun2024": {
+          "financiero_circulante": 2349,
+          "financiero_lp": 24796,
+          "operativo_circulante": 3580,
+          "operativo_lp": 15497,
+          "ppe_neto_por_arrendamiento_financiero": 25862,
+          "fuente": "F2 Nota 14 Leases (visor R90)"
+        },
+        "otros_activos_lp_detalle": {
+          "Operating lease right-of-use assets": 18961,
+          "Equity and other investments": 14600,
+          "Goodwill": 119220,
+          "Intangible assets, net": 27597,
+          "Other long-term assets": 36460
+        },
+        "otros_pasivos_circulantes_detalle": {
+          "Accrued compensation": 12564,
+          "Short-term income taxes": 5017,
+          "Short-term unearned revenue": 57582,
+          "Other current liabilities menos arrendamiento financiero circulante": 16836
+        },
+        "otros_pasivos_lp_detalle": {
+          "Long-term income taxes": 27931,
+          "Long-term unearned revenue": 2602,
+          "Deferred income taxes": 2618,
+          "Operating lease liabilities": 15497,
+          "Other long-term liabilities menos arrendamiento financiero de largo plazo": 2268
+        },
+        "otros_ingresos_detalle": {
+          "Net recognized gains (losses) on investments": -118,
+          "Net gains (losses) on derivatives": -187,
+          "Net gains (losses) on foreign currency remeasurements": -244,
+          "Other, net": -1319
+        },
+        "openai_resultado_antes_impuestos": {
+          "monto": -1500,
+          "fuente": "F1 Nota 3 (perdidas netas de 1.5 mil millones)"
+        },
+        "ppe_compras_en_cuentas_por_pagar": {
+          "monto": 4300,
+          "fuente": "F1 Nota 6"
+        },
+        "arrendamientos_derecho_de_uso_obtenidos": {
+          "financiero": 11633,
+          "operativo": 6703,
+          "fuente": "F1 Nota 13 Leases (visores R23 y R92)"
+        }
+      },
+      "notas": "Primer ejercicio del historico: C13 no aplica (no hay balance de apertura cargado). FY2024 incluye la adquisicion de Activision Blizzard (flujo de inversion -69,132 en 'Acquisition of companies...')."
+    },
+    {
+      "periodo": "FY2025",
+      "anio": 2025,
+      "fin": "2025-06-30",
+      "fuente": "F1 (estados financieros FY2026 con comparativos FY2025) y F3 (conciliacion no GAAP)",
+      "fuentes_campos": {
+        "resultados.ingresos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.costo_ventas": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.utilidad_bruta": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2) ('Gross margin')",
+        "resultados.gastos_operativos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2): R&D + Sales and marketing + G&A",
+        "resultados.utilidad_operativa": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.gasto_intereses": "F1 Nota 3 Other Income (Expense), Net (visor R13) ('Interest expense')",
+        "resultados.ingreso_intereses": "F1 Nota 3 Other Income (Expense), Net (visor R13) ('Interest and dividends income')",
+        "resultados.otros_ingresos": "F1 Nota 3 Other Income (Expense), Net (visor R13): ganancias netas en inversiones + derivados + remedicion cambiaria + 'Other, net'",
+        "resultados.utilidad_antes_impuestos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.impuestos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2) ('Provision for income taxes')",
+        "resultados.utilidad_neta": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "flujo.depreciacion_amortizacion": "F1 Item 8, Cash Flows Statements (visor R6) ('Depreciation, amortization, and other')",
+        "flujo.sbc": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.cfo": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.capex": "F1 Item 8, Cash Flows Statements (visor R6) ('Additions to property and equipment')",
+        "flujo.cfi": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.cff": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.dividendos": "F1 Item 8, Cash Flows Statements (visor R6) ('Common stock cash dividends paid')",
+        "flujo.recompras": "F1 Item 8, Cash Flows Statements (visor R6) ('Common stock repurchased'; incluye retenciones fiscales de empleados, Nota 15)",
+        "flujo.emision_deuda": "F1 Item 8, Cash Flows Statements (visor R6): 'Proceeds from issuance of debt' + neto positivo de deuda <= 90 dias",
+        "flujo.amortizacion_deuda": "F1 Item 8, Cash Flows Statements (visor R6): 'Repayments of debt' + neto negativo de deuda <= 90 dias",
+        "flujo.principal_arrendamientos_financieros": "F1 Nota 13 Leases (visores R23 y R92) flujo suplementario ('Financing cash flows from finance leases')",
+        "flujo.emision_acciones": "F1 Item 8, Cash Flows Statements (visor R6) ('Common stock issued')",
+        "flujo.efecto_cambiario": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.cambio_capital_trabajo": "F1 Item 8, Cash Flows Statements (visor R6): 'Changes in operating assets and liabilities' (9 renglones)",
+        "flujo.otros_operativos": "F1 Item 8, Cash Flows Statements (visor R6): ganancias/perdidas en inversiones y derivados + impuestos diferidos",
+        "flujo.otros_inversion": "F1 Item 8, Cash Flows Statements (visor R6): adquisiciones, compras/vencimientos/ventas de inversiones, 'Other, net'",
+        "flujo.otros_financiamiento": "F1 Item 8, Cash Flows Statements (visor R6) 'Other, net' de financiamiento menos el principal de arrendamientos financieros (Inferencia: el estado de flujo no tiene renglon propio para ese principal)",
+        "flujo.caja_inicial": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.caja_final": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.utilidad_neta": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "movimientos_capital.dividendos_declarados": "F1 Item 8, Stockholders' Equity Statements (visor R7) (columna utilidades retenidas)",
+        "movimientos_capital.recompras": "F1 Item 8, Stockholders' Equity Statements (visor R7): capital pagado + utilidades retenidas",
+        "movimientos_capital.recompras_contra_utilidades_retenidas": "F1 Item 8, Stockholders' Equity Statements (visor R7)",
+        "movimientos_capital.ori": "F1 Item 8, Stockholders' Equity Statements (visor R7) ('Other comprehensive income')",
+        "movimientos_capital.otros": "F1 Item 8, Stockholders' Equity Statements (visor R7) ('Other, net')",
+        "balance.caja": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.inversiones_cp": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.cuentas_por_cobrar": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.inventarios": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.otros_activos_circulantes": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.ppe_neto": "F1 Item 8, Balance Sheets (visor R4) ('Property and equipment, net'; incluye activos por arrendamiento financiero, Nota 13 Leases (visores R23 y R92))",
+        "balance.otros_activos_lp": "F1 Item 8, Balance Sheets (visor R4): derecho de uso operativo + 'Equity and other investments' + goodwill + intangibles + 'Other long-term assets' (composicion en memo)",
+        "balance.activo_total": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.proveedores": "F1 Item 8, Balance Sheets (visor R4) ('Accounts payable'; incluye compras de PPE por pagar, Nota 6)",
+        "balance.deuda": "F1 Item 8, Balance Sheets (visor R4): deuda de corto plazo + porcion circulante + deuda de largo plazo",
+        "balance.arrendamientos_financieros": "F1/F2 Nota 13 Leases (visores R23 y R92) (dentro de 'Other current/long-term liabilities' del balance)",
+        "balance.otros_pasivos_circulantes": "F1 Item 8, Balance Sheets (visor R4): pasivo circulante - proveedores - deuda circulante - arrendamiento financiero circulante",
+        "balance.otros_pasivos_lp": "F1 Item 8, Balance Sheets (visor R4): pasivo de largo plazo - deuda de largo plazo - arrendamiento financiero de largo plazo",
+        "balance.pasivo_total": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.capital_contable": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.utilidades_retenidas": "F1 Item 8, Balance Sheets (visor R4)"
+      },
+      "resultados": {
+        "ingresos": 281724,
+        "costo_ventas": 87831,
+        "utilidad_bruta": 193893,
+        "gastos_operativos": 65365,
+        "utilidad_operativa": 128528,
+        "gasto_intereses": 2385,
+        "ingreso_intereses": 2647,
+        "otros_ingresos": -5163,
+        "utilidad_antes_impuestos": 123627,
+        "impuestos": 21795,
+        "utilidad_neta": 101832
+      },
+      "balance": {
+        "caja": 30242,
+        "inversiones_cp": 64323,
+        "cuentas_por_cobrar": 69905,
+        "inventarios": 938,
+        "otros_activos_circulantes": 25723,
+        "ppe_neto": 204966,
+        "otros_activos_lp": 222906,
+        "activo_total": 619003,
+        "proveedores": 27724,
+        "otros_pasivos_circulantes": 107323,
+        "deuda": 43151,
+        "arrendamientos_financieros": 46172,
+        "revolvente": 0,
+        "otros_pasivos_lp": 51154,
+        "pasivo_total": 275524,
+        "capital_contable": 343479,
+        "utilidades_retenidas": 237731
+      },
+      "flujo": {
+        "depreciacion_amortizacion": 29433,
+        "sbc": 11974,
+        "cfo": 136162,
+        "capex": 64551,
+        "cfi": -72599,
+        "cff": -51699,
+        "dividendos": 24082,
+        "recompras": 18420,
+        "emision_deuda": 0,
+        "amortizacion_deuda": 8962,
+        "principal_arrendamientos_financieros": 2283,
+        "emision_acciones": 2056,
+        "efecto_cambiario": 63,
+        "cambio_capital_trabajo": {
+          "Accounts receivable": -10581,
+          "Inventories": 309,
+          "Other current assets": -3044,
+          "Other long-term assets": -2950,
+          "Accounts payable": 569,
+          "Unearned revenue": 5438,
+          "Income taxes": -38,
+          "Other current liabilities": 5922,
+          "Other long-term liabilities": -975
+        },
+        "otros_operativos": {
+          "Net recognized losses (gains) on investments and derivatives": 5329,
+          "Deferred income taxes": -7056
+        },
+        "otros_inversion": {
+          "Acquisition of companies, net of cash acquired, and purchases of intangible and other assets": -5978,
+          "Purchases of investments": -29775,
+          "Maturities of investments": 16079,
+          "Sales of investments": 9309,
+          "Other, net": 2317
+        },
+        "otros_financiamiento": {
+          "Other, net (reportado)": -2291,
+          "menos principal de arrendamientos financieros incluido en Other, net": 2283
+        },
+        "caja_inicial": 18315,
+        "caja_final": 30242,
+        "utilidad_neta": 101832
+      },
+      "movimientos_capital": {
+        "dividendos_declarados": 24677,
+        "recompras": 18424,
+        "capital_inicial": 268477,
+        "utilidades_retenidas_iniciales": 173144,
+        "sbc": 11974,
+        "emision_acciones": 2056,
+        "ori": 2243,
+        "otros": -2,
+        "recompras_contra_utilidades_retenidas": 12568,
+        "fuente": "F1 Item 8, Stockholders' Equity Statements (visor R7)"
+      },
+      "ajustado": [
+        {
+          "nombre": "utilidad_neta_sin_impacto_openai",
+          "base": "utilidad_neta",
+          "ajustes": {
+            "impacto de inversiones en OpenAI (neto de impuestos)": 3620
+          },
+          "valor_ajustado": 105452,
+          "fuente": "F3 Ex. 99.1, conciliacion GAAP vs no GAAP, doce meses terminados el 30-jun-2025"
+        }
+      ],
+      "memo": {
+        "amortizacion_deuda_detalle": {
+          "Repayments of debt": 3216,
+          "Proceeds from issuance (repayments) of debt, maturities of 90 days or less, net (valor absoluto)": 5746
+        },
+        "deuda_componentes": {
+          "valor_nominal": 49206,
+          "descuento_y_costos_no_amortizados": -1155,
+          "ajuste_cobertura_valor_razonable": -36,
+          "prima_por_canje_de_deuda": -4864,
+          "total": 43151,
+          "valor_nominal_30jun2024": 51221,
+          "descuento_30jun2024": -1227,
+          "cobertura_30jun2024": -81,
+          "prima_canje_30jun2024": -4976,
+          "total_30jun2024": 44937,
+          "fuente": "F1 Nota 10 (visor R73) y F2 Nota 11 (visor R72)"
+        },
+        "arrendamientos": {
+          "financiero_circulante": 3172,
+          "financiero_lp": 43000,
+          "operativo_circulante": 5424,
+          "operativo_lp": 17437,
+          "operativo_total": 22861,
+          "derecho_de_uso_operativo": 24823,
+          "ppe_neto_por_arrendamiento_financiero": 44015,
+          "derecho_de_uso_obtenido_financiero": 20511,
+          "derecho_de_uso_obtenido_operativo": 7826,
+          "fuente": "F1 Nota 13 Leases (visores R23 y R92)"
+        },
+        "otros_activos_lp_detalle": {
+          "Operating lease right-of-use assets": 24823,
+          "Equity and other investments": 15405,
+          "Goodwill": 119509,
+          "Intangible assets, net": 22604,
+          "Other long-term assets": 40565
+        },
+        "otros_pasivos_circulantes_detalle": {
+          "Accrued compensation": 13709,
+          "Short-term income taxes": 7211,
+          "Short-term unearned revenue": 64555,
+          "Other current liabilities menos arrendamiento financiero circulante": 21848
+        },
+        "otros_pasivos_lp_detalle": {
+          "Long-term income taxes": 25986,
+          "Long-term unearned revenue": 2710,
+          "Deferred income taxes": 2835,
+          "Operating lease liabilities": 17437,
+          "Other long-term liabilities menos arrendamiento financiero de largo plazo": 2186
+        },
+        "otros_ingresos_detalle": {
+          "Net recognized gains (losses) on investments": -349,
+          "Net gains (losses) on derivatives": -260,
+          "Net gains (losses) on foreign currency remeasurements": 171,
+          "Other, net": -4725
+        },
+        "openai_resultado_antes_impuestos": {
+          "monto": -4800,
+          "fuente": "F1 Nota 3"
+        },
+        "ppe_compras_en_cuentas_por_pagar": {
+          "monto": 6900,
+          "fuente": "F1 Nota 6"
+        },
+        "otras_cxc_por_compra_de_componentes_de_servidores": {
+          "monto": 8200,
+          "fuente": "F1 Nota 1 (visor R11/R46)"
+        },
+        "depreciacion_ppe": {
+          "monto": 22000,
+          "fuente": "F1 Nota 6 (22.0 mil millones)"
+        },
+        "recompras_programa": {
+          "acciones_millones": 31,
+          "monto": 13000,
+          "retenciones_fiscales_excluidas": 5400,
+          "fuente": "F1 Nota 15 (visor R25)"
+        },
+        "dividendos_declarados_nota15": {
+          "monto": 24676,
+          "por_accion": 3.32,
+          "nota": "el estado de variaciones muestra 24,677 (diferencia de redondeo de 1)"
+        },
+        "segmentos": {
+          "Productivity and Business Processes": {
+            "ingresos": 120810,
+            "utilidad_operativa": 69773
+          },
+          "Intelligent Cloud": {
+            "ingresos": 106265,
+            "utilidad_operativa": 44589
+          },
+          "More Personal Computing": {
+            "ingresos": 54649,
+            "utilidad_operativa": 14166
+          },
+          "fuente": "F1 Nota 18 (visor R107)"
+        }
+      },
+      "notas": "Utilidad GAAP incluye -4.8 mil millones antes de impuestos de inversiones en OpenAI (Nota 3)."
+    },
+    {
+      "periodo": "FY2026",
+      "anio": 2026,
+      "fin": "2026-06-30",
+      "fuente": "F1 Item 8 (estados financieros y notas; indice: Item 8 inicia en p. 50) y F3 (conciliacion no GAAP)",
+      "fuentes_campos": {
+        "resultados.ingresos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.costo_ventas": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.utilidad_bruta": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2) ('Gross margin')",
+        "resultados.gastos_operativos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2): R&D + Sales and marketing + G&A",
+        "resultados.utilidad_operativa": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.gasto_intereses": "F1 Nota 3 Other Income (Expense), Net (visor R13) ('Interest expense')",
+        "resultados.ingreso_intereses": "F1 Nota 3 Other Income (Expense), Net (visor R13) ('Interest and dividends income')",
+        "resultados.otros_ingresos": "F1 Nota 3 Other Income (Expense), Net (visor R13): ganancias netas en inversiones + derivados + remedicion cambiaria + 'Other, net'",
+        "resultados.utilidad_antes_impuestos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "resultados.impuestos": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2) ('Provision for income taxes')",
+        "resultados.utilidad_neta": "F1 Item 8 (p. 50 y ss. segun indice), Income Statements (visor R2)",
+        "flujo.depreciacion_amortizacion": "F1 Item 8, Cash Flows Statements (visor R6) ('Depreciation, amortization, and other')",
+        "flujo.sbc": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.cfo": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.capex": "F1 Item 8, Cash Flows Statements (visor R6) ('Additions to property and equipment')",
+        "flujo.cfi": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.cff": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.dividendos": "F1 Item 8, Cash Flows Statements (visor R6) ('Common stock cash dividends paid')",
+        "flujo.recompras": "F1 Item 8, Cash Flows Statements (visor R6) ('Common stock repurchased'; incluye retenciones fiscales de empleados, Nota 15)",
+        "flujo.emision_deuda": "F1 Item 8, Cash Flows Statements (visor R6): 'Proceeds from issuance of debt' + neto positivo de deuda <= 90 dias",
+        "flujo.amortizacion_deuda": "F1 Item 8, Cash Flows Statements (visor R6): 'Repayments of debt' + neto negativo de deuda <= 90 dias",
+        "flujo.principal_arrendamientos_financieros": "F1 Nota 13 Leases (visores R23 y R92) flujo suplementario ('Financing cash flows from finance leases')",
+        "flujo.emision_acciones": "F1 Item 8, Cash Flows Statements (visor R6) ('Common stock issued')",
+        "flujo.efecto_cambiario": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.cambio_capital_trabajo": "F1 Item 8, Cash Flows Statements (visor R6): 'Changes in operating assets and liabilities' (9 renglones)",
+        "flujo.otros_operativos": "F1 Item 8, Cash Flows Statements (visor R6): ganancias/perdidas en inversiones y derivados + impuestos diferidos",
+        "flujo.otros_inversion": "F1 Item 8, Cash Flows Statements (visor R6): adquisiciones, compras/vencimientos/ventas de inversiones, 'Other, net'",
+        "flujo.otros_financiamiento": "F1 Item 8, Cash Flows Statements (visor R6) 'Other, net' de financiamiento menos el principal de arrendamientos financieros (Inferencia: el estado de flujo no tiene renglon propio para ese principal)",
+        "flujo.caja_inicial": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.caja_final": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "flujo.utilidad_neta": "F1 Item 8, Cash Flows Statements (visor R6)",
+        "movimientos_capital.dividendos_declarados": "F1 Item 8, Stockholders' Equity Statements (visor R7) (columna utilidades retenidas)",
+        "movimientos_capital.recompras": "F1 Item 8, Stockholders' Equity Statements (visor R7): capital pagado + utilidades retenidas",
+        "movimientos_capital.recompras_contra_utilidades_retenidas": "F1 Item 8, Stockholders' Equity Statements (visor R7)",
+        "movimientos_capital.ori": "F1 Item 8, Stockholders' Equity Statements (visor R7) ('Other comprehensive income')",
+        "movimientos_capital.otros": "F1 Item 8, Stockholders' Equity Statements (visor R7) ('Other, net')",
+        "balance.caja": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.inversiones_cp": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.cuentas_por_cobrar": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.inventarios": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.otros_activos_circulantes": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.ppe_neto": "F1 Item 8, Balance Sheets (visor R4) ('Property and equipment, net'; incluye activos por arrendamiento financiero, Nota 13 Leases (visores R23 y R92))",
+        "balance.otros_activos_lp": "F1 Item 8, Balance Sheets (visor R4): derecho de uso operativo + 'Equity and other investments' + goodwill + intangibles + 'Other long-term assets' (composicion en memo)",
+        "balance.activo_total": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.proveedores": "F1 Item 8, Balance Sheets (visor R4) ('Accounts payable'; incluye compras de PPE por pagar, Nota 6)",
+        "balance.deuda": "F1 Item 8, Balance Sheets (visor R4): deuda de corto plazo + porcion circulante + deuda de largo plazo",
+        "balance.arrendamientos_financieros": "F1/F2 Nota 13 Leases (visores R23 y R92) (dentro de 'Other current/long-term liabilities' del balance)",
+        "balance.otros_pasivos_circulantes": "F1 Item 8, Balance Sheets (visor R4): pasivo circulante - proveedores - deuda circulante - arrendamiento financiero circulante",
+        "balance.otros_pasivos_lp": "F1 Item 8, Balance Sheets (visor R4): pasivo de largo plazo - deuda de largo plazo - arrendamiento financiero de largo plazo",
+        "balance.pasivo_total": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.capital_contable": "F1 Item 8, Balance Sheets (visor R4)",
+        "balance.utilidades_retenidas": "F1 Item 8, Balance Sheets (visor R4)",
+        "movimientos_deuda.amortizaciones": "F1 Item 8, Cash Flows Statements (visor R6) ('Repayments of debt')",
+        "movimientos_deuda.otros": "F1 Nota 10 (visor R73): variaciones no monetarias de los componentes de la deuda",
+        "movimientos_deuda.deuda_inicial": "F1 Item 8, Balance Sheets (visor R4) (30-jun-2025)"
+      },
+      "resultados": {
+        "ingresos": 331839,
+        "costo_ventas": 106374,
+        "utilidad_bruta": 225465,
+        "gastos_operativos": 70228,
+        "utilidad_operativa": 155237,
+        "gasto_intereses": 3051,
+        "ingreso_intereses": 3301,
+        "otros_ingresos": 10447,
+        "utilidad_antes_impuestos": 165934,
+        "impuestos": 32185,
+        "utilidad_neta": 133749
+      },
+      "balance": {
+        "caja": 20935,
+        "inversiones_cp": 55908,
+        "cuentas_por_cobrar": 80876,
+        "inventarios": 1397,
+        "otros_activos_circulantes": 48594,
+        "ppe_neto": 313076,
+        "otros_activos_lp": 237590,
+        "activo_total": 758376,
+        "proveedores": 42416,
+        "otros_pasivos_circulantes": 112892,
+        "deuda": 40294,
+        "arrendamientos_financieros": 66594,
+        "revolvente": 0,
+        "otros_pasivos_lp": 53793,
+        "pasivo_total": 315989,
+        "capital_contable": 442387,
+        "utilidades_retenidas": 328265
+      },
+      "flujo": {
+        "depreciacion_amortizacion": 38534,
+        "sbc": 12405,
+        "cfo": 182935,
+        "capex": 115948,
+        "cfi": -139500,
+        "cff": -52546,
+        "dividendos": 26445,
+        "recompras": 22271,
+        "emision_deuda": 0,
+        "amortizacion_deuda": 3000,
+        "principal_arrendamientos_financieros": 3101,
+        "emision_acciones": 2009,
+        "efecto_cambiario": -196,
+        "cambio_capital_trabajo": {
+          "Accounts receivable": -12737,
+          "Inventories": -461,
+          "Other current assets": -2627,
+          "Other long-term assets": -3964,
+          "Accounts payable": 5268,
+          "Unearned revenue": 9361,
+          "Income taxes": -1875,
+          "Other current liabilities": 6847,
+          "Other long-term liabilities": -4707
+        },
+        "otros_operativos": {
+          "Net recognized losses (gains) on investments and derivatives": -11047,
+          "Deferred income taxes": 14189
+        },
+        "otros_inversion": {
+          "Acquisition of companies, net of cash acquired, and purchases of intangible and other assets": -1743,
+          "Purchases of investments": -58351,
+          "Maturities of investments": 34605,
+          "Sales of investments": 21798,
+          "Other, net": -19861
+        },
+        "otros_financiamiento": {
+          "Other, net (reportado)": -2839,
+          "menos principal de arrendamientos financieros incluido en Other, net": 3101
+        },
+        "caja_inicial": 30242,
+        "caja_final": 20935,
+        "utilidad_neta": 133749
+      },
+      "movimientos_capital": {
+        "dividendos_declarados": 27034,
+        "recompras": 22286,
+        "capital_inicial": 343479,
+        "utilidades_retenidas_iniciales": 237731,
+        "sbc": 12405,
+        "emision_acciones": 2009,
+        "ori": 63,
+        "otros": 2,
+        "recompras_contra_utilidades_retenidas": 16181,
+        "fuente": "F1 Item 8, Stockholders' Equity Statements (visor R7)"
+      },
+      "movimientos_deuda": {
+        "deuda_inicial": 43151,
+        "emisiones": 0,
+        "amortizaciones": 3000,
+        "otros": {
+          "variacion en USD del valor nominal de las notas en euros de 2013 (2,700 -> 2,630)": -70,
+          "amortizacion de descuento y costos de emision (1,155 -> 1,081)": 74,
+          "ajuste de cobertura a valor razonable (36 -> 11)": 25,
+          "amortizacion de la prima por canje de deuda (4,864 -> 4,750)": 114
+        },
+        "fuente": "F1 Nota 10 (visor R73) y estado de flujo (R6)"
+      },
+      "ajustado": [
+        {
+          "nombre": "utilidad_neta_sin_impacto_openai",
+          "base": "utilidad_neta",
+          "ajustes": {
+            "impacto de inversiones en OpenAI (neto de impuestos)": -4963
+          },
+          "valor_ajustado": 128786,
+          "fuente": "F3 Ex. 99.1, conciliacion GAAP vs no GAAP, doce meses terminados el 30-jun-2026"
+        }
+      ],
+      "memo": {
+        "arrendamientos": {
+          "financiero_total": 66594,
+          "financiero_circulante": 4290,
+          "financiero_lp": 62304,
+          "operativo_total": 21925,
+          "operativo_circulante": 5393,
+          "operativo_lp": 16532,
+          "derecho_de_uso_operativo": 24177,
+          "ppe_por_arrendamiento_financiero_costo": 82712,
+          "ppe_por_arrendamiento_financiero_dep_acumulada": -15431,
+          "ppe_neto_por_arrendamiento_financiero": 67281,
+          "pagos_no_descontados_financieros": {
+            "FY2027": 7121,
+            "FY2028": 7294,
+            "FY2029": 6668,
+            "FY2030": 6570,
+            "FY2031": 6543,
+            "despues": 55490,
+            "total": 89686,
+            "interes_imputado": -23092
+          },
+          "pagos_no_descontados_operativos": {
+            "FY2027": 6082,
+            "FY2028": 4334,
+            "FY2029": 3146,
+            "FY2030": 2612,
+            "FY2031": 2316,
+            "despues": 6216,
+            "total": 24706,
+            "interes_imputado": -2781
+          },
+          "no_iniciados": {
+            "monto": 329100,
+            "comienzo": "FY2027 a FY2033",
+            "plazos": "1 a 20 anos",
+            "texto": "primarily for datacenters ... with some arrangements subject to certain contractual conditions being met"
+          },
+          "costo": {
+            "operativo": 6968,
+            "amortizacion_derecho_de_uso_financiero": 5403,
+            "interes_financiero": 2547
+          },
+          "flujo": {
+            "operativo_por_arrendamiento_operativo": 6443,
+            "operativo_por_arrendamiento_financiero": 2547,
+            "financiamiento_por_arrendamiento_financiero": 3101
+          },
+          "derecho_de_uso_obtenido": {
+            "financiero": 24608,
+            "operativo": 4555
+          },
+          "plazo_promedio_anos": {
+            "financiero": 13,
+            "operativo": 6
+          },
+          "tasa_descuento_promedio": {
+            "financiero": 0.045,
+            "operativo": 0.037
+          },
+          "fuente": "F1 Nota 13 Leases (visores R23 y R92) (R89-R93)"
+        },
+        "ppe": {
+          "depreciacion": 34300,
+          "compras_en_cuentas_por_pagar": 26700,
+          "compromisos_de_construccion": 34600,
+          "costo_total": 431767,
+          "depreciacion_acumulada": -118691,
+          "fuente": "F1 Nota 6 (visor R16)"
+        },
+        "openai": {
+          "ingresos_por_acuerdos_comerciales": 24100,
+          "cuentas_por_cobrar": 6000,
+          "participacion_aprox_as_converted": 0.25,
+          "compromiso_de_fondeo_total": 13000,
+          "fondeado": 11900,
+          "resultado_antes_impuestos_en_otros_ingresos": 6500,
+          "texto": "the net gains recorded for fiscal year 2026 primarily relate to the dilution gain from the OpenAI Recapitalization",
+          "fuente": "F1 Nota 1 (visores R11/R46) y Nota 3 (R13)"
+        },
+        "otras_cxc_por_compra_de_componentes_de_servidores": {
+          "monto": 27800,
+          "fuente": "F1 Nota 1 (R11/R46)"
+        },
+        "inversiones_restringidas_por_contrato_con_proveedor": {
+          "total": 11300,
+          "en_inversiones_cp": 3800,
+          "en_inversiones_lp": 7500,
+          "fuente": "F1 Nota 1 (R11/R46)"
+        },
+        "inversiones_metodo_de_participacion": {
+          "monto": 12000,
+          "anterior": 6000,
+          "fuente": "F1 Nota 4 (R14)"
+        },
+        "sbc": {
+          "gasto": 12405,
+          "beneficio_fiscal": 2089,
+          "costo_no_reconocido": 24800,
+          "periodo_promedio_anos": 3,
+          "valor_razonable_de_lo_vestido": 16300,
+          "rsu_no_vestidas_millones": 78,
+          "rsu_no_vestidas_valor_promedio_otorgamiento": 409.94,
+          "rsu_movimiento_millones": {
+            "inicial": 82,
+            "otorgadas": 41,
+            "vestidas": -35,
+            "canceladas": -10,
+            "final": 78
+          },
+          "fuente": "F1 Nota 17 (visores R101, R102, R104)"
+        },
+        "recompras": {
+          "programa_acciones_millones": 36,
+          "programa_monto": 16719,
+          "retenciones_fiscales_excluidas": 5600,
+          "flujo_de_efectivo": 22271,
+          "estado_de_variaciones": 22286,
+          "autorizacion_sep2024": 60000,
+          "disponible_30jun2026": 40600,
+          "acciones_en_circulacion_millones": {
+            "inicial": 7434,
+            "emitidas": 29,
+            "recompradas": -36,
+            "final": 7427
+          },
+          "fuente": "F1 Nota 15 (visores R25, R97) y R6/R7"
+        },
+        "dividendos_declarados_nota15": {
+          "monto": 27035,
+          "por_accion": 3.64,
+          "pagados": 26445,
+          "nota": "el estado de variaciones muestra 27,034 (diferencia de redondeo de 1); el dividendo declarado el 10-jun-2026 esta en otros pasivos circulantes"
+        },
+        "acciones": {
+          "portada_23jul2026": 7425.545491,
+          "promedio_diluidas_FY2026": 7453,
+          "promedio_basicas_FY2026": 7429,
+          "incrementales_por_sbc": 24,
+          "fuente": "F1 portada (R1) y Nota 2 (R47)"
+        },
+        "deuda": {
+          "valor_nominal": 46136,
+          "descuento_y_costos_no_amortizados": -1081,
+          "ajuste_cobertura": -11,
+          "prima_por_canje": -4750,
+          "valor_razonable": 36500,
+          "intereses_pagados": 1500,
+          "vencimientos_principal": {
+            "FY2027": 9250,
+            "FY2028": 0,
+            "FY2029": 2001,
+            "FY2030": 0,
+            "FY2031": 500,
+            "despues": 34385
+          },
+          "fuente": "F1 Nota 10 (visores R73, R75, R76)"
+        },
+        "obligaciones_de_desempeno_pendientes": {
+          "monto": 684000,
+          "pct_12_meses": 0.3,
+          "fuente": "F1 Nota 12 (R88)"
+        },
+        "ingresos_diferidos": {
+          "circulante": 72965,
+          "lp": 2747
+        },
+        "impuestos": {
+          "tasa_efectiva": 0.194,
+          "impuestos_pagados": 21188,
+          "gasto_diferido": 14424,
+          "irs_nopa": "US$28.9 mil millones mas penalidades e intereses (anos 2004-2013; precios de transferencia)",
+          "fuente": "F1 Nota 11 (visores R21, R77, R84)"
+        },
+        "segmentos": {
+          "Productivity and Business Processes": {
+            "ingresos": 139996,
+            "utilidad_operativa": 83879
+          },
+          "Intelligent Cloud": {
+            "ingresos": 137791,
+            "utilidad_operativa": 56972
+          },
+          "More Personal Computing": {
+            "ingresos": 54052,
+            "utilidad_operativa": 14386
+          },
+          "fuente": "F1 Nota 18 (visor R107)"
+        },
+        "geografia": {
+          "Estados Unidos": 170794,
+          "Otros paises": 161045,
+          "fuente": "F1 Nota 18 (visor R109)"
+        },
+        "ingresos_por_oferta": {
+          "Server products and cloud services": 129425,
+          "Microsoft 365 Commercial": 101997,
+          "Xbox": 21790,
+          "LinkedIn": 19817,
+          "Windows and Devices": 17084,
+          "Search advertising": 15176,
+          "Microsoft 365 Consumer": 9175,
+          "Dynamics": 9006,
+          "Enterprise and partner services": 8260,
+          "Other": 109,
+          "fuente": "F1 Nota 18 (visor R110)"
+        },
+        "otros_activos_lp_detalle": {
+          "Operating lease right-of-use assets": 24177,
+          "Equity and other investments": 36348,
+          "Goodwill": 119651,
+          "Intangible assets, net": 18609,
+          "Other long-term assets": 38805
+        },
+        "otros_pasivos_circulantes_detalle": {
+          "Accrued compensation": 14945,
+          "Short-term income taxes": 2534,
+          "Short-term unearned revenue": 72965,
+          "Other current liabilities menos arrendamiento financiero circulante": 22448
+        },
+        "otros_pasivos_lp_detalle": {
+          "Long-term income taxes": 28647,
+          "Long-term unearned revenue": 2747,
+          "Deferred income taxes": 3054,
+          "Operating lease liabilities": 16532,
+          "Other long-term liabilities menos arrendamiento financiero de largo plazo": 2813
+        },
+        "otros_ingresos_detalle": {
+          "Net recognized gains (losses) on investments": 4385,
+          "Net gains (losses) on derivatives": 1867,
+          "Net gains (losses) on foreign currency remeasurements": -527,
+          "Other, net": 4722
+        },
+        "amortizacion_intangibles_esperada": {
+          "FY2027": 3097,
+          "FY2028": 2141,
+          "FY2029": 1944,
+          "FY2030": 1477,
+          "FY2031": 1128,
+          "fuente": "F1 Nota 9 (hechos XBRL FiniteLivedIntangibleAssetsAmortizationExpense*)"
+        }
+      },
+      "notas": "Utilidad GAAP incluye +6.5 mil millones antes de impuestos de inversiones en OpenAI (Nota 3), sobre todo la ganancia por dilucion de la recapitalizacion de OpenAI."
+    }
+  ],
+  "supuestos": {
+    "anos": 5,
+    "caja_minima": 20000,
+    "nota": "Supuestos de escenario de MECANISMO (FY2027E-FY2031E); no son pronosticos, guia del emisor ni consenso. Politica de capital identica en los tres escenarios para aislar el mecanismo operativo. Justificacion de cada driver en empresas/MSFT/notas-y-modelo.md s5.",
+    "escenarios": {
+      "tension": {
+        "descripcion": "Intensidad de capital sostenida con desaceleracion: el capex de IA sigue alto, la depreciacion alcanza al capex y comprime el margen, crecen los arrendamientos financieros que inician y se deshacen parcialmente las compras de PPE por pagar",
+        "fuente_supuestos": "notas-y-modelo.md s5 (supuesto de escenario)",
+        "tasa_interes": 0.036,
+        "tasa_arrendamientos_financieros": 0.045,
+        "tasa_rendimiento_caja": 0.0385,
+        "otros_ingresos": 0.0,
+        "dividendos": [
+          29700,
+          32700,
+          36000,
+          39600,
+          43500
+        ],
+        "recompras": 22000,
+        "emision_acciones": 2000,
+        "emision_deuda": 0,
+        "amortizacion_deuda": [
+          9250,
+          0,
+          2001,
+          0,
+          500
+        ],
+        "amortizacion_intangibles": [
+          3097,
+          2141,
+          1944,
+          1477,
+          1128
+        ],
+        "recompras_contra_utilidades_retenidas": 0.73,
+        "dias_inventario": 4.8,
+        "crecimiento_ingresos": [
+          0.12,
+          0.09,
+          0.07,
+          0.06,
+          0.05
+        ],
+        "margen_bruto": [
+          0.66,
+          0.64,
+          0.62,
+          0.61,
+          0.6
+        ],
+        "margen_operativo": [
+          0.44,
+          0.41,
+          0.39,
+          0.37,
+          0.36
+        ],
+        "da_ventas": [
+          0.14,
+          0.16,
+          0.18,
+          0.19,
+          0.2
+        ],
+        "capex_ventas": [
+          0.38,
+          0.36,
+          0.33,
+          0.3,
+          0.28
+        ],
+        "sbc_ventas": 0.04,
+        "tasa_impuestos": 0.21,
+        "dias_cxc": 95,
+        "dias_proveedores": [
+          115,
+          109,
+          102,
+          96,
+          92
+        ],
+        "notas": "dias_proveedores = (54 dias de costo de ventas de proveedores operativos + compras de PPE por pagar = 15% del capex) / costo de ventas x 365; FY2026: 26,700 = 23% del capex (Nota 6)",
+        "nuevos_arrendamientos_financieros": 50000,
+        "principal_arrendamientos_financieros": [
+          4100,
+          6500,
+          9000,
+          11500,
+          14000
+        ]
+      },
+      "intermedio": {
+        "descripcion": "Crecimiento que se modera, capex/ventas que baja gradualmente desde el maximo de FY2026 y margen operativo que cede poco por la mayor depreciacion",
+        "fuente_supuestos": "notas-y-modelo.md s5 (supuesto de escenario)",
+        "tasa_interes": 0.036,
+        "tasa_arrendamientos_financieros": 0.045,
+        "tasa_rendimiento_caja": 0.0385,
+        "otros_ingresos": 0.0,
+        "dividendos": [
+          29700,
+          32700,
+          36000,
+          39600,
+          43500
+        ],
+        "recompras": 22000,
+        "emision_acciones": 2000,
+        "emision_deuda": 0,
+        "amortizacion_deuda": [
+          9250,
+          0,
+          2001,
+          0,
+          500
+        ],
+        "amortizacion_intangibles": [
+          3097,
+          2141,
+          1944,
+          1477,
+          1128
+        ],
+        "recompras_contra_utilidades_retenidas": 0.73,
+        "dias_inventario": 4.8,
+        "crecimiento_ingresos": [
+          0.15,
+          0.13,
+          0.11,
+          0.1,
+          0.09
+        ],
+        "margen_bruto": [
+          0.67,
+          0.665,
+          0.66,
+          0.655,
+          0.65
+        ],
+        "margen_operativo": [
+          0.46,
+          0.45,
+          0.44,
+          0.435,
+          0.43
+        ],
+        "da_ventas": [
+          0.13,
+          0.14,
+          0.15,
+          0.15,
+          0.15
+        ],
+        "capex_ventas": [
+          0.33,
+          0.3,
+          0.27,
+          0.25,
+          0.23
+        ],
+        "sbc_ventas": 0.037,
+        "tasa_impuestos": 0.19,
+        "dias_cxc": 89,
+        "dias_proveedores": [
+          138,
+          129,
+          121,
+          115,
+          109
+        ],
+        "notas": "dias_proveedores = (54 dias de costo de ventas + compras de PPE por pagar = 23% del capex, razon de FY2026) / costo de ventas x 365",
+        "nuevos_arrendamientos_financieros": 35000,
+        "principal_arrendamientos_financieros": [
+          4100,
+          5700,
+          7300,
+          8900,
+          10500
+        ]
+      },
+      "eficiencia": {
+        "descripcion": "La capacidad instalada se monetiza: crecimiento alto sostenido, capex/ventas que se normaliza rapido y margen operativo estable o al alza",
+        "fuente_supuestos": "notas-y-modelo.md s5 (supuesto de escenario)",
+        "tasa_interes": 0.036,
+        "tasa_arrendamientos_financieros": 0.045,
+        "tasa_rendimiento_caja": 0.0385,
+        "otros_ingresos": 0.0,
+        "dividendos": [
+          29700,
+          32700,
+          36000,
+          39600,
+          43500
+        ],
+        "recompras": 22000,
+        "emision_acciones": 2000,
+        "emision_deuda": 0,
+        "amortizacion_deuda": [
+          9250,
+          0,
+          2001,
+          0,
+          500
+        ],
+        "amortizacion_intangibles": [
+          3097,
+          2141,
+          1944,
+          1477,
+          1128
+        ],
+        "recompras_contra_utilidades_retenidas": 0.73,
+        "dias_inventario": 4.8,
+        "crecimiento_ingresos": [
+          0.17,
+          0.16,
+          0.15,
+          0.14,
+          0.13
+        ],
+        "margen_bruto": 0.68,
+        "margen_operativo": [
+          0.47,
+          0.47,
+          0.475,
+          0.48,
+          0.48
+        ],
+        "da_ventas": [
+          0.12,
+          0.125,
+          0.13,
+          0.13,
+          0.13
+        ],
+        "capex_ventas": [
+          0.3,
+          0.26,
+          0.23,
+          0.21,
+          0.19
+        ],
+        "sbc_ventas": 0.035,
+        "tasa_impuestos": 0.18,
+        "dias_cxc": 85,
+        "dias_proveedores": [
+          133,
+          122,
+          114,
+          109,
+          104
+        ],
+        "notas": "dias_proveedores = (54 dias de costo de ventas + compras de PPE por pagar = 23% del capex, razon de FY2026) / costo de ventas x 365",
+        "nuevos_arrendamientos_financieros": 25000,
+        "principal_arrendamientos_financieros": [
+          4100,
+          5000,
+          6000,
+          7000,
+          8000
+        ]
+      }
+    }
+  },
+  "mercado_y_dcf": {
+    "naturaleza": "insumos de mercado (hecho con fecha) y parametros de valuacion (supuestos explicitos)",
+    "precio": {
+      "valor": 497.93,
+      "fecha": "2026-09-24",
+      "fuente": "F5 (cierre regular 16:00 ET; no ajustado)"
+    },
+    "acciones_basicas_portada": {
+      "valor": 7425.545491,
+      "fecha": "2026-07-23",
+      "fuente": "F1 portada (R1, dei:EntityCommonStockSharesOutstanding)"
+    },
+    "acciones_incrementales_sbc": {
+      "valor": 24,
+      "fuente": "F1 Nota 2 (R47; metodo de tesoreria, promedio FY2026)"
+    },
+    "rsu_no_vestidas": {
+      "valor": 78,
+      "fuente": "F1 Nota 17 (R104); para la variante de dilucion completa"
+    },
+    "deuda": {
+      "valor": 40294,
+      "fuente": "F1 R4"
+    },
+    "arrendamientos_financieros": {
+      "valor": 66594,
+      "fuente": "F1 Nota 13"
+    },
+    "caja": {
+      "valor": 20935,
+      "fuente": "F1 R4"
+    },
+    "inversiones_cp": {
+      "valor": 55908,
+      "fuente": "F1 R4"
+    },
+    "inversiones_cp_restringidas": {
+      "valor": 3800,
+      "fuente": "F1 Nota 1 (restringidas por contrato con proveedor)"
+    },
+    "inversiones_lp": {
+      "valor": 36348,
+      "fuente": "F1 R4 ('Equity and other investments', valor en libros)"
+    },
+    "inversiones_lp_restringidas": {
+      "valor": 7500,
+      "fuente": "F1 Nota 1"
+    },
+    "ingresos_base": {
+      "valor": 331839,
+      "fuente": "F1 R2 (FY2026)"
+    },
+    "tasa_bono_10a": {
+      "valor": 0.0511,
+      "fecha": "2026-09-23",
+      "fuente": "F6"
+    },
+    "diferencial_default_eua": {
+      "valor": 0.0022,
+      "fuente": "F8 (supuesto del sistema, conocimiento/03 s2.3)"
+    },
+    "erp": {
+      "valor": 0.0431,
+      "fuente": "F8 (Damodaran sep-2026, contra r_f ajustada)"
+    },
+    "beta_desapalancada": {
+      "valor": 1.25,
+      "fuente": "F7 Software (System & Application), corregida por caja, ene-2026"
+    },
+    "tasa_marginal_impuestos": {
+      "valor": 0.21,
+      "fuente": "F1 Nota 11 (tasa federal estatutaria 21%)"
+    },
+    "diferencial_deuda": {
+      "valor": 0.005,
+      "fuente": "supuesto (peso de la deuda ~3% del valor: casi no mueve el WACC)"
+    },
+    "g_terminal": {
+      "valor": 0.03,
+      "sensibilidad": [
+        0.025,
+        0.035
+      ],
+      "fuente": "supuesto (<= r_f nominal, conocimiento/03 s2.4)"
+    },
+    "anos_explicitos": 10,
+    "sensibilidad_wacc_pp": 0.01,
+    "sensibilidad_g_pp": 0.005
+  }
+}

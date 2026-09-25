@@ -4,6 +4,8 @@ Reproduce, desde la raiz del repo:
   python3 laboratorio/replicas/V05-spiva-y-fiscalidad-sic/reproducir.py
 Sin red. Solo biblioteca estandar (mas herramientas/ del repo). Lee datos/ (huellas en SHA256SUMS.txt)
 y escribe resultados.json. El pre-registro es prerregistro.md (huella tomada antes de descargar nada)."""
+import sys
+sys.dont_write_bytecode = True  # no dejar __pycache__ dentro de datos/
 import csv
 import datetime
 import json
@@ -149,6 +151,17 @@ a3 = {
 ex8 = re.search(r"Exhibit 8: Non-Benchmark Holdings in Top-Quartile Mexico Equity Funds.*?(\d+\.\d)% (\d+\.\d)% (\d+\.\d)%", tp)
 a3["exhibit8_grafica_pct"] = {"no_benchmark": float(ex8.group(1)), "valores_offshore": float(ex8.group(2)), "fondos_indexados_y_etfs": float(ex8.group(3))}
 a3["discrepancia_texto_vs_grafica_pp"] = round(a3["fondos_indexados_y_etfs_extranjeros_texto_pct"] - a3["exhibit8_grafica_pct"]["fondos_indexados_y_etfs"], 2)
+rep = {}
+for ancla, clave in [("Report 3: Average Fund Performance (Equal-Weighted)", "equiponderado"),
+                     ("Report 4: Average Fund Performance (Asset-Weighted)", "ponderado_por_activos")]:
+    rep[clave] = {}
+    for etiqueta, nombre in [(r"\nS&P/BMV IRT", "S&P/BMV IRT"), (r"\nMexico Equity Funds", "Fondos Mexico Equity"),
+                             (r"\nS&P 500 \(MXN\)", "S&P 500 (MXN)"), (r"\nU\.S\. Equity \(MXN\) Funds", "Fondos U.S. Equity (MXN)"),
+                             (r"\nS&P World Index \(MXN\)", "S&P World (MXN)"), (r"\nGlobal Equity \(MXN\) Funds", "Fondos Global Equity (MXN)")]:
+        v, _ = fila(t, ancla, etiqueta, "Index/Fund Category")
+        assert v and len(v) == 4, (ancla, nombre, v)
+        rep[clave][nombre] = dict(zip(["1", "3", "5", "10"], v))
+res["spiva_ye2024_rendimientos_anualizados_pct"] = rep
 a3["veredicto"] = "confirmada con matices"
 a3["matices"] = ["se refiere al cuartil superior de 2024 (horizonte de 1 anio), no a los fondos que ganaron a 10 anios",
                  "S&P mide peso fuera del indice (cota inferior del active share), no el active share",
@@ -239,9 +252,12 @@ def analisis(a, b, pesos_extra=()):
 
 
 res["B_preregistrado"] = analisis((2015, 1), (2024, 12))
+_eq = rep["equiponderado"]
 res["B_preregistrado"]["control_contra_spiva"] = {
-    "spiva_ye2024_irt_10a_anualizado_pct": 4.14, "spiva_ye2024_sp500_mxn_10a_anualizado_pct": 17.08,
-    "fuente": "SPIVA Latin America Year-End 2024, Report 3 (fila de indices)"}
+    "spiva_ye2024_irt_10a_anualizado_pct": _eq["S&P/BMV IRT"]["10"], "spiva_ye2024_sp500_mxn_10a_anualizado_pct": _eq["S&P 500 (MXN)"]["10"],
+    "brecha_naftrac_menos_irt_pp": res["B_preregistrado"]["cagr_ipc_naftrac_pct"] - _eq["S&P/BMV IRT"]["10"],
+    "brecha_spy_por_fx_menos_sp500_mxn_pp": res["B_preregistrado"]["cagr_sp500_mxn_pct"] - _eq["S&P 500 (MXN)"]["10"],
+    "fuente": "SPIVA Latin America Year-End 2024, Report 3 (filas de indices)"}
 res["B_exploratorio"] = {
     "anio_2024 (no pre-registrado; se agrego tras leer A3)": analisis((2024, 1), (2024, 12), pesos_extra=(0.164,)),
     "2016-2025 (no pre-registrado; ventana de la edicion Year-End 2025)": analisis((2016, 1), (2025, 12)),
@@ -288,6 +304,8 @@ def contiene(rel, frase):
 
 
 CITAS = [
+    ("legal/LISR.txt", "Última reforma publicada DOF 01-04-2024", "LISR: texto vigente sin reformas posteriores al 01-04-2024"),
+    ("legal/LIF_2026.txt", "Nueva Ley publicada en el Diario Oficial de la Federación el 7 de noviembre de 2025", "LIF 2026: DOF 07-11-2025"),
     ("legal/LISR.txt", "aplicando la tasa del 10% a las ganancias obtenidas en el ejercicio", "Art. 129 LISR: 10% definitivo"),
     ("legal/LISR.txt", "acciones emitidas por sociedades extranjeras cotizadas en dichas bolsas de valores", "Art. 129 fr. I incluye acciones extranjeras cotizadas (SIC)"),
     ("legal/LISR.txt", "títulos que representen índices accionarios enajenados en las bolsas de", "Art. 129 fr. II: ETFs de indices accionarios"),
@@ -314,6 +332,7 @@ CITAS = [
     ("legal/usc-26-2102.txt", "A credit of $13,000 shall be allowed against the tax imposed by section 2101.", "26 USC 2102(b)(1): credito de 13,000 USD"),
     ("legal/usc-26-2105.txt", "This subsection shall not apply to estates of decedents dying after December 31, 2011", "26 USC 2105(d)(3): excepcion RIC vencida"),
     ("legal/usc-26-2001.txt", "Over $1,000,000 $345,800, plus 40 percent of the excess of such amount over $1,000,000.", "26 USC 2001(c): tasa marginal maxima 40%"),
+    ("legal/revenue-ie-cat-notas-guia-part09.txt", "where the disponer and beneficiary are foreign-domiciled and foreign-resident", "Irlanda CAT s.75: fondos exentos si causante y heredero no residen ni tienen domicilio en Irlanda"),
 ]
 res["citas_legales"] = [{"archivo": a, "tema": tema, "frase": fr, "encontrada": contiene(a, fr)} for a, fr, tema in CITAS]
 assert all(c["encontrada"] for c in res["citas_legales"]), [c for c in res["citas_legales"] if not c["encontrada"]]

@@ -260,6 +260,84 @@
   ],
   "veredicto": "confirmada con matices"
  },
+ "spiva_ye2024_rendimientos_anualizados_pct": {
+  "equiponderado": {
+   "S&P/BMV IRT": {
+    "1": -10.7,
+    "3": 1.07,
+    "5": 5.83,
+    "10": 4.14
+   },
+   "Fondos Mexico Equity": {
+    "1": -6.73,
+    "3": 2.25,
+    "5": 3.98,
+    "10": 2.56
+   },
+   "S&P 500 (MXN)": {
+    "1": 53.51,
+    "3": 9.6,
+    "5": 16.79,
+    "10": 17.08
+   },
+   "Fondos U.S. Equity (MXN)": {
+    "1": 44.14,
+    "3": 5.08,
+    "5": 12.29,
+    "10": 12.65
+   },
+   "S&P World (MXN)": {
+    "1": 46.67,
+    "3": 7.38,
+    "5": 13.79,
+    "10": 14.33
+   },
+   "Fondos Global Equity (MXN)": {
+    "1": 29.89,
+    "3": 2.41,
+    "5": 6.55,
+    "10": 7.09
+   }
+  },
+  "ponderado_por_activos": {
+   "S&P/BMV IRT": {
+    "1": -10.7,
+    "3": 1.07,
+    "5": 5.83,
+    "10": 4.14
+   },
+   "Fondos Mexico Equity": {
+    "1": -2.41,
+    "3": 3.9,
+    "5": 4.03,
+    "10": 2.53
+   },
+   "S&P 500 (MXN)": {
+    "1": 53.51,
+    "3": 9.6,
+    "5": 16.79,
+    "10": 17.08
+   },
+   "Fondos U.S. Equity (MXN)": {
+    "1": 50.86,
+    "3": 7.61,
+    "5": 15.28,
+    "10": 14.51
+   },
+   "S&P World (MXN)": {
+    "1": 46.67,
+    "3": 7.38,
+    "5": 13.79,
+    "10": 14.33
+   },
+   "Fondos Global Equity (MXN)": {
+    "1": 33.53,
+    "3": 3.57,
+    "5": 9.06,
+    "10": 9.26
+   }
+  }
+ },
  "A3_ganadores_mexico": {
   "fuente": "SPIVA Latin America Year-End 2024, paginas 7-8 y Exhibit 8 (datos al 31-dic-2024)",
   "periodo_de_los_ganadores": "where only 18.6% of funds underperformed in 2024",
@@ -329,7 +407,9 @@
   "control_contra_spiva": {
    "spiva_ye2024_irt_10a_anualizado_pct": 4.14,
    "spiva_ye2024_sp500_mxn_10a_anualizado_pct": 17.08,
-   "fuente": "SPIVA Latin America Year-End 2024, Report 3 (fila de indices)"
+   "brecha_naftrac_menos_irt_pp": -0.6146696505026865,
+   "brecha_spy_por_fx_menos_sp500_mxn_pp": -0.09951260576889354,
+   "fuente": "SPIVA Latin America Year-End 2024, Report 3 (filas de indices)"
   }
  },
  "B_exploratorio": {
@@ -577,6 +657,18 @@
  "citas_legales": [
   {
    "archivo": "legal/LISR.txt",
+   "tema": "LISR: texto vigente sin reformas posteriores al 01-04-2024",
+   "frase": "Última reforma publicada DOF 01-04-2024",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LIF_2026.txt",
+   "tema": "LIF 2026: DOF 07-11-2025",
+   "frase": "Nueva Ley publicada en el Diario Oficial de la Federación el 7 de noviembre de 2025",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/LISR.txt",
    "tema": "Art. 129 LISR: 10% definitivo",
    "frase": "aplicando la tasa del 10% a las ganancias obtenidas en el ejercicio",
    "encontrada": true
@@ -729,6 +821,12 @@
    "archivo": "legal/usc-26-2001.txt",
    "tema": "26 USC 2001(c): tasa marginal maxima 40%",
    "frase": "Over $1,000,000 $345,800, plus 40 percent of the excess of such amount over $1,000,000.",
+   "encontrada": true
+  },
+  {
+   "archivo": "legal/revenue-ie-cat-notas-guia-part09.txt",
+   "tema": "Irlanda CAT s.75: fondos exentos si causante y heredero no residen ni tienen domicilio en Irlanda",
+   "frase": "where the disponer and beneficiary are foreign-domiciled and foreign-resident",
    "encontrada": true
   }
  ],

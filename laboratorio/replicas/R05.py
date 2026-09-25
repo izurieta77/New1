@@ -200,7 +200,8 @@ def ols2(y: list, x: list, rezagos: int = NW_REZAGOS) -> dict:
     def se(v: float) -> float:
         return math.sqrt(v) if v > 0 else float("nan")
 
-    salida = {"n": n, "a": a_, "b": b_, "s2": s2, "r2": 1 - sum(v * v for v in e) / sst,
+    salida = {"n": n, "a": a_, "b": b_, "s2": s2,
+              "r2": 1 - sum(v * v for v in e) / sst if sst > 0 else float("nan"),
               "se_a_ols": se(s2 * inv[0][0]), "se_b_ols": se(s2 * inv[1][1]),
               "se_a_hc0": se(v_hc0[0][0]), "se_b_hc0": se(v_hc0[1][1]),
               "se_a_hc1": se(corr * v_hc0[0][0]), "se_a_nw": se(corr * v_nw[0][0]),
@@ -418,9 +419,12 @@ def exceso_mercado(res: bt.ResultadoBacktest, f0: date, f1: date) -> list:
 
 def alfa_contra_mercado(res: bt.ResultadoBacktest, f0: date, f1: date) -> dict:
     y, x = exceso(res, f0, f1), exceso_mercado(res, f0, f1)
+    if max(y) - min(y) == 0:  # regla de 100% efectivo: exceso identicamente 0
+        return {"alfa": float("nan"), "t_hc0": float("nan"), "t_nw": float("nan"), "beta": float("nan"),
+                "n": len(y), "ar": float("nan")}
     r = ols2(y, x)
     return {"alfa": r["a"] * 1200, "t_hc0": r["t_a_hc0"], "t_nw": r["t_a_nw"], "beta": r["b"], "n": r["n"],
-            "ar": r["a"] / math.sqrt(r["s2"]) * math.sqrt(12)}
+            "ar": r["a"] / math.sqrt(r["s2"]) * math.sqrt(12) if r["s2"] > 0 else float("nan")}
 
 
 def metricas_ventana(res: bt.ResultadoBacktest, r: list, f0: date, f1: date) -> dict:
@@ -438,7 +442,7 @@ def tabla_motor(resultados: list, segmento: str, bh: bt.ResultadoBacktest) -> st
     for r in resultados:
         x = r.metricas[segmento]
         a = alfa_contra_mercado(r, f0, f1)
-        if r is bh:
+        if r is bh or max(r.exposicion) == min(r.exposicion) == 0:
             jk_txt = "—"
         else:
             jk = jobson_korkie(exceso(r, f0, f1), exceso(bh, f0, f1))
@@ -604,7 +608,7 @@ def correr_todo() -> dict:
             out[seg] = {k: x[k] for k in ("fecha_inicio", "fecha_fin", "n_periodos", "cagr", "vol_anual", "sharpe",
                                           "mdd", "exposicion_media", "rotacion_anual", "costo_anual", "psr")}
             out[seg].update({"alfa": a["alfa"], "t_hc0": a["t_hc0"], "t_nw": a["t_nw"], "beta": a["beta"]})
-            if r is not bh:
+            if r is not bh and not max(r.exposicion) == min(r.exposicion) == 0:
                 jk = jobson_korkie(exceso(r, *SEG_FECHAS[seg]), exceso(bh, *SEG_FECHAS[seg]))
                 out[seg].update({"dsr_vs_cym": jk["dif"], "p_jk": jk["p"]})
         return out

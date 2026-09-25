@@ -1,0 +1,100 @@
+{
+ "fuente": "Damodaran, Betas by Sector (US), \"Data used is as of January 2026\"",
+ "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+ "descargado": "2026-09-25",
+ "sha256_html_completo": "10993bab71504e2449ccdd9e3d67fa4da983bed380b2f4486e5200a7b258616b",
+ "bytes_html_completo": 464334,
+ "filas": [
+  [
+   "Industry Name",
+   "Number of firms",
+   "Beta",
+   "D/E Ratio",
+   "Effective Tax rate",
+   "Unlevered beta",
+   "Cash/Firm value",
+   "Unlevered beta corrected for cash",
+   "HiLo Risk",
+   "Standard deviation of equity",
+   "Standard deviation in operating income (last 10 years)"
+  ],
+  [
+   "Computer Services",
+   "64",
+   "1.09",
+   "25.10%",
+   "10.53%",
+   "0.92",
+   "4.80%",
+   "0.96",
+   "0.5715",
+   "53.43%",
+   "19.63%"
+  ],
+  [
+   "Information Services",
+   "15",
+   "0.92",
+   "33.17%",
+   "18.16%",
+   "0.74",
+   "2.54%",
+   "0.76",
+   "0.4395",
+   "32.38%",
+   "40.82%"
+  ],
+  [
+   "Software (Internet)",
+   "29",
+   "1.69",
+   "12.30%",
+   "3.05%",
+   "1.55",
+   "2.80%",
+   "1.59",
+   "0.5618",
+   "52.61%",
+   "234.02%"
+  ],
+  [
+   "Software (System & Application)",
+   "309",
+   "1.28",
+   "5.58%",
+   "5.51%",
+   "1.23",
+   "1.83%",
+   "1.25",
+   "0.5741",
+   "56.79%",
+   "48.63%"
+  ],
+  [
+   "Total Market",
+   "5994",
+   "0.91",
+   "35.17%",
+   "8.30%",
+   "0.72",
+   "4.50%",
+   "0.76",
+   "0.4807",
+   "48.07%",
+   "27.75%"
+  ],
+  [
+   "Total Market (without financials)",
+   "4822",
+   "0.99",
+   "17.29%",
+   "7.10%",
+   "0.88",
+   "2.60%",
+   "0.90",
+   "0.5345",
+   "52.76%",
+   "28.15%"
+  ]
+ ]
+}

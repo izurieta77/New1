@@ -57,7 +57,7 @@ Un beat que no mueve la capa 3 casi no mueve el precio. Un miss acompañado de u
 
 **2. Consenso de analistas.** Tiene ventaja de oportunidad a horizonte corto, pero trae dos sesgos opuestos según el horizonte:
 - **Optimismo a 12 meses.** FactSet (5-dic-2025), sobre 2000-2024:
-  - el UPA anual del S&P 500 estimado un año antes superó al final en **6.2%** en promedio, y lo sobreestimó en 17 de 25 años;
+  - el UPA anual bottom-up del S&P 500 estimado al 31-dic del año previo superó al final en **6.2%** en promedio, y lo sobreestimó en 17 de 25 años;
   - sin 2001, 2008-2009 y 2020, el sesgo baja a **0.9%** [37].
 - **Walk-down hacia metas superables.**
   - La estimación agregada del trimestre suele bajar durante los dos primeros meses. Las caídas promedio son de 1.7% (5 años), 2.1% (10), 2.6% (15) y 3.1% (20) [36]. En el 1T26 bajó 1.5% [38], y en el 2T26 y 3T26 subió.
@@ -82,13 +82,13 @@ Un beat que no mueve la capa 3 casi no mueve el precio. Un miss acompañado de u
   - Los inversionistas **sobreponderan** al consenso. La estrategia rinde **5.8% anual** fuera de muestra (9.4% en empresas de alta sensibilidad), en términos brutos.
 
 **4. Datos de alta frecuencia y combinación.**
-- Ball y Ghysels (2018) pronostican con MIDAS (series mixtas diaria/mensual) [14].
+- Ball y Ghysels (2018) pronostican con MIDAS (regresiones con datos de frecuencia mixta) a horizontes de un trimestre o menos [14].
   - Superan al analista cuando la dispersión es alta y la empresa es chica.
   - **La combinación MIDAS + analistas supera sistemáticamente a los analistas solos.**
 - **Combinar pronósticos es el resultado más robusto de toda esta literatura.**
 
 **5. Machine learning.**
-- Chen, Cho, Dou y Lev (JAR 2022) usan random forest y gradient boosting sobre más de 12,000 variables XBRL [17]:
+- Chen, Cho, Dou y Lev (JAR 2022) usan random forest y gradient boosting sobre datos financieros XBRL de alta dimensión, con más de 12,000 variables **(conteo no verificado; el abstract solo dice "high-dimensional detailed financial data")** [17]:
   - predicen la dirección del cambio de utilidad a un año con un AUC de **67.5-68.7%**;
   - los portafolios de cobertura rinden **5.0-9.7% anual** ajustado por tamaño, en bruto;
   - superan a los analistas.
@@ -98,20 +98,20 @@ Un beat que no mueve la capa 3 casi no mueve el precio. Un miss acompañado de u
   - el humano gana con intangibles, distress y poca información.
 
 **6. LLMs.**
-- Kim, Muhn y Nikolaev (jul-2024): GPT-4 superaba a los analistas en la dirección del cambio de utilidades. **Retirado el 20-feb-2025**: un coautor encontró inconsistencias al replicarlo [3].
-- Kim y Nikolaev (JAR, en línea desde el 18-dic-2024): **retractado el 29-abr-2026**, "no reproducible ni cuantitativa ni cualitativamente" [4].
-- Van Binsbergen, Han y Lopez-Lira (RFS 2023), el benchmark de ML de sesgos del consenso: **Expresión de Preocupación**, mayo de 2026 [5].
-- **Memorización.** Los LLM reproducen casi literalmente valores anteriores a su fecha de corte. Enmascarar entidades no lo evita, y "post-cutoff, no recall" (Lopez-Lira, Tang y Zhu, 2025) [6].
-  - Liang: el error en utilidades trimestrales es ~11% menor antes de la fecha de corte (solo resumen) [9].
+- Kim, Muhn y Nikolaev (jul-2024): GPT-4 superaba a los analistas en la dirección del cambio de utilidades. **Retirado (temporalmente, según la nota de arXiv) el 20-feb-2025**: un coautor encontró inconsistencias en datos y análisis al replicarlo [3].
+- Kim y Nikolaev (JAR, en línea desde el 18-dic-2024): **retractado el 29-abr-2026** (aviso de retracción confirmado en Crossref, DOI 10.1111/1475-679x.70057). La cita textual "no reproducible ni cuantitativa ni cualitativamente" **(no verificado: Wiley dio 403)** [4].
+- Van Binsbergen, Han y Lopez-Lira (RFS 2023), el benchmark de ML de sesgos del consenso: **Expresión de Preocupación** publicada en línea el 1-mar-2026 y en el número de mayo de 2026, RFS 39(5) [5]. Antecedentes: réplica crítica "Man versus Machine Learning Revisited" (Zhang, Zhu y Linnainmaa, SSRN 2024) y un corrigendum de los autores (SSRN 2025) (metadatos de Crossref).
+- **Memorización.** Los LLM reproducen casi literalmente valores anteriores a su fecha de corte. Enmascarar entidades no lo evita, y "post-cutoff, we observe no recall" (Lopez-Lira, Tang y Zhu, 2025) [6].
+  - Liang (SSRN 2026), con GPT-4 (corte: 30-sep-2021): el error absoluto en utilidades trimestrales es ~11% menor antes de la fecha de corte; ~18% en niveles diarios de índices y ~16% en precios mensuales. El pre-corte reduce artificialmente la brecha GPT-analista, sobre todo en trimestres de alta sorpresa (resumen confirmado vía Crossref; texto completo no leído) [9].
   - Pruebas formales de look-ahead: [7][8].
 - Veredicto: **D.** El LLM lee, extrae, reconcilia y genera hipótesis con cita. No prueba capacidad predictiva antes de su fecha de corte.
 
 ### 2.3 Sorpresas, deriva y revisiones
 - **SUE** = (real − esperado)/σ (o /precio). Hay dos benchmarks: el RW estacional y el consenso. La deriva es mayor con la sorpresa medida contra analistas (Livnat y Mendenhall, 2006) [21].
-- **Origen.** Bernard y Thomas (1989): el diferencial entre deciles extremos de SUE fue positivo en 41 de 48 trimestres (1974-1985) y decrece con el tamaño [20].
-- **Muerte en las grandes.** Martineau (CFR 2022): en acciones grandes no hay PEAD desde 2006, y en microcaps desapareció hace poco [1]. Debate de 2025:
-  - Dickerson-Julliard-Mueller (JFE) y Hirshleifer-Peng-Wang (RFS) sostienen que sigue vivo.
-  - Subrahmanyam (dic-2025) muestra que solo sobrevive en microcaps no invertibles [2].
+- **Origen.** Bernard y Thomas (1989): el diferencial entre deciles extremos de SUE fue positivo en 41 de 48 trimestres (1974-1985) **(no verificado en fuente primaria)** y decrece con el tamaño [20].
+- **Muerte en las grandes.** Martineau (CFR 2022): fuera de las microcaps la deriva desapareció hacia 2006 (decimalización y negociación de alta frecuencia) [1]. Debate de 2025:
+  - Dickerson-Julliard-Mueller (aceptado en JFE) y Hirshleifer-Peng-Wang (RFS 38(3), 2025; t ≈ 14) sostienen que sigue vivo.
+  - Subrahmanyam (SSRN, dic-2025; reseña de UCLA Anderson del 21-ene-2026) muestra que solo sobrevive en microcaps, que son ~3% del valor de mercado. Sin ellas, el t cae a 1.43 [2].
   - Detalle en el cap. 15 §4.
 - **Por qué murió.** Kettell, McInnis y Zhao (WP, 2022): la persistencia de la SUE cayó. Al controlarla, la tendencia descendente del PEAD deja de ser significativa [22]. Inferencia: hoy la sorpresa de este trimestre predice menos la del siguiente, así que hay menos que "subreaccionar".
 - **Deriva por texto.** Meursault, Liang, Routledge y Scanlon (JFQA 2023) miden la sorpresa con el texto de la llamada (SUE.txt) [23]:
@@ -119,27 +119,31 @@ Un beat que no mueve la capa 3 casi no mueve el precio. Un miss acompañado de u
   - PEAD clásico en el mismo periodo: 1.54/2.70/3.87/4.63%;
   - los rendimientos son brutos, ajustados por tamaño y B/M, antes de costos y sin réplica independiente: **C**.
 - **Revisiones.**
-  - Chan, Jegadeesh y Lakonishok (1996): el diferencial entre extremos de SUE es de **7.5%** a 6 meses (1973-1993). El momentum de precio y el de utilidades predicen cada uno por separado [19].
-  - Stickel (1991): el precio deriva unos 6 meses en la dirección de la revisión [25].
+  - Chan, Jegadeesh y Lakonishok (1996): el diferencial entre extremos de SUE es de **7.5%** a 6 meses (1973-1993) **(cifra no verificada en fuente primaria)**. Verificado en el abstract: el rendimiento pasado y la sorpresa pasada predicen cada uno una deriva grande controlando por el otro, sin reversión posterior, y los analistas también ajustan lento [19].
+  - Stickel (1991): el precio deriva unos 6 meses en la dirección de la revisión **(horizonte no verificado en fuente primaria)** [25].
   - Gleason y Lee (2003): el mercado no distingue bien las revisiones con información nueva de las que solo se acercan al consenso. El ajuste es más lento con menos cobertura y con analistas precisos pero poco famosos [25].
-  - Novy-Marx (2015): el momentum de utilidades **subsume** al de precio y elimina sus crashes [24].
+  - Novy-Marx (2015): el momentum de utilidades **subsume** al de precio. Una estrategia de momentum de utilidades que controla por el rendimiento pasado baja su volatilidad y elimina los crashes sin perder rendimiento promedio [24].
 
 ### 2.4 Guía de la dirección
 - Hutton, Lee y Shu (2012) comparan la guía anual con el analista promedio [28]:
-  - la guía es más precisa ~**50%** de las veces;
+  - la guía es más precisa ~**50%** de las veces **(no verificado: el abstract no da la cifra y SSRN dio 403)**;
   - la dirección gana en lo propio de la firma: inventarios anormales, exceso de capacidad, pérdidas;
   - el analista gana cuando la firma se mueve con la macro (PIB, energía).
 - Definición operativa de FactSet: una guía es negativa si su punto medio queda debajo del consenso medio [36].
-- **2025, la niebla arancelaria.**
-  - GM retiró su guía el 30-abr-2025 [52]. Stellantis, Mercedes, Cummins y JetBlue la suspendieron o retiraron por los aranceles (prensa, fuente secundaria [52]).
-  - Al 10-abr-2025 solo 2 empresas del S&P 500 habían retirado su guía anual: Walgreens y Delta [39]. El pánico fue más de narrativa que de conteo.
-- **3T 2026:** 70 guías positivas y 41 negativas, es decir **63%** positivas contra 41% de promedio a 5 años. 44 de las 70 son de Tecnologías de la Información [36].
+- **2025, la niebla arancelaria** (verificado en documentos presentados a la SEC, salvo donde se indica):
+  - GM retiró su guía 2025 con su reporte del 1T el 29-abr-2025 (Fortune, 30-abr-2025) [52].
+  - Stellantis suspendió su guía 2025 "due to tariff-related uncertainties" (6-K, 30-abr-2025) [52].
+  - Cummins: "Due to growing economic uncertainty driven by tariffs we have withdrawn our full year forecast" (8-K Item 2.02, 5-may-2025) [52].
+  - JetBlue no reafirmó su guía anual "given the macroeconomic uncertainty" (8-K, 29-abr-2025). No citó aranceles de forma explícita [52].
+  - Mercedes-Benz: retiro por aranceles **(no verificado: no presenta ante la SEC y su sitio dio 403)**.
+  - FactSet (14-abr-2025): al 10-abr-2025, 2 de las 23 empresas del S&P 500 que ya habían reportado retiraron su guía anual. Walgreens lo hizo por su venta a Sycamore, no por aranceles, y Delta por "current uncertainty" [39]. **Corrección:** era una muestra de 23 reportes en la primera semana de la temporada. No sirve para concluir que el pánico fue "de narrativa". A fines de abril y en mayo se sumaron retiros explícitos por aranceles.
+- **3T 2026** (FactSet, 4-sep-2026): 70 guías positivas y 41 negativas, es decir **63%** positivas contra 41% de promedio a 5 años y 42% a 10. 44 de las 70 son de Tecnologías de la Información [36]. Al 18-sep-2026 eran 72 positivas y 43 negativas, todavía 63% [40].
 - Regla: la guía vale lo que vale el **historial de promesas contra resultados** de esa dirección (expediente de 10 puntos).
 
 ### 2.5 Tono, voz y texto
 - **Diccionario.** Loughran y McDonald (2011): ~**3/4** de las palabras "negativas" de Harvard no lo son en finanzas. Se usa el diccionario LM [30].
 - **Voz.** Mayew y Venkatachalam (2012): el afecto vocal de los directivos anticipa el desempeño. Los analistas no lo incorporan en sus pronósticos de corto plazo, y en sus recomendaciones solo incorporan el positivo [29].
-- **Engaño.** Larcker y Zakolyukina (2012): 50-65% de exactitud, 6-16% sobre el azar fuera de muestra. Las respuestas engañosas mencionan más "lo que todos saben" y menos el valor para el accionista [31].
+- **Engaño.** Larcker y Zakolyukina (2012): 50-65% de exactitud **(no verificado)**, 6-16% sobre el azar fuera de muestra (verificado en el abstract). Las respuestas engañosas mencionan más "lo que todos saben" y menos el valor para el accionista [31].
 - **Reacción de los analistas.** Matera (arXiv, nov-2025): **sobrerreaccionan al sentimiento** y **subreaccionan a las narrativas de riesgo** [32].
 - Uso: priorizar la lectura y ensanchar intervalos. No es señal de operación: grado C, sin réplica neta.
 
@@ -183,14 +187,16 @@ Un beat que no mueve la capa 3 casi no mueve el precio. Un miss acompañado de u
   - Alphabet registró **US$98 mil millones** en otros ingresos, sobre todo ganancias no realizadas en valores de capital.
   - Amazon registró **US$53.4 mil millones**, sobre todo por sus inversiones en Anthropic.
   - El crecimiento combinado del S&P 500 fue de **50.4%**, y de **32.0%** sin ellas. La sorpresa agregada fue de 29.2%, y de 10.9% sin ellas.
-  - Consecuencia en el consenso: para el 2T27 se espera un crecimiento de apenas **1.2%**, por efecto de base [36].
+  - Hecho: para el 2T27 el consenso espera un crecimiento de apenas **1.2%** [36]. Inferencia: es sobre todo efecto de base por esas ganancias no operativas; FactSet no lo atribuye explícitamente.
   - Regla: el modelo separa la utilidad operativa del mark-to-market. Para cada proveedor de consenso, se verifica si su "actual" las incluye.
-- **Vidas útiles** (10-K, verificado por búsqueda):
-  - Meta extendió la mayoría de sus servidores y equipo de red a **5.5 años** desde el 1-ene-2025: −US$2.92 mil millones de depreciación y **+US$1.00 por acción** en 2025 [47].
-  - Amazon subió la vida útil de 5 a 6 años en 2024 y la bajó de 6 a 5 en 2025 para un subconjunto, "por el ritmo de la IA". Efecto: −US$0.7 mil millones de utilidad operativa en 2025 [47].
-  - Críticas externas (fuentes secundarias, no verificado):
-    - Burry (11-nov-2025) estimó una subestimación de ~US$176 mil millones de depreciación en 2026-2028.
-    - Capex de los cuatro hyperscalers: ~US$433.9 mil millones contra ~US$149 mil millones de depreciación en los cuatro trimestres a mar-2026 [48].
+- **Vidas útiles** (10-K, verificado en el texto del 10-K el 25-sep-2026):
+  - Meta extendió la mayoría de sus servidores y equipo de red a **5.5 años** desde el 1-ene-2025: −US$2.92 mil millones de depreciación, +US$2.59 mil millones de utilidad neta y **+US$1.00 por acción diluida** en 2025 [47].
+  - Amazon subió la vida útil de sus servidores de 5 a 6 años desde el 1-ene-2024: −US$3.2 mil millones de D&A y +US$2.5 mil millones de utilidad neta en 2024. Desde el 1-ene-2025 la bajó de 6 a 5 años para un subconjunto de servidores y equipo de red, por "an increased pace of technology development, particularly in the area of artificial intelligence and machine learning". Efecto estimado: −US$0.7 mil millones de utilidad operativa en 2025, más −US$0.6 mil millones por retiros anticipados [47].
+  - Brecha capex/D&A de los cuatro hyperscalers, en los cuatro trimestres a mar-2026. **Verificado con XBRL de la SEC (companyfacts, cálculo propio):**
+    - El capex suma **US$433.9 mil millones**: MSFT 97.2, AMZN 151.0, GOOGL 109.9 y META 75.7. Es la compra de PP&E en efectivo, sin arrendamientos financieros.
+    - La depreciación suma **~US$145-149 mil millones** según la definición. Con la de MSFT (solo depreciación) da 144.6; si se suma la amortización de sus arrendamientos financieros, 149.4.
+    - El capex es ~2.9-3.0× la depreciación [42][48].
+  - Burry (nov-2025) estimó una subestimación de ~US$176 mil millones de depreciación en 2026-2028 **(no verificado: solo fuentes secundarias; la fecha exacta tampoco se confirmó)** [48].
   - Inferencia: en un ciclo de capex, la UPA subestima el costo económico. El FCF y la brecha capex/D&A son la métrica de control.
 
 ### 2.8 Alertas de calidad (lo que se revisa antes de creer un número)
@@ -206,7 +212,7 @@ Un beat que no mueve la capa 3 casi no mueve el precio. Un miss acompañado de u
 | Brecha non-GAAP/GAAP creciente o partidas "no recurrentes" recurrentes | Utilidad de menor calidad | Conciliación en el comunicado |
 | FCF/UN < 0.7, dilución > 3%, SBC > 10% de ingresos | Vetos del cap. 03 | `dossier.py` |
 
-Según Audit Analytics, el número de reexpresiones está cerca de mínimos históricos, pero la **proporción de Big R ha subido** (datos a 2024) [51]. El M-score, los accruals y el F-score están en el cap. 03 §2.10.
+Según Ideagen Audit Analytics y el CAQ (resumen del 15-jul-2024, datos a 2023), el número de reexpresiones está cerca de mínimos históricos: 458 en 2022 y 430 en 2023. Pero las **Big R subieron** de 191 a 209, y su proporción de 44% a 52% [51]. El M-score, los accruals y el F-score están en el cap. 03 §2.10.
 
 ### 2.9 Política y geopolítica dentro del modelo
 Cadena causal obligatoria: acontecimiento → exposición → efecto económico → **línea del estado financiero** → valuación → diferencia contra lo que descuenta el precio. Mapeo de hechos verificados de 2025-2026:
@@ -215,10 +221,10 @@ Cadena causal obligatoria: acontecimiento → exposición → efecto económico 
 |---|---|---|
 | Aranceles de 2025: retiros de guía (abr-may 2025) [39][52] | Costo, precio, volumen | Escenarios con arancel explícito; intervalos más anchos cuando no hay guía |
 | Petróleo del 3T26 (promedio a la fecha) en US$81.45 contra US$64.97 del 3T25 (+25%); se espera que Energía crezca **102.5%** [36] | Precio (energía) y costo (transporte, químicos, aerolíneas) | Sensibilidad por cada US$10/barril, separada por sector |
-| T-MEC: EUA no apoyó la extensión a 16 años y pidió revisiones anuales (El Financiero, 2-jul-2026) [46] | Tasa de descuento, capex de nearshoring, volumen exportador | Prima de incertidumbre en exportadores y parques industriales. Inferencia: menos visibilidad = más guías conservadoras en México |
+| T-MEC: en la reunión de la Comisión de Libre Comercio del 1-jul-2026, la USTR no aceptó la extensión automática a 16 años (art. 34.7) y activó las revisiones anuales. El tratado sigue vigente; siguiente ronda anunciada para el 20-jul-2026 en México (El Financiero, 2-jul-2026) [46] | Tasa de descuento, capex de nearshoring, volumen exportador | Prima de incertidumbre en exportadores y parques industriales. Inferencia: menos visibilidad = más guías conservadoras en México |
 | Peso: apreciación promedio de 10.8% en el 2T26 contra el 2T25 (Monex) [45] | Conversión de ingresos USD → MXN | w × Δ%USDMXN promedio (§2.6) |
-| SEC: propuesta de reporte semestral opcional (Form 10-S; 5-may-2026; comentarios hasta el 6-jul-2026; sin regla final encontrada al 25-sep-2026) [41] | Frecuencia de información | Si se adopta: 2 datos al año en lugar de 4, sorpresas más grandes y 1T/3T solo por 8-K voluntario. El pronóstico se ajusta al régimen de cada emisora |
-| IFRS 18, vigente desde el 1-ene-2027: subtotal obligatorio de "utilidad de operación" y medidas de desempeño definidas por la administración (MPM) auditadas; los comparativos 2026 se reexpresan [49] | Presentación del resultado de las emisoras IFRS (México) | Ruptura de series: rehacer el mapeo XBRL y no comparar 2027 contra 2026 sin reexpresión |
+| SEC: propuesta de reporte semestral opcional (Form 10-S; Release 33-11414, 5-may-2026; comentarios hasta el 6-jul-2026). Al 25-sep-2026 la página de rulemaking de la SEC la lista como "Proposed Rule" (S7-2026-15), sin regla final [41] | Frecuencia de información | Si se adopta: 2 datos al año en lugar de 4, sorpresas más grandes y 1T/3T solo por 8-K voluntario. El pronóstico se ajusta al régimen de cada emisora |
+| IFRS 18 (emitida en abr-2024), vigente para ejercicios que inicien desde el 1-ene-2027: subtotales obligatorios de "utilidad de operación" y "utilidad antes de financiamiento e impuestos"; medidas de desempeño definidas por la administración (MPM) reveladas en notas, que quedan dentro de los estados auditados; los comparativos 2026 se reexpresan (aplicación retrospectiva) [49] | Presentación del resultado de las emisoras IFRS (México) | Ruptura de series: rehacer el mapeo XBRL y no comparar 2027 contra 2026 sin reexpresión |
 
 Ventaja del dueño (ex funcionario federal): la lectura de calendarios regulatorios, concesiones, tarifas reguladas y contratos públicos (cap. 24) es un driver legítimo **con información pública**. La LMV sanciona el uso de información privilegiada. El edge legal es interpretar mejor y antes lo que ya es público.
 
@@ -239,9 +245,9 @@ Ventaja del dueño (ex funcionario federal): la lectura de calendarios regulator
 
 | Autores | Año | Título | Revista | Hallazgo cuantificado | Enlace | Grado |
 |---|---|---|---|---|---|---|
-| Bernard, Thomas | 1989 | Post-Earnings-Announcement Drift: Delayed Price Response or Risk Premium? | JAR 27 | Diferencial entre extremos de SUE positivo en 41/48 trimestres (1974-85); cae con el tamaño | [20] | A (histórico) |
-| Stickel | 1991 | Common Stock Returns Surrounding Earnings Forecast Revisions | TAR | El precio deriva ~6 meses tras la revisión | [25] | B (histórico) |
-| Chan, Jegadeesh, Lakonishok | 1996 | Momentum Strategies | JF 51(5) | 7.5% a 6 meses entre extremos de SUE (1973-93) | [19] | A (histórico) |
+| Bernard, Thomas | 1989 | Post-Earnings-Announcement Drift: Delayed Price Response or Risk Premium? | JAR 27 | Diferencial entre extremos de SUE positivo en 41/48 trimestres (1974-85) (no verificado); cae con el tamaño | [20] | A (histórico) |
+| Stickel | 1991 | Common Stock Returns Surrounding Earnings Forecast Revisions | TAR | El precio deriva ~6 meses tras la revisión (no verificado) | [25] | B (histórico) |
+| Chan, Jegadeesh, Lakonishok | 1996 | Momentum Strategies | JF 51(5) | 7.5% a 6 meses entre extremos de SUE (1973-93) (no verificado); momentum de precio y de utilidades predicen por separado (abstract) | [19] | A (histórico) |
 | Bartov, Givoly, Hayn | 2002 | The Rewards to Meeting or Beating Earnings Expectations | JAE 33 | Premio por cumplir o superar aun con manejo; anticipa desempeño | [26] | B |
 | Matsumoto | 2002 | Management's Incentives to Avoid Negative Earnings Surprises | TAR 77(3) | Guía a la baja y manejo de utilidades para no fallar | [27] | B |
 | Gleason, Lee | 2003 | Analyst Forecast Revisions and Market Price Discovery | TAR 78 | Subreacción mayor a revisiones de alta innovación y con poca cobertura | [25] | B |
@@ -250,23 +256,24 @@ Ventaja del dueño (ex funcionario federal): la lectura de calendarios regulator
 | Loughran, McDonald | 2011 | When Is a Liability Not a Liability? | JF 66 | ~3/4 de las palabras negativas de Harvard mal clasificadas en finanzas | [30] | A |
 | Hou, van Dijk, Zhang | 2012 | The Implied Cost of Capital: A New Approach | JAE 53 | Modelo transversal con menos sesgo y más ERC, pero menos preciso que los analistas | [11] | C |
 | Mayew, Venkatachalam | 2012 | The Power of Voice | JF 67(1) | El afecto vocal anticipa el desempeño; los analistas ignoran el negativo | [29] | C |
-| Larcker, Zakolyukina | 2012 | Detecting Deceptive Discussions in Conference Calls | JAR 50(2) | 50-65% de exactitud; 6-16% sobre el azar fuera de muestra | [31] | C |
-| Hutton, Lee, Shu | 2012 | Do Managers Always Know Better? | JAR 50(5) | La guía supera al analista ~50% de las veces; ventaja según tipo de información | [28] | B |
+| Larcker, Zakolyukina | 2012 | Detecting Deceptive Discussions in Conference Calls | JAR 50(2) | 50-65% de exactitud (no verificado); 6-16% sobre el azar fuera de muestra | [31] | C |
+| Hutton, Lee, Shu | 2012 | Do Managers Always Know Better? | JAR 50(5) | La guía supera al analista ~50% de las veces (no verificado); la dirección gana en lo propio de la firma y el analista en lo macro (abstract) | [28] | B |
 | Bradshaw, Drake, Myers, Myers | 2012 | A Re-examination of Analysts' Superiority over Time-Series Forecasts | RAST 17(4) | El RW supera al analista a largo plazo, en empresas chicas o jóvenes y en cambios grandes | [15] | A |
 | So | 2013 | A New Approach to Predicting Analyst Forecast Errors | JFE 108(3) | Los inversionistas sobreponderan al consenso; 5.8% anual fuera de muestra (bruto) | [13] | B |
 | Gerakos, Gramacy | 2013 | Regression-Based Earnings Forecasts | WP SSRN | A un año, el RW iguala a métodos sofisticados | [16] | A |
-| Li, Mohanram | 2014 | Evaluating Cross-Sectional Forecasting Models for ICC | RAST | HVZ < RW; EP/RI 28-38% más precisos que HVZ | [12] | B |
+| Li, Mohanram | 2014 | Evaluating Cross-Sectional Forecasting Models for ICC | RAST 19(3) | HVZ < RW (errores del RW 13-37% menores); RI 28-38% más preciso que HVZ a 1-3 años, hasta 45% en chicas; ERC 18-85% mayor | [12] | B |
 | Novy-Marx | 2015 | Fundamentally, Momentum Is Fundamental Momentum | NBER w20984 | El momentum de utilidades subsume al de precio | [24] | B |
-| Ball, Ghysels | 2018 | Automated Earnings Forecasts: Beat Analysts or Combine and Conquer? | MS 64(10) | MIDAS supera al analista con alta dispersión o en empresas chicas; combinar supera siempre | [14] | B |
+| Ball, Ghysels | 2018 | Automated Earnings Forecasts: Beat Analysts or Combine and Conquer? | MS 64(10) | A un trimestre o menos, MIDAS supera al analista con alta dispersión o en empresas chicas; combinar supera sistemáticamente al analista solo | [14] | B |
 | Chen, Cho, Dou, Lev | 2022 | Predicting Future Earnings Changes Using ML and Detailed Financial Data | JAR 60(2) | AUC 67.5-68.7%; cobertura 5.0-9.7% anual (bruto) | [17] | B |
 | Martineau | 2022 | Rest in Peace Post-Earnings Announcement Drift | CFR 11(3-4) | Sin PEAD en grandes desde 2006 | [1] | A |
 | Kettell, McInnis, Zhao | 2022 | Why Has PEAD Declined Over Time? | WP UT Austin | La caída de la persistencia de SUE explica la caída del PEAD | [22] | C |
 | Meursault et al. | 2023 | PEAD.txt | JFQA 58(6) | 8.01% contra 4.63% a 252 días (2010-19, bruto) | [23] | C |
-| van Binsbergen, Han, Lopez-Lira | 2023 | Man versus Machine Learning | RFS 36(6) | Consenso sesgado al alza según el benchmark de ML. **Expresión de Preocupación, may-2026** | [5] | D hasta resolverse |
-| Cao, Jiang, Wang, Yang | 2024 | From Man vs. Machine to Man + Machine | JFE | IA > 53.7% de los analistas; hombre + máquina 57.3% | [18] | B |
+| van Binsbergen, Han, Lopez-Lira | 2023 | Man versus Machine Learning: The Term Structure of Earnings Expectations and Conditional Biases | RFS 36(6) | Consenso sesgado al alza según el benchmark de ML. **Expresión de Preocupación: en línea 1-mar-2026, RFS 39(5), may-2026** | [5] | D hasta resolverse |
+| Cao, Jiang, Wang, Yang | 2024 | From Man vs. Machine to Man + Machine | JFE 160 | IA > 53.7% de los precios objetivo de analistas (2001-16); hombre + máquina 57.3% (cifras del documento de trabajo) | [18] | B |
 | Kim, Muhn, Nikolaev | 2024 | Financial Statement Analysis with LLMs | arXiv 2407.17866 | **Retirado el 20-feb-2025** | [3] | D |
 | Kim, Nikolaev | 2024 | Context-Based Interpretation of Financial Information | JAR | **Retractado el 29-abr-2026**: no reproducible | [4] | D |
 | Lopez-Lira, Tang, Zhu | 2025 | The Memorization Problem | arXiv 2504.14765 | Recuerdo casi literal antes de la fecha de corte; nulo después | [6] | B |
+| Liang | 2026 | Look-Ahead Bias in Financial Forecasts Generated by LLMs | SSRN 6772819 | GPT-4: error ~11% menor pre-corte en utilidades trimestrales; ~18% en índices y ~16% en precios | [9] | C (un estudio, sin réplica) |
 | McInnis, Griffin | 2025 | Gone but Not Forgotten | JAE | SBC inesperada: −1 a −2 pp, aunque se excluya | [33] | B |
 
 ---
@@ -286,11 +293,14 @@ Ventaja del dueño (ex funcionario federal): la lectura de calendarios regulator
    - La estimación **subió** 1.2% (US$88.64 → US$89.69) en jul-ago, contra la caída promedio de 1.7% a 5 años. Es el segundo trimestre seguido al alza.
    - Crecimiento esperado: 28.5% (26.6% al 30-jun). P/U a 12 meses: 19.5 (promedio de 5 años: 19.8).
    - Los analistas subieron estimaciones pese a la preocupación por el precio del petróleo.
-   - Actualización secundaria al 18-sep: 28.9% y P/U de 19.1 [40].
+   - Actualización al 18-sep-2026, verificada en el PDF de FactSet: crecimiento esperado de 28.9% (el dato al 30-jun se revisó a 26.7%) y P/U a 12 meses de 19.1. Guías: 72 positivas y 43 negativas, 63% [40].
 8. **Temporada 2T26 en México.**
    - Monex (14-jul-2026) esperaba en el IPC ventas de +6.5%, EBITDA de +12.8% y utilidad neta de +14.1%, con fecha límite de reporte el 28-jul [45].
-   - El Financiero (20-jul-2026) calificó los primeros reportes de "balances modestos". Ejemplos: Chedraui con ingresos −0.9% y Aeroméxico con flujo operativo −35.5% [45]. (No se distinguió si estas cifras son reportadas o estimadas.)
-   - Resumen del reporte de cierre de Monex (27-jul-2026): ventas del IPC +4.9% y EBITDA +12.1%; 22.0% de las emisoras arriba de lo estimado, 54.3% en línea y 25.7% abajo. **(No verificado: el PDF dio error 403 y los porcentajes suman 102%.)**
+   - El Financiero (20-jul-2026) calificó los primeros reportes de "balances modestos" [45]. Hay que separar dato reportado de estimado:
+     - **Aeroméxico, reportado:** el flujo operativo cayó 35.5% en el 2T26. El diario lo atribuye a que el segmento corporativo no viajó en junio por el Mundial 2026. Es un ejemplo de un evento que pega en el trimestre de un sector que parecía beneficiado.
+     - **Chedraui, estimado:** ingresos −0.9% y utilidad neta −0.8%. Es la **estimación de Ve por Más**, no un resultado.
+     - **GAP, preliminar:** ingresos +3.7% y flujo operativo ~+9%, en condicional ("se habrían expandido").
+   - Resumen del reporte de cierre de Monex (27-jul-2026): ventas del IPC +4.9% y EBITDA +12.1%; 22.0% de las emisoras arriba de lo estimado, 54.3% en línea y 25.7% abajo. **(No verificado: el PDF volvió a dar 403 el 25-sep-2026 y los porcentajes suman 102%, así que al menos una cifra está mal transcrita. No se usa como tasa base.)**
 9. **Regulación y T-MEC** (detalle en §2.9).
    - SEC: Release 33-11414 (5-may-2026) propone el Form 10-S con plazo de 40/45 días e Inline XBRL [41].
    - IFRS 18 [49].
@@ -328,7 +338,7 @@ Costos: desde el SIC, la ida y vuelta cuesta ~0.58% (cap. 15). Cualquier señal 
   - Eso **ya cumple** `pronosticos.brier_objetivo = 0.20` sin saber nada.
   - Conclusión: en este tipo de preguntas el objetivo de 0.20 es **necesario pero no suficiente**. Se exige skill contra la tasa base (§6.5).
 - **Ingresos** en el S&P 500: 68-70%, con Brier de referencia de ~0.21-0.22 [35].
-- **México, 2T26:** ~22% "arriba" con la definición de Monex (no verificado), lo que da un Brier de referencia de ~0.17.
+- **México, 2T26:** ~22% "arriba" con la definición de Monex **(no verificado; la fuente suma 102%)**. Si se confirmara, el Brier de referencia sería ~0.17. Hasta verificarlo con el PDF, no se usa como tasa base; se construye la propia con los reportes de Emisnet.
   - Inferencia: con pocos analistas y una banda de "en línea", el juego del walk-down es menos visible.
   - No se importa la tasa de EUA a México.
 - **Guía positiva del 3T26:** 63% contra 41-42% histórico [36]. Una tasa base se actualiza con el régimen, no se fija para siempre.
@@ -414,7 +424,8 @@ Reglas del registro:
 
 ### 6.5 Evaluación del propio pronóstico
 - **Binarios.**
-  - Brier = media de (p − o)². Skill contra la tasa base: BSS = 1 − Brier/[p̄(1 − p̄)], donde p̄ es la tasa base **histórica** del tipo de pregunta (§5.2). `pronosticos.py puntuar` ya reporta la skill contra la tasa base.
+  - Brier = media de (p − o)². Skill contra la tasa base: BSS = 1 − Brier/[p̄(1 − p̄)], donde p̄ es la tasa base **histórica** del tipo de pregunta (§5.2).
+  - **Corrección (verificado en el código el 25-sep-2026):** `pronosticos.py puntuar` calcula la skill contra la **climatología de la propia muestra**, es decir, la frecuencia observada de "sí" entre los pronósticos resueltos. No la calcula contra la tasa base histórica, y agrupa por autor, no por tipo de pregunta. Hasta que se agregue la tasa base histórica por tipo, el BSS contra 0.78 (UPA) o 0.70 (ingresos) se calcula aparte.
   - Se evalúa por tipo de pregunta y con un mínimo de `pronosticos.min_pronosticos_para_evaluar` = 50.
 - **Numéricos.**
   - Error escalado por precio: |F − A|/P. Se usa en lugar del error porcentual cuando |A| es chico o está cerca de cero.
@@ -443,14 +454,14 @@ Reglas del registro:
   - `companyfacts/CIK##########.json` trae todos los hechos XBRL de una empresa.
   - `frames/us-gaap/<concepto>/USD/CY2019Q1I.json` da un corte transversal del hecho "last filed" que mejor se ajusta al periodo calendario.
   - Retraso de menos de un minuto; `companyfacts.zip` se recompila cada noche. Límites: ≤ 10 solicitudes/s y User-Agent con correo.
-- **Limitaciones** (práctica general; verificar caso por caso):
-  - El comunicado del 8-K Item 2.02 no trae los estados en XBRL; llegan con el 10-Q/10-K.
+- **Limitaciones:**
+  - El comunicado del 8-K Item 2.02 no trae los estados en XBRL; llegan con el 10-Q/10-K. **Verificado en la norma**: 17 CFR 229.601(b)(101) exige el Interactive Data File en un 8-K solo cuando trae estados anuales auditados reexpresados (operación discontinuada, cambio de segmentos o de principio contable). El 8-K solo etiqueta la portada (Exhibit 104). Ejemplo: el 8-K Item 2.02 de Cummins del 5-may-2025 trae un XBRL con una sola vista (portada) y los estados en el Exhibit 99 en HTML.
   - `edgar.py` usa solo hechos no dimensionales, así que los segmentos se leen de la nota.
   - `frames` da el último valor presentado, con reexpresiones. Para evitar el look-ahead se usa la fecha `filed`.
 - **México:**
-  - Plazo (Circular Única de Emisoras, art. 33): 20 días hábiles tras el 1T-3T y 40 tras el 4T, que es preliminar [44].
+  - Plazo (Circular Única de Emisoras, art. 33): 20 días hábiles tras el 1T-3T y 40 tras el 4T, que es preliminar. Está verificado en el resumen de la BMV, un documento de 2017; vigencia actual no re-verificada contra el DOF [44].
   - Se entrega por STIV-2 (CNBV) y Emisnet (BMV).
-  - XBRL IFRS en archivos `ifrsxbrl_<clave>_<año>-<trimestre>`, obligatorio desde el 1T16 según fuente secundaria [43].
+  - XBRL IFRS en archivos `ifrsxbrl_<clave>_<año>-<trimestre>`. **Obligatorio desde el 1T16 (no verificado):** solo lo sostiene una fuente secundaria (ITAM, 503 el 25-sep-2026). Las páginas de la BMV y la CNBV no dan la fecha de entrada en vigor, y el buscador histórico de la BMV muestra archivos desde 2017 [43].
   - El comunicado de RI sale antes que el XBRL. IFRS 18 obligará a rehacer el mapeo.
 - **IA:** el LLM extrae y cita página; nunca aporta cifras de memoria (cap. 03 §6.1 regla 10).
 
@@ -463,7 +474,7 @@ Reglas del registro:
 3. **Un Brier "bueno" por tasa base.** Decir 0.78 siempre ya da 0.172. Sin BSS no hay skill.
 4. **Aplicar la tasa base de sobreestimación en un régimen que la rompe.** En 2026 el consenso anual subió ~17% desde diciembre.
 5. **Contar ganancias por valuación de inversiones como operación** (2T26: Alphabet y Amazon).
-6. **Ignorar vidas útiles y capitalizaciones.** La UPA sube sin caja (Meta: +US$1.00 por acción en 2025).
+6. **Ignorar vidas útiles y capitalizaciones.** La UPA sube sin caja (Meta: +US$1.00 por acción diluida en 2025; Amazon: +US$2.5 mil millones de utilidad neta en 2024).
 7. **Excluir la SBC y la dilución.** El mercado la castiga aunque la empresa la excluya [33].
 8. **Convertir con el FX de cierre** en lugar del promedio, o confundir el efecto de conversión con el transaccional.
 9. **Márgenes récord + random walk.** Se extrapola un pico (margen neto récord de 17.0% en el 2T26).
@@ -486,7 +497,7 @@ Reglas del registro:
 3. **¿En qué condiciones el random walk supera al analista?**
    En horizontes largos, en empresas chicas o jóvenes y en cambios grandes o negativos [15].
 4. **¿Cuál es el estado de la evidencia de "LLM supera al analista" al 25-sep-2026?**
-   D. KMN se retiró el 20-feb-2025 y Kim-Nikolaev fue retractado el 29-abr-2026. Van Binsbergen et al. está en Expresión de Preocupación desde mayo de 2026, y la memorización está documentada [3][4][5][6].
+   D. KMN se retiró el 20-feb-2025 y Kim-Nikolaev fue retractado el 29-abr-2026. Van Binsbergen et al. está en Expresión de Preocupación desde el 1-mar-2026 (en línea; número de mayo de 2026). La memorización está documentada: Liang estima un error ~11% menor antes de la fecha de corte en utilidades trimestrales [3][4][5][6][9].
 5. **Calcule el Brier de referencia para "¿UPA > consenso?" en el S&P 500 y diga qué implica para el objetivo de 0.20.**
    0.78 × 0.22 = 0.172. El objetivo se cumple sin saber nada, así que se exige BSS > 0 contra la tasa base.
 6. **Una emisora reporta en MXN con 60% de ingresos en USD y el USDMXN promedio cae 10%. ¿Cuál es el efecto de conversión?**
@@ -496,7 +507,7 @@ Reglas del registro:
 8. **¿Cuánto rindió PEAD.txt contra PEAD a 252 días y qué grado tiene?**
    8.01% contra 4.63% en 2010-2019, en bruto. Grado C: un estudio, sin costos y sin réplica [23].
 9. **Meta extendió sus vidas útiles a 5.5 años. ¿Qué efecto tuvo y qué se hace en el modelo?**
-   −US$2.92 mil millones de depreciación y +US$1.00 por acción en 2025. El cambio se modela aparte, se mira el FCF y la brecha capex/D&A [47].
+   −US$2.92 mil millones de depreciación, +US$2.59 mil millones de utilidad neta y +US$1.00 por acción diluida en 2025. El cambio se modela aparte, se mira el FCF y la brecha capex/D&A (~3× en los cuatro hyperscalers a mar-2026) [47].
 10. **Precio 100; escenarios 70/105/150 con probabilidades de 25/50/25. ¿Cuál es el EV y pasa la regla del cap. 03?**
     El EV es 107.5. No pasa, porque el precio de 100 supera 0.8 × 105 = 84.
 11. **DCF inverso con FCF de 3, g terminal de 3% y WACC de 9%: ¿qué crecimiento implica y cuánto cambia con ±100 pb?**
@@ -518,20 +529,20 @@ Reglas del registro:
 [2] Subrahmanyam, A. (2025). Keeping it Simple: How Can Post-Earnings Return Drift Exist and Not Exist Simultaneously? https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5930255 · UCLA Anderson Review: https://anderson-review.ucla.edu/is-post-earnings-announcement-drift-a-thing-again/
 [3] Kim, A., Muhn, M., Nikolaev, V. Financial Statement Analysis with Large Language Models, arXiv 2407.17866 (v3 del 20-feb-2025, retirado). https://arxiv.org/abs/2407.17866
 [4] Retracción de Kim, A. G. y Nikolaev, V. V., Context-Based Interpretation of Financial Information, *JAR* (29-abr-2026). https://onlinelibrary.wiley.com/doi/10.1111/1475-679x.70057
-[5] van Binsbergen, J., Han, X., Lopez-Lira, A. (2023). *RFS* 36(6), 2361-2396. https://academic.oup.com/rfs/article/36/6/2361/6782974 · Expresión de Preocupación, *RFS* 39(5), 1555 (may-2026): https://academic.oup.com/rfs/article/39/5/1555/8502599
+[5] van Binsbergen, J., Han, X., Lopez-Lira, A. (2023). Man versus Machine Learning: The Term Structure of Earnings Expectations and Conditional Biases. *RFS* 36(6), 2361-2396. https://academic.oup.com/rfs/article/36/6/2361/6782974 · Expresión de Preocupación, *RFS* 39(5), 1555 (en línea 1-mar-2026; impresa may-2026; DOI 10.1093/rfs/hhag017): https://academic.oup.com/rfs/article/39/5/1555/8502599
 [6] Lopez-Lira, A., Tang, Y., Zhu, M. (2025). The Memorization Problem: Can We Trust LLMs' Economic Forecasts? https://arxiv.org/abs/2504.14765
 [7] Benhenda, M. (2026). Look-Ahead-Bench. https://arxiv.org/abs/2601.13770
 [8] Gao, Z., Jiang, W., Yan, Y. (2025). Detecting Lookahead Bias in LLM Forecasts. https://arxiv.org/abs/2512.23847
-[9] Liang, C. Look-Ahead Bias in Financial Forecasts Generated by LLMs (solo resumen de búsqueda; SSRN dio 403). https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6772819
+[9] Liang, C. (2026). Look-Ahead Bias in Financial Forecasts Generated by Large Language Models. SSRN 6772819 (abstract verificado vía Crossref, DOI 10.2139/ssrn.6772819; SSRN dio 403). https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6772819
 [10] Richardson, S., Teoh, S. H., Wysocki, P. (2004). *CAR* 21(4), 885-924. https://onlinelibrary.wiley.com/doi/abs/10.1506/KHNW-PJYL-ADUB-0RP6
 [11] Hou, K., van Dijk, M., Zhang, Y. (2012). *JAE* 53, 504-526. https://www.sciencedirect.com/science/article/abs/pii/S0165410111000966
-[12] Li, K., Mohanram, P. (2014). Evaluating Cross-Sectional Forecasting Models for ICC. *RAST*. https://www-2.rotman.utoronto.ca/facbios/file/Li%20and%20Mohanram%20RAST%202014.pdf
+[12] Li, K., Mohanram, P. (2014). Evaluating Cross-Sectional Forecasting Models for ICC. *RAST* 19(3), 1152-1185. https://www-2.rotman.utoronto.ca/facbios/file/Li%20and%20Mohanram%20RAST%202014.pdf
 [13] So, E. (2013). *JFE* 108(3), 615-640. https://www.sciencedirect.com/science/article/abs/pii/S0304405X13000329 · Digest de CFA: https://rpc.cfainstitute.org/research/cfa-digest/2013/08/a-new-approach-to-predicting-analyst-forecast-errors-do-investors-overweight-analyst-forecasts
 [14] Ball, R., Ghysels, E. (2018). *Management Science* 64(10), 4936-4952. https://pubsonline.informs.org/doi/10.1287/mnsc.2017.2864
-[15] Bradshaw, M., Drake, M., Myers, J., Myers, L. (2012). *RAST* 17(4). https://link.springer.com/article/10.1007/s11142-012-9185-8
+[15] Bradshaw, M., Drake, M., Myers, J., Myers, L. (2012). *RAST* 17(4), 944-968. https://link.springer.com/article/10.1007/s11142-012-9185-8
 [16] Gerakos, J., Gramacy, R. Regression-Based Earnings Forecasts. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2112137
 [17] Chen, X., Cho, T., Dou, Y., Lev, B. (2022). *JAR* 60(2), 467-515. https://onlinelibrary.wiley.com/doi/abs/10.1111/1475-679X.12429
-[18] Cao, S., Jiang, W., Wang, J., Yang, B. (2024). *JFE*. https://www.sciencedirect.com/science/article/abs/pii/S0304405X24001338 · Resumen en el HLS Forum: http://corpgov.law.harvard.edu/2021/05/27/from-man-vs-machine-to-man-machine-the-art-and-ai-of-stock-analyses/
+[18] Cao, S., Jiang, W., Wang, J., Yang, B. (2024). *JFE* 160, 103910. https://www.sciencedirect.com/science/article/abs/pii/S0304405X24001338 · Resumen en el HLS Forum: http://corpgov.law.harvard.edu/2021/05/27/from-man-vs-machine-to-man-machine-the-art-and-ai-of-stock-analyses/
 [19] Chan, L., Jegadeesh, N., Lakonishok, J. (1996). *JF* 51(5), 1681-1713. https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1996.tb05222.x
 [20] Bernard, V., Thomas, J. (1989). *JAR* 27, 1-36. https://ideas.repec.org/a/bla/joares/v27y1989ip1-36.html
 [21] Livnat, J., Mendenhall, R. (2006). *JAR* 44(1), 177-205. https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1475-679X.2006.00196.x
@@ -552,27 +563,126 @@ Reglas del registro:
 [36] FactSet, Earnings Insight (4-sep-2026). https://advantage.factset.com/hubfs/Website/Resources%20Section/Research%20Desk/Earnings%20Insight/EarningsInsight_090426.pdf
 [37] FactSet (5-dic-2025). Are Industry Analysts Overestimating S&P 500 EPS for 2026? https://insight.factset.com/are-industry-analysts-overestimating-sp-500-eps-for-2026
 [38] FactSet (2-mar-2026). Analysts Lowering Quarterly EPS Estimates for First Time Since Q2 2025. Q1 2026: −1.5% (US$71.57 → US$70.50) contra promedios de 1.2% (5 años) y 3.2% (20 años). https://insight.factset.com/analysts-lowering-quarterly-eps-estimates-for-first-time-since-q2-2025
-[39] FactSet (abr-2025). Will S&P 500 Companies Withdraw EPS Guidance for 2025? https://insight.factset.com/will-sp-500-companies-withdraw-eps-guidance-for-2025
-[40] Motley Fool (22-sep-2026), que cita el reporte de FactSet del 18-sep (fuente secundaria). https://www.fool.com/investing/2026/09/22/s-and-p-500-profits-are-on-track-for-a-third-straight-quarter-of-25-growth-the-index-hasn-t-kept-up/
+[39] FactSet (14-abr-2025). Will S&P 500 Companies Withdraw EPS Guidance for 2025? https://insight.factset.com/will-sp-500-companies-withdraw-eps-guidance-for-2025
+[40] FactSet, Earnings Insight (18-sep-2026), primaria: https://advantage.factset.com/hubfs/Website/Resources%20Section/Research%20Desk/Earnings%20Insight/EarningsInsight_091826.pdf · Motley Fool (22-sep-2026), secundaria: https://www.fool.com/investing/2026/09/22/s-and-p-500-profits-are-on-track-for-a-third-straight-quarter-of-25-growth-the-index-hasn-t-kept-up/
 [41] SEC, propuesta de reporte semestral (5-may-2026). https://www.sec.gov/newsroom/press-releases/2026-42-sec-proposes-amendments-permit-optional-semiannual-reporting-public-companies · https://www.sec.gov/files/rules/proposed/2026/33-11414.pdf · Deloitte: https://dart.deloitte.com/USDART/home/publications/deloitte/heads-up/2026/sec-proposes-semi-annual-reporting
-[42] SEC, EDGAR APIs. https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+[42] SEC, EDGAR APIs: https://www.sec.gov/search-filings/edgar-application-programming-interfaces · Acceso justo (10 solicitudes/s, User-Agent): https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data · companyfacts de MSFT, AMZN, GOOGL y META (CIK 789019, 1018724, 1652044, 1326801): https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json · XBRL en el 8-K: 17 CFR 229.601(b)(101) y (b)(104), https://www.ecfr.gov/current/title-17/chapter-II/part-229/subpart-229.600/section-229.601
 [43] BMV, archivos XBRL: https://www.bmv.com.mx/es/emisoras/archivos-estadar-xbrl · CNBV, taxonomías: https://www.gob.mx/cnbv/acciones-y-programas/taxonomias-reporte-anual · ITAM: http://direccionestrategica.itam.mx/xbrl-su-desarrollo-y-aplicacion-en-mexico/
-[44] Circular Única de Emisoras, art. 33 (información periódica). https://www.bmv.com.mx/docs-pub/SERVICIOS_EMISORAS/5x77w2olfaeh3y4850gq.pdf
+[44] BMV, resumen de la Circular Única de Emisoras, art. 33 (información periódica; documento de may-2017). https://www.bmv.com.mx/docs-pub/SERVICIOS_EMISORAS/5x77w2olfaeh3y4850gq.pdf
 [45] Monex vía Industrial News (14-jul-2026): https://www.industrialnewsbc.com/2026/07/14/impulsara-tipo-de-cambio-los-reportes-trimestrales-de-las-emisoras-de-la-bmv-monex/ · El Financiero (20-jul-2026): https://www.elfinanciero.com.mx/empresas/2026/07/20/empresas-en-la-bolsa-mexicana-de-valores-tuvieron-balances-modestos-durante-el-2t26/ · Monex, Reportes al 2T26 (27-jul-2026; 403): https://www.monex.com.mx/portal/download/reportes/Reportes%202T26%20260727.pdf
 [46] El Financiero (2-jul-2026). EU rechaza extender el T-MEC; solicita revisiones anuales. https://www.elfinanciero.com.mx/economia/2026/07/02/eu-rechaza-extender-el-t-mec-solicita-revisiones-anuales/
 [47] Amazon, 10-K del ejercicio 2024: https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.htm · Meta, 10-K del ejercicio 2025: https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm · Hudson Labs: https://hudson-labs.com/research/meta-financials-meta
-[48] Secundarias, no verificadas: https://siliconanalysts.com/analysis/hyperscaler-ai-capex-depreciation-wall-2026 · https://chipstockinvestor.com/metas-ai-data-center-depreciation-problem-breaking-down-michael-burrys-argument-so-far-against-the-hyperscalers-and-nvidia/
-[49] PwC, IFRS 18 is here. https://www.pwc.com/mt/en/publications/other/ifrs18-is-here.html
+[48] La brecha capex/D&A se verificó con companyfacts de la SEC [42]. Burry: secundarias, no verificadas: https://siliconanalysts.com/analysis/hyperscaler-ai-capex-depreciation-wall-2026 · https://chipstockinvestor.com/metas-ai-data-center-depreciation-problem-breaking-down-michael-burrys-argument-so-far-against-the-hyperscalers-and-nvidia/
+[49] IFRS Foundation, IFRS 18 Presentation and Disclosure in Financial Statements: https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/ · PwC, IFRS 18 is here (403 el 25-sep-2026): https://www.pwc.com/mt/en/publications/other/ifrs18-is-here.html
 [50] Gneiting, T., Raftery, A. (2007). *JASA* 102, 359-378. https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf
-[51] Audit Analytics, Error corrections: adjustment and restatement trends. https://blog.auditanalytics.com/error-corrections-a-look-at-adjustment-and-restatement-trends-2/ · https://www.auditupdate.com/post/two-studies-find-that-restatements-rates-remain-low-although-big-r-restatements-have-begun-to-incre
-[52] Fortune (30-abr-2025), GM retira su guía: https://www.fortune.com/2025/04/30/general-motors-withdraws-guidance-massive-tariff-uncertainty-cfo-analyst · Resumen de retiros de 2025 (secundaria): https://www.financialcontent.com/article/marketminute-2026-1-23-the-guidance-gap-how-the-tariff-fog-of-2025-paralyzed-corporate-america
+[51] Audit Update (15-jul-2024), resumen de Ideagen Audit Analytics (2004-2023) y CAQ (2013-2022): https://www.auditupdate.com/post/two-studies-find-that-restatements-rates-remain-low-although-big-r-restatements-have-begun-to-incre · Audit Analytics (27-ago-2020), antecedentes a 2019: https://blog.auditanalytics.com/error-corrections-a-look-at-adjustment-and-restatement-trends-2/
+[52] Fortune (30-abr-2025), GM retira su guía: https://www.fortune.com/2025/04/30/general-motors-withdraws-guidance-massive-tariff-uncertainty-cfo-analyst · Stellantis, 6-K (30-abr-2025): https://www.sec.gov/Archives/edgar/data/1605484/000160548425000030/stellantisnvq12025pressrel.htm · Cummins, 8-K Ex. 99 (5-may-2025): https://www.sec.gov/Archives/edgar/data/26172/000002617225000010/cmi2025q18-kex99.htm · JetBlue, 8-K Ex. 99.1 (29-abr-2025): https://www.sec.gov/Archives/edgar/data/1158463/000115846325000064/ex991-earningsreleaseq12025.htm · Descartada: la nota de MarketMinute/FinancialContent (23-ene-2026) no tiene autor, no menciona a Stellantis, Mercedes ni JetBlue, y fecha mal el retiro de Cummins ("late 2025").
 
-**Registro de verificación de esta sesión:**
-- **No verificado:**
-  - Cifras del reporte de cierre Monex 2T26 (403; los porcentajes suman 102%).
-  - Brecha capex/D&A de los hyperscalers y cifra de Burry (secundarias).
-  - Obligatoriedad del XBRL desde 1T16 (secundaria).
-  - Magnitud del momentum de revisiones después de 2015.
-  - Texto completo de Liang (403).
-  - Bernard-Thomas: el ~18% anualizado aparece solo en fuente secundaria y no se usa.
-- **Verificado en documento primario:** FactSet 4-sep-2026 (PDF), Li-Mohanram, HVZ, PEAD.txt, Kettell-McInnis-Zhao y el abstract de Richardson-Teoh-Wysocki.
+---
+
+## Registro de verificacion (2026-09-25)
+
+Verificación adversarial del 25-sep-2026. Se usaron WebFetch sobre fuentes primarias, la API de EDGAR (submissions y companyfacts), eCFR, Crossref y arXiv. Se revisaron más de 50 elementos. Quedaron 38 grupos confirmados, 8 correcciones en sitio y 12 elementos sin verificar, marcados "(no verificado)". Algunos elementos corregidos también llevan marca.
+
+**Confirmados en fuente primaria o prensa seria con fecha:**
+1. FactSet 4-sep-2026 (PDF, re-leído):
+   - walk-down de 1.7/2.1/2.6/3.1%;
+   - 3T26: +1.2% (US$88.64 → 89.69); crecimiento de 28.5% (26.6% al 30-jun);
+   - P/U de 19.5 (5 años: 19.8; 10 años: 19.0);
+   - guías 70/41 = 63% (5 años: 41%; 10 años: 42%); 44 de 70 en TI;
+   - margen récord de 17.0% en el 2T26 (5 años: 12.4%);
+   - CY2026 de US$361.38 (+6.1% en jul-ago);
+   - Energía +102.5%; petróleo US$81.45 contra 64.97;
+   - 2T27 +1.2%.
+2. FactSet 18-sep-2026 (PDF primario; antes solo vía Motley Fool): 28.9%, P/U de 19.1, guías 72/43.
+3. FactSet 7-ago-2026:
+   - 86% arriba en UPA (5 años: 78%; 10 años: 76%) y 76% en ingresos (5 años: 70%; 10 años: 68%);
+   - Alphabet: US$98 mil millones; Amazon: US$53.4 mil millones (Anthropic);
+   - crecimiento de 50.4/32.0% y sorpresa de 29.2/10.9%.
+4. FactSet 5-dic-2025: US$309.22; 6.2%; 17/25; 0.9% sin 2001, 2008, 2009 y 2020.
+5. FactSet 2-mar-2026: 1T26 −1.5% (US$71.57 → 70.50).
+6. FactSet 14-abr-2025: 2 retiros (Walgreens y Delta) entre 23 reportes al 10-abr.
+7. Retiros de guía en 2025:
+   - GM, 29-abr (Fortune);
+   - Stellantis, 30-abr (6-K);
+   - Cummins, 5-may (8-K; cita textual sobre aranceles);
+   - JetBlue, 29-abr (8-K; "macroeconomic uncertainty", sin mención de aranceles).
+8. SEC, reporte semestral:
+   - comunicado 2026-42 del 5-may-2026; Release 33-11414; Form 10-S con plazo de 40/45 días;
+   - comentarios hasta el 6-jul-2026 (Deloitte); Q1/Q3 por 8-K voluntario; Inline XBRL;
+   - estatus "Proposed Rule" en la página de rulemaking de la SEC (consultada el 25-sep-2026).
+9. XBRL en el 8-K: 17 CFR 229.601(b)(101) y (b)(104) en eCFR, más una prueba empírica con el 8-K de Cummins. Antes era "práctica general".
+10. API de EDGAR: frames "last filed", retraso menor a un minuto, `companyfacts.zip` nocturno, 10 solicitudes/s y User-Agent.
+11. Meta, 10-K 2025: vidas útiles de 5.5 años; −US$2.92 mil millones de depreciación; +US$2.59 mil millones de utilidad neta; +US$1.00 por acción diluida.
+12. Amazon, 10-K 2024: de 5 a 6 años en 2024 (−US$3.2 mil millones de D&A) y de 6 a 5 años en 2025 (−US$0.7 mil millones de utilidad operativa), más −US$0.6 mil millones por retiros anticipados.
+13. Capex de los hyperscalers a mar-2026: US$433.9 mil millones, cálculo propio con companyfacts (coincide exactamente con la cifra secundaria). D&A de US$144.6-149.4 mil millones según la definición.
+14. Calcbench/Suffolk (16-jul-2026): 361/500; US$271 mil millones; 87%; AbbVie, Broadcom, Capital One, GM y Pfizer.
+15. McInnis y Griffin (JAE 2025, vía Phys.org del 29-oct-2025): más de 70,000 anuncios de 2003-2021; −1 a −2 pp aunque la SBC se excluya.
+16. Monex (vía Industrial News, 14-jul-2026): +6.5/12.8/14.1%; margen de 23.2 contra 21.9%; peso +10.8% promedio y 6.7% al cierre; fecha límite 28-jul.
+17. El Financiero (2-jul-2026), T-MEC: sin extensión automática, revisiones anuales, reunión de la CLC del 1-jul y siguiente ronda el 20-jul.
+18. IFRS.org, IFRS 18: vigente para ejercicios desde el 1-ene-2027; dos subtotales nuevos; MPM en notas; emitida en abr-2024.
+19. Resumen de la CUE en la BMV: 20 y 40 días hábiles; STIV-2 y Emisnet.
+20. Audit Update (15-jul-2024): datos a 2023, no "a 2024"; Big R de 209 (52%).
+21. Retiro de KMN en arXiv: 20-feb-2025, "temporalmente".
+22. Retracción de Kim y Nikolaev en JAR: 29-abr-2026 (Crossref); en línea desde el 18-dic-2024.
+23. Expresión de Preocupación en RFS: DOI 10.1093/rfs/hhag017; en línea el 1-mar-2026; número de mayo de 2026.
+24. Lopez-Lira, Tang y Zhu: arXiv 2504.14765 (20-abr-2025); texto del abstract.
+25. Benhenda: arXiv 2601.13770 (20-ene-2026).
+26. Gao, Jiang y Yan: arXiv 2512.23847 (29-dic-2025; revisado el 12-jun-2026).
+27. Liang: SSRN 6772819; abstract vía Crossref; ~11/16/18%; corte del 30-sep-2021.
+28. Matera: arXiv 2511.15214 (19-nov-2025).
+29. Martineau: CFR 11(3-4), 613-646. Subrahmanyam: SSRN 5930255 y UCLA Anderson Review (21-ene-2026; 3% del valor; t de 1.43).
+30. Kettell, McInnis y Zhao (abr-2022): abstract textual.
+31. Meursault et al. (JFQA 58(6)): 2.87/4.61/6.51/8.01 contra 1.54/2.70/3.87/4.63 (WP de la Fed de Filadelfia).
+32. Li y Mohanram: RAST 19(3); 28-38%; hasta 45%; ERC 18-85%; RW 13-37% mejor que HVZ.
+33. So (JFE 108(3)): 5.8% y 9.4% fuera de muestra, 1980-2009 (CFA Digest).
+34. Ball y Ghysels: MS 64(10); abstract.
+35. Chen, Cho, Dou y Lev: JAR 60(2); AUC de 67.52-68.66% y 5.02-9.74%.
+36. Cao, Jiang, Wang y Yang: JFE 160; 53.7 y 57.3% (versión WP, HLS Forum).
+37. Abstracts vía Crossref:
+    - Loughran y McDonald: ~3/4;
+    - Mayew y Venkatachalam;
+    - Larcker y Zakolyukina: 6-16%;
+    - Hutton, Lee y Shu: ventaja micro contra macro;
+    - Matsumoto;
+    - Gleason y Lee;
+    - Richardson, Teoh y Wysocki;
+    - Chan, Jegadeesh y Lakonishok (cualitativo);
+    - HVZ (1968-2008);
+    - Novy-Marx (con matiz sobre los crashes).
+38. Cálculos propios re-ejecutados:
+    - EV de 107.5 y E[ln] de 3.66%;
+    - DCF inverso de 9.08/11.68/14.03% con terminal de 63-68%;
+    - Brier de 0.1716;
+    - bandas binomiales de 34-45 (n = 50) y 12-19 (n = 20);
+    - +16.9% frente a diciembre;
+    - 3%/12% = 25% y 1%/12% = 8.3%;
+    - parámetros coherentes con `config/parametros.json`.
+
+**Corregidos en sitio:**
+1. §2.4: la inferencia "el pánico fue más de narrativa que de conteo" se basaba en 23 reportes y en un retiro de Walgreens ajeno a los aranceles. Se eliminó. GM se fecha el 29-abr, no el 30.
+2. §2.4 y [52]: los retiros de Stellantis, Cummins y JetBlue pasan de fuente secundaria a primaria. JetBlue citó incertidumbre macro, no aranceles. La fuente secundaria [52] se descarta: sin autor, no menciona a tres de las cuatro empresas y da una fecha errónea.
+3. §4.8: las cifras de Chedraui son una **estimación de Ve por Más**, no un dato reportado. La de Aeroméxico sí es reportada (−35.5%, atribuida al Mundial 2026).
+4. §6.5: `pronosticos.py puntuar` no usa la tasa base histórica; usa la frecuencia observada en la muestra y agrupa por autor.
+5. §2.2 y [5]: la Expresión de Preocupación salió en línea el 1-mar-2026, no en "mayo" (mayo es el número impreso). Se completó el título del artículo.
+6. §2.8: los datos de Audit Analytics llegan a 2023, no a 2024. Se agregaron las cifras.
+7. §2.3: se matizó Novy-Marx. La eliminación de crashes corresponde al momentum de utilidades que controla por el rendimiento pasado.
+8. §2.7: Meta es +US$1.00 por acción **diluida**, con +US$2.59 mil millones de utilidad neta. Se agregó el efecto de Amazon de 2024.
+
+**Siguen sin verificar (marcados inline):**
+1. Cierre de Monex 2T26: el PDF da 403 y la suma es de 102%. Se prohíbe usarlo como tasa base.
+2. Burry: ~US$176 mil millones y la fecha.
+3. XBRL de la CNBV obligatorio desde el 1T16. Tampoco se encontró la taxonomía de ~890 elementos, que no aparece en este capítulo.
+4. Mercedes-Benz: retiro de guía por aranceles.
+5. Bernard y Thomas: 41/48.
+6. Chan, Jegadeesh y Lakonishok: 7.5%.
+7. Stickel: ~6 meses.
+8. Hutton, Lee y Shu: ~50%.
+9. Larcker y Zakolyukina: 50-65%.
+10. Chen et al.: "más de 12,000 variables".
+11. La cita textual de la retracción de Kim y Nikolaev (Wiley, 403).
+12. Magnitud del momentum de revisiones después de 2015 (ya marcada).
+
+Sin marca inline por no tener cifra, con abstract inaccesible (Springer, SSRN o JSTOR bloqueados): Bradshaw et al. (2012), Gerakos y Gramacy, Livnat y Mendenhall, Bartov, Givoly y Hayn. Los metadatos (revista, volumen y páginas) sí se confirmaron en Crossref. La aplicación retrospectiva de IFRS 18 proviene de PwC (403 en esta sesión) y no se re-leyó en la norma.
+
+**Impacto en el grado:** sin cambios en el grado global (B/C/D). La corrección de §2.4 cambia una lectura: los retiros de guía por aranceles en 2025 fueron reales y documentados en presentaciones a la SEC. La regla "ensanchar intervalos cuando se retira la guía" se sostiene con más fuerza.
