@@ -841,6 +841,64 @@ dictamen = {
 R["dictamen"] = dictamen
 
 
+# =============================================================== 6b. POST-HOC (no pre-registrado; sin peso de evidencia)
+# Agregado despues de ver los resultados de la corrida 1 (ver "Desviaciones" en README.md):
+#  (a) EWW (iShares MSCI Mexico, USD, dividendos completos en Yahoo) x DEXMXUS como contraste de renta
+#      variable mexicana con rendimiento total, porque NAFTRAC en Yahoo no trae dividendos 2008-2012 ni 2021
+#      y S&P DJI (IPC Total Return) respondio 403.
+#  (b) Estimacion de NAFTRAC con dividendos imputados en los anios faltantes (dividendo implicito de EWW).
+#  (c) Busqueda de la ventana que produce las cifras recibidas de A5 (inicio 2007, fin jun o ago 2026).
+EWW_ADJ, EWW_CL, EWW_DIV, _ = yahoo_propio("yahoo_EWW_1d.json")
+eww_h, _ = yahoo_herramienta("yahoo_EWW_1d.json")
+if any(abs(EWW_ADJ[d] - eww_h[d]) > EPS * EWW_ADJ[d] for d in EWW_ADJ):
+    detener("parser EWW difiere")
+S["EWW_MXN"] = Serie("EWW adjclose x DEXMXUS (MSCI Mexico, TR)", en_mxn(EWW_ADJ, DEX))
+S["EWW_MXN_PRECIO"] = Serie("EWW close x DEXMXUS (sin dividendos)", en_mxn(EWW_CL, DEX))
+ph = {"eww_por_ventana": {w: {"tr": rendimiento_ventana(S["EWW_MXN"], d0, d1),
+                              "precio": rendimiento_ventana(S["EWW_MXN_PRECIO"], d0, d1)}
+                          for w, (d0, d1) in VENTANAS.items()}}
+div_eww = {}
+for anio in range(2008, 2026):
+    ra = rendimiento_ventana(Serie("e", EWW_ADJ), date(anio - 1, 12, 31), date(anio, 12, 31))
+    rc = rendimiento_ventana(Serie("e", EWW_CL), date(anio - 1, 12, 31), date(anio, 12, 31))
+    div_eww[anio] = (1 + ra["total"]) / (1 + rc["total"]) - 1
+faltantes = [x["anio"] for x in naftrac_anual if x["eventos_div_yahoo"] == 0]
+factor = 1.0
+for a in faltantes:
+    factor *= 1 + div_eww[a]
+base_w1 = tabla_a["NAFTRAC_ADJ"]["W1"]
+d0w, d1w = date.fromisoformat(base_w1["desde"]), date.fromisoformat(base_w1["hasta"])
+ph["naftrac_imputado_W1"] = {
+    "anios_sin_dividendos_en_yahoo": faltantes,
+    "dividendo_implicito_eww_en_esos_anios": {a: div_eww[a] for a in faltantes},
+    "cagr_yahoo": base_w1["cagr"],
+    "cagr_estimado_con_imputacion": cagr(1.0, (1 + base_w1["total"]) * factor, d0w, d1w),
+    "nota": "estimacion: dividendo implicito anual de EWW (MSCI Mexico, en USD) como aproximacion del IPC"}
+ph["dividendo_implicito_eww_por_anio"] = div_eww
+busq = []
+for ini in [(2007, 1), (2007, 4), (2007, 7), (2007, 10)]:
+    for fin in [(2026, 6), (2026, 8)]:
+        et = f"{ini[0]}-{ini[1]:02d}_a_{fin[0]}-{fin[1]:02d}"
+        a = correr(f"sma10_mxn_T0|posthoc_{et}", ub, "T0", "mxn", 10, es_prueba=False, ym_ini=ini, ym_fin=fin,
+                   cortar=False, parametros={"n": 10, "senal": "mxn", "ejecucion": "T0", "posthoc": et},
+                   nota="POST-HOC busqueda de origen")["segmentos"]["completo"]
+        b = correr(f"bh_T0|posthoc_{et}", ub, "T0", "bh", 0, es_prueba=False, ym_ini=ini, ym_fin=fin,
+                   cortar=False, parametros={"ejecucion": "T0", "posthoc": et},
+                   nota="POST-HOC busqueda de origen")["segmentos"]["completo"]
+        busq.append({"ventana": et, "desde": a["desde"], "hasta": a["hasta"], "cagr_sma": a["cagr"],
+                     "mdd_sma": a["mdd"], "cagr_bh": b["cagr"], "mdd_bh": b["mdd"],
+                     "dentro_tol": [abs(a["cagr"] - 0.146) <= TOL_CAGR, abs(b["cagr"] - 0.135) <= TOL_CAGR,
+                                    abs(a["mdd"] + 0.12) <= TOL_PCT, abs(b["mdd"] + 0.31) <= TOL_PCT]})
+ph["busqueda_ventana_A5"] = busq
+spymx = YAHOO["SPY.MX"]["adj"]
+fs = sorted(spymx)
+saltos = [(a.isoformat(), spymx[a], b.isoformat(), spymx[b]) for a, b in zip(fs, fs[1:])
+          if abs(spymx[b] / spymx[a] - 1) > 0.30]
+ph["spymx_saltos_mayores_30pct"] = {"n": len(saltos), "primeros": saltos[:4], "ultimo": saltos[-1] if saltos else None}
+R["posthoc"] = ph
+R["controles"]["motor_vs_simulador_propio_dif_max"] = DIF_MOTOR[0]
+
+
 # =============================================================== 7. salida
 def limpiar(o):
     if isinstance(o, dict):
@@ -927,3 +985,12 @@ for x in comp_a5:
 print("\nDictamen:", json.dumps(limpiar({k: v for k, v in dictamen.items() if k != "A5"}), indent=1))
 print("A5 reproducen:", [x["sma"] for x in dictamen["A5"]])
 print(f"\nVariantes de prueba registradas: {R['A5']['n_variantes_prueba']}; corridas totales: {R['A5']['n_corridas_totales']}")
+print("\n== POST-HOC (sin peso de evidencia) ==")
+for w, x in ph["eww_por_ventana"].items():
+    print(f"  EWW MXN {w}: TR {pct(x['tr']['cagr'])} precio {pct(x['precio']['cagr'])} ({x['tr']['desde']}→{x['tr']['hasta']})")
+print("  NAFTRAC imputado:", json.dumps(limpiar(ph["naftrac_imputado_W1"])))
+print("  Div. implicito EWW por anio:", "; ".join(f"{a}: {pct(v)}" for a, v in div_eww.items()))
+for x in busq:
+    print(f"  {x['ventana']} ({x['desde']}→{x['hasta']}): SMA {pct(x['cagr_sma'])}/{pct(x['mdd_sma'])} "
+          f"B&H {pct(x['cagr_bh'])}/{pct(x['mdd_bh'])} tol={x['dentro_tol']}")
+print("  SPY.MX saltos >30%:", ph["spymx_saltos_mayores_30pct"]["n"], ph["spymx_saltos_mayores_30pct"]["primeros"][:2])

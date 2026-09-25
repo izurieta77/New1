@@ -18,6 +18,9 @@ DATOS = os.path.join(AQUI, "datos")
 UA = {"User-Agent": "Mozilla/5.0"}
 YAHOO = "https://query1.finance.yahoo.com/v8/finance/chart/"
 TICKERS = ["SPY", "^SP500TR", "^GSPC", "NAFTRAC.MX", "^MXX", "MXN=X", "SPY.MX", "IVV.MX", "VOO.MX"]
+# Agregado DESPUES del pre-registro (2026-09-25 05:48 UTC), solo para el contraste post-hoc de dividendos
+# del IPC: EWW (iShares MSCI Mexico, USD). Ver "Desviaciones" en README.md.
+TICKERS += ["EWW"]
 FRED = "https://fred.stlouisfed.org/graph/fredgraph.csv?id="
 SERIES_FRED = ["DEXMXUS", "INTGSTMXM193N"]
 # Banxico SIE (exportacion CSV publica del cuadro; no requiere token)
