@@ -399,6 +399,8 @@ VARIANTES = {   # sensibilidades: NO son candidatas; cuentan como variantes prob
     "K1x": {"nombre": "K1x 100% BTC SIN cortacircuitos (viola perfil)", "lineas": [{"a": "b", "w": 1.0}],
             "sin_cc": True},
     "K1m": {"nombre": "K1m 60% BTC + 40% MXN", "lineas": [{"a": "b", "w": 0.6}], "mxn": 0.4},
+    "K1v": {"nombre": "K1v 100% BTC con el perfil ANTERIOR (solo -50%)", "lineas": [{"a": "b", "w": 1.0}],
+            "solo_tope": True},
 }
 EN_TORNEO = ("K1x", "K1m", "K3c")                               # sensibilidades que tambien entran al torneo
 OPS_MAX_MES = 8
@@ -498,7 +500,7 @@ def simular_cuenta(esp: dict, C: dict) -> dict:
         pausa_hasta = np.where(cruza40, t + 7, pausa_hasta)
         n_pausas += cruza40
         nivel_tope = np.where(dd <= -0.30, 0.25, np.where(dd <= -0.20, 0.50, 1.0))
-        if sin_cc:
+        if sin_cc or esp.get("solo_tope", False):               # K1v: perfil previo al commit c31a2c9
             nivel_tope = np.ones(P)
         nuevo_tope = np.minimum(tope, nivel_tope)
         corte = (nuevo_tope < tope) & ~parado                   # la venta es una accion al cruzar el nivel,
@@ -953,7 +955,7 @@ def seccion_significancia(D: dict) -> None:
     # DSR
     vals = np.array(list(srs.values()))
     v_ann = float(np.var(vals, ddof=1))
-    n_total = len(CANDIDATAS) - 1 + len(VARIANTES) + 2           # K1-K4 + 6 sensibilidades + SMA150 y SMA100
+    n_total = len(CANDIDATAS) - 1 + len(VARIANTES) + 2           # K1-K4 + 7 sensibilidades + SMA150 y SMA100
     for n_p in (4, n_total):
         dsr = metricas.sharpe_deflactado(list(out["BTC SMA200 rezago 1d = K3"]), n_pruebas=n_p, varianza_sharpes=v_ann,
                                          periodos_por_anio=365, varianza_anualizada=True)
