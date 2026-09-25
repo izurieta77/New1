@@ -55,3 +55,22 @@ Con la serie hasta julio de 2026, RMW desde 2000 da 4.48% anual y t = 2.28. Eso 
 1. Momentum y rentabilidad **fuera de EUA** con los factores internacionales de French (Developed, Europe, Japan, Asia Pacific ex Japan y Emerging), antes y después de su publicación.
 2. **Versiones implementables** vía ETFs disponibles en el SIC (por ejemplo, ETFs de momentum y de calidad frente al mercado), en MXN y con costos de GBM.
 3. Doble ejecución independiente de este archivo por el subagente `auditor-de-replicas`.
+
+## Adenda (25-sep-2026): verificación rápida del momentum internacional
+
+Se descargaron los factores momentum (WML) regionales de Kenneth French (versión a ago-2026) y se calcularon con Newey-West de 6 rezagos (`herramientas/estadistica.py`). Son diferenciales largo-corto, sin costos y en USD. La réplica formal, con datos congelados y doble ejecución, es **V02** (en curso).
+
+| Región | 2000-01 a 2026-08: ×12 / t | 2010-01 a 2026-08: ×12 / t | 2016-2025: ×12 / t | Veredicto |
+|---|---|---|---|---|
+| Emergentes | 9.6% / 4.21 | 12.3% / 5.47 | 10.3% / 3.76 | apoyo |
+| Asia Pacífico ex Japón | 10.7% / 3.66 | 12.5% / 4.99 | 9.0% / 3.41 | apoyo |
+| Europa (2000-2025) | 8.9% / 2.99 | 10.2% / 4.84 (hasta 2025) | 7.4% / 2.69 | apoyo |
+| Desarrollados ex EUA (2000-2025) | 6.9% / 2.50 | 8.3% / 4.27 (hasta 2025) | 5.7% / 2.27 | apoyo |
+| Norteamérica | 3.0% / 1.00 | 4.2% / 1.74 | 2.0% / 0.58 | inconcluso |
+| Japón | −0.2% / −0.09 | 1.0% / 0.40 | −1.1% / −0.37 | inconcluso |
+
+**Conclusión:** la cifra recibida para emergentes (9.6% desde 2000 y 12.3% desde 2010, con datos hasta agosto de 2026) **se reproduce exactamente**.
+
+El momentum académico sigue con evidencia fuerte fuera de EUA (emergentes, Asia ex Japón, Europa), y es inconcluso en Norteamérica y Japón.
+
+**No se sostiene todavía:** que eso sea capturable en GBM. En emergentes los costos de transacción son altos, no se puede vender en corto y hay que verificar si existe un ETF de momentum de emergentes en el SIC y cómo le ha ido neto de su gasto. Eso lo resuelve V02.

@@ -388,6 +388,36 @@ def probabilidad_implicita(compra: float | None, venta: float | None, ultimo: fl
     return ultimo
 
 
+def filtrar_mercados(mercados: list[dict], volumen_min: float, maximo: int, max_por_evento: int = 3,
+                     extremo: float = 0.01) -> list[dict]:
+    """Ordena por volumen, quita duplicados, colas (<1% o >99%) de eventos con varios resultados y limita
+    mercados por evento. Si nada supera volumen_min, devuelve los 3 mejores marcados como volumen bajo."""
+    por_evento: dict = {}
+    for m in mercados:
+        por_evento[m["evento"]] = por_evento.get(m["evento"], 0) + 1
+    vistos, candidatos = set(), []
+    for m in sorted(mercados, key=lambda x: -(x.get("volumen") or 0)):
+        if m["id"] in vistos:
+            continue
+        vistos.add(m["id"])
+        p = m.get("probabilidad")
+        if por_evento.get(m["evento"], 0) > 1 and p is not None and (p < extremo or p > 1 - extremo):
+            continue
+        candidatos.append(m)
+    def recortar(lista):
+        salida, cuenta = [], {}
+        for m in lista:
+            if cuenta.get(m["evento"], 0) >= max_por_evento:
+                continue
+            cuenta[m["evento"]] = cuenta.get(m["evento"], 0) + 1
+            salida.append(m)
+        return salida
+    suficientes = recortar([m for m in candidatos if (m.get("volumen") or 0) >= volumen_min])
+    if suficientes:
+        return suficientes[:maximo]
+    return [dict(m, volumen_bajo=True) for m in recortar(candidatos)[:3]]
+
+
 # ---------------------------------------------------------------- Polymarket
 
 def _lista_json(x) -> list:
@@ -468,13 +498,7 @@ def polymarket(palabras: list[str], max_por_palabra: int, volumen_min: float, ca
                     registro.append(f"Polymarket /markets: {e2}")
                     respaldo = []
             mercados = [m for m in respaldo if coincide(m["pregunta"], palabra) or coincide(m["evento"], palabra)]
-        vistos, unicos = set(), []
-        for m in sorted(mercados, key=lambda x: -(x["volumen"] or 0)):
-            if m["id"] in vistos or (m["volumen"] or 0) < volumen_min:
-                continue
-            vistos.add(m["id"])
-            unicos.append(m)
-        resultados[palabra] = unicos[:max_por_palabra]
+        resultados[palabra] = filtrar_mercados(mercados, volumen_min, max_por_palabra)
         time.sleep(PAUSA_S)
     return resultados
 
@@ -570,7 +594,7 @@ def kalshi_desde_busqueda_v1(datos: dict, palabra: str, ahora: datetime) -> list
 
 
 def kalshi(palabras: list[str], max_por_palabra: int, volumen_min: float, cache_horas: float | None,
-           registro: list[str], series_por_palabra: int = 4) -> dict[str, list[dict]]:
+           registro: list[str], series_por_palabra: int = 8) -> dict[str, list[dict]]:
     series, base_ok = [], None
     for base in URLS_KALSHI:
         series = []
@@ -590,6 +614,9 @@ def kalshi(palabras: list[str], max_por_palabra: int, volumen_min: float, cache_
         mercados: list[dict] = []
         if base_ok:
             for s in series_relevantes(series, palabra, series_por_palabra):
+                actuales = filtrar_mercados(mercados, volumen_min, max_por_palabra)
+                if len(actuales) >= max_por_palabra and not any(m.get("volumen_bajo") for m in actuales):
+                    break
                 try:
                     datos = _get_json(f"{base_ok}/events?" + urllib.parse.urlencode(
                         {"series_ticker": s["ticker"], "status": "open", "with_nested_markets": "true", "limit": 25}),
@@ -611,13 +638,7 @@ def kalshi(palabras: list[str], max_por_palabra: int, volumen_min: float, cache_
                 time.sleep(PAUSA_S)
             except ErrorFuente as e:
                 registro.append(f"Kalshi busqueda v1 '{palabra}': {e}")
-        vistos, unicos = set(), []
-        for m in sorted(mercados, key=lambda x: -(x["volumen"] or 0)):
-            if m["id"] in vistos or (m["volumen"] or 0) < volumen_min:
-                continue
-            vistos.add(m["id"])
-            unicos.append(m)
-        resultados[palabra] = unicos[:max_por_palabra]
+        resultados[palabra] = filtrar_mercados(mercados, volumen_min, max_por_palabra)
     return resultados
 
 
@@ -648,8 +669,9 @@ def tabla_mercados(mercados: list[dict], con_url: bool = True) -> list[str]:
         pregunta = m["pregunta"].replace("|", "/")[:110]
         cv = f"{_n(m.get('compra'), 2)}/{_n(m.get('venta'), 2)}"
         enlace = f"[ver]({m['url']})" if con_url and m["url"].startswith("http") else m["url"]
+        volumen = _vol(m.get("volumen")) + (" (bajo)" if m.get("volumen_bajo") else "")
         lineas.append(f"| {pregunta} | {str(m['resultado'])[:40]} | {_pct(m['probabilidad'])} | {cv} | "
-                      f"{_vol(m.get('volumen'))} | {m.get('cierre') or 'n.d.'} | {enlace} |")
+                      f"{volumen} | {m.get('cierre') or 'n.d.'} | {enlace} |")
     return lineas
 
 

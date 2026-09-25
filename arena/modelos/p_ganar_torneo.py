@@ -112,7 +112,7 @@ def simula(n, semilla=7, regimen="A_estres_corto"):
                  "R4 conservador (0.6x)"]
     finales_c = {c: [] for c in nombres_c}
     finales_r = {r: [] for r in nombres_r}
-    finales_c9 = {r: [] for r in nombres_r}
+    finales_c9 = {}
     for _ in range(n):
         # 200 dias de historia para la SMA200, luego 126 dias de temporada
         # Historia condicionada al estado actual (hecho al 24-sep-2026): precio entre +4% y +10% sobre su SMA200
@@ -140,8 +140,12 @@ def simula(n, semilla=7, regimen="A_estres_corto"):
         #   en otro caso sigue igual. Se calcula una trayectoria de C9 por rival.
         BETA_RIVAL = {"R1 concentrado (1.3x, s=30%)": 1.3, "R2 3x comprar-mantener": 3.0,
                       "R3 trader sin ventaja (0-2x semanal)": 1.0, "R4 conservador (0.6x)": 0.6}
-        v9 = {r_: 1.0 - COM for r_ in nombres_r}
-        modo9 = {r_: "normal" for r_ in nombres_r}
+        # Variantes de modo torneo: (nombre, k_base, k_atras, usa_filtro_banda)
+        VARIANTES9 = [("C9 = C8 + modo torneo", 2.0, 3.0, True),
+                      ("C10 = 2x sin filtro + modo torneo", 2.0, 3.0, False),
+                      ("C11 = 1x sin filtro + modo torneo (atras->2x)", 1.0, 2.0, False)]
+        v9 = {(vn, r_): 1.0 - COM for vn, _, _, _ in VARIANTES9 for r_ in nombres_r}
+        modo9 = {(vn, r_): "normal" for vn, _, _, _ in VARIANTES9 for r_ in nombres_r}
         sleeve_letf, sleeve_cash = 0.4 * v["C6 barbell 60% cash + 40% 3x filtro"], 0.6 * v["C6 barbell 60% cash + 40% 3x filtro"]
         for d in range(DIAS):
             sma = sum(precios[-200:]) / 200
@@ -160,10 +164,10 @@ def simula(n, semilla=7, regimen="A_estres_corto"):
             elif (not dentro_c8) and precios[-1] > sma:
                 dentro_c8 = True; v["C8 2x con filtro SMA200 y banda 3%"] *= (1 - COM)
             if d == 63:
-                for r_ in nombres_r:
-                    ventaja = v9[r_] / w[r_] - 1
-                    if ventaja <= -0.05: modo9[r_] = "atras"; v9[r_] *= (1 - 2 * COM)
-                    elif ventaja >= 0.05: modo9[r_] = "adelante"; v9[r_] *= (1 - 2 * COM)
+                for key in v9:
+                    ventaja = v9[key] / w[key[1]] - 1
+                    if ventaja <= -0.05: modo9[key] = "atras"; v9[key] *= (1 - 2 * COM)
+                    elif ventaja >= 0.05: modo9[key] = "adelante"; v9[key] *= (1 - 2 * COM)
             if d % 5 == 0:  # R3 cambia exposicion cada semana al azar
                 nueva = rng.choice((0.0, 1.0, 2.0))
                 if nueva != exp_r3:  # a/desde efectivo = 1 lado; cambio de instrumento = 2 lados
@@ -186,11 +190,14 @@ def simula(n, semilla=7, regimen="A_estres_corto"):
             v["C7 momentum concentrado (1.3x, s=20%, alfa 4%)"] *= max(0.0, (1 + 1.3 * r) * math.exp(e7 - 0.20**2 / 504) + 0.04 / 252 - f1)
             v["C7b igual que C7 pero alfa 0%"] *= max(0.0, (1 + 1.3 * r) * math.exp(e7 - 0.20**2 / 504) - f1)
             if dentro_c8: v["C8 2x con filtro SMA200 y banda 3%"] *= max(0.0, 1 + 2 * r - f2)
-            for r_ in nombres_r:
-                if modo9[r_] == "adelante":
-                    kb = BETA_RIVAL[r_]; v9[r_] *= max(0.0, 1 + kb * r - (f2 if kb > 1 else f1))
-                elif dentro_c8:
-                    kk = 3.0 if modo9[r_] == "atras" else 2.0; v9[r_] *= max(0.0, 1 + kk * r - f2)
+            for vn, kbase, katras, filtro in VARIANTES9:
+                for r_ in nombres_r:
+                    key = (vn, r_)
+                    if modo9[key] == "adelante":
+                        kb = BETA_RIVAL[r_]; v9[key] *= max(0.0, 1 + kb * r - (f2 if kb > 1 else f1))
+                    elif dentro_c8 or not filtro:
+                        kk = katras if modo9[key] == "atras" else kbase
+                        v9[key] *= max(0.0, 1 + kk * r - (f2 if kk > 1 else f1))
             e1 = 0.30 / math.sqrt(252) * rng.gauss(0, 1)
             w["R1 concentrado (1.3x, s=30%)"] *= max(0.0, (1 + 1.3 * r) * math.exp(e1 - 0.30**2 / 504) - f1)
             w["R2 3x comprar-mantener"] *= max(0.0, 1 + 3 * r - f2)
@@ -199,7 +206,7 @@ def simula(n, semilla=7, regimen="A_estres_corto"):
         v["C6 barbell 60% cash + 40% 3x filtro"] = sleeve_letf + sleeve_cash
         for c in nombres_c: finales_c[c].append(v[c] - 1)
         for r_ in nombres_r: finales_r[r_].append(w[r_] - 1)
-        for r_ in nombres_r: finales_c9[r_].append(v9[r_] - 1)
+        for key in v9: finales_c9.setdefault(key, []).append(v9[key] - 1)
     return nombres_c, nombres_r, finales_c, finales_r, finales_c9
 
 def reporte_mc(n, regimen):
@@ -213,10 +220,11 @@ def reporte_mc(n, regimen):
         ps = [sum(1.0 if a > b else (0.5 if a == b else 0.0) for a, b in zip(fc[c], fr[r])) / n for r in nr]  # empate = 1/2
         mezcla = sum(wi * pi for wi, pi in zip(PESOS_RIVAL_GROK, ps))
         print(f"{c:46s} {med:8.1%} {p5:8.1%} {p95:8.1%} {ruina:9.1%}  " + "  ".join(f"{p:5.1%}" for p in ps) + f"  {statistics.mean(ps):6.1%}  {mezcla:6.1%}")
-    ps9 = [sum(1.0 if a > b else (0.5 if a == b else 0.0) for a, b in zip(f9[r], fr[r])) / n for r in nr]
-    ruina9 = statistics.mean(sum(1 for x in f9[r] if x < -0.35) / n for r in nr)
-    print(f"{'C9 = C8 + modo torneo a mitad de temporada':46s} {'':>8s} {'':>8s} {'':>8s} {ruina9:9.1%}  " + "  ".join(f"{p:5.1%}" for p in ps9)
-          + f"  {statistics.mean(ps9):6.1%}  {sum(wi * pi for wi, pi in zip(PESOS_RIVAL_GROK, ps9)):6.1%}")
+    for vn in sorted({k[0] for k in f9}):
+        ps9 = [sum(1.0 if a > b else (0.5 if a == b else 0.0) for a, b in zip(f9[(vn, r)], fr[r])) / n for r in nr]
+        ruina9 = statistics.mean(sum(1 for x in f9[(vn, r)] if x < -0.35) / n for r in nr)
+        print(f"{vn:46s} {'':>8s} {'':>8s} {'':>8s} {ruina9:9.1%}  " + "  ".join(f"{p:5.1%}" for p in ps9)
+              + f"  {statistics.mean(ps9):6.1%}  {sum(wi * pi for wi, pi in zip(PESOS_RIVAL_GROK, ps9)):6.1%}")
     print("\nRivales (referencia):")
     for r in nr:
         xs = sorted(fr[r])

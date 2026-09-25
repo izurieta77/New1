@@ -21,7 +21,7 @@
 
 ## Resumen ejecutivo
 
-1. **[H] La teoría de torneos predice que quien va atrás apuesta más.** Brown-Harlow-Starks (1996) y Chevalier-Ellison (1997) lo encontraron en fondos mutuos [1][2]. Busse (2001) lo refutó con datos diarios [3]. Taylor (2003) mostró que, en un juego estratégico, **el que va adelante también sube su riesgo para "cubrir" al rival** [5].
+1. **[H] La teoría de torneos predice que quien va atrás apuesta más.** Brown-Harlow-Starks (1996) y Chevalier-Ellison (1997) lo encontraron en fondos mutuos [1][2]. Busse (2001) no lo encontró con datos diarios [3]. Taylor (2003) mostró que, en un juego estratégico, **el que va adelante también sube su riesgo para "cubrir" al rival** [5].
 2. **[H] Browne (2000) resolvió el duelo entre dos inversionistas.** Si ninguno tiene ventaja, la estrategia de equilibrio es la de crecimiento óptimo (Kelly). El que está en desventaja debe ser más audaz. **Si los dos invierten en lo mismo, el juego es trivial: cada movimiento se puede copiar** [9].
 3. **[I, modelo] En una carrera de beta pura, apalancarse más que el rival te da ~50%, no más.** Con k_claude > k_rival, P(ganar) = Φ(√T·(μ_e − (k_c + k_r)σ²/2)/σ). Esa probabilidad **no crece con la diferencia de exposición**: depende de que el mercado suba. Con μ_e = 8% y σ = 20%, sale entre 47% y 54%.
 4. **[I, modelo] Lo que mueve la probabilidad es la razón de información (IR) de la diferencia, no el nivel de riesgo.** P ≈ Φ(IR·√0.5): IR 0.25 da 57%, IR 0.5 da 64% e IR 1.0 da 76%. Sin ventaja real, el techo realista contra un rival típico es de **55% a 60%**.
@@ -33,8 +33,11 @@
    - tendencia + apalancado (2x, filtro SMA200 con banda de 3%): **54% / 57%**, con P(pérdida > 35%) de ~1%;
    - momentum concentrado: 53–58%, según el alfa que se suponga;
    - barbell: 53% / 54%, con ~0% de ruina;
-   - la misma tendencia + apalancado con **modo torneo a mitad de temporada: 58% / 60%**.
-10. **[R] Plan base:** 2x efectivo sobre renta variable de EUA de gran capitalización, con filtro SMA200 + banda de 3% + VIX < 25. El 3x se reserva para cuando vayamos atrás ≥5 pp, y se estima la beta del rival con sus reportes semanales. **El error que más cuesta es el sobretrading.** Un rival que rota cada semana sin ventaja pierde de 5% a 9% por comisiones en la temporada, y contra él ganamos del 70% al 87% de las veces.
+   - la misma tendencia + apalancado con **modo torneo a mitad de temporada: 58% / 60%**;
+   - el simple índice 1x sin filtro: 58% / 57%.
+
+   El filtro compra cola, no probabilidad.
+10. **[R] Plan base:** 1–2x efectivo sobre renta variable de EUA de gran capitalización, con filtro SMA200 + banda de 3% + VIX < 25 como seguro. A mitad de temporada entra el modo torneo: el 3x se reserva para cuando vayamos atrás ≥5 pp. La beta del rival se estima con sus reportes semanales. **El error que más cuesta es el sobretrading.** Un rival que rota cada semana sin ventaja pierde de 5% a 9% por comisiones en la temporada, y contra él ganamos del 67% al 88% de las veces.
 
 ---
 
@@ -285,7 +288,7 @@ Qué implica [I]:
 | Rivales | R1 concentrado (beta 1.3 + ruido idiosincrático de 30%). R2 3x comprar y mantener. R3 "trader sin ventaja" (cada semana elige al azar 0x, 1x o 2x y paga comisiones). R4 conservador (0.6x) | R1 y R2 son el estilo esperado de Grok (sección 4). R3 es el sobretrading que se vio en Alpha Arena [11]. R4 es un control |
 | "Rival tipo Grok" | Mezcla de 40% R1, 25% R2, 20% R3 y 15% R4 | Supuesto mío, basado en la sección 4 |
 | Momentum concentrado | Beta 1.3 + ruido de 20% + alfa de 4% anual (C7) o de 0% (C7b) | El 4% es un recorte fuerte al ~12% anual de JT [23], por decaimiento, solo largos y costos. C7b es el caso sin ventaja |
-| Modo torneo (C9) | Igual que C8 hasta el día 63. Si va atrás ≥5% → 3x con el mismo filtro. Si va adelante ≥5% → copia la beta del rival, sin filtro | **Optimista:** supone que se conoce la beta del rival. En la práctica se estima con ruido (sección 4) |
+| Modo torneo (C9–C11) | Igual que su base hasta el día 63 (C9: base C8; C10: 2x sin filtro; C11: 1x sin filtro). Si va atrás ≥5% → sube un escalón (3x, o 2x en C11). Si va adelante ≥5% → copia la beta del rival, sin filtro. Cada cambio cuesta 2 lados de comisión | **Optimista:** supone que se conoce la beta del rival. En la práctica se estima con ruido (sección 4) |
 | Empates | Cuentan 1/2 | Relevante cuando se usa exactamente el mismo instrumento que el rival |
 
 ### 7.2 Código
@@ -335,7 +338,7 @@ def simula(n, semilla=7, regimen="A_estres_corto"):
     mu_c, sd_c = g["mu_c"] / 252, g["sd_c"] / math.sqrt(252)
     mu_s, sd_s = g["mu_s"] / 252, g["sd_s"] / math.sqrt(252)
     p_cs, p_sc = g["p_cs"], g["p_sc"]
-    # ... estrategias C0..C8, rivales R1..R4 y C9 por rival (ver archivo) ...
+    # ... estrategias C0..C8, rivales R1..R4 y variantes C9..C11 de modo torneo por rival (ver archivo) ...
     for _ in range(n):
         while True:   # historia de 200 dias condicionada: precio entre +4% y +10% sobre su SMA200
             estado, precios = 0, [100.0]
@@ -350,7 +353,7 @@ def simula(n, semilla=7, regimen="A_estres_corto"):
         for d in range(DIAS):
             sma = sum(precios[-200:]) / 200
             # senal de filtro (precio > SMA200; C8: sale < 0.97*SMA, reentra > SMA), cobro de COM por cambio,
-            # R3 cambia exposicion semanal al azar, C9 decide modo en d == 63 segun ventaja vs cada rival
+            # R3 cambia exposicion semanal al azar, C9..C11 deciden modo en d == 63 segun ventaja vs cada rival
             if estado == 0 and rng.random() < p_cs: estado = 1
             elif estado == 1 and rng.random() < p_sc: estado = 0
             mu, sd = (mu_c, sd_c) if estado == 0 else (mu_s, sd_s)
@@ -394,6 +397,8 @@ Contra el rival concentrado, por escenario de μ_e:
 | C7b momentum concentrado (alfa 0%) | 4.5% | −30.5% | 49.4% | 3.1% | 52.3% | 44.2% | 70.7% | 53.8% | 55.2% | 54.2% |
 | C8 2x con filtro SMA200 y banda de 3% | 5.3% | −27.2% | 60.6% | 1.4% | 55.7% | 30.9% | 76.6% | 56.7% | 55.0% | 53.8% |
 | **C9 = C8 + modo torneo** | — | — | — | 3.2% | 57.9% | 34.2% | 80.6% | 65.8% | 59.6% | **57.7%** |
+| C10 = 2x sin filtro + modo torneo | — | — | — | 6.8% | 57.6% | 41.3% | 81.7% | 70.0% | 62.7% | **60.2%** |
+| C11 = 1x sin filtro + modo torneo (atrás → 2x) | — | — | — | 2.4% | 53.3% | 44.1% | 83.9% | 66.2% | 61.9% | **59.1%** |
 
 **Régimen B (bajista persistente):**
 
@@ -410,6 +415,10 @@ Contra el rival concentrado, por escenario de μ_e:
 | C7b momentum concentrado (alfa 0%) | 7.8% | −27.5% | 48.1% | 2.3% | 52.4% | 34.7% | 72.7% | 57.6% | 54.4% | 52.8% |
 | C8 2x con filtro SMA200 y banda de 3% | 13.4% | −22.2% | 57.2% | 0.6% | 60.4% | 23.2% | 85.1% | 68.8% | 59.4% | 57.3% |
 | **C9 = C8 + modo torneo** | — | — | — | 1.9% | 61.3% | 25.4% | 87.7% | 75.6% | 62.5% | **59.8%** |
+| C10 = 2x sin filtro + modo torneo | — | — | — | 5.1% | 60.2% | 29.7% | 87.7% | 78.0% | 63.9% | **60.7%** |
+| C11 = 1x sin filtro + modo torneo (atrás → 2x) | — | — | — | 2.0% | 52.3% | 32.4% | 87.2% | 74.8% | 61.7% | **57.7%** |
+
+En C9, C10 y C11 la mediana y los percentiles no aplican: hay una trayectoria distinta contra cada rival. P(< −35%) es el promedio de las cuatro.
 
 Medianas de los rivales:
 - Régimen A: R1 2.6%, R2 10.4%, R3 **−5.0%** y R4 2.9%.
@@ -420,9 +429,17 @@ Medianas de los rivales:
 2. **Contra el mismo instrumento (C3 vs R2) es un volado exacto (50%).** Esto confirma a Browne [9]: sin diferenciación no hay ventaja.
 3. **El filtro SMA200 sin banda (C4) le quita de 4 a 7 pp de probabilidad al 2x comprar-mantener** en un horizonte de 6 meses que arranca en tendencia, por el whipsaw. **La banda de 3% (C8) recupera la mayor parte y deja el riesgo de ruina en 0.6–1.4%**, contra 4.6–5.7% del 2x sin filtro.
    - Esto es coherente con Gayed-Bilello: la regla solo gana en términos absolutos en 49% de las ventanas de 3 años. Su valor está en la cola [27].
-4. **El modo torneo (C9) agrega de +2.5 a +4 pp sobre C8** (57.7% y 59.8%). Es la mejor combinación de probabilidad y ruina del modelo, pero supone que se conoce la beta del rival.
-5. **3x comprar y mantener (C3) tiene la probabilidad más alta en el régimen B (64.3%), pero con P(< −35%) de 8.5–12.1%.** Viola el límite `etf_apalancado_max` = 0.5 del perfil y dispararía el cortacircuitos de −35%.
-6. **El sobretrading es el peor error.** Contra R3, cualquier estrategia con exposición gana del 67% al 88% de las veces. R3 pierde de 5% a 9% solo en comisiones: 26 semanas × 2/3 de probabilidad de cambio × ~1.33 lados × 0.39% ≈ 9%.
+4. **El modo torneo agrega de +1 a +4 pp a cualquier base.**
+   - Sobre C8, sube a 57.7% / 59.8% (C9).
+   - Sobre el 2x sin filtro, sube a 60.2% / 60.7% (C10), pero con una ruina de 5–7%.
+   - Sobre el 1x, sube a 59.1% / 57.7% (C11), con una ruina de ~2%.
+   - Supuesto optimista: se conoce la beta del rival.
+5. **La sencillez compite.** El índice 1x sin filtro (C1) logra 58.0% / 56.7% con una ruina de 0.5%, igual o mejor que C8 sin modo torneo.
+   - [I] El filtro de tendencia en un duelo de 6 meses es **un seguro contra la cola**, no una fuente de probabilidad.
+   - El filtro paga en el régimen B (bajistas persistentes) y cuesta en el A.
+6. **3x comprar y mantener (C3) tiene la probabilidad más alta en el régimen B (64.3%), pero con P(< −35%) de 8.5–12.1%.** Viola el límite `etf_apalancado_max` = 0.5 del perfil y dispararía el cortacircuitos de −35%, que en la práctica te saca del juego.
+7. **El sobretrading es el peor error.** Contra R3, cualquier estrategia con exposición gana del 67% al 88% de las veces. R3 pierde de 5% a 9% solo en comisiones: 26 semanas × 2/3 de probabilidad de cambio × ~1.33 lados × 0.39% ≈ 9%.
+8. **Error de Monte Carlo:** con 20,000 trayectorias, el error estándar de cada probabilidad es de ~0.35 pp. Las comparaciones usan los mismos números aleatorios (pareadas), así que diferencias de ≥1 pp son del modelo y no del ruido. **Las diferencias de 1–3 pp entre las mejores opciones son menores que la incertidumbre de los supuestos.**
 
 ---
 
@@ -434,7 +451,12 @@ Medianas de los rivales:
 | **B. Momentum concentrado** | 3–5 ETFs sectoriales o acciones líderes con momentum 12-1 positivo y a ≤5% de su máximo de 52 semanas, revisión mensual (≤ 8 operaciones al mes). Se apaga en estado de pánico [25] | ~1.3x por la beta de los líderes | **52.8–57.6% / 52.8–56.3%**, según el alfa (0–4%) | 2.0–3.1% | La ventaja depende de que el momentum siga vivo en líderes de IA/semis (SMH +73% en 12-1). Riesgo de rotación. **Se parece a lo que probablemente hará el rival**, así que baja la diferenciación |
 | **C. Barbell** | 60% en CETES/efectivo + 40% en ETF 3x con filtro. El efectivo es munición para subir la exposición si vamos atrás | ~1.2x cuando el filtro está dentro | **52.8% / 54.1%** | **0.0%** | Pierde contra rivales con beta > 1 en mercados alcistas (R2: 24–33%). Su valor es la opcionalidad para el modo torneo y el desempate (menor máxima caída) |
 
-**Probabilidad estimada contra un rival típico [I]:** A ≈ 54–60% (con modo torneo), B ≈ 53–58% y C ≈ 53–54%.
+**Variante simple de A [I]:** índice 1x sin filtro + modo torneo (atrás → 2x; adelante → copiar la beta del rival). Da **59.1% / 57.7%** con una ruina de ~2% (C11). Es casi la misma probabilidad con menos piezas móviles y menos operaciones. Pierde en la cola si hay un mercado bajista persistente antes de la mitad de la temporada.
+
+**Probabilidad estimada contra un rival típico [I]:**
+- A ≈ 54–60%: 54–57% sin modo torneo y 58–60% con él.
+- B ≈ 53–58%.
+- C ≈ 53–54%.
 
 Rangos y supuestos [I]:
 - Los rangos combinan los dos regímenes y la mezcla supuesta de rivales. Los supuestos principales son μ_e ≈ 8% anual incondicional, σ ≈ 18–21% y el arranque en calma (sección 7.1).
@@ -446,8 +468,10 @@ Rangos y supuestos [I]:
 
 ## Implicaciones para la cuenta arena
 
-1. **[R] Arquetipo base: A (tendencia + apalancado ~2x con banda de 3%) con modo torneo.**
-   - Es el mejor equilibrio del modelo entre probabilidad (54–60%) y ruina (≤ 3%). Es compatible con el perfil provisional: `etf_apalancado_max` 0.5 y los cortacircuitos −12/−20/−28/−35.
+1. **[R] Arquetipo base: A (tendencia + apalancado ~2x con banda de 3%) con modo torneo (C9: 57.7% / 59.8%, ruina 2–3%).**
+   - Es compatible con el perfil provisional: `etf_apalancado_max` 0.5 y los cortacircuitos −12/−20/−28/−35.
+   - Alternativa de igual probabilidad y menos operaciones: 1x + modo torneo (C11: 59.1% / 57.7%, ruina ~2%).
+   - La versión sin filtro (C10: 60.2% / 60.7%) gana 1–2 pp más, pero duplica la ruina (5–7%). No conviene mientras el cortacircuitos de −35% nos saque del juego.
    - El 3x completo (C3/C5) solo se usa como herramienta para alcanzar al rival, no como punto de partida.
 2. **[R] Corregir el sentido del `modo_torneo` en `parametros.json`.** Donde dice "Adelante del mejor rival: reducir varianza" debe decir **"reducir el tracking error contra el rival (acercarse a su beta estimada)"**. Irse a efectivo cuando el rival está apalancado **aumenta** el riesgo de perder la ventaja (tabla 2.4; Taylor [5]).
 3. **[R] Instrumentar el marcador.**

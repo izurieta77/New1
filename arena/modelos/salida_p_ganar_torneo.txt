@@ -53,7 +53,9 @@ C6 barbell 60% cash + 40% 3x filtro                0.5%   -15.5%    39.3%      0
 C7 momentum concentrado (1.3x, s=20%, alfa 4%)     6.6%   -29.1%    52.5%      2.6%  55.4%  47.1%  74.4%  58.5%   58.9%   57.6%
 C7b igual que C7 pero alfa 0%                      4.5%   -30.5%    49.4%      3.1%  52.3%  44.2%  70.7%  53.8%   55.2%   54.2%
 C8 2x con filtro SMA200 y banda 3%                 5.3%   -27.2%    60.6%      1.4%  55.7%  30.9%  76.6%  56.7%   55.0%   53.8%
-C9 = C8 + modo torneo a mitad de temporada                                     3.2%  57.9%  34.2%  80.6%  65.8%   59.6%   57.7%
+C10 = 2x sin filtro + modo torneo                                              6.8%  57.6%  41.3%  81.7%  70.0%   62.7%   60.2%
+C11 = 1x sin filtro + modo torneo (atras->2x)                                  2.4%  53.3%  44.1%  83.9%  66.2%   61.9%   59.1%
+C9 = C8 + modo torneo                                                          3.2%  57.9%  34.2%  80.6%  65.8%   59.6%   57.7%
 
 Rivales (referencia):
   R1 concentrado (1.3x, s=30%)             mediana   2.6%  p5 -36.2%  p95  60.3%
@@ -73,7 +75,9 @@ C6 barbell 60% cash + 40% 3x filtro                6.6%   -12.9%    37.7%      0
 C7 momentum concentrado (1.3x, s=20%, alfa 4%)     9.9%   -26.0%    51.1%      2.0%  55.7%  37.8%  76.5%  62.2%   58.0%   56.3%
 C7b igual que C7 pero alfa 0%                      7.8%   -27.5%    48.1%      2.3%  52.4%  34.7%  72.7%  57.6%   54.4%   52.8%
 C8 2x con filtro SMA200 y banda 3%                13.4%   -22.2%    57.2%      0.6%  60.4%  23.2%  85.1%  68.8%   59.4%   57.3%
-C9 = C8 + modo torneo a mitad de temporada                                     1.9%  61.3%  25.4%  87.7%  75.6%   62.5%   59.8%
+C10 = 2x sin filtro + modo torneo                                              5.1%  60.2%  29.7%  87.7%  78.0%   63.9%   60.7%
+C11 = 1x sin filtro + modo torneo (atras->2x)                                  2.0%  52.3%  32.4%  87.2%  74.8%   61.7%   57.7%
+C9 = C8 + modo torneo                                                          1.9%  61.3%  25.4%  87.7%  75.6%   62.5%   59.8%
 
 Rivales (referencia):
   R1 concentrado (1.3x, s=30%)             mediana   5.7%  p5 -33.7%  p95  60.4%
