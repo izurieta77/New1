@@ -11,7 +11,7 @@ Quien apruebe este módulo debe poder, con números y sin ayuda:
 1. Formular cualquier regla técnica como lo que es: una función de precios y volúmenes pasados que pronostica E[r | historia], y decir qué hipótesis de eficiencia contradice y en qué horizonte.
 2. Distinguir los cinco mecanismos que pueden generar predictibilidad técnica real (subreacción/aprendizaje, anclaje, microestructura de órdenes, flujos de cobertura, primas de riesgo variables) de los tres que la fabrican (data snooping, trading no sincrónico, look-ahead).
 3. Reproducir el arco histórico BLL 1992 → Bessembinder-Chan 1998 → Sullivan-Timmermann-White 1999 → Ready 2002 → Bajgrowicz-Scaillet 2012 → Rink 2023, con las cifras clave de cada eslabón.
-4. Calcular el costo de equilibrio (*break-even cost*) de una regla y descartarla si no cubre al menos 3 veces el costo real de ida y vuelta en GBM.
+4. Calcular el costo de equilibrio (*break-even cost*) de una regla y descartarla si no cubre al menos 3 veces el costo real por lado en GBM.
 5. Explicar por qué una media móvil sobre el índice mejora más el drawdown que el CAGR, y cuantificarlo (Faber: drawdown de 83.66% → 42.24%; CAGR 9.32% → 10.18%, bruto).
 6. Ubicar cada señal de sección cruzada (52 semanas, volumen, MAD, *trend factor*, CNN sobre imágenes) en su grado de evidencia y su viabilidad en una cuenta chica.
 7. Explicar por qué los patrones (H&S, velas, Fibonacci, Elliott) fallan como sistema, qué información marginal sí contienen y por qué están prohibidos como señal de decisión.
@@ -60,7 +60,7 @@ BETC por operación (un sentido) = exceso de rendimiento anual bruto / número d
 
 - BLL sobre el Dow: BETC de un sentido de 0.39% en toda la muestra y 0.22% desde 1975 (Bessembinder-Chan 1998).
 - Media de 10 días de Han-Yang-Zhou: ~20% de los días con operación y BETC de ~29 a 65 puntos base por operación según el decil.
-- GBM (persona física): comisión de 0.25% a 0.10% por operación según el saldo promedio de 3 meses, más IVA (verificar en la guía vigente de GBM; detalle en Cap. 11), más *spread*. *Inferencia:* con MXN 20,000 el costo realista de ida y vuelta es ≥ 0.6% antes de *spread*. Toda regla con BETC menor que ~1.8% (3× ese costo) queda fuera.
+- GBM (persona física): comisión de 0.25% a 0.10% por operación según el saldo promedio de 3 meses, más IVA (verificar en la guía vigente de GBM [64]; detalle en Cap. 11), más *spread*. *Inferencia:* con MXN 20,000 el costo realista es ≥ 0.3% por lado (≥ 0.6% ida y vuelta) antes de *spread*. **Regla de las 3×:** el BETC por operación de un sentido debe ser ≥ 3 veces el costo por lado, es decir ≥ ~0.9%; si no, la regla queda fuera.
 
 ### 2.6 Taxonomía que usa el sistema
 
@@ -100,7 +100,7 @@ BETC por operación (un sentido) = exceso de rendimiento anual bruto / número d
 | Lee-Swaminathan 2000, JF 55(5) | EUA | Alta rotación = acciones "glamour" con menor rendimiento futuro; ganadores de bajo volumen y perdedores de alto volumen continúan hasta 3 años; momentum revierte en 5 años | IS, bruto | B− | [19] |
 | Gervais-Kaniel-Mingelgrin 2001, JF 56(3) | EUA | Volumen inusualmente alto en un día o semana → apreciación en el mes siguiente (efecto visibilidad) | IS, bruto | C+ | [20] |
 | Han-Yang-Zhou 2013, JFQA 48(5) | Deciles por volatilidad, jul-1963 a dic-2009 | MA de 10 días vs B&H: 8.42% a 18.70% anual; alfa FF3 de 9.80% a 23.54%; con MA de 200 días, mayormente > 5%; BETC ~29-65 pb | IS, break-even | C (nivel portafolio; en acciones individuales no se sostiene) | [21][22] |
-| Han-Zhou-Zhu 2016, JFE 122(2) | Sección cruzada EUA | *Trend factor* (medias de 3 a 1,000 días): 1.63% mensual, Sharpe mensual 0.47 vs 0.23 (reversión corta), 0.10 (momentum), 0.10 (reversión larga); en la crisis financiera +0.75% mensual vs momentum −3.88% | IS, bruto | C+ | [23][24] |
+| Han-Zhou-Zhu 2016, JFE 122(2) | Sección cruzada EUA | *Trend factor* (combina medias móviles de horizontes corto, intermedio y largo): 1.63% mensual, Sharpe mensual 0.47 vs 0.23 (reversión corta), 0.10 (momentum), 0.10 (reversión larga); en la crisis financiera +0.75% mensual vs momentum −3.88% | IS, bruto | C+ | [23][24] |
 | Avramov-Kaplanski-Subrahmanyam 2021, RFE 39(2) | Sección cruzada EUA | MAD = MA21/MA200; alfa ponderado por valor ~9% anual; sobrevive costos institucionales; más fuerte del lado largo | IS, neto institucional | B− | [25] |
 | Gao-Han-Li-Zhou 2018, JFE 129(2) | SPY 1993-2013 | El rendimiento de la primera media hora (desde el cierre previo) predice la última media hora; más fuerte con volatilidad, volumen, recesión y días de noticias macro | IS y OOS | B (existencia) | [26] |
 | Baltussen-Da-Lammers-Martens 2021, JFE 142 | 60+ futuros 1974-2020 | Últimos 30 minutos predichos por el resto del día; revierte en días siguientes; ligado a cobertura gamma | IS/OOS | B | [27] |
@@ -112,7 +112,7 @@ BETC por operación (un sentido) = exceso de rendimiento anual bruto / número d
 
 | Estudio | Muestra | Hallazgo | Grado | Fuente |
 |---|---|---|---|---|
-| Lo-Mamaysky-Wang 2000, JF | Acciones EUA 1962-1996, reconocimiento por regresión kernel | Varios patrones cambian la distribución condicional de rendimientos (información incremental, más en NASDAQ); **no prueba rentabilidad neta**; los patrones clásicos pueden no ser óptimos | C | [32][33] |
+| Lo-Mamaysky-Wang 2000, JF | Acciones EUA 1962-1996, reconocimiento por regresión kernel | Varios patrones cambian la distribución condicional de rendimientos (información incremental); **no prueba rentabilidad neta**; los patrones clásicos pueden no ser óptimos | C | [32][33] |
 | Chang-Osler 1999, EJ 109 | H&S en FX diario 1973-1994 | Rentable en algunas monedas, pero **dominado por reglas más simples** (medias móviles, momentum) | C− | [34] |
 | Savin-Weller-Zvingelis 2007, JFEc 5(2) | S&P 500 y Russell 2000, 1990-1999 | Poca o nula rentabilidad como estrategia aislada; exceso ajustado por riesgo de 5-7% anual condicionado al patrón, **en parte por identificar momentum negativo** | C− | [35][36] |
 | Marshall-Young-Rose 2006, JBF 30 | Acciones del DJIA 1992-2001, bootstrap | Las velas japonesas **no superan al trading aleatorio** | D (señal) / A (el resultado negativo) | [37] |
@@ -139,7 +139,7 @@ BETC por operación (un sentido) = exceso de rendimiento anual bruto / número d
 3. **Jiang-Kelly-Xiu 2023, JF 78(6).** Redes convolucionales sobre imágenes OHLC + volumen + media móvil de 5, 20 y 60 días. Deciles long-short con Sharpe **bruto** fuera de muestra de hasta 7.2 equiponderado y 1.7 ponderado por valor; los mejores rivales tradicionales (TREND y reversión semanal) logran 2.9 y 2.8 equiponderado (0.7 y 0.8 por valor) [50][51]. Lectura correcta: hay estructura no lineal en las gráficas, pero la cifra espectacular vive en microcaps con rotación semanal; neta y en una cuenta chica, no aplica.
 4. **Murray-Xia-Xiao 2024, JFE 153 ("Charting by machines").** ML sobre rendimientos pasados predice la sección cruzada **incluso entre las 500 mayores acciones**; no linealidades estables en el tiempo y distintas de momentum, reversión y señales técnicas conocidas [52]. Es la evidencia más fuerte a favor de que "la gráfica contiene información"; no de que un humano o un LLM la extraiga mirando.
 5. **Réplica del momentum intradía (Limkriangkrai-Chai-Zheng 2023, PBFJ 80).** EUA 1996-2013: R² dentro de muestra 1.7% con la primera media hora; R²_OS 1.7% y 2.3% combinando la penúltima media hora; persiste en EUA durante el COVID. En Asia-Pacífico solo China y Japón; nada en Hong Kong ni Singapur [53].
-6. **Overnight drift: descubrimiento y muerte.** Boyarchenko-Larsen-Whelan (RFS 2023) documentan que casi toda la prima de renta variable de EUA se ganaba entre 2:00 y 3:00 a.m. ET [54]. Los mismos autores (Liberty Street, julio 2026): ~3.7% anualizado en esa ventana en 1998-2020, **cerca de cero desde 2021**; la dispersión del desequilibrio de órdenes al cierre cayó de 6.5% a 2.9%; dos ETFs lanzados en 2022 para capturarlo cerraron a los 14 meses [55]. Caso de libro de decaimiento post-publicación.
+6. **Overnight drift: descubrimiento y muerte.** Boyarchenko-Larsen-Whelan (RFS 2023) documentan que casi toda la prima de renta variable de EUA se ganaba entre 2:00 y 3:00 a.m. ET, en la apertura europea [54]. Los mismos autores (Liberty Street, julio 2026): ~3.7% anualizado en esa ventana en 1998-2020 (más del 60% del 5.9% anual cierre a cierre del futuro), **cerca de cero desde 2021**; la dispersión del desequilibrio de órdenes al cierre cayó de 6.5% a 2.9%; dos ETFs lanzados en 2022 para capturarlo cerraron a los 14 meses [55]. Caso de libro de decaimiento post-publicación.
 7. **Sentimiento AAII (Gómez-Martínez et al. 2026, IREF).** 25 años semanales, reglas contrarias sobre el diferencial alcista-bajista, netas de costos: utilidades positivas en los extremos y mejor eficiencia de drawdown, pero **ninguna supera el Sharpe de estar largo pasivo** [56].
 8. **Tendencia multiactivo en vivo.** El SG Trend Index (los 10 mayores CTAs de tendencia) cerró 2024 en +2.4%; a junio de 2025, pérdida de −15.05% en 12 meses y drawdown de 20.61%; rendimiento anualizado desde 2000 de 4.90% [57]. La tendencia diversifica crisis largas, no es una máquina de rendimiento.
 9. **LLMs y modelos de visión leyendo gráficas.** Un benchmark de 2026 sobre velas: exactitud direccional de 49% a 53.5% (el mejor, Claude Sonnet 4.5 con razonamiento, 53.48%, vs XGBoost 50.87%), IC ≈ 0.05 en el mejor caso, más correlación con el rendimiento a 5 días que a 30 aunque se pidió 30 [58]. LiveTradeBench (2025): 21 LLMs, 50 días en vivo; un puntaje alto en LMArena no implica mejores resultados de trading [59]. *Inferencia:* los rivales de la arena que "lean gráficas" con un LLM tienen, en el mejor caso, una ventaja direccional de 1 a 3 puntos, que las comisiones de GBM se comen.
@@ -191,7 +191,7 @@ Osler muestra poder predictivo real en FX intradía (1996-98) y el mecanismo (ó
 
 ### 5.9 Métodos de practicante con momentum de crecimiento: componentes B, paquetes D
 
-- **CAN SLIM / IBD:** el único estudio académico citado (Olson et al. 1998) es dentro de muestra, 1984-1992; el vehículo en vivo (FFTY) rindió 3.47% anual desde 2015 contra un S&P 500 de dos dígitos en el mismo periodo, después de un "backtest" del índice que superaba al mercado ~9% anual. Es el ejemplo canónico de backtest vs vivo.
+- **CAN SLIM / IBD:** el único estudio académico citado (Olson et al. 1998) es dentro de muestra, 1984-1992; el vehículo en vivo (FFTY) rindió 3.47% anual desde 2015, contra un S&P 500 que compuso a dos dígitos anuales en el mismo periodo (no verificado con precisión), después de un "backtest" del índice que superaba al mercado ~9% anual. Es el ejemplo canónico de backtest vs vivo.
 - **Minervini / Weinstein (etapa 2, "trend template"):** no se encontró prueba académica del paquete. Sus componentes (precio sobre medias de 50/150/200 días, cercanía al máximo de 52 semanas, fuerza relativa) coinciden con señales de grado B (tendencia, 52 semanas, momentum). *Inferencia:* el sistema usa los componentes con evidencia, no el paquete ni sus reglas discrecionales de "patrones de contracción de volatilidad".
 - **Day trading:** Brasil, 97% de los persistentes pierde. D definitivo.
 
@@ -201,7 +201,7 @@ México estaba entre los tres mercados donde las medias móviles sobrevivían co
 
 ### 5.11 Cripto: C+
 
-Detzel et al. 2021: razones precio/media móvil (5 a 100 días) pronostican Bitcoin dentro y fuera de muestra, con mejoras en alfa, Sharpe y drawdown; lo mismo en acciones pequeñas, jóvenes y poco cubiertas. Coherente con la teoría de aprendizaje: donde los fundamentales son difíciles de valuar, la tendencia pesa más. Relevante porque `arena_agresivo.concentracion.cripto_max` = 0.30.
+Detzel et al. 2021 [63]: razones precio/media móvil (5 a 100 días) pronostican Bitcoin dentro y fuera de muestra, con mejoras en alfa, Sharpe y drawdown; lo mismo en acciones pequeñas, jóvenes y poco cubiertas. Coherente con la teoría de aprendizaje: donde los fundamentales son difíciles de valuar, la tendencia pesa más. Relevante porque `arena_agresivo.concentracion.cripto_max` = 0.30.
 
 ### 5.12 Amplitud y sentimiento: C (moduladores)
 
@@ -212,7 +212,7 @@ La amplitud predice a corto plazo entre países e industrias (Zaremba et al.), c
 | Señal | Magnitud documentada | Neto de costos | Estado post-publicación | Grado |
 |---|---|---|---|---|
 | SMA 10 meses sobre S&P 500 | DD −50% relativo; CAGR +0.9 pp (bruto) | Sí con < 1 ida y vuelta al año (inferencia) | CAGR indistinguible sin look-ahead; drawdown robusto | B |
-| 14 técnicos NRTZ (prima de mercado) | R²_OS 0.65%; CER ≈ 2.5 pp | Sí (50 pb) | Sobrevive en GWZ 2024 | B+ |
+| 14 técnicos NRTZ (prima de mercado) | R²_OS 0.65%; CER de PC-TECH 2.49 pp bruto; individuales hasta 2.82 pp neto | Sí (50 pb) | Sobrevive en GWZ 2024 | B+ |
 | 52 semanas (CS) | ~0.45-0.65% mensual | No reportado | Robusto internacionalmente según literatura posterior | B |
 | MAD 21/200 (CS) | ~9% anual de alfa VW | Sí (institucional) | Sin réplica independiente conocida | B− |
 | Reglas diarias BLL | +12% vs −7% anual (compra vs venta) | No (BETC 0.22% desde 1975) | Muertas desde 1987 | D |
@@ -240,7 +240,7 @@ La amplitud predice a corto plazo entre países e industrias (Zaremba et al.), c
 
 - **R5 — Ranking compuesto para candidatos del satélite:** z-score de (a) momentum 12-1 (Cap. 06), (b) precio / máximo de 52 semanas, (c) MAD 21/200. Ponderación sugerida por grado: 40/40/20. Condición de elegibilidad: precio sobre SMA 200 días. Solo largos.
 - **R6 — Volumen como desempate:** entre candidatos empatados, preferir el ganador con rotación **no** extrema (Lee-Swaminathan) y evitar el perdedor de alto volumen. No es señal de entrada.
-- **R7 — Cripto (tope 30% en arena):** exposición solo con precio sobre su media móvil de 50 días o sobre la de 100 días (rango 5-100 de Detzel et al.; elegir **un** parámetro ex ante y documentarlo; no optimizarlo sobre la misma muestra).
+- **R7 — Cripto (tope 30% en arena):** exposición solo con precio sobre su media móvil, con un **único** parámetro elegido ex ante dentro del rango de 5 a 100 días documentado por Detzel et al. [63] (propuesta: 50 días), registrado antes de probarlo y sin optimizarlo sobre la misma muestra.
 
 ### 6.3 Protocolo de validación para cualquier regla técnica nueva
 
@@ -248,7 +248,7 @@ Obligatorio, en este orden, con los valores de `validacion_estrategias`:
 
 1. **Pre-registro:** hipótesis, mecanismo (sección 2.2), parámetros y universo **antes** de ver resultados. Registrar el número total de variantes probadas (N) en `bitacora/decisiones`.
 2. **Datos:** ≥ 10 años (`backtest_min_anios`), *total return*, sin sesgo de supervivencia, señal al cierre de t y ejecución en la apertura de t+1 (nunca en el mismo cierre).
-3. **Costos:** comisión GBM + IVA + *spread* observado + deslizamiento; reportar el BETC. **Regla de las 3×:** BETC ≥ 3 veces el costo de ida y vuelta, o se descarta.
+3. **Costos:** comisión GBM + IVA + *spread* observado + deslizamiento; reportar el BETC por operación de un sentido. **Regla de las 3×:** BETC ≥ 3 veces el costo por lado (≥ ~0.9% con los costos actuales), o se descarta.
 4. **Snooping:** Sharpe deflactado con N variantes (`herramientas/metricas.py → sharpe_deflactado`), probabilidad ≥ 0.95; PBO ≤ 0.25; para familias de reglas, White *Reality Check* o SPA.
 5. **Robustez:** vecindad de parámetros (p. ej., medias de 150-250 días deben dar resultados parecidos a 200); submuestras por década; mercado alterno (si se diseñó en S&P 500, probar en IPC y en MSCI EM).
 6. **Descomposición:** separar el rendimiento en exposición promedio × prima + covarianza de timing (sección 2.1). Si todo viene de "estar menos invertido", no es timing.
@@ -307,7 +307,7 @@ Obligatorio, en este orden, con los valores de `validacion_estrategias`:
 | Paquetes de practicante (CAN SLIM, listas IBD, "trend template" completo con reglas discrecionales) | Sin evidencia OOS; fracaso en vivo (FFTY) | D |
 | Gann, ciclos, niveles "mágicos", astrología financiera | Sin evidencia verificable | D |
 | Lecturas de gráficas por LLM o modelos de visión | 49-53.5% de exactitud; sin validación en vivo | D (hasta pasar 6.3) |
-| Cualquier regla con BETC < 3× costo ida y vuelta o > 8 operaciones al mes | Incompatible con GBM y con `parametros.json` | D por construcción |
+| Cualquier regla con BETC < 3× el costo por lado o > 8 operaciones al mes | Incompatible con GBM y con `parametros.json` | D por construcción |
 
 ---
 
@@ -345,7 +345,7 @@ Obligatorio, en este orden, con los valores de `validacion_estrategias`:
 11. **¿Por qué la señal de 52 semanas es preferible al momentum clásico en la muestra de George-Hwang?** En regresión conjunta rinde 0.65% mensual vs 0.38% de JT, y no revierte a largo plazo.
 12. **¿Qué enseña el caso FFTY?** Que un método con backtest brillante (IBD 50 reconstruido, ~+9% anual sobre el S&P 500) puede rendir 3.47% anual en vivo: backtest ≠ vivo, y los paquetes de practicante sin validación OOS son D.
 13. **¿Qué muestra Osler 2003 y cómo se usa en el sistema?** Que los stops y take-profits se agrupan en números redondos: explica rebotes en soportes y aceleraciones al romperlos. En el sistema: poner stops lejos de números redondos y mínimos obvios.
-14. **Una regla da 4% anual bruto sobre B&H con 12 operaciones de un sentido al año. ¿Pasa el filtro de costos en GBM?** BETC = 4%/12 ≈ 0.33% por operación. Con ~0.29% por lado (0.25% + IVA) más *spread*, el BETC no llega a 3× el costo: se rechaza.
+14. **Una regla da 4% anual bruto sobre B&H con 12 operaciones de un sentido al año. ¿Pasa el filtro de costos en GBM?** BETC = 4%/12 ≈ 0.33% por operación. El costo por lado es ~0.29% (0.25% + IVA) más *spread*, así que 3× exige ≥ ~0.9%: se rechaza (y neta de costos apenas empata).
 15. **¿Qué conclusión sobre análisis técnico en México da la literatura?** México era uno de los tres emergentes donde las medias móviles sobrevivían costos en 1982-1995 (Ratner-Leal), pero la evidencia posterior muestra que la ventaja se debilita tras los ETFs y cae con el tiempo (Hsu-Hsu-Kuan, Rink); hoy es una hipótesis a validar, no un hecho.
 
 ---
@@ -413,6 +413,6 @@ Obligatorio, en este orden, con los valores de `validacion_estrategias`:
 59. Yu, Li, You, "LiveTradeBench" (arXiv 2511.03628, 2025): https://arxiv.org/pdf/2511.03628
 60. "Automatic identification and evaluation of Fibonacci retracements: Empirical evidence from three equity markets", Expert Systems with Applications (2021): https://www.sciencedirect.com/science/article/abs/pii/S0957417421012495
 61. Shanaev, Gibson (2022), "Can Returns Breed Like Rabbits? Econometric Tests for Fibonacci Retracements" (resumen): https://paperswithbacktest.com/strategies/can-returns-breed-like-rabbits-econometric-tests-for-fibonacci-retracements
-62. D'Angelo, Grimaldi (2017), "The Effectiveness of the Elliott Waves Theory to Forecast Financial Markets", International Business Research 10(6): https://ideas.repec.org/a/ibn/ibrjnl/v10y2017i6p1-18.html
+62. D'Angelo (2017), "The Effectiveness of the Elliott Waves Theory to Forecast Financial Markets", International Business Research 10(6): https://ideas.repec.org/a/ibn/ibrjnl/v10y2017i6p1-18.html
 63. Detzel, Liu, Strauss, Zhou, Zhu (2021), Financial Management 50(1): https://onlinelibrary.wiley.com/doi/abs/10.1111/fima.12310
 64. GBM, comisiones (centro de ayuda): https://gbm.com/faqs/que-comisiones-cobran-al-invertir-en-gbm/
