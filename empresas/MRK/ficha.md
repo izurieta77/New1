@@ -68,7 +68,7 @@ Capitalización de US$365.1 mil M y VE de 411.9 mil M. **P/U 2027e de 15.5x** (9
 - **Binarios:** (1) ventas mayores a US$17,340 M: **p = 0.66**; (2) UPA no-GAAP mayor a US$2.206: **p = 0.65**.
 
 ## 9. Catalizadores y riesgos
-**Catalizadores:** 26-oct, evento de oncología en el congreso ESMO (Madrid) [1]; 29-oct, reporte del 3T26; 3-nov, elecciones intermedias; 1-ene-2027, precio IRA de Janumet y ley alemana; ~feb-2027, lista IRA que probablemente incluya Keytruda. Hechos recientes: el 24-sep la FDA amplió la etiqueta de Winrevair con los datos de HYPERION (−76% de riesgo de empeoramiento) y remigromig cumplió su objetivo primario en edema macular diabético (Yahoo [12]). **Riesgos:** pérdida de exclusividad de Keytruda, IRA/MFN, cargos por M&A, China (Gardasil) y FX.
+**Catalizadores:** 26-oct, evento de oncología en el congreso ESMO (Madrid) [1]; 29-oct, reporte del 3T26; 3-nov, elecciones intermedias; 1-ene-2027, precio IRA de Janumet y ley alemana; ~feb-2027, lista IRA que probablemente incluya Keytruda. El 24-sep la FDA amplió la etiqueta de Winrevair (HYPERION) y remigromig cumplió su objetivo en edema macular diabético [12]. **Riesgos:** pérdida de exclusividad de Keytruda, IRA/MFN, cargos por M&A, China (Gardasil) y FX.
 
 ## 10. Fuentes
 1. 8-K, comunicado y tablas del 2T26 (4-ago-2026): https://www.sec.gov/Archives/edgar/data/310158/000110465926090045/tm2621496d1_ex99-1.htm · https://www.sec.gov/Archives/edgar/data/310158/000110465926090045/tm2621496d1_ex99-2.htm
@@ -77,7 +77,7 @@ Capitalización de US$365.1 mil M y VE de 411.9 mil M. **P/U 2027e de 15.5x** (9
 4. 10-K 2025 (24-feb-2026): https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm
 5. 8-K, notas por US$6.0 mil M (22-may-2026): https://www.sec.gov/Archives/edgar/data/310158/000162828026037738/mrk-20260522.htm
 6. SEC companyfacts CIK 310158 (consultado el 25-sep-2026): https://data.sec.gov/api/xbrl/companyfacts/CIK0000310158.json
-7. Dossier interno `empresas/MRK/dossier-2026-09-25.md` (25-sep-2026).
+7. Dossier interno `empresas/MRK/dossier-2026-09-25.md`.
 8. Yahoo Finance quoteSummary de MRK y pares (consultado el 25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MRK
 9. Nasdaq/Zacks (consultado el 25-sep-2026): https://www.nasdaq.com/market-activity/stocks/mrk/earnings
 10. MarketBeat (consultado el 25-sep-2026): https://www.marketbeat.com/stocks/NYSE/MRK/earnings/
