@@ -102,7 +102,7 @@ Se verifican con fuente primaria (ley, DOF, SAT, IRS, Tesoro de EUA, BMV, emisor
 |---|---|---|---|
 | 1 | Los PDF de SPIVA se tomaron de **capturas del Internet Archive** de las URL oficiales de `spglobal.com`, con el sufijo `id_` (bytes originales). | `spglobal.com` responde 403 a clientes que no son navegador, tanto con curl como con WebFetch. Las capturas de EUA venían comprimidas con gzip de transporte y se descomprimieron. | No. Los metadatos (título, autores, fecha de creación) y el contenido son de S&P DJI. Una segunda extracción de texto, con pdfminer en lugar de pypdf, da las mismas cifras clave (85.59, 83.33, 82.93, 74.3%, 16.4%). |
 | 2 | **No se obtuvo** SPIVA Latin America Year-End 2025, ni Mid-Year 2024, ni la versión en inglés de Mid-Year 2025. | 403 en el sitio oficial y ninguna captura en el archivo. | No cambia A2: la cifra ya no es la más reciente con la edición de mitad de 2025, que sí se obtuvo. Las cifras de cierre de 2025 de un resumen de buscador se reportan como **no verificadas**. |
-| 3 | La edición de EUA de mitad de 2024 es un formato corto ("SPIVA U.S. Focus") **sin Report 1a**. | Así la publicó S&P DJI. | No. Queda como "sin tabla". |
+| 3 | La edición de EUA de mitad de 2024 es un formato corto ("SPIVA U.S. Focus") **sin Report 1a**. | Así la publicó S&P DJI. | No. ~~Queda como "sin tabla".~~ **Corrección (2026-09-25):** la misma medida está en su Report 3 (*Fund Underperformance Rates*), con 84.71% a 10 años. Ver la tabla 1. |
 | 4 | En el análisis B se agregaron **dos ventanas exploratorias**: el año 2024 (con 16.4% en el S&P, el peso de A3) y 2016-2025 (la ventana de la edición de cierre de 2025). | Surgieron **después** de leer A3. | No. Van marcadas como exploratorias. La única prueba pre-registrada es 2015-2024. |
 | 5 | Se agregaron descriptivos que no entran a ningún veredicto: fuga por retención de dividendos, liquidez de ETFs UCITS y de EUA en el SIC (Yahoo, 1 año), una ilustración del *estate tax*, rendimientos anualizados de SPIVA (Reports 3 y 4) y una verificación mecánica de 29 citas legales. | Hacen verificable la parte documental (punto 7 del pre-registro). | No. |
 
@@ -118,13 +118,15 @@ Se verifican con fuente primaria (ley, DOF, SAT, IRS, Tesoro de EUA, BMV, emisor
 | Edición | Corte | Publicación | Año corrido | 1 año | 3 años | 5 años | **10 años** | 15 años | 20 años |
 |---|---|---|---|---|---|---|---|---|---|
 | Year-End 2023 | 31-dic-2023 | mar-2024 | — | 59.68 | 79.78 | 78.68 | **87.42** | 87.98 | 93.03 |
-| Focus Mid-Year 2024 | 30-jun-2024 | oct-nov 2024 | sin Report 1a (solo gráfica) | | | | — | | |
+| Focus Mid-Year 2024 | 30-jun-2024 | oct-nov 2024 | 57.31 | 57.05 | 86.08 | 77.26 | **84.71** (Report 3) | 89.54 | 91.77 |
 | Year-End 2024 | 31-dic-2024 | ~mar-2025 | — | 65.24 | 84.96 | 76.26 | **84.34** | 89.50 | 91.99 |
 | Mid-Year 2025 | 30-jun-2025 | ~sep-2025 | 54.31 | 72.61 | 64.87 | 86.91 | **85.98** | 88.29 | 91.03 |
 | **Year-End 2025** | 31-dic-2025 | mar-2026 | — | 78.78 | 66.84 | 88.96 | **85.59** ← afirmación | 89.93 | 92.89 |
 | **Mid-Year 2026 (la más reciente)** | 30-jun-2026 | ~16-17 sep 2026 | 67.18 | 78.69 | 76.63 | 89.32 | **83.33** | 90.49 | 92.61 |
 
 Las fechas de publicación salen de los metadatos del PDF, la primera captura del archivo o la nota 1 de la edición *Focus*. Solo la de cierre de 2025 viene de un resumen de buscador (ver `resultados.json`).
+
+**Corrección (2026-09-25, doble ejecución independiente).** La edición *Focus* de mitad de 2024 no tiene un Report 1a, pero sí trae la misma medida en su **Report 3**, *Fund Underperformance Rates – U.S. Equity Categories* (página 8, datos al 30-jun-2024). Ahí la fila *All Large-Cap Funds* contra el S&P 500 da **84.71%** a 10 años. Antes esta fila decía "sin Report 1a (solo gráfica)", porque `reproducir.py` solo buscaba el Report 1a. El veredicto no cambia: 84.71 queda dentro del rango de 83% a 87%, y los valores a 15 años (89.54) y a 20 años (91.77) caen dentro del rango de 88% a 93%. Anotado en `conocimiento/registro-de-errores.md`.
 
 **Veredicto A1: confirmada con matices.** La cifra está en Year-End 2025 (85.59 → 85.6). Hay dos matices: (a) no es la edición más reciente, porque Mid-Year 2026 da 83.33%; (c) "fondos grandes" es *All Large-Cap Funds*. Lo robusto es el rango: en todas las ediciones revisadas, **de 83% a 87%** de los fondos *large-cap* quedaron debajo del S&P 500 a 10 años, y **de 88% a 93%** a 15 y 20 años.
 
@@ -175,7 +177,7 @@ Fuente: *SPIVA Latin America Year-End 2024*, páginas 7 y 8 y Exhibit 8 (datos a
 | 20% | 6.40% | +2.88 |
 | 30% | 7.81% | +4.29 |
 | 50% | 10.56% | +7.03 |
-| 100% (S&P 500 en MXN) | 16.98% | +13.45 |
+| 100% (S&P 500 en MXN) | 16.98% | +13.46 |
 
 - **Peso en S&P necesario para compensar gastos** (interpolación lineal pre-registrada): **6.9%** para 1 pp, **13.8%** para 2 pp y **20.9%** para 3 pp.
 - **Prueba pre-registrada:** diferencia mensual S&P(MXN) − IPC con media de **1.018% al mes**, t Newey-West(6) = **1.99** e IC 95% = **[0.014, 2.021]**, lo que da **apoyo**. Es un apoyo al límite: el intervalo casi toca cero.
@@ -198,7 +200,7 @@ Fuente: *SPIVA Latin America Year-End 2024*, páginas 7 y 8 y Exhibit 8 (datos a
 | Constancia | El intermediario calcula la ganancia o pérdida y entrega la constancia. GBM: "Constancias Fiscales (o CFDI) por las ganancias del 2025" en la app. Sin CFDI para Trading USA | **Verificado** (art. 129; FAQ de GBM) |
 | Retención de ISR sobre intereses en 2026 | **0.90%** anual sobre el capital (arts. 54 y 135 LISR); es pago provisional | **Verificado** (art. 24 LIF 2026, DOF 07-11-2025) |
 | Dividendos de emisoras mexicanas | 10% adicional retenido (definitivo), más acumulación con acreditamiento del ISR corporativo | **Verificado** (art. 140) |
-| Dividendos extranjeros (SIC) | EUA retiene 30%, o 10% con W-8BEN (tratado, art. 10). En México, 10% adicional definitivo y acumulación con acreditamiento del impuesto extranjero. GBM retiene el 10% "sobre monto neto" | **Verificado** (art. 142 fr. V; tratado; FAQ de GBM). Base exacta del 10% (bruto o neto): la ley es ambigua y GBM dice neto |
+| Dividendos extranjeros (SIC) | EUA retiene 30%, o 10% con W-8BEN (tratado, art. 10). En México, 10% adicional definitivo y acumulación con acreditamiento del impuesto extranjero. GBM retiene el 10% "sobre monto neto" | **Verificado** (art. 142 fr. V; tratado; FAQ de GBM). Base del 10%: la letra del art. 142 fr. V la calcula "sin incluir el monto del impuesto retenido que en su caso se hubiere efectuado", o sea sobre el **neto**, y GBM también dice neto. No se revisó un criterio del SAT. **Corrección (2026-09-25):** antes decía "la ley es ambigua" |
 | Reformas 2026 | La LISR sigue con última reforma del DOF 01-04-2024. Los cambios de ISR de 2026 van en la LIF | **Verificado** (textos de la Cámara de Diputados) |
 | *Estate tax* EUA: umbral y crédito | Umbral de declaración de 60,000 USD y crédito de 13,000 USD. Tarifa de 18% a 40% | **Verificado** (instrucciones del 706-NA de 09/2025; 26 USC 2102 y 2001(c)) |
 | Tratado sucesorio México-EUA | No existe. Lista de 15 países: Australia, Austria, Canadá, Dinamarca, Finlandia, Francia, Alemania, Grecia, Irlanda, Italia, Japón, Países Bajos, Sudáfrica, Suiza y Reino Unido | **Verificado** (706-NA) |
@@ -266,7 +268,7 @@ El domicilio, el TER y la política de dividendos de CSPX e IUSA están verifica
   2. Confirmar en GBM (app o contrato) que CSPX y VUAA se pueden comprar en Trading MX.
   3. Buscar un criterio del SAT o una regla de la RMF 2026 sobre ETFs extranjeros de renta fija en el SIC, que no quedan claramente en el art. 129.
   4. Pedir opinión a un abogado fiscal sobre el *situs* de las acciones de EUA custodiadas vía Indeval.
-  5. Dar la réplica de este archivo al subagente auditor.
+  5. ~~Dar la réplica de este archivo al subagente auditor.~~ Hecho el 2026-09-25: ver "Doble ejecución independiente (2026-09-25)".
 
 ## Fuentes
 
