@@ -44,7 +44,7 @@ Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 2
 | Cartera inicial de la arena | Aprobada por el comité y registrada en git antes de ejecutarse | **Cumplido:** cartera A (7 SPYM + 1 QQQM + liquidez); gestor de riesgo aprueba con cambios | 25-sep-2026 |
 | Arena en real (GBM) | El dueño captura las boletas en GBM si se cumple la condición de validez de las 08:45. Stop por línea solo en lo táctico o apalancado (enmienda del 25-sep) | Boletas listas en `bitacora/boletas/2026-09-28.md` | 28-sep-2026 |
 | Cartera cripto (Binance) | Comité cripto: solo spot, tope de 5,000 MXN | **Cumplido:** 40% BTC (4,000 MXN) + 60% MXN, filtro SMA200 ±3%, sin ETH; gestor de riesgo aprueba con cambios. Boleta en `bitacora/boletas/2026-09-28.md` | 28-sep-2026 |
-| Pronósticos calibrados | ≥50 resueltos, Brier ≤ 0.20, 3 meses | 5 registrados, 0 resueltos | 25-dic-2026 |
+| Pronósticos calibrados | ≥50 resueltos, Brier ≤ 0.20, 3 meses | 19 en bitácora + 341 de empresas (171 numéricos, 170 binarios), 0 resueltos | 25-dic-2026 |
 | Portafolio de papel (registro sombra) | 3 meses dentro de límites | Arranca el 28-sep | 28-dic-2026 |
 | Patrimonio principal en real | Fin de fase 0 con la regla completa | — | ~28-dic-2026 |
 
@@ -104,11 +104,17 @@ Los procedimientos están versionados en `rutinas/*.md` y se cambian ahí. La se
 
 ## 8. Avance (lo actualiza la auditoría del viernes)
 
+Última actualización: auditoría semanal 2026-W39 (25-sep-2026, 23:00 UTC). Detalle en `bitacora/semanal/2026-W39.md`.
+
 | Indicador | Valor | Fecha |
 |---|---|---|
-| Pronósticos registrados / resueltos | 5 / 0 | 25-sep-2026 |
-| Brier acumulado | n/d | — |
+| Pronósticos registrados / resueltos | Bitácora 19 / 0; empresas 341 / 0. Primeros en resolverse: MU (1-oct), CPI de EUA (P0002, 14-oct) | 25-sep-2026 |
+| Brier acumulado | n/d (n = 0) | — |
 | Cuenta real arena: TWR / drawdown máximo | Arranca el 28-sep | — |
-| Portafolio de papel: TWR / drawdown máximo | Arranca el 28-sep | — |
+| Portafolio de papel: TWR / drawdown máximo | Sin fondear; arranca el 28-sep (O0001-O0002) | 25-sep-2026 |
+| Benchmarks de la semana 18→25-sep (MXN) | S&P 500 TR en MXN +4.25% (SP500TR +1.23% y USD/MXN +2.99%); IPC +2.55% (precio); CETES ~+0.12% (proxy 6.23% anual) | 25-sep-2026 |
+| Estado de dominio | 33 temas: 1 Localizado, 20 Documentado, 1 Comprendido con comprobación, 2 Contrastado, 9 Replicado | 25-sep-2026 |
+| Laboratorio | 13 pruebas con fila (0 ventaja demostrada, 3 oportunidad investigable, 7 descartadas, 3 en curso) + R05-R09 sin fila | 25-sep-2026 |
 | Rivales con datos | 0 | — |
-| Días para fin de fase 0 del patrimonio principal | ~94 | 25-sep-2026 |
+| Días para fin de fase 0 del patrimonio principal | 94 (28-dic-2026) | 25-sep-2026 |
+| Días para fin de la temporada arena | 125 (28-ene-2027) | 25-sep-2026 |
