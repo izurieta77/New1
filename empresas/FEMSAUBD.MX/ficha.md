@@ -14,7 +14,7 @@ FEMSA es un conglomerado de proximidad y bebidas. Ingresos del 2T26 por segmento
 | Salud (farmacias) | 22,328 | 9.7% | 346 |
 | Europa (Valora) | 14,491 | 6.3% | 638 |
 
-Otros negocios (Spin, Bara), corporativo y eliminaciones suman Ps 2,590 M. FEMSA consolida a KOF, de la que posee ~47% (fuente secundaria, no verificado en el 20-F) [13]. *Inferencia sobre la geografía:* México pesa más de 60% de los ingresos (OXXO México, KOF México y combustibles); el resto se reparte entre Sudamérica (KOF y OXXO), Europa (6%) y EUA.
+Otros negocios (Spin, Bara), corporativo y eliminaciones suman Ps 2,590 M. FEMSA consolida a KOF, de la que posee ~47% (fuente secundaria, no verificado en el 20-F) [13]. *Inferencia sobre la geografía:* México pesa ~60% de los ingresos (OXXO México, KOF México y combustibles); el resto se reparte entre Sudamérica (KOF y OXXO), Europa (6%) y EUA.
 
 ## 2. Último reporte: 2T26 (28-jul-2026) [1]
 - **Ingresos** Ps 231,002 M (+9.3%; +10.1% comparable). Superaron el consenso de TradingView (226.57 mil M, +2.0%) y el de Investing.com (225.78 mil M) [11].

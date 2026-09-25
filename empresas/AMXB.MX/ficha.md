@@ -4,13 +4,13 @@
 > Precio: Ps 19.60 (24-sep-2026); 52 semanas 17.56-23.92; +3.9% a 1 año y −14.5% a 3 meses [13]. Fase 0: investigación, no recomendación.
 
 ## 1. Negocio y segmentos
-Mayor operador de telecomunicaciones de América Latina. A jun-26 tenía 414.5 M de accesos: 334.3 M móviles (149.8 M pospago) y 80.2 M fijos (37.8 M de banda ancha) [1]. Ingresos 2025: Ps 943,638 M [3]. Ingresos externos por segmento en 2025 [5]: México 37.4% (Telcel 260,861 + Telmex 91,809), Brasil 18.8%, Europa (A1 Telekom, 61%) 12.8%, Colombia 8.3%, región andina 6.1%, Centroamérica 6.0%, Caribe 3.9%, Argentina 3.9% y resto del Cono Sur 2.9%. México genera 57% de la utilidad de operación (108,395 de 191,404 M; cálculo propio [5][3]). En 2T26, los servicios fueron 85% de los ingresos [1].
+Mayor operador de telecomunicaciones de Latinoamérica; a jun-26 tenía 414.5 M de accesos: 334.3 M móviles (149.8 M pospago) y 80.2 M fijos (37.8 M de banda ancha) [1]. Ingresos 2025: Ps 943,638 M [3]. Ingresos externos por segmento en 2025 [5]: México 37.4% (Telcel 260,861 + Telmex 91,809), Brasil 18.8%, Europa (A1 Telekom, 61%) 12.8%, Colombia 8.3%, región andina 6.1%, Centroamérica 6.0%, Caribe 3.9%, Argentina 3.9% y resto del Cono Sur 2.9%. México genera 57% de la utilidad de operación (108,395 de 191,404 M; cálculo propio [5][3]).
 
 ## 2. Último reporte: 2T26 (21-jul-2026) [1]
 - Ingresos Ps 241,071 M (+3.1%; servicios +5.1% a tipo de cambio constante), +0.2% contra el consenso de Ps 240,560 M (Investing) [8].
 - Margen EBITDA 39.8% (+30 pb) y margen operativo 21.5% (+130 pb). Sin la multa a Telmex (Ps 1.3 mil M según la llamada [9]), el EBITDA habría crecido 6.7%.
 - Utilidad neta Ps 24,332 M (+9.2%). UPA Ps 0.40 contra un consenso de 0.426 (−6%) [8]. Por ADS: US$0.47 contra US$0.52 (MarketBeat) [10].
-- Guía: no hay guía formal. En la llamada se mencionó capex de ~US$7 mil M en 2026 y apalancamiento objetivo de 1.2-1.5x [9] (fuente secundaria).
+- Guía: no hay formal; en la llamada, capex 2026 ~US$7 mil M y apalancamiento meta de 1.2-1.5x [9] (secundaria).
 - Datos operativos: 3.5 M altas netas de pospago; 531 mil accesos nuevos de banda ancha; Telcel con 84.5 M líneas (+0.5%) y servicio móvil en México +6.6% [1].
 
 ## 3. Tabla financiera
@@ -45,18 +45,18 @@ La UN de 2021 incluye partidas extraordinarias (venta de Tracfone; no verificado
 1. **Utilidad vs. efectivo.** El FCF de AMX en 2025 (81,884) igualó a la UN (82,819). Flujo operativo IFRS de 272,399 menos PP&E, intangibles y arrendamientos da ~90.0 mil M (cálculo propio [7]). En 1S26 el FCF subió a 43,021 (contra 20,054) por menor capex (48.1 contra 54.9 mil M), menos impuestos y menos capital de trabajo [1]. *Inferencia:* parte es de calendario.
 2. **Deuda.** Total Ps 476,927 M, caja 75,943 y neta 400,984 (1.31x EBITDAaL) [1]. Por moneda, sin derivados: MXN 128,181 M, US$9,001 M, €3,432 M, £2,200 M, R$10,000 M y otras monedas Ps 38,290 M [1]. Aproximadamente 27% MXN, 33% USD, 14% EUR, 11% GBP y 7% BRL (cálculo propio [13]). Costo implícito ~6.8% contando arrendamientos (cálculo propio). Vencimientos: no verificados.
 3. **Dilución.** Hay recompra neta: las acciones promedio bajaron de 61.5 a 60.1 mil M (−2.3%, 3T24 a 2T26) [2][1]. Fondo de recompra de Ps 21,042.6 M (abr-26 a abr-27) [11].
-4. **Capital de trabajo.** Consumió Ps 16,363 M en 2025 y 26,300 M en 1S26, con patrón estacional [3][1].
+4. **Capital de trabajo.** Consumió Ps 16,363 M (2025) y 26,300 M (1S26, estacional) [3][1].
 5. **Competidores.** AT&T tiene 16.1% del mercado móvil mexicano [12]. En fijo compiten Totalplay, izzi y Megacable; en Brasil, TIM y Vivo con promociones [9].
 6. **Concentración.** Clientes atomizados. Depende del espectro: Telcel tenía 46.7% del asignado (ago-2024) [12].
 7. **Regulación.** Telcel es agente preponderante bajo la nueva Ley de Telecomunicaciones, la CRT (instalada el 17-oct-2025) y la CNA [16][14]. Multa a Telmex de Ps 1.3 mil M [9]. Registro obligatorio de líneas con suspensión [1][15].
 8. **Promesas vs. resultados.** La UN de 2024 se re-expresó de 28,308 a 22,902 M y el 20-F 2024 salió tarde (NT 20-F el 30-abr-2025; 20-F el 14-may-2025) [4][6]. La causa no se verificó. El 20-F 2025 llegó en plazo y el apalancamiento cumple la meta.
-9. **Partes relacionadas.** Pertenece al grupo de control de la familia Slim. Las operaciones con Carso e Inbursa no se cuantificaron (no verificado).
+9. **Partes relacionadas.** Grupo de control Slim; operaciones con Carso e Inbursa no cuantificadas (no verificado).
 10. **Asignación de capital.** Dividendo de Ps 0.54 en dos pagos de 0.27 (15-jul y 11-nov-2026) [11]. Recompras de Ps 11,944 M en 2025 y 4,568 M en 1S26 [7][1]. Compra de WOW Perú (anunciada el 21-jul) [1]. Capex 2025 de 130,817 M (13.9% de los ingresos) [3].
 
 ## 5. Cadena causal
 **A. Registro obligatorio de líneas.** Al 25-jun sólo 39.1% del universo estaba registrado (~98 M de líneas pendientes). Las suspensiones van por último dígito del 31-ago al 31-dic-2026 [15]. Telcel tiene 84.5 M líneas, en su mayoría de prepago → se esperan bajas netas en 3T26-4T26. *Inferencia:* el ingreso cae menos que las líneas porque muchas son inactivas → ingreso por servicio móvil en México → México es 57% del EBIT → precio −14.5% en 3 meses. *Inferencia:* el precio ya descuenta una parte.
 **B. Peso y cambiario.** ~73% de la deuda no está en MXN. El USD/MXN pasó de 17.49 (30-jun) a 17.71 (25-sep) [13]. En 2T26 la apreciación del peso dio una ganancia cambiaria de Ps 8,275 M, 34% de la UN [1]. *Inferencia:* en 3T26 el signo se invierte y la UPA baja contra el 2T26. En la conversión, el USD y el EUR restan; el COP, +16% a/a contra el MXN, suma (cálculo propio [13]).
-**C. Espectro.** La CRT prepara licitaciones 5G para 2S26 y la CNA decidirá si Telcel puede participar [14] (detalles no verificados). El espectro costó ~7% de los ingresos móviles de Telcel contra 20.4% para AT&T (2024) [12] → capex y derechos → FCF. *Inferencia:* el precio no descuenta ni alivio ni castigo.
+**C. Espectro.** La CRT prepara licitaciones 5G para 2S26 y la CNA decidirá si Telcel puede participar [14] (detalles no verificados). El espectro costó ~7% de los ingresos móviles de Telcel contra 20.4% para AT&T (2024) [12] → capex y derechos → FCF.
 
 ## 6. Qué descuenta el precio
 Capitalización ≈ Ps 1,178 mil M. P/U de 12 meses: **13.2x** (UPA 1.49). VE/EBITDA con arrendamientos: **4.7x** (VE 1,793 mil M; EBITDA 379.2 mil M). VE sin arrendamientos/EBITDAaL: 5.1x. P/U al cierre: 6.9x (2021, extraordinarios), 15.3x, 13.0x, 40x (2024, cambiario) y 13.7x (2025). El rango limpio es ~13-15x, así que hoy está en la parte baja. Pares (Yahoo, P/U de 12 meses): VIV 14.4x y TIMB 10.4x [13].
@@ -65,17 +65,17 @@ Capitalización ≈ Ps 1,178 mil M. P/U de 12 meses: **13.2x** (UPA 1.49). VE/EB
 ## 7. Escenarios a 12 meses
 - **Bajista (25%)**: bajas masivas por el registro de líneas, peso débil con pérdidas cambiarias, competencia en Brasil y CRT/CNA más duras. UPA 2027 ≈ 1.2-1.3 (pronóstico).
 - **Base (55%)**: servicios +5% a tipo de cambio constante, margen EBITDA ~40% y 1.2-1.3x de apalancamiento. UPA 2026 ≈ 1.45-1.55.
-- **Alcista (20%)**: espectro con descuento, menos asimetría regulatoria, precios reparados en Brasil y ejecución de la recompra.
+- **Alcista (20%)**: espectro barato, menos asimetría regulatoria, precios reparados en Brasil y recompra ejecutada.
 - **Qué cambiaría el escenario:** bajas de Telcel mayores a 2 M líneas en 3T26-4T26, las reglas de la licitación 5G y un USD/MXN arriba de 19.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha estimada: 20-oct-2026** (Investing [8]; MarketBeat estima el 13-oct [10]; el 3T25 se reportó el 14/15-oct-2025). No está confirmada.
+- **Fecha estimada: 20-oct-2026** (Investing [8]; MarketBeat: 13-oct [10]; 3T25 se reportó el 14/15-oct-2025). No confirmada.
 - **Ingresos:** punto Ps 243,000 M; intervalo de 80%: 238,000-248,000. Consenso: **243,980** (Investing, 25-sep-2026) [8]. Supuesto: servicios +5% a tipo de cambio constante. El efecto cambiario contra 2T26 es casi neutro: BRL −2.5%, EUR −1.9%, COP +12.3% y USD −0.9% contra el MXN (cálculo propio [13]).
 - **UPA:** punto Ps 0.33; intervalo de 80%: 0.25-0.41. Consenso: **0.344** (Investing) [8]. Supuestos: EBIT ~52 mil M, intereses netos ~11.8 mil M, otros financieros ~6.5 mil M, cambiario entre −3 y +1 mil M y tasa efectiva ~36%.
 - **Binarios:** (1) ingresos mayores a Ps 243,980 M: **p = 0.45**; AMX superó el consenso de ingresos en los últimos 6 trimestres [8]. (2) Líneas de Telcel al 30-sep menores a 84.53 M (pérdida neta trimestral): **p = 0.60**.
 
 ## 9. Catalizadores y riesgos
-**Catalizadores:** 28-29 sep, ronda del T-MEC; 30-sep, 15-oct y 31-oct, suspensiones de líneas; ~20-oct, reporte 3T26; 5-nov, Banxico; 11-nov, dividendo; 2S26, licitación 5G; 31-dic, cierre del registro. **Riesgos:** peso, con un diferencial Banxico-Fed de 250 pb [16]; inflación por petróleo (guerra de Irán) [1][16]; Argentina (IAS 29); regulación; Brasil.
+**Catalizadores:** 28-29 sep, T-MEC; 30-sep/15-oct/31-oct, suspensiones de líneas; ~20-oct, reporte 3T26; 5-nov, Banxico; 11-nov, dividendo; 2S26, licitación 5G; 31-dic, cierre del registro. **Riesgos:** peso, con un diferencial Banxico-Fed de 250 pb [16]; inflación por petróleo (guerra de Irán) [1][16]; Argentina (IAS 29); regulación; Brasil.
 
 ## 10. Fuentes
 1. AMX, reporte 2T26 (21-jul-2026): https://s22.q4cdn.com/604986553/files/doc_financials/2026/q2/2Q26.pdf · 6-K: https://www.sec.gov/Archives/edgar/data/1129137/000114036126029404/ef20078440_6k.htm

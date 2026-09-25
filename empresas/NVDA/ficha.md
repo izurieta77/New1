@@ -7,9 +7,9 @@
 Desde el FY27 reporta por plataforma. 2T FY27 (may-jul 2026) [2]: Data Center US$89,023 M (92.5%), que se divide en Hyperscale 48,710 (50.6%) y AI Clouds, Industrial & Enterprise (ACIE) 40,313 (41.9%); Edge Computing 7,198 (7.5%). Segmentos contables: Compute & Networking 88,299 y Graphics 7,922. Por sede del cliente directo [3]: EUA 62%, Taiwán 28%, China y Hong Kong 8% (7,880) y otros 1%. Hopper a China fue <1% de Data Center [2]. FY26: US$215,938 M (+65%) [4].
 
 ## 2. Último reporte: 2T FY27 (26-ago-2026) [1][2]
-- **Ingresos:** US$96,221 M (+106% a/a; +18% t/t). Superó el consenso LSEG de 92.17 mil M por 4.4% [6] y la guía de 91.0 mil M ±2% por 5.7% [5].
+- **Ingresos:** US$96,221 M (+106% a/a), 4.4% arriba del consenso LSEG (92.17 mil M) [6] y 5.7% arriba de la guía (91.0) [5].
 - **Márgenes:** bruto 75.0%; operativo GAAP 66.2%.
-- **UPA:** non-GAAP US$2.22 contra 2.10 de LSEG (+5.7%) [6]. La GAAP fue 2.46 porque incluye US$7.8 mil M de ganancias en participaciones. Desde el 1T FY27 el non-GAAP ya incluye SBC [1].
+- **UPA:** non-GAAP US$2.22 contra 2.10 de LSEG (+5.7%) [6]; GAAP 2.46, con US$7.8 mil M de ganancias en participaciones. Desde el FY27 el non-GAAP incluye SBC [1].
 - **Guía del 3T FY27:** ingresos de US$108.0 mil M ±2% sin cómputo de Data Center en China; margen bruto de 74.0% ±50 pb; opex non-GAAP de ~9.0 mil M; tasa de 16-18% [1]. En la llamada [7]: Vera Rubin será ~20% de Data Center en el 3T; el margen bruto tocará fondo en 71-72% en el 4T por la memoria y quedará en 72-73% en FY28; ingresos FY28 +~70%, "supply-constrained".
 - **Tres datos operativos [2]:** DSO de 60 días (45 el trimestre previo) por plazos a clientes con grado de inversión; inventario de US$31.6 mil M (+22% t/t); compromisos de suministro de 279 mil M (119 el trimestre anterior).
 
