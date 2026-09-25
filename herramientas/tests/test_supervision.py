@@ -92,6 +92,11 @@ class TestSupervision(unittest.TestCase):
             w.writerow(["O3", "QQQM", "compra", "2026-09-28", "ejecutada"])
         pend = sv.revisar_pendientes(self.b / "ordenes-pendientes.csv", self.ahora.date())
         self.assertEqual([n for n, _ in pend], [sv.AVISO])
+        with open(self.b / "ordenes-pendientes.csv", "a", newline="", encoding="utf-8") as f:
+            csv.writer(f).writerow(["O4", "SPYM", "compra", "2026-09-28", "en_espera"])
+        pend = sv.revisar_pendientes(self.b / "ordenes-pendientes.csv", self.ahora.date())
+        self.assertEqual([n for n, _ in pend], [sv.AVISO, sv.AVISO])
+        self.assertIn("orden en espera: O4", pend[1][1])
         (self.b / "estado-rutinas.md").write_text("# Estado\n\n2026-09-27 12:55 UTC · pre-apertura · OK · abc · x\n",
                                                    encoding="utf-8")
         self.assertEqual(sv.revisar_latidos(self.b / "estado-rutinas.md", self.ahora)[0][0], sv.AVISO)  # 51 h

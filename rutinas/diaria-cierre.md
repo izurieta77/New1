@@ -4,7 +4,7 @@ Este procedimiento escrito manda sobre el texto del disparador, que ya indica se
 
 0. Tras el `git pull --rebase --autostash`, lee `rutinas/REGLAS-MOTOR.md` y cúmplelo: autonomía, bloqueos, latido y pendientes (§7). Si §7 tiene pendientes, hazlos aquí.
 1. **Ejecuta las órdenes pendientes.** En `bitacora/ordenes-pendientes.csv`, toma las órdenes con `estado=pendiente` cuya `fecha_ejecucion` ya llegó y ejecútalas en papel según REGLAS §4:
-   - **Precio:** la apertura de ese día en Yahoo (chart v8, campo `open`).
+   - **Precio:** la apertura de ese día en Yahoo (chart v8, campo `open`). **Si la fila trae su propia `regla_precio`** (condición de validez, hora o títulos fijos), **manda la fila**; si su condición no se cumplió, márcala `en_espera` y no la ejecutes.
    - **Comisión:** 0.29% del monto.
    - **Depósito inicial:** 20,000 MXN el día de la primera ejecución.
    - **Cantidad:** los títulos se calculan como monto ÷ (precio × FX si cotiza en USD), redondeando hacia abajo a unidades enteras. El sobrante queda en efectivo.

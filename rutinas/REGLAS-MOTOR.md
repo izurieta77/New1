@@ -46,6 +46,7 @@ Al terminar cada rutina, agrega una línea **al inicio** de `bitacora/estado-rut
 - **Órdenes pendientes** (`bitacora/ordenes-pendientes.csv`):
   - La rutina de **Cierre** ejecuta en papel cada orden pendiente cuya `fecha_ejecucion` ya llegó, con `herramientas/portafolio.py registrar`.
   - Precio: la **apertura** de ese día hábil en Yahoo (chart v8, campo `open`). Es el primer precio estrictamente posterior a la decisión; nunca uses un precio que ya se conocía al decidir.
+  - **Si la fila trae su propia `regla_precio`** (condición de validez, hora, títulos fijos), **manda la fila**. Si la condición no se cumple, marca `estado=en_espera`, no ejecutes y anótalo en el brief.
   - Comisión GBM: 0.25% + IVA = **0.29% del monto**, en el campo `--comision`, convertida a la moneda de la operación.
   - Marca la orden como `ejecutada`, con precio, fecha y commit.
   - El depósito inicial va con la primera ejecución: `--lado deposito --cantidad 20000 --moneda MXN`.
@@ -90,7 +91,7 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
 - **Qué entrega el sistema:** toda orden real sale de una decisión del comité registrada en git **antes** de ejecutarse, y se entrega como boleta con:
   - ticker tal como aparece en GBM;
   - tipo de orden, cantidad de títulos enteros y precio límite;
-  - stop que se registra en GBM desde la entrada.
+  - stop registrado en GBM desde la entrada para lo táctico, sectorial, de acción individual o apalancado. Los ETF de índice amplio sin apalancar (hoy SPYM y QQQM) van sin stop por línea; los protegen los cortacircuitos y el tope de 10,000 MXN (enmienda del 25-sep-2026 en `config/parametros.json` → `excepcion_cuenta_arena.enmiendas`).
 - **Pre-apertura:** si hay boletas para ese día, verifica que las condiciones de la decisión sigan vigentes (filtro SMA200 y VIX < 25 para apalancados, y gap del fin de semana). Si algo cambió, marca la boleta "EN ESPERA" en el brief y en `bitacora/decisiones-pendientes.md`. No la ejecutes.
 - **Registros:**
   - Las ejecuciones reales que reporte el dueño van en `bitacora/real/operaciones.csv` (`herramientas/portafolio.py --operaciones bitacora/real/operaciones.csv --equity bitacora/real/equity.csv registrar ...`).
@@ -107,7 +108,12 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
 ## 7. Pendientes para la próxima rutina (se borran al cumplirse)
 
 - [ ] **Auditoría del viernes 25-sep-2026: NO corras comité de cartera.** La cartera inicial la decide el orquestador ese mismo día (`bitacora/decisiones/2026-09-25-CARTERA-inicial.md`). El primer comité semanal toca el viernes 2-oct-2026.
-- [ ] **Pre-apertura del lunes 28-sep-2026:** hay boletas reales para ese día. Verifica sus condiciones (§5b) y copia las boletas vigentes al inicio del brief, para que el dueño las vea primero.
+- [ ] **Pre-apertura del lunes 28-sep-2026:** hay boletas reales para ese día en `bitacora/boletas/2026-09-28.md`. Copia las boletas al inicio del brief, para que el dueño las vea primero, con el estado de futuros del S&P y del VIX a esa hora. La condición de validez formal se evalúa a las 08:45.
+- [ ] **Supervisión de las 08:40 del lunes 28-sep (y del martes 29-sep si quedó EN ESPERA):**
+  - Evalúa la condición de validez de la boleta GBM con Yahoo (intervalo 1m): SPYM > 88.98 USD y ^VIX < 25.
+  - Calcula los límites exactos, precio NYSE × MXN=X × 1.003, de SPYM (7 títulos; 6 si 7 × límite > 12,000 MXN) y de QQQM (1 título).
+  - Escribe al inicio de `bitacora/alertas.md` y de la boleta: VIGENTE o EN ESPERA, con los dos límites y la hora.
+- [ ] **Cierre del lunes 28-sep:** ejecuta en papel O0001 y O0002 según su `regla_precio` (vela de 1 minuto de las 14:45 UTC, no la apertura). Registra primero el depósito de 20,000 MXN.
 
 - [ ] **R04, decisión del orquestador (25-sep-2026): sí.**
   - Cambia el estado de `laboratorio/replicas/R04-efecto-halloween.md` a **"Replicado con diferencias"**, porque rige la más conservadora de las ejecuciones A y B.

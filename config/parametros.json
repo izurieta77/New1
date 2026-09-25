@@ -215,7 +215,8 @@
         "fuente": "Dueno, 25-sep-2026: 'Caida maxima tolerable 10 mil de caida'",
         "definicion": "Perdida absoluta de la cuenta frente a las aportaciones netas (valor - aportaciones_netas <= -10,000 MXN).",
         "accion": "Todo a efectivo/CETES y la cuenta se detiene hasta que el dueno decida. Rige siempre la mas restrictiva entre este tope y los cortacircuitos porcentuales: con 20,000 MXN el cortacircuitos de -35% (-7,000) se dispara antes; al crecer el capital, este tope absoluto se vuelve el mas restrictivo (con 50,000 MXN equivale a -20%)."
-      }
+      },
+      "nota_concentracion": "etf_indice_max (0.6) se aplica por posicion, no a la suma de ETF de indice; la exposicion total la topa el apalancamiento bruto <= 1.0x. QQQM (Nasdaq-100) se clasifica como ETF de indice amplio, no como sector (si se etiquetara 'tecnologia' fallaria sector_max de 0.25). herramientas/riesgo.py validar_orden aun no revisa etf_indice_max; se comprueba a mano (gestor de riesgo, 25-sep-2026)."
     },
     "cripto_binance": {
       "estado": "Tope de pérdida fijado por el dueño (25-sep-2026). El resto es PROVISIONAL: lo calibran el analista-cripto y el gestor de riesgo.",
@@ -275,9 +276,27 @@
       "reglas": [
         "Toda orden real sale de una decision del comite registrada en git antes de la ejecucion.",
         "El dueno captura manualmente cada orden en la app de GBM; el sistema nunca da por hecha una ejecucion real que el dueno no haya reportado.",
-        "Cada posicion real lleva stop registrado en GBM desde la entrada (arena/investigacion/01-gbm-operativa-y-costos.md).",
+        "Cada posicion tactica, sectorial, de accion individual o apalancada lleva stop registrado en GBM desde la entrada. Los ETF de indice amplio sin apalancar (hoy SPYM y QQQM) van sin stop por linea: su riesgo lo acotan los cortacircuitos del perfil arena_agresivo y el tope absoluto de 10,000 MXN (enmienda del 25-sep-2026; ver 'enmiendas').",
         "Limites y cortacircuitos del perfil arena_agresivo aplican igual en real.",
         "El portafolio de papel sigue como registro sombra auditable (ejecucion a la apertura) y como evidencia para el patrimonio principal."
+      ],
+      "enmiendas": [
+        {
+          "fecha": "2026-09-25",
+          "regla": "stops de la cuenta real",
+          "antes": "Cada posicion real lleva stop registrado en GBM desde la entrada (arena/investigacion/01-gbm-operativa-y-costos.md).",
+          "despues": "Cada posicion tactica, sectorial, de accion individual o apalancada lleva stop registrado en GBM desde la entrada. Los ETF de indice amplio sin apalancar (hoy SPYM y QQQM) van sin stop por linea: su riesgo lo acotan los cortacircuitos del perfil arena_agresivo y el tope absoluto de 10,000 MXN (enmienda del 25-sep-2026; ver 'enmiendas').",
+          "autor": "Orquestador, a propuesta del gestor de riesgo (comité de la cartera inicial). La regla original la escribió el orquestador; el dueño aprobó 'la cartera que apruebe el comité', no un tipo de stop. El dueño puede revertirla en cualquier momento.",
+          "motivo": [
+            "Con ventanas de 85 días (1999-2026), un stop de -5.3% en SPYM se toca al cierre en 32% de los casos y 58% de esos toques terminan arriba del stop (venta en falso).",
+            "En la simulación M3, los stops bajan la probabilidad de quedar arriba del rival 1 de 46% a 38%.",
+            "Los stops en SIC son poco confiables: libro local delgado (SPYM y QQQM sin operaciones el 24-sep-2026), huecos, vigencia máxima de 30 días y días con SIC cerrado y NYSE abierta.",
+            "Sin stops, la cartera A nunca tocó -35% en la historia simulada; su peor caso fue -27.5% (~-5,500 MXN), dentro del tope del dueño."
+          ],
+          "costo_reconocido": "P(tocar -12%) sube de ~3% (con stops) a 15-17% (sin stops, M3); P(tocar -20%) = 2.6%.",
+          "si_se_revierte": "Stop limitada a precio de ejecución - 85 MXN por título de SPYM y - 598 MXN en QQQM (riesgo ~600 MXN = 3% por línea), renovada cada 30 días.",
+          "evidencia": "bitacora/decisiones/2026-09-25-CARTERA-inicial.md (sección del gestor de riesgo) y arena/modelos/salida_cartera_inicial.txt"
+        }
       ]
     }
   },

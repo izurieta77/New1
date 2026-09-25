@@ -41,8 +41,8 @@ Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 2
 | Hito | Criterio | Estado al 25-sep | Fecha |
 |---|---|---|---|
 | Examen de titulación | ≥90% global y ≥85% por sección | Cumplido: 96.1% | 25-sep-2026 |
-| Cartera inicial de la arena | Aprobada por el comité y registrada en git antes de ejecutarse | Comité en curso | 25-sep-2026 |
-| Arena en real (GBM) | El dueño captura las boletas en GBM, con stop desde la entrada | Pendiente | 28-sep-2026 |
+| Cartera inicial de la arena | Aprobada por el comité y registrada en git antes de ejecutarse | **Cumplido:** cartera A (7 SPYM + 1 QQQM + liquidez); gestor de riesgo aprueba con cambios | 25-sep-2026 |
+| Arena en real (GBM) | El dueño captura las boletas en GBM si se cumple la condición de validez de las 08:45. Stop por línea solo en lo táctico o apalancado (enmienda del 25-sep) | Boletas listas en `bitacora/boletas/2026-09-28.md` | 28-sep-2026 |
 | Cartera cripto (Binance) | Comité cripto: solo spot, tope de 5,000 MXN | Comité en curso | 28-sep-2026 |
 | Pronósticos calibrados | ≥50 resueltos, Brier ≤ 0.20, 3 meses | 5 registrados, 0 resueltos | 25-dic-2026 |
 | Portafolio de papel (registro sombra) | 3 meses dentro de límites | Arranca el 28-sep | 28-dic-2026 |

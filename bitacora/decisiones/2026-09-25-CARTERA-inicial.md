@@ -4,7 +4,7 @@
 - **Ejecución:** lunes 28-sep-2026, en real, por el dueño en la app de GBM. Decisión del dueño del 25-sep-2026 (`config/parametros.json` → `prioridad_actual.excepcion_cuenta_arena`).
 - **Temporada:** 28-sep-2026 a 28-ene-2027 (4 meses).
 - **Perfil:** `arena_agresivo`. Tope absoluto del dueño: 10,000 MXN.
-- **Estado de este documento:** decisión del comité tomada; faltan el dimensionamiento final del gestor de riesgo y el informe del verificador, que se agregan abajo en cuanto lleguen.
+- **Estado de este documento:** completo. Comité, verificador y gestor de riesgo (aprueba con cambios, ya aplicados). Boletas en `bitacora/boletas/2026-09-28.md`.
 
 ## Tesis y cómo se refutaría
 
@@ -15,7 +15,7 @@
 Por eso la cartera es beta de EUA sin apalancar (S&P 500 más Nasdaq-100), con liquidez en MXN. Tiene la menor probabilidad de salir del juego y deja espacio para subir exposición cuando haya datos de los rivales (modo torneo).
 
 **Se refuta si, al 28-dic-2026:**
-- la cuenta toca −12% (el modelo da ~3% de probabilidad), o
+- la cuenta toca −12%. El modelo daba ~3% de probabilidad suponiendo stops por línea. Sin ellos, que es lo que se ejecuta tras la enmienda del gestor de riesgo, da 15-17%. Ver abajo. O bien
 - quedamos 3 pp o más atrás de un rival con beta ≤ 1.2 sin que haya un choque de mercado que lo explique.
 
 ## Dictámenes (3 líneas cada uno)
@@ -87,6 +87,90 @@ Ninguna corrección cambia la decisión. Tipo de fuente en cada fila, según el 
 
 **Sin verificar:** que SPYM aparezca en la app de GBM. QQQM solo tiene un indicio. Por eso la boleta incluye una verificación previa y una alternativa.
 
-## Tamaño, stop, criterio de salida y boletas
+## Tamaño, stop, criterio de salida y boletas (gestor de riesgo, con veto)
 
-*Pendiente del gestor de riesgo, con veto. Se agrega en este mismo archivo.*
+**Veredicto del gestor de riesgo: APRUEBA CON CAMBIOS.** Voto a favor. Los cuatro cambios quedaron aplicados, como se detalla abajo.
+
+**Estado de riesgo al decidir:** libros vacíos (drawdown 0, sin rachas, P&L 0). La cuenta opera en real por `excepcion_cuenta_arena`; el patrimonio principal sigue en fase 0.
+
+### Tamaño: el menor de tres métodos
+
+| Método | Resultado |
+|---|---|
+| Por stop, con 600 MXN de riesgo (3%) | 7 SPYM (stop −5.3%) y 1 QQQM (stop −11%) |
+| Volatilidad objetivo de 20% (Regla 18.4) | No limita |
+| Kelly | No limita: A = 0.36× Kelly; en el escenario conservador M2, 1.15× |
+
+| Línea | Títulos | MXN (cierres del 25-sep) | Peso |
+|---|---|---|---|
+| SPYM (S&P 500) | 7 | 11,256 | 56.3% |
+| QQQM (Nasdaq-100) | 1 | 5,429 | 27.1% |
+| Smart Cash (liquidez en MXN) | — | ~3,270 | ~16.4% |
+
+### Validaciones
+
+- **`etf_indice_max` (0.6) se aplica por posición:** OK. Si se aplicara a la suma daría 83.4% y la cartera A no cabría. Pero el perfil permite estar 100% invertido y el apalancamiento bruto ≤ 1.0x ya topa la exposición total. `validar_orden` todavía no revisa este límite; se comprobó a mano. Quedó escrito en `config/parametros.json` (`nota_concentracion`).
+- **QQQM se clasifica como ETF de índice amplio**, no como sector. Si se etiquetara "tecnología", fallaría `sector_max` de 25%.
+- **Sin problema en:**
+  - orden mínima;
+  - límites de pérdida y cortacircuitos;
+  - número de operaciones: 2 de 8 al mes;
+  - costos: 100 MXN o menos, frente a +1.85% esperado por temporada sobre CETES.
+- **Filtro de apalancados:** no aplica.
+
+### Stop: enmienda a la regla
+
+- **Los ETF de índice 1x van sin stop por línea.** Todo lo táctico, sectorial, de acción individual o apalancado sí lleva stop registrado en GBM desde la entrada.
+- **Registro:** la enmienda está en `config/parametros.json` → `excepcion_cuenta_arena.enmiendas`, con el texto anterior, el motivo y el costo reconocido.
+- **Autoría:** la regla original la escribió el orquestador. El dueño aprobó "la cartera que apruebe el comité", no un tipo de stop, y puede revertir la enmienda.
+
+**Motivo:**
+- En ventanas de 85 días (1999-2026), un stop de −5.3% en SPYM se toca al cierre en 32% de los casos. De esos toques, 58% terminan arriba del stop, y en 10% lo dispara solo el tipo de cambio.
+- Con stops, la probabilidad de quedar arriba del rival 1 baja de 46% a 38% (simulación M3).
+- Los stops en SIC son poco confiables: el 24-sep SPYM y QQQM no tuvieron ninguna operación en el SIC. Además hay huecos, vigencia máxima de 30 días y días con el SIC cerrado y NYSE abierta.
+
+**Si el dueño prefiere stop:** stop limitada al precio de ejecución − 85 MXN por título de SPYM y − 598 MXN en QQQM. Son ~600 MXN de riesgo por línea (3%). Se renueva cada 30 días.
+
+### Corrección de cifras de riesgo: sin stops
+
+El 3% de probabilidad de tocar −12% que usa la tesis (cuantitativo) supone stops. **Sin stops:**
+- P(tocar −12%) = 15-17% (M3);
+- P(tocar −20%) = 2.6%;
+- peor caso simulado: −27.5%; nunca tocó −35%.
+
+El pronóstico P0014 (p = 0.90 de no tocar −12%) queda registrado tal como se hizo, y se califica igual. El post-mortem debe anotar que se emitió suponiendo stops.
+
+### Qué protege la cuenta sin stop por línea
+
+- **Cortacircuitos del perfil sobre el TWR:**
+
+  | Nivel | Acción |
+  |---|---|
+  | −12% | Reducir 50% lo táctico. Hoy no hay nada táctico. |
+  | −20% | Vender lo que esté bajo su SMA200 y sin apalancados |
+  | −28% | Pausa de 2 semanas y post-mortem |
+  | −35% | Todo a CETES o liquidez |
+
+- **Tope absoluto del dueño:** 10,000 MXN.
+- **Estrés de un S&P −20% en MXN:** la cartera A cae 17.4% (−3,479 MXN). Cruza el −12%, pero no llega a −20%, y le quedan 6,521 MXN de margen al tope. Para tocar −35%, las acciones tendrían que caer 42%.
+- **Escenarios de cola:**
+
+  | Escenario | Efecto en la cartera A |
+  |---|---|
+  | Un día como el 16-mar-2020 | −6.95% (−1,389 MXN); el peso amortigua |
+  | La semana del 2 al 8 de abril de 2025 | −9.46% (−1,892 MXN). Con stops se habría vendido todo antes del rebote del 9-abr, cuando A iba en −0.4%. |
+  | Peso +20% | −13.9% (−2,781 MXN). El máximo visto en 85 días fue +19.6% (2009). |
+
+### Criterio de salida
+
+- **Por regla, sin comité:** los cortacircuitos y el tope de 10,000 MXN.
+- **Por decisión:** solo el comité semanal (el primero es el viernes 2-oct-2026) puede rebalancear o subir exposición en modo torneo.
+  - Por disenso, la primera opción para subir exposición es una línea de SPXL.
+  - Condición: 6 reportes semanales de los rivales y el ETF verificado en la app de GBM.
+
+### Boletas y condición de validez
+
+- **Boleta real:** `bitacora/boletas/2026-09-28.md`, ejecución manual del dueño en GBM.
+- **Registro sombra en papel:** `bitacora/ordenes-pendientes.csv` (O0001 y O0002), con la misma condición de validez.
+- **Condición de validez a las 08:45 CDMX del lunes:** SPYM en NYSE > 88.98 USD (−2% frente al cierre del viernes, 90.80) y VIX < 25. La decisión se tomó con VIX en 14.87.
+- **Si no se cumple: EN ESPERA.** No se compra. El martes 29-sep se reevalúa a la misma hora con la misma regla. Si tampoco se cumple, decide el comité del viernes 2-oct.

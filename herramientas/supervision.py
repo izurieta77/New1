@@ -118,10 +118,15 @@ def revisar_pendientes(ruta: Path, hoy: date) -> list[tuple[int, str]]:
     if not ruta.exists():
         return []
     with open(ruta, encoding="utf-8") as f:
-        filas = [r for r in csv.DictReader(f) if r.get("estado", "").strip() == "pendiente"]
+        todas = list(csv.DictReader(f))
+    filas = [r for r in todas if r.get("estado", "").strip() == "pendiente"]
     vencidas = [r for r in filas if r.get("fecha_ejecucion") and date.fromisoformat(r["fecha_ejecucion"]) < hoy]
     salida = [(AVISO, f"orden pendiente vencida: {r.get('id')} {r.get('lado')} {r.get('ticker')} "
                       f"(debió ejecutarse el {r['fecha_ejecucion']})") for r in vencidas]
+    # Una orden en espera (condición de validez no cumplida) no debe quedar olvidada: aviso diario hasta resolverla.
+    salida += [(AVISO, f"orden en espera: {r.get('id')} {r.get('lado')} {r.get('ticker')} "
+                       f"(decisión {r.get('fecha_decision')}; revisar su condición en regla_precio)")
+               for r in todas if r.get("estado", "").strip() == "en_espera"]
     if filas and not vencidas:
         salida.append((OK, f"{len(filas)} órdenes pendientes en fecha"))
     return salida
