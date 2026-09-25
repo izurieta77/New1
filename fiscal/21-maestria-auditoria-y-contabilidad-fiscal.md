@@ -74,29 +74,29 @@ Las entidades paraestatales federales no pueden ejercer esta opción, y la opci�
 
 ### 3.3 SIPRED, plazos y estructura del formato (2026)
 
-El dictamen se presenta a través del **Sistema de Presentación del Dictamen (SIPRED)**, con la e.firma del CPR, a más tardar el **15 de mayo** del año siguiente al que corresponda (el plazo se redujo de julio a mayo con la reforma de 2022) [11][12]. Para el ejercicio 2025, presentado en 2026, el sistema se identifica como **SIPRED'2025**. La RMF 2026 reorganizó los anexos que contienen los instructivos y formatos: lo que hasta la RMF 2025 era el **Anexo 16** (dictamen general, contribuyentes no financieros, "Tipo I") pasó a ser el **Anexo 18**, y lo que era el **Anexo 16-A** (sector financiero, "Tipo II") pasó a ser el **Anexo 19**, ambos publicados por el SAT el 19-ene-2026 [15][16]. **(B):** la renumeración se confirmó en un despacho fiscal (SDV Asesores) y coincide con la existencia de la URL oficial del SAT para el Anexo 18 de la RMF 2026; no se abrió el PDF completo del Anexo para verificar cada campo del formato.
+El dictamen se presenta a través del **SIPRED**, con la e.firma del CPR, a más tardar el **15 de mayo** del año siguiente (el plazo se redujo de julio a mayo con la reforma de 2022) [11][12]. Para el ejercicio 2025 el sistema se identifica como **SIPRED'2025**. La RMF 2026 renumeró los anexos: el **Anexo 16** (dictamen general, "Tipo I") pasó a ser el **Anexo 18**, y el **Anexo 16-A** (sector financiero, "Tipo II") pasó a ser el **Anexo 19**, ambos publicados por el SAT el 19-ene-2026 [15][16]. **(B):** confirmado en un despacho fiscal y con URL oficial del SAT para el Anexo 18; no se abrió el PDF completo.
 
 ### 3.4 Responsabilidad del CPR ante el SAT
 
-**Requisitos para registrarse** (art. 52, fracción I, CFF): nacionalidad mexicana, título de contador público registrado ante la SEP, ser miembro de un colegio profesional reconocido por la SEP durante los tres años previos a la solicitud de registro, contar con certificación vigente expedida por un organismo certificador registrado ante la SEP y tener un mínimo de tres años de experiencia participando en la elaboración de dictámenes fiscales; además, estar al corriente en sus obligaciones fiscales conforme al art. 32-D CFF [17][18]. Los contadores extranjeros pueden registrarse conforme a los tratados internacionales aplicables [17].
+**Requisitos de registro** (art. 52, fr. I, CFF): nacionalidad mexicana, título registrado ante la SEP, miembro de un colegio profesional reconocido por la SEP durante los tres años previos, certificación vigente y mínimo tres años de experiencia en dictámenes fiscales, además de estar al corriente en sus obligaciones fiscales (art. 32-D) [17][18]. Los extranjeros pueden registrarse conforme a tratados internacionales [17].
 
-**Obligación de informar delitos e incumplimientos** (art. 52, fracción III, tercer párrafo, CFF): si el CPR, derivado de la elaboración del dictamen, tiene conocimiento de que el contribuyente incumplió disposiciones fiscales o aduaneras, o realizó una conducta que pueda constituir un delito fiscal, debe informarlo a la autoridad conforme a las reglas de carácter general que emita el SAT [17][19].
+**Obligación de informar** (art. 52, fr. III, tercer párrafo, CFF): si el CPR, al elaborar el dictamen, conoce que el contribuyente incumplió disposiciones fiscales/aduaneras o cometió una conducta que pueda ser delito fiscal, debe informarlo a la autoridad [17][19].
 
-**Responsabilidad penal (encubrimiento):** el art. 96, fracción III, del CFF hace responsable del delito de **encubrimiento** al CPR que, derivado de la elaboración del dictamen, tuvo conocimiento de un hecho probablemente constitutivo de delito y omitió informarlo conforme al art. 52, fracción III, tercer párrafo [19][20]. La pena por encubrimiento en el CFF va de **tres meses a seis años de prisión** [20].
+**Responsabilidad penal:** el art. 96, fr. III, CFF hace responsable de **encubrimiento** al CPR que, sabiendo de un hecho probablemente delictivo por el dictamen, omite informarlo; pena de **tres meses a seis años de prisión** [19][20].
 
-**Sanciones administrativas al registro:** cuando el CPR no cumple las disposiciones del Código, su Reglamento o las reglas generales del SAT, o no aplica las normas o procedimientos de auditoría, la autoridad, previa audiencia, puede exhortarlo, amonestarlo o **suspender hasta por tres años los efectos de su registro**; procede la **cancelación definitiva** si hay reincidencia, si participó en la comisión de un delito fiscal, o si no exhibe los papeles de trabajo de la auditoría cuando la autoridad los requiere. En estos casos se avisa por escrito al colegio profesional y, en su caso, a la federación de colegios a la que pertenezca el CPR [17][21].
+**Sanciones al registro:** por incumplir el Código, su Reglamento o las reglas del SAT, la autoridad puede exhortar, amonestar o **suspender hasta tres años** el registro; procede **cancelación definitiva** por reincidencia, participación en un delito fiscal o por no exhibir los papeles de trabajo cuando se requieren, con aviso al colegio profesional [17][21].
 
-### 3.5 El dictamen como elemento de defensa: presunción de certeza y revisión secuencial
+### 3.5 El dictamen como elemento de defensa
 
-**Presunción de certeza** (art. 52, primer párrafo, CFF): se presumen ciertos, salvo prueba en contrario, los hechos afirmados en los dictámenes formulados por contadores públicos sobre los estados financieros de los contribuyentes, siempre que se cumplan los requisitos del propio artículo [17][22].
+**Presunción de certeza** (art. 52, primer párrafo, CFF): se presumen ciertos, salvo prueba en contrario, los hechos afirmados en el dictamen, cumpliendo los requisitos del artículo [17][22].
 
-**Revisión secuencial** (art. 52-A CFF): cuando la autoridad fiscal, en ejercicio de sus facultades de comprobación, va a revisar a un contribuyente que dictaminó sus estados financieros, debe seguir un **orden secuencial**: primero requiere al CPR que formuló el dictamen la información y documentación relacionada; solo si esa información resulta insuficiente, la autoridad puede requerir directamente al contribuyente [23]. La autoridad tiene un plazo de **doce meses**, contado a partir de la notificación del requerimiento al CPR, para concluir la revisión del dictamen; si no emite la resolución correspondiente dentro de ese plazo, se entiende que no hay observaciones sobre la auditoría ni sobre las operaciones revisadas, y la autoridad pierde el derecho de actuar directamente con el contribuyente por los mismos hechos ya revisados [23][24].
+**Revisión secuencial** (art. 52-A CFF): al revisar a un contribuyente dictaminado, la autoridad debe requerir primero al CPR; solo si la información es insuficiente puede ir directo al contribuyente. Tiene **doce meses** desde la notificación al CPR para concluir; si no resuelve en ese plazo, se entiende que no hay observaciones y pierde el derecho de actuar directamente por esos hechos [23][24].
 
-**Inferencia central de valor de defensa:** para el contribuyente que dictamina, estas dos figuras (presunción de certeza + revisión secuencial) generan una **capa de protección procesal** que no tiene quien no dictamina: la autoridad no puede saltarse al CPR y llegar directo al contribuyente, y tiene un reloj corriendo. Esto no exime de la obligación sustantiva de pagar correctamente los impuestos; es una ventaja de forma y de proceso, no un blindaje de fondo.
+**Inferencia:** estas dos figuras generan una capa de protección procesal que no tiene quien no dictamina — la autoridad no puede saltarse al CPR y hay un reloj corriendo. No exime de pagar correctamente; es ventaja de forma y proceso, no de fondo.
 
 ### 3.6 Conservación de documentación (art. 30 CFF)
 
-La contabilidad y la documentación relacionada deben conservarse durante **cinco años**, contados a partir de la fecha en que se presentaron o debieron presentarse las declaraciones relacionadas con ella [25]. Reglas especiales: (i) para actos cuyos efectos fiscales se prolongan en el tiempo, el plazo corre desde la declaración del último ejercicio en que se produjeron esos efectos; (ii) para documentación sujeta a un recurso o juicio, el plazo corre desde que quede firme la resolución que le ponga fin [25]. **Práctica profesional:** aunque la ley marca cinco años, muchos despachos recomiendan conservar los papeles de trabajo de actos con efectos fiscales prolongados (activos fijos con depreciación larga, pérdidas fiscales amortizables a 10 años, CUFIN, CUCA) por el plazo completo del efecto, no solo cinco años desde la última declaración relacionada — esto es coherente con la excepción de la propia ley, no una regla adicional inventada.
+La contabilidad se conserva **cinco años** desde la declaración relacionada [25]. Excepciones: (i) actos con efectos fiscales prolongados, el plazo corre desde la declaración del último ejercicio con ese efecto; (ii) documentación en litigio, desde que la resolución quede firme [25]. **Práctica profesional:** por esta misma excepción, conviene conservar los papeles de activos fijos, pérdidas fiscales (10 años) y CUFIN/CUCA por el plazo completo del efecto, no solo cinco años desde la última declaración relacionada.
 
 ---
 
@@ -163,7 +163,7 @@ Conjunto mínimo que un banco pide o que una dirección debe monitorear (fórmul
 
 ### 6.1 Marco normativo
 
-El CINIF emitió la **NIF D-4, "Impuestos a la utilidad"**, vigente desde ejercicios que inician a partir del 1 de enero de 2008 (sustituyó al Boletín D-4 anterior) [36]. El método reconocido es el de **activos y pasivos**: el impuesto diferido se determina tomando como base las diferencias temporales entre los valores contables y los valores fiscales de activos y pasivos, más las pérdidas fiscales por amortizar y los créditos fiscales, multiplicando esa suma por la tasa de impuesto que se espera esté vigente cuando la diferencia se revierta [36][37].
+El CINIF emitió la **NIF D-4, "Impuestos a la utilidad"**, vigente desde ejercicios que inician a partir del 1 de enero de 2008 (sustituyó al Boletín D-4) [36]. El método reconocido es el de **activos y pasivos**: el impuesto diferido se determina con las diferencias temporales entre valores contables y fiscales, más pérdidas y créditos fiscales por amortizar, multiplicado por la tasa que se espera vigente al revertirse la diferencia [36][37].
 
 ### 6.2 Diferencias temporales
 
@@ -183,9 +183,9 @@ La **tasa efectiva de impuesto** es el resultado de dividir el impuesto a la uti
 
 ## 7. Peritajes contables básicos
 
-Un **dictamen pericial contable** (o peritaje contable) es un documento emitido por un experto en contabilidad, nombrado o designado dentro de un proceso judicial, arbitral o administrativo, que analiza, interpreta y valora hechos financieros, económicos o patrimoniales en disputa, y que se ofrece como **medio de prueba** en el proceso [38][39]. A diferencia del dictamen fiscal (dirigido al SAT, con presunción de certeza legal propia del art. 52 CFF) o de una auditoría de estados financieros (dirigida a usuarios generales de la información financiera bajo NIA), el dictamen pericial contable está dirigido a una **autoridad judicial** (civil, mercantil, familiar, penal) y responde a puntos específicos planteados por las partes o por el juez, no a la razonabilidad general de los estados financieros [38].
+Un **dictamen pericial contable** (peritaje contable) es un documento de un experto en contabilidad, nombrado dentro de un proceso judicial, arbitral o administrativo, que analiza, interpreta y valora hechos financieros o patrimoniales en disputa, y se ofrece como **medio de prueba** [38][39]. A diferencia del dictamen fiscal (dirigido al SAT, con presunción de certeza del art. 52 CFF) o de una auditoría (dirigida a usuarios generales bajo NIA), el pericial contable se dirige a una **autoridad judicial** (civil, mercantil, familiar, penal) y responde a puntos específicos del proceso, no a la razonabilidad general de los estados financieros [38].
 
-**Cuándo se usa:** típicamente para comprobar el saldo cierto de una cuenta, el correcto registro de operaciones en litigio, determinar un daño patrimonial cuantificable, valuar una empresa o participación societaria en un litigio societario o de divorcio, o verificar el cumplimiento de un contrato con obligaciones económicas medibles [38][39]. Su elaboración exige el análisis del expediente completo (demanda, contestación, pruebas ofrecidas) y ceñirse estrictamente al alcance específico del encargo fijado por el juez o por las partes [38]. **(nv):** no se verificó en esta sesión el artículo específico del Código Nacional de Procedimientos Civiles y Familiares (de reciente adopción gradual en México) que regula el nombramiento y desahogo de la prueba pericial; el uso de la prueba pericial contable en materia mercantil y penal sigue, según el estado procesal de cada entidad, el Código de Comercio o el Código Nacional de Procedimientos Penales respectivamente, no verificado en detalle aquí.
+**Cuándo se usa:** para comprobar el saldo cierto de una cuenta, el registro correcto de operaciones en litigio, un daño patrimonial cuantificable, la valuación de una empresa en un litigio societario o de divorcio, o el cumplimiento de un contrato con obligaciones económicas medibles [38][39]. Exige analizar el expediente completo y ceñirse al alcance del encargo fijado por el juez o las partes [38]. **(nv):** el artículo específico del Código Nacional de Procedimientos Civiles y Familiares (de adopción gradual en México) sobre nombramiento y desahogo de la prueba pericial no se verificó en esta sesión; en materia mercantil y penal la prueba pericial sigue, según el estado procesal de cada entidad, el Código de Comercio o el Código Nacional de Procedimientos Penales, no verificado en detalle aquí.
 
 ---
 
@@ -193,18 +193,18 @@ Un **dictamen pericial contable** (o peritaje contable) es un documento emitido 
 
 ### 8.1 Checklist anual de auditoría interna previa al cierre fiscal
 
-1. **Conciliaciones bancarias** de todas las cuentas, al mes de cierre, revisadas por alguien distinto de quien las elabora.
-2. **Confirmación de saldos** con los tres o cinco clientes y proveedores más relevantes (o con quien concentre exposición significativa), aunque no sea obligatorio (es práctica de auditoría, no requisito fiscal).
-3. **Inventario físico de obra en proceso** cotejado contra el registro contable de avance de obra (NIF D-7): revisar que las estimaciones facturadas correspondan al avance físico real validado por el residente de obra.
-4. **Revisión de CFDI recibidos vs. gastos registrados**: que cada gasto deducible tenga CFDI válido, con los requisitos fiscales completos, y que no haya gastos sin comprobante o con comprobantes de proveedores en listas negras del SAT (art. 69-B CFF — verificar directamente en el listado del SAT antes del cierre).
-5. **Cálculo preliminar de la tasa efectiva de impuesto** (sección 6.3) para detectar partidas no deducibles grandes antes del cierre, cuando aún hay tiempo de documentarlas o corregirlas.
-6. **Revisión de pérdidas fiscales por amortizar** y su plazo de vigencia (diez ejercicios en LISR), para no perder el derecho a aplicarlas.
-7. **Revisión de impuestos diferidos** (activos y pasivos, NIF D-4): que las diferencias temporales estén identificadas y que la estimación de recuperabilidad de pérdidas fiscales esté sustentada con proyecciones razonables.
-8. **Revisión de nómina y outsourcing**: cumplimiento de la reforma de subcontratación (REPSE) si aplica, y de retenciones de ISR e IMSS.
-9. **Revisión de contratos de obra vigentes**: que estén firmados, con anexos técnicos y de precios, y que respalden el reconocimiento contable de ingresos bajo el método de por ciento de avance.
-10. **Revisión de las actividades de control compensatorias** listadas en la sección 4.2: ¿se aplicó la doble firma en pagos grandes durante todo el año?, ¿hubo excepciones no documentadas?
-11. **Comparación de la utilidad fiscal contra la utilidad contable** y explicación documentada de cada diferencia relevante (la base misma de la conciliación de la sección 6.3).
-12. Si la empresa dictamina (opción del art. 32-A), revisar que los papeles de trabajo del CPR estén completos y disponibles: recordar que no exhibirlos ante un requerimiento de la autoridad es causal de cancelación definitiva del registro del CPR (sección 3.4) y deja al contribuyente sin la protección de la revisión secuencial.
+1. **Conciliaciones bancarias** de todas las cuentas al cierre, revisadas por alguien distinto de quien las elabora.
+2. **Confirmación de saldos** con los clientes y proveedores de mayor exposición (práctica de auditoría, no requisito fiscal).
+3. **Inventario físico de obra en proceso** cotejado contra el avance de obra registrado (NIF D-7): que las estimaciones facturadas correspondan al avance físico validado por el residente.
+4. **CFDI recibidos vs. gastos registrados**: cada gasto deducible con CFDI válido, sin comprobantes de proveedores en listas negras del SAT (art. 69-B CFF, verificar en el listado antes del cierre).
+5. **Cálculo preliminar de la tasa efectiva de impuesto** (sección 6.3) para detectar partidas no deducibles grandes a tiempo de corregirlas.
+6. **Pérdidas fiscales por amortizar** y su plazo de vigencia (diez ejercicios en LISR).
+7. **Impuestos diferidos** (NIF D-4): diferencias temporales identificadas y recuperabilidad de pérdidas fiscales sustentada.
+8. **Nómina y outsourcing**: cumplimiento de la reforma de subcontratación (REPSE) si aplica, y retenciones de ISR e IMSS.
+9. **Contratos de obra vigentes**, firmados y con anexos técnicos y de precios, que respalden el reconocimiento por avance.
+10. **Actividades de control compensatorias** (sección 4.2): ¿se aplicó la doble firma todo el año?, ¿hubo excepciones no documentadas?
+11. **Utilidad fiscal contra utilidad contable**, con cada diferencia relevante documentada (la conciliación de la sección 6.3).
+12. Si la empresa dictamina, papeles de trabajo del CPR completos y disponibles: no exhibirlos es causal de cancelación de su registro (sección 3.4) y deja al contribuyente sin la protección de la revisión secuencial.
 
 ### 8.2 Documentación que la empresa debe conservar para blindarse
 
@@ -235,50 +235,35 @@ Un **dictamen pericial contable** (o peritaje contable) es un documento emitido 
 
 ## 10. Autoevaluación
 
-1. ¿Cuál es la diferencia entre la NIA 300 y la NIA 315 (Revisada 2019) en el ciclo de una auditoría?
-   *Respuesta:* NIA 300 exige construir la estrategia global y el plan de auditoría; NIA 315 exige, antes y durante esa planeación, obtener conocimiento de la entidad y su control interno para identificar y valorar los riesgos de incorrección material que la estrategia debe atender. Son iterativas: los riesgos identificados con NIA 315 ajustan el plan de NIA 300.
+1. ¿Diferencia entre NIA 300 y NIA 315 (Revisada 2019)? *R:* NIA 300 construye la estrategia y el plan de auditoría; NIA 315 exige, antes y durante esa planeación, conocer la entidad y su control interno para valorar riesgos de incorrección material. Son iterativas.
 
-2. Una empresa mexicana tuvo ingresos acumulables de $140 millones de pesos en 2025. ¿Está obligada a dictaminarse en 2026?
-   *Respuesta:* No. Está por debajo del umbral de la **opción** de dictaminar ($157,785,270 en 2026), así que ni siquiera puede optar por ese criterio de ingresos (salvo que cumpla el criterio de activo o de 300 trabajadores). No está ni obligada ni tiene la opción de ingresos disponible.
+2. Una empresa tuvo ingresos de $140 millones en 2025. ¿Está obligada a dictaminarse en 2026? *R:* No. Está debajo del umbral de la **opción** ($157,785,270), así que ni siquiera puede optar por ese criterio (salvo que cumpla activo o 300 trabajadores).
 
-3. ¿Qué diferencia hay entre el umbral del art. 32-A CFF para la obligación de dictaminar y el umbral del art. 32-H CFF para la ISSIF?
-   *Respuesta:* El de la obligación de dictaminar (2026: ~$2,013.7 millones) es más alto que el de la ISSIF (2026: ~$1,103.2 millones). Quien está obligado a dictaminar, o quien opta por dictaminar, se tiene por cumplida automáticamente la obligación de la ISSIF.
+3. ¿Diferencia entre el umbral de obligación del art. 32-A y el de la ISSIF (art. 32-H)? *R:* El de obligación (~$2,013.7 M en 2026) es más alto que el de la ISSIF (~$1,103.2 M). Quien dictamina, obligado u opcionalmente, cumple automáticamente la ISSIF.
 
-4. ¿Qué protege al contribuyente que dictamina, frente a uno que no dictamina, cuando lo audita el SAT?
-   *Respuesta:* La presunción de certeza de los hechos afirmados en el dictamen (art. 52 CFF, salvo prueba en contrario) y la revisión secuencial (art. 52-A CFF): la autoridad debe requerir primero al CPR y tiene doce meses para concluir esa revisión antes de poder ir directamente al contribuyente por los mismos hechos.
+4. ¿Qué protege al contribuyente que dictamina frente al que no dictamina? *R:* La presunción de certeza (art. 52 CFF) y la revisión secuencial (art. 52-A): la autoridad debe requerir primero al CPR y tiene doce meses para concluir antes de ir directo al contribuyente.
 
-5. ¿Qué le pasa al CPR que detecta, al dictaminar, que su cliente cometió un delito fiscal y no lo informa a la autoridad?
-   *Respuesta:* Puede ser responsable del delito de encubrimiento (art. 96, fracción III, CFF), con pena de tres meses a seis años de prisión, además de exponerse a sanciones administrativas sobre su registro (suspensión hasta por tres años o cancelación definitiva).
+5. ¿Qué le pasa al CPR que detecta un delito fiscal al dictaminar y no lo informa? *R:* Puede ser responsable de encubrimiento (art. 96 fr. III CFF, 3 meses a 6 años de prisión), además de suspensión hasta 3 años o cancelación definitiva de su registro.
 
-6. Enumera los cinco componentes de COSO 2013 y di cuántos principios tiene cada uno.
-   *Respuesta:* Entorno de Control (5), Evaluación de Riesgos (4), Actividades de Control (3), Información y Comunicación (3), Actividades de Supervisión (2). Total: 17.
+6. Los cinco componentes de COSO 2013 y sus principios. *R:* Entorno de Control (5), Evaluación de Riesgos (4), Actividades de Control (3), Información y Comunicación (3), Supervisión (2). Total 17.
 
-7. En una constructora con solo dos personas en administración, ¿cómo se compensa la falta de segregación de funciones en el manejo de pagos a proveedores?
-   *Respuesta:* Con un control compensatorio, por ejemplo doble firma para pagos por encima de un monto fijado (con un tercero externo como segundo firmante si no hay una tercera persona interna) y conciliaciones bancarias revisadas por alguien distinto de quien captura o autoriza los pagos.
+7. En una constructora con dos personas en administración, ¿cómo se compensa la falta de segregación en pagos a proveedores? *R:* Doble firma en pagos grandes (con un tercero externo como segundo firmante) y conciliación bancaria revisada por alguien distinto de quien captura o autoriza.
 
-8. ¿Por qué el costeo tradicional por absorción puede sobrestimar la rentabilidad de las obras pequeñas y dispersas de una constructora?
-   *Respuesta:* Porque prorratea los costos indirectos (supervisión, logística, administración de obra) con una sola base, sin reflejar que las obras chicas y dispersas consumen desproporcionadamente esas actividades respecto de su tamaño. El costeo ABC, al asignar el costo por actividad real consumida, suele revelar un margen menor en esas obras.
+8. ¿Por qué el costeo por absorción puede sobrestimar la rentabilidad de obras pequeñas y dispersas? *R:* Prorratea costos indirectos con una sola base, sin reflejar que esas obras consumen desproporcionadamente supervisión y logística. El ABC suele revelar un margen menor.
 
-9. Bajo NIF D-7, ¿cuándo se reconoce una pérdida esperada de un contrato de construcción?
-   *Respuesta:* De inmediato y en su totalidad, en el periodo en que se vuelve evidente que el costo total del contrato superará el ingreso total del contrato — no de forma gradual conforme avanza la obra.
+9. Bajo NIF D-7, ¿cuándo se reconoce una pérdida esperada de un contrato? *R:* De inmediato y en su totalidad, en el periodo en que se vuelve evidente que el costo total superará el ingreso total — no gradualmente.
 
-10. ¿Qué es la tasa efectiva de impuesto bajo NIF D-4 y para qué sirve conciliarla contra la tasa legal?
-    *Respuesta:* Es el impuesto a la utilidad total del periodo (causado + diferido) entre la utilidad antes de impuestos. Conciliarla contra la tasa legal (30% en personas morales) revela qué partidas (no deducibles, ingresos no acumulables, efectos inflacionarios, estimaciones de irrecuperabilidad) explican la diferencia, lo que sirve como señal de alerta de riesgos fiscales antes del cierre.
+10. ¿Qué es la tasa efectiva de impuesto (NIF D-4) y para qué sirve conciliarla contra la tasa legal? *R:* Impuesto total (causado + diferido) entre utilidad antes de impuestos. La conciliación contra el 30% legal revela partidas no deducibles u otros efectos que alertan riesgos fiscales antes del cierre.
 
-11. ¿En qué se diferencia un dictamen pericial contable de un dictamen fiscal?
-    *Respuesta:* El dictamen pericial contable está dirigido a una autoridad judicial dentro de un litigio y responde a puntos específicos del proceso, como medio de prueba; el dictamen fiscal está dirigido al SAT, tiene presunción de certeza bajo el art. 52 CFF y opina sobre la razonabilidad de los estados financieros y el cumplimiento fiscal en general, no sobre un litigio.
+11. ¿En qué se diferencia un dictamen pericial contable de un dictamen fiscal? *R:* El pericial se dirige a una autoridad judicial dentro de un litigio, como medio de prueba; el fiscal se dirige al SAT, con presunción de certeza (art. 52 CFF) y opina sobre estados financieros y cumplimiento fiscal en general.
 
-12. ¿Qué es la NIA-LCE y a qué tipo de entidades aplica?
-    *Respuesta:* Es la Norma Internacional de Auditoría para Entidades Menos Complejas, un estándar independiente del conjunto completo de NIA, aprobado por el IAASB/IFAC en diciembre de 2023 y con folio de adopción del IMCP para ejercicios que inicien a partir del 15 de diciembre de 2025. Aplica a PyME privadas con estructuras simples, OSC sin operaciones complejas y entidades públicas pequeñas; no aplica a emisoras públicas, instituciones financieras reguladas ni grupos corporativos grandes.
+12. ¿Qué es la NIA-LCE y a quién aplica? *R:* Norma Internacional de Auditoría para Entidades Menos Complejas, estándar independiente aprobado por IAASB/IFAC en dic-2023, con folio de adopción del IMCP para ejercicios desde el 15-dic-2025. Aplica a PyME privadas simples, OSC sin operaciones complejas y entidades públicas pequeñas; no a emisoras públicas ni instituciones reguladas.
 
-13. ¿Cuánto tiempo debe conservarse la contabilidad conforme al art. 30 CFF, y qué excepción aplica a un activo fijo que se sigue depreciando?
-    *Respuesta:* Cinco años desde la fecha en que se presentaron o debieron presentarse las declaraciones relacionadas. Para actos con efectos fiscales prolongados (como la depreciación de un activo fijo), el plazo corre desde la declaración del último ejercicio en que se produjeron esos efectos, no desde la compra del activo.
+13. ¿Cuánto se conserva la contabilidad (art. 30 CFF) y qué excepción aplica a un activo fijo en depreciación? *R:* Cinco años desde la declaración relacionada; para efectos fiscales prolongados, el plazo corre desde la declaración del último ejercicio con ese efecto, no desde la compra del activo.
 
-14. ¿Qué pasa si la autoridad fiscal no concluye la revisión secuencial de un dictamen dentro de los doce meses del art. 52-A CFF?
-    *Respuesta:* Se entiende que no hay observaciones sobre la auditoría practicada ni sobre las operaciones revisadas, y la autoridad pierde el derecho de actuar directamente con el contribuyente por los mismos hechos ya revisados.
+14. ¿Qué pasa si la autoridad no concluye la revisión secuencial en doce meses (art. 52-A)? *R:* Se entiende que no hay observaciones y la autoridad pierde el derecho de actuar directamente con el contribuyente por esos hechos.
 
-15. Nombra tres razones financieras que un banco típicamente pide a una PyME constructora y qué mide cada una.
-    *Respuesta:* Razón circulante (capacidad de cubrir pasivo de corto plazo con activo de corto plazo), prueba del ácido (liquidez inmediata sin depender de vender obra en proceso/inventario) y razón de deuda a capital (qué proporción del negocio está financiada con deuda frente a recursos propios). Otras válidas: rotación/días de cuentas por cobrar, margen EBITDA por obra.
+15. Tres razones financieras que un banco pide a una PyME constructora. *R:* Razón circulante, prueba del ácido y razón de deuda a capital (también válidas: días de cuentas por cobrar, margen EBITDA por obra).
 
 ---
 

@@ -170,7 +170,7 @@
           "fondo_plan_acciones": 699.272
         },
         "otros_financiamiento": {
-          "interes_pagado": 42.902
+          "interes_pagado": -42.902
         },
         "caja_inicial": 40668.985,
         "caja_final": 36513.582,
@@ -320,7 +320,7 @@
           "fondo_plan_acciones": 789.904
         },
         "otros_financiamiento": {
-          "interes_pagado": 263.182
+          "interes_pagado": -263.182
         },
         "caja_inicial": 36513.582,
         "caja_final": 28591.153,
@@ -470,7 +470,7 @@
           "fondo_plan_acciones": 511.386
         },
         "otros_financiamiento": {
-          "interes_pagado": 23.518
+          "interes_pagado": -23.518
         },
         "caja_inicial": 28591.153,
         "caja_final": 30118.253,
@@ -519,7 +519,7 @@
         "tasa_interes": 0.11,
         "tasa_arrendamientos_financieros": 0.115,
         "tasa_revolvente": 0.13,
-        "nuevos_arrendamientos_financieros": 15000.0,
+        "nuevos_arrendamientos_financieros": 6000.0,
         "dividendos_payout": 0.45,
         "recompras": 0.0
       },
@@ -539,7 +539,7 @@
         "tasa_interes": 0.1,
         "tasa_arrendamientos_financieros": 0.11,
         "tasa_revolvente": 0.12,
-        "nuevos_arrendamientos_financieros": 20000.0,
+        "nuevos_arrendamientos_financieros": 8000.0,
         "dividendos_payout": 0.58,
         "recompras": 8000.0
       },
@@ -559,7 +559,7 @@
         "tasa_interes": 0.1,
         "tasa_arrendamientos_financieros": 0.105,
         "tasa_revolvente": 0.115,
-        "nuevos_arrendamientos_financieros": 22000.0,
+        "nuevos_arrendamientos_financieros": 10000.0,
         "dividendos_payout": 0.6,
         "recompras": 10000.0
       }

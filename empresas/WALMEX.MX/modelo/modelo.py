@@ -291,8 +291,6 @@ def construir_flujo(cf: dict, utilidad_neta_millones: float) -> dict:
     dividendos = -(cf.get("dividendos") or 0)
     recompras = -cf["recompras"]
     principal_arr = -cf["pago_arrendamiento"]
-    interes_pagado = -cf["interes_pagado"]
-    of_otros = interes_pagado
     flujo = {
         "depreciacion_amortizacion": M(cf["da"]), "sbc": M(cf["sbc"]), "cfo": M(cf["cfo_neto"]),
         "capex": M(capex), "cfi": M(cf["cfi_neto"]), "cff": M(cf["cff_neto"]),
@@ -303,7 +301,7 @@ def construir_flujo(cf: dict, utilidad_neta_millones: float) -> dict:
         "otros_operativos": {k: M(v) for k, v in oo.items()},
         "otros_inversion": {k: M(v) for k, v in {"interes_cobrado": cf["int_cobrado"], "venta_ppe": cf["venta_ppe"],
                                                   "fondo_plan_acciones": cf["fondo_plan_acciones_inv"]}.items()},
-        "otros_financiamiento": {k: M(v) for k, v in {"interes_pagado": interes_pagado}.items()},
+        "otros_financiamiento": {k: M(v) for k, v in {"interes_pagado": cf["interes_pagado"]}.items()},
         "caja_inicial": M(cf["caja_ini"]), "caja_final": M(cf["caja_fin"]), "utilidad_neta": utilidad_neta_millones,
     }
     return flujo
@@ -778,7 +776,7 @@ def construir_supuestos() -> dict:
                 "tasa_impuestos": 0.30, "da_ventas": 0.026, "capex_ventas": 0.035, "sbc_ventas": 0.0003,
                 "dias_cxc": 10.0, "dias_inventario": 55.0, "dias_proveedores": 55.0,
                 "tasa_interes": 0.11, "tasa_arrendamientos_financieros": 0.115, "tasa_revolvente": 0.13,
-                "nuevos_arrendamientos_financieros": 15000.0, "dividendos_payout": 0.45, "recompras": 0.0,
+                "nuevos_arrendamientos_financieros": 6000.0, "dividendos_payout": 0.45, "recompras": 0.0,
             },
             "intermedio": {
                 "descripcion": "Continuidad de las tendencias 2024-2025 (crecimiento ~4-5%, margenes estables, "
@@ -788,7 +786,7 @@ def construir_supuestos() -> dict:
                 "tasa_impuestos": 0.27, "da_ventas": 0.025, "capex_ventas": 0.040, "sbc_ventas": 0.0003,
                 "dias_cxc": 9.5, "dias_inventario": 52.0, "dias_proveedores": 59.0,
                 "tasa_interes": 0.10, "tasa_arrendamientos_financieros": 0.11, "tasa_revolvente": 0.12,
-                "nuevos_arrendamientos_financieros": 20000.0, "dividendos_payout": 0.58, "recompras": 8000.0,
+                "nuevos_arrendamientos_financieros": 8000.0, "dividendos_payout": 0.58, "recompras": 8000.0,
             },
             "eficiencia": {
                 "descripcion": "Aceleracion de e-commerce/On-Demand y automatizacion de cadena de suministro "
@@ -799,7 +797,7 @@ def construir_supuestos() -> dict:
                 "tasa_impuestos": 0.27, "da_ventas": 0.024, "capex_ventas": 0.043, "sbc_ventas": 0.0003,
                 "dias_cxc": 9.0, "dias_inventario": 48.0, "dias_proveedores": 63.0,
                 "tasa_interes": 0.10, "tasa_arrendamientos_financieros": 0.105, "tasa_revolvente": 0.115,
-                "nuevos_arrendamientos_financieros": 22000.0, "dividendos_payout": 0.60, "recompras": 10000.0,
+                "nuevos_arrendamientos_financieros": 10000.0, "dividendos_payout": 0.60, "recompras": 10000.0,
             },
         },
     }
