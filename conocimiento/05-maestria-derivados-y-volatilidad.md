@@ -141,7 +141,7 @@ Evidencia confirmada:
 | Whaley | 2002 | Return and Risk of CBOE Buy Write Monthly Index | J. Derivatives 10(2):35-42 | BXM con mejor rendimiento ajustado por riesgo que el S&P 500 (1988-2001; cifras exactas no verificadas) | 10.3905/jod.2002.319194 | B |
 | Bakshi, Kapadia | 2003 | Delta-Hedged Gains and the Negative Market Volatility Risk Premium | RFS 16(2):527-566 | Ganancias con cobertura delta < 0 y peores con más volatilidad | 10.1093/rfs/hhg002 | A |
 | Bollen, Whaley | 2004 | Does Net Buying Pressure Affect the Shape of IVFs? | JF 59(2):711-753 | La compra de puts de índice mueve la IV; la venta delta-neutral gana | 10.1111/j.1540-6261.2004.00647.x | A |
-| Gorton, Rouwenhorst | 2006 | Facts and Fantasies about Commodity Futures | FAJ 62(2):47-68 | 1959-2004: futuros colateralizados ≈ misma prima y Sharpe que acciones, con correlación negativa | NBER w10595 | B |
+| Gorton, Rouwenhorst | 2006 | Facts and Fantasies about Commodity Futures | FAJ 62(2):47-68 | 1959-2004: futuros colateralizados ≈ misma prima y Sharpe que acciones, con correlación negativa | 10.2469/faj.v62.n2.4083 | B |
 | Carr, Wu | 2009 | Variance Risk Premiums | RFS 22(3):1311-1341 | Variance swap ≈ cartera de opciones; VRP medida en 5 índices y 35 acciones | 10.1093/rfs/hhn038 | A |
 | Goyal, Saretto | 2009 | Cross-section of option returns and volatility | JFE 94(2):310-326 | Long-short de straddles según RV − IV: rendimiento mensual "económicamente importante" (cifra no verificada) | 10.1016/j.jfineco.2009.01.001 | B |
 | Gârleanu, Pedersen, Poteshman | 2009 | Demand-Based Option Pricing | RFS 22(10):4259-4299 | La demanda de usuarios finales afecta los precios (cifras no verificadas) | 10.1093/rfs/hhp005 | B |
@@ -391,7 +391,7 @@ El índice PUT vende puts ATM del S&P 500 colateralizados en T-bills. Descripci�
 13. Whaley (2002) — https://doi.org/10.3905/jod.2002.319194
 14. Bakshi, Kapadia (2003) — https://doi.org/10.1093/rfs/hhg002 ; https://ideas.repec.org/a/oup/rfinst/v16y2003i2p527-566.html
 15. Bollen, Whaley (2004) — https://doi.org/10.1111/j.1540-6261.2004.00647.x
-16. Gorton, Rouwenhorst (2006) — https://www.nber.org/papers/w10595
+16. Gorton, Rouwenhorst (2006) — https://doi.org/10.2469/faj.v62.n2.4083 ; https://www.nber.org/papers/w10595
 17. Carr, Wu (2009) — https://doi.org/10.1093/rfs/hhn038 ; https://ideas.repec.org/a/oup/rfinst/v22y2009i3p1311-1341.html
 18. Goyal, Saretto (2009) — https://doi.org/10.1016/j.jfineco.2009.01.001
 19. Gârleanu, Pedersen, Poteshman (2009) — https://doi.org/10.1093/rfs/hhp005

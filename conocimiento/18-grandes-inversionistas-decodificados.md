@@ -52,7 +52,7 @@ Todo historial se puede escribir como:
 | Estadística de alta amplitud | Miles de apuestas pequeñas casi independientes con IC diminuto | Renaissance, Thorp (*stat arb*) | No: requiere infraestructura, datos y costos institucionales |
 | Estructural | Fondeo barato, capital permanente, acceso, control | Float de Berkshire, Citadel (multi-gestor), Slim (control y concesiones) | No, salvo una: el capital propio no tiene redenciones |
 | Conductual y de horizonte | Comprar cuando otros *deben* vender | Marks y Oaktree 2008, Klarman, Slim 1982, Buffett | **Sí**: es la ventaja natural de una cuenta pequeña sin clientes |
-| Asimetría y convexidad | Pagos donde acertar paga mucho más de lo que cuesta fallar | Soros y Druckenmiller 1992, PTJ 1987, Universa 2008 y 2020 | Parcial: opciones caras en México; stops y tamaño sí |
+| Asimetría y convexidad | Pagos donde acertar paga mucho más de lo que cuesta fallar | Soros y Druckenmiller 1992, PTJ 1987, Universa 2008 y 2020 | Parcial: el acceso a opciones en la cuenta está por verificar en GBM; stops y tamaño sí |
 | **Falsa ventaja**: prima de cola vendida | Cobrar poco muchas veces y perder todo una vez | LTCM, Amaranth, Archegos y vendedores de volatilidad | Es lo que el sistema debe detectar y evitar |
 
 ### 2.3 Aritmética de supervivencia
@@ -79,11 +79,11 @@ Consecuencias:
 - Sobreapostar al doble no gana nada y se cobra toda la varianza.
 - Como el SR se estima con error, el Kelly "completo" casi siempre es, en realidad, más que completo.
 
-*Inferencia:* Livermore y los fondos apalancados que quebraron operaban, en la práctica, por encima de 2× Kelly. Un Sharpe estimado dentro de muestra suele ser el doble del real.
+*Inferencia:* Livermore y los fondos apalancados que quebraron operaban, en la práctica, por encima de 2× Kelly, porque el Sharpe estimado dentro de muestra suele estar inflado (cap. 07).
 
 ### 2.4 Selección, supervivencia y suerte
 
-- **Muestreo insuficiente de fracasos.** Denrell (2003) muestra que aprender de los que sobreviven sesga hacia las prácticas de riesgo alto: los que las usaron y quebraron ya no están en la muestra [35].
+- **Muestreo insuficiente de fracasos.** Denrell (2003), en resumen propio: aprender de los que sobreviven sesga hacia las prácticas de riesgo alto: los que las usaron y quebraron ya no están en la muestra [35].
 - **Los extremos informan poco.** Denrell y Liu (2012, PNAS) prueban que cuando el resultado extremo requiere suerte, los de mejor desempeño **no** son los de mayor habilidad esperada y "no deben ser imitados" [36].
 - **Monos que tiran monedas.** Jensen lo argumentó en Columbia en 1984. Buffett respondió que los ganadores venían de la misma "aldea intelectual", Graham-and-Doddsville [5]. La réplica es buena, pero la lista la hizo él *ex post*. Frazzini, Kabiller y Pedersen (FKP) señalan ese sesgo y proponen otra prueba: factores sistemáticos [1].
 - **Estadística.** t ≈ IR·√T (cap. 02). En una temporada de 6 meses, t = 2 exige un SR de 2.83. En 3 temporadas, un SR de 1.63.
@@ -153,7 +153,7 @@ Consecuencias:
 - **Pershing Square Holdings.** −24.5% en 2026 al 23-sep (PSH.L, precio de mercado, no NAV; causa no verificada; cálculo propio).
 - **Sep-2026.** Bloomberg estima la fortuna de Carlos Slim en ~US$123 mil millones (vía Wikipedia) [28].
 
-*Inferencia:* 2023-2026 cerró la era de los fundadores (Munger, Simons, O'Neil, la salida de Dalio y la de Buffett). Los primeros datos después de Buffett son 21 meses de rezago contra el índice. Son demasiado pocos para concluir, pero coinciden con el decaimiento por tamaño que documenta el cap. 03.
+*Inferencia:* 2023-2026 cerró la era de los fundadores (Munger, Simons, O'Neil, la salida de Dalio y la de Buffett). Berkshire se rezagó contra el índice en 2025 (último año de Buffett como CEO) y en 2026 al 24-sep (primero con Abel). Son 21 meses, demasiado pocos para concluir, pero coinciden con el decaimiento por tamaño que documenta el cap. 03.
 
 ---
 
@@ -187,7 +187,7 @@ Consecuencias:
 
 ### 5.2 Fichas decodificadas (solo lo que agrega sobre la tabla)
 
-**Buffett y Munger.** En 1976-2011 Berkshire tuvo el Sharpe más alto de cualquier acción o fondo con más de 30 años de historia [1]. En ese periodo sufrió −44% mientras el mercado subía +32%, un rezago de 76 pp. Ningún fondo con redenciones sobrevive algo así. Berkshire sí, porque es una corporación [1].
+**Buffett y Munger.** En 1976-2011 Berkshire tuvo el Sharpe más alto de cualquier acción o fondo con más de 30 años de historia [1]. En ese periodo sufrió −44% mientras el mercado subía +32%, un rezago de 76 pp. FKP señalan que muchos gestores no habrían sobrevivido algo así; Berkshire sí, por su reputación y por ser una corporación [1].
 
 Por *drawdown* (cálculo propio con BRK-A) [45]:
 
@@ -372,7 +372,7 @@ Si 3 y 7 no pasan o 4 falla, no se opera.
 9. **Desviarse tras el éxito.** LTCM devolvió capital y amplió estilos. Paulson pasó de crédito a oro.
 10. **Tener razón demasiado pronto con un corto.** HLF +154% contra Ackman antes de caer −80% [21].
 11. **Pensar que la paridad de riesgo es "todo clima".** En 2022 acciones y bonos cayeron juntos (RPAR −22.8%).
-12. **Extrapolar a Buffett después de Buffett.** 2025: +10.9% vs +17.9%; 2026 al 24-sep: +0.6% vs +13.4%. Muestra corta, pero coincide con el decaimiento por tamaño (cap. 03).
+12. **Extrapolar el Berkshire de 1965-1990 al de hoy.** 2025 (último año de Buffett como CEO): +10.9% vs +17.9%; 2026 al 24-sep: +0.6% vs +13.4%. Muestra corta, pero coincide con el decaimiento por tamaño (cap. 03).
 13. **Creer que el coeficiente intelectual protege.** Dos premios Nobel en LTCM [29].
 
 ---
