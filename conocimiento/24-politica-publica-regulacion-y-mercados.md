@@ -45,7 +45,7 @@ Bernanke-Kuttner (2005) separan con futuros de fondos federales la parte anticip
 - **Discursos:** pesan más presidente, vicepresidente y NY Fed. Durante el *blackout* no hay señales.
 - **Conferencia:** qué variable domina la función de reacción.
 
-**Inferencia (régimen Warsh):** Warsh **no entregó punto** en septiembre de 2026 y dice que "*independence is a two-way street... we stay in our lane*". Eso apunta a menos guía futura, más peso del comunicado y la conferencia y, por lo tanto, más sorpresa y volatilidad el día del anuncio.
+**Inferencia (régimen Warsh):** Warsh **no entregó punto** en septiembre de 2026 y dice que "*independence is a two-way street... we stay in our lane*" (cita no verificada en esta sesión). Eso apunta a menos guía futura, más peso del comunicado y la conferencia y, por lo tanto, más sorpresa y volatilidad el día del anuncio.
 
 ### 2.4 Durabilidad del instrumento: el concepto operable central
 
@@ -56,6 +56,7 @@ Bernanke-Kuttner (2005) separan con futuros de fondos federales la parte anticip
 | Acción administrativa con base estatutaria clara | Tribunales, la propia agencia | Meses a años | 232 (acero 50%, autos 25%, fármacos 100%), 301 |
 | Acción con base dudosa | Tribunales | Meses | IEEPA, anulado 6-3 el 20-feb-2026 |
 | Instrumento con plazo legal | El calendario | Fecha fija | Sección 122, expiró a los 150 días (24-jul-2026) |
+| Estatuto antiguo casi sin uso | Negociación, tribunales | Semanas a meses; puede escalar | Sección 338 contra Canadá: aranceles del 22-ago y veto a importaciones desde el 29-sep-2026 |
 | Declaración, *post*, mañanera | Nadie: no obliga | Horas a semanas | Amenazas arancelarias pospuestas |
 
 **Regla:** antes de reaccionar se anotan el instrumento, la vía de impugnación y la fecha de caducidad. Si el instrumento está en la mitad baja de la tabla, la posición se dimensiona para una reversión.
@@ -107,7 +108,7 @@ Las conexiones valen porque dan acceso a contratos, rescates y regulación favor
 
 ### 4.1 Fed: Warsh, primera alza desde 2023, independencia en tribunales
 
-- **Liderazgo.** El Senado confirmó a Warsh como presidente el 13-may-2026 por **54-45**, la votación más dividida para ese cargo. Juró el **22-may**. Powell sigue como **gobernador** (periodo hasta 2028) mientras dure la investigación del DOJ sobre la remodelación de la sede (CNN, Spectrum).
+- **Liderazgo.** El Senado confirmó a Warsh como presidente el 13-may-2026 por **54-45**, la votación más dividida para ese cargo. Juró el **22-may** ante el juez Clarence Thomas. Powell sigue como **gobernador** (periodo hasta 2028) mientras dure la investigación del DOJ sobre la remodelación de la sede (Wikipedia, Spectrum).
 - **16-sep-2026.** Alza de 25 pb a **3.75-4.00%**, votación 12-0 sin disensos. Es la primera alza desde jul-2023. El comunicado dice "*inflation remains elevated*" y busca "*a timelier return*" a 2% (Fed). En el *dot plot*, Warsh no entregó punto (lo dijo él mismo, según Wikipedia). El SEP lo firman **18** participantes. Para fin de 2026, 12 ven una alza más (4.125%), 4 ven dos (4.375%) y 2 ninguna. La mediana de 2026 sube de 3.8% a **4.1%**, la de 2027 de 3.6% a **4.1%**, la de 2028 queda en 3.9% y la de largo plazo en 3.2% (SEP de la Fed; TradingKey).
 - **Presión.** Según CNBC, Trump dijo que le recomendó a Warsh "*you might as well vote with the board because it's not going to matter*" y llamó al Consejo "*very hostile, very political*" (no verificado: CNBC bloqueó el acceso en esta sesión). **Inferencia:** una segunda alza (28-oct o 9-dic) pone a prueba la relación en plena ventana electoral.
 - ***Trump v. Cook* (29-jun-2026).** Por 5-4 (Roberts, con Sotomayor, Kagan, Kavanaugh y Jackson; disienten Thomas, Alito, Gorsuch y Barrett) la Corte negó suspender la medida que impide destituir a Lisa Cook. Una remoción "*for cause*" exige aviso y oportunidad de responder. El 7-ago-2026 Trump le notificó que "considera" destituirla por presunto fraude hipotecario y le dio 21 días para responder (SCOTUSblog). La independencia depende del procedimiento, no es inmunidad.
@@ -138,14 +139,14 @@ Las conexiones valen porque dan acceso a contratos, rescates y regulación favor
 ### 4.5 Antimonopolio, SEC, CFTC, FDA
 
 - **Google (2-sep-2026):** la jueza Brinkema **rechazó** la venta de AdX y DFP y ordenó sólo remedios de conducta (CNBC). Es el segundo caso de Google sin ruptura estructural.
-- **Paramount-WBD:** el plazo HSR venció el 19-feb sin demanda del DOJ. Doce estados demandaron el 13-jul, con una orden temporal el 20-jul, y llegaron a un **acuerdo el 21-sep**: 30 películas al año en cines y un consejo de independencia editorial para CBS y CNN. Un juez admitió una moción contra el acuerdo y el cierre se espera a principios de octubre (CNN, Deadline). **Inferencia:** el antimonopolio federal se volvió negociable y los estados son el jugador con veto.
+- **Paramount-WBD:** el plazo HSR se cumplió sin demanda del DOJ (Paramount lo anunció el 20-feb). California y otros 11 estados demandaron el 13-jul y obtuvieron una orden temporal de dos semanas el 20-jul (jueza Martínez-Olguín). El **21-sep** California y el WGA firmaron un **acuerdo**: 30 películas al año durante dos años y después 32, un consejo de independencia editorial para CBS News y CNN, US$1.5 mil millones de producción en EUA en cinco años y estudios separados. No se confirmó si los otros 11 estados se sumaron. El 24-sep la corte admitió una moción de emergencia del grupo *Block the Merger* para presentar escritos *amicus* contra el acuerdo. Ellison habló de cerrar en "aproximadamente dos semanas", es decir, hacia el 5-oct, y al 25-sep **no había cerrado** (Wikipedia; CNN y Deadline bloquearon el acceso). **Inferencia:** el antimonopolio federal se volvió negociable y los estados son el jugador con veto.
 - **SEC:** el 5-may-2026 propuso un **informe semestral opcional** (Formulario 10-S en lugar de los 10-Q). **Regla:** en una empresa que lo adopte, sube el descuento por incertidumbre informativa.
-- **CFTC:** propuesta del 10-jun-2026 para mercados de predicción. Prohíbe contratos sobre guerra y asesinatos y legaliza los deportivos. Hay litigio con estados y acciones contra *insider trading* (abr-2026).
-- **FDA:** el Commissioner's National Priority Voucher promete revisiones de **1-2 meses** en vez de 10-12. Su séptima aprobación fue el 8-may-2026. Decide un comité que encabeza Prasad, y Pazdur cuestiona su legalidad (FDA, BioSpace). **Inferencia:** la aprobación regulatoria ya incorpora criterios de relocalización y precio.
+- **CFTC:** propuesta de regla publicada el **12-jun-2026** en el Federal Register (comentarios hasta el 27-jul). **No prohíbe por categoría**: enumera terrorismo, asesinato, guerra y *gaming* como actividades que la Comisión "*may determine*" contrarias al interés público. Dice que los contratos deportivos con utilidad comercial "*are not contrary to the public interest*" y presume contrarios los juegos de azar puro. El litigio con estados y las acciones contra *insider trading* (abr-2026) no se verificaron.
+- **FDA:** el Commissioner's National Priority Voucher (CNPV) busca revisiones de **1-2 meses** en vez de 10-12 (BioSpace). Su séptima aprobación fue Bizengri, el 8-may-2026 (FDA). La FDA habla de un "*CNPV review council*". Que lo encabece Prasad no está verificado. Pazdur cuestionó la seguridad y la legalidad de los programas acelerados (BioSpace, nov-2025). **Inferencia:** la aprobación regulatoria ya incorpora criterios de relocalización y precio.
 
 ### 4.6 Política industrial: el Estado accionista
 
-El gobierno compró **433.3 millones de acciones de Intel a US$20.47 (9.9%)**, pagadas con fondos CHIPS no desembolsados. **El DoD tiene 15% de MP Materials** y en ene-2026 el gobierno entró en USA Rare Earth (Intel, Fortune). Una encuesta de CNBC (jul-2026) encontró que **49%** de los votantes considera inapropiadas estas participaciones y **19%** las apoya. **Inferencia:** el gobierno como accionista da **piso** (no deja caer a la empresa) pero pone **techo** (precios, clientes y capital bajo presión política) y crea riesgo de reversión si cambia el Congreso. Debe modelarse como opción con dos colas.
+El gobierno compró **433.3 millones de acciones de Intel a US$20.47 (9.9%, US$8.9 mil millones)**, pagadas con US$5.7 mil millones de subvenciones CHIPS pendientes y US$3.2 mil millones del programa Secure Enclave (Intel, ago-2025). **El DoD tiene 15% de MP Materials** (CSIS). El 26-ene-2026 el gobierno anunció US$1.6 mil millones para USA Rare Earth, con una participación de 8% a 16% según los *warrants* (Fortune). Según una encuesta de CNBC (jul-2026), **49%** de los votantes considera inapropiadas estas participaciones y **19%** las apoya (no verificado). **Inferencia:** el gobierno como accionista da **piso** (no deja caer a la empresa) pero pone **techo** (precios, clientes y capital bajo presión política) y crea riesgo de reversión si cambia el Congreso. Debe modelarse como opción con dos colas.
 
 ### 4.7 México: Paquete Económico 2027 (8-sep-2026)
 
@@ -153,29 +154,29 @@ El gobierno compró **433.3 millones de acciones de Intel a US$20.47 (9.9%)**, p
 |---|---|---|
 | PIB 2027 | **1.5-2.5%** (2.0% puntual) | Antes 1.9-2.9%. PIB 2026: 1-2% |
 | RFSP | **3.9% del PIB** | 4.1% en 2026. Pre-Criterios planteaban 3.5% |
-| Balance primario / SHRFSP | ~1.1% / ~55% del PIB (Investing) | (no verificado en fuente primaria) |
+| Balance primario / SHRFSP | Superávit primario ~1.1% (Investing) / SHRFSP ~55% del PIB (Investing y adn40) | Dos fuentes secundarias coinciden en la SHRFSP. Ninguna cifra está confirmada en los Criterios Generales (portal de Hacienda caído, 503) |
 | Tributarios | **15.9% del PIB**, sin impuestos nuevos | Control de IEPS a combustibles, retenciones a plataformas |
 | Costo financiero | **17.2% de los ingresos**, el más alto desde 1999 (Investing) | Es la restricción que señala Moody's |
-| Apoyo a Pemex | **MXN 81.1 mil millones (−70%)** (Investing) | Expansión (24-sep): Pemex seguirá necesitando hasta US$10 mil millones al año |
-| Tipo de cambio | 17.9 (adn40) o 18.0 (Investing) | Las fuentes discrepan |
+| Apoyo a Pemex | **MXN 81.1 mil millones (−70%)** (Investing). Meta de superávit financiero de Pemex: MXN 95 mil millones (Expansión) | Moody's (Roxana Muñoz, Expansión, 24-sep) espera "**al menos** 10,000 millones de dólares de transferencia cada año por un periodo de cinco años" |
+| Tipo de cambio | **18.00 por dólar** (Investing) | La nota de adn40 no contiene "17.9" ni ninguna cifra de tipo de cambio. Fuente única y secundaria |
 | Inflación y tasa | 3.0% y 6.0% al cierre de 2027 | Hacienda supone ~50 pb más de recortes de Banxico |
 
 Fuentes: SHCP comunicado 71, Expansión, Investing, adn40. Presentó el secretario Édgar Amador. **Calendario legal:** Ley de Ingresos a más tardar el **20-oct** en Diputados y el **31-oct** en el Senado. Presupuesto de Egresos a más tardar el **15-nov**. **Inferencia:** la aprobación es segura. Lo que sí se pronostica es la desviación del RFSP, las medidas que se agreguen en comisiones y cómo se ejerza el apoyo a Pemex.
 
 ### 4.8 Banxico
 
-- Mantuvo 7.00% el 5-feb. Bajó a **6.75%** el 26-mar y a **6.50%** el 7-may. Pausas el 25-jun, el 6-ago y el **24-sep** (unánime). Son **tres** pausas consecutivas según el listado oficial (Expansión dice "cuarta").
-- Espera la inflación en meta en el **4T-2027**, sin presiones de demanda, y dice que "no seguirá mecánicamente a la Fed" (Proceso).
+- Mantuvo 7.00% el 5-feb. Bajó a **6.75%** el 26-mar y a **6.50%** el 7-may. Pausas el 25-jun, el 6-ago y el **24-sep** (unánime). Son **tres** pausas consecutivas según el listado oficial y Proceso (Expansión dice "cuarta").
+- El comunicado del 24-sep "sigue anticipando que la inflación general converja a la meta en el **cuarto trimestre de 2027**", menciona "la ausencia de presiones de demanda" y dice que "la política monetaria **no tendría que reaccionar de manera mecánica** ante los ajustes previstos a la tasa de fondos federales" (Banxico).
 - **Diferencial contra el techo de la Fed: 250 pb.** **Inferencia:** es el colchón de *carry* más delgado en años y aumenta la sensibilidad del peso a *shocks* (cap. 16).
 - **Calendario oficial:** decisiones el **5-nov** y el **17-dic**; minutas el 8-oct y el 19-nov; Informe Trimestral el 26-nov.
 
 ### 4.9 Reformas y Estado de derecho
 
-- **Reforma judicial.** Tras la elección del 2-jun-2024 el peso cayó **4.3%** en días (de 16.97 a 17.70), alrededor de **16%** hasta septiembre, y cerró 2024 en **−22.5%** (El Financiero, CNN/EFE). Es el caso de referencia del riesgo institucional mexicano. La nueva SCJN funciona desde sep-2025. La segunda elección judicial se **aplazó de 2027 a 2028** (may-2026).
-- **Elektra.** La SCJN resolvió que Elektra y TV Azteca deben pagar **MXN 48.3 mil millones** (ISR 2008-2013). Elektra reconoce MXN 32.1 mil millones, ya pagó 13.98 y cubrirá el resto en parcialidades hasta **jul-2027** (Bloomberg Línea, La Silla Rota). Una contingencia de probabilidad baja se volvió un **pasivo cierto**.
-- **Ley de Amparo** (DOF 16-oct-2025). El interés legítimo exige afectación "real, actual y diferenciada". La suspensión fiscal sólo procede con **garantía**. Aplica a juicios en trámite (DLA Piper). **Regla:** un crédito fiscal material en litigio se modela con probabilidad de pago cercana a 100% más accesorios.
-- **Autónomos.** Cofece e IFT se sustituyen por la **Comisión Nacional Antimonopolio**, sectorizada a Economía (jul-2025), y la **CRT**, instalada el 17-oct-2025. **Inferencia:** telecomunicaciones, concentraciones y preponderancia se pronostican ahora como decisiones políticas.
-- **Energía.** Las leyes secundarias están vigentes desde el **19-mar-2025**. Pemex y CFE son "empresas públicas del Estado" y la CNE sustituye a CRE y CNH. En 2025 hubo apoyo a Pemex de ~US$35 mil millones (1.9% del PIB, según Moody's) y P-Caps por US$12 mil millones. Pemex está en **B1 estable** con Moody's (may-2026).
+- **Reforma judicial.** Tras la elección del 2-jun-2024 el peso llegó a **18.36** el 7-jun. Ese día perdió 2.65% (desde 17.88) cuando AMLO insistió en la reforma judicial (El Financiero). Las cifras de −4.3% el primer día (16.97 a 17.70), ~16% hasta septiembre y −22.5% en 2024 vienen de CNN/EFE, que bloqueó el acceso en esta sesión (no verificado). Es el caso de referencia del riesgo institucional mexicano. La nueva SCJN funciona desde sep-2025. La segunda elección judicial se **aplazó de 2027 a 2028** (may-2026).
+- **Elektra.** El 13-nov-2025 la SCJN resolvió por unanimidad que Elektra (43.3) y TV Azteca (5.1) deben pagar **MXN 48.3 mil millones** (ISR de 2008-2010, 2012 y 2013). Elektra reconoce MXN 32.1 mil millones, ya pagó 13.98 y cubrirá el resto en parcialidades hasta **jul-2027** (Bloomberg Línea, La Silla Rota). Una contingencia de probabilidad baja se volvió un **pasivo cierto**.
+- **Ley de Amparo** (DOF 16-oct-2025, vigente el 17-oct). El interés legítimo exige una lesión "real y diferenciada que concurra más allá de lo hipotético". La suspensión no procede cuando obstruye el cobro de créditos fiscales por el Estado. Que la suspensión fiscal exija **garantía** no se confirmó en DLA Piper (no verificado). La reforma aplica a juicios con etapas en trámite (DLA Piper). **Regla:** un crédito fiscal material en litigio se modela con probabilidad de pago cercana a 100% más accesorios.
+- **Autónomos.** Cofece e IFT se sustituyen por la **Comisión Nacional Antimonopolio**, aprobada en Diputados el **1-jul-2025** por 323 a 125 (LatinUS), y por la **CRT**, instalada el 17-oct-2025. La sectorización de la Comisión a Economía y la fecha de instalación de la CRT no se verificaron en esta sesión. **Inferencia:** telecomunicaciones, concentraciones y preponderancia se pronostican ahora como decisiones políticas.
+- **Energía.** Las leyes secundarias están vigentes desde el **19-mar-2025**. Pemex y CFE son "empresas públicas del Estado" y la CNE sustituye a CRE y CNH. En 2025 hubo apoyo a Pemex de ~US$35 mil millones (1.9% del PIB, según Moody's; no verificado) y P-Caps por US$12 mil millones. Moody's ratificó a Pemex con perspectiva estable (may-2026). El nivel B1 no se verificó porque La Jornada bloqueó el acceso.
 
 ### 4.10 Calificación soberana
 
@@ -183,15 +184,17 @@ Fuentes: SHCP comunicado 71, Expansión, Investing, adn40. Presentó el secretar
 |---|---|---|---|
 | Moody's | **Baa3** (antes Baa2) | Estable | 20-may-2026 |
 | S&P | BBB | **Negativa** | 12-may-2026 |
-| Fitch | BBB- | Estable | mar-2026 |
+| Fitch | BBB- | Estable | abr-2026 (ratificación, según Bloomberg Línea) |
 
-Moody's citó el deterioro fiscal, los ingresos limitados, el gasto rígido y el apoyo a Pemex, y no espera cambios en 18 meses. **Inferencia:** si los índices de grado de inversión usan la calificación intermedia de las tres agencias (regla no verificada), hoy es BBB-. Para salir de esos índices harían falta **dos** agencias en especulativo. El riesgo cercano es que S&P baje a BBB- y deje a las tres en el último escalón.
+Moody's citó el debilitamiento fiscal acelerado desde 2024, el gasto inflexible, la base de ingresos reducida y el apoyo a Pemex. Los "18 meses" sin cambios son la lectura de un analista (Carlos López Jones, en El Financiero) sobre la perspectiva estable, no una frase de Moody's.
+
+**Regla de índices (verificada):** Bloomberg (metodología del 8-ene-2026) usa la **calificación intermedia** de Moody's, S&P y Fitch, en la práctica una regla de "dos de tres". Si sólo hay dos calificaciones, usa la más baja. Para los bonos soberanos en moneda local del Global Aggregate usa la calificación soberana de largo plazo en moneda local, y para seguir en el índice exige al menos Baa3/BBB-/BBB-. **Inferencia:** hoy la intermedia es BBB- (Baa3 / BBB / BBB-). Para salir de los índices de grado de inversión de Bloomberg harían falta **dos** agencias en especulativo. El riesgo cercano es que S&P baje a BBB- y deje a las tres en el último escalón. La calificación en moneda local puede diferir de la de moneda extranjera; se revisa antes de concluir sobre los Mbonos.
 
 ### 4.11 T-MEC, aranceles y seguridad
 
-- **1-jul-2026:** EUA **no aceptó** extender el tratado. Sigue vigente hasta 2036, con **revisiones anuales** (USTR, White & Case). Rondas bilaterales: 29-may, junio y 21-23 jul. La cuarta, en Washington, tiene fecha tentativa **28-29 sep**, sin confirmar al 23-sep (El Heraldo). Canadá queda fuera de las bilaterales.
+- **1-jul-2026:** "*The United States did not agree to renew the USMCA in its current form*" (USTR). Sigue vigente mientras se negocia; por el artículo 34.7 corre hasta 2036 con **revisiones anuales** (White & Case). Rondas bilaterales: 29-may (CDMX), junio (Washington) y 21-23 jul (CDMX). La cuarta, en Washington, tiene fecha tentativa **28-29 sep**, que Economía pidió tratar como provisional (El Heraldo, 23-sep). Canadá queda fuera de las bilaterales y enfrenta la Sección 338 (4.4).
 - **Nudo:** EUA exige **50% de contenido estadounidense** por vehículo. México pide primero alivio de la 232 (autos 25%, acero 50%). Se espera una prolongación hasta fines de 2026 o 2027 (TLC Magazine).
-- **Aranceles mexicanos** desde el 1-ene-2026: **5-50%** sobre **1,463 fracciones** a países sin tratado, con meta de más de MXN 70 mil millones de recaudación. **Plan México:** inversión de más de 25% del PIB desde 2026. Seis Polos de Bienestar tienen **US$17.49 mil millones comprometidos** (Segundo Informe).
+- **Aranceles mexicanos** (DOF 29-dic-2025, vigentes desde el 1-ene-2026): **5-50%** sobre **1,463 fracciones** a países sin tratado, con meta de más de MXN 70 mil millones de recaudación (Diario de México; el número de fracciones no aparece en esa nota). **Plan México:** inversión de más de 25% del PIB desde 2026. Seis Polos de Bienestar tienen **US$17.49 mil millones comprometidos** (Segundo Informe).
 - **Seguridad-finanzas:** FinCEN emitió órdenes contra **CIBanco, Intercam y Vector** el 25-jun-2025, y la CNBV intervino al día siguiente (Mayer Brown). El 23-sep-2026, según El Financiero citando al NYT, Trump **frenó planes de ataques aéreos** por el endurecimiento de Sheinbaum contra los cárteles. **Inferencia:** el riesgo de seguridad llega a los precios primero por el sistema financiero (FinCEN, OFAC, cárteles designados FTO).
 
 ---
@@ -203,9 +206,9 @@ Moody's citó el deterioro fiscal, los ingresos limitados, el gasto rígido y el
 | Elección EUA 2000 | Elección | Ganan las conectadas a republicanos y pierden las conectadas a demócratas | El valor político es transversal |
 | Geithner (2008) | Nombramiento | +6% el primer día y +12% a 10 días en las conectadas | Los nombramientos son eventos operables |
 | Elección EUA 2016 | Elección | Ganan domésticas y con impuestos altos. Lo complejo se incorporó al precio con rezago | La ventaja está en analizar lo complejo |
-| Elección MX, 2-jun-2024 | Elección y constitución | Peso −4.3% en días, −22.5% en el año | La mayoría calificada es un evento de régimen |
+| Elección MX, 2-jun-2024 | Elección y constitución | Peso en 18.36 el 7-jun (−2.65% ese día). El −22.5% anual no está verificado | La mayoría calificada es un evento de régimen |
 | Aranceles, abr-2025 | IEEPA | S&P −10% en 2 sesiones, luego reversión (cap. 23) | Instrumento frágil, reversión probable |
-| SCOTUS e IEEPA, feb-2026 | Judicial | US$128.68 mil millones en reembolsos aceptados. Sustitutos: la 122 y después la 301 | Se pronostica el **instrumento sustituto** |
+| SCOTUS e IEEPA, feb-2026 | Judicial | ~US$166 mil millones sujetos a reembolso, ~US$81 mil millones distribuidos hacia julio. Sustitutos: la 122, después la 301 y la 338 contra Canadá | Se pronostica el **instrumento sustituto** |
 | Moody's, may-2026 | Calificación | "Ajuste anunciado y sin sobresaltos" (El Financiero) | Lo que importa es la **segunda** rebaja |
 | Fed, 16-sep-2026 | Monetaria | La mediana de 2027 sube a 4.1% | La sorpresa estuvo en el *path* |
 
@@ -244,7 +247,8 @@ Moody's citó el deterioro fiscal, los ingresos limitados, el gasto rígido y el
 | Fecha | Evento | Qué pronosticar |
 |---|---|---|
 | 28-29 sep (tentativa) | 4ª ronda del T-MEC en Washington | ¿Alivio de la 232? ¿50% de contenido estadounidense? |
-| 29 sep | Sección 232 a fármacos, empresas pequeñas | ¿Más acuerdos MFN? |
+| 29 sep | Sección 232 a fármacos para las empresas fuera del Anexo III. Veto de la 338 a productos canadienses | ¿Más acuerdos MFN? ¿Represalia de Canadá, desvío hacia México? |
+| ~5 oct | Cierre esperado de Paramount-WBD (según Ellison) | ¿Retrasos por los *amicus* o por los otros 11 estados? |
 | 8 oct | Minuta de Banxico | ¿Disensos o sesgo? |
 | 20 / 31 oct | Ley de Ingresos 2027: Diputados / Senado | Cambios contra la iniciativa |
 | 27-28 oct | FOMC | ¿Segunda alza? |
@@ -339,12 +343,12 @@ Estos valores son coherentes con `riesgo_por_operacion`, `brier_objetivo` (0.20)
 4. **Creer que la política terminó cuando se anula su instrumento.** Hay que pronosticar el sustituto.
 5. **Operar la deriva pre-FOMC o el ciclo presidencial.** La primera murió y el segundo tiene N≈20.
 6. **Copiar al Congreso.** En promedio pierde contra el mercado.
-7. **Tratar una mayoría como un bloque.** PT y PVEM tumbaron la reforma electoral. La CLARITY perdió 49-50.
+7. **Tratar una mayoría como un bloque.** PT y PVEM tumbaron la reforma electoral (259-234-1, cuando se necesitaban 334). La CLARITY no llegó al pleno aunque el partido del presidente controla el Senado.
 8. **Leer el *dot plot* como pronóstico.** La mediana para 2022 era 0.9% y la tasa terminó en 4.25-4.50%. Hoy además el presidente de la Fed no entrega punto.
 9. **Tratar el litigio fiscal mexicano como una opción gratis.** Después de la reforma al amparo la suspensión exige garantía.
 10. **Ver a un gobierno accionista como garantía.** Da piso, pero también techo y riesgo de reversión.
 11. **Confundir acertar el contenido con acertar la reacción del mercado.** Se califican por separado.
-12. **Usar una sola fuente secundaria para cifras fiscales.** En esta sesión hubo dos tipos de cambio distintos y un conteo de pausas equivocado.
+12. **Usar una sola fuente secundaria para cifras fiscales o de actualidad.** En la verificación, un tipo de cambio atribuido a adn40 no estaba en la nota, había un conteo de pausas equivocado, una votación de cloture no se sostuvo y una cifra de reembolsos IEEPA no se encontró.
 13. **Cruzar la línea de la información privilegiada.** Destruye el activo principal del dueño.
 14. **Olvidar el tipo de cambio.** Medido en MXN, el signo puede invertirse (cap. 16).
 
@@ -374,7 +378,7 @@ PIB de 1.5-2.5%, RFSP de 3.9%, tributarios de 15.9% del PIB, sin impuestos nuevo
 En 6.50%, con tres pausas y la inflación en meta hasta el 4T-2027. El diferencial con el techo de la Fed es de 250 pb, el colchón de *carry* más delgado en años, así que el peso queda más expuesto a *shocks*.
 
 **8. Con Moody's en Baa3, S&P en BBB negativa y Fitch en BBB-, ¿hay salida inminente de los índices de grado de inversión?**
-No. Con la regla de calificación intermedia (no verificada), hacen falta dos agencias en especulativo. El riesgo es que S&P baje a BBB- y deje a las tres en el último escalón.
+No. Bloomberg usa la calificación intermedia de las tres ("dos de tres"; metodología de ene-2026), así que hacen falta dos agencias en especulativo. El riesgo es que S&P baje a BBB- y deje a las tres en el último escalón. Para los Mbonos se revisa además la calificación en moneda local.
 
 **9. ¿Qué enseña el caso Elektra?**
 Que la nueva SCJN y la reforma al amparo convierten las contingencias fiscales en pasivos ciertos: MXN 48.3 mil millones resueltos y pagos en parcialidades hasta 2027. Un litigio fiscal material se modela con pago cercano a 100%.

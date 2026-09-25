@@ -1,0 +1,1506 @@
+
+===== PAGINA 1 =====
+TAX CONVENTION WITH IRELAND
+GENERAL EFFECTIVE DATE UNDER ARTICLE 29: 1 JANUARY 1998
+TABLE OF ARTICLES
+Article 1---------------------------------General Scope
+Article 2 --------------------------------Taxes Covered
+Article 3 --------------------------------General Definitions
+Article 4 --------------------------------Residence
+Article 5 --------------------------------Permanent Establishment
+Article 6 --------------------------------Income from Removable (Real Property)
+Article 7 --------------------------------Business Profits
+Article 8 --------------------------------Shipping and Air Transport
+Article 9 --------------------------------Associated Enterprises
+Article 10 -------------------------------Dividends
+Article 11 -------------------------------Interest
+Article 12 -------------------------------Royalties
+Article 13 -------------------------------Capital Gains
+Article 14--------------------------------Independent Personal Services
+Article 15 -------------------------------Dependent Personal Services
+Article 16 -------------------------------Directors’ Fees
+Article 17 -------------------------------Artistes and Sportsmen
+Article 18 -------------------------------Pensions, Social Security, Annuities,
+         Alimony and Child Support
+Article 19 ------------------------------Government Service
+Article 20 ------------------------------Students and Trainees
+Article 21 ------------------------------Offshore Exploration and Exploitation Activities
+Article 22 ------------------------------Other Income
+Article 23 ------------------------------Limitation on Benefits
+Article 24 ------------------------------Relief from Double Taxation
+Article 25 ------------------------------Non-Discrimination
+Article 26 ------------------------------Mutual Agreement Procedure
+Article 27 ------------------------------Exchange of Information and Administrative Assistance
+Article 28 ------------------------------Diplomatic Agents and Consular Officers
+Article 29 ------------------------------Entry into Force
+Article 30 ------------------------------Termination
+Protocol --------------------------------of 28 July, 1997
+Notes of Exchange -------------------of 28 July, 1997
+Letter of Submittal--------------------of 19 August, 1997
+Letter of Transmittal------------------of 24 September, 1997
+The “Saving Clause”------------------Paragraph 4 of Article 1
+===== PAGINA 2 =====
+MESSAGE
+FROM
+THE PRESIDENT OF THE UNITED STATES
+TRANSMITTING
+CONVENTION BETWEEN THE GOVERNMENT OF THE UNITED
+STATES OF AMERICA AND THE GOVERNMENT OF IRELAND FOR
+THE AVOIDANCE OF DOUBLE TAXATION AND THE PREVENTION
+OF FISCAL EVASION WITH RESPECT TO TAXES ON INCOME AND
+CAPITAL GAINS, SIGNED AT DUBLIN ON JULY 28, 1997, TOGETHER
+WITH A PROTOCOL AND EXCHANGE OF NOTES DONE ON THE SAME DATE
+LETTER OF SUBMITTAL
+DEPARTMENT OF STATE,
+Washington, August 19, 1997.
+      THE PRESIDENT: I have the honor to submit to you, with a view to its transmission to the Senate
+for advice and consent to ratification, the Convention Between the Government of Ireland for the
+Avoidance of Double Taxation and the Prevention of Fiscal Evasion with Respect to Taxes on Income
+and Capital Gains, signed at Dublin on July 28, 1997, ("the Convention") together with a Protocol and
+an exchange of notes done on the same date, which, in each case provides binding interpretations and
+understandings concerning the application of the Convention.
+      This Convention will replace the existing Convention Between the Government of the United States
+of America and the Government of Ireland for the Avoidance of Double Taxation and the prevention of
+Fiscal Evasion with Respect to Taxes on Income signed at Dublin on September 13, 1949. The new
+Convention maintains many provisions of the existing convention, but it also provides certain additional
+benefits and updates the text to reflect current tax treaty policies.
+      This Convention is similar to the tax treaties between the United States and other OECD nations. It
+provides for maximum rates of tax to be applied to various types of income, protection from double
+taxation of income, exchange of information, and contains rules making its benefits unavailable to
+persons that are engaged in treaty shopping.
+      Like other U.S. tax conventions, this Convention provides rules specifying when income that arises
+in one of the countries and is attributable to residents of the other country may be taxed by the country
+===== PAGINA 3 =====
+in which the income arises (the "source" country). In most respects, the rates under the new Convention
+are the same as those in many recent U.S. tax treaties with OECD countries.
+      The maximum rates of tax that may be imposed on dividend and royalty income are generally the
+same as in the current U.S.-Ireland treaty. Pursuant to Article 10, dividends from direct investments are
+subject to tax by the source country at a rate of five percent. The threshold criterion for direct
+investment has been reduced from 95 percent ownership of the equity of a firm to ten percent consistent
+with other modern U.S. treaties, in order to facilitate direct investment. Other dividends are generally
+taxable at 15 percent. Under Article 12, royalties derived and beneficially owned by a resident of a
+Contracting State are generally taxable only in that State.
+      As in the current convention, under Article 11 of the proposed Convention, interest arising in one
+Contracting State and owned by a resident of the other Contracting State is exempt from taxation by the
+source country. The restrictions on the taxation of royalty and interest income do not apply, however, if
+the beneficial owner of the income is a resident of one Contracting State who carries on business in the
+other Contracting State in which the income arises and the income is attributable to a permanent
+establishment in that State. In that situation, the income is to be considered either business profit or
+income from independent personal services.
+      The maximum rates of withholding tax described in the preceding paragraphs are subject to the
+standard anti-abuse rules for certain classes of investment income found in other U.S. tax treaties and
+agreements.
+      The taxation of capital gains, described in Article 13 of the Convention, generally follows the rule of
+recent U.S. tax treaties as well as the OECD model. Gains on real property are taxable in the country in
+which the property is located, and gains from the sale of personal property are taxed only in the State of
+residence of the seller, unless attributable to a permanent establishment or fixed base in the other State.
+      Article 7 of the new Convention generally follows the standard rules for taxation by one country of
+the business profits of a resident of the other. The non-residence country's right to tax such profits is
+generally limited to cases in which the profits are attributable to a permanent establishment located in
+that country. The present convention grants taxing rights that are in some respects broader and in others
+narrower than those found in modern treaties.
+      As do all recent U.S. treaties, this Convention preserves the right of the United States to impose its
+branch profits tax in addition to the basic corporate tax on a branch's business (Article 7). This tax,
+which was introduced in 1986, is not addressed under the present treaty. Paragraph 4 of the Protocol
+also accommodates a provision of the 1986 Tax Reform Act that attributes to a permanent
+establishment income that is earned during the life of the permanent establishment but is deferred and not
+received until after the permanent establishment no longer exists.
+      Consistent with U.S. treaty policy, Article 8 of the new Convention permits only the country of
+residence to tax profits from international carriage by ships or aircraft and income from the use,
+===== PAGINA 4 =====
+maintenance, or rental of containers used in international traffic. This reciprocal exemption also extends
+to income from the rental of ships and aircraft if the rental income is incidental to income from the
+operation of ships and aircraft in international traffic.
+      Article 21 of the proposed Convention provides special thresholds to determine when income
+derived in connection with the offshore exploration for, and exploitation of, natural resources may be
+taxed in the source country. The general rule of Article 21 is that all exploitation activities give rise to a
+permanent establishment while exploration activities create a permanent establishment only if they
+continue for a period of 120 days in a twelve-month period. Article 21 also provides that salaries and
+other remuneration of a resident of one Contracting State derived from an employment in connection
+with offshore activities carried on through a permanent establishment in the other may be taxed by the
+other State. Other U.S. treaties with countries bordering on the North Sea (e.g., Norway, the United
+Kingdom, and the Netherlands) have similar articles dealing with offshore activities.
+      The taxation of income from the performance of personal services under Articles 14 through 17 of
+the new Convention is essentially the same as that under other recent U.S. treaties with OECD
+countries. Unlike many U.S. treaties, however, the new Convention, at Article 18, provides for the
+deductibility of cross-border contributions by temporary residents of one State to pension plans
+registered in the other State under limited circumstances.
+      Article 23 of the new Convention contains significant anti-treaty-shopping rules making its benefits
+unavailable to persons engaged in treaty-shopping. The current convention contains no such anti-treaty-
+shopping rules. The Limitation on Benefits of the proposed Convention also eliminates another potential
+abuse by denying U.S. benefits with respect to income attributable to third-country permanent
+establishments of Irish corporations that are exempt from tax in Ireland by operation of Irish law (the
+so-called "triangular cases"). Under the new Convention, full U.S. treaty benefits generally will be
+granted in these triangular cases only when the U.S. source income is subject to a significant level of tax
+in Ireland or in the country in which the permanent establishment is located.
+      The proposed Convention also contains rules necessary for its administration, including rules for the
+resolution of disputes under the Convention (Article 26) and for exchange of information (Article 27).
+      The Convention would permit the General Accounting Office and the tax-writing committees of
+Congress to obtain access to certain tax information exchanged under the Convention for use in their
+oversight of the administration of U.S. tax laws.
+      This Convention is subject to ratification. In accordance with Article 29, it will enter into force upon
+the exchange of instruments of ratification and will have effect for payments made or credited on or after
+the first day of January following entry into force with respect to taxes withheld by the source country;
+with respect to other taxes, the Convention will take effect for taxable periods beginning on or after the
+first day of January following the date on which the Convention enters into force. When the present
+convention affords a more favorable result for a taxpayer than the proposed Convention, the provisions
+of the present convention will continue to apply for one additional year. Article 29 (5) also provides that
+===== PAGINA 5 =====
+certain companies that are owned by residents of member states of the European Union or of parties to
+the North American Free Trade Agreement not be subject to the terms of Article 23 (5) (b) for an
+additional two years.
+      The proposed Convention will remain in force indefinitely unless terminated by one of the
+Contracting States, pursuant to Article 30. That Article provides that, at any time after five years from
+the date the Convention enters into force, either State may terminate the Convention by giving prior
+notice through diplomatic channels of six months.
+      A Protocol and an exchange of notes accompany the Convention and provide binding
+interpretations and understandings concerning the application of the Convention. The Protocol, which
+states that it is an integral part of the Convention, elaborates on the meaning of certain terms used in the
+Convention. The exchange of notes provides further clarification and will constitute an agreement that
+will enter into force upon entry into force of the Convention.
+      A technical memorandum explaining in detail the provisions of the Convention will be prepared by
+the Department of the Treasury and will be submitted separately to the Senate Committee on Foreign
+Relations.
+      The Department of the Treasury and the Department of State cooperated in the negotiation of the
+Convention. It has the full approval of both Departments.
+      Respectfully submitted,
+MADELEINE ALBRIGHT.
+LETTER OF TRANSMITTAL
+THE WHITE HOUSE, September 24, 1997.
+To the Senate of the United States:
+      I transmit herewith for Senate advice and consent to ratification the Convention Between the
+Government of the United States of America and the Government of Ireland for the Avoidance of
+Double Taxation and the Prevention of Fiscal Evasion with Respect to Taxes on Income and Capital
+Gains, signed at Dublin on July 28, 1997, (the "Convention") together with a Protocol and an exchange
+of notes done on the same date. Also transmitted is the report of the Department of State concerning
+the Convention.
+      This Convention, which is similar to tax treaties between the United States and other OECD
+nations, provides maximum rates of tax to be applied to various types of income and protection from
+double taxation of income. The Convention also provides for resolution of disputes and sets forth rules
+making its benefits unavailable to residents that are engaged in treaty shopping.
+===== PAGINA 6 =====
+      I recommend that the Senate give early and favorable consideration to this Convention, with its
+Protocol and exchange of notes, and that the Senate give its advice and consent to ratification.
+WILLIAM J. CLINTON.
+CONVENTION BETWEEN THE GOVERNMENT OF THE UNITED STATES OF AMERICA
+AND THE GOVERNMENT OF IRELAND FOR THE AVOIDANCE OF DOUBLE TAXATION
+AND THE PREVENTION OF FISCAL EVASION WITH RESPECT TO TAXES ON INCOME
+AND CAPITAL GAINS
+      The Government of the United States of America and the Government of Ireland, desiring to
+conclude a convention for the avoidance of double taxation and the prevention of fiscal evasion with
+respect to taxes on income and capital gains have agreed as follows:
+ARTICLE 1
+General Scope
+      1. This Convention shall apply only to persons who are residents of one or both of the Contracting
+States, except as otherwise provided in the Convention.
+      2. This Convention shall not restrict in any manner any benefit now or hereafter accorded:
+a) by the laws of either Contracting State; or
+b) by any other agreement between the Contracting States.
+      3. a) Notwithstanding the provisions of subparagraph 2 b):
+i) the provisions or Article 25 (Mutual Agreement Procedure) of this
+Convention exclusively shall apply to any dispute concerning whether a measure is
+within the scope of this Convention, and the procedures under this Convention
+exclusively shall apply to that dispute, notwithstanding any other agreement to which
+both Contracting States may be parties; and
+ii) unless the competent authorities determine that a taxation measure is not
+within the scope of this Convention, the non-discrimination obligations of this
+Convention exclusively shall apply with respect to that measure, except for such national
+treatment or most-favoured-nation obligations as may apply to trade in goods under the
+General Agreement on Tariffs and Trade. No national treatment or most-favoured-
+nation obligation under any other agreement shall apply with respect to that measure.
+b) For the purpose of this paragraph, a "measure" is a law, regulation, rule, procedure,
+decision, administrative action, or any similar provision or action.
+      4. Notwithstanding any provision of the Convention, a Contracting State may tax its residents (as
+determined under Article 4 (Residence)), and by reason of citizenship may tax its citizens, as if the
+===== PAGINA 7 =====
+Convention had not come into effect. For this purpose, the term "citizen" shall include a former citizen
+whose loss of citizenship had as one of its principal purposes the avoidance of tax, but only for a period
+of 10 years following such loss.
+      5. The provisions of paragraph 4 shall not affect:
+a) the benefits conferred by a Contracting State under paragraph 2 of Article 9
+(Associated Enterprises), paragraph 2 of Article 16 (Directors' Fees), paragraphs 1 (b) and 4
+of Article 18 (Pensions, Social Security, Annuities, Alimony and Child Support), and Articles
+24 (Relief From Double Taxation), 25 (Non-Discrimination), and 26 (Mutual Agreement
+Procedure); and
+b) the benefits conferred by a Contracting State under paragraph 5 of Article 18
+(Pensions, Social Security, Annuities, Alimony and Child Support), Articles 19 (Government
+Service), 20 (Students and Trainees) and 28 (Diplomatic Agents and Consular Officers), upon
+individuals who are neither citizens of, nor have been admitted for permanent residence in, that
+State.
+ARTICLE 2
+Taxes Covered
+      1. The existing taxes to which this Convention shall apply are:
+a) in the United States: the Federal income taxes imposed by the Internal Revenue
+Code of 1986 (but excluding the accumulated earnings tax, the personal holding company tax
+and social security taxes), and the Federal excise taxes imposed on insurance premiums paid to
+foreign insurers and with respect to private foundations (hereinafter referred to as "United States
+tax"). The Convention shall, however, apply to the Federal excise taxes imposed on insurance
+premiums paid to foreign insurers only to the extent that the risks covered by such premiums are
+not reinsured with a person not entitled to the benefits of this or any other convention which
+provides exemption from these taxes; and
+b) in Ireland: the income tax, the corporation tax and the capital gains tax (hereinafter
+referred to as "Irish tax").
+      2. This Convention shall apply also to any identical or substantially similar taxes that are imposed
+after the date of signature of the Convention in addition to, or in place of, the existing taxes. The
+competent authorities of the Contracting States shall notify each other of any significant changes that
+have been made in their respective taxation laws and of any official published material concerning the
+application of the Convention, including explanations, regulations, rulings, or judicial decisions.
+ARTICLE 3
+General Definitions
+1. For the purposes of this Convention, unless the context otherwise requires:
+===== PAGINA 8 =====
+a) the term "person" includes an individual, an estate, a trust, a partnership, a company
+and any other body of persons;
+b) the term "company" means any body corporate or any entity which is treated as a
+body corporate for tax purposes;
+c) the terms "enterprise of a Contracting States" and "enterprise of the other Contracting
+State" mean respectively an enterprise carried on by a resident of a Contracting State and an
+enterprise carried on by a resident of the other Contracting State;
+d) the term "international traffic" means any transport by a ship or aircraft, except when
+such transport is solely between places in a Contracting State;
+e) the term "competent authority" means:
+i) in the United States: the Secretary of the Treasury or his delegate; and
+ii) in Ireland: the Revenue Commissioners or their authorized representative;
+f) the term "United States" means the United States of America, and includes the states
+thereof and the District at Columbia; such term also includes any area outside the territorial
+waters of the United States which, in accordance with international law, has been or may
+hereafter be designated under the laws of the United States concerning the Continental Shelf as
+an area within which the rights of the United States with respect to the sea bed and subsoil and
+their natural resources may be exercised; the term, however, does not include Puerto Rico, the
+Virgin Islands, Guam or any other United States possession or territory;
+g) the term “Ireland” includes any area outside the territorial waters of Ireland which, in
+accordance with international law, has been or may hereafter be designated under the laws of
+Ireland concerning the Continental Shelf as an area within which the rights of Ireland with
+respect to the sea bed and subsoil and their natural resources may be exercised;
+h) the terms "the Contracting State", "one of the Contracting States" and "the other
+Contracting State" mean Ireland or the United States, as the context requires; and the term
+"Contracting States" means Ireland and the United States;
+i) the term "national" in relation to a Contracting State, means any citizen of that State
+and any legal person, association or other entity deriving its status as such from the laws in force
+in that State;
+j) the term “qualified governmental entity” means:
+i) any person that constitutes the Government or a Department of Government
+of a Contracting State, or a political subdivision or local authority of a Contracting
+State;
+ii) a person that is wholly owned, or the beneficial interest of which is wholly
+owned, directly or indirectly, by a Contracting State or a political subdivision or local
+authority of a Contracting State, provided
+(A) it is organized under the laws of the Contracting State,
+(B) its earnings are credited to its own account and
+(C) its assets vest in the Contracting State, political subdivision or local
+authority upon its dissolution; and
+iii) a pension, trust or fund of a person described in subparagraph i) or ii) that is
+constituted and operated exclusively to administer or provide pension benefits described
+in Article 19 (Government Service),
+===== PAGINA 9 =====
+provided the income of the entity does not inure to the benefit of a private person and the entity
+does not carry on commercial activity.
+      2. As regards the application of the Convention at any time by a Contracting State, any term not
+defined therein shall, unless the context otherwise requires, or the competent authorities agree to a
+common meaning pursuant to the provisions of Article 26 (Mutual Agreement Procedure), have the
+meaning that it has at that time under the law of that State for the purposes of the taxes to which the
+Convention applies.
+ARTICLE 4
+Residence
+      1. For the purposes of this Convention the term "resident of a Contracting State" means
+a) any person who, under the laws of that State, is liable to tax therein by reason of his
+domicile, residence, place of management, place of incorporation, or any other criterion of a
+similar nature. A United States citizen or an alien lawfully admitted for permanent residence in
+the United States is a resident of the United States, but only if such person has a substantial
+presence, permanent home or habitual abode in the United States;
+b) a qualified governmental entity of that State;
+c) a pension trust and any other organization established in that State and maintained
+exclusively to administer or provide retirement or employee benefits that is established or
+sponsored by a person that is otherwise a resident under Article 4 (Residence); and any
+charitable or other exempt organization, provided that the use of the organization's assets, both
+currently and upon the dissolution or liquidation of such organization, is limited to the
+accomplishment of the purposes that serve as the basis for such organization's exemption from
+income tax;
+d) in the case of the United States, a Regulated Investment Company and a Real Estate
+Investment Trust; in the case of Ireland, a Collective Investment Undertaking; and any similar
+investment entities agreed upon by the competent authorities of both Contracting States.
+      2. The term "resident of a Contracting State" does not include any person who is liable to tax in that
+State in respect only of income from sources in that State or of profits attributable to a permanent
+establishment in that State.
+      3. Where by reason of the provisions of paragraph l, an individual is a resident of both Contracting
+States, then his status shall be determined as follows:
+a) he shall be deemed to be a resident of that State in which he has a permanent home
+available to him; if he has a permanent home available to him in both States, he shall be deemed
+to be a resident of the State with which his personal and economic relations are closer (centre of
+vital interests);
+===== PAGINA 10 =====
+b) if the State in which he has his centre of vital interests cannot be determined, or if he
+does not have a permanent home available to him in either State, he shall be deemed to be a
+resident of the State in which he has an habitual abode;
+c) if he has an habitual abode in both States or in neither of them, he shall be deemed to
+be a resident of the State of which he is a national;
+d) if he is a national of both States or of neither of them, the competent authorities of the
+Contracting States shall settle the question by mutual agreement.
+      4. Where by reason of the provisions of paragraph 1 a person other than an individual is a resident
+of both Contracting States, the competent authorities of the Contracting States shall endeavour by
+mutual agreement to deem, for purposes of the Convention, the person to be a resident of one
+Contracting State only.
+ARTICLE 5
+Permanent Establishment
+      1. For the purposes of this Convention, the term “permanent establishment” means a fixed place of
+business through which the business of an enterprise is wholly or partly carried on.
+      2. The term "permanent establishment" includes especially:
+a) a place of management;
+b) a branch;
+c) an office;
+d) a factory;
+e) a workshop; and
+f) a mine, an oil or gas well, a quarry, or any other place of extraction of natural
+resources.
+      3. A building site or construction or installation project constitutes a permanent establishment only if
+it lasts more than twelve months.
+      4. Notwithstanding the preceding provisions of this article, the term “permanent establishment” shall
+be deemed not to include:
+a) the use of facilities solely for the purpose of storage, display, or delivery of goods or
+merchandise belonging to the enterprise;
+b) the maintenance of a stock of goods or merchandise belonging to the enterprise
+solely for the purpose of storage, display, or delivery;
+c) the maintenance of a stock of goods or merchandise belonging to the enterprise
+solely for the purpose of processing by another enterprise;
+d) the maintenance of a fixed place of business solely for the purpose of purchasing
+goods or merchandise, or of collecting information, for the enterprise;
+e) the maintenance of a fixed place of business solely for the purpose of carrying on, for
+the enterprise, any other activity of a preparatory or auxiliary character;
+===== PAGINA 11 =====
+f) the maintenance of a fixed place of business solely for any combination of the
+activities mentioned in subparagraphs a) to e), provided that the overall activity of the fixed
+place of business resulting from this combination is of a preparatory or auxiliary character.
+      5. Notwithstanding the provisions of paragraphs 1 and 2, where a person - other than an agent of
+an independent status to which paragraph 6 applies - is acting on behalf of an enterprise and has, and
+habitually exercises, in a Contracting State an authority to conclude contracts in the name of the
+enterprise, that enterprise shall be deemed to have a permanent establishment in that State in respect of
+any activities which that person undertakes for the enterprise, unless the activities of such person are
+limited to those mentioned in paragraph 4 which, if exercised through a fixed place of business, would
+not make this fixed place of business a permanent establishment under the provisions of that paragraph.
+      6. An enterprise shall not be deemed to have a permanent establishment in a Contracting State
+merely because it carries on business in that State through a broker, general commission agent, or any
+other agent of an independent status, provided that such persons are acting in the ordinary course of
+their business as independent agents.
+      7. The fact that a company which is a resident of a Contracting State controls or is controlled by a
+company which is a resident of the other Contracting State, or which carries on business in that other
+State (whether through a permanent establishment or otherwise), shall not of itself constitute either
+company a permanent establishment of the other.
+ARTICLE 6
+Income from Removable (Real Property)
+      1. Income derived by a resident of a Contracting State from immovable property (real property)
+including income from agriculture or forestry, situated in the other Contracting State may be taxed in that
+other State.
+      2. The term immovable property (real property) shall have the meaning which it has under the law of
+the Contracting State in which the property in question is situated.
+      3. The provisions of paragraph 1 shall apply to income derived from the direct use, letting, or use in
+any other form of immovable property.
+      4. The provisions of paragraphs 1 and 3 shall also apply to the income from immovable property of
+an enterprise and to income from immovable property used for the performance of independent
+personal services.
+ARTICLE 7
+Business Profits
+===== PAGINA 12 =====
+      1. The profits of an enterprise of a Contracting State shall be taxable only in that State unless the
+enterprise carries on business in the other Contracting State through a permanent establishment situated
+therein. If the enterprise carries on business as aforesaid, the profits of the enterprise may be taxed in
+the other State but only so much of them as is attributable to that permanent establishment.
+      2. Subject to the provisions of paragraph 3, where an enterprise of a Contracting State carries on
+business in the other Contracting State through a permanent establishment situated therein, there shall in
+each Contracting State be attributed to that permanent establishment the profits that it might be
+expected to make if it were a distinct and separate enterprise engaged in the same or similar activities
+under the same or similar conditions and dealing wholly independently with the enterprise of which it is a
+permanent establishment.
+      3. In determining the profits of a permanent establishment, there shall be allowed as deductions
+expenses that are incurred for the purposes of the permanent establishment, including a reasonable
+allocation of executive and general administrative expenses, research and development expenses,
+interest, and other expenses incurred for the purposes of the enterprise as a whole (or the part thereof
+which includes the permanent establishment), whether incurred in the State in which the permanent
+establishment is situated or elsewhere.
+      4. Notwithstanding paragraph 6 below, insofar as it has been customary in a Contracting State to
+determine the profits to be attributed to a permanent establishment on the basis of an apportionment of
+the total profits of the enterprise to its various parts, nothing in paragraph 2 shall preclude that
+Contracting State from determining the profits to be taxed by such an apportionment as may be
+customary; the method of apportionment adopted shall, however, be such that the result shall be in
+accordance with the principles contained in this Article.
+      5. No profits shall be attributed to a permanent establishment by reason of the mere purchase by
+that permanent establishment of goods or merchandise for the enterprise.
+      6. For the purposes of this Article, the profits to be attributed to the permanent establishment shall
+include only the profits derived from the assets or activities of the permanent establishment and shall be
+determined by the same method of accounting year by year unless there is good and sufficient reason to
+the contrary.
+      7. The term “profits” as used in this Article includes income from the performance of personal
+services by an enterprise and income from the rental of tangible movable property.
+      8. Where profits include items of income that are dealt with separately in other Articles of the
+Convention, then the provisions of those Articles shall not be affected by the provisions of this Article.
+ARTICLE 8
+===== PAGINA 13 =====
+Shipping and Air Transport
+      1. Profits of an enterprise of a Contracting State from the operation of ships or aircraft in
+international traffic shall be taxable only in that State.
+      2. For the purposes of this Article, profits from the operation of ships or aircraft in international
+traffic include profits derived from the rental of ships or aircraft on a full (time or voyage) basis. They
+also include profits from the rental of ships or aircraft on a bareboat basis if such ships or aircraft are
+operated in international traffic by the lessee, or if the rental income is incidental to profits from the
+operation of ships or aircraft in international traffic. Profits derived by an enterprise from the inland
+transport of property or passengers within either Contracting State, shall be treated as profits from the
+operation of ships or aircraft in international traffic if such transport is undertaken in the course of
+international traffic by the enterprise.
+      3. Profits of an enterprise of a Contracting State from the use, maintenance, or rental of containers
+(including trailers, barges, and related equipment for the transport of containers) used in international
+traffic shall be taxable only in that State.
+      4. The provisions of paragraphs 1 and 3 shall also apply to profits from participation in a pool, a
+joint business, or an international operating agency.
+ARTICLE 9
+Associated Enterprises
+      1. Where:
+a) an enterprise of a Contracting State participates directly or indirectly in the
+management, control or capital of an enterprise of the other Contracting State; or
+b) the same persons participate directly or indirectly in the management, control, or
+capital of an enterprise of a Contracting State and an enterprise of the other Contracting State,
+and in either case conditions are made or imposed between the two enterprises in their commercial or
+financial relations that differ from those that would be made between independent enterprises, then, any
+profits that, but for those conditions, would have accrued to one of the enterprises, but by reason of
+those conditions have not so accrued, may be included in the profits of that enterprise and taxed
+accordingly.
+      2. Where a Contracting State includes in the profits of an enterprise of that State, and taxes
+accordingly, profits on which an enterprise of the other Contracting State has been charged to tax in that
+other State, and the other Contracting State agrees that the profits so included are profits that would
+have accrued to the enterprise of the first-mentioned State if the conditions made between the two
+enterprises had been those that would have been made between independent enterprises, then that other
+State shall make an appropriate adjustment to the amount of the tax charged therein on those profits in
+===== PAGINA 14 =====
+determining such adjustment, due regard shall be had to the other provisions of this Convention and the
+competent authorities of the Contracting States shall if necessary consult each other.
+ARTICLE 10
+Dividends
+      1. Dividends paid by a company that is a resident of a Contracting State to a resident of the other
+Contracting State may be taxed in that other State.
+      2. However, such dividends may also be taxed in the Contracting State of which the company
+paying the dividends is a resident and according to the laws of that State, but if the beneficial owner of
+the dividends is a resident of the other Contracting State, except as otherwise provided in this Article,
+the tax so charged shall not exceed:
+a) 5 percent of the gross amount of the dividends if the beneficial owner is a company
+that owns at least 10 percent of the voting stock of the company paying the dividends;
+b) 15 percent of the gross amount of the dividends in all other cases.
+      The competent authorities of the Contracting States shall by mutual agreement settle the mode of
+application of these limitations. This paragraph shall not affect the taxation of the company in respect of
+the profits out of which the dividends are paid.
+      3. However, as long as an individual resident in Ireland is entitled under Irish law to a tax credit in
+respect of dividends paid by a company resident in Ireland, the following provisions of this paragraph
+shall apply to dividends paid by a company resident in Ireland instead of the provisions of paragraphs 1
+and 2 of this Article:
+a)  i) Dividends paid by a company which is a resident of Ireland to a resident of
+the United States may be taxed in the United States.
+ii) Where a resident of the United States is entitled to a tax credit in respect of
+such a dividend under subparagraph b) of this paragraph, tax may also be charged in
+Ireland and according to the laws of Ireland on the aggregate of the amount or value of
+that dividend and the amount of that tax credit at a rate not exceeding 15 percent.
+iii) Except as provided in subparagraph a) ii) of this paragraph, dividends paid
+by a company which is a resident of Ireland and which are beneficially owned by a
+resident of the United States shall be exempt from any tax in Ireland which is chargeable
+on dividends.
+b) A resident of the United States who receives dividends from a company which is a
+resident of Ireland shall, subject to the provisions of subparagraph c) of this paragraph and
+provided he is the beneficial owner of the dividends, be entitled to the tax credit in respect
+thereof to which an individual resident in Ireland would have been entitled had he received those
+dividends and to the payment of any excess of that tax credit over his liability to Irish tax. Any
+such tax credit shall he treated for United States foreign tax credit purposes as a dividend.
+===== PAGINA 15 =====
+     c) The provisions of subparagraph b) of this paragraph shall not apply where the 
+beneficial owner of the dividend (being a company) is, or is associated with, a 
+company which either alone or together with one or more associated companies controls 
+directly or indirectly 10 percent or more of the voting power in the company paying 
+the dividend. For the purpose of this subparagraph, two companies shall be deemed to 
+be associated if one is controlled directly or indirectly by the other or both are 
+controlled directly or indirectly by a third company. 
+ 
+     4. Subparagraph a) of paragraph 2 shall not apply in the case of dividends paid 
+by a Regulated Investment Company or a Real Estate Investment Trust (REIT). In the 
+case of a REIT, subparagraph b) of paragraph 2 also shall not apply, unless the 
+dividend is beneficially owned by an individual holding a less than 10 percent 
+interest in the REIT. 
+ 
+     5. The term "dividends" as used in this Article means income from shares or 
+other rights, not being debt-claims, and includes any income or distribution treated 
+as income from shares under the taxation laws of the Contracting State of which the 
+company paying the dividends or income or making the distribution is a resident. 
+ 
+     6. The provisions of paragraphs 1, 2 and 3 shall not apply if the beneficial 
+owner of the dividends, being a resident of a Contracting State, carries on business 
+in the other Contracting State, of which the company paying the dividends is a 
+resident, through a permanent establishment situated therein, or performs in that 
+other State independent personal services from a fixed base situated therein, and the 
+dividends are attributable to such permanent establishment or fixed base. In such 
+case the provisions of Article 7 (Business Profits) or Article l4 (Independent 
+Personal Services), as the case may be, shall apply. 
+ 
+     7. A company which is a resident of a Contracting State and which has a 
+permanent establishment in the other Contracting State or which is subject to tax on 
+a net basis in that other State on items of income or gains that may be taxed in that 
+other State under Article 6 (Income from Immovable Property (Real Property)) or under 
+paragraph 1 of Article 13 (Capital Gains) may be subject in that other State to a tax 
+in addition to the tax allowable under the other provisions of this Convention. Such 
+tax, however, may be imposed only on: 
+ 
+     a) in the case of the United States, 
+ 
+     i) the portion of the business profits of the company attributable to the 
+permanent establishment, and 
+ 
+     ii) the portion of the income or gains referred to in the preceding sentence 
+which may be subject to tax under Article 6 or 13, which represents the "dividend 
+equivalent amount", as that term is defined under the laws of the United States, as 
+they may be amended from time to time without changing the general principle thereof, 
+and 
+ 
+     b) in the case of Ireland, 
+ 
+     i) the portion of the business profits of the company attributable to the 
+permanent establishment, and 
+ 
+     ii) the portion of the income or gains referred to in the first sentence of this 
+paragraph which may be taxed in Ireland under Article 6 or under Article 13,which in 
+both cases represent an amount that, if those business profits, income or gains arose 
+to a subsidiary company incorporated in Ireland, would be distributed as a dividend. 
+ 
+     8. The tax referred to in paragraph 7 may not be imposed at a rate in excess of 
+the rate specified in subparagraph a) of paragraph 2. 
+===== PAGINA 16 =====
+ARTICLE 11
+Interest
+      1. Interest arising in a Contracting State and beneficially owned by a resident of the other
+Contracting State may be taxed only in that other State.
+      2. The term “interest” as used in this Article means income from debt-claims of every kind, whether
+or not secured by mortgage, and whether or not carrying a right to participate in the debtors profits, and
+in particular, income from government securities and income from bonds or debentures, including
+premiums or prizes attaching to such securities, bonds, or debentures, and all other income that is
+treated as income from money lent by the taxation law of the Contracting State in which the income
+arises. Income dealt with in Article 10 (Dividends) and penalty charges for late payment shall not be
+regarded as interest for the purposes of this Article.
+      3. The provisions of paragraph 1 shall not apply if the beneficial owner of the interest, being a
+resident of a Contracting State, carries on business in the other Contracting State in which the interest
+arises, through a permanent establishment situated therein, or performs in that other State
+independent personal services from a fixed base, situated therein, and the interest is attributable to such
+permanent establishment or fixed base in such case the provisions of Article 7 (Business Profits) or
+Article 14 (Independent Personal Services), as the case may be, shall apply.
+      4. Interest shall be deemed to arise in a Contracting State when
+a) the payer is a resident of that State, or
+b) the payer, whether a resident of a Contracting State or not, has in that Contracting
+State a permanent establishment or a fixed base in connection with which the indebtedness on
+which the interest paid was incurred and such interest is borne by such permanent establishment
+or fixed base.
+      5. Where, by reason of a special relationship between the payer and the beneficial owner or
+between both of them and some other person, the amount of the interest, having regard to the debt-
+claim for which it is paid, exceeds the amount which would have been agreed upon by the payer and the
+beneficial owner in the absence of such relationship, the provisions of this Article shall apply only to the
+last-mentioned amount. In such case the excess part of the payments shall remain taxable according to
+the laws of each State, due regard being had to the other provisions of this Convention.
+       4. The excess of the amount deductible by a permanent establishment in the United States of a
+company which is a resident of Ireland over the interest actually paid by such permanent establishment,
+as those amounts are determined pursuant to the laws of the United States, shall be treated as interest
+beneficially owned by a resident of Ireland.
+ARTICLE 12
+Royalties
+===== PAGINA 17 =====
+      1. Royalties arising in a Contracting State and beneficially owned by a resident of the other
+Contracting State may be taxed only in that other State.
+      2. The term “royalties” as used in this Convention means:
+a) payments of any kind received as consideration to the use of, or the right to use, any
+copyright of literature, artistic, or scientific work (including cinematographic films, and audio and
+video tapes and disks), any patent, trademark, design or model, plan, secret  formula or
+process, or other like right or property, or for information concerning industrial, commercial, or
+scientific experience; and
+b) gains derived from the alienation of any property described in subparagraph a),
+provided that such gains are contingent on the productivity, use, or disposition of the property.
+      3. The provisions of paragraph 1 shall not apply if the beneficial owner of the royalties, being a
+resident of a Contracting State, carries on business in the other Contracting State in which the royalties
+arise, through a permanent establishment situated therein, or performs in that other State independent
+personal services from a fixed base situated therein, and the royalties are attributable to such permanent
+establishment or fixed base. In such case the provisions of Article 7 (Business Profits) or Article 14
+(Independent Personal Services), as the case may be, shall apply.
+      4. Where, by reason of a special relationship between the payer and the beneficial owner or
+between both of them and some other person, the amount of the royalties, having regard to the use,
+right, or information for which they are paid, exceeds the amount which would have been agreed upon
+by the payer and the beneficial owner in the absence of such relationship, the provisions of this Article
+shall apply only to the last-mentioned amount. In such case the excess part of the payments shall remain
+taxable according to the laws of each Contracting State, due regard being had to the other provisions of
+the Convention.
+       5. A State may not impose any tax on royalties paid by a resident of the other State, except insofar
+as
+a) the royalties are paid to a resident of the first-mentioned State;
+b) the royalties are attributable to a permanent establishment or a fixed base situated in
+the first-mentioned State;
+c) the contract under which the royalties are paid was concluded in connection with a
+permanent establishment or a fixed base which the payer has in the first-mentioned State, and
+such royalties are borne by such permanent establishment or fixed base and are not paid to a
+resident of the other State; or
+d) royalties are paid in respect of intangible property used in the first-mentioned State
+and not paid to a resident of the other State, but only where the payer has also received a
+royalty paid by a resident of the first-mentioned State, or borne by a permanent establishment
+or fixed base situated in that State, in respect of the use of that property in the first-mentioned
+State and provided that the use of the intangible property in question is not a component part of,
+===== PAGINA 18 =====
+nor directly related to, the active conduct of a trade or business in which the payer is engaged as
+meant in paragraph 3 of Article 23 (Limitation on Benefits).
+ARTICLE 13
+Capital Gains
+      1. Gains derived by a resident of a Contracting State from the alienation of immovable property
+(real property) referred to in Article 4 (Income from Immovable Property (Real Property)) and situated
+in the other Contracting State may be taxed in that other State.
+      2. For the purposes of this Article, the term “immovable property (real property) referred to in
+Article 6 (Income from Immovable Property (Real Property)) and situated in the other Contracting
+State” shall include:
+a) in the United States, a United States real property interest; and
+b) in Ireland, shares (including stock and any security) other then shares quoted on a
+stock exchange, deriving the greater part of their value directly or indirectly from immovable
+property situated in Ireland.
+      3. Gains from the alienation of movable property that are attributable to a permanent establishment
+that an enterprise of a Contracting State has in the other Contracting State, or that
+are attributable to a fixed base that is available to a resident of a Contracting State in the other
+Contracting State for the purpose of performing independent personal services, and gains from the
+alienation of such a permanent establishment (alone or with the whole enterprise) or such a fixed base,
+may be taxed in that other State.
+      4. Gains derived by an enterprise of a Contracting State from the alienation of ships, aircraft or
+containers operated in international traffic or personal property pertaining to the operation of such ships,
+aircraft or containers, shall be taxable only in that State.
+      5. Gains from the alienation of any property other than property referred to in paragraphs 1 to 4
+inclusive shall be taxable only in the Contracting State of which the alienator is a resident.
+ARTICLE 14
+Independent Personal Services
+      1. Income derived by a resident or a Contracting State in respect of professional services or other
+activities of an independent character shall be taxable only in that State, unless he has a fixed base
+regularly available to him in the other Contracting State for the purpose of performing his activities. If he
+has such a fixed base, the income may be taxed in the other State but only so much of it as is
+attributable to that fixed base.
+===== PAGINA 19 =====
+      2. The term “professional services” includes especially independent scientific, literary, artistic,
+educational or teaching activities as well as the independent activities of physicians, lawyers, engineers,
+architects, dentists and accountants.
+ARTICLE 15
+Dependent Personal Services
+      1. Subject to the provisions of Articles 15 (Directors' Fees), 18 (Pensions Social Security Annuities,
+Alimony and Child Support) and 19 (Government Service), salaries, wages, and other similar
+remuneration derived by a resident of a Contracting State in respect of an employment shall be taxable
+only in that State unless the employment is exercised in the other Contracting State. If the employment is
+so exercised, such remuneration as is derived therefrom may be taxed in that other State.
+      2. Notwithstanding the provisions of paragraph 1, remuneration derived by a resident of a
+Contracting State in respect of an employment exercised in the other Contracting State shall be taxable
+only in the first-mentioned State if:
+a) the recipient is present in the other State for a period or periods not exceeding in the
+aggregate 183 days in any twelve month period commencing or ending in the fiscal year
+concerned;
+b) the remuneration is paid by, or on behalf of, an employer who is not a resident of the
+other State; and
+c) the remuneration is not borne by a permanent establishment or a fixed base which the
+employer has in the other State.
+      3. Notwithstanding the preceding provisions of this Article, remuneration described in paragraph 1
+that is derived by a resident of a Contracting State in respect of an employment as a member of the
+regular complement of a ship or aircraft operated in international traffic may be taxed only in that State.
+ARTICLE 16
+Directors’ Fees
+      1. Directors' fees and other similar payments derived by a resident of a Contracting State in his
+capacity as a member of the board of directors of a company that is a resident of the other Contracting
+State may be taxed in the State where such fees or payments arise.
+      2. Directors' fees and other similar payments shall be deemed to arise in the Contracting State in
+which the company is resident except to the extent that such fees are paid in respect of attendance at
+meetings held in the other Contracting State.
+ARTICLE 17
+===== PAGINA 20 =====
+Artistes and Sportsmen
+      1. Income derived by a resident of a Contracting State as an entertainer, such as a theatre, motion
+picture, radio, or television artiste, or a musician, or as a sportsmen, from his personal activities as such
+exercised in the other Contracting State, which income would be exempt from tax in that other
+Contracting State under the provisions of Articles 14 (Independent Personal Services) and 15
+(Dependent Personal Services), may be taxed in that other State, except where the amount of the gross
+receipts derived by such entertainer or sportsman, including expenses reimbursed to his or borne on his
+behalf, from such activities does not exceed twenty thousand
+United States dollars ($20,000) or its equivalent in Irish pounds for the taxable year concerned.
+      2. Where income in respect of activities exercised by an entertainer or a sportsmen who is a
+resident of a Contracting State in his capacity as such accrues not to the entertainer or sportsman
+himself but to another person who is a resident of that State, that income of that other person,
+notwithstanding the provisions of Articles 7 (Business Profits) and 14 (Independent Personal Services),
+may be taxed in the Contracting State in which the activities of the entertainer or sportsman are
+exercised, unless it is established that neither the entertainer or sportsman nor persons related thereto
+participate directly or indirectly in the receipts or profits of that other person in any manner, including the
+receipt of deferred remuneration, bonuses, fees, dividends, partnership distributions, or other
+distributions.
+ARTICLE 18
+Pensions, Social Security, Annuities,
+Alimony and Child Support
+      1.  a) Subject to the provisions or Article 19 (Government Service) pensions and other
+similar remuneration derived and beneficially owned by a resident of a Contracting State in
+consideration of past employment shall be taxable only in that State; and
+b) notwithstanding the provisions of Article 19, payments made by a Contracting State
+under provisions of the social security or similar legislation of that State to a resident of the other
+Contracting State shall be taxable only in that other State.
+      2. Annuities derived and beneficially owned by a resident of a Contracting State shall be taxable
+only in that State. The term “annuities” as used in this paragraph means a stated sum paid periodically at
+stated times during a specified number of years, or for life, under an obligation to make the payments in
+return for adequate and full consideration (other than services rendered).
+      3. Alimony paid by a resident of a Contracting State, and deductible therein, to a resident of the
+other Contracting State shall be taxable only in that other State. The term "alimony" as used in this
+paragraph means periodic payments made pursuant to a written separation agreement or a decree of
+divorce, judicial separation, separate maintenance, or compulsory support.
+===== PAGINA 21 =====
+      4. Periodic payments, not dealt with in paragraph 3, for the support of a minor child made pursuant
+to a written separation agreement or a decree of divorce, judicial separation, separate maintenance, or
+compulsory support, paid by a resident of a Contracting State to a resident of the other Contracting
+State, shall be exempt from tax in both Contracting States.
+      5. For the purposes of this Convention, where an individual who is a member of a pension plan that
+is established and recognized under the legislation of one of the Contracting States performs personal
+services in the other Contracting State, contributions paid by the individual to the plan during the period
+that he performs personal services in the other Contracting State shall be deductible in computing his
+taxable income in that State within the limits that would apply if the contributions were paid to a pension
+plan that is established and recognized under the legislation of that State, and any payments made to the
+plan by or on behalf of his employer during that period shall not be treated as part of the employee's
+taxable income and shall be allowed as a deduction in computing the profits of his employer in that other
+State. The provisions of this paragraph shall not apply unless:
+a) contributions by or on behalf of the individual to the plan (or to another similar plan
+for which this plan was substituted) were made immediately before he visited the other State;
+b) the individual has performed personal services in the other State for a cumulative
+period not exceeding five calendar years; and
+c) the competent authority of the other State has agreed that the pension plan generally
+corresponds to a pension plan recognized for tax purposes by that State.
+The benefits granted under this paragraph shall not exceed the benefits that would be allowed by the
+other State to its residents for contributions to a pension plan recognized for tax purposes by that State.
+      6. Where, under paragraph 5, contributions to a foreign pension plan are deductible in computing an
+individual's taxable income in a Contracting State and, under the laws in force in that State, the individual
+is, in respect of income or gains, subject to tax by reference only to the amount thereof which is remitted
+to or received in that State, and not by reference to the full amount of such income or gains, then the
+deduction which would otherwise be allowed to the individual under paragraph 5 in respect of such
+contributions shall be reduced to an amount that bears the same proportion to such deduction as the
+amount remitted bears to the full amount of the income or gains of the individual that would be taxable in
+that State if the income or gains had not been taxable on the amount remitted only.
+ARTICLE 19
+Government Service
+      1.  a) Salaries wages and other similar remuneration other than a pension, paid by a
+Contracting State or a political subdivision or a local authority thereof to an individual in respect
+of services rendered to that State or subdivision or authority shall be taxable only in that State.
+b) However, such salaries, wages and other similar remuneration shall be taxable only in
+the other Contracting State if the services are rendered in that State and the individual is a
+resident of that State who:
+===== PAGINA 22 =====
+i) is a national of that State; or
+ii) did not become a resident of that State solely for the purpose of rendering the
+services.
+      2.  a) Any pension paid by, or out of funds created by, a Contracting State or a political
+subdivision or a local authority thereof to an individual in respect of services rendered to that
+State or subdivision or authority shall be taxable only in that State.
+b) However, such pension shall be taxable only in the other Contracting State if the
+individual is a resident of, and a national of, that State.
+      3. The provisions of Articles 15 (Dependent Personal Services), 16 (Directors' Fees), 17 (Artistes
+and Sportsmen) and 16 (Pensions, Social Security, Annuities, Alimony and Child Support) shall apply
+to salaries, wages and other similar remuneration, and to pensions, in respect of services rendered in
+connection with a business carried on by a Contracting State or a political subdivision or a local
+authority thereof.
+ARTICLE 20
+Students and Trainees
+      Payments received by a student, apprentice, or business trainee who is or was immediately before
+visiting a Contracting State a resident of the other Contracting State, and who is present in the first-
+mentioned State for the purpose of his full-time education at a recognized educational institution, or for
+his full-time training, shall not be taxed in that State, provided that such payments arise outside that
+State, and are for the purpose of his maintenance, education, or training. The exemption from tax
+provided by this Article shall apply to an apprentice or business trainee only for a period of time not
+exceeding one year from the date he first arrives in the first-mentioned Contracting State for the purpose
+of his training.
+ARTICLE 21
+Offshore Exploration and Exploitation Activities
+      1. The provisions of this Article shall apply notwithstanding any other provision of this Convention
+where activities are carried on offshore in connection with the exploration (hereinafter called
+“exploration activities”) or exploitation (hereinafter called "exploitation activities") of the sea bed and
+subsoil and their natural resources situated in a Contracting State.
+      2. An enterprise of a Contracting State which carries on exploration activities or exploitation
+activities in the other Contracting State shall, subject to paragraph 3 of this Article, be deemed to be
+carrying on business in that other State through a permanent establishment situated therein.
+===== PAGINA 23 =====
+      3. Exploration activities which are carried on by an enterprise of a Contracting State in the other
+Contracting State for a period or periods not exceeding in the aggregate 120 days within any period of
+twelve months shall not constitute the carrying on of business through a permanent establishment situated
+therein. For the purposes of determining such period or periods:
+a) where an enterprise of a Contracting State carrying on exploration activities in the
+other Contracting State is associated with another enterprise carrying on substantially similar
+exploration activities there, the former enterprise shall be deemed to be carrying on all such
+activities of the latter enterprise, except to the extent that those activities are carried on at the
+same time as its own activities;
+b) an enterprise shall be regarded as associated with another enterprise if one
+participates directly or indirectly in the management control or capital of the other or if the same
+persons participate directly or indirectly in the management, control or capital of both
+enterprises.
+      4. A resident of a Contracting State who carries on exploration activities or exploitation activities in
+the other Contracting State, which consist of professional services or other activities of an independent
+character, shall be deemed to be performing those activities from a fixed base in that other State.
+However, income derived by a resident of a Contracting State in respect of such exploration activities
+performed in the other Contracting State shall not be taxable in that other State if the activities are
+performed in that other State for a period or periods not exceeding in the aggregate 120 days within any
+period of twelve months.
+      5. Salaries, wages and other similar remuneration derived by a resident of a Contracting State in
+respect of an employment connected with a permanent establishment that is deemed to exist with
+respect to exploration activities or exploitation activities carried on in the other Contracting State may be
+taxed in that other State, to the extent that the duties are performed offshore in that other State.
+ARTICLE 22
+Other Income
+      1. Items of income beneficially owned by a resident of a Contracting State, wherever arising, not
+dealt with in the foregoing Articles of this Convention shall be taxable only in that State.
+      2. The provisions of paragraph 1 shall not apply to income, other than income from immovable
+property as defined in paragraph 2 of Article 6 (Income from Immovable Property (Real Property)), if
+the beneficial owner of the income, being a resident of a Contracting State, carries on business in the
+other Contracting State through a permanent establishment situated therein, or performs in that other
+State independent personal services from a fixed base situated therein, and the income is attributable to
+such permanent establishment or fixed base. In such case the provisions of Article 7 (Business Profits)
+or Article 14 (Independent Personal Services), as the case may be, shall apply.
+===== PAGINA 24 =====
+ARTICLE 23
+Limitation on Benefits
+      1. Except as otherwise provided in this Article, a resident of a Contracting State that derives income
+from the other Contracting State shall be entitled to all the benefits of this Convention only if such
+resident is a "qualified person" as defined in this Article.
+      2. A resident of a Contracting State is a qualified person for a fiscal year only if such resident is
+either:
+a) an individual;
+b) a qualified governmental entity;
+c) a person other than an individual, if:
+i) at least 50 percent of the beneficial interest in such person (or in the case of a
+company at least 50 percent of the aggregate vote and value of the company's shares) is
+owned, directly or indirectly, by qualified persons or residents or citizens of the United
+States, provided that such ownership test shall not be satisfied in the case of a chain of
+ownership unless it is satisfied by the last owners in the chain, and
+ii) amounts paid or accrued by the person during its fiscal year:
+A) to persons that are neither qualified persons nor residents or citizens
+of the United States, and
+B) that are deductible for income tax purposes in that fiscal year in the
+person's State of residence (but not including arm's length payments in the
+ordinary course of business for
+(l) services or tangible property, and
+(2) payments in respect of financial obligations to a bank
+provided that where such a bank is not a resident of either Contracting
+State such payment is attributable to a permanent establishment of such
+bank, and the permanent establishment is located in either Contracting
+State)
+do not exceed 50 percent of the gross income of the person;
+d) a person, other than an individual or a company, if:
+i) the principal class of units in that person is listed on a recognized stock
+exchange located in either Contracting State and is substantially and regularly traded on
+one or more recognized stock exchanges, or
+ii) the direct or indirect owners of at least 50 percent of the beneficial interests in
+that person are persons referred to in subparagraph d) i) or e) i);
+e) a company, if:
+i) the principal class of its shares is substantially and regularly traded on one or
+more recognized stock exchanges, or
+ii) at least 50 percent of the aggregate vote and value of its shares is owned
+directly or indirectly by companies described in subparagraph e) i), or by persons
+referred to in subparagraph b), or by companies more than 50 percent of the aggregate
+===== PAGINA 25 =====
+vote and value of which is owned by persons referred to in subparagraph b), or by any
+combination of the above;
+f) a person described in subparagraph c) of paragraph 1 of Article 4 (Residence),
+provided that more than half of the beneficiaries, members or participants, if any, in such organization
+are qualified persons.
+3. a) A resident of a Contracting State that is not a qualified person shall be entitled to the
+benefits of this Convention with respect to an item of income derived from the other State, if:
+i) such resident is engaged in the active conduct of a trade or business in the
+first-mentioned State (other than the business of making or managing investments, unless
+such business is carried out by a bank or insurance company acting in the ordinary
+course of its business), and
+ii) the item of income is connected with or incidental to the trade or business in
+the first-mentioned State, provided that, where such item is connected with a trade or
+business in the first-mentioned State and such resident has an ownership interest in the
+activity in the other State that generated the income, the trade or business is substantial
+in relation to that activity.
+b) For the purposes of subparagraph a) ii),
+i) an item of income shall, in any case, be connected with a trade or business if
+the activity in the other State that generated the item of income is a line of business that
+forms a part of or is complementary to the trade or business conducted in the first-
+mentioned State by the income recipient;
+ii) whether the trade or business of the resident in the first-mentioned State is
+substantial in relation to the activity in the other State shall be determined based on all
+the relevant facts and circumstances. In any case, however, the trade or business will be
+deemed substantial if, for the preceding fiscal year, or for the average of the three
+preceding fiscal years, the asset value, the gross income and the payroll expense that are
+related to the trade or business in the first-mentioned State equals at least 7.5 percent of
+the asset value, the gross income and the payroll expense, respectively, that are related
+to the activity that generated the income in the other State, and the average of the three
+ratios exceeds 10 percent,
+provided that for the purposes of calculating the above ratios, there shall be taken into account only the
+resident's proportionate ownership interest in such trade, business or activities, whether held directly or
+indirectly.
+      4. A resident of one of the Contracting States that derives from the other State income referred to in
+Article 8 (Shipping and Air Transport) and which is not entitled to the benefits of this Convention
+because of the foregoing paragraphs, shall nevertheless be entitled to the benefits of this Convention
+with respect to such income if at least 50 percent of the beneficial interest in such person (or in the case
+of a company, at least 50 percent of the aggregate vote and value of the company's shares) is owned
+directly or indirectly:
+a) by qualified persons or citizens of the United States or individuals who are residents
+of a third state; or
+===== PAGINA 26 =====
+b) by a company or combination of companies the principal class of shares in which are
+substantially and regularly traded on an established securities market in a third state,
+provided that such third state grants an exemption under similar terms for profits referred to in Article 8
+of this Convention to citizens and corporations of the other State either under its national law or in
+common agreement with that other State or under a convention between that third state and the other
+State.
+5. a) A company that is a resident of a Contracting State shall also be entitled to all of the
+benefits of the Convention if:
+i) at least 95 percent of the aggregate vote and value of all its shares is owned
+directly or indirectly by seven or fewer qualified persons or persons that are residents of
+member states of the European Union or of parties to the North American Free Trade
+Agreement (NAFTA) or any combination thereof; and
+ii) such company meets the base reduction test described in subparagraph c) ii)
+of paragraph 2, provided that a resident of a member State of the European Union or a
+party to NAFTA shall be treated as a qualified person for the purpose of that test.
+b) Notwithstanding the other provisions of this paragraph, a company which is in receipt
+of income referred to in Article 10 (Dividends), 11 (Interest) or 12 (Royalties) shall not be
+entitled to the benefit of those Articles in respect of such income unless at least 95 percent of its
+shares is held directly or indirectly by one or more persons that are residents of member states
+of the European Union or of parties to NAFTA or any combination thereof, who under the
+income tax convention between their state of residence and the Contracting State from which
+the income is derived would be entitled to benefits that are at least equivalent to the benefits
+provided under this Convention with respect to such income.
+      6. A resident of a Contracting State that is not a qualified person pursuant to the provisions of
+paragraph 2 shall, nevertheless, be granted the benefits of the Convention if the competent authority of
+that other Contracting State determines that the establishment, acquisition or maintenance of such
+person and the conduct of its operations did not have as one of its principal purposes the obtaining of
+benefits under the Convention.
+      The competent authority of the other Contracting State shall consult with the competent authority of
+the first-mentioned State before denying the benefits of the Convention under this paragraph.
+      7. Notwithstanding the other provisions of this Convention:
+a) where an enterprise of Ireland derives income from the United States;
+b) that income is attributable to a permanent establishment which that enterprise has in a
+third state; and
+c) the enterprise is exempt from tax in Ireland on the profits attributable to the
+permanent establishment; the United States tax benefits that would otherwise apply under the
+other provisions of this Convention will not apply to any item of income on which the combined
+tax in Ireland and in the third State is less than 50 percent of the generally applicable tax that
+would be imposed in Ireland on an enterprise deriving such item directly from the United States.
+Any dividends, interest or royalties to which this paragraph applies will be subject to United
+===== PAGINA 27 =====
+States tax at a rate not exceeding 15 percent of the gross amount thereof. The provisions of this
+paragraph shall not apply if the income derived from the other Contracting State is connected
+with or incidental to the active conduct of a trade or business carried on by the permanent
+establishment in the third state (other than the business of making or managing investments,
+unless these activities are banking or insurance activities carried on by a bank or insurance
+company).
+      8. The following definitions shall apply for the purposes of this Article:
+a) The term “gross income” as used in subparagraph c) of paragraph 2 means gross
+income for the fiscal year preceding the current fiscal year provided that the amount of gross
+income for the fiscal year preceding the current fiscal year shall be deemed to be not less than
+the average of the annual amounts of gross income for the four fiscal years preceding the current
+fiscal year.
+b) The term “a recognized stock exchange” means:
+i) the NASDAQ System owned by the National Association of Securities
+Dealers, Inc. and any stock exchange registered with the U.S. Securities and Exchange
+Commission as a national securities exchange for purposes of the U.S. Securities
+Exchange Act of 1934;
+ii) the Irish Stock Exchange and the stock exchanges of Amsterdam, Brussels,
+Frankfurt, Hamburg, London, Madrid, Milan, Paris, Stockholm, Sydney, Tokyo,
+Toronto, Vienna and Zurich;
+iii) any other stock exchange agreed upon by the competent authorities of the
+Contracting States.
+c) The term "units" as used in subparagraph d) of paragraph 2 includes shares and any
+other instrument, not being a debt-claim, granting an entitlement to:
+i) share in the assets or income of, or
+ii) receive a distribution from, the person.
+d) i) The term “principal class of shares” is generally the ordinary or common
+shares of the company, provided that such class of shares represents the majority of the
+voting power and value of the company. When no single class of shares represents the
+majority of the voting power and value of the company, the "principal class of shares" is
+generally those classes that in the aggregate possess more than 50 percent of the voting
+power and value of the company. The “principal class of shares” also includes any
+"disproportionate class of shares".
+ii) The term "disproportionate class of shares" means any class of shares of a
+company resident in one of the Contracting States that entitles the shareholder to
+disproportionately higher participation, through dividends, redemption payments or
+otherwise, in the earnings generated in the other Contracting State by particular assets
+or activities of the company.
+iii) The term shares shall include depository receipts thereof or trust certificates
+thereof.
+e) The term "resident of a member state of the European Union" means a person that
+would be entitled to the benefits of a comprehensive income tax convention in force between
+===== PAGINA 28 =====
+any member state of the European Union and the Contracting State from which the benefits of
+the Convention are claimed, provided that if such convention does not contain a comprehensive
+Limitation on Benefits article (including provisions similar to those of subparagraphs c) and e) of
+paragraph 2), the person would be entitled to the benefits of this Convention under the
+principles of paragraph 2 if such person were a resident of one of the Contracting States under
+Article 4 (Residence) of this Convention.
+f) The term “resident of a party to NAFTA” means a person that would be entitled to
+the benefits of a comprehensive income tax convention in force between any party to NAFTA
+and the Contracting State from which the benefits of the Convention are claimed, provided that
+if such convention does not contain a comprehensive Limitation on Benefits article (including
+provisions similar to those of subparagraphs c) and e) of paragraph 2), the person would be
+entitled to the benefits of this Convention under the principles of paragraph 2 if such person
+were a resident of one of the Contracting States under Article 4 (Residence) of this Convention.
+      9. The competent authorities of the Contracting States shall consult together with a view to
+developing a commonly agreed application of the provisions of this Article, including the publication of
+regulations or other public guidance. The competent authorities shall, in accordance with the provisions
+of Article 27 (Exchange of Information and Administrative Assistance), exchange such information as is
+necessary for carrying out the provisions of this Article.
+ARTICLE 24
+Relief from Double Taxation
+      1. In accordance with the provisions and subject to the limitations of the law of the United States (as
+it may be amended from time to time without changing the general principle hereof), the United States
+shall allow to a resident or citizen of the United States as a credit against the United States tax on
+income:
+a) the Irish tax paid by or on behalf of such citizen or resident; and
+b) in the case of a United States company owning at least 10 percent of the voting stock
+of a company which is a resident of Ireland and from which the United States company receives
+dividends, the Irish tax paid by or on behalf of the distributing company with respect to the
+profits out of which the dividends are paid.
+      2. For the purposes of paragraph 1, the amount of the credit less the amount of any excess paid by
+Ireland pursuant to paragraph 3 b) of Article 10 (Dividends) shall be treated as an income tax paid to
+Ireland by the beneficial owner of the dividend.
+      3. Where a United States citizen is a resident of Ireland:
+a) with respect to items of income that under the provisions of this Convention are
+exempt from United States tax or that are subject to a reduced rate of United States tax when
+derived by a resident of Ireland who is not a United States citizen, Ireland shall allow as a credit
+against Irish tax, only the tax paid, if any, that the United States may impose under the
+===== PAGINA 29 =====
+provisions of this Convention, other than taxes that may be imposed solely by reason of
+citizenship under the saving clause of paragraph 4 of Article 1 (General Scope);
+b) for purposes of computing United States tax on those items of income referred to in
+subparagraph a), the United States shall allow as a credit against United States tax the income
+tax paid to Ireland after the credit referred to in subparagraph a); the credit so allowed shall not
+reduce the portion of the United States tax that is creditable against the Irish tax in accordance
+with subparagraph a); and
+c) for the exclusive purpose of relieving double taxation in the United States under
+subparagraph b), items of income referred to in subparagraph a) shall be deemed to arise in
+Ireland to the extent necessary to avoid double taxation of such income under subparagraph b).
+      4. Subject to the provisions of the law of Ireland regarding the allowance as a credit against Irish tax
+of tax payable in a territory outside Ireland (which shall not affect the general principle hereof):
+a) United States tax payable under the law of the United States and in accordance with
+the Convention (other than payable solely by reason of citizenship), whether directly or by
+deduction, on profits, income or chargeable gains from sources within the United States
+(excluding, in the case of a dividend, tax payable in respect of the profits out of which the
+dividend is paid) shall be allowed as a credit against any Irish tax computed by reference to the
+same profits, income or chargeable gains by reference to which the United States tax is
+computed; and
+b) in the case of a dividend paid by a company which is a resident of the United States
+to a company which is a resident of Ireland and which controls directly or indirectly 10 percent
+or more of the voting power in the company paying the dividend, the credit shall take into
+account (in addition to any United States tax creditable under the provisions of subparagraph a)
+of this paragraph the United States tax payable by the company in respect of the profits out of
+which such dividend is paid.
+      5. Except as provided in subparagraph c) of paragraph 3, for the purposes of allowing relief from
+double taxation pursuant to this Article, and subject to such source rules in the domestic laws of the
+Contracting States as apply for purposes of limiting the foreign tax credit, income derived by a resident
+of a Contracting State which may be taxed in the other Contracting State in accordance with this
+Convention (other than solely by reason of citizenship in accordance with paragraph 4 of Article 1
+(General Scope)) shall be deemed to arise in that other State.
+      6. Where, under any provision of this Convention, income or gains is or are wholly or partly relieved
+from tax in a Contracting State and, under the laws in force in the other Contracting State, an individual,
+in respect of the said income or gains, is subject to tax by reference to the amount thereof which is
+remitted to or received in that other State, and not by reference to the full amount thereof, then the relief
+to be allowed under this Convention in the first-mentioned State shall apply only to so much of the
+income or gains as is remitted to or received in that other State.
+ARTICLE 25
+===== PAGINA 30 =====
+Non-Discrimination
+      1. Nationals of a Contracting State shall not be subjected in the other Contracting State to any
+taxation or any requirement connected therewith which is other or more burdensome than the taxation
+and connected requirements to which nationals of that other State in the same circumstances are or may
+be subjected. This provision shall also apply to persons who are not residents of one or both of the
+Contracting States. However, for the purposes of the tax of a Contracting State, a citizen of that
+Contracting State who is not a resident of that Contracting State and a citizen of the other Contracting
+State who is not a resident of the first-mentioned Contracting State are not in the same circumstances.
+      2. The taxation on a permanent establishment or fixed base that a resident or enterprise of a
+Contracting State has in the other Contracting State shall not be less favourably levied in that other State
+than the taxation levied on enterprises of that other State carrying on the same activities. The provisions
+of this paragraph shall not be construed as obliging a Contracting State to grant to residents of the other
+Contracting State any personal allowances, reliefs, and reductions for taxation purposes on account of
+civil status or family responsibilities which it grants to its own residents.
+      3. Except where the provisions of paragraph 1 of Article 9 (Associated Enterprises), paragraph 5 of
+Article 11 (Interest), or paragraph 4 of Article 12 (Royalties) apply, interest, royalties and other
+disbursements paid by a resident of a Contracting State to a resident of the other Contracting State
+shall, for the purposes of determining the taxable profits of the first-mentioned resident, be deductible
+under the same conditions as if they had been paid to a resident of the first-mentioned State.
+      4. Enterprises of a Contracting State, the capital of which is wholly or partly owned or controlled,
+directly or indirectly, by one or more residents of the other Contracting State, shall not be subjected in
+the first-mentioned State to any taxation or any requirement connected herewith which is other or more
+burdensome than the taxation and connected requirements to which other similar enterprises of the first-
+mentioned State are or may be subjected.
+      5. Nothing in this Article shall be construed as preventing either Contracting State from imposing a
+tax as described in paragraph 7 of Article 10 (Dividends).
+ARTICLE 26
+Mutual Agreement Procedure
+      1. Where a person considers that the actions of one or both of the Contracting States result or will
+result for him in taxation not in accordance with the provisions of this Convention, he may, irrespective
+of the remedies provided by the domestic law of those States and the time limits prescribed in such laws
+for presenting claims for refund, present his case to the competent authority of either Contracting State.
+      2. The competent authority shall endeavour, if the objection appears to it to be justified and if it is
+not itself able to arrive at a satisfactory solution, to resolve the case by mutual agreement with the
+===== PAGINA 31 =====
+competent authority of the other Contracting State, with a view to the avoidance of taxation which is not
+in accordance with the Convention. Any agreement reached shall be implemented notwithstanding any
+time limits or other procedural limitations in the domestic law of the Contracting States.
+      3. The competent authorities of the Contracting States shall endeavour to resolve by mutual
+agreement any difficulties or doubts arising as to the interpretation or application of the Convention. In
+particular the competent authorities of the Contracting States may agree, with a view to the avoidance of
+taxation which is not in accordance with the Convention:
+a) to the same attribution of income, deductions, credits, or allowances of an enterprise
+of a Contracting State to its permanent establishment situated in the other Contracting State;
+b) to the same allocation of income, deductions, credits. or allowances between
+persons;
+c) to the same characterization of particular items of income;
+d) to the same characterization of persons;
+e) to the same application of source rules with respect to particular items of income;
+f) to a common meaning of a term;
+g) to increases in any specific dollar amounts referred to in the Convention to reflect
+economic or monetary developments;
+h) to advance pricing arrangements; and
+i) to the application of the provisions of domestic law regarding penalties, fines, and
+interest in a manner consistent with the purposes of the Convention.
+      They may also consult together for the elimination of double taxation in cases not provided for in the
+Convention.
+      Any principle of general application established by an agreement or agreements shall be published
+by the competent authorities of both Contracting States in accordance with their laws and administrative
+practices.
+      4. The competent authorities of the Contracting States may communicate with each other directly
+for the purpose of reaching an agreement in the sense of the preceding paragraphs.
+      5. If an agreement cannot be reached by the competent authorities pursuant to the previous
+paragraphs of this article, the case may, if both competent authorities and the taxpayer agree, be
+submitted for arbitration, provided that the taxpayer agrees in writing to be bound by the decision of the
+arbitration board. The competent authorities may release to the arbitration board such information as is
+necessary for carrying out the arbitration procedure. The decision of the arbitration board shall be
+binding on the taxpayer and on both States with regard to that case. The procedures, including the
+composition of the board, shall be established between the Contracting States by notes to be exchanged
+through diplomatic channels after consultation between the competent authorities. The provisions of this
+paragraph shall not have effect until the date specified in the exchange of diplomatic notes.
+ARTICLE 27
+===== PAGINA 32 =====
+Exchange of Information and Administrative Assistance
+      1. The competent authorities of the Contracting States shall exchange such information as is relevant
+for carrying out the provisions of this Convention or of the domestic laws of the Contracting States
+concerning taxes covered by the Convention insofar as the taxation thereunder is not contrary to the
+Convention, including the assessment or collection of, the enforcement or prosecution in respect of, or
+the determination of appeals in relation to the taxes covered by the Convention. The exchange of
+information is not restricted by Article 1 (General Scope). Any information received by a Contracting
+State shall be treated as secret in the same manner as information obtained under the domestic laws of
+that State and shall be disclosed only to persons or authorities (including courts and administrative
+bodies) involved in the assessment, collection, or administration of, the enforcement or prosecution in
+respect of, or the determination of appeals in relation to, the taxes covered by the Convention or the
+oversight of the above. Such persons or authorities shall use the information only for such purposes.
+They may disclose the information in public court proceedings or in judicial decisions.
+      2. In no case shall the provisions of paragraph 1 be construed so as to impose on a Contracting
+State the obligation:
+a) to carry out administrative measures at variance with the laws and administrative
+practice of that or of the other Contracting State;
+b) to supply information which is not obtainable under the laws or in the normal course
+of the administration of that or of the other Contracting State;
+c) to supply information which would disclose any trade, business, industrial,
+commercial, or professional secret or trade process, or information the disclosure of which
+would be contrary to public policy (ordre public).
+      3. If information is requested by a Contracting State in accordance with this Article, the other
+Contracting State shall obtain the information to which the request relates in the same manner and to the
+same extent as if its own taxation were involved, notwithstanding the fact that the other State may not, at
+that time, need such information for purposes of its own tax. If specifically requested by the competent
+authority of a Contracting State, the competent authority of the other Contracting State shall provide
+information under this article in the form of depositions of witnesses and authenticated copies of
+unedited original documents (including books, papers, statements, records, accounts and writings), to
+the extent such depositions and documents can be obtained under the laws and administrative practices
+of that other State.
+      4. The competent authority of the requested State shall allow representatives of the applicant State
+to enter the requested State to interview individuals and examine a person's books and records with
+their consent.
+ARTICLE 28
+Diplomatic Agents and Consular Officers
+===== PAGINA 33 =====
+      Nothing in the Convention shall affect the fiscal privileges of diplomatic agents or consular officers
+under the general rules of international law or under the provisions of special agreements.
+ARTICLE 29
+Entry into Force
+      1. This Convention shall be subject to ratification in accordance with the applicable procedures of
+each Contracting State and instruments of ratification shall be exchanged as soon as possible.
+      2. This Convention shall enter into force upon the exchange of instruments of ratification and its
+provisions shall have effect:
+a) in respect of taxes withheld at source, for amounts paid or credited on or after the
+first day of January next following the date on which the Convention enters into force;
+b) in respect of other taxes, in the case of the United States, for taxable periods, and in
+the case of Ireland, for financial years with respect to the corporation tax and for years of
+assessment with respect to the income tax and capital gains tax, beginning on or after the first
+day of January next following the date on which the Convention enters into force.
+      3. Where the provisions of the Convention between the Government of Ireland and the Government
+of the United States of America for the Avoidance of Double Taxation and the Prevention of Fiscal
+Evasion with respect to Taxes on Income signed at Dublin on 13 September, 1949 (hereinafter referred
+to as “the 1949 Convention”) would have afforded any greater relief from tax to a person entitled to its
+benefits than is afforded under this Convention, such provisions as aforesaid shall continue to have effect
+for a period of twelve calendar months from the date on which the provisions of this Convention would
+otherwise have effect in accordance with the provisions of paragraph 2 of this Article.
+      4. The provisions of the 1949 Convention shall cease to have effect when the provisions of this
+Convention take effect in accordance with paragraphs 2 and 3.
+      5. Subparagraph b) of paragraph 5 of Article 23 (Limitation on Benefits) shall not have effect for a
+period of twenty-four calendar months from the date on which the provisions of this Convention would
+otherwise have effect in accordance with paragraph 2 of this Article or for a further period of twelve
+calendar months if paragraph 3 applies.
+ARTICLE 30
+Termination
+      This Convention shall remain in force until terminated by a Contracting State. Either Contracting
+State may terminate the Convention at any time after 5 years from the date on which the Convention
+enters into force, provided that at least 6 months prior notice of termination has been given to the other
+Contracting State through diplomatic channels. In such event, the Convention shall cease to have effect:
+===== PAGINA 34 =====
+a) in respect of taxes withheld at source, for amounts paid or credited on or after the
+first day of January next following the expiration of the 6 months period; and
+b) in respect of other taxes, in the case of the United States, for taxable periods, and in
+the case of Ireland, for financial years with respect to the corporation tax and for years of
+assessment with respect to the income tax and capital gains tax, beginning on or after the first
+day of January next following the expiration of the 6 months period.
+      IN WITNESS WHEREOF, the undersigned, being duly authorized by their respective
+Governments, have signed this Convention.
+      DONE at Dublin in duplicate, this 28 day of July, 1997.
+      FOR THE GOVERNMENT OF THE       FOR THE GOVERNMENT OF
+      UNITED STATES OF AMERICA:       IRELAND:
+(s) Jean Kennedy Smith  (s) Charlie McCreevy
+PROTOCOL
+      At the time of signing the Convention between the Government of the United States of America and
+the Government of Ireland for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion
+with Respect to Taxes on Income and Capital Gains, the undersigned have agreed that the following
+provisions shall form an integral part of the
+Convention:
+      1. With reference to income, profit or gain derived by fiscally transparent persons.
+      For the purposes of the Convention, where a resident of a Contracting State is entitled to income,
+profit or gain in respect of an interest in a person that derives income, profit or gain from the other
+Contracting State, any income, profit or gain so derived will be considered to be income, profit or gain
+of that resident to the extent it is treated as such for purposes of the taxation laws of the first-mentioned
+Contracting State.
+      The aforementioned reference to “person” shall not include a resident of a Contracting State within
+the meaning of subparagraph 1 d) of Article 4 (Residence).
+      2. With reference to Article 2 (Taxes Covered).
+      For the purposes of paragraph 1, it is understood that this Convention shall not apply to the Federal
+Excise Taxes imposed on insurance premiums paid to foreign insurers where such premiums are not
+subject to the generally applicable tax imposed on insurance corporations in the Contracting State in
+which such insurers are resident.
+      3. With reference to Article 6 (Income from Immovable Property (Real Property)).
+===== PAGINA 35 =====
+      A resident of a Contracting State who is liable to tax in the other Contracting State on income from
+immovable property situated in the other Contracting State may elect for any taxable year to compute
+the tax on such income on a net basis in accordance with the law of that other Contracting State. Any
+such election shall be binding for the taxable year of the election and all subsequent taxable years unless
+the competent authority of the other Contracting State, pursuant to a request by the taxpayer, agrees to
+terminate the election.
+      4. With reference to Articles 7 (Business Profits), 10 (Dividends), 11 (Interest), 12 (Royalties), 13
+(Capital Gains), 14 (Independent Personal Services) and 22 (Other Income).
+      In applying paragraphs 1 and 2 of Article 7, paragraph 6 of Article 10, paragraph 3 of Article 11,
+paragraph 3 of Article 12, paragraph 3 of Article 13, Article 14 and paragraph 2 of Article 22, any
+income or gain attributable to a permanent establishment or fixed base during its existence is taxable in
+the Contracting State where such permanent establishment or fixed base is situated even if the payments
+are deferred until such permanent establishment or fixed base has ceased to exist.
+      5. With reference to Article 10 (Dividends).
+      For the purposes of paragraph 5, the term "dividends" shall not include interest which, by reason of
+the fact that it was paid to a non-resident company, is treated as dividends under the domestic laws of
+either Contracting State, to the extent that such interest does not exceed the amount which would be
+expected to be paid between independent parties dealing at arm's length.
+      6. With reference to Article 11 (Interest).
+      In accordance with section 871(h) (4) and 881(c) (4) of the Internal Revenue Code, interest arising
+in the United States that is determined with reference to the profits of the issuer or of one of its
+associated enterprises, and paid to a resident of Ireland also may be taxed in the United States, and
+according to the laws of the United States, but if the beneficial owner is a resident of Ireland, the gross
+amount of the interest may be taxed at a rate not exceeding the rate prescribed in subparagraph b) of
+paragraph 2 of Article 10 (Dividends). Interest that is an excess inclusion with respect to a residual
+interest in a real estate mortgage investment conduit may be taxed by each State in accordance with its
+domestic law.
+      7. With reference to Article 14 (Independent Personal Services).
+      In determining the income described in paragraph 1 that is taxable in the other Contracting State, the
+principles of paragraph 3 of Article 7 (Business Profits) shall apply.
+      8. With reference to Article 21 (Offshore Exploration and Exploitation Activities).
+===== PAGINA 36 =====
+      Where a permanent establishment is deemed to exist by virtue of that Article, a "balancing charge"
+under Chapter II of Part XVI of the Income Tax Act, 1967 will not be imposed for the reason only that
+the trade carried on through the permanent establishment is treated as having permanently ceased
+because of the termination of the relevant activities in Ireland, except to the extent that the person
+carrying on the activities referred to in that Article has made a claim under the laws of Ireland for
+accelerated capital allowances in respect of machinery or plant used for the purposes of the permanent
+establishment. Normal wear and tear allowances would, however, be granted in respect of the
+machinery or plant concerned and no balancing charge would be imposed with respect to such
+allowances.
+      9. With reference to Article 23 (Limitation on Benefits).
+a) For the purposes of paragraph 2,
+i) the shares in a class of shares or the units in a class of units are considered to
+be substantially and regularly traded on one or more recognized stock exchanges in a
+fiscal year if:
+A) trades in such class are effected on one or more of such stock
+exchanges other than in de minimis quantities during every quarter; and
+B) the aggregate number of shares or units of that class traded on such
+stock exchange or exchanges during the previous fiscal year is at least 6 percent
+of the average number of shares or units outstanding in that class during that
+taxable year, provided that if such class was not listed on a recognized stock
+exchange in the previous fiscal year the shares or units will be considered to
+have satisfied the requirement of this subparagraph B);
+ii) a Building Society incorporated in Ireland shall be deemed to be a company
+the principal class of shares in which:
+A) is listed on the Irish Stock Exchange, and
+B) which in any fiscal year is substantially and regularly traded on such
+exchange.
+b) For the purpose of paragraph 3,
+i) whether a resident of a Contracting State is engaged in the active conduct of a
+trade or business will be determined on the basis of an analysis of all the relevant facts
+and circumstances. In any case, however,
+A) a bank will be considered to be engaged in the active conduct of a
+trade or business if it regularly accepts deposits from the public or makes loans
+to the public. It is understood that a resident of a Contracting State that, as of
+the date of signature of this Convention, is licensed by the banking authorities in
+that State to engage in the business of banking satisfies this requirement; and
+B) an insurance company will be considered to be engaged in the active
+conduct of a trade or business if its gross income consists primarily of insurance
+or reinsurance premiums and investment income attributable to such premiums;
+===== PAGINA 37 =====
+ii) in determining whether a person is engaged in the active conduct of a trade or
+business in a Contracting State, activities conducted by a partnership in which that
+person is a partner and activities conducted by persons connected to such person shall
+be deemed to be conducted by such person A person shall be connected to another if
+one possesses at least 50 percent of the beneficial interest in the other (or, in the case of
+a company, at least 50 percent of the aggregate vote and value of the company's shares
+or of the beneficial equity interest in the company) or another person possesses, directly
+or indirectly, at least 50 percent of the beneficial interest (or, in the case of a company,
+at least 50 percent of the aggregate vote and value of the company's shares or of the
+beneficial equity interest in the company) in each person. In any case, a person shall be
+considered to be connected to another if, based on all the relevant facts and
+circumstances, one has control of the other or both are under the control of the same
+person or persons;
+iii) a resident of a Contracting State does not have an ownership interest in an
+activity in the other State merely because it supplies goods, provides services or grants
+other facilities to that activity. For example, a lessor who would not otherwise have an
+ownership interest in an activity in the other State would not acquire such an interest
+merely because it leased property for use by that activity.
+      10. With reference to Article 27 (Exchange of Information and Administrative Assistance).
+      For the purposes of paragraph 3, the Contracting States consider that, at the date of signature of
+this Convention, the laws and practices of Ireland do not permit its tax authorities to carry out enquiries
+on behalf of any state where no liability to Ireland's taxes as covered by this Convention are at issue.
+However, if, after the date of signature of this Convention, the laws and practices of Ireland in this
+respect change to permit such enquiries, on behalf of any state, then, subject to the provisions of Article
+27, the tax authorities of Ireland shall carry out such enquiries on behalf of the United States and
+exchange the information so obtained.
+      IN WITNESS WHEREOF, the undersigned, being. duly authorized by their respective
+Governments, have signed this Convention.
+      DONE at Dublin in duplicate, this 28 day of July, 1997.
+      FOR THE GOVERNMENT OF THE       FOR THE GOVERNMENT OF
+      UNITED STATES OF AMERICA:       IRELAND:
+(s) Jean Kennedy Smith (s) Charlie McCreevy
+NOTES OF EXCHANGE
+EMBASSY OF THE
+UNITED STATES OF AMERICA
+===== PAGINA 38 =====
+No. 238
+July 28, 1997
+His Excellency
+Ray Burke, T.D.,
+Minister for Foreign Affairs,
+Ireland.
+      Excellency,
+      I have the honour to refer to the Convention and Protocol between the Government of the United
+States of America and the Government of Ireland for the Avoidance of Double Taxation and the
+Prevention of Fiscal Evasion with Respect to Taxes on Income and Capital Gains which has been
+signed today and to propose on behalf of the Government of the United States the following:
+      In the course of the negotiations leading to the conclusion of the Convention and Protocol signed
+today, the negotiators developed and agreed upon a common understanding and interpretation of the
+following provisions.
+      1. With reference to Article 7 (Business Profits).
+      For the purposes of paragraph 6, the assets of a permanent establishment shall be understood to
+include any property or rights used by or held by or for such permanent establishment.
+      2. With reference to Article 18 (Pensions, Social Security, Annuities, Alimony and Child Support).
+      It is understood that the term "or similar legislation" is intended to refer to United States tier I
+Railroad Retirement benefits.
+      3. With reference to subparagraph 2 c) of Article 23 (Limitation on Benefits).
+      It is understood that transactions between associated enterprises will be considered arm's length if
+the conditions made or imposed between the two enterprises in their commercial or financial relations
+do not differ from those that would be made between independent enterprises. Transactions between
+independent enterprises referred to in Article 9 (Associated Enterprises) will be considered to be arm's
+length. Whether two enterprises are associated will be determined without regard to the residence of the
+two enterprises.
+      4. With reference to subparagraph 2 d) and 2 e) of Article 23 (Limitation on Benefits).
+      It is understood that, for the purposes of determining whether a person, other than an individual or a
+company, qualifies for benefits under clause ii) of subparagraph 2 d) or a company qualifies for benefits
+under clause ii) of subparagraph 2 e), a person is “referred to in subparagraph d) i) or e) i)” or "referred
+===== PAGINA 39 =====
+to in subparagraph b)", and a company is "described in subparagraph e) i)", only if that person or
+company is a resident of one of the Contracting States and is entitled to the benefits of the Convention
+by reason of subparagraph b), d) i) or e) i), as the case may be.
+      5. With reference to paragraph 3 of Article 26 (Mutual Agreement Procedure).
+      It is understood that the competent authorities may consult for the elimination of double taxation in
+cases not provided for in the Convention only with respect to covered taxes.
+      6. With reference to Article 27 (Exchange of Information and Administrative Assistance).
+      It is understood that, in addition to the provisions of paragraph 3 of Article 27, the United States
+may, pursuant to a request under the provisions of the Irish Criminal Justice Act, 1994 (or any law
+which succeeds that Act) to the Irish Minister for Justice, obtain information, including authenticated
+copies of unedited original documents, of financial institutions located in Ireland, or depositions of
+witnesses located in Ireland, as is appropriate for giving effect to such request, for the purpose of the
+investigation (including investigations by the Internal Revenue Service) or prosecutions of criminal fiscal
+offences (including criminal revenue offences) under the laws of the United States, as provided for in
+said Act. Ireland may obtain such types of information for the enforcement of Irish tax law by making
+requests directly to the United States competent authority.
+      The foregoing understandings are acceptable to the Government of the Unites States. If the
+foregoing understandings are acceptable to the Government of Ireland, I have the honour to confirm that
+this Note and Your Excellency's reply thereto shall be regarded as constituting an agreement between
+the two Governments in this matter which shall enter into force at the same time as the entry into force of
+the Convention.
+      I avail myself of this opportunity to renew to Your Excellency the assurance of my highest
+consideration.
+(s) Jean Kennedy Smith
+OIFIG AN AIRE GNOTHAI EACHTRACHA
+Office of the Minister For Foreign Affairs
+BAILE ATHA CLIATH 2
+Dublin 2
+28 July 1997.
+Her Excellency, Mrs. Jean Kennedy Smith,
+Ambassador of the United States of America,
+===== PAGINA 40 =====
+Dublin.
+      Excellency,
+            I have received your note of 28 July, 1997, that states the following:
+      I have the honour to refer to the Convention and Protocol between the Government of the
+United States of America and the Government of Ireland for the Avoidance of Double Taxation
+and the Prevention of Fiscal Evasion with Respect to Taxes on Income and Capital Gains which
+has been signed today and to propose on behalf of the Government of the United States the
+following:
+      In the course of the negotiations leading to the conclusion of the Convention and Protocol
+signed today, the negotiators developed and agreed upon a common understanding and
+interpretation of the following provisions.
+      1. With reference to Article 7 (Business Profits).
+      For the purposes of paragraph 6, the assets of a permanent establishment shall be
+understood to include any property or rights used by or held by or for such permanent
+establishment.
+      2. With reference to Article 18 (Pensions, Social Security, Annuities, Alimony and Child
+Support).
+      It is understood that the term “or similar legislation” is intended to refer to United States
+tier I Railroad Retirement benefits.
+      3. With reference to subparagraph 2 c) of Article 23 (Limitation on Benefits).
+      It is understood that transactions between associated enterprises will be considered arm's
+length if the conditions made or imposed between the two enterprises in their commercial or
+financial relations do not differ from those that would be made between independent enterprises.
+Transactions between independent enterprises referred to in Article 9 (Associated Enterprises)
+will be considered to be arm's length. Whether two enterprises are associated will be determined
+without regard to the residence of the two enterprises.
+      4. With reference to subparagraph 2 d) and 2 e) of Article 23 (Limitation on Benefits).
+      It is understood that, for the purposes of determining whether a person, other than an
+individual or a company, qualifies for benefits under clause ii) of subparagraph 2 d) or a
+company qualifies for benefits under clause ii) of subparagraph 2 e), a person is “referred to in
+subparagraph d) i) or e) i)” or “referred to in subparagraph b)”, and a company is “described in
+===== PAGINA 41 =====
+subparagraph e) i)”, only if that person or company is a resident of one of the Contracting States
+and is entitled to the benefits of the Convention by reason of subparagraph b), d) i) or e) i), as
+the case may be.
+      5. With reference to paragraph 3 of Article 26 (Mutual Agreement Procedure).
+      It is understood that the competent authorities may consult for the elimination of double
+taxation in cases not provided for in the Convention only with respect to covered taxes.
+      6. With reference to Article 27 (Exchange of Information and Administrative Assistance).
+      It is understood that, in addition to the provisions of paragraph 3 of Article 27, the United
+States may, pursuant to a request under the provisions of the Irish Criminal Justice Act, 1994 (or
+any law which succeeds that Act) to the Irish Minister for Justice, obtain information, including
+authenticated copies of unedited original documents, of financial institutions located in Ireland,
+or depositions of witnesses located in Ireland, as is appropriate for giving effect to such request,
+for the purpose of the investigation (including investigations by the Internal Revenue Service) or
+prosecutions of criminal fiscal offences (including criminal revenue offences) under the laws of
+the United States, as provided for in said Act. Ireland may obtain such types of information for
+the enforcement of Irish tax law by making requests directly to the United States competent
+authority.
+      The foregoing understandings are acceptable to the Government of the United States. If the
+foregoing understandings are acceptable to the Government of Ireland, I have the honour to
+confirm that this Note and your Excellency's reply thereto shall be regarded as constituting an
+agreement between the two Governments in this matter which shall enter into force at the same
+time as the entry into force of the Convention.
+      The foregoing understandings are acceptable to the Government of Ireland. I have the honour to
+confirm that Your Excellency's Note and the present reply shall be regarded as constituting an
+agreement between the two Governments in this matter which shall enter into force at the same time as
+the entry into force of the Convention.
+      I avail myself of this opportunity to renew to Your Excellency the assurance of my highest
+consideration.
+(s) Ray Burke, T.D.
+Minister for Foreign Affairs.
