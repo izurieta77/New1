@@ -49,18 +49,39 @@ Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 2
 
 ## 5. Qué hace cada agente y cuándo (hora del centro de México)
 
-Las rutinas corren en la sesión en la nube "Sistema de inversión · Motor de rutinas" y dejan todo en git. Sus procedimientos están versionados en `rutinas/*.md` y se cambian ahí. La sesión principal orquesta, revisa y corrige.
+Tres sesiones en la nube trabajan solas y dejan todo en git:
+- **Motor de rutinas:** rutinas 1-6.
+- **Inteligencia y cripto:** rutinas 7-8.
+- **Supervisión, conciliación y revisión:** rutinas 9-11.
 
-| Rutina | Cuándo | Qué entrega |
-|---|---|---|
-| 1. Pre-apertura | L-V 06:52 | Régimen de mercado, geopolítica, 3-5 pronósticos nuevos, pronósticos vencidos resueltos, riesgo del papel, brief del día |
-| 2. Laboratorio | L-V 11:47 | Un tema de dominio sube de nivel, avance de una réplica con doble ejecución independiente, un paper verificado |
-| 3. Cierre | L-V 15:37 | Ejecuta en papel las órdenes pendientes, valúa, revisa cortacircuitos, post-mortems de las empresas que reportaron, marcador |
-| 4. Auditoría semanal | Vie 16:47 | Brier y calibración, 3 afirmaciones atacadas, papel vs. benchmarks y rivales, comité de rebalanceo, actualiza §8 |
-| 5. Balance mensual | Día 1, 10:13 | Examen de 20 preguntas nuevas, reporte mensual del papel, criterio de salida de fase 0 con números |
-| 6. Barrido trimestral | 5-ene, abr, jul y oct, 11:37 | Literatura nueva, SPIVA, cambios fiscales y regulatorios |
+Los procedimientos están versionados en `rutinas/*.md` y se cambian ahí. La sesión principal orquesta, revisa y corrige.
 
-Cada rutina deja una línea de latido en `bitacora/estado-rutinas.md`. Cuando una tiene una duda, decide de forma conservadora y lo anota en `bitacora/decisiones-pendientes.md`: nunca se queda esperando.
+| Rutina | Agente principal | Cuándo | Qué entrega |
+|---|---|---|---|
+| 1. Pre-apertura | analistas + `decisor` (sala de decisiones) | L-V 06:52 | Régimen, 3-5 pronósticos, riesgo, boletas del día verificadas y brief |
+| 2. Laboratorio | `auditor-de-replicas`, `investigador-academico` | L-V 11:47 | Un tema de dominio sube de nivel, una réplica, un paper |
+| 3. Cierre | `gestor-de-riesgo` | L-V 15:37 | Ejecuta el papel, valúa, cortacircuitos, post-mortems y marcador |
+| 4. Auditoría semanal | `decisor` preside el comité | Vie 16:47 | Brier, 3 afirmaciones atacadas, rebalanceo y avance del plan |
+| 5. Balance mensual | todos | Día 1, 10:13 | Examen de 20 preguntas, reporte mensual y fase 0 del patrimonio |
+| 6. Barrido trimestral | `investigador-academico` | 5-ene, abr, jul y oct | Literatura, SPIVA y regulación |
+| 7. Inteligencia | `vigia-de-informacion` | Diario 07:05, 11:05, 15:05 y 20:05 | Redes, prensa, revistas, papers, ensayos y YouTube graduados A-D; alertas |
+| 8. Cripto | `analista-cripto` | Cada 4 h, 24/7 (estudio profundo a las 08:17) | Pulso de BTC/ETH, carrera cripto en `conocimiento/cripto/` y un pronóstico diario |
+| 9. Supervisión en vivo | `supervisor` + `herramientas/supervision.py` | L-V cada hora, 08:40-14:40 | Stops, cortacircuitos, tope de 10k, filtro de apalancados, latidos y bloqueos |
+| 10. Conciliación y arbitraje | `conciliador-arbitro` | Diario 18:23 | Registros cuadrados y fallos sobre desacuerdos de hechos o reglas |
+| 11. Revisión de calidad | `revisor` | Diario 21:13 | Lista de calidad sobre todo lo del día y resumen para el dueño en el brief |
+
+**Comité completo:**
+- `analista-macro`, `analista-fundamental`, `analista-cuantitativo` y `analista-geopolitico`;
+- `abogado-del-diablo`;
+- `gestor-de-riesgo`, con veto;
+- `verificador`, `auditor-de-replicas` e `investigador-academico`;
+- los seis agentes nuevos: `vigia-de-informacion`, `revisor`, `decisor`, `supervisor`, `conciliador-arbitro` y `analista-cripto`.
+
+**Mecanismos comunes:**
+- Cada rutina deja una línea de latido en `bitacora/estado-rutinas.md`.
+- Las dudas se deciden de forma conservadora y se anotan en `bitacora/decisiones-pendientes.md`; nunca se quedan esperando.
+- Las alertas van a `bitacora/alertas.md`.
+- Las boletas reales, a `bitacora/boletas/`.
 
 ## 6. Qué necesita el sistema del dueño
 
@@ -69,10 +90,14 @@ Cada rutina deja una línea de latido en `bitacora/estado-rutinas.md`. Cuando un
 3. **Cada ejecución real de la arena:** precio, títulos y hora de cada orden capturada en GBM, y el valor de la cuenta cada viernes.
 4. **Montos y fechas de las aportaciones adicionales**, y qué resultado las dispara (`escalamiento_capital.pendiente_de_definir_por_el_dueno`).
 
-## 7. Por qué no "más agentes todo el tiempo"
+## 7. Límites prácticos de "todo el tiempo"
 
 - **La restricción que manda es el calendario.** La calibración y el papel necesitan 3 meses reales, y ningún número de agentes acorta eso.
-- **Más corridas gastan el límite semanal de uso de la cuenta.** El 25-sep ya se agotó una vez y detuvo todo. Si se agota, también se detienen las rutinas que sí importan.
+- **Más corridas gastan el límite semanal de uso de la cuenta.** El 25-sep ya se agotó una vez y detuvo todo. Con las rutinas 7-11 son ~22 corridas por día hábil. Para contenerlo:
+  - las sesiones 7-11 usan un modelo más económico;
+  - la supervisión horaria corre un script determinista.
+
+  Si el límite se agota, se detienen **todas** las rutinas por igual hasta que se reinicie. No hay prioridad automática entre ellas.
 - **Las rutinas corren en los momentos que mueven la aguja:** antes de abrir, al cierre, el viernes, el día 1 y el trimestre. Entre esos momentos no hay nada que decidir.
 
 ## 8. Avance (lo actualiza la auditoría del viernes)
