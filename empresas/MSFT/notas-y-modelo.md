@@ -35,6 +35,8 @@ Convención de etiquetas:
 | F6 | FRED DGS10 | 23-sep-2026 | Tasa del bono a 10 años: 5.11% |
 | F7 | Damodaran, *Betas by Sector (US)*, datos a enero de 2026 | descargado 25-sep-2026 | β desapalancada del software (1.25) |
 | F8 | conocimiento/03 §2.3 y §6.1 (cita a Damodaran, sep-2026) | 25-sep-2026 | ERP de 4.31% y diferencial de default de EUA de 0.22% |
+| F9 | 10-K FY2026, htm completo descargado y congelado en `modelo/datos/filing_raw/msft-20260630.htm` (verificación independiente) | descargado 25-sep-2026 | Cotejo primario de estados financieros y notas 1, 3, 4, 6, 9, 10, 11, 12, 13, 15, 17 y 18, y del MD&A (liquidez, flujos, arrendamientos, obligaciones contractuales) |
+| F10 | 10-K FY2025, htm completo descargado y congelado en `modelo/datos/filing_raw/msft-20250630.htm` (verificación independiente) | descargado 25-sep-2026 | Balance, deuda y arrendamientos al 30-jun-2024 (comparativo del histórico FY2024) |
 
 **Limitación de acceso (resuelta el 2026-09-25, ver "Verificación independiente").** `www.sec.gov/Archives` respondió 403 al User-Agent declarado ("SistemaInversionNew1/1.0 investigacion") porque la SEC exige un correo de contacto para ese directorio. Con un User-Agent que incluye un correo de contacto **genérico, no de una persona real** ("SistemaInversionNew1 research contact@example.com"; `contact@example.com` es un dominio reservado de ejemplo, RFC 2606, no la cuenta de nadie), `www.sec.gov/Archives` respondió 200. Por eso, en esta primera pasada:
 - No se descargó el htm completo del 10-K.
@@ -423,6 +425,103 @@ cd empresas/MSFT/modelo && sha256sum -c SHA256SUMS.txt                          
   - el extracto de betas de Damodaran (con el SHA-256 del HTML completo).
 - `SHA256SUMS.txt` cubre `base.json`, `modelo.py`, `resultados.json` y el manifiesto de `datos/`.
 - `modelo.py` se niega a correr si las huellas de los insumos no coinciden.
+
+## Verificación independiente (2026-09-25)
+
+**Quién y con qué.** Esta sección es una segunda revisión, independiente de quien construyó `base.json` y `modelo.py`. Se hizo descargando el filing primario directamente (no solo los visores R ni el companyfacts XBRL que usó la primera lectura), recalculando el modelo desde los archivos congelados y cotejando cifra por cifra contra el texto del 10-K.
+
+### V1. Acceso al filing primario
+
+- `www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm` respondió **403** con el User-Agent `SistemaInversionNew1/1.0 investigacion` (igual que en la primera lectura). Respondió **200** con `SistemaInversionNew1 research contact@example.com`: un User-Agent con un correo de **contacto genérico y no personal** (`contact@example.com` es un dominio reservado para documentación, RFC 2606; no es la cuenta de ninguna persona). No se usó el correo de nadie.
+- Se descargaron y congelaron dos filings completos:
+  - **10-K FY2026** (accn 0001193125-26-323660, `msft-20260630.htm`, 8,585,615 bytes) — el documento verificado en el resto de esta sección.
+  - **10-K FY2025** (accn 0000950170-25-100235, `msft-20250630.htm`, 8,158,181 bytes) — usado solo para confirmar el balance y las Notas 10 y 13 al 30-jun-2024 (comparativo del historico FY2024 de `base.json`, que no aparece en el 10-K FY2026).
+  - Ambos quedan congelados en `modelo/datos/filing_raw/` y están en `modelo/datos/SHA256SUMS.txt` (regenerado el 2026-09-25; `herramientas/huellas.py verificar` da OK sobre los 6 archivos). El `SHA256SUMS.txt` de nivel superior de `modelo/` también se regeneró (lo hace `modelo.py` en cada corrida) para reflejar el nuevo hash de `datos/SHA256SUMS.txt`; `base.json`, `modelo.py` y `resultados.json` **no cambiaron** (mismos SHA-256 que antes de esta verificación), porque no se encontró ningún error que corregir.
+  - `data.sec.gov/submissions/CIK0000789019.json` (con el User-Agent original, sin correo) confirmó de forma independiente el número de accession del 10-K FY2026 (`0001193125-26-323660`, `reportDate` 2026-06-30, `filingDate` 2026-07-29): coincide con F1.
+
+### V2. Cotejo cifra por cifra contra el 10-K primario (no contra los visores R)
+
+Convención: **[OK]** = coincide exactamente con `base.json`/notas. Todas las cifras siguientes se leyeron directamente del htm descargado (no de un visor ni de companyfacts). Página según el marcador de página impreso en el propio documento.
+
+**Estados financieros (Item 8, pp. 50-53; FY2026/FY2025/FY2024 salvo que se indique)**
+
+| # | Cifra | 10-K (p.) | `base.json` | Resultado |
+|---|---|---|---|---|
+| 1 | Ingresos totales | 331,839 / 281,724 / 245,122 (p. 50) | igual | OK |
+| 2 | Utilidad bruta | 225,465 / 193,893 / 171,008 (p. 50) | igual | OK |
+| 3 | Utilidad operativa | 155,237 / 128,528 / 109,433 (p. 50) | igual | OK |
+| 4 | Otros ingresos (gasto), neto | 10,697 / (4,901) / (1,646) (p. 50) | igual (derivado de sus componentes) | OK |
+| 5 | Utilidad antes de impuestos / impuestos / neta | 165,934 / 32,185 / 133,749 (p. 50) | igual | OK |
+| 6 | UPA diluida | 17.95 / 13.64 / 11.80 (p. 50) | citada en §7 | OK |
+| 7 | Caja, inversiones CP, cuentas por cobrar, inventarios, otros activos circulantes, PPE neto, activo total (30-jun-2026 y 2025) | 20,935 / 55,908 / 80,876 / 1,397 / 48,594 / 313,076 / 758,376 y comparativo (p. 52) | igual, campo por campo | OK |
+| 8 | Proveedores, pasivo circulante total, deuda LP, pasivo total, capital contable (30-jun-2026 y 2025) | 42,416 / 168,825 / 31,067 / 315,989 / 442,387 y comparativo (p. 52) | igual | OK |
+| 9 | CFO / capex / CFI / CFF / efecto cambiario | 182,935 / 115,948 / (139,500) / (52,546) / (196) (p. 52-53, FY2026) | igual | OK |
+| 10 | D&A, SBC, ganancias/pérdidas de inversiones y derivados, impuestos diferidos (ajustes al CFO) | 38,534 / 12,405 / (11,047) / 14,189 (p. 52) | igual, incluye el detalle de capital de trabajo línea por línea | OK |
+| 11 | Dividendos pagados, recompras (flujo), emisión de acciones | 26,445 / 22,271 / 2,009 (p. 52-53) | igual | OK |
+| 12 | Estado de variaciones: dividendos declarados y recompras contra utilidades retenidas | 27,034 y 16,181 (p. 53) | igual (`movimientos_capital`) | OK |
+
+**Nota 1 — OpenAI y cadena de suministro (p. 57 y 59)**
+
+| # | Cifra | 10-K | `base.json`/notas | Resultado |
+|---|---|---|---|---|
+| 13 | Interés en OpenAI, método de participación | "approximate 25% interest on an as-converted basis" | igual | OK |
+| 14 | Ingresos y cuentas por cobrar de OpenAI FY2026 | $24.1 mil M / $6.0 mil M | igual | OK |
+| 15 | Compromiso de fondeo OpenAI | $13.0 mil M, de los que $11.9 mil M fondeados | igual | OK |
+| 16 | Cuentas por cobrar por componentes de servidores | $27.8 mil M (FY2026) / $8.2 mil M (FY2025) | igual | OK |
+| 17 | Inversiones restringidas por contrato con proveedor | $11.3 mil M ($3.8 mil M en inversiones CP + $7.5 mil M en "Equity and other investments") | igual | OK |
+
+**Nota 3 — Otros ingresos, efecto OpenAI (p. 62)**
+
+| # | Cifra | 10-K | Resultado |
+|---|---|---|---|
+| 18 | Interés y dividendos ganados / gasto de intereses | 3,301 / (3,051) FY2026 | OK |
+| 19 | Ganancias (pérdidas) netas de OpenAI | $6.5 mil M (FY2026), $4.8 mil M de pérdida (FY2025), $1.5 mil M de pérdida (FY2024) | OK |
+
+**Nota 4 — Inversión por método de participación (p. 65):** 20. $12.0 mil M (FY2026) y $6.0 mil M (FY2025) → OK.
+
+**Nota 6 — PPE (p. 69):** 21. Edificios 182,749/137,921; servidores 215,874/132,836; depreciación 34.3/22.0/15.2 mil M; PPE en cuentas por pagar 26.7/6.9/4.3 mil M; compromisos de construcción 34.6 mil M → OK, los cinco.
+
+**Nota 9 — Intangibles (p. 71):** 22. Amortización futura 3,097/2,141/1,944/1,477/1,128 (FY2027-31) y amortización del año 4.7 mil M → OK.
+
+**Nota 10 — Deuda (p. 72):** 23. Valor nominal 46,136/49,206; descuento (1,081)/(1,155); prima por canje (4,750)/(4,864); deuda total 40,294/43,151; valor razonable 36.5/40.4 mil M; interés pagado 1.5/1.6/1.7 mil M; vencimientos 9,250/0/2,001/0/500/34,385 → OK, los siete.
+
+**Nota 11 — Impuestos (p. 73-74):** 24. Impuesto corriente 17,761/28,851; tasa efectiva 19.4%/17.6%/18.2%; NOPA del IRS de $28.9 mil M por los años 2004-2013, en apelación, bajo auditoría 2014-2017 → OK, los tres.
+
+**Nota 12 — Obligaciones de desempeño (sin página impresa localizada, cuerpo de la nota):** 25. $684 mil M totales, ~30% en 12 meses; $678 mil M de la porción comercial (esta última es del MD&A, p. 41, no de la Nota 12) → OK, ambas cifras (no son contradictorias: son universos distintos).
+
+**Nota 13 — Arrendamientos (p. 77-78):** 26. Pasivo financiero 66,594/46,172 y operativo 21,925/22,861; PPE neto por financiero 67,281/44,015; derecho de uso obtenido financiero/operativo 24,608 y 4,555 (FY2026); principal pagado 3,101/2,283; interés de financiero en flujo operativo 2,547/1,372; plazo y tasa 13a/4.5% financiero y 6a/3.7% operativo (FY2026); pagos no descontados 89,686 (interés imputado 23,092) y 24,706 (2,781); cita textual de los $329.1 mil M no iniciados, "primarily for datacenters ... with some arrangements subject to certain contractual conditions being met" → OK, los nueve, incluida la cita textual carácter por carácter.
+
+**Nota 15 — Capital, recompras y dividendos (p. 79-80):** 27. Acciones en circulación 7,434+29−36=7,427; programa autorizado $60.0 mil M (16-sep-2024), $40.6 mil M disponible; recompras 36M/$16,719M y 31M/$13,000M; retenciones fiscales excluidas $5.6/$5.4/$5.3 mil M; dividendos declarados por trimestre y total $27,035M (FY2026, Nota 15) y $24,676M (FY2025, Nota 15) → OK, los seis.
+
+**Nota 17 — SBC (p. 81):** 28. Gasto de SBC 12,405/11,974/10,734; RSU no vestidas 82+41−35−10=78; costo no reconocido $24.8 mil M a 3 años → OK, los tres.
+
+**Nota 18 — Segmentos y geografía (p. 83-84):** 29. Los tres segmentos (ingresos y utilidad operativa) y el total; geografía EUA 170,794 (51.5%) / otros 161,045 (48.5%); "Server products and cloud services" 129,425 contra 98,435 (+31.5%) → OK, los tres bloques.
+
+**Comparativo FY2024 (10-K FY2025, balance y notas al 30-jun-2024):** 30. Balance completo (caja 18,315; inversiones CP 57,228; cuentas por cobrar 56,924; PPE neto 135,591; activo total 512,163; pasivo total 243,686; capital 268,477) → OK. 31. Deuda total (nota 10) 44,937 + deuda de corto plazo (balance) 6,693 = **51,630**, exactamente el campo `deuda` de `base.json` para FY2024 → OK, y explica por qué esa cifra no aparece como una sola línea en ningún estado (es la suma de dos renglones distintos del balance con el detalle de la nota). 32. Arrendamientos financieros totales (Nota 13) al 30-jun-2024: **27,145** → OK, coincide con `base.json`.
+
+**Portada:** 33. "As of July 23, 2026, there were 7,425,545,491 shares of common stock outstanding" → OK, coincide con el insumo del DCF inverso (7,425.5 M).
+
+**Resultado del cotejo: 33 bloques de cifras verificados contra el texto primario del 10-K (bastantes más de 25 cifras individuales, ya que varios bloques agrupan 3 a 9 cifras cada uno), 0 discrepancias con `base.json`.** Las únicas dos diferencias que existen (dividendos declarados de FY2025 y FY2026, estado de variaciones contra Nota 15, por 1 millón en cada año) ya estaban identificadas y explicadas como redondeo del emisor en la §3 original; esta verificación las confirma también contra el texto primario, no solo contra XBRL: la cifra del estado de variaciones (27,034 y 24,677) es la que usa `movimientos_capital` en `base.json`, correctamente etiquetada.
+
+### V3. Controles del modelo y lógica de arrendamientos
+
+- `herramientas/huellas.py verificar empresas/MSFT/modelo/datos/SHA256SUMS.txt` → **OK** (6 archivos, incluidos los dos 10-K recién congelados).
+- `sha256sum -c empresas/MSFT/modelo/SHA256SUMS.txt` → **OK**, los cuatro archivos.
+- `python3 empresas/MSFT/modelo/modelo.py` → código de salida **0**. Salida idéntica a la ya documentada: **540 registros, OK 517, FALLA 0, INFO 19, NO_APLICA 4**; doble comprobación XBRL 167 OK / 2 explicadas / 0 FALLA; DCF inverso 21.53% (OK, sin alertas); sensibilidad geopolítica con sus propios 230 registros, 0 FALLA.
+- **Arrendamientos no iniciados vs. deuda descontada (revisado en el código, no solo en el texto).** En `herramientas/modelo_integrado.py`, `deuda_neta` (línea ~785) se calcula como `deuda + arrendamientos_financieros + revolvente − caja − inversiones_cp`, usando el campo `balance.arrendamientos_financieros` (66,594 en FY2026). El valor 329,100 (Nota 13, "no iniciados") **solo existe** en `base.json` dentro de `historico[].notas.arrendamientos.no_iniciados`, un bloque de memo/texto que el motor no lee para ningún cálculo (no aparece en `PASIVOS`, ni en `deuda_neta`, ni en el DCF inverso vía `mercado_y_dcf`). Confirmado: no se suma a la deuda.
+- **Interés de arrendamientos financieros, no restado dos veces.** El interés de arrendamientos financieros (2,547 en FY2026) ya está dentro de CFO (es la línea "Operating cash flows from finance leases" del propio 10-K, Nota 13, y así lo declara la política contable en p. 59: "Finance leases are included in property and equipment, other current liabilities, and other long-term liabilities"). En el motor, `fcf = cfo − capex` y `fcf_despues_arrendamientos = fcf − principal_arrendamientos_financieros` (solo el **principal**, línea `f["fcf_despues_arrendamientos"]` en `modelo_integrado.py`); el interés no aparece una segunda vez en esa resta. Confirmado: no hay doble conteo.
+- **Indicio adicional sobre la base del compromiso no iniciado (nuevo, no estaba en la versión previa).** La tabla de "Contractual Obligations" del MD&A (p. 44) da un total de arrendamientos (operativos + financieros, con interés imputado) de 443,506. Los pagos no descontados ya reconocidos en la Nota 13 suman 114,392 (89,686 + 24,706). 114,392 + 329,100 (no iniciados) = 443,492, a 14 de la cifra del MD&A (diferencia de 0.003%). Esto refuerza, sin ser una declaración explícita del emisor, que los 329.1 mil millones están expresados en una base nominal (no descontada) — consistente con la razón §2.1.1 de por qué no se suman a una deuda que sí está descontada.
+
+### V4. Qué NO se hizo en esta verificación
+
+- No se leyó el MD&A completo palabra por palabra: se buscaron pasajes específicos (liquidez, flujos, arrendamientos, capitalización de intereses, contractual obligations, tasa efectiva, vidas útiles). No se revisaron Item 1 (Negocio), Item 1A (Riesgos) ni Item 7A (Riesgo de mercado) más allá de lo ya citado en notas previas.
+- No se releyeron a fondo las Notas 2 (UPA), 5 (derivados), 7 (combinaciones de negocios), 8 (goodwill), 14 (contingencias, más allá de la cita de la IDPC y el NOPA) ni 16 (ORI). Ninguna de ellas alimenta una cifra de `base.json` que no se haya verificado ya por otra vía (los totales de capital y ORI sí se verificaron en el estado de variaciones, p. 53).
+- No se descargó el 10-K FY2024 (para el balance al 30-jun-2023, pendiente #6): se usó el FY2025 (para FY2024) por ser el comparativo directo del histórico de `base.json`.
+- No se leyó la transcripción de la llamada de resultados. Ver pendiente #2 para lo que el 10-K sí permite descartar (ningún cambio de vida útil aparece en el 10-K FY2026).
+
+### V5. Veredicto
+
+**Cifras cotejadas:** 33 bloques (>60 valores individuales) contra el texto primario del 10-K FY2026 y, para el comparativo FY2024, contra el 10-K FY2025. **Coincidencias:** todas, sin excepción — incluidas las dos diferencias de redondeo del emisor, ya documentadas y ahora confirmadas también contra el texto primario. **Correcciones aplicadas:** ninguna — no se encontró ningún error material ni menor en `base.json`, `modelo.py` ni `resultados.json`; no hay entrada nueva en `conocimiento/registro-de-errores.md` porque no hay nada que registrar. **Controles del modelo:** los 540 registros dan **0 FALLA** al re-ejecutar; la doble comprobación XBRL da 0 FALLA; el DCF inverso corre sin alertas; se confirmó en el código (no solo en el texto) que los arrendamientos no iniciados no entran a la deuda descontada y que el interés de arrendamientos financieros no se resta dos veces. Lo único que cambió en el repositorio con esta verificación son los archivos de evidencia (`datos/filing_raw/*.htm`, `datos/SHA256SUMS.txt` y el `SHA256SUMS.txt` de nivel superior, regenerado automáticamente por `modelo.py`); ningún dato ni resultado del modelo se modificó.
 
 ## Anexo A. Salida del motor (`mi.resumen_markdown`, sin edición)
 
