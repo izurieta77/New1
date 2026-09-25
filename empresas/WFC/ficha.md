@@ -4,7 +4,7 @@
 > Precio: US$82.18 (cierre del 24-sep-2026). Rango de 52 semanas: 73.00-94.83. A 12 meses: −1.4%. Desde el 15-sep (89.72): −8.4% [12]. Fase 0: esta ficha es investigación, no recomendación.
 
 ## 1. Negocio y segmentos
-Cuarto banco de EUA, con ~US$2.3 billones en activos. Ingresos 2025: US$83,699 M, 57% margen financiero (NII 47,484) y 43% comisiones (36,215) [3][9]. Por segmento [3]: Consumer Banking and Lending 37,362 (44.6%), Corporate and Investment Banking 19,232 (23.0%), Wealth and Investment Management 16,328 (19.5%), Commercial Banking 11,978 (14.3%) y Corporate/ajustes −1,201. La operación es casi toda en EUA; el 10-K no desglosa ingresos por país (no verificado).
+Uno de los cuatro mayores bancos de EUA, con ~US$2.3 billones en activos [1]. Ingresos 2025: US$83,699 M, 57% margen financiero (NII 47,484) y 43% comisiones (36,215) [3][9]. Por segmento [3]: Consumer Banking and Lending 37,362 (44.6%), Corporate and Investment Banking 19,232 (23.0%), Wealth and Investment Management 16,328 (19.5%), Commercial Banking 11,978 (14.3%) y Corporate/ajustes −1,201. La operación es casi toda en EUA; el 10-K no desglosa ingresos por país (no verificado).
 
 El 3-jun-2025 la Fed levantó el tope de activos de US$1.95 billones de 2018 [10]; los activos promedio llegaron a US$2,227.9 mil M en el 2T26 (+15% a/a) [1].
 

@@ -64,7 +64,7 @@ Bernanke-Kuttner (2005) separan con futuros de fondos federales la parte anticip
 
 - **Concentrados contra difusos** (Olson; Stigler; Grossman-Helpman 1994, *Protection for Sale*). Gana quien concentra beneficios y reparte costos. **Inferencia:** a largo plazo la política comercial favorece a sectores organizados con empleo concentrado geográficamente (acero, autos, agro de estados clave).
 - **Jugadores con veto** (Tsebelis). En México la mayoría calificada depende de PT y PVEM. El 11-mar-2026 votaron **contra** la reforma electoral: 259 a favor, 234 en contra, cuando se necesitaban 334. La coalición no es un bloque.
-- **Ciclo electoral.** Antes de una elección se evitan costos visibles y después se abre una ventana para medidas impopulares. Intermedias de EUA: **3-nov-2026**. Intermedias de México: primer domingo de junio de 2027, que por regla cae el 6-jun (fecha no confirmada con el INE).
+- **Ciclo electoral.** Antes de una elección se evitan costos visibles y después se abre una ventana para medidas impopulares. Intermedias de EUA: **3-nov-2026**. Intermedias de México: **6-jun-2027**, primer domingo de junio según la LGIPE; Proceso Electoral Federal 2026-2027 con 500 diputaciones y 17 gubernaturas (Wikipedia; calendario del INE no consultado).
 - **Pastor-Veronesi (2012, 2020).** Los cambios de política bajan precios en promedio, más cuando la economía es débil (cap. 23). La prima demócrata se explica por la aversión al riesgo del electorado.
 
 ### 2.6 Conexiones: renta y pasivo contingente
@@ -81,7 +81,7 @@ Las conexiones valen porque dan acceso a contratos, rescates y regulación favor
 | Gürkaynak-Sack-Swanson (2005, IJCB) | Factores *target* y *path*. El *path* domina los plazos largos | https://www.federalreserve.gov/pubs/feds/2004/200466/200466pap.pdf | **A** |
 | Nakamura-Steinsson (2018, QJE) | *Information effect* de la Fed (en debate con Bauer-Swanson 2023) | https://www.nber.org/papers/w19260 | **B** |
 | Lucca-Moench (2015, JF) | +**49 pb** en las 24 h previas al FOMC (sep-1994 a mar-2011), alrededor de **80%** del exceso anual | https://www.newyorkfed.org/research/staff_reports/sr512.html | B en muestra, **D** hoy |
-| Kurov-Wolfe-Gilbert (2021, FRL) | La deriva **desapareció después de 2015** (muestra hasta 2019) | https://pmc.ncbi.nlm.nih.gov/articles/PMC7525326/ | **B** |
+| Kurov-Wolfe-Gilbert (2021, FRL; en línea 2020) | La deriva **desapareció después de 2015**, con y sin conferencia (muestra hasta dic-2019) | https://pmc.ncbi.nlm.nih.gov/articles/PMC7525326/ | **B** |
 | Cieslak-Morse-Vissing-Jorgensen (2019, JF) | Desde 1994 la prima accionaria se gana en las semanas **0, 2, 4 y 6** del ciclo FOMC, por comunicación informal de la Fed | https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12818 | B / **C** como estrategia |
 | Santa-Clara-Valkanov (2003, JF) | Exceso de retorno con presidentes demócratas: **+9 pp** ponderado por valor y **+16 pp** equiponderado | https://ideas.repec.org/a/bla/jfinan/v58y2003i5p1841-1872.html | B como hecho, **D** para operar (N≈20) |
 | Pastor-Veronesi (2020, JPE) | Explica la prima demócrata por aversión al riesgo variable | https://www.nber.org/papers/w23184 | B |
@@ -93,9 +93,9 @@ Las conexiones valen porque dan acceso a contratos, rescates y regulación favor
 | Goldman-Rocholl-So (2013, RoF) | Los consejos conectados con el partido ganador reciben más contratos | https://academic.oup.com/rof/article-abstract/17/5/1617/1582382 | B |
 | Acemoglu et al. (2016, JFE) | Nominación de Geithner: las financieras conectadas ganan **~6%** el primer día y **~12%** en 10 días | https://www.nber.org/papers/w19701 | **B** |
 | Cohen-Coval-Malloy (2011, JPE) | Cuando llega un presidente de comité poderoso, las empresas de su estado **recortan** inversión y empleo | https://www.nber.org/papers/w15839 | B |
-| Cooper-Gulen-Ovtchinnikov (2010, JF) | El número de candidatos apoyados predice retornos anormales (magnitud no verificada) | https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2009.01548.x | **C** |
+| Cooper-Gulen-Ovtchinnikov (2010, JF 65(2)) | Con donaciones 1979-2004, las medidas de contribución se correlacionan positivamente con retornos futuros. El efecto es mayor con muchos candidatos del estado sede, de la Cámara y demócratas. El resumen no da magnitud (no verificado) | https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2009.01548.x | **C** |
 | Chen-Parsley-Yang (2015, **J. Business Finance & Accounting**, no JFQA) | Los portafolios con más *lobbying* superan su *benchmark* durante 3 años | https://onlinelibrary.wiley.com/doi/10.1111/jbfa.12109 | **C** |
-| Eggers-Hainmueller (2013, JOP) | El Congreso promedio quedó **2-3% anual por debajo** del mercado (2004-2008) | https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1762019 | **B** |
+| Eggers-Hainmueller (2013, JOP) | El Congreso promedio quedó **2-3% anual por debajo** del mercado (2004-2008) (resumen no consultado en esta sesión) | https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1762019 | **B** |
 | Belmont-Sacerdote et al. (2022, JPubE) | Sin desempeño superior entre 2012 y 2020. Lo que compra la Cámara rinde **−26 pb** a 6 meses | https://www.nber.org/papers/w26975 | B. Copiar al Congreso: **D** |
 | Wolfers-Zitzewitz (2004, JEP) | Los mercados de predicción agregan bien la información, con sesgo *favorite-longshot* | https://www.aeaweb.org/articles?id=10.1257/0895330041371321 | B |
 

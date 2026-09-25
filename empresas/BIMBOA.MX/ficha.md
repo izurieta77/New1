@@ -70,7 +70,7 @@ Capitalización de Ps 237.1 mil M (4,304.7 M acciones). VE de 374.9 mil M sin ar
 **DCF inverso:** WACC en MXN de 8.5% ±150 pb (Ke de 11.0% = 4.9% + 0.8 × 4.09% + CRP ponderado de 1.25% + 1.4 pp de inflación; Kd de 5% después de impuestos; D/V de 44%). FCFF = UAFIDA 60.9 − arrendamientos ~8.0 − capex de US$1.1 mil M × 17.5 − 30% de impuestos sobre EBIT de 35.7 = **Ps 23.0 mil M** (6.1% del VE). El crecimiento implícito es **2.2% nominal** (0.8-3.6%). *Inferencia:* está por debajo de la inflación, así que el precio descuenta un estancamiento real.
 
 ## 7. Escenarios de negocio a 12 meses
-- **Bajista (25%)**: EUA vuelve a perder volumen, trigo y energía suben más y el peso queda abajo de 17. Margen UAFIDA 2026 ≤14.5%; UN 2026 de ~Ps 11 mil M.
+- **Bajista (25%)**: EUA pierde volumen, suben trigo y energía y el peso baja de 17. Margen UAFIDA 2026 ≤14.5%; UN de ~Ps 11 mil M.
 - **Base (50%)**: se cumple la guía (margen de 14.6-15.1%) y la deuda neta/UAFIDA baja a ~2.3-2.4x. UN 2026 de Ps 12-13 mil M (*pronóstico*; 1S26 fue de 5,297 M).
 - **Alcista (25%)**: Norteamérica llega a un margen de 11% o más, el peso se deprecia y siguen las recompras. UN 2026 mayor a Ps 13.5 mil M.
 - **Qué cambiaría el escenario:** el margen UAFIDA de Norteamérica en el 3T26 (menos de 10% o más de 11%) y el costo financiero neto.
@@ -79,13 +79,13 @@ Capitalización de Ps 237.1 mil M (4,304.7 M acciones). VE de 374.9 mil M sin ar
 - **Fecha: 22-oct-2026, con conferencia a las 17:00 ET, confirmada en la página de inversionistas [10].** Investing registra la misma fecha [8].
 - **Ventas:** punto de **Ps 106,300 M**; p10-p90 de 103,600-109,000. Consenso: **Ps 106,340 M** (Investing, 25-sep-2026 [8]). Supuestos: Norteamérica +1.5% sin efecto cambiario y −7.5% por tipo de cambio; México +4%; EAA +8% sin efecto cambiario y −8% por tipo de cambio; Latinoamérica +4.5% en MXN; eliminaciones de ~3.8%.
 - **UPA:** punto de **Ps 0.82**; p10-p90 de 0.66-0.97. Consenso: **Ps 0.866** [8]. Supuestos: margen UAFIDA de 15.0%, D&A y otros de ~Ps 6.2 mil M, costo financiero de 3.45 mil M, tasa de 37%, minoritario de ~Ps 460 M y 4,300 M acciones.
-- **Binarios:** (1) ventas mayores a Ps 106,340 M: **p = 0.50**; (2) margen UAFIDA ajustada mayor a 14.7% (el del 3T25): **p = 0.70**. La guía implica un margen de ~15.0-15.9% en el 2S26 (cálculo propio).
+- **Binarios:** (1) ventas mayores a Ps 106,340 M: **p = 0.50**; (2) margen UAFIDA ajustada mayor a 14.7% (3T25): **p = 0.70**; la guía implica ~15.0-15.9% en el 2S26 (cálculo propio).
 
 ## 9. Catalizadores con fecha y riesgos
 - **22-oct-2026:** 3T26.
 - **20 y 31 oct-2026:** plazos para aprobar la Ley de Ingresos 2027 (IEPS de 8% sin cambio en la iniciativa) [12].
 - **Feb-2027:** 4T26 y guía 2027.
-- **Riesgos:** peso, trigo y energía, consumo en EUA, MEPPs, costo financiero e integración de adquisiciones.
+- **Riesgos:** peso, trigo, energía, consumo en EUA, MEPPs y costo financiero.
 
 ## 10. Fuentes
 1. Grupo Bimbo, 2T26 (23-jul-2026): https://d2rwhogv2mrkk6.cloudfront.net/s3fs-public/reportes-2026/Grupo%20Bimbo%20Reports%202Q26%20Results_VF.pdf?VersionId=UZM8LqJBZjeqYQj1T1pdIE41TADT5hwz
