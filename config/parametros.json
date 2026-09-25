@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "fecha": "2026-09-25",
   "nota": "Fuente unica de verdad de los parametros de riesgo. Todo documento y herramienta lee de aqui. Valores por defecto: ajustar con el perfil real del dueno (capital, horizonte, gastos).",
   "objetivo": {
@@ -119,7 +119,7 @@
     "fecha_captura": "2026-09-25",
     "broker": "GBM (app GBM+)",
     "ejecucion": "Manual por el dueno en la app de GBM a partir de las ordenes que propone el sistema (GBM no tiene API publica para personas fisicas)",
-    "tolerancia_riesgo": "Alta en las cuentas arena: el dueno acepta perder el capital asignado; la prioridad declarada es ganar",
+    "tolerancia_riesgo": "Alta en la cuenta arena: acepta perder el capital asignado; la prioridad declarada es ganar",
     "pendiente": [
       "horizonte del patrimonio principal",
       "gastos mensuales",
@@ -133,23 +133,15 @@
       "broker": "GBM",
       "capital_inicial_mxn": 20000,
       "perfil_riesgo": "arena_agresivo",
-      "estado": "por fondear"
-    },
-    {
-      "id": "arena-grok",
-      "gestor": "Grok (rival)",
-      "broker": "GBM",
-      "capital_inicial_mxn": 15000,
-      "perfil_riesgo": "desconocido",
-      "estado": "rival: solo se registra su valor para el marcador"
+      "estado": "abierta; opera hasta salir de fase 0"
     }
   ],
   "perfiles_riesgo": {
     "estandar": "Los parametros de nivel superior de este archivo (patrimonio principal)",
     "arena_agresivo": {
-      "estado": "PROVISIONAL hasta completar arena/ (investigacion GBM + teoria de torneos)",
-      "objetivo": "Maximizar la probabilidad de terminar la temporada con mayor rendimiento % (TWR en MXN) que arena-grok, sin quedar fuera del juego",
-      "metrica_competencia": "Rendimiento ponderado por tiempo (TWR) en MXN desde el fondeo; desempate: menor drawdown maximo",
+      "estado": "PROVISIONAL: se calibra al terminar la formacion (fase 0)",
+      "objetivo": "Terminar cada temporada con el mayor rendimiento % (TWR en MXN) entre todas las cuentas de IA, sin quedar fuera del juego",
+      "metrica_competencia": "TWR en MXN desde el fondeo, igual capital para todos; desempate: menor drawdown maximo",
       "temporada_meses": 6,
       "estructura": {
         "nucleo_min": 0.0,
@@ -195,10 +187,21 @@
       "filtro_apalancados": "Solo con el subyacente sobre su media movil de 200 dias y VIX < 25; se venden al perder el filtro",
       "operaciones_max_mes": 8,
       "modo_torneo": {
+        "referencia": "mejor rival reportado",
         "ventaja_para_bajar_varianza_pp": 5,
         "desventaja_para_subir_exposicion_pp": 5,
-        "nota": "Adelante: reducir varianza y proteger la ventaja. Atras: subir exposicion dentro de los limites."
+        "nota": "Solo se conocen resultados de los rivales. Adelante del mejor rival: reducir varianza. Atras: subir exposicion dentro de los limites."
       }
     }
+  },
+  "prioridad_actual": {
+    "fase": 0,
+    "descripcion": "Formacion experta primero. El sistema NO propone inversiones reales al dueno hasta aprobar el examen de titulacion (conocimiento/examenes) y completar la validacion en papel. Las rutinas en fase 0 solo entrenan: pronosticos calibrados y portafolio de papel.",
+    "criterio_salida": "Examen de titulacion >= 90% + 3 meses de pronosticos con Brier <= objetivo + portafolio de papel dentro de limites"
+  },
+  "rivales": {
+    "descripcion": "Otras IAs, cada una con su propia cuenta en GBM y el mismo capital inicial. El dueno reporta solo resultados (valor de la cuenta y fecha), nunca posiciones.",
+    "registro": "competencia/rivales.csv",
+    "capital_inicial_mxn": 20000
   }
 }
