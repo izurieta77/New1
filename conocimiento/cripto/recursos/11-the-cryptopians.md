@@ -1,111 +1,122 @@
 # 11 · The Cryptopians (Laura Shin, 2022)
 
-> Ficha del grupo G2 Ethereum. Estudiada el 25-sep-2026 por el analista cripto. Estado: **estudiado (sin el texto del libro)**. Acceso: **resumen**.
-> Capítulo de síntesis: [02-ethereum-historia-protocolo-y-hoja-de-ruta.md](../02-ethereum-historia-protocolo-y-hoja-de-ruta.md).
+> Ficha del grupo G2 Ethereum. Acceso ampliado a **íntegro** el 25-sep-2026 por el analista cripto: el dueño subió el PDF completo a Google Drive (carpeta "CRYPTO") y esta ficha se reescribió sobre el texto leído directamente, no sobre reseñas. Estado: **estudiado (texto completo)**. Acceso: **íntegro**.
+> Capítulo de síntesis: [02-ethereum-historia-protocolo-y-hoja-de-ruta.md](../02-ethereum-historia-protocolo-y-hoja-de-ruta.md). **Nota:** ese archivo no existe todavía en el repo a la fecha de esta ficha (25-sep-2026); no pude escribirle la adenda que pide el encargo porque no hay capítulo que enmendar. Queda pendiente para quien lo cree.
 
 ## 1. Ficha
 
 | Campo | Dato |
 |---|---|
 | Título | *The Cryptopians: Idealism, Greed, Lies, and the Making of the First Big Cryptocurrency Craze* |
-| Año | 2022, PublicAffairs (Hachette Book Group), **22-feb-2022**, 496 pp. ISBN: e-book 9781541763005; rústica 9781541763029 |
-| Autora | Laura Shin: periodista cripto, en Forbes hasta 2018; conduce los pódcast *Unchained* y *Unconfirmed* ("over 14 million downloads and views", según Hachette) |
-| Tipo | Libro de periodismo de investigación |
-| Nivel | Principiante (en el índice del dueño). La reseña de Decrypt lo juzga denso y poco apto para novatos |
-| Costo | De pago (~US$20-30) |
-| Idioma | Inglés |
+| Año | 2022, PublicAffairs (Hachette Book Group). Primera edición: feb-2022. 496 pp. en impreso (el PDF que leí, generado de un ebook, pagina distinto: 407 "páginas"). ISBN tapa dura 9781541763012, ebook 9781541763005 |
+| Autora | Laura Shin: periodista, editora sénior en *Forbes* hasta 2018; conduce el pódcast *Unchained* (antes también *Unconfirmed*). Es la misma red de pódcasts del **recurso 09** de nuestra lista, *The Chopping Block* (Qureshi/Schmidt/Chitra/Leshner) — ambos recursos comparten el mismo patrón de conflicto: anfitriones de un medio cripto con posiciones propias en el sector |
+| Tipo | Periodismo narrativo de investigación (no ficción) |
+| Nivel | Indexado como "Principiante" por el dueño. Habiéndolo leído completo, lo calificaría de **Intermedio**: el propio libro trae una lista de más de 60 personajes y un glosario porque anticipa que el lector se pierde con la jerga y el elenco |
+| Costo | De pago (~US$20-30). El dueño ya lo había comprado; subió el PDF a Drive el 25-sep-2026 |
+| Idioma | Inglés. No verifiqué que exista una traducción oficial al español |
 | URL | https://www.hachettebookgroup.com/titles/laura-shin/the-cryptopians/9781541763012/ |
-| Conflictos de interés | - La autora declara en unchainedcrypto.com que "holds more than $1,000 each of bitcoin, ether, sol, hype, and sui".<br>- Su pódcast vive de patrocinios del sector.<br>- Su investigación sobre el atacante de The DAO se hizo con Chainalysis, empresa de análisis on-chain; la cobertura no reporta un pago de por medio. |
+| Conflictos de interés | Ver detalle abajo — son varios y con matices distintos |
+
+**Conflictos de interés, en detalle:**
+
+- [H] La propia autora los declara en el libro, en su nota "Notes on Reporting" (la leí directo del PDF): las empresas que han patrocinado su pódcast o sus videos son *"CoinDesk (owned by Digital Currency Group), ConsenSys, Cosmos, Kraken, Microsoft, ShapeShift, and Tezos"*. ConsenSys y su fundador, Joseph Lubin, son sujetos centrales del libro —incluida la disputa por acciones que se litiga en tribunales después de la publicación (§3, §4)—, así que la autora reporta sobre un patrocinador de su propio medio. Es un conflicto declarado, no oculto, pero pesa.
+- [H] Metodología declarada en la misma nota: más de tres años de reporteo, **más de 200 entrevistas "on background"** (sin atribuir la información a una fuente concreta), entrevistó a los ocho cofundadores de Ethereum. Esto importa para calificar la evidencia: buena parte de las caracterizaciones personales del libro son citas de fuentes anónimas que Shin reporta, no hechos que un lector pueda verificar por su cuenta.
+- [H] Externamente (unchainedcrypto.com, no verificado en el libro, que es de 2022): declara tenencias personales de bitcoin, ether, SOL, HYPE y SUI por más de US$1,000 cada una.
+- [I] Ninguno de estos conflictos invalida el reportaje factual verificable (fechas, cifras on-chain, documentos legales), pero sí conviene descontarlo de los juicios de carácter y de cualquier pasaje sobre ConsenSys.
 
 ## 2. Acceso real
 
-- **Nivel: resumen.** No leí el texto del libro. Consulté el 25-sep-2026:
-  1. la **página de Hachette**: descripción oficial, biografía, fecha, páginas e ISBN;
-  2. la **reseña de Decrypt** de Jeff John Roberts (febrero de 2022);
-  3. la cobertura del **extracto que la autora publicó en Forbes el 22-feb-2022**, sobre el atacante de The DAO, en The Block (Tim Copeland, 22-feb-2022) y Stockhead (22-feb-2022);
-  4. la cobertura de la réplica de Charles Hoskinson (marzo de 2022);
-  5. la declaración de tenencias de la autora en unchainedcrypto.com.
-- **No pude leer el artículo original de Forbes** (devolvió 403) ni el video de C-SPAN3 (16-abr-2022, no visto).
-- Los hechos del periodo (The DAO, venta de ether, ICOs, crash de 2018) los **verifiqué con fuentes primarias** (SEC, blog de la EF, Binance, RFS).
+**Nivel: íntegro (PDF completo), aportado por el dueño el 25-sep-2026 (Google Drive, carpeta "CRYPTO").** Archivo `The Cryptopians - Laura Shin.pdf`, 2,859,592 bytes, 407 páginas de PDF (paginación de un ebook exportado con Calibre; no coincide con las 496 pp. de la edición impresa, así que en esta ficha cito por **capítulo**, no por página).
+
+Cómo lo obtuve y cuánto cubrí:
+
+1. `mcp__Google_Drive__read_file_content` devolvió una representación de **176,070 caracteres** — **incompleta**, tal como advierte la propia herramienta. Lo confirmé de dos formas: (a) no contenía ni una vez las palabras "hard fork", "Frontier", "Parity" ni "Devcon", que sí aparecen decenas de veces más adelante en el libro; (b) por longitud, 176,070 caracteres son ~18.6% de los 947,570 que obtuve después. Ese primer extracto llegaba, como mucho, a mitad del capítulo 3 (de 12).
+2. Por eso usé `mcp__Google_Drive__download_file_content` (el PDF completo en base64, 3,812,792 caracteres, que decodifiqué con Python a un archivo de 2,859,592 bytes — coincide exactamente con el tamaño que reporta Drive). Extraje el texto con `pypdf`, página por página. **Las 407 páginas se extrajeron sin ninguna excepción**; solo 5 quedaron casi vacías (portada, dedicatoria y la última, en blanco). Total: **947,570 caracteres**, que considero el texto íntegro del libro (prólogo, nota metodológica, lista de personajes, los 12 capítulos, epílogo, glosario y notas).
+3. Con ese texto completo hice dos cosas: **(a)** búsqueda de palabra clave sobre el 100% del texto, para ubicar los 12 capítulos por su encabezado de fechas, verificar personajes, cifras y citas, y confirmar o refutar afirmaciones de la ficha anterior; **(b)** lectura cercana, párrafo por párrafo, de la nota metodológica, el prólogo, la apertura de los 12 capítulos, y las secciones del epílogo sobre el atacante de The DAO y la reestructuración de ConsenSys — en total, unas 60-90 páginas de 407 (~15-20%) leídas de corrido.
+4. **Lo que no leí de cerca:** el grueso narrativo intermedio de los capítulos 1, 2, 4 y 10 más allá de sus escenas de apertura y los términos que busqué; los agradecimientos; y la mayoría de las notas al pie y la bibliografía (solo verifiqué puntualmente 3-4 notas, como la cita al reporte de la SEC sobre The DAO).
+5. **Balance honesto:** tengo cobertura por palabra clave del 100% del texto extraído y lectura directa de ~15-20% de las páginas. Es sustancialmente más que un resumen y me deja verificar con el texto en mano casi todo lo que sigue, pero no equivale a una relectura íntegra palabra por palabra.
+
+Archivos de trabajo (no se subieron al repo, solo en mi scratchpad): `cryptopians.pdf` (el PDF decodificado), `full_text.txt` (947,570 caracteres extraídos con pypdf), `read_file_content_extract.txt` (el primer intento, parcial).
 
 ## 3. Lo esencial
 
-**Qué cubre el libro** (según la editorial y las reseñas)
-1. [H] La descripción oficial: "The story of the idealists, technologists, and opportunists fighting to bring cryptocurrency to the masses". Cuenta la fundación de Ethereum, con Vitalik Buterin y Joseph Lubin, como "a deeply personal struggle to influence the coming revolution in money, culture, and power" (Hachette).
-2. [O] Según Decrypt, es "the most authoritative account to date about Ethereum" por su "meticulous research". A Hoskinson lo pinta como "a pervert and pathological liar" y a Gavin Wood como "a failed MacBeth" que socava a Vitalik.
-3. [O] Según la misma reseña, hubo una confrontación estilo "Game of Thrones" en Zug que fijó ocho cofundadores. Ming Chan, directora de la EF, habría ejercido "cult-like influence" sobre el joven Vitalik. Los "verdaderos héroes" serían miembros anónimos de la comunidad.
-4. [H] El libro trata The DAO y el dilema entre inmutabilidad y recuperar fondos, que se resolvió con el hard fork, y el "crazy period" de las ICOs de 2017 (Decrypt).
-
-**La investigación sobre el atacante de The DAO** (extracto en Forbes, vía The Block y Stockhead)
-5. [H] Con Chainalysis, Shin señala a **Toby Hoenisch**, ex-CEO de TenX, como el probable atacante de 2016. Titular de Forbes: "Austrian Programmer and Ex-Crypto CEO Likely Stole $11 Billion of Ether", valuando ~3.6 M ETH a precios de 2022.
-6. [H] Cadena de evidencia reportada:
-   - conversión de ETC a BTC en ShapeShift;
-   - 50 BTC mezclados en Wasabi;
-   - salida por cuatro exchanges centralizados;
-   - retiro en Grin a un nodo llamado "grin.toby.ai";
-   - el alias "toby.ai" y una IP que también alojaba un nodo "TenX".
-
-   Fuentes: The Block, Stockhead.
-7. [H] Hoenisch lo negó ("your statement and conclusion is factually inaccurate") y no entregó la refutación que prometió (The Block; Stockhead). **La atribución no está probada judicialmente.**
-8. [I] Matiz técnico: después del hard fork, en la cadena ETH los fondos volvieron a los tenedores de tokens DAO (SEC). El botín que el atacante pudo usar estaba en la cadena **ETC**, y por eso el rastro empieza convirtiendo ETC a BTC. Los "US$11 mil millones" son una valuación nocional a precios de ETH de 2022, no una ganancia realizada.
-
-**Controversia con Hoskinson**
-9. [H] Hoskinson llamó al libro "a great work of fiction". Shin respondió con audio de un pódcast donde él decía que había intentado un doctorado y lo abandonó. Según la cobertura, Shin documentó que se inscribió como estudiante de tiempo parcial en Metropolitan State University of Denver (2006-2008) y en la Universidad de Colorado en Boulder (2009-2011) (CryptoSlate, The Coin Republic; marzo de 2022).
-
-**Hechos del periodo, verificados con fuentes primarias**
-10. [H] **The DAO:** ~12 M ETH (~US$150 M) recaudados del 30-abr al 28-may-2016. El 17-jun-2016 se desviaron ~3.6 M ETH (1/3). Hard fork el 20-jul-2016 y nace Ethereum Classic. La SEC concluyó que los tokens eran valores ([Release 81207](https://www.sec.gov/litigation/investreport/34-81207.pdf)).
-11. [H] **Venta de ether de 2014:** 31,531 BTC (US$18.44 M) por ~60.1 M ETH (EF; ethereum.org).
-12. [H] **ICOs:** más de 1,500 ofertas que recaudaron US$12.9 mil millones (Howell, Niessner y Yermack, *RFS* 2020). La SEC ya en 2017 trató un token de "DAO" como valor. Para inversión, el mensaje es que el riesgo regulatorio del periodo era real.
-13. [H] **Crash:** ETH cayó −94.0% en cierres (1,388.02 el 13-ene-2018 → 83.76 el 15-dic-2018, Binance). ETH/BTC tocó su cierre máximo en Binance, 0.1132, el 1-feb-2018, y cayó a 0.0164 en sep-2019.
-14. [H] **Parity:** Mastering Ethereum 2.ª ed. (cap. 9) documenta el segundo hackeo de la multisig de Parity (2017), un caso de biblioteca usada fuera de contexto. [I] Es parte del mismo periodo turbulento; no verifiqué qué tanto lo trata *The Cryptopians*.
+1. [H] Estructura: prólogo + 12 capítulos, cada uno acotado a un rango de fechas exacto (el más corto, el cap. 6, cubre apenas 4 días —17 al 21-jun-2016, el hackeo de The DAO—; el más largo, el cap. 10, cubre de otoño de 2016 a jul-2017) + un epílogo que llega hasta ~jun-2021, antes de la publicación (feb-2022).
+2. [H] (Cap. 1, 1994-ene-2014) Vitalik Buterin envió la propuesta de Ethereum el 27-nov-2013, el mismo día en que bitcoin superó por primera vez los US$1,000 camino a un máximo de ~US$1,242. Uno de los destinatarios fue Anthony Di Iorio.
+3. [H] (Cap. 2, ene-jun-2014) En la reunión fundacional de Miami se fijó una estructura de ocho cofundadores con dotación de ether y voto igualitarios, salvo Vitalik, que recibió el doble de ether y un segundo voto para desempatar entre ellos.
+4. [H] (Cap. 3, jun-2014 a jul-2015) Charles Hoskinson (CEO) y Amir Chetrit fueron sacados del grupo fundador tras una decisión interna en Suiza. El libro cita a personas no identificadas que lo describieron como alguien que "podría ser un sociópata" ("this guy could be a fucking sociopath") y a Stephan Tual llamándolo "un lastre" ("a liability"); son citas de fuentes anónimas que la autora reporta, no una conclusión que Shin firme ni un hecho adjudicado por nadie.
+   **Corrección respecto a la ficha anterior (que era solo de reseñas):** frases como *"a pervert and pathological liar"* (sobre Hoskinson) o *"a failed MacBeth"* (sobre Gavin Wood), que la ficha previa citaba como contenido del libro vía la reseña de Decrypt, **no aparecen en el texto** que pude buscar de forma exhaustiva (0 resultados para "pervert", "pathological", "MacBeth"). Todo indica que es la interpretación colorida del reseñista, no palabras de Shin.
+5. [H] (Cap. 3) La preventa de ether de 2014 recaudó 31,530 BTC en 42 días. Al precio del día de cada aportación eso valía ~US$18.4 millones, pero como bitcoin cayó de ~US$620 a ~US$477 durante la venta, el valor real al cierre fue de solo ~US$15 millones: riesgo de tesorería de manual en una recaudación cripto, documentado por el propio libro.
+6. [H] (Cap. 3) El despacho Pryor Cashman construyó el argumento legal (con el test *Howey*) de que el ether no era un valor porque tenía utilidad —pagar cómputo, como gasolina para un auto— y no dependía del esfuerzo de un tercero. Es el mismo razonamiento que después repetirían cientos de ICOs en 2017.
+7. [H] (Cap. 4-5) Ming Chan, nueva directora ejecutiva de la Fundación Ethereum, despidió a Gavin Wood (CTO); la salida se complicó porque su pareja, Jutta Steiner (jefa de seguridad), estaba embarazada. Ocurre un año antes del hackeo de The DAO y muestra cuán informal era todavía la gobernanza del proyecto.
+8. [H] (Cap. 5) La preventa de tokens de The DAO cerró el 28-may-2016 con más de 11.7 millones de ETH —14.6% de todo el ETH en circulación— y **US$139.4 millones** recaudados: la mayor recaudación colectiva de la historia hasta ese momento, según el libro.
+9. [H] (Cap. 6) El 17-jun-2016 un atacante drenó **3.64 millones de ETH** de The DAO explotando una función de retiro recursivo. Un grupo de "sombreros blancos" (Robin Hood Group) corrió a rescatar los fondos restantes replicando la misma técnica sobre sí mismo, antes de que el atacante pudiera hacerlo de nuevo.
+10. [H] (Cap. 7) El debate "hard fork" contra "code is law" se resolvió con una única consulta informal y no vinculante: carbonvote.com, ponderada por ETH y no por personas. Cerró con **87% a favor**, pero con solo **~5% de todo el ETH en circulación** participando. La bifurcación se ejecutó en el bloque 1,920,000 (20-jul-2016) y separó a los disidentes en Ethereum Classic.
+11. [H] (Cap. 8-9) Cuando Poloniex listó ETC, varios usuarios amenazaron con demandar al exchange y al propio grupo de rescate, acusándolos de complicidad con el atacante. ETC sobrevivió pese a que buena parte de la comunidad esperaba que muriera.
+12. [H] (Cap. 9 / Epílogo) Dentro de la Fundación Ethereum operaba lo que el propio personal llamaba un **"gobierno en la sombra"** ("shadow government"): asesores sin cargo oficial que influían en decisiones —hasta la sede de un DevCon— sin rendir cuentas formalmente. El libro reporta un intercambio en el que un miembro del consejo, preguntado cuántos votos tenía Vitalik, respondió "más que nadie: tres", lo que contradice la propia versión de Ming Chan de que él solo tenía un voto cuando la removieron. Es gobernanza informal documentada por entrevistas, no un hecho que yo pueda verificar de forma independiente.
+13. [H] (Cap. 10) El 27-feb-2017 se lanzó la Enterprise Ethereum Alliance (EEA) con JPMorgan, Microsoft, Wipro, Banco Santander, Accenture, Intel, BNY Mellon y CME Group como miembros fundadores con voto.
+14. [H] (Cap. 10-11) La manía de ICOs de 2017 saturó la red de forma literal: la venta de BAT recaudó ~US$36 millones en 24 segundos con solo 210 compradores (uno solo puso US$4.7 millones); apenas el 1.89% de las transacciones que lo intentaron lograron entrar.
+15. [H] (Dato externo, no del libro, para poner el periodo en escala) Howell, Niessner y Yermack (*Review of Financial Studies*, 2020) documentan más de 1,500 ICOs que recaudaron US$12.9 mil millones en total; el conteo de mercado (CoinSchedule) solo para el calendario 2017 varía entre ~US$3.9 y 6.8 mil millones según la fuente, por diferencias de metodología. La SEC ya trataba un token "DAO" como valor desde el 25-jul-2017 (Release 81207), antes del pico de la manía.
+16. [H] (Cap. 12) El libro registra el máximo histórico de ETH el 13-ene-2018 en "poco más de US$1,432" (con la fuente de precios que declara usar, similar a CoinMarketCap). Es una cifra distinta del cierre diario de US$1,388.02 en Binance citado en la ficha anterior de este mismo recurso: no es una contradicción, son convenciones de medición distintas (máximo intradía agregado de varios exchanges vs. cierre de un solo exchange).
+17. [H] (Epílogo) Entre enero y diciembre de 2018, ETH cayó de más de US$1,000 a un mínimo de ~US$83, dentro de una caída del 87% en la capitalización total de cripto, según cifras del propio libro.
+18. [H] (Epílogo) Con datos de Chainalysis, Shin arma un caso circunstancial sobre el atacante de The DAO: conversión a BTC vía ShapeShift, mezcla en una billetera Wasabi (CoinJoin), conversión a la moneda de privacidad Grin, y retiro a un nodo cuyo alias e IP se repetían en varias redes públicas (AngelList, GitHub, LinkedIn, etc.) de una persona en Singapur. **En el texto que pude extraer y buscar no ubiqué el nombre propio final impreso en ese pasaje** (podría ser un artefacto de la conversión del PDF, ya que el libro usa versalitas estilizadas al abrir cada sección). La cobertura pública del adelanto que *Forbes* publicó en feb-2022 —vía The Block, Stockhead y Decrypt— nombra a esa persona: **Toby Hoenisch, excofundador y CEO de TenX**. Él lo negó ("your statement and conclusion is factually inaccurate") y no entregó la refutación detallada que había ofrecido. No hay cargo penal ni fallo civil conocido: sigue siendo una atribución periodística, no judicial.
+19. [H] (Epílogo) La estructura interna de ConsenSys organizaba a los empleados en **"spokes"** (proyectos internos, con salario pagado por ConsenSys); el reparto de tokens entre el empleado y la empresa no tenía un estándar fijo —empleados citados hablan de 50/50 y hasta 70% para ConsenSys—, algo que la propia empresa (Matt Corva, su abogado) niega ("no había un reparto estándar").
+20. [H] (Epílogo) En 2020, ConsenSys trasladó sus activos centrales —MetaMask, Infura y el negocio Quorum comprado a JPMorgan— de la entidad suiza original (ConsenSys AG, apodada "Mesh") a una nueva entidad de EE. UU., ConsenSys Software Inc. JPMorgan aportó Quorum a cambio de una participación en la nueva entidad y un asiento en su consejo. Empleados que tenían acciones de la entidad suiza describieron en un chat interno que quedaron diluidas a una décima parte de su valor previo; el abogado de ConsenSys no confirmó esa cifra, pero sí confirmó una votación de accionistas que autorizó más acciones comunes para repartir entre empleados que aún no tenían equity.
+21. [I] Esa reestructuración de 2020 es el antecedente directo de una demanda real **posterior** a lo que narra el libro (que llega hasta ~jun-2021 según su propio epílogo, y se publicó en feb-2022): en **oct-2023**, **27 exempleados de ConsenSys AG demandaron a Joseph Lubin, a ConsenSys Software Inc. y a JPMorgan** (entre 7 demandados) en la Corte Suprema del estado de Nueva York, alegando que Lubin incumplió una promesa de "no dilución" hecha en 2015; antes habían litigado —sin éxito, según la propia ConsenSys— unos dos años en un tribunal suizo. Los demandantes dijeron que sus acciones quedaron en "papeles prácticamente sin valor", mientras ConsenSys Software Inc. ya había recaudado US$726.7 millones a una valuación de más de US$7 mil millones (CoinDesk, oct-2023). **No encontré una resolución pública de esa demanda**: mi búsqueda no halló cobertura posterior a oct/nov-2023 sobre su estado procesal (ni sentencia, ni acuerdo, ni retiro). Es importante no confundir esto con lo que sigue.
+22. [H] Distinto de lo anterior (y para no confundir ambos litigios): la SEC demandó por separado a ConsenSys Software Inc. en jun-2024 por las funciones de staking e intercambio de MetaMask (alegó actuar como bróker no registrado); esa demanda **regulatoria**, sin relación con la disputa de equity entre exempleados y Lubin, fue retirada por la propia SEC en feb-2025 tras el cambio de liderazgo de la agencia (salida de Gensler, nueva postura más favorable a cripto).
 
 ## 4. Qué cambia para invertir
 
-- **Economía de ETH.**
-  - [I] La lección del libro es sobre gobernanza. En 2016 la comunidad cambió el estado de la cadena para devolver fondos. Esa capacidad social de intervenir existe, y hoy sostiene otras decisiones, como cambiar la política de emisión.
-  - [H] Hoy la emisión es de ~1.07 M ETH al año y la quema de 30 días anualizada es ~15.8 mil; inflación neta de +0.87% al año (ultrasound.money). Staking de 35.7%, con Lido en ~22.5% del stake (medido en cadena).
-  - [I] El riesgo de gobernanza que narra Shin (fundadores en conflicto) hoy se traslada a la concentración de operadores y constructores. Lido tiene ~22.5%; el umbral peligroso que cita Mastering Ethereum es 33%.
-- **Captura de valor de las L2.**
-  - [I] No aplica directamente: el libro cubre 2014-2018.
-  - [H] Hoy la actividad se fue a las L2. En L2BEAT (25-sep-2026), Base tiene US$16.4 mil millones y Arbitrum US$11.7 mil millones, y ninguna grande está en etapa 2. Pagan ~0.04 ETH al día en blobs.
-- **Catalizadores del torneo.**
-  - [I] El libro enseña que los eventos que movieron a ETH en 2016-2018 fueron **shocks no programados**: el hackeo, el fork, la regulación y la euforia de las ICOs. No fueron las actualizaciones programadas.
-  - [H] En el torneo, lo programado es Glamsterdam: Sepolia el 6-oct-2026, Hoodi el 27-oct-2026 (tentativo) y mainnet sin fecha, con objetivo de la EF en dic-2026.
-  - [H] Mi estudio de eventos (n = 5, grado D) no halló un efecto consistente de los forks en ETH/BTC. A 30 días: Merge −10.6%, Shapella +5.2%, Dencun −12.0%, Pectra +27.2%, Fusaka +1.8%.
-- **Razón ETH/BTC.**
-  - [H] El ciclo que narra Shin llevó ETH/BTC a su máximo de Binance (0.1132, feb-2018) y luego a su mínimo (0.0164, sep-2019).
-  - [I] Cuando la especulación en tokens de Ethereum se enfría, ETH/BTC cae. Hoy está en 0.0320; subió de 0.0258 (jun-2026) y lleva 52 días sobre su SMA200.
-- **Qué haría falta para que ETH vuelva al universo.**
-  - [I] Desde este recurso: vigilar las señales de euforia que precedieron el colapso de 2018. Una ola de emisión especulativa sin ingresos es una señal de **salida**, no de entrada.
-  - [I] Criterios de reentrada en el capítulo 02, §8.
+El libro no es sobre tokenomics ni sobre ETH hoy; es sobre cómo se ve, por dentro, la gobernanza de un proyecto cripto en sus primeros años. Estas son las lecciones que sí trasladan a cómo evaluamos un token, un protocolo o un exchange antes de aprobarlo en comité:
+
+**Riesgo de gobernanza**
+- [I] El poder real puede vivir fuera del organigrama público. El "gobierno en la sombra" de la Fundación Ethereum (§3.12) —gente sin cargo oficial cuya influencia ni los propios miembros del consejo describían igual— muestra que no basta con leer la lista pública de firmantes de un multisig o el diagrama de gobernanza de un proyecto. Conviene preguntar quién tiene influencia informal (holders grandes, desarrolladores clave, el círculo cercano de un fundador) y si esa influencia está documentada en algún lado.
+- [I] Un "voto de la comunidad" con baja participación no es gobernanza real. El carbonvote del hard fork de The DAO (87% a favor, con solo ~5% de participación) es el ejemplo del propio libro. Señal concreta para el comité: cuando un proyecto invoca "la comunidad votó" para justificar un cambio importante, pedir el porcentaje real de participación y la concentración de los votantes antes de darle peso a ese argumento.
+
+**Riesgo de fundadores**
+- [I] Un protocolo técnicamente sólido puede acumular un riesgo de "organigrama" enorme en sus primeros años, independiente del código: las salidas de Hoskinson y de Wood, y el conflicto Vitalik-Ming Chan, ocurrieron todas antes de que Ethereum cumpliera tres años. Señal para el comité: revisar la rotación de fundadores y ejecutivos clave de un proyecto, y si hubo salidas conflictivas, no solo el currículum técnico del equipo actual.
+- [I] Un fundador puede reestructurar la entidad matriz de un proyecto —trasladando los activos valiosos (marca, código, ingresos) a una entidad nueva— y dejar a los tenedores originales con una entidad vaciada. Es exactamente lo que describe la disputa de ConsenSys (§3.20-21). Cuando un token o una herramienta dependen de una empresa "detrás" del protocolo (como ConsenSys detrás de MetaMask e Infura), vale la pena preguntar: ¿quién controla legalmente esa empresa hoy?, ¿hubo una reestructuración societaria reciente?, ¿quién ganó y quién perdió con ella?
+
+**Riesgo de disputas internas**
+- [I] Un litigio activo entre fundadores y empleados tempranos (como la demanda de 2023 contra Lubin, sin resolución pública conocida) es una señal de que la empresa detrás de un token o de una herramienta puede tener años de atención directiva y capital legal consumidos en una pelea interna —un costo que no aparece en el whitepaper ni en las métricas on-chain—.
+- [I] Regla práctica que se desprende de este libro: antes de aprobar un token, protocolo o exchange, agregar a la diligencia la pregunta explícita de si existe o existió un litigio entre los fundadores, entre la empresa y sus primeros empleados o inversionistas, o entre la fundación sin fines de lucro y la empresa con fines de lucro que construye sobre el mismo protocolo (Ethereum mismo tiene esa dualidad: Fundación Ethereum sin fines de lucro vs. ConsenSys con fines de lucro).
+- [I] Sugerencia para quien mantiene `conocimiento/cripto/lista-senales-de-alerta.md`: hoy esa lista cubre exchange, stablecoin, token/protocolo y autocustodia, pero no tiene una categoría de "fundadores y gobernanza" para litigios internos, reestructuraciones societarias o gobiernos en la sombra. Este libro sería una buena fuente para armarla. No la edito yo porque no fue parte de mi encargo; lo dejo anotado.
+
+**Aplicación puntual a ETH/BTC hoy** (breve, para no adelantarme al capítulo 02 cuando exista)
+- [H] La concentración de poder que narra el libro en 2016-2018 (Fundación Ethereum, ConsenSys) tiene un eco actual en la concentración de proveedores de staking (Lido concentra alrededor de una quinta parte del ETH en staking, cifra que conviene seguir en el capítulo 02) y en la dependencia de herramientas de un solo proveedor —MetaMask e Infura, ambos de ConsenSys— para buena parte del acceso cotidiano a Ethereum.
 
 ## 5. Contrapuntos y límites
 
-1. [O] **Sesgo de la autora.** Tiene tenencias declaradas en BTC, ETH, SOL, HYPE y SUI, y un medio patrocinado por el sector. Su estilo busca héroes y villanos. Las caracterizaciones personales de Hoskinson, Wood y Chan son juicios narrativos, no hechos verificables.
-2. [H] **No está probado:** la identidad del atacante de The DAO. Es una atribución de periodismo más análisis on-chain; hay negación y no hubo proceso judicial en lo que revisé.
-3. [H] **Lo que sí está sólido:** los hechos del periodo que verifiqué con la SEC, la EF y los datos de precios.
-4. [I] **Qué envejeció.** El subtítulo habla de "the First Big Cryptocurrency Craze". Después vinieron ciclos mayores: los de 2021 y 2025. ETH hizo máximos de cierre de 4,807.98 (8-nov-2021) y 4,832.07 (22-ago-2025) y cayó −79.3% y −67.6% en cada ciclo, respectivamente (Binance). La lección de ciclos sigue vigente.
-5. [H] **Límites de mi acceso.** No leí el libro ni el artículo original de Forbes. Todo lo que atribuyo al contenido viene de reseñas y cobertura.
+1. [O] **Sesgo declarado.** ConsenSys —sujeto central del libro— ha patrocinado el pódcast y los videos de la autora, según ella misma declara en el libro. A eso se suma, por fuente externa, que declara tenencias personales en varias criptomonedas. Pesa más sobre los pasajes que involucran a ConsenSys y sobre los juicios de carácter que sobre las fechas o cifras verificables.
+2. [H] **Metodología de fuentes.** Más de 200 entrevistas "on background", casi todas sin atribución nombrada. Buena parte de las citas más filosas del libro (llamar "sociópata" a alguien, por ejemplo) son palabras de fuentes anónimas que la autora reporta, no hechos que un lector pueda verificar de forma independiente. El propio libro reconoce, en varios pasajes, que distintas fuentes recuerdan el mismo momento de forma distinta (p. ej., sobre cómo exactamente se decidió expulsar a Hoskinson y Chetrit).
+3. [H] **Atribución sin resolver.** La identidad del atacante de The DAO (externamente: Toby Hoenisch) no tiene resolución judicial ni cargo penal; es negada por el señalado.
+4. [H] **Litigio sin resolución conocida.** La demanda de 27 exempleados contra Lubin (2023) tampoco tiene, hasta donde pude verificar el 25-sep-2026, una resolución pública: ni sentencia, ni acuerdo, ni retiro. Si en algún momento esta ficha se usa para una decisión que dependa de ese desenlace, hay que revisar el expediente directamente (Corte Suprema del estado de Nueva York) antes de asumir cualquier estado.
+5. [I] **Qué envejeció.** El subtítulo ("the First Big Cryptocurrency Craze") data el libro al ciclo de 2017. Los ciclos de 2021 y 2025 fueron de magnitud igual o mayor en ETH: máximos de cierre de US$4,807.98 (8-nov-2021) y US$4,832.07 (22-ago-2025), con caídas de −79.3% y −67.6% desde esos máximos (Binance), frente al ~−94% de 2018 que ya recogía la ficha anterior. La lección de ciclo se mantiene vigente; los superlativos puntuales del libro, no.
+6. [H] **Convención de precios.** Las cifras de precio del libro (p. ej., el máximo de ETH del 13-ene-2018 en US$1,432) usan la fuente de precios agregada que la autora declara (similar a CoinMarketCap), distinta del cierre diario de un solo exchange (Binance) que usamos en otras fichas de este grupo. No son cifras contradictorias: son metodologías distintas y conviene compararlas con cuidado.
+7. [H] **Límite de mi propia lectura.** Tuve el texto íntegro (947,570 caracteres, 407 páginas, extraídas sin errores) y lo busqué de punta a punta por palabra clave, pero no leí de cerca cada página (ver §2). Cualquier detalle narrativo fuera de los pasajes que cito puede haber quedado fuera de este análisis.
 
 ## 6. Autoexamen
 
-1. **¿A quién señala Shin como probable atacante de The DAO y en qué evidencia se basa?**
-   A Toby Hoenisch, ex-CEO de TenX. La evidencia: rastreo con Chainalysis de ETC→BTC (ShapeShift) → Wasabi → exchanges → Grin, hasta el nodo "grin.toby.ai" y una IP asociada a "TenX". Hoenisch lo niega.
-   Fuentes: Forbes, 22-feb-2022, vía The Block y Stockhead.
-2. **¿Por qué el botín del atacante se rastrea desde ETC y no desde ETH?**
-   Porque el hard fork del 20-jul-2016 devolvió los fondos en la cadena ETH. El atacante conservó el saldo solo en la cadena original, Ethereum Classic.
-   Fuente: SEC Release 81207; cobertura del rastreo.
-3. **¿Qué concluyó la SEC en 2017 sobre los tokens DAO y por qué importa para invertir en ETH?**
-   Que eran valores (securities) y que la oferta debía registrarse. Importa porque fija el precedente del riesgo regulatorio de los tokens emitidos en Ethereum, que marcó el fin de la era de las ICOs.
-   Fuente: SEC Release No. 81207 (25-jul-2017).
-4. **¿Qué caracterización de Hoskinson y de Wood reporta la reseña de Decrypt y por qué es evidencia débil?**
-   Hoskinson aparece como "a pervert and pathological liar"; Wood como "a failed MacBeth". Es evidencia débil porque son juicios narrativos de una reseña sobre un libro con sesgo de héroes y villanos, y Hoskinson lo disputa ("a great work of fiction").
-   Fuente: Decrypt (Jeff John Roberts, 2022).
+1. **¿Qué porcentaje de todo el ETH en circulación participó en el carbonvote que "decidió" el hard fork de The DAO, y qué llevó a la comunidad a considerarlo suficiente para actuar?**
+   Cerró con 87% a favor, pero con solo ~5% de todo el ETH en circulación participando. No fue un proceso formal ni vinculante; la Fundación actuó en parte porque el sentimiento en Reddit apuntaba en la misma dirección y porque el proyecto era joven (menos de un año).
+   Fuente: *The Cryptopians*, cap. 7 (leído directo del PDF completo).
 
-## 7. Grado de evidencia: **C**
+2. **¿Qué le pasó al equity de los primeros empleados de ConsenSys tras la reestructuración de 2020, y qué demanda originó eso?**
+   En 2020, ConsenSys trasladó sus activos principales (MetaMask, Infura, Quorum) de la entidad suiza original (ConsenSys AG, "Mesh") a una nueva entidad de EE. UU. (ConsenSys Software Inc.). Empleados con acciones de la entidad suiza describieron quedar diluidos a una décima parte de su valor previo. En oct-2023, 27 exempleados demandaron a Joseph Lubin, ConsenSys Software Inc. y JPMorgan en la Corte Suprema de Nueva York por incumplir una promesa de "no dilución" de 2015. No hallé una resolución pública de esa demanda a sep-2026.
+   Fuentes: el libro (epílogo, hechos hasta ~jun-2021) + CoinDesk, Cointelegraph, The Block y Blockworks (oct-2023).
 
-- Periodismo de investigación serio, con cientos de entrevistas según las reseñas y trabajo on-chain con Chainalysis. Tiene tres frenos:
-  - mi acceso es solo resumen;
-  - la pieza más citada, la atribución del hackeo, está negada por el señalado y no tiene resolución judicial;
-  - la autora declara tenencias en el sector.
-- Los hechos del periodo que verifiqué con fuentes primarias quedan en **A**. Las caracterizaciones personales, en **D**.
+3. **¿A quién apunta la investigación de Shin como probable atacante de The DAO, con qué evidencia, y cuál es el estatus de esa acusación?**
+   A Toby Hoenisch, excofundador y CEO de TenX, según la cobertura pública de feb-2022 sobre el adelanto del libro (no logré ubicar el nombre impreso en el pasaje que pude extraer del PDF, ver §3.18). La evidencia es circunstancial y on-chain: rastreo con Chainalysis del ETC robado, convertido a BTC, mezclado en Wasabi, convertido a Grin y retirado a un nodo cuyo alias e IP se repetían en cuentas públicas de una persona en Singapur. Hoenisch lo negó y no entregó la refutación detallada que ofreció. No hay cargo penal ni fallo civil conocido.
+   Fuente: el libro (epílogo) + Decrypt, The Block, Stockhead (feb-2022).
+
+4. **Según el propio libro, ¿qué conflictos de interés declara la autora, y por qué importan especialmente para la parte sobre ConsenSys?**
+   En sus "Notes on Reporting", Shin declara que CoinDesk, ConsenSys, Cosmos, Kraken, Microsoft, ShapeShift y Tezos han patrocinado su pódcast o sus videos. Importa porque ConsenSys y Joseph Lubin son sujetos centrales del libro, incluida la disputa de equity: la autora reporta sobre un patrocinador de su propio medio. A eso se suma, por fuente externa, que declara tenencias personales en varias criptomonedas.
+   Fuente: el libro, "Notes on Reporting" (leído directo del PDF); unchainedcrypto.com (tenencias).
+
+## 7. Grado de evidencia: **B**
+
+- **Lo que dice el libro** (que ahora puedo citar de primera mano, con el texto completo en mano): grado **A** — lo verifiqué yo mismo, palabra por palabra donde importaba, sobre el 100% del texto extraído.
+- **Los hechos duros del periodo** (fechas, montos on-chain, el reporte de la SEC de 2017, el lanzamiento de Ethereum el 30-jul-2015, los totales de ICOs): grado **A-B** — verificados con fuentes primarias y con al menos una segunda fuente externa al libro.
+- **La existencia y las alegaciones de la demanda de 2023 contra Lubin**: grado **B** — reportada de forma consistente por múltiples medios independientes (CoinDesk, Cointelegraph, The Block, Blockworks, Yahoo Finance), aunque no logré verificar su resolución.
+- **Las caracterizaciones personales y la reconstrucción de conversaciones internas** (basadas en entrevistas "on background" no atribuidas): grado **D** — son el punto más débil del libro, por diseño de su propia metodología, y varias veces el libro mismo admite versiones contradictorias entre fuentes.
+- **La identidad del atacante de The DAO**: grado **D** — atribución circunstancial, negada, sin proceso judicial.
+- En conjunto, subo el grado de esta ficha de **C a B** respecto a la versión anterior (solo de reseñas), porque ahora el reportaje del propio libro está verificado de primera mano y no de segunda mano; el techo sigue en B y no en A porque el libro depende en gran medida de fuentes anónimas y porque al menos un litigio central que toca (ConsenSys-Lubin) sigue sin desenlace público conocido.
