@@ -433,3 +433,155 @@ python3 herramientas/huellas.py verificar empresas/TSM/modelo/SHA256SUMS.txt    
 python3 herramientas/huellas.py verificar empresas/TSM/modelo/datos/SHA256SUMS.txt  # OK
 ```
 Solo usa la biblioteca estándar de Python 3.11. `resultados.json` es determinista: dos corridas dan el mismo SHA-256. Para volver a verificar un documento de la SEC: se descarga la URL de F1-F9, se quita la etiqueta `<script type="text/javascript" src="/...">` que agrega el CDN y se compara el SHA-256 con `base.json`.
+
+## Verificación independiente (2026-09-25)
+
+Verificación hecha por un segundo agente, sin reutilizar los scripts de trabajo del autor original: descarga propia con `curl` (agente `SistemaInversionNew1/1.0 investigacion contacto@example.invalid`) y con `WebFetch` para lo que bloquea `curl` (investor.tsmc.com, Cloudflare). No se editó `ficha.md` (no existe en `empresas/TSM/`) ni se hizo commit ni push.
+
+### A. Documentos re-descargados y huella SHA-256 (byte a byte)
+
+Los siete documentos que `base.json` registra con huella se volvieron a descargar de forma independiente. Los siete coinciden **exactamente** con el SHA-256 congelado (para los HTML de la SEC, quitando la etiqueta `<script>` del CDN, igual que documenta §1):
+
+| Documento | SHA-256 obtenido | Coincide con `base.json`/`datos/SHA256SUMS.txt` |
+|---|---|---|
+| F1 20-F 2025 (`tsm-20251231.htm`, 10,355,816 bytes) | `c3ebd05c...6647b` | Sí |
+| F3 6-K 2T26, comunicado (`a2q26e_withguidancexfinal.htm`) | `6e877956...860be3` | Sí |
+| F3 6-K 2T26, presentación (`a2q26presentatione.htm`) | `939d51f1...495251` | Sí |
+| F4 6-K 1S26, estados consolidados (`a2026q2consolidatedreport-.htm`) | `f421f6fe...2309a5` | Sí |
+| F7 6-K 4T25, presentación (`a4q25presentatione.htm`) | `37c3e600...ea634` | Sí |
+| F10 transcripción del 2T26 (PDF, 22 páginas, 1,473,791 bytes) | `17947a4c...4cc915` | Sí (byte a byte; PDF de terceros, no versionado) |
+| F11 Federal Register 2026-06851 (PDF, 217,964 bytes) | `0666f438...605999` | Sí (ya estaba en `datos/`) |
+| F12 guía del BIS del 31-may-2026 (PDF, 162,121 bytes) | `d7296438...828610b` | Sí (ya estaba en `datos/`) |
+
+También se re-corrió `herramientas/huellas.py verificar` sobre los dos `SHA256SUMS.txt` (raíz y `datos/`): **OK** en ambos. Nada faltaba por congelar; F11 y F12 (los únicos "pequeños y de dominio público" que el protocolo exige congelar en `datos/`) ya estaban presentes.
+
+### B. Motor re-ejecutado
+
+`python3 empresas/TSM/modelo/modelo.py` desde cero: código de salida **0**.
+- Motor: **540 registros, 521 OK, 0 FALLA, 16 INFO, 3 NO_APLICA**. `todos_ok`: sí.
+- Controles propios (T01, T02, T03, P01, D01, G01): **291 registros, 0 FALLA**.
+- Auditoría de `resultados.json` releído (`mi.verificar`): coincide con la corrida (540 registros, 0 FALLA).
+- `SHA256SUMS.txt` resultante idéntico al que ya estaba en el repositorio (la corrida es determinista).
+
+No fue necesario corregir nada en `base.json`, `modelo.py` ni `notas-y-modelo.md`: no se encontró ningún error material en esta verificación (detalle en D).
+
+### C. Cifras cotejadas contra las fuentes primarias (57 cotejos; se pedían ≥25)
+
+Todas se cotejaron leyendo el texto real de la fuente re-descargada (no la caché de `base.json`). "Hecho" = literal de la fuente; el signo ✓ significa que el número/texto de `base.json` o `notas-y-modelo.md` coincide exactamente.
+
+**Contra el 20-F 2025 (F1, re-descargado):**
+
+| # | Cifra/afirmación | Fuente exacta re-verificada | ✓ |
+|---|---|---|---|
+| 1 | Capex 2023/2024/2025: NT$949,817M / 956,007M / 1,272,411M (US$40,895M a 31.11) | "Our capital expenditures in 2023, 2024 and 2025 were NT$949,817 million, NT$956,007 million and NT$1,272,411 million (US$40,895 million...)" | ✓ |
+| 2 | Guía de capex 2026 (ene-2026, tal como el 20-F la registra): US$52-56 mil M | "Our capital expenditures in 2026 are expected to be between US$52 billion and US$56 billion" | ✓ |
+| 3 | FX: 1% de depreciación del USD → ~0.3 pp menos de margen operativo (base 2025) | "every 1% depreciation of the U.S. dollar against the NT dollar would result in an approximately 0.3 percentage point decrease in our operating margin based on our 2025 results" | ✓ |
+| 4 | Diez mayores clientes: 70%/76%/78% (2023-2025); mayor 25%/22%/19%; segundo 11%/12%/17% | cita literal idéntica en el 20-F (Item 3.D) | ✓ |
+| 5 | China por sede del cliente: 12%/11%/9% (2023-2025), 327,503 en 2025 | tabla geográfica del 20-F: China 267,154 (12%) / 331,673 (11%) / 327,503 (9%) | ✓ |
+| 6 | Norteamérica 75% de 2025 (2,875,270) | misma tabla: North America 2,875,270 (75%) | ✓ |
+| 7 | Compromisos de compra al 31-dic-2025: total 1,534,575, <1 año 1,220,393 | tabla de "Contractual Obligations": Capital Purchase or Other Purchase Obligations 1,534,575 / 1,220,393 | ✓ |
+| 8 | Anticipos de clientes ("temporary receipts") al 31-dic-2025: total 189,858.2, no circulante 43,298.9 | Nota de compromisos: "$189,858.2 ... Noncurrent portion ... 43,298.9" | ✓ |
+| 9 | Activos no circulantes por país 2025: Taiwán 3,102,343.0 (80.0%), EUA 540,057.4, Japón 117,403.2, China 65,019.9, EMEA 51,515.1, total 3,876,339.8 | Nota 38: tabla idéntica cifra por cifra | ✓ |
+| 10 | Mismo dato 2024: Taiwán 2,613,112.2 de 3,383,106.4 (77.2%) | misma tabla, columna 2024 | ✓ |
+| 11 | Cada ADS representa 5 acciones comunes | "each ADS represents five (5) common shares" | ✓ |
+| 12 | CHIPS Act: hasta US$6.6 mil M directos y hasta US$5 mil M en préstamos (TSMC Arizona) | "up to US$6.6 billion in total direct funding and up to US$5 billion of proposed loans" | ✓ |
+| 13 | Créditos fiscales R.O.C.: 25% sobre I+D y 5% sobre equipo avanzado | "investment tax credit of 25% on qualified R&D expenditure and 5% on procurement of machinery/equipment for advanced processes" | ✓ |
+| 14 | Licencia de exportación para ≤16 nm a destinos especificados | "we may need to obtain an export license prior to shipping products using 16-nanometer or below process to specified destinations unless specific conditions are met" | ✓ |
+| 15 | VEU de Nanjing venció en dic-2025, sustituida por licencia anual | "the VEU authorization expired in December 2025, the U.S. Department of Commerce has granted TSMC Nanjing... an annual export license" | ✓ |
+| 16 | "resultados de operación no han sido afectados materialmente" | "our current results of operations have not been materially affected by the expanded export control regulations..." | ✓ |
+| 17 | Sección 232: arancel de 25% a ciertos chips avanzados, concluida dic-2025; acuerdo EUA-Taiwán ene-2026 limita arancel recíproco a 15% con trato preferente 232 | cita casi literal del 20-F, Item 3.D | ✓ |
+| 18 | Estados financieros: gross profit, cost of revenue, EPS básica/diluida 2023-2025 (32.85/44.68/65.47; 32.85/44.67/65.47) | Nota 27, tabla de EPS | ✓ (no citado en notas, cruce de consistencia) |
+
+**Contra el 6-K del 2T26 (F3, comunicado + presentación, re-descargados):**
+
+| # | Cifra | Fuente | ✓ |
+|---|---|---|---|
+| 19 | Ingresos 2T26 US$40.20 mil M (+33.7% a/a, +12.0% t/t) | comunicado, párrafo 1 | ✓ |
+| 20 | Margen bruto 67.7%, margen operativo 60.3%, margen neto 55.6% | comunicado, mismo párrafo | ✓ (el margen operativo de 60.3% no estaba citado explícitamente en notas-y-modelo.md; se agrega como dato nuevo verificado, sin afectar ningún control) |
+| 21 | Guía 3T26: US$44.6-45.8 mil M; margen bruto 65%-67%; margen operativo 56%-58%; FX 32 | comunicado y presentación, diap. 9 | ✓ |
+| 22 | Tabla NT$: ingresos 1,270,381; utilidad bruta 860,311; utilidad de operación 766,603; UAI 862,430; utilidad neta 706,562; UPA 27.25 | tabla de resultados del comunicado | ✓ (706.56 y 27.25 ya citados en notas §2.7; 1,270.38 también) |
+| 23 | CFO 2T26 = 783.36 mil M NT$; capex 2T26 = 496.00 mil M NT$ (≈US$15.7 mil M); FCF 2T26 = 287.36 mil M NT$ | presentación, diap. 8 (Cash Flows) | ✓ (los 5 números de "los datos trimestrales del 2T26" en §2.7 resultan ser ingresos/utilidad neta/CFO/capex/UPA, no una fila secuencial del estado de resultados; los cinco están correctos) |
+| 24 | FCF 1T26 = 348.21 mil M NT$ | misma tabla, columna 1T26 | ✓ |
+| 25 | Dividendo NT$7.00 del 1T26, fecha ex el 16-sep-2026 | presentación, diap. 11 | ✓ |
+| 26 | "2026 revenue to increase by slightly above 40% in US dollar terms" | presentación, diap. 10 (Future Outlook) | ✓ |
+| 27 | Tipo de cambio promedio 2T26: 31.60; 1T26: 31.59 (implícito en el 20-F: 31.11 para 2025) | presentación, diap. 4 | ✓ |
+
+**Contra la transcripción del 2T26 (F10, re-descargada, PDF de 22 páginas):**
+
+| # | Cifra/afirmación | Fuente exacta | ✓ |
+|---|---|---|---|
+| 28 | Capex 2026 elevado a US$60-64 mil M | "decided to raise our full-year 2026 capital budget to be between USD60 billion and USD64 billion" | ✓ |
+| 29 | 70%-80% del capex 2026 a procesos avanzados | "About 70% to 80% of the 2026 capital budget will be allocated for advanced process technologies" | ✓ |
+| 30 | "el capex de los próximos tres años será aún más significativamente mayor" | "Now the CapEx in the next three years will be even more significantly higher than the past three years" | ✓ |
+| 31 | US$100 mil M adicionales en Arizona; total US$265 mil M | "you just announced additional USD100 billion CapEx in the US... now with total USD265 billion CapEx" (pregunta de analista, confirmada por el CFO en el mismo intercambio) | ✓ |
+| 32 | 13 fábricas de vanguardia y empaquetado en Taiwán "en los próximos años" | "we are building 13 leading-edge and advanced packaging fabs in Taiwan over the next several years" | ✓ |
+| 33 | Tres fábricas adicionales de 3 nm: Taiwán, Arizona, Japón | "three additional 3-nanometer fabs, one in Taiwan, one in Arizona, and one in Japan" | ✓ |
+| 34 | Dilución del extranjero: 2-3 pp en etapa temprana, se amplía a 3-4 pp en etapa posterior | "gross margin dilution from the ramp-up of overseas fabs in the next several years to be 2% to 3% in the early stages and widen to 3% to 4% in the latter stages" | ✓ |
+| 35 | Dilución de N2 en el 2S26: 3-4 pp | "a steep ramp-up of our 2-nanometer to dilute our gross margin by about 3 to 4 percentage points in the second half of the year" | ✓ |
+| 36 | Dividendo: NT$18/acción en 2025, NT$24/acción en 2026 (+33% a/a), sigue subiendo en 2027 | "In 2025, we paid... TWD18 cash dividend per share. In 2026, they will receive TWD24 per share, up another 33%... and we expect a continued and increasing cash dividends per share in 2027 as well" | ✓ |
+| 37 | Ninguna de las palabras "export", "tariff", "China" aparece en las 22 páginas | conteo automático sobre el texto extraído del PDF re-descargado: 0, 0, 0 | ✓ |
+
+**Contra el 6-K del 1S26 (F4, estados consolidados, re-descargado):**
+
+| # | Cifra | Fuente | ✓ |
+|---|---|---|---|
+| 38 | Anticipos de clientes al 30-jun-2026: total 234,225.1, no circulante 92,372.0 (frente a 189,858.2 / 43,298.9 al 31-dic-2025) | nota de compromisos, columnas "June 30, 2026" / "December 31, 2025": `$234,225,146 / $189,858,211`; no circulante `92,372,004 / 43,298,936` | ✓ |
+| 39 | Ganancia por venta de VIS: NT$63,202,285 mil = 63,202.3 M; revaluación a valor razonable 56,398,783 mil = 56,398.8 M; TSMC bajó a 19% | "The Company recognized a gain on disposal of NT$63,202,285 thousand... remeasurement of its remaining interest in VIS to a fair value of NT$56,398,783 thousand..."; "decrease in the Company's shareholding to 19%" | ✓ |
+| 40 | Dividendos por pagar al 30-jun-2026: 337,435.8 | "Cash dividends payable (Note 19) 337,435,778" | ✓ |
+| 41 | Arrendamientos totales al 30-jun-2026: 36,882.4 | "$36,882,401" | ✓ |
+| 42 | China por sede: 76,730.5 (2T26) y 162,572.4 (1S26); Taiwán 164,712.2 (1S26); EUA 1,818,632.5 (1S26) | tabla de ingresos por geografía (sede del cliente) | ✓ |
+| 43 | Ingresos 1S26 = 2,404,483.7; utilidad bruta 1S26 = 1,611,606.1 (67%); utilidad de operación 1S26 = 1,425,568.8; CFO 1S26 = 1,482,341.2; capex PPE 1S26 = 846,764.7; gasto operativo neto 1S26 = 192,987.7; otros ingresos operativos = 6,950.4 | estado de resultados y de flujo del 1S26 | ✓ |
+| 44 | Aumento de 102,502.2 en "otros pasivos no circulantes" en el flujo del 1S26 | "other noncurrent liabilities 102,502,167" | ✓ |
+
+**Contra el 6-K del 4T25 (F7, presentación, re-descargada):**
+
+| # | Cifra | Fuente | ✓ |
+|---|---|---|---|
+| 45 | "2026 revenue to increase by close to 30% in US dollar terms" (guía de ene-2026) | diap. 13 | ✓ |
+| 46 | Objetivos de largo plazo: CAGR de ingresos 2024-2029 "cerca de 25%"; margen bruto de largo plazo "56% o más"; ROE "high-20s" | "Revenue CAGR to approach 25% in US dollar terms... Long-term gross margin to be 56% and higher through the cycle... ROE to be high-20s% through the cycle" | ✓ |
+| 47 | Dividendos pagados 2025: 466.78 (mil M NT$); caja y valores circulantes 3,068.59 | mismo documento, tabla de resumen anual | ✓ |
+
+**Federal Register 2026-06851 y guía del BIS del 31-may-2026 (F11, F12; texto completo leído):**
+
+| # | Afirmación | Verificación | ✓ |
+|---|---|---|---|
+| 48 | Regla final del BIS, vigente desde el 7-abr-2026, publicada el 9-abr-2026 | portada del documento: "Effective date: ...April 7, 2026"; cabecera "Thursday, April 9, 2026" | ✓ |
+| 49 | Sustituye "April 13, 2026" por "December 31, 2026" en la Nota 1 a 3A090.a, párrafos a.(2) y (3) | "amend note 1 to 3A090.a in paragraphs a.(2) and (3) by removing the date 'April 13, 2026', wherever it occurs, and adding in its place the date 'December 31, 2026'" | ✓ |
+| 50 | Antecedente: regla interina del 16-ene-2025 (90 FR 5298), presunciones para "front-end fabricators" y OSAT bajo 3A090.a | "On January 16, 2025, BIS published an interim final rule (IFR) (90 FR 5298)... adding certain presumptions for 'front-end fabricators' and 'OSAT' companies..." | ✓ |
+| 51 | BIS estima 20 diseñadores aprobados adicionales | "BIS estimates the extension included in this final rule will result an increase of 20 approved IC designers" | ✓ |
+| 52 | Guía BIS del 31-may-2026: licencia exigida desde el 17-nov-2023 sigue vigente para entidades con sede (o matriz última) en D:5/Macao aunque estén fuera de esos destinos | "a license requirement continues to apply under §742.6(a)(6)(iii)(A)... to all destinations outside the United States... when such items are for entities headquartered in, or whose ultimate parent company is headquartered in, Country Group D:5 or Macau" | ✓ |
+| 53 | Operadores de centros de datos de buena fe no tienen que dejar de usar lo ya instalado | "Bona fide operators of data centers who are otherwise engaged in activities consistent with the EAR are not required to cease the ongoing use, storage, disposal, or servicing of advanced computing items because of this guidance, until further notice from BIS" | ✓ |
+
+**Damodaran (F14, F15; re-consultados):**
+
+| # | Cifra | Fuente | ✓ |
+|---|---|---|---|
+| 54 | Semiconductor: 66 empresas, beta desapalancada 1.49, corregida por caja 1.50 | tabla de *Betas by Sector* | ✓ |
+| 55 | Taiwán: Aa3, diferencial ajustado 0.51%, tasa corporativa 20% | tabla de *Country Default Spreads* | ✓ |
+| 56 | Prima de riesgo país de Taiwán = 0.78% (columna "Country Risk Premium", distinta de la prima total de 5.01%) | misma tabla, columna específica | ✓ |
+| 57 | "Last updated: January 5, 2026" en la página de Damodaran | encabezado de la página | ✓ |
+
+**Resultado:** 57 de 57 cotejos coinciden con la fuente re-descargada. No se encontró ninguna cifra de `base.json`, `resultados.json` ni `notas-y-modelo.md` que contradiga el texto primario. El único hallazgo digno de nota (línea 20 y 23) es que el margen operativo del 2T26 (60.3%) y el desglose de "los datos trimestrales del 2T26" (ingresos, utilidad neta, CFO, capex y UPA — no una fila secuencial del estado de resultados) no estaban explicados con suficiente claridad en el texto de §2.7; se aclara aquí, sin que cambie ninguna cifra del modelo.
+
+### D. Errores materiales encontrados
+
+**Ninguno.** No se registra ninguna entrada nueva en `conocimiento/registro-de-errores.md`: los 57 cotejos de la sección C coinciden exactamente con el texto primario re-descargado, los siete documentos con huella SHA-256 son bit a bit idénticos a una segunda descarga independiente, y el motor re-ejecutado da 0 FALLA en los 540 registros propios del motor y en los 291 registros de controles propios (T01, T02, T03, P01, D01, G01).
+
+### E. Doble conteo de la dilución de margen — verificación del mecanismo
+
+Se revisó específicamente que el puente de margen bruto (§2.2, §5) no reste dos veces la dilución del extranjero:
+- La transcripción del 2T26 (re-verificada en B, fila 34) dice literalmente que la dilución del extranjero va de **2-3 pp (etapa temprana) a 3-4 pp (etapa posterior)**, y que el margen bruto consolidado del 2T26 (67.7%, +1.5 pp t/t) sube "parcialmente compensado por la dilución de las fábricas en el extranjero" — es decir, el 67.7%/67.0% (ancla del 1S26) **ya incluye** la etapa temprana.
+- `base.json → insumos_complementarios.puente_margen_bruto.ultramar_incremental_maximo = 0.02` (2 pp) fuerza a que el componente "extranjero incremental" del puente nunca exceda el paso de 2-3 a 3-4 pp. El control **P01** (45 registros, 0 FALLA) verifica esto en las 15 combinaciones año-escenario.
+- `modelo.py → sensibilidad_geopolitica` usa el mismo límite para `d` (presión incremental del extranjero, rejilla ∈ {0, 1, 2} pp, nunca el rango total de 2-4 pp) y el control **G01** (identidad algebraica COGS' en las 81 celdas) da error máximo de 0.
+- Verificación aritmética propia (no solo lectura de `resultados.json`): con e=5%, r=0%, c=100%, si `d` se tomara como 2 pp de dilución **total** (en vez de incremental) en lugar de los 2 pp incrementales ya acotados, la celda sobreestimaría la pérdida de utilidad operativa en 2 pp × R' ≈ NT$85 mil M — coincide con el rango que `resultados.json → sensibilidad_geopolitica.doble_conteo` reporta (79,929 a 88,810).
+- **Conclusión:** el mecanismo evita el doble conteo tal como está descrito; no se encontró ninguna celda, año o escenario donde el componente "extranjero" exceda 2 pp.
+
+### F. Rejilla de sensibilidad geopolítica — verificación de cobertura
+
+- La rejilla (`base.json → insumos_complementarios.geopolitica.rejilla`) varía **cuatro parámetros con tres niveles cada uno** (3⁴ = 81 celdas): fracción restringida (2%/5%/10%), sustitución en el periodo (0%/50%/100%), fracción del margen de contribución perdido (80%/90%/100%) y presión incremental del extranjero (0/1/2 pp). Se confirmó contando las filas de `resultados.json → sensibilidad_geopolitica.filas`: **81**, ninguna repetida.
+- Es una rejilla **enteramente adversa**: no incluye un escenario de "mejora" (por ejemplo, relajación de controles o ganancia de participación por desvío de pedidos desde un competidor sancionado). Eso es apropiado para una sensibilidad de riesgo a la baja (no es una estimación de valor esperado ni asigna probabilidades, como aclara la propia sección 7), pero significa que la rejilla **no** cubre el caso favorable de que la fricción geopolítica beneficie a TSMC frente a rivales chinos (SMIC) sujetos a controles más estrictos — mecanismo que sí se menciona de forma cualitativa en otros documentos del sistema (`conocimiento/23`) pero no se modela aquí. Se deja como límite explícito, no como corrección: la sección 8 ("Qué NO demuestra") ya advierte que la sensibilidad "no mide la exposición real"; se agrega que tampoco mide el lado favorable.
+- El peor caso (e=10%, r=0%, c=100%, d=2pp) y el mejor caso dentro de la rejilla (r=100%, d=0pp: sin efecto, ΔUO=0) están ambos representados; no se seleccionaron solo las celdas favorables para el resumen de §7 (la tabla de la sección 7 incluye las 18 combinaciones no agrupadas por r=100%, incluida la peor).
+
+### G. Qué confirma y qué no confirma esta verificación
+- Confirma: que los documentos primarios citados existen, tienen el contenido citado y (para siete de ellos) son bit a bit idénticos a los congelados; que el motor reproduce sus propios controles sin fallas; que el puente de margen y la rejilla geopolítica implementan la regla anti-doble-conteo que describen.
+- No confirma (fuera del alcance de esta verificación, en la misma línea que §8 y §9): si los supuestos de los tres escenarios (crecimiento, márgenes, capex/ventas, días de capital de trabajo) son razonables: son supuestos declarados, no estimaciones verificadas contra un modelo alterno. Tampoco se verificaron independientemente los ~482 hechos XBRL de la prueba (A) de §3 (se re-verificaron los mismos números contra el texto plano del HTML re-descargado, que es una fuente equivalente pero no una tercera fuente distinta de la SEC). No se volvió a calcular el DCF inverso ni la sensibilidad geopolítica con código propio fuera de `modelo.py`; se verificó que el código del repositorio (leído íntegro) implementa la fórmula que describe y que el control interno (G01) da error algebraico cero.

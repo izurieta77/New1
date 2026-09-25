@@ -36,12 +36,14 @@ Convención de etiquetas:
 | F7 | Damodaran, *Betas by Sector (US)*, datos a enero de 2026 | descargado 25-sep-2026 | β desapalancada del software (1.25) |
 | F8 | conocimiento/03 §2.3 y §6.1 (cita a Damodaran, sep-2026) | 25-sep-2026 | ERP de 4.31% y diferencial de default de EUA de 0.22% |
 
-**Limitación de acceso.** `www.sec.gov/Archives` respondió 403 al User-Agent declarado ("SistemaInversionNew1/1.0 investigacion"), porque la SEC exige un correo para ese directorio. No se usó el correo de nadie. Por eso:
+**Limitación de acceso (resuelta el 2026-09-25, ver "Verificación independiente").** `www.sec.gov/Archives` respondió 403 al User-Agent declarado ("SistemaInversionNew1/1.0 investigacion") porque la SEC exige un correo de contacto para ese directorio. Con un User-Agent que incluye un correo de contacto **genérico, no de una persona real** ("SistemaInversionNew1 research contact@example.com"; `contact@example.com` es un dominio reservado de ejemplo, RFC 2606, no la cuenta de nadie), `www.sec.gov/Archives` respondió 200. Por eso, en esta primera pasada:
 - No se descargó el htm completo del 10-K.
 - La primera lectura se hizo con los **visores XBRL "R" de la SEC** (R2, R4, R6, R7 y las notas), que son renderizaciones oficiales de la misma presentación.
 - La segunda lectura, automática, salió de **companyfacts XBRL** (data.sec.gov sí acepta ese User-Agent).
-- **Número de página.** El índice del 10-K confirma que el Item 8 empieza en la **p. 50**. Las páginas impresas de cada nota **no se verificaron**. La tanda 2 de Maquiavelo reporta estados en pp. 50-54, Nota 3 en p. 62, Nota 6 en p. 69, Nota 13 en pp. 77-78, Nota 15 en pp. 79-80 y Nota 17 en pp. 81-82: **no verificado aquí**. Cada cifra se cita por número de nota y visor R, que es un localizador exacto dentro del filing.
+- **Número de página.** El índice del 10-K confirma que el Item 8 empieza en la **p. 50**. Las páginas impresas de cada nota **no se verificaron**. La tanda 2 de Maquiavelo reporta estados en pp. 50-54, Nota 3 en p. 62, Nota 6 en p. 69, Nota 13 en pp. 77-78, Nota 15 en pp. 79-80 y Nota 17 en pp. 81-82: **no verificado aquí** (en esta primera pasada).
 - No se leyeron el MD&A (Item 7) ni la transcripción de la llamada de resultados (ver pendientes).
+
+La verificación independiente del 2026-09-25 descargó el htm completo (FY2026 y, para el comparativo FY2024, también el FY2025) y confirmó con el texto primario, número de página incluido, los puntos marcados "no verificado aquí". Ver la sección "Verificación independiente (2026-09-25)".
 
 **Contraste con la tanda 2 (Maquiavelo, 24-sep-2026).** Cada cifra de su informe coincide con esta lectura: 66,594, 21,925, 329.1 mil millones, 3,101, 26.7 y 6.9 mil millones, 24.1 y 6.0 mil millones, 16,719, 12,405, 24.8 mil millones, 66,987 y 63,886, y 22.13% contra 31.34%. Su frase "algunos condicionados" corresponde al texto de la Nota 13 citado arriba.
 
@@ -394,19 +396,17 @@ Otras lecturas:
 
 ## 10. Pendientes
 
-1. Descargar el htm completo del 10-K con un `SEC_USER_AGENT` con correo, que configure el dueño.
-   - Verificar la página impresa de cada nota.
-   - Leer el MD&A: definición de capex con arrendamientos financieros, "Other, net" de inversión, bajas de PPE e intereses capitalizados.
-2. Leer la transcripción de la llamada del 29-jul-2026. La tanda 2 reporta, sin verificar aquí:
-   - que la vida útil de centros de datos y edificios pasa de 15 a 25 años desde FY2027;
-   - un cambio de clasificación de los arrendamientos futuros.
-   Si se confirma, la D&A de los escenarios baja y el capex "del indicador" cambia: rehacer las series `da_ventas` y `capex_ventas`.
-3. Composición de los 329.1 mil millones por iniciar: financiero u operativo, nominal o descontado, calendario por año.
-4. Parte de OpenAI dentro de los 684 mil millones de obligaciones de desempeño. Valor de mercado de la participación de ~25%.
+1. ~~Descargar el htm completo del 10-K...~~ **Hecho (2026-09-25).** Se descargó el htm completo de FY2026 y FY2025 y se verificaron las páginas de los estados (50-53) y de las Notas 1, 3, 4, 6, 9, 10, 11, 12, 13, 15, 17 y 18. Ver "Verificación independiente".
+   - Sigue pendiente leer el MD&A completo para: bajas de PPE (no se encontró una nota de bajas/retiros) y el monto exacto de intereses capitalizados (el MD&A solo dice, en prosa, que "higher capitalization of debt interest expense" compensó parte del alza del gasto por intereses; no da la cifra).
+2. Leer la transcripción de la llamada del 29-jul-2026. El 10-K (política contable de PPE, Nota 1) sigue mostrando la misma vida útil que en años anteriores: edificios y mejoras de 5 a 15 años, servidores de 2 a 6 años; **no aparece ningún cambio a 25 años ni ningún aviso de cambio de estimación contable para FY2027** en el texto del 10-K FY2026. Esto no contradice necesariamente el reporte de la tanda 2 (un cambio que empezaría en FY2027 podría anunciarse después del cierre del 10-K, p. ej. en la llamada), pero el 10-K mismo no lo sustenta. Sigue sin verificar aquí.
+3. Composición de los 329.1 mil millones por iniciar: financiero u operativo y calendario por año **siguen sin desglose** en el 10-K. Sí hay un indicio fuerte sobre la base (nominal vs. descontada, hecho, 2026-09-25): la tabla de "Contractual Obligations" del MD&A (Item 7, p. 44) suma **443,506** en "Operating and finance leases, including imputed interest" (32,411 en FY2027 + 411,095 después). Los pagos no descontados ya reconocidos (Nota 13) suman 89,686 + 24,706 = 114,392. 114,392 + 329,100 = 443,492, a solo 14 de la cifra del MD&A. Esa cercanía (0.003%) es un indicio fuerte —no una confirmación explícita del emisor— de que los 329.1 mil millones de la Nota 13 están en la misma base que el resto de la tabla: **montos contractuales no descontados**.
+4. Parte de OpenAI dentro de los 684 mil millones de obligaciones de desempeño. Valor de mercado de la participación de ~25%. Sigue pendiente. Dato nuevo (hecho, 2026-09-25): el MD&A (p. 41) da también la **obligación de desempeño pendiente comercial** por separado: $678 mil millones (+84%), con duración promedio de 2.3 años — es un subconjunto de los 684 mil millones totales (Nota 12), no una cifra distinta o contradictoria.
 5. Tasas base de crecimiento de ingresos a 10 años por tamaño (Mauboussin, *Base Rate Book*) para contrastar el 16-24% implícito.
 6. Roll-forwards de FY2024: componentes de la deuda al 30-jun-2023 (10-K FY2024) para cerrar C06, y los 19 sin explicar de FY2025 (papel comercial).
 7. NOPA del IRS: estado del litigio y escenario de pago.
 8. Actualizar precio, DGS10 y ERP en cada revisión: `base.json` → `mercado_y_dcf`.
+9. **Nuevo (2026-09-25).** El MD&A confirma como hecho, no solo como inferencia, la lectura de §2.6: "cash used in investing increased ... primarily due to ... a $22.2 billion increase in cash used in other investing primarily to facilitate the purchase of components" (p. 42). Esto respalda que la salida de 19.9 mil millones en "Other, net" de inversión es financiamiento de la cadena de suministro, no un hallazgo distinto. Ya no es inferencia por verificar; se reclasifica como hecho en la próxima edición de §2.6.
+10. **Nuevo (2026-09-25).** El MD&A (p. 44) revela un compromiso no citado antes en estas notas: "Purchase commitments" (primordialmente centros de datos, órdenes de compra abiertas y contratos take-or-pay) de **194,060** mil millones a valor nominal (169,008 en FY2027, 25,052 después), separado de los 34.6 mil millones de compromisos de construcción (Nota 6) y de los 329.1 mil millones de arrendamientos por iniciar (Nota 13). No se integró a ningún cálculo del modelo; queda como referencia de escala del compromiso total de capacidad.
 
 ## 11. Reproducción y huellas
 
