@@ -73,7 +73,7 @@ Con 30 años de datos, el IC95 de la prima todavía mide unos ±5.5 pp. Con un s
 | IPC (^MXX) 1991-2026 | 8,733 | −0.01 | 9.8 | 52 (0.55) | 17 (0.005) | −14.3% (27-oct-1997), z = −10.4 | 2.83-4.87 / 2.96-4.09 |
 | USD/MXN (MXN=X) 2003-2026 | 5,940 | **+0.94** | 15.1 | 33 (0.38) | 14 (0.003) | +9.3% (9-oct-2008); +8.3% (9-nov-2016) | 3.42-4.01 / **2.45-2.87** |
 
-Para el inversionista en pesos, la cola pesada del tipo de cambio es la **depreciación** del peso (cola derecha de USD/MXN). Por eso el dólar funciona como cobertura en las crisis: sube justo cuando caen los activos de riesgo (ver cap. 16).
+Para el inversionista en pesos, la cola pesada del tipo de cambio es la **depreciación** del peso (cola derecha de USD/MXN). Los tres días más extremos (oct-2008, 9-nov-2016 y 9-mar-2020) caen en episodios de estrés. *Inferencia:* por eso el dólar funciona como cobertura en las crisis, porque sube justo cuando caen los activos de riesgo (ver cap. 16).
 
 **Consecuencia matemática.** Si la cola tiene índice α, el momento E|r|^k existe solo para k < α. Con α ≈ 3, el cuarto momento poblacional no existe. *Inferencia:* la curtosis muestral no converge y la dominan los días más extremos. "Curtosis = 20" no es un parámetro estable, así que conviene reportar el índice de cola o los cuantiles extremos. La misma fragilidad llega al PSR y al DSR, que usan la curtosis (`herramientas/metricas.py`). Por eso deben validarse con bootstrap.
 

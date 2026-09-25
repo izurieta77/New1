@@ -120,7 +120,9 @@ def har_vs_rezago(r, inicio_oos=0.5, h=22):
 
 def main():
     diaria = dh.french("F-F_Research_Data_Factors_daily", "diaria")
-    mkt_d = [a + b for a, b in zip(diaria["columnas"]["Mkt-RF"], diaria["columnas"]["RF"]) if a is not None]
+    par_d = [(f, a + b) for f, a, b in zip(diaria["fechas"], diaria["columnas"]["Mkt-RF"], diaria["columnas"]["RF"]) if a is not None]
+    mkt_d = [v for _, v in par_d]
+    print("  peor dia French:", min(par_d, key=lambda t: t[1]))
     print("French diario:", diaria["fechas"][0], "->", diaria["fechas"][-1], "version", diaria.get("version_crsp"))
     colas([math.log1p(v) for v in mkt_d], "Mercado EUA diario (French, log)")
     # Lo (2002): anualizar con sqrt(12) sobreestima el SR si hay autocorrelacion AR(1) rho
@@ -168,8 +170,10 @@ def main():
         try:
             h = dh.yahoo_historia(tic)
             pp = h["precios"]; ff = h["fechas"]
-            rr = [math.log(pp[i] / pp[i - 1]) for i in range(1, len(pp)) if pp[i] > 0 and pp[i - 1] > 0]
+            par = [(ff[i], math.log(pp[i] / pp[i - 1])) for i in range(1, len(pp)) if pp[i] > 0 and pp[i - 1] > 0]
+            rr = [v for _, v in par]
             print(f"\n{tic}: {ff[0]} -> {ff[-1]}")
+            print("  mayores movimientos (log):", [(str(d), round(v, 4)) for d, v in sorted(par, key=lambda t: -abs(t[1]))[:6]])
             colas(rr, tic + " diario (log)")
         except Exception as e:  # noqa: BLE001
             print(tic, "error", e)

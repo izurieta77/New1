@@ -1,3 +1,4 @@
+  peor dia French: (datetime.date(1987, 10, 19), -0.1741)
 French diario: 1926-07-01 -> 2026-07-31 version 202607
 
 == Colas: Mercado EUA diario (French, log) (n=26296)  media=0.00037 sd=0.01079 asim=-0.46 curtosis=20.0
@@ -25,42 +26,3 @@ French mensual: 1926-07-31 -> 2026-07-31
   1956-1985: prima anual=4.85%  EE=2.68%  SR=0.33
   1986-2015: prima anual=7.68%  EE=2.83%  SR=0.50
   1996-2025: prima anual=8.94%  EE=2.87%  SR=0.57
-
-Monte Carlo: max SR anual de 200 estrategias nulas, 10 anos: mediana=0.87 p5=0.70 p95=1.13
-
-^GSPC: 1927-12-30 -> 2026-09-24
-  GARCH(1,1) 2000-2026: omega=2.47e-06 alpha=0.118 beta=0.863 persistencia=0.9808 vida media=36 dias vol LP anual=18.0%
-  HAR coef (c, d, s, m)=[6.8e-05, 0.045, 0.286, 0.214]
-  QLIKE media OOS: HAR=0.4140 ingenuo22d=0.6452; DM (ingenuo-HAR) media=0.2311 t_NW=3.23
-
-^MXX: 1991-11-08 -> 2026-09-24
-
-== Colas: ^MXX diario (log) (n=8733)  media=0.00044 sd=0.01382 asim=-0.01 curtosis=9.8
-  |z|>3: observados=141  esperados normal=23.5773  razon=6
-  |z|>4: observados=52  esperados normal=0.5532  razon=94
-  |z|>5: observados=17  esperados normal=0.0050  razon=3395
-  |z|>7: observados=6  esperados normal=0.0000  razon=268406851
-  |z|>10: observados=1  esperados normal=0.0000  razon=inf
-  peor dia=-0.1431  z=-10.4  P_normal~0.0e+00
-  Hill cola izquierda k=43 (0.5% de n): alfa=4.87
-  Hill cola izquierda k=87 (1.0% de n): alfa=3.71
-  Hill cola izquierda k=218 (2.5% de n): alfa=2.83
-  Hill cola derecha k=43 (0.5% de n): alfa=4.09
-  Hill cola derecha k=87 (1.0% de n): alfa=3.80
-  Hill cola derecha k=218 (2.5% de n): alfa=2.96
-
-MXN=X: 2003-12-01 -> 2026-09-24
-
-== Colas: MXN=X diario (log) (n=5940)  media=0.00007 sd=0.00765 asim=0.94 curtosis=15.1
-  |z|>3: observados=75  esperados normal=16.0368  razon=5
-  |z|>4: observados=33  esperados normal=0.3763  razon=88
-  |z|>5: observados=14  esperados normal=0.0034  razon=4111
-  |z|>7: observados=6  esperados normal=0.0000  razon=394612295
-  |z|>10: observados=2  esperados normal=0.0000  razon=inf
-  peor dia=-0.0689  z=-9.0  P_normal~0.0e+00
-  Hill cola izquierda k=29 (0.5% de n): alfa=4.01
-  Hill cola izquierda k=59 (1.0% de n): alfa=3.51
-  Hill cola izquierda k=148 (2.5% de n): alfa=3.42
-  Hill cola derecha k=29 (0.5% de n): alfa=2.45
-  Hill cola derecha k=59 (1.0% de n): alfa=2.87
-  Hill cola derecha k=148 (2.5% de n): alfa=2.82
