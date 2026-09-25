@@ -239,9 +239,12 @@ def bootstrap_bloques(x, largo=12, reps=5000, semilla=7):
             muestra.extend(x[i:i + largo])
         medias.append(math.fsum(muestra[:n]) / n)
     medias.sort()
-    k_lo = math.ceil(0.025 * reps) - 1
-    k_hi = math.ceil(0.975 * reps) - 1
-    return medias[k_lo], medias[k_hi]
+    k_lo = math.ceil(0.025 * reps) - 1   # rango mas cercano: posicion 125 -> indice 124
+    k_hi = math.ceil(0.975 * reps) - 1   # posicion 4875 -> indice 4874
+    # Convencion alternativa (indice int(0.025*B) = 125 para el limite inferior),
+    # solo para diagnosticar diferencias de redondeo; no es la cifra propia.
+    alt = (medias[int(0.025 * reps)], medias[int(0.975 * reps) - 1])
+    return medias[k_lo], medias[k_hi], alt
 
 
 def cagr(r_dec):
@@ -289,6 +292,19 @@ def cargar():
         info["%s_titulos" % cod] = (vw["titulo"], ew["titulo"])
         info["%s_rango" % cod] = (min(vw["filas"]), max(vw["filas"]))
         info["faltantes"][cod] = vw["faltantes"] + ew["faltantes"]
+    # controles de estructura (no son cifras de resultados)
+    info["version_crsp"] = {}
+    for nombre in ["F-F_Research_Data_Factors_CSV.zip", "F-F_Research_Data_5_Factors_2x3_CSV.zip"] + \
+            ["Portfolios_Formed_on_%s_CSV.zip" % c for c in ("OP", "NI", "VAR", "RESVAR", "INV")]:
+        with zipfile.ZipFile(os.path.join(DATOS, nombre)) as z:
+            primera = z.read(z.namelist()[0]).decode("latin-1").splitlines()[0]
+        m = re.search(r"(\d{6}) CRSP", primera)
+        info["version_crsp"][nombre] = m.group(1) if m else primera
+    ni_prom = [s for s in leer_french("Portfolios_Formed_on_NI_CSV.zip") if "Average of NI" in s["titulo"]]
+    assert len(ni_prom) == 1
+    lo20 = columna(ni_prom[0], "Lo 20")
+    info["NI_Lo20_promedio"] = {"anios": len(lo20), "minimo": min(lo20.values()),
+                                "todos_positivos": all(v is not None and v > 0 for v in lo20.values())}
     return mkt, ff5, carteras, info
 
 
@@ -375,7 +391,7 @@ def prueba(ms, d, con_bootstrap=False):
         "t": m1 / se1, "lo": lo, "hi": hi, "veredicto": veredicto(lo, hi),
     }
     if con_bootstrap:
-        r["b_lo"], r["b_hi"] = bootstrap_bloques(d)
+        r["b_lo"], r["b_hi"], (r["b_lo_alt"], r["b_hi_alt"]) = bootstrap_bloques(d)
     return r
 
 
@@ -760,6 +776,30 @@ def main():
     print(f"Pruebas registradas: {len(pruebas)}")
     print(f"Max |se formula1 - se formula2| = {info['max_dif_se_formulas_propias']:.2e}")
     print(f"Max |se propio - herramientas.estadistica| = {info['max_dif_se_vs_herramienta']}")
+    print("Version CRSP de los 7 zip de French:", sorted(set(info["version_crsp"].values())))
+    print("NI 'Lo 20' (promedio VW de NI por anio):", info["NI_Lo20_promedio"])
+    v01 = os.path.join(BASE, "..", "V01-momentum-y-rentabilidad", "SHA256SUMS.txt")
+    if os.path.exists(v01):
+        with open(v01, encoding="utf-8") as fh:
+            h01 = {l.split()[1].split("/")[-1]: l.split()[0] for l in fh if l.strip()}
+        with open(os.path.join(BASE, "SHA256SUMS.txt"), encoding="utf-8") as fh:
+            h03 = {l.split()[1].split("/")[-1]: l.split()[0] for l in fh if l.strip()}
+        k5 = "F-F_Research_Data_5_Factors_2x3_CSV.zip"
+        print("Huella FF5 igual a V01:", h01.get(k5) == h03.get(k5), h03.get(k5, "")[:8])
+    apoyos = [f"{s} {v}" for s, v, m in pruebas if R[(s, v)]["veredicto"] == "apoyo"]
+    print(f"Pruebas con apoyo ({len(apoyos)}):", "; ".join(apoyos))
+    # diagnostico del bootstrap: convencion de cuantil
+    igual_alt = 0
+    total_alt = 0
+    _, T = tablas_readme()
+    (k4,) = [k for k in T if k.startswith("4.")]
+    for f in T[k4]:
+        r = R[(f[0], f[1])]
+        lo, hi = RE_IC.search(norm(f[8])).groups()
+        for rep, alt in ((lo, r["b_lo_alt"]), (hi, r["b_hi_alt"])):
+            total_alt += 1
+            igual_alt += abs(round(alt, 3) - float(rep)) < 5e-4 + 1e-12
+    print(f"Bootstrap con indice int(0.025*B)=125: {igual_alt}/{total_alt} limites iguales al redondeo impreso")
     print(f"Titulos de seccion usados: " + "; ".join(f"{k}: {info[k][0]} / {info[k][1]}" for k in info if k.endswith("_titulos")))
     print()
     # resumen por tabla

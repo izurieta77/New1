@@ -101,4 +101,4 @@ Capitalización de Ps 116.1 mil M (2,991 M acciones); VE de ~129.4 mil M. **P/U 
 10. Yahoo Finance: chart, dividendos, fundamentals y múltiplos de KIMBERA.MX, KMB, PG y ESSITY-B.ST (25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/KIMBERA.MX
 11. Bloomberg Línea, KCC-Kenvue y México (3-nov-2025): https://www.bloomberglinea.com/latinoamerica/mexico/fusion-entre-kimberly-clark-y-kenvue-pone-la-mira-en-mexico-sera-su-segundo-mayor-mercado/
 12. Kimberly-Clark Corp., 10-Q del 2T26 (compra de Kenvue pendiente): https://www.sec.gov/Archives/edgar/data/0000055785/000162828026052348/kmb-20260630.htm
-13. Conocimiento interno, `conocimiento/23-geopolitica-y-riesgo-politico-global.md` y `16-macro-global-divisas-y-el-peso.md` (25-sep-2026).
+13. Conocimiento interno, `conocimiento/23-geopolitica-y-riesgo-politico-global.md` (Brent), `16-macro-global-divisas-y-el-peso.md` (Banxico) y `24-politica-publica-regulacion-y-mercados.md` (PIB 2026) (25-sep-2026).

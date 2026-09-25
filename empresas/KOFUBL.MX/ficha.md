@@ -9,7 +9,7 @@ Es el mayor embotellador de Coca-Cola por volumen: 4,150.4 millones de cajas uni
 ## 2. Último reporte: 2T26 (27-jul-2026) [1]
 - **Ingresos:** Ps 76,318 M (+4.7%; +6.6% en moneda neutral), 0.4% arriba del consenso de Ps 75.96 mil M (Investing [9]).
 - **Márgenes:** bruto de 47.1% (+180 pb) y operativo de 14.0% (+60 pb). México y CA tuvo 14.0% (−110 pb) y Sudamérica 13.9% (+330 pb).
-- **Utilidad:** neta mayoritaria de Ps 6,211 M (+16.9%). La UPA fue Ps 0.37 por acción (2.96 por unidad) contra un consenso de 2.80 por unidad (Investing [9]). Por ADS fue US$1.70 contra US$1.65 (MarketBeat [10]).
+- **Utilidad:** neta mayoritaria de Ps 6,211 M (+16.9%). La UPA fue Ps 0.37 por acción (2.96 por unidad) contra un consenso de 2.80, que se asume por unidad (Investing [9]). Por ADS fue US$1.70 contra US$1.65 (MarketBeat [10]).
 - **Guía (call [11]):** capex 2026 de 7.0-7.5% de los ingresos. Volumen de México "flattish" (antes "ligeramente negativo"). Trasladó 85% del IEPS y la inflación a precio, y el resto en agosto. Coberturas 2026: azúcar 96%, JMAF 98%, aluminio 73% y PET 65%; para 2027, aluminio 54%. Fletes +20%.
 - **Operación:** volumen +3.5% (México +1.0%, Brasil +5.2%). Precio por caja en México de Ps 69.27 (−1.6%, por la mezcla multiserve y retornable) y en Brasil de Ps 69.18 (+5.1%) [1].
 
