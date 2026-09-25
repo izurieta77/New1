@@ -16,7 +16,7 @@
 ## Resumen ejecutivo
 
 1. **[C] El régimen es alcista en renta variable de EUA.** 46 de 68 instrumentos (68%) están arriba de su SMA200 en MXN. Lo están los 5 ETFs de índices de EUA y 10 de los 12 sectoriales.
-2. **[C] Top 5 por momentum compuesto con filtro de tendencia:** AMD, TECL, MU, SPXL y GMEXICOB. 12 de los 20 primeros son semiconductores, tecnología o apalancados sobre índices de EUA.
+2. **[C] Top 5 por momentum compuesto con filtro de tendencia:** AMD, TECL, MU, SPXL y GMEXICOB. 14 de los 20 primeros son semiconductores, tecnología o apalancados sobre índices de EUA.
 3. **[C] El liderazgo es una sola apuesta.** La correlación diaria a 60 días (en MXN) entre AMD, MU, TECL, TQQQ y SOXL va de 0.67 a 0.95.
 4. **[C] Hay dos bloques en tendencia con poca correlación con los semis:**
    - Metales (GMEXICOB, COPX, GDX): 12-1 de +33% a +70%, pero con 1m negativo.
@@ -25,7 +25,7 @@
    - [H] Contexto: el bono del Tesoro a 10 años está en 5.11%, su máximo de 12 meses [2]. La Fed subió 25 pb el 16-sep [3].
 6. **[C] Efecto del peso.** El USD/MXN cerró en 17.72 al cierre de EUA del 24-sep, con +4.5% en un mes. Eso agrega ~4.5 pp al retorno de 1m en MXN de todo activo en USD. A 6 meses el efecto cambiario es casi cero (−0.4%).
 7. **[C] El filtro de apalancados de `parametros.json` se cumple hoy para los 7 apalancados del universo:** su subyacente está arriba de la SMA200 y el VIX cerró en 15.67 (el límite es 25) [1].
-8. **[C] Varios líderes no caben en el SIC.** Sin fracciones, un solo título de AMD es el 56% de la cuenta, uno de MU el 96% y uno de LLY el 105%. Los tres rompen el tope de 30% por acción. Del top sí caben TECL, TQQQ, SPXL, SOXL, XLK, NVDA y AAPL (esta última justo en el límite).
+8. **[C] Varios líderes no caben en el SIC.** Sin fracciones, un solo título de AMD es el 56% de la cuenta, uno de MU el 96% y uno de LLY el 105%. Los tres rompen el tope de 30% por acción. Los vehículos de tecnología del top que sí caben son TECL, TQQQ, SPXL, SOXL, XLK, NVDA y AAPL (esta última justo en el límite).
 9. **[C] Hallazgo técnico.** En Yahoo, la vela diaria de `MXN=X` fechada *d* es el tipo de cambio de ~23:00 UTC de *d−1*. Usarla con cierres de EUA atrasa el tipo de cambio un día. Por eso la pantalla usa velas horarias al cierre de Nueva York. `herramientas/portafolio.py` y `tablero.py` usan la vela diaria y hay que revisarlos.
 10. **[R] Insumo para la estrategia (no es una orden):**
     - Una pierna de momentum tecnológico en un solo vehículo apalancado: TECL o TQQQ, o SPXL si se quiere menos volatilidad.
@@ -46,10 +46,9 @@
 - **Corte:** 2026-09-24, la última sesión de SPY. No se usa ningún dato posterior al corte.
 
 ### 1.2 Conversión a MXN y el problema del tipo de cambio diario
-- **[C] Hallazgo.** Comparé las velas diarias de `MXN=X` con sus velas horarias (1-mes, 1h). La vela diaria fechada *d* tiene apertura ≈ cierre ≈ el precio de ~23:00 UTC de *d−1*, el inicio del día de Londres.
+- **[C] Hallazgo.** Comparé las velas diarias de `MXN=X` con sus velas horarias (rango de 1 mes, intervalo de 1 h). En las 23 velas diarias del 25-ago al 24-sep-2026, la apertura y el cierre difieren menos de 0.1%. En las de martes a viernes, ese valor coincide (±0.1%) con la vela horaria de las 23:00 UTC del día previo. O sea, la vela diaria fechada *d* es una foto de ~23:00 UTC de *d−1*, el inicio del día de Londres [1].
   - Ejemplo: la vela diaria del 24-sep marca 17.5413. La vela horaria de las 23:00 UTC del 23-sep cerró en 17.5419. Al cierre de EUA del 24-sep (vela de 19:00 UTC) el tipo de cambio ya estaba en 17.7188.
-  - El patrón se repite en las 22 sesiones revisadas (25-ago a 24-sep-2026) [1].
-- **[C] Consecuencia.** Si se multiplica el cierre de EUA del día *d* por la vela diaria *d*, se usa el tipo de cambio del día anterior. Los niveles cambian hasta ~1% en días como el 24-sep. La volatilidad en MXN también sale sesgada, porque se pierde la correlación del mismo día entre el peso y el riesgo.
+- **[C] Consecuencia.** Si se multiplica el cierre de EUA del día *d* por la vela diaria *d*, se usa el tipo de cambio del día anterior. Los niveles cambian hasta ~1% en días como el 24-sep. La volatilidad en MXN también sale sesgada, porque se pierde la correlación del mismo día entre el peso y el riesgo. Ejemplo con SPY: vol 60d en MXN de 12.9% con la vela diaria contra 9.4% con la horaria.
 - **Solución en `pantalla.py`:** USD/MXN a las 16:00 de Nueva York, tomado del cierre de la vela horaria de las 15:00 a las 16:00 NY. Se descargan 2 años de velas de 1 h. Si falta la vela, se usa la vela diaria de *d+1* (la foto de ~23:00 UTC de *d*). Las series `.MX` ya están en MXN y no se convierten.
 - **[C] Validación cruzada del tipo de cambio.** Dividí el precio BMV del 24-sep entre el precio de EUA:
   - AMD: 11,139 / 629.26 = 17.70
@@ -57,7 +56,7 @@
   - LLY: 20,970 / 1,181.89 = 17.74
   - XLV: 3,023 / 169.87 = 17.80
 
-  El tipo de cambio horario que usa la pantalla es 17.72 [16]. A2 reporta un tipo de cambio implícito SPY BMV/EUA de 17.75 [A2].
+  Precios BMV de [16]. El tipo de cambio horario que usa la pantalla es 17.72 [1]. A2 reporta un tipo de cambio implícito SPY BMV/EUA de 17.75 [A2].
 - **[C] Validación cruzada de precios.** Los retornos a 6m en USD de la pantalla coinciden con los de A2, que usa StockAnalysis y S&P Global como fuente:
 
   | Instrumento | Pantalla | A2 |
@@ -77,7 +76,7 @@
 | Métrica | Definición |
 |---|---|
 | 1m, 3m, 6m | P(t) / P(t − n meses calendario) − 1, con el último cierre ≤ la fecha objetivo |
-| 12-1 | P(t − 1m) / P(t − 12m) − 1. Omite el último mes, que en la literatura muestra reversión de corto plazo [10] |
+| 12-1 | P(t − 1m) / P(t − 12m) − 1. Omite el último mes, convención estándar del momentum 12-1 (no verifiqué aquí la fuente primaria de la reversión de 1 mes) |
 | Vol 60d | Desviación estándar de 60 rendimientos log diarios × √252 |
 | vs SMA200 | P / promedio de los últimos 200 cierres − 1. También se reporta en moneda local (columna `dist_sma200_local`) |
 | DD máx 1a | Caída máxima de pico a valle dentro de los últimos 12 meses |
@@ -95,10 +94,10 @@
 
 ### 1.5 Limitaciones
 - **[I] Sesgo de selección.** El universo se eligió hoy con nombres conocidos. La pantalla describe el presente y no es un backtest.
-- **[I] Los apalancados y su subyacente cuentan por separado.** Hay tres vehículos sobre el S&P 500 (SPXL, UPRO y SSO), dos sobre el Nasdaq-100 (TQQQ y QLD) y dos sobre semis (SOXL, más SOXX y SMH). Eso infla la presencia de estas exposiciones en el top. El apalancamiento sube los retornos en tendencia y, por construcción, sube su rango.
+- **[I] Los apalancados y su subyacente cuentan por separado.** Hay tres vehículos sobre el S&P 500 (SPXL, UPRO y SSO), dos sobre el Nasdaq-100 (TQQQ y QLD) y tres sobre semis (SOXL, SOXX y SMH). Eso infla la presencia de estas exposiciones en el top. El apalancamiento sube los retornos en tendencia y, por construcción, sube su rango.
 - **[C] El filtro en MXN puede cambiar solo por el peso.** XLI (+0.4% en MXN y −1.2% en USD), XLP (+0.6% y −1.0%) y HYG (+1.1% y −0.4%) pasan el filtro en MXN y no en USD. El `filtro_apalancados` de `parametros.json` se evalúa sobre el subyacente en moneda local.
 - **Datos:** NAFTRAC.MX tiene último dato del 23-sep en Yahoo, un día de rezago. `adjclose` incluye dividendos brutos. En el SIC, el dividendo neto es menor por las retenciones (ver `01`).
-- **Reproducir:** `python3 arena/investigacion/pantalla.py --salida arena/investigacion/pantalla-AAAA-MM-DD.csv --markdown`. Tarda ~2 min por la pausa de 1 s entre 69 descargas. Opciones: `--corte AAAA-MM-DD` y `--cache-horas 0`.
+- **Reproducir:** `python3 arena/investigacion/pantalla.py --salida arena/investigacion/pantalla-AAAA-MM-DD.csv --markdown`. Tarda ~2 min por la pausa de 1 s entre 70 descargas (68 series + 2 de tipo de cambio). Opciones: `--corte AAAA-MM-DD` y `--cache-horas 0`.
 
 ---
 
@@ -153,8 +152,8 @@ Retornos en MXN. "1 título ≈ % de 20k" usa el precio BMV cuando está verific
 
 Lectura rápida [C]:
 - **Top 1x (sin apalancados):** AMD, MU, GMEXICOB, COPX, AAPL, XLK, LLY, GDX, TSM, XLE, SOXX y SMH.
-- **Mejor 6m/vol entre los filtrados:** AMD 3.04, MU 2.20, SPY 1.87, VOO 1.84, TECL 1.77, SSO 1.75, SPXL 1.72 y XLK 1.62.
-- **Posiciones 22 a 27:** ARKK, MSFT, PLTR, ASML, IGV y META. Todos tienen 3m fuerte (META +40%, PLTR +70%, MSFT +36%, IGV +25%) y 12-1 negativo. Son **rebotes**, no tendencias de 12 meses, y el Score los castiga.
+- **Mejor 6m/vol entre los filtrados:** AMD 3.04, MU 2.20, SPY 1.87, VOO 1.84, TECL 1.77, SSO 1.75, SPXL 1.72, UPRO 1.69 y XLK 1.62.
+- **Posiciones 22 a 27:** ARKK, MSFT, PLTR, ASML, IGV y META. Salvo ASML (3m −1.6%, 12-1 +70%), todos tienen 3m fuerte y 12-1 negativo: PLTR +71% / −10%, META +40% / −32%, MSFT +37% / −11%, IGV +25% / −18% y ARKK +20% / −8%. Son **rebotes**, no tendencias de 12 meses, y el Score los castiga.
 - **SOXL:** 6m de +165% pero 3m de −36%, por el desplome de julio documentado en A2. Tiene vol de 147% y está a −50% de su máximo. Su subyacente SOXX está a −11.8%.
 
 ---
@@ -245,8 +244,9 @@ Otros valores [C]:
 **Hechos que explican a los líderes**
 - [H] **Hardware de IA.**
   - AMD llegó a 1 billón de USD de valor de mercado el 21-sep-2026, con "shares surging 9.6% to a record $613.50" [6].
-  - MU cerró arriba de 1,000 USD por primera vez el 21 o 22-sep. La nota dice: "Micron has sold out its entire 2026 production of high bandwidth memory". **Reporta resultados el 30-sep-2026** [7].
-- [H] **META** subió 11% en un día por su agente Muse, lanzado el 8-sep [8]. En la pantalla tiene 1m de +40% y 12-1 de −32%, así que queda en el lugar 27.
+  - MU: la nota del 23-sep atribuye el alza a la escasez de memoria: "Micron has sold out its entire 2026 production of high bandwidth memory" [7]. La misma nota dice que MU cerró arriba de 1,000 USD "por primera vez". Ese dato no cuadra: en Yahoo, MU ya cerraba arriba de 1,000 desde el 1-jun-2026 (1,035.34) [1].
+  - **Micron reporta su cuarto trimestre fiscal el miércoles 30-sep-2026**, con llamada a las 2:30 p.m. hora de la Montaña, después del cierre [17].
+- [H] **META** subió 11% en un día por su agente Muse, lanzado el 8-sep [8]. En la pantalla tiene 1m de +45%, 3m de +40% y 12-1 de −32%, así que queda en el lugar 27.
 - [H] **Tasas al alza.**
   - La Fed subió a 3.75%–4.00% el 16-sep [3].
   - El bono del Tesoro a 10 años está en 5.11% [2] y el de 30 años en 5.46%, "su nivel más alto desde 2004" [5].
@@ -263,16 +263,16 @@ Otros valores [C]:
   - Consumo: XLY, COST y WALMEX.
   - China: KWEB y FXI.
   - México doméstico: WALMEX, AMX, CEMEX y NAFTRAC bajo su SMA200.
-  - Uranio y oro físico: GLD e IAU a −5.4% de su SMA200.
-- [I] **El patrón corresponde a una expansión con tasas al alza.** Ganan el capex de IA y los productores de materias primas. Pierden los activos de duración larga y el consumo. Es coherente con el FOMC, que describe una actividad "expanding at a solid pace" [3] (no verificado palabra por palabra; la cita la resumió el buscador).
+  - Uranio (URA) y oro físico (GLD e IAU, −5.4% bajo su SMA200).
+- [I] **El patrón corresponde a una expansión con tasas al alza.** Ganan el capex de IA y los productores de materias primas. Pierden los activos de duración larga y el consumo. Es coherente con el comunicado del FOMC: "Economic activity is expanding at a solid pace… capital investment is robust" [3].
 - [I] **Por industria [11].** El momentum de acciones se explica en buena parte por el de su industria. Aquí, AMD, MU, TSM y NVDA van con SOXX/SMH. Por eso un vehículo sectorial (TECL, SOXL o TQQQ) captura casi todo el efecto sin el riesgo idiosincrático, y además cabe en la cuenta.
 - [I] **Riesgo de "momentum crash" [13].** Daniel y Moskowitz encuentran que los crashes de momentum ocurren en estados de "pánico": después de caídas del mercado, con volatilidad alta y coincidiendo con rebotes. Hoy el VIX está en 15.67 y el S&P 500 a −1.2% de su máximo, así que el estado actual no es de pánico. Ese riesgo se activaría tras una corrección fuerte seguida de rebote.
 - [I] **Concentración de evento.** El resultado de MU del 30-sep cae en la semana previa al inicio de la temporada. Los tres primeros del ranking (AMD, TECL y MU) tienen correlación de 0.77 a 0.82 entre sí. Una sorpresa de MU movería a todo el bloque.
 - [C] **Extensión.**
   - AMD está +77% sobre su SMA200 y MU +68%. El siguiente, TECL, está en +48%.
-  - Ninguno de los 20 está a más de 18% de su máximo de 52 semanas.
-  - Estas distancias son extremas contra su propia historia de 12 meses. Qué implica eso para el retorno siguiente no está verificado en esta pantalla.
-- [C] **El peso en 1 mes.** La depreciación de 4.5% explica una parte grande del 1m en MXN de los activos en USD. SPY: 3m en USD +4.9% contra +5.4% en MXN. Si el peso revierte, el 1m en MXN se corrige sin que el activo se mueva.
+  - Ninguno de los 20 está más de 18.1% abajo de su máximo de 52 semanas (el más lejano es GDX).
+  - No calculé la distribución histórica de esta distancia. Qué implica para el retorno siguiente **no está verificado**.
+- [C] **El peso en 1 mes.** La depreciación de 4.5% explica casi todo el 1m en MXN de los índices de EUA. SPY rindió +0.7% en USD y +5.3% en MXN en el mismo mes. Si el peso revierte, el 1m en MXN se corrige sin que el activo se mueva.
 
 ---
 
@@ -283,16 +283,16 @@ Contexto [H]: `parametros.json` pone al sistema en fase 0. Lo que sigue es insum
 1. **[R] Vehículo principal de momentum: TECL o TQQQ, no AMD ni MU.**
    - AMD (56% por título) y MU (96%) rompen el tope `accion_individual_max` = 0.30 en el SIC. LLY ni siquiera cabe.
    - TECL tiene correlación de 0.82 con AMD y 0.78 con MU. Captura el mismo factor con incrementos de 20% de la cuenta.
-   - TQQQ: 7% por título, correlación de 0.95 con TECL y la mitad del Score de volatilidad (56% contra 81%).
+   - TQQQ: 7% por título, correlación de 0.95 con TECL y menos volatilidad (56% contra 81%).
    - Comprar AMD o MU exigiría Trading USA (fracciones en USD, conversión cambiaria; costos en `01`).
 2. **[R] SPXL como versión de menor varianza.** Tiene el mejor 6m/vol entre los apalancados verificados en el SIC (1.72), vol de 30% y está a −0.9% de su máximo. UPRO y SSO puntúan parecido, pero su disponibilidad en el SIC **no está verificada** (A2). No usarlos hasta confirmarlos en la app.
 3. **[R] No sumar varios apalancados de tecnología creyendo que diversifican.** TECL, TQQQ y SOXL tienen correlación de 0.86 a 0.95. Dos de ellos son la misma apuesta con más fricción.
-4. **[R] Pierna(s) de diversificación con tendencia positiva y correlación ≤ 0 contra los semis:**
+4. **[R] Pierna(s) de diversificación con tendencia positiva y correlación baja o negativa contra los semis:**
    - XLE (6% por título; −0.39 con TECL).
    - XLV (15%; −0.51 con TECL).
    - GDX (8%; 0.29 con TECL; liquidez baja, solo con orden limitada).
 
-   COPX y GMEXICOB se correlacionan más con los semis (0.41 a 0.55) y ya perdieron momentum de 1m. GMEXICOB tiene la ventaja de estar en MXN.
+   COPX y GMEXICOB se correlacionan más con los semis y apalancados de tecnología (0.32 a 0.55) y ya perdieron momentum de 1m. GMEXICOB tiene la ventaja de estar en MXN.
 5. **[R] SOXL: solo como palanca de máxima varianza.** TECL domina a SOXL en la pantalla: mejor Score (10.0 contra 24.3), la mitad de la volatilidad (81% contra 147%) y correlación de 0.94. SOXL solo se justifica si el modo torneo pide subir la varianza (`modo_torneo`: ir atrás del rival por ≥5 pp).
 6. **[C] El filtro de apalancados permite hoy los 7 apalancados.** Todos los subyacentes están sobre su SMA200 en USD y el VIX está en 15.67. Si el VIX pasa de 25 o el subyacente pierde su SMA200, `parametros.json` obliga a vender.
 7. **[R] Evitar lo que está abajo de la SMA200:** bonos largos, XLU, KWEB, WALMEX, ORCL, NFLX y URA. Tampoco hay argumento de momentum para IBIT (12-1 de −36%), que además **no está verificado en el SIC** (A2).
@@ -323,3 +323,4 @@ Contexto [H]: `parametros.json` pone al sistema en fase 0. Lo que sigue es insum
 14. Faber, M. (2007), "A Quantitative Approach to Tactical Asset Allocation", *Journal of Wealth Management*; SSRN 962461. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=962461
 15. Documentos internos: `arena/investigacion/01-gbm-operativa-y-costos.md` (costos, fracciones, Trading USA), `arena/investigacion/02-universo-sic-bmv-agresivo.md` ("A2": disponibilidad en el SIC, precios BMV, liquidez) y `config/parametros.json` (perfil `arena_agresivo`, `filtro_apalancados`, límites de concentración).
 16. StockAnalysis (datos de S&P Global), cotizaciones BMV del 24-sep-2026: https://stockanalysis.com/quote/bmv/AMD/ (11,139 MXN), https://stockanalysis.com/quote/bmv/MU/ (19,126 MXN), https://stockanalysis.com/quote/bmv/LLY/ (20,970 MXN), https://stockanalysis.com/quote/bmv/XLV/ (3,023 MXN). Consultado el 25-sep-2026.
+17. Micron Technology (GlobeNewswire), "Micron Technology to Report Fiscal Fourth Quarter Results on September 30, 2026", 26-ago-2026. https://www.globenewswire.com/news-release/2026/08/26/3351673/14450/en/micron-technology-to-report-fiscal-fourth-quarter-results-on-september-30-2026.html

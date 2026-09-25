@@ -471,38 +471,125 @@ def seccion_presentaciones(presentaciones: list[dict], formas4: list[dict], resu
     return lineas
 
 
+def _clave_previa(anio: int, k: int, n: int) -> tuple[int, int]:
+    """Trimestre fiscal n posiciones antes de (anio, k)."""
+    indice = anio * 4 + (k - 1) - n
+    return indice // 4, indice % 4 + 1
+
+
+def ancla_pronostico(filas_t: list[dict], campo: str = "ingresos", minimo_errores: int = 6) -> dict | None:
+    """Ancla ingenua del proximo trimestre y su intervalo empirico de 80%.
+
+    Modelo: X(t) = X(t-4) x (1 + crecimiento a/a de t-1). El intervalo aplica los percentiles 10 y 90 de los
+    errores relativos que ese mismo modelo tuvo en los trimestres historicos disponibles (hasta 12).
+    Solo para series positivas. No es un pronostico: es la base contra la cual se ajusta por guia y consenso.
+    """
+    datos = {(f["anio_fiscal"], f["trimestre"]): f.get(campo) for f in filas_t if f.get(campo) is not None}
+    if not datos:
+        return None
+
+    def ingenuo(anio, k):
+        a4, a1, a5 = (datos.get(_clave_previa(anio, k, n)) for n in (4, 1, 5))
+        if None in (a4, a1, a5) or min(a4, a1, a5) <= 0:
+            return None
+        return a4 * (a1 / a5)
+
+    errores = []
+    for (anio, k), real in sorted(datos.items())[-12:]:
+        pron = ingenuo(anio, k)
+        if pron and real > 0:
+            errores.append(real / pron - 1)
+    ultimo = max(datos)
+    siguiente = _clave_previa(ultimo[0], ultimo[1], -1)
+    punto = ingenuo(*siguiente)
+    if punto is None:
+        return None
+    res = {"trimestre": f"FY{siguiente[0]} Q{siguiente[1]}", "punto": punto, "n_errores": len(errores),
+           "p10": None, "p90": None}
+    if len(errores) >= minimo_errores:
+        cortes = statistics.quantiles(errores, n=10, method="inclusive")
+        res["p10"], res["p90"] = punto * (1 + cortes[0]), punto * (1 + cortes[-1])
+    return res
+
+
+def _sumar_dias_habiles(inicio: date, dias: int) -> date:
+    """Suma dias habiles (lunes a viernes; no descuenta feriados oficiales)."""
+    fecha, sumados = inicio, 0
+    while sumados < dias:
+        fecha += timedelta(days=1)
+        if fecha.weekday() < 5:
+            sumados += 1
+    return fecha
+
+
+def fecha_limite_bmv(hoy: date) -> tuple[date, date]:
+    """(cierre de trimestre, fecha limite) del proximo reporte trimestral BMV segun la Circular Unica de
+    Emisoras: 20 dias habiles tras Q1-Q3 y 40 tras Q4 (sin feriados; la emisora suele reportar antes)."""
+    cierres = []
+    for anio in (hoy.year - 1, hoy.year, hoy.year + 1):
+        for mes, dia in ((3, 31), (6, 30), (9, 30), (12, 31)):
+            cierres.append(date(anio, mes, dia))
+    for cierre in cierres:
+        limite = _sumar_dias_habiles(cierre, 40 if cierre.month == 12 else 20)
+        if limite >= hoy:
+            return cierre, limite
+    raise ValueError("sin cierre trimestral")  # pragma: no cover
+
+
 def secciones_analista(ticker: str, nombre: str, trimestral: dict | None, anual: dict | None,
-                       presentaciones: list[dict], precio: float | None, moneda: str | None, es_mx: bool) -> list[str]:
+                       presentaciones: list[dict], precio: float | None, moneda: str | None, es_mx: bool,
+                       hoy: date | None = None) -> list[str]:
     """Secciones que completa el analista, con datos precargados cuando existen."""
+    hoy = hoy or date.today()
     ttm = (trimestral or {}).get("ttm") or {}
     filas_a = (anual or {}).get("filas") or []
     filas_t = (trimestral or {}).get("filas") or []
     crec_5a = None
-    if len(filas_a) >= 6 and filas_a[-1].get("ingresos") and filas_a[-6].get("ingresos"):
+    if len(filas_a) >= 6 and filas_a[-1].get("ingresos") and filas_a[-6].get("ingresos") and filas_a[-6]["ingresos"] > 0:
         crec_5a = (filas_a[-1]["ingresos"] / filas_a[-6]["ingresos"]) ** (1 / 5) - 1
     recompra = None
     if len(filas_a) >= 2 and filas_a[-1].get("acciones_diluidas") and filas_a[-2].get("acciones_diluidas"):
         recompra = filas_a[-1]["acciones_diluidas"] / filas_a[-2]["acciones_diluidas"] - 1
     capex_int = _pct((ttm.get("capex") / ttm["ingresos"]) if ttm.get("capex") and ttm.get("ingresos") else None)
-    proximo, base_proximo = _proximo_reporte(presentaciones) if presentaciones else (None, "sin datos EDGAR")
-    ult = filas_t[-1] if filas_t else {}
-    # Ancla ingenua: el mismo trimestre del anio pasado x (1 + crecimiento a/a del ultimo trimestre).
-    siguiente_k = ((ult.get("trimestre") or 0) % 4) + 1 if ult else None
-    anio_sig = (ult.get("anio_fiscal", 0) + (1 if ult.get("trimestre") == 4 else 0)) if ult else None
-    base_ancla = next((f for f in filas_t if f["anio_fiscal"] == (anio_sig or 0) - 1 and f["trimestre"] == siguiente_k), None)
-    ancla = None
-    if base_ancla and base_ancla.get("ingresos") and ult.get("crec_ingresos") is not None:
-        ancla = base_ancla["ingresos"] * (1 + ult["crec_ingresos"])
-    etiqueta_sig = f"FY{anio_sig} Q{siguiente_k}" if ult else "proximo trimestre"
+    if es_mx:
+        cierre, limite = fecha_limite_bmv(hoy)
+        proximo = limite.isoformat()
+        base_proximo = (f"trimestre al {cierre}; limite de la Circular Unica de Emisoras (20/40 dias habiles, "
+                        "sin feriados); la emisora suele reportar antes")
+        fuente_reporte, doc_anual, doc_proxy, doc_directivos = (
+            "BMV eventos relevantes", "informe anual BMV", "convocatoria y actas de asamblea",
+            "eventos relevantes de cambios en consejo o direccion")
+    else:
+        proximo, base_proximo = _proximo_reporte(presentaciones) if presentaciones else (None, "sin datos EDGAR")
+        fuente_reporte, doc_anual, doc_proxy, doc_directivos = (
+            "EDGAR 8-K 2.02", "10-K", "proxy DEF 14A", "8-K item 5.02")
+    anc_ing = ancla_pronostico(filas_t, "ingresos")
+    anc_upa = ancla_pronostico(filas_t, "upa_diluida")
+    etiqueta_sig = (anc_ing or anc_upa or {}).get("trimestre") or "proximo trimestre"
     limite_pos_std = obtener("concentracion.accion_individual_max")
     limite_pos_arena = obtener("perfiles_riesgo.arena_agresivo.concentracion.accion_individual_max")
     riesgo_std = obtener("riesgo_por_operacion.max_riesgo_pct_capital")
     riesgo_arena = obtener("perfiles_riesgo.arena_agresivo.riesgo_por_operacion")
     brier = obtener("pronosticos.brier_objetivo")
-    lineas = [
+
+    def fila_ancla(nombre_campo, anc, escala_monto):
+        if not anc:
+            return f"| {nombre_campo} | n.d. | n.d. | | |"
+        fmt = (lambda x: edgar.fmt_monto(x)) if escala_monto else (lambda x: _num(x))
+        intervalo = (f"{fmt(anc['p10'])} a {fmt(anc['p90'])} (n={anc['n_errores']})"
+                     if anc.get("p10") is not None else f"n.d. (n={anc['n_errores']} errores)")
+        return f"| {nombre_campo} | {fmt(anc['punto'])} | {intervalo} | | |"
+
+    criterio = (f"reporte trimestral BMV de {ticker}; ingresos totales reportados" if es_mx
+                else f"8-K item 2.02 de {ticker}; ingresos totales reportados")
+    lineas = []
+    if es_mx:
+        lineas += ["> Emisora de la BMV: completar las tablas con el reporte trimestral (BMV/BIVA) antes de las "
+                   "secciones siguientes.", ""]
+    lineas += [
         "## 7. Negocio y moat (analista)",
         "",
-        "- Que vende, a quien, y quien decide la compra. Segmentos y su peso en ingresos (10-K, nota de segmentos).",
+        f"- Que vende, a quien, y quien decide la compra. Segmentos y su peso en ingresos ({doc_anual}, nota de segmentos).",
         "- Fuente de ventaja: costos de cambio / efecto red / escala / activos intangibles / eficiencia. Evidencia medible "
         "(retencion, precios, margen bruto vs competidores), no adjetivos.",
         f"- Crecimiento de ingresos 5 anios (CAGR): {_pct(crec_5a)}. Margen operativo TTM: {_pct(ttm.get('margen_operativo'))}. "
@@ -514,13 +601,13 @@ def secciones_analista(ticker: str, nombre: str, trimestral: dict | None, anual:
         f"- Cambio en acciones diluidas ultimo anio: {_pct(recompra)} (negativo = recompra neta). SBC/ingresos TTM: "
         f"{_pct(ttm.get('sbc_ingresos'))}. Capex/ingresos TTM: {capex_int}.",
         "- Historial: dijeron vs hicieron (guias previas vs resultados), adquisiciones y su retorno, politica de dividendos.",
-        "- Incentivos del proxy (DEF 14A): metricas de bono, tenencia de directivos, dilucion por planes.",
-        "- Compras/ventas de insiders (seccion 6) y cambios de directivos (8-K 5.02).",
+        f"- Incentivos ({doc_proxy}): metricas de bono, tenencia de directivos, dilucion por planes.",
+        f"- Compras/ventas de insiders y cambios de directivos ({doc_directivos}).",
         "",
         "## 9. Exposicion geopolitica y regulatoria (analista)",
         "",
-        "Ingresos por region (10-K: 'revenue by geographic area' o nota de segmentos; en companyfacts no vienen "
-        "los datos dimensionales):",
+        f"Ingresos por region ({doc_anual}: ingresos por area geografica o nota de segmentos; companyfacts de la SEC "
+        "no trae datos dimensionales):",
         "",
         "| Region | % ingresos ultimo anio | Tendencia | Riesgo especifico (aranceles, controles de exportacion, sanciones, FX) |",
         "|---|---|---|---|",
@@ -531,15 +618,22 @@ def secciones_analista(ticker: str, nombre: str, trimestral: dict | None, anual:
         "| Europa | | | |",
         "| Resto | | | |",
         "",
+        "Cadena causal por riesgo relevante (acontecimiento -> exposicion -> efecto economico -> estado financiero -> "
+        "valuacion -> precio):",
+        "",
+        "| Acontecimiento | Exposicion | Efecto economico | Linea del estado financiero | Efecto en valuacion | Probabilidad (fuente) |",
+        "|---|---|---|---|---|---|",
+        "| | | | | | |",
+        "",
         "- Regulacion: antimonopolio, privacidad, subsidios/CHIPS, T-MEC (revision 2026), licencias de exportacion.",
-        "- Probabilidades de mercado de prediccion relevantes: correr `python3 herramientas/geopolitica.py` "
-        "y copiar aqui las que muevan la tesis.",
+        "- Probabilidades de mercados de prediccion: correr `python3 herramientas/geopolitica.py` y copiar aqui las "
+        "que muevan la tesis.",
         "",
         "## 10. Catalizadores con fecha (analista)",
         "",
         "| Fecha | Evento | Impacto esperado | Fuente |",
         "|---|---|---|---|",
-        f"| {proximo or 'n.d.'} | Reporte {etiqueta_sig} ({base_proximo}) | | EDGAR 8-K 2.02 |",
+        f"| {proximo or 'n.d.'} | Reporte {etiqueta_sig} ({base_proximo}) | | {fuente_reporte} |",
         "| | Junta anual / cambio de guia / dia del inversionista | | |",
         "| | Decision regulatoria o arancelaria | | |",
         "",
@@ -556,20 +650,25 @@ def secciones_analista(ticker: str, nombre: str, trimestral: dict | None, anual:
         "",
         "Regla: sin asimetria (VE claramente > precio y bear acotado) no hay posicion. Contrastar con el reverse DCF.",
         "",
-        "## 12. Pronostico del proximo reporte (registrar en el ledger)",
+        "## 12. Pronostico del proximo reporte (registrar antes del reporte)",
         "",
-        f"Ancla estadistica ingenua para ingresos {etiqueta_sig}: {edgar.fmt_monto(ancla)} millones "
-        "(mismo trimestre del anio previo x (1 + crecimiento a/a del ultimo trimestre)). No es el pronostico: "
-        "ajustar por la guia de la empresa y el consenso.",
+        f"Ancla estadistica ingenua para {etiqueta_sig}: mismo trimestre del anio previo x (1 + crecimiento a/a del "
+        "ultimo trimestre). Intervalo 80% = percentiles 10-90 de los errores historicos de ese mismo modelo. "
+        "No es el pronostico: ajustar por guia de la empresa, consenso y lo que diga la seccion 9.",
         "",
-        "Comando para registrar (probabilidad propia; objetivo Brier <= "
-        f"{brier}):",
+        "| Variable | Ancla ingenua | Intervalo 80% empirico del ancla | Punto propio | Intervalo 80% propio |",
+        "|---|---|---|---|---|",
+        fila_ancla("Ingresos (millones)", anc_ing, True),
+        fila_ancla("UPA diluida", anc_upa, False),
+        "",
+        f"Registrar (probabilidad propia; objetivo Brier <= {brier}); repetir con `python3 herramientas/pronosticos.py "
+        f"--archivo empresas/{ticker}/pronosticos.csv agregar ...` para el ledger de la empresa:",
         "",
         "```",
-        f"python3 herramientas/pronosticos.py agregar --autor claude \\",
+        "python3 herramientas/pronosticos.py agregar --autor claude \\",
         f"  --pregunta \"{ticker}: ingresos {etiqueta_sig} > [umbral = guia o consenso]?\" \\",
         "  --probabilidad 0.__ --fecha-resolucion " + (proximo or "AAAA-MM-DD") + " \\",
-        f"  --criterio \"8-K item 2.02 de {ticker}; ingresos totales reportados\"",
+        f"  --criterio \"{criterio}\"",
         "```",
         "",
         "## 13. Riesgos y criterio para matar la tesis (analista)",
@@ -591,10 +690,28 @@ def secciones_analista(ticker: str, nombre: str, trimestral: dict | None, anual:
         "por el limite de concentracion (herramientas/riesgo.py tamano_por_stop). Fase 0: solo portafolio de papel.",
         "",
     ]
-    if es_mx:
-        lineas.insert(0, "")
-        lineas.insert(0, "> Emisora de la BMV: completar las tablas con el reporte trimestral (BMV/BIVA) antes de las secciones siguientes.")
     return lineas
+
+
+def secciones_mexico_sin_edgar() -> list[str]:
+    """Secciones 5 y 6 para emisoras BMV sin EDGAR: reglas de alerta a aplicar a mano y eventos relevantes."""
+    return [
+        "## 5. Alertas (aplicar a mano con la tabla trimestral)",
+        "",
+        f"- Dilucion > {UMBRAL_DILUCION:.0%}/anio (acciones en circulacion a/a).",
+        f"- Conversion de caja FCF/utilidad neta < {UMBRAL_CONVERSION}.",
+        f"- Pagos basados en acciones > {UMBRAL_SBC:.0%} de ingresos (raro en emisoras mexicanas; revisar notas).",
+        f"- Caida de margen operativo o bruto > {UMBRAL_CAIDA_MARGEN * 100:.0f} pp a/a.",
+        "- Evento relevante de cambio de auditor, reexpresion, incumplimiento de covenants o suspension de cotizacion.",
+        "",
+        "## 6. Eventos relevantes y reportes (BMV)",
+        "",
+        "- Eventos relevantes, reportes trimestrales e informe anual: BMV Emisnet (seccion 3) y BIVA.",
+        "- Plazos (Circular Unica de Emisoras, CNBV): reporte de Q1-Q3 dentro de 20 dias habiles tras el cierre; "
+        "Q4 dentro de 40 dias habiles; informe anual y estados auditados en fechas posteriores.",
+        "- Derechos corporativos (dividendos, recompras, splits): avisos de derechos en BMV.",
+        "",
+    ]
 
 
 def seccion_mexico(ticker: str, meta: dict, estados_mx: dict | None, ticker_edgar: str | None) -> list[str]:
@@ -749,13 +866,15 @@ def generar(ticker: str, fecha: date | None = None, cache_horas: float | None = 
             lineas += seccion_presentaciones(presentaciones, formas4, None, None)
         else:
             lineas += ["## 4. Valuacion", "", "Capitalizacion = precio x acciones en circulacion (reporte BMV). "
-                       "Reverse DCF: usar herramientas/dossier.py crecimiento_implicito con FCF capturado.", ""]
+                       "Reverse DCF: `from herramientas.dossier import crecimiento_implicito` con capitalizacion y FCF "
+                       "capturados (misma moneda).", ""]
+            lineas += secciones_mexico_sin_edgar()
     else:
         lineas += seccion_estados(anual, trimestral)
         lineas += seccion_valuacion(val, (trimestral or anual or {}).get("moneda"), tasas, g_terminal)
         lineas += seccion_alertas(alertas, presentaciones)
         lineas += seccion_presentaciones(presentaciones, formas4, resumen4, error4)
-    lineas += secciones_analista(ticker, nombre, trimestral, anual, presentaciones, precio, moneda_precio, es_mx)
+    lineas += secciones_analista(ticker, nombre, trimestral, anual, presentaciones, precio, moneda_precio, es_mx, fecha)
     lineas += ["## 15. Fuentes", ""]
     lineas.append(f"- Yahoo Finance chart: https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(ticker)}?range=5y&interval=1d")
     if anual or trimestral:
