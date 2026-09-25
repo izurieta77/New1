@@ -1,9 +1,10 @@
 # Simulacion de la cartera inicial arena-claude (temporada de 4 meses: 28-sep-2026 a 28-ene-2027)
-Corrida: 2026-09-25 20:46 UTC. Corte de datos: 2026-09-25 (cierre). Semilla 20260925. Trayectorias bootstrap: 20000.
+Corrida: 2026-09-25 20:56 UTC. Corte de datos: 2026-09-25 (cierre). Semilla 20260925. Trayectorias bootstrap: 20000.
 Perfil leido de config/parametros.json: cortacircuitos [-0.12, -0.2, -0.28, -0.35], apalancado_max 0.5, indice_max 0.6, riesgo/op 0.03, kelly_max 0.5, ops/mes 8, orden minima 5000 MXN
 Calendario de la temporada: 85 dias habiles de NYSE, 2026-09-28 a 2027-01-28 (feriados NYSE: 26-nov, 25-dic, 1-ene, 18-ene).
 USD/MXN: FRED DEXMXUS hasta 2026-09-18; Yahoo MXN=X 16:00 NY despues (2026-09-21:17.2180, 2026-09-22:17.2904, 2026-09-23:17.5114, 2026-09-24:17.7188, 2026-09-25:17.7093). USD/MXN usado para precios por titulo: 17.7093.
 T-bill 3m (FRED DTB3, 2026-09-23): 4.04%. CETES 28: 6.15%.
+ALCANCE: solo la cuenta GBM (20,000 MXN). La metrica del torneo es la cuenta combinada GBM + Binance (30,000 MXN); la parte cripto no se modela aqui. Variantes marcadas POST-HOC se agregaron despues de ver resultados y cuentan en N del DSR.
 
 ## 1. Calibracion de los apalancados sinteticos (3 x exceso diario - arrastre)
   SPXL desde 2010-03-01: arrastre anual 2.34% (ademas del financiamiento a T-bill); corr diaria 0.9989; TE 2.44%
@@ -76,6 +77,8 @@ B2 7 TQQQ + 6 SPYM | sma_vix+st3 apal.          +6.3%  -11.2%  +30.0%   +8.1%  4
 B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas          +6.0%  -11.5%  +30.0%   +7.9%  48.0%   5.6%   0.0%   36%   45.8%   14.8%   15.6%   40.2%   29.8%   34.6%   51%   55%   30%   6.9  1.37  45.3%  0.1%  2.3%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix           +8.2%   -8.4%  +25.7%   +8.6%  32.7%   4.0%   0.0%   27%   51.8%    9.9%    9.4%   29.8%   15.2%   20.5%   58%   64%   31%   6.7  0.00  24.7%  0.4%  0.1%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas    +7.5%   -9.0%  +25.4%   +8.1%  30.3%   2.3%   0.0%   29%   48.9%    9.2%    9.2%   32.1%   18.8%   24.7%   55%   61%   29%   7.2  0.82  22.6%  0.4%  0.1%
+B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3    +5.9%   -7.6%  +19.2%   +6.0%  17.3%   0.3%   0.0%   29%   40.5%   16.3%   17.2%   32.7%   25.3%   35.6%   49%   59%   32%   7.1  0.67   9.7%  0.2%  0.0%
+C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3           +5.6%   -5.0%  +16.2%   +5.7%   7.5%   0.0%   0.0%   24%   31.0%   16.7%   17.6%   28.7%   23.9%   40.7%   43%   59%   34%   3.9  0.49   3.6%  0.0%  0.0%
 C 50% S&P + 2x25% sectores top 12-1             +6.2%   -4.5%  +17.2%   +6.4%  11.0%   0.2%   0.0%   22%   35.8%   18.2%   19.0%   23.9%   20.1%   35.5%   49%   63%   35%   3.2  0.00   4.9%  0.0%  0.0%
 C st3 (stop 3% por linea)                       +5.9%   -5.5%  +17.1%   +6.0%   9.4%   0.1%   0.0%   25%   33.9%   16.9%   17.5%   27.2%   22.3%   37.6%   46%   61%   34%   4.0  0.53   3.7%  0.0%  0.0%
   rival R1 beta 1 S&P (100%)                    +6.4%   -3.8%  +16.6%   +6.4%   9.6%   0.4% (sin ruido)
@@ -103,6 +106,8 @@ B2 7 TQQQ + 6 SPYM | sma_vix+st3 apal.          -1.5%  -14.6%  +18.9%   +0.7%  5
 B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas          -1.8%  -14.7%  +18.9%   +0.5%  58.4%   7.3%   0.0%   55%   31.4%   12.6%   15.6%   53.9%   35.7%   38.0%   39%   38%   39%   7.5  1.74  42.8%  0.2%  2.6%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix           +1.1%  -12.7%  +17.0%   +1.8%  43.5%   6.0%   0.0%   46%   35.2%    9.4%   11.1%   44.6%   19.5%   21.9%   45%   46%   44%   6.9  0.00  23.8%  0.5%  0.1%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas    +0.4%  -12.5%  +16.7%   +1.4%  40.6%   2.8%   0.0%   49%   33.0%    8.9%   11.3%   46.7%   24.0%   26.4%   43%   43%   42%   7.8  1.16  20.6%  0.5%  0.1%
+B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3    +0.9%  -10.2%  +13.7%   +1.5%  22.2%   0.4%   0.0%   46%   31.1%   18.9%   23.7%   40.8%   26.9%   31.4%   45%   45%   47%   7.4  0.91   9.3%  0.4%  0.0%
+C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3           +1.9%   -8.0%  +12.1%   +2.2%  10.1%   0.0%   0.0%   40%   29.1%   21.3%   27.4%   32.6%   23.0%   29.8%   48%   49%   50%   4.2  0.68   3.5%  0.0%  0.0%
 C 50% S&P + 2x25% sectores top 12-1             +2.2%   -8.1%  +12.7%   +2.4%  15.8%   0.5%   0.0%   38%   30.8%   21.6%   27.2%   30.5%   20.6%   27.0%   50%   51%   50%   3.3  0.00   5.0%  0.0%  0.0%
 C st3 (stop 3% por linea)                       +1.8%   -8.5%  +12.6%   +2.1%  12.6%   0.0%   0.0%   41%   29.1%   20.2%   25.9%   33.5%   22.9%   29.3%   47%   48%   49%   4.3  0.75   3.6%  0.0%  0.0%
   rival R1 beta 1 S&P (100%)                    +2.2%   -7.4%  +12.0%   +2.3%  14.2%   1.2% (sin ruido)
@@ -132,6 +137,8 @@ B2 7 TQQQ + 6 SPYM | sma_vix+st3 apal.          +2.0%  -10.8%  +22.5%   +4.3%  4
 B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas          +1.2%  -11.0%  +22.5%   +3.9%  38.7%   4.0%   0.0%   47%   37.4%   13.5%   16.9%   44.4%   34.0%   39.5%   46%   48%   32%   6.0  1.19  32.3%  0.6%  3.1%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix           +4.8%  -10.2%  +20.3%   +5.1%  29.7%   4.2%   0.0%   34%   43.0%    8.1%   11.0%   32.3%   17.1%   23.6%   54%   57%   34%   6.2  0.00  17.5%  0.5%  0.0%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas    +3.7%   -9.3%  +19.8%   +4.5%  24.3%   2.9%   0.0%   38%   39.3%    7.5%   10.8%   36.7%   22.9%   29.9%   49%   53%   31%   6.9  0.88  16.2%  0.5%  0.0%
+B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3    +4.1%   -7.8%  +15.8%   +4.0%  12.3%   0.1%   0.0%   35%   39.3%   16.5%   20.7%   30.1%   23.0%   32.4%   52%   57%   36%   6.3  0.57   4.0%  0.4%  0.0%
+C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3           +4.5%   -8.3%  +14.4%   +4.0%  12.4%   0.2%   0.0%   30%   34.6%   15.0%   19.5%   24.9%   18.6%   32.5%   50%   60%   37%   4.0  0.59   6.2%  0.1%  0.0%
 C 50% S&P + 2x25% sectores top 12-1             +4.8%   -7.4%  +14.1%   +4.3%  16.9%   1.8%   0.0%   26%   34.7%   18.9%   23.7%   24.0%   19.8%   34.4%   50%   60%   39%   3.4  0.00   6.2%  0.0%  0.0%
 C st3 (stop 3% por linea)                       +4.3%   -8.1%  +14.0%   +3.8%  11.5%   0.0%   0.0%   31%   33.8%   18.6%   23.3%   27.4%   23.4%   37.3%   49%   58%   37%   4.0  0.58   4.7%  0.0%  0.0%
   rival R1 beta 1 S&P (100%)                    +4.6%   -7.1%  +14.3%   +4.2%  18.8%   3.2% (sin ruido)
@@ -161,6 +168,8 @@ B2 7 TQQQ + 6 SPYM | sma_vix+st3 apal.          +3.0%  -11.2%  +22.4%   +4.6%  4
 B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas          +2.6%  -11.6%  +22.4%   +4.3%  46.6%   4.2%   0.0%   43%   39.1%   12.5%   13.5%   45.7%   35.3%   40.9%   44%   49%   28%   6.0  1.23  34.2%  0.6%  2.6%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix           +5.6%   -8.8%  +20.3%   +5.9%  26.2%   3.7%   0.0%   29%   46.0%    9.1%    8.3%   33.2%   17.8%   23.6%   53%   60%   32%   5.8  0.00  16.9%  0.6%  0.0%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas    +4.5%   -9.0%  +19.6%   +5.1%  25.5%   2.3%   0.0%   33%   41.8%    7.7%    7.8%   37.5%   23.8%   30.5%   49%   55%   28%   6.5  0.77  14.8%  0.5%  0.0%
+B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3    +5.2%   -8.1%  +16.7%   +4.9%  13.4%   0.1%   0.0%   30%   41.1%   17.8%   18.1%   28.6%   21.7%   31.1%   52%   61%   35%   5.9  0.51   4.5%  0.4%  0.0%
+C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3           +5.1%   -5.8%  +14.4%   +4.9%   7.3%   0.0%   0.0%   22%   34.6%   16.5%   18.4%   22.7%   18.9%   34.5%   49%   63%   35%   3.6  0.37   4.0%  0.0%  0.0%
 C 50% S&P + 2x25% sectores top 12-1             +5.5%   -4.4%  +14.3%   +5.3%   9.8%   0.3%   0.0%   19%   36.3%   21.3%   23.0%   21.5%   19.9%   34.9%   51%   64%   37%   3.2  0.00   5.1%  0.0%  0.0%
 C st3 (stop 3% por linea)                       +5.2%   -5.6%  +14.3%   +4.8%   8.6%   0.0%   0.0%   22%   35.5%   20.6%   21.8%   24.5%   22.6%   37.2%   49%   62%   36%   3.7  0.39   3.7%  0.0%  0.0%
   rival R1 beta 1 S&P (100%)                    +5.1%   -4.2%  +14.1%   +5.1%  10.3%   0.3% (sin ruido)
@@ -193,6 +202,7 @@ B2 7 TQQQ + 6 SPYM | sma_vix+st3 apal.          +0.5%  -10.4%  +21.6%   +3.2%  3
 B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas          -0.7%  -10.6%  +21.6%   +3.0%  34.6%   2.9%   0.0%   52%   34.4%   13.8%   18.3%   46.4%   34.6%   39.3%   44%   44%   35%   5.7  1.07  26.0%  0.7%  3.9%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix           +2.7%  -11.0%  +19.3%   +3.4%  29.9%   3.5%   0.0%   40%   36.4%    7.7%   10.9%   39.0%   19.6%   25.5%   47%   50%   38%   6.3  0.00  13.8%  0.8%  0.1%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas    +1.8%   -9.3%  +18.8%   +3.2%  20.8%   2.6%   0.0%   43%   34.6%    7.6%   12.0%   40.5%   23.9%   30.0%   46%   48%   36%   6.8  0.84  13.7%  0.8%  0.0%
+B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3    +3.0%   -7.6%  +14.3%   +3.2%  10.5%   0.1%   0.0%   38%   35.9%   18.7%   24.2%   32.6%   22.5%   31.6%   50%   53%   43%   6.0  0.55   3.5%  0.5%  0.0%
   rival R1 beta 1 S&P (100%)                    +4.1%   -8.0%  +13.0%   +3.5%  18.9%   5.3% (sin ruido)
   rival R2 mixta 50% S&P + 50% CETES            +3.1%   -2.9%   +7.6%   +2.8%   1.3%   0.0% (sin ruido)
   rival R3 agresiva 50% TQQQ + 50% QQQ          +6.5%  -37.3%  +32.6%   +3.5%  74.8%  40.3% (sin ruido)
@@ -216,6 +226,7 @@ B2 7 TQQQ + 6 SPYM | sma_vix+st3 apal.          +5.4%  -11.5%  +23.3%   +6.0%  4
 B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas          +4.4%  -12.0%  +23.3%   +5.4%  45.0%   5.7%   0.0%   38%   41.0%   13.1%   15.8%   41.6%   34.2%   40.6%   48%   52%   27%   6.3  1.38  42.1%  0.4%  1.8%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix           +8.9%   -8.7%  +21.4%   +7.6%  29.3%   5.2%   0.0%   24%   53.5%    9.2%   11.2%   23.7%   14.2%   20.9%   63%   67%   28%   6.2  0.00  23.3%  0.0%  0.0%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas    +7.2%   -9.3%  +20.8%   +6.5%  29.8%   3.3%   0.0%   28%   46.0%    7.0%    9.4%   31.1%   22.5%   30.8%   54%   60%   24%   7.0  0.94  19.9%  0.0%  0.0%
+B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3    +6.1%   -8.4%  +17.5%   +5.4%  15.2%   0.1%   0.0%   30%   43.0%   12.2%   14.1%   28.4%   24.2%   34.9%   53%   62%   26%   6.7  0.60   4.7%  0.3%  0.0%
   rival R1 beta 1 S&P (100%)                    +5.8%   -6.1%  +15.6%   +5.4%  18.5%   0.0% (sin ruido)
   rival R2 mixta 50% S&P + 50% CETES            +4.0%   -2.0%   +8.9%   +3.8%   0.0%   0.0% (sin ruido)
   rival R3 agresiva 50% TQQQ + 50% QQQ         +14.7%  -17.0%  +34.0%  +12.3%  72.6%  36.1% (sin ruido)
@@ -242,28 +253,32 @@ B2 7 TQQQ + 6 SPYM | sma_vix+st3 apal.         +0.69% [ -1.83%, +3.22%]      47%
 B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas         +0.40% [ -2.21%, +3.01%]      45%         0.06  0.30     +2.59%    0.30  1.55
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix          +0.77% [ -0.90%, +2.44%]      54%         0.18  0.90     +2.96%    0.41  2.10
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas   +0.11% [ -1.71%, +1.93%]      49%         0.02  0.12     +2.30%    0.33  1.70
+B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3   -0.31% [ -1.57%, +0.94%]      53%        -0.10 -0.49     +1.88%    0.34  1.76
+C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3          -0.55% [ -1.46%, +0.37%]      49%        -0.23 -1.17     +1.65%    0.35  1.78
 C 50% S&P + 2x25% sectores top 12-1            +0.12% [ -0.49%, +0.73%]      48%         0.07  0.38     +2.31%    0.49  2.50
 C st3 (stop 3% por linea)                      -0.40% [ -1.35%, +0.55%]      46%        -0.16 -0.82     +1.79%    0.37  1.91
 
-DSR (Bailey y Lopez de Prado 2014) sobre la serie diaria encadenada, N = 19 variantes, V[SR diario] = 6.82e-06:
-  A 7 SPYM + 1 QQQM (+CETES)                   SR anual vs CETES  0.40  PSR(0) 0.980  DSR 0.951
+DSR (Bailey y Lopez de Prado 2014) sobre la serie diaria encadenada, N = 21 variantes, V[SR diario] = 6.59e-06:
+  A 7 SPYM + 1 QQQM (+CETES)                   SR anual vs CETES  0.40  PSR(0) 0.980  DSR 0.950
   A st3 (stop 3% por linea)                    SR anual vs CETES  0.39  PSR(0) 0.977  DSR 0.946
   B1 1 SPXL + 5 SPYM + 1 QQQM | bh             SR anual vs CETES  0.43  PSR(0) 0.986  DSR 0.964
   B1 1 SPXL + 5 SPYM + 1 QQQM | sma            SR anual vs CETES  0.47  PSR(0) 0.992  DSR 0.977
-  B1 1 SPXL + 5 SPYM + 1 QQQM | sma_vix        SR anual vs CETES  0.43  PSR(0) 0.986  DSR 0.965
+  B1 1 SPXL + 5 SPYM + 1 QQQM | sma_vix        SR anual vs CETES  0.43  PSR(0) 0.986  DSR 0.964
   B1 1 SPXL + 5 SPYM + 1 QQQM | r01            SR anual vs CETES  0.48  PSR(0) 0.993  DSR 0.980
-  B1 1 SPXL + 5 SPYM + 1 QQQM | sma_vix+st3 apal. SR anual vs CETES  0.41  PSR(0) 0.983  DSR 0.957
+  B1 1 SPXL + 5 SPYM + 1 QQQM | sma_vix+st3 apal. SR anual vs CETES  0.41  PSR(0) 0.983  DSR 0.956
   B1 1 SPXL + 5 SPYM + 1 QQQM | sma_vix+st3 todas SR anual vs CETES  0.40  PSR(0) 0.981  DSR 0.952
   B1 1 SPXL + 5 SPYM + 1 QQQM | sma+st3 todas  SR anual vs CETES  0.43  PSR(0) 0.987  DSR 0.965
   B2 7 TQQQ + 6 SPYM | bh                      SR anual vs CETES  0.37  PSR(0) 0.971  DSR 0.932
-  B2 7 TQQQ + 6 SPYM | sma                     SR anual vs CETES  0.50  PSR(0) 0.995  DSR 0.985
+  B2 7 TQQQ + 6 SPYM | sma                     SR anual vs CETES  0.50  PSR(0) 0.995  DSR 0.984
   B2 7 TQQQ + 6 SPYM | sma_vix                 SR anual vs CETES  0.47  PSR(0) 0.991  DSR 0.976
   B2 7 TQQQ + 6 SPYM | r01                     SR anual vs CETES  0.50  PSR(0) 0.995  DSR 0.985
   B2 7 TQQQ + 6 SPYM | sma_vix+st3 apal.       SR anual vs CETES  0.40  PSR(0) 0.980  DSR 0.952
   B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas       SR anual vs CETES  0.37  PSR(0) 0.971  DSR 0.932
   B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix        SR anual vs CETES  0.45  PSR(0) 0.990  DSR 0.972
-  B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas SR anual vs CETES  0.39  PSR(0) 0.978  DSR 0.947
-  C 50% S&P + 2x25% sectores top 12-1          SR anual vs CETES  0.48  PSR(0) 0.993  DSR 0.981
+  B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas SR anual vs CETES  0.39  PSR(0) 0.978  DSR 0.946
+  B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3 SR anual vs CETES  0.40  PSR(0) 0.979  DSR 0.950
+  C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3        SR anual vs CETES  0.40  PSR(0) 0.978  DSR 0.948
+  C 50% S&P + 2x25% sectores top 12-1          SR anual vs CETES  0.48  PSR(0) 0.993  DSR 0.980
   C st3 (stop 3% por linea)                    SR anual vs CETES  0.43  PSR(0) 0.986  DSR 0.964
 
 Razon de informacion diaria contra R1 (serie encadenada) y t = IR x sqrt(anios):
@@ -284,6 +299,8 @@ Razon de informacion diaria contra R1 (serie encadenada) y t = IR x sqrt(anios):
   B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas       IR -0.01  t -0.06
   B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix        IR  0.13  t  0.65
   B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas IR -0.05  t -0.23
+  B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3 IR -0.13  t -0.66
+  C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3        IR -0.19  t -0.96
   C 50% S&P + 2x25% sectores top 12-1          IR  0.03  t  0.15
   C st3 (stop 3% por linea)                    IR -0.15  t -0.75
 
@@ -295,12 +312,20 @@ Si k* < 2 la cartera ya esta arriba de medio Kelly (kelly_fraccion_max = 0.5).
     B2 7 TQQQ + 6 SPYM: mu_e +31.7% sigma 35.9% k* 2.45 -> fraccion de Kelly 0.41; con recorte R3 (prima x0.5): 0.82
     B3 4 TQQQ + 5 SPYM + 1 QQQ: mu_e +24.7% sigma 27.8% k* 3.20 -> fraccion de Kelly 0.31; con recorte R3 (prima x0.5): 0.63
     C 50% S&P + 2x25% sectores: mu_e +14.2% sigma 17.9% k* 4.41 -> fraccion de Kelly 0.23; con recorte R3 (prima x0.5): 0.45
+    B1x POST-HOC 1 SPXL+5 SPYM: mu_e +17.8% sigma 23.1% k* 3.33 -> fraccion de Kelly 0.30; con recorte R3 (prima x0.5): 0.60
+    B1x con 4 SPYM: mu_e +16.6% sigma 21.8% k* 3.48 -> fraccion de Kelly 0.29; con recorte R3 (prima x0.5): 0.57
+    B1x con 3 SPYM: mu_e +15.5% sigma 20.6% k* 3.65 -> fraccion de Kelly 0.27; con recorte R3 (prima x0.5): 0.55
+    C' POST-HOC 5 SPYM+5 XLE+1: mu_e +13.0% sigma 16.9% k* 4.54 -> fraccion de Kelly 0.22; con recorte R3 (prima x0.5): 0.44
   [M2 deriva conservadora]
     A 7 SPYM + 1 QQQM (+CETES): mu_e +1.9% sigma 14.7% k* 0.87 -> fraccion de Kelly 1.15
     B1 1 SPXL + 5 SPYM + 1 QQQ: mu_e +3.4% sigma 23.1% k* 0.63 -> fraccion de Kelly 1.58
     B2 7 TQQQ + 6 SPYM: mu_e +5.7% sigma 35.4% k* 0.45 -> fraccion de Kelly 2.22
     B3 4 TQQQ + 5 SPYM + 1 QQQ: mu_e +4.2% sigma 27.4% k* 0.56 -> fraccion de Kelly 1.79
     C 50% S&P + 2x25% sectores: mu_e +3.0% sigma 17.9% k* 0.92 -> fraccion de Kelly 1.08
+    B1x POST-HOC 1 SPXL+5 SPYM: mu_e +3.7% sigma 22.9% k* 0.71 -> fraccion de Kelly 1.40
+    B1x con 4 SPYM: mu_e +3.5% sigma 21.6% k* 0.75 -> fraccion de Kelly 1.33
+    B1x con 3 SPYM: mu_e +3.3% sigma 20.3% k* 0.79 -> fraccion de Kelly 1.26
+    C' POST-HOC 5 SPYM+5 XLE+1: mu_e +2.9% sigma 16.9% k* 1.00 -> fraccion de Kelly 1.00
 
 ## 8. Resumen compacto (M1 | M2 | M3 | M3c): mediana, P(-12%), P(-20%), P(1o en F1), P(1o en F2), P(1o en F3), P(ultimo en F1)
 C0 CETES 100%                                +2.1% 0% 0% 22% 20% 21% ult 57% | +2.1% 0% 0% 38% 35% 38% ult 38% | +2.1% 0% 0% 29% 26% 27% ult 49% | +2.1% 0% 0% 23% 21% 22% ult 52%
@@ -321,7 +346,9 @@ B2 7 TQQQ + 6 SPYM | sma_vix+st3 apal.       +6.3% 48% 6% 46% 15% 16% ult 40% | 
 B2 7 TQQQ + 6 SPYM | sma_vix+st3 todas       +6.0% 48% 6% 46% 15% 16% ult 40% | -1.8% 58% 7% 31% 13% 16% ult 54% | +1.2% 39% 4% 37% 13% 17% ult 44% | +2.6% 47% 4% 39% 12% 14% ult 46%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix        +8.2% 33% 4% 52% 10% 9% ult 30% | +1.1% 44% 6% 35% 9% 11% ult 45% | +4.8% 30% 4% 43% 8% 11% ult 32% | +5.6% 26% 4% 46% 9% 8% ult 33%
 B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas +7.5% 30% 2% 49% 9% 9% ult 32% | +0.4% 41% 3% 33% 9% 11% ult 47% | +3.7% 24% 3% 39% 8% 11% ult 37% | +4.5% 26% 2% 42% 8% 8% ult 37%
+B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3 +5.9% 17% 0% 40% 16% 17% ult 33% | +0.9% 22% 0% 31% 19% 24% ult 41% | +4.1% 12% 0% 39% 16% 21% ult 30% | +5.2% 13% 0% 41% 18% 18% ult 29%
+C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3        +5.6% 8% 0% 31% 17% 18% ult 29% | +1.9% 10% 0% 29% 21% 27% ult 33% | +4.5% 12% 0% 35% 15% 20% ult 25% | +5.1% 7% 0% 35% 17% 18% ult 23%
 C 50% S&P + 2x25% sectores top 12-1          +6.2% 11% 0% 36% 18% 19% ult 24% | +2.2% 16% 1% 31% 22% 27% ult 30% | +4.8% 17% 2% 35% 19% 24% ult 24% | +5.5% 10% 0% 36% 21% 23% ult 22%
 C st3 (stop 3% por linea)                    +5.9% 9% 0% 34% 17% 18% ult 27% | +1.8% 13% 0% 29% 20% 26% ult 33% | +4.3% 11% 0% 34% 19% 23% ult 27% | +5.2% 9% 0% 35% 21% 22% ult 24%
 
-Tiempo de corrida: 38 s
+Tiempo de corrida: 43 s

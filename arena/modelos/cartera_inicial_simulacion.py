@@ -6,6 +6,9 @@ probabilidad de terminar la temporada con el mayor TWR en MXN frente a los rival
 sin romper perfiles_riesgo.arena_agresivo de config/parametros.json.
 ACTUALIZACION DEL DUENO (25-sep-2026): la temporada dura 4 MESES, del 28-sep-2026 al 28-ene-2027;
 perdida maxima tolerada 10,000 MXN (-50%); la cartera se ejecuta en REAL el 28-sep (titulos enteros).
+ALCANCE: solo la cuenta GBM (20,000 MXN). Desde el commit a993426 la metrica del torneo es la cuenta
+combinada GBM + Binance (30,000 MXN); la parte cripto (1/3) no se modela aqui y diluye las diferencias
+entre carteras GBM que muestran las P(primero).
 
 Uso (desde cualquier directorio):
     python3 arena/modelos/cartera_inicial_simulacion.py                  # 20,000 trayectorias por metodo
@@ -560,6 +563,16 @@ def carteras(precios_mxn: dict) -> tuple[dict, dict, dict]:
         {"activo": "NDX1", "w": w("QQQM", 1), "titulos": 1, "stop": st_all}]
     c["B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix"] = {"lineas": B3("sma_vix"), "cb": True}
     c["B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix+st3 todas"] = {"lineas": B3("sma_vix", True), "cb": True}
+    # POST-HOC (agregada el 25-sep despues de ver F2/F3): B1 con el sectorial top 12-1 (hoy XLE) en lugar de QQQM
+    B1x = [{"activo": "SPX3", "w": w("SPXL", 1), "titulos": 1, "filtro": "sma_vix", "tactica": True, "stop": True},
+           {"activo": "SPX1", "w": w("SPYM", 5), "titulos": 5, "stop": True},
+           {"activo": "SEC1", "w": 5 * precios_mxn["XLE"] / CAPITAL, "titulos": 5, "tactica": True, "stop": True}]
+    c["B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3"] = {"lineas": B1x, "cb": True}
+    # POST-HOC: version implementable de C que cumple Kelly con recorte R3 (sin apalancados)
+    Cp = [{"activo": "SPX1", "w": w("SPYM", 5), "titulos": 5, "stop": True},
+          {"activo": "SEC1", "w": 5 * precios_mxn["XLE"] / CAPITAL, "titulos": 5, "tactica": True, "stop": True},
+          {"activo": "NDX1", "w": w("QQQM", 1), "titulos": 1, "tactica": True, "stop": True}]
+    c["C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3"] = {"lineas": Cp, "cb": True}
     C = [{"activo": "SPX1", "w": 0.50, "titulos": 6},
          {"activo": "SEC1", "w": 0.25, "titulos": 5, "tactica": True},
          {"activo": "SEC2", "w": 0.25, "titulos": 2, "tactica": True}]
@@ -676,6 +689,9 @@ def correr(caminos: int, semilla: int) -> None:
           f"(feriados NYSE: 26-nov, 25-dic, 1-ene, 18-ene).")
     print(f"USD/MXN: {D['FX_fuente']}. USD/MXN usado para precios por titulo: {D['fx_hoy']:.4f}.")
     print(f"T-bill 3m (FRED DTB3, {D['RF_hoy_fecha']}): {D['RF_hoy']:.2%}. CETES 28: {CETES_28:.2%}.")
+    print("ALCANCE: solo la cuenta GBM (20,000 MXN). La metrica del torneo es la cuenta combinada GBM + Binance "
+          "(30,000 MXN); la parte cripto no se modela aqui. Variantes marcadas POST-HOC se agregaron despues de ver "
+          "resultados y cuentan en N del DSR.")
 
     # ---------------- construccion de insumos comunes
     B = {"fechas": f, "rfx": np.full(N, np.nan), "x": {}, "nivel": {}, "sma": {}, "r01": {},
@@ -911,9 +927,17 @@ def kelly(B, T, cands, caminos, semilla, cal) -> None:
     for nombre, cons in (("M1 deriva historica 2011-2026", False), ("M2 deriva conservadora", True)):
         Dk = construir_bootstrap(B, T, min(caminos, 8000), semilla + 7, conservador=cons, condicionar=False, cal=cal)
         linea = []
+        extra = {}
+        bx = cands["B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3"]["lineas"]
+        w_spym = bx[1]["w"] / 5
+        for n in (4, 3):   # diagnostico de tamano (no es variante de torneo): menos SPYM
+            extra[f"B1x con {n} SPYM"] = {"lineas": [bx[0], dict(bx[1], w=n * w_spym, titulos=n), bx[2]]}
         for k in ["A 7 SPYM + 1 QQQM (+CETES)", "B1 1 SPXL + 5 SPYM + 1 QQQM | bh", "B2 7 TQQQ + 6 SPYM | bh",
-                  "B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix", "C 50% S&P + 2x25% sectores top 12-1"]:
-            esp = {"lineas": [dict(l, filtro=None, stop=False) for l in cands[k]["lineas"]], "cb": False}
+                  "B3 4 TQQQ + 5 SPYM + 1 QQQM | sma_vix", "C 50% S&P + 2x25% sectores top 12-1",
+                  "B1x POST-HOC 1 SPXL+5 SPYM+5 XLE | sma_vix+st3", "B1x con 4 SPYM", "B1x con 3 SPYM",
+                  "C' POST-HOC 5 SPYM+5 XLE+1 QQQM | st3"]:
+            fuente = extra[k] if k in extra else cands[k]
+            esp = {"lineas": [dict(l, filtro=None, stop=False) for l in fuente["lineas"]], "cb": False}
             Vh = simular(esp, Dk)["Vh"]
             rd = (Vh[:, 1:] / Vh[:, :-1] - 1).ravel() - Dk["cash_d"]
             mu, var = float(np.mean(rd)) * 252, float(np.var(rd)) * 252
