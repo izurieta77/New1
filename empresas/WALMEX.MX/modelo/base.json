@@ -100,8 +100,7 @@
         "flujo.depreciacion_amortizacion": "F2/F4 Cash flow: 'Depreciation and amortization' (=EBITDA - utilidad operativa, control interno)",
         "flujo.sbc": "F2/F4 Cash flow: 'Stock option compensation expenses'",
         "flujo.efecto_cambiario": "F2/F4 Cash flow: 'Effect of changes in the value of cash'",
-        "flujo.otros_operativos.interes_por_pasivos_de_arrendamiento_(nota_9)": "F2/F4 Cash flow: 'Interest on lease liabilities' (= Nota 9 'Intereses por pasivos por arrendamiento')",
-        "flujo.otros_operativos.diferencia_isr_devengado_vs_isr_pagado_en_efectivo": "calculo sobre hechos: 'Income tax paid' (Cash flow) menos ISR devengado implicito (Income before income taxes - Consolidated net income, mismo estado)"
+        "flujo.otros_operativos": "F2/F4 Cash flow, seccion 'Operating activities': partidas no monetarias (perdida en baja de activos, interes ganado y a cargo -reversos-, interes por pasivos de arrendamiento Nota 9, efecto cambiario no realizado, provision de obligaciones laborales) mas la diferencia entre ISR pagado en efectivo ('Income tax paid') y el ISR devengado implicito (Income before income taxes - Consolidated net income del mismo estado), mas beneficios a empleados pagados; ver modelo.py construir_flujo() para el detalle exacto de cada componente."
       },
       "resultados": {
         "ingresos": 958507.491,
@@ -251,8 +250,7 @@
         "flujo.depreciacion_amortizacion": "F2/F4 Cash flow: 'Depreciation and amortization' (=EBITDA - utilidad operativa, control interno)",
         "flujo.sbc": "F2/F4 Cash flow: 'Stock option compensation expenses'",
         "flujo.efecto_cambiario": "F2/F4 Cash flow: 'Effect of changes in the value of cash'",
-        "flujo.otros_operativos.interes_por_pasivos_de_arrendamiento_(nota_9)": "F2/F4 Cash flow: 'Interest on lease liabilities' (= Nota 9 'Intereses por pasivos por arrendamiento')",
-        "flujo.otros_operativos.diferencia_isr_devengado_vs_isr_pagado_en_efectivo": "calculo sobre hechos: 'Income tax paid' (Cash flow) menos ISR devengado implicito (Income before income taxes - Consolidated net income, mismo estado)"
+        "flujo.otros_operativos": "F2/F4 Cash flow, seccion 'Operating activities': partidas no monetarias (perdida en baja de activos, interes ganado y a cargo -reversos-, interes por pasivos de arrendamiento Nota 9, efecto cambiario no realizado, provision de obligaciones laborales) mas la diferencia entre ISR pagado en efectivo ('Income tax paid') y el ISR devengado implicito (Income before income taxes - Consolidated net income del mismo estado), mas beneficios a empleados pagados; ver modelo.py construir_flujo() para el detalle exacto de cada componente."
       },
       "resultados": {
         "ingresos": 1011597.884,
@@ -402,8 +400,7 @@
         "flujo.depreciacion_amortizacion": "F2/F4 Cash flow: 'Depreciation and amortization' (=EBITDA - utilidad operativa, control interno)",
         "flujo.sbc": "F2/F4 Cash flow: 'Stock option compensation expenses'",
         "flujo.efecto_cambiario": "F2/F4 Cash flow: 'Effect of changes in the value of cash'",
-        "flujo.otros_operativos.interes_por_pasivos_de_arrendamiento_(nota_9)": "F2/F4 Cash flow: 'Interest on lease liabilities' (= Nota 9 'Intereses por pasivos por arrendamiento')",
-        "flujo.otros_operativos.diferencia_isr_devengado_vs_isr_pagado_en_efectivo": "calculo sobre hechos: 'Income tax paid' (Cash flow) menos ISR devengado implicito (Income before income taxes - Consolidated net income, mismo estado)"
+        "flujo.otros_operativos": "F2/F4 Cash flow, seccion 'Operating activities': partidas no monetarias (perdida en baja de activos, interes ganado y a cargo -reversos-, interes por pasivos de arrendamiento Nota 9, efecto cambiario no realizado, provision de obligaciones laborales) mas la diferencia entre ISR pagado en efectivo ('Income tax paid') y el ISR devengado implicito (Income before income taxes - Consolidated net income del mismo estado), mas beneficios a empleados pagados; ver modelo.py construir_flujo() para el detalle exacto de cada componente."
       },
       "resultados": {
         "ingresos": 495966.33,
