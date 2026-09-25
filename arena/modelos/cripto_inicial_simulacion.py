@@ -235,6 +235,10 @@ def cargar_datos() -> dict:
     for k in ("btc", "eth"):
         for m in (50, 100, 150, 200):
             D[f"sig_{k}_{m}"] = senal_sma(D[k], m)
+    b = D["btc"]
+    mom = np.full(n, np.nan)
+    mom[365:] = b[365 - 30:n - 30] / b[:n - 365] - 1               # 12-1 en dias corridos (365 y 30)
+    D["mom12_1_btc"] = mom
     D["i0"] = fechas.index(INICIO_MUESTRA)
     return D
 
@@ -335,8 +339,8 @@ def caminos_bootstrap(D: dict, pool: dict, n_caminos: int, rng: np.random.Genera
                       regimen_inicial: bool = True, desde: int | None = None) -> dict:
     n_obs = len(pool["rb"])
     primeros = None
-    if regimen_inicial:
-        sig = D["sig_btc_200"][desde:][:n_obs]
+    if regimen_inicial:                                          # senal al cierre previo al primer rendimiento
+        sig = D["sig_btc_200"][desde - 1:desde - 1 + n_obs]
         primeros = np.flatnonzero(sig)
     idx = indices_bootstrap(n_caminos, n_obs, rng, primeros)
     C = {k: pool[k][idx] for k in CAMPOS_R}
@@ -349,12 +353,14 @@ def caminos_bootstrap(D: dict, pool: dict, n_caminos: int, rng: np.random.Genera
 
 
 def caminos_ventanas(D: dict, solo_regimen: bool = False, hasta: date | None = None,
-                     desde_f: date | None = None) -> dict:
+                     desde_f: date | None = None, regimen_estrecho: bool = False) -> dict:
     fechas = D["fechas"]
     i_ini = fechas.index(INICIO_MUESTRA) - 1                     # entrada al cierre del 2017-11-09
     starts = np.arange(i_ini, len(fechas) - H)
     if solo_regimen:
         starts = starts[D["sig_btc_200"][starts]]
+    if regimen_estrecho:                                         # como hoy: sobre la SMA200 y 12-1 negativo
+        starts = starts[D["sig_btc_200"][starts] & (D["mom12_1_btc"][starts] < 0)]
     if hasta is not None:
         starts = starts[np.array([fechas[s] < hasta for s in starts])]
     if desde_f is not None:
@@ -381,7 +387,7 @@ CANDIDATAS = {
     "K4": {"nombre": "K4 55/20/25 + compra de caidas", "lineas": [{"a": "b", "w": 0.55}, {"a": "e", "w": 0.20}],
            "reserva": 0.25, "dips": [(0.85, 0.125), (0.75, 0.125)]},
 }
-VARIANTES = {
+VARIANTES = {   # sensibilidades: NO son candidatas; cuentan como variantes probadas (sesgo de mineria)
     "K3a": {"nombre": "K3a SMA200 sin rezago (ideal)", "lineas": [{"a": "b", "w": 1.0, "filtro": "sig_b_200"}],
             "rezago": 0},
     "K3b": {"nombre": "K3b 70/30 con SMA200 por activo", "lineas": [
@@ -390,7 +396,12 @@ VARIANTES = {
             "rezago": 1},
     "K4s": {"nombre": "K4s 55/20/25 sin compra de caidas", "lineas": [{"a": "b", "w": 0.55}, {"a": "e", "w": 0.20}],
             "reserva": 0.25},
+    "K1x": {"nombre": "K1x 100% BTC SIN cortacircuitos (viola perfil)", "lineas": [{"a": "b", "w": 1.0}],
+            "sin_cc": True},
+    "K1m": {"nombre": "K1m 60% BTC + 40% MXN", "lineas": [{"a": "b", "w": 0.6}], "mxn": 0.4},
 }
+EN_TORNEO = ("K1x", "K1m", "K3c")                               # sensibilidades que tambien entran al torneo
+OPS_MAX_MES = 8
 
 
 def simular_cuenta(esp: dict, C: dict) -> dict:
@@ -403,10 +414,11 @@ def simular_cuenta(esp: dict, C: dict) -> dict:
     w = np.array([l["w"] for l in lin]) if nL else np.zeros(0)
     filtrada = np.array([bool(l.get("filtro")) for l in lin]) if nL else np.zeros(0, bool)
     cap0 = CAPITAL * (1 - CONVERSION)
+    sin_cc = esp.get("sin_cc", False)
     q = np.zeros((P, nL))
     u = np.zeros((P, nL))
     reserva = np.full(P, cap0 * esp.get("reserva", 0.0))
-    mxn = np.zeros(P)
+    mxn = np.full(P, CAPITAL * esp.get("mxn", 0.0))              # MXN sin convertir (sin costo ni tipo de cambio)
     ops = np.ones(P, dtype=np.int64)                             # MXN -> USDT
     ops_mes = np.zeros((P, 6), dtype=np.int64)
     for j, l in enumerate(lin):
@@ -432,7 +444,7 @@ def simular_cuenta(esp: dict, C: dict) -> dict:
     n_cortes = np.zeros(P, dtype=np.int64)
     n_liberaciones = np.zeros(P, dtype=np.int64)
     expo_fin = np.zeros(P)
-    mes_de = [min((INICIO_TEMPORADA + timedelta(days=t)).month % 12, 5) for t in range(H + 1)]
+    mes_de = [((INICIO_TEMPORADA + timedelta(days=t)).month - 9) % 12 for t in range(H + 1)]   # sep=0 ... ene=4
 
     def matriz(dic):
         return np.stack([dic[l["a"]] for l in lin], 1) if nL else np.zeros((P, 0))
@@ -444,7 +456,8 @@ def simular_cuenta(esp: dict, C: dict) -> dict:
         px["b"] = px["b"] * (1 + C["rb"][:, k])
         px["e"] = px["e"] * (1 + C["re"][:, k])
         fx = fx * (1 + C["rx"][:, k])
-        activo = ~parado & (t >= pausa_hasta)
+        cupo = ops_mes[:, mes_de[t]] < OPS_MAX_MES               # las compras respetan 8 operaciones/mes
+        activo = ~parado & (t >= pausa_hasta) & cupo
         for d_i, (nivel, frac) in enumerate(dips):              # ordenes limite de K4 (intradia)
             f = ~lleno[:, d_i] & activo & (lo["b"] <= nivel)
             if f.any():
@@ -472,7 +485,7 @@ def simular_cuenta(esp: dict, C: dict) -> dict:
         maxdd = np.minimum(maxdd, dd)
         vmin = np.minimum(vmin, V)
         # --- cortacircuitos
-        stop = ((dd <= -0.50) | (V <= CAPITAL - 5000)) & ~parado
+        stop = ((dd <= -0.50) | (V <= CAPITAL - 5000)) & ~parado & (not sin_cc)
         if stop.any():
             mxn = mxn + stop * (X * (1 - COMISION - CONVERSION) + (u.sum(1) + reserva) * fx * (1 - CONVERSION))
             q[stop] = 0.0
@@ -481,10 +494,12 @@ def simular_cuenta(esp: dict, C: dict) -> dict:
             parado |= stop
             ops += stop
             tope = np.where(stop, 0.0, tope)
-        cruza40 = (dd <= -0.40) & (dd_prev > -0.40) & ~parado
+        cruza40 = (dd <= -0.40) & (dd_prev > -0.40) & ~parado & (not sin_cc)
         pausa_hasta = np.where(cruza40, t + 7, pausa_hasta)
         n_pausas += cruza40
         nivel_tope = np.where(dd <= -0.30, 0.25, np.where(dd <= -0.20, 0.50, 1.0))
+        if sin_cc:
+            nivel_tope = np.ones(P)
         nuevo_tope = np.minimum(tope, nivel_tope)
         corte = (nuevo_tope < tope) & ~parado                   # la venta es una accion al cruzar el nivel,
         n_cortes += corte                                        # no un rebalanceo diario [I]
@@ -503,11 +518,12 @@ def simular_cuenta(esp: dict, C: dict) -> dict:
             tope = np.where(libera, 1.0, tope)
             n_liberaciones += libera
             if nL and not filtrada.any():                        # comprar y mantener: recompra con el MXN de los cortes
-                recompra = libera & (mxn > 0)
+                recompra = libera & (mxn > CAPITAL * esp.get("mxn", 0.0) + 1e-9) & (ops_mes[:, mes_de[t]] < OPS_MAX_MES)
+                mxn_base = CAPITAL * esp.get("mxn", 0.0)
                 wn = w / w.sum()
                 for j in range(nL):
-                    q[:, j] += np.where(recompra, mxn * wn[j] * (1 - COMISION - CONVERSION) / (pxs[:, j] * fx), 0.0)
-                mxn = np.where(recompra, 0.0, mxn)
+                    q[:, j] += np.where(recompra, (mxn - mxn_base) * wn[j] * (1 - COMISION - CONVERSION) / (pxs[:, j] * fx), 0.0)
+                mxn = np.where(recompra, mxn_base, mxn)
                 ops += recompra
                 ops_mes[:, mes_de[t]] += recompra
         # --- senales de tendencia (K3) al cierre de t
@@ -523,7 +539,8 @@ def simular_cuenta(esp: dict, C: dict) -> dict:
                 X = (q * matriz(px)).sum(1) * fx
                 V = X + (u.sum(1) + reserva) * fx + mxn
                 hueco = np.maximum(tope * V - X, 0.0)
-                comprar = obj & (q[:, j] == 0) & ((u[:, j] > 0) | (mxn > 0)) & ~parado & (t >= pausa_hasta) & (hueco > 0)
+                comprar = (obj & (q[:, j] == 0) & ((u[:, j] > 0) | (mxn > 0)) & ~parado & (t >= pausa_hasta) & (hueco > 0)
+                           & (ops_mes[:, mes_de[t]] < OPS_MAX_MES))
                 de_u = np.minimum(u[:, j] * fx, hueco) * comprar
                 de_m = np.minimum(mxn, hueco - de_u) * comprar
                 q[:, j] += (de_u * (1 - COMISION) + de_m * (1 - COMISION - CONVERSION)) / (p_j * fx)
@@ -620,7 +637,13 @@ def fila_dist(nombre: str, s: dict) -> str:
 def evaluar_metodo(etiqueta: str, C: dict, D: dict, rng: np.random.Generator, resumen: dict,
                    variantes: bool = True) -> dict:
     P = C["P"]
-    print(f"\n### {etiqueta}  (trayectorias: {P})")
+    extra = ""
+    if "starts" in C:
+        st = C["starts"]
+        bloques = len(np.unique(st // H))
+        extra = (f"; ventanas traslapadas: ~{bloques} temporadas independientes -> EE de un P(1o) de 40% "
+                 f"~ {math.sqrt(0.24 / max(bloques, 1)):.0%}; primer inicio {D['fechas'][st[0]]}, ultimo {D['fechas'][st[-1]]}")
+    print(f"\n### {etiqueta}  (trayectorias: {P}{extra})")
     print(ENCAB)
     res = {}
     for k, esp in list(CANDIDATAS.items()) + (list(VARIANTES.items()) if variantes else []):
@@ -628,6 +651,13 @@ def evaluar_metodo(etiqueta: str, C: dict, D: dict, rng: np.random.Generator, re
         res[k] = s
         print(fila_dist(esp["nombre"], s))
     g = crecimientos(C, D["rf_hoy"])
+    trayect = np.cumprod(1 + C["rb"], axis=1)
+    pico_b = np.maximum.accumulate(np.maximum(trayect, 1.0), axis=1)
+    dd_b = (trayect / pico_b - 1).min(1)
+    print(f"  Solo BTC en USD (cierres diarios): P(cierre final > entrada) {np.mean(trayect[:, -1] > 1):.0%}; "
+          f"P(algun cierre <= 0.80 x entrada) {np.mean(trayect.min(1) <= 0.80):.0%}; P(caida >= 20% desde su maximo "
+          f"de la temporada) {np.mean(dd_b <= -0.20):.0%}; P(>= 30%) {np.mean(dd_b <= -0.30):.0%}; mediana del rendimiento "
+          f"{fmt(np.median(trayect[:, -1] - 1))}.")
     print("  referencias comprar y mantener (sin cortacircuitos): "
           + "; ".join(f"{DESC_CR[a]} med {fmt(np.median(pierna_cripto(a, g)))}" for a in ("C1", "C2", "C3", "C4")))
     print("  piernas GBM: " + "; ".join(f"{n} med {fmt(np.median(pierna_gbm(a, g)))} p10 {fmt(pct(pierna_gbm(a, g), 10))}"
@@ -639,9 +669,10 @@ def evaluar_metodo(etiqueta: str, C: dict, D: dict, rng: np.random.Generator, re
     print("  candidata                                  GBM                comb.med  comb.p10  P(comb<0)    F1 1o   F2 1o"
           "   F3 1o   F4 1o  prom 1o   F1 ult   F2 ult")
     tabla = {}
+    en_torneo = list(CANDIDATAS.items()) + ([(k, VARIANTES[k]) for k in EN_TORNEO] if variantes else [])
     for clave_g, desc_g in PIERNAS_PROPIAS:
         rg = pierna_gbm(clave_g, g)
-        for k, esp in CANDIDATAS.items():
+        for k, esp in en_torneo:
             comb = (CAPITAL_GBM * rg + CAPITAL * res[k]["R"]) / (CAPITAL_GBM + CAPITAL)
             p1 = {c: float(np.mean(comb > riv[c].max(1))) for c in CAMPOS}
             pu = {c: float(np.mean(comb < riv[c].min(1))) for c in CAMPOS}
@@ -651,6 +682,15 @@ def evaluar_metodo(etiqueta: str, C: dict, D: dict, rng: np.random.Generator, re
             print(f"  {esp['nombre']:42s} {desc_g:17s} {fmt(np.median(comb)):>8s}  {fmt(pct(comb, 10)):>8s}   "
                   f"{np.mean(comb < 0):6.1%}  " + "  ".join(f"{p1[c]:6.1%}" for c in CAMPOS)
                   + f"  {prom:6.1%}  {pu['F1']:6.1%}  {pu['F2']:6.1%}")
+    n_ef = len(np.unique(C["starts"] // H)) if "starts" in C else P
+    for clave_g, desc_g in PIERNAS_PROPIAS:
+        rg = pierna_gbm(clave_g, g)
+        c1 = (CAPITAL_GBM * rg + CAPITAL * res["K1"]["R"]) / (CAPITAL_GBM + CAPITAL)
+        c3 = (CAPITAL_GBM * rg + CAPITAL * res["K3"]["R"]) / (CAPITAL_GBM + CAPITAL)
+        difs = [(c1 > riv[c].max(1)).astype(float) - (c3 > riv[c].max(1)) for c in CAMPOS]
+        d_ = np.mean(difs, axis=0)
+        print(f"  P(1o) K1 - K3 pareada, GBM {desc_g}, promedio F1-F4: {d_.mean() * 100:+.1f} pp "
+              f"(EE {d_.std(ddof=1) / math.sqrt(n_ef) * 100:.1f} pp con n efectivo {n_ef}).")
     resumen[etiqueta] = {"res": res, "tabla": tabla}
     return res
 
@@ -847,21 +887,27 @@ def seccion_significancia(D: dict) -> None:
     rbm = (1 + rb) * (1 + rx) - 1
     rem = (1 + re_) * (1 + rx) - 1
 
-    def filtrado(sig_full, rezago, r_act):
+    info_pos = {}
+
+    def filtrado(sig_full, rezago, r_act, nombre=None):
         sig = sig_full[i0 - 2:len(f)]                            # sig[k] = senal al cierre de fe[k-2]
         pos = sig[2 - rezago - 1: len(sig) - rezago - 1] if rezago else sig[1:-1]
         pos = pos[:len(r_act)].astype(float)
         cambio = np.abs(np.diff(np.concatenate([[pos[0]], pos])))
+        if nombre:
+            info_pos[nombre] = (pos.mean(), cambio.sum() / anios)
         return pos * r_act + (1 - pos) * rx - COMISION * cambio, pos
     out = {}
     out["K1 BTC comprar y mantener"] = rbm
     out["K2 70/30 (rebalanceo diario, aprox.)"] = 0.7 * rbm + 0.3 * rem
     for m in (200, 150, 100, 50):
-        out[f"BTC SMA{m} rezago 1d" + (" = K3" if m == 200 else "")], _ = filtrado(D[f"sig_btc_{m}"], 1, rbm)
-    out["BTC SMA200 sin rezago = K3a"], pos200 = filtrado(D["sig_btc_200"], 0, rbm)
+        nom = f"BTC SMA{m} rezago 1d" + (" = K3" if m == 200 else (" = K3c (R7)" if m == 50 else ""))
+        out[nom], _ = filtrado(D[f"sig_btc_{m}"], 1, rbm, nom)
+    out["BTC SMA200 sin rezago = K3a"], pos200 = filtrado(D["sig_btc_200"], 0, rbm, "BTC SMA200 sin rezago = K3a")
     k3b_b, _ = filtrado(D["sig_btc_200"], 1, rbm)
     k3b_e, _ = filtrado(D["sig_eth_200"], 1, rem)
     out["K3b 70/30 SMA200 por activo"] = 0.7 * k3b_b + 0.3 * k3b_e
+    print("  (las SMA de 150 y 100 dias solo se usan aqui, para medir la varianza entre variantes del DSR)")
     print(f"  {anios:.1f} anios. SR = media/sd x raiz(365), contra 0 en MXN (sin restar CETES). t ~ SR x raiz(anios).")
     print("  estrategia                                 CAGR     vol     SR     t   MDD     %invertido  cambios/anio")
     srs = {}
@@ -872,8 +918,8 @@ def seccion_significancia(D: dict) -> None:
         sr = np.mean(r) / np.std(r, ddof=1) * math.sqrt(365)
         srs[k] = sr
         mdd = metricas.max_drawdown(list(curva))["valor"]
-        print(f"  {k:40s} {cagr:+7.1%} {sd:6.1%} {sr:6.2f} {sr * math.sqrt(anios):5.2f} {mdd:+6.1%}")
-    print(f"  K3 invertido {pos200.mean():.0%} del tiempo.")
+        extra = f"   {info_pos[k][0]:9.0%}  {info_pos[k][1]:11.1f}" if k in info_pos else ""
+        print(f"  {k:40s} {cagr:+7.1%} {sd:6.1%} {sr:6.2f} {sr * math.sqrt(anios):5.2f} {mdd:+6.1%}{extra}")
     # prima de BTC en USD sobre T-bill
     rf_d = D["rf"][i0 - 1:-1] / 365
     ex = rb - rf_d
@@ -907,7 +953,8 @@ def seccion_significancia(D: dict) -> None:
     # DSR
     vals = np.array(list(srs.values()))
     v_ann = float(np.var(vals, ddof=1))
-    for n_p in (4, len(srs)):
+    n_total = len(CANDIDATAS) - 1 + len(VARIANTES) + 2           # K1-K4 + 6 sensibilidades + SMA150 y SMA100
+    for n_p in (4, n_total):
         dsr = metricas.sharpe_deflactado(list(out["BTC SMA200 rezago 1d = K3"]), n_pruebas=n_p, varianza_sharpes=v_ann,
                                          periodos_por_anio=365, varianza_anualizada=True)
         psr = metricas.sharpe_probabilistico(list(out["BTC SMA200 rezago 1d = K3"]), 0.0, periodos_por_anio=365)
@@ -950,7 +997,9 @@ def resumen_final(res_all: dict) -> None:
           "con GBM A / b1.30 / b1.45 | P(1o) en F1 con A / b1.30 / b1.45")
     for et, v in res_all.items():
         print(f"  [{et}]")
-        for k, esp in CANDIDATAS.items():
+        for k, esp in list(CANDIDATAS.items()) + [(k, VARIANTES[k]) for k in EN_TORNEO]:
+            if k not in v["res"] or (k, "A") not in v["tabla"]:
+                continue
             s = v["res"][k]
             t = v["tabla"]
             print(f"    {esp['nombre']:42s} {fmt(np.median(s['R'])):>7s} | {np.mean(s['maxdd'] <= -0.2):5.1%} | "
@@ -992,6 +1041,11 @@ def correr(n_caminos: int) -> None:
     evaluar_metodo(f"M1 ventanas moviles 2017-11 a 2026-05 (todas)", C, D, rng, resumen)
     C = caminos_ventanas(D, solo_regimen=True)
     evaluar_metodo("M1c ventanas moviles con BTC > SMA200 al inicio (regimen de hoy)", C, D, rng, resumen)
+    C = caminos_ventanas(D, regimen_estrecho=True)
+    if C["P"] >= 150:
+        evaluar_metodo("M1c2 ventanas con BTC > SMA200 y momentum 12-1 < 0 al inicio (como hoy)", C, D, rng, resumen)
+    else:
+        print(f"\n  M1c2 (BTC > SMA200 y 12-1 < 0): solo {C['P']} ventanas; no se reporta.")
     C = caminos_ventanas(D, hasta=CORTE_PUBLICACION)
     evaluar_metodo("M1 antes de 2021 (in-sample de Detzel et al. 2021)", C, D, rng, resumen, variantes=True)
     C = caminos_ventanas(D, desde_f=CORTE_PUBLICACION)
