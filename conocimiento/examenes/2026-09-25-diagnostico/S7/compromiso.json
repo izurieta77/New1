@@ -1,0 +1,66 @@
+{
+  "seccion": "S7",
+  "examen": "2026-09-25-diagnostico",
+  "tema": "Frontera: machine learning, microestructura y derivados",
+  "fecha_compromiso_utc": "2026-09-25T06:03:05Z",
+  "n_preguntas": 12,
+  "ids": [
+    "S7-01",
+    "S7-02",
+    "S7-03",
+    "S7-04",
+    "S7-05",
+    "S7-06",
+    "S7-07",
+    "S7-08",
+    "S7-09",
+    "S7-10",
+    "S7-11",
+    "S7-12"
+  ],
+  "proposito": "Compromiso publico de la clave de respuestas ANTES de que el sustentante responda. La clave va cifrada; la contrasena NO esta en el repositorio ni en disco y se revela solo despues de calificar. Cualquiera puede entonces descifrar y comprobar que las huellas coinciden con las publicadas aqui.",
+  "cifrado": {
+    "herramienta": "OpenSSL 3.0.13 (openssl enc)",
+    "algoritmo": "aes-256-cbc",
+    "derivacion_de_clave": "pbkdf2",
+    "digest_pbkdf2": "sha256",
+    "iteraciones": 200000,
+    "sal": "aleatoria de 8 bytes, incluida en el archivo tras la cabecera 'Salted__'",
+    "contrasena": "64 caracteres hexadecimales (openssl rand -hex 32); NO incluida, se revela despues de calificar",
+    "comando_cifrado": "openssl enc -aes-256-cbc -md sha256 -pbkdf2 -iter 200000 -salt -in clave.json -out clave.enc -pass pass:<contrasena>"
+  },
+  "archivo_cifrado": {
+    "ruta": "conocimiento/examenes/2026-09-25-diagnostico/S7/clave.enc",
+    "sha256": "0355bd38fe70692a541aa87d9c399a94922319563534692d4a9f133ec9a1df6e",
+    "bytes": 34768
+  },
+  "archivo_en_claro": {
+    "nombre": "clave.json",
+    "sha256": "4aa2121251ef21966ccbfead7780ccdb117eaa3cc92de40eb3e4b8ff1078cd11",
+    "serializacion": "UTF-8; json.dumps(lista, sort_keys=True, ensure_ascii=False, indent=2) + '\\n', donde lista es la lista de 12 objetos {id, clave, numerica, tolerancia, rubrica} en orden S7-01..S7-12 (Python 3)"
+  },
+  "sha256_por_pregunta": {
+    "serializacion": "sha256(json.dumps({'id','clave','numerica','tolerancia','rubrica'}, sort_keys=True, ensure_ascii=False).encode('utf-8')) con separadores por defecto de Python 3 (', ' y ': ')",
+    "huellas": {
+      "S7-01": "44445a97c5183b572cfee539e89136e58e2a413e88f56335d0b68810c8fc10bb",
+      "S7-02": "9ab75cd1a81019d405a9b9c1a313a03678a624d19d6eb9a97c2a4c84d0a7782d",
+      "S7-03": "17e18b310e8fa44e51ec9bfc774f153d70c392bb1e001ccb86c00bcfa8715c0e",
+      "S7-04": "08395115da83078f7b0c94a8c3593040524d93eb7de79f05f4d1a5e43fcb8d89",
+      "S7-05": "552f3c067eb7256319494ea6d4173712b41834c5e43973cfe30812ffd546e359",
+      "S7-06": "7c2d9dca5f816ae32096163c725b7824db1994aeadd334a16f8a79c70f7f5b5f",
+      "S7-07": "5a79d0743368403d7b312940f10052d2e1bec93d131c40b76ff0ef0827e2b837",
+      "S7-08": "c3e023761f5ce7e7797b5927e867ab2ceeab6a5bcd75169a41ecbf223717012d",
+      "S7-09": "963fac22f03816e9d8710a8b723c826720ddfee27f658c28e2d9bcfbdd192c7e",
+      "S7-10": "215249d539c60009dabf05c00f5e9c3043be65abc93c2315d84b40e23578cc36",
+      "S7-11": "a330fe9fd82645d26e75d58ce2a0d6f6697e79678872a38bbe342a3a28d64a8f",
+      "S7-12": "813f04b8cf27e91994bff73906fc8dfaadc25d5e563c44494dfcf1f01173526b"
+    }
+  },
+  "verificacion": [
+    "1. sha256sum conocimiento/examenes/2026-09-25-diagnostico/S7/clave.enc  -> debe ser 0355bd38fe70692a541aa87d9c399a94922319563534692d4a9f133ec9a1df6e",
+    "2. openssl enc -d -aes-256-cbc -md sha256 -pbkdf2 -iter 200000 -in conocimiento/examenes/2026-09-25-diagnostico/S7/clave.enc -out clave.json -pass pass:<contrasena_revelada>",
+    "3. sha256sum clave.json  -> debe ser 4aa2121251ef21966ccbfead7780ccdb117eaa3cc92de40eb3e4b8ff1078cd11",
+    "4. python3 -c \"import json,hashlib; [print(d['id'], hashlib.sha256(json.dumps({k:d[k] for k in ('id','clave','numerica','tolerancia','rubrica')}, sort_keys=True, ensure_ascii=False).encode('utf-8')).hexdigest()) for d in json.load(open('clave.json', encoding='utf-8'))]\"  -> cada linea debe coincidir con sha256_por_pregunta.huellas",
+    "5. git log --format='%H %cI' -- conocimiento/examenes/2026-09-25-diagnostico/S7/compromiso.json  -> la fecha del commit debe ser anterior al primer registro de respuestas del sustentante"
+  ]
+}
