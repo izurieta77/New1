@@ -1,0 +1,49 @@
+{
+ "series": [
+  {
+   "ticker": "KXCBDECISIONMEXICO",
+   "title": "Bank of Mexico interest rate decision",
+   "tags": [
+    "Central banks"
+   ],
+   "category": "Economics",
+   "volume_fp": "473340.00"
+  },
+  {
+   "ticker": "POPVOTEKHNM",
+   "title": "Kamala New Mexico",
+   "tags": [
+    "US Elections"
+   ],
+   "category": "Elections",
+   "volume_fp": "5518133.00"
+  },
+  {
+   "ticker": "KXTARIFFSMEX",
+   "title": "Tariffs on Mexico",
+   "tags": [
+    "Trump"
+   ],
+   "category": "Politics",
+   "volume_fp": "21072.00"
+  },
+  {
+   "ticker": "KXCBDECISIONMEXICO",
+   "title": "Bank of Mexico interest rate decision",
+   "tags": [
+    "Central banks"
+   ],
+   "category": "Economics",
+   "volume_fp": "473340.00"
+  },
+  {
+   "ticker": "KXFED",
+   "title": "Fed funds rate",
+   "tags": [
+    "Fed"
+   ],
+   "category": "Economics",
+   "volume_fp": "59421508.00"
+  }
+ ]
+}

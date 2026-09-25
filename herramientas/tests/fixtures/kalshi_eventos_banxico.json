@@ -1,0 +1,65 @@
+{
+ "events": [
+  {
+   "event_ticker": "KXCBDECISIONMEXICO-26DEC17",
+   "series_ticker": "KXCBDECISIONMEXICO",
+   "title": "Bank of Mexico rate decision in December",
+   "category": "Economics",
+   "markets": [
+    {
+     "ticker": "KXCBDECISIONMEXICO-26DEC17-H0",
+     "status": "active",
+     "yes_sub_title": "Maintain current rate",
+     "yes_bid_dollars": "0.5000",
+     "yes_ask_dollars": "0.5400",
+     "last_price_dollars": "0.5100",
+     "volume_fp": "3000.00",
+     "volume_24h_fp": "10.00",
+     "open_interest_fp": "2000.00",
+     "close_time": "2026-12-17T19:00:00Z"
+    }
+   ]
+  },
+  {
+   "event_ticker": "KXCBDECISIONMEXICO-26NOV05",
+   "series_ticker": "KXCBDECISIONMEXICO",
+   "title": "Bank of Mexico rate decision in November",
+   "category": "Economics",
+   "markets": [
+    {
+     "ticker": "KXCBDECISIONMEXICO-26NOV05-H0",
+     "status": "active",
+     "yes_sub_title": "Maintain current rate",
+     "yes_bid_dollars": "0.6400",
+     "yes_ask_dollars": "0.6500",
+     "last_price_dollars": "0.6300",
+     "volume_fp": "5653.81",
+     "volume_24h_fp": "12.00",
+     "open_interest_fp": "4000.00",
+     "close_time": "2026-11-05T19:00:00Z"
+    },
+    {
+     "ticker": "KXCBDECISIONMEXICO-26NOV05-C25",
+     "status": "active",
+     "yes_sub_title": "Cut 25bps",
+     "yes_bid_dollars": "0.1000",
+     "yes_ask_dollars": "0.4500",
+     "last_price_dollars": "0.3000",
+     "volume_fp": "4000.00",
+     "close_time": "2026-11-05T19:00:00Z"
+    },
+    {
+     "ticker": "KXCBDECISIONMEXICO-26NOV05-X",
+     "status": "finalized",
+     "yes_sub_title": "Otro",
+     "yes_bid_dollars": "0.0000",
+     "yes_ask_dollars": "0.0100",
+     "last_price_dollars": "0.0000",
+     "volume_fp": "9000.00",
+     "close_time": "2026-11-05T19:00:00Z"
+    }
+   ]
+  }
+ ],
+ "cursor": ""
+}

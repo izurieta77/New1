@@ -1,0 +1,116 @@
+{
+ "events": [
+  {
+   "title": "Bank of Mexico Decision in November?",
+   "slug": "bank-of-mexico-decision-in-november",
+   "closed": false,
+   "endDate": "2026-11-05T00:00:00Z",
+   "tags": [
+    {
+     "label": "Mexico"
+    },
+    {
+     "label": "Economy"
+    }
+   ],
+   "markets": [
+    {
+     "id": "1",
+     "question": "No change in Bank of Mexico's interest rates after November 2026 meeting?",
+     "outcomes": "[\"Yes\", \"No\"]",
+     "outcomePrices": "[\"0.67\", \"0.33\"]",
+     "bestBid": 0.66,
+     "bestAsk": 0.68,
+     "lastTradePrice": 0.67,
+     "volumeNum": 18000.5,
+     "volume24hr": 300,
+     "endDate": "2026-11-05T00:00:00Z",
+     "closed": false,
+     "active": true,
+     "oneWeekPriceChange": 0.02
+    },
+    {
+     "id": "2",
+     "question": "25 bps decrease in Bank of Mexico's rates after November 2026 meeting?",
+     "outcomes": "[\"Yes\", \"No\"]",
+     "outcomePrices": "[\"0.30\", \"0.70\"]",
+     "bestBid": 0.29,
+     "bestAsk": 0.31,
+     "lastTradePrice": 0.3,
+     "volumeNum": 12000,
+     "endDate": "2026-11-05T00:00:00Z",
+     "closed": false,
+     "active": true
+    },
+    {
+     "id": "3",
+     "question": "50+ bps decrease after November 2026 meeting?",
+     "outcomes": "[\"Yes\", \"No\"]",
+     "outcomePrices": "[\"0.004\", \"0.996\"]",
+     "volumeNum": 15000,
+     "endDate": "2026-11-05T00:00:00Z",
+     "closed": false,
+     "active": true
+    },
+    {
+     "id": "4",
+     "question": "Hike after September 2026 meeting?",
+     "outcomes": "[\"Yes\", \"No\"]",
+     "outcomePrices": "[\"0\", \"1\"]",
+     "volumeNum": 50000,
+     "closed": true,
+     "active": true
+    }
+   ]
+  },
+  {
+   "title": "Highest temperature in Mexico City on September 25?",
+   "slug": "temp-cdmx",
+   "closed": false,
+   "tags": [
+    {
+     "label": "Weather"
+    },
+    {
+     "label": "Recurring"
+    }
+   ],
+   "markets": [
+    {
+     "id": "9",
+     "question": "Will the highest temperature in Mexico City be 24C?",
+     "outcomes": "[\"Yes\", \"No\"]",
+     "outcomePrices": "[\"0.5\", \"0.5\"]",
+     "volumeNum": 90000,
+     "closed": false,
+     "active": true
+    }
+   ]
+  },
+  {
+   "title": "New Mexico governor election",
+   "slug": "nm-gov",
+   "closed": false,
+   "tags": [
+    {
+     "label": "Politics"
+    }
+   ],
+   "markets": [
+    {
+     "id": "10",
+     "question": "Will the Democrat win New Mexico?",
+     "outcomes": "[\"Yes\", \"No\"]",
+     "outcomePrices": "[\"0.8\", \"0.2\"]",
+     "volumeNum": 70000,
+     "closed": false,
+     "active": true
+    }
+   ]
+  }
+ ],
+ "pagination": {
+  "hasMore": false,
+  "totalResults": 3
+ }
+}

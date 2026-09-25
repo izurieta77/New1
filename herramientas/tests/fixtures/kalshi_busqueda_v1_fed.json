@@ -1,0 +1,49 @@
+{
+ "total_results_count": 2,
+ "current_page": [
+  {
+   "series_ticker": "KXFEDDECISION",
+   "series_title": "Fed meeting",
+   "event_title": "Fed decision in October?",
+   "category": "Economics",
+   "markets": [
+    {
+     "ticker": "KXFEDDECISION-26OCT-H25",
+     "yes_subtitle": "Hike 25bps",
+     "yes_bid_dollars": "0.6700",
+     "yes_ask_dollars": "0.6800",
+     "last_price_dollars": "0.6750",
+     "close_ts": "2099-10-28T18:00:00Z",
+     "result": "",
+     "volume": 906000
+    },
+    {
+     "ticker": "KXFEDDECISION-26SEP-H25",
+     "yes_subtitle": "Hike 25bps",
+     "yes_bid_dollars": "0.0000",
+     "yes_ask_dollars": "1.0000",
+     "last_price_dollars": "0.8800",
+     "close_ts": "2020-09-16T17:59:00Z",
+     "result": "yes",
+     "volume": 37540816
+    }
+   ]
+  },
+  {
+   "series_ticker": "KXMENWORLDCUP",
+   "series_title": "World Cup",
+   "event_title": "Final: Federation Cup",
+   "category": "Sports",
+   "markets": [
+    {
+     "ticker": "X",
+     "yes_subtitle": "Spain",
+     "last_price_dollars": "0.99",
+     "close_ts": "2099-01-01T00:00:00Z",
+     "result": "",
+     "volume": 10
+    }
+   ]
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 # Módulo 16 — Macro global, divisas y el peso mexicano
 
-> Nivel: especialidad (macro internacional + mesa de FX emergentes) · Actualizado: 2026-09-25 · Grado de evidencia global: **B**. Tres hechos llegan a grado **A**: (1) la paridad descubierta de tasas (UIP) falla, y las monedas de tasa alta pagan en promedio un exceso positivo con sesgo negativo; (2) el peso es una moneda de riesgo que se deprecia cuando el mundo entra en pánico, con correlación mensual de −0.4 a −0.56 contra el S&P 500 en todas las submuestras de 1996 a 2026; (3) por lo mismo, para quien mide en MXN, los activos en dólares sin cubrir son una cobertura natural que redujo a menos de la mitad los *drawdowns* de 2008 y 2020. Las estrategias de *timing* cambiario (momentum, filtros, valor de corto plazo, marcos de ciclo de deuda) son **C/D**.
+> Nivel: especialidad (macro internacional + mesa de FX emergentes) · Actualizado: 2026-09-25 · Grado de evidencia global: **B**. Tres hechos llegan a grado **A**: (1) la paridad descubierta de tasas (UIP) falla, y las monedas de tasa alta pagan en promedio un exceso positivo con sesgo negativo; (2) el peso es una moneda de riesgo que se deprecia cuando el mundo entra en pánico, con correlación mensual de −0.4 a −0.56 contra el S&P 500 en todas las submuestras de 1996 a 2026; (3) por lo mismo, para quien mide en MXN, los activos en dólares sin cubrir son una cobertura natural en *shocks* globales: el *drawdown* del S&P medido en MXN fue de −40% en 2007-09 (contra −57% en USD) y de −15% en 2020 (contra −34%). Las estrategias de *timing* cambiario (momentum, filtros, valor de corto plazo, marcos de ciclo de deuda) son **C/D**.
 
 Capítulos relacionados, que aquí no se repiten: [01 Fundamentos](01-licenciatura-fundamentos.md) · [02 Portafolio y asset pricing](02-maestria-portafolio-y-asset-pricing.md) · cap. 04 (renta fija y macro) · cap. 06 (asset pricing empírico y decaimiento) · cap. 07 (riesgo y backtesting) · cap. 11 (México: SIC, fiscalidad, BMV) · cap. 13 (estado del mercado) · [23 Geopolítica](23-geopolitica-y-riesgo-politico-global.md) (taxonomía de *shocks* A-E). La fórmula de rendimiento en pesos y el registro del tipo de cambio están en [ideas adoptadas](ideas-adoptadas-2026-09-25.md), punto 7. Los parámetros salen de `config/parametros.json`.
 
@@ -223,13 +223,13 @@ Se trata de un largo en MXN fondeado en USD. Tasas: interbancaria a 3 meses de M
 - **Peores meses:** mar-2020 **−15.5%**, oct-2008 −13.1%, sep-2011 −10.1%, ago-1998 −9.4% y may-2012 −8.8%.
 - ***Drawdowns* mayores a 10%:** 1998 (−10.5%), 2002-03 (−13.1%), **2008-09 (−30.4%, recuperado en abr-2011)**, 2011-12 (−15.2%), **abr-2013 a ene-2017 (−33.0%, recuperado apenas en nov-2022: unos 9.6 años bajo el agua)** y 2024 (−16.9%, recuperado en dic-2025).
 - **Aritmética:** el diferencial promedio de 1997 a 2026 fue de **7.07 pp** y la depreciación promedio de USD/MXN de **2.67% anual**. El resto, alrededor de 4.4 pp, es la prima. De 2008 a 2026 el diferencial promedio bajó a 5.18 pp.
-- **Lectura:** el *carry* del peso **sí** tiene prima positiva de largo plazo, lo cual es consistente con la UIP fallida y con Hassan-Mano. Pero decayó después de 2008 (Sharpe de 0.91 a 0.29), tiene sesgo negativo y está **correlacionado +0.5 con las acciones**. No diversifica un portafolio de acciones: duplica su riesgo. Grado **B**.
+- **Lectura:** el *carry* del peso **sí** tiene prima positiva de largo plazo, lo cual es consistente con la UIP fallida y con Hassan-Mano. Pero decayó después de 2008 (Sharpe de 0.91 a 0.29), tiene sesgo negativo y está **correlacionado +0.5 con las acciones**. No diversifica un portafolio de acciones: suma al mismo riesgo. Grado **B**.
 
 ### 5.3 Momentum, valor y filtros en FX: lo que no sobrevive
 
 - **Momentum FX (MSSS 2012):** ~10% bruto → ~4% con *spread* completo; concentrado en monedas menores con alto riesgo idiosincrático. Para una persona física en GBM **no es implementable** (no hay *forwards* minoristas en 48 monedas). **C**.
 - **Reglas técnicas clásicas en FX** (medias móviles 1/20, 1/50, 1/200): ~5% anual con Sharpe 0.77-0.88 en 1976-2010 (MSSS, tabla 3), bien documentado su decaimiento posterior en la literatura (nv para cifras post-2010). **C**.
-- **Filtros "prudentes" sobre el *carry* del MXN (cálculo propio, 1998-2026, reglas fijadas *ex ante*, no optimizadas):**
+- **Filtros "prudentes" sobre el *carry* del MXN (cálculo propio, 1998-2026; parámetros estándar tomados de `parametros.json` y de la literatura, sin optimizar):**
 
 | Regla | Rend. geo. | Vol | Sharpe | Máx. DD | Tiempo invertido |
 |---|---|---|---|---|---|
@@ -261,7 +261,7 @@ Se trata de un largo en MXN fondeado en USD. Tasas: interbancaria a 3 meses de M
 
 Cambios de USD/MXN en ventanas de 126 días hábiles, diarios de 1996 a 2026, traslapados: **p5 −8.7%, p25 −3.0%, mediana +0.4%, p75 +4.9%, p95 +16.4%**. P(> +10%) = **12.4%**. P(< −5%) = 15.8%. Volatilidad diaria anualizada de largo plazo: 10.9%.
 
-**Lectura:** la cola derecha (el peso se desploma) es el doble de gruesa que la izquierda. En una temporada de 6 meses, **el tipo de cambio por sí solo puede mover ±9% una cartera 100% en USD con probabilidad de 10%**. Eso es comparable a la diferencia típica entre rivales.
+**Lectura:** la cola derecha (el peso se desploma) es casi el doble de larga que la izquierda. En una temporada de 6 meses, con 5% de probabilidad en cada cola, **el tipo de cambio por sí solo mueve una cartera 100% en USD más de −9% o más de +16%**, medida en MXN.
 
 ### 5.6 Resumen de qué funciona
 
@@ -309,7 +309,7 @@ Para un inversionista que mide en MXN, **la decisión cambiaria es la más grand
 
 | Situación | ¿Cubrir el USD (pasarlo a MXN)? | Motivo |
 |---|---|---|
-| Acciones globales, horizonte de más de 1 año | **No** | Correlación de −0.5. *Drawdowns* de 2008 y 2020 a la mitad o menos |
+| Acciones globales, horizonte de más de 1 año | **No** | Correlación de −0.5. *Drawdown* de −40% contra −57% (2008) y de −15% contra −34% (2020) |
 | Bonos o efectivo en USD con fin de rendimiento | **Sí** (sustituir por deuda en MXN) | La vol del FX domina a la del bono (Campbell et al.) |
 | Gasto en MXN a menos de 12 meses | **Sí** (tenerlo en MXN) | Calce de pasivos |
 | Gasto o deuda en USD | **No** | Calce de pasivos |
@@ -487,4 +487,4 @@ Para un inversionista que mide en MXN, **la decisión cambiaria es la más grand
 43. Series FRED usadas en los cálculos propios (descargadas el 2026-09-25): DEXMXUS https://fred.stlouisfed.org/series/DEXMXUS · IR3TIB01MXM156N https://fred.stlouisfed.org/series/IR3TIB01MXM156N · TB3MS https://fred.stlouisfed.org/series/TB3MS · VIXCLS https://fred.stlouisfed.org/series/VIXCLS · DGS10, DFII10, T10YIE, DTWEXBGS, RBMXBIS y TRESEGMXM052N (misma raíz https://fred.stlouisfed.org/series/)
 44. S&P 500 (^GSPC, Yahoo Finance, 30 años diarios): https://finance.yahoo.com/quote/%5EGSPC/history
 
-**Registro de verificación (2026-09-25):** 33 búsquedas web y 25 lecturas de páginas y PDFs (MSSS 2012, BNP 2008, LRV 2008 y Calvo-Izquierdo-Mejía 2004 leídos en texto completo). Cálculos propios reproducibles con `herramientas/datos.py`. **Pendiente de verificar:** el estado 2024-2026 del programa de coberturas de Banxico, el tamaño del contrato de dólar en MexDer, la muestra exacta de Kaminsky-Reinhart, el número de casos de *Big Debt Crises*, el tipo fijo "desde 1954", la fecha de la moratoria de 1982, el mandato exacto de los índices ante una degradación a *junk* y las cifras de la CBO (vistas sólo por fuente secundaria).
+**Registro de verificación (2026-09-25):** 35 búsquedas web y alrededor de 34 lecturas de páginas y PDFs (MSSS 2012, BNP 2008, LRV 2008 y Calvo-Izquierdo-Mejía 2004 leídos en texto completo). Cálculos propios reproducibles con `herramientas/datos.py`. **Pendiente de verificar:** el estado 2024-2026 del programa de coberturas de Banxico, el tamaño del contrato de dólar en MexDer, la muestra exacta de Kaminsky-Reinhart, el número de casos de *Big Debt Crises*, el tipo fijo "desde 1954", la fecha de la moratoria de 1982, el mandato exacto de los índices ante una degradación a *junk* y las cifras de la CBO (vistas sólo por fuente secundaria).

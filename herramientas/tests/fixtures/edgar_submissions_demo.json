@@ -1,0 +1,92 @@
+{
+ "cik": "1234567",
+ "name": "DEMO CORP",
+ "tickers": [
+  "DEMO"
+ ],
+ "exchanges": [
+  "Nasdaq"
+ ],
+ "sic": "7372",
+ "sicDescription": "Services-Prepackaged Software",
+ "fiscalYearEnd": "1231",
+ "stateOfIncorporation": "DE",
+ "stateOfIncorporationDescription": "DE",
+ "category": "Large accelerated filer",
+ "investorWebsite": "",
+ "website": "",
+ "filings": {
+  "recent": {
+   "accessionNumber": [
+    "0001234567-25-000010",
+    "0001234567-25-000009",
+    "0001234567-25-000008",
+    "0001234567-25-000007",
+    "0001234567-25-000006",
+    "0001234567-25-000005",
+    "0001234567-25-000004",
+    "0001234567-25-000003"
+   ],
+   "filingDate": [
+    "2025-08-12",
+    "2025-08-10",
+    "2025-08-01",
+    "2025-07-30",
+    "2025-06-01",
+    "2025-05-10",
+    "2025-03-01",
+    "2025-02-15"
+   ],
+   "reportDate": [
+    "2025-08-08",
+    "2025-06-30",
+    "2025-07-31",
+    "2025-07-30",
+    "2025-05-30",
+    "2025-03-31",
+    "2025-02-27",
+    "2024-12-31"
+   ],
+   "form": [
+    "4",
+    "10-Q",
+    "8-K",
+    "8-K",
+    "8-K/A",
+    "10-Q",
+    "4",
+    "10-K"
+   ],
+   "items": [
+    "",
+    "",
+    "4.02,9.01",
+    "2.02,9.01",
+    "5.02",
+    "",
+    "",
+    ""
+   ],
+   "primaryDocument": [
+    "xslF345X05/form4.xml",
+    "demo-20250630.htm",
+    "demo-20250731.htm",
+    "demo-20250730.htm",
+    "demo-20250530.htm",
+    "demo-20250331.htm",
+    "xslF345X05/form4b.xml",
+    "demo-20241231.htm"
+   ],
+   "primaryDocDescription": [
+    "FORM 4",
+    "10-Q",
+    "8-K",
+    "8-K",
+    "8-K/A",
+    "10-Q",
+    "FORM 4",
+    "10-K"
+   ]
+  }
+ }
+}
