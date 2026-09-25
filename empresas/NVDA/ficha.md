@@ -38,10 +38,10 @@ Deuda neta negativa = caja neta. El FCF es flujo operativo menos capex.
 Los márgenes de FY26 y del 1T FY26 incluyen el cargo de US$4.5 mil M por el H20 [3].
 
 ## 4. Expediente de 10 puntos
-1. **Utilidad vs. efectivo.** FCF/UN de 12 meses de 0.66 (alerta del dossier) y de sólo 0.36 en el 2T FY27. Tres causas: cuentas por cobrar (DSO de 60 días), inventario y US$7.8 mil M de ganancias no monetarias [2][4]. *Inferencia:* la utilidad GAAP incluye revaluaciones de participaciones y parte del crecimiento se financia dando plazo a clientes.
-2. **Deuda.** Emitió US$25 mil M en junio en 7 tramos (2028-2056, cupones de 4.25-5.625%, todo en USD a tasa fija). La deuda total es de 33.4 mil M contra 56.6 mil M de efectivo y valores [3][2]. Fuera de balance tiene garantías por hasta 108.5 mil M y compromisos por 366 mil M, más otros 56 mil M con nubes de IA [2].
-3. **Dilución.** Acciones −1.0% a/a; SBC de 2.1% de ingresos. Recompró US$20 mil M en el 2T y le quedan 99.3 mil M autorizados [3][7].
-4. **Capital de trabajo.** Cuentas por cobrar de US$63.1 mil M e inventario de 31.6 mil M para el arranque de Rubin [2].
+1. **Utilidad vs. efectivo.** FCF/UN de 0.66 en 12 meses (alerta del dossier) y de 0.36 en el 2T FY27, por cuentas por cobrar, inventario y US$7.8 mil M de ganancias no monetarias [2][4]. *Inferencia:* parte del crecimiento se financia con plazo a clientes.
+2. **Deuda.** En junio emitió US$25 mil M en 7 tramos (2028-2056, cupones de 4.25-5.625%, en USD a tasa fija). Deuda total de 33.4 mil M contra 56.6 mil M en caja y valores [3][2]. Fuera de balance: garantías por hasta 108.5 mil M y compromisos por 366 mil M más 56 mil M [2].
+3. **Dilución.** Acciones −1.0% a/a; SBC de 2.1% de ingresos; quedan 99.3 mil M autorizados para recompras [3][7].
+4. **Capital de trabajo.** Cuentas por cobrar de US$63.1 mil M (DSO de 60 días) e inventario de 31.6 mil M para Rubin [2].
 5. **Competidores y sustitutos.** AMD; los ASIC propios de hiperescaladores (TPU, Trainium, diseños de Broadcom); Huawei en China. Pagó US$2.9 mil M por una licencia no exclusiva de Groq en el 1S FY27 [3].
 6. **Concentración.** Un cliente directo fue 16% de los ingresos del 2T; en el 1S, tres sumaron 16%, 15% y 13%. "Una empresa de investigación y despliegue de IA" aporta un monto significativo vía nubes [3] (inferencia: OpenAI). Proveedores clave: TSMC y memoria (riesgo Taiwán, tipo E) [9].
 7. **Regulación.** Controles de exportación: cargos de US$4.5 mil M por el H20 (FY26) y de 0.4 mil M por el H200 (1S FY27); hay licencias con pago de 25% a EUA, pero Pekín bloquea las compras [3][8]. Arancel 232 de 25% a ciertos chips [9]. Revisión antimonopolio de Hugging Face [10].
@@ -62,10 +62,10 @@ Múltiplos: P/U de 12 meses de 28.4x GAAP (UPA 7.91) y 32.0x non-GAAP (7.01) [4]
 **DCF inverso.** Con el FCF de 12 meses (127.0 mil M) y 3% perpetuo, el precio implica que el FCF crezca 14.9% al año por 10 años con r = 9%, o 17.3% con r = 10% [4]. Alternativa con supuestos propios: FCF FY28 = UPA 15.5 × 24.1 mil M de acciones × conversión de 0.85 ≈ US$318 mil M; si creciera a perpetuidad, el precio implica g ≈ 4.3% con r = 10% y ≈ 5.3% con r = 11%. *Inferencia:* el precio no descuenta que el +70% se repita, sino un aterrizaje a un dígito medio después de FY28 (un FY28 cercano al pico). El debate es la durabilidad, no el trimestre.
 
 ## 7. Escenarios de negocio a 12 meses
-- **Bajista (20%).** Los hiperescaladores moderan su capex de 2027 o se cierra el crédito para las neonubes y OpenAI. La memoria sigue subiendo y el margen bruto cae abajo de 71%. FY28 crece ~40% en lugar de 70%.
-- **Base (55%).** Supera la guía por 3-6% cada trimestre, Rubin se vuelve mayoría en el 1S FY28, margen bruto de 72-73%, FY28 +65-75% y UPA FY28 de ~15-16 (pronóstico).
-- **Alcista (25%).** El cuello de botella de CoWoS y HBM se libera antes, China reabre para variantes del H200 y FY28 crece más de 80%.
-- **Qué cambiaría el escenario:** la guía del 4T (17-nov), el capex que anuncien los hiperescaladores a fines de octubre, un DSO arriba de 70 días, el financiamiento de OpenAI y la tregua del 10-ene.
+- **Bajista (20%).** Menos capex de hiperescaladores en 2027 o se cierra el crédito a neonubes y OpenAI; memoria al alza y margen bruto < 71%; FY28 +~40%.
+- **Base (55%).** Supera la guía por 3-6% cada trimestre; Rubin es mayoría en el 1S FY28; margen bruto de 72-73%; FY28 +65-75%; UPA FY28 ≈ 15-16 (pronóstico).
+- **Alcista (25%).** CoWoS y HBM se liberan antes, China reabre para variantes del H200 y FY28 crece > 80%.
+- **Qué cambiaría el escenario:** la guía del 4T (17-nov), el capex de hiperescaladores a fines de octubre, un DSO > 70 días, el financiamiento de OpenAI y la tregua del 10-ene.
 
 ## 8. Pronósticos registrados (3T FY27: ago-oct 2026)
 - **Fecha de reporte: 17-nov-2026.** Anunciada en la llamada del 26-ago [7]; Yahoo la da como no estimada [13].

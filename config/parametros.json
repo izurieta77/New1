@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "fecha": "2026-09-25",
   "nota": "Fuente unica de verdad de los parametros de riesgo. Todo documento y herramienta lee de aqui. Valores por defecto: ajustar con el perfil real del dueno (capital, horizonte, gastos).",
   "objetivo": {
@@ -191,7 +191,10 @@
         "ventaja_para_bajar_varianza_pp": 5,
         "desventaja_para_subir_exposicion_pp": 5,
         "nota": "Solo se conocen resultados de los rivales. Adelante del mejor rival: reducir varianza. Atras: subir exposicion dentro de los limites."
-      }
+      },
+      "rotacion_max_mensual_x_capital": 1.5,
+      "nota_rotacion": "Agregado el 25-sep-2026 con base en arena/investigacion/01-gbm-operativa-y-costos.md: en GBM cada vuelta completa cuesta 0.58% de comision (0.25% + IVA por lado) mas spread. Con 8 vueltas de 10k al mes el costo seria ~13.9% por temporada. El limite efectivo es el menor entre operaciones_max_mes y la rotacion maxima de 1.5x el capital al mes. Solo se toman swings con movimiento esperado de 5% o mas.",
+      "orden_minima_mxn": 5000
     }
   },
   "prioridad_actual": {
