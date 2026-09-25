@@ -52,7 +52,6 @@ MIN_HISTORIA_MOM = 10      # familia MOM: primer mes evaluado 1927-11 (SMA10 nec
 CORTES_MOM = (date(2013, 3, 31), date(2016, 11, 30))  # fin de muestra DM; numero de la JFE
 COSTO_DEFECTO = (bt.COMISION_GBM_POR_LADO, bt.SPREAD_POR_LADO["liquido"])
 COSTO_MEDIO = (bt.COMISION_GBM_POR_LADO, bt.SPREAD_POR_LADO["medio"])
-DECIMALES_TOL = None       # la tolerancia del bloque C se deriva del numero de decimales publicado
 
 # Tramos de McLean-Pontiff (seccion 6 del pre-registro). "pub" es el corte: mes de publicacion
 # incluido en el tramo anterior. "alt" es la fecha alternativa verificada (sensibilidad).
@@ -531,7 +530,11 @@ def bloque_a(s: dict) -> dict:
       f"{100 * e_mk['media'] - 0.50:+.3f} | {'si' if abs(100 * e_mk['media'] - 0.50) <= 0.05 else 'NO'} | |")
     p("")
     condicion_a = sum(1 for f in ("HML", "MOM", "RMW", "CMA") if not h1[f]) == 0 and sum(h1_mag.values()) >= 3
-    fallas_a = sum(1 for f in ("HML", "MOM", "RMW", "CMA") if not h1[f]) + (0 if sum(h1_mag.values()) >= 3 else 1)
+    # factores distintos que fallan alguna parte de A (t >= 2 o magnitud contra FF2015)
+    fallas_factores = sorted({f for f in ("HML", "MOM", "RMW", "CMA") if not h1[f]} |
+                             {f for f, ok in h1_mag.items() if not ok})
+    fallas_a = len(fallas_factores)
+    p(f"Factores que fallan alguna parte de la condicion A: {', '.join(fallas_factores) or 'ninguno'}.")
     p(f"Condicion A: {'SE CUMPLE' if condicion_a else 'NO se cumple'} (fallas t>=2 en HML/MOM/RMW/CMA: "
       f"{sum(1 for f in ('HML', 'MOM', 'RMW', 'CMA') if not h1[f])}; factores dentro de ±0.05 de FF2015: "
       f"{sum(h1_mag.values())} de 4).\n")
@@ -962,8 +965,6 @@ def bloque_c(s: dict) -> list:
         if t:
             out.append(comparar_cifra(cid, f"{nombre} {ym(a)} a {ym(b)}, t", t, tstat(claves, a, b)))
     # C13 muerte del value (usa el calculo del bloque B)
-    for clave in ("HML", "HML5"):
-        pass
     vb = RESULTADOS["bloque_b"]["value"]
     out.append(comparar_cifra("C13", f"HML caida pico-valle (calc. 3F: {vb['HML']['pico']} a {vb['HML']['valle']}; "
                                      f"5F: {vb['HML5']['pico']} a {vb['HML5']['valle']}) %", "-57.8",
@@ -1058,12 +1059,13 @@ def indices_segmentos(r) -> dict:
 
 def tabla_motor(resultados: list, segmento: str) -> None:
     claves = ("n_periodos", "cagr", "vol_anual", "sharpe", "sortino", "mdd", "exposicion_media", "rotacion_anual", "costo_anual")
-    p(f"| variante ({segmento}) | inicio | fin | " + " | ".join(claves) + " | t NW exceso |")
-    p("|---|---|---|" + "---|" * (len(claves) + 1))
+    p(f"| variante ({segmento}) | costo/lado | inicio | fin | " + " | ".join(claves) + " | t NW exceso |")
+    p("|---|---|---|---|" + "---|" * (len(claves) + 1))
     for r in resultados:
         x = r.metricas[segmento]
         i0, i1 = indices_segmentos(r)[segmento]
-        p(f"| {r.variante} | {x['fecha_inicio']} | {x['fecha_fin']} | " +
+        c = r.parametros["comision_por_lado"] + r.parametros["spread_por_lado"]
+        p(f"| {r.variante} | {100 * c:.2f}% | {x['fecha_inicio']} | {x['fecha_fin']} | " +
           " | ".join(str(x[k]) if k == "n_periodos" else fmt(x[k]) for k in claves) + f" | {fmt(nw_exceso(r, i0, i1), 2)} |")
     p("")
 
@@ -1274,10 +1276,6 @@ def bloque_d(s: dict, a_res: dict) -> dict:
     return res
 
 
-def valor_en_curva(r, desde: date):
-    pass
-
-
 # ================================================================ principal
 
 def main() -> None:
@@ -1307,7 +1305,8 @@ def main() -> None:
     # ---------- estado pre-registrado
     mp, bs = a_res["mp"], a_res["bs"]
     D, (lo, hi) = mp["D"], bs["ic_D"]
-    todos_bajan = all(v["decaimiento_post"] > 0 for v in mp["por_factor"].values())
+    todos_bajan = all(v["POST"]["media"] < v["IS"]["media"] for v in mp["por_factor"].values())
+    lista_dec = ", ".join(f + ": " + pct(v["decaimiento_post"], 1) + "%" for f, v in mp["por_factor"].items())
     if D <= 0 or a_res["fallas_a"] >= 2:
         estado = "No replicado"
     elif a_res["condicion_a"] and lo > 0 and lo <= MP_POST <= hi and todos_bajan:
@@ -1319,7 +1318,7 @@ def main() -> None:
     p(f"- D = {pct(D, 1)}%, IC95 [{pct(lo, 1)}%, {pct(hi, 1)}%]; ¿limite inferior > 0?: {'si' if lo > 0 else 'no'}; "
       f"¿contiene 58%?: {'si' if lo <= MP_POST <= hi else 'no'}.")
     p(f"- ¿Los cinco factores tienen media POST < media IS?: {'si' if todos_bajan else 'no'} "
-      f"({', '.join(f'{f}: {pct(v['decaimiento_post'], 1)}%' for f, v in mp['por_factor'].items())}).")
+      f"({lista_dec}).")
     p(f"- **Estado: {estado}.** H4: {'confirmada' if b_res['H4']['confirmada'] else 'no confirmada'}; "
       f"H5: {'confirmada' if b_res['H5']['confirmada'] else 'no confirmada'}; "
       f"H6: {d_res['H6']['veredicto_dentro']} / {d_res['H6']['veredicto_fuera']}.\n")

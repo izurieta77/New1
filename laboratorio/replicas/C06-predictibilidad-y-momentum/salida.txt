@@ -1,0 +1,49 @@
+French CRSP: 202607 202607 202607
+C1 UMD bear: n=191 media=-0.775%/mes t_NW=-1.29
+C1 UMD no bear: n=986 media=0.877%/mes t_NW=8.73
+C1 1927-1999 bear=True: n=129 media=-0.643% t_NW=-0.90
+C1 1927-1999 bear=False: n=729 media=1.007% t_NW=9.03
+C1 2000-2026 bear=True: n=62 media=-1.051% t_NW=-0.95
+C1 2000-2026 bear=False: n=257 media=0.509% t_NW=2.53
+C1 bear y mercado sube en el mes (contemporaneo): n=105 media=-4.05% t=-3.85
+C1 20 peores meses de UMD: 16 en estado bear; fraccion de meses bear: 0.162
+   1932-08-31 UMD=-52.6% bear=1 mercado=37.1%
+   1932-07-31 UMD=-45.6% bear=1 mercado=33.6%
+   2009-04-30 UMD=-34.4% bear=1 mercado=10.2%
+   1939-09-30 UMD=-31.4% bear=1 mercado=16.9%
+   2001-01-31 UMD=-25.4% bear=0 mercado=3.2%
+   1938-06-30 UMD=-24.9% bear=1 mercado=23.9%
+   1931-06-30 UMD=-17.5% bear=1 mercado=13.9%
+   1933-04-30 UMD=-17.1% bear=1 mercado=38.8%
+   2002-11-30 UMD=-16.4% bear=1 mercado=6.0%
+   2023-01-31 UMD=-16.2% bear=1 mercado=6.6%
+   1975-01-31 UMD=-13.8% bear=1 mercado=13.7%
+   1931-02-28 UMD=-13.6% bear=1 mercado=10.9%
+   2020-11-30 UMD=-12.6% bear=0 mercado=12.4%
+   2009-05-31 UMD=-12.5% bear=1 mercado=5.2%
+   2026-07-31 UMD=-12.2% bear=0 mercado=-0.6%
+   2009-03-31 UMD=-11.8% bear=1 mercado=9.0%
+   1973-07-31 UMD=-11.7% bear=0 mercado=5.0%
+   1931-01-31 UMD=-11.1% bear=1 mercado=6.2%
+   2003-05-31 UMD=-10.7% bear=1 mercado=6.0%
+   1932-01-31 UMD=-9.9% bear=1 mercado=-1.6%
+C2 1964-2026: tras anio + 45.2 pb (n=2405) | tras anio - 7.7 pb (n=1320) | TSFM 26.4 pb/mes t=4.32
+C2 1964-1999: tras anio + 53.8 pb (n=1453) | tras anio - 2.6 pb (n=677) | TSFM 35.9 pb/mes t=4.84
+C2 2000-2026: tras anio + 32.0 pb (n=952) | tras anio - 13.0 pb (n=643) | TSFM 13.8 pb/mes t=1.43
+C2 2016-2026: tras anio + 17.1 pb (n=326) | tras anio - -5.8 pb (n=309) | TSFM 11.6 pb/mes t=0.80
+Shiller: 1871.01 a 2024.09 CAPE ultimo 35.23
+P1 dentro de muestra 1881.01-2014.09: r10 = 0.2561 -0.0694 ln(CAPE), R2=0.282
+   CAPE 15: 6.83% real anual
+   CAPE 20: 4.83% real anual
+   CAPE 25: 3.28% real anual
+   CAPE 30: 2.02% real anual
+   CAPE 35: 0.95% real anual
+   CAPE 40: 0.02% real anual
+P1 fuera de muestra 1950-2014: n=777 R2_OOS=0.179 pronostico medio 4.61% realizado 6.86%
+P1 fuera de muestra 1950-1969: n=240 R2_OOS=0.409 pronostico medio 4.53% realizado 5.96%
+P1 fuera de muestra 1970-1989: n=240 R2_OOS=0.318 pronostico medio 8.27% realizado 8.03%
+P1 fuera de muestra 1990-2014: n=297 R2_OOS=-0.315 pronostico medio 1.72% realizado 6.65%
+P2 dentro de muestra mensual: b=0.0026 R2=0.0009 n=1842
+P2 fuera de muestra desde 1927: n=1170 R2_OOS=-0.0035 CT=-0.0011
+P2 fuera de muestra desde 1950: n=894 R2_OOS=-0.0022 CT=-0.0022
+P2 fuera de muestra desde 1990: n=414 R2_OOS=-0.0104 CT=-0.0104

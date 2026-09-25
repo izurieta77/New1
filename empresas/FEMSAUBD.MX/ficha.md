@@ -19,7 +19,7 @@ Otros negocios (Spin, Bara), corporativo y eliminaciones suman Ps 2,590 M. FEMSA
 ## 2. Último reporte: 2T26 (28-jul-2026) [1]
 - **Ingresos** Ps 231,002 M (+9.3%; +10.1% comparable). Superaron el consenso de TradingView (226.57 mil M, +2.0%) y el de Investing.com (225.78 mil M) [11].
 - **Márgenes:** bruto 40.1% (−60 pb) y operativo 8.3% (−10 pb). La utilidad de operación creció 7.2% (+11.7% comparable) y el EBITDA ajustado 12.7%.
-- **UPA:** utilidad neta mayoritaria de Ps 5,536 M, **Ps 1.62 por unidad** (+107.7%). Quedó por debajo del consenso de Ps 1.87 (TradingView e Investing) [11]. La tasa efectiva de impuestos fue 34.8% por las pérdidas no acreditables de Spin y Salud.
+- **UPA:** utilidad mayoritaria de Ps 5,536 M, **Ps 1.62 por unidad** (+107.7%), abajo del consenso de Ps 1.87 (TradingView e Investing) [11]. Tasa efectiva de 34.8% por pérdidas no acreditables de Spin y Salud.
 - **Guía:** capex de 5-6% de las ventas en 2026; segundo semestre "más moderado" sin el Mundial; SSS normalizadas "de un dígito medio"; distribuciones por ~Ps 41 mil M entre mar-2026 y mar-2027 [10].
 - **Datos operativos:** (1) OXXO México con SSS +9.5% (ticket +7.4%, tráfico +2.0%, el primero positivo en varios trimestres); (2) 253 tiendas netas abiertas, para 24,708; (3) Spin by OXXO con 11.5 M de usuarios activos (+22.1%) [1].
 
@@ -49,7 +49,7 @@ Anual (20-F [5][6]; FCF = flujo operativo − capex en PP&E e intangibles):
 | 2024 | 781,585 | 9.0% | 26,735 | 7.88 | 24,197 | 0.12% | 3,578.2 |
 | 2025 | 840,954 | 8.8% | 19,431 | 5.60 | 29,033 | n.d. | 3,469.5 |
 
-†Cálculo propio: la utilidad mayoritaria de 2021-2022 es la consolidada menos la minoritaria [6], dividida entre las unidades. La de 2023 incluye la venta de Heineken. Los ingresos 2021-2022 están reexpresados por operaciones discontinuadas. SBC: companyfacts [14]. Hoy hay 3,412.7 M unidades (3,387.2 M sin tesorería) [1].
+†Cálculo propio (consolidada menos minoritaria [6], entre unidades); 2023 incluye la venta de Heineken. Ingresos 2021-2022 reexpresados. SBC: companyfacts [14]. Unidades a jun-26: 3,412.7 M (3,387.2 M sin tesorería) [1].
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad contra efectivo.** En 2025 el flujo operativo (Ps 71,080 M) fue 3.7x la utilidad mayoritaria, pero el FCF de 29,033 baja a ~13,242 después de arrendamientos (15,791) [5]. La utilidad trae partidas no caja: cambiaria y ganancias únicas.

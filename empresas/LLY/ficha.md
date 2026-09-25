@@ -12,7 +12,7 @@ Un solo segmento. Ingresos 2025 US$65,179 M (+45%) [3]: Mounjaro 22,965 (35%), Z
 - Guía 2026: ingresos 85-87 mil M (antes 82-85); UPA no-GAAP 35.50-36.50 (antes 35.50-37.00: +2.78 subyacente, −3.03 IPR&D); **excluye IPR&D posterior al 30-jun** [1].
 - Datos operativos: (1) Mounjaro US$9,943 M (+91%; fuera de EUA +172%); (2) precio en EUA −3%, **−9% sin ajustes de rebates**; (3) fuera de EUA volumen +113% y precio −36% (Mounjaro en la NRDL de China) [1].
 
-## 3. Tabla financiera (US$ M; EDGAR XBRL [2], comunicados [1][4][5])
+## 3. Tabla financiera (US$ M; EDGAR XBRL [2], comunicados [1][4][5], dossier [7])
 | Trim | Ingresos | Mg bruto | Mg a.i. | UN | UPA dil | UPA no-GAAP | FCF | SBC/ing | Deuda neta | Acc. dil (M) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 3T24 | 11,439 | 81.0% | 13.9% | 970 | 1.07 | n.d. | 2,361 | 1.2% | 27,751 | 905 |

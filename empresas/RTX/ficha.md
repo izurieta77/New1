@@ -12,7 +12,7 @@ Tres segmentos, con ventas externas de 2025 (US$ M) [3]: Pratt & Whitney (motore
 - Guía 2026 elevada: ventas ajustadas de 95.0-96.0 mil M (antes 92.5-93.5), UPA ajustada de 7.10-7.25 (antes 6.70-6.90) y FCF de 8.50-8.75 mil M.
 - Tres datos operativos: (1) cartera de US$289 mil M (+22%), de la cual 170 es comercial y 119 defensa; (2) *book-to-bill* de Raytheon de 2.42, con US$19.9 mil M en pedidos [12]; (3) posventa comercial +18% en la empresa y +25% en Pratt [12].
 
-## 3. Tabla financiera (US$ M; EDGAR XBRL [2], comunicados [1][4])
+## 3. Tabla financiera (US$ M; EDGAR XBRL [2], comunicados [1][4], dossier [8])
 | Trim | Ventas | Mg oper | UN | UPA dil | UPA ajust. | FCF | SBC/ventas | Deuda neta | Acc. dil (M) |
 |---|---|---|---|---|---|---|---|---|---|
 | 3T24 | 20,089 | 10.1% | 1,472 | 1.09 | n.d. | 1,971 | 0.5% | 34,728 | 1,346 |
@@ -43,16 +43,16 @@ Notas: 2023 incluye el cargo del *powder metal* (US$5.4 mil M en ventas) [3]. La
 6. **Concentración.** El gobierno de EUA suma 46% de las ventas contando FMS. Airbus depende del GTF. Tierras raras y microelectrónica son insumos críticos [5].
 7. **Regulación.** Presupuesto del DoW con resolución continua (CR) hasta el 11-dic-2026 [14]. Licencias de exportación. Acuerdos de enjuiciamiento diferido con el DOJ, orden de la SEC y consentimiento con el Departamento de Estado [1]. Investigación de la SEC por la divulgación del *powder metal* [5]. Sanciones de China a Raytheon [3].
 8. **Promesas contra resultados.** Subió la guía 2026 dos veces: UPA de 6.60-6.80 (ene) a 6.70-6.90 (abr) y 7.10-7.25 (jul) [1][4]. Superó el consenso de UPA en los últimos 4 trimestres, por 5% a 21% (Yahoo [9]). Los aviones en tierra (AOG) del GTF bajaron 25% en el año [12].
-9. **Partes relacionadas.** Programa PW1100 con socios, del que tiene 51% de participación neta. Intereses minoritarios de US$110 M en el 2T26 [1].
+9. **Partes relacionadas.** Programa PW1100 con socios (51% de participación neta); minoritarios de US$110 M en el 2T26 [1]. Relevo en Pratt: Jill Albertelli sustituye a Shane Eddy el 1-ene-2027 [7].
 10. **Asignación de capital.** Capex de ~US$2.6 mil M al año. Dividendo elevado en 2026 (monto no verificado). Desinversiones: *actuation* y Simmonds en 2025, Blue Canyon por US$620 M en 2026 [1].
 
 ## 5. Cadena causal
 **A. Guerra de Irán (desde el 28-feb-2026) y consumo de interceptores [14].** Exposición: Raytheon, con Patriot, SM y LTAMDS → pedidos internacionales de defensa por US$10 mil M en 1S26, el doble que un año antes, incluidos US$5 mil M de GEM-T [12] → cartera de defensa de US$119 mil M y ventas de Raytheon +18% con margen de 12.6% → más visibilidad del FCF 2027-28 → *inferencia:* el mercado paga por RTX 24x UPA 2027, contra 16-18x de las defensivas puras, porque combina defensa y posventa.
 **B. Brent en US$103 y turbosina [14].** Las aerolíneas pierden margen → se entregan menos aviones y se vuela la flota vieja por más tiempo → la posventa de Pratt, que creció 25%, se sostiene mientras el tráfico aguante → riesgo en 2027 si la demanda cae en rutas del Golfo. La posventa es la línea de mayor margen (*inferencia*).
-**C. Fiscal en EUA.** La CR vence el 11-dic y las elecciones intermedias son el 3-nov, con 46% de probabilidad de un Congreso demócrata completo en Kalshi [14] → los pagos de programas se retrasan (flujo) más que las ventas → el FCF del 4T26 y el tono de la guía 2027 quedan en riesgo.
+**C. Fiscal en EUA.** La CR vence el 11-dic y las elecciones intermedias son el 3-nov, con 46% de probabilidad de un Congreso demócrata completo en Kalshi [14] → *inferencia:* una CR retrasa más los pagos (flujo) que las ventas → el FCF del 4T26 y el tono de la guía 2027 quedan en riesgo.
 
 ## 6. Qué descuenta el precio
-Capitalización de US$254.2 mil M y VE de 282.6 mil M [9]. P/U ajustada de 12 meses de **27.3x** (UPA de US$6.92) y P/U 2027e de **24.0x** (consenso de 7.85 [9]). VE/EBITDA de 18.0x. Historia de P/U GAAP al cierre de año: 33.6x, 28.8x, 37.7x, 32.6x y 37.0x de 2021 a 2025; con UPA ajustada, 29.2x en 2025. Hoy está en la parte baja de su rango ajustado. Pares a P/U futuro (Yahoo, 25-sep): GE Aerospace 35.2x, Lockheed 16.0x, Northrop 16.7x y General Dynamics 18.1x [9].
+Capitalización de US$254.2 mil M y VE de 282.6 mil M [9]. P/U ajustada de 12 meses de **27.3x** (UPA de US$6.92) y P/U 2027e de **24.0x** (consenso de 7.85 [9]). VE/EBITDA de 18.0x. Historia de P/U GAAP al cierre de año: 33.6x, 28.8x, 37.7x, 32.6x y 37.0x de 2021 a 2025; con UPA ajustada, 29.2x en 2025. Hoy cotiza por debajo de ese 29.2x ajustado. Pares a P/U futuro (Yahoo, 25-sep): GE Aerospace 35.2x, Lockheed 16.0x, Northrop 16.7x y General Dynamics 18.1x [9].
 **DCF inverso** (FCF inicial de US$8.6 mil M, punto medio de la guía 2026; 10 años; crecimiento terminal de 3%): con tasa de 8% el crecimiento implícito es **7.6% anual**, con 9% es **10.1%** y con 10% es **12.4%**. El FCF creció 12.2% anual entre 2021 y 2025. *Inferencia:* con un WACC de ~8.5% el precio pide ~9%, alcanzable si la posventa y los misiles sostienen el ciclo, pero con poco margen para un tropiezo del GTF.
 
 ## 7. Escenarios de negocio a 12 meses
@@ -62,7 +62,7 @@ Capitalización de US$254.2 mil M y VE de 282.6 mil M [9]. P/U ajustada de 12 me
 - **Qué cambiaría el escenario:** la posventa comercial del 3T26 (menos de 10% apunta al bajista); el *book-to-bill* de Raytheon; la resolución de la CR el 11-dic.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha estimada: 20-oct-2026** (Yahoo [9] y Nasdaq/Zacks [13]; Investing.com dice 27-oct). La empresa no la ha confirmado; en 2025 reportó el 21-oct.
+- **Fecha estimada: 20-oct-2026** (Yahoo [9] y Nasdaq/Zacks [13]; Investing.com dice 27-oct). La empresa no la ha confirmado; en 2025 reportó el 21-oct [6].
 - **Ventas:** punto **US$24,100 M**; intervalo de 80%: 23,300-24,900. Consenso de US$24,013 M (Yahoo, 18 analistas, 25-sep-2026) [9]. La dirección espera ~5% orgánico en el 2S [12]; la supera históricamente y el 3T25 creció 12%.
 - **UPA ajustada:** punto **US$1.84**; intervalo de 80%: 1.72-1.96. Consenso de US$1.77 (Yahoo, 18) y 1.75 (Zacks, 5) [9][13].
 - **Binarios:** (1) UPA ajustada del 3T26 mayor a US$1.77: **p = 0.72**; (2) ventas mayores a US$24,013 M: **p = 0.55**.
