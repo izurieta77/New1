@@ -9,7 +9,7 @@ Uso:
     python3 herramientas/portafolio.py posiciones
     python3 herramientas/portafolio.py valuar [--reconstruir] [--sin-guardar]
     python3 herramientas/portafolio.py reporte [--tasa-cetes 0.07] [--salida ruta.md]
-Opciones globales: --operaciones RUTA, --equity RUTA, --perfil {arena_agresivo,estandar}.
+Opciones globales: --operaciones RUTA, --equity RUTA, --perfil {arena_agresivo,cripto_binance,estandar}.
 El libro por defecto es la cuenta arena-claude, asi que el perfil por defecto es arena_agresivo.
 
 Convenciones: moneda base MXN. Efectivo unico en MXN; operaciones en USD se convierten con
@@ -563,8 +563,8 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Portafolio en papel")
     ap.add_argument("--operaciones", default=str(RUTA_OPS))
     ap.add_argument("--equity", default=str(RUTA_EQUITY))
-    ap.add_argument("--perfil", default="arena_agresivo", choices=("arena_agresivo", "estandar"),
-                    help="perfil de riesgo de la cuenta del libro (por defecto la arena)")
+    ap.add_argument("--perfil", default="arena_agresivo", choices=("arena_agresivo", "cripto_binance", "estandar"),
+                    help="perfil de riesgo de la cuenta del libro (por defecto la arena de GBM)")
     sub = ap.add_subparsers(dest="comando", required=True)
     r = sub.add_parser("registrar", help="agregar operacion al libro")
     r.add_argument("--fecha", default=date.today().isoformat())

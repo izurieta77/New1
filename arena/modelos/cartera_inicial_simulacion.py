@@ -552,6 +552,8 @@ def carteras(precios_mxn: dict) -> tuple[dict, dict, dict]:
         c[f"{nombre} | r01"] = {"lineas": fn("r01"), "cb": True}
         c[f"{nombre} | sma_vix+st3 apal."] = {"lineas": fn("sma_vix", st_lev=True), "cb": True}
         c[f"{nombre} | sma_vix+st3 todas"] = {"lineas": fn("sma_vix", st_all=True), "cb": True}
+        if nombre.startswith("B1"):
+            c[f"{nombre} | sma+st3 todas"] = {"lineas": fn("sma", st_all=True), "cb": True}
     B3 = lambda f, st_all=False: [
         {"activo": "NDX3", "w": w("TQQQ", 4), "titulos": 4, "filtro": f, "tactica": True, "stop": st_all},
         {"activo": "SPX1", "w": w("SPYM", 5), "titulos": 5, "stop": st_all},
@@ -570,7 +572,8 @@ def carteras(precios_mxn: dict) -> tuple[dict, dict, dict]:
                                             "cb": False},
     }
     campos = {"F1 {R1,R2}": ["R1 beta 1 S&P (100%)", "R2 mixta 50% S&P + 50% CETES"],
-              "F2 {R2,R3}": ["R2 mixta 50% S&P + 50% CETES", "R3 agresiva 50% TQQQ + 50% QQQ"]}
+              "F2 {R2,R3}": ["R2 mixta 50% S&P + 50% CETES", "R3 agresiva 50% TQQQ + 50% QQQ"],
+              "F3 {R1,R3}": ["R1 beta 1 S&P (100%)", "R3 agresiva 50% TQQQ + 50% QQQ"]}
     return c, rivales, campos
 
 
@@ -743,8 +746,8 @@ def correr(caminos: int, semilla: int) -> None:
     resultados = {}
     print("\n## 5. Resultados por metodo (TWR de la temporada de 4 meses en MXN; P-12%/P-20%/P-35% = tocar ese "
           "drawdown desde el maximo; P<0 = terminar con perdida; '1o' = terminar arriba de ambos rivales del campo)")
-    print("Campos: F1 = {R1 beta 1 S&P, R2 mixta 50/50} (supuesto pedido); "
-          "F2 = {R2 mixta, R3 agresiva 2x Nasdaq} (sensibilidad 'Grok agresivo').")
+    print("Campos (3 cuentas: Claude + 2 rivales): F1 = {R1 beta 1 S&P, R2 mixta 50/50} (supuesto pedido); "
+          "F2 = {R2 mixta, R3 agresiva 2x Nasdaq}; F3 = {R1 beta 1, R3 agresiva} (sensibilidades 'Grok agresivo').")
     D1 = construir_bootstrap(B, T, caminos, semilla, conservador=False, condicionar=True, cal=cal)
     resultados["M1"] = evaluar(cands, rivales, campos, D1, semilla)
     print(tabla(resultados["M1"], campos, "M1 bootstrap 15 anios (2011-2026), inicio en regimen de hoy, deriva historica"))
@@ -927,14 +930,14 @@ def kelly(B, T, cands, caminos, semilla, cal) -> None:
 
 def resumen_final(resultados: dict, campos: dict) -> None:
     print("\n## 8. Resumen compacto (M1 | M2 | M3 | M3c): mediana, P(-12%), P(-20%), P(1o en F1), P(1o en F2), "
-          "P(ultimo en F1)")
+          "P(1o en F3), P(ultimo en F1)")
     claves = [k for k in resultados["M1"] if not k.startswith("_")]
     for k in claves:
         partes = []
         for m in ("M1", "M2", "M3", "M3c"):
             f = resultados[m][k]
             partes.append(f"{f['med']:+.1%} {f['p12']:.0%} {f['p20']:.0%} {f['F1 {R1,R2}']:.0%} {f['F2 {R2,R3}']:.0%}"
-                          f" ult {f['ult F1 {R1,R2}']:.0%}")
+                          f" {f['F3 {R1,R3}']:.0%} ult {f['ult F1 {R1,R2}']:.0%}")
         print(f"{k:44s} " + " | ".join(partes))
 
 

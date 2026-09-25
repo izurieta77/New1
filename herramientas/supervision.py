@@ -5,7 +5,8 @@ Uso:
     python3 herramientas/supervision.py --sin-red  # solo archivos (latidos, pendientes, bloqueos)
 
 Revisa, con el perfil arena_agresivo:
-- cada libro (papel: bitacora/operaciones.csv; real: bitacora/real/operaciones.csv): cortacircuitos
+- cada libro (GBM papel: bitacora/operaciones.csv; GBM real: bitacora/real/; Binance papel y real:
+  bitacora/papel-binance/ y bitacora/real-binance/, con el perfil cripto_binance): cortacircuitos
   sobre el indice time-weighted (con un punto intradia), tope absoluto de perdida y stops por posicion;
 - filtro de apalancados: subyacente sobre su SMA200 y VIX < 25;
 - ordenes pendientes vencidas, latido mas reciente, bloqueos y dudas abiertas.
@@ -153,15 +154,25 @@ def contar_abiertos(ruta: Path) -> int:
     return sum(1 for l in filas[2:] if "cerrad" not in l.split("|")[-2].lower())
 
 
+def libros(bitacora: Path, params: dict, params_cripto: dict | None) -> list[tuple[str, Path, Path, dict]]:
+    """(nombre, operaciones, equity, parametros) de cada libro supervisado."""
+    salida = [("papel", bitacora / "operaciones.csv", bitacora / "equity.csv", params),
+              ("real", bitacora / "real" / "operaciones.csv", bitacora / "real" / "equity.csv", params)]
+    if params_cripto is not None:
+        for nombre, carpeta in (("papel-binance", "papel-binance"), ("real-binance", "real-binance")):
+            salida.append((nombre, bitacora / carpeta / "operaciones.csv", bitacora / carpeta / "equity.csv",
+                           params_cripto))
+    return salida
+
+
 def supervisar(ahora: datetime, params: dict, precios: Precios | None, serie: Serie | None,
                vix: float | None, fx_actual: float | None, fabrica_fx: FabricaFX | None = None,
-               bitacora: Path = DIR_BITACORA) -> list[tuple[int, str]]:
+               bitacora: Path = DIR_BITACORA, params_cripto: dict | None = None) -> list[tuple[int, str]]:
     salida: list[tuple[int, str]] = []
     tickers: list[str] = []
     if precios is not None:
-        for nombre, ops, eq in (("papel", bitacora / "operaciones.csv", bitacora / "equity.csv"),
-                                ("real", bitacora / "real" / "operaciones.csv", bitacora / "real" / "equity.csv")):
-            lineas, tks = revisar_libro(nombre, ops, eq, params, precios, fx_actual, fabrica_fx)
+        for nombre, ops, eq, prm in libros(bitacora, params, params_cripto):
+            lineas, tks = revisar_libro(nombre, ops, eq, prm, precios, fx_actual, fabrica_fx)
             salida += lineas
             tickers += tks
         if serie is not None:
@@ -192,7 +203,8 @@ def main(argv: list[str] | None = None) -> int:
         except datos.ErrorDatos as e:
             print(f"AVISO · datos de mercado no disponibles: {e}")
     salida = supervisar(ahora, params, precios, serie, vix, fx,
-                        None if args.sin_red else portafolio.proveedor_fx_yahoo)
+                        None if args.sin_red else portafolio.proveedor_fx_yahoo,
+                        params_cripto=parametros_efectivos("cripto_binance"))
     peor = max([n for n, _ in salida], default=OK)
     print(f"{ahora:%Y-%m-%d %H:%M} UTC · supervisión · {NOMBRE[peor]}")
     for nivel, texto in sorted(salida, key=lambda x: -x[0]):

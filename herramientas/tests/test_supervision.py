@@ -61,6 +61,20 @@ class TestSupervision(unittest.TestCase):
         self.assertEqual(cc[0], sv.ALERTA)
         self.assertIn("ACTIVADO -35%", cc[1])
 
+    def test_libro_binance_con_su_tope(self):
+        (self.b / "real-binance").mkdir()
+        ops = self.b / "real-binance" / "operaciones.csv"
+        pf.registrar(ops, "2026-09-28", "", "deposito", 10_000)
+        pf.registrar(ops, "2026-09-28", "BTC-USD", "compra", 0.08, 100_000.0, "USD", comision=0)  # FX 1: 8,000 MXN
+        precios = lambda _t: ({"BTC-USD": (date(2026, 9, 29), 60_000.0, "USD")}, [])  # noqa: E731
+        cripto = parametros_efectivos("cripto_binance")
+        salida = sv.supervisar(self.ahora, self.params, precios, None, None, 1.0, lambda _d: (lambda _f: 1.0),
+                               self.b, params_cripto=cripto)
+        tope = [x for x in salida if x[1].startswith("real-binance: P&L")][0]
+        self.assertIn("tope -5,000", tope[1])
+        # 0.08 x 60,000 = 4,800 + 2,000 de efectivo = 6,800: P&L -3,200, margen 1,800 > 20% del tope (1,000).
+        self.assertEqual(tope[0], sv.OK)
+
     def test_filtro_apalancados(self):
         serie_ok = lambda _t: [(date(2026, 1, 1) + timedelta(days=i), 100.0 + i) for i in range(250)]  # noqa: E731
         serie_mal = lambda _t: [(date(2026, 1, 1) + timedelta(days=i), 400.0 - i) for i in range(250)]  # noqa: E731

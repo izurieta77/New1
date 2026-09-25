@@ -133,7 +133,16 @@
       "broker": "GBM",
       "capital_inicial_mxn": 20000,
       "perfil_riesgo": "arena_agresivo",
-      "estado": "abierta; opera en real desde 2026-09-28 por decision del dueno del 2026-09-25 (ver prioridad_actual.excepcion_cuenta_arena)"
+      "estado": "abierta; opera en real desde 2026-09-28 por decision del dueno del 2026-09-25 (ver prioridad_actual.excepcion_cuenta_arena)",
+      "id_compuesto": "arena-claude (GBM) + arena-claude-binance (Binance)"
+    },
+    {
+      "id": "arena-claude-binance",
+      "gestor": "Claude",
+      "broker": "Binance",
+      "capital_inicial_mxn": 10000,
+      "perfil_riesgo": "cripto_binance",
+      "estado": "nueva (dueño, 25-sep-2026): cuenta cripto de la competencia; arranca con la decisión del comité cripto, ejecución manual del dueño en la app de Binance"
     }
   ],
   "perfiles_riesgo": {
@@ -141,11 +150,12 @@
     "arena_agresivo": {
       "estado": "PROVISIONAL: se calibra al terminar la formacion (fase 0)",
       "objetivo": "Terminar cada temporada con el mayor rendimiento % (TWR en MXN) entre todas las cuentas de IA, sin quedar fuera del juego",
-      "metrica_competencia": "TWR en MXN desde el fondeo, igual capital para todos; desempate: menor drawdown maximo",
+      "metrica_competencia": "TWR en MXN de la cuenta combinada de cada IA (GBM 20,000 + Binance 10,000 = 30,000 MXN iniciales), desde el fondeo; igual capital para todos; desempate: menor drawdown máximo. Se reportan también los TWR separados de GBM y de Binance.",
       "temporada_meses": 4,
       "estructura": {
         "nucleo_min": 0.0,
-        "reserva_cetes_min": 0.0
+        "reserva_cetes_min": 0.0,
+        "satelite_max": 1.0
       },
       "riesgo_por_operacion": 0.03,
       "kelly_fraccion_max": 0.5,
@@ -206,6 +216,51 @@
         "definicion": "Perdida absoluta de la cuenta frente a las aportaciones netas (valor - aportaciones_netas <= -10,000 MXN).",
         "accion": "Todo a efectivo/CETES y la cuenta se detiene hasta que el dueno decida. Rige siempre la mas restrictiva entre este tope y los cortacircuitos porcentuales: con 20,000 MXN el cortacircuitos de -35% (-7,000) se dispara antes; al crecer el capital, este tope absoluto se vuelve el mas restrictivo (con 50,000 MXN equivale a -20%)."
       }
+    },
+    "cripto_binance": {
+      "estado": "Tope de pérdida fijado por el dueño (25-sep-2026). El resto es PROVISIONAL: lo calibran el analista-cripto y el gestor de riesgo.",
+      "objetivo": "Aportar TWR en MXN a la cuenta combinada de la competencia sin rebasar el tope de pérdida de cripto.",
+      "perdida_maxima_tolerable_mxn": {
+        "valor": 5000,
+        "fuente": "Dueño, 25-sep-2026: 'Tope de perdida en cripto 5 mil'",
+        "definicion": "Pérdida absoluta de la cuenta Binance frente a sus aportaciones netas (valor - aportaciones_netas <= -5,000 MXN).",
+        "accion": "Todo a stablecoin o MXN y la cuenta cripto se detiene hasta que el dueño decida."
+      },
+      "cortacircuitos_drawdown": [
+        {
+          "nivel": -0.2,
+          "accion": "Reducir 50% la exposición a altcoins; conservar BTC/ETH"
+        },
+        {
+          "nivel": -0.3,
+          "accion": "Solo BTC y ETH spot; nada nuevo fuera de ellos"
+        },
+        {
+          "nivel": -0.4,
+          "accion": "Pausa 1 semana + post-mortem escrito"
+        },
+        {
+          "nivel": -0.5,
+          "accion": "Límite duro = tope del dueño: todo a stablecoin/MXN hasta revisión con el dueño"
+        }
+      ],
+      "riesgo_por_operacion": 0.1,
+      "reglas": [
+        "Solo spot: sin futuros, sin margen, sin opciones, sin préstamos ni productos con bloqueo de liquidez (staking con plazo, Earn a plazo fijo).",
+        "El dueño ejecuta cada orden a mano en la app de Binance; el sistema entrega boletas con par, tipo de orden, cantidad, precio límite y stop (stop-limit u OCO si la app lo permite).",
+        "Universo inicial: BTC y ETH. Otra moneda solo con aprobación del comité y máximo 20% de la cuenta cripto por moneda.",
+        "Efectivo: MXN o una stablecoin grande; el riesgo de pérdida de paridad de la stablecoin se vigila y se anota.",
+        "Toda decisión sale del comité (con el analista-cripto) y queda en git antes de ejecutarse."
+      ],
+      "concentracion": {
+        "cripto_max": 1.0,
+        "altcoin_individual_max": 0.2
+      },
+      "operaciones_max_mes": 8,
+      "estructura": {
+        "nucleo_min": 0.0,
+        "satelite_max": 1.0
+      }
     }
   },
   "prioridad_actual": {
@@ -233,19 +288,22 @@
       {
         "id": "arena-chatgpt",
         "gestor": "ChatGPT",
-        "capital_inicial_mxn": 20000
+        "capital_inicial_mxn": 20000,
+        "capital_inicial_binance_mxn": 10000
       },
       {
         "id": "arena-grok",
         "gestor": "Grok",
-        "capital_inicial_mxn": 20000
+        "capital_inicial_mxn": 20000,
+        "capital_inicial_binance_mxn": 10000
       }
     ],
-    "referencia_sin_cuenta": "Barebone AI: competidor a superar en calidad de analisis, sin cuenta en el torneo (confirmado por el dueno 25-sep-2026). Ver arena/investigacion/06-barebone-ai-competidor.md."
+    "referencia_sin_cuenta": "Barebone AI: competidor a superar en calidad de analisis, sin cuenta en el torneo (confirmado por el dueno 25-sep-2026). Ver arena/investigacion/06-barebone-ai-competidor.md.",
+    "nota_binance": "Cada IA tiene además 10,000 MXN en Binance (dueño, 25-sep-2026). Las cripto cuentan para la competencia."
   },
   "escalamiento_capital": {
     "fecha_captura": "2026-09-25",
-    "regla": "Las tres cuentas (arena-claude y cada rival) arrancan con el mismo capital_inicial_mxn (20,000). El dueno ira aportando mas capital de forma progresiva a la cuenta que vaya rindiendo, hasta un rango de 100,000-200,000 MXN o mas, no de golpe.",
+    "regla": "Cada IA arranca con el mismo capital: 20,000 MXN en GBM (cuenta arena) y 10,000 MXN en Binance (cripto). El dueño irá aportando más de forma progresiva a la IA que vaya rindiendo, hasta 100,000-200,000 MXN o más, no de golpe.",
     "criterio_de_decision": "Al final de cada temporada (temporada_meses en arena_agresivo, actualmente 6 meses) el dueno decide, por cuenta, si cancela o continua la suscripcion de esa IA segun el TWR en MXN desde el fondeo frente a las demas cuentas. La cuenta que no rinda fruto se puede quedar sin mas aportaciones o perder la suscripcion.",
     "implicacion_para_el_sistema": "Cada aportacion adicional es un deposito (lado=deposito en herramientas/portafolio.py) y se mide con el mismo indice time-weighted que ya usa el portafolio, para no premiar ni castigar el tamano ni el momento de las aportaciones. No cambia el criterio_salida de fase 0: no se propone ni la primera peseta real hasta cumplirlo.",
     "pendiente_de_definir_por_el_dueno": [

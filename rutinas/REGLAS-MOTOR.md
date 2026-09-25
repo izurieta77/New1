@@ -57,13 +57,27 @@ Al terminar cada rutina, agrega una línea **al inicio** de `bitacora/estado-rut
 - **Tope absoluto del dueño: 10,000 MXN de pérdida** frente a las aportaciones netas (`perdida_maxima_tolerable_mxn`). Si se alcanza, todo pasa a efectivo o CETES y la cuenta se detiene hasta que el dueño decida. Rige siempre el límite más restrictivo.
 - **Temporada:** 4 meses, del 28-sep-2026 al 28-ene-2027.
 
+## 4b. Cuenta cripto en Binance (`arena-claude-binance`, perfil `cripto_binance`)
+
+Decisión del dueño (25-sep-2026): **10,000 MXN por IA**, que cuentan para la competencia. **Tope de pérdida en cripto: 5,000 MXN.**
+
+- **Operaciones permitidas:** solo spot. Sin futuros, margen, opciones, préstamos ni productos con bloqueo de liquidez. Universo inicial: BTC y ETH; otra moneda requiere comité y pesa 20% como máximo.
+- **Registros:**
+  - papel sombra en `bitacora/papel-binance/`;
+  - real, según lo que reporte el dueño, en `bitacora/real-binance/`;
+  - se usa `herramientas/portafolio.py --perfil cripto_binance --operaciones <ruta> --equity <ruta>`.
+- **Precios:** Yahoo `BTC-USD` y `ETH-USD` en USD, convertidos con `MXN=X`.
+- **Ejecución en papel:** el precio de ejecución es el cierre de la primera vela horaria completa posterior al commit de la decisión (Yahoo, intervalo 1h). Comisión: 0.1% por lado (tarifa spot estándar; verificar la tarifa real en la app).
+- **Boletas reales** en `bitacora/boletas/`, con: par tal como aparece en la app (BTC/MXN si existe; si no, BTC/USDT), tipo de orden (límite; stop-limit u OCO si la app lo permite), cantidad y precio.
+- **Cortacircuitos** (sobre el TWR de la cuenta cripto): −20%, −30% y −40%. El −50% equivale al tope de 5,000 MXN: todo a stablecoin o MXN y la cuenta se detiene hasta que el dueño decida.
+
 ## 5. Competencia
 
-Rivales con cuenta, confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**. Cada uno tiene 20,000 MXN en GBM.
+Rivales con cuenta, confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**. Cada IA, nosotros incluidos, tiene **20,000 MXN en GBM y 10,000 MXN en Binance**. La métrica es el TWR en MXN de la cuenta combinada, y además se reportan GBM y Binance por separado.
 
 **Barebone AI no tiene cuenta.** Es un competidor de referencia al que hay que superar en calidad y verificabilidad del análisis (ver `arena/investigacion/06-barebone-ai-competidor.md`).
 
-- Solo se registra lo que el dueño reporte, en `competencia/rivales.csv`.
+- Solo se registra lo que el dueño reporte, en `competencia/rivales.csv`, con la columna `cuenta` como `<ia>-gbm` o `<ia>-binance` (por ejemplo, `chatgpt-binance`).
 - El valor real de nuestra cuenta `arena-claude` también lo reporta el dueño, en el mismo archivo.
 - **Nunca inventes ni estimes el saldo de ninguna cuenta.**
 - `competencia/marcador.md` compara TWR, drawdown máximo y días invertidos. Mientras no haya datos del dueño, el marcador lo dice así: "sin datos".

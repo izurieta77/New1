@@ -78,5 +78,29 @@ class TestPerfilArena(unittest.TestCase):
         self.assertIn("-12%", texto)
 
 
+class TestPerfilCripto(unittest.TestCase):
+    def test_perfil_cripto_binance(self):
+        c = parametros_efectivos("cripto_binance")
+        self.assertEqual(c["perdida_maxima_tolerable_mxn"]["valor"], 5000)
+        self.assertEqual([n["nivel"] for n in niveles_cortacircuitos(c)], [-0.2, -0.3, -0.4, -0.5])
+        self.assertEqual(c["concentracion"]["cripto_max"], 1.0)
+        self.assertEqual(c["estructura"]["satelite_max"], 1.0)
+        t = riesgo.estado_tope_perdida(4_990, 10_000, c)
+        self.assertTrue(t["activado"])
+
+    def test_compra_cripto_no_viola_limites_del_perfil(self):
+        c = parametros_efectivos("cripto_binance")
+        ops = [{"fecha": date(2026, 9, 28), "ticker": "EFECTIVO", "lado": "deposito", "cantidad": 10_000.0,
+                "precio": 1.0, "moneda": "MXN", "comision": 0.0, "stop": None, "tesis_id": "", "estrategia": "",
+                "notas": ""}]
+        # 0.07 x 100,000 = 7,000 MXN: 70% de la cuenta en cripto.
+        orden = {"fecha": date(2026, 9, 28), "ticker": "BTC-USD", "lado": "compra", "cantidad": 0.07,
+                 "precio": 100_000.0, "moneda": "MXN", "stop": None, "estrategia": "cripto"}
+        r = pf.validar_contra_libro(ops, orden, None, "cripto", 1, c)
+        self.assertEqual(r["violaciones"], [])
+        est = pf.validar_contra_libro(ops, orden, None, "cripto", 1, parametros_efectivos("estandar"))
+        self.assertTrue(any("Cripto" in v for v in est["violaciones"]))
+
+
 if __name__ == "__main__":
     unittest.main()

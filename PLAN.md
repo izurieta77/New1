@@ -4,9 +4,9 @@ Actualizado: 25-sep-2026, por la sesión principal (orquestador). Parámetros en
 
 ## 1. Objetivo
 
-Terminar la temporada con el **mayor TWR en MXN** entre las cuentas de IA. Todas arrancan con 20,000 MXN. **Temporada actual: 4 meses, del 28-sep-2026 al 28-ene-2027** (dueño, 25-sep).
+Terminar la temporada con el **mayor TWR en MXN** entre las cuentas de IA. Cada IA arranca con **30,000 MXN: 20,000 en GBM y 10,000 en Binance (cripto)**. La métrica es la cuenta combinada, y además se reportan GBM y Binance por separado. **Temporada actual: 4 meses, del 28-sep-2026 al 28-ene-2027** (dueño, 25-sep).
 
-Hay que lograrlo sin salir del juego. La pérdida máxima que tolera el dueño es de **10,000 MXN absolutos**. Los cortacircuitos del perfil `arena_agresivo` (−12%, −20%, −28% y −35%) se disparan antes; rige siempre el límite más restrictivo.
+Hay que lograrlo sin salir del juego. La pérdida máxima que tolera el dueño es de **10,000 MXN en GBM** y **5,000 MXN en cripto**. Los cortacircuitos del perfil `arena_agresivo` (−12%, −20%, −28% y −35%) se disparan antes; rige siempre el límite más restrictivo.
 
 Lo que está en juego:
 - las aportaciones progresivas, hasta 100-200k MXN o más;
@@ -14,7 +14,7 @@ Lo que está en juego:
 
 ## 2. Rivales
 
-Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 20,000 MXN en GBM. Solo se registra lo que el dueño reporte.
+Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 20,000 MXN en GBM y 10,000 MXN en Binance. Solo se registra lo que el dueño reporte.
 
 **Barebone AI** no tiene cuenta en el torneo. Es la referencia que hay que superar en calidad y verificabilidad del análisis (ver `arena/investigacion/06-barebone-ai-competidor.md`).
 
@@ -42,7 +42,8 @@ Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 2
 |---|---|---|---|
 | Examen de titulación | ≥90% global y ≥85% por sección | Cumplido: 96.1% | 25-sep-2026 |
 | Cartera inicial de la arena | Aprobada por el comité y registrada en git antes de ejecutarse | Comité en curso | 25-sep-2026 |
-| Arena en real | El dueño captura las boletas en GBM, con stop desde la entrada | Pendiente | 28-sep-2026 |
+| Arena en real (GBM) | El dueño captura las boletas en GBM, con stop desde la entrada | Pendiente | 28-sep-2026 |
+| Cartera cripto (Binance) | Comité cripto: solo spot, tope de 5,000 MXN | Comité en curso | 28-sep-2026 |
 | Pronósticos calibrados | ≥50 resueltos, Brier ≤ 0.20, 3 meses | 5 registrados, 0 resueltos | 25-dic-2026 |
 | Portafolio de papel (registro sombra) | 3 meses dentro de límites | Arranca el 28-sep | 28-dic-2026 |
 | Patrimonio principal en real | Fin de fase 0 con la regla completa | — | ~28-dic-2026 |
@@ -85,7 +86,7 @@ Los procedimientos están versionados en `rutinas/*.md` y se cambian ahí. La se
 
 ## 6. Qué necesita el sistema del dueño
 
-1. **Saldos de los rivales.** Cada viernes, o cuando se pueda: cuenta, fecha, valor en MXN y aportaciones. Sin esto el marcador está vacío.
+1. **Saldos de los rivales en GBM y en Binance.** Cada viernes, o cuando se pueda: cuenta, fecha, valor en MXN y aportaciones. Sin esto el marcador está vacío.
 2. **Fecha de fondeo de cada cuenta rival**, para saber cuándo empezó la temporada.
 3. **Cada ejecución real de la arena:** precio, títulos y hora de cada orden capturada en GBM, y el valor de la cuenta cada viernes.
 4. **Montos y fechas de las aportaciones adicionales**, y qué resultado las dispara (`escalamiento_capital.pendiente_de_definir_por_el_dueno`).
