@@ -5,7 +5,9 @@
 Reimplementacion desde cero de V02 usando SOLO:
   - el pre-registro (seccion PRE-REGISTRO del README / preregistro.md), y
   - los datos congelados en datos/ (sin red).
-No importa ni lee reproducir.py, resultados.json ni variantes.csv.
+No importa ni lee reproducir.py. resultados.json y variantes.csv (salidas del original)
+solo se leen AL FINAL, en cotejo_con_original() y cotejo_variantes_csv(), despues de
+calcular todo; no entran en ningun calculo.
 
 Todo es propio: lector de CSV de French (por bloques), lector del JSON de Yahoo,
 alineacion por indice de mes, fin de mes del tipo de cambio, conversion a MXN,
@@ -13,7 +15,8 @@ costos de GBM y estadistica. El error estandar Newey-West(6) se calcula con DOS
 formulas propias (suma doble de Bartlett sobre pares (i, j) y autocovarianzas
 ponderadas) y, solo como tercera comprobacion, con herramientas/estadistica.py.
 
-Despues compara cada cifra que el README de V02 reporta con la cifra propia
+Despues compara cada cifra que el README de V02 reporta (texto corregido el
+2026-09-25; el texto anterior se conserva en afirmaciones_anteriores()) con la cifra propia
 (tolerancias de la tarea: 0.01 pp en medias mensuales, 0.05 en t, 0.1 pp en
 CAGR / caida maxima / medias x12; en cifras redondeadas a menos decimales se
 usa media unidad del ultimo decimal publicado).
@@ -775,6 +778,8 @@ def construir_comparacion(R):
     num(s, "A1c Emerging W2b CAGR (%)", "12.40", e["W2b"]["cagr"], "anual")
     num(s, "A1c Emerging W2 media x12 (%)", "11.40", e["W2"]["x12"], "anual")
     num(s, "A1c Emerging W2 CAGR (%)", "11.62", e["W2"]["cagr"], "anual")
+    cat(s, "A1a con anios completos (W1) fuera de +-0.5 pp de 9.6", True, all(abs(v - 9.6) > 0.5 for v in (e["W1"]["x12"], e["W1"]["cagr"])))
+    cat(s, "A1c con anios completos (W2) fuera de +-0.5 pp de 12.3", True, all(abs(v - 12.3) > 0.5 for v in (e["W2"]["x12"], e["W2"]["cagr"])))
     dx = W["Developed_ex_US"]
     num(s, "A2 Developed ex US W2 t NW(6)", "4.27", dx["W2"]["t_nw"], "t")
     cat(s, "A2 Developed ex US W2 veredicto", "apoyo", dx["W2"]["veredicto"])
@@ -824,18 +829,32 @@ def construir_comparacion(R):
     num(s, "H2 North America AMP13-post t NW(6)", "1.26", na["AMP13-post"]["t_nw"], "t")
     cat(s, "H2 North America AMP13-post deja de ser significativa", "inconcluso", na["AMP13-post"]["veredicto"])
     ap = W["Asia_Pacific_ex_Japan"]
-    cat(s, "H2 Asia Pacific ex Japan sube en AMP13", True, ap["AMP13-post"]["media"] > ap["AMP13-pre"]["media"])
-    cat(s, "H2 Asia Pacific ex Japan sube en los tres cortes (R98, FF12, AMP13), como se lee sin corte", True,
-        all(ap[b]["media"] > ap[a]["media"] for a, b in (("R98-pre", "R98-post"), ("FF12-in", "FF12-out"), ("AMP13-pre", "AMP13-post"))))
+    num(s, "H2 Asia Pacific ex Japan AMP13-pre media (%/mes)", "0.79", ap["AMP13-pre"]["media"], "media")
+    num(s, "H2 Asia Pacific ex Japan AMP13-post media (%/mes)", "0.96", ap["AMP13-post"]["media"], "media")
+    num(s, "H2 Asia Pacific ex Japan FF12-in media (%/mes)", "0.67", ap["FF12-in"]["media"], "media")
+    num(s, "H2 Asia Pacific ex Japan FF12-out media (%/mes)", "1.09", ap["FF12-out"]["media"], "media")
+    num(s, "H2 Asia Pacific ex Japan R98-pre media (%/mes)", "0.99", ap["R98-pre"]["media"], "media")
+    num(s, "H2 Asia Pacific ex Japan R98-post media (%/mes)", "0.82", ap["R98-post"]["media"], "media")
+    cat(s, "H2 Asia Pacific ex Japan R98 pre y post significativos", "apoyo / apoyo", ap["R98-pre"]["veredicto"] + " / " + ap["R98-post"]["veredicto"])
+    num(s, "H2 Emerging R99-pre media (%/mes)", "0.89", e["R99-pre"]["media"], "media")
+    num(s, "H2 Emerging R99-post media (%/mes)", "0.83", e["R99-post"]["media"], "media")
+    cat(s, "H2 Emerging R99-post sigue significativo", "apoyo", e["R99-post"]["veredicto"])
+    cat(s, "North America inconclusa despues de cada publicacion (R98, FF12, AMP13, AMP09 post)", True,
+        all(na[k]["veredicto"] == "inconcluso" for k in ("R98-post", "FF12-out", "AMP13-post", "AMP09-post")))
     cat(s, "H3 Japon inconcluso en todas sus ventanas", True, all(W["Japan"][k]["veredicto"] == "inconcluso" for k in W["Japan"]))
     rango(s, "Crash: asimetria (g1) por region", "-0.22", "-2.67", [C[r]["asimetria_g1"] for r in REGIONES], "red")
-    des_sin_jp_ap = ["Developed", "Developed_ex_US", "Europe", "North_America"]
-    cat(s, "Peor mes W0 = 2009-04 en desarrollados (7 regiones: cuales)", "Developed, Developed_ex_US, Europe, Japan, Asia_Pacific_ex_Japan, North_America",
-        ", ".join(r for r in REGIONES if r != "Emerging" and C[r]["peores5"][0][0] == "2009-04"))
-    rango(s, "Peor mes desarrollados en 2009-04 (%)", "-22", "-26",
-          [C[r]["peores5"][0][1] for r in REGIONES if r != "Emerging" and C[r]["peores5"][0][0] == "2009-04"], "red")
-    rango(s, "Mkt-RF en ese mes (%)", "10", "14",
-          [C[r]["peores5"][0][2] for r in REGIONES if r != "Emerging" and C[r]["peores5"][0][0] == "2009-04"], "red")
+    cat(s, "Regiones cuyo peor mes W0 es 2009-04", "Developed, Developed_ex_US, Europe, North_America",
+        ", ".join(r for r in REGIONES if C[r]["peores5"][0][0] == "2009-04"))
+    rango(s, "Peor mes en 2009-04 (%)", "-22.52", "-26.09",
+          [C[r]["peores5"][0][1] for r in REGIONES if C[r]["peores5"][0][0] == "2009-04"], "red")
+    rango(s, "Mkt-RF en ese mes (%)", "10.49", "13.67",
+          [C[r]["peores5"][0][2] for r in REGIONES if C[r]["peores5"][0][0] == "2009-04"], "red")
+    cat(s, "Japan: peor mes W0", "1998-01", C["Japan"]["peores5"][0][0])
+    num(s, "Japan: peor mes (%)", "-19.83", C["Japan"]["peores5"][0][1], "red")
+    num(s, "Japan: Mkt-RF ese mes (%)", "10.55", C["Japan"]["peores5"][0][2], "red")
+    cat(s, "Asia Pacific ex Japan: peor mes W0", "1998-10", C["Asia_Pacific_ex_Japan"]["peores5"][0][0])
+    num(s, "Asia Pacific ex Japan: peor mes (%)", "-36.77", C["Asia_Pacific_ex_Japan"]["peores5"][0][1], "red")
+    num(s, "Asia Pacific ex Japan: Mkt-RF ese mes (%)", "18.07", C["Asia_Pacific_ex_Japan"]["peores5"][0][2], "red")
     pe = C["Emerging"]["peores5"]
     cat(s, "Emerging: peor mes", "2026-07", pe[0][0])
     num(s, "Emerging: peor mes (%)", "-16.84", pe[0][1], "red")
@@ -867,7 +886,7 @@ def construir_comparacion(R):
     pl = P["Emerging"]
     v4 = [pl[k] for k in ("W0", "W1", "W2", "AMP13-post")]
     rango(s, "Pierna larga Emerging: media en 4 ventanas (%/mes)", "0.30", "0.39", [x["media"] for x in v4], "media")
-    rango(s, "Pierna larga Emerging: media x12 en 4 ventanas (%)", "3.6", "4.7", [x["x12"] for x in v4], "anual")
+    rango(s, "Pierna larga Emerging: media x12 en 4 ventanas (%)", "3.6", "4.6", [x["x12"] for x in v4], "anual")
     cat(s, "Pierna larga Emerging: apoyo en las 4 ventanas", True, all(x["veredicto"] == "apoyo" for x in v4))
     frac = [pl[k]["media"] / W["Emerging"][k]["media"] for k in ("W0", "W1", "W2", "AMP13-post")]
     num(s, "Pierna larga Emerging / WML (fraccion, promedio 4 ventanas)", "0.40", media(frac), "anual")
@@ -906,6 +925,9 @@ def construir_comparacion(R):
     num(s, "USD/MXN fin 2026-08", "17.01", fxd["2026-08"], "red")
     num(s, "PIE CAGR USD bruto 2008-02 a 2026-08 (%)", "3.49", g("PIE", "EEM")["cagr_usd_bruto_mom"], "anual")
     num(s, "PIE CAGR MXN neto 2008-02 a 2026-08 (%)", "5.99", g("PIE", "EEM")["mom"]["cagr"], "anual")
+    pe_ = g("PIE", "EEM")
+    cat(s, "PIE - EEM: la diferencia apenas cambia de USD bruto a MXN neto (< 0.1 pp)", True,
+        abs((pe_["cagr_usd_bruto_mom"] - pe_["cagr_usd_bruto_mer"]) - pe_["dif_cagr_mxn_neto"]) < 0.1)
 
     # --- SIC
     s = "SIC"
@@ -933,12 +955,39 @@ def construir_comparacion(R):
     cat(s, "North America inconcluso desde 2000 (W1, W1b)", True,
         W["North_America"]["W1"]["veredicto"] == "inconcluso" and W["North_America"]["W1b"]["veredicto"] == "inconcluso")
     rango(s, "Peor mes de cada region en W0 (%)", "-17", "-37", [C[r]["peores5"][0][1] for r in REGIONES], "red")
+    rango(s, "Conclusiones: pierna larga Emerging '~3.6-4.6%' x12", "3.6", "4.6",
+          [P["Emerging"][k]["x12"] for k in ("W0", "W1", "W2", "AMP13-post")], "anual")
     rango(s, "Caida maxima del factor por region (%)", "-37", "-53", [C[r]["mdd"] for r in REGIONES], "red")
     cat(s, "Emerging: peor mes de toda la historia = 2026-07", "2026-07", C["Emerging"]["peores5"][0][0])
     cat(s, "EEMO y PIE por debajo de EEM en historia completa (MXN neto)", True,
         g("EEMO", "EEM")["dif_cagr_mxn_neto"] < 0 and g("PIE", "EEM")["dif_cagr_mxn_neto"] < 0)
     num(s, "t maxima de IDMO/IMTM/PIZ (conclusiones NO permitidas: 't <= 1.15')", "1.15",
         max(x["dif_usd"]["t_nw"] for k, x in E.items() if k.split("-")[0] in ("IDMO", "IMTM", "PIZ")), "t")
+    return filas
+
+
+def afirmaciones_anteriores(R):
+    """Texto del README de V02 ANTES de la correccion del 2026-09-25 (seccion 'Hipotesis del pre-registro').
+    Se conserva para que la diferencia se pueda reproducir; el README corregido se coteja en construir_comparacion."""
+    W, C = R["wml"], R["crash"]
+    filas = []
+
+    def fila(cifra, readme, propio, ok):
+        filas.append({"seccion": "README anterior", "cifra": cifra, "readme": readme, "propio": propio, "coincide": ok})
+
+    ap = W["Asia_Pacific_ex_Japan"]
+    cortes = [(a, b, ap[a]["media"], ap[b]["media"]) for a, b in (("R98-pre", "R98-post"), ("FF12-in", "FF12-out"), ("AMP13-pre", "AMP13-post"))]
+    fila("'Asia Pacific ex Japan sube' (sin decir el corte)", "sube",
+         "; ".join("%s %.2f -> %.2f" % (b.split("-")[0], x, y) for a, b, x, y in cortes), all(y > x for _, _, x, y in cortes))
+    em = W["Emerging"]
+    fila("'Emerging solo baja con el corte de Rouwenhorst (1998)'", "solo R98 baja",
+         "R98 %.2f -> %.2f; R99 %.2f -> %.2f" % (em["R98-pre"]["media"], em["R98-post"]["media"], em["R99-pre"]["media"], em["R99-post"]["media"]),
+         not (em["R99-post"]["media"] < em["R99-pre"]["media"]))
+    regs = [r for r in REGIONES if r != "Emerging"]
+    fila("'Peor mes en los desarrollados: abril de 2009'", "2009-04 en las 6 regiones desarrolladas",
+         ", ".join("%s %s" % (r, C[r]["peores5"][0][0]) for r in regs), all(C[r]["peores5"][0][0] == "2009-04" for r in regs))
+    vals = [C[r]["peores5"][0][1] for r in regs if C[r]["peores5"][0][0] == "2009-04"]
+    fila("'de -22% a -26%' (extremo menos negativo)", "-22", "%.2f" % max(vals), abs(max(vals) - (-22)) <= 0.5)
     return filas
 
 
@@ -1147,10 +1196,12 @@ def main():
     R = correr()
     filas = construir_comparacion(R)
     filas_ac03 = comparar_tablas_ac03(R)
+    filas_ant = afirmaciones_anteriores(R)
     filas_orig = cotejo_con_original(R)
     filas_var = cotejo_variantes_csv(R)
     salida = {"generado": "2026-09-25", "script": "independiente.py", "resultados": R,
               "comparacion_readme": filas, "comparacion_tablas_ac03": filas_ac03,
+              "afirmaciones_anteriores_del_readme": filas_ant,
               "cotejo_resultados_json_original": filas_orig, "cotejo_variantes_csv": filas_var}
     with open(os.path.join(AQUI, "independiente_resultados.json"), "w", encoding="utf-8") as fh:
         json.dump(salida, fh, ensure_ascii=False, indent=1, default=str)
@@ -1166,6 +1217,9 @@ def main():
         print("%s | %-12s | %-80s | README %-28s | propio %-14s" % (marca, f["seccion"], f["cifra"][:80], f["readme"], fmt(f["propio"])))
     n_ok = sum(f["coincide"] for f in filas)
     print("Cifras propias de V02: %d comparadas, %d coinciden, %d difieren" % (len(filas), n_ok, len(filas) - n_ok))
+    print("Texto del README antes de la correccion del 2026-09-25 (debe fallar; se corrigio):")
+    for f in filas_ant:
+        print("  %s | %s | README %s | propio %s" % ("OK " if f["coincide"] else "DIF", f["cifra"], f["readme"], f["propio"]))
     n_ok2 = sum(f["coincide"] for f in filas_ac03)
     print("Tablas AC-03 pegadas (Fuente A y B): %d comparadas, %d coinciden" % (len(filas_ac03), n_ok2))
     for f in filas_ac03:

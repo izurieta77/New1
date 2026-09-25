@@ -8293,6 +8293,24 @@
   },
   {
    "seccion": "Veredicto",
+   "cifra": "A1a con anios completos (W1) fuera de +-0.5 pp de 9.6",
+   "readme": "True",
+   "propio": "True",
+   "dif": null,
+   "tol": "igual",
+   "coincide": true
+  },
+  {
+   "seccion": "Veredicto",
+   "cifra": "A1c con anios completos (W2) fuera de +-0.5 pp de 12.3",
+   "readme": "True",
+   "propio": "True",
+   "dif": null,
+   "tol": "igual",
+   "coincide": true
+  },
+  {
+   "seccion": "Veredicto",
    "cifra": "A2 Developed ex US W2 t NW(6)",
    "readme": "4.27",
    "propio": 4.2697408200322435,
@@ -8626,21 +8644,102 @@
   },
   {
    "seccion": "Hipotesis",
-   "cifra": "H2 Asia Pacific ex Japan sube en AMP13",
-   "readme": "True",
-   "propio": "True",
+   "cifra": "H2 Asia Pacific ex Japan AMP13-pre media (%/mes)",
+   "readme": "0.79",
+   "propio": 0.788970588235294,
+   "dif": -0.0010294117647060563,
+   "tol": 0.01,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "H2 Asia Pacific ex Japan AMP13-post media (%/mes)",
+   "readme": "0.96",
+   "propio": 0.9640506329113918,
+   "dif": 0.004050632911391849,
+   "tol": 0.01,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "H2 Asia Pacific ex Japan FF12-in media (%/mes)",
+   "readme": "0.67",
+   "propio": 0.6723265306122445,
+   "dif": 0.002326530612244415,
+   "tol": 0.01,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "H2 Asia Pacific ex Japan FF12-out media (%/mes)",
+   "readme": "1.09",
+   "propio": 1.0929729729729722,
+   "dif": 0.0029729729729721655,
+   "tol": 0.01,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "H2 Asia Pacific ex Japan R98-pre media (%/mes)",
+   "readme": "0.99",
+   "propio": 0.9902272727272723,
+   "dif": 0.00022727272727229852,
+   "tol": 0.01,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "H2 Asia Pacific ex Japan R98-post media (%/mes)",
+   "readme": "0.82",
+   "propio": 0.8180701754385966,
+   "dif": -0.0019298245614033371,
+   "tol": 0.01,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "H2 Asia Pacific ex Japan R98 pre y post significativos",
+   "readme": "apoyo / apoyo",
+   "propio": "apoyo / apoyo",
    "dif": null,
    "tol": "igual",
    "coincide": true
   },
   {
    "seccion": "Hipotesis",
-   "cifra": "H2 Asia Pacific ex Japan sube en los tres cortes (R98, FF12, AMP13), como se lee sin corte",
-   "readme": "True",
-   "propio": "False",
+   "cifra": "H2 Emerging R99-pre media (%/mes)",
+   "readme": "0.89",
+   "propio": 0.8906034482758622,
+   "dif": 0.0006034482758622284,
+   "tol": 0.01,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "H2 Emerging R99-post media (%/mes)",
+   "readme": "0.83",
+   "propio": 0.8333024691358026,
+   "dif": 0.003302469135802677,
+   "tol": 0.01,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "H2 Emerging R99-post sigue significativo",
+   "readme": "apoyo",
+   "propio": "apoyo",
    "dif": null,
    "tol": "igual",
-   "coincide": false
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "North America inconclusa despues de cada publicacion (R98, FF12, AMP13, AMP09 post)",
+   "readme": "True",
+   "propio": "True",
+   "dif": null,
+   "tol": "igual",
+   "coincide": true
   },
   {
    "seccion": "Hipotesis",
@@ -8671,47 +8770,101 @@
   },
   {
    "seccion": "Hipotesis",
-   "cifra": "Peor mes W0 = 2009-04 en desarrollados (7 regiones: cuales)",
-   "readme": "Developed, Developed_ex_US, Europe, Japan, Asia_Pacific_ex_Japan, North_America",
+   "cifra": "Regiones cuyo peor mes W0 es 2009-04",
+   "readme": "Developed, Developed_ex_US, Europe, North_America",
    "propio": "Developed, Developed_ex_US, Europe, North_America",
    "dif": null,
    "tol": "igual",
-   "coincide": false
-  },
-  {
-   "seccion": "Hipotesis",
-   "cifra": "Peor mes desarrollados en 2009-04 (%) (minimo)",
-   "readme": "-26",
-   "propio": -26.09,
-   "dif": -0.08999999999999986,
-   "tol": 0.5,
    "coincide": true
   },
   {
    "seccion": "Hipotesis",
-   "cifra": "Peor mes desarrollados en 2009-04 (%) (maximo)",
-   "readme": "-22",
+   "cifra": "Peor mes en 2009-04 (%) (minimo)",
+   "readme": "-26.09",
+   "propio": -26.09,
+   "dif": 0.0,
+   "tol": 0.005,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "Peor mes en 2009-04 (%) (maximo)",
+   "readme": "-22.52",
    "propio": -22.52,
-   "dif": -0.5199999999999996,
-   "tol": 0.5,
-   "coincide": false
+   "dif": 0.0,
+   "tol": 0.005,
+   "coincide": true
   },
   {
    "seccion": "Hipotesis",
    "cifra": "Mkt-RF en ese mes (%) (minimo)",
-   "readme": "10",
+   "readme": "10.49",
    "propio": 10.49,
-   "dif": 0.4900000000000002,
-   "tol": 0.5,
+   "dif": 0.0,
+   "tol": 0.005,
    "coincide": true
   },
   {
    "seccion": "Hipotesis",
    "cifra": "Mkt-RF en ese mes (%) (maximo)",
-   "readme": "14",
+   "readme": "13.67",
    "propio": 13.67,
-   "dif": -0.33000000000000007,
-   "tol": 0.5,
+   "dif": 0.0,
+   "tol": 0.005,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "Japan: peor mes W0",
+   "readme": "1998-01",
+   "propio": "1998-01",
+   "dif": null,
+   "tol": "igual",
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "Japan: peor mes (%)",
+   "readme": "-19.83",
+   "propio": -19.83,
+   "dif": 0.0,
+   "tol": 0.005,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "Japan: Mkt-RF ese mes (%)",
+   "readme": "10.55",
+   "propio": 10.55,
+   "dif": 0.0,
+   "tol": 0.005,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "Asia Pacific ex Japan: peor mes W0",
+   "readme": "1998-10",
+   "propio": "1998-10",
+   "dif": null,
+   "tol": "igual",
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "Asia Pacific ex Japan: peor mes (%)",
+   "readme": "-36.77",
+   "propio": -36.77,
+   "dif": 0.0,
+   "tol": 0.005,
+   "coincide": true
+  },
+  {
+   "seccion": "Hipotesis",
+   "cifra": "Asia Pacific ex Japan: Mkt-RF ese mes (%)",
+   "readme": "18.07",
+   "propio": 18.07,
+   "dif": 0.0,
+   "tol": 0.005,
    "coincide": true
   },
   {
@@ -8978,9 +9131,9 @@
   {
    "seccion": "Hipotesis",
    "cifra": "Pierna larga Emerging: media x12 en 4 ventanas (%) (maximo)",
-   "readme": "4.7",
+   "readme": "4.6",
    "propio": 4.649620253164555,
-   "dif": -0.05037974683544544,
+   "dif": 0.049620253164555095,
    "tol": 0.1,
    "coincide": true
   },
@@ -9291,6 +9444,15 @@
    "coincide": true
   },
   {
+   "seccion": "Hipotesis",
+   "cifra": "PIE - EEM: la diferencia apenas cambia de USD bruto a MXN neto (< 0.1 pp)",
+   "readme": "True",
+   "propio": "True",
+   "dif": null,
+   "tol": "igual",
+   "coincide": true
+  },
+  {
    "seccion": "SIC",
    "cifra": "Yahoo .MX 404: EEMO, IMTM, IDMO, IMOM",
    "readme": "True",
@@ -9441,6 +9603,24 @@
    "propio": -16.84,
    "dif": 0.16000000000000014,
    "tol": 0.5,
+   "coincide": true
+  },
+  {
+   "seccion": "Conclusiones",
+   "cifra": "Conclusiones: pierna larga Emerging '~3.6-4.6%' x12 (minimo)",
+   "readme": "3.6",
+   "propio": 3.5665384615384603,
+   "dif": -0.033461538461539764,
+   "tol": 0.1,
+   "coincide": true
+  },
+  {
+   "seccion": "Conclusiones",
+   "cifra": "Conclusiones: pierna larga Emerging '~3.6-4.6%' x12 (maximo)",
+   "readme": "4.6",
+   "propio": 4.649620253164555,
+   "dif": 0.049620253164555095,
+   "tol": 0.1,
    "coincide": true
   },
   {
@@ -14349,6 +14529,36 @@
    "dif": null,
    "tol": "igual",
    "coincide": true
+  }
+ ],
+ "afirmaciones_anteriores_del_readme": [
+  {
+   "seccion": "README anterior",
+   "cifra": "'Asia Pacific ex Japan sube' (sin decir el corte)",
+   "readme": "sube",
+   "propio": "R98 0.99 -> 0.82; FF12 0.67 -> 1.09; AMP13 0.79 -> 0.96",
+   "coincide": false
+  },
+  {
+   "seccion": "README anterior",
+   "cifra": "'Emerging solo baja con el corte de Rouwenhorst (1998)'",
+   "readme": "solo R98 baja",
+   "propio": "R98 1.11 -> 0.77; R99 0.89 -> 0.83",
+   "coincide": false
+  },
+  {
+   "seccion": "README anterior",
+   "cifra": "'Peor mes en los desarrollados: abril de 2009'",
+   "readme": "2009-04 en las 6 regiones desarrolladas",
+   "propio": "Developed 2009-04, Developed_ex_US 2009-04, Europe 2009-04, Japan 1998-01, Asia_Pacific_ex_Japan 1998-10, North_America 2009-04",
+   "coincide": false
+  },
+  {
+   "seccion": "README anterior",
+   "cifra": "'de -22% a -26%' (extremo menos negativo)",
+   "readme": "-22",
+   "propio": "-22.52",
+   "coincide": false
   }
  ],
  "cotejo_resultados_json_original": [

@@ -35,7 +35,7 @@ En 1S26 vendió US$32,893 M (+5%) [1]. Farmacéutico: 29,109 (88.5%); salud anim
 Notas: Mg a.i. = margen antes de impuestos (Merck no reporta utilidad operativa). Deuda neta = deuda total − caja − valores de corto plazo. El 4T = anual − 9M.
 
 ## 4. Expediente de 10 puntos
-1. **Utilidad contra efectivo.** FCF/UN de 0.68x en 2025, por capex de US$4.1 mil M. En los últimos 12 meses el FCF es de 16.1 mil M contra una UN de 3.2 mil M, deprimida por los cargos de Cidara y Terns. El FCF es la mejor medida hoy.
+1. **Utilidad contra efectivo.** FCF/UN de 0.68x en 2025 (capex de US$4.1 mil M). En 12 meses, FCF de 16.1 mil M contra UN de 3.2 mil M, deprimida por los cargos de Cidara y Terns.
 2. **Deuda.** US$53.9 mil M a jun-26, contra 37.1 mil M en dic-24 [6]. El 22-may emitió **US$6.0 mil M** en notas (2028-2056, 4.30%-5.85%, más una FRN a 2028) [5]. Vencimientos a dic-25: 2.6, 2.7, 2.1, 3.0 y 2.7 mil M en los próximos 5 años [6]. Deuda neta/EBITDA de ~1.6x (EBITDA de 28.9 mil M [8]). Tiene notas listadas en NYSE de 1.375%-3.5%; *inferencia:* están en EUR (no verificado).
 3. **Dilución.** Acciones diluidas de 2,541 M a 2,470 M (−2.8% en 8 trimestres). Recompró US$1.6 mil M en 1S26 y espera ~3.0 mil M en 2026 [3].
 4. **Capital de trabajo.** FCF trimestral volátil (1.2-8.5 mil M); el 3T suele ser fuerte.
@@ -59,7 +59,7 @@ Capitalización de US$365.1 mil M y VE de 411.9 mil M. **P/U 2027e de 15.5x** (9
 - **Bajista (25%)**: Qlex se adopta lento (menos de 10% de Keytruda en EUA a mediados de 2027), fallan fases 3, hay cargos grandes por M&A o PD-1×VEGF demuestra superioridad; el consenso 2027 baja de US$9.
 - **Base (55%)**: ventas 2026 en la mitad alta de la guía (~67 mil M) y UPA 2027 de ~9.3-9.8, con Winrevair por arriba de US$2.5 mil M anualizados.
 - **Alcista (20%)**: el evento de oncología del 26-oct amplía la visibilidad, Lipfendra arranca rápido y la UPA 2027 supera 10.
-- **Qué cambiaría el escenario:** la proporción de Qlex, los cargos por nuevas compras y el mensaje del 26-oct.
+- **Qué cambiaría el escenario:** la proporción de Qlex, nuevos cargos por compras y el 26-oct.
 
 ## 8. Pronósticos registrados (3T26)
 - **Fecha estimada: 29-oct-2026.** Yahoo la marca como no estimada [8] y Zacks la estima igual [9]; MarketBeat dice que no está confirmada [10].

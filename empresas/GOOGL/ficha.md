@@ -37,7 +37,7 @@ Geografía 2T26 [1]: EUA 60,846 (51%, +32%), EMEA 32,501 (27%), APAC 19,317 (16%
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad vs efectivo:** FCF/UN TTM 0.22 (alerta). Sin ganancias de capital: FCF 53.3 contra UN ~128 mil M (0.42). El capex TTM fue de US$132.4 mil M y el FCF del 2T26, negativo [1].
-2. **Deuda:** US$101.1 mil M de valor nominal al 30-jun, más US$25 mil M del 10-ago (4.50%-6.50%, 2028-2066) [2][7]. ~45% está en EUR, GBP, CHF, CAD y JPY. Tasas efectivas de 0.93% a 6.19%; hay un bono en libras a 2126. El gasto por interés del 2T26 fue US$1,278 M contra 261 M un año antes.
+2. **Deuda:** US$101.1 mil M de valor nominal al 30-jun, más US$25 mil M del 10-ago (4.50%-6.50%, 2028-2066) [2][7]. Al 30-jun, ~45% estaba en EUR, GBP, CHF, CAD y JPY. Tasas efectivas de 0.93% a 6.19%; hay un bono en libras a 2126. El gasto por interés del 2T26 fue US$1,278 M contra 261 M un año antes.
 3. **Dilución:** en jun-2026 emitió ~58 M de acciones a ~US$352-355 y colocó US$10 mil M con **Berkshire Hathaway**. También emitió US$19 mil M en preferentes obligatoriamente convertibles al 6.25% y abrió un ATM de US$40 mil M [6][2]. La recompra quedó en cero (US$13.2 mil M en 2T25). SBC 6.3% de ingresos.
 4. **Capital de trabajo:** el inventario pasó de 2,439 a 9,991 en 6 meses (TPU) y las cuentas por cobrar subieron US$6.5 mil M en el trimestre [1].
 5. **Competidores:** asistentes de IA (ChatGPT, Muse de Meta) en búsqueda; AWS, Azure y Oracle en nube; Netflix y TikTok en video. Anthropic y SpaceX/xAI son participadas y rivales.

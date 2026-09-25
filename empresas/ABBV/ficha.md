@@ -49,7 +49,7 @@ Notas: FCF = flujo operativo − capex. Deuda neta = deuda total − caja − in
 ## 5. Cadena causal
 **A. Acuerdo MFN y exención de la 232.** El arancel de 100% a fármacos patentados rige desde el 31-jul-2026 [13] → EUA es 74.5% de las ventas → la exención de 3 años lo neutraliza a cambio de descuentos en Medicaid → el margen bruto ajustado sigue en 84.7% [1] → *inferencia:* el precio ya no descuenta riesgo arancelario hasta 2029.
 **B. IRA 2027-2028.** Vraylar (~US$4 mil M anualizados, casi todo en EUA) y Linzess tendrán precio fijado en 2027 y Botox en 2028 → menor precio neto en la porción de Medicare → golpe al ingreso de 2027 → el consenso 2027 de 73.5 mil M (+8.7%) [9] tendría que absorberlo (*inferencia*; el tamaño del recorte no está publicado).
-**C. IPR&D recurrente.** Los cargos trimestrales fueron de US$248 M a 2,680 M en los últimos 6 trimestres (−0.14 a −1.50 por acción) [2] → reducen la UPA ajustada, pero la guía los excluye → **el consenso del 3T (3.844) replica la guía sin IPR&D** → es probable que la UPA quede por debajo del consenso aunque el negocio vaya bien; el mercado valúa sobre 2027.
+**C. IPR&D recurrente.** Los cargos trimestrales fueron de US$248 M a 2,680 M en los últimos 6 trimestres (~−0.14 a −1.50 por acción) [2] → reducen la UPA ajustada, pero la guía los excluye → **el consenso del 3T (3.844) replica la guía sin IPR&D** → es probable que la UPA quede por debajo del consenso aunque el negocio vaya bien; el mercado valúa sobre 2027.
 
 ## 6. Qué descuenta el precio
 Capitalización de US$468.5 mil M y VE de 532.9 mil M. P/U 2026e de **18.9x** (UPA de 14.01) y 2027e de **16.3x** (16.27; Yahoo, 25 analistas [9]). VE/EBITDA de 17.3x; rendimiento por dividendo de 2.6%. El P/U GAAP de 74.7x no sirve por la amortización. **P/FCF** al cierre de cada año: 10.9x (2021), 11.9x, 12.5x, 17.7x y 22.7x (2025); hoy **25.7x**, el máximo de 5 años. Pares a P/U 2027e (Yahoo, 25-sep): LLY 24.9x, JNJ 22.3x, AMGN 16.6x, MRK 15.5x, PFE 9.8x y BMY 9.4x.
@@ -64,11 +64,11 @@ Capitalización de US$468.5 mil M y VE de 532.9 mil M. P/U 2026e de **18.9x** (U
 ## 8. Pronósticos registrados (3T26)
 - **Fecha estimada: 29 o 30-oct-2026.** Yahoo marca el 29-oct como fecha no estimada [9]; Zacks/Nasdaq y MarketBeat estiman el 30-oct por algoritmo [10][11]. La empresa no lo ha confirmado. El 8-K de IPR&D suele salir 3-7 días después del cierre del trimestre [2].
 - **Ingresos:** punto **US$17,450 M**; intervalo de 80%: **17,150-17,750**. Consenso de 17,314 M (Yahoo, 18 analistas, 25-sep) [9]. Supuesto: +2.7% contra el 2T (en 2025 el 2T→3T fue +2.3%).
-- **UPA ajustada:** punto **US$3.55**; intervalo de 80%: **2.75-3.88**. Consenso de 3.844 (Yahoo, 18) y 3.86 (Zacks, 6) [9][10]. Supuestos: guía de 3.86 + sorpresa típica de +0.08 = 3.94 subyacente, menos un IPR&D esperado de ~0.40. La mediana de 6 trimestres fue 0.41 y el rango 0.14-1.50. El intervalo tiene sesgo a la baja.
+- **UPA ajustada:** punto **US$3.55**; intervalo de 80%: **2.75-3.88**. Consenso de 3.844 (Yahoo, 18) y 3.86 (Zacks, 6) [9][10]. Supuestos: guía de 3.86 + sorpresa típica de +0.08 = 3.94, menos IPR&D esperado de ~0.40 (mediana de 6 trimestres: 0.41; rango 0.14-1.50). Sesgo a la baja.
 - **Binarios:** (1) ingresos mayores a US$17,314 M: **p = 0.70**; (2) UPA ajustada mayor a US$3.844: **p = 0.15**, porque exige un IPR&D menor a ~US$150 M, que no ocurrió en ninguno de los últimos 6 trimestres.
 
 ## 9. Catalizadores y riesgos
-**Catalizadores:** ~5-7 oct, 8-K de IPR&D del 3T; 29 o 30-oct, reporte del 3T26; 3-nov, elecciones intermedias en EUA; 1-ene-2027, precios IRA de Vraylar y Linzess; feb-2027, guía 2027. **Riesgos:** IPR&D, IRA/MFN, competencia, deuda por M&A, litigios de Humira [5] y concentración en Skyrizi y Rinvoq.
+**Catalizadores:** ~5-7 oct, 8-K de IPR&D; 29 o 30-oct, reporte del 3T26; 3-nov, elecciones intermedias; 1-ene-2027, precios IRA de Vraylar y Linzess; feb-2027, guía 2027. **Riesgos:** IPR&D, IRA/MFN, competencia, deuda por M&A, litigios de Humira [5] y concentración en Skyrizi y Rinvoq.
 
 ## 10. Fuentes
 1. 8-K, comunicado 2T26 (31-jul-2026): https://www.sec.gov/Archives/edgar/data/1551152/000155115226000023/abbv-20260630xexhibit991.htm
@@ -78,7 +78,7 @@ Capitalización de US$468.5 mil M y VE de 532.9 mil M. P/U 2026e de **18.9x** (U
 5. 10-Q 2T26 (3-ago-2026): https://www.sec.gov/Archives/edgar/data/1551152/000155115226000026/abbv-20260630.htm
 6. 10-K 2025 (20-feb-2026): https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/abbv-20251231.htm
 7. SEC companyfacts CIK 1551152 (consultado el 25-sep-2026): https://data.sec.gov/api/xbrl/companyfacts/CIK0001551152.json
-8. Dossier interno `empresas/ABBV/dossier-2026-09-25.md` (25-sep-2026).
+8. Dossier interno `empresas/ABBV/dossier-2026-09-25.md`.
 9. Yahoo Finance quoteSummary de ABBV y pares (earningsTrend, calendarEvents, earningsHistory; consultado el 25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/ABBV
 10. Nasdaq/Zacks, fecha y consenso (consultado el 25-sep-2026): https://www.nasdaq.com/market-activity/stocks/abbv/earnings
 11. MarketBeat, historial y guía (consultado el 25-sep-2026): https://www.marketbeat.com/stocks/NYSE/ABBV/earnings/

@@ -3,6 +3,7 @@
 > Fase 0 (formación). No es recomendación de inversión.
 > Estado: **Replicado** (factor académico: la cifra recibida se reproduce al centésimo, con matices). **Versión operable: sin evidencia de ventaja y sin listado en el SIC verificado.**
 > Reproducir desde la raíz del repo: `python3 laboratorio/replicas/V02-momentum-internacional/reproducir.py`. No usa red: datos congelados en `datos/`, huellas en `SHA256SUMS.txt` y todas las pruebas en `variantes.csv` (154 filas).
+> Doble ejecución independiente: `python3 laboratorio/replicas/V02-momentum-internacional/independiente.py` (código escrito desde cero, sin leer `reproducir.py`; salida en `independiente_resultados.json`).
 
 | Campo | Valor |
 |---|---|
@@ -190,155 +191,123 @@ Huellas: Emerging_MOM `5316f98a…`, Developed_ex_US_Mom `0b0941b3…`.
 
 - El rendimiento reconstruido con cierre + dividendos coincide con `adjclose`: diferencia media < 0.01 pp al mes y máxima de 0.29 pp. El split 3:1 de EEM en 2008 está bien tratado.
 - DEXMXUS contra Yahoo MXN=X, en cambios mensuales: correlación de 0.982 y diferencia absoluta media de 0.47 pp. Se explica por la hora de la cotización. No afecta la comparación entre ETFs, porque ambos lados se convierten con el mismo tipo de cambio.
-- **Verificación independiente.** Un script aparte, sin `herramientas/`, con su propio lector de CSV y JSON y NW calculado con la suma doble completa de Bartlett, da las mismas cifras. Coinciden al tercer decimal en Emerging W1, W1b, W2 y W2b y en Developed ex US W2 y AMP13-post, y al peso en la riqueza final de IDMO, EFA, EEMO, EEM, IMTM y PIZ.
+- **Verificación independiente.** Un script aparte, sin `herramientas/`, con su propio lector de CSV y JSON y NW calculado con la suma doble completa de Bartlett, da las mismas cifras. Coinciden al tercer decimal en Emerging W1, W1b, W2 y W2b y en Developed ex US W2 y AMP13-post, y al peso en la riqueza final de IDMO, EFA, EEMO, EEM, IMTM y PIZ. *Nota del 2026-09-25: ese script no quedó guardado en el repositorio, así que esta frase no se puede verificar. La doble ejecución verificable es `independiente.py` (ver "Doble ejecución independiente (2026-09-25)").*
 
 
-#### Fuente A
+#### Tabla 1. WML por región (French, USD, largo-corto, sin costos)
 
-| serie | V | periodo | n | media %/mes | DE | t IID | t NW(6) | IC95 NW %/mes | media x12 % (no es CAGR) | compuesto anual % (serie L-C; no es rendimiento de cuenta) | peor mes | mejor mes | veredicto |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| A:Emerging | V1 | 2000-01–2026-08 | 320 | 0.799 | 3.10 | 4.60 | 4.21 | [0.427, 1.171] | 9.59 | 9.37 | -16.84 (2026-07) | 12.84 (2026-04) | apoyo |
-| A:Emerging | V2 | 2010-01–2026-08 | 200 | 1.025 | 3.02 | 4.80 | 5.47 | [0.658, 1.391] | 12.30 | 12.40 | -16.84 (2026-07) | 12.84 (2026-04) | apoyo |
-| A:Emerging | V3 | 2016-01–2025-12 | 120 | 0.860 | 2.52 | 3.74 | 3.76 | [0.412, 1.309] | 10.32 | 10.41 | -9.15 (2022-11) | 7.03 (2021-01) | apoyo |
-| A:Developed_ex_US | V1 | 2000-01–2026-08 | 320 | 0.584 | 3.51 | 2.98 | 2.59 | [0.141, 1.028] | 7.01 | 6.43 | -22.52 (2009-04) | 10.06 (2000-02) | apoyo |
-| A:Developed_ex_US | V2 | 2010-01–2026-08 | 200 | 0.708 | 2.73 | 3.67 | 4.22 | [0.379, 1.038] | 8.50 | 8.35 | -12.31 (2020-11) | 7.21 (2020-03) | apoyo |
-| A:Developed_ex_US | V3 | 2016-01–2025-12 | 120 | 0.479 | 2.57 | 2.04 | 2.27 | [0.064, 0.893] | 5.75 | 5.48 | -12.31 (2020-11) | 7.21 (2020-03) | apoyo |
-| A:Europe | V1 | 2000-01–2026-08 | 320 | 0.749 | 4.08 | 3.28 | 3.05 | [0.267, 1.230] | 8.99 | 8.25 | -26.09 (2009-04) | 13.65 (2002-09) | apoyo |
-| A:Europe | V2 | 2010-01–2026-08 | 200 | 0.851 | 3.08 | 3.90 | 4.77 | [0.501, 1.200] | 10.21 | 10.06 | -18.39 (2020-11) | 8.94 (2012-04) | apoyo |
-| A:Europe | V3 | 2016-01–2025-12 | 120 | 0.618 | 3.08 | 2.20 | 2.69 | [0.168, 1.067] | 7.41 | 7.05 | -18.39 (2020-11) | 8.50 (2019-05) | apoyo |
-| A:Asia_Pacific_ex_Japan | V1 | 2000-01–2026-08 | 320 | 0.889 | 3.51 | 4.53 | 3.66 | [0.413, 1.365] | 10.67 | 10.38 | -18.03 (2009-05) | 7.99 (2013-04) | apoyo |
-| A:Asia_Pacific_ex_Japan | V2 | 2010-01–2026-08 | 200 | 1.040 | 3.05 | 4.82 | 4.99 | [0.631, 1.448] | 12.48 | 12.60 | -8.37 (2020-11) | 7.99 (2013-04) | apoyo |
-| A:Asia_Pacific_ex_Japan | V3 | 2016-01–2025-12 | 120 | 0.751 | 2.86 | 2.88 | 3.41 | [0.319, 1.183] | 9.02 | 8.87 | -8.37 (2020-11) | 7.65 (2020-07) | apoyo |
-| A:Japan | V1 | 2000-01–2026-08 | 320 | -0.020 | 3.96 | -0.09 | -0.09 | [-0.481, 0.440] | -0.24 | -1.19 | -18.28 (2026-07) | 14.80 (2000-02) | inconcluso |
-| A:Japan | V2 | 2010-01–2026-08 | 200 | 0.082 | 3.40 | 0.34 | 0.40 | [-0.324, 0.488] | 0.98 | 0.28 | -18.28 (2026-07) | 14.30 (2026-04) | inconcluso |
-| A:Japan | V3 | 2016-01–2025-12 | 120 | -0.090 | 2.89 | -0.34 | -0.37 | [-0.570, 0.391] | -1.08 | -1.57 | -8.50 (2016-08) | 8.44 (2016-06) | inconcluso |
-| A:North_America | V1 | 2000-01–2026-08 | 320 | 0.248 | 4.93 | 0.90 | 1.00 | [-0.239, 0.735] | 2.97 | 1.51 | -25.00 (2009-04) | 29.32 (2000-02) | inconcluso |
-| A:North_America | V2 | 2010-01–2026-08 | 200 | 0.348 | 3.29 | 1.50 | 1.74 | [-0.044, 0.740] | 4.18 | 3.58 | -12.98 (2026-07) | 11.35 (2026-04) | inconcluso |
-| A:North_America | V3 | 2016-01–2025-12 | 120 | 0.164 | 3.32 | 0.54 | 0.58 | [-0.389, 0.718] | 1.97 | 1.32 | -12.72 (2023-01) | 6.94 (2020-03) | inconcluso |
+| Región | Ventana | Periodo | n | Media %/mes | t IID | t NW(6) | IC95 NW %/mes | Media ×12 % (no es CAGR) | Compuesto anual % | Veredicto |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Developed | W0 | 1990-11 a 2026-08 | 430 | 0.544 | 3.01 | 2.80 | [0.163, 0.924] | 6.52 | 5.81 | apoyo |
+| Developed | W1 | 2000-01 a 2025-12 | 312 | 0.352 | 1.58 | 1.55 | [−0.094, 0.799] | 4.23 | 3.32 | inconcluso |
+| Developed | W1b | 2000-01 a 2026-08 | 320 | 0.366 | 1.64 | 1.62 | [−0.077, 0.809] | 4.39 | 3.46 | inconcluso |
+| Developed | W2 | 2010-01 a 2025-12 | 192 | 0.462 | 2.39 | 2.69 | [0.126, 0.797] | 5.54 | 5.23 | apoyo |
+| Developed | W2b | 2010-01 a 2026-08 | 200 | 0.479 | 2.35 | 2.71 | [0.133, 0.825] | 5.75 | 5.37 | apoyo |
+| Developed ex US | W0 | 1990-11 a 2026-08 | 430 | 0.662 | 4.03 | 3.46 | [0.287, 1.038] | 7.95 | 7.48 | apoyo |
+| Developed ex US | W1 | 2000-01 a 2025-12 | 312 | 0.571 | 2.92 | 2.50 | [0.124, 1.018] | 6.85 | 6.29 | apoyo |
+| Developed ex US | W1b | 2000-01 a 2026-08 | 320 | 0.584 | 2.98 | 2.59 | [0.141, 1.028] | 7.01 | 6.43 | apoyo |
+| Developed ex US | W2 | 2010-01 a 2025-12 | 192 | 0.692 | 3.73 | 4.27 | [0.374, 1.010] | 8.30 | 8.20 | apoyo |
+| Developed ex US | W2b | 2010-01 a 2026-08 | 200 | 0.708 | 3.67 | 4.22 | [0.379, 1.038] | 8.50 | 8.35 | apoyo |
+| Europe | W0 | 1990-11 a 2026-08 | 430 | 0.858 | 4.68 | 4.27 | [0.464, 1.251] | 10.29 | 9.81 | apoyo |
+| Europe | W1 | 2000-01 a 2025-12 | 312 | 0.746 | 3.22 | 2.99 | [0.257, 1.234] | 8.95 | 8.20 | apoyo |
+| Europe | W1b | 2000-01 a 2026-08 | 320 | 0.749 | 3.28 | 3.05 | [0.267, 1.230] | 8.99 | 8.25 | apoyo |
+| Europe | W2 | 2010-01 a 2025-12 | 192 | 0.849 | 3.87 | 4.84 | [0.505, 1.193] | 10.19 | 10.06 | apoyo |
+| Europe | W2b | 2010-01 a 2026-08 | 200 | 0.851 | 3.90 | 4.77 | [0.501, 1.200] | 10.21 | 10.06 | apoyo |
+| Japan | W0 | 1990-11 a 2026-08 | 430 | 0.082 | 0.40 | 0.37 | [−0.351, 0.515] | 0.98 | −0.13 | inconcluso |
+| Japan | W1 | 2000-01 a 2025-12 | 312 | −0.043 | −0.20 | −0.18 | [−0.500, 0.415] | −0.51 | −1.35 | inconcluso |
+| Japan | W1b | 2000-01 a 2026-08 | 320 | −0.020 | −0.09 | −0.09 | [−0.481, 0.440] | −0.24 | −1.19 | inconcluso |
+| Japan | W2 | 2010-01 a 2025-12 | 192 | 0.050 | 0.24 | 0.26 | [−0.330, 0.430] | 0.60 | 0.08 | inconcluso |
+| Japan | W2b | 2010-01 a 2026-08 | 200 | 0.082 | 0.34 | 0.40 | [−0.324, 0.488] | 0.98 | 0.28 | inconcluso |
+| Asia Pacific ex Japan | W0 | 1990-11 a 2026-08 | 430 | 0.853 | 4.26 | 3.99 | [0.434, 1.272] | 10.24 | 9.51 | apoyo |
+| Asia Pacific ex Japan | W1 | 2000-01 a 2025-12 | 312 | 0.882 | 4.50 | 3.56 | [0.396, 1.367] | 10.58 | 10.30 | apoyo |
+| Asia Pacific ex Japan | W1b | 2000-01 a 2026-08 | 320 | 0.889 | 4.53 | 3.66 | [0.413, 1.365] | 10.67 | 10.38 | apoyo |
+| Asia Pacific ex Japan | W2 | 2010-01 a 2025-12 | 192 | 1.034 | 4.88 | 4.86 | [0.617, 1.452] | 12.41 | 12.57 | apoyo |
+| Asia Pacific ex Japan | W2b | 2010-01 a 2026-08 | 200 | 1.040 | 4.82 | 4.99 | [0.631, 1.448] | 12.48 | 12.60 | apoyo |
+| North America | W0 | 1990-11 a 2026-08 | 430 | 0.514 | 2.33 | 2.30 | [0.075, 0.953] | 6.17 | 5.01 | apoyo |
+| North America | W1 | 2000-01 a 2025-12 | 312 | 0.238 | 0.86 | 0.95 | [−0.253, 0.729] | 2.86 | 1.42 | inconcluso |
+| North America | W1b | 2000-01 a 2026-08 | 320 | 0.248 | 0.90 | 1.00 | [−0.239, 0.735] | 2.97 | 1.51 | inconcluso |
+| North America | W2 | 2010-01 a 2025-12 | 192 | 0.336 | 1.52 | 1.73 | [−0.045, 0.718] | 4.03 | 3.53 | inconcluso |
+| North America | W2b | 2010-01 a 2026-08 | 200 | 0.348 | 1.50 | 1.74 | [−0.044, 0.740] | 4.18 | 3.58 | inconcluso |
+| Emerging | W0 | 1990-01 a 2026-08 | 440 | 0.848 | 5.62 | 5.08 | [0.521, 1.176] | 10.18 | 10.00 | apoyo |
+| Emerging | W1 | 2000-01 a 2025-12 | 312 | 0.747 | 4.77 | 4.10 | [0.390, 1.105] | 8.97 | 8.84 | apoyo |
+| Emerging | W1b | 2000-01 a 2026-08 | 320 | 0.799 | 4.60 | 4.21 | [0.427, 1.171] | 9.59 | 9.37 | apoyo |
+| Emerging | W2 | 2010-01 a 2025-12 | 192 | 0.950 | 5.42 | 5.74 | [0.626, 1.274] | 11.40 | 11.62 | apoyo |
+| Emerging | W2b | 2010-01 a 2026-08 | 200 | 1.025 | 4.80 | 5.47 | [0.658, 1.391] | 12.30 | 12.40 | apoyo |
 
-#### Fuente B
+#### Tabla 2. Antes y después de cada publicación (media %/mes, con t NW(6) entre paréntesis)
 
-| serie | V | periodo | n | media %/mes | DE | t IID | t NW(6) | IC95 NW %/mes | media x12 % (no es CAGR) | compuesto anual % (serie L-C; no es rendimiento de cuenta) | peor mes | mejor mes | veredicto |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| B:Emerging | V1 | 2000-01–2026-08 | 320 | 0.799 | 3.10 | 4.60 | 4.21 | [0.427, 1.170] | 9.58 | 9.37 | -16.84 (2026-07) | 12.84 (2026-04) | apoyo |
-| B:Emerging | V2 | 2010-01–2026-08 | 200 | 1.024 | 3.02 | 4.79 | 5.48 | [0.658, 1.390] | 12.29 | 12.39 | -16.84 (2026-07) | 12.84 (2026-04) | apoyo |
-| B:Emerging | V3 | 2016-01–2025-12 | 120 | 0.860 | 2.52 | 3.74 | 3.76 | [0.412, 1.309] | 10.32 | 10.41 | -9.15 (2022-11) | 7.02 (2021-01) | apoyo |
-| B:Developed_ex_US | V1 | 2000-01–2026-08 | 320 | 0.583 | 3.51 | 2.97 | 2.58 | [0.140, 1.026] | 7.00 | 6.42 | -22.52 (2009-04) | 10.05 (2000-02) | apoyo |
-| B:Developed_ex_US | V2 | 2010-01–2026-08 | 200 | 0.707 | 2.73 | 3.67 | 4.21 | [0.378, 1.036] | 8.49 | 8.34 | -12.31 (2020-11) | 7.21 (2020-03) | apoyo |
-| B:Developed_ex_US | V3 | 2016-01–2025-12 | 120 | 0.478 | 2.57 | 2.04 | 2.26 | [0.064, 0.892] | 5.74 | 5.47 | -12.31 (2020-11) | 7.21 (2020-03) | apoyo |
-| B:Europe | V1 | 2000-01–2026-08 | 320 | 0.749 | 4.08 | 3.28 | 3.05 | [0.267, 1.230] | 8.98 | 8.24 | -26.09 (2009-04) | 13.65 (2002-09) | apoyo |
-| B:Europe | V2 | 2010-01–2026-08 | 200 | 0.850 | 3.08 | 3.90 | 4.77 | [0.501, 1.199] | 10.20 | 10.06 | -18.39 (2020-11) | 8.93 (2012-04) | apoyo |
-| B:Europe | V3 | 2016-01–2025-12 | 120 | 0.617 | 3.08 | 2.20 | 2.69 | [0.168, 1.067] | 7.41 | 7.04 | -18.39 (2020-11) | 8.49 (2019-05) | apoyo |
-| B:Asia_Pacific_ex_Japan | V1 | 2000-01–2026-08 | 320 | 0.888 | 3.51 | 4.53 | 3.65 | [0.412, 1.364] | 10.66 | 10.37 | -18.02 (2009-05) | 7.99 (2013-04) | apoyo |
-| B:Asia_Pacific_ex_Japan | V2 | 2010-01–2026-08 | 200 | 1.039 | 3.05 | 4.82 | 4.99 | [0.631, 1.447] | 12.47 | 12.59 | -8.38 (2020-11) | 7.99 (2013-04) | apoyo |
-| B:Asia_Pacific_ex_Japan | V3 | 2016-01–2025-12 | 120 | 0.750 | 2.86 | 2.88 | 3.41 | [0.319, 1.182] | 9.01 | 8.86 | -8.38 (2020-11) | 7.63 (2020-07) | apoyo |
-| B:Japan | V1 | 2000-01–2026-08 | 320 | -0.021 | 3.96 | -0.09 | -0.09 | [-0.481, 0.439] | -0.25 | -1.20 | -18.27 (2026-07) | 14.79 (2000-02) | inconcluso |
-| B:Japan | V2 | 2010-01–2026-08 | 200 | 0.082 | 3.40 | 0.34 | 0.39 | [-0.324, 0.487] | 0.98 | 0.28 | -18.27 (2026-07) | 14.29 (2026-04) | inconcluso |
-| B:Japan | V3 | 2016-01–2025-12 | 120 | -0.090 | 2.89 | -0.34 | -0.37 | [-0.570, 0.390] | -1.08 | -1.57 | -8.49 (2016-08) | 8.43 (2016-06) | inconcluso |
-| B:North_America | V1 | 2000-01–2026-08 | 320 | 0.247 | 4.92 | 0.90 | 1.00 | [-0.240, 0.734] | 2.97 | 1.50 | -25.00 (2009-04) | 29.32 (2000-02) | inconcluso |
-| B:North_America | V2 | 2010-01–2026-08 | 200 | 0.348 | 3.29 | 1.50 | 1.74 | [-0.044, 0.740] | 4.17 | 3.58 | -12.97 (2026-07) | 11.36 (2026-04) | inconcluso |
-| B:North_America | V3 | 2016-01–2025-12 | 120 | 0.165 | 3.32 | 0.54 | 0.58 | [-0.389, 0.718] | 1.98 | 1.32 | -12.72 (2023-01) | 6.95 (2020-03) | inconcluso |
+| Región | R98 pre | R98 post | FF12 dentro | FF12 fuera | AMP13 pre | AMP13 post | AMP09 post |
+|---|---|---|---|---|---|---|---|
+| Developed | 0.69 (2.91) apoyo | 0.51 (2.14) apoyo | 0.62 (2.00) apoyo | 0.44 (2.35) apoyo | 0.63 (2.25) apoyo | 0.39 (1.87) inc. | 0.27 (1.07) inc. |
+| Developed ex US | 0.58 (1.94) inc. | 0.68 (2.98) apoyo | 0.64 (2.08) apoyo | 0.69 (3.83) apoyo | 0.71 (2.50) apoyo | 0.59 (3.08) apoyo | 0.51 (2.13) apoyo |
+| Europe | 1.02 (3.96) apoyo | 0.82 (3.35) apoyo | 0.91 (2.80) apoyo | 0.79 (4.27) apoyo | 0.94 (3.18) apoyo | 0.72 (3.55) apoyo | 0.63 (2.39) apoyo |
+| Japan | −0.27 (−0.62) inc. | 0.17 (0.68) inc. | 0.08 (0.23) inc. | 0.08 (0.37) inc. | 0.14 (0.43) inc. | −0.02 (−0.08) inc. | −0.04 (−0.17) inc. |
+| Asia Pacific ex Japan | 0.99 (3.09) apoyo | 0.82 (3.12) apoyo | 0.67 (2.01) apoyo | 1.09 (4.99) apoyo | 0.79 (2.54) apoyo | 0.96 (4.27) apoyo | 0.82 (2.97) apoyo |
+| North America | 0.84 (2.97) apoyo | 0.43 (1.59) inc. | 0.66 (1.86) inc. | 0.32 (1.48) inc. | 0.63 (1.96) apoyo | 0.31 (1.26) inc. | 0.13 (0.49) inc. |
+| Emerging | 1.11 (3.66) apoyo | 0.77 (3.95) apoyo | 0.76 (3.06) apoyo | 1.02 (5.09) apoyo | 0.79 (3.46) apoyo | 0.94 (4.28) apoyo | 0.85 (3.49) apoyo |
 
-#### Fuente C — agregados AQR y comparables directos
+Solo Emerging, corte de Rouwenhorst (1999): R99 pre (inicio a 1999-08) 0.89 (2.62) apoyo; R99 post (1999-09 a 2026-08) 0.83 (4.42) apoyo.
 
-| serie | V | periodo | n | media %/mes | DE | t IID | t NW(6) | IC95 NW %/mes | media x12 % (no es CAGR) | compuesto anual % (serie L-C; no es rendimiento de cuenta) | peor mes | mejor mes | veredicto |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| C:Global Ex USA | V1 | 2000-01–2026-07 | 319 | 0.838 | 3.61 | 4.15 | 3.50 | [0.369, 1.308] | 10.06 | 9.66 | -23.53 (2009-04) | 11.09 (2000-02) | apoyo |
-| C:Global Ex USA | V2 | 2010-01–2026-07 | 199 | 0.953 | 2.64 | 5.10 | 5.82 | [0.632, 1.274] | 11.43 | 11.59 | -12.06 (2020-11) | 6.92 (2019-05) | apoyo |
-| C:Global Ex USA | V3 | 2016-01–2025-12 | 120 | 0.721 | 2.57 | 3.07 | 3.50 | [0.317, 1.126] | 8.66 | 8.58 | -12.06 (2020-11) | 6.92 (2019-05) | apoyo |
-| C:Europe | V1 | 2000-01–2026-07 | 319 | 1.006 | 4.22 | 4.26 | 3.85 | [0.494, 1.519] | 12.08 | 11.53 | -27.06 (2009-04) | 14.62 (2002-09) | apoyo |
-| C:Europe | V2 | 2010-01–2026-07 | 199 | 1.123 | 2.93 | 5.41 | 6.66 | [0.792, 1.454] | 13.48 | 13.74 | -18.88 (2020-11) | 8.61 (2019-05) | apoyo |
-| C:Europe | V3 | 2016-01–2025-12 | 120 | 0.855 | 2.99 | 3.13 | 3.98 | [0.433, 1.276] | 10.25 | 10.14 | -18.88 (2020-11) | 8.61 (2019-05) | apoyo |
-| C:Pacific | V1 | 2000-01–2026-07 | 319 | 0.485 | 3.39 | 2.55 | 2.14 | [0.040, 0.929] | 5.81 | 5.23 | -17.47 (2009-04) | 11.42 (2000-02) | apoyo |
-| C:Pacific | V2 | 2010-01–2026-07 | 199 | 0.617 | 2.78 | 3.13 | 3.38 | [0.260, 0.974] | 7.40 | 7.16 | -10.74 (2026-07) | 8.36 (2026-04) | apoyo |
-| C:Pacific | V3 | 2016-01–2025-12 | 120 | 0.454 | 2.54 | 1.96 | 2.07 | [0.024, 0.883] | 5.44 | 5.18 | -7.46 (2024-09) | 7.84 (2024-01) | apoyo |
-| C:JPN | V1 | 2000-01–2026-07 | 319 | 0.087 | 3.85 | 0.40 | 0.37 | [-0.369, 0.543] | 1.04 | 0.14 | -17.49 (2009-04) | 11.92 (2004-03) | inconcluso |
-| C:JPN | V2 | 2010-01–2026-07 | 199 | 0.114 | 3.23 | 0.50 | 0.57 | [-0.278, 0.507] | 1.37 | 0.74 | -14.41 (2026-07) | 11.55 (2026-04) | inconcluso |
-| C:JPN | V3 | 2016-01–2025-12 | 120 | -0.056 | 2.91 | -0.21 | -0.22 | [-0.544, 0.432] | -0.67 | -1.17 | -8.76 (2021-02) | 8.72 (2016-06) | inconcluso |
-| C:North America | V1 | 2000-01–2026-07 | 319 | 0.343 | 5.01 | 1.22 | 1.22 | [-0.207, 0.893] | 4.12 | 2.54 | -34.16 (2009-04) | 16.65 (2000-02) | inconcluso |
-| C:North America | V2 | 2010-01–2026-07 | 199 | 0.460 | 3.70 | 1.76 | 2.01 | [0.010, 0.909] | 5.52 | 4.78 | -16.88 (2020-11) | 10.77 (2015-07) | apoyo |
-| C:North America | V3 | 2016-01–2025-12 | 120 | 0.110 | 3.89 | 0.31 | 0.35 | [-0.514, 0.734] | 1.32 | 0.39 | -16.88 (2020-11) | 8.48 (2019-05) | inconcluso |
-| C:USA | V1 | 2000-01–2026-07 | 319 | 0.275 | 5.05 | 0.97 | 0.98 | [-0.272, 0.822] | 3.30 | 1.68 | -34.62 (2009-04) | 17.01 (2000-02) | inconcluso |
-| C:USA | V2 | 2010-01–2026-07 | 199 | 0.386 | 3.70 | 1.47 | 1.69 | [-0.062, 0.833] | 4.63 | 3.86 | -16.77 (2020-11) | 10.40 (2015-07) | inconcluso |
-| C:USA | V3 | 2016-01–2025-12 | 120 | 0.052 | 3.90 | 0.15 | 0.17 | [-0.570, 0.675] | 0.63 | -0.30 | -16.77 (2020-11) | 8.48 (2019-05) | inconcluso |
-| C:CAN | V1 | 2000-01–2026-07 | 319 | 1.320 | 5.85 | 4.03 | 3.44 | [0.568, 2.072] | 15.84 | 14.63 | -29.32 (2009-04) | 22.57 (2001-02) | apoyo |
-| C:CAN | V2 | 2010-01–2026-07 | 199 | 1.453 | 5.18 | 3.96 | 3.89 | [0.720, 2.186] | 17.44 | 17.02 | -19.00 (2020-11) | 16.05 (2015-07) | apoyo |
-| C:CAN | V3 | 2016-01–2025-12 | 120 | 1.116 | 4.96 | 2.46 | 2.26 | [0.149, 2.083] | 13.39 | 12.56 | -19.00 (2020-11) | 12.76 (2020-03) | apoyo |
-| C:Global | V1 | 2000-01–2026-07 | 319 | 0.551 | 4.17 | 2.36 | 2.24 | [0.069, 1.033] | 6.61 | 5.66 | -28.48 (2009-04) | 14.16 (2000-02) | apoyo |
-| C:Global | V2 | 2010-01–2026-07 | 199 | 0.649 | 3.08 | 2.97 | 3.46 | [0.282, 1.016] | 7.78 | 7.45 | -14.72 (2020-11) | 7.77 (2019-05) | apoyo |
-| C:Global | V3 | 2016-01–2025-12 | 120 | 0.337 | 3.18 | 1.16 | 1.32 | [-0.162, 0.837] | 4.05 | 3.48 | -14.72 (2020-11) | 7.77 (2019-05) | inconcluso |
+#### Tabla 3. Riesgo de *crash* y relación con el mercado regional (W0, descriptivo)
 
-#### Fuente C — paises AQR
+| Región | Peor mes WML (Mkt-RF ese mes) | Caída máxima del factor (pico a valle) | Peor 12 meses (termina) | Asimetría | Corr / beta W0 | Corr / beta W1 | Beta bajista / normal | Media WML bajista / normal %/mes (n) |
+|---|---|---|---|---|---|---|---|---|
+| Developed | −24.26% en 2009-04 (11.41%) | −43.6% (2008-11 a 2009-09) | −42.3% (2009-11) | −0.96 | −0.22 / −0.20 | −0.32 / −0.28 | −0.53 / 0.02 | 0.02 / 0.67 (81 / 329) |
+| Developed ex US | −22.52% en 2009-04 (12.38%) | −40.9% (2009-02 a 2009-09) | −38.8% (2009-11) | −1.05 | −0.27 / −0.20 | −0.36 / −0.26 | −0.42 / 0.02 | 0.31 / 0.82 (129 / 281) |
+| Europe | −26.09% en 2009-04 (13.67%) | −45.6% (2009-02 a 2009-09) | −41.9% (2010-02) | −1.36 | −0.34 / −0.27 | −0.45 / −0.35 | −0.50 / −0.07 | 0.74 / 0.88 (118 / 292) |
+| Japan | −19.83% en 1998-01 (10.55%) | −42.0% (2000-02 a 2012-02) | −39.0% (2001-02) | −0.50 | −0.13 / −0.11 | −0.07 / −0.06 | −0.33 / 0.26 | 0.05 / 0.12 (162 / 248) |
+| Asia Pacific ex Japan | −36.77% en 1998-10 (18.07%) | −52.8% (1998-08 a 2000-11) | −48.0% (1999-08) | −2.67 | −0.17 / −0.12 | −0.10 / −0.06 | −0.43 / 0.10 | 0.36 / 1.04 (131 / 279) |
+| North America | −25.00% en 2009-04 (10.49%) | −50.0% (2008-06 a 2009-09) | −46.0% (2009-11) | −0.22 | −0.14 / −0.15 | −0.25 / −0.27 | −0.57 / 0.04 | −0.58 / 0.74 (71 / 339) |
+| Emerging | −16.84% en 2026-07 (−4.22%) | −37.3% (2008-11 a 2009-10) | −36.8% (2009-10) | −1.17 | −0.12 / −0.07 | −0.32 / −0.15 | −0.26 / 0.08 | 0.49 / 1.11 (155 / 267) |
 
-| serie | V | periodo | n | media %/mes | DE | t IID | t NW(6) | IC95 NW %/mes | media x12 % (no es CAGR) | compuesto anual % (serie L-C; no es rendimiento de cuenta) | peor mes | mejor mes | veredicto |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| C:AUS | V1 | 2000-01–2026-07 | 319 | 1.449 | 4.31 | 6.01 | 5.44 | [0.927, 1.971] | 17.39 | 17.54 | -17.19 (2000-04) | 14.79 (2013-04) | apoyo |
-| C:AUS | V2 | 2010-01–2026-07 | 199 | 1.383 | 3.79 | 5.14 | 5.88 | [0.922, 1.843] | 16.59 | 16.92 | -13.48 (2020-11) | 14.79 (2013-04) | apoyo |
-| C:AUS | V3 | 2016-01–2025-12 | 120 | 0.953 | 3.38 | 3.09 | 4.86 | [0.568, 1.338] | 11.44 | 11.30 | -13.48 (2020-11) | 9.28 (2020-03) | apoyo |
-| C:AUT | V1 | 2000-01–2026-07 | 319 | 0.571 | 5.76 | 1.77 | 1.40 | [-0.230, 1.372] | 6.85 | 4.81 | -39.69 (2009-04) | 21.56 (2008-11) | inconcluso |
-| C:AUT | V2 | 2010-01–2026-07 | 199 | 0.625 | 4.87 | 1.81 | 1.56 | [-0.160, 1.409] | 7.50 | 6.23 | -23.06 (2020-11) | 16.10 (2026-05) | inconcluso |
-| C:AUT | V3 | 2016-01–2025-12 | 120 | -0.017 | 4.53 | -0.04 | -0.04 | [-0.944, 0.909] | -0.21 | -1.47 | -23.06 (2020-11) | 7.69 (2025-05) | inconcluso |
-| C:BEL | V1 | 2000-01–2026-07 | 319 | 0.735 | 5.14 | 2.56 | 2.25 | [0.096, 1.375] | 8.83 | 7.42 | -30.98 (2009-04) | 19.34 (2008-10) | apoyo |
-| C:BEL | V2 | 2010-01–2026-07 | 199 | 0.613 | 4.26 | 2.03 | 2.36 | [0.105, 1.122] | 7.36 | 6.44 | -19.03 (2020-11) | 12.80 (2012-04) | apoyo |
-| C:BEL | V3 | 2016-01–2025-12 | 120 | 0.343 | 4.05 | 0.93 | 0.95 | [-0.366, 1.051] | 4.11 | 3.15 | -19.03 (2020-11) | 12.58 (2018-01) | inconcluso |
-| C:CHE | V1 | 2000-01–2026-07 | 319 | 0.780 | 4.68 | 2.98 | 2.94 | [0.260, 1.300] | 9.36 | 8.32 | -25.28 (2009-04) | 22.69 (2001-09) | apoyo |
-| C:CHE | V2 | 2010-01–2026-07 | 199 | 0.722 | 3.38 | 3.02 | 3.93 | [0.361, 1.082] | 8.66 | 8.27 | -16.67 (2020-11) | 9.47 (2020-03) | apoyo |
-| C:CHE | V3 | 2016-01–2025-12 | 120 | 0.516 | 3.51 | 1.61 | 2.12 | [0.040, 0.993] | 6.19 | 5.58 | -16.67 (2020-11) | 9.47 (2020-03) | apoyo |
-| C:DEU | V1 | 2000-01–2026-07 | 319 | 1.425 | 5.59 | 4.56 | 4.33 | [0.780, 2.071] | 17.10 | 16.30 | -23.21 (2009-08) | 26.89 (2008-10) | apoyo |
-| C:DEU | V2 | 2010-01–2026-07 | 199 | 1.399 | 3.53 | 5.60 | 5.86 | [0.931, 1.866] | 16.79 | 17.27 | -15.15 (2020-11) | 11.29 (2026-01) | apoyo |
-| C:DEU | V3 | 2016-01–2025-12 | 120 | 0.958 | 3.66 | 2.87 | 3.38 | [0.402, 1.515] | 11.50 | 11.23 | -15.15 (2020-11) | 11.13 (2019-05) | apoyo |
-| C:DNK | V1 | 2000-01–2026-07 | 319 | 1.441 | 4.93 | 5.22 | 5.19 | [0.897, 1.986] | 17.30 | 17.03 | -22.25 (2009-04) | 14.15 (2022-04) | apoyo |
-| C:DNK | V2 | 2010-01–2026-07 | 199 | 1.554 | 4.65 | 4.71 | 5.09 | [0.956, 2.152] | 18.65 | 18.82 | -14.63 (2022-05) | 14.15 (2022-04) | apoyo |
-| C:DNK | V3 | 2016-01–2025-12 | 120 | 1.293 | 5.00 | 2.83 | 2.98 | [0.442, 2.144] | 15.51 | 14.97 | -14.63 (2022-05) | 14.15 (2022-04) | apoyo |
-| C:ESP | V1 | 2000-01–2026-07 | 319 | 0.825 | 5.33 | 2.76 | 2.68 | [0.221, 1.428] | 9.90 | 8.42 | -28.87 (2020-11) | 14.89 (2020-07) | apoyo |
-| C:ESP | V2 | 2010-01–2026-07 | 199 | 1.166 | 5.30 | 3.10 | 3.03 | [0.411, 1.920] | 13.99 | 12.96 | -28.87 (2020-11) | 14.89 (2020-07) | apoyo |
-| C:ESP | V3 | 2016-01–2025-12 | 120 | 0.854 | 4.91 | 1.91 | 1.87 | [-0.040, 1.748] | 10.25 | 9.09 | -28.87 (2020-11) | 14.89 (2020-07) | inconcluso |
-| C:FIN | V1 | 2000-01–2026-07 | 319 | 0.858 | 5.27 | 2.91 | 3.29 | [0.347, 1.370] | 10.30 | 9.00 | -19.06 (2001-10) | 26.09 (2001-08) | apoyo |
-| C:FIN | V2 | 2010-01–2026-07 | 199 | 0.883 | 3.86 | 3.23 | 3.50 | [0.389, 1.378] | 10.60 | 10.16 | -10.09 (2026-07) | 13.10 (2012-04) | apoyo |
-| C:FIN | V3 | 2016-01–2025-12 | 120 | 0.543 | 3.30 | 1.80 | 2.33 | [0.086, 1.000] | 6.51 | 6.03 | -8.20 (2025-07) | 11.84 (2019-05) | apoyo |
-| C:FRA | V1 | 2000-01–2026-07 | 319 | 0.887 | 4.90 | 3.23 | 3.25 | [0.352, 1.421] | 10.64 | 9.56 | -26.67 (2009-04) | 20.66 (2002-09) | apoyo |
-| C:FRA | V2 | 2010-01–2026-07 | 199 | 0.935 | 3.40 | 3.88 | 5.41 | [0.596, 1.274] | 11.22 | 11.03 | -21.28 (2020-11) | 8.00 (2019-05) | apoyo |
-| C:FRA | V3 | 2016-01–2025-12 | 120 | 0.814 | 3.59 | 2.48 | 3.53 | [0.362, 1.266] | 9.76 | 9.34 | -21.28 (2020-11) | 8.00 (2019-05) | apoyo |
-| C:GBR | V1 | 2000-01–2026-07 | 319 | 1.016 | 5.00 | 3.63 | 3.08 | [0.370, 1.662] | 12.19 | 11.11 | -34.19 (2009-04) | 12.46 (2000-02) | apoyo |
-| C:GBR | V2 | 2010-01–2026-07 | 199 | 1.171 | 3.89 | 4.25 | 4.23 | [0.628, 1.714] | 14.06 | 13.92 | -26.21 (2020-11) | 10.85 (2020-07) | apoyo |
-| C:GBR | V3 | 2016-01–2025-12 | 120 | 0.755 | 3.99 | 2.07 | 2.12 | [0.057, 1.453] | 9.06 | 8.34 | -26.21 (2020-11) | 10.85 (2020-07) | apoyo |
-| C:GRC | V1 | 2000-01–2026-07 | 319 | 0.518 | 7.50 | 1.23 | 1.21 | [-0.321, 1.358] | 6.22 | 2.65 | -35.93 (2012-01) | 35.15 (2015-08) | inconcluso |
-| C:GRC | V2 | 2010-01–2026-07 | 199 | 0.759 | 7.97 | 1.34 | 1.42 | [-0.289, 1.807] | 9.11 | 5.24 | -35.93 (2012-01) | 35.15 (2015-08) | inconcluso |
-| C:GRC | V3 | 2016-01–2025-12 | 120 | 0.046 | 5.53 | 0.09 | 0.09 | [-0.930, 1.021] | 0.55 | -1.34 | -25.06 (2020-11) | 17.45 (2016-06) | inconcluso |
-| C:HKG | V1 | 2000-01–2026-07 | 319 | 0.802 | 5.46 | 2.62 | 2.48 | [0.169, 1.435] | 9.63 | 8.02 | -28.43 (2009-05) | 20.72 (2000-02) | apoyo |
-| C:HKG | V2 | 2010-01–2026-07 | 199 | 0.927 | 4.67 | 2.80 | 3.35 | [0.385, 1.470] | 11.13 | 10.22 | -22.09 (2024-09) | 12.07 (2024-01) | apoyo |
-| C:HKG | V3 | 2016-01–2025-12 | 120 | 0.870 | 4.85 | 1.96 | 2.47 | [0.179, 1.561] | 10.44 | 9.34 | -22.09 (2024-09) | 12.07 (2024-01) | apoyo |
-| C:IRL | V1 | 2000-01–2026-07 | 319 | 0.713 | 10.56 | 1.21 | 1.20 | [-0.453, 1.878] | 8.55 | 0.96 | -59.46 (2011-10) | 37.56 (2009-02) | inconcluso |
-| C:IRL | V2 | 2010-01–2026-07 | 199 | 0.742 | 9.73 | 1.07 | 1.22 | [-0.452, 1.935] | 8.90 | 2.29 | -59.46 (2011-10) | 30.76 (2014-01) | inconcluso |
-| C:IRL | V3 | 2016-01–2025-12 | 120 | -0.234 | 7.13 | -0.36 | -0.45 | [-1.263, 0.795] | -2.81 | -5.82 | -28.51 (2020-11) | 20.41 (2016-05) | inconcluso |
-| C:ISR | V1 | 2000-01–2026-07 | 319 | 1.373 | 4.85 | 5.05 | 4.64 | [0.793, 1.952] | 16.47 | 16.10 | -24.66 (2009-04) | 13.00 (2008-06) | apoyo |
-| C:ISR | V2 | 2010-01–2026-07 | 199 | 1.612 | 4.31 | 5.27 | 4.91 | [0.968, 2.255] | 19.34 | 19.82 | -18.62 (2020-11) | 12.10 (2017-08) | apoyo |
-| C:ISR | V3 | 2016-01–2025-12 | 120 | 1.426 | 4.12 | 3.79 | 3.24 | [0.563, 2.289] | 17.11 | 17.33 | -18.62 (2020-11) | 12.10 (2017-08) | apoyo |
-| C:ITA | V1 | 2000-01–2026-07 | 319 | 1.009 | 5.06 | 3.56 | 3.59 | [0.459, 1.560] | 12.11 | 11.09 | -21.12 (2009-03) | 20.09 (2000-02) | apoyo |
-| C:ITA | V2 | 2010-01–2026-07 | 199 | 1.351 | 4.46 | 4.28 | 5.22 | [0.844, 1.858] | 16.21 | 16.09 | -18.88 (2020-11) | 14.89 (2010-11) | apoyo |
-| C:ITA | V3 | 2016-01–2025-12 | 120 | 1.530 | 4.36 | 3.84 | 4.44 | [0.855, 2.204] | 18.36 | 18.63 | -18.88 (2020-11) | 12.68 (2016-06) | apoyo |
-| C:NLD | V1 | 2000-01–2026-07 | 319 | 0.486 | 5.72 | 1.52 | 1.49 | [-0.153, 1.125] | 5.83 | 3.87 | -31.17 (2009-04) | 17.88 (2013-02) | inconcluso |
-| C:NLD | V2 | 2010-01–2026-07 | 199 | 0.645 | 4.93 | 1.85 | 1.96 | [-0.000, 1.291] | 7.74 | 6.46 | -21.39 (2020-11) | 17.88 (2013-02) | inconcluso |
-| C:NLD | V3 | 2016-01–2025-12 | 120 | 0.618 | 4.88 | 1.39 | 1.34 | [-0.286, 1.523] | 7.42 | 6.12 | -21.39 (2020-11) | 12.00 (2019-05) | inconcluso |
-| C:NOR | V1 | 2000-01–2026-07 | 319 | 1.553 | 5.63 | 4.92 | 4.79 | [0.918, 2.189] | 18.64 | 18.08 | -22.44 (2001-11) | 20.12 (2002-12) | apoyo |
-| C:NOR | V2 | 2010-01–2026-07 | 199 | 1.480 | 4.68 | 4.46 | 4.18 | [0.786, 2.174] | 17.76 | 17.73 | -19.98 (2020-11) | 16.22 (2020-03) | apoyo |
-| C:NOR | V3 | 2016-01–2025-12 | 120 | 1.527 | 4.63 | 3.61 | 3.34 | [0.632, 2.422] | 18.33 | 18.43 | -19.98 (2020-11) | 16.22 (2020-03) | apoyo |
-| C:NZL | V1 | 2000-01–2026-07 | 319 | 1.240 | 3.52 | 6.29 | 6.66 | [0.875, 1.605] | 14.88 | 15.10 | -11.10 (2014-04) | 13.96 (2001-09) | apoyo |
-| C:NZL | V2 | 2010-01–2026-07 | 199 | 1.299 | 3.52 | 5.21 | 5.54 | [0.840, 1.758] | 15.59 | 15.91 | -11.10 (2014-04) | 11.10 (2020-12) | apoyo |
-| C:NZL | V3 | 2016-01–2025-12 | 120 | 1.247 | 3.74 | 3.65 | 4.30 | [0.679, 1.815] | 14.96 | 15.10 | -9.43 (2020-11) | 11.10 (2020-12) | apoyo |
-| C:PRT | V1 | 2000-01–2026-07 | 319 | 0.972 | 6.13 | 2.83 | 3.03 | [0.342, 1.602] | 11.67 | 9.80 | -23.97 (2020-11) | 18.02 (2011-10) | apoyo |
-| C:PRT | V2 | 2010-01–2026-07 | 199 | 1.086 | 6.48 | 2.37 | 2.67 | [0.289, 1.883] | 13.03 | 11.02 | -23.97 (2020-11) | 18.02 (2011-10) | apoyo |
-| C:PRT | V3 | 2016-01–2025-12 | 120 | 0.595 | 6.61 | 0.98 | 1.22 | [-0.358, 1.547] | 7.13 | 4.57 | -23.97 (2020-11) | 16.38 (2020-03) | inconcluso |
-| C:SGP | V1 | 2000-01–2026-07 | 319 | 0.851 | 4.34 | 3.50 | 3.01 | [0.297, 1.406] | 10.22 | 9.40 | -31.70 (2009-05) | 14.52 (2020-07) | apoyo |
-| C:SGP | V2 | 2010-01–2026-07 | 199 | 1.027 | 3.24 | 4.47 | 5.36 | [0.652, 1.402] | 12.33 | 12.35 | -9.07 (2013-10) | 14.52 (2020-07) | apoyo |
-| C:SGP | V3 | 2016-01–2025-12 | 120 | 0.907 | 3.22 | 3.09 | 3.94 | [0.456, 1.359] | 10.89 | 10.78 | -9.00 (2016-03) | 14.52 (2020-07) | apoyo |
-| C:SWE | V1 | 2000-01–2026-07 | 319 | 1.057 | 5.79 | 3.26 | 3.26 | [0.421, 1.693] | 12.68 | 11.13 | -29.43 (2009-04) | 22.36 (2000-02) | apoyo |
-| C:SWE | V2 | 2010-01–2026-07 | 199 | 1.205 | 3.27 | 5.19 | 6.99 | [0.868, 1.543] | 14.46 | 14.74 | -10.63 (2012-01) | 13.16 (2021-07) | apoyo |
-| C:SWE | V3 | 2016-01–2025-12 | 120 | 1.000 | 3.38 | 3.25 | 4.77 | [0.589, 1.411] | 12.00 | 11.95 | -7.18 (2022-01) | 13.16 (2021-07) | apoyo |
+Los 5 peores meses de cada región, con el Mkt-RF del mismo mes, están en `resultados.json` (`crash.<región>.peores_5`).
 
-V1 {'apoyo': 17, 'inconcluso': 4} ['AUT', 'GRC', 'IRL', 'NLD']
-V2 {'apoyo': 17, 'inconcluso': 4} ['AUT', 'GRC', 'IRL', 'NLD']
-V3 {'apoyo': 14, 'inconcluso': 7} ['AUT', 'BEL', 'ESP', 'GRC', 'IRL', 'NLD', 'PRT']
+#### Tabla 4. Pierna larga académica: Big High − (Mkt-RF + RF), USD, sin costos (media %/mes, t NW(6) y veredicto)
+
+| Región | W0 | W1 (2000-2025) | W2 (2010-2025) | AMP13 post | Media ×12 %, rango en las 4 ventanas |
+|---|---|---|---|---|---|
+| Developed | 0.15 (1.46) inc. | 0.02 (0.20) inc. | 0.10 (0.92) inc. | 0.10 (0.75) inc. | 0.3 a 1.8 |
+| Developed ex US | 0.15 (1.48) inc. | 0.06 (0.51) inc. | 0.17 (1.79) inc. | 0.13 (1.11) inc. | 0.7 a 2.1 |
+| Europe | 0.20 (1.91) inc. | 0.14 (1.07) inc. | 0.21 (2.05) apoyo | 0.15 (1.31) inc. | 1.6 a 2.5 |
+| Japan | 0.07 (0.48) inc. | −0.10 (−0.76) inc. | −0.02 (−0.15) inc. | −0.02 (−0.16) inc. | −1.2 a 0.8 |
+| Asia Pacific ex Japan | 0.24 (2.00) apoyo | 0.22 (1.62) inc. | 0.20 (1.36) inc. | 0.16 (0.89) inc. | 1.9 a 2.9 |
+| North America | 0.18 (1.47) inc. | 0.05 (0.34) inc. | 0.07 (0.58) inc. | 0.11 (0.75) inc. | 0.5 a 2.2 |
+| Emerging | 0.33 (3.74) apoyo | 0.30 (3.15) apoyo | 0.36 (3.36) apoyo | 0.39 (2.40) apoyo | 3.6 a 4.6 |
+
+#### Tabla 5. ETFs: caso base, historia completa como momentum hasta 2026-08 (MXN neto de costos GBM; prueba en USD)
+
+| Par | Periodo | n | CAGR MXN neto ETF / comparable % | Diferencia pp/año | Riqueza final de 20,000 MXN (ETF / comparable) | Vol. anual MXN % | Caída máx. MXN % | Dif. USD %/mes | t NW(6) | IC95 NW | Veredicto | Beta de la dif. contra WML |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| EEMO − EEM | 2016-04 a 2026-08 | 125 | 7.49 / 8.81 | −1.32 | 42,447 / 48,192 | 18.3 / 15.0 | −41.2 / −38.2 | −0.046 | −0.18 | [−0.544, 0.452] | inconcluso | 0.61 |
+| PIE − EEM | 2008-02 a 2026-08 | 223 | 5.99 / 6.78 | −0.79 | 58,950 / 67,648 | 18.5 / 16.3 | −56.9 / −40.3 | −0.020 | −0.10 | [−0.402, 0.363] | inconcluso | 0.34 |
+| IMTM − EFA | 2015-02 a 2026-08 | 139 | 10.26 / 9.22 | 1.04 | 61,977 / 55,548 | 12.7 / 12.7 | −30.1 / −29.0 | 0.070 | 0.54 | [−0.183, 0.323] | inconcluso | 0.42 |
+| IMTM − VEA | 2015-02 a 2026-08 | 139 | 10.26 / 10.04 | 0.22 | 61,977 / 60,560 | 12.7 / 13.0 | −30.1 / −29.4 | 0.001 | 0.00 | [−0.253, 0.254] | inconcluso | 0.37 |
+| PIZ − EFA | 2008-02 a 2026-08 | 223 | 8.88 / 7.81 | 1.07 | 97,188 / 80,917 | 16.4 / 13.4 | −41.0 / −32.2 | 0.128 | 0.89 | [−0.153, 0.409] | inconcluso | 0.29 |
+| PIZ − VEA | 2008-02 a 2026-08 | 223 | 8.88 / 8.38 | 0.50 | 97,188 / 89,220 | 16.4 / 13.6 | −41.0 / −32.0 | 0.079 | 0.56 | [−0.196, 0.354] | inconcluso | 0.28 |
+| IDMO − EFA | 2016-04 a 2026-08 | 125 | 12.12 / 9.31 | 2.81 | 65,874 / 50,554 | 13.6 / 12.9 | −26.8 / −29.0 | 0.212 | 1.12 | [−0.158, 0.583] | inconcluso | 0.41 |
+| IDMO − VEA | 2016-04 a 2026-08 | 125 | 12.12 / 10.08 | 2.05 | 65,874 / 54,374 | 13.6 / 13.2 | −26.8 / −29.4 | 0.146 | 0.76 | [−0.231, 0.523] | inconcluso | 0.35 |
+| IMOM − EFA | 2016-01 a 2026-08 | 128 | 6.62 / 8.82 | −2.20 | 39,635 / 49,265 | 16.0 / 12.8 | −38.4 / −29.0 | −0.123 | −0.50 | [−0.611, 0.364] | inconcluso | 0.59 |
+| IMOM − VEA | 2016-01 a 2026-08 | 128 | 6.62 / 9.65 | −3.03 | 39,635 / 53,423 | 16.0 / 13.2 | −38.4 / −29.4 | −0.195 | −0.86 | [−0.637, 0.248] | inconcluso | 0.54 |
+
+Región de WML para la beta: Emerging en EEMO y PIE; Developed ex US en los demás.
+
+**Sensibilidades (diferencia de CAGR MXN neto en pp/año; t NW(6) de la diferencia mensual en USD entre paréntesis).**
+
+| Par | Base | Spread de 0.30% en el ETF de momentum | Retención de 30% sobre dividendos | Ventana común 2016-04 a 2026-08 |
+|---|---|---|---|---|
+| EEMO − EEM | −1.32 (−0.18) inc. | −1.35 (−0.18) inc. | −1.80 (−0.31) inc. | −1.32 (−0.18) inc. |
+| PIE − EEM | −0.79 (−0.10) inc. | −0.81 (−0.10) inc. | −0.57 (−0.01) inc. | 1.16 (0.50) inc. |
+| IMTM − EFA | 1.04 (0.54) inc. | 1.01 (0.54) inc. | 1.11 (0.58) inc. | 0.99 (0.50) inc. |
+| IMTM − VEA | 0.22 (0.00) inc. | 0.19 (0.00) inc. | 0.33 (0.06) inc. | 0.22 (0.02) inc. |
+| PIZ − EFA | 1.07 (0.89) inc. | 1.05 (0.89) inc. | 1.50 (1.13) inc. | 0.60 (0.44) inc. |
+| PIZ − VEA | 0.50 (0.56) inc. | 0.48 (0.56) inc. | 0.95 (0.82) inc. | −0.17 (0.13) inc. |
+| IDMO − EFA | 2.81 (1.12) inc. | 2.78 (1.12) inc. | 2.87 (1.15) inc. | 2.81 (1.12) inc. |
+| IDMO − VEA | 2.05 (0.76) inc. | 2.01 (0.76) inc. | 2.13 (0.80) inc. | 2.05 (0.76) inc. |
+| IMOM − EFA | −2.20 (−0.50) inc. | −2.23 (−0.50) inc. | −1.89 (−0.41) inc. | −1.86 (−0.37) inc. |
+| IMOM − VEA | −3.03 (−0.86) inc. | −3.06 (−0.86) inc. | −2.69 (−0.76) inc. | −2.62 (−0.69) inc. |
+
+Las tablas "Fuente A / B / C" (ventanas V1-V3 y series de AQR) pertenecen a la auditoría ciega [AC-03](../../auditorias/AC-03-momentum-internacional/README.md) y se consultan allá. Se habían pegado aquí por error; ver `conocimiento/registro-de-errores.md`.
+
 
 **Rango de fechas de la Tabla 2.** R98: pre = inicio a 1998-02; post = 1998-03 a 2026-08. AMP13: pre = inicio a 2013-06; post = 2013-07 a 2026-08. AMP09: post = 2009-04 a 2026-08. "inc." = inconcluso.
 
@@ -369,18 +338,18 @@ V3 {'apoyo': 14, 'inconcluso': 7} ['AUT', 'BEL', 'ESP', 'GRC', 'IRL', 'NLD', 'PR
 
 - **H1:** apoyo en W0 para 6 de 7 regiones. Japón es inconcluso.
 - **H2 (decaimiento después de publicarse):** no es uniforme.
-  - **Emerging** no decae: 0.79 → 0.94 %/mes alrededor de AMP13 y 0.76 → 1.02 fuera de la muestra de FF2012. Solo baja con el corte de Rouwenhorst (1998): 1.11 → 0.77, y sigue significativo.
-  - **Europe** baja (0.94 → 0.72) y sigue significativo.
-  - **Norteamérica** cae y deja de ser significativa: 0.63 → 0.31, t = 1.26. Es coherente con V01 (EUA).
-  - **Asia Pacific ex Japan** sube.
+  - **Emerging** no decae: 0.79 → 0.94 %/mes alrededor de AMP13 y 0.76 → 1.02 fuera de la muestra de FF2012. Baja con los dos cortes de Rouwenhorst: 1.11 → 0.77 (1998) y 0.89 → 0.83 (1999), y sigue significativo en ambos.
+  - **Europe** baja alrededor de AMP13 (0.94 → 0.72) y sigue significativo.
+  - **Norteamérica** cae alrededor de AMP13 y deja de ser significativa: 0.63 → 0.31, t = 1.26. Es coherente con V01 (EUA).
+  - **Asia Pacific ex Japan** sube alrededor de AMP13 (0.79 → 0.96) y de FF2012 (0.67 → 1.09). Con el corte de Rouwenhorst (1998) baja (0.99 → 0.82) y sigue significativo.
 - **H3 (Japón sin momentum):** consistente; inconcluso en las 12 ventanas.
 - **Crash.** Todas las regiones tienen asimetría negativa, de −0.22 a −2.67.
-  - **Peor mes en los desarrollados:** abril de 2009, de −22% a −26%, mientras el mercado subía de +10% a +14%.
+  - **Peor mes en Developed, Developed ex US, Europe y North America:** abril de 2009, de −22.52% a −26.09%, mientras el mercado subía de +10.49% a +13.67%. En **Japan** el peor mes fue enero de 1998 (−19.83%, con el mercado en +10.55%) y en **Asia Pacific ex Japan**, octubre de 1998 (−36.77%, con el mercado en +18.07%).
   - **Peor mes de Emerging:** julio de 2026, −16.84% con el mercado en −4.2%. Le siguen mayo y abril de 2009 (−14.8% y −14.4%, con el mercado en +18% y +17%).
   - **Caídas máximas del factor:** −37% (Emerging) a −53% (Asia Pacific ex Japan).
   - **Correlación con el mercado:** negativa en todas las regiones. En W0 va de −0.12 (Emerging) a −0.34 (Europe), con betas de −0.07 a −0.27. En W1 va de −0.07 (Japan) a −0.45 (Europe).
   - **Estado bajista (Daniel y Moskowitz):** la beta se vuelve más negativa (Emerging −0.26; desarrollados de −0.33 a −0.57) y la media de WML es menor (Emerging 0.49 contra 1.11 %/mes). El riesgo es perder cuando el mercado rebota desde abajo.
-- **Pierna larga académica (Tabla 4).** Solo en **Emerging** la cartera de grandes ganadoras le gana al mercado de forma significativa: 0.30 a 0.39 %/mes, o 3.6% a 4.7% ×12, con "apoyo" en las 4 ventanas. Eso es alrededor del 40% del largo-corto, antes de costos de rotación. En desarrollados, la pierna larga es inconclusa en casi todas las ventanas. Las excepciones son Europe W2 y Asia Pacific ex Japan W0, que apenas pasan.
+- **Pierna larga académica (Tabla 4).** Solo en **Emerging** la cartera de grandes ganadoras le gana al mercado de forma significativa: 0.30 a 0.39 %/mes, o 3.6% a 4.6% ×12, con "apoyo" en las 4 ventanas. Eso es alrededor del 40% del largo-corto, antes de costos de rotación. En desarrollados, la pierna larga es inconclusa en casi todas las ventanas. Las excepciones son Europe W2 y Asia Pacific ex Japan W0, que apenas pasan.
 - **H4 (ETFs).** **Inconclusa en los 10 pares y en todas las sensibilidades.**
   - **Emergentes:** EEMO quedó 1.32 pp al año por debajo de EEM en MXN neto (2016-04 a 2026-08). PIE quedó 0.79 pp por debajo desde 2008-02, con una caída máxima de −56.9% contra −40.3% de EEM.
   - **Desarrollados, en su historia completa:** IDMO (+2.05 a +2.81 pp), IMTM (+0.22 a +1.04) y PIZ (+0.50 a +1.07) quedaron arriba. PIZ contra VEA en la ventana común quedó en −0.17. IMOM quedó debajo (−2.20 a −3.03). Ninguna diferencia es significativa: la t va de −0.86 a 1.15, incluidas las sensibilidades.
@@ -425,7 +394,7 @@ Que no aparezcan en agregadores **no prueba** que no estén listados (ver `arena
 - Con años completos, la cifra es **~9.0% (2000–2025) y ~11.4% (2010–2025)**. Esas son las cifras que conviene citar.
 - El momentum académico **sí sigue funcionando fuera de EUA** en Developed ex US, Europe y Asia Pacific ex Japan, también después de 2013. **No funciona en Japón** en ningún periodo. En **Norteamérica** no hay evidencia desde 2000.
 - El momentum tiene riesgo de *crash*: el peor mes de cada región va de −17% a −37%, caídas del factor de 37% a 53% y betas negativas que empeoran en mercados bajistas. En emergentes, el peor mes de 36 años fue **julio de 2026**.
-- En versión solo compra y académica, **solo emergentes** conserva una ventaja significativa: ~3.6–4.7% al año sobre su mercado, antes de costos de rotación.
+- En versión solo compra y académica, **solo emergentes** conserva una ventaja significativa: ~3.6–4.6% al año sobre su mercado (media ×12), antes de costos de rotación.
 - Con los ETFs reales, **no hay evidencia estadística de que ninguno de los 6 le gane a su comparable**, en MXN y neto de costos de GBM. Los dos ETFs de momentum emergente (EEMO y PIE) **quedaron por debajo** de EEM en sus historias completas.
 
 ## Conclusiones que NO se sostienen
@@ -436,6 +405,90 @@ Que no aparezcan en agregadores **no prueba** que no estén listados (ver `arena
 - Que el momentum funcione "en todos los desarrollados". No funciona en Japón, y en Norteamérica no hay evidencia desde 2000.
 - Que la ventaja académica vaya a seguir. Ninguna prueba aquí es un pronóstico, y el riesgo de *crash* es alto: el −16.8% de julio de 2026 es reciente.
 - Que una media ×12 sea un CAGR, o que la riqueza de un factor largo-corto sea la de una cartera.
+
+## Doble ejecución independiente (2026-09-25)
+
+**Qué se hizo.** El auditor de réplicas escribió `independiente.py` desde cero. Solo leyó el pre-registro y los datos congelados en `datos/`; no abrió `reproducir.py`. El script tiene su propio lector de los CSV de French (por bloques), del JSON de Yahoo y del CSV de FRED. Alinea por índice de mes y toma como fin de mes el último día con precio. Convierte a MXN y cobra los costos de GBM según el punto 8. Calcula el error estándar Newey-West(6) con dos fórmulas propias: la suma doble de Bartlett sobre pares (i, j) y las autocovarianzas ponderadas. Las dos coinciden entre sí y con `herramientas/estadistica.py` (diferencia máxima de 8.9e−16). `resultados.json` y `variantes.csv` se leyeron solo después de calcular todo, para el cotejo. Las 42 huellas de `datos/` coinciden con `SHA256SUMS.txt`, y la sección PRE-REGISTRO de este README es idéntica a `preregistro.md` (SHA-256 `2a9aa15f…`).
+
+**Tolerancias.** 0.01 pp en medias mensuales, errores estándar e IC; 0.05 en t; 0.1 pp en CAGR, caídas máximas y medias ×12. Si el README publica una cifra con menos decimales, la tolerancia es media unidad del último decimal publicado. Por ejemplo, "−37%" admite ±0.5.
+
+**Resumen de la comparación.**
+
+| Qué se comparó | Cifras | Coinciden | Mayor diferencia |
+|---|---|---|---|
+| Cifras y afirmaciones propias de V02 en este README: datos, veredicto, hipótesis, SIC y conclusiones, con el texto ya corregido | 200 | 200 | Dentro de tolerancia (0.26 en "−37%", que admite ±0.5) |
+| Las mismas afirmaciones en el texto **anterior** a la corrección (ver abajo) | 4 | 0 | — |
+| Celdas de las tablas "Fuente A" y "Fuente B" de AC-03 que estaban pegadas aquí (French, V1-V3) | 540 | 540 | 0.005 (redondeo) |
+| `resultados.json` de `reproducir.py`, cifra por cifra: WML 1,032; pierna larga 336; *crash* 154; mercado 98; ETFs 1,080; controles 40; descriptivos 28; afirmación 11; versiones 14 | 2,793 | 2,793 | 2.3e−14 en los estadísticos; 0.0008 pp en la media absoluta de un control de EFA |
+| `variantes.csv` (154 filas completas) | 154 | 154 | 5e−7 (el CSV redondea a 6 decimales) |
+
+Las tablas "Fuente C" (AQR) no se pueden cotejar con los datos de V02, porque aquí no están congeladas. Se verificaron en AC-03.
+
+**Cifras clave: README contra ejecución independiente.**
+
+| Cifra | README | Independiente | Diferencia | Tolerancia |
+|---|---|---|---|---|
+| Emerging W1b (2000-01 a 2026-08), media ×12 % | 9.59 | 9.5858 | −0.0042 | 0.1 |
+| Emerging W1b, compuesto anual % | 9.37 | 9.3744 | 0.0044 | 0.1 |
+| Emerging W1 (2000-2025), media ×12 % | 8.97 | 8.9669 | −0.0031 | 0.1 |
+| Emerging W1, compuesto anual % | 8.84 | 8.8362 | −0.0038 | 0.1 |
+| Emerging W1, t NW(6) | 4.10 | 4.0964 | −0.0036 | 0.05 |
+| Emerging W1, IC95 inferior %/mes | 0.39 | 0.3897 | −0.0003 | 0.01 |
+| Emerging W1, IC95 superior %/mes | 1.10 | 1.1048 | 0.0048 | 0.01 |
+| Emerging W2b (2010-01 a 2026-08), media ×12 % | 12.30 | 12.2952 | −0.0048 | 0.1 |
+| Emerging W2b, compuesto anual % | 12.40 | 12.3953 | −0.0047 | 0.1 |
+| Emerging W2 (2010-2025), media ×12 % | 11.40 | 11.4025 | 0.0025 | 0.1 |
+| Emerging W2, compuesto anual % | 11.62 | 11.6246 | 0.0046 | 0.1 |
+| Emerging W2, t NW(6) | 5.74 | 5.7444 | 0.0044 | 0.05 |
+| Emerging W0, media %/mes | 0.85 | 0.8484 | −0.0016 | 0.01 |
+| Emerging W0, t NW(6) | 5.08 | 5.0762 | −0.0038 | 0.05 |
+| Emerging AMP13 post, t NW(6) | 4.28 | 4.2816 | 0.0016 | 0.05 |
+| Developed ex US W2, t NW(6) | 4.27 | 4.2697 | −0.0003 | 0.05 |
+| Developed ex US AMP13 post, t NW(6) | 3.08 | 3.0813 | 0.0013 | 0.05 |
+| Developed ex US W1, t NW(6) | 2.50 | 2.5046 | 0.0046 | 0.05 |
+| Japan, t NW(6) mínima en 12 ventanas | −0.62 | −0.6164 | 0.0036 | 0.05 |
+| Japan, t NW(6) máxima en 12 ventanas | 0.68 | 0.6757 | −0.0043 | 0.05 |
+| North America AMP13 post, t NW(6) | 1.26 | 1.2608 | 0.0008 | 0.05 |
+| WML Emerging ene-ago 2026, media %/mes | 2.81 | 2.8100 | 0.0000 | 0.01 |
+| Caída máxima del factor, Emerging % | −37 | −37.2595 | −0.2595 | 0.5 |
+| WML Emerging en estado bajista, media %/mes | 0.49 | 0.4922 | 0.0022 | 0.01 |
+| Pierna larga Emerging 2016-04 a 2026-08, %/mes | 0.46 | 0.4561 | −0.0039 | 0.01 |
+| Pierna larga Emerging 2016-04 a 2026-08, t NW(6) | 2.33 | 2.3344 | 0.0044 | 0.05 |
+| EEMO − EEM, dif. CAGR MXN neto, pp/año | −1.32 | −1.3179 | 0.0021 | 0.1 |
+| PIE − EEM, dif. CAGR MXN neto, pp/año | −0.79 | −0.7879 | 0.0021 | 0.1 |
+| PIE, caída máxima MXN neta % | −56.9 | −56.8779 | 0.0221 | 0.1 |
+| EEM (ventana de PIE), caída máxima MXN neta % | −40.3 | −40.3328 | −0.0328 | 0.1 |
+| PIE, CAGR MXN neto % | 5.99 | 5.9893 | −0.0007 | 0.1 |
+| PIZ − VEA ventana común, dif. CAGR pp/año | −0.17 | −0.1671 | 0.0029 | 0.1 |
+| DEXMXUS fin de mes 2026-08 | 17.0081 | 17.0081 | 0.0000 | 5e-05 |
+| DEXMXUS contra MXN=X, correlación | 0.982 | 0.9823 | 0.0003 | 0.0005 |
+| t NW(6) de las diferencias de ETFs (pares, ventanas y sensibilidades), rango | −0.86 a 1.15 | −0.8621 a 1.1543 | −0.0021 / 0.0043 | 0.05 |
+| Beta de la diferencia de ETFs contra WML, rango | 0.28 a 0.61 | 0.2751 a 0.6147 | −0.0049 / 0.0047 | 0.005 |
+
+El detalle cifra por cifra está en `independiente_resultados.json`: `comparacion_readme`, `afirmaciones_anteriores_del_readme`, `comparacion_tablas_ac03`, `cotejo_resultados_json_original` y `cotejo_variantes_csv`.
+
+**Diferencias encontradas y corrección.** Ninguna es de cálculo: todos los estadísticos, los veredictos y la etiqueta global se reproducen. Las diferencias estaban en el texto y en la estructura del README.
+
+| # | Qué decía el README | Qué dan los datos | Causa | Corrección |
+|---|---|---|---|---|
+| 1 | Tablas "Fuente A / B / C" de AC-03 en lugar de las tablas propias de V02, que el texto cita como "Tabla 2", "Tabla 3" y "Tabla 4" | Las cifras de V02 estaban solo en `resultados.json` y `variantes.csv` | Pegado de otro archivo en el commit `44d5a61` (ya registrado como pendiente) | Se restauraron las Tablas 1 a 5 desde `resultados.json`, cotejado 2,793 de 2,793 contra la ejecución independiente. Las tablas de AC-03 quedan como enlace |
+| 2 | "Peor mes en los desarrollados: abril de 2009, de −22% a −26%, mientras el mercado subía de +10% a +14%" | Solo es cierto en Developed, Developed ex US, Europe y North America (−22.52% a −26.09%). En Japan fue 1998-01 (−19.83%) y en Asia Pacific ex Japan 1998-10 (−36.77%). Además −22.52 no redondea a −22 | Se generalizó de 4 regiones a 6, y el extremo se truncó en vez de redondearse | Texto corregido en "Hipótesis del pre-registro" |
+| 3 | Emerging: "Solo baja con el corte de Rouwenhorst (1998)" | También baja con el corte R99 pre-registrado: 0.89 → 0.83 %/mes, y sigue con "apoyo" | Se omitió el corte R99 | Texto corregido |
+| 4 | "Europe baja (0.94 → 0.72)", "Norteamérica cae (0.63 → 0.31)" y "Asia Pacific ex Japan sube", sin decir el corte | Las cifras son del corte AMP13. Asia Pacific ex Japan sube con AMP13 y FF12, pero baja con R98 (0.99 → 0.82) | Se omitió qué corte se usaba | Texto corregido para nombrar el corte |
+| 5 | Pierna larga emergente "3.6% a 4.7% ×12" | El máximo es 4.6496% | Doble redondeo (4.6496 → 4.65 → 4.7). Está dentro de la tolerancia | Corregido a "3.6% a 4.6%" en "Hipótesis" y en "Conclusiones permitidas" |
+| 6 | "Un script aparte [...] da las mismas cifras" | Ese script no está en el repositorio | Afirmación sin evidencia guardada | Se agregó una nota. La doble ejecución verificable es `independiente.py` |
+
+Las conclusiones permitidas y las que no se sostienen **no cambian**. La etiqueta de la regla pre-registrada sigue siendo "CONFIRMADA", con los mismos matices: la cifra se reproduce como media ×12 solo con fin en 2026-08, no es un CAGR y no es operable.
+
+**Límites de esta doble ejecución.**
+
+- Usa los mismos datos congelados y las mismas fuentes: French (base Bloomberg 202608), Yahoo y FRED. Confirma el cálculo, no los datos. La segunda fuente para WML es AC-03 (AQR), que no publica emergentes: **las cifras de emergentes siguen sin fuente independiente**.
+- Donde el pre-registro deja margen, las elecciones del script independiente coincidieron con las del original (lo confirma el cotejo). Ninguna de las alternativas cambia un veredicto:
+  - Estado bajista: Mkt-RF compuesto de t−24 a t−1. Con la suma simple, la beta bajista de Emerging pasa de −0.26 a −0.29 y la de los desarrollados queda entre −0.35 y −0.55.
+  - Asimetría: se usa la poblacional (g1). La versión ajustada difiere en 0.01 o menos.
+  - Volatilidad: se calcula con rendimientos mensuales en MXN sin costos. Con los costos, cambia 0.04 pp o menos.
+  - Caída máxima: se mide desde los 20,000 MXN iniciales. Sin ese punto da lo mismo.
+- No prueba nada sobre el listado en el SIC ni sobre los spreads reales en GBM. Esos siguen pendientes.
 
 ## Estado y siguientes pasos
 
@@ -448,5 +501,5 @@ Que no aparezcan en agregadores **no prueba** que no estén listados (ver `arena
   2. Consultar el catálogo oficial de la BMV cuando el buscador responda.
   3. Verificar el gasto de EEMO, PIE, PIZ, IDMO e IMOM en los documentos del emisor.
   4. Medir la brecha de implementación del momentum emergente: índice S&P Momentum y Dorsey Wright contra la pierna larga de French.
-  5. Doble ejecución independiente de este archivo por `auditor-de-replicas`. Las cifras clave ya se verificaron con un script aparte.
+  5. ~~Doble ejecución independiente de este archivo por `auditor-de-replicas`.~~ Hecha el 2026-09-25 con `independiente.py`: ver la sección "Doble ejecución independiente (2026-09-25)".
 - **Corrida final:** 2026-09-25. El pre-registro está en `preregistro.md` (SHA-256 `2a9aa15f…`).

@@ -50,7 +50,7 @@ La deuda neta incluye la deuda de DFS (financiamiento a clientes, sin recurso, U
 | FY25 | 95,567 (8.1%) | 22.2% | 6.5% | 4,592 | 6.38 | 1,869 | 0.8% | 20,934 | 720 |
 | FY26 | 113,538 (18.8%) | 20.0% | 7.2% | 5,936 | 8.68 | 8,552 | 0.6% | 19,975 | 684 |
 
-El FY22 incluye operaciones discontinuadas de VMware (escisión en nov-2021).
+La UN y la UPA de FY22 incluyen operaciones discontinuadas de VMware (escisión en nov-2021).
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad vs efectivo:** el FCF/UN TTM es de 0.75 y en el 2T fue de sólo 0.24 (FCF de US$986 M contra UN de 4,133) [10]. El inventario subió US$10.9 mil M en el semestre y lo financiaron proveedores: las cuentas por pagar pasaron de US$33.6 a 49.7 mil M [2]. Inferencia: el efectivo depende de que los plazos de pago a proveedores de GPU y memoria se sostengan.
