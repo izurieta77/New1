@@ -19,7 +19,7 @@ Deuda neta negativa = caja neta. El FCF es flujo operativo menos capex.
 | Trim | Ingresos | MB | MO | UN | UPA dil | FCF | SBC/ing | Deuda neta | Acc. dil (M) |
 |---|---|---|---|---|---|---|---|---|---|
 | 3T FY25 (oct-24) | 35,082 | 74.6% | 62.3% | 19,309 | 0.78 | 16,814 | 3.6% | −30,025 | 24,774 |
-| 4T FY25 | 39,331 | 73.0% | 61.1% | 22,091 | 0.90 | 15,552 | 3.4% | −34,747 | 24,704 |
+| 4T FY25 | 39,331 | 73.0% | 61.1% | 22,091 | 0.89† | 15,552 | 3.4% | −34,747 | 24,704 |
 | 1T FY26 | 44,062 | 60.5% | 49.1% | 18,775 | 0.76 | 26,187 | 3.3% | −45,227 | 24,611 |
 | 2T FY26 | 46,743 | 72.4% | 60.8% | 26,422 | 1.08 | 13,470 | 3.5% | −48,325 | 24,532 |
 | 3T FY26 | 57,006 | 73.4% | 63.2% | 31,910 | 1.30 | 22,115 | 2.9% | −52,141 | 24,483 |
@@ -35,7 +35,7 @@ Deuda neta negativa = caja neta. El FCF es flujo operativo menos capex.
 | FY25 | 130,497 | 75.0% | 62.4% | 72,880 | 2.94 | 60,853 | 3.6% | −34,747 | 24,804 |
 | FY26 | 215,938 | 71.1% | 60.4% | 120,067 | 4.90 | 96,676 | 3.0% | −41,202 | 24,514 |
 
-Los márgenes de FY26 y del 1T FY26 incluyen el cargo de US$4.5 mil M por el H20 [3].
+Los márgenes de FY26 y del 1T FY26 incluyen el cargo de US$4.5 mil M por el H20 [3]. †UPA reportada en el 8-K del 4T FY26 (US$0.89) [5]; restar anual menos 9 meses da 0.90.
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad vs. efectivo.** FCF/UN de 0.66 en 12 meses (alerta del dossier) y de 0.36 en el 2T FY27, por cuentas por cobrar, inventario y US$7.8 mil M de ganancias no monetarias [2][4]. *Inferencia:* parte del crecimiento se financia con plazo a clientes.
@@ -57,7 +57,7 @@ Los márgenes de FY26 y del 1T FY26 incluyen el cargo de US$4.5 mil M por el H20
 **C. EUA-China y Taiwán.** Tregua sólo hasta el 10-ene-2027, aranceles de 36.5% y 31%, y China bloquea el H200 [9] → como la guía excluye a China, China es una opción al alza; la fabricación en Taiwán es el riesgo contrario (Polymarket: 4% de invasión en 2026) [9] → mayor prima de riesgo (beta de 1.9).
 
 ## 6. Qué descuenta el precio
-Múltiplos: P/U de 12 meses de 28.4x GAAP (UPA 7.91) y 32.0x non-GAAP (7.01) [4][13]; adelantado de 24.1x para FY27 (9.31) y 14.3x para FY28 (15.68) [13]. Historia (P/U GAAP al cierre fiscal, cálculo propio): 58.6x, 119.8x, 51.3x, 48.5x y 38.3x de FY22 a FY26 (mediana 51.3x). Pares (P/U / adelantado) [13]: AMD 156x/40x, AVGO 45x/18x, TSM 33x/21x. Es el múltiplo más bajo de su historia reciente y está bajo el de sus pares.
+Múltiplos: P/U de 12 meses de 28.4x GAAP (UPA 7.91) y 32.0x non-GAAP (7.01) [4][13]. El 7.01 mezcla dos bases: el 3T y 4T FY26 excluyen SBC y el FY27 lo incluye. En la base FY27 sería ≈6.9 y el P/U ≈32.5x. *Inferencia*, con el ajuste de −0.04 del 2T FY26 reexpresado (1.05 → 1.01) [1]; adelantado de 24.1x para FY27 (9.31) y 14.3x para FY28 (15.68) [13]. Historia (P/U GAAP al cierre fiscal, cálculo propio): 58.6x, 119.8x, 51.3x, 48.5x y 38.3x de FY22 a FY26 (mediana 51.3x). Pares (P/U / adelantado) [13]: AMD 156x/40x, AVGO 45x/18x, TSM 33x/21x. Es el múltiplo más bajo de su historia reciente y está bajo el de sus pares.
 
 **DCF inverso.** Con el FCF de 12 meses (127.0 mil M) y 3% perpetuo, el precio implica que el FCF crezca 14.9% al año por 10 años con r = 9%, o 17.3% con r = 10% [4]. Alternativa con supuestos propios: FCF FY28 = UPA 15.5 × 24.1 mil M de acciones × conversión de 0.85 ≈ US$318 mil M; si creciera a perpetuidad, el precio implica g ≈ 4.3% con r = 10% y ≈ 5.3% con r = 11%. *Inferencia:* el precio no descuenta que el +70% se repita, sino un aterrizaje a un dígito medio después de FY28 (un FY28 cercano al pico). El debate es la durabilidad, no el trimestre.
 
@@ -71,7 +71,7 @@ Múltiplos: P/U de 12 meses de 28.4x GAAP (UPA 7.91) y 32.0x non-GAAP (7.01) [4]
 - **Fecha de reporte: 17-nov-2026.** Anunciada en la llamada del 26-ago [7]; Yahoo la da como no estimada [13].
 - **Ingresos:** punto US$112,500 M; intervalo de 80%: 108,800-116,000. Consenso US$109,011 M (Yahoo, 44 analistas; otras fuentes llegan a ~111.3 mil M, no verificado) [13]. Supuesto: supera el punto medio de la guía por ~4%, algo menos que en los últimos trimestres (+4.6% a +5.7%) por la restricción de oferta.
 - **UPA non-GAAP diluida:** punto US$2.57; intervalo de 80%: 2.44-2.70. Consenso US$2.47 (Yahoo, 43; Nasdaq/Zacks, 13, rango 2.34-2.70) [13][14]. Supuestos: margen bruto de 74.0%, opex de 9.0 mil M, otros ingresos por +0.3 mil M, tasa de 16.5% y 24,220 M de acciones.
-- **Binarios:** ingresos > US$109,011 M: **p = 0.80**; UPA non-GAAP > US$2.47: **p = 0.75**.
+- **Binarios:** ingresos > US$109,011 M: **p = 0.87**; UPA non-GAAP > US$2.47: **p = 0.82**. Los originales eran 0.80 y 0.75; se ajustaron en la verificación para que fueran coherentes con los intervalos de 80% (ver abajo).
 
 ## 9. Catalizadores con fecha y riesgos
 **Catalizadores:** 21-oct, keynote en GTC Berlín [7]; fines de octubre, guías de capex de los hiperescaladores; 3-nov, elecciones intermedias; 17-nov, reporte del 3T FY27; 10-ene-2027, vence la tregua EUA-China; 1S 2027, cierre de Hugging Face; FY29, entran las garantías de SB Energy.
@@ -94,3 +94,31 @@ Múltiplos: P/U de 12 meses de 28.4x GAAP (UPA 7.91) y 32.0x non-GAAP (7.01) [4]
 13. Yahoo quoteSummary y chart de NVDA, NVDA.MX y pares (25-sep-2026): https://finance.yahoo.com/quote/NVDA/analysis/
 14. Nasdaq/Zacks (25-sep-2026): https://api.nasdaq.com/api/analyst/NVDA/earnings-forecast
 15. `bitacora/briefs/2026-09-25-tablero.md` · Goldman Communacopia (10-sep-2026): https://www.investing.com/news/transcripts/nvidia-at-goldman-sachs-conference-huang-sees-ai-buildout-still-early-93CH-4896555
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 2T FY27 (íntegro), CFO Commentary del 2T FY27 (íntegro), transcripción FactSet de la llamada del 26-ago (PDF en investor.nvidia.com, íntegro), 10-Q del 2T FY27 (secciones de clientes, geografía, recompras, flujo y regulación) y 8-K del 4T FY26. También se consultaron de nuevo Yahoo quoteSummary y Nasdaq/Zacks el 25-sep.
+
+**Correcto (hecho verificado):**
+- Ingresos del 2T FY27 de US$96,221 M (+106%). UPA GAAP de 2.46 y non-GAAP de 2.22. Márgenes bruto de 75.0% y operativo de 66.2% [1]. Mezcla por plataforma y segmentos contables [2]. Por sede del cliente: EUA 60,074, Taiwán 26,985, China y HK 7,880 y otros 1,282 [3].
+- Guía del 3T FY27: ingresos de US$108.0 mil M ±2% sin cómputo de China; margen bruto de 74.0% ±50 pb; opex non-GAAP de 9.0 mil M; tasa de 16-18% para el año [1].
+- En la llamada [7]: Vera Rubin será ~20% de Data Center en el 3T; el margen tocará fondo en 71-72% en el 4T y quedará en 72-73% en FY28; FY28 crecerá ~70% con oferta restringida. Devolvió US$20 mil M en recompras y 6 mil M en dividendos de US$0.25 por acción.
+- **Fecha de reporte del 17-nov:** confirmada en la transcripción: "*Our earnings call to discuss the results of our third quarter of fiscal 2027 is scheduled for November 17*". Nasdaq/Zacks da 18-nov, pero calculada por algoritmo.
+- Consenso: ingresos de US$109,011 M (44 analistas) y UPA non-GAAP de 2.47 (Yahoo, 43; Zacks, 13, rango 2.34-2.70). La base del consenso es non-GAAP con SBC: el historial de Yahoo registra 2.22 y 1.87, los non-GAAP del FY27.
+- Cadena causal B: la garantía a SB Energy y OpenAI tiene un tope de US$105 mil M, entra por fases desde FY29 y baja conforme OpenAI paga. La exposición total en garantías es de 108.5 mil M [2]. Cadena A y operación: compromisos de suministro de 119 → 279 mil M (sobre todo memoria), DSO de 60 días (45 antes) e inventario de 31.6 mil M [2].
+- Otros datos: autorización de recompra de US$99.3 mil M según el 10-Q (el comunicado dice "~99.0"). Groq por 2.9 mil M. Un cliente directo fue 16% en el 2T; en el 1S, tres clientes sumaron 16%, 15% y 13% [3].
+- Aritmética del punto de UPA: 112.5 × 74% − 9.0 + 0.3 = 74.55 mil M; con tasa de 16.5% y 24,220 M de acciones da 2.570. Escenarios: 20 + 55 + 25 = 100%. Periodo correcto: trimestre ago-oct, USD. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. UPA GAAP del 4T FY25: decía 0.90 y es **0.89**, la reportada [5]. El 0.90 salía de restar anual menos 9 meses.
+2. **Coherencia entre binarios e intervalos.** Con un intervalo de ingresos de 108,800-116,000 centrado en 112,500, P(ingresos > 109,011) ≈ 0.89. El binario decía 0.80, lo que obligaba a poner ≥10% de probabilidad en una franja de solo US$211 M. Con el intervalo de UPA de 2.44-2.70, P(UPA ≥ 2.48) ≈ 0.83, y el binario decía 0.75. Se ajustaron a **0.87** y **0.82**. El historial respalda estos valores: NVIDIA superó el consenso de UPA 4 de 4 veces (+3.5% a +6.2%) y rebasó su guía de ingresos por 4.6-5.7% en los últimos tres trimestres. Los intervalos no se tocaron: los análogos históricos (2.56-2.63) caen dentro.
+3. P/U non-GAAP: se aclaró que la UPA de 12 meses (7.01) mezcla la base anterior (sin SBC) con la del FY27.
+
+**No verificado o pendiente:**
+- La cifra de DRAM viene de un agregador [11].
+- El consenso LSEG (92.17 mil M y 2.10) viene de Webull.
+- La probabilidad de invasión de Polymarket y la tregua del 10-ene provienen de `conocimiento/23`.
+- El "~111.3 mil M" de otras fuentes ya estaba marcado como no verificado.
+
+**Calibración (para el post-mortem):** las sorpresas de UPA de los últimos 4 trimestres (+3.5%, +5.3%, +5.5% y +6.2%; desviación de 1.0 pp) aplicadas al consenso dan 2.56-2.63, todas dentro de 2.44-2.70. El intervalo no es estrecho.
+
+**Veredicto:** muy confiable. Las cifras del último reporte, la guía, la fecha y la cadena causal coinciden con la fuente primaria. Se corrigieron un dato histórico menor y la incoherencia de probabilidad en los binarios.

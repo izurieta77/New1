@@ -1,0 +1,287 @@
+{
+  "descripcion": "Primera extraccion (manual, desde el texto del PDF 'as filed'): renglones de los estados financieros y notas de America Movil tal como aparecen en el filing, en MILES de pesos (MXN). Es la capa 'hecho (filing)'. modelo.py la mapea a los campos del motor (millones) y comprueba que base.json coincide; tambien la contrasta con la segunda extraccion (visor XBRL de la SEC y companyfacts).",
+  "unidades": "miles de MXN",
+  "signos": "como en el filing: salidas de caja y cargos con signo negativo en flujo; costos en positivo en resultados",
+  "periodos": {
+    "FY2023": {
+      "resultados": {
+        "fuente": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023)",
+        "lineas": {
+          "ingresos_servicios": 689154325, "venta_equipos": 126858519, "ingresos_operativos": 816012844,
+          "costo_ventas_equipos_y_servicios": 316476140, "gastos_comerciales_admin_generales": 173001297,
+          "otros_gastos": 6965828, "depreciacion_y_amortizacion": 151786064, "costos_y_gastos_operativos": 648229329,
+          "utilidad_operativa": 167783515, "ingreso_por_intereses": 9628340, "gasto_por_intereses": -44545241,
+          "resultado_cambiario_neto": 14653523, "valuacion_derivados_costo_laboral_otros": -26814668,
+          "participacion_en_asociadas": -5371824, "utilidad_antes_impuestos": 115333645, "impuesto_a_la_utilidad": 34544003,
+          "utilidad_neta": 80789642, "utilidad_neta_controladora": 76110617, "utilidad_neta_no_controladora": 4679025,
+          "ori_total": -45417173
+        }
+      },
+      "balance": {
+        "fuente": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024)",
+        "lineas": {
+          "efectivo_y_equivalentes": 26597773, "inversiones_capital_vr_ori_y_otras_cp": 73755627,
+          "cxc_suscriptores_distribuidores_impuestos_contrato_otros": 206802150, "cxc_partes_relacionadas": 1071520,
+          "derivados_activo": 1446034, "inventarios": 19271625, "otros_activos_circulantes": 11222259,
+          "total_activo_circulante": 340166988, "ppe_neto": 628650904, "intangibles": 121498519, "credito_mercantil": 146078897,
+          "inversiones_en_asociadas": 14380463, "impuestos_diferidos_activo": 137883622, "cxc_largo_plazo": 9400123,
+          "otros_activos_lp": 37643712, "instrumentos_deuda_vr_ori": 14914412, "activos_derecho_uso": 113568320,
+          "activo_total": 1564185960,
+          "deuda_cp": 160963603, "arrendamientos_cp": 24375010, "proveedores_y_cuentas_por_pagar": 162097416,
+          "pasivos_acumulados": 55214324, "impuesto_utilidad_por_pagar": 29516162, "otros_impuestos_por_pagar": 40082150,
+          "derivados_pasivo": 17896379, "partes_relacionadas_pasivo": 6766826, "ingresos_diferidos_cp": 27494667,
+          "total_pasivo_circulante": 524406537, "deuda_lp": 339713449, "arrendamientos_lp": 100794146,
+          "impuestos_diferidos_pasivo": 21269102, "cuentas_por_pagar_lp": 0, "ingresos_diferidos_lp": 2666273,
+          "obligaciones_retiro_activos": 10117928, "beneficios_a_empleados": 143516143, "total_pasivo_no_circulante": 618077041,
+          "pasivo_total": 1142483578, "capital_social": 95362024, "utilidades_retenidas_anos_anteriores": 469543111,
+          "utilidad_del_ano": 76110617, "utilidades_retenidas_total": 545653728, "ori_acumulado": -274303207,
+          "capital_controladora": 366712545, "participacion_no_controladora": 54989837, "capital_contable_total": 421702382
+        }
+      },
+      "flujo": {
+        "fuente": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023)",
+        "lineas": {
+          "utilidad_antes_impuestos": 115333645, "depreciacion_ppe_y_derecho_uso": 133818176, "amortizacion_intangibles_y_otros": 17967888,
+          "participacion_en_asociadas": 5371824, "resultado_venta_ppe": -5055264, "costo_neto_obligaciones_laborales": 16971936,
+          "cambiario_neto": -16175776, "ingreso_por_intereses": -9628340, "gasto_por_intereses": 44545241, "ptu": 3938274,
+          "valuacion_derivados_intereses_capitalizados_otros": 4623029, "ganancia_posicion_monetaria": -9321480,
+          "deterioro_documentos_negocio_conjunto": 12184562, "deterioro_inversion_negocio_conjunto": 4677782,
+          "ct_suscriptores_distribuidores_impuestos_contrato": -19201698, "ct_pagos_anticipados": -6154082,
+          "ct_partes_relacionadas": 758301, "ct_inventarios": 2832978, "ct_otros_activos": -1564370,
+          "ct_proveedores_y_pasivos_acumulados": 10098156, "ct_ingresos_diferidos": 3062445,
+          "beneficios_empleados_pagados": -13090945, "ptu_pagada": -3316540, "intereses_cobrados": 4882509,
+          "impuestos_pagados": -49466056, "flujo_operacion": 248092195,
+          "compra_ppe": -131101509, "adquisicion_intangibles": -25237297, "dividendos_cobrados": 4590313,
+          "venta_ppe": 7042757, "adquisicion_negocios": 0, "earn_out_combinacion": 3468655, "instrumentos_financieros_neto": -9420419,
+          "inversiones_en_asociadas": -459750, "adquisicion_inversiones": -10061353, "venta_inversiones": 10482150,
+          "documentos_negocio_conjunto": -14292963, "flujo_inversion": -164989416,
+          "prestamos_obtenidos": 249380436, "pago_prestamos": -214735610, "pago_pasivo_derecho_uso": -39498197,
+          "intereses_pagados": -29031855, "recompra_acciones": -14331361, "dividendos_pagados": -30466636,
+          "adquisicion_no_controladora": -6263945, "pago_contraprestacion_diferida": 0, "flujo_financiamiento": -84947168,
+          "cambio_neto_efectivo": -1844389, "efecto_cambiario_efectivo": -5258787, "efectivo_inicial": 33700949, "efectivo_final": 26597773
+        }
+      },
+      "capital": {
+        "fuente": "F1 p. F-7 (Estado consolidado de variaciones en el capital contable, 2023)",
+        "lineas": {
+          "capital_total_inicial": 437829273, "ure_inicial_columna": 505125277, "reserva_legal": 358440,
+          "utilidad_neta_total": 80789642, "ori_total": -45417173,
+          "dividendos_decretados_controladora": -28946819, "dividendos_decretados_no_controladora": -1965529,
+          "recompra_capital_social": -3305, "recompra_utilidades_retenidas": -14319762,
+          "traspaso_superavit_revaluacion_a_ure": 815693, "reciclaje_superavit_torres_peru_rd": 4911409,
+          "otras_adquisiciones_no_controladora_ure": 1598873, "otras_adquisiciones_no_controladora_nci": -7862818,
+          "ure_final_columna": 545295288, "capital_total_final": 421702382
+        }
+      },
+      "ppe": {
+        "fuente": "F1 Nota 10 a) p. F-41 (movimiento de PPE neto 2023)",
+        "lineas": {"inicial": 657226210, "adiciones": 144607028, "retiros": -10591479, "revaluacion": -5394784,
+                   "transferencias": -4368760, "conversion_e_hiperinflacion": -50848185, "depreciacion": -101979126, "final": 628650904}
+      },
+      "derecho_uso": {
+        "fuente": "F1 Nota 15 p. F-62 (movimiento de activos por derecho de uso y pasivo, 2023)",
+        "lineas": {"activo_inicial": 121874096, "activo_altas_y_bajas": 15355610, "activo_modificaciones": 23807386,
+                   "activo_depreciacion": -31839050, "activo_conversion": -15629722, "activo_final": 113568320,
+                   "pasivo_inicial": 134148811, "pasivo_altas_y_bajas": 12244019, "pasivo_modificaciones": 39109007,
+                   "pasivo_intereses": 10648584, "pasivo_pagos": -39498197, "pasivo_conversion": -31483068, "pasivo_final": 125169156}
+      },
+      "deuda": {
+        "fuente": "F2 Nota 19 p. F-82 (cambios en pasivos por actividades de financiamiento 2022-2023)",
+        "lineas": {"inicial": 510589480, "flujo_de_efectivo": 34644826, "cambiario_y_otros": -44557254, "final": 500677052}
+      },
+      "emisor": {
+        "fuente": "F5 p. 8 (reporte 4T24, estado de resultados, columna Jan-Dec 23; cifra no IFRS en millones)",
+        "lineas_millones": {"ebitda": 319570}
+      }
+    },
+    "FY2024": {
+      "resultados": {
+        "fuente": "F1 p. F-6 (columna 2024)",
+        "lineas": {
+          "ingresos_servicios": 741858822, "venta_equipos": 127361762, "ingresos_operativos": 869220584,
+          "costo_ventas_equipos_y_servicios": 331177822, "gastos_comerciales_admin_generales": 186515841,
+          "otros_gastos": 7298470, "depreciacion_y_amortizacion": 164128361, "costos_y_gastos_operativos": 689120494,
+          "utilidad_operativa": 180100090, "ingreso_por_intereses": 9008220, "gasto_por_intereses": -56019754,
+          "resultado_cambiario_neto": -70698375, "valuacion_derivados_costo_laboral_otros": 5618840,
+          "participacion_en_asociadas": -5179112, "utilidad_antes_impuestos": 62829909, "impuesto_a_la_utilidad": 35238443,
+          "utilidad_neta": 27591466, "utilidad_neta_controladora": 22902025, "utilidad_neta_no_controladora": 4689441,
+          "ori_total": 39444416
+        }
+      },
+      "balance": {
+        "fuente": "F1 p. F-5 (columna 2024)",
+        "lineas": {
+          "efectivo_y_equivalentes": 36652098, "inversiones_capital_vr_ori_y_otras_cp": 46683687,
+          "cxc_suscriptores_distribuidores_impuestos_contrato_otros": 221122253, "cxc_partes_relacionadas": 1395483,
+          "derivados_activo": 10668460, "inventarios": 23751457, "otros_activos_circulantes": 13424395,
+          "total_activo_circulante": 353697833, "ppe_neto": 713784429, "intangibles": 141736581, "credito_mercantil": 156836369,
+          "inversiones_en_asociadas": 3678383, "impuestos_diferidos_activo": 153217164, "cxc_largo_plazo": 9394158,
+          "otros_activos_lp": 48206789, "instrumentos_deuda_vr_ori": 13908873, "activos_derecho_uso": 199460378,
+          "activo_total": 1793920957,
+          "deuda_cp": 104210738, "arrendamientos_cp": 35436851, "proveedores_y_cuentas_por_pagar": 166924134,
+          "pasivos_acumulados": 57033837, "impuesto_utilidad_por_pagar": 24151790, "otros_impuestos_por_pagar": 51735433,
+          "derivados_pasivo": 22185709, "partes_relacionadas_pasivo": 3701960, "ingresos_diferidos_cp": 29020425,
+          "total_pasivo_circulante": 494400877, "deuda_lp": 463374893, "arrendamientos_lp": 177666377,
+          "impuestos_diferidos_pasivo": 27731694, "cuentas_por_pagar_lp": 17224845, "ingresos_diferidos_lp": 2672730,
+          "obligaciones_retiro_activos": 11512779, "beneficios_a_empleados": 167152441, "total_pasivo_no_circulante": 867335759,
+          "pasivo_total": 1361736636, "capital_social": 95356548, "utilidades_retenidas_anos_anteriores": 494346642,
+          "utilidad_del_ano": 22902025, "utilidades_retenidas_total": 517248667, "ori_acumulado": -243519865,
+          "capital_controladora": 369085350, "participacion_no_controladora": 63098971, "capital_contable_total": 432184321
+        }
+      },
+      "flujo": {
+        "fuente": "F1 p. F-8 (columna 2024)",
+        "lineas": {
+          "utilidad_antes_impuestos": 62829909, "depreciacion_ppe_y_derecho_uso": 143697887, "amortizacion_intangibles_y_otros": 20430474,
+          "participacion_en_asociadas": 5179112, "resultado_venta_ppe": 264769, "costo_neto_obligaciones_laborales": 18232542,
+          "cambiario_neto": 69721961, "ingreso_por_intereses": -9008220, "gasto_por_intereses": 56019754, "ptu": 3721782,
+          "valuacion_derivados_intereses_capitalizados_otros": -3672093, "ganancia_posicion_monetaria": -27387169,
+          "deterioro_documentos_negocio_conjunto": 4594792, "deterioro_inversion_negocio_conjunto": 0,
+          "ct_suscriptores_distribuidores_impuestos_contrato": -4160268, "ct_pagos_anticipados": 2252754,
+          "ct_partes_relacionadas": -3388829, "ct_inventarios": -3055411, "ct_otros_activos": -8825833,
+          "ct_proveedores_y_pasivos_acumulados": -15450565, "ct_ingresos_diferidos": 2738688,
+          "beneficios_empleados_pagados": -27271158, "ptu_pagada": -3524357, "intereses_cobrados": 3489600,
+          "impuestos_pagados": -48089000, "flujo_operacion": 239341121,
+          "compra_ppe": -113083319, "adquisicion_intangibles": -17751708, "dividendos_cobrados": 2779138,
+          "venta_ppe": 395232, "adquisicion_negocios": 493714, "earn_out_combinacion": 893754, "instrumentos_financieros_neto": -2111926,
+          "inversiones_en_asociadas": -72513, "adquisicion_inversiones": -10983052, "venta_inversiones": 15702126,
+          "documentos_negocio_conjunto": -5497250, "flujo_inversion": -129235804,
+          "prestamos_obtenidos": 262041021, "pago_prestamos": -232731277, "pago_pasivo_derecho_uso": -45285610,
+          "intereses_pagados": -31082117, "recompra_acciones": -22746633, "dividendos_pagados": -31007121,
+          "adquisicion_no_controladora": -2310084, "pago_contraprestacion_diferida": 0, "flujo_financiamiento": -103121821,
+          "cambio_neto_efectivo": 6983496, "efecto_cambiario_efectivo": 3070829, "efectivo_inicial": 26597773, "efectivo_final": 36652098
+        }
+      },
+      "capital": {
+        "fuente": "F1 p. F-7 (2024)",
+        "lineas": {
+          "capital_total_inicial": 421702382, "ure_inicial_columna": 545295288, "reserva_legal": 358440,
+          "utilidad_neta_total": 27591466, "ori_total": 39444416,
+          "dividendos_decretados_controladora": -29482507, "dividendos_decretados_no_controladora": -2021059,
+          "recompra_capital_social": -5476, "recompra_utilidades_retenidas": -22734817,
+          "traspaso_superavit_revaluacion_a_ure": 816810, "reciclaje_superavit_torres_peru_rd": 0,
+          "otras_adquisiciones_no_controladora_ure": 93428, "otras_adquisiciones_no_controladora_nci": -2403512,
+          "ure_final_columna": 516890227, "capital_total_final": 432184321
+        }
+      },
+      "ppe": {
+        "fuente": "F1 Nota 10 a) p. F-42 (movimiento de PPE neto 2024)",
+        "lineas": {"inicial": 628650904, "adiciones": 127886893, "retiros": -14987146, "combinaciones_de_negocios": 33764113,
+                   "revaluacion": 2160477, "transferencias": -4559179, "conversion_e_hiperinflacion": 52164488,
+                   "depreciacion": -111296121, "final": 713784429}
+      },
+      "derecho_uso": {
+        "fuente": "F1 Nota 15 p. F-62 (2024)",
+        "lineas": {"activo_inicial": 113568320, "activo_altas_y_bajas": 74728239, "activo_combinacion": 5511546,
+                   "activo_modificaciones": 30856221, "activo_depreciacion": -32401766, "activo_conversion": 7197818,
+                   "activo_final": 199460378,
+                   "pasivo_inicial": 125169156, "pasivo_altas_y_bajas": 74430110, "pasivo_combinacion": 5285522,
+                   "pasivo_modificaciones": 31996863, "pasivo_intereses": 16594964, "pasivo_pagos": -45285610,
+                   "pasivo_conversion": 4912223, "pasivo_final": 213103228}
+      },
+      "deuda": {
+        "fuente": "F1 Nota 19 p. F-74 (cambios en pasivos por actividades de financiamiento 2023-2024)",
+        "lineas": {"inicial": 500677052, "flujo_de_efectivo": 29309744, "cambiario_y_otros": 37598835, "final": 567585631}
+      },
+      "emisor": {
+        "fuente": "F4 p. 8 (reporte 4T25, columna Jan-Dec 24; cifra no IFRS en millones)",
+        "lineas_millones": {"ebitda": 344228}
+      }
+    },
+    "FY2025": {
+      "resultados": {
+        "fuente": "F1 p. F-6 (columna 2025)",
+        "lineas": {
+          "ingresos_servicios": 803655320, "venta_equipos": 139983086, "ingresos_operativos": 943638406,
+          "costo_ventas_equipos_y_servicios": 357637156, "gastos_comerciales_admin_generales": 207011427,
+          "otros_gastos": 6781152, "depreciacion_y_amortizacion": 180804783, "costos_y_gastos_operativos": 752234518,
+          "utilidad_operativa": 191403888, "ingreso_por_intereses": 9127487, "gasto_por_intereses": -60318857,
+          "resultado_cambiario_neto": 19786745, "valuacion_derivados_costo_laboral_otros": -18306262,
+          "participacion_en_asociadas": 294235, "utilidad_antes_impuestos": 141987236, "impuesto_a_la_utilidad": 53870189,
+          "utilidad_neta": 88117047, "utilidad_neta_controladora": 82819082, "utilidad_neta_no_controladora": 5297965,
+          "ori_total": -46576066
+        }
+      },
+      "balance": {
+        "fuente": "F1 p. F-5 (columna 2025)",
+        "lineas": {
+          "efectivo_y_equivalentes": 34954355, "inversiones_capital_vr_ori_y_otras_cp": 42430014,
+          "cxc_suscriptores_distribuidores_impuestos_contrato_otros": 241381386, "cxc_partes_relacionadas": 1247942,
+          "derivados_activo": 2417009, "inventarios": 28306625, "otros_activos_circulantes": 14383083,
+          "total_activo_circulante": 365120414, "ppe_neto": 687263062, "intangibles": 139248894, "credito_mercantil": 157453175,
+          "inversiones_en_asociadas": 4318867, "impuestos_diferidos_activo": 159387970, "cxc_largo_plazo": 13379712,
+          "otros_activos_lp": 57812753, "instrumentos_deuda_vr_ori": 18086886, "activos_derecho_uso": 197543872,
+          "activo_total": 1799615605,
+          "deuda_cp": 91973001, "arrendamientos_cp": 35866709, "proveedores_y_cuentas_por_pagar": 167124791,
+          "pasivos_acumulados": 65690407, "impuesto_utilidad_por_pagar": 19785151, "otros_impuestos_por_pagar": 62010352,
+          "derivados_pasivo": 16132182, "partes_relacionadas_pasivo": 3263615, "ingresos_diferidos_cp": 33344862,
+          "total_pasivo_circulante": 495191070, "deuda_lp": 432933859, "arrendamientos_lp": 178242224,
+          "impuestos_diferidos_pasivo": 27480494, "cuentas_por_pagar_lp": 19071252, "ingresos_diferidos_lp": 3851733,
+          "obligaciones_retiro_activos": 11785915, "beneficios_a_empleados": 203386684, "total_pasivo_no_circulante": 876752161,
+          "pasivo_total": 1371943231, "capital_social": 95353767, "utilidades_retenidas_anos_anteriores": 474663431,
+          "utilidad_del_ano": 82819082, "utilidades_retenidas_total": 557482513, "ori_acumulado": -290766017,
+          "capital_controladora": 362070263, "participacion_no_controladora": 65602111, "capital_contable_total": 427672374
+        }
+      },
+      "flujo": {
+        "fuente": "F1 p. F-8 (columna 2025)",
+        "lineas": {
+          "utilidad_antes_impuestos": 141987236, "depreciacion_ppe_y_derecho_uso": 158889309, "amortizacion_intangibles_y_otros": 21915474,
+          "participacion_en_asociadas": -294235, "resultado_venta_ppe": 282824, "costo_neto_obligaciones_laborales": 21444882,
+          "cambiario_neto": -19786745, "ingreso_por_intereses": -9127487, "gasto_por_intereses": 60318857, "ptu": 4016423,
+          "valuacion_derivados_intereses_capitalizados_otros": -3887863, "ganancia_posicion_monetaria": -5420274,
+          "deterioro_documentos_negocio_conjunto": 0, "deterioro_inversion_negocio_conjunto": 0,
+          "ct_suscriptores_distribuidores_impuestos_contrato": -13146153, "ct_pagos_anticipados": 2942404,
+          "ct_partes_relacionadas": -290804, "ct_inventarios": -5190448, "ct_otros_activos": -10719667,
+          "ct_proveedores_y_pasivos_acumulados": -2814001, "ct_ingresos_diferidos": 6683261,
+          "beneficios_empleados_pagados": -21577637, "ptu_pagada": -3131168, "intereses_cobrados": 2504220,
+          "impuestos_pagados": -53199386, "flujo_operacion": 272399022,
+          "compra_ppe": -114431308, "adquisicion_intangibles": -16386132, "dividendos_cobrados": 3015648,
+          "venta_ppe": 406588, "adquisicion_negocios": -276841, "earn_out_combinacion": 0, "instrumentos_financieros_neto": 7490018,
+          "inversiones_en_asociadas": 0, "adquisicion_inversiones": -4162135, "venta_inversiones": 1443893,
+          "documentos_negocio_conjunto": 0, "flujo_inversion": -122900269,
+          "prestamos_obtenidos": 238903497, "pago_prestamos": -257291962, "pago_pasivo_derecho_uso": -51585889,
+          "intereses_pagados": -32325287, "recompra_acciones": -11944156, "dividendos_pagados": -33159586,
+          "adquisicion_no_controladora": -440849, "pago_contraprestacion_diferida": -296861, "flujo_financiamiento": -148141093,
+          "cambio_neto_efectivo": 1357660, "efecto_cambiario_efectivo": -3055403, "efectivo_inicial": 36652098, "efectivo_final": 34954355
+        }
+      },
+      "capital": {
+        "fuente": "F1 p. F-7 (2025)",
+        "lineas": {
+          "capital_total_inicial": 432184321, "ure_inicial_columna": 516890227, "reserva_legal": 358440,
+          "utilidad_neta_total": 88117047, "ori_total": -46576066,
+          "dividendos_decretados_controladora": -31388472, "dividendos_decretados_no_controladora": -2196223,
+          "recompra_capital_social": -2781, "recompra_utilidades_retenidas": -11941375,
+          "traspaso_superavit_revaluacion_a_ure": 875209, "reciclaje_superavit_torres_peru_rd": 0,
+          "perdida_transaccion_bajo_control_comun_ure": -83228,
+          "otras_adquisiciones_no_controladora_ure": -47370, "otras_adquisiciones_no_controladora_nci": -393479,
+          "ure_final_columna": 557124073, "capital_total_final": 427672374
+        }
+      },
+      "ppe": {
+        "fuente": "F1 Nota 10 a) p. F-43 (movimiento de PPE neto 2025)",
+        "lineas": {"inicial": 713784429, "adiciones": 128740006, "retiros": -14496202, "combinaciones_de_negocios": 1422969,
+                   "revaluacion": 1218190, "transferencias": -4813959, "conversion_e_hiperinflacion": -18929129,
+                   "depreciacion": -119663242, "final": 687263062}
+      },
+      "derecho_uso": {
+        "fuente": "F1 Nota 15 p. F-62 (2025)",
+        "lineas": {"activo_inicial": 199460378, "activo_altas_y_bajas": 15848621, "activo_combinacion": 38315,
+                   "activo_modificaciones": 26726258, "activo_depreciacion": -39226067, "activo_conversion": -5303633,
+                   "activo_final": 197543872,
+                   "pasivo_inicial": 213103228, "pasivo_altas_y_bajas": 14847515, "pasivo_combinacion": 37229,
+                   "pasivo_modificaciones": 28873668, "pasivo_intereses": 16156752, "pasivo_pagos": -51585889,
+                   "pasivo_conversion": -7323570, "pasivo_final": 214108933}
+      },
+      "deuda": {
+        "fuente": "F1 Nota 19 p. F-74 (cambios en pasivos por actividades de financiamiento 2024-2025)",
+        "lineas": {"inicial": 567585631, "flujo_de_efectivo": -18388465, "cambiario_y_otros": -24290306, "final": 524906860}
+      },
+      "emisor": {
+        "fuente": "F4 p. 8 (reporte 4T25, columna Jan-Dec 25; cifra no IFRS en millones)",
+        "lineas_millones": {"ebitda": 372209}
+      }
+    }
+  }
+}

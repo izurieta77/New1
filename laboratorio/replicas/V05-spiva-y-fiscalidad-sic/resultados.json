@@ -7,6 +7,7 @@
    "corte": "2023-12-31",
    "publicacion": "marzo 2024 (citado asi en SPIVA U.S. Focus Mid-Year 2024, nota 1)",
    "diez_anios": 87.42,
+   "tabla": "Report 1a",
    "columnas": [
     "1",
     "3",
@@ -29,8 +30,26 @@
    "archivo": "spiva-us-mid-year-2024.txt",
    "corte": "2024-06-30",
    "publicacion": "~oct-nov 2024 (PDF creado 2024-10-29)",
-   "diez_anios": null,
-   "nota": "formato 'Focus' sin Report 1a: la cifra a 10 anios solo aparece en una grafica"
+   "diez_anios": 84.71,
+   "tabla": "Report 3 (Fund Underperformance Rates, formato Focus)",
+   "columnas": [
+    "YTD",
+    "1",
+    "3",
+    "5",
+    "10",
+    "15",
+    "20"
+   ],
+   "valores": [
+    57.31,
+    57.05,
+    86.08,
+    77.26,
+    84.71,
+    89.54,
+    91.77
+   ]
   },
   {
    "edicion": "SPIVA U.S. Year-End 2024",
@@ -38,6 +57,7 @@
    "corte": "2024-12-31",
    "publicacion": "~marzo 2025 (primera captura Wayback 2025-03-24)",
    "diez_anios": 84.34,
+   "tabla": "Report 1a",
    "columnas": [
     "1",
     "3",
@@ -61,6 +81,7 @@
    "corte": "2025-06-30",
    "publicacion": "~sep 2025 (primera captura Wayback 2025-09-05)",
    "diez_anios": 85.98,
+   "tabla": "Report 1a",
    "columnas": [
     "YTD",
     "1",
@@ -86,6 +107,7 @@
    "corte": "2025-12-31",
    "publicacion": "marzo 2026 (resumen de buscador; no hay fecha impresa en el PDF)",
    "diez_anios": 85.59,
+   "tabla": "Report 1a",
    "columnas": [
     "1",
     "3",
@@ -109,6 +131,7 @@
    "corte": "2026-06-30",
    "publicacion": "~16-17 sep 2026 (PDF creado 2026-09-16; captura Wayback 2026-09-17)",
    "diez_anios": 83.33,
+   "tabla": "Report 1a",
    "columnas": [
     "YTD",
     "1",

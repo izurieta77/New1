@@ -75,11 +75,17 @@ res = {"control_extraccion_pdf": control_extraccion(), "A1_eua": [], "A2_mexico"
 for arch, ed, corte, pub in EUA:
     t = leer("spiva/" + arch)
     vals, enc = fila(t, "Report 1a", r"All Large-Cap Funds S&P 500", "All Domestic Funds")
+    tabla = "Report 1a"
+    if not vals:
+        # Correccion 2026-09-25 (doble ejecucion independiente, independiente.py): el formato "Focus"
+        # no tiene Report 1a, pero trae la misma medida en su "Report 3: Fund Underperformance Rates".
+        vals, enc = fila(t, "Report 3: Fund Underperformance Rates", r"All Large-Cap\s+Funds S&P 500", "Global Equity")
+        tabla = "Report 3 (Fund Underperformance Rates, formato Focus)"
     reg = {"edicion": ed, "archivo": arch, "corte": corte, "publicacion": pub, "diez_anios": None}
     if vals:
         cols = (["YTD"] if "YTD" in enc else []) + ["1", "3", "5", "10", "15", "20"]
         assert len(cols) == len(vals), (ed, vals)
-        reg.update({"columnas": cols, "valores": vals, "diez_anios": vals[cols.index("10")]})
+        reg.update({"tabla": tabla, "columnas": cols, "valores": vals, "diez_anios": vals[cols.index("10")]})
     else:
         reg["nota"] = "formato 'Focus' sin Report 1a: la cifra a 10 anios solo aparece en una grafica"
     res["A1_eua"].append(reg)

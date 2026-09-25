@@ -72,10 +72,10 @@ Múltiplos: P/U de 12 meses de 27.8x GAAP (UPA 17.96) y 28.8x non-GAAP (17.28); 
 - **Qué cambiaría el escenario:** Azure del 1T contra la guía de 44-45%, la guía de capex del FY27, el RPO sin OpenAI y el desenlace de la FTC.
 
 ## 8. Pronósticos registrados (1T FY27: jul-sep 2026)
-- **Fecha de reporte estimada: 28-oct-2026, después del cierre.** Yahoo la marca como estimada; otra fuente dice 27-oct. Microsoft no la había confirmado al 25-sep [8][13].
+- **Fecha de reporte estimada: 28-oct-2026, después del cierre.** Yahoo la marca como estimada; otra fuente dice 27-oct y Nasdaq/Zacks, con su algoritmo, 4-nov [14]. Al 25-sep Microsoft no la había confirmado: su página de eventos del 1T FY27 aún no existía [8][13].
 - **Ingresos:** punto US$91,800 M; intervalo de 80%: 90,300-93,300. Consenso US$90,659 M (Yahoo, 38 analistas) [8]. Supuesto: supera el tope de la guía (90.95) por ~0.9 mil M, menos que en el 4T, por la restricción de capacidad.
-- **UPA diluida non-GAAP (sin OpenAI):** punto US$4.82; intervalo de 80%: 4.62-5.02. Consenso US$4.72 (Yahoo, 25; Nasdaq/Zacks 4.69 con 13, rango 4.53-4.84) [8][14]. Supuestos: COGS de 30.0, opex de 16.9, otros ingresos de −0.1, tasa de 20% y 7,440 M de acciones.
-- **Binarios:** ingresos > US$90,659 M: **p = 0.75**; UPA non-GAAP > US$4.72: **p = 0.72**.
+- **UPA diluida non-GAAP (sin OpenAI):** punto US$4.82; intervalo de 80%: 4.62-5.12 (el tope original de 5.02 se amplió en la verificación; ver abajo). Consenso US$4.72 (Yahoo, 25; Nasdaq/Zacks 4.69 con 13, rango 4.53-4.84) [8][14]. Supuestos: COGS de 30.0, opex de 16.9, otros ingresos de −0.1, tasa de 20% y 7,440 M de acciones.
+- **Binarios:** ingresos > US$90,659 M: **p = 0.82** (el original era 0.75; se ajustó en la verificación para que fuera coherente con el intervalo); UPA non-GAAP > US$4.72: **p = 0.72**.
 
 ## 9. Catalizadores con fecha y riesgos
 **Catalizadores:** 27-28 oct, FOMC; ~28-oct, reporte del 1T FY27 (el primero con los segmentos nuevos); 3-nov, elecciones intermedias; 17-nov, reporte de NVIDIA (señal de capex); sin fecha, financiamiento de OpenAI y avances de la FTC.
@@ -97,3 +97,33 @@ Múltiplos: P/U de 12 meses de 27.8x GAAP (UPA 17.96) y 28.8x non-GAAP (17.28); 
 12. `bitacora/briefs/2026-09-25-tablero.md` (DGS10 = 5.11%, percentil de 5 años = 100).
 13. Investing.com, calendario de resultados de MSFT (consultado el 25-sep-2026): https://www.investing.com/equities/microsoft-corp-earnings
 14. Nasdaq/Zacks, pronósticos de MSFT (25-sep-2026): https://api.nasdaq.com/api/analyst/MSFT/earnings-forecast
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 4T FY26 (íntegro), 8-K 7.01 del 2-sep-2026 con la guía ajustada y las cifras reexpresadas (íntegro), 10-K del FY26 (secciones de OpenAI, arrendamientos, recompras, otros ingresos y conciliación non-GAAP) y XBRL companyconcept de UPA diluida. También se consultaron de nuevo Yahoo quoteSummary y Nasdaq/Zacks el 25-sep.
+
+**Correcto (hecho verificado):**
+- Ingresos del 4T FY26 de US$90,007 M (+18%; +17% a tipo de cambio constante). UPA GAAP de 4.81 y non-GAAP sin OpenAI de 4.74. Partidas discretas por +US$0.27: ganancia de 3.2 mil M en Anthropic y menor gasto del retiro voluntario, netos de indemnizaciones y deterioros en XBOX [1].
+- Otros datos del 4T [1]: Microsoft Cloud de 59.3 mil M (+27%); RPO comercial de 678 mil M (+84%); Azure +43%; Windows OEM −7%; contenido de XBOX −10%; 10.2 mil M devueltos.
+- Guía del 1T FY27 (2-sep) [2]: ingresos de 89.85-90.95 mil M, de los que Agents and Infra son 75.15-75.75 y Devices and Consumer 14.7-15.2. COGS de 29.6-29.8, opex de 16.8-16.9, otros ingresos de ~−0.1 mil M sin OpenAI, margen operativo plano, tasa de ~20% y capex de más de 50 mil M. Azure +44-45% a tipo de cambio constante y Windows OEM con caída de "low-twenties".
+- Cifras reexpresadas del FY26 [2]: Azure 101,938 (+40.4% contra 72,610), M365 cloud 100,299, Agents and Infra 268,127 con margen de 50.9% y Devices and Consumer 63,712.
+- Cadena causal B, según el 10-K [3]: participación de ~25% por método de participación, medida con HLBV; ingresos de OpenAI de 24.1 mil M y cuentas por cobrar de 6.0; compromisos de fondeo de 13.0 mil M, de los que ya aportó 11.9; ganancia de 6.5 mil M por dilución.
+- Arrendamientos, recompras y UPA [3]: arrendamientos no iniciados por 329.1 mil M (FY27-FY33, plazos de 1 a 20 años). Recompras de 16.7 mil M, con 40.6 de 60 mil M disponibles. UPA non-GAAP del FY26 de 17.28.
+- La UPA GAAP trimestral de la tabla coincide con XBRL (3.30, 3.23, 3.46, 3.72, 5.16, 4.27 y 4.81).
+- Consenso: ingresos de 90,659 (38 analistas) y UPA de 4.72 (Yahoo, 25). Zacks da 4.69 (13, rango 4.53-4.84). La base es non-GAAP sin OpenAI: el historial de Yahoo registra 4.74 y 4.13, cifras non-GAAP.
+- Aritmética del punto: 91.8 − 30.0 − 16.9 − 0.1 = 44.8 mil M; con tasa de 20% y 7,440 M de acciones da 4.817. Escenarios: 20 + 55 + 25 = 100%. Periodo correcto: trimestre jul-sep, USD. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **Coherencia de ingresos.** Con un intervalo de 90,300-93,300 centrado en 91,800, P(ingresos > 90,659) ≈ 0.84; el binario decía 0.75. Se ajustó a **0.82**.
+2. **Intervalo de UPA estrecho.** Las sorpresas de los últimos 4 trimestres (+12.7%, +5.7%, +4.9% y +11.8%) aplicadas al consenso dan 5.33, 4.99, 4.96 y 5.28: dos de cuatro quedaban arriba del p90 original de 5.02, y las otras dos a menos de 0.06 de él. El tope pasa a **5.12**. El punto y el p10 no cambian, y el binario de 0.72 sigue siendo coherente (probabilidad implícita de ≈0.73).
+3. **Fecha de reporte.** Se agregó que Nasdaq/Zacks la estima por algoritmo en 4-nov y que Microsoft aún no la publica. La resolución sigue siendo "el día real del reporte".
+
+**No verificado o pendiente:**
+- La fecha del reporte (28-oct según Yahoo, 27-oct según Investing y 4-nov según Zacks).
+- El consenso de 87.7 mil M y el ~45% del RPO ligado a OpenAI, ambos de GeekWire.
+- La investigación de la FTC, que viene de una fuente secundaria [10].
+- El efecto contable de ~US$15 mil M en el capex, citado por CFO Dive.
+- El fin de la exclusividad con OpenAI, citado por Forbes.
+
+**Calibración (para el post-mortem):** el punto de UPA (+2.0% sobre el consenso) supone un COGS arriba del tope de la guía y un opex en el tope, así que es conservador frente a la sorpresa media histórica (+8.8%; ~+5.3% sin partidas discretas). La sorpresa de +12.7% del 1T FY26 puede reflejar consensos que incluían las pérdidas de OpenAI (no verificado).
+
+**Veredicto:** muy confiable en hechos: no hubo errores de dato. Se corrigieron un binario incoherente y un intervalo estrecho.

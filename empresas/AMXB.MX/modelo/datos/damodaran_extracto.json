@@ -1,0 +1,317 @@
+{
+ "descripcion": "Extracto de archivos de Damodaran (NYU Stern) usados para el costo de capital. Valores copiados por programa (openpyxl/xlrd en el entorno de trabajo) de los archivos descargados el 2026-09-25; se guarda el sha256 de cada archivo original.",
+ "archivos": {
+  "ctrypremJuly26.xlsx": {
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx",
+   "sha256": "8d7237c432bca23cd680f149395aa518a465d0b77bec1fdf788edc7a1748c60a",
+   "hoja": "ERPs by country",
+   "fecha_actualizacion": "2026-07-01",
+   "nota": "Default spreads corrected on July 9, 2026",
+   "prima_mercado_maduro": 0.042,
+   "erp_eua": 0.0442,
+   "multiplicador_volatilidad": 1.554495526258941,
+   "paises": {
+    "Argentina": {
+     "region": "Central and South America",
+     "moodys": "Caa1",
+     "default_spread_rating": 0.05970182998951399,
+     "erp_total_rating": 0.13480622762817138,
+     "crp_rating": 0.09280622762817138,
+     "cds_neto_suiza": "NA",
+     "erp_total_cds": "NA",
+     "crp_cds": "NA"
+    },
+    "Austria": {
+     "region": "Western Europe",
+     "moodys": "Aa1",
+     "default_spread_rating": 0.002186353678194708,
+     "erp_total_rating": 0.045398677011573456,
+     "crp_rating": 0.003398677011573454,
+     "cds_neto_suiza": 0.0015,
+     "erp_total_cds": 0.044331743289388416,
+     "crp_cds": 0.0023317432893884115
+    },
+    "Belarus": {
+     "region": "Eastern Europe & Russia",
+     "moodys": "C",
+     "default_spread_rating": 0.175,
+     "erp_total_rating": 0.31403671709531467,
+     "crp_rating": 0.2720367170953147,
+     "cds_neto_suiza": "NA",
+     "erp_total_cds": "NA",
+     "crp_cds": "NA"
+    },
+    "Brazil": {
+     "region": "Central and South America",
+     "moodys": "Ba1",
+     "default_spread_rating": 0.019931802175182575,
+     "erp_total_rating": 0.07298389731159954,
+     "crp_rating": 0.030983897311599545,
+     "cds_neto_suiza": 0.020800000000000003,
+     "erp_total_cds": 0.07433350694618598,
+     "crp_cds": 0.032333506946185975
+    },
+    "Bulgaria": {
+     "region": "Eastern Europe & Russia",
+     "moodys": "Baa1",
+     "default_spread_rating": 0.012726408900586053,
+     "erp_total_rating": 0.06178314570130299,
+     "crp_rating": 0.01978314570130299,
+     "cds_neto_suiza": 0.0065,
+     "erp_total_cds": 0.05210422092068312,
+     "crp_cds": 0.010104220920683117
+    },
+    "Chile": {
+     "region": "Central and South America",
+     "moodys": "A2",
+     "default_spread_rating": 0.006737510594427911,
+     "erp_total_rating": 0.052473430077160405,
+     "crp_rating": 0.010473430077160405,
+     "cds_neto_suiza": 0.0067,
+     "erp_total_cds": 0.05241512002593491,
+     "crp_cds": 0.010415120025934905
+    },
+    "Colombia": {
+     "region": "Central and South America",
+     "moodys": "Baa3",
+     "default_spread_rating": 0.01749881223830583,
+     "erp_total_rating": 0.06920182533929162,
+     "crp_rating": 0.027201825339291618,
+     "cds_neto_suiza": 0.0238,
+     "erp_total_cds": 0.07899699352496281,
+     "crp_cds": 0.0369969935249628
+    },
+    "Costa Rica": {
+     "region": "Central and South America",
+     "moodys": "Ba3",
+     "default_spread_rating": 0.02863442002631862,
+     "erp_total_rating": 0.08651207782793173,
+     "crp_rating": 0.04451207782793173,
+     "cds_neto_suiza": 0.017,
+     "erp_total_cds": 0.068426423946402,
+     "crp_cds": 0.026426423946402
+    },
+    "Croatia": {
+     "region": "Eastern Europe & Russia",
+     "moodys": "A3",
+     "default_spread_rating": 0.00954480667543954,
+     "erp_total_rating": 0.056837359275977245,
+     "crp_rating": 0.014837359275977242,
+     "cds_neto_suiza": 0.0078000000000000005,
+     "erp_total_cds": 0.05412506510481974,
+     "crp_cds": 0.01212506510481974
+    },
+    "Dominican Republic": {
+     "region": "Caribbean",
+     "moodys": "Ba2",
+     "default_spread_rating": 0.023955593224632577,
+     "erp_total_rating": 0.07923886249657033,
+     "crp_rating": 0.03723886249657034,
+     "cds_neto_suiza": "NA",
+     "erp_total_cds": "NA",
+     "crp_cds": "NA"
+    },
+    "Ecuador": {
+     "region": "Central and South America",
+     "moodys": "Caa1",
+     "default_spread_rating": 0.05970182998951399,
+     "erp_total_rating": 0.13480622762817138,
+     "crp_rating": 0.09280622762817138,
+     "cds_neto_suiza": 0.044899999999999995,
+     "erp_total_cds": 0.11179684912902646,
+     "crp_cds": 0.06979684912902645
+    },
+    "El Salvador": {
+     "region": "Central and South America",
+     "moodys": "B3",
+     "default_spread_rating": 0.05174782442664771,
+     "erp_total_rating": 0.122441761564857,
+     "crp_rating": 0.08044176156485701,
+     "cds_neto_suiza": 0.0336,
+     "erp_total_cds": 0.09423104968230042,
+     "crp_cds": 0.05223104968230042
+    },
+    "Guatemala": {
+     "region": "Central and South America",
+     "moodys": "Ba1",
+     "default_spread_rating": 0.019931802175182575,
+     "erp_total_rating": 0.07298389731159954,
+     "crp_rating": 0.030983897311599545,
+     "cds_neto_suiza": "NA",
+     "erp_total_cds": "NA",
+     "crp_cds": "NA"
+    },
+    "Honduras": {
+     "region": "Central and South America",
+     "moodys": "B1",
+     "default_spread_rating": 0.03583981330091514,
+     "erp_total_rating": 0.09771282943822827,
+     "crp_rating": 0.05571282943822827,
+     "cds_neto_suiza": "NA",
+     "erp_total_cds": "NA",
+     "crp_cds": "NA"
+    },
+    "Macedonia": {
+     "region": "Eastern Europe & Russia",
+     "moodys": "Ba3",
+     "default_spread_rating": 0.02863442002631862,
+     "erp_total_rating": 0.08651207782793173,
+     "crp_rating": 0.04451207782793173,
+     "cds_neto_suiza": "NA",
+     "erp_total_cds": "NA",
+     "crp_cds": "NA"
+    },
+    "Mexico": {
+     "region": "Central and South America",
+     "moodys": "Baa3",
+     "default_spread_rating": 0.01749881223830583,
+     "erp_total_rating": 0.06920182533929162,
+     "crp_rating": 0.027201825339291618,
+     "cds_neto_suiza": 0.014600000000000002,
+     "erp_total_cds": 0.06469563468338055,
+     "crp_cds": 0.022695634683380542
+    },
+    "Nicaragua": {
+     "region": "Central and South America",
+     "moodys": "B2",
+     "default_spread_rating": 0.04379381886378142,
+     "erp_total_rating": 0.11007729550154263,
+     "crp_rating": 0.06807729550154264,
+     "cds_neto_suiza": 0.051699999999999996,
+     "erp_total_cds": 0.12236741870758724,
+     "crp_cds": 0.08036741870758725
+    },
+    "Paraguay": {
+     "region": "Central and South America",
+     "moodys": "Ba1",
+     "default_spread_rating": 0.019931802175182575,
+     "erp_total_rating": 0.07298389731159954,
+     "crp_rating": 0.030983897311599545,
+     "cds_neto_suiza": "NA",
+     "erp_total_cds": "NA",
+     "crp_cds": "NA"
+    },
+    "Peru": {
+     "region": "Central and South America",
+     "moodys": "Baa1",
+     "default_spread_rating": 0.012726408900586053,
+     "erp_total_rating": 0.06178314570130299,
+     "crp_rating": 0.01978314570130299,
+     "cds_neto_suiza": 0.009999999999999998,
+     "erp_total_cds": 0.05754495526258941,
+     "crp_cds": 0.015544955262589408
+    },
+    "Serbia": {
+     "region": "Eastern Europe & Russia",
+     "moodys": "Ba2",
+     "default_spread_rating": 0.023955593224632577,
+     "erp_total_rating": 0.07923886249657033,
+     "crp_rating": 0.03723886249657034,
+     "cds_neto_suiza": 0.018600000000000002,
+     "erp_total_cds": 0.07091361678841632,
+     "crp_cds": 0.028913616788416308
+    },
+    "Slovenia": {
+     "region": "Eastern Europe & Russia",
+     "moodys": "A2",
+     "default_spread_rating": 0.006737510594427911,
+     "erp_total_rating": 0.052473430077160405,
+     "crp_rating": 0.010473430077160405,
+     "cds_neto_suiza": 0.006600000000000001,
+     "erp_total_cds": 0.05225967047330901,
+     "crp_cds": 0.010259670473309012
+    },
+    "United States": {
+     "region": "North America",
+     "moodys": "Aa1",
+     "default_spread_rating": 0.002186353678194708,
+     "erp_total_rating": 0.0442,
+     "crp_rating": 0.002186353678194708,
+     "cds_neto_suiza": 0.0043,
+     "erp_total_cds": 0.04868433076291345,
+     "crp_cds": 0.0066843307629134464
+    },
+    "Uruguay": {
+     "region": "Central and South America",
+     "moodys": "Baa1",
+     "default_spread_rating": 0.012726408900586053,
+     "erp_total_rating": 0.06178314570130299,
+     "crp_rating": 0.01978314570130299,
+     "cds_neto_suiza": 0.006600000000000001,
+     "erp_total_cds": 0.05225967047330901,
+     "crp_cds": 0.010259670473309012
+    }
+   }
+  },
+  "betaemerg.xls": {
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaemerg.xls",
+   "sha256": "9ae04d9565657126266bf0877cefeedb52df02c21c70ba1d70e27ce4249b719d",
+   "hoja": "Industry Averages",
+   "fecha_actualizacion": "2026-01-05",
+   "filas": {
+    "Telecom (Wireless)": {
+     "n_empresas": 68.0,
+     "beta": 0.7842438973074944,
+     "d_e": 0.30036545135822923,
+     "tasa_efectiva": 0.19550391470592918,
+     "beta_desapalancada": 0.639601191080156,
+     "caja_valor_firma": 0.04314847002582016,
+     "beta_desapalancada_corregida_caja": 0.6684435056475432
+    },
+    "Telecom. Services": {
+     "n_empresas": 142.0,
+     "beta": 0.7143580227656771,
+     "d_e": 0.3263610211273725,
+     "tasa_efectiva": 0.15845441152762327,
+     "beta_desapalancada": 0.5734511937553748,
+     "caja_valor_firma": 0.06623079954446821,
+     "beta_desapalancada_corregida_caja": 0.6141251965428087
+    },
+    "Total Market (without financials)": {
+     "n_empresas": 24760.0,
+     "beta": 1.123048876959943,
+     "d_e": 0.3277527286759824,
+     "tasa_efectiva": 0.13722148680313695,
+     "beta_desapalancada": 0.9007702738360067,
+     "caja_valor_firma": 0.08810406744075058,
+     "beta_desapalancada_corregida_caja": 0.9877994206071099
+    }
+   }
+  },
+  "betaGlobal.xls": {
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaGlobal.xls",
+   "sha256": "10c33f46df2a35fa7e4e8c4386c01f9da636fc2ab3e1e98307a52a947c9ab52b",
+   "hoja": "Industry Averages",
+   "fecha_actualizacion": "2026-01-05",
+   "filas": {
+    "Telecom (Wireless)": {
+     "n_empresas": 101.0,
+     "beta": 0.7824176683719886,
+     "d_e": 0.49967519812786204,
+     "tasa_efectiva": 0.17669932539189387,
+     "beta_desapalancada": 0.5698982714970884,
+     "caja_valor_firma": 0.05464749677784661,
+     "beta_desapalancada_corregida_caja": 0.6028420822440717
+    },
+    "Telecom. Services": {
+     "n_empresas": 283.0,
+     "beta": 0.7289777763741335,
+     "d_e": 0.7318091840259973,
+     "tasa_efectiva": 0.15396096284202662,
+     "beta_desapalancada": 0.4714795824263344,
+     "caja_valor_firma": 0.04992614403089267,
+     "beta_desapalancada_corregida_caja": 0.49625571682046693
+    },
+    "Total Market (without financials)": {
+     "n_empresas": 43056.0,
+     "beta": 1.0774430100117653,
+     "d_e": 0.25949267807029314,
+     "tasa_efectiva": 0.1312539668509866,
+     "beta_desapalancada": 0.9026385776128193,
+     "caja_valor_firma": 0.05518851257789983,
+     "beta_desapalancada_corregida_caja": 0.9553636779709899
+    }
+   }
+  }
+ }
+}

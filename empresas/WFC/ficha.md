@@ -54,7 +54,7 @@ El FCF no aplica a un banco: su flujo operativo mezcla activos de negociación y
 10. **Asignación de capital.** Dividendo de US$0.50 desde el 3T26 (+11%; rendimiento de 2.4%) y recompras de 3.0 mil M en el 2T26. Vendió su negocio de arrendamiento de carros de ferrocarril en el 1T26 [1]. Para adquisiciones mantiene "a high bar" [14]. El COO Scott Powell será CRO desde el 15-ene-2027 [8].
 
 ## 5. Cadena causal
-**A. Alza de la Fed y 10 años en 5.11% [17].** Exposición: +100 pb paralelos ≈ +US$1.3 mil M de NII (≈2.6%) [4] → efecto: el NII de 2027 podría superar una guía que suponía recortes → estado financiero: las tasas largas reducen el valor de los valores AFS, que pasa por el AOCI al CET1 (inferencia para un G-SIB) → valuación: menos recompras → precio: los bancos cayeron 3-4% el 22-sep por el costo de los depósitos [18], y WFC acumula −8.4% en 7 sesiones. *Inferencia:* hoy pesa más el riesgo de capital que el beneficio en NII.
+**A. Alza de la Fed y 10 años en 5.11% [17].** Exposición: +100 pb paralelos ≈ +US$1.3 mil M de NII a 12 meses (≈2.7% del NII sin Markets; la sensibilidad excluye el NII de trading) [4] → efecto: el NII de 2027 podría superar una guía que suponía recortes → estado financiero: las tasas largas reducen el valor de los valores AFS, que pasa por el AOCI al CET1 (inferencia para un G-SIB) → valuación: menos recompras → precio: los bancos cayeron 3-4% el 22-sep por el costo de los depósitos [18], y WFC acumula −8.4% en 7 sesiones. *Inferencia:* hoy pesa más el riesgo de capital que el beneficio en NII.
 
 **B. Crecimiento sin tope de activos.** Préstamos +12% → más ingreso, pero los APR suben 9.5% y el CET1 baja a 10.3% → el ROTCE mejora sólo si el crédito aguanta → el P/TBV de 1.78x ya supone un ROTCE alto (sección 6).
 
@@ -72,9 +72,9 @@ Múltiplos: P/U de 12 meses 11.9x (UPA US$6.88) [9]; adelantado 11.2x para 2026 
 - **Qué cambiaría el escenario:** CET1 del 3T26 < 10.0% (bajista), la guía de NII 2027 (14-ene-2027), castigos de tarjeta y la regla final de Basilea.
 
 ## 8. Pronósticos registrados (3T26)
-- **Fecha de reporte: 13-oct-2026, 7:00 a.m. ET.** Confirmada por la empresa el 20-feb-2026 [7].
+- **Fecha de reporte: 13-oct-2026, 7:00 a.m. ET.** Confirmada por la empresa el 20-feb-2026 [7]. Yahoo la marca como no estimada. Nasdaq/Zacks la lista como "expected" el 14-oct; prevalece la fecha de la empresa.
 - **Ingresos del 3T26:** punto US$22,450 M; intervalo de 80%: 21,900-23,000. Consenso US$22,340 M (Yahoo, 7 analistas, 25-sep) [11]. Supuestos: NII de 12.55 mil M (+2% t/t) y comisiones de 9.9 mil M (+4% a/a, con menos VC que en el 2T).
-- **UPA diluida del 3T26:** punto US$1.90; intervalo de 80%: 1.74-2.05. Consenso US$1.84 (Nasdaq/Zacks, 8 estimados, rango 1.80-1.89) y 1.85 (Yahoo, 19) [11][19]. Supuestos: gasto de 13.85 mil M, provisión de ~1.0 mil M, tasa de ~18.5%, preferentes de 0.25 mil M y 3,040 M de acciones.
+- **UPA diluida del 3T26:** punto US$1.90; intervalo de 80%: 1.74-2.05. Consenso US$1.84 (Nasdaq/Zacks, 8 estimados, rango 1.80-1.89) y 1.85 (Yahoo, 19) [11][19]. Supuestos: gasto de 13.85 mil M, provisión de ~1.0 mil M, tasa de ~18.5%, interés minoritario de ~0.17 mil M (0.24 en el 2T26, por VC), preferentes de 0.25 mil M y 3,040 M de acciones. El minoritario se agregó en la verificación: sin él, la aritmética da 1.96. Base del consenso: Yahoo (1.85) es comparable con la UPA GAAP, porque su historial registra 1.66 para el 3T25. Zacks (1.84) parece ajustado: registra 1.73 para ese trimestre. Con UPA redondeada a centavos, ">1.84" equivale a "≥1.85", así que el binario no cambia.
 - **Binarios:** ingresos > US$22,340 M: **p = 0.57**; UPA > US$1.84: **p = 0.63** (superó el consenso en 3 de los últimos 4 trimestres [11]).
 
 ## 9. Catalizadores con fecha y riesgos
@@ -102,3 +102,32 @@ Múltiplos: P/U de 12 meses 11.9x (UPA US$6.88) [9]; adelantado 11.2x para 2026 
 17. Conocimiento interno: `conocimiento/24-...` §4.1-4.3, `conocimiento/23-...` §4.3 y `bitacora/briefs/2026-09-25-tablero.md` (DGS10 = 5.11%).
 18. TradingKey (22-sep-2026): https://www.tradingkey.com/news/market-movers/262180809-market-movers-wfc-20260922 · Business Wire, prime de 7.00% (16-sep-2026): https://www.businesswire.com/news/home/20260916614484/en/Wells-Fargo-Bank-Increases-Prime-Rate-to-7.00-Percent
 19. Nasdaq/Zacks, pronósticos de WFC (25-sep-2026): https://api.nasdaq.com/api/analyst/WFC/earnings-forecast
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 2T26 (íntegro), 8-K ex. 99.3 con la presentación del 2T26 (íntegro), presentación del 4T25 (supuestos de la guía 2026), 10-Q del 2T26 (sensibilidad del NII, litigios y venta de carros de ferrocarril), XBRL companyconcept de UPA diluida y el anuncio de fechas del 20-feb-2026. También se consultaron de nuevo Yahoo quoteSummary y Nasdaq/Zacks el 25-sep.
+
+**Correcto (hecho verificado):**
+- Ingresos del 2T26 de US$22,622 M (+9%): NII de 12,317 y comisiones de 10,305. UPA diluida de 2.00 (+25%), que incluye US$132 M (US$0.04) de beneficios fiscales discretos y ganancias de VC. Índice de eficiencia de 60%. Provisión de 914. Castigos netos de 0.34% (0.44% un año antes). Reserva de 1.40% (1.58%). CET1 de 10.3% (11.1%), con capital CET1 de 136.4 → 137.7 mil M y APR +9.5%. LCR de 119%. ROTCE de 17.7% en el 2T y 16.1% en el 1S. Dividendo del 3T de US$0.50 (+11%) [1][2].
+- Guía 2026 [2]: NII de ±US$50 mil M (±48 sin Markets y ±2 de Markets) y gasto de ~55.7 mil M, ambos sin cambio.
+- Cadena causal, supuesto roto: la guía de enero suponía "*two to three fed funds rate cuts in 2026*" y un bono a 10 años estable [6]. Sensibilidad: +100 pb paralelos equivalen a +US$1.3 mil M de NII a 12 meses (1.9 en dic-25), según la tabla 22 del 10-Q [4].
+- Litigios: US$1.5 mil M de pérdidas razonablemente posibles sobre lo reservado [4]. Venta del negocio de carros de ferrocarril en el 1T26 [4].
+- La UPA trimestral de la tabla coincide con XBRL y con los comunicados (1.42, 1.43, 1.39, 1.60, 1.66, 1.62, 1.60 y 2.00).
+- **Fecha de reporte del 13-oct, 7:00 a.m. ET:** la anunció la empresa el 20-feb y Yahoo la marca como no estimada.
+- Consenso: ingresos de US$22,340 M (Yahoo, 7) y UPA de 1.85 (Yahoo, 19) o 1.84 (Zacks, 8, rango 1.80-1.89). Sorpresas de UPA (Yahoo): +7.4%, −2.8%, +1.1% y +16.4%.
+- Escenarios: 25 + 50 + 25 = 100%. Periodo correcto: trimestre jul-sep, USD, UPA GAAP. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. Sensibilidad del NII: decía "≈2.6%" sin base. Ahora dice ≈2.7% del NII sin Markets, porque la sensibilidad excluye el NII de trading.
+2. Supuestos de la UPA: se agregó el interés minoritario (~0.17 mil M). Sin él, los supuestos listados daban 1.96 y no el punto de 1.90.
+3. Se documentó la base del consenso (Zacks parece ajustado; Yahoo, GAAP) y la fecha de Zacks (14-oct). No cambia ningún pronóstico: el umbral ">1.84" resuelve igual que contra el 1.846 de Yahoo.
+
+**No verificado o pendiente:**
+- El consenso de ingresos del 2T (~21.87 mil M, Investing).
+- La reducción de ~7% de APR por Basilea (Seeking Alpha).
+- Las declaraciones del CFO en Barclays: vienen de Reuters vía Kitco, no de la transcripción.
+- La caída de bancos del 22-sep (TradingKey).
+- La Fed en 3.75-4.00% (16-sep) y el 10 años en 5.11%: se cotejaron con `conocimiento/24` §4.1 y con el tablero del 25-sep (FRED DGS10 al 23-sep), no con la Fed directamente.
+
+**Calibración (para el post-mortem):** con los últimos 4 trimestres, las sorpresas aplicadas al consenso dan 1.98, 1.79, 1.87 y 2.15. Solo el 2.15 (ganancias de VC y beneficio fiscal no recurrentes) queda fuera de 1.74-2.05, así que el intervalo es razonable. Los binarios (0.57 y 0.63) son coherentes con los intervalos (probabilidades implícitas de 0.60 y 0.67).
+
+**Veredicto:** muy confiable. Las cifras, la guía, la fecha y la cadena causal coinciden con la fuente primaria. Solo hubo precisiones menores de base y de aritmética.

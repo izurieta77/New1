@@ -1,0 +1,1115 @@
+{
+ "fecha": "2026-09-25",
+ "autor": "auditor-de-replicas (doble ejecucion independiente)",
+ "huellas": {
+  "listados": 58,
+  "malos": [],
+  "no_listados": []
+ },
+ "reextraccion_pypdf": {
+  "hecha": true,
+  "version_pypdf": "6.19.0",
+  "iguales": {
+   "spiva/spiva-latin-america-mid-year-2025-es.pdf": true,
+   "spiva/spiva-latin-america-scorecard-year-end-2023.pdf": true,
+   "spiva/spiva-latin-america-year-end-2024.pdf": true,
+   "spiva/spiva-us-mid-year-2024.pdf": true,
+   "spiva/spiva-us-mid-year-2025.pdf": true,
+   "spiva/spiva-us-mid-year-2026.pdf": true,
+   "spiva/spiva-us-year-end-2023.pdf": true,
+   "spiva/spiva-us-year-end-2024.pdf": true,
+   "spiva/spiva-us-year-end-2025.pdf": true,
+   "legal/LIF_2026.pdf": true,
+   "legal/LISR-texto-vigente-ult-ref-DOF-2024-04-01.pdf": true,
+   "legal/irs-tratado-eua-mexico.pdf": true,
+   "legal/irs-tratado-eua-irlanda.pdf": true
+  },
+  "spiva_identicos": 9,
+  "legales_identicos": 4
+ },
+ "huellas_independiente_datos": {
+  "diputados-lisr-ref.txt": "abab2dcb3b8b4e3435432ff2ab8695821aceee75250b1f7f0152af9de80069fc",
+  "ishares-CSPX-253743.txt": "6251f211c2fdd5daf24fffd4e2fe4539bac446141f37bde59d69ac9c623d916d",
+  "ishares-IUSA-251900.txt": "efd449a17205d370ed741e3ab8fd04f9f3bdbb4e85ab40f68e079677a6a39337",
+  "procedencia.json": "669ddceab34d93422889c6ffa5c1c81ebade40270129feb926f083d0d5f7d9ee"
+ },
+ "spiva": {
+  "eua": {
+   "Year-End 2023": {
+    "1a": 59.68,
+    "3a": 79.78,
+    "5a": 78.68,
+    "10a": 87.42,
+    "15a": 87.98,
+    "20a": 93.03,
+    "pagina": 10,
+    "corte": "2023-12-31",
+    "creacion_pdf": "20240305",
+    "tabla": "Report 1a"
+   },
+   "Focus Mid-Year 2024": {
+    "ytd": 57.31,
+    "1a": 57.05,
+    "3a": 86.08,
+    "5a": 77.26,
+    "10a": 84.71,
+    "15a": 89.54,
+    "20a": 91.77,
+    "pagina": 8,
+    "corte": "2024-06-30",
+    "creacion_pdf": "20241029",
+    "tabla": "Report 3"
+   },
+   "Year-End 2024": {
+    "1a": 65.24,
+    "3a": 84.96,
+    "5a": 76.26,
+    "10a": 84.34,
+    "15a": 89.5,
+    "20a": 91.99,
+    "pagina": 10,
+    "corte": "2024-12-31",
+    "creacion_pdf": "20251015",
+    "tabla": "Report 1a"
+   },
+   "Mid-Year 2025": {
+    "ytd": 54.31,
+    "1a": 72.61,
+    "3a": 64.87,
+    "5a": 86.91,
+    "10a": 85.98,
+    "15a": 88.29,
+    "20a": 91.03,
+    "pagina": 10,
+    "corte": "2025-06-30",
+    "creacion_pdf": "20251015",
+    "tabla": "Report 1a"
+   },
+   "Year-End 2025": {
+    "1a": 78.78,
+    "3a": 66.84,
+    "5a": 88.96,
+    "10a": 85.59,
+    "15a": 89.93,
+    "20a": 92.89,
+    "pagina": 12,
+    "corte": "2025-12-31",
+    "creacion_pdf": "20260728",
+    "tabla": "Report 1a"
+   },
+   "Mid-Year 2026": {
+    "ytd": 67.18,
+    "1a": 78.69,
+    "3a": 76.63,
+    "5a": 89.32,
+    "10a": 83.33,
+    "15a": 90.49,
+    "20a": 92.61,
+    "pagina": 11,
+    "corte": "2026-06-30",
+    "creacion_pdf": "20260916",
+    "tabla": "Report 1a"
+   }
+  },
+  "latam": {
+   "Year-End 2023": {
+    "corte": "2023-12-31",
+    "creacion_pdf": "20240426",
+    "mx": {
+     "1a": 90.7,
+     "3a": 79.07,
+     "5a": 77.78,
+     "10a": 87.8,
+     "pagina": 9
+    },
+    "superv10": {
+     "fondos_iniciales": 41,
+     "pct": 78.05,
+     "sobrevivientes": 32
+    }
+   },
+   "Year-End 2024": {
+    "corte": "2024-12-31",
+    "creacion_pdf": "20250408",
+    "mx": {
+     "1a": 18.6,
+     "3a": 46.51,
+     "5a": 62.79,
+     "10a": 82.93,
+     "pagina": 10
+    },
+    "eua_mxn": {
+     "1a": 82.61,
+     "3a": 100.0,
+     "5a": 85.71,
+     "10a": 86.67,
+     "pagina": 10
+    },
+    "global_mxn": {
+     "1a": 88.89,
+     "3a": 88.0,
+     "5a": 97.56,
+     "10a": 100.0,
+     "pagina": 10
+    },
+    "superv10": {
+     "fondos_iniciales": 41,
+     "pct": 78.05,
+     "sobrevivientes": 32
+    },
+    "reports_3_4": {
+     "S&P/BMV IRT": {
+      "ew": {
+       "1a": -10.7,
+       "3a": 1.07,
+       "5a": 5.83,
+       "10a": 4.14
+      },
+      "aw": {
+       "1a": -10.7,
+       "3a": 1.07,
+       "5a": 5.83,
+       "10a": 4.14
+      }
+     },
+     "Mexico Equity Funds": {
+      "ew": {
+       "1a": -6.73,
+       "3a": 2.25,
+       "5a": 3.98,
+       "10a": 2.56
+      },
+      "aw": {
+       "1a": -2.41,
+       "3a": 3.9,
+       "5a": 4.03,
+       "10a": 2.53
+      }
+     },
+     "S&P 500 (MXN)": {
+      "ew": {
+       "1a": 53.51,
+       "3a": 9.6,
+       "5a": 16.79,
+       "10a": 17.08
+      },
+      "aw": {
+       "1a": 53.51,
+       "3a": 9.6,
+       "5a": 16.79,
+       "10a": 17.08
+      }
+     },
+     "U.S. Equity (MXN) Funds": {
+      "ew": {
+       "1a": 44.14,
+       "3a": 5.08,
+       "5a": 12.29,
+       "10a": 12.65
+      },
+      "aw": {
+       "1a": 50.86,
+       "3a": 7.61,
+       "5a": 15.28,
+       "10a": 14.51
+      }
+     },
+     "S&P World Index (MXN)": {
+      "ew": {
+       "1a": 46.67,
+       "3a": 7.38,
+       "5a": 13.79,
+       "10a": 14.33
+      },
+      "aw": {
+       "1a": 46.67,
+       "3a": 7.38,
+       "5a": 13.79,
+       "10a": 14.33
+      }
+     },
+     "Global Equity (MXN) Funds": {
+      "ew": {
+       "1a": 29.89,
+       "3a": 2.41,
+       "5a": 6.55,
+       "10a": 7.09
+      },
+      "aw": {
+       "1a": 33.53,
+       "3a": 3.57,
+       "5a": 9.06,
+       "10a": 9.26
+      }
+     }
+    }
+   },
+   "Primer semestre 2025": {
+    "corte": "2025-06-30",
+    "creacion_pdf": "20251020",
+    "mx": {
+     "ytd": 63.64,
+     "1a": 50.0,
+     "3a": 60.47,
+     "5a": 69.05,
+     "10a": 73.17,
+     "pagina": 13
+    },
+    "eua_mxn": {
+     "ytd": 66.67,
+     "1a": 91.67,
+     "3a": 78.26,
+     "5a": 100.0,
+     "10a": 86.67,
+     "pagina": 13
+    },
+    "global_mxn": {
+     "ytd": 67.27,
+     "1a": 85.45,
+     "3a": 92.16,
+     "5a": 95.12,
+     "10a": 100.0,
+     "pagina": 13
+    },
+    "superv10": {
+     "fondos_iniciales": 41,
+     "pct": 82.93,
+     "sobrevivientes": 34
+    }
+   }
+  },
+  "rutas": {
+   "a_texto_pypdf": true,
+   "b_coordenadas_pdfminer": true
+  },
+  "discrepancias_rutas": [],
+  "a3": {
+   "texto_fuera_indice": 74.3,
+   "texto_etfs_extranjeros": 16.4,
+   "texto_bajo_1a": 18.6,
+   "grafica_texto_orden": [
+    74.3,
+    16.8,
+    16.2
+   ],
+   "grafica_coordenadas": {
+    "Non-Benchmark Securities": 74.3,
+    "Offshore Securities": 16.8,
+    "Index Funds and ETFs": 16.2
+   },
+   "paginas": [
+    7,
+    8
+   ]
+  }
+ },
+ "analisis_b": {
+  "prereg_2015_2024": {
+   "n": 120,
+   "desde": "2015-01",
+   "hasta": "2024-12",
+   "fx_primero": "2014-12-31",
+   "fx_ultimo": "2024-12-31",
+   "ipc_cagr_pct": 3.525330349497313,
+   "sp_mxn_cagr_pct": 16.980487394231105,
+   "mezclas": {
+    "0": {
+     "cagr_pct": 3.525330349497313,
+     "ventaja_pp": 0.0
+    },
+    "10": {
+     "cagr_pct": 4.975731776391501,
+     "ventaja_pp": 1.4504014268941878
+    },
+    "16.4": {
+     "cagr_pct": 5.892819181242914,
+     "ventaja_pp": 2.367488831745601
+    },
+    "20": {
+     "cagr_pct": 6.404762958511712,
+     "ventaja_pp": 2.8794326090143985
+    },
+    "30": {
+     "cagr_pct": 7.8116991118188706,
+     "ventaja_pp": 4.286368762321557
+    },
+    "50": {
+     "cagr_pct": 10.556378497853135,
+     "ventaja_pp": 7.031048148355823
+    },
+    "100": {
+     "cagr_pct": 16.980487394231105,
+     "ventaja_pp": 13.45515704473379
+    }
+   },
+   "peso_compensa_pct": {
+    "1": 6.894642968887218,
+    "2": 13.845952278594714,
+    "3": 20.856949981007983
+   },
+   "peso_compensa_exacto_pct": {
+    "1": 6.879060802985196,
+    "2": 13.828010547772202,
+    "3": 20.850765331595888
+   },
+   "dif_media_pct_mes": 1.0178715494289692,
+   "se_nw_pct": 0.5120339514411015,
+   "t_nw": 1.9878985496258708,
+   "t_nw_sin_correccion": 1.9962335905832127,
+   "t_iid": 2.023224706725019,
+   "ic95_pct": [
+    0.014303445742679284,
+    2.0214396531152587
+   ],
+   "veredicto": "apoyo",
+   "se_formula2_menos_formula1": -8.673617379884035e-19,
+   "se_herramientas_menos_formula1": 0.0
+  },
+  "expl_2024": {
+   "n": 12,
+   "desde": "2024-01",
+   "hasta": "2024-12",
+   "fx_primero": "2023-12-29",
+   "fx_ultimo": "2024-12-31",
+   "ipc_cagr_pct": -10.269946241237582,
+   "sp_mxn_cagr_pct": 54.11983766414126,
+   "mezclas": {
+    "0": {
+     "cagr_pct": -10.269946241237582,
+     "ventaja_pp": 0.0
+    },
+    "10": {
+     "cagr_pct": -5.048515557852696,
+     "ventaja_pp": 5.221430683384886
+    },
+    "16.4": {
+     "cagr_pct": -1.5785419396710076,
+     "ventaja_pp": 8.691404301566575
+    },
+    "20": {
+     "cagr_pct": 0.4183781574246037,
+     "ventaja_pp": 10.688324398662186
+    },
+    "30": {
+     "cagr_pct": 6.139723766812288,
+     "ventaja_pp": 16.409670008049872
+    },
+    "50": {
+     "cagr_pct": 18.382921233595706,
+     "ventaja_pp": 28.652867474833286
+    },
+    "100": {
+     "cagr_pct": 54.11983766414126,
+     "ventaja_pp": 64.38978390537883
+    }
+   },
+   "peso_compensa_pct": {
+    "1": 1.9151839038715956,
+    "2": 3.8303678077431913,
+    "3": 5.745551711614787
+   },
+   "peso_compensa_exacto_pct": {
+    "1": 1.9513016958242424,
+    "2": 3.885129938996444,
+    "3": 5.801827336107018
+   },
+   "dif_media_pct_mes": 4.604306291137516,
+   "se_nw_pct": 0.8401895078823907,
+   "t_nw": 5.480080681728799,
+   "t_nw_sin_correccion": 5.723757597140713,
+   "t_iid": 3.0256606059780897,
+   "ic95_pct": [
+    2.957565115499598,
+    6.251047466775433
+   ],
+   "veredicto": "apoyo",
+   "se_formula2_menos_formula1": 0.0,
+   "se_herramientas_menos_formula1": 0.0
+  },
+  "expl_2016_2025": {
+   "n": 120,
+   "desde": "2016-01",
+   "hasta": "2025-12",
+   "fx_primero": "2015-12-31",
+   "fx_ultimo": "2025-12-31",
+   "ipc_cagr_pct": 6.499786058448742,
+   "sp_mxn_cagr_pct": 15.24520272777794,
+   "mezclas": {
+    "0": {
+     "cagr_pct": 6.499786058448742,
+     "ventaja_pp": 0.0
+    },
+    "10": {
+     "cagr_pct": 7.535896803066167,
+     "ventaja_pp": 1.0361107446174245
+    },
+    "16.4": {
+     "cagr_pct": 8.180871306839155,
+     "ventaja_pp": 1.6810852483904126
+    },
+    "20": {
+     "cagr_pct": 8.537388732868312,
+     "ventaja_pp": 2.0376026744195697
+    },
+    "30": {
+     "cagr_pct": 9.503763175889057,
+     "ventaja_pp": 3.003977117440315
+    },
+    "50": {
+     "cagr_pct": 11.329208887795495,
+     "ventaja_pp": 4.829422829346752
+    },
+    "100": {
+     "cagr_pct": 15.24520272777794,
+     "ventaja_pp": 8.745416669329199
+    }
+   },
+   "peso_compensa_pct": {
+    "1": 9.651477944756204,
+    "2": 19.624533425576395,
+    "3": 29.958844964609337
+   },
+   "peso_compensa_exacto_pct": {
+    "1": 9.64579881675033,
+    "2": 19.61812523431971,
+    "3": 29.95807939834898
+   },
+   "dif_media_pct_mes": 0.657122156958555,
+   "se_nw_pct": 0.5466651382600923,
+   "t_nw": 1.2020560869310628,
+   "t_nw_sin_correccion": 1.2070961764866783,
+   "t_iid": 1.255597380514748,
+   "ic95_pct": [
+    -0.4143218256348352,
+    1.7285661395519452
+   ],
+   "veredicto": "inconcluso",
+   "se_formula2_menos_formula1": 0.0,
+   "se_herramientas_menos_formula1": 0.0
+  },
+  "sesgo_mezclas": {
+   "10": 0.0546042546623271,
+   "10_ambos": 0.04555282435130259,
+   "20": 0.11082167406630816,
+   "20_ambos": 0.09250448390953903,
+   "30": 0.16862141326550173,
+   "30_ambos": 0.1408292088981744,
+   "50": 0.2888381930052475,
+   "50_ambos": 0.24148939240615785
+  }
+ },
+ "liquidez": {
+  "CSPXN.MX": {
+   "precio_meta": 14725.5,
+   "ultimo_cierre": 14725.5,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 252,
+   "con_volumen": 249,
+   "mediana_valor_mxn": 47066414.212890625,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "iShares VII Public Limited Company - iShares Core S&P 500 UCITS ETF"
+  },
+  "VUAAN.MX": {
+   "precio_meta": 2630.0,
+   "ultimo_cierre": 2630.0,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 252,
+   "con_volumen": 251,
+   "mediana_valor_mxn": 5269475.5,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "Vanguard Funds Public Limited Company - Vanguard S&P 500 UCITS ETF"
+  },
+  "IUSAN.MX": {
+   "precio_meta": 1304.43,
+   "ultimo_cierre": 1304.4300537109375,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 213,
+   "con_volumen": 14,
+   "mediana_valor_mxn": 0.0,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "iShares Public Limited Company - iShares S&P 500 UCITS ETF"
+  },
+  "IWDAN.MX": {
+   "precio_meta": 2603.9,
+   "ultimo_cierre": 2603.89990234375,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 249,
+   "con_volumen": 155,
+   "mediana_valor_mxn": 40049.281494140625,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "iShares III Public Limited Company - iShares Core MSCI World UCITS ETF"
+  },
+  "VWRAN.MX": {
+   "precio_meta": 3413.86,
+   "ultimo_cierre": 3408.159912109375,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 252,
+   "con_volumen": 239,
+   "mediana_valor_mxn": 641283.6145019531,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "Vanguard Funds Public Limited Company - Vanguard FTSE All-World UCITS ETF"
+  },
+  "ISACN.MX": {
+   "precio_meta": 2192.08,
+   "ultimo_cierre": 2192.080078125,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 252,
+   "con_volumen": 199,
+   "mediana_valor_mxn": 670349.3452148438,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "iShares V Public Limited Company - iShares MSCI ACWI UCITS ETF"
+  },
+  "EIMIN.MX": {
+   "precio_meta": 979.0,
+   "ultimo_cierre": 979.0,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 250,
+   "con_volumen": 195,
+   "mediana_valor_mxn": 754376.1727905273,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "iShares Public Limited Company - iShares Core MSCI EM IMI UCITS ETF"
+  },
+  "CNDXN.MX": {
+   "precio_meta": 31040.0,
+   "ultimo_cierre": 31040.0,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 252,
+   "con_volumen": 209,
+   "mediana_valor_mxn": 4812576.8046875,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "iShares VII Public Limited Company -  iShares NASDAQ 100 UCITS ETF"
+  },
+  "IVV.MX": {
+   "precio_meta": 13673.23,
+   "ultimo_cierre": 13513.0,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 252,
+   "con_volumen": 250,
+   "mediana_valor_mxn": 73814940.48828125,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "iShares Core S&P 500 ETF"
+  },
+  "VOO.MX": {
+   "precio_meta": 12552.41,
+   "ultimo_cierre": 12403.8798828125,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 252,
+   "con_volumen": 250,
+   "mediana_valor_mxn": 35557601.40234375,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "Vanguard S&P 500 ETF"
+  },
+  "SPY.MX": {
+   "precio_meta": 13617.49,
+   "ultimo_cierre": 13445.0,
+   "fecha_ultima": "2026-09-24",
+   "sesiones": 252,
+   "con_volumen": 250,
+   "mediana_valor_mxn": 19440540.755859375,
+   "moneda": "MXN",
+   "bolsa": "MEX",
+   "nombre": "State Street SPDR S&P 500 ETF Trust"
+  }
+ },
+ "dividendo_spy": {
+  "n_dividendos_12m": 4,
+  "suma_12m_usd": 7.583,
+  "cierre": 767.1799926757812,
+  "fecha": "2026-09-24",
+  "rend_div_pct": 0.9884251508634766,
+  "fuga_pp": {
+   "10": 0.09884251508634767,
+   "15": 0.14826377262952148,
+   "30": 0.29652754525904296
+  }
+ },
+ "impuesto_sucesorio": {
+  "tc": 17.2454,
+  "fecha_tc": "2026-09-18",
+  "credito": 13000.0,
+  "tarifa_min_pct": 18.0,
+  "tarifa_max_pct": 40.0,
+  "n_tramos": 12,
+  "filas": {
+   "1160": {
+    "usd": 1159.7295510686909,
+    "mxn": 20000.0,
+    "impuesto_usd": 0.0,
+    "tasa_efectiva_pct": 0.0
+   },
+   "60000": {
+    "usd": 60000,
+    "mxn": 1034724.0,
+    "impuesto_usd": 0.0,
+    "tasa_efectiva_pct": 0.0
+   },
+   "100000": {
+    "usd": 100000,
+    "mxn": 1724540.0,
+    "impuesto_usd": 10800.0,
+    "tasa_efectiva_pct": 10.8
+   },
+   "250000": {
+    "usd": 250000,
+    "mxn": 4311350.0,
+    "impuesto_usd": 57800.0,
+    "tasa_efectiva_pct": 23.12
+   },
+   "500000": {
+    "usd": 500000,
+    "mxn": 8622700.0,
+    "impuesto_usd": 142800.0,
+    "tasa_efectiva_pct": 28.56
+   },
+   "1000000": {
+    "usd": 1000000,
+    "mxn": 17245400.0,
+    "impuesto_usd": 332800.0,
+    "tasa_efectiva_pct": 33.28
+   }
+  }
+ },
+ "citas_legales": [
+  {
+   "id": "L01",
+   "regla": "ISR 10% definitivo sobre ganancias en bolsa",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L02",
+   "regla": "Art. 129 fr. I incluye acciones extranjeras cotizadas en bolsa",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L03",
+   "regla": "Art. 129 fr. II incluye títulos que representen índices accionarios",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L04",
+   "regla": "Pérdidas solo contra ganancias del mismo tipo, en el ejercicio o en los 10 siguientes",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L05",
+   "regla": "Pérdidas actualizadas por inflación",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L06",
+   "regla": "Si pudiendo no se disminuye la pérdida, se pierde",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L07",
+   "regla": "Declaración junto con la anual del art. 150",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L08",
+   "regla": "El intermediario expide las constancias",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L09",
+   "regla": "GBM: sin retención en la venta y 10% anual",
+   "fuentes": [
+    "gbm_como-funcionan-los-impuestos-por-las-acciones-de-empresas-extranjeras-en-el-sic.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L10",
+   "regla": "GBM: constancias 2025 en la app; sin CFDI para Trading USA",
+   "fuentes": [
+    "gbm_como-y-donde-recibo-los-comprobantes-fiscales-o-cfdi-por-mis-ganancias.txt",
+    "gbm_como-funcionan-los-impuestos-por-las-acciones-de-empresas-extranjeras-en-el-sic.txt"
+   ],
+   "frases": 2,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L11",
+   "regla": "LIF 2026 art. 24: retención anual 0.90% (arts. 54 y 135 LISR)",
+   "fuentes": [
+    "LIF_2026.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L12",
+   "regla": "LIF 2026 publicada en el DOF el 7-nov-2025, vigente desde 01-01-2026",
+   "fuentes": [
+    "LIF_2026.txt"
+   ],
+   "frases": 2,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L13",
+   "regla": "Retención sobre el capital, como pago provisional (arts. 54 y 135)",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L14",
+   "regla": "Dividendos mexicanos: acumulación, acreditamiento del ISR corporativo y 10% adicional retenido definitivo",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 3,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L15",
+   "regla": "Dividendos extranjeros: acumulación más 10% adicional definitivo (art. 142 fr. V)",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 4,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L16",
+   "regla": "Base del 10% adicional: sin incluir el impuesto retenido (neto)",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L17",
+   "regla": "Acreditamiento del impuesto pagado en el extranjero (art. 5)",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L18",
+   "regla": "GBM: EUA retiene 30% o 10% con W-8BEN; México 10% sobre neto",
+   "fuentes": [
+    "gbm_como-funcionan-los-impuestos-sobre-los-dividendos-en-trading-mx.txt"
+   ],
+   "frases": 2,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L19",
+   "regla": "Tratado México-EUA art. 10: 10% en dividendos de cartera",
+   "fuentes": [
+    "irs-tratado-eua-mexico.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L20",
+   "regla": "LISR: última reforma DOF 01-04-2024 (texto de la Cámara)",
+   "fuentes": [
+    "LISR.txt",
+    "extra:diputados-lisr-ref.txt"
+   ],
+   "frases": 2,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L21",
+   "regla": "706-NA: umbral de declaración de 60,000 USD (instrucciones 09/2025)",
+   "fuentes": [
+    "irs-instrucciones-706NA.txt",
+    "irs-instrucciones-706NA.html"
+   ],
+   "frases": 2,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L22",
+   "regla": "Crédito unificado de 13,000 USD (706-NA y 26 USC 2102(b)(1))",
+   "fuentes": [
+    "irs-instrucciones-706NA.txt",
+    "usc-26-2102.txt"
+   ],
+   "frases": 2,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L23",
+   "regla": "Tarifa 26 USC 2001(c): de 18% a 40%",
+   "fuentes": [
+    "usc-26-2001.txt"
+   ],
+   "frases": 2,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L24",
+   "regla": "Tratados sucesorios: 15 países, sin México",
+   "fuentes": [
+    "irs-instrucciones-706NA.txt",
+    "irs-instrucciones-706NA.html"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L25",
+   "regla": "Situs: acciones de sociedad de EUA sin importar dónde estén los certificados",
+   "fuentes": [
+    "ecfr-26CFR20.2104-1.txt",
+    "ecfr-26CFR20.2104-1.html"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L26",
+   "regla": "Excepción RIC terminó para fallecimientos después del 31-dic-2011",
+   "fuentes": [
+    "usc-26-2105.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L27",
+   "regla": "Tratado EUA-Irlanda art. 10: 15% en dividendos de cartera",
+   "fuentes": [
+    "irs-tratado-eua-irlanda.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L28",
+   "regla": "CAT irlandés s.75: exención si causante y heredero no tienen domicilio ni residencia habitual en Irlanda",
+   "fuentes": [
+    "revenue-ie-cat-notas-guia-part09.txt"
+   ],
+   "frases": 2,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L29",
+   "regla": "REFIPRE (art. 176) solo con control efectivo",
+   "fuentes": [
+    "LISR.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L30",
+   "regla": "GBM: W-8BEN reduce la retención de 30% a 10%",
+   "fuentes": [
+    "gbm_que-es-y-como-funciona-el-w-8ben-para-trading-mx-y-sic.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L31",
+   "regla": "iShares: CSPX e IUSA domiciliados en Irlanda, TER 0.07% (página del emisor, consulta en vivo 2026-09-25)",
+   "fuentes": [
+    "extra:ishares-CSPX-253743.txt",
+    "extra:ishares-IUSA-251900.txt"
+   ],
+   "frases": 6,
+   "faltan": [],
+   "ok": true
+  },
+  {
+   "id": "L24b",
+   "regla": "Lista de tratados: 15 países y México ausente",
+   "fuentes": [
+    "irs-instrucciones-706NA.txt"
+   ],
+   "frases": 1,
+   "faltan": [],
+   "ok": true,
+   "n_paises": 15
+  }
+ ],
+ "comparacion": {
+  "cifras": 334,
+  "dentro": 326,
+  "identicas": 320,
+  "fuera": [
+   {
+    "bloque": "1. A1 (Report 1a)",
+    "concepto": "Focus Mid-Year 2024: ytd",
+    "readme": "1",
+    "propio": 57.31,
+    "tolerancia": 0.005,
+    "nota": "",
+    "tipo": "numerica",
+    "diferencia": 56.31,
+    "dentro": false,
+    "identica": false
+   },
+   {
+    "bloque": "1. A1 (Report 1a)",
+    "concepto": "Focus Mid-Year 2024: 1a",
+    "readme": "(sin cifra)",
+    "propio": 57.05,
+    "tolerancia": 0.005,
+    "nota": "",
+    "tipo": "numerica",
+    "diferencia": "",
+    "dentro": false,
+    "identica": false
+   },
+   {
+    "bloque": "1. A1 (Report 1a)",
+    "concepto": "Focus Mid-Year 2024: 3a",
+    "readme": "(sin cifra)",
+    "propio": 86.08,
+    "tolerancia": 0.005,
+    "nota": "",
+    "tipo": "numerica",
+    "diferencia": "",
+    "dentro": false,
+    "identica": false
+   },
+   {
+    "bloque": "1. A1 (Report 1a)",
+    "concepto": "Focus Mid-Year 2024: 5a",
+    "readme": "(sin cifra)",
+    "propio": 77.26,
+    "tolerancia": 0.005,
+    "nota": "",
+    "tipo": "numerica",
+    "diferencia": "",
+    "dentro": false,
+    "identica": false
+   },
+   {
+    "bloque": "1. A1 (Report 1a)",
+    "concepto": "Focus Mid-Year 2024: 10a",
+    "readme": "(sin cifra)",
+    "propio": 84.71,
+    "tolerancia": 0.005,
+    "nota": "",
+    "tipo": "numerica",
+    "diferencia": "",
+    "dentro": false,
+    "identica": false
+   },
+   {
+    "bloque": "1. A1 (Report 1a)",
+    "concepto": "Focus Mid-Year 2024: 15a",
+    "readme": "(sin cifra)",
+    "propio": 89.54,
+    "tolerancia": 0.005,
+    "nota": "",
+    "tipo": "numerica",
+    "diferencia": "",
+    "dentro": false,
+    "identica": false
+   },
+   {
+    "bloque": "1. A1 (Report 1a)",
+    "concepto": "Focus Mid-Year 2024: 20a",
+    "readme": "(sin cifra)",
+    "propio": 91.77,
+    "tolerancia": 0.005,
+    "nota": "",
+    "tipo": "numerica",
+    "diferencia": "",
+    "dentro": false,
+    "identica": false
+   },
+   {
+    "bloque": "5. Fiscalidad",
+    "concepto": "Base del 10% adicional de dividendos extranjeros (L16)",
+    "readme": "ambigua",
+    "propio": "neta",
+    "tolerancia": 0,
+    "nota": "art. 142 fr. V: 'sin incluir el monto del impuesto retenido que en su caso se hubiere efectuado'",
+    "tipo": "categorica",
+    "diferencia": "",
+    "dentro": false,
+    "identica": false
+   }
+  ]
+ }
+}

@@ -1,0 +1,3449 @@
+{
+"descripcion": "Extracto de SEC companyfacts (XBRL, ifrs-full, MXN) de America Movil: hechos del 20-F 2024 (accession 0001140361-25-018954) con fecha final 2022-12-31, 2023-12-31 o 2024-12-31. Lectura por maquina, independiente del PDF. El 20-F 2025 aun no aparece en companyfacts al 2026-09-25.",
+"url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001129137.json",
+"fecha_descarga": "2026-09-25",
+"sha256_json_completo": "50054fdc1df277e5b24c7c10273aecb7f39ab9821e55b944d7571b9625e2349d",
+"bytes_json_completo": 1062974,
+"accession": "0001140361-25-018954",
+"n_hechos": 573,
+"hechos": [
+{
+"concepto": "AccrualsClassifiedAsCurrent",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 55214324000
+},
+{
+"concepto": "AccrualsClassifiedAsCurrent",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 57033837000
+},
+{
+"concepto": "AccumulatedOtherComprehensiveIncome",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": -274303207000
+},
+{
+"concepto": "AccumulatedOtherComprehensiveIncome",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": -243519865000
+},
+{
+"concepto": "AcquisitionsThroughBusinessCombinationsIntangibleAssetsOtherThanGoodwill",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 3013529000
+},
+{
+"concepto": "AcquisitionsThroughBusinessCombinationsIntangibleAssetsOtherThanGoodwill",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 874167000
+},
+{
+"concepto": "AcquisitionsThroughBusinessCombinationsPropertyPlantAndEquipment",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 1475682000
+},
+{
+"concepto": "AcquisitionsThroughBusinessCombinationsPropertyPlantAndEquipment",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 33764113000
+},
+{
+"concepto": "AcquisitionsThroughBusinessCombinationsRightofuseAssets",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 4252773000
+},
+{
+"concepto": "AcquisitionsThroughBusinessCombinationsRightofuseAssets",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 5511546000
+},
+{
+"concepto": "ActuarialGainsLossesArisingFromChangesInDemographicAssumptionsNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 64000
+},
+{
+"concepto": "ActuarialGainsLossesArisingFromChangesInDemographicAssumptionsNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -134000
+},
+{
+"concepto": "ActuarialGainsLossesArisingFromChangesInDemographicAssumptionsNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ActuarialGainsLossesArisingFromChangesInFinancialAssumptionsNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 88990000
+},
+{
+"concepto": "ActuarialGainsLossesArisingFromChangesInFinancialAssumptionsNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -30958000
+},
+{
+"concepto": "ActuarialGainsLossesArisingFromChangesInFinancialAssumptionsNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 23068000
+},
+{
+"concepto": "AdditionsOtherThanThroughBusinessCombinationsIntangibleAssetsOtherThanGoodwill",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 8846833000
+},
+{
+"concepto": "AdditionsOtherThanThroughBusinessCombinationsIntangibleAssetsOtherThanGoodwill",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 25602692000
+},
+{
+"concepto": "AdditionsOtherThanThroughBusinessCombinationsIntangibleAssetsOtherThanGoodwill",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 18321105000
+},
+{
+"concepto": "AdditionsOtherThanThroughBusinessCombinationsPropertyPlantAndEquipment",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 227067886000
+},
+{
+"concepto": "AdditionsOtherThanThroughBusinessCombinationsPropertyPlantAndEquipment",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 144607028000
+},
+{
+"concepto": "AdditionsOtherThanThroughBusinessCombinationsPropertyPlantAndEquipment",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 127886893000
+},
+{
+"concepto": "AdditionsToRightofuseAssets",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 48996728000
+},
+{
+"concepto": "AdditionsToRightofuseAssets",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 15355610000
+},
+{
+"concepto": "AdditionsToRightofuseAssets",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 74728239000
+},
+{
+"concepto": "AdjustmentsForAmortisationExpense",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 18280617000
+},
+{
+"concepto": "AdjustmentsForAmortisationExpense",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 17967888000
+},
+{
+"concepto": "AdjustmentsForAmortisationExpense",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 20430474000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInInventories",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -1183883000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInInventories",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 2832978000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInInventories",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -3055411000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInOtherAssets",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -1321813000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInOtherAssets",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -1564370000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInOtherAssets",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -8825833000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInPrepaidExpenses",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -2527168000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInPrepaidExpenses",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -6154082000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInPrepaidExpenses",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2252754000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInTradeAndOtherReceivables",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -6803202000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInTradeAndOtherReceivables",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -19201698000
+},
+{
+"concepto": "AdjustmentsForDecreaseIncreaseInTradeAndOtherReceivables",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -4160268000
+},
+{
+"concepto": "AdjustmentsForDepreciationExpense",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 140353169000
+},
+{
+"concepto": "AdjustmentsForDepreciationExpense",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 133818176000
+},
+{
+"concepto": "AdjustmentsForDepreciationExpense",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 143697887000
+},
+{
+"concepto": "AdjustmentsForGainLossOnDisposalOfInvestmentsInSubsidiariesJointVenturesAndAssociates",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 3405014000
+},
+{
+"concepto": "AdjustmentsForGainLossOnDisposalOfInvestmentsInSubsidiariesJointVenturesAndAssociates",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "AdjustmentsForGainLossOnDisposalOfInvestmentsInSubsidiariesJointVenturesAndAssociates",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "AdjustmentsForGainLossOnDisposalsPropertyPlantAndEquipment",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -935644000
+},
+{
+"concepto": "AdjustmentsForGainLossOnDisposalsPropertyPlantAndEquipment",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 5055264000
+},
+{
+"concepto": "AdjustmentsForGainLossOnDisposalsPropertyPlantAndEquipment",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -264769000
+},
+{
+"concepto": "AdjustmentsForGainsLossesOnChangeInFairValueOfDerivatives",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -28639687000
+},
+{
+"concepto": "AdjustmentsForGainsLossesOnChangeInFairValueOfDerivatives",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -10268520000
+},
+{
+"concepto": "AdjustmentsForGainsLossesOnChangeInFairValueOfDerivatives",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -2141802000
+},
+{
+"concepto": "AdjustmentsForImpairmentLossReversalOfImpairmentLossRecognisedInProfitOrLossTradeAndOtherReceivables",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "AdjustmentsForImpairmentLossReversalOfImpairmentLossRecognisedInProfitOrLossTradeAndOtherReceivables",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 12184562000
+},
+{
+"concepto": "AdjustmentsForImpairmentLossReversalOfImpairmentLossRecognisedInProfitOrLossTradeAndOtherReceivables",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 4594792000
+},
+{
+"concepto": "AdjustmentsForIncreaseDecreaseInDeferredIncomeIncludingContractLiabilities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 2430434000
+},
+{
+"concepto": "AdjustmentsForIncreaseDecreaseInDeferredIncomeIncludingContractLiabilities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 3062445000
+},
+{
+"concepto": "AdjustmentsForIncreaseDecreaseInDeferredIncomeIncludingContractLiabilities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2738688000
+},
+{
+"concepto": "AdjustmentsForIncreaseDecreaseInEmployeeBenefitLiabilities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -25723517000
+},
+{
+"concepto": "AdjustmentsForIncreaseDecreaseInEmployeeBenefitLiabilities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -13090945000
+},
+{
+"concepto": "AdjustmentsForIncreaseDecreaseInEmployeeBenefitLiabilities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -27271158000
+},
+{
+"concepto": "AdjustmentsForIncreaseDecreaseInTradeAndOtherPayables",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -10291588000
+},
+{
+"concepto": "AdjustmentsForIncreaseDecreaseInTradeAndOtherPayables",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 10098156000
+},
+{
+"concepto": "AdjustmentsForIncreaseDecreaseInTradeAndOtherPayables",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -15450565000
+},
+{
+"concepto": "AdjustmentsForInterestExpense",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 41258803000
+},
+{
+"concepto": "AdjustmentsForInterestExpense",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 44545241000
+},
+{
+"concepto": "AdjustmentsForInterestExpense",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 56019754000
+},
+{
+"concepto": "AdjustmentsForInterestIncome",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 4823579000
+},
+{
+"concepto": "AdjustmentsForInterestIncome",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 9628340000
+},
+{
+"concepto": "AdjustmentsForInterestIncome",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 9008220000
+},
+{
+"concepto": "AdjustmentsForUnrealisedForeignExchangeLossesGains",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -20008610000
+},
+{
+"concepto": "AdjustmentsForUnrealisedForeignExchangeLossesGains",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -16175776000
+},
+{
+"concepto": "AdjustmentsForUnrealisedForeignExchangeLossesGains",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 69721961000
+},
+{
+"concepto": "AdvertisingExpense",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 12676350000
+},
+{
+"concepto": "AdvertisingExpense",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 11781250000
+},
+{
+"concepto": "AdvertisingExpense",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 12670214000
+},
+{
+"concepto": "AmortisationIntangibleAssetsOtherThanGoodwill",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 17119319000
+},
+{
+"concepto": "AmortisationIntangibleAssetsOtherThanGoodwill",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 19864238000
+},
+{
+"concepto": "AmountsPayableRelatedPartyTransactions",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 6766826000
+},
+{
+"concepto": "AmountsPayableRelatedPartyTransactions",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 3701960000
+},
+{
+"concepto": "AmountsReceivableRelatedPartyTransactions",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 1071520000
+},
+{
+"concepto": "AmountsReceivableRelatedPartyTransactions",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 1395483000
+},
+{
+"concepto": "Assets",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 1618099344000
+},
+{
+"concepto": "Assets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 1564185960000
+},
+{
+"concepto": "Assets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 1793920957000
+},
+{
+"concepto": "BalancesOnDemandDepositsFromCustomers",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 1455109000
+},
+{
+"concepto": "BalancesOnDemandDepositsFromCustomers",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 1669103000
+},
+{
+"concepto": "BorrowingCostsCapitalised",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 1514654000
+},
+{
+"concepto": "BorrowingCostsCapitalised",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 1442077000
+},
+{
+"concepto": "BorrowingCostsCapitalised",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 1622958000
+},
+{
+"concepto": "Borrowings",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 500677052000
+},
+{
+"concepto": "Borrowings",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 567585631000
+},
+{
+"concepto": "CashAndCashEquivalents",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 33700949000
+},
+{
+"concepto": "CashAndCashEquivalents",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 26597773000
+},
+{
+"concepto": "CashAndCashEquivalents",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 36652098000
+},
+{
+"concepto": "CashFlowsFromLosingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 5791488000
+},
+{
+"concepto": "CashFlowsFromLosingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "CashFlowsFromLosingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "CashFlowsFromUsedInFinancingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -73348287000
+},
+{
+"concepto": "CashFlowsFromUsedInFinancingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -84947168000
+},
+{
+"concepto": "CashFlowsFromUsedInFinancingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -103121821000
+},
+{
+"concepto": "CashFlowsFromUsedInInvestingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -152359040000
+},
+{
+"concepto": "CashFlowsFromUsedInInvestingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -164989416000
+},
+{
+"concepto": "CashFlowsFromUsedInInvestingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -129235804000
+},
+{
+"concepto": "CashFlowsFromUsedInInvestingActivitiesDiscontinuedOperations",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -1944235000
+},
+{
+"concepto": "CashFlowsFromUsedInInvestingActivitiesDiscontinuedOperations",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "CashFlowsFromUsedInInvestingActivitiesDiscontinuedOperations",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "CashFlowsFromUsedInOperatingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 225287031000
+},
+{
+"concepto": "CashFlowsFromUsedInOperatingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 248092195000
+},
+{
+"concepto": "CashFlowsFromUsedInOperatingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 239341121000
+},
+{
+"concepto": "CashFlowsFromUsedInOperatingActivitiesDiscontinuedOperations",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -1214025000
+},
+{
+"concepto": "CashFlowsFromUsedInOperatingActivitiesDiscontinuedOperations",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "CashFlowsFromUsedInOperatingActivitiesDiscontinuedOperations",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "CashFlowsUsedInObtainingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 18525639000
+},
+{
+"concepto": "CashFlowsUsedInObtainingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "CashFlowsUsedInObtainingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -493714000
+},
+{
+"concepto": "ComprehensiveIncome",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 42571962000
+},
+{
+"concepto": "ComprehensiveIncome",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 35372469000
+},
+{
+"concepto": "ComprehensiveIncome",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 67035882000
+},
+{
+"concepto": "ComprehensiveIncomeAttributableToNoncontrollingInterests",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 1612938000
+},
+{
+"concepto": "ComprehensiveIncomeAttributableToNoncontrollingInterests",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 793615000
+},
+{
+"concepto": "ComprehensiveIncomeAttributableToNoncontrollingInterests",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 12533705000
+},
+{
+"concepto": "ComprehensiveIncomeFromContinuingOperations",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 49290977000
+},
+{
+"concepto": "ComprehensiveIncomeFromContinuingOperations",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 35372469000
+},
+{
+"concepto": "ComprehensiveIncomeFromContinuingOperations",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 67035882000
+},
+{
+"concepto": "ComprehensiveIncomeFromContinuingOperationsAttributableToOwnersOfParent",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 40959024000
+},
+{
+"concepto": "ComprehensiveIncomeFromContinuingOperationsAttributableToOwnersOfParent",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 34578854000
+},
+{
+"concepto": "ComprehensiveIncomeFromContinuingOperationsAttributableToOwnersOfParent",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 54502177000
+},
+{
+"concepto": "ComprehensiveIncomeFromDiscontinuedOperations",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -6719015000
+},
+{
+"concepto": "ComprehensiveIncomeFromDiscontinuedOperations",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ComprehensiveIncomeFromDiscontinuedOperations",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ContractAssets",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 28573717000
+},
+{
+"concepto": "ContractAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 25062219000
+},
+{
+"concepto": "ContractAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 31230793000
+},
+{
+"concepto": "ContractualCapitalCommitments",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 65850017000
+},
+{
+"concepto": "ContributionsToPlanByPlanParticipantsNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ContributionsToPlanByPlanParticipantsNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ContributionsToPlanByPlanParticipantsNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "CostOfInventoriesRecognisedAsExpenseDuringPeriod",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 115022007000
+},
+{
+"concepto": "CostOfInventoriesRecognisedAsExpenseDuringPeriod",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 111863425000
+},
+{
+"concepto": "CostOfInventoriesRecognisedAsExpenseDuringPeriod",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 111659973000
+},
+{
+"concepto": "CostOfSales",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 330532450000
+},
+{
+"concepto": "CostOfSales",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 316476140000
+},
+{
+"concepto": "CostOfSales",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 331177822000
+},
+{
+"concepto": "CurrentAdvancesToSuppliers",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 8788638000
+},
+{
+"concepto": "CurrentAdvancesToSuppliers",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 10909652000
+},
+{
+"concepto": "CurrentAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 340166988000
+},
+{
+"concepto": "CurrentAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 353697833000
+},
+{
+"concepto": "CurrentBorrowingsAndCurrentPortionOfNoncurrentBorrowings",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 160963603000
+},
+{
+"concepto": "CurrentBorrowingsAndCurrentPortionOfNoncurrentBorrowings",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 104210738000
+},
+{
+"concepto": "CurrentContractAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 23913017000
+},
+{
+"concepto": "CurrentContractAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 29672689000
+},
+{
+"concepto": "CurrentDeferredIncomeIncludingCurrentContractLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 27494667000
+},
+{
+"concepto": "CurrentDeferredIncomeIncludingCurrentContractLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 29020425000
+},
+{
+"concepto": "CurrentDerivativeFinancialAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 1446034000
+},
+{
+"concepto": "CurrentDerivativeFinancialAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 10668460000
+},
+{
+"concepto": "CurrentDerivativeFinancialLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 17896379000
+},
+{
+"concepto": "CurrentDerivativeFinancialLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 22185709000
+},
+{
+"concepto": "CurrentDividendPayables",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 2152686000
+},
+{
+"concepto": "CurrentDividendPayables",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 2266987000
+},
+{
+"concepto": "CurrentInterestPayable",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 6616584000
+},
+{
+"concepto": "CurrentInterestPayable",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 8959701000
+},
+{
+"concepto": "CurrentLeaseLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 24375010000
+},
+{
+"concepto": "CurrentLeaseLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 35436851000
+},
+{
+"concepto": "CurrentLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 524406537000
+},
+{
+"concepto": "CurrentLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 494400877000
+},
+{
+"concepto": "CurrentPayablesOnSocialSecurityAndTaxesOtherThanIncomeTax",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 40082150000
+},
+{
+"concepto": "CurrentPayablesOnSocialSecurityAndTaxesOtherThanIncomeTax",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 51735433000
+},
+{
+"concepto": "CurrentPrepaidExpenses",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 2105556000
+},
+{
+"concepto": "CurrentPrepaidExpenses",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 2140859000
+},
+{
+"concepto": "CurrentPrepaymentsAndOtherCurrentAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 328065000
+},
+{
+"concepto": "CurrentPrepaymentsAndOtherCurrentAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 373884000
+},
+{
+"concepto": "CurrentRecognisedLiabilitiesDefinedBenefitPlan",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 275209000
+},
+{
+"concepto": "CurrentRecognisedLiabilitiesDefinedBenefitPlan",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 232102000
+},
+{
+"concepto": "CurrentRecognisedLiabilitiesDefinedBenefitPlan",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 292907000
+},
+{
+"concepto": "CurrentServiceCostNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 1534180000
+},
+{
+"concepto": "CurrentServiceCostNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 2044102000
+},
+{
+"concepto": "CurrentServiceCostNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 1889699000
+},
+{
+"concepto": "CurrentTaxExpenseIncomeRelatedToPillarTwoIncomeTaxes",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 235000000
+},
+{
+"concepto": "CurrentTaxLiabilitiesCurrent",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 29516162000
+},
+{
+"concepto": "CurrentTaxLiabilitiesCurrent",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 24151790000
+},
+{
+"concepto": "DebtInstrumentsHeldMeasuredAtFairValueThroughOtherComprehensiveIncome",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 14914412000
+},
+{
+"concepto": "DebtInstrumentsHeldMeasuredAtFairValueThroughOtherComprehensiveIncome",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 13908873000
+},
+{
+"concepto": "DeductibleTemporaryDifferencesForWhichNoDeferredTaxAssetIsRecognised",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 3909327000
+},
+{
+"concepto": "DeductibleTemporaryDifferencesForWhichNoDeferredTaxAssetIsRecognised",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 596631908000
+},
+{
+"concepto": "DeferredTaxAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 137883622000
+},
+{
+"concepto": "DeferredTaxAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 153217164000
+},
+{
+"concepto": "DeferredTaxExpenseIncome",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -13810280000
+},
+{
+"concepto": "DeferredTaxExpenseIncome",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -12920451000
+},
+{
+"concepto": "DeferredTaxExpenseIncomeRecognisedInProfitOrLoss",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -1455448000
+},
+{
+"concepto": "DeferredTaxExpenseIncomeRecognisedInProfitOrLoss",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -13810280000
+},
+{
+"concepto": "DeferredTaxExpenseIncomeRecognisedInProfitOrLoss",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -12920451000
+},
+{
+"concepto": "DeferredTaxLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 21269102000
+},
+{
+"concepto": "DeferredTaxLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 27731694000
+},
+{
+"concepto": "DeferredTaxLiabilityAsset",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": -98415751000
+},
+{
+"concepto": "DeferredTaxLiabilityAsset",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": -116614520000
+},
+{
+"concepto": "DeferredTaxLiabilityAsset",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": -125485470000
+},
+{
+"concepto": "DepreciationAndAmortisationExpense",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 158633786000
+},
+{
+"concepto": "DepreciationAndAmortisationExpense",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 151786064000
+},
+{
+"concepto": "DepreciationAndAmortisationExpense",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 164128361000
+},
+{
+"concepto": "DepreciationRightofuseAssets",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 28984861000
+},
+{
+"concepto": "DepreciationRightofuseAssets",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 31839050000
+},
+{
+"concepto": "DepreciationRightofuseAssets",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 32401766000
+},
+{
+"concepto": "DerivativeFinancialAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 1446034000
+},
+{
+"concepto": "DerivativeFinancialAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 10668460000
+},
+{
+"concepto": "DerivativeFinancialLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 17896379000
+},
+{
+"concepto": "DerivativeFinancialLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 22185709000
+},
+{
+"concepto": "DisposalsRightofuseAssets",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 821901000
+},
+{
+"concepto": "DividendsPaid",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 29880809000
+},
+{
+"concepto": "DividendsPaid",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 30912348000
+},
+{
+"concepto": "DividendsPaid",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 31503566000
+},
+{
+"concepto": "DividendsPaidClassifiedAsFinancingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 29534053000
+},
+{
+"concepto": "DividendsPaidClassifiedAsFinancingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 30466636000
+},
+{
+"concepto": "DividendsPaidClassifiedAsFinancingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 31007121000
+},
+{
+"concepto": "DividendsReceived",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 5426370000
+},
+{
+"concepto": "DividendsReceived",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 4590313000
+},
+{
+"concepto": "DividendsReceived",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2779138000
+},
+{
+"concepto": "DividendsReceivedClassifiedAsInvestingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 5426370000
+},
+{
+"concepto": "DividendsReceivedClassifiedAsInvestingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 4590313000
+},
+{
+"concepto": "DividendsReceivedClassifiedAsInvestingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2779138000
+},
+{
+"concepto": "EffectOfExchangeRateChangesOnCashAndCashEquivalents",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -4558646000
+},
+{
+"concepto": "EffectOfExchangeRateChangesOnCashAndCashEquivalents",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -5258787000
+},
+{
+"concepto": "EffectOfExchangeRateChangesOnCashAndCashEquivalents",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 3070829000
+},
+{
+"concepto": "Equity",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 437829273000
+},
+{
+"concepto": "Equity",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 421702382000
+},
+{
+"concepto": "Equity",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 432184321000
+},
+{
+"concepto": "EquityAndLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 1564185960000
+},
+{
+"concepto": "EquityAndLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 1793920957000
+},
+{
+"concepto": "EquityAttributableToOwnersOfParent",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 366712545000
+},
+{
+"concepto": "EquityAttributableToOwnersOfParent",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 369085350000
+},
+{
+"concepto": "ExpenseByNature",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 673630645000
+},
+{
+"concepto": "ExpenseByNature",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 648229329000
+},
+{
+"concepto": "ExpenseByNature",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 689120494000
+},
+{
+"concepto": "ExpenseRelatingToLeasesOfLowvalueAssetsForWhichRecognitionExemptionHasBeenUsed",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 886000
+},
+{
+"concepto": "ExpenseRelatingToLeasesOfLowvalueAssetsForWhichRecognitionExemptionHasBeenUsed",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 1749000
+},
+{
+"concepto": "ExpenseRelatingToLeasesOfLowvalueAssetsForWhichRecognitionExemptionHasBeenUsed",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2288000
+},
+{
+"concepto": "ExpenseRelatingToShorttermLeasesForWhichRecognitionExemptionHasBeenUsed",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 24234000
+},
+{
+"concepto": "ExpenseRelatingToShorttermLeasesForWhichRecognitionExemptionHasBeenUsed",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 23295000
+},
+{
+"concepto": "ExpenseRelatingToShorttermLeasesForWhichRecognitionExemptionHasBeenUsed",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 845000
+},
+{
+"concepto": "ExpenseRelatingToVariableLeasePaymentsNotIncludedInMeasurementOfLeaseLiabilities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 65520000
+},
+{
+"concepto": "ExpenseRelatingToVariableLeasePaymentsNotIncludedInMeasurementOfLeaseLiabilities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 67927000
+},
+{
+"concepto": "ExpenseRelatingToVariableLeasePaymentsNotIncludedInMeasurementOfLeaseLiabilities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 94352000
+},
+{
+"concepto": "FeeAndCommissionExpense",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 1061278000
+},
+{
+"concepto": "FeeAndCommissionExpense",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 1190435000
+},
+{
+"concepto": "FeeAndCommissionExpense",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 1787308000
+},
+{
+"concepto": "FinanceIncomeCost",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -19116219000
+},
+{
+"concepto": "FinanceIncomeCost",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -26814668000
+},
+{
+"concepto": "FinanceIncomeCost",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 5618840000
+},
+{
+"concepto": "GainLossOnChangesInEffectOfLimitingNetDefinedBenefitAssetToAssetCeiling",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -398399000
+},
+{
+"concepto": "GainLossOnChangesInEffectOfLimitingNetDefinedBenefitAssetToAssetCeiling",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -585667000
+},
+{
+"concepto": "GainLossOnChangesInEffectOfLimitingNetDefinedBenefitAssetToAssetCeiling",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -357182000
+},
+{
+"concepto": "GainLossOnRemeasurementOfNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -13688645000
+},
+{
+"concepto": "GainLossOnRemeasurementOfNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -15414937000
+},
+{
+"concepto": "GainLossOnRemeasurementOfNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -16451061000
+},
+{
+"concepto": "GainsLossesOnChangeInFairValueOfDerivatives",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -19116219000
+},
+{
+"concepto": "GainsLossesOnChangeInFairValueOfDerivatives",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -26814668000
+},
+{
+"concepto": "GainsLossesOnChangeInFairValueOfDerivatives",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 5618840000
+},
+{
+"concepto": "GainsLossesOnExchangeDifferencesOnTranslationRecognisedInProfitOrLoss",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 20761622000
+},
+{
+"concepto": "GainsLossesOnExchangeDifferencesOnTranslationRecognisedInProfitOrLoss",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 14653523000
+},
+{
+"concepto": "GainsLossesOnExchangeDifferencesOnTranslationRecognisedInProfitOrLoss",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -70698375000
+},
+{
+"concepto": "GainsLossesOnNetMonetaryPosition",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 11538061000
+},
+{
+"concepto": "GainsLossesOnNetMonetaryPosition",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 9321480000
+},
+{
+"concepto": "GainsLossesOnNetMonetaryPosition",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 27387169000
+},
+{
+"concepto": "GainsLossesRecognisedWhenControlInSubsidiaryIsLost",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -9390641000
+},
+{
+"concepto": "GainsLossesRecognisedWhenControlInSubsidiaryIsLost",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "GainsLossesRecognisedWhenControlInSubsidiaryIsLost",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "Goodwill",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 141121365000
+},
+{
+"concepto": "Goodwill",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 146078897000
+},
+{
+"concepto": "Goodwill",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 156836369000
+},
+{
+"concepto": "ImpairmentLoss",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ImpairmentLoss",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ImpairmentLoss",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ImpairmentLossRecognisedInProfitOrLossGoodwill",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ImpairmentLossRecognisedInProfitOrLossGoodwill",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ImpairmentLossRecognisedInProfitOrLossGoodwill",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ImpairmentLossRecognisedInProfitOrLossIntangibleAssetsAndGoodwill",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 18065088000
+},
+{
+"concepto": "ImpairmentLossRecognisedInProfitOrLossLoansAndAdvances",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ImpairmentLossRecognisedInProfitOrLossLoansAndAdvances",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -12184562000
+},
+{
+"concepto": "ImpairmentLossRecognisedInProfitOrLossLoansAndAdvances",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -4594792000
+},
+{
+"concepto": "IncomeTaxExpenseContinuingOperations",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 46044089000
+},
+{
+"concepto": "IncomeTaxExpenseContinuingOperations",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 34544003000
+},
+{
+"concepto": "IncomeTaxExpenseContinuingOperations",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 35238443000
+},
+{
+"concepto": "IncomeTaxRelatingToComponentsOfOtherComprehensiveIncome",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -1861305000
+},
+{
+"concepto": "IncomeTaxRelatingToComponentsOfOtherComprehensiveIncome",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 1657918000
+},
+{
+"concepto": "IncomeTaxesPaidClassifiedAsOperatingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 62015057000
+},
+{
+"concepto": "IncomeTaxesPaidClassifiedAsOperatingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 49466056000
+},
+{
+"concepto": "IncomeTaxesPaidClassifiedAsOperatingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 48089000000
+},
+{
+"concepto": "IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -420296000
+},
+{
+"concepto": "IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -1844389000
+},
+{
+"concepto": "IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 6983496000
+},
+{
+"concepto": "IncreaseDecreaseThroughBusinessCombinationsDeferredTaxLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 529191000
+},
+{
+"concepto": "IncreaseDecreaseThroughBusinessCombinationsDeferredTaxLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -1811189000
+},
+{
+"concepto": "IncreaseDecreaseThroughChangesInForeignExchangeRatesNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -1159387000
+},
+{
+"concepto": "IncreaseDecreaseThroughChangesInForeignExchangeRatesNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -1832409000
+},
+{
+"concepto": "IncreaseDecreaseThroughChangesInForeignExchangeRatesNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 1435207000
+},
+{
+"concepto": "IncreaseDecreaseThroughEffectOfChangesInForeignExchangeRatesLiabilitiesArisingFromFinancingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -14038712000
+},
+{
+"concepto": "IncreaseDecreaseThroughEffectOfChangesInForeignExchangeRatesLiabilitiesArisingFromFinancingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 170818517000
+},
+{
+"concepto": "IncreaseDecreaseThroughFinancingCashFlowsLiabilitiesArisingFromFinancingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -4853371000
+},
+{
+"concepto": "IncreaseDecreaseThroughFinancingCashFlowsLiabilitiesArisingFromFinancingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -15975866000
+},
+{
+"concepto": "IncreaseDecreaseThroughNetExchangeDifferencesDeferredTaxLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -3202557000
+},
+{
+"concepto": "IncreaseDecreaseThroughNetExchangeDifferencesDeferredTaxLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 4202772000
+},
+{
+"concepto": "IncreaseDecreaseThroughNetExchangeDifferencesIntangibleAssetsOtherThanGoodwill",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -7781093000
+},
+{
+"concepto": "IncreaseDecreaseThroughNetExchangeDifferencesIntangibleAssetsOtherThanGoodwill",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -18371494000
+},
+{
+"concepto": "IncreaseDecreaseThroughNetExchangeDifferencesIntangibleAssetsOtherThanGoodwill",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 18135249000
+},
+{
+"concepto": "IncreaseDecreaseThroughNetExchangeDifferencesPropertyPlantAndEquipment",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -23287597000
+},
+{
+"concepto": "IncreaseDecreaseThroughNetExchangeDifferencesPropertyPlantAndEquipment",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -50848185000
+},
+{
+"concepto": "IncreaseDecreaseThroughNetExchangeDifferencesPropertyPlantAndEquipment",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 52164488000
+},
+{
+"concepto": "IncreaseDecreaseThroughOtherChangesNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -24665960000
+},
+{
+"concepto": "IncreaseDecreaseThroughOtherChangesNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -13038404000
+},
+{
+"concepto": "IncreaseDecreaseThroughOtherChangesNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -24615017000
+},
+{
+"concepto": "IncreaseDecreaseThroughTransferBetweenRevaluationReserveAndRetainedEarnings",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "IncreaseDecreaseThroughTransferBetweenRevaluationReserveAndRetainedEarnings",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "IncreaseDecreaseThroughTransferBetweenRevaluationReserveAndRetainedEarnings",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "IncreaseDecreaseThroughTransfersPropertyPlantAndEquipment",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -4121663000
+},
+{
+"concepto": "IncreaseDecreaseThroughTransfersPropertyPlantAndEquipment",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -4368760000
+},
+{
+"concepto": "IncreaseDecreaseThroughTransfersPropertyPlantAndEquipment",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -4559179000
+},
+{
+"concepto": "IncreaseDecreaseThroughTransfersRightofuseAssets",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -404843000
+},
+{
+"concepto": "IncreaseThroughBusinessCombinationsContractAssets",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "IncreaseThroughBusinessCombinationsContractAssets",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2347803000
+},
+{
+"concepto": "IntangibleAssetsOtherThanGoodwill",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 128893422000
+},
+{
+"concepto": "IntangibleAssetsOtherThanGoodwill",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 121498519000
+},
+{
+"concepto": "IntangibleAssetsOtherThanGoodwill",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 141736581000
+},
+{
+"concepto": "InterestCostsCapitalised",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 1514654000
+},
+{
+"concepto": "InterestCostsCapitalised",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 1442077000
+},
+{
+"concepto": "InterestCostsCapitalised",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 1622958000
+},
+{
+"concepto": "InterestExpense",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 41258803000
+},
+{
+"concepto": "InterestExpense",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 44545241000
+},
+{
+"concepto": "InterestExpense",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 56019754000
+},
+{
+"concepto": "InterestExpenseIncomeNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 30565134000
+},
+{
+"concepto": "InterestExpenseIncomeNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 33203706000
+},
+{
+"concepto": "InterestExpenseIncomeNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 34540808000
+},
+{
+"concepto": "InterestExpenseOnLeaseLiabilities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 8903397000
+},
+{
+"concepto": "InterestExpenseOnLeaseLiabilities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 10648584000
+},
+{
+"concepto": "InterestExpenseOnLeaseLiabilities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 16594964000
+},
+{
+"concepto": "InterestPaidClassifiedAsFinancingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 26882181000
+},
+{
+"concepto": "InterestPaidClassifiedAsFinancingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 29031855000
+},
+{
+"concepto": "InterestPaidClassifiedAsFinancingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 31082117000
+},
+{
+"concepto": "InterestReceivedClassifiedAsOperatingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 2652195000
+},
+{
+"concepto": "InterestReceivedClassifiedAsOperatingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 4882509000
+},
+{
+"concepto": "InterestReceivedClassifiedAsOperatingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 3489600000
+},
+{
+"concepto": "Inventories",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 19271625000
+},
+{
+"concepto": "Inventories",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 23751457000
+},
+{
+"concepto": "InvestmentsInAssociates",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 14380463000
+},
+{
+"concepto": "InvestmentsInAssociates",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 3678383000
+},
+{
+"concepto": "IssuedCapital",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 95362024000
+},
+{
+"concepto": "IssuedCapital",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 95356548000
+},
+{
+"concepto": "LeaseLiabilities",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 134148811000
+},
+{
+"concepto": "LeaseLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 125169156000
+},
+{
+"concepto": "LeaseLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 213103228000
+},
+{
+"concepto": "LegalProceedingsProvision",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 6105484000
+},
+{
+"concepto": "Liabilities",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 1180270071000
+},
+{
+"concepto": "Liabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 1142483578000
+},
+{
+"concepto": "Liabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 1361736636000
+},
+{
+"concepto": "LiabilitiesArisingFromFinancingActivities",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 644738291000
+},
+{
+"concepto": "LiabilitiesArisingFromFinancingActivities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 625846208000
+},
+{
+"concepto": "LiabilitiesArisingFromFinancingActivities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 780688859000
+},
+{
+"concepto": "LiabilityAssetOfDefinedBenefitPlans",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 128400391000
+},
+{
+"concepto": "LiabilityAssetOfDefinedBenefitPlans",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 134420606000
+},
+{
+"concepto": "LiabilityAssetOfDefinedBenefitPlans",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 157866603000
+},
+{
+"concepto": "LongtermBorrowings",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 339713449000
+},
+{
+"concepto": "LongtermBorrowings",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 463374893000
+},
+{
+"concepto": "LongtermProvisionForDecommissioningRestorationAndRehabilitationCosts",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 10799997000
+},
+{
+"concepto": "LongtermProvisionForDecommissioningRestorationAndRehabilitationCosts",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 10117928000
+},
+{
+"concepto": "LongtermProvisionForDecommissioningRestorationAndRehabilitationCosts",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 11512779000
+},
+{
+"concepto": "Merchandise",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 21858519000
+},
+{
+"concepto": "Merchandise",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 26361417000
+},
+{
+"concepto": "NoncontrollingInterests",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 54989837000
+},
+{
+"concepto": "NoncontrollingInterests",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 63098971000
+},
+{
+"concepto": "NoncurrentContractAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 1149202000
+},
+{
+"concepto": "NoncurrentContractAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 1558104000
+},
+{
+"concepto": "NoncurrentDeferredIncomeIncludingNoncurrentContractLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 2666273000
+},
+{
+"concepto": "NoncurrentDeferredIncomeIncludingNoncurrentContractLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 2672730000
+},
+{
+"concepto": "NoncurrentLeaseLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 100794146000
+},
+{
+"concepto": "NoncurrentLeaseLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 177666377000
+},
+{
+"concepto": "NoncurrentLiabilities",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 618077041000
+},
+{
+"concepto": "NoncurrentLiabilities",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 867335759000
+},
+{
+"concepto": "NoncurrentPrepayments",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 10574048000
+},
+{
+"concepto": "NoncurrentPrepayments",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 10775412000
+},
+{
+"concepto": "NoncurrentProvisionsForEmployeeBenefits",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 143516143000
+},
+{
+"concepto": "NoncurrentProvisionsForEmployeeBenefits",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 167152441000
+},
+{
+"concepto": "NoncurrentReceivables",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 9400123000
+},
+{
+"concepto": "NoncurrentReceivables",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 9394158000
+},
+{
+"concepto": "NoncurrentReceivablesFromTaxesOtherThanIncomeTax",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 8879374000
+},
+{
+"concepto": "NoncurrentReceivablesFromTaxesOtherThanIncomeTax",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 19489256000
+},
+{
+"concepto": "NoncurrentRecognisedLiabilitiesDefinedBenefitPlan",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 128125182000
+},
+{
+"concepto": "NoncurrentRecognisedLiabilitiesDefinedBenefitPlan",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 134188504000
+},
+{
+"concepto": "NoncurrentRecognisedLiabilitiesDefinedBenefitPlan",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 157573696000
+},
+{
+"concepto": "OtherComprehensiveIncome",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -38934433000
+},
+{
+"concepto": "OtherComprehensiveIncome",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -45417173000
+},
+{
+"concepto": "OtherComprehensiveIncome",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 39444416000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxExchangeDifferencesOnTranslation",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -35114722000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxExchangeDifferencesOnTranslation",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -41548455000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxExchangeDifferencesOnTranslation",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 62171364000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxGainsLossesFromInvestmentsInEquityInstruments",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -4707276000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxGainsLossesFromInvestmentsInEquityInstruments",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -967609000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxGainsLossesFromInvestmentsInEquityInstruments",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 3485814000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxGainsLossesOnRemeasurementsOfDefinedBenefitPlans",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -4305716000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxGainsLossesOnRemeasurementsOfDefinedBenefitPlans",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -3769565000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxGainsLossesOnRemeasurementsOfDefinedBenefitPlans",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -27872099000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxGainsLossesOnRevaluation",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxGainsLossesOnRevaluation",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 868456000
+},
+{
+"concepto": "OtherComprehensiveIncomeNetOfTaxGainsLossesOnRevaluation",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 1659337000
+},
+{
+"concepto": "OtherCurrentAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 11222259000
+},
+{
+"concepto": "OtherCurrentAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 13424395000
+},
+{
+"concepto": "OtherExpenseByFunction",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 5010379000
+},
+{
+"concepto": "OtherExpenseByFunction",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 6965828000
+},
+{
+"concepto": "OtherExpenseByFunction",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 7298470000
+},
+{
+"concepto": "OtherFinanceCost",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 327451000
+},
+{
+"concepto": "OtherFinanceCost",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 522259000
+},
+{
+"concepto": "OtherFinanceCost",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2608382000
+},
+{
+"concepto": "OtherNoncurrentAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 37643712000
+},
+{
+"concepto": "OtherNoncurrentAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 48206789000
+},
+{
+"concepto": "OtherNoncurrentFinancialAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 37643712000
+},
+{
+"concepto": "OtherNoncurrentFinancialAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 48206789000
+},
+{
+"concepto": "OtherReceivables",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 2960653000
+},
+{
+"concepto": "OtherReceivables",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 3837362000
+},
+{
+"concepto": "PastServiceCostAndGainsLossesArisingFromSettlementsNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 15979152000
+},
+{
+"concepto": "PastServiceCostAndGainsLossesArisingFromSettlementsNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 16971936000
+},
+{
+"concepto": "PastServiceCostAndGainsLossesArisingFromSettlementsNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 18232542000
+},
+{
+"concepto": "PastServiceCostNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 142911000
+},
+{
+"concepto": "PastServiceCostNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -177054000
+},
+{
+"concepto": "PastServiceCostNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 35458000
+},
+{
+"concepto": "PayablesForPurchaseOfNoncurrentAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "PayablesForPurchaseOfNoncurrentAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 17224845000
+},
+{
+"concepto": "PaymentsFromChangesInOwnershipInterestsInSubsidiaries",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 39596000
+},
+{
+"concepto": "PaymentsFromChangesInOwnershipInterestsInSubsidiaries",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 6263945000
+},
+{
+"concepto": "PaymentsFromChangesInOwnershipInterestsInSubsidiaries",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2310084000
+},
+{
+"concepto": "PaymentsFromPlanNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 281579000
+},
+{
+"concepto": "PaymentsFromPlanNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 297159000
+},
+{
+"concepto": "PaymentsFromPlanNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 328158000
+},
+{
+"concepto": "PaymentsInRespectOfSettlementsNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 23753735000
+},
+{
+"concepto": "PaymentsInRespectOfSettlementsNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 10868600000
+},
+{
+"concepto": "PaymentsInRespectOfSettlementsNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 24325925000
+},
+{
+"concepto": "PaymentsOfLeaseLiabilitiesClassifiedAsFinancingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 33823287000
+},
+{
+"concepto": "PaymentsOfLeaseLiabilitiesClassifiedAsFinancingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 39498197000
+},
+{
+"concepto": "PaymentsOfLeaseLiabilitiesClassifiedAsFinancingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 45285610000
+},
+{
+"concepto": "PaymentsToAcquireOrRedeemEntitysShares",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 26143162000
+},
+{
+"concepto": "PaymentsToAcquireOrRedeemEntitysShares",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 14331361000
+},
+{
+"concepto": "PaymentsToAcquireOrRedeemEntitysShares",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 22746633000
+},
+{
+"concepto": "ProceedsFromBorrowingsClassifiedAsFinancingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 188414369000
+},
+{
+"concepto": "ProceedsFromBorrowingsClassifiedAsFinancingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 249380436000
+},
+{
+"concepto": "ProceedsFromBorrowingsClassifiedAsFinancingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 262041021000
+},
+{
+"concepto": "ProceedsFromSalesOfInterestsInAssociates",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 6329000
+},
+{
+"concepto": "ProceedsFromSalesOfInterestsInAssociates",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ProceedsFromSalesOfInterestsInAssociates",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 3795740000
+},
+{
+"concepto": "ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 7042757000
+},
+{
+"concepto": "ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 395232000
+},
+{
+"concepto": "ProfitLoss",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 81506395000
+},
+{
+"concepto": "ProfitLoss",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 80789642000
+},
+{
+"concepto": "ProfitLoss",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 27591466000
+},
+{
+"concepto": "ProfitLossAttributableToNoncontrollingInterests",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 5347004000
+},
+{
+"concepto": "ProfitLossAttributableToNoncontrollingInterests",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 4679025000
+},
+{
+"concepto": "ProfitLossAttributableToNoncontrollingInterests",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 4689441000
+},
+{
+"concepto": "ProfitLossAttributableToOrdinaryEquityHoldersOfParentEntity",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 76159391000
+},
+{
+"concepto": "ProfitLossAttributableToOrdinaryEquityHoldersOfParentEntity",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 76110617000
+},
+{
+"concepto": "ProfitLossAttributableToOrdinaryEquityHoldersOfParentEntity",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 22902025000
+},
+{
+"concepto": "ProfitLossAttributableToOwnersOfParent",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 76159391000
+},
+{
+"concepto": "ProfitLossAttributableToOwnersOfParent",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 76110617000
+},
+{
+"concepto": "ProfitLossAttributableToOwnersOfParent",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 22902025000
+},
+{
+"concepto": "ProfitLossBeforeTax",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 134269499000
+},
+{
+"concepto": "ProfitLossBeforeTax",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 115333645000
+},
+{
+"concepto": "ProfitLossBeforeTax",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 62829909000
+},
+{
+"concepto": "ProfitLossFromContinuingOperations",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 88225410000
+},
+{
+"concepto": "ProfitLossFromContinuingOperations",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 80789642000
+},
+{
+"concepto": "ProfitLossFromContinuingOperations",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 27591466000
+},
+{
+"concepto": "ProfitLossFromContinuingOperationsAttributableToOrdinaryEquityHoldersOfParentEntity",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 82878406000
+},
+{
+"concepto": "ProfitLossFromContinuingOperationsAttributableToOrdinaryEquityHoldersOfParentEntity",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 76110617000
+},
+{
+"concepto": "ProfitLossFromContinuingOperationsAttributableToOrdinaryEquityHoldersOfParentEntity",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 22902025000
+},
+{
+"concepto": "ProfitLossFromDiscontinuedOperations",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -6719015000
+},
+{
+"concepto": "ProfitLossFromDiscontinuedOperations",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ProfitLossFromDiscontinuedOperations",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ProfitLossFromDiscontinuedOperationsAttributableToOrdinaryEquityHoldersOfParentEntity",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -6719015000
+},
+{
+"concepto": "ProfitLossFromDiscontinuedOperationsAttributableToOrdinaryEquityHoldersOfParentEntity",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ProfitLossFromDiscontinuedOperationsAttributableToOrdinaryEquityHoldersOfParentEntity",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "ProfitLossFromOperatingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 170870752000
+},
+{
+"concepto": "ProfitLossFromOperatingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 167783515000
+},
+{
+"concepto": "ProfitLossFromOperatingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 180100090000
+},
+{
+"concepto": "PropertyPlantAndEquipment",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 657226210000
+},
+{
+"concepto": "PropertyPlantAndEquipment",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 628650904000
+},
+{
+"concepto": "PropertyPlantAndEquipment",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 713784429000
+},
+{
+"concepto": "PropertyPlantAndEquipmentRevaluationSurplus",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 38353719000
+},
+{
+"concepto": "PropertyPlantAndEquipmentRevaluationSurplus",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 9239279000
+},
+{
+"concepto": "PropertyPlantAndEquipmentRevaluationSurplus",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 10457088000
+},
+{
+"concepto": "PurchaseOfFinancialInstrumentsClassifiedAsInvestingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "PurchaseOfFinancialInstrumentsClassifiedAsInvestingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 9420419000
+},
+{
+"concepto": "PurchaseOfFinancialInstrumentsClassifiedAsInvestingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2111926000
+},
+{
+"concepto": "PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 11661530000
+},
+{
+"concepto": "PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 25237297000
+},
+{
+"concepto": "PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 17751708000
+},
+{
+"concepto": "PurchaseOfInterestsInAssociates",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 1043954000
+},
+{
+"concepto": "PurchaseOfInterestsInAssociates",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 459750000
+},
+{
+"concepto": "PurchaseOfInterestsInAssociates",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 72513000
+},
+{
+"concepto": "PurchaseOfInvestmentsOtherThanInvestmentsAccountedForUsingEquityMethod",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "PurchaseOfInvestmentsOtherThanInvestmentsAccountedForUsingEquityMethod",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 10061353000
+},
+{
+"concepto": "PurchaseOfInvestmentsOtherThanInvestmentsAccountedForUsingEquityMethod",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 10983052000
+},
+{
+"concepto": "PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 146192426000
+},
+{
+"concepto": "PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 131101509000
+},
+{
+"concepto": "PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 113083319000
+},
+{
+"concepto": "PurchaseOfTreasuryShares",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 26201317000
+},
+{
+"concepto": "PurchaseOfTreasuryShares",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 14323067000
+},
+{
+"concepto": "PurchaseOfTreasuryShares",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 22740293000
+},
+{
+"concepto": "ReceivablesFromTaxesOtherThanIncomeTax",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 57501535000
+},
+{
+"concepto": "ReceivablesFromTaxesOtherThanIncomeTax",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 50900914000
+},
+{
+"concepto": "RepairsAndMaintenanceExpense",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 12376939000
+},
+{
+"concepto": "RepairsAndMaintenanceExpense",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 13573881000
+},
+{
+"concepto": "RepairsAndMaintenanceExpense",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 14116698000
+},
+{
+"concepto": "RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 145340377000
+},
+{
+"concepto": "RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 214735610000
+},
+{
+"concepto": "RepaymentsOfBorrowingsClassifiedAsFinancingActivities",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 232731277000
+},
+{
+"concepto": "RetainedEarnings",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 545653728000
+},
+{
+"concepto": "RetainedEarnings",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 517248667000
+},
+{
+"concepto": "RetirementsPropertyPlantAndEquipment",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 97343915000
+},
+{
+"concepto": "RetirementsPropertyPlantAndEquipment",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 10591479000
+},
+{
+"concepto": "RetirementsPropertyPlantAndEquipment",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 14987146000
+},
+{
+"concepto": "ReturnOnPlanAssetsNetDefinedBenefitLiabilityAsset",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 18819322000
+},
+{
+"concepto": "ReturnOnPlanAssetsNetDefinedBenefitLiabilityAsset",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 20251931000
+},
+{
+"concepto": "ReturnOnPlanAssetsNetDefinedBenefitLiabilityAsset",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 20306050000
+},
+{
+"concepto": "RevaluationIncreaseDecreasePropertyPlantAndEquipment",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -51540632000
+},
+{
+"concepto": "RevaluationIncreaseDecreasePropertyPlantAndEquipment",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -5394784000
+},
+{
+"concepto": "RevaluationIncreaseDecreasePropertyPlantAndEquipment",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2160477000
+},
+{
+"concepto": "Revenue",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 844501397000
+},
+{
+"concepto": "Revenue",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 816012844000
+},
+{
+"concepto": "Revenue",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 869220584000
+},
+{
+"concepto": "RevenueFromDividends",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 6155993000
+},
+{
+"concepto": "RevenueFromDividends",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 4551827000
+},
+{
+"concepto": "RevenueFromDividends",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 2779138000
+},
+{
+"concepto": "RevenueFromInterest",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 4823579000
+},
+{
+"concepto": "RevenueFromInterest",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 9628340000
+},
+{
+"concepto": "RevenueFromInterest",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 9008220000
+},
+{
+"concepto": "RevenueFromRenderingOfServices",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 712985548000
+},
+{
+"concepto": "RevenueFromRenderingOfServices",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 689154325000
+},
+{
+"concepto": "RevenueFromRenderingOfServices",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 741858822000
+},
+{
+"concepto": "RevenueFromRenderingOfServicesRelatedPartyTransactions",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 756347000
+},
+{
+"concepto": "RevenueFromRenderingOfServicesRelatedPartyTransactions",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 1153877000
+},
+{
+"concepto": "RevenueFromRenderingOfServicesRelatedPartyTransactions",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 1270286000
+},
+{
+"concepto": "RevenueFromSaleOfTelecommunicationEquipment",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 131515849000
+},
+{
+"concepto": "RevenueFromSaleOfTelecommunicationEquipment",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 126858519000
+},
+{
+"concepto": "RevenueFromSaleOfTelecommunicationEquipment",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 127361762000
+},
+{
+"concepto": "RightofuseAssets",
+"inicio": null,
+"fin": "2022-12-31",
+"valor_mxn": 121874096000
+},
+{
+"concepto": "RightofuseAssets",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 113568320000
+},
+{
+"concepto": "RightofuseAssets",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 199460378000
+},
+{
+"concepto": "SalesOfPropertyAndOtherAssetsRelatedPartyTransactions",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 1153439000
+},
+{
+"concepto": "SalesOfPropertyAndOtherAssetsRelatedPartyTransactions",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 2225521000
+},
+{
+"concepto": "SalesOfPropertyAndOtherAssetsRelatedPartyTransactions",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 1514397000
+},
+{
+"concepto": "SellingGeneralAndAdministrativeExpense",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": 179454030000
+},
+{
+"concepto": "SellingGeneralAndAdministrativeExpense",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 173001297000
+},
+{
+"concepto": "SellingGeneralAndAdministrativeExpense",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 186515841000
+},
+{
+"concepto": "ShareOfProfitLossOfAssociatesAccountedForUsingEquityMethod",
+"inicio": "2022-01-01",
+"fin": "2022-12-31",
+"valor_mxn": -1811432000
+},
+{
+"concepto": "ShareOfProfitLossOfAssociatesAccountedForUsingEquityMethod",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": -5371824000
+},
+{
+"concepto": "ShareOfProfitLossOfAssociatesAccountedForUsingEquityMethod",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": -5179112000
+},
+{
+"concepto": "ShorttermEmployeeBenefitsAccruals",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 20858965000
+},
+{
+"concepto": "ShorttermEmployeeBenefitsAccruals",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 22080021000
+},
+{
+"concepto": "TradeAndOtherCurrentPayables",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 162097416000
+},
+{
+"concepto": "TradeAndOtherCurrentPayables",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 166924134000
+},
+{
+"concepto": "TradeAndOtherCurrentPayablesToRelatedParties",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 6766826000
+},
+{
+"concepto": "TradeAndOtherCurrentPayablesToRelatedParties",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 3701960000
+},
+{
+"concepto": "TradeAndOtherCurrentPayablesToTradeSuppliers",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 63235934000
+},
+{
+"concepto": "TradeAndOtherCurrentPayablesToTradeSuppliers",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 61741976000
+},
+{
+"concepto": "TradeAndOtherCurrentReceivables",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 206802150000
+},
+{
+"concepto": "TradeAndOtherCurrentReceivables",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 221122253000
+},
+{
+"concepto": "TradeAndOtherCurrentReceivablesDueFromRelatedParties",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 1071520000
+},
+{
+"concepto": "TradeAndOtherCurrentReceivablesDueFromRelatedParties",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 1395483000
+},
+{
+"concepto": "TradeAndOtherReceivables",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 216202273000
+},
+{
+"concepto": "TradeAndOtherReceivables",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 230516411000
+},
+{
+"concepto": "TradeAndOtherReceivablesDueFromRelatedParties",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 12302877000
+},
+{
+"concepto": "TradeAndOtherReceivablesDueFromRelatedParties",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 11838770000
+},
+{
+"concepto": "TradeReceivables",
+"inicio": null,
+"fin": "2023-12-31",
+"valor_mxn": 156569986000
+},
+{
+"concepto": "TradeReceivables",
+"inicio": null,
+"fin": "2024-12-31",
+"valor_mxn": 170242307000
+},
+{
+"concepto": "TransfersIntoLevel3OfFairValueHierarchyAssets",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "TransfersIntoLevel3OfFairValueHierarchyAssets",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "TransfersOutOfLevel1IntoLevel2OfFairValueHierarchyAssets",
+"inicio": "2023-01-01",
+"fin": "2023-12-31",
+"valor_mxn": 0
+},
+{
+"concepto": "TransfersOutOfLevel1IntoLevel2OfFairValueHierarchyAssets",
+"inicio": "2024-01-01",
+"fin": "2024-12-31",
+"valor_mxn": 0
+}
+]
+}

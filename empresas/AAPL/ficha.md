@@ -22,12 +22,12 @@ La deuda neta es deuda menos efectivo y valores de corto plazo. Si se suman los 
 | 1T FY25 | 124,300 | 46.9% | 34.5% | 36,330 | 2.40 | 26,995 | 2.6% | 43,020 | 15,151 |
 | 2T FY25 | 95,359 | 47.1% | 31.0% | 24,780 | 1.65 | 20,881 | 3.4% | 49,684 | 15,056 |
 | 3T FY25 | 94,036 | 46.5% | 30.0% | 23,434 | 1.57 | 24,405 | 3.4% | 46,351 | 14,948 |
-| 4T FY25 | 102,466 | 47.2% | 31.6% | 27,466 | 1.84 | 26,486 | 3.1% | 43,982 | 14,864 |
+| 4T FY25 | 102,466 | 47.2% | 31.6% | 27,466 | 1.85† | 26,486 | 3.1% | 43,982 | 14,864 |
 | 1T FY26 | 143,756 | 48.2% | 35.4% | 42,097 | 2.84 | 51,552 | 2.5% | 23,590 | 14,810 |
 | 2T FY26 | 111,184 | 49.3% | 32.3% | 29,578 | 2.01 | 26,731 | 3.2% | 16,190 | 14,726 |
 | 3T FY26 (jun-26) | 109,417 | 50.1% | 32.6% | 29,789 | 2.02 | 31,914 | 3.1% | 21,898 | 14,715 |
 
-\*El 4T FY24 incluye un cargo fiscal único por la ayuda estatal de la UE. Sin ese cargo, la UPA fue de US$1.64 [8].
+\*El 4T FY24 incluye un cargo fiscal único por la ayuda estatal de la UE. Sin ese cargo, la UPA fue de US$1.64 [8]. †UPA reportada en el 8-K del 30-oct-2025 (US$1.85); la resta anual − 9 meses da 1.84 por el cambio en acciones promedio [16].
 
 | Año fiscal | Ingresos | MB | MO | UN | UPA dil | FCF | SBC/ing | Deuda neta | Acc. dil (M) |
 |---|---|---|---|---|---|---|---|---|---|
@@ -72,7 +72,7 @@ La deuda neta es deuda menos efectivo y valores de corto plazo. Si se suman los 
 **C. IA y ciclo de producto.** Siri AI (WWDC26) y el iPhone Duo plegable en octubre [12] → posible renovación de equipos (consenso del 1T FY27: 154.4 mil M, +7.4%) [6] → +32% en 12 meses. *Inferencia:* el precio ya refleja un ciclo fuerte.
 
 ## 6. Qué descuenta el precio
-Múltiplos: P/U de 12 meses de 38.6x (UPA 8.71); adelantado de 38.1x para FY26 (8.82) y 35.1x para FY27 (9.58) [6]. Historia (P/U al cierre fiscal, cálculo propio [13]): 26.2x, 24.6x, 27.9x, 37.5x y 34.2x de FY21 a FY25 (promedio 30.1x); hoy está ~8 puntos arriba. Pares (P/U / adelantado) [6]: MSFT 27.8x/21.0x, GOOGL 16.9x/23.0x, META 28.0x/22.3x, AMZN 20.0x/24.0x.
+Múltiplos: P/U de 12 meses de 38.5x (UPA 8.72); adelantado de 38.1x para FY26 (8.82) y 35.1x para FY27 (9.58) [6]. Historia (P/U al cierre fiscal, cálculo propio [13]): 26.2x, 24.6x, 27.9x, 37.5x y 34.2x de FY21 a FY25 (promedio 30.1x); hoy está ~8 puntos arriba. Pares (P/U / adelantado) [6]: MSFT 27.8x/21.0x, GOOGL 16.9x/23.0x, META 28.0x/22.3x, AMZN 20.0x/24.0x.
 
 **DCF inverso** (FCF de 12 meses 136.7 mil M, 10 años más 3% perpetuo) [13]: el precio implica que el FCF crezca 12.6% al año con r = 9% o 15.0% con r = 10%. En la práctica, el FCF creció ~8.5% al año entre el FY21 (93.0) y los últimos 12 meses, y los ingresos 3.3% al año entre FY21 y FY25 (cálculo propio). *Inferencia:* el precio exige casi duplicar el crecimiento histórico del FCF por una década, con el bono a 10 años en 5.11%.
 
@@ -83,9 +83,9 @@ Múltiplos: P/U de 12 meses de 38.6x (UPA 8.71); adelantado de 38.1x para FY26 (
 - **Qué cambiaría el escenario:** la guía de ingresos y margen del 1T FY27 (29-oct), los tiempos de entrega del Duo, los precios contrato de DRAM del 4T26 y la decisión sobre la 232.
 
 ## 8. Pronósticos registrados (4T FY26: jul-sep 2026)
-- **Fecha de reporte: 29-oct-2026, después del cierre.** Yahoo la marca como no estimada [6]; no se verificó en investor.apple.com.
+- **Fecha de reporte: 29-oct-2026, después del cierre.** Yahoo la marca como no estimada [6]; Nasdaq/Zacks da la misma fecha, pero calculada por algoritmo [14]. Apple no la había publicado en investor.apple.com al 25-sep: fecha no verificada en fuente primaria.
 - **Ingresos:** punto US$113,300 M; intervalo de 80%: 111,200-115,600. Consenso US$113,625 M (Yahoo, 27 analistas) [6]. Supuesto: +10.6% a/a, parte media-alta de la guía (el 3T cayó al 80% del rango, pero ahora hay más restricciones de oferta).
-- **UPA diluida:** punto US$2.00; intervalo de 80%: 1.91-2.09. Consenso US$1.98 (Yahoo, 27; Nasdaq/Zacks, 8, rango 1.91-2.09) [6][14]. Supuestos: margen bruto de 47.6%, opex de 19.25 mil M, otros ingresos por +0.4 mil M, tasa de 16.5% y 14,630 M de acciones.
+- **UPA diluida:** punto US$2.00; intervalo de 80%: 1.91-2.13 (el tope original de 2.09 se amplió en la verificación; ver abajo). Consenso US$1.98 (Yahoo, 27; Nasdaq/Zacks, 8, rango 1.91-2.09) [6][14]. Supuestos: margen bruto de 47.6%, opex de 19.25 mil M, otros ingresos por +0.4 mil M, tasa de 16.5% y 14,630 M de acciones.
 - **Binarios:** ingresos > US$113,625 M: **p = 0.45**; UPA > US$1.98: **p = 0.58** (superó el consenso de UPA en los últimos 4 trimestres, por 3.5-6.7% [6]).
 
 ## 9. Catalizadores con fecha y riesgos
@@ -109,3 +109,28 @@ Múltiplos: P/U de 12 meses de 38.6x (UPA 8.71); adelantado de 38.1x para FY26 (
 13. SEC companyfacts CIK 320193 y `empresas/AAPL/dossier-2026-09-25.md`; Yahoo chart v8 (25-sep-2026): https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json
 14. Nasdaq/Zacks, pronósticos de AAPL (25-sep-2026): https://api.nasdaq.com/api/analyst/AAPL/earnings-forecast
 15. `bitacora/briefs/2026-09-25-tablero.md` (DFII10 = 2.76%, DGS10 = 5.11%) y `conocimiento/23-...` §4.2 y §4.5.
+16. Apple 8-K ex. 99.1, resultados del 4T FY25 (30-oct-2025): https://www.sec.gov/Archives/edgar/data/320193/000032019325000077/a8-kex991q4202509272025.htm
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 3T FY26 (íntegro), 10-Q del 3T FY26 (secciones de balance, intangibles, deuda, recompras y aranceles), 8-K ex. 99.1 del 4T FY25 (estado de resultados) y Yahoo quoteSummary y Nasdaq/Zacks consultados de nuevo el 25-sep. La guía del 4T se cotejó con la transcripción de VectorShift (fuente secundaria: Apple no publica la guía por escrito).
+
+**Correcto (hecho verificado):**
+- Ingresos del 3T FY26 de US$109,417 M (+16.4%) y UPA diluida de US$2.02 (+29%), con US$0.11 de reembolsos IEEPA y ~2 pp de margen por la misma causa [1]. Margen bruto de 50.1%, operativo de 32.6%, servicios de 75.6% y productos de 40.1%. Mezcla de 9 meses por producto y por región.
+- Guía del 4T: ingresos +9% a +11%, que sobre 102,466 dan 111.7-113.7 mil M. Margen bruto de 47-48% con ~1 pp de reembolsos, opex de 19.1-19.4 mil M, tasa de ~16.5%, tipo de cambio −2.5 pp y restricciones de oferta crecientes [2].
+- Consenso: ingresos de US$113,625 M (27 analistas) y UPA de 1.98 (Yahoo, 27; Zacks, 8, rango 1.91-2.09). El historial de sorpresas de UPA fue +4.5%, +6.3%, +3.5% y +6.7% [6][14].
+- Cadena causal: el fallo de la Suprema Corte contra los aranceles IEEPA (20-feb-2026) y el registro de los reembolsos como menor costo de ventas están en el 10-Q [8]. Los intangibles netos pasaron de 13.3 a 25.4 mil M según la nota del 10-Q (incluye la porción circulante; en el balance solo aparece la no circulante, de 11.1 a 20.3). El inventario pasó de 5.7 a 11.1 mil M. Hubo 8.1 mil M de vencimientos pagados sin emitir deuda y recompras de 215 M de acciones por 61.8 mil M.
+- Escenarios: 25 + 50 + 25 = 100%. Periodo correcto: trimestre jul-sep, USD, UPA GAAP, que es la base del consenso de Yahoo. No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. UPA del 4T FY25: decía 1.84 y es **1.85**, la reportada en el 8-K del 30-oct-2025 [16]. El 1.84 salía de restar anual menos 9 meses. Por eso la UPA de 12 meses queda en 8.72 y el P/U en 38.5x (antes 8.71 y 38.6x).
+2. Intervalo de 80% de la UPA: pasa de 1.91-2.09 a **1.91-2.13**. El intervalo original era idéntico al rango de los analistas de Zacks, y aplicar las sorpresas de los últimos 4 trimestres al consenso actual da 2.07, 2.10, 2.05 y 2.11: dos de cuatro quedaban arriba del p90. El punto (2.00) y el binario (0.58) no se tocaron, porque siguen siendo coherentes con el intervalo (probabilidad implícita de 0.58).
+3. Criterios de resolución en `pronosticos.csv`: ahora especifican la columna de tres meses, porque el 8-K del 4T también trae la del año completo.
+
+**No verificado o pendiente:**
+- La fecha del 29-oct no está en investor.apple.com al 25-sep. Zacks la estima por algoritmo; Yahoo la marca como no estimada.
+- El consenso LSEG de 108.65 mil M y la cifra de Services contra LSEG vienen de Webull, no de LSEG.
+- La cifra de DRAM viene de un agregador [9]. Las preventas del 18 Pro vienen de BofA, citado por prensa [11].
+
+**Calibración (para el post-mortem):** el punto de UPA (+1.1% sobre el consenso) queda debajo de la sorpresa media histórica (+5.3%). La justificación es que ~US$0.11 de la sorpresa del 3T fueron reembolsos; sin ellos, la sorpresa del 3T fue de ~+1%. Si Apple vuelve a superar el consenso por 3-7%, el sesgo del punto habrá sido conservador. El umbral binario ">1.98" deja fuera un 1.98 reportado, aunque ese resultado supera el promedio sin redondear de Yahoo (1.9775).
+
+**Veredicto:** confiable. Hubo un error de dato menor (derivado del cálculo del 4T), el intervalo de UPA era estrecho y quedó corregido, y no hay errores en las cifras del último reporte ni en la guía.
