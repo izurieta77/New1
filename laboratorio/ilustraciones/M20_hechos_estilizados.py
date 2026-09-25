@@ -36,12 +36,13 @@ def colas(x, nombre):
         print(f"  |z|>{k}: observados={obs}  esperados normal={esp:.4f}  razon={obs / esp if esp else float('inf'):.0f}")
     peor = min(x); print(f"  peor dia={peor:.4f}  z={(peor - m) / s:.1f}  P_normal~{N01.cdf((peor - m) / s):.1e}")
     # Hill sobre perdidas (cola izquierda)
-    perd = sorted((-v for v in x if v < 0), reverse=True)
-    for frac in (0.005, 0.01, 0.025):
-        k = int(frac * n)
-        xk = perd[k]
-        h = sum(math.log(perd[i] / xk) for i in range(k)) / k
-        print(f"  Hill cola izquierda k={k} ({frac:.1%} de n): alfa={1 / h:.2f}")
+    for lado, cola in (("izquierda", sorted((-v for v in x if v < 0), reverse=True)),
+                       ("derecha", sorted((v for v in x if v > 0), reverse=True))):
+        for frac in (0.005, 0.01, 0.025):
+            k = int(frac * n)
+            xk = cola[k]
+            h = sum(math.log(cola[i] / xk) for i in range(k)) / k
+            print(f"  Hill cola {lado} k={k} ({frac:.1%} de n): alfa={1 / h:.2f}")
 
 
 def garch11(r, iters=4000, semilla=1):
@@ -122,6 +123,10 @@ def main():
     mkt_d = [a + b for a, b in zip(diaria["columnas"]["Mkt-RF"], diaria["columnas"]["RF"]) if a is not None]
     print("French diario:", diaria["fechas"][0], "->", diaria["fechas"][-1], "version", diaria.get("version_crsp"))
     colas([math.log1p(v) for v in mkt_d], "Mercado EUA diario (French, log)")
+    # Lo (2002): anualizar con sqrt(12) sobreestima el SR si hay autocorrelacion AR(1) rho
+    for rho in (0.1, 0.2, 0.3):
+        eta = 12 / math.sqrt(12 + 2 * sum((12 - k) * rho ** k for k in range(1, 12)))
+        print(f"  Lo(2002) AR(1) rho={rho}: eta(12)={eta:.3f} vs sqrt(12)=3.464 -> SR anual inflado {math.sqrt(12) / eta - 1:.1%}")
 
     mensual = dh.french("F-F_Research_Data_Factors", "mensual")
     ex = [v for v in mensual["columnas"]["Mkt-RF"] if v is not None]

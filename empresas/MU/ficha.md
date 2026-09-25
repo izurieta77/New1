@@ -4,7 +4,7 @@
 > Precio: US$1,080.53 (24-sep-2026); 52 semanas 156.58-1,213.37; 12m +550%; volatilidad 1a de 81.6%; beta 3.31; capitalización US$1.22 billones (1,129.4 M acciones) [10]. Fase 0: investigación, no recomendación.
 
 ## 1. Negocio y segmentos
-Tercer fabricante mundial de DRAM y uno de los principales de NAND. En el 3T FY26 (al 28-may-2026) la DRAM fue US$31,328 M (75.6%) y la NAND US$9,943 M (24.0%) [2]. Unidades de negocio [1]:
+Fabricante de DRAM y NAND; compite con Samsung, SK hynix, Kioxia, SanDisk, CXMT y YMTC [2]. En el 3T FY26 (al 28-may-2026) la DRAM fue US$31,328 M (75.6%) y la NAND US$9,943 M (24.0%) [2]. Unidades de negocio [1]:
 - CMBU (nube; incluye HBM): US$13,769 M, margen operativo 78%.
 - CDBU (centro de datos core): US$11,524 M, 83%.
 - MCBU (móvil y PC): US$11,521 M, 86%.

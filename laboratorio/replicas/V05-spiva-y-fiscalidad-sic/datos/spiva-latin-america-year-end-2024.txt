@@ -1,0 +1,891 @@
+
+===== PAGINA 1 =====
+SPIVA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Sign up to receive our latest research, education, and commentary at 
+on.spdji.com/SignUp. 
+Contributors 
+Joseph Nelesen, PhD 
+Head of Specialists 
+Index Investment Strategy  
+joseph.nelesen@spglobal.com 
+Anu R. Ganti, CFA 
+Head of U.S. 
+Index Investment Strategy 
+anu.ganti@spglobal.com 
+Davide Di Gioia  
+Head of SPIVA 
+Index Investment Strategy  
+davide.di.gioia@spglobal.com  
+ 
+SPIVA® Latin America 
+Scorecard 
+Summary 
+The SPIVA Latin America Scorecard measures the performance of 
+actively managed funds across Brazil, Chile and Mexico against their 
+respective benchmarks over various time horizons, providing 
+statistics on underperformance rates, survivorship rates and fund 
+performance dispersion.  
+Year-End Highlights 
+As most Latin American benchmarks declined over the course of 
+2024, underperformance rates among active managers significantly 
+varied by country and asset class.  Managers of equity funds in 
+Mexico and bond funds in Brazil fared better than most, with less 
+than one-half of funds underperforming their benchmarks.  In all 
+other categories, the majority of active funds underperformed in 
+2024.  All categories underperformed over a 10-year horizon (see 
+Exhibit 1). 
+Exhibit 1: Percent of Underperforming Latin America Funds 
+ 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Outperformance is based on equal-weighted fund counts.  
+Index performance based on total return in local country currency.  Past performance is no guarantee of future results.  Chart is provided for 
+illustrative purposes. 
+0%
+20%
+40%
+60%
+80%
+100%
+120%
+Brazil Equity Brazil Large-Cap Brazil Mid-/Small-
+Cap
+Brazil Corporate
+Bond
+Brazil
+Government
+Bond
+Chile Equity Mexico Equity
+Underperforming Active Funds
+1-Year 3-Year 5-Year 10-Year
+Experience the  
+active vs. passive debate 
+on a global scale. 
+===== PAGINA 2 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  2 
+Mexico 
+ The S&P/BMV IRT fell 10.7% during calendar year 2024.  Fewer than one in five active 
+Mexico Equity fund managers (18.6%) underperformed for the one-year horizon.  Over 
+longer periods, outperformance remained challenging, with 46.5%, 62.8% and 82.9% of 
+managers underperforming the benchmark over 3-, 5- and 10-year periods, respectively 
+(see Report 1a). 
+ The median active fund return surpassed the benchmark by 2.2% in 2024, better than in 
+longer periods; median funds outperformed by 0.6% over the 3-year period and 
+underperformed by 1.2% and 2.3% for the 5- and 10-year periods, respectively (see 
+Reports 3 and 5).  Over the 10-year period, the threshold for top-quartile managers lagged 
+the benchmark by 0.2%. 
+ The survival rates of active funds in Mexico remained the highest in Latin America, at 
+100.0%, 100.0%, 95.3% and 78.0% over the 1-, 3-, 5- and 10-year periods, respectively 
+(see Report 2); this marked the eighth scorecard in a row that Mexico Equity funds had the 
+highest three- and five-year period survivorship rates among Latin America categories. 
+ Funds with greater assets performed slightly better than smaller funds in 2024.  Average 
+returns for Mexico Equity funds were 4.3% higher on an asset-weighted basis than on an 
+equal-weighted basis (see Reports 3 and 4). 
+Brazil 
+ Brazil’s equity market ended 2024 in negative territory, with the S&P Brazil BMI declining 
+8.0% (see Report 3).  Large caps, as measured by the S&P Brazil LargeCap, fell 4.8%, 
+significantly outperforming mid- and small-cap companies, as measured by the S&P Brazil 
+MidSmallCap, which finished the year down 15.4%. 
+ In 2024, 58.0% of active Brazil Mid-/Small-Cap funds underperformed their benchmark, 
+while a larger majority of active equity funds underperformed their benchmarks in other 
+categories, with underperformance rates of 84.7% among Brazil Large-Cap funds and 
+83.1% for Brazil Equity funds.  Active managers within all categories, with the exception of 
+Brazil Large-Cap funds, fared even worse relative to their respective benchmarks over the 
+longer 10-year period ending in 2024, with underperformance rates of 93.1%, 79.1% and 
+85.9% in the Brazil Equity, Brazil Large-Cap and Brazil Mid-/Small-Cap fund categories, 
+respectively (see Report 1a). 
+===== PAGINA 3 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  3 
+Chile 
+ Chile’s equity market was the only one in the scorecard to post positive benchmark 
+performance for 2024, with the S&P Chile BMI rising 7.9% for the year (see Report 3). 
+ A majority of active Chile Equity fund managers (65.1%) underperformed the S&P Chile 
+BMI over the one-year horizon, and the underperformance rate increased over longer time 
+periods, with 59.5%, 69.6% and 95.5% of active funds underperforming the benchmark 
+over the 3-, 5- and 10-year periods, respectively (see Report 1a).  Median funds 
+underperformed the benchmark by 1.0% in 2024 and trailed by 2.0% over the longer 10-
+year period (see Report 5). 
+ Over the one-year period, the relationship between fund size and returns was limited, with 
+active Chile Equity funds rising 7.5% and 7.2% on equal-weighted and asset-weighted 
+bases, respectively.  Over the 10-year period ending in 2024, however, asset-weighted 
+returns for Chile Equity funds averaged 5.7%, while equal-weighted returns averaged 5.0%, 
+indicating that funds with higher assets generated slightly higher performance than their 
+smaller peers (see Reports 3 and 4). 
+ Over the 10-year period, the threshold for top-quartile active fund managers trailed the 
+benchmark by 1.0% (see Reports 3 and 5). 
+Fixed Income 
+ Fixed income funds fared relatively well in 2024, with one-year underperformance rates for 
+Brazil Corporate Bond funds and Brazil Government Bond funds at 28.7% and 30.7%, 
+respectively.  However, underperformance increased significantly over time.  Over the 10-
+year period, underperformance rates exceeded 90% in both categories. 
+===== PAGINA 4 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  4 
+Market Context 
+In a year when global equities were generally on the rise, much of Latin America languished, 
+with the S&P Latin America BMI falling 24.5% for the year and trailing the S&P World Index 
+benchmark by 43.8% in U.S. dollar terms (see Exhibit 2). 
+Exhibit 2: S&P Latin America BMI and S&P World Index Cumulative Performance 
+ 
+Source: S&P Dow Jones Indices LLC.  Data as of Dec.31, 2024.  Index performance based on total return in U.S. dollars.  Past performance is 
+no guarantee of future results.  Chart is provided for illustrative purposes. 
+Performance decelerated across most individual Latin American equity markets in 2024.  With 
+the sole exception of Chile, all other major equity benchmarks observed in this scorecard 
+delivered negative performance for the year (see Exhibit 3 and Report 3). 
+Exhibit 3: Trailing One-Year Benchmark Performance 
+ 
+Source: S&P Dow Jones Indices LLC.  Data as of Dec.31, 2024.  Index performance based on total return in local country currency.  Past 
+performance is no guarantee of future results.  Chart is provided for illustrative purposes. 
+-24.4%
+19.5%
+-30%
+-20%
+-10%
+0%
+10%
+20%
+30%
+Dec. 2023
+Jan. 2024
+Feb. 2024
+Mar. 2024
+Apr. 2024
+May. 2024
+Jun. 2024
+Jul. 2024
+Aug. 2024
+Sep. 2024
+Oct. 2024
+Nov. 2024
+Dec. 2024
+Performance
+S&P Latin America BMI S&P World Index
+-20%
+-10%
+0%
+10%
+20%
+30%
+40%
+50%
+Dec. 2023
+Jan. 2024
+Feb. 2024
+Mar. 2024
+Apr. 2024
+May. 2024
+Jun. 2024
+Jul. 2024
+Aug. 2024
+Sep. 2024
+Oct. 2024
+Nov. 2024
+Dec. 2024
+Trailing 1-Year Performance
+S&P Brazil BMI S&P Brazil LargeCap S&P Brazil MidSmallCap S&P Chile BMI S&P/BMV IRT
+===== PAGINA 5 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  5 
+In 2024, the relationship between the proportion of stocks underperforming each benchmark 
+(also referred to as skew) and the proportion of active funds underperforming in those markets 
+was not consistent.  On one hand, domestic equity fund managers in Brazil and Chile showed 
+slightly worse results than probability would suggest.  In Brazil, for example, 68.8% of 
+constituents within the S&P Brazil BMI underperformed the index, yet an even greater 
+proportion of managers (83.1%) failed to beat the benchmark, meaning their aggregate stock 
+selections were worse than random (see Exhibit 4).  Similarly, in Chile, less than half of stocks 
+(39.4%) trailed the S&P Chile BMI, but nearly two-thirds (65.1%) of managers underperformed.  
+On the other hand, Mexico was an outlier in 2024.  Despite 47.4% of stocks underperforming 
+the S&P/BMV IRT, less than one-fifth (18.6%) of Mexico Equity fund managers 
+underperformed, an all-time low in the more than 10-year history of the category. 
+Exhibit 4: Percentage of Latin America Stocks and Funds Underperforming the Index 
+ 
+Source: S&P Dow Jones Indices LLC, FactSet.  Data as of Dec.31, 2024.  Index performance based on total return in local country currency.  
+Past performance is no guarantee of future results.  Chart is provided for illustrative purposes. 
+Managers of funds focused on equities outside of the region did not fare as well.  Among Latin 
+America-domiciled funds focused on either Global Equity or U.S. Equity, the proportion of 
+active managers underperforming was consistently higher than the proportion of stocks trailing 
+the benchmark, as shown in Exhibit 5. 
+Exhibit 5: Percentage of Global and U.S. Stocks and Funds Underperforming the Index 
+ 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Index performance based on total return in local country 
+currency.  Prior to inception dates, S&P World Index total returns were translated at prevailing exchange rates into BRL, CLP and MXN and 
+S&P 500 total returns were translated at prevailing exchange rates into MXN through back-testing.  All data prior to such date is back-tested 
+hypothetical data.  Past performance is no guarantee of future results.  Chart is provided for illustrative purposes and reflects hypothetical 
+historical performance.  Please see the Performance Disclosure at the end of this document for more information regarding the inherent 
+limitations associated with back-tested performance.   
+83.1%
+65.1%
+18.6%
+68.8%
+39.4%
+47.4%
+0%
+20%
+40%
+60%
+80%
+100%
+Brazil Equity Chile Equity Mexico Equity
+Percent Underperforming
+Active Funds Benchmark Constituents
+95.5% 100.0%
+88.9%
+80.0% 86.7% 82.6%
+71.7% 71.7% 71.7% 72.4% 72.5% 72.5%
+0%
+20%
+40%
+60%
+80%
+100%
+Global Equity (BRL) Global Equity (CLP) Global Equity (MXN) U.S. Equity (BRL) U.S. Equity (CLP) U.S. Equity (MXN)
+Percent Underperforming
+Active Funds Benchmark Constituents
+===== PAGINA 6 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  6 
+Falling dispersion may have added to the challenges active managers faced in 2024.  Across 
+major Latin American equity markets, stock-level dispersion levels declined over the course of 
+the year and ended well beneath their five-year averages, as shown in Exhibit 6.  Higher levels 
+of dispersion, a measure of cross-sectional volatility expressing differences between stock 
+returns within each index, have typically been associated not only with greater rewards from 
+picking outperforming stocks but also with greater penalties from selecting underperformers. 
+Exhibit 6: Trailing 12-Month Constituent Dispersion 
+ 
+Source: S&P Dow Jones Indices LLC.  Data as of Dec. 31, 2024.  Index performance based on total return in local country currency.  Past 
+performance is no guarantee of future results.  Chart is provided for illustrative purposes. 
+The differences in excess returns between fund quartiles often underscore the challenge asset 
+owners face in manager selection.  In some categories such as Brazil Mid-/Small-Cap Equity 
+and Chile Equity, bottom-quartile funds underperformed their respective benchmarks to a 
+greater degree than top-quartile funds outperformed (see Report 5).  Consequently, investors 
+selecting funds from these categories faced more severe underperformance penalties from 
+picking bottom-quartile funds than the outperformance benefits of picking those that finished in 
+the top quartile.  In other cases, such as Brazil Equity and Brazil Large-Cap Equity, many 
+funds in the top-quartile were still underperformers.  In contrast, fund selectors faced fewer 
+challenges in the Brazil Corporate Bond, Brazil Government Bond and Mexico equity 
+categories, where even a significant number of funds ranked in the bottom half still beat the 
+benchmarks in 2024, as illustrated in Exhibit 7. 
+15%
+20%
+25%
+30%
+35%
+40%
+45%
+Dec. 2020
+Apr. 2021
+Aug. 2021
+Dec. 2021
+Apr. 2022
+Aug. 2022
+Dec. 2022
+Apr. 2023
+Aug. 2023
+Dec. 2023
+Apr. 2024
+Aug. 2024
+Dec. 2024
+12-Month Average Dispersion
+S&P/BMV IRT S&P Brazil BMI S&P Brazil LargeCap
+S&P Brazil MidSmallCap S&P Chile BMI
+===== PAGINA 7 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  7 
+Exhibit 7: Excess Performance versus Category Benchmark by Active Fund Quartile 
+ 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Returns shown are annualized for periods greater than one 
+year.  Index performance based on total return in local country currency.  Prior to inception dates, S&P World Index total returns were 
+translated at prevailing exchange rates into BRL, CLP and MXN and S&P 500 total returns were translated at prevailing exchang e rates into 
+MXN through back-testing.  All data prior to such date is back-tested hypothetical data.  Past performance is no guarantee of future results.  
+Chart is provided for illustrative purposes and reflects hypothetical historical performance.  Please see the Performance Disclosure at the end 
+of this document for more information regarding the inherent limitations associated with back-tested performance.  
+Revisiting the Mexico Equity category, where only 18.6% of funds underperformed in 2024, 
+one might wonder how such a result was achieved.  Looking under the hood of the best-
+performing funds, we find that significant exposure to non-benchmark securities explained the 
+majority of outperformance.  As shown in Exhibit 8, among top-quartile Mexico Equity funds, 
+the average allocation to securities outside of the S&P/BMV IRT benchmark was 74.3%.  
+Within this category of non-benchmark holdings, offshore (non-Mexico domiciled) securities 
+consisting almost entirely of U.S. and European-domiciled index funds and ETFs also played a 
+major role in generating outperformance.  In fact, top-quartile Mexico Equity funds held an 
+average of 16.4% weight in foreign index funds and ETFs.  While this finding may be 
+surprising to some, others who more regularly follow the evolution of the index and active 
+landscape may see it as confirmation of a longstanding trend; index-linked products such as 
+ETFs are not separate from active management but rather are used as important building 
+blocks within active portfolios worldwide. 
+-11.1%
+-10.3%
+-7.9%
+1.3%
+-0.9%
+-3.4%
+0.3%
+-2.3%
+-4.2%
+5.9% 5.3% 5.7%
+2.0%
+4.9%
+-12%
+-10%
+-8%
+-6%
+-4%
+-2%
+0%
+2%
+4%
+6%
+8%
+Brazil Equity Brazil Large-Cap Brazil Mid-/Small-
+Cap
+Brazil Corporate
+Bond
+Brazil
+Government Bond
+Chile Equity Mexico Equity
+Excess Performance 
+versus Benchmark
+Third Quartile Second Quartile First Quartile
+===== PAGINA 8 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  8 
+Exhibit 8: Non-Benchmark Holdings in Top-Quartile Mexico Equity Funds 
+ 
+Source: S&P Dow Jones Indices LLC.  Data as of Dec. 31, 2024.  Index performance based on total return in local country currency.  Past 
+performance is no guarantee of future results.  Chart is provided for illustrative purposes. 
+74.3%
+16.8% 16.2%
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+70%
+80%
+90%
+100%
+Non-Benchmark Securities Offshore Securities Index Funds and ETFs
+Average Percent of Holdings
+===== PAGINA 9 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  9 
+A Unique Scorecard for the Active versus Passive 
+Debate 
+There is nothing novel about the index versus active debate.  It has been a contentious subject 
+for decades, and there are a few strong believers on both sides, with the vast majority of 
+market participants falling somewhere in between.  Since its first publication in 2002, the 
+SPIVA Scorecard has served as the de facto scorekeeper.  When headline numbers have 
+deviated from their beliefs, we have heard passionate arguments from both camps. 
+Beyond the SPIVA Scorecard’s widely cited headline numbers is a rich data set that addresses 
+issues—often far more fascinating though far less discussed—about measurement techniques, 
+universe composition and fund survivorship.  These data sets are rooted in the following 
+fundamental principles of the SPIVA Scorecard, with which regular readers will be familiar. 
+ Survivorship Bias Correction: Many funds might be liquidated or merged during a period 
+of study.  However, for someone making an investment decision at the beginning of the 
+period, these funds are part of the opportunity set.  Unlike other commonly available 
+comparison reports, SPIVA Scorecards account for the entire opportunity set—not just the 
+survivors—thereby eliminating survivorship bias. 
+ Apples-to-Apples Comparison: Fund returns are often compared with a popular 
+benchmark regardless of their investment category.  The SPIVA Latin America Scorecard 
+makes an appropriate comparison by measuring a fund's returns against the returns of a 
+benchmark that reflects the fund’s investment category. 
+ Asset-Weighted Returns: Average returns for a fund group are often calculated using only 
+equal weighting, which means the returns of a BRL, CLP or MXN 10 billion fund affect the 
+average in the same manner as the returns of a BRL, CLP or MXN 10 million fund.  An 
+accurate representation of how market participants fared in a particular period can be 
+ascertained by calculating weighted average returns where each fund’s return is weighted 
+by net assets.  SPIVA Scorecards show both equal- and asset-weighted averages. 
+ Data Cleaning: SPIVA Scorecards avoid double-counting multiple share classes in all 
+count-based calculations by using only the share class with greater assets.  Index, 
+leveraged and inverse funds, along with other index-linked products, are excluded because 
+this is meant to be a scorecard for active managers. 
+ 
+===== PAGINA 10 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  10 
+Reports 
+Report 1a: Percentage of Funds Underperforming Their Benchmarks (Based on 
+Absolute Return) 
+Fund Category Comparison Index 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 
+Brazil Equity Funds S&P Brazil BMI 83.10 86.85 87.12 93.09 
+Brazil Large-Cap Funds S&P Brazil LargeCap 84.71 88.16 87.70 79.07 
+Brazil Mid-/Small-Cap Funds S&P Brazil MidSmallCap 58.04 62.28 65.75 85.90 
+Brazil Corporate Bond Funds Anbima Debentures Index (IDA) 28.66 42.99 52.88 92.96 
+Brazil Government Bond Funds Anbima Market Index (IMA) 30.69 50.28 55.18 94.27 
+Chile Equity Funds S&P Chile BMI 65.12 59.52 69.57 95.45 
+Mexico Equity Funds S&P/BMV IRT 18.60 46.51 62.79 82.93 
+Global Equity (BRL) Funds S&P World Index (BRL) 95.45 91.67 94.87 100.00 
+Global Equity (CLP) Funds S&P World Index (CLP) 100.00 100.00 100.00 100.00 
+Global Equity (MXN) Funds S&P World Index (MXN) 88.89 88.00 97.56 100.00 
+U.S. Equity (BRL) Funds S&P 500 (BRL) 80.00 68.42 91.30 92.86 
+U.S. Equity (CLP) Funds S&P 500 (CLP) 86.67 100.00 100.00 100.00 
+U.S. Equity (MXN) Funds S&P 500 (MXN) 82.61 100.00 85.71 86.67 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Index performance based on total return in local country 
+currency.  Prior to inception dates, S&P World Index total returns were translated at prevailing exchange rates into BRL, CLP and MXN and 
+S&P 500 total returns were translated at prevailing exchange rates into MXN through back-testing.  All data prior to such date is back-tested 
+hypothetical data.  Past performance is no guarantee of future results.  Table is provided for illustrative purposes and reflects hypothetical 
+historical performance.  Please see the Performance Disclosure at the end of this document for more information regarding the inherent 
+limitations associated with back-tested performance.  
+===== PAGINA 11 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  11 
+Report 1b: Percentage of Funds Underperforming Their Benchmarks (Based on Risk-
+Adjusted Return) 
+Fund Category Comparison Index 3-Year (%) 5-Year (%) 10-Year (%) 
+Brazil Equity Funds S&P Brazil BMI 85.12 87.12 92.82 
+Brazil Large-Cap Funds S&P Brazil LargeCap 89.47 87.70 76.74 
+Brazil Mid-/Small-Cap Funds S&P Brazil MidSmallCap 63.16 68.49 87.18 
+Brazil Corporate Bond Funds Anbima Debentures Index (IDA) 42.99 50.96 81.69 
+Brazil Government Bond Funds Anbima Market Index (IMA) 49.72 50.50 61.45 
+Chile Equity Funds S&P Chile BMI 52.38 60.87 95.45 
+Mexico Equity Funds S&P/BMV IRT 11.63 41.86 65.12 
+Global Equity (BRL) Funds S&P World Index (BRL) 90.00 97.44 100.00 
+Global Equity (CLP) Funds S&P World Index (CLP) 100.00 100.00 100.00 
+Global Equity (MXN) Funds S&P World Index (MXN) 88.00 92.68 100.00 
+U.S. Equity (BRL) Funds S&P 500 (BRL) 73.68 100.00 100.00 
+U.S. Equity (CLP) Funds S&P 500 (CLP) 100.00 100.00 100.00 
+U.S. Equity (MXN) Funds S&P 500 (MXN) 100.00 90.48 100.00 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Index performance based on total return in local country 
+currency.  Prior to inception dates, S&P World Index total returns were translated at prevailing exchange rates into BRL, CLP and MXN and 
+S&P 500 total returns were translated at prevailing exchange rates into MXN through back-testing.  All data prior to such date is back-tested 
+hypothetical data.  Past performance is no guarantee of future results.  Table is provided for illustrative purposes and reflects hypothetical 
+historical performance.  Please see the Performance Disclosure at the end of this document for more information regarding the inherent 
+limitations associated with back-tested performance.  
+===== PAGINA 12 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  12 
+Report 2: Survivorship of Funds 
+Fund Category Number of Funds at Start Survivorship (%) 
+1-Year 
+Brazil Equity Funds 290 92.76 
+Brazil Large-Cap Funds 157 91.08 
+Brazil Mid-/Small-Cap Funds 143 91.61 
+Brazil Corporate Bond Funds 157 93.63 
+Brazil Government Bond Funds 554 96.75 
+Chile Equity Funds 43 93.02 
+Mexico Equity Funds 43 100.00 
+Global Equity (BRL) Funds 66 93.94 
+Global Equity (CLP) Funds 17 82.35 
+Global Equity (MXN) Funds 52 100.00 
+U.S. Equity (BRL) Funds 35 91.43 
+U.S. Equity (CLP) Funds 15 93.33 
+U.S. Equity (MXN) Funds 22 100.00 
+3-Year 
+Brazil Equity Funds 289 77.16 
+Brazil Large-Cap Funds 152 76.97 
+Brazil Mid-/Small-Cap Funds 114 78.07 
+Brazil Corporate Bond Funds 107 81.31 
+Brazil Government Bond Funds 358 87.15 
+Chile Equity Funds 42 78.57 
+Mexico Equity Funds 43 100.00 
+Global Equity (BRL) Funds 60 86.67 
+Global Equity (CLP) Funds 15 86.67 
+Global Equity (MXN) Funds 48 97.92 
+U.S. Equity (BRL) Funds 38 81.58 
+U.S. Equity (CLP) Funds 14 71.43 
+U.S. Equity (MXN) Funds 21 95.24 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Past performance is no guarantee of future results.  Table is  
+provided for illustrative purposes. 
+===== PAGINA 13 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  13 
+Report 2: Survivorship of Funds (cont.) 
+Fund Category Number of Funds at Start Survivorship (%) 
+5-Year 
+Brazil Equity Funds 233 77.25 
+Brazil Large-Cap Funds 122 77.87 
+Brazil Mid-/Small-Cap Funds 73 80.82 
+Brazil Corporate Bond Funds 104 63.46 
+Brazil Government Bond Funds 299 80.27 
+Chile Equity Funds 46 60.87 
+Mexico Equity Funds 43 95.35 
+Global Equity (BRL) Funds 39 84.62 
+Global Equity (CLP) Funds 12 66.67 
+Global Equity (MXN) Funds 40 95.00 
+U.S. Equity (BRL) Funds 23 78.26 
+U.S. Equity (CLP) Funds 15 60.00 
+U.S. Equity (MXN) Funds 21 95.24 
+10-Year 
+Brazil Equity Funds 362 35.64 
+Brazil Large-Cap Funds 86 63.95 
+Brazil Mid-/Small-Cap Funds 78 42.31 
+Brazil Corporate Bond Funds 142 19.72 
+Brazil Government Bond Funds 262 63.74 
+Chile Equity Funds 44 29.55 
+Mexico Equity Funds 41 78.05 
+Global Equity (BRL) Funds 8 87.50 
+Global Equity (CLP) Funds 12 50.00 
+Global Equity (MXN) Funds 26 88.46 
+U.S. Equity (BRL) Funds 14 85.71 
+U.S. Equity (CLP) Funds 17 35.29 
+U.S. Equity (MXN) Funds 15 93.33 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 14 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  14 
+Report 3: Average Fund Performance (Equal-Weighted) 
+Index/Fund Category 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 
+S&P Brazil BMI -7.97 4.88 1.01 9.64 
+Brazil Equity Funds -13.26 0.56 -2.51 6.46 
+S&P Brazil LargeCap -4.84 8.09 2.42 9.28 
+Brazil Large-Cap Funds -7.90 2.41 -0.86 7.75 
+S&P Brazil MidSmallCap -15.41 -2.23 -2.42 10.17 
+Brazil Mid-/Small-Cap Funds -17.30 -2.82 -1.05 8.35 
+Anbima Debentures Index (IDA) 8.38 10.39 8.65 10.19 
+Brazil Corporate Bond Funds 9.33 11.13 9.22 8.41 
+Anbima Market Index (IMA) 5.10 9.78 7.07 10.05 
+Brazil Government Bond Funds 6.97 9.90 6.59 8.39 
+S&P Chile BMI 7.91 15.37 7.38 5.81 
+Chile Equity Funds 7.54 15.77 7.53 5.00 
+S&P/BMV IRT -10.70 1.07 5.83 4.14 
+Mexico Equity Funds -6.73 2.25 3.98 2.56 
+S&P World Index (BRL) 51.92 10.57 21.62 20.18 
+Global Equity (BRL) Funds 32.04 4.82 13.67 14.65 
+S&P World Index (CLP) 36.04 12.47 18.04 16.06 
+Global Equity (CLP) Funds 26.05 5.34 10.54 9.40 
+S&P World Index (MXN) 46.67 7.38 13.79 14.33 
+Global Equity (MXN) Funds 29.89 2.41 6.55 7.09 
+S&P 500 (BRL) 59.00 12.77 24.79 23.05 
+U.S. Equity (BRL) Funds 41.95 8.38 17.60 17.54 
+S&P 500 (CLP) 42.38 14.70 21.11 18.83 
+U.S. Equity (CLP) Funds 35.70 9.74 15.99 13.21 
+S&P 500 (MXN) 53.51 9.60 16.79 17.08 
+U.S. Equity (MXN) Funds 44.14 5.08 12.29 12.65 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Index performance based on total return in local country 
+currency.  Prior to inception dates, S&P World Index total returns were translated at prevailing exchange rates into BRL, CLP and MXN and 
+S&P 500 total returns were translated at prevailing exchange rates into MXN through back-testing.  All data prior to such date is back-tested 
+hypothetical data.  Past performance is no guarantee of future results.  Table is provided for illustrative purposes and reflects hypothetical 
+historical performance.  Please see the Performance Disclosure at the end of this document for more information regarding the inherent 
+limitations associated with back-tested performance.  
+===== PAGINA 15 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  15 
+Report 4: Average Fund Performance (Asset-Weighted) 
+Index/Fund Category 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 
+S&P Brazil BMI -7.97 4.88 1.01 9.64 
+Brazil Equity Funds -14.92 -0.15 -3.57 6.62 
+S&P Brazil LargeCap -4.84 8.09 2.42 9.28 
+Brazil Large-Cap Funds -10.92 1.81 -1.94 7.65 
+S&P Brazil MidSmallCap -15.41 -2.23 -2.42 10.17 
+Brazil Mid-/Small-Cap Funds -15.22 -1.91 -3.11 7.28 
+Anbima Debentures Index (IDA) 8.38 10.39 8.65 10.19 
+Brazil Corporate Bond Funds 11.75 12.19 9.26 9.36 
+Anbima Market Index (IMA) 5.10 9.78 7.07 10.05 
+Brazil Government Bond Funds 9.23 11.13 7.76 8.83 
+S&P Chile BMI 7.91 15.37 7.38 5.81 
+Chile Equity Funds 7.17 16.43 8.03 5.72 
+S&P/BMV IRT -10.70 1.07 5.83 4.14 
+Mexico Equity Funds -2.41 3.90 4.03 2.53 
+S&P World Index (BRL) 51.92 10.57 21.62 20.18 
+Global Equity (BRL) Funds 36.89 7.00 15.74 15.41 
+S&P World Index (CLP) 36.04 12.47 18.04 16.06 
+Global Equity (CLP) Funds 27.49 6.26 10.75 9.35 
+S&P World Index (MXN) 46.67 7.38 13.79 14.33 
+Global Equity (MXN) Funds 33.53 3.57 9.06 9.26 
+S&P 500 (BRL) 59.00 12.77 24.79 23.05 
+U.S. Equity (BRL) Funds 40.32 11.67 17.71 17.20 
+S&P 500 (CLP) 42.38 14.70 21.11 18.83 
+U.S. Equity (CLP) Funds 36.40 8.83 15.57 12.94 
+S&P 500 (MXN) 53.51 9.60 16.79 17.08 
+U.S. Equity (MXN) Funds 50.86 7.61 15.28 14.51 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Index performance based on total return in local country 
+currency.  Prior to inception dates, S&P World Index total returns were translated at prevailing exchange rates into BRL, CLP and MXN and 
+S&P 500 total returns were translated at prevailing exchange rates into MXN through back-testing.  All data prior to such date is back-tested 
+hypothetical data.  Past performance is no guarantee of future results.  Table is provided for illustrative purposes and reflects hypothetical 
+historical performance.  Please see the Performance Disclosure at the end of this document for more information regarding the inherent 
+limitations associated with back-tested performance.  
+===== PAGINA 16 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  16 
+Report 5: Quartile Breakpoints of Fund Performance 
+Fund Category Third Quartile Second Quartile First Quartile 
+1-Year 
+Brazil Equity Funds -19.11 -14.26 -10.28 
+Brazil Large-Cap Funds -15.12 -10.99 -9.09 
+Brazil Mid-/Small-Cap Funds -23.32 -16.28 -9.56 
+Brazil Corporate Bond Funds 9.71 12.56 13.63 
+Brazil Government Bond Funds 4.18 9.32 10.79 
+Chile Equity Funds 4.55 6.93 9.87 
+Mexico Equity Funds -10.41 -8.50 -5.82 
+Global Equity (BRL) Funds 25.61 33.57 43.43 
+Global Equity (CLP) Funds 22.74 24.97 30.60 
+Global Equity (MXN) Funds 27.10 35.42 40.01 
+U.S. Equity (BRL) Funds 28.27 44.99 57.83 
+U.S. Equity (CLP) Funds 31.15 34.36 38.32 
+U.S. Equity (MXN) Funds 40.28 47.51 52.27 
+3-Year 
+Brazil Equity Funds -2.63 0.06 3.46 
+Brazil Large-Cap Funds 0.74 4.24 6.19 
+Brazil Mid-/Small-Cap Funds -8.39 -2.47 1.79 
+Brazil Corporate Bond Funds 10.23 12.90 13.52 
+Brazil Government Bond Funds 7.68 10.68 11.92 
+Chile Equity Funds 11.57 15.76 17.43 
+Mexico Equity Funds -0.19 1.63 4.01 
+Global Equity (BRL) Funds 3.45 5.51 7.52 
+Global Equity (CLP) Funds 2.52 4.62 6.56 
+Global Equity (MXN) Funds 0.61 2.43 4.55 
+U.S. Equity (BRL) Funds 7.38 10.79 14.26 
+U.S. Equity (CLP) Funds 7.21 8.21 8.54 
+U.S. Equity (MXN) Funds 2.38 6.84 7.27 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Returns shown are annualized for periods greater than one 
+year.  Index performance based on total return in local country currency.  Prior to inception dates, S&P World Index total returns were 
+translated at prevailing exchange rates into BRL, CLP and MXN and S&P 500 total returns were translated at prevailing exchange rates into 
+MXN through back-testing.  All data prior to such date is back-tested hypothetical data.  Past performance is no guarantee of future results.  
+Table is provided for illustrative purposes and reflects hypothetical historical performance.  Please see the Performance Disclosure at the end 
+of this document for more information regarding the inherent limitations associated with back-tested performance.  
+===== PAGINA 17 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  17 
+Report 5: Quartile Breakpoints of Fund Performance (cont.) 
+Fund Category Third Quartile Second Quartile First Quartile 
+5-Year 
+Brazil Equity Funds -5.58 -3.06 -0.50 
+Brazil Large-Cap Funds -2.34 0.22 1.29 
+Brazil Mid-/Small-Cap Funds -8.55 -4.94 1.30 
+Brazil Corporate Bond Funds 8.76 9.41 10.20 
+Brazil Government Bond Funds 5.04 7.39 8.28 
+Chile Equity Funds 6.14 7.38 10.03 
+Mexico Equity Funds 1.29 4.68 6.24 
+Global Equity (BRL) Funds 11.55 13.43 17.90 
+Global Equity (CLP) Funds 8.44 10.61 12.22 
+Global Equity (MXN) Funds 4.40 6.96 9.92 
+U.S. Equity (BRL) Funds 17.37 20.36 22.58 
+U.S. Equity (CLP) Funds 13.59 14.63 15.22 
+U.S. Equity (MXN) Funds 7.69 12.52 14.68 
+10-Year 
+Brazil Equity Funds 5.27 7.17 9.23 
+Brazil Large-Cap Funds 6.11 8.00 9.55 
+Brazil Mid-/Small-Cap Funds 3.45 6.44 10.67 
+Brazil Corporate Bond Funds 9.63 9.94 10.55 
+Brazil Government Bond Funds 8.28 9.00 9.47 
+Chile Equity Funds 3.21 3.80 4.83 
+Mexico Equity Funds 0.39 1.85 3.93 
+Global Equity (BRL) Funds 16.03 17.19 19.40 
+Global Equity (CLP) Funds 7.84 9.36 10.20 
+Global Equity (MXN) Funds 3.68 7.71 9.34 
+U.S. Equity (BRL) Funds 17.55 19.67 20.98 
+U.S. Equity (CLP) Funds 11.40 11.81 12.14 
+U.S. Equity (MXN) Funds 9.23 12.88 14.50 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Data as of Dec. 31, 2024.  Returns shown are annualized for periods greater than one 
+year.  Index performance based on total return in local country currency.  Prior to inception dates, S&P World Index total returns were 
+translated at prevailing exchange rates into BRL, CLP and MXN and S&P 500 total returns were translated at prevailing exchange rates into 
+MXN through back-testing.  All data prior to such date is back-tested hypothetical data.  Past performance is no guarantee of future results.  
+Table is provided for illustrative purposes and reflects hypothetical historical performance.  Please see the Performance Disclosure at the end 
+of this document for more information regarding the inherent limitations associated with back-tested performance.  
+===== PAGINA 18 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  18 
+Appendix A: SPIVA Styles and Morningstar Fund 
+Classifications 
+Data are obtained from Morningstar for all managed funds for which month-end data are 
+available during the performance period.  The SPIVA Latin America Scorecard covers country-
+specific funds for Brazil, Chile and Mexico that are domiciled in the respective country markets 
+and denominated in each country’s local currency.  The Morningstar classification system 
+produces narrow, style-based classifications for funds. 
+Morningstar categories have been mapped to SPIVA peer groups as follows: 
+Exhibit 8: Fund Category Mapping 
+Morningstar Category SPIVA Category 
+Brazil  
+Brazil Fund Brazil All-Cap Equity Brazil Equity Funds 
+Brazil Fund Brazil Large-Cap Equity Brazil Large-Cap Funds 
+Brazil Fund Brazil Small-/Mid-Cap Equity Brazil Mid-/Small-Cap Funds 
+Brazil Fund BRL Corporate Bond Brazil Corporate Bond Funds 
+Brazil Fund BRL Government Bond Brazil Government Bond Funds 
+Brazil Fund Global Equity Global Equity (BRL) Funds 
+Brazil Fund US Equity U.S. Equity (BRL) Funds 
+Chile  
+Chile Fund Chile Equity Chile Equity Funds 
+Chile Fund Global Equity Global Equity (CLP) Funds 
+Chile Fund US Equity U.S. Equity (CLP) Funds 
+Mexico 
+Mexico Fund Mexico Equity Mexico Equity Funds 
+Mexico Fund Global Equity Global Equity (MXN) Funds 
+Mexico Fund US Equity U.S. Equity (MXN) Funds 
+Source: S&P Dow Jones Indices LLC, Morningstar.  Table is provided for illustrative purposes. 
+===== PAGINA 19 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  19 
+Appendix B: Glossary – Reports 
+Percentage of Funds Outperformed by the Index 
+We use funds with returns available for the entire period as the denominator.  We determine 
+the count of funds that have survived and beat the index and then report the index 
+outperformance percentage. 
+Survivorship (%) 
+The survivorship metric represents the percentage of funds in existence at the beginning of the 
+time period that are still active at the end of the time period. 
+Equal-Weighted Fund Performance 
+Equal-weighted returns for a particular style category are determined by calculating a simple 
+average return of all active funds in that category in a particular month. 
+Asset-Weighted Fund Performance 
+Asset-weighted returns for a particular style category are determined by calculating a weighted 
+average return of all funds in that category in a particular month, with each fund’s return 
+weighted by its total net assets.  Asset-weighted returns are a better indicator of fund category 
+performance because they reflect the returns of the total money invested in that particular style 
+category with more accuracy. 
+Quartile Breakpoints 
+The pth percentile for a set of data is the value that is greater than or equal to p% of the data 
+but is less than or equal to (100-p)% of the data.  In other words, it is a value that divides the 
+data into two parts: the lower p% of the values and the upper (100-p)% of the values.  The first 
+quartile border is the 75th percentile, which is the value separating the elements of a population 
+into the lower 75% and the upper 25%.  The second quartile border is the 50th percentile, and 
+the third quartile border is the 25th percentile.  For fund category quartiles in a particular time 
+period, the data used are the return of the largest share class of the fund net of fees, excluding 
+loads. 
+Survivorship Bias 
+Some funds liquidate or merge during a period of study.  This usually occurs due to continued 
+poor performance by the fund.  Therefore, if index returns were compared to fund returns using 
+only surviving funds, the comparison would be biased in favor of the fund category.  The 
+===== PAGINA 20 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  20 
+SPIVA reports remove this bias in three ways.  The first method to remove the bias is to use 
+the entire investment opportunity set, made up of all funds in that particular category at the 
+outset of the period, as the denominator for outperformance calculations.  The second is to 
+show explicitly the survivorship rate in each category.  The final way is to construct a peer 
+average return series for each category based on all available funds at the outset of the period. 
+Fees 
+The fund returns used are net of fees, excluding loads. 
+Indices 
+A benchmark index provides an investment reference against which fund performance can be 
+measured. 
+S&P Brazil BMI 
+The S&P Brazil BMI, a subset of the S&P Global BMI, is designed to represent the Brazilian 
+stock market. 
+S&P Brazil LargeCap 
+The S&P Brazil LargeCap, a subset of the S&P Global BMI, is designed to represent large-cap 
+stocks in the Brazilian market. 
+S&P Brazil MidSmallCap 
+The S&P Brazil MidSmallCap, a subset of the S&P Global BMI, is designed to represent mid- 
+and small-cap stocks in the Brazilian market. 
+S&P Chile BMI 
+The S&P Chile BMI, a subset of the S&P Global BMI, is designed to represent the Chilean 
+stock market. 
+S&P/BMV IRT 
+The S&P/BMV IRT, the total return version of S&P/BMV IPC, measures the performance of the 
+largest and most liquid stocks listed on the Bolsa Mexicana de Valores. 
+S&P 500  
+Widely regarded as the best single gauge of the U.S. equities market, this market 
+capitalization-weighted index includes a representative sample of 500 leading companies in 
+the foremost industries of the U.S. economy and provides over 80% coverage of U.S. equities. 
+===== PAGINA 21 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  21 
+S&P World Index  
+The S&P World Index tracks the performance of large- and mid-cap stocks from 24 developed 
+markets of the S&P Developed BMI. With data extending over several economic cycles, the 
+index provides a consistent universe for historical market analysis and back-testing investing 
+strategies. 
+Anbima Debentures Index (IDA) 
+The IDA represents a portfolio of debentures at market prices and serves as a benchmark for 
+the segment.  The index consists of all debentures priced by the Association. 
+Anbima Market Index (IMA) 
+The IMA represents a portfolio of government securities at market prices, with an approximate 
+range of 97% of the market segment. 
+===== PAGINA 22 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  22 
+Performance Disclosure/Back-Tested Data 
+The S&P World Index in BRL was launched on September 30, 2024. The S&P 500 in CLP was launched on August 29, 2024. The S&P World 
+Index in CLP was launched on September 30, 2024. The S&P World Index in MXN was launched on September 30, 2024. All information 
+presented prior to an index’s Launch Date is hypothetical (back-tested), not actual performance. The back-test calculations are based on the 
+same methodology that was in effect on the index Launch Date. However, when creating back-tested history for periods of market anomalies 
+or other periods that do not reflect the general current market environment, index methodology rules may be relaxed to captur e a large enough 
+universe of securities to simulate the target market the index is designed to measure or strategy the index is designed to capture. For 
+example, market capitalization and liquidity thresholds may be reduced. Complete index methodology details are available at 
+www.spglobal.com/spdji. Past performance of the Index is not an indication of future results. Back-tested performance reflects application of 
+an index methodology and selection of index constituents with the benefit of hindsight and knowledge of factors that may have positively 
+affected its performance, cannot account for all financial risk that may affect results and may be considered to reflect surv ivor/look ahead bias. 
+Actual returns may differ significantly from, and be lower than, back-tested returns. Past performance is not an indication or guarantee of 
+future results. Please refer to the methodology for the Index for more details about the index, including the manner in which it is rebalance d, 
+the timing of such rebalancing, criteria for additions and deletions, as well as all index calculations. Back-tested performance is for use with 
+institutions only; not for use with retail investors. 
+S&P Dow Jones Indices defines various dates to assist our clients in providing transparency. The First Value Date is the firs t day for which 
+there is a calculated value (either live or back-tested) for a given index. The Base Date is the date at which the index is set to a fixed value for 
+calculation purposes. The Launch Date designates the date when the values of an index are first considered live: index values provided for 
+any date or time period prior to the index’s Launch Date are considered back-tested. S&P Dow Jones Indices defines the Launch Date as the 
+date by which the values of an index are known to have been released to the public, for example via the company’s public webs ite or its data 
+feed to external parties. For Dow Jones-branded indices introduced prior to May 31, 2013, the Launch Date (which prior to May 31, 2013, was 
+termed “Date of introduction”) is set at a date upon which no further changes were permitted to be made to the index met hodology, but that 
+may have been prior to the Index’s public release date. 
+Typically, when S&P DJI creates back-tested index data, S&P DJI uses actual historical constituent-level data (e.g., historical price, market 
+capitalization, and corporate action data) in its calculations. As ESG investing is still in early stages of development, certain datapoints used to 
+calculate S&P DJI’s ESG indices may not be available for the entire desired period of back-tested history. The same data availability issue 
+could be true for other indices as well. In cases when actual data is not available for all relevant historical periods, S&P DJI may employ a 
+process of using “Backward Data Assumption” (or pulling back) of ESG data for the calculation of back-tested historical performance. 
+“Backward Data Assumption” is a process that applies the earliest actual live data point available for an index constituent company to all prior 
+historical instances in the index performance. For example, Backward Data Assumption inherently assumes that companies curren tly not 
+involved in a specific business activity (also known as “product involvement”) were never involved historically and similarly also assumes that 
+companies currently involved in a specific business activity were involved historically too. The Backward Data Assumption all ows the 
+hypothetical back-test to be extended over more historical years than would be feasible using only actual data. For more information on 
+“Backward Data Assumption” please refer to the FAQ. The methodology and factsheets of any index that employs backward assumption in the 
+back-tested history will explicitly state so. The methodology will include an Appendix with a table setting forth the specific dat a points and 
+relevant time period for which backward projected data was used.  
+Index returns shown do not represent the results of actual trading of investable assets/securities. S&P Dow Jones Indices mai ntains the index 
+and calculates the index levels and performance shown or discussed but does not manage actual assets. Index returns do not reflect payment 
+of any sales charges or fees an investor may pay to purchase the securities underlying the Index or investment funds that are intended to 
+track the performance of the Index. The imposition of these fees and charges would cause actual and back-tested performance of the 
+securities/fund to be lower than the Index performance shown. As a simple example, if an index returned 10% on a US $100,000 investment 
+for a 12-month period (or US $10,000) and an actual asset-based fee of 1.5% was imposed at the end of the period on the investment plus 
+accrued interest (or US $1,650), the net return would be 8.35% (or US $8,350) for the year. Over a three-year period, an annual 1.5% fee 
+taken at year end with an assumed 10% return per year would result in a cumulative gross return of 33.10%, a total fee of US $5,375, and a 
+cumulative net return of 27.2% (or US $27,200). 
+===== PAGINA 23 =====
+SPIVA Latin America Scorecard Year-End 2024 
+SPIVA  23 
+General Disclaimer 
+© 2025 S&P Dow Jones Indices. All rights reserved. S&P, S&P 500, SPX, SPY, The 500, US 500 , US 30, S&P 100, S&P COMPOSITE 1500, 
+S&P 400, S&P MIDCAP 400, S&P 600, S&P SMALLCAP 600, S&P GIVI, GLOBAL TITANS, DIVIDEND ARISTOCRATS, DIVIDEND 
+MONARCHS, BUYBACK ARISTOCRATS, SELECT SECTOR, S&P MAESTRO, S&P PRISM, GICS, SPIVA, SPDR, INDEXOLOGY, iTraxx, 
+iBoxx, ABX, ADBI, CDX, CMBX, MBX, MCDX, PRIMEX, HHPI and SOVX are trademarks of S&P Global, Inc. (“S&P Global”) or its affili ates. 
+DOW JONES, DJIA, THE DOW and DOW JONES INDUSTRIAL AVERAGE are trademarks of Dow Jones Trademark Holdings LLC (“Dow 
+Jones”). These trademarks together with others have been licensed to S&P Dow Jones Indices LLC. Redistribution or reproductio n in whole or 
+in part are prohibited without written permission of S&P Dow Jones Indices LLC. This document does not constitute an offer of services in 
+jurisdictions where S&P Dow Jones Indices LLC, S&P Global, Dow Jones or their respective affiliates (collectively “S&P Dow Jo nes Indices”) 
+do not have the necessary licenses. Except for certain custom index calculation services, all information provided by S&P Dow Jones Indices 
+is impersonal and not tailored to the needs of any person, entity or group of persons. S&P Dow Jones Indices receives compens ation in 
+connection with licensing its indices to third parties and providing custom calculation services. Past performance of an index is not an 
+indication or guarantee of future results. 
+It is not possible to invest directly in an index. Exposure to an asset class represented by an index may be available through investable 
+instruments based on that index. S&P Dow Jones Indices does not sponsor, endorse, sell, promote or manage any investme nt fund or other 
+investment vehicle that is offered by third parties and that seeks to provide an investment return based on the performance o f any index. S&P 
+Dow Jones Indices makes no assurance that investment products based on the index will accurately track index performance or provide 
+positive investment returns. Index performance does not reflect trading costs, management fees or expenses. S&P Dow Jones Ind ices makes 
+no representation regarding the advisability of investing in any such investment fund or other investment vehicle. A decision to invest in any 
+such investment fund or other investment vehicle should not be made in reliance on any of the statements set forth in this do cument. S&P 
+Dow Jones Indices is not an investment adviser, commodity trading advisor, commodity pool operator, broker dealer, fiduciary, promoter” (as 
+defined in the Investment Company Act of 1940, as amended), “expert” as enumerated within 15 U.S.C. § 77k(a) or tax advisor. Inclusion of a 
+security, commodity, crypto currency or other asset within an index is not a recommendation by S&P Dow Jones Indices to buy, sell, or hold 
+such security, commodity, crypto currency or other asset, nor is it considered to be investment advice or commodity trading advice. 
+These materials have been prepared solely for informational purposes based upon information generally available to the public  and from 
+sources believed to be reliable. No content contained in these materials (including index data, ratings, credit-related analyses and data, 
+research, valuations, model, software or other application or output therefrom) or any part thereof (“Content”) may be modifi ed, reverse-
+engineered, reproduced or distributed in any form or by any means, or stored in a database or retrieval system, without the prior written 
+permission of S&P Dow Jones Indices. The Content shall not be used for any unlawful or unauthorized purposes. S&P Dow Jones I ndices and 
+its third-party data providers and licensors (collectively “S&P Dow Jones Indices Parties”) do not guarantee the accuracy, completeness, 
+timeliness or availability of the Content. S&P Dow Jones Indices Parties are not responsible for any errors or omissions, regardless of the 
+cause, for the results obtained from the use of the Content. THE CONTENT IS PROVIDED ON AN “AS IS” BASIS. S&P DOW JONES 
+INDICES PARTIES DISCLAIM ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY 
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE, FREEDOM FROM BUGS, SOFTWARE 
+ERRORS OR DEFECTS, THAT THE CONTENT’S FUNCTIONING WILL BE UNINTERRUPTED OR THAT THE CONTENT WILL OPERATE 
+WITH ANY SOFTWARE OR HARDWARE CONFIGURATION. In no event shall S&P Dow Jones Indices Parties be liable to any party for any 
+direct, indirect, incidental, exemplary, compensatory, punitive, special or consequential damages, costs, expenses, legal fees, or losses 
+(including, without limitation, lost income or lost profits and opportunity costs) in connection with any use of the Content even if advised of the 
+possibility of such damages. 
+S&P Global keeps certain activities of its various divisions and business units separate from each other in order to preserve  the independence 
+and objectivity of their respective activities. As a result, certain divisions and business units of S&P Global may have information that is not 
+available to other business units. S&P Global has established policies and procedures to maintain the confidentiality of certain non-public 
+information received in connection with each analytical process. 
+In addition, S&P Dow Jones Indices provides a wide range of services to, or relating to, many organizations, including issuer s of securities, 
+investment advisers, broker-dealers, investment banks, other financial institutions and financial intermediaries, and accordingly may receive 
+fees or other economic benefits from those organizations, including organizations whose securities or services they may recom mend, rate, 
+include in model portfolios, evaluate or otherwise address. 
+BMV is a trademark of Bolsa Mexicana de Valores, S.A.B. de C.V. and has been licensed for use by S&P Dow Jones Indices. 

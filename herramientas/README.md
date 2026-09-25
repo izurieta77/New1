@@ -11,6 +11,7 @@ Sin numpy/pandas y sin pip. Todos los límites de riesgo se leen de `config/para
 | `tablero.py` | CLI: tablero markdown de mercado y régimen. |
 | `pronosticos.py` | CLI: bitácora de pronósticos con puntuación Brier, log score y calibración. |
 | `portafolio.py` | CLI: libro en papel, valuación, curva de equity y reporte vs benchmark. |
+| `modelo_integrado.py` | Modelo de 3 estados (resultados, balance, flujo) con la caja como variable de cierre y el revolvente como "financiamiento requerido" explícito. Tiene 16 tipos de control con tolerancia declarada, reconciliación del histórico y `dcf_inverso` por bisección. Los escenarios no son pronósticos. El esquema está en el docstring. |
 
 Pruebas (desde la raíz del repo): `python3 -m unittest discover -s herramientas/tests -t .`
 

@@ -176,7 +176,7 @@ if FIX != banxico_csv_modulo("banxico_CF102_fix_SF43718.csv") or \
         CET != banxico_csv_modulo("banxico_CF107_cetes28_SF43936.csv"):
     detener("los dos parsers de Banxico difieren")
 MXNX = YAHOO["MXNX"]["close"]
-R["controles"]["parsers"] = {"yahoo_dif_rel_max": dif_parser, "fred_identico": True, "banxico_identico": True}
+R["controles"]["parsers"] = {"yahoo_dif_rel_max": f"{dif_parser:.1e}", "fred_identico": True, "banxico_identico": True}
 R["datos"] = {k: {"desde": min(v["adj"]).isoformat(), "hasta": max(v["adj"]).isoformat(), "n": len(v["adj"]),
                   "dividendos": len(v["divs"]), "moneda": v["moneda"]} for k, v in YAHOO.items()}
 for k, v in [("DEXMXUS", DEX), ("FIX_SF43718", FIX), ("CETES28_SF43936", CET), ("IMF_INTGSTMXM193N", IMF)]:
@@ -760,8 +760,29 @@ for modo in ("T0", "T1"):
     correr(f"bh_{modo}|spymx_hist2008", U["spymx"], modo, "bh", 0, es_prueba=False, ym_ini=(2008, 11),
            cortar=False, parametros={"ejecucion": modo, "activo": "SPY.MX adjclose"}, nota="busqueda de origen")
 
-R["controles"]["motor_vs_simulador_propio_dif_max"] = DIF_MOTOR[0]
-R["controles"]["nw_vs_matriz_bartlett_dif_max"] = DIF_NW[0]
+R["controles"]["motor_vs_simulador_propio_dif_max"] = f"{DIF_MOTOR[0]:.1e}"
+R["controles"]["nw_vs_matriz_bartlett_dif_max"] = f"{DIF_NW[0]:.1e}"
+
+# ---- controles cruzados entre rutas de codigo distintas
+_bh = CORRIDAS["bh_T0"]["resumen"]["segmentos"]["2008-2026"]
+_x = {
+    "cagr_bh_motor_vs_A1_W1": abs(_bh["cagr"] - tabla_a["SP_MXN_SPY_DEX"]["W1"]["cagr"]),
+    "mdd_bh_motor_vs_A1_W1": abs(_bh["mdd"] - amortiguador["mdd_mensual_mxn_W1"]),
+}
+_w = tabla_a["SP_MXN_SPY_DEX"]["W1"]
+_a = S["SP_MXN_SPY_DEX"].en_o_antes(date(2007, 12, 31))
+_b = S["SP_MXN_SPY_DEX"].en_o_antes(date(2026, 8, 31))
+_x["cagr_propio_vs_metricas_py"] = abs(_w["cagr"] - mt.cagr([(_a[0], _a[1]), (_b[0], _b[1])]))
+_crisis = S["SP_USD_SPY"].ventana(date(2007, 1, 1), date(2009, 12, 31))
+_x["mdd_propio_vs_metricas_py"] = abs(caida_maxima(_crisis)[0] - mt.max_drawdown(_crisis)["valor"])
+if max(_x.values()) > EPS:
+    detener(f"controles cruzados fallan: {_x}")
+R["controles"]["cruzados_dif_max"] = f"{max(_x.values()):.1e}"
+_f0 = DEX[S["SP_MXN_SPY_DEX"].en_o_antes(date(2007, 12, 31))[0]]
+_f1 = DEX[S["SP_MXN_SPY_DEX"].en_o_antes(date(2026, 8, 31))[0]]
+amortiguador["fx_W1"] = {"inicio": _f0, "fin": _f1, "cagr": cagr(_f0, _f1, date(2007, 12, 31), date(2026, 8, 31))}
+R["A5_psr_referencia"] = {v: {sg: CORRIDAS[v]["res"].metricas[sg]["psr"] for sg in ("1995-2007", "2008-2026", "completo")}
+                          for v in ("bh_T0", "bh_T1", "sma10_mxn_T0", "sma10_mxn_T1", "sma10_usd_T0", "sma10_usd_T1")}
 
 
 # ---- pruebas NW: SMA - comprar y mantener (mismos periodos)
@@ -895,8 +916,9 @@ fs = sorted(spymx)
 saltos = [(a.isoformat(), spymx[a], b.isoformat(), spymx[b]) for a, b in zip(fs, fs[1:])
           if abs(spymx[b] / spymx[a] - 1) > 0.30]
 ph["spymx_saltos_mayores_30pct"] = {"n": len(saltos), "primeros": saltos[:4], "ultimo": saltos[-1] if saltos else None}
+ph["n_corridas_posthoc"] = len(busq) * 2
 R["posthoc"] = ph
-R["controles"]["motor_vs_simulador_propio_dif_max"] = DIF_MOTOR[0]
+R["controles"]["motor_vs_simulador_propio_dif_max"] = f"{DIF_MOTOR[0]:.1e}"
 
 
 # =============================================================== 7. salida
@@ -994,3 +1016,6 @@ for x in busq:
     print(f"  {x['ventana']} ({x['desde']}→{x['hasta']}): SMA {pct(x['cagr_sma'])}/{pct(x['mdd_sma'])} "
           f"B&H {pct(x['cagr_bh'])}/{pct(x['mdd_bh'])} tol={x['dentro_tol']}")
 print("  SPY.MX saltos >30%:", ph["spymx_saltos_mayores_30pct"]["n"], ph["spymx_saltos_mayores_30pct"]["primeros"][:2])
+print("\nFX W1:", amortiguador["fx_W1"])
+print("PSR referencia:", json.dumps(limpiar(R["A5_psr_referencia"])))
+print("Controles finales:", json.dumps(limpiar(R["controles"])))

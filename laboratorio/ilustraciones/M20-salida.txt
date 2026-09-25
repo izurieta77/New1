@@ -10,6 +10,12 @@ French diario: 1926-07-01 -> 2026-07-31 version 202607
   Hill cola izquierda k=131 (0.5% de n): alfa=3.14
   Hill cola izquierda k=262 (1.0% de n): alfa=2.95
   Hill cola izquierda k=657 (2.5% de n): alfa=2.74
+  Hill cola derecha k=131 (0.5% de n): alfa=3.20
+  Hill cola derecha k=262 (1.0% de n): alfa=2.88
+  Hill cola derecha k=657 (2.5% de n): alfa=2.57
+  Lo(2002) AR(1) rho=0.1: eta(12)=3.160 vs sqrt(12)=3.464 -> SR anual inflado 9.6%
+  Lo(2002) AR(1) rho=0.2: eta(12)=2.879 vs sqrt(12)=3.464 -> SR anual inflado 20.3%
+  Lo(2002) AR(1) rho=0.3: eta(12)=2.615 vs sqrt(12)=3.464 -> SR anual inflado 32.5%
 
 French mensual: 1926-07-31 -> 2026-07-31
   Exceso mensual: media=0.00694 (8.329%/a) sd=0.0530 (18.36%/a) SR anual=0.454 anos=100.1

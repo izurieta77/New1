@@ -2,6 +2,11 @@
  "A1_A3": {
   "amortiguador": {
    "corr_mensual_sp_usd_vs_fx": -0.56009313109,
+   "fx_W1": {
+    "cagr": 0.024036708704,
+    "fin": 17.0081,
+    "inicio": 10.9169
+   },
    "fx_media_en_esos_meses": 0.045381384546,
    "mdd_mensual_mxn_W1": -0.284342188222,
    "mdd_mensual_naftrac_W1": -0.450264736054,
@@ -6922,6 +6927,38 @@
   }
  },
  "A5_meses_E_distinto_ultimo_dia_spy": 4,
+ "A5_psr_referencia": {
+  "bh_T0": {
+   "1995-2007": 0.581894744437,
+   "2008-2026": 0.99329902106,
+   "completo": 0.974495047707
+  },
+  "bh_T1": {
+   "1995-2007": 0.491099970562,
+   "2008-2026": 0.991285036431,
+   "completo": 0.964253532323
+  },
+  "sma10_mxn_T0": {
+   "1995-2007": 0.638924946306,
+   "2008-2026": 0.99964906361,
+   "completo": 0.995896984934
+  },
+  "sma10_mxn_T1": {
+   "1995-2007": 0.579569320433,
+   "2008-2026": 0.999674367303,
+   "completo": 0.995630664193
+  },
+  "sma10_usd_T0": {
+   "1995-2007": 0.822106871147,
+   "2008-2026": 0.991141023592,
+   "completo": 0.990816454014
+  },
+  "sma10_usd_T1": {
+   "1995-2007": 0.801940934973,
+   "2008-2026": 0.988661177966,
+   "completo": 0.988313674018
+  }
+ },
  "control_conversion_sic_2016_en_adelante": {
   "DEXMXUS": {
    "mediana": 1.8610544e-05,
@@ -6943,13 +6980,14 @@
   }
  },
  "controles": {
+  "cruzados_dif_max": "0.0e+00",
   "huellas": "OK (datos, descargar_datos.py y prerregistro.md)",
-  "motor_vs_simulador_propio_dif_max": 0.0,
-  "nw_vs_matriz_bartlett_dif_max": 0.0,
+  "motor_vs_simulador_propio_dif_max": "2.3e-15",
+  "nw_vs_matriz_bartlett_dif_max": "6.1e-18",
   "parsers": {
    "banxico_identico": true,
    "fred_identico": true,
-   "yahoo_dif_rel_max": 0.0
+   "yahoo_dif_rel_max": "0.0e+00"
   }
  },
  "datos": {
@@ -7307,6 +7345,7 @@
     }
    }
   },
+  "n_corridas_posthoc": 16,
   "naftrac_imputado_W1": {
    "anios_sin_dividendos_en_yahoo": [
     2008,

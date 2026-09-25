@@ -1,0 +1,2089 @@
+
+===== PAGINA 1 =====
+  SPIVA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Experience the  
+active vs. passive debate 
+on a global scale. 
+Contributors 
+Anu R. Ganti, CFA 
+U.S. Head 
+Index Investment Strategy 
+anu.ganti@spglobal.com 
+Tim Edwards, PhD  
+Managing Director 
+Index Investment Strategy 
+tim.edwards@spglobal.com 
+Joseph Nelesen, PhD  
+Head of Specialists 
+Index Investment Strategy 
+joseph.nelesen@spglobal.com 
+Davide Di Gioia  
+Head of SPIVA 
+Index Investment Strategy  
+davide.di.gioia@spglobal.com 
+Sabatino Longo 
+Quantitative Analyst 
+Index Investment Strategy 
+sabatino.longo@spglobal.com 
+ 
+Register to receive our latest research, education, and commentary at 
+on.spdji.com/Sign-up. 
+SPIVA® U.S. Scorecard 
+Summary 
+After a dismal 2022, the market recovered with a vengeance in 2023 
+and the S&P 500® gained an impressive 26%.  Optimism that the 
+U.S. Federal Reserve would be able to engineer a soft landing 
+accompanied a broadening of the rally to the S&P MidCap 400® and 
+the S&P SmallCap 600®, which both climbed 16%.  Meanwhile, 
+despite persistent inflation concerns and a rough start to the year for 
+regional banks, U.S. fixed income markets also gained in 2023—
+albeit less materially and with a few more bumps along the way. 
+Over the full year, a majority of actively managed funds 
+underperformed their assigned benchmarks in most of our reported 
+fund categories.  In our largest and most closely watched 
+comparison, 60% of all active large-cap U.S. equity funds 
+underperformed the S&P 500.  This figure was better than might 
+have been expected given the dominance of the U.S. equity market’s 
+largest stocks, placing 2023’s underperformance rate close to, but 
+just below, the 64% average annual rate reported over the 23-year 
+history of our SPIVA Scorecards. 
+Exhibit 1: Percentage of Large-Cap Domestic Equity Funds 
+Underperforming the S&P 500 Each Year 
+ 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no 
+guarantee of future results.  Chart is provided for illustrative purposes. 
+65 68
+75
+69
+49
+68
+45
+56
+48
+66
+82
+63
+55
+87
+65 66 63 65
+71
+60
+85
+51
+60
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+2001
+2002
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+% Underperforming
+===== PAGINA 2 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 2 
+Perhaps aided by their ability to opportunistically tilt toward outperforming large caps,1 the 
+results were generally better for funds in smaller-capitalization U.S. equity categories: just 50% 
+of All Mid-Cap funds lagged the S&P MidCap 400 and only 48% of All Small-Cap funds 
+underperformed the S&P SmallCap 600.  Small-Cap Value was a particular bright spot, with 
+only 37% of funds underperforming the S&P SmallCap 600 Value. 
+Turning to international equity categories, nearly three-quarters (74%) of funds in the Global 
+category underperformed, but at least in relative terms, International Small-Cap Funds 
+continued to offer more fertile grounds for actively managed funds: just 54% underperformed. 
+Fixed income results, with an underperformance rate of 59% across all fund categories, were 
+more mixed, with 9 out of our 17 reported categories posting majority underperformance.  At 
+one extreme, 98% of funds in the General Investment-Grade category and 80% of High 
+Yield funds underperformed.  Municipal and emerging debt were among the categories that 
+saw majority outperformance. 
+Across all categories, underperformance rates typically rose as time horizons 
+lengthened.  Exhibit 2 illustrates the point.  At the one-year horizon, 6 of 22 equity categories 
+and 8 of 17 fixed income categories saw majority outperformance, falling to just 1 equity 
+category and 4 fixed income categories over five years.  At the 15-year horizon in both asset 
+classes, there were no categories in which the majority of active managers outperformed. 
+Exhibit 2: Equities and Fixed Income Underperformance Rates Rose over Time 
+ 
+Source: S&P Dow Jones Indices LLC, CRSP, Bloomberg LLC.  Data as of Dec. 31, 2023.  See Reports 1a, 6a and 11a.  Past performance is 
+no guarantee of future results.  Charts are provided for illustrative purposes. 
+ 
+1  Ganti, Anu and Craig J. Lazzara, “Style Bias and Active Performance,” S&P Dow Jones Indices, March 2021. 
+6
+1
+0
+11
+10
+1
+5
+11
+21
+0
+5
+10
+15
+20
+25
+1 Year 5 Years 15 Years
+Number of Categories
+Equities
+Less than 50% 50% to 75% 75% to 100%
+8
+4
+0
+2
+4
+77
+9 9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+1 Year 5 Years 15 Years
+Number of Categories
+Fixed Income
+===== PAGINA 3 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 3 
+Market Context 
+Led by growth in equities and leveraged loans in fixed income, and in a strong reversal from 
+the challenging market climate in 2022, all of our 39 category benchmarks delivered positive 
+performance in 2023. 
+Exhibit 3: 2023 Performance of U.S. Scorecard Comparison Indices 
+ 
+Source: S&P Dow Jones Indices LLC, Bloomberg LLC.  Data as of Dec. 31, 2023.  Index performance based on total returns in USD.  Past 
+performance is no guarantee of future results.  Charts are provided for illustrative purposes. 
+Mega-cap outperformance was a pervasive force: the S&P 500 Top 50 was up a substantial 
+38% in 2023, while the S&P 500 Equal Weight Index, which has a natural tilt toward smaller 
+capitalizations, underperformed the S&P 500 by 12.4%.  Still, 40% of All Large-Cap funds 
+and 27% of Large-Cap Core funds managed to outperform the S&P 500.  This is 
+particularly surprising given the relatively strong performance of the very largest stocks—which 
+are often underweighted by active managers in comparison to their benchmark weights.2  
+Equal weight underperformance has typically been a headwind for large-cap active fund 
+relative performance,3 as when the largest companies lead, the ability of active managers to 
+keep up with market-capitalization weightings is challenged. 
+ 
+2  Ganti, Anu, “Mutual Fund Portfolios: Equal Weight or Cap Weight?,” S&P Dow Jones Indices, July 2017. 
+3 Lazzara, Craig J., and Fei Mei Chan, “Degrees of Difficulty: Indications of Active Success,” S&P Dow Jones Indices, January 2022. 
+12%
+14%
+14%
+15%
+15%
+16%
+16%
+17%
+17%
+18%
+22%
+22%
+23%
+25%
+26%
+29%
+30%
+0% 10% 20% 30%
+S&P SmallCap 600 Value
+S&P United States REIT
+S&P/IFCI Composite
+S&P SmallCap 600
+S&P Developed Ex-U.S. SmallCap
+S&P SmallCap 600 Growth
+S&P MidCap 400 Value
+S&P MidCap 400
+S&P MidCap 400 Growth
+S&P Composite 1500 Value
+S&P 700
+S&P 500 Value
+S&P Global 1200
+S&P Composite 1500
+S&P 500
+S&P Composite 1500 Growth
+S&P 500 Growth
+Performance
+Equities
+4%
+5%
+5%
+5%
+5%
+6%
+6%
+6%
+6%
+6%
+6%
+6%
+9%
+9%
+13%
+13%
+0% 10% 20% 30%
+iBoxx TIPS Inflation-Linked
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-5Y
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-10Y
+iBoxx $ Overall 1-5Y
+Bloomberg US Aggregate Securitized - MBS
+Bloomberg U.S. Aggregate
+S&P California AMT-Free Municipal Bond
+iBoxx $ Domestic Sovereign & Sub-Sovereigns
+iBoxx $ Overall
+Bloomberg Global Aggregate
+S&P National AMT-Free Municipal Bond
+S&P New York AMT-Free Municipal Bond
+Bloomberg Emerging Markets USD Aggregate
+iBoxx $ Liquid Investment Grade
+iBoxx $ Liquid High Yield
+Markit iBoxx USD Leveraged Loans
+Fixed Income
+===== PAGINA 4 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 4 
+To offer perspective on which U.S. equity funds fared better than others, Exhibit 4 compares 
+the asset-weighted to the equal-weighted average Large-Cap Core fund performance.  While it 
+is typical for larger funds to perform better, perhaps because of natural economies of scale and 
+greater access to information, the difference in 2023 of 2.4% between Large-Cap Core’s asset-
+weighted average return of 25% and the corresponding equal-weighted average return of 
+22.6% was the highest since 2008. 
+Exhibit 4: Large-Cap Core Asset-Weighted versus Equal-Weighted Average Fund Return 
+Was the Highest in 16 Years 
+ 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Chart is 
+provided for illustrative purposes. 
+While larger funds were among the winners, a markedly negative skew accompanied the cross 
+section of fund returns.  In other words, when fund performances differed significantly 
+from the median, they were more likely to be significant underperformers.  Exhibit 5 
+shows one measure of the historical skewness of fund excess returns for the Large-Cap Core 
+category—specifically comparing the average return to the median return.  As the exhibit 
+makes clear, 2023 saw a noticeable difference from the typical relationship, with the average 
+return far lower than would have been expected given historical norms. 
+-0.9
+0.5
+-0.6 -0.7
+1.2
+0.1
+0.5
+0.7
+1.9
+1.3
+1.0
+-1.7
+-1.4
+-0.3
+0.7
+2.4
+-2.00
+-1.50
+-1.00
+-0.50
+0.00
+0.50
+1.00
+1.50
+2.00
+2.50
+3.00
+2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023
+Asset-Weighted versus Equal-Weighted Large-Cap Core 
+Fund Average
+===== PAGINA 5 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 5 
+Exhibit 5: Large-Cap Core Fund Average versus Median Return Was the Most Negative 
+in 16 Years 
+ 
+ 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Charts are 
+provided for illustrative purposes. 
+Consequently, the range of performances delivered by active equity funds was 
+drastically higher compared to 2022.  The 2023 interquartile range (the difference in 
+performance separating those funds in the top 25% from those in the bottom 25% of annual 
+returns) approximately doubled in the All Large-Cap category.  The substantial spread already 
+noted between larger versus smaller funds is consistent with the wide range of performances 
+shown in Exhibit 6.  Meanwhile, fixed income fund dispersion was much narrower than that of 
+equities, as is typical of the asset class.4 
+Contrary to intuition, while fund dispersion was high, market volatility was low, with realized 
+volatility declining across most equity benchmarks from the previous year.  In particular, S&P 
+500 volatility declined by roughly one-half from its 2022 levels (see Exhibit 6). 
+ 
+4 Edwards, Tim, Davide Di Gioia, Anu R. Ganti, Craig J. Lazzara and Grace Stoddart, “SPIVA Institutional Scorecard Year-End 2022,” S&P 
+Dow Jones Indices, July 2023. 
+2008
+2009
+2010
+2011
+2012
+2013
+2014
+20152016
+201720182019
+2020
+2021
+2022
+2023
+-5.00
+-4.00
+-3.00
+-2.00
+-1.00
+0.00
+1.00
+2.00
+3.00
+-5.00 -4.00 -3.00 -2.00 -1.00 0.00 1.00 2.00 3.00
+Large-Cap Core Median Return 
+Relative to S&P 500
+Large-Cap Core Average Return, Relative to S&P 500
+-0.2
+0.9
+0.0 0.0
+-0.4
+0.5
+-0.3
+-0.6 -0.4
+-0.6 -0.6
+-1.0
+0.1
+-1.0
+0.5
+-1.4
+-2.00
+-1.50
+-1.00
+-0.50
+0.00
+0.50
+1.00
+1.50
+2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023
+Large-Cap Core Average 
+Relative to Median Return
+===== PAGINA 6 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 6 
+Exhibit 6: Dispersion among Selected Active Fund Performances Widened and 
+Benchmark Volatility Declined, Particularly across Equities 
+ 
+ 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Charts are 
+provided for illustrative purposes. 
+Fixed income volatility changes were mixed and more muted compared to their equity 
+counterparts, but there may have been some opportunities for active fixed income managers to 
+generate outperformance5 by taking on greater credit risk.  Exhibit 7 illustrates that more funds 
+in the Investment Grade Short-Intermediate category tended to historically outperform when 
+higher-yielding bonds outperformed—as they did in 2023. 
+Offering a complementary perspective, the bottom half of Exhibit 7 shows that 
+underperformance rates in the Government Intermediate category were typically higher than in 
+the shorter-maturity category6 when longer-dated government bonds outperformed shorter-
+dated government bonds.  In 2023, perhaps due to limited opportunities to benefit from 
+ 
+5 Edwards, Tim, Anu R. Ganti and Agatha Malinowski, “The Hare and the Tortoise – Assessing Passive’s Potential in Bonds,” S&P Dow 
+Jones Indices, February 2024. 
+6 Refers to the Government Short & Short-Intermediate funds category, which is benchmarked to the iBoxx $ Domestic Sovereigns & Sub-
+Sovereigns 1-5Y.  Government Intermediate Funds are benchmarked to the iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-10Y. 
+0
+5
+10
+15
+20
+25
+30
+-2
+0
+2
+4
+6
+8
+10
+12
+14
+16
+2023 Interquartile Range (%)
+Change in Interquartile Range (%)
+Change in One-Year Fund Interquartile Range from 2022 to 2023 2023 Fund Interquartile Range
+0
+5
+10
+15
+20
+25
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+2023 Realized Volatility (%)
+Change in Benchmark 
+Volatility (%)
+Change in Benchmark Volatility from 2022 to 2023 2023 Benchmark Realized Volatility
+===== PAGINA 7 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 7 
+duration tilts, all government categories posted majority underperformance, with reported 
+underperformance rates of 89% and 82%, respectively, for the Government Intermediate and 
+Government Short & Short-Intermediate categories. 
+Exhibit 7: Fixed Income Style Bias Conditions Were Mixed in 2023 
+ 
+ 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Charts are 
+provided for illustrative purposes. 
+Conditions for active management success can be contingent upon various factors, including 
+market volatility, market direction and the relative performance of large and small caps in 
+equities, and credit and duration in fixed income.  2022 was the best year for large-cap active 
+equity performance since 2009,7 with high market volatility, a down market and the 
+underperformance of mega caps.  2023, however, was lacking in these very aspects, with low 
+volatility, a robust market and significant mega-cap outperformance.  Despite these 
+headwinds, the fact that 40% of large-cap equity funds still outperformed might be viewed as a 
+relatively benign result. 
+ 
+7 Edwards, Tim, Anu R. Ganti, Craig J. Lazzara, Joe Nelesen and Davide Di Gioia, “SPIVA U.S. Scorecard Year-End 2022,” S&P Dow Jones 
+Indices, March 2023. 
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+20212022
+2023
+R² = 0.33
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+70%
+80%
+90%
+100%
+-10.0% 0.0% 10.0% 20.0% 30.0% 40.0% 50.0%
+Investment-Grade Short & Intermediate 
+Funds 1-Year Underperformance Rate
+iBoxx $ Liquid High Yield Relative to iBoxx $ Overall 1-5Y Return
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+20172018
+2019
+2020
+2021
+2022
+2023
+R² = 0.62
+-80%
+-60%
+-40%
+-20%
+0%
+20%
+40%
+60%
+-2.0% -1.5% -1.0% -0.5% 0.0% 0.5% 1.0% 1.5% 2.0%
+Government Intermediate Relative to 
+Short & Short-Intermediate Funds 
+1-Year Underperformance Rate
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-10Y Relative to iBoxx $ Domestic Sovereigns & Sub-
+Sovereigns 1-5Y Return
+===== PAGINA 8 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 8 
+A Unique Scorecard for the Active Versus Passive 
+Debate 
+Since its first publication in 2002, the SPIVA Scorecard has served as the de facto 
+scorekeeper of the long-standing active versus passive debate.  Beyond the SPIVA 
+Scorecard’s widely cited headline numbers is a rich data set that addresses issues—often far 
+more fascinating though far less discussed—about measurement techniques, universe 
+composition and fund survivorship.  These data sets are rooted in the following fundamental 
+principles of the SPIVA Scorecard, with which regular readers will be familiar. 
+ Survivorship Bias Correction: Many funds might be liquidated or merged during a 
+period of study.  However, for someone making an investment decision at the beginning 
+of the period, these funds are part of the opportunity set.  Unlike other commonly 
+available comparison reports, SPIVA Scorecards account for the entire opportunity set—
+not just the survivors—thereby eliminating survivorship bias. 
+ Apples-to-Apples Comparison: Fund returns are often compared to popular 
+benchmarks such as the S&P 500, regardless of size or style classification.  SPIVA 
+Scorecards avoid this pitfall by measuring a fund's returns against the returns of a 
+benchmark appropriate for that particular investment category. 
+ Asset-Weighted Returns: Average returns for a fund group are often calculated using 
+only equal weighting, which results in the returns of a USD 10 billion fund affecting the 
+average in the same manner as the returns of a USD 10 million fund.  A more accurate 
+representation of how market participants fared in a particular period is found by 
+calculating weighted average returns where each fund’s return is weighted by net assets.  
+SPIVA Scorecards show both equal- and asset-weighted averages. 
+ Style Consistency: SPIVA Scorecards measure style consistency for each style 
+category across different time horizons.  Style consistency is an important metric because 
+style drift (the tendency of funds to diverge from their initial investment categorization) 
+can have an impact on asset allocation decisions. 
+ Data Cleaning: SPIVA Scorecards avoid double-counting multiple share classes in all 
+count-based calculations, using only the share class with greater assets.  Since this is 
+meant to be a scorecard for active managers, it excludes index funds, leveraged and 
+inverse funds, and other index-linked products. 
+===== PAGINA 9 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 9 
+Historical View 
+To provide context for the relative performance of active funds, we compile annual league 
+tables across the U.S. and international equity categories.  The tables show how active funds 
+performed against their benchmarks in each calendar year.  Owing to the 2022 change in fixed 
+income categories and benchmarks (see Appendix C), equivalent year-over-year comparisons 
+for fixed income funds would not provide “apples-to-apples” comparisons.8 
+Exhibit 8: Percentage of U.S. Equity and International Funds Underperforming 
+Benchmarks Each Year 
+Fund Category 
+2002 
+2003 
+2004 
+2005 
+2006 
+2007 
+2008 
+2009 
+2010 
+2011 
+2012 
+2013 
+2014 
+2015 
+2016 
+2017 
+2018 
+2019 
+2020 
+2021 
+2022 
+2023 
+Domestic Equity Funds (%) 
+All Domestic Funds 58 48 51 42 68 49 65 41 48 85 65 43 87 74 61 63 69 70 57 80 50 75 
+All Large-Cap Funds 68 75 69 49 68 45 56 48 66 82 63 55 87 65 66 63 65 71 60 85 51 60 
+All Mid-Cap Funds 74 52 65 74 45 46 76 56 73 69 80 37 66 57 89 44 46 32 51 62 63 50 
+All Small-Cap Funds 68 35 84 61 63 46 83 31 54 86 66 68 72 72 86 48 69 39 46 71 57 48 
+All Multi-Cap Funds 54 49 49 37 69 46 70 39 60 84 65 47 82 70 75 57 67 69 56 80 51 72 
+Large-Cap Growth Funds 83 48 44 38 94 27 91 37 51 96 46 41 96 48 90 33 60 33 38 99 74 10 
+Large-Cap Core Funds 67 85 83 56 81 44 52 51 77 83 67 58 80 74 75 69 76 70 66 79 54 73 
+Large-Cap Value Funds 35 86 87 54 80 46 25 46 71 54 85 65 78 62 78 47 46 97 33 39 59 91 
+Mid-Cap Growth Funds 86 36 64 80 28 42 91 54 84 77 87 35 55 80 95 18 15 9 17 83 91 24 
+Mid-Cap Core Funds 70 55 57 66 32 61 60 71 87 66 79 43 59 68 91 62 62 41 80 45 54 12 
+Mid-Cap Value Funds 64 68 53 69 37 58 68 47 57 68 74 41 71 34 97 43 72 65 53 63 73 75 
+Small-Cap Growth Funds 97 27 95 78 51 41 95 31 62 94 63 55 64 88 96 15 62 14 14 87 80 55 
+Small-Cap Core Funds 67 35 80 58 56 56 82 33 59 86 69 78 67 78 90 59 88 41 62 61 40 52 
+Small-Cap Value Funds 30 48 72 45 71 39 72 25 42 82 62 79 94 45 89 74 83 80 44 51 41 37 
+Multi-Cap Growth Funds 62 34 51 18 73 30 88 42 46 95 52 39 87 66 85 46 66 45 47 93 56 42 
+Multi-Cap Core Funds 49 55 61 38 77 45 66 39 66 83 68 53 84 84 75 69 82 74 62 80 58 76 
+Multi-Cap Value Funds 61 57 79 72 84 58 48 36 68 67 73 48 67 56 71 50 75 92 50 51 58 91 
+Real Estate Funds 48 57 43 44 68 45 73 38 67 66 62 65 68 43 84 37 89 27 25 70 88 87 
+International Equity Funds (%) 
+Global Funds 58 59 59 50 75 54 62 52 44 72 62 48 77 58 80 50 71 57 54 84 69 74 
+International Funds 61 81 73 71 75 68 64 72 40 70 44 43 68 26 85 54 77 57 55 50 68 68 
+International Small-Cap 
+Funds 68 56 56 60 65 37 53 49 45 60 25 48 69 49 72 44 91 61 52 31 60 54 
+Emerging Markets Funds 63 65 79 65 78 70 65 71 65 53 46 55 71 66 64 65 62 36 52 65 76 63 
+Sources: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  See reports 1a and 6a for the indices used as benchmarks for each 
+category.  Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+ 
+8  The interested reader may find the as-reported historical outperformance rates for fixed income categories in prior scorecards, available at 
+www.spglobal.com/spiva. 
+===== PAGINA 10 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 10 
+Reports 
+Report 1a: Percentage of U.S. Equity Funds Underperforming Their Benchmarks  
+(Based on Absolute Return) 
+Fund Category Comparison Index 1-Year 
+(%) 
+3-Year 
+(%) 
+5-Year 
+(%) 
+10-Year 
+(%) 
+15-Year 
+(%) 
+20-Year 
+(%) 
+All Domestic Funds S&P Composite 1500® 75.32 78.97 84.82 91.44 90.84 93.97 
+All Large-Cap Funds S&P 500 59.68 79.78 78.68 87.42 87.98 93.03 
+All Mid-Cap Funds S&P MidCap 400 49.66 69.97 65.92 80.38 88.20 92.75 
+All Small-Cap Funds S&P SmallCap 600 48.31 64.24 61.10 88.29 86.91 95.71 
+All Multi-Cap Funds S&P Composite 1500 71.98 77.85 82.57 90.70 89.18 93.63 
+Large-Cap Growth Funds S&P 500 Growth 9.76 72.10 58.55 84.12 87.47 94.09 
+Large-Cap Core Funds S&P 500 72.57 79.28 80.65 96.45 94.57 94.31 
+Large-Cap Value Funds S&P 500 Value 90.77 93.86 92.92 92.77 93.77 90.70 
+Mid-Cap Growth Funds S&P MidCap 400 Growth 24.41 87.50 44.70 63.31 82.77 90.11 
+Mid-Cap Core Funds S&P MidCap 400 72.07 58.82 78.33 89.31 93.75 92.91 
+Mid-Cap Value Funds S&P MidCap 400 Value 75.00 70.91 77.42 94.44 91.08 95.60 
+Small-Cap Growth Funds S&P SmallCap 600 
+Growth 54.72 87.00 53.85 84.00 84.77 97.91 
+Small-Cap Core Funds S&P SmallCap 600 51.71 52.40 60.07 92.55 93.38 96.52 
+Small-Cap Value Funds S&P SmallCap 600 Value 36.84 49.32 62.14 88.03 84.87 93.81 
+Multi-Cap Growth Funds S&P Composite 1500 
+Growth 42.38 76.09 73.22 90.45 88.98 94.08 
+Multi-Cap Core Funds S&P Composite 1500 76.21 82.19 87.65 96.97 94.43 93.81 
+Multi-Cap Value Funds S&P Composite 1500 
+Value 91.28 88.59 88.06 96.55 92.15 91.54 
+Real Estate Funds S&P United States REIT 87.34 94.87 60.00 76.40 86.54 90.54 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 11 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 11 
+Report 1b: Percentage of U.S. Equity Funds Underperforming Their Benchmarks  
+(Based on Risk-Adjusted Return) 
+Fund Category Comparison Index 3-Year  
+(%) 
+5-Year 
+(%) 
+10-Year 
+(%) 
+15-Year 
+(%) 
+20-Year 
+(%) 
+All Domestic Funds S&P Composite 1500 78.64 90.25 95.01 96.19 96.83 
+All Large-Cap Funds S&P 500 73.50 87.21 94.06 95.46 96.39 
+All Mid-Cap Funds S&P MidCap 400 65.19 61.15 80.11 87.15 90.00 
+All Small-Cap Funds S&P SmallCap 600 62.91 61.63 86.19 85.47 93.46 
+All Multi-Cap Funds S&P Composite 1500 76.15 89.61 95.19 94.71 95.96 
+Large-Cap Growth Funds S&P 500 Growth 71.24 64.10 91.55 98.09 98.64 
+Large-Cap Core Funds S&P 500 72.07 79.84 94.81 96.38 97.02 
+Large-Cap Value Funds S&P 500 Value 93.86 89.68 91.87 88.35 85.58 
+Mid-Cap Growth Funds S&P MidCap 400 Growth 86.76 53.79 73.37 87.64 91.76 
+Mid-Cap Core Funds S&P MidCap 400 48.04 67.50 84.73 92.36 90.55 
+Mid-Cap Value Funds S&P MidCap 400 Value 63.64 54.84 84.72 81.53 85.71 
+Small-Cap Growth Funds S&P SmallCap 600 Growth 87.00 64.29 85.00 89.84 96.34 
+Small-Cap Core Funds S&P SmallCap 600 51.20 60.43 87.06 88.85 93.03 
+Small-Cap Value Funds S&P SmallCap 600 Value 35.62 51.46 82.91 71.71 84.54 
+Multi-Cap Growth Funds S&P Composite 1500 Growth 76.63 77.05 90.95 95.92 96.71 
+Multi-Cap Core Funds S&P Composite 1500 81.74 91.24 97.88 96.29 95.53 
+Multi-Cap Value Funds S&P Composite 1500 Value 96.20 97.01 95.69 91.10 91.04 
+Real Estate Funds S&P United States REIT 94.87 52.94 67.42 77.88 82.43 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 12 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 12 
+Report 2: Survivorship and Style Consistency of U.S. Equity Funds 
+Fund Category Number of Funds at Start Survivorship (%) Style Consistency 
+1-Year  
+All Domestic Funds 2176 96.51 92.74 
+All Large-Cap Funds 754 96.15 93.63 
+All Mid-Cap Funds 294 96.26 90.48 
+All Small-Cap Funds 532 97.37 93.42 
+All Multi-Cap Funds 596 96.31 92.11 
+Large-Cap Growth Funds 246 97.56 93.90 
+Large-Cap Core Funds 237 93.25 94.94 
+Large-Cap Value Funds 271 97.42 92.25 
+Mid-Cap Growth Funds 127 96.85 93.70 
+Mid-Cap Core Funds 111 95.50 90.99 
+Mid-Cap Value Funds 56 96.43 82.14 
+Small-Cap Growth Funds 212 97.64 90.09 
+Small-Cap Core Funds 263 96.58 98.86 
+Small-Cap Value Funds 57 100.00 80.70 
+Multi-Cap Growth Funds 151 97.35 88.74 
+Multi-Cap Core Funds 227 94.27 91.63 
+Multi-Cap Value Funds 218 97.71 94.95 
+Real Estate Funds 79 94.94 100.00 
+3-Year 
+All Domestic Funds 2135 90.40 77.28 
+All Large-Cap Funds 732 92.35 80.19 
+All Mid-Cap Funds 293 89.76 67.92 
+All Small-Cap Funds 523 90.44 86.23 
+All Multi-Cap Funds 587 88.25 70.36 
+Large-Cap Growth Funds 233 93.13 87.98 
+Large-Cap Core Funds 222 91.44 76.13 
+Large-Cap Value Funds 277 92.42 76.90 
+Mid-Cap Growth Funds 136 88.24 75.00 
+Mid-Cap Core Funds 102 92.16 63.73 
+Mid-Cap Value Funds 55 89.09 58.18 
+Small-Cap Growth Funds 200 91.00 89.00 
+Small-Cap Core Funds 250 90.40 91.60 
+Small-Cap Value Funds 73 89.04 60.27 
+Multi-Cap Growth Funds 184 89.67 59.24 
+Multi-Cap Core Funds 219 86.30 70.78 
+Multi-Cap Value Funds 184 89.13 80.98 
+Real Estate Funds 78 87.18 100.00 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 13 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 13 
+Report 2: Survivorship and Style Consistency of U.S. Equity Funds (cont.) 
+Fund Category Number of Funds at Start Survivorship (%) Style Consistency 
+5-Year 
+All Domestic Funds 2266 81.16 67.43 
+All Large-Cap Funds 821 85.02 69.31 
+All Mid-Cap Funds 314 79.30 61.15 
+All Small-Cap Funds 563 78.15 78.33 
+All Multi-Cap Funds 568 79.58 57.39 
+Large-Cap Growth Funds 234 89.74 80.77 
+Large-Cap Core Funds 248 85.08 62.50 
+Large-Cap Value Funds 339 81.71 66.37 
+Mid-Cap Growth Funds 132 82.58 71.97 
+Mid-Cap Core Funds 120 75.83 53.33 
+Mid-Cap Value Funds 62 79.03 53.23 
+Small-Cap Growth Funds 182 84.07 89.56 
+Small-Cap Core Funds 278 75.18 80.94 
+Small-Cap Value Funds 103 75.73 51.46 
+Multi-Cap Growth Funds 183 81.42 53.01 
+Multi-Cap Core Funds 251 80.08 54.98 
+Multi-Cap Value Funds 134 76.12 67.91 
+Real Estate Funds 85 80.00 97.65 
+10-Year 
+All Domestic Funds 2583 64.19 53.97 
+All Large-Cap Funds 994 64.59 61.07 
+All Mid-Cap Funds 372 59.41 47.04 
+All Small-Cap Funds 572 65.03 66.26 
+All Multi-Cap Funds 645 65.58 36.12 
+Large-Cap Growth Funds 296 63.18 72.64 
+Large-Cap Core Funds 366 64.48 52.19 
+Large-Cap Value Funds 332 65.96 60.54 
+Mid-Cap Growth Funds 169 63.31 56.80 
+Mid-Cap Core Funds 131 51.15 42.75 
+Mid-Cap Value Funds 72 65.28 31.94 
+Small-Cap Growth Funds 200 65.00 83.00 
+Small-Cap Core Funds 255 65.10 66.67 
+Small-Cap Value Funds 117 64.96 36.75 
+Multi-Cap Growth Funds 199 65.83 38.69 
+Multi-Cap Core Funds 330 67.58 31.52 
+Multi-Cap Value Funds 116 59.48 44.83 
+Real Estate Funds 89 65.17 96.63 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 14 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 14 
+Report 2: Survivorship and Style Consistency of U.S. Equity Funds (cont.) 
+Fund Category Number of Funds at Start Survivorship (%) Style Consistency 
+20-Year 
+All Domestic Funds 2337 34.40 45.66 
+All Large-Cap Funds 804 30.35 55.47 
+All Mid-Cap Funds 400 36.75 38.25 
+All Small-Cap Funds 489 37.42 51.94 
+All Multi-Cap Funds 644 35.71 33.23 
+Large-Cap Growth Funds 220 23.18 65.45 
+Large-Cap Core Funds 369 28.73 53.66 
+Large-Cap Value Funds 215 40.47 48.37 
+Mid-Cap Growth Funds 182 31.32 51.10 
+Mid-Cap Core Funds 127 35.43 32.28 
+Mid-Cap Value Funds 91 49.45 20.88 
+Small-Cap Growth Funds 191 35.60 71.20 
+Small-Cap Core Funds 201 35.32 48.26 
+Small-Cap Value Funds 97 45.36 21.65 
+Multi-Cap Growth Funds 152 31.58 42.11 
+Multi-Cap Core Funds 291 35.05 32.65 
+Multi-Cap Value Funds 201 39.80 27.36 
+Real Estate Funds 74 40.54 82.43 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 15 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 15 
+Report 3: Average U.S. Equity Fund Performance (Equal-Weighted) 
+Index/Fund Category 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 20-Year (%) 
+S&P Composite 1500 25.47 9.83 15.39 11.76 9.75 
+All Domestic Funds 20.35 5.91 12.33 8.54 7.85 
+S&P 500 26.29 10.00 15.69 12.03 9.69 
+All Large-Cap Funds 24.20 7.48 13.07 9.47 7.98 
+S&P MidCap 400 16.44 8.09 12.62 9.27 9.81 
+All Mid-Cap Funds 16.99 4.44 11.94 8.14 8.22 
+S&P SmallCap 600 16.05 7.28 11.03 8.66 9.65 
+All Small-Cap Funds 15.92 3.88 10.87 6.91 7.67 
+S&P Composite 1500 25.47 9.83 15.39 11.76 9.75 
+All Multi-Cap Funds 20.84 6.15 12.52 8.57 7.51 
+Large-Cap 
+S&P 500 Growth 30.03 6.61 16.23 13.35 10.49 
+Large-Cap Growth Funds 40.45 4.41 15.36 11.52 8.94 
+S&P 500 26.29 10.00 15.69 12.03 9.69 
+Large-Cap Core Funds 22.62 8.09 13.37 9.49 8.15 
+S&P 500 Value 22.23 13.11 14.11 10.01 8.52 
+Large-Cap Value Funds 12.16 9.23 11.00 7.74 7.04 
+Mid-Cap 
+S&P MidCap 400 Growth 17.49 4.22 11.91 9.04 9.85 
+Mid-Cap Growth Funds 20.71 -0.31 12.42 9.03 8.56 
+S&P MidCap 400 16.44 8.09 12.62 9.27 9.81 
+Mid-Cap Core Funds 14.72 7.39 11.44 7.65 8.11 
+S&P MidCap 400 Value 15.39 11.95 12.91 9.17 9.58 
+Mid-Cap Value Funds 12.89 10.44 11.35 7.16 7.85  
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 16 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 16 
+Report 3: Average U.S. Equity Fund Performance (Equal-Weighted) (cont.) 
+Index/Fund Category 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 20-Year (%) 
+Small-Cap 
+S&P SmallCap 600 Growth 17.10 4.26 10.42 8.96 10.09 
+Small-Cap Growth Funds 16.35 -2.69 10.65 7.64 7.72 
+S&P SmallCap 600 16.05 7.28 11.03 8.66 9.65 
+Small-Cap Core Funds 15.36 6.96 10.67 6.46 7.65 
+S&P SmallCap 600 Value 14.89 10.20 11.31 8.17 9.11 
+Small-Cap Value Funds 16.64 11.28 11.36 6.50 7.62 
+Multi-Cap 
+S&P Composite 1500 Growth 29.01 6.47 15.85 12.97 10.41 
+Multi-Cap Growth Funds 32.25 1.71 13.44 10.15 8.42 
+S&P Composite 1500 25.47 9.83 15.39 11.76 9.75 
+Multi-Cap Core Funds 20.79 6.85 12.15 7.91 7.16 
+S&P Composite 1500 Value 21.64 12.97 13.98 9.91 8.74 
+Multi-Cap Value Funds 13.24 9.51 11.66 7.63 7.15 
+Real Estate 
+S&P United States REIT 13.77 7.17 7.22 7.50 7.94 
+Real Estate Funds 11.62 4.38 6.73 6.44 6.28 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 17 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 17 
+Report 4: Average U.S. Equity Fund Performance (Asset-Weighted) 
+Index/Fund Category 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 20-Year (%) 
+S&P Composite 1500 25.47 9.83 15.39 11.76 9.75 
+All Domestic Funds 24.80 6.59 13.71 10.04 8.56 
+S&P 500 26.29 10.00 15.69 12.03 9.69 
+All Large-Cap Funds 26.97 7.37 14.14 10.63 8.50 
+S&P MidCap 400 16.44 8.09 12.62 9.27 9.81 
+All Mid-Cap Funds 17.08 2.76 12.14 8.49 8.52 
+S&P SmallCap 600 16.05 7.28 11.03 8.66 9.65 
+All Small-Cap Funds 17.49 3.22 11.30 7.84 8.50 
+S&P Composite 1500 25.47 9.83 15.39 11.76 9.75 
+All Multi-Cap Funds 24.18 6.86 13.76 9.90 8.68 
+Large-Cap 
+S&P 500 Growth 30.03 6.61 16.23 13.35 10.49 
+Large-Cap Growth Funds 40.78 4.69 15.88 12.28 9.40 
+S&P 500 26.29 10.00 15.69 12.03 9.69 
+Large-Cap Core Funds 25.00 9.39 13.86 10.53 8.76 
+S&P 500 Value 22.23 13.11 14.11 10.01 8.52 
+Large-Cap Value Funds 12.73 9.60 12.27 8.98 8.00 
+Mid-Cap 
+S&P MidCap 400 Growth 17.49 4.22 11.91 9.04 9.85 
+Mid-Cap Growth Funds 20.35 -1.34 12.33 9.36 9.18 
+S&P MidCap 400 16.44 8.09 12.62 9.27 9.81 
+Mid-Cap Core Funds 14.79 7.54 11.92 7.85 7.71 
+S&P MidCap 400 Value 15.39 11.95 12.91 9.17 9.58 
+Mid-Cap Value Funds 14.95 10.46 11.66 7.45 8.49 
+Small-Cap 
+S&P SmallCap 600 Growth 17.10 4.26 10.42 8.96 10.09 
+Small-Cap Growth Funds 17.63 -1.38 10.90 8.75 8.91 
+S&P SmallCap 600 16.05 7.28 11.03 8.66 9.65 
+Small-Cap Core Funds 17.18 7.67 11.52 7.17 8.23 
+S&P SmallCap 600 Value 14.89 10.20 11.31 8.17 9.11 
+Small-Cap Value Funds 17.87 11.71 12.00 7.18 8.18  
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 18 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 18 
+Report 4: Average U.S. Equity Fund Performance (Asset-Weighted) (cont.) 
+Index/Fund Category 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 20-Year (%) 
+Multi-Cap 
+S&P Composite 1500 Growth 29.01 6.47 15.85 12.97 10.41 
+Multi-Cap Growth Funds 35.24 2.48 15.33 12.14 10.20 
+S&P Composite 1500 25.47 9.83 15.39 11.76 9.75 
+Multi-Cap Core Funds 23.15 7.30 12.70 8.58 8.06 
+S&P Composite 1500 Value 21.64 12.97 13.98 9.91 8.74 
+Multi-Cap Value Funds 16.02 11.15 12.57 7.88 7.88 
+Real-Estate 
+S&P United States REIT 13.77 7.17 7.22 7.50 7.94 
+Real Estate Funds 11.96 5.04 6.52 6.67 6.80 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 19 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 19 
+Report 5: Quartile Breakpoints of U.S. Equity Funds 
+Fund Category Third Quartile (%) Second Quartile (%) First Quartile (%) 
+1-Year 
+All Domestic Funds 12.82 18.54 25.69 
+All Large-Cap Funds 13.39 24.00 37.55 
+All Mid-Cap Funds 12.38 16.93 21.05 
+All Small-Cap Funds 12.79 16.39 19.21 
+All Multi-Cap Funds 13.13 20.85 26.58 
+Large-Cap Growth Funds 37.57 41.22 46.00 
+Large-Cap Core Funds 19.45 24.01 26.71 
+Large-Cap Value Funds 7.99 11.93 16.33 
+Mid-Cap Growth Funds 17.81 20.16 23.56 
+Mid-Cap Core Funds 11.39 13.43 17.13 
+Mid-Cap Value Funds 10.04 12.19 15.68 
+Small-Cap Growth Funds 13.10 16.73 19.92 
+Small-Cap Core Funds 12.63 16.04 18.51 
+Small-Cap Value Funds 12.83 16.59 20.15 
+Multi-Cap Growth Funds 24.00 32.67 39.55 
+Multi-Cap Core Funds 17.73 22.78 25.52 
+Multi-Cap Value Funds 9.15 12.22 16.39 
+Real Estate Funds 10.63 11.89 13.23 
+3-Year 
+All Domestic Funds 3.25 7.46 9.71 
+All Large-Cap Funds 5.74 8.12 9.78 
+All Mid-Cap Funds -0.42 5.58 9.38 
+All Small-Cap Funds -1.09 5.77 9.43 
+All Multi-Cap Funds 4.20 7.73 9.83 
+Large-Cap Growth Funds 2.81 5.33 7.17 
+Large-Cap Core Funds 7.64 8.70 9.91 
+Large-Cap Value Funds 7.86 9.31 10.72 
+Mid-Cap Growth Funds -4.03 -0.74 2.11 
+Mid-Cap Core Funds 6.00 7.74 9.51 
+Mid-Cap Value Funds 9.39 10.15 12.20 
+Small-Cap Growth Funds -6.77 -2.22 1.68 
+Small-Cap Core Funds 5.03 7.66 9.86 
+Small-Cap Value Funds 8.92 10.95 13.47 
+Multi-Cap Growth Funds -0.92 3.52 6.56 
+Multi-Cap Core Funds 4.93 7.88 9.40 
+Multi-Cap Value Funds 8.36 9.76 11.11 
+Real Estate Funds 3.74 5.14 6.08  
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 20 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 20 
+Report 5: Quartile Breakpoints of U.S. Equity Funds (cont.) 
+Fund Category Third Quartile (%) Second Quartile (%) First Quartile (%) 
+5-Year 
+All Domestic Funds 10.51 12.50 14.68 
+All Large-Cap Funds 11.26 13.51 15.70 
+All Mid-Cap Funds 10.83 12.37 13.32 
+All Small-Cap Funds 9.46 11.01 12.43 
+All Multi-Cap Funds 10.82 13.18 15.14 
+Large-Cap Growth Funds 14.49 16.07 17.37 
+Large-Cap Core Funds 12.91 14.22 15.52 
+Large-Cap Value Funds 9.76 11.32 12.64 
+Mid-Cap Growth Funds 11.39 12.98 13.82 
+Mid-Cap Core Funds 10.61 11.49 12.82 
+Mid-Cap Value Funds 10.57 12.26 12.97 
+Small-Cap Growth Funds 8.93 10.59 12.35 
+Small-Cap Core Funds 9.73 11.11 12.32 
+Small-Cap Value Funds 10.13 11.22 13.09 
+Multi-Cap Growth Funds 12.56 14.57 16.28 
+Multi-Cap Core Funds 10.58 13.24 14.88 
+Multi-Cap Value Funds 10.23 11.34 12.83 
+Real Estate Funds 5.83 7.25 8.24 
+10-Year 
+All Domestic Funds 7.20 8.67 10.62 
+All Large-Cap Funds 8.37 10.15 11.66 
+All Mid-Cap Funds 7.17 8.40 9.61 
+All Small-Cap Funds 6.22 7.28 8.26 
+All Multi-Cap Funds 7.14 8.72 10.70 
+Large-Cap Growth Funds 11.34 12.49 13.36 
+Large-Cap Core Funds 9.14 10.43 11.13 
+Large-Cap Value Funds 7.38 8.23 8.93 
+Mid-Cap Growth Funds 8.25 9.28 10.32 
+Mid-Cap Core Funds 6.94 7.88 8.98 
+Mid-Cap Value Funds 6.72 7.44 8.26 
+Small-Cap Growth Funds 6.76 7.79 8.92 
+Small-Cap Core Funds 6.00 7.06 8.00 
+Small-Cap Value Funds 5.66 6.90 7.71 
+Multi-Cap Growth Funds 9.43 10.99 12.47 
+Multi-Cap Core Funds 6.95 8.00 9.99 
+Multi-Cap Value Funds 6.88 7.98 8.78 
+Real Estate Funds 6.08 7.17 7.76  
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 21 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 21 
+Report 5: Quartile Breakpoints of U.S. Equity Funds (cont.) 
+Fund Category Third Quartile (%) Second Quartile (%) First Quartile (%) 
+20-Year 
+All Domestic Funds 7.47 8.48 9.36 
+All Large-Cap Funds 7.62 8.60 9.55 
+All Mid-Cap Funds 7.84 8.76 9.40 
+All Small-Cap Funds 7.70 8.35 9.11 
+All Multi-Cap Funds 7.00 8.17 9.36 
+Large-Cap Growth Funds 8.80 9.96 10.51 
+Large-Cap Core Funds 8.14 8.79 9.47 
+Large-Cap Value Funds 7.03 7.67 8.43 
+Mid-Cap Growth Funds 8.25 9.09 10.22 
+Mid-Cap Core Funds 7.60 8.80 9.35 
+Mid-Cap Value Funds 7.20 8.30 8.91 
+Small-Cap Growth Funds 8.05 8.82 9.45 
+Small-Cap Core Funds 7.58 8.19 9.02 
+Small-Cap Value Funds 7.54 8.09 8.75 
+Multi-Cap Growth Funds 9.05 9.57 10.11 
+Multi-Cap Core Funds 7.00 8.00 9.09 
+Multi-Cap Value Funds 6.40 7.46 8.44 
+Real Estate Funds 6.19 7.17 7.84 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+Report 6a: Percentage of International Equity Funds Underperforming Their 
+Benchmarks (Based on Absolute Return) 
+Fund Category Comparison Index 1-Year (%) 3-Year (%) 5-Year (%) 10-Year 
+(%) 
+15-Year 
+(%) 
+20-Year 
+(%) 
+Global Funds S&P Global 1200 73.60 87.93 83.33 90.95 89.31 91.27 
+International Funds S&P 700 68.07 69.98 77.97 87.80 87.05 93.38 
+International Small-
+Cap Funds 
+S&P Developed Ex-
+U.S. SmallCap 54.22 62.82 59.30 70.49 70.18 78.13 
+Emerging Markets 
+Funds S&P/IFCI Composite 63.30 73.50 74.67 89.20 88.15 95.24 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+Report 6b: Percentage of International Equity Funds Underperforming Their 
+Benchmarks (Based on Risk-Adjusted Return) 
+Fund Category Comparison Index  3-Year (%) 5-Year (%) 10-Year (%) 15-Year (%) 20-Year (%) 
+Global Funds S&P Global 1200 83.19 92.92 94.97 92.45 93.65 
+International Funds S&P 700 71.71 84.30 88.47 88.55 94.08 
+International Small-Cap 
+Funds 
+S&P Developed Ex-
+U.S. SmallCap - 60.47 68.85 73.68 84.38 
+Emerging Markets 
+Funds S&P/IFCI Composite - 77.29 91.08 91.11 95.24 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 22 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 22 
+Report 7: Survivorship of International Equity Funds 
+Fund Category Number of Funds at Start Survivorship (%) Style Consistency (%) 
+1-Year 
+Global Funds 250 93.20 88.00 
+International Funds 404 96.78 84.90 
+International Small-Cap Funds 83 92.77 83.13 
+Emerging Markets Funds 218 93.12 99.08 
+3-Year 
+Global Funds 232 87.50 70.26 
+International Funds 403 88.59 65.26 
+International Small-Cap Funds 78 84.62 76.92 
+Emerging Markets Funds 200 85.00 100.00 
+5-Year 
+Global Funds 240 77.92 57.08 
+International Funds 395 82.03 50.89 
+International Small-Cap Funds 86 73.26 68.60 
+Emerging Markets Funds 229 70.31 93.01 
+10-Year 
+Global Funds 199 58.29 34.67 
+International Funds 295 61.02 42.71 
+International Small-Cap Funds 61 62.30 67.21 
+Emerging Markets Funds 213 56.81 91.55 
+20-Year 
+Global Funds 126 37.30 9.52 
+International Funds 287 36.59 7.67 
+International Small-Cap Funds 32 46.88 0.00 
+Emerging Markets Funds 63 50.79 93.65 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 23 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 23 
+Report 8: Average International Equity Fund Performance (Equal-Weighted) 
+Index/Fund Category 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 20-Year (%) 
+S&P Global 1200 23.38 7.64 13.07 9.11 8.37 
+Global Funds 20.32 3.48 10.65 6.51 6.52 
+S&P 700 18.01 3.55 8.80 4.97 6.50 
+International Funds 16.34 1.38 7.37 3.98 5.18 
+S&P Developed Ex-U.S. SmallCap 14.07 -0.60 6.95 4.84 7.37 
+International Small-Cap Funds 14.12 -1.27 6.76 4.04 6.86 
+S&P/IFCI Composite 12.22 -3.15 4.76 3.66 7.87 
+Emerging Markets Funds 12.94 -5.01 4.18 2.00 6.03 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+Report 9: Average International Equity Fund Performance (Asset-Weighted) 
+Index/Fund Category 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 20-Year (%) 
+S&P Global 1200 23.38 7.64 13.07 9.11 8.37 
+Global Funds 22.80 3.68 11.16 7.55 7.56 
+S&P 700 18.01 3.55 8.80 4.97 6.50 
+International Funds 16.66 0.41 7.99 4.17 5.90 
+S&P Developed Ex-U.S. SmallCap 14.07 -0.60 6.95 4.84 7.37 
+International Small-Cap Funds 15.48 -1.35 7.62 4.97 7.49 
+S&P/IFCI Composite 12.22 -3.15 4.76 3.66 7.87 
+Emerging Markets Funds 13.33 -5.25 5.18 2.98 6.99 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 24 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 24 
+ Report 10: Quartile Breakpoints of International Equity Funds 
+Fund Category Third Quartile (%) Second Quartile (%) First Quartile (%) 
+1-Year 
+Global Funds 15.70 20.14 24.23 
+International Funds 14.54 16.56 18.80 
+International Small-Cap Funds 11.48 13.95 16.99 
+Emerging Markets Funds 8.08 11.06 15.14 
+3-Year 
+Global Funds 1.68 4.03 6.40 
+International Funds -0.63 2.04 4.31 
+International Small-Cap Funds -5.18 -1.51 2.31 
+Emerging Markets Funds -8.98 -5.67 -1.69 
+5-Year 
+Global Funds 9.67 11.36 12.69 
+International Funds 6.40 7.65 8.82 
+International Small-Cap Funds 5.89 7.21 8.49 
+Emerging Markets Funds 2.84 3.95 6.12 
+10-Year 
+Global Funds 5.63 6.96 8.73 
+International Funds 3.33 4.00 4.75 
+International Small-Cap Funds 3.62 4.76 5.52 
+Emerging Markets Funds 1.46 2.20 3.26 
+20-Year 
+Global Funds 6.01 6.98 8.31 
+International Funds 4.60 5.49 6.27 
+International Small-Cap Funds 6.73 7.18 8.35 
+Emerging Markets Funds 5.64 6.18 7.25 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 25 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 25 
+Report 11a: Percentage of Fixed Income Funds Underperforming Their Benchmarks 
+(Based on Absolute Return) 
+Fund Category Comparison Index 1-Year 
+(%) 
+3-Year 
+(%) 
+5-Year 
+(%) 
+10-Year 
+(%) 
+15-Year 
+(%) 
+General Government 
+Funds 
+iBoxx $ Domestic Sovereign & 
+Sub-Sovereigns 95.00 91.43 93.88 93.65 81.82 
+Government 
+Intermediate Funds 
+iBoxx $ Domestic Sovereigns & 
+Sub-Sovereigns 1-10Y 89.47 95.24 90.00 93.75 83.33 
+Government Short & 
+Short-Intermediate 
+Funds 
+iBoxx $ Domestic Sovereigns & Sub-
+Sovereigns 1-5Y 82.14 65.52 86.11 93.33 94.55 
+General Investment-
+Grade Funds iBoxx $ Liquid Investment Grade 97.62 38.46 86.67 90.82 82.27 
+Investment-Grade 
+Intermediate Funds Bloomberg U.S. Aggregate 44.30 62.07 46.62 71.34 59.09 
+Investment-Grade 
+Short & Intermediate 
+Funds 
+iBoxx $ Overall 1-5Y 30.06 24.03 40.63 64.23 61.64 
+General Bond Funds iBoxx $ Overall 31.25 32.50 45.45 64.29 59.32 
+High Yield Funds iBoxx $ Liquid High Yield 80.46 59.04 63.51 77.52 78.00 
+Mortgage-Backed 
+Securities Funds 
+Bloomberg US Aggregate 
+Securitized - MBS 67.24 58.00 68.00 84.75 75.81 
+Core Plus Bond Funds iBoxx $ Liquid Investment Grade 100.00 18.18 98.85 - - 
+Inflation-Linked Funds iBoxx TIPS Inflation-Linked 63.46 48.94 78.43 96.23 96.55 
+Global Income Funds Bloomberg Global Aggregate 37.27 42.42 45.95 63.08 58.06 
+Emerging Market Debt 
+Funds 
+Bloomberg Emerging Markets USD 
+Aggregate 28.57 56.45 64.41 91.23 96.43 
+General Municipal 
+Debt Funds 
+S&P National AMT-Free Municipal 
+Bond 38.82 91.57 80.95 66.67 58.33 
+California Municipal 
+Debt Funds 
+S&P California AMT-Free Municipal 
+Bond 30.30 75.00 71.43 53.66 53.33 
+New York Municipal 
+Debt Funds 
+S&P New York AMT-Free 
+Municipal Bond 19.23 92.31 81.48 75.00 69.23 
+Loan Participation 
+Funds 
+Markit iBoxx USD Leveraged 
+Loans 87.88 93.65 93.10 100.00 95.65 
+Source: S&P Dow Jones Indices LLC, CRSP, Bloomberg LLC.  Data as of Dec. 31, 2023.  Results not shown for the Core Plus Bond Funds 
+category for periods beginning prior to the category’s inception in 2017.  Past performance is no guarantee of future results.  Table is provided 
+for illustrative purposes. 
+===== PAGINA 26 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 26 
+Report 11b: Percentage of Fixed Income Funds Underperforming Their Benchmarks 
+(Based on Risk-Adjusted Return) 
+Fund Category Comparison Index 3-Year (%) 5-Year (%) 10-Year (%) 15-Year (%) 
+General Government 
+Funds 
+iBoxx $ Domestic Sovereign & 
+Sub-Sovereigns - 93.88 96.83 90.91 
+Government 
+Intermediate Funds 
+iBoxx $ Domestic Sovereigns & 
+Sub-Sovereigns 1-10Y - 90.00 93.75 100.00 
+Government Short & 
+Short-Intermediate 
+Funds 
+iBoxx $ Domestic Sovereigns & 
+Sub-Sovereigns 1-5Y - 77.78 91.11 89.09 
+General Investment-
+Grade Funds iBoxx $ Liquid Investment Grade - 68.89 69.39 60.28 
+Investment-Grade 
+Intermediate Funds Bloomberg U.S. Aggregate - 56.76 77.07 62.63 
+Investment-Grade Short 
+& Intermediate Funds iBoxx $ Overall 1-5Y - 55.00 70.80 70.55 
+General Bond Funds iBoxx $ Overall - 43.18 66.07 64.41 
+High Yield Funds iBoxx $ Liquid High Yield 52.41 54.98 68.35 63.50 
+Mortgage-Backed 
+Securities Funds 
+Bloomberg US Aggregate 
+Securitized - MBS - 68.00 79.66 70.97 
+Core Plus Bond Funds iBoxx $ Liquid Investment Grade - 74.71 - - 
+Inflation-Linked Funds iBoxx TIPS Inflation-Linked - 58.82 83.02 89.66 
+Global Income Funds Bloomberg Global Aggregate - - 66.15 62.37 
+Emerging Market Debt 
+Funds 
+Bloomberg Emerging Markets 
+USD Aggregate - 77.97 96.49 100.00 
+General Municipal Debt 
+Funds 
+S&P National AMT-Free 
+Municipal Bond - 92.86 86.67 75.00 
+California Municipal Debt 
+Funds 
+S&P California AMT-Free 
+Municipal Bond - 97.14 92.68 82.22 
+New York Municipal Debt 
+Funds 
+S&P New York AMT-Free 
+Municipal Bond - 100.00 96.88 100.00 
+Loan Participation Funds Markit iBoxx USD Leveraged 
+Loans 92.06 77.59 86.79 91.30 
+Source: S&P Dow Jones Indices LLC, CRSP, Bloomberg LLC.  Data as of Dec. 31, 2023.  Results not shown for the Core Plus Bond Funds 
+category for periods beginning prior to the category’s inception in 2017.  Results not shown for periods in which the benchmark return was 
+negative.  Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 27 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 27 
+Report 12: Survivorship and Style Consistency of Fixed Income Funds 
+Fund Category Number of Funds  
+at Start Survivorship (%) Style Consistency (%) 
+1-Year 
+General Government Funds 40 95.00 100.00 
+Government Intermediate Funds 19 94.74 100.00 
+Government Short & Short-Intermediate Funds 28 92.86 100.00 
+General Investment-Grade Funds 84 94.05 96.43 
+Investment-Grade Intermediate Funds 149 96.64 99.33 
+Investment-Grade Short & Intermediate Funds 163 98.16 99.39 
+General Bond Funds 32 90.63 96.88 
+High Yield Funds 174 96.55 98.28 
+Mortgage-Backed Securities Funds 58 96.55 100.00 
+Core Plus Bond Funds 100 98.00 99.00 
+Inflation-Linked Funds 52 100.00 100.00 
+Global Income Funds 110 90.91 95.45 
+Emerging Market Debt Funds 63 87.30 100.00 
+General Municipal Debt Funds 85 97.65 100.00 
+California Municipal Debt Funds 33 100.00 100.00 
+New York Municipal Debt Funds 26 100.00 100.00 
+Loan Participation Funds 66 96.97 100.00 
+3-Year 
+General Government Funds 35 85.71 100.00 
+Government Intermediate Funds 21 90.48 95.24 
+Government Short & Short-Intermediate Funds 29 93.10 93.10 
+General Investment-Grade Funds 91 79.12 94.51 
+Investment-Grade Intermediate Funds 145 91.03 97.93 
+Investment-Grade Short & Intermediate Funds 154 89.61 99.35 
+General Bond Funds 40 85.00 75.00 
+High Yield Funds 166 93.37 97.59 
+Mortgage-Backed Securities Funds 50 96.00 100.00 
+Core Plus Bond Funds 88 94.32 95.45 
+Inflation-Linked Funds 47 95.74 97.87 
+Global Income Funds 99 80.81 93.94 
+Emerging Market Debt Funds 62 79.03 100.00 
+General Municipal Debt Funds 83 92.77 100.00 
+California Municipal Debt Funds 32 100.00 100.00 
+New York Municipal Debt Funds 26 96.15 100.00 
+Loan Participation Funds 63 88.89 98.41 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Results not shown for the Core Plus Bond Funds category for 
+periods beginning prior to the category’s inception in 2017.  Past performance is no guarantee of future results.  Table is provided for 
+illustrative purposes. 
+===== PAGINA 28 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 28 
+Report 12: Survivorship and Style Consistency of Fixed Income Funds (cont.) 
+Fund Category Number of Funds  
+at Start Survivorship (%) Style Consistency (%) 
+5-Year 
+General Government Funds 49 81.63 73.47 
+Government Intermediate Funds 10 80.00 90.00 
+Government Short & Short-Intermediate Funds 36 77.78 88.89 
+General Investment-Grade Funds 90 80.00 87.78 
+Investment-Grade Intermediate Funds 148 82.43 94.59 
+Investment-Grade Short & Intermediate Funds 160 85.63 94.38 
+General Bond Funds 44 75.00 59.09 
+High Yield Funds 211 85.78 72.99 
+Mortgage-Backed Securities Funds 50 90.00 98.00 
+Core Plus Bond Funds 87 90.80 88.51 
+Inflation-Linked Funds 51 84.31 96.08 
+Global Income Funds 111 76.58 84.68 
+Emerging Market Debt Funds 59 69.49 98.31 
+General Municipal Debt Funds 84 83.33 96.43 
+California Municipal Debt Funds 35 88.57 97.14 
+New York Municipal Debt Funds 27 88.89 100.00 
+Loan Participation Funds 58 91.38 100.00 
+10-Year 
+General Government Funds 63 58.73 77.78 
+Government Intermediate Funds 16 50.00 87.50 
+Government Short & Short-Intermediate Funds 45 57.78 86.67 
+General Investment-Grade Funds 98 74.49 73.47 
+Investment-Grade Intermediate Funds 157 64.97 86.62 
+Investment-Grade Short & Intermediate Funds 137 74.45 79.56 
+General Bond Funds 56 53.57 35.71 
+High Yield Funds 218 71.10 78.90 
+Mortgage-Backed Securities Funds 59 69.49 86.44 
+Inflation-Linked Funds 53 66.04 96.23 
+Global Income Funds 130 56.15 77.69 
+Emerging Market Debt Funds 57 52.63 89.47 
+General Municipal Debt Funds 90 71.11 87.78 
+California Municipal Debt Funds 41 73.17 95.12 
+New York Municipal Debt Funds 32 71.88 96.88 
+Loan Participation Funds 53 86.79 96.23  
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Results not shown for the Core Plus Bond Funds category for 
+periods beginning prior to the category’s inception in 2017.  Past performance is no guarantee of future results.  Table is provided for 
+illustrative purposes. 
+===== PAGINA 29 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 29 
+Report 12: Survivorship and Style Consistency of Fixed Income Funds (cont.) 
+Fund Category Number of Funds  
+at Start Survivorship (%) Style Consistency (%) 
+15-Year 
+General Government Funds 88 52.27 67.05 
+Government Intermediate Funds 24 45.83 70.83 
+Government Short & Short-Intermediate Funds 55 45.45 76.36 
+General Investment-Grade Funds 141 56.74 59.57 
+Investment-Grade Intermediate Funds 198 48.48 68.69 
+Investment-Grade Short & Intermediate Funds 146 50.00 78.08 
+General Bond Funds 59 45.76 42.37 
+High Yield Funds 200 59.00 86.50 
+Mortgage-Backed Securities Funds 62 53.23 87.10 
+Inflation-Linked Funds 29 48.28 89.66 
+Global Income Funds 93 52.69 67.74 
+Emerging Market Debt Funds 28 57.14 60.71 
+General Municipal Debt Funds 84 60.71 86.90 
+California Municipal Debt Funds 45 62.22 93.33 
+New York Municipal Debt Funds 39 56.41 92.31 
+Loan Participation Funds 23 78.26 95.65 
+Source: S&P Dow Jones Indices LLC, CRSP, Bloomberg LLC.  Data as of Dec. 31, 2023.  Results not shown for the Core Plus Bond Funds 
+category for periods beginning prior to the category’s inception in 2017.  Past performance is no guarantee of future results.  Table is provided 
+for illustrative purposes. 
+===== PAGINA 30 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 30 
+Report 13: Average Fixed Income Fund Performance (Equal-Weighted) 
+Index/Fund Category 1-Year (%) 3-Year (%) 5-Year (%) 10-Year (%) 15-Year (%) 
+iBoxx $ Domestic Sovereign & Sub-Sovereigns 5.66 -2.21 1.36 1.80 2.11 
+General Government Funds 3.08 -5.13 -0.30 0.63 1.79 
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-10Y 4.99 -1.28 1.34 1.51 1.89 
+Government Intermediate Funds 4.03 -3.06 0.50 0.81 1.29 
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-5Y 4.76 -0.57 1.40 1.33 1.64 
+Government Short & Short-Intermediate Funds 4.04 -0.89 0.81 0.76 1.07 
+iBoxx $ Liquid Investment Grade 9.45 -3.99 2.92 3.19 4.77 
+General Investment-Grade Funds 6.93 -1.70 3.09 2.73 3.94 
+Bloomberg U.S. Aggregate 5.53 -3.31 1.10 1.81 2.68 
+Investment-Grade Intermediate Funds 5.53 -3.47 1.08 1.64 3.10 
+iBoxx $ Overall 1-5Y 5.01 -0.58 1.58 1.46 1.88 
+Investment-Grade Short & Intermediate Funds 5.61 0.13 1.75 1.41 2.29 
+iBoxx $ Overall 5.70 -3.57 1.30 1.91 2.55 
+General Bond Funds 6.99 -1.97 1.67 1.88 3.48 
+iBoxx $ Liquid High Yield 12.89 1.73 4.79 4.00 7.80 
+High Yield Funds 11.46 1.48 4.36 3.31 7.15 
+Bloomberg US Aggregate Securitized - MBS 5.05 -2.86 0.25 1.38 2.15 
+Mortgage-Backed Securities Funds 4.99 -2.90 0.20 1.17 2.23 
+iBoxx $ Liquid Investment Grade 9.45 -3.99 2.92 3.19 4.77 
+Core Plus Bond Funds 6.21 -3.12 1.56 - - 
+iBoxx TIPS Inflation-Linked 3.96 -.1.30 3.13 2.46 3.43 
+Inflation-Linked Funds 3.39 -0.53 2.98 1.98 2.76 
+Bloomberg Global Aggregate 5.72 -5.51 -0.32 0.38 1.54 
+Global Income Funds 6.30 -3.76 0.64 0.88 2.46 
+Bloomberg Emerging Markets USD Aggregate 9.09 -3.13 1.84 3.03 6.21 
+Emerging Market Debt Funds 10.57 -3.20 1.37 1.67 3.96 
+S&P National AMT-Free Municipal Bond 6.24 -0.27 2.26 2.97 3.83 
+General Municipal Debt Funds 6.21 -1.18 1.68 2.58 3.67 
+S&P California AMT-Free Municipal Bond 5.64 -0.51 2.10 3.00 4.05 
+California Municipal Debt Funds 5.94 -1.22 1.55 2.81 4.26 
+S&P New York AMT-Free Municipal Bond 6.40 -0.06 2.17 2.87 3.81 
+New York Municipal Debt Funds 6.80 -0.87 1.66 2.68 3.80 
+Markit iBoxx USD Leveraged Loans 13.00 5.46 5.29 4.01 7.47 
+Loan Participation Funds 11.01 4.00 3.98 3.01 5.94 
+Source: S&P Dow Jones Indices LLC, CRSP, Bloomberg LLC.  Data as of Dec. 31, 2023.  Results not shown for the Core Plus Bond Funds 
+category for periods beginning prior to the category’s inception in 2017.  Returns shown are annualized for periods greater than one year. Past 
+performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 31 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 31 
+Report 14: Average Fixed Income Fund Performance (Asset-Weighted) 
+Index/Fund Category 1-Year 
+(%) 
+3-Year 
+(%) 
+5-Year 
+(%) 
+10-Year 
+(%) 
+15-Year 
+(%) 
+iBoxx $ Domestic Sovereign & Sub-Sovereigns 5.66 -2.21 1.36 1.08 2.11 
+General Government Funds 3.77 -4.65 0.35 1.13 2.07 
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-10Y 4.99 -1.28 1.34 1.51 1.89 
+Government Intermediate Funds 3.96 -3.37 0.48 0.79 2.10 
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-5Y 4.76 -0.57 1.40 1.33 1.64 
+Government Short & Short-Intermediate Funds 3.59 -0.65 1.11 0.99 1.27 
+iBoxx $ Liquid Investment Grade 9.45 -3.99 2.92 3.19 4.77 
+General Investment-Grade Funds 7.10 -4.31 2.19 2.58 3.91 
+Bloomberg U.S. Aggregate 5.53 -3.31 1.1 1.81 2.68 
+Investment-Grade Intermediate Funds 6.53 -2.77 1.87 2.25 3.80 
+iBoxx $ Overall 1-5Y 5.01 -0.58 1.58 1.46 1.88 
+Investment-Grade Short & Intermediate Funds 5.54 -0.05 1.80 1.60 2.60 
+iBoxx $ Overall -13.61 -2.69 0.13 1.08 2.63 
+General Bond Funds 8.11 -0.38 2.8 2.13 3.70 
+iBoxx $ Liquid High Yield 12.89 1.73 4.79 4.00 7.80 
+High Yield Funds 11.70 2.09 5.03 3.92 7.87 
+Bloomberg US Aggregate Securitized – MBS 5.05 -2.86 0.25 1.38 2.15 
+Mortgage-Backed Securities Funds 5.04 -2.55 0.39 1.38 2.35 
+iBoxx $ Liquid Investment Grade 9.45 -3.99 2.92 3.19 4.77 
+Core Plus Bond Funds 5.90 -3.67 1.23 - - 
+iBoxx TIPS Inflation-Linked 3.96 -.1.30 3.13 2.46 3.43 
+Inflation-Linked Funds 3.40 -1.15 2.61 2.07 3.14 
+Bloomberg Global Aggregate 5.72 -5.51 -0.32 0.38 1.54 
+Global Income Funds 6.58 -4.27 -0.42 0.42 2.53 
+Bloomberg Emerging Markets USD Aggregate 9.09 -3.13 1.84 3.03 6.21 
+Emerging Market Debt Funds 12.22 -2.74 1.45 2.38 5.16 
+S&P National AMT-Free Municipal Bond 6.24 -0.27 2.26 2.97 3.83 
+General Municipal Debt Funds 6.89 -0.77 2.08 3.08 4.37 
+S&P California AMT-Free Municipal Bond 5.64 -0.51 2.10 3.00 4.05 
+California Municipal Debt Funds 6.31 -0.95 2.05 3.29 4.63 
+S&P New York AMT-Free Municipal Bond  6.40 -0.06 2.17 2.87 3.81 
+New York Municipal Debt Funds 7.60 -0.58 2.26 3.27 4.55 
+Markit iBoxx USD Leveraged Loans 13.00 5.46 5.29 4.01 7.47 
+Loan Participation Funds 11.14 4.54 4.18 3.21 6.05 
+Source: S&P Dow Jones Indices LLC, CRSP, Bloomberg LLC.  Data as of Dec. 31, 2023.  Results not shown for the Core Plus Bond Funds 
+category for periods beginning prior to the category’s inception in 2017.  Returns shown are annualized for periods greater than one year.  
+Past performance is no guarantee of future results.  Table is provided for illustrative purposes. 
+===== PAGINA 32 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 32 
+Report 15: Quartile Breakpoints of Fixed Income Funds 
+Fund Category Third Quartile (%) Second Quartile (%) First Quartile (%) 
+1-Year 
+General Government Funds 3.07 3.79 4.33 
+Government Intermediate Funds 3.74 4.14 4.44 
+Government Short & Short-Intermediate Funds 3.64 3.91 4.17 
+General Investment-Grade Funds 5.83 7.35 8.51 
+Investment-Grade Intermediate Funds 5.22 5.67 6.21 
+Investment-Grade Short & Intermediate Funds 4.89 5.55 6.18 
+General Bond Funds 5.99 6.99 8.84 
+High Yield Funds 10.87 11.96 12.71 
+Mortgage-Backed Securities Funds 4.32 4.83 5.58 
+Core Plus Bond Funds 5.82 6.22 6.85 
+Inflation-Linked Funds 3.12 3.75 4.09 
+Global Income Funds 5.15 6.62 8.17 
+Emerging Market Debt Funds 9.34 11.07 12.57 
+General Municipal Debt Funds 5.80 6.49 6.98 
+California Municipal Debt Funds 5.33 6.26 6.65 
+New York Municipal Debt Funds 6.80 6.80 7.67 
+Loan Participation Funds 10.56 11.28 12.46 
+3-Year 
+General Government Funds -4.71 -3.78 -3.07 
+Government Intermediate Funds -3.73 -3.08 -2.56 
+Government Short & Short-Intermediate Funds -1.28 -1.00 -0.36 
+General Investment-Grade Funds -3.92 -3.53 -2.94 
+Investment-Grade Intermediate Funds -3.80 -3.47 -3.08 
+Investment-Grade Short & Intermediate Funds -0.29 0.19 0.63 
+General Bond Funds -2.93 -1.98 0.05 
+High Yield Funds 0.85 1.58 2.24 
+Mortgage-Backed Securities Funds -3.45 -2.91 -2.39 
+Core Plus Bond Funds -3.67 -3.21 -2.82 
+Inflation-Linked Funds -1.65 -1.21 0.02 
+Global Income Funds -5.77 -3.16 -1.55 
+Emerging Market Debt Funds -3.48 -2.66 -1.87 
+General Municipal Debt Funds -1.21 -0.80 -0.63 
+California Municipal Debt Funds -1.28 -0.88 -0.53 
+New York Municipal Debt Funds -1.04 -0.70 -0.42 
+Loan Participation Funds 3.72 4.32 4.91 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 33 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 33 
+Report 15: Quartile Breakpoints of Fixed Income Funds (cont.) 
+Fund Category Third Quartile (%) Second Quartile (%) First Quartile (%) 
+5-Year 
+General Government Funds -0.18 0.24 0.71 
+Government Intermediate Funds 0.18 0.51 0.85 
+Government Short & Short-Intermediate Funds 0.55 0.90 1.14 
+General Investment-Grade Funds 1.22 2.05 2.67 
+Investment-Grade Intermediate Funds 0.88 1.22 1.57 
+Investment-Grade Short & Intermediate Funds 1.46 1.76 2.06 
+General Bond Funds 1.09 2.37 3.16 
+High Yield Funds 3.94 4.54 5.17 
+Mortgage-Backed Securities Funds -0.01 0.17 0.45 
+Core Plus Bond Funds 1.08 1.54 2.07 
+Inflation-Linked Funds 2.61 2.87 3.12 
+Global Income Funds -0.47 0.82 1.88 
+Emerging Market Debt Funds 1.15 1.86 2.46 
+General Municipal Debt Funds 1.65 1.89 2.22 
+California Municipal Debt Funds 1.51 1.86 2.16 
+New York Municipal Debt Funds 1.55 1.83 2.06 
+Loan Participation Funds 4.01 4.39 4.89 
+10-Year 
+General Government Funds 0.73 1.08 1.33 
+Government Intermediate Funds 0.70 0.91 1.04 
+Government Short & Short-Intermediate Funds 0.58 0.89 1.02 
+General Investment-Grade Funds 1.70 2.24 2.85 
+Investment-Grade Intermediate Funds 1.54 1.77 1.94 
+Investment-Grade Short & Intermediate Funds 1.21 1.43 1.73 
+General Bond Funds 1.63 2.36 3.00 
+High Yield Funds 3.23 3.64 4.05 
+Mortgage-Backed Securities Funds 0.92 1.12 1.33 
+Inflation-Linked Funds 1.77 1.98 2.19 
+Global Income Funds 0.20 1.15 2.22 
+Emerging Market Debt Funds 1.45 2.19 2.86 
+General Municipal Debt Funds 2.66 2.94 3.14 
+California Municipal Debt Funds 2.78 3.17 3.38 
+New York Municipal Debt Funds 2.59 2.81 3.01 
+Loan Participation Funds 2.96 3.32 3.58 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 34 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 34 
+Report 15: Quartile Breakpoints of Fixed Income Funds (cont.) 
+Fund Category Third Quartile (%) Second Quartile (%) First Quartile (%) 
+15-Year 
+General Government Funds 1.54 1.76 2.64 
+Government Intermediate Funds 1.24 1.50 2.04 
+Government Short & Short-Intermediate Funds 0.93 1.14 1.36 
+General Investment-Grade Funds 2.97 3.86 5.07 
+Investment-Grade Intermediate Funds 2.99 3.51 3.96 
+Investment-Grade Short & Intermediate Funds 1.90 2.19 2.83 
+General Bond Funds 2.95 3.79 5.36 
+High Yield Funds 7.32 7.70 8.09 
+Mortgage-Backed Securities Funds 1.87 2.05 2.57 
+Inflation-Linked Funds 2.55 2.92 2.96 
+Global Income Funds 1.71 2.49 3.81 
+Emerging Market Debt Funds 3.45 5.29 5.75 
+General Municipal Debt Funds 3.72 4.17 4.61 
+California Municipal Debt Funds 4.11 4.55 4.81 
+New York Municipal Debt Funds 3.53 3.92 4.14 
+Loan Participation Funds 5.57 5.86 6.44 
+Source: S&P Dow Jones Indices LLC, CRSP.  Data as of Dec. 31, 2023.  Past performance is no guarantee of future results.  Table is 
+provided for illustrative purposes. 
+===== PAGINA 35 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 35 
+Appendix A: Mapping 
+SPIVA Styles and Fund Classifications 
+The SPIVA Scorecard covers domestic equity, global equity and global fixed income 
+categories.  Fund returns are sourced from the CRSP Survivor-Bias-Free US Mutual Fund 
+Database, a complete database of both active and liquidated or merged mutual funds and 
+ETFs9 created in 1995 and containing fund data from December 1961.  Fund classifications 
+are based upon the Lipper fund classification system. 
+U.S. Equity 
+SPIVA covers major capitalization levels (large-, mid-, small- and multi-cap funds) and 
+investment styles (growth, core and value).  S&P Dow Jones Indices relies on the Lipper fund 
+classifications, which determine a fund portfolio’s capitalization and investment style 
+assignments. 
+Lipper assigns a market capitalization to each fund based on the percentages of a fund’s 
+three-year weighted equity assets that fall into each of Lipper’s three defined market 
+capitalization slices.  The market capitalization breakpoints are calculated using all common 
+stocks, excluding all non-U.S. domiciled stocks and ADRs, trading on the NYSE, AMEX and 
+NASDAQ.  Funds are assigned to the capitalization level in which they have a 75% or higher 
+weighting.  Any fund that has less than 75% of its three-year weighted allocation in any of the 
+three market capitalization ranges is classified as a multi-cap fund. 
+For investment style selection, the Lipper classification system uses three-year fundamental 
+portfolio characteristics (price/earnings, price/book and three-year sales-per-share growth) 
+and, if necessary, confirms secondary characteristics (price-to-sales and price-to-operating 
+cash flow). 
+In some cases, S&P Dow Jones Indices combines closely related Lipper fund classifications in 
+one SPIVA category.  Exhibit A1 maps the SPIVA U.S. Equity fund categories to Lipper 
+classifications. 
+ 
+9 The dataset encompasses retail mutual funds and all ETFs that are domiciled in the U.S. 
+===== PAGINA 36 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 36 
+Exhibit A1: U.S. Equity Category Mappings 
+SPIVA Category Lipper Fund Classification 
+Large-Cap Growth Equity Large-Cap Growth Funds 
+Large-Cap Core Equity Large-Cap Core Funds 
+Large-Cap Value Equity 
+Large-Cap Value Funds 
+Equity Income Funds 
+Mid-Cap Growth Equity Mid-Cap Growth Funds 
+Mid-Cap Core Equity Mid-Cap Core Funds 
+Mid-Cap Value Equity Mid-Cap Value Funds 
+Small-Cap Growth Equity Small-Cap Growth Funds 
+Small-Cap Core Equity Small-Cap Core Funds 
+Small-Cap Value Equity Small-Cap Value Funds 
+Multi-Cap Growth Equity Multi-Cap Growth Funds 
+Multi-Cap Core Equity Multi-Cap Core Funds 
+Multi-Cap Value Equity Multi-Cap Value Funds 
+Source: S&P Dow Jones Indices LLC, Lipper.  Table is provided for illustrative purposes. 
+International Equity 
+For international equity, SPIVA reports on four major categories (global, international, 
+international small-cap and emerging market) of interest to global asset allocators.  These 
+categories also include multiple Lipper capitalization and style classifications. 
+Exhibit A2: International Equity Category Mappings 
+SPIVA Category Lipper Funds Classification 
+Global Funds 
+Global Large-Cap Growth Funds 
+Global Large-Cap Core Funds 
+Global Large-Cap Value Funds 
+Global Multi-Cap Growth Funds 
+Global Multi-Cap Core Funds 
+Global Multi-Cap Value Funds 
+International Funds 
+International Large-Cap Growth Funds 
+International Large-Cap Core Funds 
+International Large-Cap Value Funds 
+International Multi-Cap Growth Funds 
+International Multi-Cap Core Funds 
+International Multi-Cap Value Funds 
+International Small-Cap Funds 
+International Small-/Mid-Cap Growth Funds 
+International Small-/Mid-Cap Core Funds 
+International Small-/Mid-Cap Value Funds 
+Emerging Market Funds Emerging Markets Funds 
+Source: S&P Dow Jones Indices LLC, Lipper.  Table is provided for illustrative purposes. 
+===== PAGINA 37 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 37 
+Fixed Income 
+SPIVA reports on 12 domestic, 2 global and 3 municipal fixed income categories.  The Lipper 
+domestic fixed income classifications are based on maturity and credit quality.  For maturity, 
+long is over 10 years, intermediate is 5-10 years, short/intermediate is 1-5 years and short is 1-
+3.5 years.  For credit quality, bonds are assigned to U.S. Treasury, U.S. government (includes 
+government and agency issues), A or BBB rated (according to Lipper fund rating 
+methodology), loan participations and high yield classifications.  Lipper also includes U.S. 
+mortgages and Government National Mortgage Association (GNMA) classifications. 
+In global fixed income, Lipper differentiates between global (including the U.S.) and 
+international (excluding the U.S.) objectives.  For municipal debt funds, we include the general 
+classification (invests in the top four credit ratings) plus two state funds (California and New 
+York). 
+Exhibit A3: Fixed Income Category Mappings 
+SPIVA Category Lipper Funds Classification 
+General Government Funds General U.S. Government Funds 
+Government Intermediate Funds 
+General U.S. Treasury Funds 
+Intermediate U.S. Government Funds 
+Government Short & Short-Intermediate Funds 
+Short-Intermediate U.S. Government Funds 
+Short U.S. Government Funds 
+General Investment-Grade Funds 
+Short U.S. Treasury Funds 
+Corporate Debt Funds A Rated 
+Investment-Grade Intermediate Funds 
+Corporate Debt Funds BBB-Rated 
+Intermediate Investment Grade Debt Funds 
+Investment-Grade Short & Intermediate Funds 
+Short-Intermediate Investment Grade Debt Funds 
+Short Investment Grade Debt Funds 
+General Bond Funds General Bond Funds 
+High Yield Funds High Current Yield Funds 
+Mortgage-Backed Securities Funds 
+U.S. Mortgage Funds 
+GNMA Funds 
+Core Plus Bond Funds Core Plus Bond Funds 
+Inflation-Linked Funds Inflation Protected Bond Funds 
+Global Income Funds 
+Global Income Funds 
+International Income Funds 
+Emerging Market Debt Funds Emerging Markets Debt Funds 
+General Municipal Debt Funds General & Insured Municipal Debt Funds 
+California Municipal Debt Funds California Municipal Debt Funds 
+New York Municipal Debt Funds New York Municipal Debt Funds 
+Loan Participation Funds Loan Participation Funds 
+Source: S&P Dow Jones Indices LLC, Lipper.  Table is provided for illustrative purposes. 
+===== PAGINA 38 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 38 
+Appendix B: Glossary 
+Percentage of Funds Underperforming the Index 
+To correct for survivorship bias, we use the opportunity set available at the beginning of the 
+period as the denominator.  We determine the count of funds that have survived and beat the 
+index.  We then report the index outperformance percentage. 
+Survivorship (%) 
+This measure represents the percentage of products in existence at the beginning of the time 
+period that is still active at the end of the time period. 
+Style Consistency (%) 
+This calculation shows the percentage of funds that had the same style classification at the 
+end of the time period as at the beginning of the time period. 
+Equal-Weighted Performance 
+Equal-weighted returns for a particular style category are determined by calculating a simple 
+average return of all active managers in that category in a particular month. 
+Asset-Weighted Performance 
+Asset-weighted returns for a particular style category are determined by calculating a weighted 
+average return of all funds in that category in a particular month, with each fund's return 
+weighted by its total net assets. 
+Quartile Breakpoints 
+The pth percentile for a set of data is the value that is greater than or equal to p% of the data 
+but is less than or equal to (100-p)% of the data.  In other words, it is a value that divides the 
+data into two parts: the lower p% of the values and the upper (100-p)% of the values.  The first 
+quartile is the 75th percentile, the value separating the elements of a population into the lower 
+75% and the upper 25%.  The second quartile is the 50th percentile and the third quartile is the 
+25th percentile. 
+Survivorship Bias 
+Many funds might liquidate or merge during a period of study.  This usually occurs due to 
+continued poor performance by the fund.  Therefore, if index returns were compared to fund 
+returns using only surviving funds, the comparison would be biased in favor of the fund 
+category.  These reports remove this bias by (a) using the entire investment opportunity set, 
+===== PAGINA 39 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 39 
+made up of all funds in that particular category at the outset of the period, as the denominator 
+for outperformance calculations, (b) explicitly showing the survivorship rate in each category 
+and (c) constructing peer average return series for each category based on all available funds 
+at the outset of the period. 
+Fees 
+The fund returns used are net of fees, excluding loads. 
+Indices 
+A benchmark index provides an investment vehicle against which fund performance can be 
+measured. 
+U.S. Equity 
+S&P 500 
+Widely regarded as the best single gauge of the U.S. equities market, this market-
+capitalization-weighted index includes a representative sample of 500 leading companies in 
+the foremost industries of the U.S. economy and provides over 80% coverage of U.S. equities. 
+S&P Midcap 400 
+This index consists of 400 mid-sized companies and covers approximately 7% of the U.S. 
+equities market. 
+S&P SmallCap 600 
+This index consists of 600 small-cap companies and covers approximately 3% of the U.S. 
+equities market. 
+S&P Composite 1500 
+This is a broad, market-capitalization-weighted index of 1500 companies formed by combining 
+the S&P 500, S&P MidCap 400 and S&P SmallCap 600.  The index represents approximately 
+90% of U.S. equities. 
+S&P 500 Growth and Value Indices 
+These indices form an exhaustive, multi-factor style series covering the entire market 
+capitalization of the S&P 500.  Constituents, weighted according to market capitalization, are 
+classified as growth, value or a mix of growth and value. 
+===== PAGINA 40 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 40 
+S&P MidCap 400 Growth and Value Indices 
+These indices form an exhaustive, multi-factor style series covering the entire market 
+capitalization of the S&P MidCap 400.  
+S&P SmallCap 600 Growth and Value Indices 
+These indices form an exhaustive, multi-factor style series covering the entire market 
+capitalization of the S&P SmallCap 600. 
+S&P Composite 1500 Growth and Value Indices 
+These indices form an exhaustive, multi-factor style series covering the entire market 
+capitalization of the S&P Composite 1500. 
+S&P United States REIT 
+This index measures the investable universe of publicly traded real estate investment trusts. 
+International Equity 
+S&P Global 1200 
+Capturing approximately 70% of the world’s capital markets by market capitalization, the S&P 
+Global 1200 is a composite of seven headline indices, many of which are accepted leaders in 
+their regions.  It includes the S&P 500 (U.S.), S&P Europe 350® (Europe), S&P/TOPIX 150 
+(Japan), S&P/TSX 60 (Canada), S&P/ASX All Australian 50 (Australia), S&P Asia 50 (Asia Ex-
+Japan) and S&P Latin America 40 (Latin America). 
+S&P International 700 
+This index is designed to measure the non-U.S. component of the global equity markets, 
+covering all the regions included in the S&P Global 1200, excluding the U.S. (S&P 500). 
+S&P Developed Ex-U.S. SmallCap 
+This index represents the small-cap segment—the bottom 15%—of the world’s universe of 
+institutionally investable securities, excluding the U.S. 
+S&P/IFCI Composite 
+This index is widely recognized as a comprehensive and reliable measure of the world’s 
+emerging markets.  It is designed to measure the returns of stocks that are legally and 
+practically available to foreign investors. 
+===== PAGINA 41 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 41 
+Fixed Income 
+iBoxx $ Liquid High Yield Index 
+This index consists of USD-denominated corporate high yield debt from developed markets 
+with maturities greater than 1 year and less than 15 years. 
+iBoxx $ Liquid Investment Grade Index 
+This index consists of USD-denominated corporate investment grade debt from developed 
+markets with maturities greater than three years. 
+iBoxx TIPS Inflation Linked Index 
+This index measures the performance of the U.S. Treasury Inflation Protected Securities 
+(TIPS) market across all maturities. 
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns Index 
+This index comprises USD-denominated sovereign and sub-sovereign bonds that have an 
+investment grade rating and are SEC registered.  Eligible bonds must have maturities greater 
+than one year. 
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-10Y Index 
+This index comprises USD-denominated sovereign and sub-sovereign bonds that have an 
+investment grade rating and are SEC registered.  Eligible bonds must have maturities greater 
+than 1 year and less than 10 years. 
+iBoxx $ Domestic Sovereigns & Sub-Sovereigns 1-5Y Index 
+This index comprises USD-denominated sovereign and sub-sovereign bonds that are SEC 
+registered.  Eligible bonds must have maturities greater than one year and less than five years. 
+iBoxx $ Overall Index 
+This index is a broad set of USD-denominated bonds, comprising U.S. treasuries, sovereigns, 
+sub-sovereigns, corporates and covered bonds with an investment grade rating.  It includes 
+bonds from developed markets and emerging markets.  Eligible bonds must have maturities 
+greater than one year. 
+iBoxx $ Overall 1-5Y Index 
+This index is a broad set of USD-denominated bonds, comprising U.S. treasuries, sovereigns, 
+sub-sovereigns, corporates and covered bonds with an investment grade rating. It includes 
+bonds from developed markets and emerging markets.  Eligible bonds must have maturities 
+greater than one year and less than five years. 
+===== PAGINA 42 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 42 
+Markit iBoxx USD Leveraged Loans Index 
+This index represents the main sections of the USD leveraged loan market.  It comprises 
+rated, non-rated and defaulted loans.  Eligible rated loans must have a non-investment grade 
+rating.  The minimum initial time to maturity for loans is one year and the minimum amount 
+outstanding is USD 100 million. 
+Bloomberg US Aggregate Bond Index 
+This is a broad-based index covering investment grade, USD-denominated bonds, including 
+treasuries, government-related and corporate securities, mortgage-backed securities (MBS) 
+and asset-backed securities (ABS). 
+Bloomberg Mortgage-Backed Securities Index 
+This index includes 15- and 30-year fixed-rate securities backed by mortgage pools of the 
+Government National Mortgage Association (GNMA), Federal Home Loan Mortgage 
+Corporation (FHLMC) and Federal National Mortgage Association (FNMA). 
+Bloomberg Global Aggregate Bond Index 
+This index covers the most liquid portion of the global investment grade, fixed-rate bond 
+market, including government, credit and collateralized securities. 
+Bloomberg Emerging Markets USD Aggregate Index 
+This index includes fixed- and floating-rate USD-denominated debt from emerging markets. 
+S&P National AMT-Free Municipal Bond Index 
+This index is a broad, comprehensive, market-value-weighted index designed to measure the 
+performance of investment grade U.S. municipal bonds that are exempt from the Alternative 
+Minimum Tax. 
+S&P California AMT-Free Municipal Bond Index 
+This index is designed to measure the performance of investment grade California municipal 
+bonds that are exempt from the alternative minimum tax. 
+S&P New York AMT-Free Municipal Bond Index 
+This index is designed to measure the performance of investment grade New York bonds that 
+are exempt from the alternative minimum tax. 
+===== PAGINA 43 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 43 
+Appendix C: Change of Categories and Benchmarks 
+in Fixed Income 
+Since the inaugural SPIVA U.S. Scorecard was published in 2002, the landscape of 
+actively managed fixed income funds and the availability of benchmarks to measure 
+them have changed appreciably.  Despite the evolution of indices and active fund 
+marketplaces over the past two decades, until 2022, the SPIVA Scorecards largely retained 
+the original assignments of categories and benchmarks—primarily in order to facilitate year-
+over-year comparisons.  In the mid-year 2022 edition, we made several changes. 
+February 2022 brought an opportunity to review the fixed income fund categories and their 
+associated benchmarks via the merger of S&P Global and IHS Markit, which resulted in a 
+material expansion in the range of fixed income indices available to S&P DJI for use in the 
+production of SPIVA reports.  Accordingly, scorecards published since 2022 incorporate 
+several changes in fixed income reports, including the addition of several previously 
+unreported categories and an updated assignment of benchmarks.  The previous 
+assignments of SPIVA categories and benchmarks are summarized in Exhibit C1, and 
+the new assignments are summarized in Exhibit C2 for purposes of comparison. 
+To form the new assignments, funds were first grouped into appropriate SPIVA categories, and 
+benchmarks for each category were assigned through a combination of quantitative and 
+qualitative considerations.  These included: 
+ All else equal, the organization of the historical U.S. scorecards was followed or 
+approximated where possible; 
+ Where sensible, smaller fund categories were grouped with similar categories to provide 
+broader sample sizes, with size measured both on the number of funds and their 
+aggregate assets under management; 
+ Lipper category and benchmark definitions were reviewed for similarities and differences; 
+ The benchmarks reported by the various active funds in each category were reviewed in 
+comparison to potential category benchmarks; and 
+ The correlations and tracking errors between fund category returns (both asset weighted 
+and equal weighted) and potential category benchmarks were examined over various 
+time horizons. 
+Although the new assignments seek a degree of continuity, the mid-year 2022 scorecard 
+incorporates a methodological “break” with prior editions for some fixed income fund 
+categories.  The updated categorization scheme generally improves the correspondence 
+===== PAGINA 44 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 44 
+between category and benchmark performance and expands the fund universe to include 
+several previously excluded categories. 
+Exhibit C1: Previous Fixed Income SPIVA Assignments 
+Lipper Category Previous SPIVA Category Previous Comparison Index 
+General U.S. Government Funds 
+Government Long Funds Bloomberg US Aggregate 
+Government – Long General U.S. Treasury Funds 
+Intermediate U.S. Government Funds 
+Government Intermediate Funds Bloomberg US Aggregate 
+Government – Intermediate Short-Intermediate U.S. Government Funds 
+Short U.S. Government Funds 
+Government Short Funds Bloomberg US 1-3 Year 
+Government Short U.S. Treasury Funds 
+Corporate Debt Funds A Rated 
+Investment-Grade Long Funds Bloomberg US Aggregate 
+Government & Credit – Long Corporate Debt Funds BBB-Rated 
+Intermediate Investment Grade Debt Funds Investment-Grade Intermediate 
+Funds 
+Bloomberg US Intermediate 
+Government/Credit Short-Intermediate Investment Grade Debt 
+Funds 
+Short Investment Grade Debt Funds Short Investment-Grade Funds Bloomberg US Aggregate 
+Government & Credit (1-3 Y) 
+High Current Yield Funds High Yield Funds Bloomberg US High Yield – 
+Corporate 
+U.S. Mortgage Funds 
+Mortgage-Backed Securities Funds Bloomberg US Aggregate 
+Securitized – MBS GNMA Funds 
+Global Income Funds 
+Global Income Funds Bloomberg Global Aggregate 
+International Income Funds 
+Emerging Markets Debt Funds Emerging Market Debt Funds Bloomberg Emerging Markets 
+USD Aggregate 
+General & Insured Municipal Debt Funds General Municipal Debt Funds S&P National AMT-Free Municipal 
+Bond 
+California Municipal Debt Funds California Municipal Debt Funds S&P California AMT-Free 
+Municipal Bond Index 
+New York Municipal Debt Funds New York Municipal Debt Funds S&P New York AMT-Free 
+Municipal Bond Index 
+Loan Participation Funds Loan Participation Funds S&P/LSTA U.S. Leveraged Loan 
+100 Index 
+Inflation Protected Bond Funds Not previously included Not previously included 
+Core Plus Bond Funds Not previously included Not previously included 
+General Bond Funds Not previously included Not previously included 
+Source: S&P Dow Jones Indices LLC, Lipper.  Table is provided for illustrative purposes. 
+===== PAGINA 45 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 45 
+Exhibit C2: New Fixed Income SPIVA Assignments 
+Lipper Category New SPIVA Category New Comparison Index 
+General U.S. Government Funds 
+General Government Funds iBoxx $ Domestic Sovereign & Sub-
+Sovereigns General U.S. Treasury Funds 
+Intermediate U.S. Government Funds Government Intermediate Funds iBoxx $ Domestic Sovereign & Sub-
+Sovereigns 1-10Y 
+Short-Intermediate U.S. Government 
+Funds 
+Government Short & Short-
+Intermediate Funds 
+iBoxx $ Domestic Sovereign & Sub-
+Sovereigns 1-5Y Short U.S. Government Funds 
+Short U.S. Treasury Funds 
+Corporate Debt Funds A Rated 
+General Investment-Grade Funds iBoxx $ Liquid Investment Grade 
+Corporate Debt Funds BBB-Rated 
+Intermediate Investment Grade Debt 
+Funds 
+Investment-Grade Intermediate 
+Funds Bloomberg U.S. Aggregate 
+Short-Intermediate Investment Grade 
+Debt Funds Investment-Grade Short & 
+Intermediate Funds iBoxx $ Overall 1-5Y 
+Short Investment Grade Debt Funds 
+High Current Yield Funds High Yield Funds iBoxx USD Liquid High Yield 
+U.S. Mortgage Funds 
+Mortgage-Backed Securities Funds Bloomberg US Aggregate Securitized – 
+MBS GNMA Funds 
+Global Income Funds 
+Global Income Funds Bloomberg Global Aggregate 
+International Income Funds 
+Emerging Markets Debt Funds Emerging Market Debt Funds Bloomberg Emerging Markets USD 
+Aggregate 
+General & Insured Municipal Debt 
+Funds General Municipal Debt Funds S&P National AMT-Free Municipal Bond 
+California Municipal Debt Funds California Municipal Debt Funds S&P California AMT-Free Municipal 
+Bond 
+New York Municipal Debt Funds New York Municipal Debt Funds S&P New York AMT-Free Municipal 
+Bond  
+Loan Participation Funds Loan Participation Funds Markit iBoxx USD Leveraged Loans 
+Inflation Protected Bond Funds Inflation-Linked Funds iBoxx TIPS Inflation-Linked 
+Core Plus Bond Funds Core Plus Bond Funds iBoxx $ Liquid Investment Grade 
+General Bond Funds General Bond Funds iBoxx $ Overall 
+Source: S&P Dow Jones Indices LLC, Lipper.  Table is provided for illustrative purposes. 
+===== PAGINA 46 =====
+SPIVA U.S. Scorecard Year-End 2023 
+SPIVA 46 
+General Disclaimer 
+© 2024 S&P Dow Jones Indices. All rights reserved. S&P, S&P 500, SPX, SPY, The 500, US500 , US 30, S&P 100, S&P COMPOSITE 1500, 
+S&P 400, S&P MIDCAP 400, S&P 600, S&P SMALLCAP 600, S&P GIVI, GLOBAL TITANS, DIVIDEND ARISTOCRATS, Select Sector, S&P 
+MAESTRO, S&P PRISM, S&P STRIDE, GICS, SPIVA, SPDR, INDEXOLOGY, tax, iBoxx, ABX, ADBI, CDX, CMBX, MBX, MCDX, PRIMEX, 
+HHPI and SOVX are trademarks of S&P Global, Inc. (“S&P Global”) or its affiliates. DOW JONES, DJIA, THE DOW and DOW JONES 
+INDUSTRIAL AVERAGE are trademarks of Dow Jones Trademark Holdings LLC (“Dow Jones”). These trademarks together with others have 
+been licensed to S&P Dow Jones Indices LLC. Redistribution or reproduction in whole or in part are prohibited without written permission of 
+S&P Dow Jones Indices LLC. This document does not constitute an offer of services in jurisdictions where S&P Dow Jones Indices LLC, S&P 
+Global, Dow Jones or their respective affiliates (collectively “S&P Dow Jones Indices”) do not have the necessary licenses. Except for certain 
+custom index calculation services, all information provided by S&P Dow Jones Indices is impersonal and not tailored to the needs of any 
+person, entity or group of persons. S&P Dow Jones Indices receives compensation in connection with licensing its indices to third parties and 
+providing custom calculation services. Past performance of an index is not an indication or guarantee of future results. 
+It is not possible to invest directly in an index. Exposure to an asset class represented by an index may be available through investable 
+instruments based on that index. S&P Dow Jones Indices does not sponsor, endorse, sell, promote or manage any investment fund or other 
+investment vehicle that is offered by third parties and that seeks to provide an investment return based on the performance of any index. S&P 
+Dow Jones Indices makes no assurance that investment products based on the index will accurately track index performance or provide 
+positive investment returns. S&P Dow Jones Indices LLC is not an investment advisor, and S&P Dow Jones Indices makes no representation 
+regarding the advisability of investing in any such investment fund or other investment vehicle. A decision to invest in any such investment 
+fund or other investment vehicle should not be made in reliance on any of the statements set forth in this document.  S&P Dow Jones Indices 
+is not an investment adviser, commodity trading advisor, commodity pool operator, broker dealer, fiduciary, promoter” (as defined in the 
+Investment Company Act of 1940, as amended), “expert” as enumerated within 15 U.S.C. § 77k(a) or tax advisor.  Inclusion of a security, 
+commodity, crypto currency or other asset within an index is not a recommendation by S&P Dow Jones Indices to buy, sell, or hold such 
+security, commodity, crypto currency or other asset, nor is it considered to be investment advice or commodity trading advice. Closing prices 
+for S&P Dow Jones Indices’ US benchmark indices are calculated by S&P Dow Jones Indices based on the closing price of the individual 
+constituents of the index as set by their primary exchange. Closing prices are received by S&P Dow Jones Indices from one of its third party 
+vendors and verified by comparing them with prices from an alternative vendor. The vendors receive the closing price from the primary 
+exchanges. Real-time intraday prices are calculated similarly without a second verification. 
+These materials have been prepared solely for informational purposes based upon information generally available to the public and from 
+sources believed to be reliable. No content contained in these materials (including index data, ratings, credit-related analyses and data, 
+research, valuations, model, software or other application or output therefrom) or any part thereof (“Content”) may be modified, reverse-
+engineered, reproduced or distributed in any form or by any means, or stored in a database or retrieval system, without the prior written 
+permission of S&P Dow Jones Indices. The Content shall not be used for any unlawful or unauthorized purposes. S&P Dow Jones Indices and 
+its third-party data providers and licensors (collectively “S&P Dow Jones Indices Parties”) do not guarantee the accuracy, completeness, 
+timeliness or availability of the Content. S&P Dow Jones Indices Parties are not responsible for any errors or omissions, regardless of the 
+cause, for the results obtained from the use of the Content. THE CONTENT IS PROVIDED ON AN “AS IS” BASIS. S&P DOW JONES 
+INDICES PARTIES DISCLAIM ANY AND ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY 
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE, FREEDOM FROM BUGS, SOFTWARE 
+ERRORS OR DEFECTS, THAT THE CONTENT’S FUNCTIONING WILL BE UNINTERRUPTED OR THAT THE CONTENT WILL OPERATE 
+WITH ANY SOFTWARE OR HARDWARE CONFIGURATION. In no event shall S&P Dow Jones Indices Parties be liable to any party for any 
+direct, indirect, incidental, exemplary, compensatory, punitive, special or consequential damages, costs, expenses, legal fees, or losses 
+(including, without limitation, lost income or lost profits and opportunity costs) in connection with any use of the Content even if advised of the 
+possibility of such damages. 
+S&P Global keeps certain activities of its various divisions and business units separate from each other in order to preserve the independence 
+and objectivity of their respective activities. As a result, certain divisions and business units of S&P Global may have information that is not 
+available to other business units. S&P Global has established policies and procedures to maintain the confidentiality of certain non-public 
+information received in connection with each analytical process. 
+In addition, S&P Dow Jones Indices provides a wide range of services to, or relating to, many organizations, including issuers of securities, 
+investment advisers, broker-dealers, investment banks, other financial institutions and financial intermediaries, and accordingly may receive 
+fees or other economic benefits from those organizations, including organizations whose securities or services they may recommend, rate, 
+include in model portfolios, evaluate or otherwise address. 
