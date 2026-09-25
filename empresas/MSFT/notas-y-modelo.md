@@ -279,12 +279,12 @@ Ancla de los supuestos:
 |---|---|
 | NO_APLICA (4) | FY2024 es el primer ejercicio: sin balance de apertura cargado no aplican C05, C06, C10 ni C13 |
 | INFO C05 (2) | El 10-K no da roll-forward del PPE. Otros implícitos: 34,257 (FY2025) y 30,696 (FY2026) |
-| INFO C06 (3) | Deuda FY2025: diferencia no monetaria de 483. La Nota 11 de F2 explica 464 (euro +235, descuento +72, cobertura +45, prima +112); 19 quedan sin explicar (papel comercial). Arrendamientos: nuevos + otros implícitos 21,310 y 23,523, contra 20,511 y 24,608 de derecho de uso reportado |
+| INFO C06 (3) | Deuda FY2025: diferencia no monetaria de 483. Los componentes de F2 (visor R72) explican 464 (euro +235, descuento +72, cobertura +45, prima +112); 19 quedan sin explicar (papel comercial). Arrendamientos: nuevos + otros implícitos 21,310 y 23,523, contra 20,511 y 24,608 de derecho de uso reportado |
 | INFO C08-C12 (15) | En el histórico el driver sale del mismo dato: se informa el valor (DSO 89.0, DPO 145.5, tasa efectiva 19.4%, FCF 66,987 y 63,886) |
 
 - C01-C04, C07, C14 y C15 son **pruebas reales** en el histórico: el estado de variaciones, el puente CFO y el puente no GAAP cierran al millón. C06 de la deuda de FY2026 también, con los componentes de la Nota 10.
 - En la proyección los 16 tipos se recalculan desde los estados guardados. Tensión prueba C16 con revolvente activo.
-- **Auditoría del propio control (cálculo):** `mi.verificar` sobre el `resultados.json` releído reproduce 540/0/19/4. Si se altera la caja de FY2026 en +10, aparecen 10 FALLA (C01, C02 y C13 en el histórico; C02, C10 y C16 en 2027E). Los controles detectan una alteración.
+- **Auditoría del propio control (cálculo):** `mi.verificar` sobre el `resultados.json` releído reproduce 540/0/19/4. Si se altera la caja de FY2026 en +10, aparecen 10 FALLA: C01, C02 y C13 en FY2026, C02 y C10 en 2027E de los tres escenarios, y C16 en 2027E de tensión. Los controles detectan una alteración.
 - La sensibilidad geopolítica (§8) corre su propio modelo: 230 registros, 0 FALLA.
 
 ## 7. DCF inverso
@@ -343,7 +343,7 @@ Contexto (cálculo sobre hechos):
 **Lectura (inferencia; no es recomendación):**
 - Con un margen FCF constante en el nivel deprimido de FY2026, el precio exige crecer ~21.5% al año durante una década. Es más que cualquier año reciente.
 - Si el margen vuelve al 30% de FY2024, el requisito baja a ~16%, cerca del crecimiento de FY2024-FY2026.
-- La variable que más mueve la expectativa es el **margen FCF**, es decir, la intensidad de capex. Pesa más que el WACC: 100 pb de WACC mueven ~2.3 pp; pasar de 20% a 30% de margen mueve ~5.5 pp.
+- La variable que más mueve la expectativa es el **margen FCF**, es decir, la intensidad de capex. Pesa más que el WACC: 100 pb de WACC mueven 2.3-2.5 pp; pasar de 20% a 30% de margen mueve ~5.5 pp.
 - El DCF inverso usa margen constante y los escenarios lo suben con el tiempo, así que la comparación es direccional.
 - Falta contrastar con **tasas base** de crecimiento a 10 años para empresas de más de 300 mil millones de ingresos (conocimiento/03 §2.7). No están en la base de conocimiento. Pendiente.
 
@@ -374,7 +374,7 @@ Cadena causal (conocimiento/25 §2.9): acontecimiento → exposición → efecto
 | Deuda neta FY2031E | −109,645 | −29,866 | +79,778 |
 
 Otras lecturas:
-- **Por la tasa.** Un riesgo geopolítico que se cobre con +1 pp de WACC sube ~2.3 pp el crecimiento implícito (§7). No se debe subir la tasa **y** recortar los flujos por el mismo riesgo (conocimiento/03 §7, trampa 3).
+- **Por la tasa.** Un riesgo geopolítico que se cobre con +1 pp de WACC sube 2.3 pp el crecimiento implícito (de 21.53% a 23.86%, §7). No se debe subir la tasa **y** recortar los flujos por el mismo riesgo (conocimiento/03 §7, trampa 3).
 - **Regulación y política (conocimiento/24; hecho F1).** La NOPA del IRS por 28.9 mil millones más penalidades e intereses es el riesgo de política pública fiscal cuantificado en el filing. No se modela: no hay resolución ni probabilidad.
 
 ## 9. Qué NO demuestra este trabajo
@@ -426,3 +426,120 @@ cd empresas/MSFT/modelo && sha256sum -c SHA256SUMS.txt                          
 
 ## Anexo A. Salida del motor (`mi.resumen_markdown`, sin edición)
 
+Motor herramientas/modelo_integrado.py v1.0 | Microsoft Corporation | USD millones
+
+> FASE 0 (formacion). Escenarios con supuestos explicitos: no son pronosticos, guia del emisor ni consenso, y no constituyen recomendacion de compra o venta.
+
+**Controles:** 540 registros, OK 517, FALLA 0, INFO 19, NO_APLICA 4. Todos OK: si.
+
+| Id | Control | OK | FALLA | INFO | NO_APLICA |
+|---|---|---|---|---|---|
+| C01 | Balance: activo = pasivo + capital (y totales = suma de componentes) | 54 | 0 | 0 | 0 |
+| C02 | Caja: inicial + CFO + CFI + CFF + efecto cambiario = final (y sumas de CFI y CFF) | 59 | 0 | 0 | 0 |
+| C03 | Capital: inicial + utilidad + SBC - dividendos - recompras + emisiones + ORI + otros = final | 18 | 0 | 0 | 0 |
+| C04 | Utilidades retenidas: inicial + utilidad - dividendos - recompras imputadas + otros = final | 18 | 0 | 0 | 0 |
+| C05 | PPE: inicial + capex + nuevos arrendamientos - depreciacion + otros = final | 15 | 0 | 2 | 1 |
+| C06 | Deuda: inicial + emisiones - amortizaciones (+ otros) = final (deuda, arrendamientos, revolvente) | 46 | 0 | 3 | 1 |
+| C07 | Puente utilidad -> CFO: utilidad + D&A + SBC + capital de trabajo + otros = CFO | 36 | 0 | 0 | 0 |
+| C08 | Cuentas por cobrar = dias_cxc x ingresos / 365 | 15 | 0 | 3 | 0 |
+| C09 | Inventario y proveedores = dias x costo de ventas / 365 | 30 | 0 | 3 | 0 |
+| C10 | Intereses = tasa x deuda promedio; ingreso financiero = tasa x caja promedio | 30 | 0 | 2 | 1 |
+| C11 | Impuestos = tasa x utilidad antes de impuestos | 15 | 0 | 3 | 0 |
+| C12 | FCF = CFO - capex; FCF despues de principal de arrendamientos financieros = FCF - principal | 30 | 0 | 3 | 0 |
+| C13 | Reconciliacion del historico: el motor reproduce los estados cargados con drivers implicitos | 2 | 0 | 0 | 1 |
+| C14 | Conciliacion GAAP vs ajustado: cifra GAAP + ajustes = cifra ajustada | 2 | 0 | 0 | 0 |
+| C15 | Aritmetica del estado de resultados (ingresos, bruta, operativa, UAI, neta) | 87 | 0 | 0 | 0 |
+| C16 | Caja minima y revolvente: caja >= minimo; financiamiento requerido explicito, sin plug | 60 | 0 | 0 | 0 |
+
+**Reconciliacion FY2025** (calculo sobre hechos; max |dif| = 0.0000, tolerancia 2.8172)
+
+| Partida conciliatoria | Monto | % ingresos | Origen | Material |
+|---|---|---|---|---|
+| otros_ingresos (UAI - UO + intereses; incluye ingreso financiero) | -2,516.0 | -0.9% | implicito |  |
+| otros_operativos del CFO (incluye diferencia capital de trabajo balance vs flujo) | -132.0 | -0.0% | implicito |  |
+| otros_inversion (CFI + capex) | -8,048.0 | -2.9% | implicito | ALERTA |
+| otros_financiamiento (CFF - componentes) | -8.0 | -0.0% | implicito |  |
+| efecto_cambiario | 63.0 | 0.0% | reportado |  |
+| nuevos arrendamientos financieros (saldo final - inicial + principal) | 21,310.0 | 7.6% | implicito | ALERTA |
+| movimiento no monetario / no explicado en inversiones_cp | 7,095.0 | 2.5% | residuo explicito | ALERTA |
+| movimiento no monetario / no explicado en otros_activos_circulantes | -298.0 | -0.1% | residuo explicito |  |
+| movimiento no monetario / no explicado en otros_activos_lp | -1,980.0 | -0.7% | residuo explicito |  |
+| movimiento no monetario / no explicado en ppe_neto | 12,947.0 | 4.6% | residuo explicito | ALERTA |
+| movimiento no monetario / no explicado en otros_pasivos_circulantes | 15,324.0 | 5.4% | residuo explicito | ALERTA |
+| movimiento no monetario / no explicado en otros_pasivos_lp | 378.0 | 0.1% | residuo explicito |  |
+| movimiento no monetario / no explicado en deuda | 483.0 | 0.2% | residuo explicito |  |
+| capital: ORI + otros + diferencias devengado vs pagado (del estado de variaciones) | 1,642.0 | 0.6% | derivado de movimientos_capital |  |
+| utilidades retenidas: movimientos distintos de utilidad, dividendos pagados y recompras | -595.0 | -0.2% | residuo explicito |  |
+
+**Reconciliacion FY2026** (calculo sobre hechos; max |dif| = 0.0000, tolerancia 3.3184)
+
+| Partida conciliatoria | Monto | % ingresos | Origen | Material |
+|---|---|---|---|---|
+| otros_ingresos (UAI - UO + intereses; incluye ingreso financiero) | 13,748.0 | 4.1% | implicito | ALERTA |
+| otros_operativos del CFO (incluye diferencia capital de trabajo balance vs flujo) | -5,015.0 | -1.5% | implicito |  |
+| otros_inversion (CFI + capex) | -23,552.0 | -7.1% | implicito | ALERTA |
+| otros_financiamiento (CFF - componentes) | 262.0 | 0.1% | implicito |  |
+| efecto_cambiario | -196.0 | -0.1% | reportado |  |
+| nuevos arrendamientos financieros (saldo final - inicial + principal) | 23,523.0 | 7.1% | implicito | ALERTA |
+| movimiento no monetario / no explicado en inversiones_cp | -8,415.0 | -2.5% | residuo explicito | ALERTA |
+| movimiento no monetario / no explicado en otros_activos_circulantes | 22,871.0 | 6.9% | residuo explicito | ALERTA |
+| movimiento no monetario / no explicado en otros_activos_lp | -8,868.0 | -2.7% | residuo explicito | ALERTA |
+| movimiento no monetario / no explicado en ppe_neto | 7,173.0 | 2.2% | residuo explicito | ALERTA |
+| movimiento no monetario / no explicado en otros_pasivos_circulantes | 5,569.0 | 1.7% | residuo explicito |  |
+| movimiento no monetario / no explicado en otros_pasivos_lp | 7,392.0 | 2.2% | residuo explicito | ALERTA |
+| movimiento no monetario / no explicado en deuda | 143.0 | 0.0% | residuo explicito |  |
+| capital: ORI + otros + diferencias devengado vs pagado (del estado de variaciones) | -539.0 | -0.2% | derivado de movimientos_capital |  |
+| utilidades retenidas: movimientos distintos de utilidad, dividendos pagados y recompras | -589.0 | -0.2% | residuo explicito |  |
+
+**Escenario tension** (supuesto de escenario; no es pronostico): Intensidad de capital sostenida con desaceleracion: el capex de IA sigue alto, la depreciacion alcanza al capex y comprime el margen, crecen los arrendamientos financieros que inician y se deshacen parcialmente las compras de PPE por pagar
+
+| Concepto | 2027E | 2028E | 2029E | 2030E | 2031E |
+|---|---|---|---|---|---|
+| Ingresos | 371,659.7 | 405,109.1 | 433,466.7 | 459,474.7 | 482,448.4 |
+| Utilidad operativa | 163,530.3 | 166,094.7 | 169,052.0 | 170,005.6 | 173,681.4 |
+| Utilidad neta | 126,912.3 | 127,033.2 | 127,980.4 | 127,729.6 | 130,003.9 |
+| CFO | 175,086.3 | 202,831.5 | 218,192.7 | 227,549.3 | 241,141.4 |
+| Capex | 141,230.7 | 145,839.3 | 143,044.0 | 137,842.4 | 135,085.6 |
+| FCF | 33,855.7 | 56,992.2 | 75,148.7 | 89,706.9 | 106,055.8 |
+| FCF despues de arrendamientos | 29,755.7 | 50,492.2 | 66,148.7 | 78,206.9 | 92,055.8 |
+| Dividendos + recompras | 51,700.0 | 54,700.0 | 58,000.0 | 61,600.0 | 65,500.0 |
+| Financiamiento requerido | 28,259.3 | 2,207.8 | 0.0 | 0.0 | 0.0 |
+| Caja final | 20,000.0 | 20,000.0 | 20,000.0 | 20,000.0 | 44,343.3 |
+| Revolvente | 28,259.3 | 30,467.1 | 22,319.4 | 3,712.5 | 0.0 |
+| Deuda neta | 95,889.3 | 141,597.1 | 172,448.4 | 192,341.5 | 199,785.7 |
+- 2027E: FINANCIAMIENTO REQUERIDO 28259.3 (revolvente) para mantener caja_minima 20000
+- 2028E: FINANCIAMIENTO REQUERIDO 2207.76 (revolvente) para mantener caja_minima 20000
+
+**Escenario intermedio** (supuesto de escenario; no es pronostico): Crecimiento que se modera, capex/ventas que baja gradualmente desde el maximo de FY2026 y margen operativo que cede poco por la mayor depreciacion
+
+| Concepto | 2027E | 2028E | 2029E | 2030E | 2031E |
+|---|---|---|---|---|---|
+| Ingresos | 381,614.8 | 431,224.8 | 478,659.5 | 526,525.5 | 573,912.7 |
+| Utilidad operativa | 175,542.8 | 194,051.2 | 210,610.2 | 229,038.6 | 246,782.5 |
+| Utilidad neta | 140,683.2 | 155,386.9 | 169,198.1 | 185,203.2 | 201,279.4 |
+| CFO | 197,175.4 | 222,816.2 | 249,795.7 | 275,025.1 | 299,546.8 |
+| Capex | 125,932.9 | 129,367.4 | 129,238.1 | 131,631.4 | 131,999.9 |
+| FCF | 71,242.5 | 93,448.8 | 120,557.7 | 143,393.8 | 167,546.8 |
+| FCF despues de arrendamientos | 67,142.5 | 87,748.8 | 113,257.7 | 134,493.8 | 157,046.8 |
+| Dividendos + recompras | 51,700.0 | 54,700.0 | 58,000.0 | 61,600.0 | 65,500.0 |
+| Financiamiento requerido | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Caja final | 29,127.5 | 64,176.3 | 119,433.0 | 194,326.7 | 287,373.5 |
+| Revolvente | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Deuda neta | 43,502.5 | 37,753.7 | 8,196.0 | -40,597.7 | -109,644.5 |
+
+**Escenario eficiencia** (supuesto de escenario; no es pronostico): La capacidad instalada se monetiza: crecimiento alto sostenido, capex/ventas que se normaliza rapido y margen operativo estable o al alza
+
+| Concepto | 2027E | 2028E | 2029E | 2030E | 2031E |
+|---|---|---|---|---|---|
+| Ingresos | 388,251.6 | 450,371.9 | 517,927.7 | 590,437.5 | 667,194.4 |
+| Utilidad operativa | 182,478.3 | 211,674.8 | 246,015.6 | 283,410.0 | 320,253.3 |
+| Utilidad neta | 148,513.4 | 173,111.8 | 202,971.6 | 236,512.9 | 270,808.1 |
+| CFO | 201,772.0 | 233,343.6 | 276,006.3 | 321,402.8 | 367,107.6 |
+| Capex | 116,475.5 | 117,096.7 | 119,123.4 | 123,991.9 | 126,766.9 |
+| FCF | 85,296.5 | 116,246.9 | 156,882.9 | 197,411.0 | 240,340.7 |
+| FCF despues de arrendamientos | 81,196.5 | 111,246.9 | 150,882.9 | 190,411.0 | 232,340.7 |
+| Dividendos + recompras | 51,700.0 | 54,700.0 | 58,000.0 | 61,600.0 | 65,500.0 |
+| Financiamiento requerido | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Caja final | 43,181.5 | 101,728.4 | 194,610.4 | 325,421.3 | 493,762.0 |
+| Revolvente | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| Deuda neta | 19,448.5 | -19,098.4 | -94,981.4 | -207,792.3 | -359,633.0 |

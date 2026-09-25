@@ -64,7 +64,7 @@ Capitalización de US$336.6 mil M y VE de 386.0 mil M [8]. **P/U ajustado 2026e 
 ## 8. Pronósticos registrados (3T26)
 - **Fecha: 13-oct-2026**, antes de la apertura. Confirmada según Nasdaq/Zacks y MarketBeat [9][10]; Yahoo la marca como no estimada [8].
 - **Ingresos:** punto **US$111,900 M**; intervalo de 80%: **110,300-113,300**. Consenso de 111,489 M (Yahoo, 18 analistas, 25-sep) [8]. Supuesto: nivel similar al 1T y 2T, con reprecio que compensa la pérdida de afiliados; la cola baja cubre la venta en Sudamérica (efecto no verificado).
-- **UPA ajustada:** punto **US$4.40**; intervalo de 80%: **3.90-4.95**. Consenso de 4.149 (Yahoo, 23) y 4.12 (Zacks, 8) [8][9]. Supuestos: la guía implica un 2S de 5.89-6.39 (menos 13.61 del 1S). El punto supone un MCR del 3T de ~89.2%; el p10 equivale a ~89.9% y el p90 a ~88.5% (*inferencia*). La guía ha sido conservadora.
+- **UPA ajustada:** punto **US$4.40**; intervalo de 80%: **3.90-4.95**. Consenso de 4.149 (Yahoo, 23) y 4.12 (Zacks, 8) [8][9]. Supuestos: la guía implica un 2S de 5.89-6.39 (19.50-20.00 menos 13.61 del 1S). El punto supone un MCR del 3T de ~89.2%; el p10 equivale a ~89.9% y el p90 a ~88.5% (*inferencia*). La guía ha sido conservadora.
 - **Binarios:** (1) ingresos mayores a US$111,489 M: **p = 0.62**; (2) UPA ajustada mayor a US$4.149: **p = 0.66**.
 
 ## 9. Catalizadores y riesgos

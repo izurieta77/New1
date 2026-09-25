@@ -4,7 +4,7 @@
 > Precio: US$147.98 (24-sep-2026); 52 semanas: 75.39-155.53; +89.5% a 12 meses [7]. Fase 0: investigación, no recomendación.
 
 ## 1. Negocio y segmentos
-En 1S26 vendió US$32,893 M (+5%) [1]. Farmacéutico: 29,109 (88.5%); salud animal: 3,566 (10.8%). Keytruda y Keytruda Qlex suman 16,400 (50%) y las vacunas 4,675 (14%). Por geografía: EUA 18,532 (56%) e internacional 14,361 (44%). En 2025 Keytruda fue 49% de las ventas totales de 65,011 M [4].
+En 1S26 vendió US$32,893 M (+5%) [1]. Farmacéutico: 29,109 (88.5%); salud animal: 3,566 (10.8%). Keytruda y Qlex suman 16,400 (50%) y las vacunas 4,675 (14%). Por geografía: EUA 18,532 (56%) e internacional 14,361 (44%). En 2025 Keytruda fue 49% de las ventas totales de 65,011 M [4].
 
 ## 2. Último reporte: 2T26 (4-ago-2026) [1]
 - **Ventas de US$16,607 M** (+5%; +4% sin tipo de cambio) contra un consenso de 16.37 mil M (MarketBeat [10]): **+1.4%**.
@@ -36,7 +36,7 @@ Notas: Mg a.i. = margen antes de impuestos (Merck no reporta utilidad operativa)
 
 ## 4. Expediente de 10 puntos
 1. **Utilidad contra efectivo.** FCF/UN de 0.68x en 2025 (capex de US$4.1 mil M). En 12 meses, FCF de 16.1 mil M contra UN de 3.2 mil M, deprimida por los cargos de Cidara y Terns.
-2. **Deuda.** US$53.9 mil M a jun-26, contra 37.1 mil M en dic-24 [6]. El 22-may emitió **US$6.0 mil M** en notas (2028-2056, 4.30%-5.85%, más una FRN a 2028) [5]. Vencimientos a dic-25: 2.6, 2.7, 2.1, 3.0 y 2.7 mil M en los próximos 5 años [6]. Deuda neta/EBITDA de ~1.6x (EBITDA de 28.9 mil M [8]). Tiene notas listadas en NYSE de 1.375%-3.5%; *inferencia:* están en EUR (no verificado).
+2. **Deuda.** US$53.9 mil M a jun-26, contra 37.1 mil M en dic-24 [6]. El 22-may emitió **US$6.0 mil M** en notas (2028-2056, 4.30%-5.85%, más una FRN a 2028) [5]. Vencimientos a dic-25: 2.6, 2.7, 2.1, 3.0 y 2.7 mil M en los próximos 5 años [6]. Deuda neta/EBITDA de ~1.6x (EBITDA de 28.9 mil M [8]). Notas en NYSE de 1.375%-3.5%, *inferencia:* en EUR (no verificado).
 3. **Dilución.** Acciones diluidas de 2,541 M a 2,470 M (−2.8% en 8 trimestres). Recompró US$1.6 mil M en 1S26 y espera ~3.0 mil M en 2026 [3].
 4. **Capital de trabajo.** FCF trimestral volátil (1.2-8.5 mil M); el 3T suele ser fuerte.
 5. **Competidores.** BMS, Roche y AZ en PD-1; biespecíficos PD-1×VEGF (*inferencia*: amenaza a Keytruda); genéricos de sitagliptina.
@@ -48,7 +48,7 @@ Notas: Mg a.i. = margen antes de impuestos (Merck no reporta utilidad operativa)
 
 ## 5. Cadena causal
 **A. Pérdida de exclusividad de Keytruda (2028) y la IRA (2029).** Keytruda es 49% de las ventas → biosimilares en EUA desde 2028-2029 y precio de Medicare → caída de ingresos y margen salvo por la conversión a Qlex (patentes a 2043; 5.5% de Keytruda en el 2T) y los lanzamientos (Winrevair, Ohtuvayre, Capvaxive, Lipfendra) → el consenso 2027 es de US$70.3 mil M de ventas y UPA de 9.53 [8] → a 15.5x 2027e, *inferencia:* el mercado ya no aplica el descuento de "precipicio" que sí aplica a PFE y BMY (~9-10x).
-**B. Compras con cargo de IPR&D.** Cidara y Terns suman US$14.7 mil M de cargos → la UPA no-GAAP 2026 cae a 2.66-2.76 contra 8.98 en 2025 → la deuda neta sube de 23.4 a 46.8 mil M y el gasto financiero neto a ~1.4 mil M [1] → el P/U 2026 no sirve y el valor depende del retorno del pipeline.
+**B. Compras con cargo de IPR&D.** Cidara y Terns suman US$14.7 mil M de cargos → la UPA no-GAAP 2026 cae a 2.66-2.76 contra 8.98 en 2025 → la deuda neta sube de 23.4 a 46.8 mil M y los otros gastos netos no-GAAP a ~1.4 mil M [1] → el P/U 2026 no sirve y el valor depende del retorno del pipeline.
 **C. MFN y 232.** Con el arancel de 100% vigente desde el 31-jul [13], Merck tiene 3 años de diferimiento → a cambio acepta precio MFN en lanzamientos y comparte ingresos del extranjero → *inferencia:* menor precio internacional en lanzamientos; retirar esta amenaza explica parte del +89% en 12 meses.
 
 ## 6. Qué descuenta el precio
@@ -63,7 +63,7 @@ Capitalización de US$365.1 mil M y VE de 411.9 mil M. **P/U 2027e de 15.5x** (9
 
 ## 8. Pronósticos registrados (3T26)
 - **Fecha estimada: 29-oct-2026.** Yahoo la marca como no estimada [8] y Zacks la estima igual [9]; MarketBeat dice que no está confirmada [10].
-- **Ventas:** punto **US$17,550 M**; intervalo de 80%: **17,000-18,050**. Consenso de 17,340 M (Yahoo, 16 analistas, 25-sep) [8]. Supuestos: la base del 3T25 (17,276) traía 200 M de Koselugo y compras de mayoristas de Keytruda [2]. Suman Winrevair (+~280), Ohtuvayre (+~220), Keytruda (+~300) y salud animal (+~125); restan Januvia (−~245), Koselugo (−~145) y Lagevrio (−~120). Resultado: ~+1.6% anual.
+- **Ventas:** punto **US$17,550 M**; intervalo de 80%: **17,000-18,050**. Consenso de 17,340 M (Yahoo, 16 analistas, 25-sep) [8]. Supuestos: la base del 3T25 (17,276) traía 200 M de Koselugo y compras de mayoristas de Keytruda [2]. Suman Winrevair (+~280), Ohtuvayre (+~220), Keytruda (+~300) y salud animal (+~125); restan Januvia (−~245), Koselugo (−~145), Lagevrio (−~120) y otros (−~140): ~+1.6% anual.
 - **UPA no-GAAP:** punto **US$2.30**; intervalo de 80%: **1.95-2.50**. Consenso de 2.206 (Yahoo, 18), 2.25 (Zacks, 5) y 2.26 (MarketBeat) [8][9][10]. Supuesto: ~2.18-2.34 subyacente (1T y 2T sin cargos); la cola baja refleja un posible cargo por licencias o compras, que Merck incluye en la cifra no-GAAP.
 - **Binarios:** (1) ventas mayores a US$17,340 M: **p = 0.66**; (2) UPA no-GAAP mayor a US$2.206: **p = 0.65**.
 
