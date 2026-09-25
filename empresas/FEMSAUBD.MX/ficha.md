@@ -52,19 +52,19 @@ Anual (20-F [5][6]; FCF = flujo operativo − capex en PP&E e intangibles):
 †Cálculo propio: la utilidad mayoritaria de 2021-2022 es la consolidada menos la minoritaria [6], dividida entre las unidades. La de 2023 incluye la venta de Heineken. Los ingresos 2021-2022 están reexpresados por operaciones discontinuadas. SBC: companyfacts [14]. Hoy hay 3,412.7 M unidades (3,387.2 M sin tesorería) [1].
 
 ## 4. Expediente de 10 puntos
-1. **Utilidad contra efectivo.** En 2025 el flujo operativo (Ps 71,080 M) fue 3.7x la utilidad mayoritaria. Aun así, el FCF de 29,033 se reduce a ~13,242 después de pagar arrendamientos (15,791) [5]. La utilidad está distorsionada por partidas no caja: cambiaria y ganancias únicas.
+1. **Utilidad contra efectivo.** En 2025 el flujo operativo (Ps 71,080 M) fue 3.7x la utilidad mayoritaria, pero el FCF de 29,033 baja a ~13,242 después de arrendamientos (15,791) [5]. La utilidad trae partidas no caja: cambiaria y ganancias únicas.
 2. **Deuda.** Sin KOF, a jun-26: deuda financiera Ps 54,153 M, arrendamientos 109,387 y caja 73,591, para una deuda neta de 90,020 (1.15x EBITDA) [1]. El 23-sep colocó CHF 300 M a 5 años con rendimiento de 1.73% (BBB+ de S&P, A de Fitch) [8]. Mezcla de monedas y vencimientos: no verificados.
 3. **Dilución.** No hay; al contrario, recompra. Las unidades bajaron de 3,578.2 M (2024) a 3,412.7 M (jun-26), y el 14-sep anunció un ASR de hasta US$280 M que se liquida antes de fin de año [7].
-4. **Capital de trabajo.** Negativo, como en todo comercio de proximidad (proveedores financian el inventario). El detalle trimestral no está verificado.
-5. **Competidores.** Tiendas de conveniencia (7-Eleven, Circle K y la expansión de Tiendas 3B), farmacias (en Chile y Colombia) y SPAR y otros en Europa. Bara es su apuesta de *hard discount*.
-6. **Concentración.** Por el lado de los proveedores: Coca-Cola, Heineken (cerveza) y las tabacaleras. Clientes: masivo, sin concentración.
+4. **Capital de trabajo.** Negativo, típico del comercio de proximidad (detalle no verificado).
+5. **Competidores.** 7-Eleven, Circle K, Tiendas 3B y farmacias en Chile y Colombia. Bara es su apuesta de *hard discount*.
+6. **Concentración.** En proveedores: Coca-Cola, Heineken y las tabacaleras. Los clientes están atomizados.
 7. **Regulación.** IEPS a refrescos y cigarros ("seguirá unos trimestres", según el call) [10]; licencia bancaria de Spin, que primero se pausó y luego se reconsideró (fuente secundaria) [15]; sistema de salud colombiano, que en el 2T26 obligó a una provisión de ~Ps 408 M por el contrato con EPS Sanitas [10].
 8. **Promesas contra resultados.** La UPA quedó abajo del consenso en 5 de los últimos 6 trimestres [11]. En cambio, la promesa de recuperar tráfico en OXXO se cumplió en el 2T26 [1].
 9. **Partes relacionadas.** KOF vende a OXXO. FEMSA controla KOF junto con TCCC y recibió ~US$407 M de dividendos de KOF en 12 meses [1].
 10. **Asignación de capital.** Dividendo 2026 por unidad BD: 4 pagos de Ps 3.2029 (1.188 ordinario y 2.014925 extraordinario), Ps 12.81 al año, un rendimiento de 6.1% [9]. En 12 meses repartió Ps 45,498 M en dividendos y recompró Ps 10,354 M [1].
 
 ## 5. Cadena causal
-**A. IEPS 2026 a refrescos (+87%) y a cigarros [13][10].** Exposición: OXXO México (38% de los ingresos) → efecto: el ticket sube (+7.4%) aunque OXXO recorta precios en categorías que atraen tráfico, y el margen bruto cae 70 pb → estado financiero: ingresos arriba, margen presionado → valuación: la UPA crece menos que las ventas → precio: *inferencia*: el mercado paga por el tráfico recuperado.
+**A. IEPS 2026 a refrescos (+87%) y cigarros [13][10].** Exposición: OXXO México (38% de los ingresos) → efecto: ticket +7.4%, pero hay recortes de precio en categorías de tráfico y el margen bruto cae 70 pb → estado financiero: ingresos arriba y margen presionado → valuación: la UPA crece menos que las ventas → precio: *inferencia*: el mercado paga por el tráfico recuperado.
 **B. Peso fuerte (USD/MXN promedio de 17.22 en el 3T26 contra 18.62 en el 3T25) [12].** Exposición: caja en USD y conversión de Europa, EUA y Sudamérica → efecto: pérdida cambiaria cuando el peso se aprecia (−Ps 4,102 M en el 2T25) e ingresos convertidos a menos pesos → estado financiero: utilidad neta volátil. En el 3T26 el peso se depreció ~1.4% frente a jun-26, lo que da una ganancia cambiaria chica (inferencia) → precio: el mercado mira el EBITDA, no la UPA.
 **C. Retorno de capital y apalancamiento.** Exposición: ~Ps 41 mil M en distribuciones y el ASR de US$280 M [7][10] → efecto: menos unidades (−4.6% desde 2024) y menos intereses cobrados (−26.5% en el 2T26) → estado financiero: la deuda neta sin KOF subió de 0.93x a 1.15x → valuación: *inferencia*: sube la UPA por unidad, pero también el riesgo si el consumo se debilita.
 
@@ -76,7 +76,7 @@ Capitalización ≈ Ps 707 mil M (3,387.2 M unidades × 208.77). La participaci�
 - **DCF inverso sin KOF** (supuestos explícitos): VE sin KOF = 516 + 90 = Ps 606 mil M. EBIT sin KOF de 12 meses = 76.1 − 43.7 (KOF) = 32.4 mil M, y NOPAT con 34% de impuestos = 21.4 mil M. Con WACC de 10.5% y ROIC incremental de 15-20%, el crecimiento perpetuo implícito del NOPAT es **~8.5-9% nominal (~5% real)**. *Inferencia:* el precio descuenta una recuperación fuerte de los márgenes sin KOF (Spin, Salud, Américas), no un estado estable.
 
 ## 7. Escenarios de negocio a 12 meses
-- **Bajista (25%)**: sin el Mundial, las SSS de OXXO México bajan de 3%; Salud y Américas siguen perdiendo y el peso se aprecia (pérdida cambiaria). La UPA 2026 sin partidas únicas queda por debajo de Ps 6.0.
+- **Bajista (25%)**: sin el Mundial, las SSS de OXXO México bajan de 3%, Salud y Américas siguen perdiendo y el peso se aprecia. La UPA 2026 sin partidas únicas queda abajo de Ps 6.0.
 - **Base (50%)**: SSS de OXXO de un dígito medio, EBIT consolidado de +6-9% y distribuciones de ~Ps 41 mil M. UPA 2026 sin partidas únicas de ~Ps 6.5-7.2 (pronóstico).
 - **Alcista (25%)**: el tráfico de OXXO se sostiene positivo, Spin empieza a monetizar (crédito), se venden activos no estratégicos y las recompras se aceleran.
 - **Qué haría cambiar de escenario:** el tráfico de OXXO México en el 3T26 (negativo apunta al bajista), el EBIT de Salud y Américas, y la deuda neta/EBITDA sin KOF por arriba de 1.3x.
@@ -88,7 +88,7 @@ Capitalización ≈ Ps 707 mil M (3,387.2 M unidades × 208.77). La participaci�
 - **Binarios:** (1) ingresos del 3T26 mayores a Ps 228,760 M: **p = 0.60**; (2) UPA por unidad del 3T26 mayor a Ps 2.03: **p = 0.30**.
 
 ## 9. Catalizadores y riesgos
-**Catalizadores:** 28 al 29-sep, 4ª ronda del T-MEC; 15-oct, pago de dividendo (fecha aproximada, por el patrón de 2025); ~27-oct, reporte del 3T26; antes de fin de año, liquidación del ASR; 5-nov, Banxico; ~ene-2027, pago de dividendo; feb-2027, reporte del 4T26 con la guía 2027. **Riesgos:** consumo débil en México, pérdidas de Spin, la situación de Salud en Colombia, el tráfico de Valora en Alemania, la cambiaria y la ejecución en Brasil y EUA.
+**Catalizadores:** ~15-oct, dividendo (fecha aproximada por el patrón de 2025); ~27-oct, reporte del 3T26; liquidación del ASR antes de fin de año; 5-nov, Banxico; feb-2027, reporte del 4T26 con la guía 2027. **Riesgos:** consumo débil en México, pérdidas de Spin, Salud en Colombia, el tráfico de Valora en Alemania, la cambiaria y la ejecución en Brasil y EUA.
 
 ## 10. Fuentes
 1. FEMSA 6-K, resultados 2T26 (28-jul-2026): https://www.sec.gov/Archives/edgar/data/1061736/000110465926087338/tm2621462d1_ex99-1.htm
