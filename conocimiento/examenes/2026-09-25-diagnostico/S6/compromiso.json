@@ -1,0 +1,43 @@
+{
+  "seccion": "S6",
+  "examen": "2026-09-25-diagnostico",
+  "fecha": "2026-09-25",
+  "nota_fecha": "La fecha que cuenta es la del commit en GitHub que agrega este archivo, no la de este campo.",
+  "proposito": "Compromiso publico de la clave de S6 ANTES de que el sustentante responda. La contrasena NO esta en este archivo ni en el repositorio; se revela despues de calificar.",
+  "archivo_cifrado": "clave.enc",
+  "algoritmo": {
+    "cifrado": "aes-256-cbc",
+    "derivacion_de_clave": "pbkdf2 (OpenSSL 3, HMAC-SHA256 por defecto)",
+    "iteraciones": 200000,
+    "sal": "aleatoria de 8 bytes, incluida en la cabecera 'Salted__' de clave.enc",
+    "contrasena": "64 caracteres hexadecimales generados con 'openssl rand -hex 32' (no incluida)",
+    "comando_de_cifrado": "openssl enc -aes-256-cbc -pbkdf2 -iter 200000 -salt -in clave.json -out clave.enc -pass pass:<contrasena>",
+    "herramienta": "OpenSSL 3.0.13"
+  },
+  "sha256_clave_enc": "ed5f8e0990380279db86b266a4ffdb400507ba3107dae38fd46f4163f33aa2ab",
+  "sha256_clave_json_en_claro": "8119ceecf65833cbc4f1c2ab16510c767073c64fdd2b1231b72cbfeee55549a8",
+  "numero_de_preguntas": 12,
+  "serializacion_canonica_por_pregunta": "Para cada elemento q de clave.json: json.dumps({'id','clave','numerica','tolerancia','rubrica'} de q, sort_keys=True, ensure_ascii=False) en Python 3 (separadores por defecto ', ' y ': '), codificado en UTF-8; la huella es SHA256 de esos bytes.",
+  "serializacion_del_archivo": "clave.json = json.dumps(lista de preguntas, sort_keys=True, ensure_ascii=False, indent=2) + salto de linea final, en UTF-8.",
+  "sha256_por_pregunta": {
+    "S6-01": "080e55529c93212e4aba54510b1f6164130f0fec698f7f10f31b356c13f3fee0",
+    "S6-02": "291c02627cb8d841b37a145d99e96ef6e4815e531e609c5075b4c6a1ddf8ba4a",
+    "S6-03": "134b7d16fa94ea1d1714fb5cd4457f2a3e0355acc4f283ccafd60f092d8a845a",
+    "S6-04": "aec8990c7f7754ed6e75524a068de1c9303742e655582ab5169a71f627f5ce42",
+    "S6-05": "077986137d7fc0f0132f965e6476a274c69b22a62b5b66538d4b6dd4c15bb69b",
+    "S6-06": "70ef4937f1574734af500dbf29668ccf01f03cd5786cc8e67e44eb1bba9ce789",
+    "S6-07": "e34f1ee0ee5778e7a18aedf5ab78ded990fdcab351873118fc546ef0c4b23c65",
+    "S6-08": "f2a4f9f256645da3b8b7393729114f16fd21862bc4674ec04927e6287612ff9a",
+    "S6-09": "afb4da7a17ec448b4cc5a27c9c2df63ba70c80d6dc32559912ad16cfb941fabd",
+    "S6-10": "9067f40c6de384e4c3db53a3b7417e45ac39a04533c212a2fde2a5d0134c7d93",
+    "S6-11": "f9e0881cc11842518f8d875442ccf2fb291e2185096305574bb8dd032d905254",
+    "S6-12": "a9c8052ae7c6900c769bba821e737f443a7304eecc6b70c46163a1673b054fb9"
+  },
+  "verificacion": [
+    "1. Tomar clave.enc y compromiso.json del commit que los agrego (git show <commit>:conocimiento/examenes/2026-09-25-diagnostico/S6/clave.enc > clave.enc).",
+    "2. sha256sum clave.enc  -> debe coincidir con sha256_clave_enc.",
+    "3. openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in clave.enc -out clave.json -pass pass:<contrasena revelada>",
+    "4. sha256sum clave.json  -> debe coincidir con sha256_clave_json_en_claro.",
+    "5. python3 -c \"import json,hashlib; K=['id','clave','numerica','tolerancia','rubrica']; [print(q['id'], hashlib.sha256(json.dumps({k:q[k] for k in K}, sort_keys=True, ensure_ascii=False).encode('utf-8')).hexdigest()) for q in json.load(open('clave.json', encoding='utf-8'))]\"  -> cada huella debe coincidir con sha256_por_pregunta."
+  ]
+}
