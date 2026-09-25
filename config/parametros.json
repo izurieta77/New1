@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "fecha": "2026-09-25",
+  "nota": "Fuente unica de verdad de los parametros de riesgo. Todo documento y herramienta lee de aqui. Valores por defecto: ajustar con el perfil real del dueno (capital, horizonte, gastos).",
+  "objetivo": {
+    "funcion": "Maximizar el crecimiento geometrico (CAGR) del capital medido en MXN, sujeto a las restricciones de drawdown de este archivo",
+    "moneda_base": "MXN",
+    "benchmark_principal": "50% S&P 500 Total Return convertido a MXN + 50% CETES 28 dias",
+    "benchmarks_secundarios": ["CETES 28 dias", "S&P 500 Total Return en MXN", "S&P/BMV IPC Total Return", "60/40 global en MXN"],
+    "drawdown_objetivo": 0.12,
+    "drawdown_maximo_duro": 0.20
+  },
+  "estructura": {
+    "nucleo_min": 0.70,
+    "satelite_max": 0.30,
+    "descripcion": "Nucleo = sistematico, diversificado, bajo costo. Satelite = estrategias tacticas con ventaja validada."
+  },
+  "riesgo_por_operacion": {
+    "max_riesgo_pct_capital": 0.01,
+    "max_riesgo_pct_capital_fase_prueba": 0.005,
+    "definicion": "Perdida maxima si se ejecuta el stop, como fraccion del capital total"
+  },
+  "limites_perdida": {
+    "diaria": 0.02,
+    "semanal": 0.04,
+    "mensual": 0.06,
+    "accion": "Al tocar un limite: no se abren posiciones tacticas nuevas en lo que resta del periodo"
+  },
+  "cortacircuitos_drawdown": [
+    {"nivel": -0.08, "accion": "Reducir 50% el riesgo del satelite"},
+    {"nivel": -0.12, "accion": "Satelite a cero; solo nucleo; revision completa de estrategias"},
+    {"nivel": -0.15, "accion": "Pausa tactica 30 dias + post-mortem escrito; nucleo a perfil defensivo"},
+    {"nivel": -0.20, "accion": "Limite duro: des-riesgo a perfil preservacion hasta revision con el dueno"}
+  ],
+  "rachas": {
+    "perdedoras_para_reducir": 3,
+    "factor_reduccion": 0.5,
+    "ganadoras_para_restaurar": 2,
+    "perdedoras_para_pausa": 5,
+    "accion_pausa": "Pausa de la estrategia + revision de si el edge sigue vivo"
+  },
+  "kelly": {"fraccion_max": 0.25},
+  "concentracion": {
+    "accion_individual_max": 0.10,
+    "sector_max": 0.25,
+    "cripto_max": 0.05,
+    "opciones_prima_en_riesgo_max": 0.02,
+    "emisor_deuda_privada_max": 0.05
+  },
+  "apalancamiento": {
+    "bruto_max_fase_1": 1.0,
+    "bruto_max_fase_2": 1.3,
+    "requisito_fase_2": "12 meses de track record real con Sharpe > 0.7 y drawdown dentro del objetivo"
+  },
+  "liquidez": {"reserva_emergencia_meses": 6, "fuera_del_portafolio": true},
+  "validacion_estrategias": {
+    "backtest_min_anios": 10,
+    "incluir_costos_y_slippage": true,
+    "deflated_sharpe_min_probabilidad": 0.95,
+    "pbo_max": 0.25,
+    "paper_trading_min_meses": 3,
+    "paper_trading_min_operaciones": 30,
+    "fraccion_capital_inicial": 0.25
+  },
+  "rebalanceo": {"metodo": "bandas", "banda_absoluta": 0.05, "banda_relativa": 0.25, "revision": "mensual"},
+  "pronosticos": {"brier_objetivo": 0.20, "min_pronosticos_para_evaluar": 50},
+  "fases": [
+    {"fase": 0, "nombre": "Formacion y papel", "duracion": "0-3 meses", "capital_real": 0.0},
+    {"fase": 1, "nombre": "Capital real reducido", "duracion": "3-12 meses", "capital_real": 0.25},
+    {"fase": 2, "nombre": "Escala", "duracion": "12+ meses", "capital_real": 1.0, "requisito": "cumplir requisito_fase_2"}
+  ]
+}
