@@ -588,3 +588,171 @@ def control_sic(D: dict) -> dict:
     out["spymx_adj_2008-08-29"] = s["adj"].get(date(2008, 8, 29))
     out["spymx_adj_2008-09-01"] = s["adj"].get(date(2008, 9, 1))
     return out
+
+# ============================================================== bloque 3: SMA mensual (A5), simulador propio
+
+COMISION = 0.0025 * 1.16   # 0.29% por lado (Guia GBM V1025)
+SPREAD = 0.0005            # 0.05% por lado (supuesto del pre-registro)
+
+
+def preparar(activo_usd: dict, fx: dict, senal_usd: dict | None = None) -> dict:
+    """Fechas con precio y FX el mismo dia; E = ultimo dia del mes, G = primer dia del mes."""
+    senal_usd = senal_usd or activo_usd
+    fechas = sorted(f for f in activo_usd if f in fx and f in senal_usd)
+    return {"fechas": fechas, "E": fin_de_mes(fechas), "G": inicio_de_mes(fechas),
+            "pm": {f: activo_usd[f] * fx[f] for f in fechas},
+            "s_usd": {f: senal_usd[f] for f in fechas},
+            "s_mxn": {f: senal_usd[f] * fx[f] for f in fechas}}
+
+
+def simular(P: dict, I: IndiceCetes, regla, ejecucion: str, m0: tuple, m1: tuple,
+            costo_lado: float = COMISION + SPREAD, w_inicial: float = 0.0, efectivo: str = "indice") -> dict:
+    """regla: ('bh',) | ('cetes',) | ('sma', n, 'usd'|'mxn').
+    Mes m: decision con el cierre E_{m-1}; T0 opera en E_{m-1} (periodo E_{m-1}..E_m);
+    T1 opera en G_m, primer dia del mes m (periodo G_m..G_{m+1})."""
+    E, G, pm = P["E"], P["G"], P["pm"]
+    filas = []
+    w_prev = w_inicial
+    for m in rango_meses(m0, m1):
+        if regla[0] == "bh":
+            w = 1.0
+        elif regla[0] == "cetes":
+            w = 0.0
+        else:
+            n, moneda = regla[1], regla[2]
+            s = P["s_usd"] if moneda == "usd" else P["s_mxn"]
+            cierres = []
+            k = mes_ant(m)
+            for _ in range(n):
+                cierres.append(s[E[k]])
+                k = mes_ant(k)
+            cierres.reverse()
+            w = 1.0 if cierres[-1] > statistics.fmean(cierres) else 0.0
+        if ejecucion == "T0":
+            d0, d1 = E[mes_ant(m)], E[m]
+        else:
+            d0, d1 = G[m], G[mes_sig(m)]
+        ra = pm[d1] / pm[d0] - 1
+        re_ = I.rend(d0, d1) if efectivo == "indice" else I.rend_particion(d0, d1)
+        c = abs(w - w_prev) * costo_lado
+        rb = w * ra + (1 - w) * re_
+        rn = (1 - c) * (1 + rb) - 1
+        filas.append({"mes": m, "d0": d0, "d1": d1, "w": w, "w_prev": w_prev, "c": c,
+                      "ra": ra, "re": re_, "rn": rn})
+        w_prev = w
+    return {"filas": filas}
+
+
+def metricas(filas: list) -> dict:
+    rn = [f["rn"] for f in filas]
+    ex = [f["rn"] - f["re"] for f in filas]
+    d0, d1 = filas[0]["d0"], filas[-1]["d1"]
+    curva = [1.0]
+    for r in rn:
+        curva.append(curva[-1] * (1 + r))
+    a = anios(d0, d1)
+    sd_ex = statistics.stdev(ex)
+    sr_p = statistics.fmean(ex) / sd_ex if sd_ex > 0 else None
+    g3, g4 = asim_curt(ex) if sd_ex > 0 else (None, None)
+    return {
+        "n": len(rn), "d0": str(d0), "d1": str(d1),
+        "cagr": curva[-1] ** (1 / a) - 1,
+        "vol": statistics.stdev(rn) * math.sqrt(12),
+        "sharpe": sr_p * math.sqrt(12) if sr_p is not None else None,
+        "sr_periodo": sr_p, "asimetria": g3, "curtosis": g4,
+        "psr": psr(sr_p, len(ex), g3, g4) if sr_p is not None else None,
+        "mdd": mdd_curva(curva)[0],
+        "tiempo": sum(1 for f in filas if f["w"] != 0) / len(filas),
+        "cambios": sum(1 for f in filas if f["w"] != f["w_prev"]),
+        "costo_anual": sum(f["c"] for f in filas) / a,
+    }
+
+
+SEG = {"1995-2007": ((1995, 1), (2007, 12)), "2008-2026": ((2008, 1), (2026, 8)),
+       "1995-2026": ((1995, 1), (2026, 8))}
+
+
+def tramo(sim: dict, m0: tuple, m1: tuple) -> list:
+    return [f for f in sim["filas"] if m0 <= f["mes"] <= m1]
+
+
+def reglas_prueba():
+    for n in (6, 8, 10, 12):
+        for moneda in ("usd", "mxn"):
+            for ej in ("T0", "T1"):
+                yield f"sma{n}_{moneda}_{ej}", ("sma", n, moneda), ej
+
+
+def bloque_sma(D: dict) -> dict:
+    I = D["CETES"]
+    spy = D["SPY"]
+    base = preparar(spy["adj"], D["DEX"])
+    out = {"variantes": {}, "referencias": {}, "nw": {}, "dsr": {}, "sens": {}, "posthoc": {}}
+    sims = {}
+    # ---- 16 variantes de prueba y referencias, corrida 1995-01 a 2026-08
+    for nombre, regla, ej in reglas_prueba():
+        sims[nombre] = simular(base, I, regla, ej, (1995, 1), (2026, 8))
+    for ej in ("T0", "T1"):
+        sims[f"bh_{ej}"] = simular(base, I, ("bh",), ej, (1995, 1), (2026, 8))
+    sims["cetes_T0"] = simular(base, I, ("cetes",), "T0", (1995, 1), (2026, 8))
+    for nombre, sim in sims.items():
+        out["variantes"][nombre] = {s: metricas(tramo(sim, *r)) for s, r in SEG.items()}
+    # ---- prueba principal: SMA10 - comprar y mantener
+    for moneda in ("mxn", "usd"):
+        for ej in ("T1", "T0"):
+            a, b = sims[f"sma10_{moneda}_{ej}"], sims[f"bh_{ej}"]
+            for s, r in SEG.items():
+                x = [p["rn"] - q["rn"] for p, q in zip(tramo(a, *r), tramo(b, *r))]
+                out["nw"][f"sma10_{moneda}_{ej}|{s}"] = prueba_nw(x)
+    # ---- DSR con N = 16 (varianza muestral de los SR por periodo de las 16 pruebas)
+    for s in ("2008-2026", "1995-2007"):
+        pruebas = {k: out["variantes"][k][s] for k, _, _ in reglas_prueba()}
+        srs = [v["sr_periodo"] for v in pruebas.values()]
+        var = statistics.variance(srs)
+        mejor = max(pruebas, key=lambda k: pruebas[k]["sr_periodo"])
+        for nombre, N in [("sma10_mxn_T1", 16), ("sma10_mxn_T0", 16), ("sma10_usd_T1", 16),
+                          (mejor, 16), ("sma10_mxn_T1", 100)]:
+            v = pruebas[nombre]
+            sr0 = sr_max_esperado(N, var)
+            out["dsr"][f"{s}|{nombre}|N{N}"] = {
+                "sharpe_anual": v["sr_periodo"] * math.sqrt(12), "sr0_anual": sr0 * math.sqrt(12),
+                "psr": v["psr"], "dsr": psr(v["sr_periodo"], v["n"], v["asimetria"], v["curtosis"], sr0),
+                "mejor": nombre == mejor}
+        out["dsr"][f"{s}|mejor"] = mejor
+        for ej in ("T0", "T1"):
+            out["dsr"][f"{s}|psr_bh_{ej}"] = out["variantes"][f"bh_{ej}"][s]["psr"]
+    # ---- sensibilidades (2008-2026)
+    def corrida(P, regla, ej, costo=COMISION + SPREAD, m0=(1995, 1), efectivo="indice", w0=0.0):
+        sim = simular(P, I, regla, ej, m0, (2026, 8), costo_lado=costo, w_inicial=w0, efectivo=efectivo)
+        return metricas(tramo(sim, (2008, 1), (2026, 8)) if m0 < (2008, 1) else sim["filas"])
+
+    casos = {
+        "base": (base, {}), "sin_costos": (base, {"costo": 0.0}),
+        "spread_medio": (base, {"costo": 0.0029 + 0.0015}),
+        "doble_pierna": (base, {"costo": 0.0058 + 0.0010}),
+        "sp500tr": (preparar(D["SP500TR"]["close"], D["DEX"]), {}),
+        "fix": (preparar(spy["adj"], D["FIX"]), {}),
+        "mxnx": (preparar(spy["adj"], D["FX_MXNX"]), {"m0": (2005, 1)}),
+        "senal_close": (preparar(spy["adj"], D["DEX"], spy["close"]), {}),
+        "div_net30": (preparar(serie_tr(spy["close"], spy["div"], 0.7), D["DEX"]), {}),
+        "div_net30_senal_adj": (preparar(serie_tr(spy["close"], spy["div"], 0.7), D["DEX"],
+                                         {f: spy["adj"][f] for f in spy["adj"]}), {}),
+        "cetes_particion": (base, {"efectivo": "particion"}),
+        "aislada_2008": (base, {"m0": (2008, 1)}),
+        "origen_2008_11": (base, {"m0": (2008, 11)}),
+    }
+    for caso, (P, kw) in casos.items():
+        d = {}
+        for etiqueta, regla, ej in [("mxn_T1", ("sma", 10, "mxn"), "T1"), ("usd_T1", ("sma", 10, "usd"), "T1"),
+                                    ("bh_T1", ("bh",), "T1"), ("mxn_T0", ("sma", 10, "mxn"), "T0"),
+                                    ("bh_T0", ("bh",), "T0")]:
+            d[etiqueta] = corrida(P, regla, ej, **kw)
+        out["sens"][caso] = d
+    # ---- POST-HOC: ventanas que empiezan en 2007 (T0, corrida aislada que entra desde cero)
+    for mi in range(1, 13):
+        for mf in ((2026, 6), (2026, 8)):
+            k = f"2007-{mi:02d}_{mf[0]}-{mf[1]:02d}"
+            s = simular(base, I, ("sma", 10, "mxn"), "T0", (2007, mi), mf)
+            b = simular(base, I, ("bh",), "T0", (2007, mi), mf)
+            out["posthoc"][k] = {"sma": metricas(s["filas"]), "bh": metricas(b["filas"])}
+    return out
