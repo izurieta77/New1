@@ -24,6 +24,20 @@ Método: verificación de precios con datos propios (Yahoo Finance, `adjclose` a
 - "Sus acciones de 2025 rindieron 2.3 veces el S&P, no casi el triple": necesitaría su lista específica de 2025.
 - "El primer trimestre de 2026 fue el peor desde 2001, y no lo fue": es una afirmación macro, no de precios de una acción — no la verifiqué en esta pasada (se puede hacer con datos de ^GSPC trimestrales si se pide).
 
+## Segunda ronda (25-sep-2026): corrección del propio usuario sobre las calificadoras
+
+El usuario compartió una versión corregida y ampliada del análisis (278 llamadas en 122 videos, con cita literal, tasa base aleatoria y prueba de significancia), de nuevo **no producida en esta sesión** y sin acceso mío a su script (`/workspace/bolsa/conocimiento/youtube/invierteconpepe/verificacion/v2/reproducir.sh` no existe en este entorno — no puedo ejecutarlo ni reproducirlo). Verifiqué lo único con fuente primaria pública: el dato de las calificadoras.
+
+Bajé directamente el reporte de la SEC publicado en **abril de 2026** (`2025-ocr-staff-report-compliant-4-24-26.pdf`, la versión más reciente que existe) y confirmé:
+
+- **Cubre datos al 31-dic-2024, no al 31-dic-2025.** Texto literal: "the calendar year ending December 31, 2024". Esto confirma la afirmación del usuario de que la SEC **todavía no ha publicado** datos a diciembre de 2025 — cualquier cifra "a 2025" (como los conteos de 1,077,798 / 684,055 / 2,192,543 que el usuario marca como no verificables) no puede venir de un reporte oficial existente.
+- **Los tres "grandes" NRSRO (Fitch + Moody's + S&P) suman 93.38% del total a dic-2024**, texto literal: "The large NRSROs accounted for 93.38% of all the ratings outstanding as of December 31, 2024, a small decrease from their share of 94.15% of all the ratings outstanding as of December 31, 2023." El 94.15% de 2023 coincide exactamente con lo que yo mismo extraje del reporte anterior en la primera ronda de esta verificación.
+- Las cifras individuales de S&P y Moody's para 2024 están en un gráfico (Chart 5) sin texto extraíble por `pypdf`, así que no pude leer el 80.99% dígito por dígito. Pero es consistente: 93.38% (los tres grandes) − 80.99% (S&P+Moody's) = 12.39% para Fitch, cifra razonable frente al 12.46% que Fitch tenía en 2023.
+
+**Veredicto: la corrección del usuario sobre las calificadoras se sostiene** con la fuente primaria más reciente que existe — no pude confirmar el dígito exacto de la partición S&P/Moody's de 2024 por una limitación técnica de extracción (gráfico vs. tabla de texto), pero el total de los tres grandes y la ausencia de datos 2025 sí quedaron confirmados letra por letra contra el PDF oficial.
+
+Las cifras estadísticas del núcleo del análisis (tasas base aleatorias, significancia, 278 llamadas etiquetadas) siguen sin verificación independiente de mi parte: no tengo el dataset ni el script, y no puedo ejecutar código fuera de este entorno. Si se comparte el CSV/JSON de las 278 llamadas con cita, fecha, ticker y bolsa, lo puedo correr contra mis propios precios igual que hice con las 8 cifras de la primera ronda.
+
 ## Conclusión
 
 Lo verificable con datos propios (7 de 8 cifras con ticker/fecha reconstruible) se sostiene en dirección y, en la mayoría de los casos, en magnitud casi exacta. El único hallazgo con matiz real es el de las calificadoras: la cifra es correcta pero corresponde a una sola categoría, no al total. Esto no invalida la conclusión general del análisis (Pepe es mejor evitando que comprando, y algunas cifras que presume están infladas o mal encuadradas) — al contrario, la sostiene con una base de datos propia, no solo con la palabra de quien hizo el análisis.
