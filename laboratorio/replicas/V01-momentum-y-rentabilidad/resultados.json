@@ -15,7 +15,20 @@
     1.2620651087603398
    ],
    "rezagos": 6,
-   "veredicto": "apoyo"
+   "veredicto": "apoyo",
+   "desde": 198401,
+   "hasta": 200609,
+   "de": 4.344840030749495,
+   "x12_no_es_cagr": 9.580659340659349,
+   "compuesto_anual_pct": 8.760062607493602,
+   "peor_mes": {
+    "mes": 200101,
+    "pct": -25.36
+   },
+   "mejor_mes": {
+    "mes": 200002,
+    "pct": 18.05
+   }
   },
   "200610-202512": {
    "n": 231,
@@ -28,7 +41,20 @@
     0.7421433132662791
    ],
    "rezagos": 6,
-   "veredicto": "inconcluso"
+   "veredicto": "inconcluso",
+   "desde": 200610,
+   "hasta": 202512,
+   "de": 4.500950432286691,
+   "x12_no_es_cagr": 1.0550649350649353,
+   "compuesto_anual_pct": -0.26450129332225014,
+   "peor_mes": {
+    "mes": 200904,
+    "pct": -34.36
+   },
+   "mejor_mes": {
+    "mes": 200806,
+    "pct": 12.73
+   }
   },
   "200610-201512": {
    "n": 111,
@@ -41,7 +67,20 @@
     1.3552341932568968
    ],
    "rezagos": 6,
-   "veredicto": "inconcluso"
+   "veredicto": "inconcluso",
+   "desde": 200610,
+   "hasta": 201512,
+   "de": 5.134551323854627,
+   "x12_no_es_cagr": 1.8227027027027034,
+   "compuesto_anual_pct": 0.05006148378892128,
+   "peor_mes": {
+    "mes": 200904,
+    "pct": -34.36
+   },
+   "mejor_mes": {
+    "mes": 200806,
+    "pct": 12.73
+   }
   },
   "201601-202512": {
    "n": 120,
@@ -54,7 +93,20 @@
     0.6353192330065972
    ],
    "rezagos": 6,
-   "veredicto": "inconcluso"
+   "veredicto": "inconcluso",
+   "desde": 201601,
+   "hasta": 202512,
+   "de": 3.844230985483039,
+   "x12_no_es_cagr": 0.3449999999999992,
+   "compuesto_anual_pct": -0.5545912717727641,
+   "peor_mes": {
+    "mes": 202301,
+    "pct": -16.21
+   },
+   "mejor_mes": {
+    "mes": 202003,
+    "pct": 8.2
+   }
   }
  },
  "RMW": {
@@ -69,7 +121,20 @@
     0.3505409883284628
    ],
    "rezagos": 6,
-   "veredicto": "inconcluso"
+   "veredicto": "inconcluso",
+   "desde": 196307,
+   "hasta": 199912,
+   "de": 1.6003562822669586,
+   "x12_no_es_cagr": 2.071506849315069,
+   "compuesto_anual_pct": 1.9348019823221874,
+   "peor_mes": {
+    "mes": 199912,
+    "pct": -8.07
+   },
+   "mejor_mes": {
+    "mes": 197405,
+    "pct": 5.01
+   }
   },
   "200001-202512": {
    "n": 312,
@@ -82,7 +147,20 @@
     0.717308554995352
    ],
    "rezagos": 6,
-   "veredicto": "apoyo"
+   "veredicto": "apoyo",
+   "desde": 200001,
+   "hasta": 202512,
+   "de": 2.872267215036179,
+   "x12_no_es_cagr": 4.761538461538454,
+   "compuesto_anual_pct": 4.348475471865809,
+   "peor_mes": {
+    "mes": 200002,
+    "pct": -18.93
+   },
+   "mejor_mes": {
+    "mes": 200011,
+    "pct": 13.04
+   }
   },
   "201501-202512": {
    "n": 132,
@@ -95,7 +173,20 @@
     0.611159048959062
    ],
    "rezagos": 6,
-   "veredicto": "inconcluso"
+   "veredicto": "inconcluso",
+   "desde": 201501,
+   "hasta": 202512,
+   "de": 2.129000600684403,
+   "x12_no_es_cagr": 3.2854545454545456,
+   "compuesto_anual_pct": 3.0597080226441697,
+   "peor_mes": {
+    "mes": 202510,
+    "pct": -5.25
+   },
+   "mejor_mes": {
+    "mes": 202111,
+    "pct": 7.19
+   }
   },
   "201601-202512": {
    "n": 120,
@@ -108,7 +199,194 @@
     0.6663044540601073
    ],
    "rezagos": 6,
-   "veredicto": "inconcluso"
+   "veredicto": "inconcluso",
+   "desde": 201601,
+   "hasta": 202512,
+   "de": 2.1970952159510935,
+   "x12_no_es_cagr": 3.5530000000000004,
+   "compuesto_anual_pct": 3.3174609157139434,
+   "peor_mes": {
+    "mes": 202510,
+    "pct": -5.25
+   },
+   "mejor_mes": {
+    "mes": 202111,
+    "pct": 7.19
+   }
   }
+ },
+ "sensibilidad": {
+  "nota": "No pre-registrada. Ventana hasta el ultimo mes del archivo (CRSP 202607).",
+  "RMW 200001-202607": {
+   "n": 319,
+   "media": 0.3730407523510966,
+   "se": 0.16397154007281103,
+   "t": 2.2750335343892547,
+   "t_iid": 2.240344368212345,
+   "ic95": [
+    0.05166243931882075,
+    0.6944190653833725
+   ],
+   "rezagos": 6,
+   "veredicto": "apoyo",
+   "desde": 200001,
+   "hasta": 202607,
+   "de": 2.97397175849849,
+   "x12_no_es_cagr": 4.47648902821316,
+   "compuesto_anual_pct": 4.016210788608654,
+   "peor_mes": {
+    "mes": 200002,
+    "pct": -18.93
+   },
+   "mejor_mes": {
+    "mes": 200011,
+    "pct": 13.04
+   }
+  },
+  "RMW 202601-202607 (meses)": {
+   "n": 7,
+   "suma_pct": -4.8,
+   "media_pct": -0.6857142857142857,
+   "meses_negativos": 4,
+   "serie": {
+    "202601": 1.89,
+    "202602": 1.67,
+    "202603": -2.03,
+    "202604": -4.15,
+    "202605": -8.16,
+    "202606": -5.07,
+    "202607": 11.05
+   }
+  }
+ },
+ "contraste_auditorias": {
+  "AC-01-momentum-eua": {
+   "archivo": "laboratorio/auditorias/AC-01-momentum-eua/resultados.json",
+   "sha256": "d407a18af48667a55844c96c3641c8fb3f865330ee0e741968372839fc89c27d",
+   "sha256_fuente_A_auditoria": {
+    "F-F_Momentum_Factor_CSV.zip": "7ee14e892b0f7044902fdbc4e25cfaf175b73d4eda0ae6f4a0354a4433afe065"
+   },
+   "nota_ic": "Las auditorias usan z = 1.96; V01 usa z = 1.959964 (herramientas/estadistica.py).",
+   "ventanas": {
+    "198401-200609": {
+     "ventana_auditoria": "W1",
+     "dif_n": 0,
+     "dif_media": -2.783882789847425e-07,
+     "dif_t_iid": -2.384275319400331e-07,
+     "dif_t_nw6": 2.646847638843042e-07,
+     "dif_compuesto_pct": 3.9250639893850803e-07,
+     "dif_ic95": [
+      -8.448016218187693e-06,
+      8.89123966008043e-06
+     ],
+     "mismo_veredicto": true
+    },
+    "200610-202512": {
+     "ventana_auditoria": "W2",
+     "dif_n": 0,
+     "dif_media": -7.792207794288242e-08,
+     "dif_t_iid": 1.7423644482761347e-07,
+     "dif_t_nw6": -4.128875887299266e-07,
+     "dif_compuesto_pct": 2.933222501555477e-07,
+     "dif_ic95": [
+      -1.1842577876786109e-05,
+      1.1686733720872589e-05
+     ],
+     "mismo_veredicto": true
+    },
+    "200610-201512": {
+     "ventana_auditoria": "W3",
+     "dif_n": 0,
+     "dif_media": 1.0810810804895432e-07,
+     "dif_t_iid": 1.864149906660728e-08,
+     "dif_t_nw6": -4.7007677056454256e-07,
+     "dif_compuesto_pct": -4.837889212780389e-07,
+     "dif_ic95": [
+      -2.2590526887134033e-05,
+      2.1806743103258697e-05
+     ],
+     "mismo_veredicto": true
+    },
+    "201601-202512": {
+     "ventana_auditoria": "W4",
+     "dif_n": 0,
+     "dif_media": 6.938893903907228e-17,
+     "dif_t_iid": -4.804809541208988e-07,
+     "dif_t_nw6": 1.7154236446603743e-07,
+     "dif_compuesto_pct": 2.7177276418210994e-07,
+     "dif_ic95": [
+      -1.0766993402633318e-05,
+      1.076699340274434e-05
+     ],
+     "mismo_veredicto": true
+    }
+   }
+  },
+  "AC-02-rentabilidad-eua": {
+   "archivo": "laboratorio/auditorias/AC-02-rentabilidad-eua/resultados.json",
+   "sha256": "cbb847872db5e057675b22970269c0b1d75839069839f054c1be630dcc8dbc48",
+   "sha256_fuente_A_auditoria": {
+    "F-F_Research_Data_5_Factors_2x3_CSV.zip": "b8653b411cc5e28917e7ef643bb42f6d2d3703f84bc170eb6ae38d5267c65807"
+   },
+   "nota_ic": "Las auditorias usan z = 1.96; V01 usa z = 1.959964 (herramientas/estadistica.py).",
+   "ventanas": {
+    "196307-199912": {
+     "ventana_auditoria": "W1",
+     "dif_n": 0,
+     "dif_media": 0.0,
+     "dif_t_iid": 0.0,
+     "dif_t_nw6": -6.661338147750939e-16,
+     "dif_compuesto_pct": 0.0,
+     "dif_ic95": [
+      -3.269297622426892e-06,
+      3.2692976223991366e-06
+     ],
+     "mismo_veredicto": true
+    },
+    "200001-202512": {
+     "ventana_auditoria": "W2",
+     "dif_n": 0,
+     "dif_media": 0.0,
+     "dif_t_iid": 0.0,
+     "dif_t_nw6": 0.0,
+     "dif_compuesto_pct": 2.220446049250313e-14,
+     "dif_ic95": [
+      -5.88962236575119e-06,
+      5.8896223658067015e-06
+     ],
+     "mismo_veredicto": true
+    },
+    "201501-202512": {
+     "ventana_auditoria": "W3",
+     "dif_n": 0,
+     "dif_media": 0.0,
+     "dif_t_iid": -2.220446049250313e-16,
+     "dif_t_nw6": 0.0,
+     "dif_compuesto_pct": 2.220446049250313e-14,
+     "dif_ic95": [
+      -6.199388336736167e-06,
+      6.199388336791678e-06
+     ],
+     "mismo_veredicto": true
+    },
+    "201601-202512": {
+     "ventana_auditoria": "W4",
+     "dif_n": 0,
+     "dif_media": 0.0,
+     "dif_t_iid": 0.0,
+     "dif_t_nw6": 0.0,
+     "dif_compuesto_pct": 0.0,
+     "dif_ic95": [
+      -6.803024978963013e-06,
+      6.8030249789075015e-06
+     ],
+     "mismo_veredicto": true
+    }
+   }
+  }
+ },
+ "huellas_codigo": {
+  "laboratorio/replicas/V01-momentum-y-rentabilidad/reproducir.py": "d476930ed74bb992a228b87dd947b1be5c2133bd6764aa07d1844e01db6ab552",
+  "herramientas/estadistica.py": "0fea2dd50a650e77b6c4e829a0bfbf4e1ac85ffe922200a35874f469ec642c4c"
  }
 }

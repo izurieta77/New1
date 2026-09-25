@@ -42,6 +42,7 @@ SERIES_YAHOO = [
     ("^GSPC", "S&P 500", "precio", True),
     ("^MXX", "S&P/BMV IPC", "precio", True),
     ("MXN=X", "USD/MXN", "precio", True),
+    ("^VIX", "VIX (CBOE, Yahoo)", "puntos", False),
     ("GC=F", "Oro futuro (USD)", "precio", True),
     ("BTC-USD", "Bitcoin (USD)", "precio", True),
     ("SPY", "SPY", "precio", True),
@@ -57,7 +58,7 @@ UMBRAL_HY_VIGILANCIA = 1.10        # spread / mediana 1a > 1.10 vigilancia
 UMBRAL_HY_ESTRES = 1.25            # spread / mediana 1a > 1.25 estres
 UMBRAL_CURVA_PLANA = 0.50          # pp: 0 a 0.50 plana, > 0.50 positiva, < 0 invertida
 UMBRAL_MXN_DEPRECIACION_1M = 0.05  # USD/MXN +5% en 30 dias = depreciacion rapida
-UMBRAL_REZAGO_DIAS = 5             # dato mas viejo que esto se marca como rezagado
+UMBRAL_REZAGO_DIAS = 3             # dato mas viejo que esto (dias calendario) se marca como rezagado
 SUMA_RISK_ON = 2                   # suma de senales >= 2 risk-on; <= -2 risk-off
 DIAS_CAMBIO = {"1s": 7, "1m": 30, "3m": 91}
 
@@ -130,8 +131,11 @@ def diagnostico_regimen(series: dict, resumenes: dict) -> dict:
         dims.append(("Tendencia (S&P 500 vs SMA200)", "sin dato", 0, "S&P 500 no disponible"))
 
     # 2. Volatilidad: VIX
-    if "FRED:VIXCLS" in resumenes:
-        vix = resumenes["FRED:VIXCLS"]["ultimo"]
+    # Se usa la fuente mas reciente entre Yahoo ^VIX y FRED VIXCLS (FRED publica con rezago).
+    cands = [k for k in ("YAHOO:^VIX", "FRED:VIXCLS") if k in resumenes]
+    kv = max(cands, key=lambda k: resumenes[k]["fecha"]) if cands else None
+    if kv:
+        vix = resumenes[kv]["ultimo"]
         if vix < UMBRAL_VIX_CALMA:
             estado, senal = "calma", 1
         elif vix <= UMBRAL_VIX_ESTRES:
@@ -139,10 +143,10 @@ def diagnostico_regimen(series: dict, resumenes: dict) -> dict:
         else:
             estado, senal = "estres", -1
         dims.append(("Volatilidad (VIX)", estado, senal,
-                     f"VIX {vix:.2f} ({resumenes['FRED:VIXCLS']['fecha']}); calma <{UMBRAL_VIX_CALMA:g}, "
-                     f"estres >{UMBRAL_VIX_ESTRES:g}; pctl 5a {resumenes['FRED:VIXCLS']['percentil_5a']:.0f}"))
+                     f"VIX {vix:.2f} ({resumenes[kv]['fecha']}, {kv}); calma <{UMBRAL_VIX_CALMA:g}, "
+                     f"estres >{UMBRAL_VIX_ESTRES:g}; pctl 5a {resumenes[kv]['percentil_5a']:.0f}"))
     else:
-        dims.append(("Volatilidad (VIX)", "sin dato", 0, "VIXCLS no disponible"))
+        dims.append(("Volatilidad (VIX)", "sin dato", 0, "VIX no disponible (Yahoo ^VIX ni FRED VIXCLS)"))
 
     # 3. Credito: spread HY vs mediana de 1 anio
     if "FRED:BAMLH0A0HYM2" in series:
