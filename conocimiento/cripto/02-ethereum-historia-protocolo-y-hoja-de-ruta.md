@@ -8,7 +8,7 @@
 
 | # | Recurso | Acceso real | Grado | Ficha |
 |---|---|---|---|---|
-| 01 | *The Infinite Machine*, Camila Russo (2020) | Resumen: índice, descripción y reseñas | C | [01-the-infinite-machine.md](recursos/01-the-infinite-machine.md) |
+| 01 | *The Infinite Machine*, Camila Russo (2020) | **Íntegro** (adenda 25-sep-2026): PDF completo, ~610,900 caracteres verificados; lectura cerrada de la intro y caps. 1-6, 13, 19, 26 y 30; resto por búsqueda dirigida | B | [01-the-infinite-machine.md](recursos/01-the-infinite-machine.md) |
 | 11 | *The Cryptopians*, Laura Shin (2022) | Resumen: editorial, reseñas y cobertura del extracto en Forbes | C | [11-the-cryptopians.md](recursos/11-the-cryptopians.md) |
 | 21 | *Read Write Own*, Chris Dixon (2024) | Sección: introducción oficial, 16 extractos con página e índice | D para inversión / C como marco | [21-read-write-own.md](recursos/21-read-write-own.md) |
 | 23 | *Possible futures of the Ethereum protocol*, Vitalik Buterin (2024), 6 partes | **Íntegro**: las 6 partes | B | [23-possible-futures-of-the-ethereum-protocol.md](recursos/23-possible-futures-of-the-ethereum-protocol.md) |
@@ -32,7 +32,7 @@ Banco de examen del grupo: [examen/banco-g2-ethereum.md](examen/banco-g2-ethereu
 |---|---|---|
 | Dic-2013 | Buterin comparte el whitepaper; Gavin Wood se suma como cofundador y CTO | [H] 27, cap. 1 |
 | 26-ene-2014 | Presentación pública en la North American Bitcoin Conference de Miami | [H] fuente secundaria (Wikipedia, que cita a Fortune del 28-ene-2014) |
-| 22-jul → 2-sep-2014 | Venta de ether: 31,531 BTC (US$18,439,086) por ~60,102,216 ETH, a 2,000 → 1,337 ETH/BTC | [H] [EF](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale) y plantilla de ethereum.org |
+| 22-jul → 2-sep-2014 | Venta de ether: **31,591 BTC** (US$18,439,086) por ~60,102,216 ETH, a 2,000 → 1,337 ETH/BTC | [H] [EF](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale) y plantilla de ethereum.org; cifra de BTC corregida el 25-sep-2026 (ver adenda) |
 | 30-jul-2015 03:26:13 UTC | Génesis (Frontier), con límite de gas de 5,000 | [H] 24 `protocol/history`; 27, cap. 1 |
 | 14-mar-2016 | Homestead (bloque 1,150,000) | [H] 24; 27 |
 | 30-abr → 28-may-2016 | The DAO vende ~1.15 mil millones de tokens por ~12 M ETH (~US$150 M) | [H] [SEC Rel. 81207](https://www.sec.gov/litigation/investreport/34-81207.pdf) |
@@ -207,7 +207,7 @@ Banco de examen del grupo: [examen/banco-g2-ethereum.md](examen/banco-g2-ethereu
 | Participación de Lido | 27, cap. 13: 29% | En cadena (25-sep-2026): ~22.5% | [H] Bajó; el umbral de riesgo citado es 33% |
 | ¿Blockchains "inviolables"? | 21: "establish inviolable rules in software" | 01, 11 y SEC: el fork de The DAO cambió el estado por decisión social; 24: forks cada ~7 meses | [O] vs [H]: las reglas de Ethereum son **sociales y actualizables** |
 | ¿Para qué sirve DeFi hoy? | 21: redes con "persistently lower take rates" para todo tipo de aplicaciones | 27, cap. 13: uso mayormente especulativo; sin encaje más allá de intercambio, stablecoins y derivados | [I] El marco optimista de 21 no trae evidencia; 27 es más creíble en este punto |
-| Héroes del relato | 01 (según Decrypt): Buterin reticente con intenciones transparentes; la fundación como decisión correcta | 11 (según Decrypt): Hoskinson y Wood como villanos; Ming Chan con influencia "de culto" | [I] Relatos con sesgos opuestos; ninguno se usa para decidir |
+| Héroes del relato | 01 (ahora con el texto íntegro, no solo Decrypt): en la "Red Wedding" (cap. 13, 7-jun-2014) Buterin no es solo reticente, decide solo sacar a Hoskinson y Chetrit del liderazgo; el libro le da la última palabra en cada disputa | 11 (según Decrypt, todavía resumen): Hoskinson y Wood como villanos; Ming Chan con influencia "de culto" | [I] Relatos con sesgos opuestos; ninguno se usa para decidir |
 | Los "US$11 mil millones" de The DAO | Titular del extracto de 11 en Forbes (2022) | SEC: el fork devolvió los fondos en ETH; el botín quedó en ETC | [H] Es una valuación nocional, no una ganancia realizada |
 
 ## 8. Qué haría falta para que ETH vuelva a entrar al universo
@@ -251,8 +251,20 @@ Reglas propuestas para el próximo comité. Son inferencias [I] mías y deben pa
 ## 10. Límites y pendientes
 
 - **Acceso.**
-  - Tres libros los estudié solo como resumen o sección (01, 11, 21). Para subir a "sección", o a "íntegro" en 01 y 11, hay que leer los libros.
+  - El recurso 01 subió a íntegro el 25-sep-2026 (ver adenda). Dos libros siguen en resumen o sección (11, 21). Para subir a "sección", o a "íntegro" en 11, hay que leer el libro.
   - De la wiki del EPF (24) no vi los videos.
   - De Mastering Ethereum (27) faltan los caps. 2-5, 8, 11 y 12.
 - **Fuente única.** Tres datos dependen de una sola fuente: la oferta en el Merge, el total de L2BEAT y la quema de blobs (muestra de 3.4 h). La cifra de quema de 30 días también es de fuente única, aunque su orden es coherente con el RPC.
 - **No verificado.** El detalle de Stage 1 vigente en L2BEAT. Los flujos de ETFs de ETH no los verifiqué en esta sesión; los cita la decisión del comité (SoSoValue).
+
+## Adenda 25-sep-2026 — recurso 01 pasa a acceso íntegro
+
+El dueño subió el PDF completo de *The Infinite Machine* a Drive el 25-sep-2026; la ficha 01 se reescribió con ese texto (ver [01-the-infinite-machine.md](recursos/01-the-infinite-machine.md) para el detalle de cobertura y método). Cambios que tocan a este capítulo:
+
+- **Corrección de cifra.** La venta de ether de 2014 fue de **31,591 BTC** (no 31,531 como decía la §2 hasta hoy) por US$18,439,086 y ~60,102,216 ETH. El libro, con cifras redondeadas ("más de 60 millones de ether", "US$18.3 millones"), es consistente con el dato corregido. Verificado además con la guía técnica `ethereum/homestead-guide` (GitHub) y prensa cripto.
+- **Precisión nueva sobre el whitepaper.** El libro (caps. 5-6) fecha el primer envío del borrador del whitepaper el miércoles 27-nov-2013, 10:49 a.m., a ~13 personas — más preciso que el "dic-2013" de la fila de la §2, que sigue citando a 27 porque ese es el recurso que la sustenta ahí; ambas fechas son compatibles (envío privado en noviembre, decisión de ser cadena propia a inicios de diciembre).
+- **Hecho nuevo, relevante para la §6 y la idea #10.** El libro narra en detalle (cap. 13, "The Red Wedding", 7-jun-2014) la reunión en Zug donde Vitalik Buterin decidió, solo, sacar a Charles Hoskinson y Amir Chetrit del grupo de liderazgo y fijar que Ethereum sería una fundación sin fines de lucro. Es la evidencia más concreta que tengo hasta ahora de que la identidad no-corporativa de Ethereum nació de una decisión humana puntual, no de un diseño técnico — refuerza directamente el argumento de la fila "¿Blockchains inviolables?" en la §7 y la idea #10 de la §6.
+- **Precisión nueva sobre el hard fork.** Se activó en el bloque **1,920,000**, con ~85-89% de apoyo en la votación de señalización (verificado con The Block, sep-2026); no lo tenía con este nivel de detalle.
+- **Confirmado, ya no es inferencia.** "The Magic Lock" (cap. 19) es Slock.it y el origen de The DAO; "The Friendly Ghost" (cap. 26) narra la investigación temprana de Vlad Zamfir que se volvería Casper. Ambos estaban marcados como "probablemente" en la ficha anterior.
+- **Grado.** El recurso 01 sube de C a B en la tabla de la §0 y en el banco de recursos; los hechos duros de esta adenda valen A (verificados con segunda fuente), las escenas de diálogo reconstruidas siguen en D. No cambia ningún valor de la §5 (datos de red/mercado), que sigue viniendo de fuentes on-chain, no de este libro.
+- **No cambia la decisión.** ETH sigue fuera de la cuenta cripto (§8); esta adenda es contexto histórico y de gobernanza, no una señal de mercado.

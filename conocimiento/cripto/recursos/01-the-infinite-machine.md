@@ -1,123 +1,98 @@
 # 01 · The Infinite Machine (Camila Russo, 2020)
 
-> Ficha del grupo G2 Ethereum. Estudiada el 25-sep-2026 por el analista cripto. Estado: **estudiado (sin el texto del libro)**. Acceso: **resumen**.
-> Capítulo de síntesis: [02-ethereum-historia-protocolo-y-hoja-de-ruta.md](../02-ethereum-historia-protocolo-y-hoja-de-ruta.md).
+> Ficha del grupo G2 Ethereum. Reescrita el 25-sep-2026 por el analista cripto tras recibir el PDF completo. Estado: **estudiado (PDF completo)**. Acceso: **íntegro**.
+> Capítulo de síntesis: [02-ethereum-historia-protocolo-y-hoja-de-ruta.md](../02-ethereum-historia-protocolo-y-hoja-de-ruta.md) (ver adenda del 25-sep-2026 al final de ese capítulo).
+> Esta versión reemplaza la ficha del mismo día con acceso "resumen" (índice, reseñas, descripción de editorial), hecha antes de que el dueño subiera el PDF a Drive.
 
 ## 1. Ficha
 
 | Campo | Dato |
 |---|---|
-| Título | *The Infinite Machine: How an Army of Crypto-Hackers Is Building the Next Internet with Ethereum*. Edición en español: *La máquina infinita*, La Esfera de los Libros, 11-ene-2023, 368 pp., ISBN 9788413844893, según fichas de librerías (Ecobook, Librería Luque) |
-| Año | 2020, Harper Business (HarperCollins), **14-jul-2020**. Hay dos cifras de páginas: xv + 332 pp. según Open Library y 352 pp. según Porchlight. ISBN tapa dura: 9780062886149 |
-| Autora | Camila Russo: 8 años en Bloomberg News, luego fundadora y editora de The Defiant (medio cripto) |
-| Tipo | Libro de periodismo narrativo basado en entrevistas |
+| Título | *The Infinite Machine: How an Army of Crypto-Hackers Is Building the Next Internet with Ethereum*. Edición en español: *La máquina infinita*, La Esfera de los Libros, 11-ene-2023, ISBN 9788413844893 |
+| Año | 2020, HarperBusiness (HarperCollins), 14-jul-2020. Edición digital ISBN 978-0-06-288615-6; tapa dura ISBN 9780062886149 |
+| Autora | Camila Russo: economista chilena, 8 años en Bloomberg News (mercados emergentes, acciones europeas y activos digitales desde Buenos Aires, Madrid y Nueva York), luego fundadora y editora en jefe de *The Defiant* (medio cripto centrado en DeFi) |
+| Tipo | Periodismo narrativo: +100 entrevistas (~2 años, ~6 meses de tiempo completo), diálogos reconstruidos según la memoria de los participantes (no son transcripciones), un solo personaje con seudónimo (declarado en el libro). La autora dice que cuando hay versiones distintas sin evidencia documental, elige "la que comparte la mayoría de los participantes" |
 | Nivel | Principiante |
 | Costo | De pago (~US$20-30) |
-| Idioma | Inglés, con traducción al español |
-| URL | https://www.harpercollins.com/products/the-infinite-machine-camila-russo (la página devolvió 403 por el bloqueo anti-bots de la editorial; usé fichas de librerías y Open Library) |
-| Conflictos de interés | - La autora dirige un medio que vive del sector cripto (The Defiant). **No encontré una declaración de sus tenencias** en lo que revisé.<br>- Varios de los que respaldan el libro invierten en el sector: Michael Novogratz (Galaxy), Chris Burniske (Placeholder), Jesse Walden (Variant) y Erik Voorhees (ShapeShift). Fuente: camirusso.com/book. |
+| Idioma | Leí la edición en inglés (la que subió el dueño). Hay traducción al español (2023) |
+| URL | https://www.harpercollins.com/products/the-infinite-machine-camila-russo (sigue devolviendo 403 al bot de esta sesión) |
+| Conflictos de interés | - Russo dirige un medio (*The Defiant*) que vive de audiencia y patrocinios del sector DeFi/Ethereum. Leí el libro completo buscando una declaración de tenencias personales de ether o bitcoin y **no encontré ninguna**, ni en la "Nota a mis lectores" ni en la biografía final.<br>- El propio libro es explícito sobre su simpatía: "it's about freedom. If you push me a little, I might even say it's about revolution" (Nota a los lectores).<br>- Las citas de la contraportada son de gente del sector: Michael Novogratz (Galaxy Digital) y Chris Burniske (Placeholder Ventures, coautor de *Cryptoassets*) alaban el libro; Erik Voorhees (ShapeShift) lo recomienda a "tech enthusiasts and financial radicals" (confirmado vía búsqueda web, sep-2026). La mención de Jesse Walden (Variant) en la ficha original salía de camirusso.com/book y no la reconfirmé esta sesión. |
 
 ## 2. Acceso real
 
-- **Nivel: resumen.** No leí el texto del libro. Consulté el 25-sep-2026:
-  1. el **índice completo, con páginas**, en el registro de Open Library (OL32282829M, JSON): 6 partes y 30 capítulos;
-  2. la **descripción de la editorial**, reproducida en Porchlight y en camirusso.com/book;
-  3. la **reseña de Decrypt** de Adriana Hamacher (14-jul-2020);
-  4. datos de la edición en español en fichas de librerías.
-- No encontré un extracto oficial gratuito. La vista previa de Google Books no fue accesible (API con cuota agotada) y la de HarperCollins estaba bloqueada.
-- Los hechos que el libro narra los **verifiqué con fuentes primarias**: el blog de la EF de 2014, la plantilla oficial de ethereum.org, el informe de la SEC de 2017 sobre The DAO y precios diarios de Binance.
-- **Todo lo que digo sobre el enfoque del libro sale del índice, la descripción y la reseña, no de haberlo leído.**
+- **Nivel: íntegro.** El dueño subió el PDF a Drive (`14JHCxqfZC_XrcQlsL0-nnoeWcezFEjaR`, `The Infinite Machine - Camila Russo.pdf`, 1,627,254 bytes) el 25-sep-2026.
+- **Cómo lo leí (y por qué en dos pasos).** El primer intento, con la herramienta de lectura "en lenguaje natural" de Drive, devolvió solo 172,799 caracteres (~28,300 palabras): confirmé, contando encabezados de capítulo, que cubría la portada, la "Nota a mis lectores" y los capítulos 1 a 9 completos (hasta "The Announcement"), y que de ahí saltaba directo a fragmentos sueltos de la sección de notas al pie — es decir, cubría el arranque del libro (~28% de las palabras) y nada de los capítulos 10 a 30. Como la propia herramienta advierte que puede venir incompleta, la descarté como fuente única y bajé el PDF completo en base64 con la segunda herramienta, lo decodifiqué y extraje el texto con `pypdf`, página por página.
+- **Cobertura verificada.** La extracción con `pypdf` dio 282 páginas y ~610,900 caracteres (~102,800 palabras). Confirmé, buscando cada título en el texto, que las 30 secciones numeradas de la tabla de contenidos aparecen como encabezado real dentro del cuerpo (no solo en el índice), en orden creciente de página, y que el archivo llega hasta "Acknowledgments", "Notes", "About the Author", "Copyright" y "About the Publisher" — es decir, el PDF completo, sin capítulos faltantes.
+- **Profundidad de lectura, no uniforme:**
+  - Leí de corrido la "Nota a mis lectores" y los capítulos 1 a 6 (el origen de Ethereum, de los cypherpunks al whitepaper de nov-2013), más los capítulos 13 ("The Red Wedding"), 19 ("The Magic Lock"), 26 ("The Friendly Ghost") y el arranque del 30 ("The Party") completos.
+  - Los capítulos 7, 8, 9 (del primer intento) y 10 a 12, 14 a 18, 20 a 25 y 27 a 29 los cubrí con búsquedas dirigidas sobre el texto completo (fechas, cifras en dólares/BTC/ETH, nombres propios y los sucesos que ya sabía que debía verificar), no palabra por palabra. Eso alcanza para las cifras duras y la cronología, pero puede dejar fuera matices de tono o anécdotas menores en esos tramos.
+  - En total, estimo haber leído de corrido, o revisado con suficiente detalle para citar con confianza, bien más de la mitad del libro, con el 100% del texto disponible para búsqueda exacta.
+- **Verificación externa de hechos duros (WebSearch/WebFetch, 25-sep-2026):** el bloque génesis (30-jul-2015, 15:26:13 UTC — ethereum.org/en/history, blog de la EF, CoinDesk); el total de la venta de 2014 (31,591 BTC, US$18,439,086, ~60,102,216 ETH — coincide con la guía técnica `ethereum/homestead-guide` en GitHub y con reportes de prensa cripto); el hackeo de The DAO del 17-jun-2016 (3.6 M ETH, ~30% del total, vía reentrancy en la función `split` — The Block, Wikipedia); el hard fork del 20-jul-2016 en el bloque 1,920,000 con ~85-89% de apoyo en la votación de señalización (The Block).
+- **Corrección de cifra:** la ficha anterior (versión "resumen") y el capítulo 02 dicen que la venta recaudó "31,531 BTC". Con el libro completo y la verificación externa de esta sesión, la cifra correcta es **31,591 BTC**. Ver la adenda en el capítulo 02.
 
 ## 3. Lo esencial
 
-**Qué cubre el libro** (según el índice, la descripción y la reseña)
-1. [H] Seis partes. Groundwork (caps. 1-5), Prelaunch (6-15), Launch (16-19), Lunar Orbit (20-22), Near-Landing (23-28) y Back to Earth (29-30). Capítulos relevantes:
-   - 6 "The White Paper", 9 "The Announcement", 10 "The Town of Zug", 13 "The Red Wedding", 15 "The Ether Sale";
-   - 20 "The DAO Wars", 21 "The Fork", 22 "The Shanghai Attacks";
-   - 25 "The New IPO", 27 "The Boom", 28 "Futures and Cats", 29 "The Crash".
-
-   Fuente: índice de Open Library.
-2. [H] La descripción de la editorial habla de un Buterin de diecinueve años que imagina una "super-charged, global computer". La historia combina innovación, escrutinio regulatorio y la llegada de Wall Street, y convirtió a los primeros participantes en millonarios y a algunos en "criminals" (descripción de Porchlight).
-3. [O] Según la reseña de Decrypt:
-   - un tema central es la elección de una **fundación sin fines de lucro** en vez de una empresa, impulsada por Buterin y Mihai Alisie, frente a la visión de "crypto Google" de Charles Hoskinson;
-   - Russo pinta a Buterin como líder a regañadientes, con "very transparent intentions, which are always for Ethereum";
-   - el cierre enfatiza que DeFi probaría que "Ethereum is actually capable of what it set out to do".
-
-**Hechos del relato, verificados con fuentes primarias**
-4. [H] Buterin compartió el whitepaper en dic-2013 (Mastering Ethereum 2.ª ed., cap. 1). Presentó Ethereum en la North American Bitcoin Conference de Miami el **26-ene-2014**; esto último solo lo verifiqué con una fuente secundaria: Wikipedia, que cita la crónica de Fortune del 28-ene-2014.
-5. [H] **Venta de ether (cap. 15).**
-   - Duró 42 días: del 22-jul-2014 a las 23:59, hora de Zug, del 2-sep-2014.
-   - Precio: 2,000 ETH por BTC durante 14 días, luego baja lineal hasta 1,337.
-   - Recaudó **31,531 BTC (US$18,439,086)** a cambio de **~60,102,216 ETH**.
-   - Además se crearon dos fondos de 0.099x lo vendido: uno para contribuyentes tempranos y otro para la fundación.
-   - Emisión anual prevista (diseño PoW): 0.26x lo vendido.
-
-   Fuentes: [EF, 22-jul-2014](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale); plantilla ether-sale del repositorio ethereum/ethereum.org. Génesis resultante ≈ 60.1 M × 1.198 ≈ 72 M ETH (cálculo propio).
-6. [H] **Lanzamiento (cap. 16).** El bloque génesis es del 30-jul-2015 a las 03:26:13 UTC, con límite de gas de 5,000 (wiki del EPF, `protocol/history`).
-7. [H] **The DAO (caps. 20-21).** Datos del informe de la SEC ([Release No. 81207, 25-jul-2017](https://www.sec.gov/litigation/investreport/34-81207.pdf)):
-   - del 30-abr al 28-may-2016 vendió ~1.15 mil millones de tokens DAO por **~12 M ETH (~US$150 M)**;
-   - el **17-jun-2016** un atacante desvió **~3.6 M ETH, 1/3 del total**;
-   - el propio código le impidió moverlos durante 27 días;
-   - el **20-jul-2016** se activó el hard fork;
-   - una minoría siguió en la cadena original, "Ethereum Classic";
-   - la SEC concluyó que los tokens DAO eran valores (securities).
-8. [I] "The Magic Lock" (cap. 19) probablemente alude a Slock.it, la empresa de "cerraduras inteligentes" cuyos cofundadores crearon The DAO, según el informe de la SEC. No leí el capítulo.
-9. [H] **Ataques de Shanghai (cap. 22).** Durante DevCon2 (2016) hubo ataques DoS con opcodes mal tarificados, como EXTCODESIZE. Respuesta: los hard forks Tangerine Whistle y Spurious Dragon (wiki del EPF, `testing/incidents`).
-10. [H] **Boom de ICOs (caps. 25 y 27).** Howell, Niessner y Yermack estudian más de 1,500 ICOs que recaudaron **US$12.9 mil millones** (*Review of Financial Studies* 33(9), 2020). El éxito real se asocia con divulgación, compromiso creíble y señales de calidad.
-11. [H] **Congestión (cap. 28, "Futures and Cats").** CryptoKitties (2017) congestionó la red y disparó el gas (Mastering Ethereum 2.ª ed., cap. 16). [I] El "Futures" del título probablemente alude al lanzamiento de futuros de bitcoin en dic-2017; no lo verifiqué en el libro.
-12. [H] **Crash (cap. 29).** Cierre de ETHUSDT en Binance de **US$1,388.02 el 13-ene-2018**, contra **US$83.76 el 15-dic-2018**: **−94.0%** (cálculo propio con datos diarios).
-13. [H] **ETH/BTC en la burbuja.** El cierre máximo del par ETHBTC en Binance fue 0.1132 (1-feb-2018) y el mínimo 0.0164 (6-sep-2019). La serie de Binance empieza el 15-jul-2017; el pico histórico de mediados de 2017 en otros exchanges no está en estos datos.
-14. [I] "The Friendly Ghost" (cap. 26) probablemente alude a Casper, el "Friendly Finality Gadget", o a la línea de investigación de Vlad Zamfir. Es inferencia por el título.
-15. [O] Literary Hub lo describió como "a fast-paced, Michael Lewis-style history" (citado en resultados de búsqueda; no leí la reseña original).
+1. [H] *(Nota a los lectores)* Russo cubrió Bitcoin para Bloomberg desde Buenos Aires en 2013 (inflación y control de cambios) y cripto desde Nueva York en 2017; decidió escribir el libro a fines de 2017, tras la burbuja de ICOs, por no existir entonces una historia de Ethereum comparable a las que ya existían sobre Bitcoin.
+2. [H] *(cap. 2, "Cypherpunks' Fever Dream")* El libro sitúa a Ethereum en dos linajes previos a Bitcoin: los cypherpunks (David Chaum y eCash en 1983, el manifiesto de Timothy May, "prueba de trabajo" de Dwork y Naor en 1993, Hashcash de Adam Back) y el software libre (GNU de Stallman en 1983, "La catedral y el bazar" de 1997). Bitcoin, dice, no aparece "en un vacío".
+3. [H] *(cap. 2)* Para explicar por qué a alguien le importaría un dinero sin control estatal, Russo abre con el corralito argentino de dic-2001 (retiros topados en US$250 semanales, devaluación de 40%, renuncia de De la Rúa) y con la Argentina de 2013, cuando el gobierno de Cristina Fernández prohibió comprar dólares.
+4. [H] *(caps. 3-4)* *Bitcoin Magazine* nació en 2012 del acuerdo entre Mihai Alisie (Rumania) y Vitalik Buterin (entonces columnista de 17-19 años); Vitalik conoció a Anthony Di Iorio en el primer meetup de Bitcoin de Toronto (nov-2012) y viajó por Bitcoin conferences y hacklabs (incluida la comuna anarquista de Calafou, España) durante 2013.
+5. [H] *(cap. 5, "The Swiss Knife")* Antes de Ethereum, Vitalik trabajó y escribió whitepapers para Mastercoin y Colored Coins ("Bitcoin 2.0"); se frustró con lo fragmentado de esos proyectos ("como pasarse el día haciendo la lima de uñas y el sacacorchos de una navaja suiza") y decidió construir, en cambio, una capa base genérica.
+6. [H] *(cap. 5-6)* Vitalik escribió el borrador del whitepaper en dos semanas, en San Francisco, y lo envió por correo el **miércoles 27-nov-2013, 10:49 a.m.**, a un grupo reducido de ~13 personas, bajo el asunto "Introducing Ethereum: a generalized smart contract/DAC platform". El nombre "Ethereum" salió de buscar términos de ciencia ficción en Wikipedia; recordó la palabra "ether" de un libro de ciencias de su infancia.
+7. [H] *(caps. 7-9)* El grupo fundador (Vitalik, Gavin Wood, Charles Hoskinson, Anthony Di Iorio, Joseph Lubin, Mihai Alisie, Amir Chetrit y Jeffrey Wilcke) tomó forma en una casa alquilada en Miami (ene-2014); ahí Gavin Wood hizo la primera implementación funcional y pidió el título de "cofundador y CTO", lo que ya anticipaba disputas por roles.
+8. [H] *(cap. 10, "The Town of Zug")* Eligieron el cantón suizo de Zug por su baja carga fiscal corporativa y regulación favorable a empresas de tecnología; una firma legal local (MME) los ayudó a estructurar la fundación. El primer año de renta de la casa de Zug (~82,500 francos suizos) lo pagó Joseph Lubin.
+9. [H] *(cap. 13, "The Red Wedding")* El **7-jun-2014**, en una reunión convocada en Zug para firmar la constitución de una empresa, estalló un conflicto latente por semanas: gran parte del equipo acusó a Charles Hoskinson (entonces CEO) de imponer una estructura corporativa con fines de lucro. Tras escuchar los reclamos, Vitalik decidió por su cuenta sacar a Hoskinson y a Amir Chetrit del grupo de liderazgo y declaró que Ethereum sería una **fundación sin fines de lucro y de código abierto**. Hoskinson fundaría después Cardano.
+10. [H] *(cap. 15, "The Ether Sale")* La venta corrió del 22-jul al 2-sep-2014 (42 días), con el precio bajando de 2,000 a 1,337 ETH por BTC. El libro la cifra en "más de 60 millones de ether" a "~30 centavos" cada uno, "US$18.3 millones" en total — cifras redondeadas, consistentes con el dato preciso verificado esta sesión: **31,591 BTC (US$18,439,086) por ~60,102,216 ETH**.
+11. [H] *(cap. 16, "Takeoff")* El bloque génesis se calculó por consenso a partir de un hash de la testnet y se lanzó el **30-jul-2015** (calculado para llegar cerca de las 5 p.m. hora de Berlín); verificado externamente: 15:26:13 UTC.
+12. [H] *(cap. 17, "The Shrinking Runway")* Como casi todo lo recaudado en la venta quedó en bitcoin (no en dólares) y el precio de BTC cayó de +US$600 a ~US$500 durante los 42 días de venta, la fundación llegó a fin de 2014 con una crisis de caja real; Anthony Di Iorio y Joseph Lubin le prestaron personalmente entre US$500,000 y US$800,000 (ninguno de los dos coincide en la cifra exacta) para cubrir renta y honorarios legales.
+13. [H] *(cap. 19, "The Magic Lock")* El capítulo trata de Slock.it (Christoph Jentzsch, físico teórico alemán, y su hermano): un proyecto de candados conectados a Ethereum para alquilar bienes (bicicletas, alojamiento) sin intermediarios, demostrado con una tetera en Devcon1 (nov-2015). De ahí nació el diseño de **The DAO**, un fondo gobernado por votación de tenedores de tokens.
+14. [H] *(cap. 19-20)* La preventa de tokens de The DAO corrió del 30-abr al 28-may-2016 y recaudó **12 millones de ETH** (100 tokens DAO por 1 ETH), **~US$150 millones** con ETH a ~US$12 — ocho veces más que la propia venta de ether de 2014, según remarca el libro.
+15. [H] *(cap. 20, "The DAO Wars")* El **17-jun-2016**, alrededor de las 3 p.m. (con Vitalik en Shanghái), un atacante explotó la función `split` del contrato (un ataque de reentrancy, aunque el libro narra el pánico en tiempo real antes de que se identificara la causa técnica) y drenó **30%, o 3.6 millones de ether**, antes de detenerse por razones que nadie explicó. El propio diseño del contrato obligaba a esperar ~27 días antes de mover esos fondos, ventana que le dio tiempo a la comunidad de reaccionar.
+16. [H] *(cap. 21, "The Fork")* El hard fork se activó el **20-jul-2016** (bloque 1,920,000, ~85-89% de apoyo en la votación de señalización) y devolvió los fondos a los tenedores originales de DAO; la minoría que lo rechazó siguió en la cadena original, hoy Ethereum Classic. El propio atacante retiró sus 3.6 millones de ETC el 5-sep-2016 (~US$5.5 millones en ese momento) y donó 1,000 ETC al fondo de desarrollo de Ethereum Classic — un detalle narrado en el libro que no estaba en mi ficha anterior.
+17. [H] *(cap. 22, "The Shanghai Attacks")* Entre septiembre y octubre de 2016 la red sufrió ataques de denegación de servicio explotando opcodes subvaluados en gas (como `EXTCODESIZE`); se resolvió con dos hard forks, "Tangerine Whistle" (18-oct-2016) y "Spurious Dragon" (~un mes después).
+18. [H] *(caps. 23-27)* El "boom" de ICOs de 2017 aceleró mes a mes: Status recaudó ~US$100 millones en 3 horas, Bancor US$153 millones en 3 horas (12-jun-2017); harto de que le pidieran asesorar o invertir en cada proyecto, Vitalik anunció el 13-jun-2017 que dejaría de asesorar ICOs nuevas (con dos excepciones ya comprometidas).
+19. [H] *(cap. 28, "Futures and Cats")* CryptoKitties (Axiom Zen, luego Dapper Labs) llegó a representar ~15% de las transacciones de Ethereum y congestionó la red en dic-2017; algunos gatos se vendieron por más de US$100,000.
+20. [H] *(cap. 29, "The Crash")* Según el propio libro, ether cerró 2017 en ~US$750, tocó un récord de "más de US$1,400" el 12-ene-2018 y cayó a "tan bajo como US$82" a mediados de dic-2018. Mi cálculo con cierres diarios de Binance (13-ene a 15-dic-2018, ya usado en la ficha anterior) da US$1,388.02 → US$83.76, **−94.0%**: dos fuentes independientes que coinciden dentro del margen de redondeo.
+21. [H] *(cap. 30, "The Party")* El libro cierra en Devcon4, Praga (30-oct a 2-nov-2018), en plena caída del mercado, con Vitalik presentando "Serenity" (Ethereum 2.0: prueba de participación, escalabilidad) sin fecha: "no está tan lejos", dijo el 31-oct-2018. La prueba de participación llegaría en los hechos casi 4 años después, con el Merge (15-sep-2022, según el capítulo 02 de este sistema).
+22. [I] *(cap. 26, "The Friendly Ghost")* Confirmo la inferencia de mi ficha anterior: el título es un juego con "Casper the Friendly Ghost". El capítulo narra la investigación temprana de prueba de participación de Vlad Zamfir (el algoritmo "Slasher", 2014) que luego se formalizaría como el protocolo Casper.
+23. [H] *(cap. 27, hacia 2018)* El propio libro señala que, pese a que Ethereum se vende como una red que mejora la transparencia, la Fundación Ethereum no publicaba estados financieros ni un organigrama, y hubo una salida tensa de Gavin Wood (acusado internamente de conflicto de interés por dirigir a la vez EthDev y su empresa Ethcore/Parity) y un cambio de directora ejecutiva (Ming Chan por Aya Miyaguchi) que el libro solo esboza.
+24. [O] El cierre del libro es de optimismo cauteloso: tras el crash, la comunidad discutía en Praga cómo sostener financieramente el desarrollo de código abierto (suscripciones, comercio, donaciones) — pregunta que, según *Mastering Ethereum* 2.ª ed. (recurso 27 de este mismo sistema), seis años después sigue sin resolverse del todo.
 
 ## 4. Qué cambia para invertir
 
-- **Economía de ETH.**
-  - [H] El libro narra el diseño original: preminado de ~72 M ETH y emisión PoW. Hoy la oferta es de 122.07 M ETH (ultrasound.money; CoinGecko da 122.08 M).
-  - [H] Desde el Merge la oferta creció +1.29%; la inflación neta de los últimos 30 días es +0.87% al año.
-  - [H] Staking de 35.7% de la oferta con APR máximo de consenso de 2.52% (capítulo 02).
-  - [I] La lección del libro para la economía del activo: la política monetaria de ETH **ha cambiado varias veces por decisión social** (preminado, PoW, EIP-1559, PoS). La "oferta" de ETH es una regla de gobernanza, no una constante física como el tope de 21 M de BTC. Es un riesgo y una opción a la vez.
-- **Captura de valor de las L2.**
-  - [I] El libro es anterior a la hoja de ruta centrada en rollups: la reseña cierra con DeFi en L1.
-  - [H] Hoy las L2 pagan ~0.04 ETH al día a L1 por blobs (capítulo 02).
-  - [I] La "máquina infinita" de 2020 era L1. La de 2026 reparte la actividad en L2 que casi no le pagan renta.
-- **Catalizadores del torneo.**
-  - [I] El libro enseña que las actualizaciones se retrasan (Serenity y Casper tardaron años) y que los eventos traumáticos (The DAO, Shanghai) llegaron de sorpresa.
-  - [H] Fechas del torneo: Glamsterdam en Sepolia el 6-oct-2026 y en Hoodi el 27-oct-2026 (tentativo). Mainnet sin fecha; objetivo de la EF, dic-2026.
-- **Razón ETH/BTC.**
-  - [H] La burbuja que narra llevó ETH/BTC a 0.1132 (feb-2018) y el crash lo hundió a 0.0164 (sep-2019).
-  - [I] ETH/BTC ha sido una apuesta **procíclica** a la especulación en tokens, el ciclo de las ICOs. Hoy está en 0.0320. Un repunte fuerte del par ha requerido históricamente una ola de emisión o especulación sobre Ethereum. Con la muestra 2017-2026 de Binance no pude aislar esa relación; es una inferencia.
-- **Qué haría falta para que ETH vuelva al universo.**
-  - [I] Este libro no aporta criterios cuantitativos.
-  - [I] Su lección de riesgo sí: el drawdown de 2018 (−94%) muestra que ETH puede perder casi todo en un año. Cualquier reentrada tiene que dimensionarse para sobrevivir a un −50% en 4 meses. Eso pasó en 26.7% de las ventanas de 122 días desde 2017 (Binance, USD).
-  - [I] Criterios completos en el capítulo 02, §8.
+**Esta lectura no cambia la decisión del comité del 25-sep-2026 de dejar ETH fuera de la cuenta cripto** (`bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`). Sí aporta contexto para la reevaluación futura que ya fija el capítulo 02, §8:
+
+- **La "Red Wedding" es el origen del argumento de que la política monetaria de ETH es una regla social, no física.** Ya haber leído de primera mano cómo Vitalik decidió unilateralmente, en una tarde, sacar a dos cofundadores y fijar que Ethereum sería sin fines de lucro, refuerza [I] con un hecho concreto (no solo una inferencia de reseñas) la idea ya escrita en el capítulo 02: la oferta y la gobernanza de ETH se han fijado y refijado por decisiones humanas repetidas (preminado 2014, hard fork de 2016, EIP-1559 2021, fusión a PoS 2022), no por una regla fija como el tope de 21 M de BTC.
+- **Riesgo de "persona clave" institucional, con más textura de la que tenía antes.** El libro documenta que varios cofundadores originales (Hoskinson → Cardano, Wood → Polkadot/Kusama) terminaron construyendo cadenas competidoras, y que la Fundación fue opaca en sus finanzas y tuvo una salida tensa de su directora ejecutiva. Esto es un antecedente [I] a vigilar si algún día se reevalúa ETH: la gobernanza on-chain (votación de validadores, clientes) convive con una gobernanza social menos visible (Fundación, "Ethereum Magicians") que este libro muestra que ya generó fricción una vez.
+- **La brecha entre promesa y entrega es un patrón, no un incidente.** "Serenity" se presentó en 2018 como "ya no tan lejos" y tardó a los hechos ~4 años (Merge, sep-2022). El capítulo 02 (idea #5) ya registra que Glamsterdam se movió de "primer semestre de 2026" a "diciembre de 2026". Es la misma dinámica, dos ciclos distintos, separados por 8 años: [I] un cronograma de Ethereum no es una fecha, es una intención sujeta a retraso.
+- **Nada en este libro (que termina en 2018-2020) permite evaluar la economía actual de ETH** (quema, blobs, L2, staking): esos datos verificados están en el capítulo 02, §5, con fecha 25-sep-2026.
 
 ## 5. Contrapuntos y límites
 
-1. [O] **Sesgo de la autora.** Periodista dentro del ecosistema, con acceso privilegiado a sus protagonistas. La reseña de Decrypt no le encuentra críticas, y los que respaldan el libro son del sector. Es probable un encuadre heroico de Buterin; no pude contrastarlo sin leer el texto.
-2. [H] **Qué envejeció.** El título promete "the next internet". Seis años después, el uso de DeFi sigue siendo mayormente especulativo, según Mastering Ethereum 2.ª ed., cap. 13: "has yet to find a proper market fit beyond token exchanges, stablecoins, and derivative creation". ETH quedó 44.5% abajo de su cierre máximo (cierre de ~US$2,681 frente a 4,832.07 el 22-ago-2025, Binance).
-3. [I] **Qué no está probado.** Que la narrativa fundacional (idealismo, fundación sin fines de lucro) se traduzca en valor para el tenedor de ETH. El libro es historia, no tesis de inversión.
-4. [H] **Límites de mi acceso.** No leí el libro. Las inferencias sobre capítulos (8, 11, 14) se basan en títulos. Para pasar de "resumen" a "sección" habría que conseguir la edición en español en una biblioteca o comprarla.
-5. [I] **Contraste con *The Cryptopians*.** Shin (2022) se enfoca más en los conflictos y la codicia, y retrata a Hoskinson y Wood como villanos (reseña de Decrypt, 2022). Russo (2020) parece más celebratoria. Leer ambos corrige el sesgo de cada uno.
+1. [O] **Sesgo de la autora, ahora con evidencia directa y no solo por reseñas.** Vitalik es tratado como protagonista comprensivo incluso en el momento más duro del libro (la Red Wedding): el texto enfatiza su angustia y su cuidado por "lo que era mejor para Ethereum", y le da la última palabra en cada disputa. No es necesariamente falso, pero es una elección narrativa consistente con que Russo tuvo acceso privilegiado a él y luego construyó su carrera (*The Defiant*) sobre la reputación de esa misma red.
+2. [H] **Limitación de método que la propia autora declara.** Los diálogos son reconstrucciones de la memoria de los participantes, no grabaciones ni transcripciones (salvo cuando cita tuits, correos o posts de foros, que sí son verificables); cuando hay versiones distintas sin evidencia documental, ella elige una. Es periodismo narrativo serio, pero no es un documento primario.
+3. [H] **Qué envejeció mal.** El subtítulo promete "the next internet". Mastering Ethereum 2.ª ed. (recurso 27, cap. 13) concluye en 2025 que DeFi "has yet to find a proper market fit beyond token exchanges, stablecoins, and derivative creation". Y "Serenity" tardó 4 años más de lo que el libro sugería en su último capítulo.
+4. [I] **Qué no está probado.** Que la narrativa fundacional (idealismo, fundación sin fines de lucro, "beauty in subtraction") se traduzca en valor sostenido para quien tiene ETH. El libro es historia de producto y de comunidad, no tesis de inversión, y termina antes de DeFi Summer (2020), el Merge (2022) o la era de blobs (2024-26).
+5. [I] **Contraste con *The Cryptopians* (Laura Shin, 2022, recurso 11 de este sistema).** Según las reseñas que usé para esa ficha (acceso todavía "resumen"), Shin retrata a Hoskinson y Wood con más dureza. Russo, que sí los entrevistó para este libro, los muestra como parte de un conflicto de poder real pero sin villanizarlos tan marcadamente. Leer ambos, cuando la ficha de Shin también suba a íntegro, va a corregir el sesgo de cada una.
+6. [H] **Límite de esta ficha.** Cubrí de corrido y con seguridad de cita el arranque del libro (caps. 1-6) y cuatro capítulos puntuales (13, 19, 26, 30); el resto (7-12, 14-18, 20-25, 27-29) lo verifiqué por búsqueda dirigida sobre el texto íntegro, no palabra por palabra. Para anécdotas menores fuera de los hechos que cité aquí, la ficha puede no reflejar matices que solo aparecerían en una relectura completa.
 
 ## 6. Autoexamen
 
-1. **¿Cuánto recaudó la venta de ether de 2014, a qué precio y cuánto ETH se vendió?**
-   31,531 BTC (US$18,439,086) por ~60,102,216 ETH. El precio fue de 2,000 ETH/BTC los primeros 14 días y bajó lineal hasta 1,337 ETH/BTC. Duró 42 días, del 22-jul al 2-sep-2014.
-   Fuentes: EF blog (22-jul-2014); plantilla ether-sale de ethereum.org.
-2. **Según la SEC, ¿cuánto recaudó The DAO, cuánto se desvió y cuándo se activó el hard fork?**
-   ~12 M ETH (~US$150 M), del 30-abr al 28-may-2016. El 17-jun-2016 se desviaron ~3.6 M ETH (1/3). El hard fork se activó el 20-jul-2016; la minoría siguió como Ethereum Classic.
-   Fuente: SEC Release No. 81207.
-3. **¿Qué caída tuvo ETH entre el pico de la burbuja de ICOs y el fondo de 2018?**
-   De 1,388.02 (13-ene-2018) a 83.76 (15-dic-2018) en cierres de ETHUSDT: −94.0%.
-   Fuente: datos diarios de Binance (data-api.binance.vision), cálculo propio.
-4. **¿Qué decisión institucional temprana, según las reseñas del libro, separó a Buterin de Hoskinson?**
-   Constituir Ethereum como fundación sin fines de lucro, en vez de una empresa con fines de lucro ("crypto Google").
-   Fuente: reseña de Decrypt (Hamacher, 14-jul-2020). No verificado en el texto.
+1. **¿Cuánto recaudó la venta de ether de 2014 (BTC y USD), a qué precio y cuánto ETH se vendió?**
+   31,591 BTC (US$18,439,086) por ~60,102,216 ETH, del 22-jul al 2-sep-2014 (42 días), a un precio que bajó de 2,000 a 1,337 ETH por BTC. El libro redondea a "más de 60 millones de ether" y "US$18.3 millones".
+   Fuentes: libro, cap. 15; guía técnica `ethereum/homestead-guide` (GitHub) y prensa cripto, verificado por WebSearch el 25-sep-2026. (Corrige la cifra de 31,531 BTC de la ficha anterior.)
+2. **¿Qué pasó el 17-jun-2016 con The DAO y cómo se resolvió?**
+   Un atacante explotó la función `split` del contrato y drenó 3.6 millones de los 12 millones de ETH recaudados (30%), aprovechando una ventana de 27 días antes de poder mover los fondos. El 20-jul-2016 (bloque 1,920,000, ~85-89% de apoyo) se activó un hard fork que devolvió los fondos; la minoría disidente siguió como Ethereum Classic.
+   Fuentes: libro, caps. 20-21; SEC Release No. 81207 (25-jul-2017); The Block y Wikipedia, verificado por WebSearch el 25-sep-2026.
+3. **¿Qué evento decidió que Ethereum fuera una fundación sin fines de lucro, y quién quedó fuera del liderazgo?**
+   La confrontación del 7-jun-2014 en Zug (el propio libro la llama "The Red Wedding"): tras escuchar los reclamos del equipo contra Charles Hoskinson (entonces CEO), Vitalik Buterin decidió por su cuenta sacarlo a él y a Amir Chetrit del grupo de liderazgo y declaró que Ethereum sería una organización sin fines de lucro y de código abierto.
+   Fuente: libro, cap. 13. No tengo una segunda fuente independiente para el detalle de esa reunión puntual; sí es consistente con el hecho público de que la Fundación Ethereum existe y de que Hoskinson fundó después Cardano.
+4. **¿Qué tan completa fue esta lectura y cómo medí la cobertura?**
+   Confirmé con un script propio que las 282 páginas extraídas del PDF (~102,800 palabras) contienen las 30 secciones numeradas de la tabla de contenidos, en orden, más *Acknowledgments*, *Notes*, *About the Author* y *Copyright*: el archivo está completo. Dentro de eso, leí de corrido la introducción, los capítulos 1-6, 13, 19, 26 y el arranque del 30; el resto lo cubrí con búsquedas dirigidas por fecha, cifra y nombre propio sobre el texto íntegro, no de corrido.
+   Fuente: extracción y verificación propias con `pypdf` en esta sesión (25-sep-2026).
 
-## 7. Grado de evidencia: **C**
+## 7. Grado de evidencia: **B**
 
-- El libro es periodismo narrativo con entrevistas, útil para entender motivos y personas.
-- Para este sistema vale C por dos razones: mi acceso es solo resumen, y los relatos de testigos no son datos auditados.
-- Los hechos clave de su historia sí quedan en **A**, porque los verifiqué con fuentes primarias (EF, SEC, Binance).
-- Para decisiones de inversión aporta contexto de ciclos y riesgo de cola, no señales.
+- Sube de C a B frente a la ficha anterior porque el acceso pasó de resumen a íntegro y porque los hechos duros (venta de 2014, lanzamiento, DAO, fork) quedaron verificados con una segunda fuente externa además del propio texto.
+- Los hechos históricos con fecha, cifra o cita verificable (whitepaper, venta de 2014, génesis, DAO, fork, Shanghai, ICOs, crash) valen **A**: coinciden entre el libro y fuentes independientes.
+- Las escenas reconstruidas de diálogo y las caracterizaciones personales (motivaciones, estados de ánimo, "quién tenía razón" en la Red Wedding) valen **D**: son la versión de la autora sobre la memoria de los participantes, sin grabación ni documento que las respalde.
+- Para decisiones de inversión sigue aportando contexto de ciclos, riesgo de cola y gobernanza social del activo, no señales de precio ni tesis cuantificable.
