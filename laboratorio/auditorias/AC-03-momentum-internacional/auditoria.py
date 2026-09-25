@@ -384,6 +384,18 @@ def main():
             }
         diag_c["%s~%s" % (reg, col)] = d
 
+    # --- adenda 2 (post-resultados, SOLO descriptiva; no cambia veredictos):
+    # correlaciones para documentar la composicion de agregados AQR (2000-01 en adelante)
+    composicion = {}
+    for agg, cols in (("Pacific", ["JPN", "AUS", "HKG", "SGP", "NZL"]), ("North America", ["USA", "CAN"])):
+        for col in cols:
+            c = concordancia(recortar(series["C|" + agg]["serie"], 200001), recortar(series["C|" + col]["serie"], 200001))
+            composicion["C:%s ~ C:%s" % (agg, col)] = {"n_comun": c["n_comun"], "correlacion": c["correlacion"]}
+    c = concordancia(recortar(series["A|Asia_Pacific_ex_Japan"]["serie"], 200001), recortar(series["C|JPN"]["serie"], 200001))
+    composicion["A:Asia_Pacific_ex_Japan ~ C:JPN"] = {"n_comun": c["n_comun"], "correlacion": c["correlacion"]}
+    c = concordancia(recortar(series["A|North_America"]["serie"], 200001), recortar(series["C|USA"]["serie"], 200001))
+    composicion["A:North_America ~ C:USA"] = {"n_comun": c["n_comun"], "correlacion": c["correlacion"]}
+
     # --- sensibilidad del fin de ventana (Emerging, A y B)
     sens = {}
     for fuente in ("A", "B"):
@@ -447,6 +459,7 @@ def main():
         "diagnostico_A_vs_B": diag_ab,
         "diagnostico_vs_C": diag_c,
         "sensibilidad_emergentes_fin_de_ventana": sens,
+        "adenda2_correlaciones_composicion_desde_2000_01": composicion,
         "afirmaciones": af,
     }
     with open(SALIDA, "w", encoding="utf-8") as f:
@@ -492,6 +505,10 @@ def main():
                 print("  %-36s %s %s %s..%s n=%d corr=%.3f x12(French)=%.2f x12(AQR)=%.2f media_dif=%.3f max|dif|=%.2f" % (
                     par, vid, k, c["desde"], c["hasta"], c["n_comun"], c["correlacion"],
                     c["media_x12_1_pct"], c["media_x12_2_pct"], c["media_dif_mensual_pct"], c["max_abs_dif_pct"]))
+    print()
+    print("Adenda 2 (descriptiva) correlaciones de composicion desde 2000-01:")
+    for k, v in composicion.items():
+        print("  %-36s n=%d corr=%.3f" % (k, v["n_comun"], v["correlacion"]))
     print()
     print("Sensibilidad emergentes (fin de ventana):")
     for k, v in sens.items():

@@ -1,0 +1,77 @@
+{
+ "descargado_utc": "2026-09-25T05:37:30+00:00",
+ "archivos": {
+  "yahoo_SPY_1d.json": {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit"
+  },
+  "yahoo_SP500TR_1d.json": {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESP500TR?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit"
+  },
+  "yahoo_GSPC_1d.json": {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit"
+  },
+  "yahoo_NAFTRAC.MX_1d.json": {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NAFTRAC.MX?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit"
+  },
+  "yahoo_MXX_1d.json": {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EMXX?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit"
+  },
+  "yahoo_MXN_X_1d.json": {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MXN%3DX?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit"
+  },
+  "yahoo_SPY.MX_1d.json": {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY.MX?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit"
+  },
+  "yahoo_IVV.MX_1d.json": {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IVV.MX?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit"
+  },
+  "yahoo_VOO.MX_1d.json": {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VOO.MX?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit"
+  },
+  "fred_DEXMXUS.csv": {
+   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXMXUS"
+  },
+  "fred_INTGSTMXM193N.csv": {
+   "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=INTGSTMXM193N"
+  },
+  "banxico_CF107_cetes28_SF43936.csv": {
+   "url": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarSeries",
+   "post": {
+    "idCuadro": "CF107",
+    "sector": "22",
+    "version": "3",
+    "locale": "es",
+    "anoInicial": "1990",
+    "anoFinal": "2026",
+    "tipoInformacion": "4,1",
+    "metadatosWeb": "true",
+    "formatoHorizontal": "false",
+    "formatoCSV.x": "10",
+    "formatoCSV.y": "10"
+   },
+   "series": [
+    "SF43936",
+    "SF43935"
+   ]
+  },
+  "banxico_CF102_fix_SF43718.csv": {
+   "url": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarSeries",
+   "post": {
+    "idCuadro": "CF102",
+    "sector": "6",
+    "version": "3",
+    "locale": "es",
+    "anoInicial": "1990",
+    "anoFinal": "2026",
+    "tipoInformacion": "4,1",
+    "metadatosWeb": "true",
+    "formatoHorizontal": "false",
+    "formatoCSV.x": "10",
+    "formatoCSV.y": "10"
+   },
+   "series": [
+    "SF43718"
+   ]
+  }
+ }
+}

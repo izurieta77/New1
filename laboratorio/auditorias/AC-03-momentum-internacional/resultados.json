@@ -4459,6 +4459,44 @@
    "veredicto": "apoyo"
   }
  },
+ "adenda2_correlaciones_composicion_desde_2000_01": {
+  "C:Pacific ~ C:JPN": {
+   "n_comun": 319,
+   "correlacion": 0.884261
+  },
+  "C:Pacific ~ C:AUS": {
+   "n_comun": 319,
+   "correlacion": 0.552425
+  },
+  "C:Pacific ~ C:HKG": {
+   "n_comun": 319,
+   "correlacion": 0.680397
+  },
+  "C:Pacific ~ C:SGP": {
+   "n_comun": 319,
+   "correlacion": 0.49988
+  },
+  "C:Pacific ~ C:NZL": {
+   "n_comun": 319,
+   "correlacion": 0.298537
+  },
+  "C:North America ~ C:USA": {
+   "n_comun": 319,
+   "correlacion": 0.998602
+  },
+  "C:North America ~ C:CAN": {
+   "n_comun": 319,
+   "correlacion": 0.77393
+  },
+  "A:Asia_Pacific_ex_Japan ~ C:JPN": {
+   "n_comun": 319,
+   "correlacion": 0.392875
+  },
+  "A:North_America ~ C:USA": {
+   "n_comun": 319,
+   "correlacion": 0.934503
+  }
+ },
  "afirmaciones": {
   "emergentes": {
    "A|V1": {
