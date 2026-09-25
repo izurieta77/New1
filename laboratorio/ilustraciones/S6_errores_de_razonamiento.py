@@ -109,8 +109,9 @@ S_sin6 = b["S"] - c[6]
 se_sin6 = math.sqrt(S_sin6 / (n - 1))
 print(f"  Sin el rezago 6 (gamma_6 := 0): S={S_sin6:.3f}, SE={se_sin6:.5f}, t={np.mean(x) / se_sin6:.3f} "
       f"(cambio de SE {100 * (nw['se'] / se_sin6 - 1):+.2f} %; de t {nw['t'] - np.mean(x) / se_sin6:+.3f})")
-dse = (1 / 7) / (2 * b["S"])  # d ln SE / d gamma_6 = (dS/dgamma_6)/(2S) = (2/7)/(2S)
-print(f"  d ln(SE)/d gamma_6 = (2/7)/(2S) = {dse:.5f} por unidad de gamma_6")
+dse = (2 / 7) / (2 * b["S"])  # d ln SE / d gamma_6 = (dS/dgamma_6)/(2S) = (2/7)/(2S) = (1/7)/S
+print(f"  d ln(SE)/d gamma_6 = (2/7)/(2S) = {dse:.5f} por unidad de gamma_6; aproximacion lineal de quitar "
+      f"gamma_6: {100 * dse * b['gammas'][6]:+.2f} % (exacto {100 * math.log(nw['se'] / se_sin6):+.2f} % en log)")
 P = np.array([[b["gammas"][abs(i - j)] for j in range(7)] for i in range(7)])
 print(f"  Teorema 1 NW: e'Pe/(L+1) = {P.sum() / 7:.6f}  vs S = {b['S']:.6f}; "
       f"eigenvalor minimo de P = {np.linalg.eigvalsh(P).min():.4f}")

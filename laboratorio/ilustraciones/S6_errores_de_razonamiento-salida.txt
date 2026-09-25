@@ -19,7 +19,7 @@
   lag 6 / lag 1 (Bartlett) = -0.421 / 2.747 = -0.153;  (uniforme) = -2.944 / 3.204 = -0.919
   rezagos 4-6 suman -0.962; rezagos 1-3 suman 3.567
   Sin el rezago 6 (gamma_6 := 0): S=11.296, SE=0.26008, t=-1.704 (cambio de SE -1.88 %; de t -0.033)
-  d ln(SE)/d gamma_6 = (2/7)/(2S) = 0.00657 por unidad de gamma_6
+  d ln(SE)/d gamma_6 = (2/7)/(2S) = 0.01314 por unidad de gamma_6; aproximacion lineal de quitar gamma_6: -1.93 % (exacto -1.90 % en log)
   Teorema 1 NW: e'Pe/(L+1) = 10.875135  vs S = 10.875135; eigenvalor minimo de P = 5.2669
   Pesos de Bartlett: L, w_L=1/(L+1), participacion de w_L en suma w_1..w_L = 2/(L(L+1))
     L= 1  w_L=0.5000  participacion=1.0000

@@ -80,3 +80,31 @@ Sin historia de 5 años como emisora. Valuaciones privadas: US$800 mil M (venta 
 12. Yahoo Finance (sep-2026), vuelo 14 y ventas minoristas: https://finance.yahoo.com/markets/stocks/article/spacex-stock-falls-as-starships-test-flight-slips-to-sept-28-retail-investors-sell-shares-143200705.html
 13. Quartz (14-sep-2026), Amodei pide desacelerar la IA y Altman y Musk coinciden: https://qz.com/anthropic-amodei-ai-slowdown-altman-musk-091426 · Yahoo Finance: https://finance.yahoo.com/technology/ai/articles/dario-elon-musk-more-top-135024610.html
 14. Yahoo/Bloomberg, valuación de US$800 mil M (dic-2025): https://finance.yahoo.com/news/spacex-sets-800b-valuation-confirms-145533834.html
+
+## Verificación (2026-09-25)
+Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 2T26 (íntegro: segmentos, estado de resultados, conciliación de UAFIDA y balance) [1] y 10-Q del 2T26 (portada, estados financieros, política de reconocimiento de contratos de nube, flujo de efectivo, oferta pública y Cursor) [3]. Revisé la lista de filings de la SEC al 25-sep (sin 8-K de aviso de fecha). Consenso consultado de nuevo el 25-sep en Yahoo quoteSummary, Nasdaq/Zacks y MarketBeat. La transcripción de Motley Fool [2] y los artículos de Motley Fool [5] se consultaron de nuevo (son fuentes secundarias).
+
+**Correcto (hecho verificado):**
+- 2T26: ingresos de US$7,814 M (+92%); Space 962, Connectivity 4,291 y AI 2,561. Pérdida operativa de −143 M (Connectivity +1,656, Space −542, AI −1,257), pérdida neta de −541 M, UPA de −0.09 con 5,864 M de acciones y UAFIDA ajustada de 3,538 M (+191%) [1].
+- Otros datos del 2T26: capex de 18,369 M, de los cuales AI 15,828; 12.0 M de suscriptores con ARPU de US$66; 78 lanzamientos y 1,041 t en el 1S26 [1].
+- Balance y flujo: caja de 93,522 M más valores de 6,487 M y deuda de 39,364 M, es decir, caja neta de 60,645 M. Flujo operativo del 1S26 de 3,466 M contra capex de 28,476 M [3]. En la portada del 10-Q hay 7,696 M de acciones clase A y 5,485 M clase B al 28-jul [3].
+- Las cifras derivadas del 1T26 y el 1T25 en la tabla cuadran con el 1S menos el 2T.
+- Consenso de Yahoo del 3T26: ingresos de 12,844 M (12 analistas, rango 11,111-16,023) y UPA de 0.144 (12 analistas, rango −0.11 a 0.29). La sorpresa de UPA del 2T26 fue de −0.09 contra −0.29 (Yahoo) o −0.26 (Zacks).
+- Cadena causal, hecho 1: contratos de nube por US$14.1 mil M de ventas contratadas, que aportaron US$1.6 mil M de ingresos incrementales en el 2T26 [1]. Hecho 2: bonos por US$25 mil M en cinco series (2031-2056), con tasas de 5.35% a 6.65% y promedio ponderado de 5.855% [1].
+- Escenarios: 30 + 45 + 25 = 100%. UPA en base GAAP, que es la del consenso (SPCX no publica UPA ajustada). No hay recomendaciones de compra o venta.
+
+**Corregido:**
+1. **Acciones de la oferta pública:** fueron 638,888,888 a US$135 (555.6 M base más la sobreasignación completa), con ingresos netos de US$85,675 M [3]. La ficha decía 555.6 M, según Wikipedia.
+2. **Punto de ingresos del 3T26: de 11,400 a 11,100.** Los supuestos de la propia ficha (Connectivity 4.7, Space 1.1 y AI 5.3) suman ~11.1 mil M; el punto tenía ~0.3 mil M sin desglosar. **p10 de 10,300 a 9,900**, porque el supuesto de Anthropic por US$3.75 mil M (tres meses completos a US$1.25 mil M/mes) viene de Motley Fool y no de la emisora. Además, el 10-Q reconoce estos contratos de forma escalonada durante el arranque [3]; según el resumen de la transcripción, los contratos con Google y Anthropic empiezan "later this quarter or in October" (cita *no verificada* palabra por palabra). El binario de ingresos baja de 0.15 a **0.12**.
+3. **Intereses netos del 3T26:** la ficha suponía +US$0.4 mil M a favor. En el 2T26 fueron −289 M (gasto de 629, del cual 327 con partes relacionadas, contra ingreso de 340) [1]. *Inferencia:* con un trimestre completo de caja (~US$90 mil M) el neto sería de +0.2 a +0.3 mil M. El punto de UPA (0.08 ≈ US$1.07 mil M de utilidad) se mantiene, porque la utilidad operativa de 0.8-1.0 mil M más esos intereses sigue dando 0.07-0.10.
+4. Se agregaron los consensos alternos de UPA: Zacks, 0.09 (11 analistas), y calendarEvents de Yahoo, 0.118. La dispersión entre fuentes es grande.
+
+**No verificado o pendiente:**
+- Montos y fechas de arranque de Anthropic (US$1.25 mil M/mes), Alphabet (US$920 M/mes desde octubre) y del contrato de US$1.11 mil M/mes desde el 1-dic: Motley Fool [5]; el 10-Q no nombra clientes.
+- Ingresos del 2025 y pérdida neta: cifras del S-1 tomadas de fuentes secundarias [7]. El control de voto (~82%) viene de Wikipedia.
+- UPA del 1T26 (−1.27): Yahoo y MarketBeat; la tabla la deja como n.d.
+- Fecha del 3T26: estimaciones de 3-nov (Yahoo, Zacks) y 5-nov (Investing); ir.spacex.com bloqueó la consulta.
+
+**Calibración (para el post-mortem):** el punto de ingresos queda 13.6% debajo del consenso. La tesis es que el consenso sobreestima el arranque de los contratos de nube en el 3T26. Si Anthropic factura el trimestre completo y Connectivity repite el +32% t/t del 2T26, el resultado rondaría 12.5 mil M, cerca del p90. El binario de UPA > 0 (0.65) es coherente con el intervalo (probabilidad implícita de ≈0.70).
+
+**Veredicto:** confiable con correcciones. Los datos del 2T26 cuadran con el 8-K y el 10-Q. Hubo un error de dato (acciones de la oferta), un punto de ingresos incoherente con sus supuestos y un supuesto de intereses con el signo del último trimestre invertido. Todo quedó corregido en la ficha y en `pronosticos.csv`.
