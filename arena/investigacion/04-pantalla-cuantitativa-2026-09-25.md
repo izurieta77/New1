@@ -205,7 +205,7 @@ También están abajo de su SMA200 (en MXN): GLD, IAU, SLV, EWW, NAFTRAC, FXI, I
 | 19 | XLV | Salud | +11.8% | +17.8% | +19.4% | Sí |
 | 26 | IGV | Software | +25.0% | +32.1% | −18.2% | Sí |
 | 30 | QQQ | Nasdaq-100 | +4.9% | +26.7% | +9.4% | Sí |
-| 36 / 40 | VOO / SPY | S&P 500 | +5.5% | +17.6% | +7.2% | Sí |
+| 36 / 40 | VOO / SPY | S&P 500 | +5.5% / +5.4% | +17.6% | +7.2% / +7.1% | Sí |
 | 43 | IWM | Russell 2000 | −4.3% | +13.3% | +14.3% | Sí |
 | 44 | DIA | Dow Jones | −0.3% | +11.5% | +7.8% | Sí |
 | 45 | XLF | Financiero | +2.4% | +11.0% | +1.1% | Sí |
@@ -250,7 +250,7 @@ Otros valores [C]:
 - [H] **Tasas al alza.**
   - La Fed subió a 3.75%–4.00% el 16-sep [3].
   - El bono del Tesoro a 10 años está en 5.11% [2] y el de 30 años en 5.46%, "su nivel más alto desde 2004" [5].
-  - Banxico se quedó en 6.50% [4]. El diferencial se estrecha, y la prensa lo cita entre las causas de la caída del peso [5].
+  - Banxico se quedó en 6.50% [4]. [I] Con la Fed subiendo y Banxico quieto, el diferencial de tasas se estrecha. La prensa cita la expectativa de una Fed más restrictiva y el alza de los rendimientos del Tesoro entre las causas de la caída del peso [5].
 - [H] **ORCL.** La prensa liga su caída al costo de la deuda con la que financia sus centros de datos de IA: "Higher rates mean Oracle's debt expenses could climb higher than they already are" [9].
 
 **Lectura de la pantalla**
@@ -293,7 +293,7 @@ Contexto [H]: `parametros.json` pone al sistema en fase 0. Lo que sigue es insum
    - GDX (8%; 0.29 con TECL; liquidez baja, solo con orden limitada).
 
    COPX y GMEXICOB se correlacionan más con los semis y apalancados de tecnología (0.32 a 0.55) y ya perdieron momentum de 1m. GMEXICOB tiene la ventaja de estar en MXN.
-5. **[R] SOXL: solo como palanca de máxima varianza.** TECL domina a SOXL en la pantalla: mejor Score (10.0 contra 24.3), la mitad de la volatilidad (81% contra 147%) y correlación de 0.94. SOXL solo se justifica si el modo torneo pide subir la varianza (`modo_torneo`: ir atrás del rival por ≥5 pp).
+5. **[R] SOXL: solo como palanca de máxima varianza.** TECL domina a SOXL en la pantalla: mejor Score (10.0 contra 24.3), cerca de la mitad de la volatilidad (81% contra 147%) y correlación de 0.94. SOXL solo se justifica si el modo torneo pide subir la varianza (`modo_torneo`: ir atrás del rival por ≥5 pp).
 6. **[C] El filtro de apalancados permite hoy los 7 apalancados.** Todos los subyacentes están sobre su SMA200 en USD y el VIX está en 15.67. Si el VIX pasa de 25 o el subyacente pierde su SMA200, `parametros.json` obliga a vender.
 7. **[R] Evitar lo que está abajo de la SMA200:** bonos largos, XLU, KWEB, WALMEX, ORCL, NFLX y URA. Tampoco hay argumento de momentum para IBIT (12-1 de −36%), que además **no está verificado en el SIC** (A2).
 8. **[R] Riesgo cambiario.** Todo lo del SIC es una posición larga en USD. El peso ya se depreció 4.5% en un mes, con Fed al alza y Banxico quieto [3][4][5]. Si revierte, resta directo al TWR. GMEXICOB es la única pierna del top en MXN sin exposición cambiaria directa.
