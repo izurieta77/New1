@@ -1,0 +1,4800 @@
+{
+ "empresa": "Taiwan Semiconductor Manufacturing Company Limited",
+ "ticker": "TSM",
+ "moneda": "TWD",
+ "unidades": "millones de NT$ (un decimal, como el 20-F)",
+ "fecha_corte": "2026-09-25",
+ "aviso": "FASE 0 (formacion). Escenarios de mecanismo con supuestos explicitos: no son pronosticos, ni guia del emisor, ni consenso, ni recomendacion de compra o venta.",
+ "base_contable": "Historico: IFRS de IASB tal como se presentan en el 20-F (F1, F2). Los 6-K (F4, F5) usan TIFRS: ingresos, utilidad bruta, utilidad de operacion y flujo coinciden con IFRS en 2025; impuestos y utilidad neta difieren (C14).",
+ "fuentes": {
+  "F1": {
+   "documento": "Form 20-F ejercicio 2025 (IFRS de IASB), accession 0001628280-26-025362",
+   "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+   "fecha": "2026-04-16",
+   "descargado": "2026-09-25",
+   "archivo": "tsm-20251231.htm",
+   "bytes": 10355816,
+   "sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b",
+   "alcance_leido": "Estados financieros pp. F-4 a F-12; notas 15, 16, 18, 19, 22, 24, 26, 30, 31, 33, 36, 37 y 38; Item 3.D (riesgos: aranceles, controles de exportacion, concentracion, tipo de cambio) pp. 4-12; Item 4 pp. 16-17 y 25-26; Item 5 pp. 26-35; Item 11 pp. 71-72",
+   "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR"
+  },
+  "F2": {
+   "documento": "Form 20-F ejercicio 2024 (IFRS de IASB), accession 0001193125-25-083423",
+   "url": "https://www.sec.gov/Archives/edgar/data/1046179/000119312525083423/d896993d20f.htm",
+   "fecha": "2025-04-17",
+   "descargado": "2026-09-25",
+   "archivo": "d896993d20f.htm",
+   "bytes": 8404793,
+   "sha256": "8239f280b4e9b70fedddd536db181f6ea96fd898ceb2b93cacd730c6aaae2c1e",
+   "alcance_leido": "Balance al 31-dic-2023 pp. F-4/F-5; Nota 16 p. F-38; Nota 31 (conciliacion de pasivos de financiamiento) pp. F-66/F-67; Nota 11 p. F-32",
+   "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR"
+  },
+  "F3": {
+   "documento": "Form 6-K del 16-jul-2026, accession 0001046179-26-000451: EX-99.1 comunicado del 2T26 y EX-99.2 presentacion (a2q26presentatione.htm; el texto de las diapositivas esta en la capa HTML)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000451/a2q26e_withguidancexfinal.htm",
+   "fecha": "2026-07-16",
+   "descargado": "2026-09-25",
+   "archivo": "a2q26e_withguidancexfinal.htm",
+   "bytes": 28002,
+   "sha256": "6e877956870c87d857d8af23144f35ddcbd3b569d464c962e7cf368c46860be3",
+   "alcance_leido": "Comunicado completo; presentacion diapositivas 4, 7, 8, 9, 10 y 11",
+   "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR",
+   "presentacion": {
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000451/a2q26presentatione.htm",
+    "bytes": 9609,
+    "sha256": "939d51f10b81ee70e87864e3fa0f93b7eb0a9e4868d6a226b6bd284d407583af"
+   }
+  },
+  "F4": {
+   "documento": "Form 6-K del 14-ago-2026, accession 0001046179-26-000541: estados financieros consolidados del 1S26 (TIFRS, revision limitada de Deloitte del 11-ago-2026; miles de NT$)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000541/a2026q2consolidatedreport-.htm",
+   "fecha": "2026-08-14",
+   "descargado": "2026-09-25",
+   "archivo": "a2026q2consolidatedreport-.htm",
+   "bytes": 4841859,
+   "sha256": "f421f6fe7b0c14ba15969f57749effdd54a04342cbfff49ef1fadf128f495251",
+   "alcance_leido": "Balance p. 3; resultados pp. 4-5; flujo pp. 7-9; notas 13 (VIS) p. 20, 15 (arrendamientos) p. 22, 20 (ingresos por geografia, plataforma y nodo; anticipos de clientes) pp. 31-32, 33 (compromisos) pp. 53-54",
+   "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR"
+  },
+  "F5": {
+   "documento": "Form 6-K del 26-feb-2026, accession 0001046179-26-000024: estados financieros consolidados 2025 (TIFRS)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000024/a2025q4consolidatedreport-.htm",
+   "fecha": "2026-02-26",
+   "descargado": "2026-09-25",
+   "archivo": "a2025q4consolidatedreport-.htm",
+   "bytes": 5214747,
+   "sha256": "43a740eb791fb01939cc4e47886d9f2d4171155f285c87f6a55d3c3f9c747393",
+   "alcance_leido": "Estado de resultados integral p. 7 y flujo de efectivo (comparacion TIFRS vs IFRS)",
+   "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR"
+  },
+  "F6": {
+   "documento": "Form 6-K del 16-abr-2026, accession 0001046179-26-000199: comunicado y presentacion del 1T26",
+   "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000199/a1q26e_withguidancexfinal.htm",
+   "fecha": "2026-04-16",
+   "descargado": "2026-09-25",
+   "archivo": "a1q26e_withguidancexfinal.htm",
+   "bytes": 27446,
+   "sha256": "38894a5f4e753a6b17e451671419f21dd0e05ba0a39e6700e368dc99f1344a3f",
+   "alcance_leido": "Comunicado; presentacion diapositivas 4, 7, 8 y 10",
+   "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR",
+   "presentacion": {
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000199/a1q26presentatione.htm",
+    "bytes": 9510,
+    "sha256": "c997c6e88f287b5d379a43d87d2799677d557d6fc19efc43ad02616cf4eade9d"
+   }
+  },
+  "F7": {
+   "documento": "Form 6-K del 15-ene-2026, accession 0001046179-26-000008: comunicado y presentacion del 4T25",
+   "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000008/a4q25e_withguidancexfinal.htm",
+   "fecha": "2026-01-15",
+   "descargado": "2026-09-25",
+   "archivo": "a4q25e_withguidancexfinal.htm",
+   "bytes": 27938,
+   "sha256": "182ec7f50f514c1c6e1f396febaef2589ee735f3e7c400356c6c56591a9d745b",
+   "alcance_leido": "Comunicado; presentacion diapositivas 4, 7, 8 y 'Future Outlook'",
+   "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR",
+   "presentacion": {
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000008/a4q25presentatione.htm",
+    "bytes": 11160,
+    "sha256": "37c3e6006cbbcf2374d178f2cee25ac10fbcae30b40c5976f93f5c23b30ea634"
+   }
+  },
+  "F8": {
+   "documento": "Form 6-K del 16-oct-2025, accession 0001046179-25-000116: comunicado y presentacion del 3T25",
+   "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617925000116/a3q25e_withguidancexfinal.htm",
+   "fecha": "2025-10-16",
+   "descargado": "2026-09-25",
+   "archivo": "a3q25e_withguidancexfinal.htm",
+   "bytes": 27823,
+   "sha256": "f0748d8cb463ad4fb2c1808b3e001927425cae06601eeb2cd37811413f2309a5",
+   "alcance_leido": "Ingresos en USD del 3T25; diapositivas 4 y 8",
+   "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR",
+   "presentacion": {
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617925000116/a3q25presentatione.htm",
+    "bytes": 9490,
+    "sha256": "0df47a4bc890c5d42aef29b2bf706e3577cbe33b14486fc28e014f53cc6c278d"
+   }
+  },
+  "F9": {
+   "documento": "Form 6-K del 17-jul-2025, accession 0001046179-25-000082: comunicado del 2T25; y 6-K del 17-abr-2025, accession 0001046179-25-000035: presentacion del 1T25",
+   "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617925000082/a2q25e_withguidancexfinal.htm",
+   "fecha": "2025-07-17",
+   "descargado": "2026-09-25",
+   "archivo": "a2q25e_withguidancexfinal.htm",
+   "bytes": 27918,
+   "sha256": "22d8e8c793587b87eafc7d1805104de26fd8bc05525b0bcf04b711e0b97c13ab",
+   "alcance_leido": "Ingresos en USD del 2T25 (+44.4% a/a) y del 1T24 (diapositiva 4 del 1T25)",
+   "nota_huella": "sha256 del HTML sin la etiqueta <script> que el CDN de la SEC agrega antes de </body>; el tamano coincide con el index.json de EDGAR",
+   "presentacion": {
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617925000035/a1q25presentatione_for6k.htm",
+    "bytes": 9096,
+    "sha256": "02232dd1890612a2cb7e46121af70fb4ce14c36c7a5f175b473af2acabdd8b0b"
+   }
+  },
+  "F10": {
+   "documento": "Transcripcion editada de la llamada del 2T26 (LSEG StreetEvents), alojada por TSMC en investor.tsmc.com (carpeta 2026-08); llamada del 16-jul-2026. Algunos parrafos entre corchetes estan marcados como 'added by company after the call'",
+   "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf",
+   "fecha": "2026-07-16",
+   "descargado": "2026-09-25",
+   "archivo": "tsmc_2q26_transcript.pdf",
+   "bytes": 1473791,
+   "sha256": "17947a4c33c3ef2153641706eef7051422ab8594251dfbb64646b92d9a4cc915",
+   "alcance_leido": "Paginas 3-7 (resumen financiero, mensajes clave, primeras preguntas) y 12; busqueda de texto completa de 'export', 'tariff', 'China' y 'overseas' en las 22 paginas",
+   "nota_huella": "PDF de 22 paginas; no se versiona en el repositorio (derechos de LSEG)"
+  },
+  "F11": {
+   "documento": "Federal Register, Vol. 91, No. 68, 9-abr-2026, pp. 17851-17852: BIS, regla final 'Extension of Authorized Integrated Circuit (IC) Designer Status and Application Deadline To Become an Approved IC Designer' (FR Doc. 2026-06851, RIN 0694-AJ98)",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2026-04-09/pdf/2026-06851.pdf",
+   "fecha": "2026-04-09",
+   "descargado": "2026-09-25",
+   "archivo": "fr_2026-06851.pdf",
+   "bytes": 217964,
+   "sha256": "0666f438edf78fa65402c84cc2a3fe6ca162a042924d82117744959c18605999",
+   "alcance_leido": "Documento completo (2 paginas; se excluye la regla de la EPA que comparte la p. 17852)"
+  },
+  "F12": {
+   "documento": "BIS, 'Guidance Regarding Enforcement of License Requirements for Advanced Computing Items for Entities Headquartered in Country Group D:5 and Macau' [May 31, 2026]",
+   "url": "https://www.bis.gov/media/documents/bis-guidance-may-31-2026.pdf",
+   "fecha": "2026-05-31",
+   "descargado": "2026-09-25",
+   "archivo": "bis_guidance_2026-05-31.pdf",
+   "bytes": 162121,
+   "sha256": "d7296438740efad835badddb5daa6cfd8d3a43bb62fedbf5a7a817c79828610b",
+   "alcance_leido": "Documento completo (1 pagina)"
+  },
+  "F13": {
+   "documento": "Yahoo Finance chart v8 (range=1mo, interval=1d): TSM (NYSE, ADR) cierre del 2026-09-24 = 451.15 USD; 2330.TW (TWSE) cierre del 2026-09-24 = 2,475 NT$; TWD=X cierre del 2026-09-24 = 31.7895 NT$/USD",
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/{TSM|2330.TW|TWD=X}?range=1mo&interval=1d",
+   "fecha": "2026-09-24",
+   "descargado": "2026-09-25",
+   "archivos": {
+    "yahoo_TSM_1mo.json": {
+     "bytes": 3568,
+     "sha256": "28c7b0860f54675fc2cd3971ac3ad34f0274eada96dc4bf3afd10ed56e2b64df"
+    },
+    "yahoo_2330.TW_1mo.json": {
+     "bytes": 2701,
+     "sha256": "c4279d2556933b04c58c5ac5d96d4afa20bae3361cab22aa9203bbdfa06ab11e"
+    },
+    "yahoo_TWD_X_1mo.json": {
+     "bytes": 3810,
+     "sha256": "59baaeec4d4ba837b1b22ab7954729ec55720f2d25dacd127410df3334269d33"
+    }
+   },
+   "nota_huella": "respuestas JSON crudas congeladas en modelo/datos/; la fuente es viva y una nueva descarga no reproduce el hash"
+  },
+  "F14": {
+   "documento": "Damodaran, Betas by Sector (US), datos a enero de 2026: Semiconductor, 66 empresas, beta desapalancada corregida por caja 1.50 (mismo archivo que NVDA F7: igual sha256)",
+   "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+   "fecha": "2026-01",
+   "descargado": "2026-09-25",
+   "bytes": 464334,
+   "sha256": "10993bab71504e2449ccdd9e3d67fa4da983bed380b2f4486e5200a7b258616b"
+  },
+  "F15": {
+   "documento": "Damodaran, Country Default Spreads and Risk Premiums (Last updated: January 5, 2026): Taiwan, Moody's Aa3, diferencial de default ajustado 0.51%, prima de riesgo pais 0.78%, tasa corporativa 20%",
+   "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
+   "fecha": "2026-01-05",
+   "descargado": "2026-09-25",
+   "bytes": 277049,
+   "sha256": "ea30d57fc0858072c520930e2e5b8a5e5affdce81f7f2e1f9054efab79959dbc"
+  },
+  "F16": {
+   "documento": "conocimiento/03-maestria-valuacion-y-analisis-fundamental.md s2.3: T-bond a 10 anos de 4.75% y ERP implicita de 4.09% (hoja de Damodaran de sep-2026)",
+   "url": "conocimiento/03-maestria-valuacion-y-analisis-fundamental.md",
+   "fecha": "2026-09"
+  }
+ },
+ "supuestos": {
+  "anos": 5,
+  "caja_minima": 1500000.0,
+  "nota": "Supuestos de escenario; no son pronosticos ni consenso. caja_minima de 1.5 billones de NT$ (~ caja de 1,465,427.8 al cierre de 2023, F2 p. F-4). Deuda constante (emision = amortizacion = 0), arrendamientos con saldo constante, sin recompras ni aportes de minoritarios. Dividendos pagados = NT$24 por accion en 2026 (F10 p. 4) y +NT$4 por ano despues (supuesto) sobre 25,932 M de acciones (F3 diapositiva 7).",
+  "escenarios": {
+   "tension": {
+    "descripcion": "Mecanismo de tension: 2S26 en el extremo bajo de la guia del 3T (US$44.6 mil M) y 4T igual al 3T con el NT$ apreciado a 30.5 por USD; digestion de la inversion en IA o restricciones en 2027-2028 (-8% y -12%); capex rigido por compromisos (40% de ingresos en 2027); margen bruto que cae por utilizacion, dilucion de N2/A14, presion incremental de las fabricas en el extranjero y tipo de cambio.",
+    "fuente_supuestos": "notas-y-modelo.md s5; anclas en insumos_complementarios.anclas_escenarios y puente_margen_bruto",
+    "crecimiento_ingresos": [
+     0.345,
+     -0.08,
+     -0.12,
+     0.05,
+     0.06
+    ],
+    "margen_bruto": [
+     0.6375,
+     0.556,
+     0.515,
+     0.53,
+     0.55
+    ],
+    "margen_operativo": [
+     0.5515,
+     0.461,
+     0.405,
+     0.422,
+     0.445
+    ],
+    "tasa_impuestos": 0.175,
+    "da_ventas": [
+     0.149926,
+     0.210647,
+     0.28338,
+     0.275376,
+     0.260018
+    ],
+    "capex_ventas": [
+     0.364,
+     0.4,
+     0.31,
+     0.275,
+     0.28
+    ],
+    "sbc_ventas": 0.0003,
+    "dias_cxc": [
+     34,
+     38,
+     38,
+     35,
+     33
+    ],
+    "dias_inventario": [
+     90,
+     100,
+     100,
+     92,
+     88
+    ],
+    "dias_proveedores": [
+     22,
+     20,
+     20,
+     21,
+     22
+    ],
+    "tasa_interes": 0.012,
+    "tasa_arrendamientos_financieros": 0.012,
+    "tasa_revolvente": 0.03,
+    "tasa_rendimiento_caja": 0.03,
+    "otros_ingresos": 0.0,
+    "dividendos": [
+     622368.0,
+     726096.0,
+     829824.0,
+     933552.0,
+     1037280.0
+    ],
+    "principal_arrendamientos_financieros": 4000.0,
+    "nuevos_arrendamientos_financieros": 4000.0,
+    "emision_deuda": 0.0,
+    "amortizacion_deuda": 0.0,
+    "emision_acciones": 0.0,
+    "recompras": 0.0,
+    "notas": "Supuestos de escenario, no pronosticos. Politica de capital identica en los tres para aislar el mecanismo operativo."
+   },
+   "intermedio": {
+    "descripcion": "Mecanismo intermedio: 2026 con la guia del emisor (3T en el punto medio y ano completo ~+41% en USD, tipo de cambio de 32); desaceleracion gradual a 6% en 2030; capex de 36% a 28% de ingresos; margen bruto que baja de 66% a 62.5% por nodos nuevos, presion incremental del extranjero y normalizacion de precios.",
+    "fuente_supuestos": "notas-y-modelo.md s5; anclas en insumos_complementarios.anclas_escenarios y puente_margen_bruto",
+    "crecimiento_ingresos": [
+     0.442,
+     0.2,
+     0.12,
+     0.08,
+     0.06
+    ],
+    "margen_bruto": [
+     0.66,
+     0.6425,
+     0.635,
+     0.63,
+     0.625
+    ],
+    "margen_operativo": [
+     0.577,
+     0.5625,
+     0.555,
+     0.55,
+     0.545
+    ],
+    "tasa_impuestos": 0.175,
+    "da_ventas": [
+     0.139989,
+     0.154905,
+     0.172533,
+     0.18801,
+     0.199248
+    ],
+    "capex_ventas": [
+     0.361,
+     0.34,
+     0.32,
+     0.3,
+     0.28
+    ],
+    "sbc_ventas": 0.0003,
+    "dias_cxc": [
+     30,
+     30,
+     29,
+     29,
+     29
+    ],
+    "dias_inventario": [
+     85,
+     80,
+     78,
+     76,
+     75
+    ],
+    "dias_proveedores": [
+     24,
+     23,
+     23,
+     23,
+     23
+    ],
+    "tasa_interes": 0.012,
+    "tasa_arrendamientos_financieros": 0.012,
+    "tasa_revolvente": 0.03,
+    "tasa_rendimiento_caja": 0.03,
+    "otros_ingresos": 0.0,
+    "dividendos": [
+     622368.0,
+     726096.0,
+     829824.0,
+     933552.0,
+     1037280.0
+    ],
+    "principal_arrendamientos_financieros": 4000.0,
+    "nuevos_arrendamientos_financieros": 4000.0,
+    "emision_deuda": 0.0,
+    "amortizacion_deuda": 0.0,
+    "emision_acciones": 0.0,
+    "recompras": 0.0,
+    "notas": "Supuestos de escenario, no pronosticos. Politica de capital identica en los tres para aislar el mecanismo operativo."
+   },
+   "eficiencia": {
+    "descripcion": "Mecanismo de eficiencia: 2026 en el extremo alto de la guia; demanda de IA sostenida (+28%, +18%, +12%, +8%); el precio y la productividad compensan la dilucion (margen bruto de 66.5% a 67%); gasto operativo con apalancamiento; capex de 36.5% a 27% de ingresos.",
+    "fuente_supuestos": "notas-y-modelo.md s5; anclas en insumos_complementarios.anclas_escenarios y puente_margen_bruto",
+    "crecimiento_ingresos": [
+     0.461,
+     0.28,
+     0.18,
+     0.12,
+     0.08
+    ],
+    "margen_bruto": [
+     0.665,
+     0.6675,
+     0.67,
+     0.67,
+     0.67
+    ],
+    "margen_operativo": [
+     0.585,
+     0.5925,
+     0.597,
+     0.598,
+     0.598
+    ],
+    "tasa_impuestos": 0.175,
+    "da_ventas": [
+     0.138197,
+     0.144887,
+     0.155378,
+     0.165524,
+     0.175236
+    ],
+    "capex_ventas": [
+     0.365,
+     0.33,
+     0.3,
+     0.28,
+     0.27
+    ],
+    "sbc_ventas": 0.0003,
+    "dias_cxc": [
+     28,
+     27,
+     27,
+     27,
+     27
+    ],
+    "dias_inventario": [
+     80,
+     74,
+     72,
+     70,
+     70
+    ],
+    "dias_proveedores": [
+     25,
+     24,
+     24,
+     24,
+     24
+    ],
+    "tasa_interes": 0.012,
+    "tasa_arrendamientos_financieros": 0.012,
+    "tasa_revolvente": 0.03,
+    "tasa_rendimiento_caja": 0.03,
+    "otros_ingresos": 0.0,
+    "dividendos": [
+     622368.0,
+     726096.0,
+     829824.0,
+     933552.0,
+     1037280.0
+    ],
+    "principal_arrendamientos_financieros": 4000.0,
+    "nuevos_arrendamientos_financieros": 4000.0,
+    "emision_deuda": 0.0,
+    "amortizacion_deuda": 0.0,
+    "emision_acciones": 0.0,
+    "recompras": 0.0,
+    "notas": "Supuestos de escenario, no pronosticos. Politica de capital identica en los tres para aislar el mecanismo operativo."
+   }
+  }
+ },
+ "insumos_complementarios": {
+  "naturaleza": "hechos con fuente salvo donde se marca supuesto",
+  "puente_margen_bruto": {
+   "regla": "margen_bruto = ancla - n2_y_nodos_nuevos - ultramar_incremental - tipo_de_cambio + utilizacion_precio_costo. El ancla (margen consolidado del 1S26) ya incorpora la dilucion de las fabricas en el extranjero en su etapa temprana; 'ultramar_incremental' solo puede tomar valores entre 0 y 2 pp (paso de 2-3 pp a 3-4 pp, F10 p. 4). Restar el rango completo de 2-4 pp al margen consolidado contaria dos veces la dilucion.",
+   "ultramar_incremental_maximo": 0.02,
+   "dilucion_comunicada": {
+    "ultramar_etapa_temprana_pp": [
+     2,
+     3
+    ],
+    "ultramar_etapa_posterior_pp": [
+     3,
+     4
+    ],
+    "n2_2S26_pp": [
+     3,
+     4
+    ],
+    "fuente": "F10 p. 4 (mensajes clave del CFO, 16-jul-2026)"
+   },
+   "fx_sensibilidad_pp_margen_operativo_por_1pct": 0.3,
+   "fx_fuente": "F1 p. 11: cada 1% de depreciacion del USD frente al NT$ reduce ~0.3 pp el margen operativo (base 2025)",
+   "escenarios": {
+    "tension": {
+     "ancla_margen_bruto": 0.67,
+     "n2_y_nodos_nuevos": [
+      0.0175,
+      0.025,
+      0.015,
+      0.015,
+      0.005
+     ],
+     "ultramar_incremental": [
+      0.0025,
+      0.01,
+      0.015,
+      0.02,
+      0.02
+     ],
+     "tipo_de_cambio": [
+      0.0075,
+      0.015,
+      0.015,
+      0.015,
+      0.015
+     ],
+     "utilizacion_precio_costo": [
+      -0.005,
+      -0.064,
+      -0.11,
+      -0.09,
+      -0.08
+     ],
+     "gastos_operativos_ventas": [
+      0.086,
+      0.095,
+      0.11,
+      0.108,
+      0.105
+     ],
+     "margen_bruto_resultante": [
+      0.6375,
+      0.556,
+      0.515,
+      0.53,
+      0.55
+     ],
+     "margen_operativo_resultante": [
+      0.5515,
+      0.461,
+      0.405,
+      0.422,
+      0.445
+     ]
+    },
+    "intermedio": {
+     "ancla_margen_bruto": 0.67,
+     "n2_y_nodos_nuevos": [
+      0.0175,
+      0.02,
+      0.015,
+      0.01,
+      0.005
+     ],
+     "ultramar_incremental": [
+      0.0025,
+      0.0075,
+      0.01,
+      0.01,
+      0.01
+     ],
+     "tipo_de_cambio": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "utilizacion_precio_costo": [
+      0.01,
+      0.0,
+      -0.01,
+      -0.02,
+      -0.03
+     ],
+     "gastos_operativos_ventas": [
+      0.083,
+      0.08,
+      0.08,
+      0.08,
+      0.08
+     ],
+     "margen_bruto_resultante": [
+      0.66,
+      0.6425,
+      0.635,
+      0.63,
+      0.625
+     ],
+     "margen_operativo_resultante": [
+      0.577,
+      0.5625,
+      0.555,
+      0.55,
+      0.545
+     ]
+    },
+    "eficiencia": {
+     "ancla_margen_bruto": 0.67,
+     "n2_y_nodos_nuevos": [
+      0.015,
+      0.015,
+      0.01,
+      0.005,
+      0.0
+     ],
+     "ultramar_incremental": [
+      0.0,
+      0.0025,
+      0.005,
+      0.005,
+      0.005
+     ],
+     "tipo_de_cambio": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "utilizacion_precio_costo": [
+      0.01,
+      0.015,
+      0.015,
+      0.01,
+      0.005
+     ],
+     "gastos_operativos_ventas": [
+      0.08,
+      0.075,
+      0.073,
+      0.072,
+      0.072
+     ],
+     "margen_bruto_resultante": [
+      0.665,
+      0.6675,
+      0.67,
+      0.67,
+      0.67
+     ],
+     "margen_operativo_resultante": [
+      0.585,
+      0.5925,
+      0.597,
+      0.598,
+      0.598
+     ]
+    }
+   }
+  },
+  "depreciacion": {
+   "regla": "da_t = 20.5% x PPE inicial del motor + 0.22% x ingresos (amortizacion)",
+   "tasa_dep_ppe_inicial": 0.205,
+   "amortizacion_ventas": 0.0022,
+   "anclas": "depreciacion / PPE inicial: 653,610.5 / 3,064,475.0 = 21.3% (2024); 679,684.0 / 3,234,980.1 = 21.0% (2025) (F1 pp. F-4 y F-10); 1S26: 359,541.5 x 2 / 3,691,840.9 = 19.5% (F4 p. 7)"
+  },
+  "anclas_escenarios": {
+   "ingresos_usd_miles_de_millones": {
+    "1T25": 25.53,
+    "2T25": 30.07,
+    "3T25": 33.1,
+    "4T25": 33.73,
+    "1T26": 35.9,
+    "2T26": 40.2,
+    "fuente": "F6 diap. 4 (1T25, 1T26), F3 diap. 4 (2T25, 2T26), F7 diap. 4 (3T25, 4T25)"
+   },
+   "ingresos_usd_2024_trimestres": {
+    "1T24": 18.87,
+    "3T24": 23.5,
+    "4T24": 26.88,
+    "2T24_calculado": 20.82,
+    "fuente": "F9 (1T24 y 2T25 +44.4% a/a), F8 diap. 4 (3T24), F7 diap. 4 (4T24); 2T24 es calculo"
+   },
+   "guia_3T26": {
+    "ingresos_usd": [
+     44.6,
+     45.8
+    ],
+    "margen_bruto": [
+     0.65,
+     0.67
+    ],
+    "margen_operativo": [
+     0.56,
+     0.58
+    ],
+    "tipo_cambio": 32.0,
+    "fuente": "F3 comunicado y diapositiva 9"
+   },
+   "guia_2026_crecimiento_usd": {
+    "ene-2026": "cerca de 30% (F7)",
+    "abr-2026": "arriba de 30% (F6)",
+    "jul-2026": "ligeramente arriba de 40% (F3 diap. 10; F10 p. 5)"
+   },
+   "guia_capex_2026_usd_miles_de_millones": {
+    "ene-2026": [
+     52,
+     56
+    ],
+    "20-F": [
+     52,
+     56
+    ],
+    "jul-2026": [
+     60,
+     64
+    ],
+    "fuente": "F7 comunicado; F1 p. 16; F10 p. 4"
+   },
+   "objetivos_largo_plazo_ene_2026": {
+    "cagr_ingresos_usd_2024_2029": "cerca de 25%",
+    "margen_bruto_largo_plazo": "56% o mas a lo largo del ciclo",
+    "roe": "alrededor de 25-29% (high-20s) a lo largo del ciclo",
+    "fuente": "F7 presentacion, 'Future Outlook'"
+   },
+   "margen_bruto_1S26": {
+    "utilidad_bruta": 1611606.1,
+    "ingresos": 2404483.7,
+    "fuente": "F4 p. 4"
+   },
+   "gasto_operativo_neto_1S26": {
+    "gastos": 192987.7,
+    "otros_ingresos_operativos": 6950.4,
+    "fuente": "F4 p. 4"
+   },
+   "dias_2T26_emisor": {
+    "cxc": 29,
+    "inventario": 87,
+    "fuente": "F3 diapositiva 7"
+   },
+   "compromisos_compra_capital_31dic2025": {
+    "total": 1534575,
+    "menos_de_1_ano": 1220393,
+    "fuente": "F1 p. 34"
+   },
+   "dividendo_por_accion_2026": {
+    "valor": 24.0,
+    "fuente": "F10 p. 4"
+   }
+  },
+  "ttm": {
+   "naturaleza": "hechos; 12 meses a jun-2026 = 2025 (F1, IFRS) - 1S25 + 1S26 (F4, TIFRS); ingresos, utilidad bruta, utilidad de operacion y flujo coinciden entre bases",
+   "ingresos": {
+    "fy2025": 3809054.3,
+    "1s25": 1773045.5,
+    "1s26": 2404483.7
+   },
+   "utilidad_bruta": {
+    "fy2025": 2281294.0,
+    "1s25": 1040764.3,
+    "1s26": 1611606.1
+   },
+   "utilidad_operativa": {
+    "fy2025": 1936091.7,
+    "1s25": 870504.4,
+    "1s26": 1425568.8
+   },
+   "cfo": {
+    "fy2025": 2274975.6,
+    "1s25": 1122637.8,
+    "1s26": 1482341.2
+   },
+   "capex_ppe": {
+    "fy2025": 1272410.5,
+    "1s25": 628052.5,
+    "1s26": 846764.7
+   },
+   "capex_intangibles": {
+    "fy2025": 10146.9,
+    "1s25": 4616.5,
+    "1s26": 3876.4
+   },
+   "da": {
+    "fy2025": 688096.4,
+    "1s25": 363197.0,
+    "1s26": 363988.6
+   },
+   "sbc": {
+    "fy2025": 1246.1,
+    "1s25": 799.6,
+    "1s26": 237.0
+   },
+   "fcf_emisor_trimestral_miles_de_millones": {
+    "3T25": 139.38,
+    "4T25": 368.6,
+    "1T26": 348.21,
+    "2T26": 287.36,
+    "fuente": "F7 diap. 8 (3T25, 4T25), F6 diap. 8 (1T26), F3 diap. 8 (2T26)"
+   },
+   "fuente": "F1 pp. F-6 y F-10/F-11; F4 pp. 4 y 7-8"
+  },
+  "dcf_inverso": {
+   "precio_adr": {
+    "valor": 451.15,
+    "fuente": "F13 (TSM, cierre del 2026-09-24)"
+   },
+   "precio_local": {
+    "valor": 2475.0,
+    "fuente": "F13 (2330.TW, cierre del 2026-09-24)"
+   },
+   "tipo_cambio": {
+    "valor": 31.7895,
+    "fuente": "F13 (TWD=X, cierre del 2026-09-24)"
+   },
+   "acciones_comunes": {
+    "valor": 25932.0,
+    "fuente": "F3 diapositivas 4 y 7 (25,932 M diluidas en 2T26 y en circulacion al 30-jun-2026)"
+   },
+   "acciones_por_ads": {
+    "valor": 5,
+    "fuente": "F1 p. 46 (cada ADS representa cinco acciones comunes)"
+   },
+   "balance_30jun2026": {
+    "bonos_no_circulantes": 815036.7,
+    "prestamos_bancarios_no_circulantes": 49227.0,
+    "porcion_circulante_lp": 167409.9,
+    "arrendamientos": 36882.4,
+    "caja": 3134218.2,
+    "fvtpl_circulante": 226.4,
+    "fvoci_circulante": 193182.7,
+    "costo_amortizado_circulante": 190385.8,
+    "dividendos_por_pagar": 337435.8,
+    "anticipos_de_clientes": 234225.1,
+    "fvtpl_no_circulante": 15780.3,
+    "fvoci_no_circulante": 88151.6,
+    "costo_amortizado_no_circulante": 105877.5,
+    "fuente": "F4 p. 3 (balance), p. 22 (arrendamientos: 36,882,401 miles), p. 32 (anticipos de clientes: 234,225,146 miles)"
+   },
+   "tasa_libre_riesgo": {
+    "valor": 0.0475,
+    "fuente": "F16"
+   },
+   "erp": {
+    "valor": 0.0409,
+    "fuente": "F16"
+   },
+   "beta_desapalancada_sector": {
+    "valor": 1.5,
+    "fuente": "F14 (Semiconductor, corregida por caja)"
+   },
+   "prima_riesgo_pais_taiwan": {
+    "valor": 0.0078,
+    "fuente": "F15"
+   },
+   "lambda_activos": {
+    "valor": 0.8003,
+    "fuente": "supuesto de exposicion = fraccion de activos no circulantes en Taiwan (3,102,343.0 / 3,876,339.8; F1 Nota 38 p. F-82)"
+   },
+   "lambda_ingresos": {
+    "valor": 0.0685,
+    "fuente": "variante: fraccion de ingresos del 1S26 de clientes con sede en Taiwan (F4 p. 31)"
+   },
+   "tasa_impuesto_marginal": {
+    "valor": 0.2,
+    "fuente": "F1 p. 35 (tasa del impuesto corporativo en la R.O.C.)"
+   },
+   "diferencial_deuda": {
+    "valor": 0.0051,
+    "fuente": "supuesto: diferencial de default de Aa3 (F15) sobre la r_f"
+   },
+   "g_terminal": {
+    "valor": 0.03,
+    "fuente": "supuesto (menor que la r_f de 4.75%; conocimiento/03 s2.4 regla 1)"
+   },
+   "anos": {
+    "valor": 10,
+    "fuente": "supuesto (horizonte explicito)"
+   },
+   "margenes_fcf_sensibilidad": {
+    "valor": [
+     0.2,
+     0.34
+    ],
+    "fuente": "supuestos: 20% (capex alto con margenes menores) y 34% (margen CFO de 12 meses de 59.3% con capex normalizado a 25% de ingresos)"
+   }
+  },
+  "geopolitica": {
+   "rejilla": {
+    "fraccion_restringida": [
+     0.02,
+     0.05,
+     0.1
+    ],
+    "sustitucion": [
+     0.0,
+     0.5,
+     1.0
+    ],
+    "margen_contribucion_perdido": [
+     0.8,
+     0.9,
+     1.0
+    ],
+    "presion_incremental_ultramar": [
+     0.0,
+     0.01,
+     0.02
+    ]
+   },
+   "rejilla_doble_conteo_comparacion": {
+    "presion_total_comunicada": [
+     0.02,
+     0.03,
+     0.04
+    ],
+    "nota": "valores que usaria quien resta todo el rango comunicado (2-4 pp) al margen consolidado"
+   },
+   "tasa_impuestos": {
+    "valor": 0.175,
+    "fuente": "supuesto (tasa efectiva IFRS: 16.97% en 2025 y 17.66% en 2024, F1 p. F-6)"
+   },
+   "referencias_exposicion": {
+    "china_sede_1s26": 162572.4,
+    "china_sede_2t26": 76730.5,
+    "ingresos_2t26": 1270380.2,
+    "ingresos_1s26": 2404483.7,
+    "eeuu_sede_1s26": 1818632.5,
+    "taiwan_sede_1s26": 164712.2,
+    "china_sede_fy2025": 327503.0,
+    "ingresos_fy2025_item5": 3809054.0,
+    "fuente": "F4 p. 31 (sede del cliente, 1S26 y 2T26); F1 p. 17 (China 2025: 327,503 = 9%)"
+   }
+  }
+ },
+ "historico": [
+  {
+   "periodo": "FY2023",
+   "anio": 2023,
+   "fin": "2023-12-31",
+   "fuente": "Balance F2 pp. F-4/F-5; resultados F1 pp. F-6/F-7; flujo F1 pp. F-10 a F-12; capital F1 p. F-8; notas 15, 16, 19 y 31 de F1 (y de F2 para 2023). IFRS (IASB), millones de NT$.",
+   "fuentes_campos": {
+    "resultados.ingresos": "F1 pp. F-6/F-7: Net revenue",
+    "resultados.costo_ventas": "F1 pp. F-6/F-7: Cost of revenue",
+    "resultados.utilidad_bruta": "F1 pp. F-6/F-7: Gross profit",
+    "resultados.gastos_operativos": "F1 pp. F-6/F-7: Total operating expenses - other operating income and expenses, net",
+    "resultados.utilidad_operativa": "F1 pp. F-6/F-7: Income from operations",
+    "resultados.gasto_intereses": "F1 pp. F-6/F-7: Finance costs (neto de intereses capitalizados, Nota 24)",
+    "resultados.ingreso_intereses": "F1 pp. F-6/F-7: Interest income",
+    "resultados.otros_ingresos": "F1 pp. F-6/F-7: Share of profits of associates + other income + FX gain (loss) + other gains and losses",
+    "resultados.utilidad_antes_impuestos": "F1 pp. F-6/F-7: Income before income tax",
+    "resultados.impuestos": "F1 pp. F-6/F-7: Income tax expense",
+    "resultados.utilidad_neta": "F1 pp. F-6/F-7: Net income (consolidada)",
+    "resultados.utilidad_neta_controladora": "F1 pp. F-6/F-7: Net income attributable to shareholders of the parent",
+    "balance.caja": "F2 pp. F-4/F-5: Cash and cash equivalents (misma definicion que el flujo)",
+    "balance.inversiones_cp": "F2 pp. F-4/F-5: Activos financieros circulantes a VR (resultados y ORI), a costo amortizado y de cobertura (= current marketable securities de Item 5 p. 32)",
+    "balance.cuentas_por_cobrar": "F2 pp. F-4/F-5: Notes and accounts receivable, net + receivables from related parties",
+    "balance.inventarios": "F2 pp. F-4/F-5: Inventories",
+    "balance.otros_activos_circulantes": "F2 pp. F-4/F-5: Other receivables from related parties + other financial assets + other current assets",
+    "balance.ppe_neto": "F2 pp. F-4/F-5: Property, plant and equipment",
+    "balance.otros_activos_lp": "F2 pp. F-4/F-5: Activos no circulantes distintos de PPE (financieros, asociadas, derecho de uso, intangibles, ISR diferido, depositos, otros)",
+    "balance.activo_total": "F2 pp. F-4/F-5: Total assets",
+    "balance.proveedores": "F2 pp. F-4/F-5: Accounts payable + payables to related parties",
+    "balance.otros_pasivos_circulantes": "F2 pp. F-4/F-5; Nota 16 (porcion circulante de arrendamientos) y F2 Nota 31 (prestamos de cobertura): Pasivos circulantes distintos de proveedores y deuda (sin la porcion circulante de arrendamientos, que va en arrendamientos, ni los prestamos de cobertura, que van en deuda)",
+    "balance.deuda": "F2 pp. F-4/F-5; F2 Nota 31 pp. F-66/F-67 (2023-2024); F1 Nota 31 p. F-68 y Nota 19 p. F-46 (2025): Bonos + prestamos bancarios de largo plazo (incl. porcion circulante) + prestamos bancarios designados como cobertura de inversion neta",
+    "balance.arrendamientos_financieros": "F2 pp. F-4/F-5; F1 Nota 16 p. F-38; F2 Nota 16 p. F-38: Pasivo por arrendamiento IFRS 16 (circulante + no circulante); el principal se paga en financiamiento",
+    "balance.otros_pasivos_lp": "F2 pp. F-4/F-5: Deferred income tax liabilities + net defined benefit liability + guarantee deposits + others",
+    "balance.pasivo_total": "F2 pp. F-4/F-5: Total liabilities",
+    "balance.capital_contable": "F2 pp. F-4/F-5: Total equity (incluye participacion no controladora)",
+    "balance.utilidades_retenidas": "F2 pp. F-4/F-5: Retained earnings (reserva legal + especial + no asignadas)",
+    "flujo.depreciacion_amortizacion": "F1 pp. F-10 a F-12: Depreciation expense + amortization expense",
+    "flujo.sbc": "F1 pp. F-10 a F-12: Share-based compensation",
+    "flujo.cfo": "F1 pp. F-10 a F-12: Net cash generated by operating activities",
+    "flujo.capex": "F1 pp. F-10 a F-12: Acquisitions of property, plant and equipment (definicion de capex del emisor; intangibles en otros_inversion)",
+    "flujo.cfi": "F1 pp. F-10 a F-12: Net cash used in investing activities",
+    "flujo.cff": "F1 pp. F-10 a F-12: Net cash used in financing activities",
+    "flujo.dividendos": "F1 pp. F-10 a F-12: Cash dividends",
+    "flujo.recompras": "F1 pp. F-10 a F-12: Treasury stock acquired",
+    "flujo.principal_arrendamientos_financieros": "F1 pp. F-10 a F-12: Repayment of the principal portion of lease liabilities",
+    "flujo.emision_acciones": "F1 pp. F-10 a F-12: Increase in non-controlling interests (aportes de socios minoritarios en JASM, ESMC y otras)",
+    "flujo.efecto_cambiario": "F1 pp. F-10 a F-12: Effect of exchange rate changes on cash and cash equivalents",
+    "flujo.caja_inicial": "F1 pp. F-10 a F-12: Cash and cash equivalents, beginning of year",
+    "flujo.caja_final": "F1 pp. F-10 a F-12: Cash and cash equivalents, end of year",
+    "flujo.utilidad_neta": "F1 pp. F-10 a F-12: Net income (el flujo IFRS parte de la UAI; el motor parte de la utilidad neta)",
+    "flujo.emision_deuda": "F1 pp. F-10 a F-12: Proceeds from bonds + long-term bank loans + aumento de prestamos de cobertura",
+    "flujo.amortizacion_deuda": "F1 pp. F-10 a F-12: Repayment of bonds + repayment of long-term bank loans",
+    "flujo.otros_financiamiento": "F1 pp. F-10 a F-12: Costos de emision, intereses pagados, depositos en garantia, venta de participaciones y donaciones",
+    "flujo.cambio_capital_trabajo": "F1 pp. F-10 a F-12: Cambios en cuentas por cobrar, inventarios y proveedores (las mismas lineas que el balance del motor)",
+    "flujo.otros_operativos": "F1 pp. F-10 a F-12: Impuesto del periodo (UAI - utilidad neta), demas ajustes no monetarios, cambios en otros activos y pasivos de operacion e impuestos pagados",
+    "flujo.otros_inversion": "F1 pp. F-10 a F-12: Todas las lineas de inversion salvo la compra de PPE (incluye intangibles, subsidios cobrados e intereses cobrados)"
+   },
+   "resultados": {
+    "ingresos": 2161735.8,
+    "costo_ventas": 986625.2,
+    "utilidad_bruta": 1175110.6,
+    "gastos_operativos": 253645.0,
+    "utilidad_operativa": 921465.6,
+    "gasto_intereses": 11999.4,
+    "ingreso_intereses": 60293.9,
+    "otros_ingresos": 9556.4,
+    "utilidad_antes_impuestos": 979316.5,
+    "impuestos": 128288.8,
+    "utilidad_neta": 851027.7,
+    "utilidad_neta_controladora": 851740.0
+   },
+   "balance": {
+    "caja": 1465427.8,
+    "inversiones_cp": 222216.6,
+    "cuentas_por_cobrar": 201938.3,
+    "inventarios": 250997.1,
+    "otros_activos_circulantes": 53453.1,
+    "ppe_neto": 3064475.0,
+    "otros_activos_lp": 273688.7,
+    "activo_total": 5532196.6,
+    "proveedores": 57293.1,
+    "otros_pasivos_circulantes": 846117.7,
+    "deuda": 954866.5,
+    "arrendamientos_financieros": 31492.4,
+    "otros_pasivos_lp": 188560.4,
+    "pasivo_total": 2078330.1,
+    "capital_contable": 3453866.5,
+    "utilidades_retenidas": 3128639.6
+   },
+   "flujo": {
+    "depreciacion_amortizacion": 532190.9,
+    "sbc": 483.0,
+    "cfo": 1241967.3,
+    "capex": 949816.8,
+    "cfi": -906120.6,
+    "cff": -204894.2,
+    "dividendos": 291721.9,
+    "recompras": 0.0,
+    "principal_arrendamientos_financieros": 2854.3,
+    "emision_acciones": 11048.8,
+    "efecto_cambiario": -8338.8,
+    "caja_inicial": 1342814.1,
+    "caja_final": 1465427.8,
+    "utilidad_neta": 851027.7,
+    "emision_deuda": 116058.6,
+    "amortizacion_deuda": 19856.9,
+    "otros_financiamiento": {
+     "Payments for transaction costs attributable to the issuance of bonds": -88.7,
+     "Interest paid": -17359.0,
+     "Guarantee deposits received": 230.1,
+     "Guarantee deposits refunded": -367.4,
+     "Disposal of ownership interests in subsidiaries (without losing control)": 0.0,
+     "Donation from shareholders": 16.5
+    },
+    "cambio_capital_trabajo": {
+     "Change: notes and accounts receivable, net": 28442.0,
+     "Change: receivables from related parties": 959.5,
+     "Change: inventories": -29847.9,
+     "Change: accounts payable": 847.0,
+     "Change: payables to related parties": -76.3
+    },
+    "otros_operativos": {
+     "INCOME TAX EXPENSE": 128288.8,
+     "Expected credit losses recognized (reversal) on investments in debt instruments": 35.7,
+     "Finance costs": 11999.4,
+     "Share of profits of associates": -4800.2,
+     "Interest income": -60293.9,
+     "Loss on disposal or retirement of PP&E, net": 369.1,
+     "Loss (gain) on disposal or retirement of intangible assets, net": -3.0,
+     "Impairment loss on PP&E": 0.0,
+     "Loss (gain) on financial instruments at FVTPL, net": -12.4,
+     "Loss on disposal of investments in debt instruments at FVTOCI, net": 473.9,
+     "Gain on disposal of investments accounted for using equity method, net": -15.8,
+     "Loss from disposal of subsidiaries": 0.0,
+     "Loss (gain) on foreign exchange, net": -246.7,
+     "Dividend income": -464.1,
+     "Others (adjustments)": -338.0,
+     "Change: financial instruments at FVTPL": 289.6,
+     "Change: other receivables from related parties": -2.9,
+     "Change: other financial assets": 1878.7,
+     "Change: other current assets": -12530.9,
+     "Change: other noncurrent assets": -720.3,
+     "Change: salary and bonus payable": -3234.9,
+     "Change: accrued profit sharing bonus": -11031.6,
+     "Change: accrued expenses and other current liabilities": -44466.7,
+     "Change: other noncurrent liabilities": 13329.9,
+     "Change: net defined benefit liability": -687.2,
+     "Income taxes paid": -159875.1
+    },
+    "otros_inversion": {
+     "Acquisitions: financial instruments at FVTPL": -14142.1,
+     "Acquisitions: financial assets at FVTOCI": -62752.0,
+     "Acquisitions: financial assets at amortized cost": -149387.9,
+     "Acquisitions: hedging financial instruments": 0.0,
+     "Acquisitions: investments accounted for using equity method": 0.0,
+     "Acquisitions: intangible assets": -5518.4,
+     "Proceeds: financial assets at FVTOCI": 35698.6,
+     "Proceeds: financial assets at amortized cost": 134605.8,
+     "Proceeds: property, plant and equipment": 703.9,
+     "Proceeds: intangible assets": 3.1,
+     "Derecognition of derivative financial instruments": 0.0,
+     "Proceeds from return of capital of equity instruments at FVTOCI": 128.0,
+     "Derecognition of hedging financial instruments": 68.2,
+     "Interest received": 55887.2,
+     "Proceeds from government grants - PP&E": 47544.7,
+     "Proceeds from government grants - others": 1.2,
+     "Other dividends received": 445.1,
+     "Dividends received from investments accounted for using equity method": 3076.5,
+     "Increase in prepayments for leases": -63.2,
+     "Refundable deposits paid": -4056.5,
+     "Refundable deposits refunded": 1454.0
+    }
+   },
+   "movimientos_capital": {
+    "dividendos_declarados": 317663.2,
+    "recompras": 0.0,
+    "sbc": 477.7,
+    "emision_acciones": 11048.3,
+    "ori": -8813.7,
+    "otros": {
+     "acciones restringidas de empleados retiradas": 4.6,
+     "ajuste base de coberturas": -45.2,
+     "baja de inversiones por metodo de participacion": -18.5,
+     "donacion de accionistas": 16.4
+    },
+    "recompras_contra_utilidades_retenidas": 0.0,
+    "otros_utilidades_retenidas": {
+     "participacion no controladora en la perdida (la URE usa la utilidad de la controladora)": 712.3,
+     "ORI reconocido en utilidades retenidas (remedicion de beneficios definidos)": -484.9,
+     "baja de instrumentos de capital a VR con cambios en ORI": 151.9,
+     "acciones restringidas retiradas": 4.6
+    },
+    "fuente": "F1 p. F-8 (estado de variaciones del capital; columna Total Equity y columna de utilidades retenidas)",
+    "capital_inicial": 2917832.4,
+    "utilidades_retenidas_iniciales": 2594891.2
+   },
+   "movimientos_deuda": {
+    "deuda_inicial": 858410.3,
+    "emisiones": {
+     "bonos": 85700.0,
+     "prestamos bancarios LP": 2450.0,
+     "prestamos bancarios de cobertura (inversion neta)": 27908.6
+    },
+    "amortizaciones": {
+     "bonos": 18100.0,
+     "prestamos bancarios LP": 1756.9
+    },
+    "otros": {
+     "costos de emision de bonos": -88.7,
+     "bonos: efecto cambiario": 587.7,
+     "bonos: amortizacion de descuento (otros cambios)": 362.1,
+     "prestamos LP: otros cambios": 11.6,
+     "prestamos de cobertura: efecto cambiario": -618.2
+    },
+    "fuente": "F2 Nota 31 p. F-66: bonos 852,436.4 + prestamos 5,973.9 + cobertura 0 al 1-ene-2023; flujos y cambios no monetarios por renglon"
+   },
+   "memo": {
+    "capex_intangibles": 5518.4,
+    "subsidios_gubernamentales_ppe_cobrados": 47544.7,
+    "intereses_pagados_en_financiamiento": 17359.0,
+    "intereses_cobrados_en_inversion": 55887.2,
+    "impuestos_pagados": 159875.1,
+    "arrendamientos_total_nota": 31492.4,
+    "nota": "IFRS clasifica intereses pagados en financiamiento e intereses cobrados en inversion; el CFO parte de la UAI. El motor usa la utilidad neta: los ajustes quedan explicitos en otros_operativos."
+   }
+  },
+  {
+   "periodo": "FY2024",
+   "anio": 2024,
+   "fin": "2024-12-31",
+   "fuente": "Balance F1 pp. F-4/F-5; resultados F1 pp. F-6/F-7; flujo F1 pp. F-10 a F-12; capital F1 pp. F-8/F-9; notas 15, 16, 19 y 31 de F1 (y de F2 para 2023). IFRS (IASB), millones de NT$.",
+   "fuentes_campos": {
+    "resultados.ingresos": "F1 pp. F-6/F-7: Net revenue",
+    "resultados.costo_ventas": "F1 pp. F-6/F-7: Cost of revenue",
+    "resultados.utilidad_bruta": "F1 pp. F-6/F-7: Gross profit",
+    "resultados.gastos_operativos": "F1 pp. F-6/F-7: Total operating expenses - other operating income and expenses, net",
+    "resultados.utilidad_operativa": "F1 pp. F-6/F-7: Income from operations",
+    "resultados.gasto_intereses": "F1 pp. F-6/F-7: Finance costs (neto de intereses capitalizados, Nota 24)",
+    "resultados.ingreso_intereses": "F1 pp. F-6/F-7: Interest income",
+    "resultados.otros_ingresos": "F1 pp. F-6/F-7: Share of profits of associates + other income + FX gain (loss) + other gains and losses",
+    "resultados.utilidad_antes_impuestos": "F1 pp. F-6/F-7: Income before income tax",
+    "resultados.impuestos": "F1 pp. F-6/F-7: Income tax expense",
+    "resultados.utilidad_neta": "F1 pp. F-6/F-7: Net income (consolidada)",
+    "resultados.utilidad_neta_controladora": "F1 pp. F-6/F-7: Net income attributable to shareholders of the parent",
+    "balance.caja": "F1 pp. F-4/F-5: Cash and cash equivalents (misma definicion que el flujo)",
+    "balance.inversiones_cp": "F1 pp. F-4/F-5: Activos financieros circulantes a VR (resultados y ORI), a costo amortizado y de cobertura (= current marketable securities de Item 5 p. 32)",
+    "balance.cuentas_por_cobrar": "F1 pp. F-4/F-5: Notes and accounts receivable, net + receivables from related parties",
+    "balance.inventarios": "F1 pp. F-4/F-5: Inventories",
+    "balance.otros_activos_circulantes": "F1 pp. F-4/F-5: Other receivables from related parties + other financial assets + other current assets",
+    "balance.ppe_neto": "F1 pp. F-4/F-5: Property, plant and equipment",
+    "balance.otros_activos_lp": "F1 pp. F-4/F-5: Activos no circulantes distintos de PPE (financieros, asociadas, derecho de uso, intangibles, ISR diferido, depositos, otros)",
+    "balance.activo_total": "F1 pp. F-4/F-5: Total assets",
+    "balance.proveedores": "F1 pp. F-4/F-5: Accounts payable + payables to related parties",
+    "balance.otros_pasivos_circulantes": "F1 pp. F-4/F-5; Nota 16 (porcion circulante de arrendamientos) y F2 Nota 31 (prestamos de cobertura): Pasivos circulantes distintos de proveedores y deuda (sin la porcion circulante de arrendamientos, que va en arrendamientos, ni los prestamos de cobertura, que van en deuda)",
+    "balance.deuda": "F1 pp. F-4/F-5; F2 Nota 31 pp. F-66/F-67 (2023-2024); F1 Nota 31 p. F-68 y Nota 19 p. F-46 (2025): Bonos + prestamos bancarios de largo plazo (incl. porcion circulante) + prestamos bancarios designados como cobertura de inversion neta",
+    "balance.arrendamientos_financieros": "F1 pp. F-4/F-5; F1 Nota 16 p. F-38; F2 Nota 16 p. F-38: Pasivo por arrendamiento IFRS 16 (circulante + no circulante); el principal se paga en financiamiento",
+    "balance.otros_pasivos_lp": "F1 pp. F-4/F-5: Deferred income tax liabilities + net defined benefit liability + guarantee deposits + others",
+    "balance.pasivo_total": "F1 pp. F-4/F-5: Total liabilities",
+    "balance.capital_contable": "F1 pp. F-4/F-5: Total equity (incluye participacion no controladora)",
+    "balance.utilidades_retenidas": "F1 pp. F-4/F-5: Retained earnings (reserva legal + especial + no asignadas)",
+    "flujo.depreciacion_amortizacion": "F1 pp. F-10 a F-12: Depreciation expense + amortization expense",
+    "flujo.sbc": "F1 pp. F-10 a F-12: Share-based compensation",
+    "flujo.cfo": "F1 pp. F-10 a F-12: Net cash generated by operating activities",
+    "flujo.capex": "F1 pp. F-10 a F-12: Acquisitions of property, plant and equipment (definicion de capex del emisor; intangibles en otros_inversion)",
+    "flujo.cfi": "F1 pp. F-10 a F-12: Net cash used in investing activities",
+    "flujo.cff": "F1 pp. F-10 a F-12: Net cash used in financing activities",
+    "flujo.dividendos": "F1 pp. F-10 a F-12: Cash dividends",
+    "flujo.recompras": "F1 pp. F-10 a F-12: Treasury stock acquired",
+    "flujo.principal_arrendamientos_financieros": "F1 pp. F-10 a F-12: Repayment of the principal portion of lease liabilities",
+    "flujo.emision_acciones": "F1 pp. F-10 a F-12: Increase in non-controlling interests (aportes de socios minoritarios en JASM, ESMC y otras)",
+    "flujo.efecto_cambiario": "F1 pp. F-10 a F-12: Effect of exchange rate changes on cash and cash equivalents",
+    "flujo.caja_inicial": "F1 pp. F-10 a F-12: Cash and cash equivalents, beginning of year",
+    "flujo.caja_final": "F1 pp. F-10 a F-12: Cash and cash equivalents, end of year",
+    "flujo.utilidad_neta": "F1 pp. F-10 a F-12: Net income (el flujo IFRS parte de la UAI; el motor parte de la utilidad neta)",
+    "flujo.emision_deuda": "F1 pp. F-10 a F-12: Proceeds from bonds + long-term bank loans",
+    "flujo.amortizacion_deuda": "F1 pp. F-10 a F-12: Repayment of bonds + bank loans + disminucion de prestamos de cobertura",
+    "flujo.otros_financiamiento": "F1 pp. F-10 a F-12: Costos de emision, intereses pagados, depositos en garantia, venta de participaciones y donaciones",
+    "flujo.cambio_capital_trabajo": "F1 pp. F-10 a F-12: Cambios en cuentas por cobrar, inventarios y proveedores (las mismas lineas que el balance del motor)",
+    "flujo.otros_operativos": "F1 pp. F-10 a F-12: Impuesto del periodo (UAI - utilidad neta), demas ajustes no monetarios, cambios en otros activos y pasivos de operacion e impuestos pagados",
+    "flujo.otros_inversion": "F1 pp. F-10 a F-12: Todas las lineas de inversion salvo la compra de PPE (incluye intangibles, subsidios cobrados e intereses cobrados)"
+   },
+   "resultados": {
+    "ingresos": 2894307.7,
+    "costo_ventas": 1269954.1,
+    "utilidad_bruta": 1624353.6,
+    "gastos_operativos": 302300.6,
+    "utilidad_operativa": 1322053.0,
+    "gasto_intereses": 10495.4,
+    "ingreso_intereses": 87213.4,
+    "otros_ingresos": 7069.0,
+    "utilidad_antes_impuestos": 1405840.0,
+    "impuestos": 248316.1,
+    "utilidad_neta": 1157523.9,
+    "utilidad_neta_controladora": 1158380.2
+   },
+   "balance": {
+    "caja": 2127627.0,
+    "inversiones_cp": 294392.7,
+    "cuentas_por_cobrar": 272087.7,
+    "inventarios": 287868.8,
+    "otros_activos_circulantes": 106375.9,
+    "ppe_neto": 3234980.1,
+    "otros_activos_lp": 368432.5,
+    "activo_total": 6691764.7,
+    "proveedores": 74226.6,
+    "otros_pasivos_circulantes": 1171522.4,
+    "deuda": 1018286.8,
+    "arrendamientos_financieros": 31804.3,
+    "otros_pasivos_lp": 116653.0,
+    "pasivo_total": 2412493.1,
+    "capital_contable": 4279271.6,
+    "utilidades_retenidas": 3872973.4
+   },
+   "flujo": {
+    "depreciacion_amortizacion": 662796.6,
+    "sbc": 1242.7,
+    "cfo": 1826177.1,
+    "capex": 956006.5,
+    "cfi": -864842.8,
+    "cff": -346301.0,
+    "dividendos": 363055.2,
+    "recompras": 3089.2,
+    "principal_arrendamientos_financieros": 2873.7,
+    "emision_acciones": 12177.6,
+    "efecto_cambiario": 47165.9,
+    "caja_inicial": 1465427.8,
+    "caja_final": 2127627.0,
+    "utilidad_neta": 1157523.9,
+    "emision_deuda": 65197.0,
+    "amortizacion_deuda": 35792.2,
+    "otros_financiamiento": {
+     "Payments for transaction costs attributable to the issuance of bonds": -35.7,
+     "Interest paid": -18751.2,
+     "Guarantee deposits received": 5.0,
+     "Guarantee deposits refunded": -93.3,
+     "Disposal of ownership interests in subsidiaries (without losing control)": 1.0,
+     "Donation from shareholders": 8.9
+    },
+    "cambio_capital_trabajo": {
+     "Change: notes and accounts receivable, net": -69369.4,
+     "Change: receivables from related parties": -780.1,
+     "Change: inventories": -36871.7,
+     "Change: accounts payable": 17073.8,
+     "Change: payables to related parties": -140.3
+    },
+    "otros_operativos": {
+     "INCOME TAX EXPENSE": 248316.1,
+     "Expected credit losses recognized (reversal) on investments in debt instruments": 49.9,
+     "Finance costs": 10495.4,
+     "Share of profits of associates": -4880.7,
+     "Interest income": -87213.4,
+     "Loss on disposal or retirement of PP&E, net": 2597.9,
+     "Loss (gain) on disposal or retirement of intangible assets, net": 0.0,
+     "Impairment loss on PP&E": 1150.5,
+     "Loss (gain) on financial instruments at FVTPL, net": 137.7,
+     "Loss on disposal of investments in debt instruments at FVTOCI, net": 683.1,
+     "Gain on disposal of investments accounted for using equity method, net": -7.1,
+     "Loss from disposal of subsidiaries": 0.0,
+     "Loss (gain) on foreign exchange, net": 4576.3,
+     "Dividend income": -566.9,
+     "Others (adjustments)": -435.7,
+     "Change: financial instruments at FVTPL": 842.6,
+     "Change: other receivables from related parties": 71.7,
+     "Change: other financial assets": -2377.5,
+     "Change: other current assets": -15537.3,
+     "Change: other noncurrent assets": -3862.0,
+     "Change: salary and bonus payable": 14250.9,
+     "Change: accrued profit sharing bonus": 20154.3,
+     "Change: accrued expenses and other current liabilities": 74659.4,
+     "Change: other noncurrent liabilities": 16768.7,
+     "Change: net defined benefit liability": -1532.2,
+     "Income taxes paid": -183640.1
+    },
+    "otros_inversion": {
+     "Acquisitions: financial instruments at FVTPL": -1178.8,
+     "Acquisitions: financial assets at FVTOCI": -87787.5,
+     "Acquisitions: financial assets at amortized cost": -151656.4,
+     "Acquisitions: hedging financial instruments": 0.0,
+     "Acquisitions: investments accounted for using equity method": -3738.8,
+     "Acquisitions: intangible assets": -8875.7,
+     "Proceeds: financial assets at FVTOCI": 67684.5,
+     "Proceeds: financial assets at amortized cost": 118350.9,
+     "Proceeds: property, plant and equipment": 894.6,
+     "Proceeds: intangible assets": 57.2,
+     "Derecognition of derivative financial instruments": 0.0,
+     "Proceeds from return of capital of equity instruments at FVTOCI": 325.9,
+     "Derecognition of hedging financial instruments": 118.3,
+     "Interest received": 76434.1,
+     "Proceeds from government grants - PP&E": 75164.0,
+     "Proceeds from government grants - others": 0.3,
+     "Other dividends received": 541.8,
+     "Dividends received from investments accounted for using equity method": 2965.2,
+     "Increase in prepayments for leases": -99.4,
+     "Refundable deposits paid": -1304.8,
+     "Refundable deposits refunded": 3268.3
+    }
+   },
+   "movimientos_capital": {
+    "dividendos_declarados": 414915.5,
+    "recompras": 3089.2,
+    "sbc": 1222.8,
+    "emision_acciones": 12177.5,
+    "ori": 71585.7,
+    "otros": {
+     "acciones restringidas de empleados retiradas": 19.9,
+     "ajuste base de coberturas": 0.1,
+     "ajustes a cambios en capital de asociadas": 870.0,
+     "diferencia en disposicion parcial de subsidiarias": 1.0,
+     "donacion de accionistas": 8.9
+    },
+    "recompras_contra_utilidades_retenidas": 3049.6,
+    "otros_utilidades_retenidas": {
+     "participacion no controladora en la perdida (la URE usa la utilidad de la controladora)": 856.3,
+     "ORI reconocido en utilidades retenidas (remedicion de beneficios definidos)": 126.0,
+     "baja de instrumentos de capital a VR con cambios en ORI": 3772.8,
+     "acciones restringidas retiradas": 19.9
+    },
+    "fuente": "F1 pp. F-8/F-9 (estado de variaciones del capital; columna Total Equity y columna de utilidades retenidas)"
+   },
+   "movimientos_ppe": {
+    "adiciones": 798507.4,
+    "depreciacion": 649901.3,
+    "otros": {
+     "bajas netas": -3602.4,
+     "reclasificaciones netas": -180.8,
+     "deterioro": -1150.5,
+     "efecto cambiario neto": 26681.7,
+     "cambio en activos sujetos a arrendamiento operativo": 151.0
+    },
+    "fuente": "F1 Nota 15 pp. F-35 a F-37 (costo y depreciacion acumulada por renglon); los activos arrendados a terceros, p. F-35"
+   },
+   "movimientos_deuda": {
+    "emisiones": {
+     "bonos": 34300.0,
+     "prestamos bancarios LP": 30897.0
+    },
+    "amortizaciones": {
+     "bonos": 7000.0,
+     "prestamos bancarios LP": 2295.6,
+     "prestamos bancarios de cobertura (inversion neta)": 26496.6
+    },
+    "otros": {
+     "costos de emision de bonos": -35.7,
+     "bonos: efecto cambiario": 35202.9,
+     "bonos: amortizacion de descuento (otros cambios)": 387.8,
+     "prestamos LP: efecto cambiario": -763.7,
+     "prestamos LP: otros cambios": 18.0,
+     "prestamos de cobertura: efecto cambiario": -793.8
+    },
+    "fuente": "F2 Nota 31 p. F-67 (conciliacion de pasivos de financiamiento 2024)"
+   },
+   "ajustado": [
+    {
+     "nombre": "utilidad_neta_TIFRS",
+     "base": "utilidad_neta",
+     "ajustes": {
+      "menor gasto por impuestos en TIFRS (IFRS - TIFRS)": 14909.2,
+      "diferencia en UAI (participacion en asociadas)": -1.4
+     },
+     "valor_ajustado": 1172431.8,
+     "fuente": "F5 p. 7 (estado de resultados integral TIFRS 2025 y 2024, miles de NT$ redondeados a millones)"
+    }
+   ],
+   "memo": {
+    "capex_intangibles": 8875.7,
+    "subsidios_gubernamentales_ppe_cobrados": 75164.0,
+    "intereses_pagados_en_financiamiento": 18751.2,
+    "intereses_cobrados_en_inversion": 76434.1,
+    "impuestos_pagados": 183640.1,
+    "arrendamientos_total_nota": 31804.3,
+    "nota": "IFRS clasifica intereses pagados en financiamiento e intereses cobrados en inversion; el CFO parte de la UAI. El motor usa la utilidad neta: los ajustes quedan explicitos en otros_operativos."
+   }
+  },
+  {
+   "periodo": "FY2025",
+   "anio": 2025,
+   "fin": "2025-12-31",
+   "fuente": "Balance F1 pp. F-4/F-5; resultados F1 pp. F-6/F-7; flujo F1 pp. F-10 a F-12; capital F1 p. F-9; notas 15, 16, 19 y 31 de F1 (y de F2 para 2023). IFRS (IASB), millones de NT$.",
+   "fuentes_campos": {
+    "resultados.ingresos": "F1 pp. F-6/F-7: Net revenue",
+    "resultados.costo_ventas": "F1 pp. F-6/F-7: Cost of revenue",
+    "resultados.utilidad_bruta": "F1 pp. F-6/F-7: Gross profit",
+    "resultados.gastos_operativos": "F1 pp. F-6/F-7: Total operating expenses - other operating income and expenses, net",
+    "resultados.utilidad_operativa": "F1 pp. F-6/F-7: Income from operations",
+    "resultados.gasto_intereses": "F1 pp. F-6/F-7: Finance costs (neto de intereses capitalizados, Nota 24)",
+    "resultados.ingreso_intereses": "F1 pp. F-6/F-7: Interest income",
+    "resultados.otros_ingresos": "F1 pp. F-6/F-7: Share of profits of associates + other income + FX gain (loss) + other gains and losses",
+    "resultados.utilidad_antes_impuestos": "F1 pp. F-6/F-7: Income before income tax",
+    "resultados.impuestos": "F1 pp. F-6/F-7: Income tax expense",
+    "resultados.utilidad_neta": "F1 pp. F-6/F-7: Net income (consolidada)",
+    "resultados.utilidad_neta_controladora": "F1 pp. F-6/F-7: Net income attributable to shareholders of the parent",
+    "balance.caja": "F1 pp. F-4/F-5: Cash and cash equivalents (misma definicion que el flujo)",
+    "balance.inversiones_cp": "F1 pp. F-4/F-5: Activos financieros circulantes a VR (resultados y ORI), a costo amortizado y de cobertura (= current marketable securities de Item 5 p. 32)",
+    "balance.cuentas_por_cobrar": "F1 pp. F-4/F-5: Notes and accounts receivable, net + receivables from related parties",
+    "balance.inventarios": "F1 pp. F-4/F-5: Inventories",
+    "balance.otros_activos_circulantes": "F1 pp. F-4/F-5: Other receivables from related parties + other financial assets + other current assets",
+    "balance.ppe_neto": "F1 pp. F-4/F-5: Property, plant and equipment",
+    "balance.otros_activos_lp": "F1 pp. F-4/F-5: Activos no circulantes distintos de PPE (financieros, asociadas, derecho de uso, intangibles, ISR diferido, depositos, otros)",
+    "balance.activo_total": "F1 pp. F-4/F-5: Total assets",
+    "balance.proveedores": "F1 pp. F-4/F-5: Accounts payable + payables to related parties",
+    "balance.otros_pasivos_circulantes": "F1 pp. F-4/F-5; Nota 16 (porcion circulante de arrendamientos) y F2 Nota 31 (prestamos de cobertura): Pasivos circulantes distintos de proveedores y deuda (sin la porcion circulante de arrendamientos, que va en arrendamientos, ni los prestamos de cobertura, que van en deuda)",
+    "balance.deuda": "F1 pp. F-4/F-5; F2 Nota 31 pp. F-66/F-67 (2023-2024); F1 Nota 31 p. F-68 y Nota 19 p. F-46 (2025): Bonos + prestamos bancarios de largo plazo (incl. porcion circulante) + prestamos bancarios designados como cobertura de inversion neta",
+    "balance.arrendamientos_financieros": "F1 pp. F-4/F-5; F1 Nota 16 p. F-38; F2 Nota 16 p. F-38: Pasivo por arrendamiento IFRS 16 (circulante + no circulante); el principal se paga en financiamiento",
+    "balance.otros_pasivos_lp": "F1 pp. F-4/F-5: Deferred income tax liabilities + net defined benefit liability + guarantee deposits + others",
+    "balance.pasivo_total": "F1 pp. F-4/F-5: Total liabilities",
+    "balance.capital_contable": "F1 pp. F-4/F-5: Total equity (incluye participacion no controladora)",
+    "balance.utilidades_retenidas": "F1 pp. F-4/F-5: Retained earnings (reserva legal + especial + no asignadas)",
+    "flujo.depreciacion_amortizacion": "F1 pp. F-10 a F-12: Depreciation expense + amortization expense",
+    "flujo.sbc": "F1 pp. F-10 a F-12: Share-based compensation",
+    "flujo.cfo": "F1 pp. F-10 a F-12: Net cash generated by operating activities",
+    "flujo.capex": "F1 pp. F-10 a F-12: Acquisitions of property, plant and equipment (definicion de capex del emisor; intangibles en otros_inversion)",
+    "flujo.cfi": "F1 pp. F-10 a F-12: Net cash used in investing activities",
+    "flujo.cff": "F1 pp. F-10 a F-12: Net cash used in financing activities",
+    "flujo.dividendos": "F1 pp. F-10 a F-12: Cash dividends",
+    "flujo.recompras": "F1 pp. F-10 a F-12: Treasury stock acquired",
+    "flujo.principal_arrendamientos_financieros": "F1 pp. F-10 a F-12: Repayment of the principal portion of lease liabilities",
+    "flujo.emision_acciones": "F1 pp. F-10 a F-12: Increase in non-controlling interests (aportes de socios minoritarios en JASM, ESMC y otras)",
+    "flujo.efecto_cambiario": "F1 pp. F-10 a F-12: Effect of exchange rate changes on cash and cash equivalents",
+    "flujo.caja_inicial": "F1 pp. F-10 a F-12: Cash and cash equivalents, beginning of year",
+    "flujo.caja_final": "F1 pp. F-10 a F-12: Cash and cash equivalents, end of year",
+    "flujo.utilidad_neta": "F1 pp. F-10 a F-12: Net income (el flujo IFRS parte de la UAI; el motor parte de la utilidad neta)",
+    "flujo.emision_deuda": "F1 pp. F-10 a F-12: Proceeds from bonds + long-term bank loans",
+    "flujo.amortizacion_deuda": "F1 pp. F-10 a F-12: Repayment of bonds + repayment of long-term bank loans",
+    "flujo.otros_financiamiento": "F1 pp. F-10 a F-12: Pasivos de cobertura (sin saldo de prestamos al cierre, Nota 11), costos de emision, intereses pagados, depositos, venta de participaciones y donaciones",
+    "flujo.cambio_capital_trabajo": "F1 pp. F-10 a F-12: Cambios en cuentas por cobrar, inventarios y proveedores (las mismas lineas que el balance del motor)",
+    "flujo.otros_operativos": "F1 pp. F-10 a F-12: Impuesto del periodo (UAI - utilidad neta), demas ajustes no monetarios, cambios en otros activos y pasivos de operacion e impuestos pagados",
+    "flujo.otros_inversion": "F1 pp. F-10 a F-12: Todas las lineas de inversion salvo la compra de PPE (incluye intangibles, subsidios cobrados e intereses cobrados)",
+    "flujo.fcf_reportado": "F6 diapositiva 8 (1T25: 294.74), F3 diapositiva 8 (2T25: 199.85), F7 diapositiva 8 (3T25: 139.38 y 4T25: 368.60); miles de millones de NT$; FCF del emisor = CFO - capex"
+   },
+   "resultados": {
+    "ingresos": 3809054.3,
+    "costo_ventas": 1527760.3,
+    "utilidad_bruta": 2281294.0,
+    "gastos_operativos": 345202.3,
+    "utilidad_operativa": 1936091.7,
+    "gasto_intereses": 12370.4,
+    "ingreso_intereses": 105739.1,
+    "otros_ingresos": 12194.3,
+    "utilidad_antes_impuestos": 2041654.7,
+    "impuestos": 346529.8,
+    "utilidad_neta": 1695124.9,
+    "utilidad_neta_controladora": 1697604.0
+   },
+   "balance": {
+    "caja": 2767856.4,
+    "inversiones_cp": 300738.4,
+    "cuentas_por_cobrar": 281791.1,
+    "inventarios": 288109.5,
+    "otros_activos_circulantes": 178635.4,
+    "ppe_neto": 3691840.9,
+    "otros_activos_lp": 423870.8,
+    "activo_total": 7932842.5,
+    "proveedores": 84330.3,
+    "otros_pasivos_circulantes": 1297325.0,
+    "deuda": 1032987.7,
+    "arrendamientos_financieros": 35428.0,
+    "otros_pasivos_lp": 86552.3,
+    "pasivo_total": 2536623.3,
+    "capital_contable": 5396219.2,
+    "utilidades_retenidas": 5038944.2
+   },
+   "flujo": {
+    "depreciacion_amortizacion": 688096.4,
+    "sbc": 1246.1,
+    "cfo": 2274975.6,
+    "capex": 1272410.5,
+    "cfi": -1144393.4,
+    "cff": -440344.6,
+    "dividendos": 466779.2,
+    "recompras": 0.0,
+    "principal_arrendamientos_financieros": 3496.5,
+    "emision_acciones": 8295.4,
+    "efecto_cambiario": -50008.2,
+    "caja_inicial": 2127627.0,
+    "caja_final": 2767856.4,
+    "utilidad_neta": 1695124.9,
+    "emision_deuda": 97558.4,
+    "amortizacion_deuda": 57020.0,
+    "otros_financiamiento": {
+     "Increase (decrease) in hedging financial liabilities - bank loans": 335.1,
+     "Payments for transaction costs attributable to the issuance of bonds": -90.3,
+     "Interest paid": -19128.8,
+     "Guarantee deposits received": 3.0,
+     "Guarantee deposits refunded": -48.5,
+     "Disposal of ownership interests in subsidiaries (without losing control)": 0.0,
+     "Donation from shareholders": 26.8
+    },
+    "cambio_capital_trabajo": {
+     "Change: notes and accounts receivable, net": -8368.3,
+     "Change: receivables from related parties": -1335.0,
+     "Change: inventories": -240.7,
+     "Change: accounts payable": 9751.0,
+     "Change: payables to related parties": 352.7
+    },
+    "otros_operativos": {
+     "INCOME TAX EXPENSE": 346529.8,
+     "Expected credit losses recognized (reversal) on investments in debt instruments": -3.9,
+     "Finance costs": 12370.4,
+     "Share of profits of associates": -5488.5,
+     "Interest income": -105739.1,
+     "Loss on disposal or retirement of PP&E, net": 1581.0,
+     "Loss (gain) on disposal or retirement of intangible assets, net": 4.5,
+     "Impairment loss on PP&E": 782.0,
+     "Loss (gain) on financial instruments at FVTPL, net": -353.1,
+     "Loss on disposal of investments in debt instruments at FVTOCI, net": 200.2,
+     "Gain on disposal of investments accounted for using equity method, net": 0.0,
+     "Loss from disposal of subsidiaries": 168.0,
+     "Loss (gain) on foreign exchange, net": 4308.9,
+     "Dividend income": -591.7,
+     "Others (adjustments)": 1049.2,
+     "Change: financial instruments at FVTPL": 8436.2,
+     "Change: other receivables from related parties": -267.9,
+     "Change: other financial assets": 64524.9,
+     "Change: other current assets": -74620.3,
+     "Change: other noncurrent assets": -38798.1,
+     "Change: salary and bonus payable": 16421.4,
+     "Change: accrued profit sharing bonus": 32484.1,
+     "Change: accrued expenses and other current liabilities": -103215.5,
+     "Change: other noncurrent liabilities": 385.1,
+     "Change: net defined benefit liability": -2261.6,
+     "Income taxes paid": -267557.5
+    },
+    "otros_inversion": {
+     "Acquisitions: financial instruments at FVTPL": -260.1,
+     "Acquisitions: financial assets at FVTOCI": -66823.2,
+     "Acquisitions: financial assets at amortized cost": -188288.6,
+     "Acquisitions: hedging financial instruments": -631.6,
+     "Acquisitions: investments accounted for using equity method": 0.0,
+     "Acquisitions: intangible assets": -10146.9,
+     "Proceeds: financial assets at FVTOCI": 80052.3,
+     "Proceeds: financial assets at amortized cost": 138203.7,
+     "Proceeds: property, plant and equipment": 797.0,
+     "Proceeds: intangible assets": 0.0,
+     "Derecognition of derivative financial instruments": -5703.1,
+     "Proceeds from return of capital of equity instruments at FVTOCI": 101.5,
+     "Derecognition of hedging financial instruments": 566.9,
+     "Interest received": 98954.7,
+     "Proceeds from government grants - PP&E": 76258.8,
+     "Proceeds from government grants - others": 0.0,
+     "Other dividends received": 635.1,
+     "Dividends received from investments accounted for using equity method": 3304.5,
+     "Increase in prepayments for leases": -39.8,
+     "Refundable deposits paid": -420.2,
+     "Refundable deposits refunded": 1456.1
+    },
+    "fcf_reportado": 1002570.0
+   },
+   "movimientos_capital": {
+    "dividendos_declarados": 531618.4,
+    "recompras": 0.0,
+    "sbc": 1209.2,
+    "emision_acciones": 8321.3,
+    "ori": -56326.5,
+    "otros": {
+     "acciones restringidas de empleados retiradas": 4.1,
+     "ajuste base de coberturas": 13.4,
+     "ajustes a cambios en capital de asociadas": 192.8,
+     "donacion de accionistas": 26.8
+    },
+    "recompras_contra_utilidades_retenidas": 0.0,
+    "otros_utilidades_retenidas": {
+     "participacion no controladora en la perdida (la URE usa la utilidad de la controladora)": 2479.1,
+     "ORI reconocido en utilidades retenidas (remedicion de beneficios definidos)": -559.9,
+     "baja de instrumentos de capital a VR con cambios en ORI": 541.1,
+     "acciones restringidas retiradas": 4.0
+    },
+    "fuente": "F1 p. F-9 (estado de variaciones del capital; columna Total Equity y columna de utilidades retenidas)"
+   },
+   "movimientos_ppe": {
+    "adiciones": 1160977.7,
+    "depreciacion": 675369.0,
+    "otros": {
+     "bajas netas": -2779.2,
+     "reclasificaciones netas": -1053.6,
+     "deterioro": -782.0,
+     "efecto cambiario neto": -25130.3,
+     "cambio en activos sujetos a arrendamiento operativo": 997.2
+    },
+    "fuente": "F1 Nota 15 pp. F-35 a F-37 (costo y depreciacion acumulada por renglon); los activos arrendados a terceros, p. F-35"
+   },
+   "ajustado": [
+    {
+     "nombre": "utilidad_neta_TIFRS",
+     "base": "utilidad_neta",
+     "ajustes": {
+      "menor gasto por impuestos en TIFRS (IFRS - TIFRS)": 20263.7,
+      "diferencia en UAI (participacion en asociadas)": 8.1
+     },
+     "valor_ajustado": 1715396.8,
+     "fuente": "F5 p. 7 (estado de resultados integral TIFRS 2025 y 2024, miles de NT$ redondeados a millones)"
+    }
+   ],
+   "memo": {
+    "capex_intangibles": 10146.9,
+    "subsidios_gubernamentales_ppe_cobrados": 76258.8,
+    "intereses_pagados_en_financiamiento": 19128.8,
+    "intereses_cobrados_en_inversion": 98954.7,
+    "impuestos_pagados": 267557.5,
+    "arrendamientos_total_nota": 35428.0,
+    "nota": "IFRS clasifica intereses pagados en financiamiento e intereses cobrados en inversion; el CFO parte de la UAI. El motor usa la utilidad neta: los ajustes quedan explicitos en otros_operativos."
+   }
+  }
+ ],
+ "transcripcion": {
+  "naturaleza": "hecho (filing): renglones tal como aparecen en los estados; millones de NT$",
+  "balance": {
+   "a_caja": {
+    "etiqueta": "Cash and cash equivalents",
+    "valores": {
+     "FY2023": 1465427.8,
+     "FY2024": 2127627.0,
+     "FY2025": 2767856.4
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_fvtpl_c": {
+    "etiqueta": "Financial assets at FVTPL (current)",
+    "valores": {
+     "FY2023": 924.6,
+     "FY2024": 207.7,
+     "FY2025": 100.2
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_fvoci_c": {
+    "etiqueta": "Financial assets at FVTOCI (current)",
+    "valores": {
+     "FY2023": 154530.8,
+     "FY2024": 192202.7,
+     "FY2025": 175692.7
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_ac_c": {
+    "etiqueta": "Financial assets at amortized cost (current)",
+    "valores": {
+     "FY2023": 66761.2,
+     "FY2024": 101971.3,
+     "FY2025": 124945.5
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_cobertura_c": {
+    "etiqueta": "Hedging financial assets (current)",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 11.0,
+     "FY2025": 0.0
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_cxc": {
+    "etiqueta": "Notes and accounts receivable, net",
+    "valores": {
+     "FY2023": 201313.9,
+     "FY2024": 270683.2,
+     "FY2025": 279051.6
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_cxc_rel": {
+    "etiqueta": "Receivables from related parties",
+    "valores": {
+     "FY2023": 624.4,
+     "FY2024": 1404.5,
+     "FY2025": 2739.5
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_otras_cxc_rel": {
+    "etiqueta": "Other receivables from related parties",
+    "valores": {
+     "FY2023": 71.9,
+     "FY2024": 0.2,
+     "FY2025": 268.1
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_inventarios": {
+    "etiqueta": "Inventories",
+    "valores": {
+     "FY2023": 250997.1,
+     "FY2024": 287868.8,
+     "FY2025": 288109.5
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_otros_fin_c": {
+    "etiqueta": "Other financial assets (current)",
+    "valores": {
+     "FY2023": 27158.8,
+     "FY2024": 63138.3,
+     "FY2025": 59702.9
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_otros_c": {
+    "etiqueta": "Other current assets",
+    "valores": {
+     "FY2023": 26222.4,
+     "FY2024": 43237.4,
+     "FY2025": 118664.4
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_total_c": {
+    "etiqueta": "Total current assets",
+    "valores": {
+     "FY2023": 2194032.9,
+     "FY2024": 3088352.1,
+     "FY2025": 3817130.8
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_fvtpl_nc": {
+    "etiqueta": "Financial assets at FVTPL (noncurrent)",
+    "valores": {
+     "FY2023": 13417.5,
+     "FY2024": 15199.8,
+     "FY2025": 15032.1
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_fvoci_nc": {
+    "etiqueta": "Financial assets at FVTOCI (noncurrent)",
+    "valores": {
+     "FY2023": 7208.7,
+     "FY2024": 7822.9,
+     "FY2025": 8797.2
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_ac_nc": {
+    "etiqueta": "Financial assets at amortized cost (noncurrent)",
+    "valores": {
+     "FY2023": 79199.4,
+     "FY2024": 88596.5,
+     "FY2025": 110507.8
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_asociadas": {
+    "etiqueta": "Investments accounted for using equity method",
+    "valores": {
+     "FY2023": 29442.0,
+     "FY2024": 37247.8,
+     "FY2025": 37851.9
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_ppe": {
+    "etiqueta": "Property, plant and equipment",
+    "valores": {
+     "FY2023": 3064475.0,
+     "FY2024": 3234980.1,
+     "FY2025": 3691840.9
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_rou": {
+    "etiqueta": "Right-of-use assets",
+    "valores": {
+     "FY2023": 40424.7,
+     "FY2024": 40128.4,
+     "FY2025": 43918.9
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_intangibles": {
+    "etiqueta": "Intangible assets",
+    "valores": {
+     "FY2023": 22766.7,
+     "FY2024": 26282.5,
+     "FY2025": 24952.6
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_isr_dif": {
+    "etiqueta": "Deferred income tax assets",
+    "valores": {
+     "FY2023": 64175.8,
+     "FY2024": 65943.3,
+     "FY2025": 62940.3
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_depositos": {
+    "etiqueta": "Refundable deposits",
+    "valores": {
+     "FY2023": 7044.5,
+     "FY2024": 5495.9,
+     "FY2025": 4242.6
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_otros_nc": {
+    "etiqueta": "Other noncurrent assets",
+    "valores": {
+     "FY2023": 10009.4,
+     "FY2024": 81715.4,
+     "FY2025": 115627.4
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_total_nc": {
+    "etiqueta": "Total noncurrent assets",
+    "valores": {
+     "FY2023": 3338163.7,
+     "FY2024": 3603412.6,
+     "FY2025": 4115711.7
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "a_total": {
+    "etiqueta": "TOTAL assets",
+    "valores": {
+     "FY2023": 5532196.6,
+     "FY2024": 6691764.7,
+     "FY2025": 7932842.5
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_fvtpl_c": {
+    "etiqueta": "Financial liabilities at FVTPL (current)",
+    "valores": {
+     "FY2023": 121.4,
+     "FY2024": 466.5,
+     "FY2025": 3083.9
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_cobertura_c": {
+    "etiqueta": "Hedging financial liabilities (current)",
+    "valores": {
+     "FY2023": 27334.2,
+     "FY2024": 0.0,
+     "FY2025": 0.8
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_proveedores": {
+    "etiqueta": "Accounts payable",
+    "valores": {
+     "FY2023": 55726.8,
+     "FY2024": 72800.6,
+     "FY2025": 82551.6
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_proveedores_rel": {
+    "etiqueta": "Payables to related parties",
+    "valores": {
+     "FY2023": 1566.3,
+     "FY2024": 1426.0,
+     "FY2025": 1778.7
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_sueldos": {
+    "etiqueta": "Salary and bonus payable",
+    "valores": {
+     "FY2023": 33200.6,
+     "FY2024": 47451.5,
+     "FY2025": 63872.9
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_bono_utilidades": {
+    "etiqueta": "Accrued profit sharing bonus to employees and compensation to directors",
+    "valores": {
+     "FY2023": 50716.9,
+     "FY2024": 70871.2,
+     "FY2025": 103355.3
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_contratistas_equipo": {
+    "etiqueta": "Payables to contractors and equipment suppliers",
+    "valores": {
+     "FY2023": 171484.6,
+     "FY2024": 192635.2,
+     "FY2025": 177730.3
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_dividendos_por_pagar": {
+    "etiqueta": "Cash dividends payable",
+    "valores": {
+     "FY2023": 168558.5,
+     "FY2024": 220418.8,
+     "FY2025": 285258.1
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_isr_por_pagar": {
+    "etiqueta": "Income tax payable",
+    "valores": {
+     "FY2023": 128134.6,
+     "FY2024": 191569.4,
+     "FY2025": 266732.6
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_porcion_circ_lp": {
+    "etiqueta": "Long-term liabilities - current portion",
+    "valores": {
+     "FY2023": 9293.3,
+     "FY2024": 59857.9,
+     "FY2025": 136925.7
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_acumulados_otros_c": {
+    "etiqueta": "Accrued expenses and other current liabilities",
+    "valores": {
+     "FY2023": 296667.9,
+     "FY2024": 451158.8,
+     "FY2025": 401124.1
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_total_c": {
+    "etiqueta": "Total current liabilities",
+    "valores": {
+     "FY2023": 942805.1,
+     "FY2024": 1308655.9,
+     "FY2025": 1522414.0
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_bonos": {
+    "etiqueta": "Bonds payable (noncurrent)",
+    "valores": {
+     "FY2023": 913899.8,
+     "FY2024": 926604.5,
+     "FY2025": 856227.5
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_prestamos_lp": {
+    "etiqueta": "Long-term bank loans (noncurrent)",
+    "valores": {
+     "FY2023": 4383.0,
+     "FY2024": 31824.4,
+     "FY2025": 39834.5
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_isr_dif": {
+    "etiqueta": "Deferred income tax liabilities",
+    "valores": {
+     "FY2023": 53.8,
+     "FY2024": 3988.5,
+     "FY2025": 3888.8
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_arrend_nc": {
+    "etiqueta": "Lease liabilities (noncurrent)",
+    "valores": {
+     "FY2023": 28681.8,
+     "FY2024": 28755.3,
+     "FY2025": 31595.0
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_beneficios_def": {
+    "etiqueta": "Net defined benefit liability",
+    "valores": {
+     "FY2023": 9257.2,
+     "FY2024": 7580.7,
+     "FY2025": 6012.3
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_depositos_garantia": {
+    "etiqueta": "Guarantee deposits",
+    "valores": {
+     "FY2023": 923.2,
+     "FY2024": 845.6,
+     "FY2025": 764.2
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_otros_nc": {
+    "etiqueta": "Others (noncurrent liabilities)",
+    "valores": {
+     "FY2023": 178326.2,
+     "FY2024": 104238.2,
+     "FY2025": 75887.0
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_total_nc": {
+    "etiqueta": "Total noncurrent liabilities",
+    "valores": {
+     "FY2023": 1135525.0,
+     "FY2024": 1103837.2,
+     "FY2025": 1014209.3
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "p_total": {
+    "etiqueta": "Total liabilities",
+    "valores": {
+     "FY2023": 2078330.1,
+     "FY2024": 2412493.1,
+     "FY2025": 2536623.3
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_capital_social": {
+    "etiqueta": "Capital stock",
+    "valores": {
+     "FY2023": 259320.7,
+     "FY2024": 259327.3,
+     "FY2025": 259325.3
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_prima": {
+    "etiqueta": "Capital surplus",
+    "valores": {
+     "FY2023": 69876.4,
+     "FY2024": 73260.8,
+     "FY2025": 73445.6
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_reserva_legal": {
+    "etiqueta": "Appropriated as legal capital reserve",
+    "valores": {
+     "FY2023": 311147.0,
+     "FY2024": 311147.0,
+     "FY2025": 311147.0
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_reserva_especial": {
+    "etiqueta": "Appropriated as special capital reserve",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 0.0,
+     "FY2025": 87284.5
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_no_asignadas": {
+    "etiqueta": "Unappropriated earnings",
+    "valores": {
+     "FY2023": 2817492.6,
+     "FY2024": 3561826.4,
+     "FY2025": 4640512.7
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_utilidades_retenidas": {
+    "etiqueta": "Retained earnings (total)",
+    "valores": {
+     "FY2023": 3128639.6,
+     "FY2024": 3872973.4,
+     "FY2025": 5038944.2
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_otros": {
+    "etiqueta": "Others (equity)",
+    "valores": {
+     "FY2023": -28314.3,
+     "FY2024": 38705.0,
+     "FY2025": -16676.4
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_controladora": {
+    "etiqueta": "Equity attributable to shareholders of the parent",
+    "valores": {
+     "FY2023": 3429522.4,
+     "FY2024": 4244266.5,
+     "FY2025": 5355038.7
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_no_controladora": {
+    "etiqueta": "Non-controlling interests",
+    "valores": {
+     "FY2023": 24344.1,
+     "FY2024": 35005.1,
+     "FY2025": 41180.5
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   },
+   "k_total": {
+    "etiqueta": "Total equity",
+    "valores": {
+     "FY2023": 3453866.5,
+     "FY2024": 4279271.6,
+     "FY2025": 5396219.2
+    },
+    "fuente": {
+     "FY2023": "F2 pp. F-4/F-5",
+     "FY2024": "F1 pp. F-4/F-5",
+     "FY2025": "F1 pp. F-4/F-5"
+    }
+   }
+  },
+  "notas": {
+   "n_bonos_total": {
+    "etiqueta": "Bonds payable (total, incl. current) - Note 31 reconciliation",
+    "valores": {
+     "FY2023": 920897.5,
+     "FY2024": 983752.5,
+     "FY2025": 992033.5
+    }
+   },
+   "n_prestamos_total": {
+    "etiqueta": "Long-term bank loans (total, incl. current)",
+    "valores": {
+     "FY2023": 6678.6,
+     "FY2024": 34534.3,
+     "FY2025": 40954.2
+    }
+   },
+   "n_prestamos_cobertura": {
+    "etiqueta": "Hedging financial liabilities - bank loans",
+    "valores": {
+     "FY2023": 27290.4,
+     "FY2024": 0.0,
+     "FY2025": 0.0
+    }
+   },
+   "n_arrend_circ": {
+    "etiqueta": "Lease liabilities - current portion (in accrued expenses)",
+    "valores": {
+     "FY2023": 2810.6,
+     "FY2024": 3049.0,
+     "FY2025": 3833.0
+    }
+   },
+   "n_arrend_total": {
+    "etiqueta": "Lease liabilities (total)",
+    "valores": {
+     "FY2023": 31492.4,
+     "FY2024": 31804.3,
+     "FY2025": 35428.0
+    }
+   },
+   "n_prestamos_jpy": {
+    "etiqueta": "JPY unsecured loans (Note 19)",
+    "valores": {
+     "FY2023": null,
+     "FY2024": 30124.8,
+     "FY2025": 39253.5
+    }
+   },
+   "n_prestamos_ntd": {
+    "etiqueta": "NT$ unsecured loans (Note 19)",
+    "valores": {
+     "FY2023": null,
+     "FY2024": 4410.8,
+     "FY2025": 1700.8
+    }
+   },
+   "n_prestamos_descuento": {
+    "etiqueta": "Less: discounts on government grants (Note 19)",
+    "valores": {
+     "FY2023": null,
+     "FY2024": -1.3,
+     "FY2025": -0.1
+    }
+   },
+   "n_prestamos_circ": {
+    "etiqueta": "Less: current portion of bank loans (Note 19)",
+    "valores": {
+     "FY2023": null,
+     "FY2024": 2709.9,
+     "FY2025": 1119.7
+    }
+   }
+  },
+  "resultados": {
+   "r_ingresos": {
+    "etiqueta": "NET REVENUE",
+    "valores": {
+     "FY2023": 2161735.8,
+     "FY2024": 2894307.7,
+     "FY2025": 3809054.3
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_costo_ventas": {
+    "etiqueta": "COST OF REVENUE",
+    "valores": {
+     "FY2023": 986625.2,
+     "FY2024": 1269954.1,
+     "FY2025": 1527760.3
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_utilidad_bruta": {
+    "etiqueta": "GROSS PROFIT",
+    "valores": {
+     "FY2023": 1175110.6,
+     "FY2024": 1624353.6,
+     "FY2025": 2281294.0
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_gid": {
+    "etiqueta": "Research and development",
+    "valores": {
+     "FY2023": 182370.2,
+     "FY2024": 204181.8,
+     "FY2025": 246427.2
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_gya": {
+    "etiqueta": "General and administrative",
+    "valores": {
+     "FY2023": 60872.8,
+     "FY2024": 83745.0,
+     "FY2025": 82304.3
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_mkt": {
+    "etiqueta": "Marketing",
+    "valores": {
+     "FY2023": 10590.7,
+     "FY2024": 13143.6,
+     "FY2025": 16918.1
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_gastos_op_total": {
+    "etiqueta": "Total operating expenses",
+    "valores": {
+     "FY2023": 253833.7,
+     "FY2024": 301070.4,
+     "FY2025": 345649.6
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_otros_ing_op": {
+    "etiqueta": "Other operating income and expenses, net",
+    "valores": {
+     "FY2023": 188.7,
+     "FY2024": -1230.2,
+     "FY2025": 447.3
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_utilidad_operativa": {
+    "etiqueta": "INCOME FROM OPERATIONS",
+    "valores": {
+     "FY2023": 921465.6,
+     "FY2024": 1322053.0,
+     "FY2025": 1936091.7
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_asociadas": {
+    "etiqueta": "Share of profits of associates",
+    "valores": {
+     "FY2023": 4800.2,
+     "FY2024": 4880.7,
+     "FY2025": 5488.5
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_ingreso_intereses": {
+    "etiqueta": "Interest income",
+    "valores": {
+     "FY2023": 60293.9,
+     "FY2024": 87213.4,
+     "FY2025": 105739.1
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_otros_ingresos": {
+    "etiqueta": "Other income",
+    "valores": {
+     "FY2023": 480.0,
+     "FY2024": 566.9,
+     "FY2025": 591.7
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_cambiario": {
+    "etiqueta": "Foreign exchange gain (loss), net",
+    "valores": {
+     "FY2023": -2685.4,
+     "FY2024": 10000.8,
+     "FY2025": 13831.3
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_costos_financieros": {
+    "etiqueta": "Finance costs",
+    "valores": {
+     "FY2023": -11999.4,
+     "FY2024": -10495.4,
+     "FY2025": -12370.4
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_otras_ganancias": {
+    "etiqueta": "Other gains and losses, net",
+    "valores": {
+     "FY2023": 6961.6,
+     "FY2024": -8379.4,
+     "FY2025": -7717.2
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_no_operativo_total": {
+    "etiqueta": "Total non-operating income and expenses",
+    "valores": {
+     "FY2023": 57850.9,
+     "FY2024": 83787.0,
+     "FY2025": 105563.0
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_uai": {
+    "etiqueta": "INCOME BEFORE INCOME TAX",
+    "valores": {
+     "FY2023": 979316.5,
+     "FY2024": 1405840.0,
+     "FY2025": 2041654.7
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_impuestos": {
+    "etiqueta": "INCOME TAX EXPENSE",
+    "valores": {
+     "FY2023": 128288.8,
+     "FY2024": 248316.1,
+     "FY2025": 346529.8
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_utilidad_neta": {
+    "etiqueta": "NET INCOME",
+    "valores": {
+     "FY2023": 851027.7,
+     "FY2024": 1157523.9,
+     "FY2025": 1695124.9
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_ori_total": {
+    "etiqueta": "Other comprehensive income (loss), net of income tax",
+    "valores": {
+     "FY2023": -8813.7,
+     "FY2024": 71585.7,
+     "FY2025": -56326.5
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_un_controladora": {
+    "etiqueta": "Net income attributable to shareholders of the parent",
+    "valores": {
+     "FY2023": 851740.0,
+     "FY2024": 1158380.2,
+     "FY2025": 1697604.0
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   },
+   "r_un_no_controladora": {
+    "etiqueta": "Net income attributable to non-controlling interests",
+    "valores": {
+     "FY2023": -712.3,
+     "FY2024": -856.3,
+     "FY2025": -2479.1
+    },
+    "fuente": "F1 pp. F-6/F-7"
+   }
+  },
+  "flujo": {
+   "f_uai": {
+    "etiqueta": "Income before income tax",
+    "valores": {
+     "FY2023": 979316.5,
+     "FY2024": 1405840.0,
+     "FY2025": 2041654.7
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_depreciacion": {
+    "etiqueta": "Depreciation expense",
+    "valores": {
+     "FY2023": 522932.7,
+     "FY2024": 653610.5,
+     "FY2025": 679684.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_amortizacion": {
+    "etiqueta": "Amortization expense",
+    "valores": {
+     "FY2023": 9258.2,
+     "FY2024": 9186.1,
+     "FY2025": 8412.4
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_perdida_crediticia": {
+    "etiqueta": "Expected credit losses recognized (reversal) on investments in debt instruments",
+    "valores": {
+     "FY2023": 35.7,
+     "FY2024": 49.9,
+     "FY2025": -3.9
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_costos_financieros": {
+    "etiqueta": "Finance costs",
+    "valores": {
+     "FY2023": 11999.4,
+     "FY2024": 10495.4,
+     "FY2025": 12370.4
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_asociadas": {
+    "etiqueta": "Share of profits of associates",
+    "valores": {
+     "FY2023": -4800.2,
+     "FY2024": -4880.7,
+     "FY2025": -5488.5
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_ingreso_intereses": {
+    "etiqueta": "Interest income",
+    "valores": {
+     "FY2023": -60293.9,
+     "FY2024": -87213.4,
+     "FY2025": -105739.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_sbc": {
+    "etiqueta": "Share-based compensation",
+    "valores": {
+     "FY2023": 483.0,
+     "FY2024": 1242.7,
+     "FY2025": 1246.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_baja_ppe": {
+    "etiqueta": "Loss on disposal or retirement of PP&E, net",
+    "valores": {
+     "FY2023": 369.1,
+     "FY2024": 2597.9,
+     "FY2025": 1581.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_baja_intangibles": {
+    "etiqueta": "Loss (gain) on disposal or retirement of intangible assets, net",
+    "valores": {
+     "FY2023": -3.0,
+     "FY2024": 0.0,
+     "FY2025": 4.5
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_deterioro_ppe": {
+    "etiqueta": "Impairment loss on PP&E",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 1150.5,
+     "FY2025": 782.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_vr_resultados": {
+    "etiqueta": "Loss (gain) on financial instruments at FVTPL, net",
+    "valores": {
+     "FY2023": -12.4,
+     "FY2024": 137.7,
+     "FY2025": -353.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_baja_deuda_ori": {
+    "etiqueta": "Loss on disposal of investments in debt instruments at FVTOCI, net",
+    "valores": {
+     "FY2023": 473.9,
+     "FY2024": 683.1,
+     "FY2025": 200.2
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_baja_asociadas": {
+    "etiqueta": "Gain on disposal of investments accounted for using equity method, net",
+    "valores": {
+     "FY2023": -15.8,
+     "FY2024": -7.1,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_baja_subsidiarias": {
+    "etiqueta": "Loss from disposal of subsidiaries",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 0.0,
+     "FY2025": 168.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_cambiario": {
+    "etiqueta": "Loss (gain) on foreign exchange, net",
+    "valores": {
+     "FY2023": -246.7,
+     "FY2024": 4576.3,
+     "FY2025": 4308.9
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_ingreso_dividendos": {
+    "etiqueta": "Dividend income",
+    "valores": {
+     "FY2023": -464.1,
+     "FY2024": -566.9,
+     "FY2025": -591.7
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_otros_ajustes": {
+    "etiqueta": "Others (adjustments)",
+    "valores": {
+     "FY2023": -338.0,
+     "FY2024": -435.7,
+     "FY2025": 1049.2
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_vr_resultados": {
+    "etiqueta": "Change: financial instruments at FVTPL",
+    "valores": {
+     "FY2023": 289.6,
+     "FY2024": 842.6,
+     "FY2025": 8436.2
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_cxc": {
+    "etiqueta": "Change: notes and accounts receivable, net",
+    "valores": {
+     "FY2023": 28442.0,
+     "FY2024": -69369.4,
+     "FY2025": -8368.3
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_cxc_rel": {
+    "etiqueta": "Change: receivables from related parties",
+    "valores": {
+     "FY2023": 959.5,
+     "FY2024": -780.1,
+     "FY2025": -1335.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_otras_cxc_rel": {
+    "etiqueta": "Change: other receivables from related parties",
+    "valores": {
+     "FY2023": -2.9,
+     "FY2024": 71.7,
+     "FY2025": -267.9
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_inventarios": {
+    "etiqueta": "Change: inventories",
+    "valores": {
+     "FY2023": -29847.9,
+     "FY2024": -36871.7,
+     "FY2025": -240.7
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_otros_fin": {
+    "etiqueta": "Change: other financial assets",
+    "valores": {
+     "FY2023": 1878.7,
+     "FY2024": -2377.5,
+     "FY2025": 64524.9
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_otros_c": {
+    "etiqueta": "Change: other current assets",
+    "valores": {
+     "FY2023": -12530.9,
+     "FY2024": -15537.3,
+     "FY2025": -74620.3
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_otros_nc": {
+    "etiqueta": "Change: other noncurrent assets",
+    "valores": {
+     "FY2023": -720.3,
+     "FY2024": -3862.0,
+     "FY2025": -38798.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_proveedores": {
+    "etiqueta": "Change: accounts payable",
+    "valores": {
+     "FY2023": 847.0,
+     "FY2024": 17073.8,
+     "FY2025": 9751.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_proveedores_rel": {
+    "etiqueta": "Change: payables to related parties",
+    "valores": {
+     "FY2023": -76.3,
+     "FY2024": -140.3,
+     "FY2025": 352.7
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_sueldos": {
+    "etiqueta": "Change: salary and bonus payable",
+    "valores": {
+     "FY2023": -3234.9,
+     "FY2024": 14250.9,
+     "FY2025": 16421.4
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_bono_utilidades": {
+    "etiqueta": "Change: accrued profit sharing bonus",
+    "valores": {
+     "FY2023": -11031.6,
+     "FY2024": 20154.3,
+     "FY2025": 32484.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_acumulados": {
+    "etiqueta": "Change: accrued expenses and other current liabilities",
+    "valores": {
+     "FY2023": -44466.7,
+     "FY2024": 74659.4,
+     "FY2025": -103215.5
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_otros_pas_nc": {
+    "etiqueta": "Change: other noncurrent liabilities",
+    "valores": {
+     "FY2023": 13329.9,
+     "FY2024": 16768.7,
+     "FY2025": 385.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_c_beneficios_def": {
+    "etiqueta": "Change: net defined benefit liability",
+    "valores": {
+     "FY2023": -687.2,
+     "FY2024": -1532.2,
+     "FY2025": -2261.6
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_generado_operacion": {
+    "etiqueta": "Cash generated from operations",
+    "valores": {
+     "FY2023": 1401842.4,
+     "FY2024": 2009817.2,
+     "FY2025": 2542533.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_impuestos_pagados": {
+    "etiqueta": "Income taxes paid",
+    "valores": {
+     "FY2023": -159875.1,
+     "FY2024": -183640.1,
+     "FY2025": -267557.5
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "f_cfo": {
+    "etiqueta": "Net cash generated by operating activities",
+    "valores": {
+     "FY2023": 1241967.3,
+     "FY2024": 1826177.1,
+     "FY2025": 2274975.6
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_adq_vr_resultados": {
+    "etiqueta": "Acquisitions: financial instruments at FVTPL",
+    "valores": {
+     "FY2023": -14142.1,
+     "FY2024": -1178.8,
+     "FY2025": -260.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_adq_vr_ori": {
+    "etiqueta": "Acquisitions: financial assets at FVTOCI",
+    "valores": {
+     "FY2023": -62752.0,
+     "FY2024": -87787.5,
+     "FY2025": -66823.2
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_adq_costo_amort": {
+    "etiqueta": "Acquisitions: financial assets at amortized cost",
+    "valores": {
+     "FY2023": -149387.9,
+     "FY2024": -151656.4,
+     "FY2025": -188288.6
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_adq_cobertura": {
+    "etiqueta": "Acquisitions: hedging financial instruments",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 0.0,
+     "FY2025": -631.6
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_adq_asociadas": {
+    "etiqueta": "Acquisitions: investments accounted for using equity method",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": -3738.8,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_adq_ppe": {
+    "etiqueta": "Acquisitions: property, plant and equipment",
+    "valores": {
+     "FY2023": -949816.8,
+     "FY2024": -956006.5,
+     "FY2025": -1272410.5
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_adq_intangibles": {
+    "etiqueta": "Acquisitions: intangible assets",
+    "valores": {
+     "FY2023": -5518.4,
+     "FY2024": -8875.7,
+     "FY2025": -10146.9
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_disp_vr_ori": {
+    "etiqueta": "Proceeds: financial assets at FVTOCI",
+    "valores": {
+     "FY2023": 35698.6,
+     "FY2024": 67684.5,
+     "FY2025": 80052.3
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_disp_costo_amort": {
+    "etiqueta": "Proceeds: financial assets at amortized cost",
+    "valores": {
+     "FY2023": 134605.8,
+     "FY2024": 118350.9,
+     "FY2025": 138203.7
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_disp_ppe": {
+    "etiqueta": "Proceeds: property, plant and equipment",
+    "valores": {
+     "FY2023": 703.9,
+     "FY2024": 894.6,
+     "FY2025": 797.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_disp_intangibles": {
+    "etiqueta": "Proceeds: intangible assets",
+    "valores": {
+     "FY2023": 3.1,
+     "FY2024": 57.2,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_derivados": {
+    "etiqueta": "Derecognition of derivative financial instruments",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 0.0,
+     "FY2025": -5703.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_retorno_capital_ori": {
+    "etiqueta": "Proceeds from return of capital of equity instruments at FVTOCI",
+    "valores": {
+     "FY2023": 128.0,
+     "FY2024": 325.9,
+     "FY2025": 101.5
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_baja_cobertura": {
+    "etiqueta": "Derecognition of hedging financial instruments",
+    "valores": {
+     "FY2023": 68.2,
+     "FY2024": 118.3,
+     "FY2025": 566.9
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_intereses_cobrados": {
+    "etiqueta": "Interest received",
+    "valores": {
+     "FY2023": 55887.2,
+     "FY2024": 76434.1,
+     "FY2025": 98954.7
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_subsidios_ppe": {
+    "etiqueta": "Proceeds from government grants - PP&E",
+    "valores": {
+     "FY2023": 47544.7,
+     "FY2024": 75164.0,
+     "FY2025": 76258.8
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_subsidios_otros": {
+    "etiqueta": "Proceeds from government grants - others",
+    "valores": {
+     "FY2023": 1.2,
+     "FY2024": 0.3,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_otros_dividendos": {
+    "etiqueta": "Other dividends received",
+    "valores": {
+     "FY2023": 445.1,
+     "FY2024": 541.8,
+     "FY2025": 635.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_dividendos_asociadas": {
+    "etiqueta": "Dividends received from investments accounted for using equity method",
+    "valores": {
+     "FY2023": 3076.5,
+     "FY2024": 2965.2,
+     "FY2025": 3304.5
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_prepagos_arrend": {
+    "etiqueta": "Increase in prepayments for leases",
+    "valores": {
+     "FY2023": -63.2,
+     "FY2024": -99.4,
+     "FY2025": -39.8
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_depositos_pagados": {
+    "etiqueta": "Refundable deposits paid",
+    "valores": {
+     "FY2023": -4056.5,
+     "FY2024": -1304.8,
+     "FY2025": -420.2
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_depositos_recuperados": {
+    "etiqueta": "Refundable deposits refunded",
+    "valores": {
+     "FY2023": 1454.0,
+     "FY2024": 3268.3,
+     "FY2025": 1456.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "i_cfi": {
+    "etiqueta": "Net cash used in investing activities",
+    "valores": {
+     "FY2023": -906120.6,
+     "FY2024": -864842.8,
+     "FY2025": -1144393.4
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_cobertura_prestamos": {
+    "etiqueta": "Increase (decrease) in hedging financial liabilities - bank loans",
+    "valores": {
+     "FY2023": 27908.6,
+     "FY2024": -26496.6,
+     "FY2025": 335.1
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_emision_bonos": {
+    "etiqueta": "Proceeds from issuance of bonds",
+    "valores": {
+     "FY2023": 85700.0,
+     "FY2024": 34300.0,
+     "FY2025": 86900.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_pago_bonos": {
+    "etiqueta": "Repayment of bonds",
+    "valores": {
+     "FY2023": -18100.0,
+     "FY2024": -7000.0,
+     "FY2025": -54310.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_prestamos_recibidos": {
+    "etiqueta": "Proceeds from long-term bank loans",
+    "valores": {
+     "FY2023": 2450.0,
+     "FY2024": 30897.0,
+     "FY2025": 10658.4
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_pago_prestamos": {
+    "etiqueta": "Repayment of long-term bank loans",
+    "valores": {
+     "FY2023": -1756.9,
+     "FY2024": -2295.6,
+     "FY2025": -2710.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_costos_emision": {
+    "etiqueta": "Payments for transaction costs attributable to the issuance of bonds",
+    "valores": {
+     "FY2023": -88.7,
+     "FY2024": -35.7,
+     "FY2025": -90.3
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_tesoreria": {
+    "etiqueta": "Treasury stock acquired",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": -3089.2,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_principal_arrend": {
+    "etiqueta": "Repayment of the principal portion of lease liabilities",
+    "valores": {
+     "FY2023": -2854.3,
+     "FY2024": -2873.7,
+     "FY2025": -3496.5
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_intereses_pagados": {
+    "etiqueta": "Interest paid",
+    "valores": {
+     "FY2023": -17359.0,
+     "FY2024": -18751.2,
+     "FY2025": -19128.8
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_depositos_recibidos": {
+    "etiqueta": "Guarantee deposits received",
+    "valores": {
+     "FY2023": 230.1,
+     "FY2024": 5.0,
+     "FY2025": 3.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_depositos_devueltos": {
+    "etiqueta": "Guarantee deposits refunded",
+    "valores": {
+     "FY2023": -367.4,
+     "FY2024": -93.3,
+     "FY2025": -48.5
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_dividendos": {
+    "etiqueta": "Cash dividends",
+    "valores": {
+     "FY2023": -291721.9,
+     "FY2024": -363055.2,
+     "FY2025": -466779.2
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_venta_participacion": {
+    "etiqueta": "Disposal of ownership interests in subsidiaries (without losing control)",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 1.0,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_donacion": {
+    "etiqueta": "Donation from shareholders",
+    "valores": {
+     "FY2023": 16.5,
+     "FY2024": 8.9,
+     "FY2025": 26.8
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_no_controladora": {
+    "etiqueta": "Increase in non-controlling interests",
+    "valores": {
+     "FY2023": 11048.8,
+     "FY2024": 12177.6,
+     "FY2025": 8295.4
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "x_cff": {
+    "etiqueta": "Net cash used in financing activities",
+    "valores": {
+     "FY2023": -204894.2,
+     "FY2024": -346301.0,
+     "FY2025": -440344.6
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "z_fx": {
+    "etiqueta": "Effect of exchange rate changes on cash and cash equivalents",
+    "valores": {
+     "FY2023": -8338.8,
+     "FY2024": 47165.9,
+     "FY2025": -50008.2
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "z_aumento": {
+    "etiqueta": "Net increase in cash and cash equivalents",
+    "valores": {
+     "FY2023": 122613.7,
+     "FY2024": 662199.2,
+     "FY2025": 640229.4
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "z_caja_inicial": {
+    "etiqueta": "Cash and cash equivalents, beginning of year",
+    "valores": {
+     "FY2023": 1342814.1,
+     "FY2024": 1465427.8,
+     "FY2025": 2127627.0
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   },
+   "z_caja_final": {
+    "etiqueta": "Cash and cash equivalents, end of year",
+    "valores": {
+     "FY2023": 1465427.8,
+     "FY2024": 2127627.0,
+     "FY2025": 2767856.4
+    },
+    "fuente": "F1 pp. F-10 a F-12"
+   }
+  },
+  "capital": {
+   "e_capital_inicial": {
+    "etiqueta": "BALANCE, JANUARY 1 (total equity)",
+    "valores": {
+     "FY2023": 2917832.4,
+     "FY2024": 3453866.5,
+     "FY2025": 4279271.6
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_ure_inicial": {
+    "etiqueta": "BALANCE, JANUARY 1 (retained earnings, total)",
+    "valores": {
+     "FY2023": 2594891.2,
+     "FY2024": 3128639.6,
+     "FY2025": 3872973.4
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_dividendos_declarados": {
+    "etiqueta": "Cash dividends to shareholders",
+    "valores": {
+     "FY2023": 317663.2,
+     "FY2024": 414915.5,
+     "FY2025": 531618.4
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_sbc": {
+    "etiqueta": "Share-based payment arrangements (total equity)",
+    "valores": {
+     "FY2023": 477.7,
+     "FY2024": 1222.8,
+     "FY2025": 1209.2
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_tesoreria": {
+    "etiqueta": "Treasury stock acquired (total equity)",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 3089.2,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_tesoreria_contra_ure": {
+    "etiqueta": "Treasury stock retired: retained earnings column",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 3049.6,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_nci_aportes": {
+    "etiqueta": "Increase/decrease in NCI + from share of changes in equities of subsidiaries (total equity)",
+    "valores": {
+     "FY2023": 11048.3,
+     "FY2024": 12177.5,
+     "FY2025": 8321.3
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_ori_total": {
+    "etiqueta": "Other comprehensive income (loss), net of income tax (total equity)",
+    "valores": {
+     "FY2023": -8813.7,
+     "FY2024": 71585.7,
+     "FY2025": -56326.5
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_ori_a_ure": {
+    "etiqueta": "OCI recognised in retained earnings (remeasurement of DB obligation)",
+    "valores": {
+     "FY2023": -484.9,
+     "FY2024": 126.0,
+     "FY2025": -559.9
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_baja_ori_a_ure": {
+    "etiqueta": "Disposal of FVTOCI equity instruments: retained earnings column",
+    "valores": {
+     "FY2023": 151.9,
+     "FY2024": 3772.8,
+     "FY2025": 541.1
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_acciones_restringidas": {
+    "etiqueta": "Employee restricted shares retired (total equity)",
+    "valores": {
+     "FY2023": 4.6,
+     "FY2024": 19.9,
+     "FY2025": 4.1
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_acciones_restringidas_ure": {
+    "etiqueta": "Employee restricted shares retired: retained earnings column",
+    "valores": {
+     "FY2023": 4.6,
+     "FY2024": 19.9,
+     "FY2025": 4.0
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_cobertura_base": {
+    "etiqueta": "Basis adjustment for gain (loss) on hedging instruments",
+    "valores": {
+     "FY2023": -45.2,
+     "FY2024": 0.1,
+     "FY2025": 13.4
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_asociadas_ajuste": {
+    "etiqueta": "Adjustments to share of changes in equities of associates",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 870.0,
+     "FY2025": 192.8
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_baja_asociadas": {
+    "etiqueta": "Disposal of investments accounted for using equity method",
+    "valores": {
+     "FY2023": -18.5,
+     "FY2024": 0.0,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_diferencia_disposicion": {
+    "etiqueta": "Difference between consideration and carrying amount of subsidiaries' net assets",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 1.0,
+     "FY2025": 0.0
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_donacion": {
+    "etiqueta": "Donation from shareholders",
+    "valores": {
+     "FY2023": 16.4,
+     "FY2024": 8.9,
+     "FY2025": 26.8
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_capital_final": {
+    "etiqueta": "BALANCE, DECEMBER 31 (total equity)",
+    "valores": {
+     "FY2023": 3453866.5,
+     "FY2024": 4279271.6,
+     "FY2025": 5396219.2
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   },
+   "e_ure_final": {
+    "etiqueta": "BALANCE, DECEMBER 31 (retained earnings, total)",
+    "valores": {
+     "FY2023": 3128639.6,
+     "FY2024": 3872973.4,
+     "FY2025": 5038944.2
+    },
+    "fuente": "F1 pp. F-8/F-9"
+   }
+  },
+  "ppe_nota15": {
+   "q_adiciones": {
+    "etiqueta": "Additions (cost)",
+    "valores": {
+     "FY2023": 897518.8,
+     "FY2024": 798507.4,
+     "FY2025": 1160977.7
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   },
+   "q_depreciacion": {
+    "etiqueta": "Additions (accumulated depreciation)",
+    "valores": {
+     "FY2023": 519466.2,
+     "FY2024": 649901.3,
+     "FY2025": 675369.0
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   },
+   "q_bajas_costo": {
+    "etiqueta": "Disposals or retirements (cost)",
+    "valores": {
+     "FY2023": -32436.7,
+     "FY2024": -42872.8,
+     "FY2025": -58087.5
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   },
+   "q_bajas_dep": {
+    "etiqueta": "Disposals or retirements (accumulated depreciation)",
+    "valores": {
+     "FY2023": -31314.9,
+     "FY2024": -39270.4,
+     "FY2025": -55308.3
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   },
+   "q_reclas_costo": {
+    "etiqueta": "Reclassification (cost)",
+    "valores": {
+     "FY2023": 13.7,
+     "FY2024": -141.4,
+     "FY2025": -1181.5
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   },
+   "q_reclas_dep": {
+    "etiqueta": "Reclassification (accumulated depreciation)",
+    "valores": {
+     "FY2023": 9.7,
+     "FY2024": 39.4,
+     "FY2025": -127.9
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   },
+   "q_deterioro": {
+    "etiqueta": "Impairment losses (reversed)",
+    "valores": {
+     "FY2023": 0.0,
+     "FY2024": 1150.5,
+     "FY2025": 782.0
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   },
+   "q_fx_costo": {
+    "etiqueta": "Effect of exchange rate changes (cost)",
+    "valores": {
+     "FY2023": -9072.2,
+     "FY2024": 36071.0,
+     "FY2025": -26572.8
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   },
+   "q_fx_dep": {
+    "etiqueta": "Effect of exchange rate changes (accumulated depreciation)",
+    "valores": {
+     "FY2023": -2746.0,
+     "FY2024": 9389.3,
+     "FY2025": -1442.5
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   },
+   "q_arrendados": {
+    "etiqueta": "Assets subject to operating leases (carrying amount, Dec 31)",
+    "valores": {
+     "FY2023": 50.7,
+     "FY2024": 201.7,
+     "FY2025": 1198.9
+    },
+    "fuente": "F1 pp. F-35 a F-37"
+   }
+  }
+ },
+ "composicion": [
+  {
+   "campo": "resultados.ingresos",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_ingresos",
+     1
+    ]
+   ],
+   "descripcion": "Net revenue",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.costo_ventas",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_costo_ventas",
+     1
+    ]
+   ],
+   "descripcion": "Cost of revenue",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.utilidad_bruta",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_utilidad_bruta",
+     1
+    ]
+   ],
+   "descripcion": "Gross profit",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.gastos_operativos",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_gastos_op_total",
+     1
+    ],
+    [
+     "r_otros_ing_op",
+     -1
+    ]
+   ],
+   "descripcion": "Total operating expenses - other operating income and expenses, net",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.utilidad_operativa",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_utilidad_operativa",
+     1
+    ]
+   ],
+   "descripcion": "Income from operations",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.gasto_intereses",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_costos_financieros",
+     -1
+    ]
+   ],
+   "descripcion": "Finance costs (neto de intereses capitalizados, Nota 24)",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.ingreso_intereses",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_ingreso_intereses",
+     1
+    ]
+   ],
+   "descripcion": "Interest income",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.otros_ingresos",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_asociadas",
+     1
+    ],
+    [
+     "r_otros_ingresos",
+     1
+    ],
+    [
+     "r_cambiario",
+     1
+    ],
+    [
+     "r_otras_ganancias",
+     1
+    ]
+   ],
+   "descripcion": "Share of profits of associates + other income + FX gain (loss) + other gains and losses",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.utilidad_antes_impuestos",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_uai",
+     1
+    ]
+   ],
+   "descripcion": "Income before income tax",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.impuestos",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_impuestos",
+     1
+    ]
+   ],
+   "descripcion": "Income tax expense",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.utilidad_neta",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_utilidad_neta",
+     1
+    ]
+   ],
+   "descripcion": "Net income (consolidada)",
+   "nota": ""
+  },
+  {
+   "campo": "resultados.utilidad_neta_controladora",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_un_controladora",
+     1
+    ]
+   ],
+   "descripcion": "Net income attributable to shareholders of the parent",
+   "nota": ""
+  },
+  {
+   "campo": "balance.caja",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "a_caja",
+     1
+    ]
+   ],
+   "descripcion": "Cash and cash equivalents (misma definicion que el flujo)",
+   "nota": ""
+  },
+  {
+   "campo": "balance.inversiones_cp",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "a_fvtpl_c",
+     1
+    ],
+    [
+     "a_fvoci_c",
+     1
+    ],
+    [
+     "a_ac_c",
+     1
+    ],
+    [
+     "a_cobertura_c",
+     1
+    ]
+   ],
+   "descripcion": "Activos financieros circulantes a VR (resultados y ORI), a costo amortizado y de cobertura (= current marketable securities de Item 5 p. 32)",
+   "nota": ""
+  },
+  {
+   "campo": "balance.cuentas_por_cobrar",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "a_cxc",
+     1
+    ],
+    [
+     "a_cxc_rel",
+     1
+    ]
+   ],
+   "descripcion": "Notes and accounts receivable, net + receivables from related parties",
+   "nota": ""
+  },
+  {
+   "campo": "balance.inventarios",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "a_inventarios",
+     1
+    ]
+   ],
+   "descripcion": "Inventories",
+   "nota": ""
+  },
+  {
+   "campo": "balance.otros_activos_circulantes",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "a_otras_cxc_rel",
+     1
+    ],
+    [
+     "a_otros_fin_c",
+     1
+    ],
+    [
+     "a_otros_c",
+     1
+    ]
+   ],
+   "descripcion": "Other receivables from related parties + other financial assets + other current assets",
+   "nota": ""
+  },
+  {
+   "campo": "balance.ppe_neto",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "a_ppe",
+     1
+    ]
+   ],
+   "descripcion": "Property, plant and equipment",
+   "nota": ""
+  },
+  {
+   "campo": "balance.otros_activos_lp",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "a_fvtpl_nc",
+     1
+    ],
+    [
+     "a_fvoci_nc",
+     1
+    ],
+    [
+     "a_ac_nc",
+     1
+    ],
+    [
+     "a_asociadas",
+     1
+    ],
+    [
+     "a_rou",
+     1
+    ],
+    [
+     "a_intangibles",
+     1
+    ],
+    [
+     "a_isr_dif",
+     1
+    ],
+    [
+     "a_depositos",
+     1
+    ],
+    [
+     "a_otros_nc",
+     1
+    ]
+   ],
+   "descripcion": "Activos no circulantes distintos de PPE (financieros, asociadas, derecho de uso, intangibles, ISR diferido, depositos, otros)",
+   "nota": ""
+  },
+  {
+   "campo": "balance.activo_total",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "a_total",
+     1
+    ]
+   ],
+   "descripcion": "Total assets",
+   "nota": ""
+  },
+  {
+   "campo": "balance.proveedores",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "p_proveedores",
+     1
+    ],
+    [
+     "p_proveedores_rel",
+     1
+    ]
+   ],
+   "descripcion": "Accounts payable + payables to related parties",
+   "nota": ""
+  },
+  {
+   "campo": "balance.otros_pasivos_circulantes",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "p_fvtpl_c",
+     1
+    ],
+    [
+     "p_cobertura_c",
+     1
+    ],
+    [
+     "p_sueldos",
+     1
+    ],
+    [
+     "p_bono_utilidades",
+     1
+    ],
+    [
+     "p_contratistas_equipo",
+     1
+    ],
+    [
+     "p_dividendos_por_pagar",
+     1
+    ],
+    [
+     "p_isr_por_pagar",
+     1
+    ],
+    [
+     "p_acumulados_otros_c",
+     1
+    ],
+    [
+     "n_arrend_circ",
+     -1
+    ],
+    [
+     "n_prestamos_cobertura",
+     -1
+    ]
+   ],
+   "descripcion": "Pasivos circulantes distintos de proveedores y deuda (sin la porcion circulante de arrendamientos, que va en arrendamientos, ni los prestamos de cobertura, que van en deuda)",
+   "nota": "Nota 16 (porcion circulante de arrendamientos) y F2 Nota 31 (prestamos de cobertura)"
+  },
+  {
+   "campo": "balance.deuda",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "n_bonos_total",
+     1
+    ],
+    [
+     "n_prestamos_total",
+     1
+    ],
+    [
+     "n_prestamos_cobertura",
+     1
+    ]
+   ],
+   "descripcion": "Bonos + prestamos bancarios de largo plazo (incl. porcion circulante) + prestamos bancarios designados como cobertura de inversion neta",
+   "nota": "F2 Nota 31 pp. F-66/F-67 (2023-2024); F1 Nota 31 p. F-68 y Nota 19 p. F-46 (2025)"
+  },
+  {
+   "campo": "balance.arrendamientos_financieros",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "n_arrend_circ",
+     1
+    ],
+    [
+     "p_arrend_nc",
+     1
+    ]
+   ],
+   "descripcion": "Pasivo por arrendamiento IFRS 16 (circulante + no circulante); el principal se paga en financiamiento",
+   "nota": "F1 Nota 16 p. F-38; F2 Nota 16 p. F-38"
+  },
+  {
+   "campo": "balance.otros_pasivos_lp",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "p_isr_dif",
+     1
+    ],
+    [
+     "p_beneficios_def",
+     1
+    ],
+    [
+     "p_depositos_garantia",
+     1
+    ],
+    [
+     "p_otros_nc",
+     1
+    ]
+   ],
+   "descripcion": "Deferred income tax liabilities + net defined benefit liability + guarantee deposits + others",
+   "nota": ""
+  },
+  {
+   "campo": "balance.pasivo_total",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "p_total",
+     1
+    ]
+   ],
+   "descripcion": "Total liabilities",
+   "nota": ""
+  },
+  {
+   "campo": "balance.capital_contable",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "k_total",
+     1
+    ]
+   ],
+   "descripcion": "Total equity (incluye participacion no controladora)",
+   "nota": ""
+  },
+  {
+   "campo": "balance.utilidades_retenidas",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "k_utilidades_retenidas",
+     1
+    ]
+   ],
+   "descripcion": "Retained earnings (reserva legal + especial + no asignadas)",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.depreciacion_amortizacion",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "f_depreciacion",
+     1
+    ],
+    [
+     "f_amortizacion",
+     1
+    ]
+   ],
+   "descripcion": "Depreciation expense + amortization expense",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.sbc",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "f_sbc",
+     1
+    ]
+   ],
+   "descripcion": "Share-based compensation",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.cfo",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "f_cfo",
+     1
+    ]
+   ],
+   "descripcion": "Net cash generated by operating activities",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.capex",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "i_adq_ppe",
+     -1
+    ]
+   ],
+   "descripcion": "Acquisitions of property, plant and equipment (definicion de capex del emisor; intangibles en otros_inversion)",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.cfi",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "i_cfi",
+     1
+    ]
+   ],
+   "descripcion": "Net cash used in investing activities",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.cff",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "x_cff",
+     1
+    ]
+   ],
+   "descripcion": "Net cash used in financing activities",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.dividendos",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "x_dividendos",
+     -1
+    ]
+   ],
+   "descripcion": "Cash dividends",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.recompras",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "x_tesoreria",
+     -1
+    ]
+   ],
+   "descripcion": "Treasury stock acquired",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.principal_arrendamientos_financieros",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "x_principal_arrend",
+     -1
+    ]
+   ],
+   "descripcion": "Repayment of the principal portion of lease liabilities",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.emision_acciones",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "x_no_controladora",
+     1
+    ]
+   ],
+   "descripcion": "Increase in non-controlling interests (aportes de socios minoritarios en JASM, ESMC y otras)",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.efecto_cambiario",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "z_fx",
+     1
+    ]
+   ],
+   "descripcion": "Effect of exchange rate changes on cash and cash equivalents",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.caja_inicial",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "z_caja_inicial",
+     1
+    ]
+   ],
+   "descripcion": "Cash and cash equivalents, beginning of year",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.caja_final",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "z_caja_final",
+     1
+    ]
+   ],
+   "descripcion": "Cash and cash equivalents, end of year",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.utilidad_neta",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_utilidad_neta",
+     1
+    ]
+   ],
+   "descripcion": "Net income (el flujo IFRS parte de la UAI; el motor parte de la utilidad neta)",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.emision_deuda",
+   "anios": [
+    "FY2023"
+   ],
+   "lineas": [
+    [
+     "x_emision_bonos",
+     1
+    ],
+    [
+     "x_prestamos_recibidos",
+     1
+    ],
+    [
+     "x_cobertura_prestamos",
+     1
+    ]
+   ],
+   "descripcion": "Proceeds from bonds + long-term bank loans + aumento de prestamos de cobertura",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.emision_deuda",
+   "anios": [
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "x_emision_bonos",
+     1
+    ],
+    [
+     "x_prestamos_recibidos",
+     1
+    ]
+   ],
+   "descripcion": "Proceeds from bonds + long-term bank loans",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.amortizacion_deuda",
+   "anios": [
+    "FY2023",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "x_pago_bonos",
+     -1
+    ],
+    [
+     "x_pago_prestamos",
+     -1
+    ]
+   ],
+   "descripcion": "Repayment of bonds + repayment of long-term bank loans",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.amortizacion_deuda",
+   "anios": [
+    "FY2024"
+   ],
+   "lineas": [
+    [
+     "x_pago_bonos",
+     -1
+    ],
+    [
+     "x_pago_prestamos",
+     -1
+    ],
+    [
+     "x_cobertura_prestamos",
+     -1
+    ]
+   ],
+   "descripcion": "Repayment of bonds + bank loans + disminucion de prestamos de cobertura",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.otros_financiamiento",
+   "anios": [
+    "FY2023",
+    "FY2024"
+   ],
+   "lineas": [
+    [
+     "x_costos_emision",
+     1
+    ],
+    [
+     "x_intereses_pagados",
+     1
+    ],
+    [
+     "x_depositos_recibidos",
+     1
+    ],
+    [
+     "x_depositos_devueltos",
+     1
+    ],
+    [
+     "x_venta_participacion",
+     1
+    ],
+    [
+     "x_donacion",
+     1
+    ]
+   ],
+   "descripcion": "Costos de emision, intereses pagados, depositos en garantia, venta de participaciones y donaciones",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.otros_financiamiento",
+   "anios": [
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "x_cobertura_prestamos",
+     1
+    ],
+    [
+     "x_costos_emision",
+     1
+    ],
+    [
+     "x_intereses_pagados",
+     1
+    ],
+    [
+     "x_depositos_recibidos",
+     1
+    ],
+    [
+     "x_depositos_devueltos",
+     1
+    ],
+    [
+     "x_venta_participacion",
+     1
+    ],
+    [
+     "x_donacion",
+     1
+    ]
+   ],
+   "descripcion": "Pasivos de cobertura (sin saldo de prestamos al cierre, Nota 11), costos de emision, intereses pagados, depositos, venta de participaciones y donaciones",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.cambio_capital_trabajo",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "f_c_cxc",
+     1
+    ],
+    [
+     "f_c_cxc_rel",
+     1
+    ],
+    [
+     "f_c_inventarios",
+     1
+    ],
+    [
+     "f_c_proveedores",
+     1
+    ],
+    [
+     "f_c_proveedores_rel",
+     1
+    ]
+   ],
+   "descripcion": "Cambios en cuentas por cobrar, inventarios y proveedores (las mismas lineas que el balance del motor)",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.otros_operativos",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "r_impuestos",
+     1
+    ],
+    [
+     "f_perdida_crediticia",
+     1
+    ],
+    [
+     "f_costos_financieros",
+     1
+    ],
+    [
+     "f_asociadas",
+     1
+    ],
+    [
+     "f_ingreso_intereses",
+     1
+    ],
+    [
+     "f_baja_ppe",
+     1
+    ],
+    [
+     "f_baja_intangibles",
+     1
+    ],
+    [
+     "f_deterioro_ppe",
+     1
+    ],
+    [
+     "f_vr_resultados",
+     1
+    ],
+    [
+     "f_baja_deuda_ori",
+     1
+    ],
+    [
+     "f_baja_asociadas",
+     1
+    ],
+    [
+     "f_baja_subsidiarias",
+     1
+    ],
+    [
+     "f_cambiario",
+     1
+    ],
+    [
+     "f_ingreso_dividendos",
+     1
+    ],
+    [
+     "f_otros_ajustes",
+     1
+    ],
+    [
+     "f_c_vr_resultados",
+     1
+    ],
+    [
+     "f_c_otras_cxc_rel",
+     1
+    ],
+    [
+     "f_c_otros_fin",
+     1
+    ],
+    [
+     "f_c_otros_c",
+     1
+    ],
+    [
+     "f_c_otros_nc",
+     1
+    ],
+    [
+     "f_c_sueldos",
+     1
+    ],
+    [
+     "f_c_bono_utilidades",
+     1
+    ],
+    [
+     "f_c_acumulados",
+     1
+    ],
+    [
+     "f_c_otros_pas_nc",
+     1
+    ],
+    [
+     "f_c_beneficios_def",
+     1
+    ],
+    [
+     "f_impuestos_pagados",
+     1
+    ]
+   ],
+   "descripcion": "Impuesto del periodo (UAI - utilidad neta), demas ajustes no monetarios, cambios en otros activos y pasivos de operacion e impuestos pagados",
+   "nota": ""
+  },
+  {
+   "campo": "flujo.otros_inversion",
+   "anios": [
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "lineas": [
+    [
+     "i_adq_vr_resultados",
+     1
+    ],
+    [
+     "i_adq_vr_ori",
+     1
+    ],
+    [
+     "i_adq_costo_amort",
+     1
+    ],
+    [
+     "i_adq_cobertura",
+     1
+    ],
+    [
+     "i_adq_asociadas",
+     1
+    ],
+    [
+     "i_adq_intangibles",
+     1
+    ],
+    [
+     "i_disp_vr_ori",
+     1
+    ],
+    [
+     "i_disp_costo_amort",
+     1
+    ],
+    [
+     "i_disp_ppe",
+     1
+    ],
+    [
+     "i_disp_intangibles",
+     1
+    ],
+    [
+     "i_derivados",
+     1
+    ],
+    [
+     "i_retorno_capital_ori",
+     1
+    ],
+    [
+     "i_baja_cobertura",
+     1
+    ],
+    [
+     "i_intereses_cobrados",
+     1
+    ],
+    [
+     "i_subsidios_ppe",
+     1
+    ],
+    [
+     "i_subsidios_otros",
+     1
+    ],
+    [
+     "i_otros_dividendos",
+     1
+    ],
+    [
+     "i_dividendos_asociadas",
+     1
+    ],
+    [
+     "i_prepagos_arrend",
+     1
+    ],
+    [
+     "i_depositos_pagados",
+     1
+    ],
+    [
+     "i_depositos_recuperados",
+     1
+    ]
+   ],
+   "descripcion": "Todas las lineas de inversion salvo la compra de PPE (incluye intangibles, subsidios cobrados e intereses cobrados)",
+   "nota": ""
+  }
+ ]
+}

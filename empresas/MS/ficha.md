@@ -6,12 +6,12 @@
 ## 1. Negocio y segmentos
 Ingresos netos 2025: US$70,645 M [3]. Institutional Securities (ISG: banca de inversión, acciones y renta fija) 33,080 (46.8%); Wealth Management (WM) 31,754 (44.9%); Investment Management (IM) 6,525 (9.2%); eliminaciones −714. Por región: Américas 52,897 (74.9%), EMEA 8,328 (11.8%) y Asia 9,420 (13.3%) [3]. En el 2T26 Asia creció 71% a/a y pesó 18.4% [2].
 
-WM es la "anualidad": US$8.08 billones de activos de clientes, 3.02 billones en cuentas con comisión (*fee-based*), préstamos por 195.7 mil M y un ROTCE de 53% [2]. Con IM, los activos de clientes llegaron a US$10 billones en el 2T26, que era la meta [1].
+WM es la "anualidad": US$8.08 billones de activos de clientes, 3.02 billones en cuentas con comisión (*fee-based*) y un ROTCE de 53% [2]. Con IM suman US$10 billones, la meta, alcanzada en el 2T26 [1].
 
 ## 2. Último reporte: 2T26 (15-jul-2026) [1][2][13]
 - **Ingresos:** US$21,348 M (+27% a/a), récord. Consenso de 19,620 (Investing.com): +8.8%.
 - **Margen antes de impuestos:** 34.4% (27.5% un año antes). Índice de eficiencia de 65% (71%).
-- **UPA diluida:** US$3.46 (+62%) contra 2.93 de consenso: +18%. ROTCE de 26.6%.
+- **UPA diluida:** US$3.46 (+62%) contra 2.93 de consenso (Yahoo; Investing.com): +18%. ROTCE de 26.6%.
 - **Guía:** Pick no mueve metas durante el año (ROTCE 20%, eficiencia 70%, margen WM 30%) [5][13]. Tasa fiscal de 22-23%. NII de WM: "*modest sequential increase*" en el 3T [13]. En Barclays (15-sep) el copresidente Simkowitz dijo "*3Q is no 2Q*" sobre mercados [14], y que el *pipeline* de banca de inversión es "*very robust*" (titular de Reuters) [14].
 - **Datos operativos:** (i) activos nuevos netos (NNA) récord de US$148.1 mil M, de los que "*just over half*" vino de OPIs de clientes del canal Workplace [1]; (ii) Equity de 6,300 M (+69%), con fuerza en Asia [1]; (iii) CET1 estandarizado de 14.8% y SLR de 4.9% (5.5% un año antes) [2].
 
@@ -42,7 +42,7 @@ Anual (10-K, XBRL) [8]:
 El FCF y la deuda neta no aplican a un intermediario: el flujo operativo mezcla inventarios de negociación y fue de −US$17,889 M en 2025 [8]. Por eso se muestra la deuda de largo plazo (LP).
 
 ## 4. Expediente de 10 puntos
-1. **Utilidad vs. efectivo.** La prueba es el capital. El CET1 creció 11% a/a (78.7 → 87.6 mil M) y el valor en libros tangible por acción (TBVPS) +12.5% (47.25 → 53.18) [2]. *Inferencia:* la mitad de los NNA récord vino de OPIs, un evento no recurrente.
+1. **Utilidad vs. efectivo.** La prueba es el capital. El CET1 creció 11% a/a (78.7 → 87.6 mil M) y el valor en libros tangible por acción (TBVPS) +12.5% (47.25 → 53.18) [2]. Como la mitad de los NNA récord vino de OPIs [1], *inferencia:* no son recurrentes.
 2. **Deuda.** LP de US$383.2 mil M (+20% a/a), con 34.3 mil M venciendo en 12 meses [2]. Perfil de deuda sin garantía: 2026 21, 2027 38, 2028 43 y 2029 40 mil M; plazo promedio de 6.1 años. Emisión 2021-2T26: 77% USD, 13% EUR, 3% JPY y 2% GBP. TLAC de 52.4% de los APR contra 21.5% requerido [6]. Costo: no verificado.
 3. **Dilución.** Acciones diluidas −1.5% a/a. SBC de 2.6-2.8% de los ingresos. En 2021 subieron 11.7% por las compras de E*TRADE y Eaton Vance [8].
 4. **Capital de trabajo (equivalente bancario).** Activos +24% a/a (1.675 billones), préstamos +18% y depósitos +15%; el SLR bajó de 5.5% a 4.9% [2]. *Inferencia:* el balance crece más rápido que el capital de nivel 1.
@@ -70,7 +70,7 @@ El FCF y la deuda neta no aplican a un intermediario: el flujo operativo mezcla 
 | Ke 10.5% | 28.0% | 25.3% | 22.6% |
 | Ke 12% | 33.5% | 30.8% | 28.1% |
 
-*Inferencia:* el precio exige sostener un ROTCE de 23-34% contra 26.6% en el 2T26, 21.6% en 2025 y una meta de 20%. Descuenta que el pico de mercados se vuelva estructural, lo cual depende de que WM siga creciendo.
+*Inferencia:* el precio exige un ROTCE sostenido de 23-34%, contra 26.6% en el 2T26, 21.6% en 2025 y una meta de 20%: descuenta que el pico de mercados sea estructural.
 
 ## 7. Escenarios de negocio a 12 meses
 - **Bajista (25%).** Se cierra la ventana de OPIs, el mercado cae ~15% (menos comisiones de WM) y hay compresión de tarifas por IA. ROTCE de 18-20%; UPA 2027 ≈ US$11.0 (pronóstico).
@@ -80,14 +80,14 @@ El FCF y la deuda neta no aplican a un intermediario: el flujo operativo mezcla 
 
 ## 8. Pronósticos registrados (3T26)
 - **Fecha: 14-oct-2026, ~7:30 a.m. ET.** Confirmada por la empresa el 11-sep-2025 [7].
-- **Ingresos 3T26:** punto US$20,900 M; intervalo de 80%: 19,700-22,100. Consenso de 20,840 (Yahoo, 10 analistas, 25-sep) [10]; Zacks tiene 19,880 (22-sep) [11]. Supuestos: ISG 10.0 mil M (banca de inversión 2.3, Equity 5.4, renta fija 2.3); WM 9.3 (comisiones de gestión +7% t/t por activos *fee-based* iniciales de 3.02 billones); IM 1.7.
+- **Ingresos 3T26:** punto US$20,900 M; intervalo de 80%: 19,700-22,100. Consenso de 20,840 (Yahoo, 10 analistas, 25-sep) [10]; Zacks tiene 19,880 (22-sep) [11]. Supuestos: ISG 10.1 mil M (banca de inversión 2.3, Equity 5.5, renta fija 2.3); WM 9.3 (comisiones de gestión +7% t/t por activos *fee-based* iniciales de 3.02 billones); IM 1.7; eliminaciones −0.2.
 - **UPA diluida 3T26:** punto US$3.32; intervalo de 80%: 3.00-3.64. Consenso de 3.16 (Yahoo, 14) y 3.06 (Nasdaq/Zacks, 5) [10][11]. Supuestos: margen antes de impuestos de 34%, tasa de 23%, preferentes de 145 M y 1,563 M de acciones.
 - **Binarios:** ingresos > US$20,840 M: **p = 0.53**; UPA > US$3.16: **p = 0.72** (superó el consenso en los últimos 4 trimestres, por 11-35% [11]).
 
 ## 9. Catalizadores con fecha y riesgos
 **Catalizadores:** 14-oct, reporte del 3T26; 27-28 oct, FOMC; 3-nov, elecciones intermedias [18]; 11-dic, vence la resolución continua de gasto [18]; 14-ene-2027, reporte del 4T26 [7]; sin fecha, reglas finales de Basilea y del sobrecargo G-SIB [17].
 
-**Riesgos:** caída de mercados (comisiones de WM sobre activos); compresión de tarifas por IA; fin del auge de OPIs de IA; filtración de su lista de operaciones (23-sep; sólo el titular, riesgo reputacional) [19]; AOCI y fondeo con tasas largas arriba de 5%; SLR en 4.9%.
+**Riesgos:** caída de mercados; compresión de tarifas por IA; fin del auge de OPIs de IA; filtración de su lista de operaciones (23-sep; sólo el titular) [19]; AOCI y fondeo con tasas largas arriba de 5%; SLR de 4.9%.
 
 ## 10. Fuentes
 1. MS 8-K ex. 99.1, resultados 2T26 (15-jul-2026): https://www.sec.gov/Archives/edgar/data/895421/000089542126000207/a2q26msearningsrelease.htm

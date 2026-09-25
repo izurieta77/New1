@@ -898,7 +898,8 @@ def comparar_readme(S, B, liq, div, suc, cit):
         propio = estado if all(ok[i] for i in ids) else "NO VERIFICADO: " + ",".join(i for i in ids if not ok[i])
         comparar("5. Fiscalidad", pref.strip("| ").strip() + " (" + ",".join(ids) + ")", estado if c[2].startswith(estado) else c[2][:40], propio)
     c = celdas(sec, "| Dividendos extranjeros (SIC) |")
-    base_readme = "ambigua" if "ambigua" in c[2] else ("neta" if "neto" in c[2] or "neta" in c[2] else "(no dice)")
+    vigente = c[2].split("Corrección")[0]  # lo que dice hoy la celda, sin la nota historica de la correccion
+    base_readme = "ambigua" if "ambigua" in vigente else ("neta" if "neto" in vigente or "neta" in vigente else "(no dice)")
     comparar("5. Fiscalidad", "Base del 10% adicional de dividendos extranjeros (L16)", base_readme, "neta" if ok["L16"] else "no verificada",
              nota="art. 142 fr. V: 'sin incluir el monto del impuesto retenido que en su caso se hubiere efectuado'")
     c = celdas(sec, "| UCITS irlandeses en el SIC |")

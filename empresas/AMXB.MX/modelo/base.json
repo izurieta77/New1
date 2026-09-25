@@ -1,0 +1,1292 @@
+{
+  "empresa": "America Movil, S.A.B. de C.V.",
+  "ticker": "AMXB.MX",
+  "moneda": "MXN",
+  "unidades": "millones",
+  "fecha_corte": "2026-09-25",
+  "aviso": "FASE 0 (formacion): no es recomendacion de compra o venta. Escenarios = supuestos de mecanismo, no pronosticos.",
+  "fuentes": {
+    "F1": {
+      "documento": "Formulario 20-F del ejercicio 2025 de America Movil (PDF 'as filed' publicado por el emisor; mismo documento que ef20060642_20f.htm, accession 0001140361-26-017486)",
+      "url": "https://s22.q4cdn.com/604986553/files/doc_financials/2025/ar/AS-FILED-AMERICA-MOVIL-SAB-DE-CV-20F-2025.pdf",
+      "url_sec": "https://www.sec.gov/Archives/edgar/data/1129137/000114036126017486/ef20060642_20f.htm",
+      "fecha": "2026-04-28",
+      "descargado": "2026-09-25",
+      "bytes": 1724696,
+      "sha256": "d340b7db3eeada61ad651b4d328cafd138aa58fe650f3d995ec4c429446a835a",
+      "paginas": "438 paginas PDF; estados financieros F-5 a F-8 (PDF 99-102); citas 'p. F-n' = pagina impresa; PDF = F-n + 94"
+    },
+    "F2": {
+      "documento": "Formulario 20-F del ejercicio 2024 (PDF publicado por el emisor; accession SEC 0001140361-25-018954)",
+      "url": "https://sustainability-americamovil-com.amxdigital.net/portal/su/pdf/Annual-Report-20F-2024.pdf",
+      "fecha": "2025-05-14",
+      "descargado": "2026-09-25",
+      "bytes": 4882413,
+      "sha256": "7b50911068a8e33faeef7d01b30f2339e8e61cd7bab97828e2826f612a1c7289",
+      "paginas": "balance al 31-dic-2023 en p. F-6 (PDF 100); cambios en pasivos de financiamiento 2022-2023 en p. F-82 (PDF 178)"
+    },
+    "F3": {
+      "documento": "Reporte financiero y operativo del 2T26 (21-jul-2026), tambien anexo al 6-K de la SEC accession 0001140361-26-029404",
+      "url": "https://s22.q4cdn.com/604986553/files/doc_financials/2026/q2/2Q26.pdf",
+      "fecha": "2026-07-21",
+      "descargado": "2026-09-25",
+      "bytes": 6243701,
+      "sha256": "8f13d33da7778c26e8240b3eeaa7d7341971305064f57ba3f7c585ca5482dd92",
+      "nota": "tablas sin auditar"
+    },
+    "F4": {
+      "documento": "Reporte financiero y operativo del 4T25 (10-feb-2026)",
+      "url": "https://s22.q4cdn.com/604986553/files/doc_financials/2025/q4/4Q25.pdf",
+      "fecha": "2026-02-10",
+      "descargado": "2026-09-25",
+      "bytes": 967242,
+      "sha256": "4c68d83c8262530dd939c98cf7f0275b059b882c1064cc585e87bf2b8fd0d00c",
+      "nota": "tablas sin auditar"
+    },
+    "F5": {
+      "documento": "Reporte financiero y operativo del 4T24 (feb-2025; version original, antes de la reexpresion del 20-F 2024)",
+      "url": "https://s22.q4cdn.com/604986553/files/doc_financials/2024/q4/4Q24.pdf",
+      "fecha": "2025-02",
+      "descargado": "2026-09-25",
+      "bytes": 1057814,
+      "sha256": "a14487a6094bd468e9ca0698398ae41d7bea334b307ff3a0f065486572096fc5",
+      "nota": "tablas sin auditar"
+    },
+    "F6": {
+      "documento": "SEC, visor XBRL del 20-F 2025 (R2, R3, R4, R5), leido con WebFetch; segunda extraccion en datos/segunda_extraccion_sec_visor_R.json",
+      "url": "https://www.sec.gov/Archives/edgar/data/1129137/000114036126017486/R2.htm",
+      "fecha": "2026-04-28",
+      "descargado": "2026-09-25"
+    },
+    "F7": {
+      "documento": "SEC companyfacts (XBRL) CIK 1129137; extracto del 20-F 2024 en datos/xbrl_companyfacts_amx_20F2024_extracto.json",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001129137.json",
+      "fecha": "2026-09-25",
+      "descargado": "2026-09-25"
+    },
+    "F8": {
+      "documento": "Yahoo Finance chart v8, AMXB.MX (BMV) y MXN=X; datos/yahoo_*.json",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMXB.MX?range=1mo&interval=1d",
+      "fecha": "2026-09-24",
+      "descargado": "2026-09-25",
+      "nota": "fuente viva: una nueva descarga no reproduce el hash"
+    },
+    "F9": {
+      "documento": "FRED: DGS10 (T-bond 10a), T5YIE (inflacion implicita 5a EUA), IRLTLT01MXM156N (bono 10a Mexico, OCDE, mensual); datos/fred_*.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+      "fecha": "2026-09-24",
+      "descargado": "2026-09-25"
+    },
+    "F10": {
+      "documento": "Damodaran, Country Risk Premiums, actualizacion del 1-jul-2026 (diferenciales corregidos el 9-jul); extracto en datos/damodaran_extracto.json",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx",
+      "fecha": "2026-07-01",
+      "descargado": "2026-09-25"
+    },
+    "F11": {
+      "documento": "Damodaran, Betas by Sector: mercados emergentes y global (datos a 5-ene-2026), renglon Telecom. Services",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaemerg.xls",
+      "fecha": "2026-01-05",
+      "descargado": "2026-09-25"
+    },
+    "F12": {
+      "documento": "conocimiento/03 s2.3 y s6.1 (metodo de costo de capital del sistema), conocimiento/23 y 24 (riesgo politico y regulacion), conocimiento/25",
+      "fecha": "2026-09-25"
+    }
+  },
+  "historico": [
+    {
+      "periodo": "FY2023",
+      "anio": 2023,
+      "fin": "2023-12-31",
+      "fuente": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023); F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024); F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023); F1 p. F-7 (Estado consolidado de variaciones en el capital contable, 2023); F1 Nota 10 a) p. F-41 (movimiento de PPE neto 2023); F1 Nota 15 p. F-62 (movimiento de activos por derecho de uso y pasivo, 2023); F2 Nota 19 p. F-82 (cambios en pasivos por actividades de financiamiento 2022-2023). Transcripcion en miles en datos/transcripcion_filing_miles.json; aqui en millones.",
+      "fuentes_campos": {
+        "resultados.ingresos": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023): ingresos operativos",
+        "resultados.costo_ventas": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023): costo de ventas de equipos y servicios (sin D&A)",
+        "resultados.gastos_operativos": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023): gastos comerciales, de administracion y generales + otros gastos + D&A",
+        "resultados.utilidad_operativa": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023)",
+        "resultados.gasto_intereses": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023): gasto por intereses (incluye intereses de arrendamientos, ver Nota 15)",
+        "resultados.ingreso_intereses": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023)",
+        "resultados.otros_ingresos": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023): cambiario neto + valuacion de derivados, costo laboral y otros + asociadas",
+        "resultados.utilidad_antes_impuestos": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023)",
+        "resultados.impuestos": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023)",
+        "resultados.utilidad_neta": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023): utilidad neta consolidada",
+        "resultados.utilidad_neta_controladora": "F1 p. F-6 (Estado consolidado de resultados integrales, columna 2023)",
+        "balance.caja": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): efectivo y equivalentes",
+        "balance.inversiones_cp": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): inversiones de capital a VR con cambios en ORI y otras de corto plazo (Verizon, BT)",
+        "balance.cuentas_por_cobrar": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): suscriptores, distribuidores, impuestos por recuperar, activos de contrato y otros",
+        "balance.inventarios": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024)",
+        "balance.otros_activos_circulantes": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): partes relacionadas + derivados + otros activos circulantes",
+        "balance.ppe_neto": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): PPE neto + activos por derecho de uso",
+        "balance.otros_activos_lp": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): intangibles + credito mercantil + asociadas + ISR diferido + cxc LP + otros + instrumentos de deuda",
+        "balance.activo_total": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024)",
+        "balance.proveedores": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): cuentas por pagar circulantes (Nota 16a: proveedores, acreedores diversos, intereses y dividendos por pagar)",
+        "balance.otros_pasivos_circulantes": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): pasivos acumulados + ISR + otros impuestos + derivados + partes relacionadas + ingresos diferidos",
+        "balance.deuda": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): deuda de corto plazo y porcion circulante + deuda de largo plazo",
+        "balance.arrendamientos_financieros": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): pasivo por derecho de uso de corto y largo plazo",
+        "balance.otros_pasivos_lp": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): ISR diferido + cuentas por pagar LP + ingresos diferidos LP + retiro de activos + beneficios a empleados",
+        "balance.pasivo_total": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024)",
+        "balance.capital_contable": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): capital contable total (incluye no controladora)",
+        "balance.utilidades_retenidas": "F2 p. F-6 (Estado consolidado de situacion financiera al 31-dic-2023, columna 2023 del 20-F 2024): utilidades retenidas totales",
+        "flujo.cfo": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023): flujo de operacion IFRS - intereses pagados - intereses de arrendamientos (F1 Nota 15 p. F-62 (movimiento de activos por derecho de uso y pasivo, 2023)); reclasificacion declarada",
+        "flujo.capex": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023): compra de PPE + adquisicion de intangibles",
+        "flujo.cfi": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023)",
+        "flujo.cff": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023): flujo de financiamiento IFRS + intereses pagados + intereses de arrendamientos (reclasificados a CFO)",
+        "flujo.dividendos": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023): dividendos pagados",
+        "flujo.recompras": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023): recompra de acciones",
+        "flujo.emision_deuda": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023): prestamos obtenidos",
+        "flujo.amortizacion_deuda": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023): pago de prestamos",
+        "flujo.principal_arrendamientos_financieros": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023) pago del pasivo por derecho de uso - intereses del pasivo (F1 Nota 15 p. F-62 (movimiento de activos por derecho de uso y pasivo, 2023))",
+        "flujo.efecto_cambiario": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023)",
+        "flujo.depreciacion_amortizacion": "F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023): depreciacion de PPE y derecho de uso + amortizacion de intangibles",
+        "flujo.sbc": "F1: no se identificaron planes de pagos basados en acciones (busqueda 'share-based' en el 20-F); 0"
+      },
+      "resultados": {
+        "ingresos": 816012.844,
+        "costo_ventas": 316476.14,
+        "gastos_operativos": 331753.189,
+        "utilidad_operativa": 167783.515,
+        "gasto_intereses": 44545.241,
+        "ingreso_intereses": 9628.34,
+        "otros_ingresos": -17532.969,
+        "utilidad_antes_impuestos": 115333.645,
+        "impuestos": 34544.003,
+        "utilidad_neta": 80789.642,
+        "utilidad_neta_controladora": 76110.617
+      },
+      "balance": {
+        "caja": 26597.773,
+        "inversiones_cp": 73755.627,
+        "cuentas_por_cobrar": 206802.15,
+        "inventarios": 19271.625,
+        "otros_activos_circulantes": 13739.813,
+        "ppe_neto": 742219.224,
+        "otros_activos_lp": 481799.748,
+        "activo_total": 1564185.96,
+        "proveedores": 162097.416,
+        "otros_pasivos_circulantes": 176970.508,
+        "deuda": 500677.052,
+        "arrendamientos_financieros": 125169.156,
+        "otros_pasivos_lp": 177569.446,
+        "pasivo_total": 1142483.578,
+        "capital_contable": 421702.382,
+        "utilidades_retenidas": 545653.728
+      },
+      "flujo": {
+        "depreciacion_amortizacion": 151786.064,
+        "sbc": 0.0,
+        "cfo": 208411.756,
+        "capex": 156338.806,
+        "cfi": -164989.416,
+        "cff": -45266.729,
+        "dividendos": 30466.636,
+        "recompras": 14331.361,
+        "emision_deuda": 249380.436,
+        "amortizacion_deuda": 214735.61,
+        "principal_arrendamientos_financieros": 28849.613,
+        "emision_acciones": 0.0,
+        "efecto_cambiario": -5258.787,
+        "cambio_capital_trabajo": {
+          "suscriptores_distribuidores_impuestos_contrato": -19201.698,
+          "pagos_anticipados": -6154.082,
+          "partes_relacionadas": 758.301,
+          "inventarios": 2832.978,
+          "otros_activos": -1564.37,
+          "proveedores_y_pasivos_acumulados": 10098.156,
+          "ingresos_diferidos": 3062.445
+        },
+        "otros_operativos": {
+          "impuesto_a_la_utilidad_devengado (el CFO IFRS parte de la UAI)": 34544.003,
+          "participacion_en_asociadas": 5371.824,
+          "resultado_venta_ppe": -5055.264,
+          "costo_neto_obligaciones_laborales": 16971.936,
+          "cambiario_neto": -16175.776,
+          "ingreso_por_intereses": -9628.34,
+          "gasto_por_intereses": 44545.241,
+          "ptu": 3938.274,
+          "valuacion_derivados_intereses_capitalizados_otros": 4623.029,
+          "ganancia_posicion_monetaria (Argentina, IAS 29)": -9321.48,
+          "deterioro_documentos_negocio_conjunto": 12184.562,
+          "deterioro_inversion_negocio_conjunto": 4677.782,
+          "beneficios_empleados_pagados": -13090.945,
+          "ptu_pagada": -3316.54,
+          "intereses_cobrados": 4882.509,
+          "impuestos_pagados": -49466.056,
+          "RECLASIFICACION intereses pagados (desde financiamiento)": -29031.855,
+          "RECLASIFICACION intereses de arrendamientos (Nota 15; desde financiamiento)": -10648.584
+        },
+        "otros_inversion": {
+          "dividendos_cobrados": 4590.313,
+          "venta_ppe": 7042.757,
+          "adquisicion_negocios": 0.0,
+          "earn_out_combinacion": 3468.655,
+          "instrumentos_financieros_neto": -9420.419,
+          "inversiones_en_asociadas": -459.75,
+          "adquisicion_inversiones": -10061.353,
+          "venta_inversiones": 10482.15,
+          "documentos_negocio_conjunto": -14292.963
+        },
+        "otros_financiamiento": {
+          "adquisicion_no_controladora": -6263.945,
+          "pago_contraprestacion_diferida": 0.0
+        },
+        "caja_inicial": 33700.949,
+        "caja_final": 26597.773,
+        "utilidad_neta": 80789.642
+      },
+      "movimientos_capital": {
+        "fuente": "F1 p. F-7 (Estado consolidado de variaciones en el capital contable, 2023); utilidades retenidas = columna + reserva legal (F-5)",
+        "capital_inicial": 437829.273,
+        "utilidades_retenidas_iniciales": 505483.717,
+        "dividendos_declarados": 30912.348,
+        "recompras": 14323.067,
+        "ori": -45417.173,
+        "otros": -6263.945,
+        "recompras_contra_utilidades_retenidas": 14319.762,
+        "otros_utilidades_retenidas": {
+          "utilidad_no_controladora (no llega a utilidades retenidas)": -4679.025,
+          "dividendos_no_controladora (no salen de utilidades retenidas)": 1965.529,
+          "traspaso_superavit_revaluacion": 815.693,
+          "reciclaje_superavit_torres_peru_rd": 4911.409,
+          "adquisiciones_no_controladora_y_control_comun": 1598.873
+        }
+      },
+      "movimientos_ppe": {
+        "fuente": "F1 Nota 10 a) p. F-41 (movimiento de PPE neto 2023) + F1 Nota 15 p. F-62 (movimiento de activos por derecho de uso y pasivo, 2023): rubro PPE + derecho de uso",
+        "ppe_inicial": 779100.306,
+        "adiciones": {
+          "ppe_adiciones": 144607.028,
+          "derecho_uso_altas_y_bajas": 15355.61,
+          "derecho_uso_modificaciones": 23807.386
+        },
+        "depreciacion": 133818.176,
+        "otros": {
+          "ppe_retiros": -10591.479,
+          "ppe_revaluacion": -5394.784,
+          "ppe_transferencias": -4368.76,
+          "ppe_conversion_e_hiperinflacion": -50848.185,
+          "derecho_uso_conversion": -15629.722
+        }
+      },
+      "movimientos_deuda": {
+        "fuente": "F2 Nota 19 p. F-82 (cambios en pasivos por actividades de financiamiento 2022-2023); emisiones y amortizaciones de F1 p. F-8 (Estado consolidado de flujos de efectivo, columna 2023)",
+        "deuda_inicial": 510589.48,
+        "emisiones": 249380.436,
+        "amortizaciones": 214735.61,
+        "otros": -44557.254
+      },
+      "movimientos_arrendamientos": {
+        "fuente": "F1 Nota 15 p. F-62 (movimiento de activos por derecho de uso y pasivo, 2023); principal = pagos - intereses devengados del pasivo",
+        "inicial": 134148.811,
+        "nuevos": {
+          "pasivo_altas_y_bajas": 12244.019,
+          "pasivo_modificaciones": 39109.007
+        },
+        "principal": 28849.613,
+        "otros": -31483.068
+      },
+      "ajustado": [
+        {
+          "nombre": "ebitda_emisor",
+          "base": "utilidad_operativa",
+          "ajustes": {
+            "depreciacion_y_amortizacion (F-6)": 151786.064
+          },
+          "valor_ajustado": 319570.0,
+          "fuente": "F5 p. 8 (reporte 4T24, estado de resultados, columna Jan-Dec 23; cifra no IFRS en millones); EBITDA = utilidad de operacion + D&A (definicion del glosario del emisor)"
+        }
+      ],
+      "memo": {
+        "cfo_ifrs_reportado": 248092.195,
+        "cff_ifrs_reportado": -84947.168,
+        "intereses_pagados_deuda": 29031.855,
+        "intereses_arrendamientos_nota15": 10648.584,
+        "pagos_totales_arrendamientos": 39498.197,
+        "compra_ppe": 131101.509,
+        "adquisicion_intangibles": 25237.297,
+        "ebitda_emisor": 319570.0,
+        "ppe_sin_derecho_uso": 628650.904,
+        "activos_derecho_uso": 113568.32,
+        "beneficios_a_empleados_pasivo": 143516.143,
+        "participacion_no_controladora": 54989.837,
+        "unidades": "millones de MXN"
+      },
+      "notas": "Mapeo declarado: PPE incluye derecho de uso; arrendamientos IFRS 16 como 'arrendamientos_financieros'; intereses pagados y de arrendamientos reclasificados de financiamiento a operacion; capex incluye intangibles."
+    },
+    {
+      "periodo": "FY2024",
+      "anio": 2024,
+      "fin": "2024-12-31",
+      "fuente": "F1 p. F-6 (columna 2024); F1 p. F-5 (columna 2024); F1 p. F-8 (columna 2024); F1 p. F-7 (2024); F1 Nota 10 a) p. F-42 (movimiento de PPE neto 2024); F1 Nota 15 p. F-62 (2024); F1 Nota 19 p. F-74 (cambios en pasivos por actividades de financiamiento 2023-2024). Transcripcion en miles en datos/transcripcion_filing_miles.json; aqui en millones.",
+      "fuentes_campos": {
+        "resultados.ingresos": "F1 p. F-6 (columna 2024): ingresos operativos",
+        "resultados.costo_ventas": "F1 p. F-6 (columna 2024): costo de ventas de equipos y servicios (sin D&A)",
+        "resultados.gastos_operativos": "F1 p. F-6 (columna 2024): gastos comerciales, de administracion y generales + otros gastos + D&A",
+        "resultados.utilidad_operativa": "F1 p. F-6 (columna 2024)",
+        "resultados.gasto_intereses": "F1 p. F-6 (columna 2024): gasto por intereses (incluye intereses de arrendamientos, ver Nota 15)",
+        "resultados.ingreso_intereses": "F1 p. F-6 (columna 2024)",
+        "resultados.otros_ingresos": "F1 p. F-6 (columna 2024): cambiario neto + valuacion de derivados, costo laboral y otros + asociadas",
+        "resultados.utilidad_antes_impuestos": "F1 p. F-6 (columna 2024)",
+        "resultados.impuestos": "F1 p. F-6 (columna 2024)",
+        "resultados.utilidad_neta": "F1 p. F-6 (columna 2024): utilidad neta consolidada",
+        "resultados.utilidad_neta_controladora": "F1 p. F-6 (columna 2024)",
+        "balance.caja": "F1 p. F-5 (columna 2024): efectivo y equivalentes",
+        "balance.inversiones_cp": "F1 p. F-5 (columna 2024): inversiones de capital a VR con cambios en ORI y otras de corto plazo (Verizon, BT)",
+        "balance.cuentas_por_cobrar": "F1 p. F-5 (columna 2024): suscriptores, distribuidores, impuestos por recuperar, activos de contrato y otros",
+        "balance.inventarios": "F1 p. F-5 (columna 2024)",
+        "balance.otros_activos_circulantes": "F1 p. F-5 (columna 2024): partes relacionadas + derivados + otros activos circulantes",
+        "balance.ppe_neto": "F1 p. F-5 (columna 2024): PPE neto + activos por derecho de uso",
+        "balance.otros_activos_lp": "F1 p. F-5 (columna 2024): intangibles + credito mercantil + asociadas + ISR diferido + cxc LP + otros + instrumentos de deuda",
+        "balance.activo_total": "F1 p. F-5 (columna 2024)",
+        "balance.proveedores": "F1 p. F-5 (columna 2024): cuentas por pagar circulantes (Nota 16a: proveedores, acreedores diversos, intereses y dividendos por pagar)",
+        "balance.otros_pasivos_circulantes": "F1 p. F-5 (columna 2024): pasivos acumulados + ISR + otros impuestos + derivados + partes relacionadas + ingresos diferidos",
+        "balance.deuda": "F1 p. F-5 (columna 2024): deuda de corto plazo y porcion circulante + deuda de largo plazo",
+        "balance.arrendamientos_financieros": "F1 p. F-5 (columna 2024): pasivo por derecho de uso de corto y largo plazo",
+        "balance.otros_pasivos_lp": "F1 p. F-5 (columna 2024): ISR diferido + cuentas por pagar LP + ingresos diferidos LP + retiro de activos + beneficios a empleados",
+        "balance.pasivo_total": "F1 p. F-5 (columna 2024)",
+        "balance.capital_contable": "F1 p. F-5 (columna 2024): capital contable total (incluye no controladora)",
+        "balance.utilidades_retenidas": "F1 p. F-5 (columna 2024): utilidades retenidas totales",
+        "flujo.cfo": "F1 p. F-8 (columna 2024): flujo de operacion IFRS - intereses pagados - intereses de arrendamientos (F1 Nota 15 p. F-62 (2024)); reclasificacion declarada",
+        "flujo.capex": "F1 p. F-8 (columna 2024): compra de PPE + adquisicion de intangibles",
+        "flujo.cfi": "F1 p. F-8 (columna 2024)",
+        "flujo.cff": "F1 p. F-8 (columna 2024): flujo de financiamiento IFRS + intereses pagados + intereses de arrendamientos (reclasificados a CFO)",
+        "flujo.dividendos": "F1 p. F-8 (columna 2024): dividendos pagados",
+        "flujo.recompras": "F1 p. F-8 (columna 2024): recompra de acciones",
+        "flujo.emision_deuda": "F1 p. F-8 (columna 2024): prestamos obtenidos",
+        "flujo.amortizacion_deuda": "F1 p. F-8 (columna 2024): pago de prestamos",
+        "flujo.principal_arrendamientos_financieros": "F1 p. F-8 (columna 2024) pago del pasivo por derecho de uso - intereses del pasivo (F1 Nota 15 p. F-62 (2024))",
+        "flujo.efecto_cambiario": "F1 p. F-8 (columna 2024)",
+        "flujo.depreciacion_amortizacion": "F1 p. F-8 (columna 2024): depreciacion de PPE y derecho de uso + amortizacion de intangibles",
+        "flujo.sbc": "F1: no se identificaron planes de pagos basados en acciones (busqueda 'share-based' en el 20-F); 0"
+      },
+      "resultados": {
+        "ingresos": 869220.584,
+        "costo_ventas": 331177.822,
+        "gastos_operativos": 357942.672,
+        "utilidad_operativa": 180100.09,
+        "gasto_intereses": 56019.754,
+        "ingreso_intereses": 9008.22,
+        "otros_ingresos": -70258.647,
+        "utilidad_antes_impuestos": 62829.909,
+        "impuestos": 35238.443,
+        "utilidad_neta": 27591.466,
+        "utilidad_neta_controladora": 22902.025
+      },
+      "balance": {
+        "caja": 36652.098,
+        "inversiones_cp": 46683.687,
+        "cuentas_por_cobrar": 221122.253,
+        "inventarios": 23751.457,
+        "otros_activos_circulantes": 25488.338,
+        "ppe_neto": 913244.807,
+        "otros_activos_lp": 526978.317,
+        "activo_total": 1793920.957,
+        "proveedores": 166924.134,
+        "otros_pasivos_circulantes": 187829.154,
+        "deuda": 567585.631,
+        "arrendamientos_financieros": 213103.228,
+        "otros_pasivos_lp": 226294.489,
+        "pasivo_total": 1361736.636,
+        "capital_contable": 432184.321,
+        "utilidades_retenidas": 517248.667
+      },
+      "flujo": {
+        "depreciacion_amortizacion": 164128.361,
+        "sbc": 0.0,
+        "cfo": 191664.04,
+        "capex": 130835.027,
+        "cfi": -129235.804,
+        "cff": -55444.74,
+        "dividendos": 31007.121,
+        "recompras": 22746.633,
+        "emision_deuda": 262041.021,
+        "amortizacion_deuda": 232731.277,
+        "principal_arrendamientos_financieros": 28690.646,
+        "emision_acciones": 0.0,
+        "efecto_cambiario": 3070.829,
+        "cambio_capital_trabajo": {
+          "suscriptores_distribuidores_impuestos_contrato": -4160.268,
+          "pagos_anticipados": 2252.754,
+          "partes_relacionadas": -3388.829,
+          "inventarios": -3055.411,
+          "otros_activos": -8825.833,
+          "proveedores_y_pasivos_acumulados": -15450.565,
+          "ingresos_diferidos": 2738.688
+        },
+        "otros_operativos": {
+          "impuesto_a_la_utilidad_devengado (el CFO IFRS parte de la UAI)": 35238.443,
+          "participacion_en_asociadas": 5179.112,
+          "resultado_venta_ppe": 264.769,
+          "costo_neto_obligaciones_laborales": 18232.542,
+          "cambiario_neto": 69721.961,
+          "ingreso_por_intereses": -9008.22,
+          "gasto_por_intereses": 56019.754,
+          "ptu": 3721.782,
+          "valuacion_derivados_intereses_capitalizados_otros": -3672.093,
+          "ganancia_posicion_monetaria (Argentina, IAS 29)": -27387.169,
+          "deterioro_documentos_negocio_conjunto": 4594.792,
+          "deterioro_inversion_negocio_conjunto": 0.0,
+          "beneficios_empleados_pagados": -27271.158,
+          "ptu_pagada": -3524.357,
+          "intereses_cobrados": 3489.6,
+          "impuestos_pagados": -48089.0,
+          "RECLASIFICACION intereses pagados (desde financiamiento)": -31082.117,
+          "RECLASIFICACION intereses de arrendamientos (Nota 15; desde financiamiento)": -16594.964
+        },
+        "otros_inversion": {
+          "dividendos_cobrados": 2779.138,
+          "venta_ppe": 395.232,
+          "adquisicion_negocios": 493.714,
+          "earn_out_combinacion": 893.754,
+          "instrumentos_financieros_neto": -2111.926,
+          "inversiones_en_asociadas": -72.513,
+          "adquisicion_inversiones": -10983.052,
+          "venta_inversiones": 15702.126,
+          "documentos_negocio_conjunto": -5497.25
+        },
+        "otros_financiamiento": {
+          "adquisicion_no_controladora": -2310.084,
+          "pago_contraprestacion_diferida": 0.0
+        },
+        "caja_inicial": 26597.773,
+        "caja_final": 36652.098,
+        "utilidad_neta": 27591.466
+      },
+      "movimientos_capital": {
+        "fuente": "F1 p. F-7 (2024); utilidades retenidas = columna + reserva legal (F-5)",
+        "capital_inicial": 421702.382,
+        "utilidades_retenidas_iniciales": 545653.728,
+        "dividendos_declarados": 31503.566,
+        "recompras": 22740.293,
+        "ori": 39444.416,
+        "otros": -2310.084,
+        "recompras_contra_utilidades_retenidas": 22734.817,
+        "otros_utilidades_retenidas": {
+          "utilidad_no_controladora (no llega a utilidades retenidas)": -4689.441,
+          "dividendos_no_controladora (no salen de utilidades retenidas)": 2021.059,
+          "traspaso_superavit_revaluacion": 816.81,
+          "adquisiciones_no_controladora_y_control_comun": 93.428
+        }
+      },
+      "movimientos_ppe": {
+        "fuente": "F1 Nota 10 a) p. F-42 (movimiento de PPE neto 2024) + F1 Nota 15 p. F-62 (2024): rubro PPE + derecho de uso",
+        "ppe_inicial": 742219.224,
+        "adiciones": {
+          "ppe_adiciones": 127886.893,
+          "derecho_uso_altas_y_bajas": 74728.239,
+          "derecho_uso_modificaciones": 30856.221
+        },
+        "depreciacion": 143697.887,
+        "otros": {
+          "ppe_retiros": -14987.146,
+          "ppe_combinaciones_de_negocios": 33764.113,
+          "ppe_revaluacion": 2160.477,
+          "ppe_transferencias": -4559.179,
+          "ppe_conversion_e_hiperinflacion": 52164.488,
+          "derecho_uso_combinacion": 5511.546,
+          "derecho_uso_conversion": 7197.818
+        }
+      },
+      "movimientos_deuda": {
+        "fuente": "F1 Nota 19 p. F-74 (cambios en pasivos por actividades de financiamiento 2023-2024); emisiones y amortizaciones de F1 p. F-8 (columna 2024)",
+        "deuda_inicial": 500677.052,
+        "emisiones": 262041.021,
+        "amortizaciones": 232731.277,
+        "otros": 37598.835
+      },
+      "movimientos_arrendamientos": {
+        "fuente": "F1 Nota 15 p. F-62 (2024); principal = pagos - intereses devengados del pasivo",
+        "inicial": 125169.156,
+        "nuevos": {
+          "pasivo_altas_y_bajas": 74430.11,
+          "pasivo_combinacion": 5285.522,
+          "pasivo_modificaciones": 31996.863
+        },
+        "principal": 28690.646,
+        "otros": 4912.223
+      },
+      "ajustado": [
+        {
+          "nombre": "ebitda_emisor",
+          "base": "utilidad_operativa",
+          "ajustes": {
+            "depreciacion_y_amortizacion (F-6)": 164128.361
+          },
+          "valor_ajustado": 344228.0,
+          "fuente": "F4 p. 8 (reporte 4T25, columna Jan-Dec 24; cifra no IFRS en millones); EBITDA = utilidad de operacion + D&A (definicion del glosario del emisor)"
+        }
+      ],
+      "memo": {
+        "cfo_ifrs_reportado": 239341.121,
+        "cff_ifrs_reportado": -103121.821,
+        "intereses_pagados_deuda": 31082.117,
+        "intereses_arrendamientos_nota15": 16594.964,
+        "pagos_totales_arrendamientos": 45285.61,
+        "compra_ppe": 113083.319,
+        "adquisicion_intangibles": 17751.708,
+        "ebitda_emisor": 344228.0,
+        "ppe_sin_derecho_uso": 713784.429,
+        "activos_derecho_uso": 199460.378,
+        "beneficios_a_empleados_pasivo": 167152.441,
+        "participacion_no_controladora": 63098.971,
+        "unidades": "millones de MXN"
+      },
+      "notas": "Mapeo declarado: PPE incluye derecho de uso; arrendamientos IFRS 16 como 'arrendamientos_financieros'; intereses pagados y de arrendamientos reclasificados de financiamiento a operacion; capex incluye intangibles."
+    },
+    {
+      "periodo": "FY2025",
+      "anio": 2025,
+      "fin": "2025-12-31",
+      "fuente": "F1 p. F-6 (columna 2025); F1 p. F-5 (columna 2025); F1 p. F-8 (columna 2025); F1 p. F-7 (2025); F1 Nota 10 a) p. F-43 (movimiento de PPE neto 2025); F1 Nota 15 p. F-62 (2025); F1 Nota 19 p. F-74 (cambios en pasivos por actividades de financiamiento 2024-2025). Transcripcion en miles en datos/transcripcion_filing_miles.json; aqui en millones.",
+      "fuentes_campos": {
+        "resultados.ingresos": "F1 p. F-6 (columna 2025): ingresos operativos",
+        "resultados.costo_ventas": "F1 p. F-6 (columna 2025): costo de ventas de equipos y servicios (sin D&A)",
+        "resultados.gastos_operativos": "F1 p. F-6 (columna 2025): gastos comerciales, de administracion y generales + otros gastos + D&A",
+        "resultados.utilidad_operativa": "F1 p. F-6 (columna 2025)",
+        "resultados.gasto_intereses": "F1 p. F-6 (columna 2025): gasto por intereses (incluye intereses de arrendamientos, ver Nota 15)",
+        "resultados.ingreso_intereses": "F1 p. F-6 (columna 2025)",
+        "resultados.otros_ingresos": "F1 p. F-6 (columna 2025): cambiario neto + valuacion de derivados, costo laboral y otros + asociadas",
+        "resultados.utilidad_antes_impuestos": "F1 p. F-6 (columna 2025)",
+        "resultados.impuestos": "F1 p. F-6 (columna 2025)",
+        "resultados.utilidad_neta": "F1 p. F-6 (columna 2025): utilidad neta consolidada",
+        "resultados.utilidad_neta_controladora": "F1 p. F-6 (columna 2025)",
+        "balance.caja": "F1 p. F-5 (columna 2025): efectivo y equivalentes",
+        "balance.inversiones_cp": "F1 p. F-5 (columna 2025): inversiones de capital a VR con cambios en ORI y otras de corto plazo (Verizon, BT)",
+        "balance.cuentas_por_cobrar": "F1 p. F-5 (columna 2025): suscriptores, distribuidores, impuestos por recuperar, activos de contrato y otros",
+        "balance.inventarios": "F1 p. F-5 (columna 2025)",
+        "balance.otros_activos_circulantes": "F1 p. F-5 (columna 2025): partes relacionadas + derivados + otros activos circulantes",
+        "balance.ppe_neto": "F1 p. F-5 (columna 2025): PPE neto + activos por derecho de uso",
+        "balance.otros_activos_lp": "F1 p. F-5 (columna 2025): intangibles + credito mercantil + asociadas + ISR diferido + cxc LP + otros + instrumentos de deuda",
+        "balance.activo_total": "F1 p. F-5 (columna 2025)",
+        "balance.proveedores": "F1 p. F-5 (columna 2025): cuentas por pagar circulantes (Nota 16a: proveedores, acreedores diversos, intereses y dividendos por pagar)",
+        "balance.otros_pasivos_circulantes": "F1 p. F-5 (columna 2025): pasivos acumulados + ISR + otros impuestos + derivados + partes relacionadas + ingresos diferidos",
+        "balance.deuda": "F1 p. F-5 (columna 2025): deuda de corto plazo y porcion circulante + deuda de largo plazo",
+        "balance.arrendamientos_financieros": "F1 p. F-5 (columna 2025): pasivo por derecho de uso de corto y largo plazo",
+        "balance.otros_pasivos_lp": "F1 p. F-5 (columna 2025): ISR diferido + cuentas por pagar LP + ingresos diferidos LP + retiro de activos + beneficios a empleados",
+        "balance.pasivo_total": "F1 p. F-5 (columna 2025)",
+        "balance.capital_contable": "F1 p. F-5 (columna 2025): capital contable total (incluye no controladora)",
+        "balance.utilidades_retenidas": "F1 p. F-5 (columna 2025): utilidades retenidas totales",
+        "flujo.cfo": "F1 p. F-8 (columna 2025): flujo de operacion IFRS - intereses pagados - intereses de arrendamientos (F1 Nota 15 p. F-62 (2025)); reclasificacion declarada",
+        "flujo.capex": "F1 p. F-8 (columna 2025): compra de PPE + adquisicion de intangibles",
+        "flujo.cfi": "F1 p. F-8 (columna 2025)",
+        "flujo.cff": "F1 p. F-8 (columna 2025): flujo de financiamiento IFRS + intereses pagados + intereses de arrendamientos (reclasificados a CFO)",
+        "flujo.dividendos": "F1 p. F-8 (columna 2025): dividendos pagados",
+        "flujo.recompras": "F1 p. F-8 (columna 2025): recompra de acciones",
+        "flujo.emision_deuda": "F1 p. F-8 (columna 2025): prestamos obtenidos",
+        "flujo.amortizacion_deuda": "F1 p. F-8 (columna 2025): pago de prestamos",
+        "flujo.principal_arrendamientos_financieros": "F1 p. F-8 (columna 2025) pago del pasivo por derecho de uso - intereses del pasivo (F1 Nota 15 p. F-62 (2025))",
+        "flujo.efecto_cambiario": "F1 p. F-8 (columna 2025)",
+        "flujo.depreciacion_amortizacion": "F1 p. F-8 (columna 2025): depreciacion de PPE y derecho de uso + amortizacion de intangibles",
+        "flujo.sbc": "F1: no se identificaron planes de pagos basados en acciones (busqueda 'share-based' en el 20-F); 0"
+      },
+      "resultados": {
+        "ingresos": 943638.406,
+        "costo_ventas": 357637.156,
+        "gastos_operativos": 394597.362,
+        "utilidad_operativa": 191403.888,
+        "gasto_intereses": 60318.857,
+        "ingreso_intereses": 9127.487,
+        "otros_ingresos": 1774.718,
+        "utilidad_antes_impuestos": 141987.236,
+        "impuestos": 53870.189,
+        "utilidad_neta": 88117.047,
+        "utilidad_neta_controladora": 82819.082
+      },
+      "balance": {
+        "caja": 34954.355,
+        "inversiones_cp": 42430.014,
+        "cuentas_por_cobrar": 241381.386,
+        "inventarios": 28306.625,
+        "otros_activos_circulantes": 18048.034,
+        "ppe_neto": 884806.934,
+        "otros_activos_lp": 549688.257,
+        "activo_total": 1799615.605,
+        "proveedores": 167124.791,
+        "otros_pasivos_circulantes": 200226.569,
+        "deuda": 524906.86,
+        "arrendamientos_financieros": 214108.933,
+        "otros_pasivos_lp": 265576.078,
+        "pasivo_total": 1371943.231,
+        "capital_contable": 427672.374,
+        "utilidades_retenidas": 557482.513
+      },
+      "flujo": {
+        "depreciacion_amortizacion": 180804.783,
+        "sbc": 0.0,
+        "cfo": 223916.983,
+        "capex": 130817.44,
+        "cfi": -122900.269,
+        "cff": -99659.054,
+        "dividendos": 33159.586,
+        "recompras": 11944.156,
+        "emision_deuda": 238903.497,
+        "amortizacion_deuda": 257291.962,
+        "principal_arrendamientos_financieros": 35429.137,
+        "emision_acciones": 0.0,
+        "efecto_cambiario": -3055.403,
+        "cambio_capital_trabajo": {
+          "suscriptores_distribuidores_impuestos_contrato": -13146.153,
+          "pagos_anticipados": 2942.404,
+          "partes_relacionadas": -290.804,
+          "inventarios": -5190.448,
+          "otros_activos": -10719.667,
+          "proveedores_y_pasivos_acumulados": -2814.001,
+          "ingresos_diferidos": 6683.261
+        },
+        "otros_operativos": {
+          "impuesto_a_la_utilidad_devengado (el CFO IFRS parte de la UAI)": 53870.189,
+          "participacion_en_asociadas": -294.235,
+          "resultado_venta_ppe": 282.824,
+          "costo_neto_obligaciones_laborales": 21444.882,
+          "cambiario_neto": -19786.745,
+          "ingreso_por_intereses": -9127.487,
+          "gasto_por_intereses": 60318.857,
+          "ptu": 4016.423,
+          "valuacion_derivados_intereses_capitalizados_otros": -3887.863,
+          "ganancia_posicion_monetaria (Argentina, IAS 29)": -5420.274,
+          "deterioro_documentos_negocio_conjunto": 0.0,
+          "deterioro_inversion_negocio_conjunto": 0.0,
+          "beneficios_empleados_pagados": -21577.637,
+          "ptu_pagada": -3131.168,
+          "intereses_cobrados": 2504.22,
+          "impuestos_pagados": -53199.386,
+          "RECLASIFICACION intereses pagados (desde financiamiento)": -32325.287,
+          "RECLASIFICACION intereses de arrendamientos (Nota 15; desde financiamiento)": -16156.752
+        },
+        "otros_inversion": {
+          "dividendos_cobrados": 3015.648,
+          "venta_ppe": 406.588,
+          "adquisicion_negocios": -276.841,
+          "earn_out_combinacion": 0.0,
+          "instrumentos_financieros_neto": 7490.018,
+          "inversiones_en_asociadas": 0.0,
+          "adquisicion_inversiones": -4162.135,
+          "venta_inversiones": 1443.893,
+          "documentos_negocio_conjunto": 0.0
+        },
+        "otros_financiamiento": {
+          "adquisicion_no_controladora": -440.849,
+          "pago_contraprestacion_diferida": -296.861
+        },
+        "caja_inicial": 36652.098,
+        "caja_final": 34954.355,
+        "utilidad_neta": 88117.047
+      },
+      "movimientos_capital": {
+        "fuente": "F1 p. F-7 (2025); utilidades retenidas = columna + reserva legal (F-5)",
+        "capital_inicial": 432184.321,
+        "utilidades_retenidas_iniciales": 517248.667,
+        "dividendos_declarados": 33584.695,
+        "recompras": 11944.156,
+        "ori": -46576.066,
+        "otros": -524.077,
+        "recompras_contra_utilidades_retenidas": 11941.375,
+        "otros_utilidades_retenidas": {
+          "utilidad_no_controladora (no llega a utilidades retenidas)": -5297.965,
+          "dividendos_no_controladora (no salen de utilidades retenidas)": 2196.223,
+          "traspaso_superavit_revaluacion": 875.209,
+          "adquisiciones_no_controladora_y_control_comun": -130.598
+        }
+      },
+      "movimientos_ppe": {
+        "fuente": "F1 Nota 10 a) p. F-43 (movimiento de PPE neto 2025) + F1 Nota 15 p. F-62 (2025): rubro PPE + derecho de uso",
+        "ppe_inicial": 913244.807,
+        "adiciones": {
+          "ppe_adiciones": 128740.006,
+          "derecho_uso_altas_y_bajas": 15848.621,
+          "derecho_uso_modificaciones": 26726.258
+        },
+        "depreciacion": 158889.309,
+        "otros": {
+          "ppe_retiros": -14496.202,
+          "ppe_combinaciones_de_negocios": 1422.969,
+          "ppe_revaluacion": 1218.19,
+          "ppe_transferencias": -4813.959,
+          "ppe_conversion_e_hiperinflacion": -18929.129,
+          "derecho_uso_combinacion": 38.315,
+          "derecho_uso_conversion": -5303.633
+        }
+      },
+      "movimientos_deuda": {
+        "fuente": "F1 Nota 19 p. F-74 (cambios en pasivos por actividades de financiamiento 2024-2025); emisiones y amortizaciones de F1 p. F-8 (columna 2025)",
+        "deuda_inicial": 567585.631,
+        "emisiones": 238903.497,
+        "amortizaciones": 257291.962,
+        "otros": -24290.306
+      },
+      "movimientos_arrendamientos": {
+        "fuente": "F1 Nota 15 p. F-62 (2025); principal = pagos - intereses devengados del pasivo",
+        "inicial": 213103.228,
+        "nuevos": {
+          "pasivo_altas_y_bajas": 14847.515,
+          "pasivo_combinacion": 37.229,
+          "pasivo_modificaciones": 28873.668
+        },
+        "principal": 35429.137,
+        "otros": -7323.57
+      },
+      "ajustado": [
+        {
+          "nombre": "ebitda_emisor",
+          "base": "utilidad_operativa",
+          "ajustes": {
+            "depreciacion_y_amortizacion (F-6)": 180804.783
+          },
+          "valor_ajustado": 372209.0,
+          "fuente": "F4 p. 8 (reporte 4T25, columna Jan-Dec 25; cifra no IFRS en millones); EBITDA = utilidad de operacion + D&A (definicion del glosario del emisor)"
+        }
+      ],
+      "memo": {
+        "cfo_ifrs_reportado": 272399.022,
+        "cff_ifrs_reportado": -148141.093,
+        "intereses_pagados_deuda": 32325.287,
+        "intereses_arrendamientos_nota15": 16156.752,
+        "pagos_totales_arrendamientos": 51585.889,
+        "compra_ppe": 114431.308,
+        "adquisicion_intangibles": 16386.132,
+        "ebitda_emisor": 372209.0,
+        "ppe_sin_derecho_uso": 687263.062,
+        "activos_derecho_uso": 197543.872,
+        "beneficios_a_empleados_pasivo": 203386.684,
+        "participacion_no_controladora": 65602.111,
+        "unidades": "millones de MXN"
+      },
+      "notas": "Mapeo declarado: PPE incluye derecho de uso; arrendamientos IFRS 16 como 'arrendamientos_financieros'; intereses pagados y de arrendamientos reclasificados de financiamiento a operacion; capex incluye intangibles."
+    }
+  ],
+  "supuestos": {
+    "anos": 5,
+    "caja_minima": 25000,
+    "nota": "Supuestos de escenario (2026E-2030E) sobre el balance al 31-dic-2025. No son pronosticos, guia ni consenso. Tipo de cambio constante: resultado cambiario = 0 en los tres escenarios (el choque cambiario se mide aparte en la sensibilidad geopolitica). otros_ingresos = otros resultados financieros sin intereses de caja ni cambiario (costo financiero de obligaciones laborales, comisiones, valuacion; 2025: -18,306 + 294 de asociadas; F1 p. F-6 y Nota 22); tasa_rendimiento_caja 6% (~objetivo de Banxico de 6.50%, conocimiento/03 s2.3) sobre caja + inversiones de corto plazo. margen_bruto = 1 - costo de ventas sin D&A / ingresos. caja_minima 25,000 ~ minimo de caja 2023-2025 (26,598; F2 p. F-6).",
+    "escenarios": {
+      "tension": {
+        "descripcion": "Mecanismo de tension: bajas de prepago en Mexico por el registro obligatorio de lineas y competencia (ingresos planos 2026-2027), regulacion asimetrica mas dura y pago de espectro 5G en 2027 (capex 16.5%), tasas altas, acceso limitado a mercado (se refinancia 50% de los vencimientos) y costo financiero no operativo como 2023.",
+        "fuente_supuestos": "notas-y-modelo.md s5; anclas: F1 p. F-6/F-8 (2023-2025), F3 p. 8-12, F1 Nota 14 p. F-60 (vencimientos)",
+        "crecimiento_ingresos": [
+          0.01,
+          0.0,
+          0.02,
+          0.03,
+          0.03
+        ],
+        "margen_bruto": 0.615,
+        "margen_operativo": [
+          0.2,
+          0.185,
+          0.18,
+          0.18,
+          0.18
+        ],
+        "tasa_impuestos": 0.4,
+        "da_ventas": 0.19,
+        "capex_ventas": [
+          0.135,
+          0.165,
+          0.15,
+          0.145,
+          0.145
+        ],
+        "sbc_ventas": 0.0,
+        "dias_cxc": 97,
+        "dias_inventario": 30,
+        "dias_proveedores": 160,
+        "tasa_interes": 0.09,
+        "tasa_arrendamientos_financieros": 0.08,
+        "otros_ingresos": -28000,
+        "tasa_rendimiento_caja": 0.06,
+        "dividendos": [
+          34650,
+          34650,
+          34650,
+          34650,
+          34650
+        ],
+        "recompras": 5000,
+        "emision_deuda": [
+          45986.501,
+          21006.715,
+          21418.577,
+          27126.834,
+          23695.158
+        ],
+        "amortizacion_deuda": [
+          91973.001,
+          42013.431,
+          42837.154,
+          54253.667,
+          47390.315
+        ],
+        "nuevos_arrendamientos_financieros": 48000,
+        "principal_arrendamientos_financieros": 37000
+      },
+      "intermedio": {
+        "descripcion": "Mecanismo intermedio: continuidad de 2025-1S26 (servicios +5% a tipo de cambio constante, margen de operacion ~21% como en 1S26, capex 13.5% como 2025, tasa efectiva 37%) con dividendo creciendo 4% y recompras de Ps 10 mil M; se refinancia 80% de los vencimientos.",
+        "fuente_supuestos": "notas-y-modelo.md s5; anclas: F3 p. 7-10 (1S26), F1 Nota 25 p. F-83 (dividendo 0.54 y fondo de recompra), F1 Nota 14",
+        "crecimiento_ingresos": [
+          0.03,
+          0.045,
+          0.045,
+          0.045,
+          0.04
+        ],
+        "margen_bruto": 0.625,
+        "margen_operativo": 0.21,
+        "tasa_impuestos": 0.37,
+        "da_ventas": 0.187,
+        "capex_ventas": 0.135,
+        "sbc_ventas": 0.0,
+        "dias_cxc": 93,
+        "dias_inventario": 29,
+        "dias_proveedores": 170,
+        "tasa_interes": 0.081,
+        "tasa_arrendamientos_financieros": 0.0756,
+        "otros_ingresos": -18000,
+        "tasa_rendimiento_caja": 0.06,
+        "dividendos": [
+          34650,
+          36036,
+          37477,
+          38976,
+          40535
+        ],
+        "recompras": 10000,
+        "emision_deuda": [
+          73578.401,
+          33610.745,
+          34269.723,
+          43402.934,
+          37912.252
+        ],
+        "amortizacion_deuda": [
+          91973.001,
+          42013.431,
+          42837.154,
+          54253.667,
+          47390.315
+        ],
+        "nuevos_arrendamientos_financieros": 44000,
+        "principal_arrendamientos_financieros": 36000
+      },
+      "eficiencia": {
+        "descripcion": "Mecanismo de eficiencia: ahorro de costos (IA en atencion y red), margen de operacion subiendo a 24%, capex normalizado en 12% de ingresos, menor tasa efectiva (33%, como 2023), menor costo financiero; dividendo +8% anual, recompras de Ps 15 mil M y desendeudamiento (se refinancia 60% de los vencimientos).",
+        "fuente_supuestos": "notas-y-modelo.md s5; anclas: F1 pp. 17-18 (ahorros e IA), F3 p. 10 (capex 1S26 10.1% de ingresos), F1 Nota 13 p. F-53",
+        "crecimiento_ingresos": [
+          0.04,
+          0.055,
+          0.055,
+          0.05,
+          0.05
+        ],
+        "margen_bruto": 0.632,
+        "margen_operativo": [
+          0.215,
+          0.222,
+          0.228,
+          0.234,
+          0.24
+        ],
+        "tasa_impuestos": 0.33,
+        "da_ventas": 0.18,
+        "capex_ventas": [
+          0.125,
+          0.12,
+          0.12,
+          0.12,
+          0.12
+        ],
+        "sbc_ventas": 0.0,
+        "dias_cxc": 90,
+        "dias_inventario": 28,
+        "dias_proveedores": 175,
+        "tasa_interes": 0.075,
+        "tasa_arrendamientos_financieros": 0.072,
+        "otros_ingresos": -12000,
+        "tasa_rendimiento_caja": 0.06,
+        "dividendos": [
+          34650,
+          37422,
+          40416,
+          43649,
+          47141
+        ],
+        "recompras": 15000,
+        "emision_deuda": [
+          55183.801,
+          25208.059,
+          25702.292,
+          32552.2,
+          28434.189
+        ],
+        "amortizacion_deuda": [
+          91973.001,
+          42013.431,
+          42837.154,
+          54253.667,
+          47390.315
+        ],
+        "nuevos_arrendamientos_financieros": 40000,
+        "principal_arrendamientos_financieros": 35000
+      }
+    }
+  },
+  "insumos_complementarios": {
+    "dcf_inverso": {
+      "precio": {
+        "valor": 19.6,
+        "fecha": "2026-09-24",
+        "fuente": "F8: regularMarketPrice 19.60 MXN, regularMarketTime 2026-09-24 19:59:57 UTC (la barra diaria del 24-sep no traia cierre)"
+      },
+      "precio_alterno": {
+        "valor": 19.34,
+        "fecha": "2026-09-23",
+        "fuente": "F8: cierre diario del 23-sep-2026 (19.34000015258789)"
+      },
+      "acciones": {
+        "valor": 60100,
+        "fuente": "F3 p. 3: acciones en circulacion al cierre de jun-26 = 60.1 mil millones (redondeo del emisor, +/-0.08%); UPA basica = diluida (F1 p. F-75); 60,195 M al 31-mar-2026 (F1 portada/p. 4)"
+      },
+      "deuda_financiera_jun26": {
+        "valor": 476927,
+        "fuente": "F3 p. 32 (deuda total, sin arrendamientos; sin efecto de derivados)"
+      },
+      "caja_valores_jun26": {
+        "valor": 75943,
+        "fuente": "F3 p. 32 (efectivo, valores negociables e inversiones de corto plazo; incluye valores disponibles para venta)"
+      },
+      "arrendamientos_jun26": {
+        "valor": 214400,
+        "fuente": "F3 p. 9: 36,319 + 178,081"
+      },
+      "no_controladora_dic25": {
+        "valor": 65602.111,
+        "fuente": "F1 p. F-5 (valor en libros; A1 Telekom Austria 61% es la principal)"
+      },
+      "beneficios_empleados_netos_dic25": {
+        "valor": 194453.982,
+        "fuente": "F1 Nota 18 p. F-66: pasivo neto por beneficios definidos (DBO - activos del plan + techo)"
+      },
+      "beneficios_empleados_pagados_2025": {
+        "valor": -21577.637,
+        "fuente": "F1 p. F-8"
+      },
+      "historico_fcff": {
+        "valor": {
+          "2023": {
+            "ingresos": 816012.844,
+            "cfo_ifrs": 248092.195,
+            "intereses_cobrados": 4882.509,
+            "pagos_arrendamientos": 39498.197,
+            "capex": 156338.806,
+            "gasto_intereses": 44545.241,
+            "intereses_arrendamientos": 10648.584
+          },
+          "2024": {
+            "ingresos": 869220.584,
+            "cfo_ifrs": 239341.121,
+            "intereses_cobrados": 3489.6,
+            "pagos_arrendamientos": 45285.61,
+            "capex": 130835.027,
+            "gasto_intereses": 56019.754,
+            "intereses_arrendamientos": 16594.964
+          },
+          "2025": {
+            "ingresos": 943638.406,
+            "cfo_ifrs": 272399.022,
+            "intereses_cobrados": 2504.22,
+            "pagos_arrendamientos": 51585.889,
+            "capex": 130817.44,
+            "gasto_intereses": 60318.857,
+            "intereses_arrendamientos": 16156.752
+          }
+        },
+        "fuente": "F1 p. F-6 y F-8; Nota 15 p. F-62 (intereses de arrendamientos)"
+      },
+      "ttm_jun26": {
+        "valor": {
+          "ingresos_6m25": 465823,
+          "ingresos_6m26": 477915,
+          "cfo_6m25": 111204,
+          "cfo_6m26": 122799,
+          "arrendamientos_6m25": 25993,
+          "arrendamientos_6m26": 26425,
+          "capex_6m25": 54919,
+          "capex_6m26": 48112
+        },
+        "fuente": "F3 p. 8 (ingresos), p. 31 (CFO IFRS y pagos de arrendamiento), p. 10 (capex)"
+      },
+      "tasa_marginal": {
+        "valor": 0.3,
+        "fuente": "F1 Nota 13 p. F-53 (tasa legal en Mexico 30%)"
+      },
+      "tbond_10a": {
+        "valor": 0.0511,
+        "fuente": "F9 DGS10 del 2026-09-23"
+      },
+      "diferencial_default_eua": {
+        "valor": 0.002186353678194708,
+        "fuente": "F10 (EUA Aa1)"
+      },
+      "erp_madura": {
+        "valor": 0.042,
+        "fuente": "F10 (prima de mercado maduro, 1-jul-2026)"
+      },
+      "inflacion_eua": {
+        "valor": 0.0233,
+        "fuente": "F9 T5YIE del 2026-09-24 (inflacion implicita a 5 anos)"
+      },
+      "inflacion_mx": {
+        "valor": 0.035,
+        "fuente": "SUPUESTO: expectativa de largo plazo; meta de Banxico 3% +/-1 pp; conocimiento/03 s2.3 usa 3.5% como supuesto ilustrativo"
+      },
+      "mbono_10a": {
+        "valor": 0.0916,
+        "fuente": "F9 IRLTLT01MXM156N, ago-2026 (OCDE, mensual)"
+      },
+      "diferencial_default_mx": {
+        "valor": 0.01749881223830583,
+        "fuente": "F10 (Mexico Baa3)"
+      },
+      "kd_mxn": {
+        "valor": 0.093,
+        "fuente": "F4 p. 3: reapertura del bono global en pesos AMX34 al 9.3% (25-nov-2025)"
+      },
+      "tasa_arrendamientos": {
+        "valor": 0.07563807154824884,
+        "fuente": "calculo: intereses del pasivo 2025 / promedio del pasivo (F1 Nota 15 p. F-62)"
+      },
+      "g_terminal": {
+        "valor": 0.035,
+        "fuente": "SUPUESTO: crecimiento nominal perpetuo en MXN = inflacion supuesta (0% real); menor que la r_f en MXN"
+      },
+      "anos": {
+        "valor": 10,
+        "fuente": "SUPUESTO: horizonte explicito"
+      },
+      "ingresos_externos_segmento_2025_miles": {
+        "valor": {
+          "Mexico (Telcel y corporativo)": 260860901,
+          "Telmex": 91809477,
+          "Brasil": 177524392,
+          "Argentina": 36571343,
+          "Uruguay, Paraguay y Chile": 26934980,
+          "Colombia": 78606339,
+          "Andina (Ecuador y Peru)": 57156506,
+          "Centroamerica": 56291546,
+          "Caribe (Rep. Dominicana y Puerto Rico)": 36719643,
+          "Europa": 121163279
+        },
+        "fuente": "F1 Nota 23 p. F-80 (ingresos externos por segmento 2025)"
+      },
+      "paises_por_segmento": {
+        "valor": {
+          "Mexico (Telcel y corporativo)": [
+            "Mexico"
+          ],
+          "Telmex": [
+            "Mexico"
+          ],
+          "Brasil": [
+            "Brazil"
+          ],
+          "Argentina": [
+            "Argentina"
+          ],
+          "Uruguay, Paraguay y Chile": [
+            "Uruguay",
+            "Paraguay",
+            "Chile"
+          ],
+          "Colombia": [
+            "Colombia"
+          ],
+          "Andina (Ecuador y Peru)": [
+            "Ecuador",
+            "Peru"
+          ],
+          "Centroamerica": [
+            "Guatemala",
+            "El Salvador",
+            "Honduras",
+            "Nicaragua",
+            "Costa Rica"
+          ],
+          "Caribe (Rep. Dominicana y Puerto Rico)": [
+            "Dominican Republic",
+            "United States"
+          ],
+          "Europa": [
+            "Austria"
+          ]
+        },
+        "fuente": "F1 Nota 23 p. F-77 (paises de cada segmento); Europa = Austria (SUPUESTO por falta de desglose; ver notas s6)"
+      }
+    },
+    "geopolitica": {
+      "prepago_mexico_miles": {
+        "valor": 68421,
+        "fuente": "F3 p. 12 (suscriptores de prepago de Telcel, jun-26)"
+      },
+      "arpu_mexico_mxn_mes": {
+        "valor": 194,
+        "fuente": "F3 p. 12 (ARPU movil Mexico 2T26, mezcla prepago y pospago)"
+      },
+      "servicio_movil_mexico_2t26": {
+        "valor": 49027,
+        "fuente": "F3 p. 12 (ingresos por servicio movil Mexico 2T26)"
+      },
+      "ebitda_2025": {
+        "valor": 372209,
+        "fuente": "F4 p. 8"
+      },
+      "ebitda_6m25": {
+        "valor": 183458,
+        "fuente": "F3 p. 8"
+      },
+      "ebitda_6m26": {
+        "valor": 190412,
+        "fuente": "F3 p. 8"
+      },
+      "utilidad_controladora_2025": {
+        "valor": 82819.082,
+        "fuente": "F1 p. F-6"
+      },
+      "utilidad_controladora_6m25": {
+        "valor": 40985,
+        "fuente": "F3 p. 8"
+      },
+      "utilidad_controladora_6m26": {
+        "valor": 47733,
+        "fuente": "F3 p. 8"
+      },
+      "acciones_millones": {
+        "valor": 60100,
+        "fuente": "F3 p. 3"
+      },
+      "tasa_marginal": {
+        "valor": 0.3,
+        "fuente": "F1 Nota 13 p. F-53"
+      },
+      "rejilla_lineas": {
+        "valor": {
+          "s_fraccion_prepago_suspendida": [
+            0.05,
+            0.15,
+            0.3
+          ],
+          "k_arpu_relativo_suspendidas": [
+            0.1,
+            0.25,
+            0.5
+          ],
+          "c_margen_de_contribucion": [
+            0.7,
+            0.9
+          ]
+        },
+        "fuente": "SUPUESTOS de sensibilidad (sin probabilidad)"
+      },
+      "deuda_usd_jun26_musd": {
+        "valor": 9001,
+        "fuente": "F3 p. 32 (deuda en USD, millones de USD, sin derivados)"
+      },
+      "usdmxn_jun26": {
+        "valor": 17.47,
+        "fuente": "F3 p. 30 (MXN por USD al cierre de jun-26)"
+      },
+      "coberturas_usd_mxn_dic25_musd": {
+        "valor": 4990,
+        "fuente": "F1 Nota 7 p. F-38: XCS USD-MXN US$1,700 (activo) + US$3,190 (pasivo) + forward USD-MXN US$100; se supone vigente a jun-26"
+      },
+      "rejilla_cambiaria": {
+        "valor": {
+          "choque_depreciacion_mxn": [
+            0.05,
+            0.1,
+            0.2
+          ]
+        },
+        "fuente": "SUPUESTOS de sensibilidad"
+      },
+      "elasticidad_observada": {
+        "valor": {
+          "2024": {
+            "resultado_cambiario": -70698.375,
+            "cambio_usdmxn": 0.1997691419776837
+          },
+          "2025": {
+            "resultado_cambiario": 19786.745,
+            "cambio_usdmxn": -0.11355663770518498
+          }
+        },
+        "fuente": "F1 p. F-6 (resultado cambiario); F5 p. 31 y F4 p. 31 (USD/MXN de cierre 16.8935, 20.2683, 17.9667)"
+      }
+    },
+    "notas": {
+      "arrendamientos_partes_relacionadas": {
+        "valor": {
+          "activo_2025": 119146817,
+          "pasivo_2025": 128238094,
+          "costo_total_2025": 29791644
+        },
+        "fuente": "F1 Nota 15 p. F-63 (miles)"
+      },
+      "deuda_por_moneda_dic25_miles": {
+        "valor": {
+          "USD": 168694292,
+          "MXN": 136981910,
+          "EUR": 81951105,
+          "GBP": 53183228,
+          "BRL": 27754608,
+          "PEN": 24590054,
+          "COP": 14585379,
+          "CLP": 15676128,
+          "JPY": 1490156
+        },
+        "fuente": "F1 Nota 14 p. F-59 (bonos + lineas de credito por moneda; CLP incluye arrendamientos financieros de 14,466)"
+      },
+      "vencimientos_deuda_lp_dic25_miles": {
+        "valor": {
+          "2027": 42013431,
+          "2028": 42837154,
+          "2029": 54253667,
+          "2030": 47390315,
+          "2031": 22000000,
+          "2032+": 224439292
+        },
+        "fuente": "F1 Nota 14 p. F-60"
+      },
+      "pension_mexico_dic25_miles": {
+        "valor": {
+          "dbo": 343620613,
+          "activos": -160323036,
+          "neto": 183297577
+        },
+        "fuente": "F1 Nota 18 p. F-66"
+      },
+      "brasil_contingencias_miles": {
+        "valor": {
+          "total": 130738939,
+          "provision": 25361197
+        },
+        "fuente": "F1 Nota 17 p. F-64"
+      },
+      "reexpresion_2024": {
+        "valor": {
+          "isr_4t24": 29832,
+          "isr_20f": 35238.443,
+          "un_4t24": 28308,
+          "un_20f": 22902.025
+        },
+        "fuente": "F5 p. 8 (reporte original 4T24) y F1 p. F-6 (20-F)"
+      },
+      "fcf_emisor_2025": {
+        "valor": {
+          "fcf": 81884,
+          "beneficios_empleados": 18535,
+          "inversion_y_otros": 5678
+        },
+        "fuente": "F4 p. 32 (conciliacion no IFRS) y p. 10"
+      }
+    }
+  }
+}

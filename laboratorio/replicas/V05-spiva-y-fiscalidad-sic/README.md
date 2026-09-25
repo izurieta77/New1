@@ -2,6 +2,8 @@
 
 > Fecha: 25-sep-2026. Estado: **Verificado con matices.** Las tres afirmaciones recibidas quedan como **confirmadas con matices**: las cifras existen en PDF oficiales de S&P DJI, pero no son las más recientes y dos etiquetas no corresponden exactamente. La parte fiscal está verificada contra ley, DOF, IRS y tratados (ver el capítulo [27](../../../conocimiento/27-fiscalidad-2026-y-estructura-sic.md)). Esto no es una estrategia ni una recomendación (fase 0).
 >
+> **Doble ejecución independiente (2026-09-25):** `independiente.py` se escribió sin leer `reproducir.py`. Lee cada cifra de SPIVA por dos rutas, el texto congelado y las coordenadas del PDF con pdfminer, recalcula el análisis B y verifica 32 reglas fiscales por frase literal. De 334 cifras comparadas, 326 coincidían en la primera corrida. Se corrigieron tres cosas: la edición *Focus* de mitad de 2024 **sí trae** la cifra a 10 años (84.71%, en su Report 3); la base del 10% sobre dividendos extranjeros **es el neto** según la letra del art. 142 fr. V; y "+13.46" en lugar de "+13.45". Además, se anotó que el "script aparte" de los controles de calidad no está en el repositorio. Tras corregir, las 334 coinciden. Ningún veredicto cambia. Detalle al final.
+>
 > Para reproducir, desde la raíz del repo: `python3 laboratorio/replicas/V05-spiva-y-fiscalidad-sic/reproducir.py`. No usa red y solo usa la biblioteca estándar. Los PDF, los textos legales y los precios están congelados en `datos/`, con sus huellas y la del pre-registro en `SHA256SUMS.txt`. La salida es `resultados.json`. El script falla si cambia una huella, si no encuentra una cifra de SPIVA o si falta alguna de las 29 citas legales en los textos congelados.
 
 ## Resumen
@@ -110,7 +112,7 @@ Se verifican con fuente primaria (ley, DOF, SAT, IRS, Tesoro de EUA, BMV, emisor
 
 - **Huellas:** `herramientas/huellas.py verificar` → OK (57 archivos más el pre-registro).
 - **Extracción de texto:** `reproducir.py` re-extrae los 9 PDF con pypdf, si está instalado, y compara byte a byte con los `.txt` congelados: son idénticos. Con **pdfminer**, un extractor distinto, se confirmaron las filas de 85.59 (cierre de 2025) y 83.33 (mitad de 2026), y la presencia de 82.93, 74.3% y 16.4% (cierre de 2024 de América Latina).
-- **Doble implementación del análisis B:** un script aparte, que usa el parser del repo (`herramientas/datos_historicos.parsear_yahoo_historia`) y no el código de `reproducir.py`, reproduce los CAGR: 3.53% y 16.98% en 2015-2024 (80/20 → 6.40%); −10.27% y 54.12% en 2024; 6.50% y 15.25% en 2016-2025.
+- **Doble implementación del análisis B:** un script aparte, que usa el parser del repo (`herramientas/datos_historicos.parsear_yahoo_historia`) y no el código de `reproducir.py`, reproduce los CAGR: 3.53% y 16.98% en 2015-2024 (80/20 → 6.40%); −10.27% y 54.12% en 2024; 6.50% y 15.25% en 2016-2025. **Nota (2026-09-25):** ese script no está en el repositorio. No aparece en la carpeta de V05 ni en una búsqueda de archivos `.py` que mencionen V05, así que no cuenta como doble ejecución. La doble ejecución verificable es `independiente.py`, que reproduce esas mismas cifras (ver la última sección).
 - **Datos propios contra SPIVA (misma ventana, 10 años a 2024):** NAFTRAC da 3.53% contra 4.14% del S&P/BMV IRT según SPIVA. La **brecha de −0.61 pp al año** se debe a la comisión y el *tracking* del ETF y sesga el IPC hacia abajo; por eso la ventaja de las mezclas está sobrestimada en unos 0.1-0.3 pp. SPY × DEXMXUS da 16.98% contra 17.08% del S&P 500 (MXN) de SPIVA (−0.10 pp, el gasto de SPY).
 
 ### 1. A1: fondos *All Large-Cap* de EUA por debajo del S&P 500 (Report 1a, rendimiento absoluto, % de fondos)
@@ -283,3 +285,126 @@ El domicilio, el TER y la política de dividendos de CSPX e IUSA están verifica
 - iShares: CSPX (https://www.ishares.com/uk/individual/en/products/253743/ishares-sp-500-b-ucits-etf-acc-fund) e IUSA (https://www.ishares.com/uk/individual/en/products/251900/ishares-sp-500-ucits-etf-inc-fund)
 - GBM, FAQ: impuestos en el SIC (https://gbm.com/faqs/como-funcionan-los-impuestos-por-las-acciones-de-empresas-extranjeras-en-el-sic/), dividendos (https://gbm.com/faqs/como-funcionan-los-impuestos-sobre-los-dividendos-en-trading-mx/), W-8BEN (https://gbm.com/faqs/que-es-y-como-funciona-el-w-8ben-para-trading-mx-y-sic/) y constancias (https://gbm.com/faqs/como-y-donde-recibo-los-comprobantes-fiscales-o-cfdi-por-mis-ganancias/)
 - Precios: Yahoo Finance chart v8 (NAFTRAC.MX, SPY y ETFs del SIC) y FRED DEXMXUS (https://fred.stlouisfed.org/series/DEXMXUS)
+
+## Doble ejecución independiente (2026-09-25)
+
+**Resultado: 334 cifras y afirmaciones comparadas. Tras corregir, las 334 quedan dentro de tolerancia.** En la primera corrida, 326 estaban dentro y 8 fuera. Las 8 venían de dos errores: la fila de la edición *Focus* de mitad de 2024 (7 cifras que existen en el PDF y que el README daba como ausentes) y la base del 10% adicional sobre dividendos extranjeros. Además, "+13.45" se corrigió a "+13.46" por exactitud, aunque estaba dentro de tolerancia. También se anotó que el "script aparte" citado en los controles de calidad no está en el repositorio (fila 4). Ninguno de los cuatro cambia un veredicto. De las 334, 329 son idénticas al redondeo impreso. Las otras 5 se explican en "Observaciones".
+
+### Cómo se hizo
+
+- **Independencia.** El `auditor-de-replicas` escribió `independiente.py` sin leer `reproducir.py` ni `resultados.json`. Solo leyó el pre-registro y los datos congelados en `datos/`. Esos dos archivos se consultaron después, y solo para encontrar la causa de la diferencia de la edición *Focus*.
+- **Huellas.** Se revisaron con `hashlib`: coinciden los 58 archivos de `SHA256SUMS.txt`, que son los 57 de `datos/` más `prerregistro.md`, y no hay archivos sin huella en `datos/`.
+- **Texto de los PDF.** Con pypdf 6.19.0 se re-extrajeron los 9 PDF de SPIVA y los 4 PDF legales (LISR, LIF 2026 y los dos tratados). Los 13 textos son idénticos byte a byte a los `.txt` congelados.
+- **Cifras de SPIVA, por dos rutas propias que no comparten código:**
+  - **(a)** El `.txt` congelado, leído con expresiones regulares por encabezado de tabla y etiqueta de fila.
+  - **(b)** El PDF leído con **pdfminer.six**, un extractor distinto. Cada fila se reconstruye por la posición vertical de los números. No se usa el texto de pdfminer en orden, porque pdfminer entrega algunas tablas por columna y en un orden que no es el de las filas.
+  - **Resultado.** Las dos rutas coinciden en todas las filas: 6 ediciones de EUA, 3 de América Latina, supervivencia, Reports 3 y 4, y el Exhibit 8. En el Exhibit 8 cada barra se asigna a su categoría por coordenada x.
+- **Análisis B, recalculado desde cero.**
+  - **Datos y alineación.** Lectura propia del JSON de Yahoo y del CSV de FRED. Cada serie se alinea por mes; en DEXMXUS se toma el último dato no vacío del mes. Se ignora la barra parcial repetida de SPY de 2026-09.
+  - **Cálculos.** CAGR, mezclas con rebalanceo mensual, interpolación lineal sobre la rejilla pre-registrada (0/10/20/30/50/100) y, como control, el peso exacto por bisección.
+  - **Error estándar.** Newey-West(6) con **dos fórmulas propias**: (1) suma de autocovarianzas con pesos de Bartlett; (2) identidad de sumas móviles con relleno de ceros. La diferencia máxima entre las dos es de 8.7e-19. `herramientas.estadistica.newey_west` se usó solo como tercera comprobación, con diferencia de 0.0.
+- **Descriptivos.** Se recalcularon la liquidez del SIC, el dividendo de SPY de los últimos 12 meses y el *estate tax*. La tarifa del art. 2001(c) se leyó del texto congelado, con un control de continuidad entre tramos. Ese control encontró que el tramo de 40,000 a 60,000 USD no lleva coma ("$8,200 plus"), y el lector se corrigió. El crédito se leyó del art. 2102(b)(1).
+- **Fiscalidad.** 32 reglas se verificaron por **frase literal** en la fuente primaria congelada. La comparación se hace sin espacios, porque la extracción parte palabras ("gananci a"). La lista está abajo.
+- **Consultas en vivo.** Se hicieron dos, el 2026-09-25, y quedaron en `independiente-datos/` con sus huellas en `independiente-resultados.json`:
+  - El índice de reformas de la LISR de la Cámara de Diputados.
+  - Las páginas de iShares de CSPX e IUSA.
+- **Salidas.** `independiente-resultados.json`, `independiente-comparacion.csv` (una fila por cifra) e `independiente-comparacion-primera-corrida.csv` (la corrida antes de corregir). Para reproducir: `python3 laboratorio/replicas/V05-spiva-y-fiscalidad-sic/independiente.py`. No usa red. Necesita pdfminer.six para la ruta (b) y pypdf para la re-extracción; sin ellos, omite esas dos comprobaciones y lo avisa.
+
+**Tolerancias:**
+
+- 0.005 pp en cifras leídas de SPIVA y en tasas legales, es decir, igualdad al redondeo impreso.
+- 0.01 pp en la media mensual y en el IC (%/mes).
+- 0.05 en t.
+- 0.1 pp en CAGR, ventajas, pesos para compensar gastos y brechas.
+- 0.5 en redondeos a entero del texto ("de 83% a 87%", "~74%") y en MXN.
+- Igualdad exacta en conteos, impuesto en USD, veredictos y estados documentales.
+
+### Comparación por bloque
+
+| Bloque del README | Cifras | Primera corrida: dentro de tolerancia | Tras corregir: dentro de tolerancia | Idénticas al redondeo impreso |
+|---|---|---|---|---|
+| 1. A1: Report 1a (6 ediciones, cortes y columnas) | 45 | 38 | 45 | 45 |
+| 1. A1: fechas de publicación | 6 | 6 | 6 | 3 |
+| 1. A1: rangos del veredicto | 4 | 4 | 4 | 4 |
+| 2. A2: Tabla 1a (3 ediciones) | 16 | 16 | 16 | 16 |
+| 2. A2: fechas de publicación | 3 | 3 | 3 | 3 |
+| 2. A2: supervivencia a 10 años | 6 | 6 | 6 | 6 |
+| 2. A2: contexto (fondos de EUA y globales en MXN) | 4 | 4 | 4 | 4 |
+| 2. Reports 3 y 4 (rendimientos anualizados) | 48 | 48 | 48 | 48 |
+| 3. A3 (texto, Exhibit 8 y páginas) | 8 | 8 | 8 | 8 |
+| 4. B pre-registrado (CAGR, ventajas y pesos) | 14 | 14 | 14 | 14 |
+| 4. B prueba (media, t, IC y veredicto) | 5 | 5 | 5 | 5 |
+| 4. B exploratorio (2024 y 2016-2025) | 15 | 15 | 15 | 15 |
+| 4. B lectura | 4 | 4 | 4 | 3 |
+| Controles de calidad | 17 | 17 | 17 | 17 |
+| 5. Fiscalidad (estado de los 13 renglones, base del 10% y número de UCITS) | 15 | 14 | 15 | 15 |
+| 6. Liquidez del SIC (11 ETFs) | 46 | 46 | 46 | 46 |
+| 7. *Estate tax* | 26 | 26 | 26 | 26 |
+| Resumen (texto) | 40 | 40 | 40 | 39 |
+| Conclusiones permitidas y no permitidas (texto) | 12 | 12 | 12 | 12 |
+| **Total** | **334** | **326** | **334** | **329** |
+
+De las 334, 297 son numéricas y 37 son categóricas: cortes, fechas, veredictos y estados.
+
+### Cifras clave, lado a lado
+
+| Cifra | README | Propia: ruta (a) = ruta (b) |
+|---|---|---|
+| A1, 10 años: YE2023 / *Focus* 2024 / YE2024 / mitad 2025 / YE2025 / mitad 2026 | 87.42 / ~~sin tabla~~ 84.71 / 84.34 / 85.98 / 85.59 / 83.33 | 87.42 / 84.71 / 84.34 / 85.98 / 85.59 / 83.33 |
+| A2, 10 años: YE2023 / YE2024 / primer semestre 2025 | 87.80 / 82.93 / 73.17 | 87.80 / 82.93 / 73.17 |
+| Supervivencia a 10 años, primer semestre 2025 | 82.93% (34 de 41) | 82.93% (41 iniciales → 34) |
+| A3: fuera del índice / ETFs extranjeros (texto) / ETFs extranjeros (gráfica) / *offshore* (gráfica) | 74.3 / 16.4 / 16.2 / 16.8 | 74.3 / 16.4 / 16.2 / 16.8 (páginas 7 y 8) |
+| B 2015-2024: CAGR del IPC / S&P en MXN / 80/20 | 3.53 / 16.98 / 6.40 | 3.5253 / 16.9805 / 6.4048 |
+| B: peso en S&P para compensar 1 / 2 / 3 pp | 6.9 / 13.8 / 20.9 | 6.895 / 13.846 / 20.857 (exacto: 6.879 / 13.828 / 20.851) |
+| B: diferencia mensual, media / t NW(6) / IC 95% | 1.018 / 1.99 / [0.014, 2.021] | 1.0179 / 1.9879 / [0.0143, 2.0214] → apoyo |
+| B 2024: t NW(6) / B 2016-2025: t NW(6) | 5.48 / 1.20 | 5.4801 / 1.2021 |
+| Rendimiento por dividendo de SPY en 12 meses y fuga al 15% / 10% / 30% | 0.99 / 0.15 / 0.10 / 0.30 | 0.9884 / 0.1483 / 0.0988 / 0.2965 |
+| *Estate tax* con 100,000 / 1,000,000 USD | 10,800 / 332,800 USD | 10,800 / 332,800 USD |
+
+### Diferencias encontradas y corregidas
+
+| # | Dónde | Lo que decía | Evidencia propia | Causa | Corrección | Efecto |
+|---|---|---|---|---|---|---|
+| 1 | Tabla 1 (A1), desviación 3, `reproducir.py` y `resultados.json` | *Focus* Mid-Year 2024: "sin Report 1a (solo gráfica)", con `diez_anios: null` | El PDF trae el **Report 3**, *Fund Underperformance Rates – U.S. Equity Categories* (p. 8, datos al 30-jun-2024). *All Large-Cap Funds* contra el S&P 500 da 57.31 / 57.05 / 86.08 / 77.26 / **84.71** / 89.54 / 91.77. Rutas (a) y (b) iguales | `reproducir.py` solo buscaba "Report 1a". Si no lo encontraba, anotaba sin comprobarlo que la cifra "solo aparece en una gráfica" | `reproducir.py` ahora lee el Report 3 cuando falta el 1a. Se re-ejecutó: solo cambió esa entrada de `resultados.json`, y ninguna otra cifra. Se llenaron la fila de la tabla 1 y la desviación 3 | Ninguno sobre el veredicto: A1 sigue **confirmada con matices** y los rangos de 83% a 87% y de 88% a 93% se mantienen. La serie de ediciones queda completa |
+| 2 | Tabla 5, renglón "Dividendos extranjeros (SIC)" | "Base exacta del 10% (bruto o neto): la ley es ambigua y GBM dice neto" | Art. 142 fr. V LISR: el 10% se aplica "al monto al cual tengan derecho del dividendo o utilidad efectivamente distribuido por el residente en el extranjero, **sin incluir el monto del impuesto retenido** que en su caso se hubiere efectuado". El capítulo 27 cita la misma frase | La letra de la ley se calificó como ambigua | "La letra fija la base sin incluir el impuesto retenido, o sea el neto, y GBM también dice neto. No se revisó un criterio del SAT" | No cambia ninguna cifra. Queda más claro que el 10% mexicano se calcula sobre el dividendo neto de la retención de EUA |
+| 3 | Tabla del análisis B, fila 100% | "+13.45" | 16.9805 − 3.5253 = 13.4552, que redondea a 13.46 | Resta de cifras ya redondeadas (16.98 − 3.53) | "+13.46" | Menor: estaba dentro de la tolerancia de 0.1 pp |
+| 4 | Controles de calidad, "Doble implementación del análisis B" | "Un script aparte, que usa el parser del repo [...], reproduce los CAGR" | El script no está en la carpeta de V05 ni lo encuentra una búsqueda de archivos `.py` que mencionen V05 | Verificación sin script guardado | Se agregó una nota junto a la frase. La doble ejecución verificable es `independiente.py`, que reproduce los mismos CAGR (3.53 / 16.98 / 6.40; −10.27 / 54.12; 6.50 / 15.25) | Ninguno sobre las cifras. Hasta hoy, ese control no tenía evidencia guardada |
+
+Las cuatro están en `conocimiento/registro-de-errores.md`.
+
+### Las 32 reglas fiscales verificadas por frase literal
+
+| Id | Regla | Fuente congelada |
+|---|---|---|
+| L01-L03 | ISR de 10% definitivo; incluye acciones extranjeras cotizadas en bolsa (fr. I) y títulos que representen índices (fr. II) | LISR art. 129 |
+| L04-L06 | Pérdidas: solo contra ganancias del mismo tipo, en el ejercicio o en los 10 siguientes; se actualizan por inflación; si pudiendo no se restan, se pierde ese monto | LISR art. 129 |
+| L07-L08 | Declaración junto con la anual del art. 150; el intermediario expide las constancias | LISR art. 129 |
+| L09-L10 | GBM: "No tiene ninguna retención"; 10% en la anual; constancias 2025 en la app; sin CFDI en Trading USA | FAQ de GBM |
+| L11-L13 | Retención de 0.90% en 2026 (LIF art. 24, DOF 07-11-2025, vigente desde 01-01-2026), sobre el capital y como pago provisional | LIF 2026; LISR arts. 54 y 135 |
+| L14 | Dividendos mexicanos: acumulación, acreditamiento del ISR corporativo y 10% adicional retenido y definitivo | LISR art. 140 |
+| L15-L17 | Dividendos extranjeros: acumulación, 10% adicional definitivo, base sin incluir el impuesto retenido, y acreditamiento del impuesto extranjero | LISR arts. 142 fr. V y 5 |
+| L18-L19, L30 | EUA retiene 30%, o 10% con W-8BEN. En México, 10% sobre el neto (GBM). Tratado México-EUA art. 10(2)(b): 10% | FAQ de GBM; tratado |
+| L20 | Última reforma de la LISR: DOF 01-04-2024 | Texto de la Cámara y su índice de reformas (consulta en vivo) |
+| L21-L23 | Umbral de 60,000 USD (706-NA, 09/2025); crédito de 13,000 USD; tarifa de 18% a 40% | Instrucciones 706-NA (.txt y .html); 26 USC 2102 y 2001(c) |
+| L24, L24b | Tratados sucesorios con 15 países, sin México | Instrucciones 706-NA (.txt y .html) |
+| L25-L26 | *Situs*: acciones de sociedad de EUA "irrespective of the location of the certificates"; la excepción RIC terminó para fallecimientos después del 31-dic-2011 | 26 CFR 20.2104-1(a)(5) (.txt y .html); 26 USC 2105(d)(3) |
+| L27 | Tratado EUA-Irlanda art. 10(2)(b): 15% | Tratado |
+| L28 | CAT irlandés s.75: exención si causante y beneficiario no tienen domicilio ni residencia habitual en Irlanda | Revenue, *Notes for Guidance*, Part 9 |
+| L29 | REFIPRE (art. 176) solo con control efectivo | LISR art. 176 |
+| L31 | CSPX: Irlanda, IE00B5BMR087, TER 0.07%, acumulación. IUSA: Irlanda, IE0031442068, TER 0.07%, distribución | Página de iShares (consulta en vivo) |
+
+### Observaciones (no son errores; sin corrección)
+
+1. **Convención de la t.** El README reporta Newey-West(6) **con la corrección n/(n−1)**, igual que `herramientas/estadistica.py` y V01, aunque no lo dice. Sin la corrección, en 2015-2024 la t es 2.00 y el IC [0.019, 2.017]; el veredicto sigue siendo apoyo. En 2024, con 12 meses, la corrección pesa más: 5.48 con ella y 5.72 sin ella. La t convencional (IID) de 2015-2024 es 2.02.
+2. **Fechas de publicación.** Tres de las seis ediciones de EUA no se pueden verificar con los datos congelados: YE2024 (~mar-2025), mitad de 2025 (~sep-2025) y YE2025 (mar-2026). Sus PDF fueron regenerados por S&P (creados el 2025-10-15, el 2025-10-15 y el 2026-07-28), y las fechas del README salen de capturas del archivo o de un resumen de buscador que no se congelaron. Los metadatos no las contradicen. Las otras seis fechas coinciden con los metadatos.
+3. **"Sobrestimada en unos 0.1-0.3 pp".** Medido con NAFTRAC ajustado al CAGR del IRT de SPIVA, la sobrestimación es de 0.05 pp con 10% en el S&P, 0.11 con 20%, 0.17 con 30% y 0.29 con 50%. Si también se ajusta SPY al S&P 500 (MXN) de SPIVA, queda en 0.05 / 0.09 / 0.14 / 0.24. El rango del README es correcto de 20% a 50%.
+4. **Aproximaciones del texto.** "Una séptima parte" es 14.3%, contra 13.85% calculado. "~14,700 MXN" de CSPX es 14,725.50.
+5. **Columna "Precio" de la tabla 6.** Es el `regularMarketPrice` de Yahoo, no el último cierre diario. Difieren en IVV.MX (13,673.23 contra 13,513.00), VOO.MX (12,552.41 contra 12,403.88), SPY.MX (13,617.49 contra 13,445.00) y VWRAN.MX (3,413.86 contra 3,408.16). No afecta ninguna conclusión.
+6. **Domicilio de los UCITS.** El de CSPX e IUSA se confirmó en vivo en la página de iShares. El de IWDA, VWRA, ISAC, EIMI y CNDX solo se sabe por el nombre de la emisora en Yahoo ("Public Limited Company", "UCITS ETF"), no por el emisor. En los datos congelados, los 8 UCITS cotizan en MEX y en MXN.
+7. **Art. 135 LISR.** La retención sobre intereses es pago provisional, pero quien solo tiene intereses de hasta 100,000 MXN en el año puede tomarla como definitiva. El README no menciona esa opción.
+8. **Clasificación de A3.** Por la letra del criterio 5, A3 podría quedar como "confirmada": el peso fuera del índice (74.3%) es una cota inferior del *active share* y la fuente lo liga al cuartil superior. El README la deja "con matices" por tres razones: el horizonte es de 1 año y no de 10; los números son promedios, que no prueban que todos los fondos lo "tuvieran en común"; y el *active share* no se midió. Es un juicio más conservador, no un error de cifra.
+9. **No se pudo verificar aquí.** Las cifras de SPIVA Latin America YE2025 (el README ya las marca como no verificadas). Que GBM permita comprar CSPX o VUAA. La compra solo por títulos completos en el SIC, que sale de `arena/investigacion/01`, fuera de los datos de V05. El README original enumera "29 citas legales" y esta ejecución usa su propia lista de 32, así que no se comparan una a una.
+
+### Alcance
+
+Es una doble ejecución **con los mismos documentos y datos congelados**. No es una segunda fuente para SPIVA: solo S&P DJI publica esos PDF. Las únicas fuentes nuevas son las dos consultas en vivo: el índice de reformas de la Cámara y las páginas de iShares. Fase 0: nada de esto es una recomendación.

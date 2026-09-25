@@ -65,7 +65,7 @@
         "fuente": "F1 p. F-7 (Estado consolidado de variaciones en el capital contable, 2023)",
         "lineas": {
           "capital_total_inicial": 437829273, "ure_inicial_columna": 505125277, "reserva_legal": 358440,
-          "utilidad_neta_total": 80789642, "ori_total": -45417173,
+          "utilidad_neta_total": 80789642,
           "dividendos_decretados_controladora": -28946819, "dividendos_decretados_no_controladora": -1965529,
           "recompra_capital_social": -3305, "recompra_utilidades_retenidas": -14319762,
           "traspaso_superavit_revaluacion_a_ure": 815693, "reciclaje_superavit_torres_peru_rd": 4911409,
@@ -156,7 +156,7 @@
         "fuente": "F1 p. F-7 (2024)",
         "lineas": {
           "capital_total_inicial": 421702382, "ure_inicial_columna": 545295288, "reserva_legal": 358440,
-          "utilidad_neta_total": 27591466, "ori_total": 39444416,
+          "utilidad_neta_total": 27591466,
           "dividendos_decretados_controladora": -29482507, "dividendos_decretados_no_controladora": -2021059,
           "recompra_capital_social": -5476, "recompra_utilidades_retenidas": -22734817,
           "traspaso_superavit_revaluacion_a_ure": 816810, "reciclaje_superavit_torres_peru_rd": 0,
@@ -250,7 +250,7 @@
         "fuente": "F1 p. F-7 (2025)",
         "lineas": {
           "capital_total_inicial": 432184321, "ure_inicial_columna": 516890227, "reserva_legal": 358440,
-          "utilidad_neta_total": 88117047, "ori_total": -46576066,
+          "utilidad_neta_total": 88117047,
           "dividendos_decretados_controladora": -31388472, "dividendos_decretados_no_controladora": -2196223,
           "recompra_capital_social": -2781, "recompra_utilidades_retenidas": -11941375,
           "traspaso_superavit_revaluacion_a_ure": 875209, "reciclaje_superavit_torres_peru_rd": 0,

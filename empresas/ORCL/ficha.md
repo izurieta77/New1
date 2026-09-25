@@ -73,11 +73,11 @@ Ningún cliente superó 10% de los ingresos en FY26. Aun así, "en ciertas ofert
    - 4T FY26: +20.6% contra una guía de +19% a +21%.
    - 1T FY27: arriba del rango.
    - La guía de ingresos FY27 subió a US$90 mil M en marzo [4].
-9. **Partes relacionadas:** Larry Ellison (presidente ejecutivo y CTO) canceló su plan 10b5-1 sin haber vendido (8-K del 12-sep) [6].
+9. **Partes relacionadas:** Larry Ellison (presidente ejecutivo y CTO) canceló su plan 10b5-1 sin haber vendido; el anexo agrega que "no tiene otros planes" de vender acciones de Oracle (8-K con fecha de evento del 12-sep, presentado el 14-sep) [6].
 10. **Asignación de capital:** dividendo de US$0.50 trimestral (US$1.57 mil M pagados en el 1T) con FCF negativo. Inferencia: el dividendo se financia con capital externo. No recompró acciones en el 1T [1].
 
 ## 5. Cadenas causales vigentes
-1. **Aviso de fuerza mayor en Project Jupiter** (24-sep, por retrasos de energía; US$18 mil M de préstamos bancarios; Blue Owl aporta ~US$3 mil M de capital) [7][8] → Oracle busca diferir la renta en la etapa de desarrollo → menor presión de efectivo en el corto plazo, pero una señal de estrés en el financiamiento de IA → diferenciales de crédito y costo de refinanciamiento (Treasury a 10 años de 5.11% [14]) → gasto por intereses (+55% a/a) → la acción cayó ~3.5% ese día. William Blair dice que FY27 no se afecta porque Jupiter no aporta ingresos este año (secundaria) [7].
+1. **Aviso de fuerza mayor en Project Jupiter** (24-sep, por retrasos de energía; US$18 mil M de préstamos bancarios; Blue Owl aporta ~US$3 mil M de capital) [7][8] → Oracle busca diferir la renta en la etapa de desarrollo → menor presión de efectivo en el corto plazo, pero una señal de estrés en el financiamiento de IA → diferenciales de crédito y costo de refinanciamiento (Treasury a 10 años de 5.11% [14]) → gasto por intereses (+55% a/a) → la acción cayó 3.5% ese día (cierre de 144.56 a 139.54 en Yahoo; Reuters habla de ~4%). Oracle sostuvo que "Project Jupiter remains on our planned schedule"; Reuters describe un retraso de un año del programa para Blue Owl. William Blair dice que FY27 no se afecta porque Jupiter no aporta ingresos este año (secundaria) [7][8].
 2. **Rampa de OCI** (RPO de US$664 mil M) → +121% en IaaS → ingresos FY27 de al menos US$90 mil M → depreciación que crece más rápido que los ingresos, lo que presiona el margen GAAP → UPA FY27 de US$8.10 → P/U forward de 17x: el mercado descuenta un riesgo de ejecución y de balance, no de demanda.
 3. **Riesgo de contraparte** (clientes apalancados [5]) → los prepagos por US$11.4 mil M dependen de su capacidad de fondeo → si un cliente se retrasa, el RPO se convierte más lento y el capex queda varado → deterioro y más emisión de acciones → dilución.
 
@@ -115,11 +115,11 @@ Consenso: Yahoo **no tiene** el trimestre a nov-2026 (salta de ago-2026 a feb-20
 | Variable | Punto | p10-p90 (80%) | Referencia |
 |---|---|---|---|
 | Ingresos (US$ M) | 21,300 | 20,850-21,750 | Guía de 20,875-21,518 (punto medio 21,197) |
-| UPA non-GAAP diluida (US$) | 1.96 | 1.86-2.07 | Guía de 1.85-1.93 (punto medio 1.89) |
+| UPA non-GAAP diluida (US$) | 1.96 | 1.86-2.10 | Guía de 1.85-1.93 (punto medio 1.89) |
 
 Base del cálculo:
 - **Ingresos:** superación del punto medio de la guía de +0.6 pp (4T FY26) y +1.6 pp (1T FY27), aplicada sobre un crecimiento de +32%.
-- **UPA:** Oracle superó el punto medio de su guía de UPA por +6.6% y +10.3%. Descuento parte de eso porque en el 2T ya pesa el trimestre completo de las 141 M acciones del ATM, más depreciación e intereses.
+- **UPA:** Oracle superó el punto medio de su guía de UPA por +6.6% (4T FY26: 2.11 contra 1.96-2.00 [4]) y +10.3% (1T FY27: 1.92 contra 1.72-1.76 [3]). Descuento parte de eso porque la superación del 1T se apoyó en una tasa non-GAAP de 16.9% y en US$307 M de ingresos no operativos: con una tasa de ~20%, la UPA habría sido ~US$1.85 (+6% sobre la guía; cálculo del verificador). También pesan más depreciación e intereses. Nota del verificador: la dilución del ATM (141 M acciones) no justifica el descuento, porque la guía del 10-sep ya la incorpora. El p90 se amplió de 2.07 a 2.10 para incluir una superación como la del 1T (+10.3% ≈ 2.08).
 
 Binarios:
 - Ingresos > US$21,197 M: **p = 0.62**.
@@ -143,7 +143,7 @@ Binarios:
 3. Oracle, comunicado 4T FY26 (guía del 1T FY27; plan de financiamiento), 10-jun-2026: https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm
 4. Oracle, comunicado 3T FY26 (guía FY26 de ingresos y capex; FY27), 10-mar-2026: https://www.sec.gov/Archives/edgar/data/1341439/000119312526100148/orcl-ex99_1.htm
 5. Oracle, 10-K FY26 (concentración, riesgo de calificación), 22-jun-2026: https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm
-6. Oracle, 8-K del 12-sep-2026 (cancelación del plan 10b5-1): https://www.sec.gov/Archives/edgar/data/1341439/000119312526389753/d20034d8k.htm
+6. Oracle, 8-K con fecha de evento del 12-sep-2026, presentado el 14-sep-2026 (cancelación del plan 10b5-1; ítem 8.01 y ex. 99.1): https://www.sec.gov/Archives/edgar/data/1341439/000119312526389753/d20034d8k.htm
 7. Reuters vía Yahoo, fuerza mayor en Project Jupiter (secundaria), 24-sep-2026: https://finance.yahoo.com/technology/ai/articles/oracle-triggers-force-majeure-data-190718335.html
 8. Reuters vía Yahoo, análisis de Oracle y Blue Owl (secundaria), 24-sep-2026: https://finance.yahoo.com/technology/ai/articles/analysis-oracle-blue-owl-project-225500245.html
 9. StockStory vía Yahoo, "Why Oracle stock is down" (secundaria), 25-sep-2026: https://finance.yahoo.com/markets/stocks/articles/why-oracle-orcl-stock-down-010458176.html
@@ -154,3 +154,62 @@ Binarios:
 14. Conocimiento cap. 23 §6.6 (Treasury a 10 años de 5.11%) y cap. 24 (FOMC del 16-sep-2026): conocimiento/23-geopolitica-y-riesgo-politico-global.md; conocimiento/24-politica-publica-regulacion-y-mercados.md
 
 Nota de método: el presupuesto de WebSearch de la sesión estaba agotado. Las búsquedas se sustituyeron por EDGAR, la API de noticias y consenso de Yahoo, Nasdaq y WebFetch. La página de Zacks bloqueó el acceso.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Nivel de acceso:
+- Comunicados 8-K ex. 99.1 del 1T FY27, 4T FY26 y 3T FY26: sección pertinente (cifras, guía, financiamiento), vía WebFetch.
+- 10-Q del 1T FY27: sección pertinente (RPO, deuda, ATM, prepagos, preferente) y búsqueda de texto completo de EDGAR ("288", "significant financing component").
+- 8-K del 12/14-sep-2026 y su ex. 99.1: lectura íntegra.
+- Reuters vía Yahoo (fuerza mayor en Jupiter; análisis Oracle-Blue Owl): lectura de la nota.
+- Yahoo quoteSummary y Nasdaq/Zacks (earnings-forecast, earnings-date): descarga propia.
+- Sin acceso: WebSearch (presupuesto agotado). Los comunicados de dic-2025 y sep-2025 no traen la guía trimestral en el texto (Oracle la daba en la llamada), así que la superación del 3T FY26 no se pudo medir.
+
+Aritmética recalculada con Python.
+
+**Confirmado contra fuente primaria**
+- 1T FY27 [1]:
+  - Ingresos: US$19.3 mil M (+30% en USD y en moneda constante). Cloud: US$11.6 mil M (+62%). IaaS: US$7.4 mil M (+121%). SaaS: US$4.2 mil M (+10%). Software: US$5.5 mil M (−3%). Hardware: US$0.8 mil M (+15%). Servicios: US$1.4 mil M (+5%).
+  - Utilidad operativa GAAP de US$6.7 mil M (35%); margen non-GAAP de 42%.
+  - UPA: GAAP US$1.56 y non-GAAP US$1.92. Tasa non-GAAP de 16.9%. Gasto por intereses de US$1,428 M.
+  - RPO de US$664 mil M (+US$209 mil M). Más de US$30 mil M de contratos de nube de IA, más de 300 mil GPU y 850 MW adicionales. Capex de US$28.499 mil M. Flujo operativo de US$23 mil M y FCF de −US$5 mil M.
+  - Dividendo de US$0.50, con registro el 9-oct y pago el 23-oct-2026.
+- Guía [1]:
+  - 2T FY27: ingresos +30% a +34% (USD y moneda constante); cloud +65% a +71% en USD; UPA non-GAAP US$1.85-1.93 en USD. Sobre US$16,058 M da US$20,875-21,518 M.
+  - FY27: ingresos de "al menos" US$90 mil M y UPA non-GAAP de US$8.10.
+- Guías previas: 1T FY27 de +27% a +29% y UPA de US$1.72-1.76 [3]; 4T FY26 de +19% a +21% y UPA de US$1.96-2.00; FY26 de US$67 mil M y capex de US$50 mil M [4]. Plan de ~US$40 mil M de deuda y capital, ATM de US$20 mil M y "does not expect to issue additional debt in calendar year 2026" [3].
+- 10-Q [2]: ~13% del RPO en 12 meses; pagarés y préstamos de US$125.337 mil M (7.625 corrientes), valor razonable de US$105.7 mil M; ATM por US$19,909 M; prepagos de US$11.4 mil M con componente de financiamiento significativo; preferente serie D de 6.50% por US$4.954 mil M. El texto completo contiene "288".
+- 8-K [6]: Ellison "has cancelled his 10b5-1 Plan"; "No Oracle stock was sold under that plan". Fecha de evento 12-sep; presentado el 14-sep.
+- Consenso (Yahoo, consulta propia del 2026-09-25):
+  - Yahoo no tiene el trimestre a nov-2026: su "0q" es el trimestre a ago-2026 ya reportado (UPA 1.738, ingresos 19,129 M) y su "+1q" es feb-2027 (UPA 2.022; ingresos 23,380 M). La afirmación de la ficha se confirma.
+  - FY27: UPA de US$8.141 e ingresos de US$90.48 mil M. FY28: UPA de US$10.997.
+  - Sorpresas de UPA contra Yahoo: +38.0% (2T FY26, con la ganancia de Ampere), +5.7%, +7.5% y +10.4%.
+  - Nasdaq/Zacks: 1.57 para nov-2026 (9 estimados; rango 1.51-1.60), incompatible con la guía non-GAAP de 1.85-1.93.
+- Cadena causal:
+  - Reuters (24-sep): fuerza mayor ante Stack Infrastructure (Blue Owl) por retrasos de energía; préstamos de US$18 mil M y capital de Blue Owl de ~US$3 mil M; Oracle busca extender la renta baja de la etapa de desarrollo; William Blair: FY27 no se afecta [7]. Moody's: capex de IA de las seis mayores tecnológicas de EUA de ~US$1 billón en 2027; SB Energy pospuso su OPI [8].
+  - Caída del 24-sep: −3.47% al cierre (144.56 a 139.54, Yahoo).
+- Precio de US$139.54 y capitalización de 139.54 × 3,023.7 M = US$421.9 mil M: coinciden. P/U consenso FY27/FY28: 17.1x/12.7x. P/U GAAP TTM: 139.54 / 6.38 = 21.9x.
+
+**Revisiones de forma**
+- Periodo: 2T FY27 al 30-nov-2026, en USD. Pronóstico y referencia en non-GAAP (la guía de la empresa).
+- Fecha del reporte: **~10-dic-2026, estimada y no confirmada** (Yahoo isEarningsDateEstimate = true; Nasdaq/Zacks sin fecha). El 2T FY26 se reportó el 10-dic-2025. La resolución al 18-dic cubre el rango habitual.
+- Escenarios: 30 + 50 + 20 = 100%.
+- Intervalos de 80%:
+  - Ingresos: 20,850-21,750 equivale a +29.8% a +35.4% contra una guía de +30% a +34%. Superaciones del punto medio de +0.6 pp y +1.6 pp: ambas dentro. No se cambia.
+  - **UPA: el p90 era estrecho.** El original (2.07) quedaba a +9.5% sobre el punto medio y la superación más reciente fue de +10.3% (+10.4% contra el consenso). **Se amplió a 2.10** en la ficha y en el CSV. El punto y el p10 no cambian.
+  - El punto (1.96, +3.7%) queda debajo de las dos superaciones medidas (+6.6% y +10.3%). La justificación por dilución del ATM era inválida porque la guía es posterior al ATM; se sustituyó por la de la tasa fiscal y los ingresos no operativos del 1T, que sí explica una superación "limpia" de ~+6%. Aun así, el punto sigue siendo conservador: es una apuesta explícita que se evaluará.
+- Coherencia de los binarios: en ingresos se registró 0.62 contra ~0.62 implícito; en UPA, 0.75 contra ~0.80. Dentro de la tolerancia; no se cambian.
+- Recomendaciones de compra o venta: ninguna.
+
+**Correcciones**
+1. p90 de UPA non-GAAP: de 2.07 a 2.10 (ficha y `pronosticos.csv`).
+2. Base del cálculo de UPA: se retiró el argumento del ATM y se documentó el efecto de la tasa fiscal (16.9%) y de los ingresos no operativos.
+3. 8-K de Ellison: fecha de evento 12-sep y presentación 14-sep; se agregó la frase sobre la ausencia de otros planes de venta.
+4. Cadena causal 1: caída de 3.5% al cierre verificada con Yahoo; se agregó la postura de Oracle ("remains on our planned schedule").
+
+**Sigue sin verificar (ya marcado o secundario):**
+- Compromisos de arrendamiento de US$288 mil M: la cifra aparece en el 10-Q, pero el plazo (15-19 años) y el inicio (2T FY27 a FY29) no se leyeron textualmente.
+- Obligaciones de compra por US$34.2 mil M, depreciación de US$3,156 M (+134%) y la geografía del 1T.
+- OpenAI como cliente principal (prensa) y las metas de FY30 (reunión de oct-2025).
+- Project Jupiter y su oposición local (secundarias).
+
+**Veredicto:** confiable en datos. El pronóstico de UPA era estrecho del lado alto y tenía una justificación inválida; ya se corrigió.

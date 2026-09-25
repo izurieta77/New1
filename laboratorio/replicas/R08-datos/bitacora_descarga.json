@@ -1,0 +1,46 @@
+{
+ "french/F-F_Research_Data_Factors_CSV.zip": {
+  "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "french/F-F_Research_Data_Factors_daily_CSV.zip": {
+  "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_daily_CSV.zip",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "fred_DEXMXUS.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXMXUS",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "fred_INTGSTMXM193N.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=INTGSTMXM193N",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "fred_IR3TIB01MXM156N.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01MXM156N",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "fred_IR3TIB01USM156N.csv": {
+  "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=IR3TIB01USM156N",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "banxico_SF43718_fix.csv": {
+  "url": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarSeries (POST idCuadro=CF102, series=SF43718)",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "banxico_SF43936_cetes28.csv": {
+  "url": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarSeries (POST idCuadro=CF107, series=SF43936)",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "yahoo_SP500TR_1d.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESP500TR?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "yahoo_GSPC_1d.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ },
+ "yahoo_IVVPESO.MX_1d.json": {
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/IVVPESO.MX?period1=-2208988800&period2=4102444800&interval=1d&events=div%2Csplit",
+  "descargado_utc": "2026-09-25T06:51:28+00:00"
+ }
+}

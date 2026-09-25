@@ -90,7 +90,7 @@ Lectura: el precio pide multiplicar el FCF ~10-22 veces en una década, según l
 Dato que cambia de escenario: la guía implícita del 4T en el reporte del 3T (hoy ~US$2,424 M; consenso de US$2,459 M [7]). Una guía por debajo de US$2.40 mil M, o EUA comercial por debajo de +100% a/a, mueve al bajista.
 
 ## 8. Pronósticos registrados — 3T26 (trimestre al 30-sep-2026)
-Fecha estimada del reporte: **2-nov-2026** (lunes, después del cierre), no confirmada por la emisora. Yahoo la marca como estimada [7]. Un resumen de un calendario secundario menciona el 9-nov (no verificado) [12]. La resolución se fija el 10-nov-2026 para cubrir ambas fechas.
+Fecha estimada del reporte: **2-nov-2026** (lunes, después del cierre), no confirmada por la emisora. Yahoo la marca como estimada [7] y Nasdaq/Zacks da la misma fecha por algoritmo [16]; el 3T25 se reportó el lunes 3-nov-2025 [5]. Un resumen de un calendario secundario menciona el 9-nov (no verificado) [12]. La resolución se fija el 10-nov-2026 para cubrir ambas fechas.
 
 | Variable | Punto | p10-p90 (80%) | Consenso (Yahoo, 25-sep-2026) |
 |---|---|---|---|
@@ -98,8 +98,8 @@ Fecha estimada del reporte: **2-nov-2026** (lunes, después del cierre), no conf
 | UPA ajustada diluida (US$) | 0.46 | 0.41-0.50 | 0.4137 (23 analistas) |
 
 Base del cálculo:
-- **Ingresos:** superación de la guía de +6.6%, contra un rango observado de +5.9% a +8.9% en sólo 4 trimestres verificados. El p10 se amplía a +1.8% sobre la guía para reconocer esa muestra corta. El consenso está sólo 0.7% arriba del punto medio de la guía, algo inusual frente a ese historial.
-- **UPA:** utilidad operativa ajustada de ~US$1,460 M (+13% sobre la guía, contra +12% a +21% histórico), intereses de US$80 M, otros ingresos de US$30 M (±80), tasa de 23% y 2,576 M de acciones.
+- **Ingresos:** superación de la guía de +6.6%. Rango observado en 8 trimestres verificados (3T24-2T26): +3.8%, +7.6%, +2.8%, +7.2%, +8.9%, +5.9%, +6.4% y +7.6% (media +6.3%) [1][3][4][5][6][17]. El p10 (+1.8% sobre la guía) queda debajo del mínimo observado. El consenso está sólo 0.7% arriba del punto medio de la guía, algo inusual frente a ese historial.
+- **UPA:** utilidad operativa ajustada de ~US$1,460 M (+13% sobre la guía, contra +12% a +21% histórico), intereses de US$80 M, otros ingresos de US$30 M (±80), tasa de 23% y 2,576 M de acciones. Con esos supuestos la cuenta da US$0.469; el punto registrado de 0.46 lleva un sesgo conservador de ~1 centavo (nota del verificador).
 - Nasdaq/Zacks muestra una UPA de US$0.34 con 9 estimados; parece desactualizada [16].
 
 Binarios:
@@ -135,6 +135,67 @@ Binarios:
 13. Oracle, comunicado 1T FY27 (AI Data Platform y ontología), 10-sep-2026: https://www.sec.gov/Archives/edgar/data/1341439/000119312526387905/orcl-ex99_1.htm
 14. Conocimiento cap. 24 §CR del año fiscal 2027 (CR hasta 11-dic-2026): conocimiento/24-politica-publica-regulacion-y-mercados.md
 15. Conocimiento cap. 23 §6.6, mapa de riesgos al 25-sep-2026 (Polymarket, Treasury a 10 años): conocimiento/23-geopolitica-y-riesgo-politico-global.md
-16. Nasdaq (Zacks), earnings forecast PLTR, 2026-09-25: https://api.nasdaq.com/api/analyst/PLTR/earnings-forecast
+16. Nasdaq (Zacks), earnings forecast PLTR, 2026-09-25: https://api.nasdaq.com/api/analyst/PLTR/earnings-forecast ; fecha estimada: https://api.nasdaq.com/api/analyst/PLTR/earnings-date
+17. Palantir, comunicados 2T24, 3T24, 4T24 y 1T25 (guías de 3T24 a 2T25: US$697-701 M, 767-771 M, 858-862 M y 934-938 M), 5-ago-2024, 4-nov-2024, 3-feb-2025 y 5-may-2025; localizados con la búsqueda de texto completo de EDGAR (efts.sec.gov), consultada 2026-09-25: https://www.sec.gov/Archives/edgar/data/1321655/000132165524000133/a2024q2ex991pressrelease.htm ; https://www.sec.gov/Archives/edgar/data/1321655/000132165524000207/a2024q3ex991earningsrelease.htm ; https://www.sec.gov/Archives/edgar/data/1321655/000132165525000007/a2024q4ex991earningsrelease.htm ; https://www.sec.gov/Archives/edgar/data/1321655/000132165525000063/a2025q1ex991pressrelease.htm
 
 Nota de método: el presupuesto de WebSearch de la sesión se agotó después de 3 búsquedas para esta emisora. Lo demás se cubrió por consulta directa: EDGAR, la API de noticias y consenso de Yahoo, Nasdaq y WebFetch. CNBC respondió 403.
+
+## Verificación (2026-09-25)
+Verificador adversarial. Nivel de acceso:
+- Comunicados 8-K ex. 99.1 del 2T26, 1T26 y 4T25: sección pertinente (cifras, guía y conciliación de la UPA ajustada), vía WebFetch.
+- Guías de 3T24 a 2T26: búsqueda de texto completo de EDGAR (efts.sec.gov) de cada rango en el comunicado que lo emitió.
+- 10-Q del 2T26: búsqueda de texto completo ("Customer I").
+- Yahoo quoteSummary (earningsTrend, calendarEvents, earningsHistory, price) y Nasdaq/Zacks (earnings-forecast, earnings-date): descarga propia.
+- Conocimiento cap. 23 y 24: lectura de los párrafos citados.
+- Sin acceso: el sitio de IR de Palantir (página dinámica) y WebSearch (presupuesto agotado).
+
+Aritmética recalculada con Python.
+
+**Confirmado contra fuente primaria**
+- 2T26 [1]:
+  - Ingresos: US$1.935 mil M (+93% a/a, +19% t/t). Gobierno de EUA: US$809 M (+90%). Comercial de EUA: US$764 M (+149%).
+  - Margen operativo: GAAP 47% (US$912 M); ajustado US$1.194 mil M (62%).
+  - UPA diluida: GAAP US$0.41 y ajustada US$0.41.
+  - TCV: US$3.373 mil M (+49%), con US$2.132 mil M de comercial de EUA. RDV de comercial de EUA: US$6.238 mil M (+124%). Contratos: 220 de ≥US$1 M, 98 de ≥US$5 M y 73 de ≥US$10 M.
+- Guía [1]:
+  - 3T26: ingresos de US$2.160-2.164 mil M; utilidad operativa ajustada de US$1.292-1.296 mil M.
+  - FY26: ingresos de US$8.150-8.158 mil M; comercial de EUA de más de US$3.424 mil M (≥+134%); utilidad operativa ajustada de US$4.889-4.897 mil M; FCF ajustado de US$4.5-4.7 mil M.
+  - Guía FY26 de febrero: US$7.182-7.198 mil M (punto medio 7,190) [4]. Guía del 1T26: ingresos de US$1.532-1.536 mil M y utilidad operativa ajustada de US$870-874 M [4].
+- 1T26 [3]: ingresos de US$1,632.6 M; utilidad operativa ajustada de US$983.5 M (+12.8% sobre la guía); UPA ajustada US$0.33 y GAAP US$0.34. La conciliación suma SBC e impuestos de nómina y resta "income tax effects and adjustments"; los otros ingresos no se excluyen. Con la misma fórmula, el 2T da (1,194.5 + 77.5 + 91.8) × 0.77 / 2,568.7 = US$0.409, igual a lo reportado.
+- Guías históricas (efts): 3T24 US$697-701 M, 4T24 767-771, 1T25 858-862, 2T25 934-938, 3T25 1,083-1,087, 4T25 1,327-1,331, 1T26 1,532-1,536 y 2T26 1,797-1,801 [17][6][5][4][3]. Superaciones del punto medio: +3.8%, +7.6%, +2.8%, +7.2%, +8.9%, +5.9%, +6.4% y +7.6%.
+- 10-Q [2]: el texto completo contiene "Customer I".
+- Consenso (Yahoo, consulta propia del 2026-09-25):
+  - 3T26: ingresos de US$2,176.7 M (23 analistas; rango 2,161-2,263) y UPA de US$0.4137 (23; rango 0.38-0.48).
+  - 4T26: US$2,458.9 M. FY26: US$8,187.7 M. FY27: US$12,258.5 M (+49.7%) y UPA de US$2.327.
+  - Base ajustada: el real del 1T26 en Yahoo es 0.33 (igual al ajustado; el GAAP fue 0.34).
+  - Sorpresas de UPA contra Yahoo: +25.5%, +8.6%, +18.1% y +18.5% (3T25-2T26).
+- Cadena causal:
+  - Gobierno de EUA = 809 / 1,935.5 = 41.8% de los ingresos [1].
+  - CR hasta el 11-dic-2026 (conocimiento cap. 24, §año fiscal 2027) y Cámara demócrata 92.5% en Polymarket al 25-sep (cap. 23): coinciden con lo citado.
+- Precio de US$192.59 al 24-sep: coincide con Yahoo. P/U consenso 2026/2027: 119.5x/82.8x. P/U GAAP TTM: 192.59 / 1.16 = 166x.
+
+**Revisiones de forma**
+- Periodo: 3T26 al 30-sep-2026 (trimestre calendario), en USD. Pronóstico y consenso en base ajustada.
+- Fecha del reporte: **2-nov-2026, estimada y no confirmada** (Yahoo isEarningsDateEstimate = true; Nasdaq/Zacks la estima por algoritmo). La resolución al 10-nov cubre también la alternativa del 9-nov.
+- Escenarios: 25 + 50 + 25 = 100%.
+- Intervalos de 80%:
+  - Ingresos: +1.8% a +10.1% sobre el punto medio de la guía. Las 8 superaciones históricas (+2.8% a +8.9%) caen dentro. Media +6.3% y desviación estándar ~2.1 pp: el intervalo es incluso algo más ancho que el estadístico. No se cambia.
+  - UPA: −0.9% a +20.9% contra el consenso. De las 4 sorpresas históricas, 3 caen dentro; la de +25.5% (3T25) quedaría fuera. Las superaciones de la utilidad operativa ajustada vienen bajando: +21.4% (3T25: ~US$601 M contra 493-497), +14.6% (4T25: 798.5 contra 695-699), +12.8% y +12.2% (guías localizadas con efts en [6] y [5]). Por eso el p90 de 0.50 es defendible. No se cambia.
+  - Nota: el punto de ingresos (US$2,305 M) queda por encima del estimado más alto de los analistas (US$2,263 M). Es coherente con el historial de superaciones, pero es una apuesta explícita contra todo el panel.
+- Coherencia de los binarios: en ingresos se registró 0.92 contra ~0.96 implícito; en UPA, 0.86 contra ~0.87. Ambos dentro de la tolerancia; no se cambian.
+- Aritmética: la UPA con los supuestos declarados da 0.469; se registró 0.46 (sesgo conservador de ~1 centavo, dentro del intervalo; se anotó en la base del cálculo, sin cambiar el punto).
+- Recomendaciones de compra o venta: ninguna.
+
+**Correcciones**
+1. Base del cálculo de ingresos: el historial pasa de 4 a 8 trimestres verificados (+2.8% a +8.9%), con la fuente [17].
+2. Base del cálculo de UPA: se anotó que los supuestos declarados dan 0.469.
+3. Fecha: se agregó la estimación de Nasdaq/Zacks y el antecedente del 3T25 (3-nov-2025).
+4. `pronosticos.csv`: sin cambios (revisado; 4 filas coherentes con la ficha).
+
+**Sigue sin verificar (ya marcado o secundario):**
+- Consenso del 2T26 de Investing.com (US$0.34 y US$1.81 mil M) y la fecha alternativa del 9-nov.
+- NHS (£330 M, 15-feb-2027), Rosenblatt/FAA y Burry: secundarias.
+- La mención de "ontología" en el comunicado de Oracle [13] no se releyó en esta ronda.
+- La tasa fiscal de largo plazo de 23% no se leyó textualmente; la conciliación del 1T y el cálculo del 2T son consistentes con ella.
+
+**Veredicto:** confiable. Las cifras del 2T26, la guía y el consenso coinciden con las fuentes primarias. Las correcciones fueron de amplitud de la muestra histórica y de trazabilidad aritmética; los pronósticos no cambian.
