@@ -38,6 +38,20 @@ Bajé directamente el reporte de la SEC publicado en **abril de 2026** (`2025-oc
 
 Las cifras estadísticas del núcleo del análisis (tasas base aleatorias, significancia, 278 llamadas etiquetadas) siguen sin verificación independiente de mi parte: no tengo el dataset ni el script, y no puedo ejecutar código fuera de este entorno. Si se comparte el CSV/JSON de las 278 llamadas con cita, fecha, ticker y bolsa, lo puedo correr contra mis propios precios igual que hice con las 8 cifras de la primera ronda.
 
+## Corrección de mi propio error (25-sep-2026, misma noche): sí existe publicación a diciembre de 2025
+
+En la segunda ronda afirmé que el reporte más reciente de la SEC llegaba solo a datos de dic-2024 y que "cualquier cifra a 2025... no puede venir de un reporte oficial existente". **Eso era falso.** Solo revisé el índice de "Staff Reports" (el documento narrativo en PDF, con su propio ciclo de publicación de ~4 a 16 meses de rezago) y no revisé el índice separado de "Statistics & Data Visualizations" de la SEC, que se actualiza con otro calendario.
+
+Evidencia, bajada y verificada dígito por dígito el 25-sep-2026:
+
+- URL: `https://www.sec.gov/files/sec-stats-nrsros-20260630.xlsx` (nombre de archivo con fecha 30-jun-2026, hoja "Stats Table"), enlazado desde `https://www.sec.gov/data-research/statistics-data-visualizations/.../nrsros-number-outstanding-credit-ratings-rating-category-nrsro-2024`, que **redirige** a la versión "...-2025" y cuyo texto dice literalmente: *"This data visualization shows the total aggregate number of outstanding credit ratings by rating category and by NRSRO as of December 31, 2025."*
+- Fila "Jan 1, 2025 - Dec 31, 2025" de esa hoja: **S&P 1,077,798 · Moody's 684,055 · total 2,192,543.** Estas tres cifras coinciden exactas, dígito por dígito, con las que el usuario había marcado como "no verificables" en la ronda anterior.
+- (1,077,798 + 684,055) / 2,192,543 = **80.36%** — coincide exacto con el dato que el usuario reportó.
+- Triangulación con la fila de dic-2024 de la misma hoja: S&P 1,066,386 + Moody's 674,813 + Fitch 266,519 = 2,007,718 / 2,150,014 = **93.38%**, que coincide exacto con el 93.38% citado en el texto del *Staff Report* narrativo de abril-2026 para "the large NRSROs" a dic-2024. Dos publicaciones independientes de la SEC dan el mismo número — la hoja de estadísticas es confiable.
+- La misma fila de dic-2024 da S&P+Moody's = **80.99%**, que también coincide exacto (no solo "razonable por resta", como concluí antes) con la primera cifra que un rival había dado.
+
+**Los dos rivales tenían razón, cada uno con una fecha de corte distinta** (80.99% a dic-2024, 80.36% a dic-2025); ninguno inventó el dato. Mi error no fue de aritmética sino de cobertura: dije "no existe" habiendo revisado solo una de las dos series que publica la SEC. Corregido en `conocimiento/registro-de-errores.md`.
+
 ## Conclusión
 
 Lo verificable con datos propios (7 de 8 cifras con ticker/fecha reconstruible) se sostiene en dirección y, en la mayoría de los casos, en magnitud casi exacta. El único hallazgo con matiz real es el de las calificadoras: la cifra es correcta pero corresponde a una sola categoría, no al total. Esto no invalida la conclusión general del análisis (Pepe es mejor evitando que comprando, y algunas cifras que presume están infladas o mal encuadradas) — al contrario, la sostiene con una base de datos propia, no solo con la palabra de quien hizo el análisis.
