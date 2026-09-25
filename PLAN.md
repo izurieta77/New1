@@ -12,12 +12,9 @@ Lo que está en juego:
 
 ## 2. Rivales
 
-Pendiente de confirmar con el dueño:
-- ChatGPT ("Maquiavelo");
-- Grok;
-- Barebone AI.
+Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 20,000 MXN en GBM. Solo se registra lo que el dueño reporte.
 
-Barebone es un terminal de investigación que no ejecuta operaciones (ver `arena/investigacion/06-barebone-ai-competidor.md`). Falta saber si sustituye a un rival o se suma como cuarto. Solo se registra lo que el dueño reporte.
+**Barebone AI** no tiene cuenta en el torneo. Es la referencia que hay que superar en calidad y verificabilidad del análisis (ver `arena/investigacion/06-barebone-ai-competidor.md`).
 
 ## 3. Dónde se puede ganar, con evidencia
 
@@ -37,15 +34,16 @@ Barebone es un terminal de investigación que no ejecuta operaciones (ver `arena
 
 ## 4. Ruta crítica
 
-| Hito | Criterio | Estado al 25-sep | Fecha estimada |
+**Decisión del dueño (25-sep-2026): la cuenta arena entra en real el lunes 28-sep-2026** con la cartera que apruebe el comité. El patrimonio principal sigue en fase 0 con la regla completa.
+
+| Hito | Criterio | Estado al 25-sep | Fecha |
 |---|---|---|---|
 | Examen de titulación | ≥90% global y ≥85% por sección | Cumplido: 96.1% | 25-sep-2026 |
-| Pronósticos calibrados | ≥50 resueltos, Brier ≤ 0.20, 3 meses | 5 registrados, 0 resueltos. Los primeros se resuelven el 14 y el 23-oct | 25-dic-2026 |
-| Portafolio de papel | 3 meses dentro de límites | Arranca hoy: comité el 25-sep, ejecución en papel a la apertura del 28-sep | 28-dic-2026 |
-| Capital real (regla vigente de fase 0) | Los tres criterios anteriores | — | ~28-dic-2026 |
-| **Decisión del dueño** | ¿La cuenta arena entra antes que el patrimonio principal? | Pendiente | — |
-
-Con la regla vigente, nuestro dinero real entra cuando la primera temporada ya lleva la mitad. Esa es la desventaja real frente a rivales que ya estén invertidos. Se resuelve con una decisión del dueño, no con más agentes (ver §7).
+| Cartera inicial de la arena | Aprobada por el comité y registrada en git antes de ejecutarse | Comité en curso | 25-sep-2026 |
+| Arena en real | El dueño captura las boletas en GBM, con stop desde la entrada | Pendiente | 28-sep-2026 |
+| Pronósticos calibrados | ≥50 resueltos, Brier ≤ 0.20, 3 meses | 5 registrados, 0 resueltos | 25-dic-2026 |
+| Portafolio de papel (registro sombra) | 3 meses dentro de límites | Arranca el 28-sep | 28-dic-2026 |
+| Patrimonio principal en real | Fin de fase 0 con la regla completa | — | ~28-dic-2026 |
 
 ## 5. Qué hace cada agente y cuándo (hora del centro de México)
 
@@ -66,7 +64,7 @@ Cada rutina deja una línea de latido en `bitacora/estado-rutinas.md`. Cuando un
 
 1. **Saldos de los rivales.** Cada viernes, o cuando se pueda: cuenta, fecha, valor en MXN y aportaciones. Sin esto el marcador está vacío.
 2. **Fecha de fondeo de cada cuenta rival**, para saber cuándo empezó la temporada.
-3. La decisión de §4 sobre la cuenta arena.
+3. **Cada ejecución real de la arena:** precio, títulos y hora de cada orden capturada en GBM, y el valor de la cuenta cada viernes.
 4. **Montos y fechas de las aportaciones adicionales**, y qué resultado las dispara (`escalamiento_capital.pendiente_de_definir_por_el_dueno`).
 
 ## 7. Por qué no "más agentes todo el tiempo"
@@ -81,6 +79,7 @@ Cada rutina deja una línea de latido en `bitacora/estado-rutinas.md`. Cuando un
 |---|---|---|
 | Pronósticos registrados / resueltos | 5 / 0 | 25-sep-2026 |
 | Brier acumulado | n/d | — |
+| Cuenta real arena: TWR / drawdown máximo | Arranca el 28-sep | — |
 | Portafolio de papel: TWR / drawdown máximo | Arranca el 28-sep | — |
 | Rivales con datos | 0 | — |
-| Días para fin de fase 0 (regla vigente) | ~94 | 25-sep-2026 |
+| Días para fin de fase 0 del patrimonio principal | ~94 | 25-sep-2026 |

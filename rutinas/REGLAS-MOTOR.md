@@ -46,12 +46,28 @@ Al terminar cada rutina, agrega una línea **al inicio** de `bitacora/estado-rut
 
 ## 5. Competencia
 
-- Rivales vigentes, pendientes de confirmar con el dueño:
-  - ChatGPT ("Maquiavelo");
-  - Grok;
-  - Barebone AI, terminal de investigación que no ejecuta operaciones (ver `arena/investigacion/06-barebone-ai-competidor.md`).
-- Solo se registra lo que el dueño reporte, en `competencia/rivales.csv`. **Nunca inventes ni estimes el saldo de un rival.**
+Rivales con cuenta, confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**. Cada uno tiene 20,000 MXN en GBM.
+
+**Barebone AI no tiene cuenta.** Es un competidor de referencia al que hay que superar en calidad y verificabilidad del análisis (ver `arena/investigacion/06-barebone-ai-competidor.md`).
+
+- Solo se registra lo que el dueño reporte, en `competencia/rivales.csv`.
+- El valor real de nuestra cuenta `arena-claude` también lo reporta el dueño, en el mismo archivo.
+- **Nunca inventes ni estimes el saldo de ninguna cuenta.**
 - `competencia/marcador.md` compara TWR, drawdown máximo y días invertidos. Mientras no haya datos del dueño, el marcador lo dice así: "sin datos".
+
+## 5b. Cuenta real `arena-claude` (desde el 28-sep-2026, decisión del dueño)
+
+Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuenta_arena`.
+
+- **Quién ejecuta:** el dueño captura cada orden a mano en la app de GBM. El sistema nunca da por hecha una ejecución real que el dueño no haya reportado.
+- **Qué entrega el sistema:** toda orden real sale de una decisión del comité registrada en git **antes** de ejecutarse, y se entrega como boleta con:
+  - ticker tal como aparece en GBM;
+  - tipo de orden, cantidad de títulos enteros y precio límite;
+  - stop que se registra en GBM desde la entrada.
+- **Pre-apertura:** si hay boletas para ese día, verifica que las condiciones de la decisión sigan vigentes (filtro SMA200 y VIX < 25 para apalancados, y gap del fin de semana). Si algo cambió, marca la boleta "EN ESPERA" en el brief y en `bitacora/decisiones-pendientes.md`. No la ejecutes.
+- **Registros:**
+  - Las ejecuciones reales que reporte el dueño van en `bitacora/real/operaciones.csv` (`herramientas/portafolio.py --operaciones bitacora/real/operaciones.csv --equity bitacora/real/equity.csv registrar ...`).
+  - El portafolio de papel sigue como registro sombra a la apertura.
 
 ## 6. Plan
 

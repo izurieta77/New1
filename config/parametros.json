@@ -133,7 +133,7 @@
       "broker": "GBM",
       "capital_inicial_mxn": 20000,
       "perfil_riesgo": "arena_agresivo",
-      "estado": "abierta; opera hasta salir de fase 0"
+      "estado": "abierta; opera en real desde 2026-09-28 por decision del dueno del 2026-09-25 (ver prioridad_actual.excepcion_cuenta_arena)"
     }
   ],
   "perfiles_riesgo": {
@@ -200,12 +200,37 @@
   "prioridad_actual": {
     "fase": 0,
     "descripcion": "Formacion experta primero. El sistema NO propone inversiones reales al dueno hasta aprobar el examen de titulacion (conocimiento/examenes) y completar la validacion en papel. Las rutinas en fase 0 solo entrenan: pronosticos calibrados y portafolio de papel.",
-    "criterio_salida": "Examen de titulacion >= 90% + 3 meses de pronosticos con Brier <= objetivo + portafolio de papel dentro de limites"
+    "criterio_salida": "Examen de titulacion >= 90% + 3 meses de pronosticos con Brier <= objetivo + portafolio de papel dentro de limites",
+    "excepcion_cuenta_arena": {
+      "fecha_decision": "2026-09-25",
+      "decision_del_dueno": "Entrar ya: la cartera que apruebe el comite de inversion se replica en dinero real el lunes 28-sep-2026 en la cuenta arena-claude (20,000 MXN). Decision explicita del dueno en la sesion principal, 25-sep-2026.",
+      "alcance": "Solo la cuenta arena-claude. El patrimonio principal sigue en fase 0 con su criterio_salida completo.",
+      "reglas": [
+        "Toda orden real sale de una decision del comite registrada en git antes de la ejecucion.",
+        "El dueno captura manualmente cada orden en la app de GBM; el sistema nunca da por hecha una ejecucion real que el dueno no haya reportado.",
+        "Cada posicion real lleva stop registrado en GBM desde la entrada (arena/investigacion/01-gbm-operativa-y-costos.md).",
+        "Limites y cortacircuitos del perfil arena_agresivo aplican igual en real.",
+        "El portafolio de papel sigue como registro sombra auditable (ejecucion a la apertura) y como evidencia para el patrimonio principal."
+      ]
+    }
   },
   "rivales": {
-    "descripcion": "Otras IAs, cada una con su propia cuenta en GBM y el mismo capital inicial. El dueno reporta solo resultados (valor de la cuenta y fecha), nunca posiciones.",
+    "descripcion": "Otras IAs, cada una con su propia cuenta en GBM y el mismo capital inicial. El dueno reporta solo resultados (valor de la cuenta y fecha), nunca posiciones. El valor real de la cuenta arena-claude tambien lo reporta el dueno en el mismo archivo.",
     "registro": "competencia/rivales.csv",
-    "capital_inicial_mxn": 20000
+    "capital_inicial_mxn": 20000,
+    "cuentas": [
+      {
+        "id": "arena-chatgpt",
+        "gestor": "ChatGPT",
+        "capital_inicial_mxn": 20000
+      },
+      {
+        "id": "arena-grok",
+        "gestor": "Grok",
+        "capital_inicial_mxn": 20000
+      }
+    ],
+    "referencia_sin_cuenta": "Barebone AI: competidor a superar en calidad de analisis, sin cuenta en el torneo (confirmado por el dueno 25-sep-2026). Ver arena/investigacion/06-barebone-ai-competidor.md."
   },
   "escalamiento_capital": {
     "fecha_captura": "2026-09-25",
