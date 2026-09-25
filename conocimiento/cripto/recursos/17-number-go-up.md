@@ -117,6 +117,8 @@
     - "conveniencia": 120%.
     - Los reclamos se valuaron **en USD a la fecha de la petición** (11-nov-2022), con **BTC a US$16,871**.
     - El juez de quiebras aceptó ese criterio: "el uso de la fecha de la petición... es apropiado" ([Protos, 1-feb-2024](https://protos.com/ftx-customers-to-be-repaid-at-16871-bitcoin-prices/)).
+    - **Conciliación con el "119%":** el plan confirmado el 7-oct-2024 prometía ~119% al **98% de los acreedores por número**, sobre todo reclamos chicos de la clase "conveniencia", que ya van en 120%. Los reclamos grandes de clientes llevan 105% ([CNBC, 7-oct-2024](https://www.cnbc.com/2024/10/07/ftx-bankruptcy-judge-approves-more-than-14-billion-payback-plan.html)).
+    - El G6 (ficha 09) usa el 119%; las dos cifras son compatibles.
 16. [I] **En BTC, el 105% es una pérdida:** 1.05 × 16,871 = US$17,715 por BTC reclamado, contra ~US$84,000 hoy. **Recuperó 21% en términos de BTC.** La quiebra convirtió monedas en un reclamo en dólares.
 
 ### Juicios de terceros
