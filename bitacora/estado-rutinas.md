@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-26 13:15 UTC · inteligencia · OK · (este commit) · barrido completo 07:05 CDMX en bitacora/inteligencia/2026-09-26.md; ALERTA ALTA: WSJ dice que Trump rechazó el plan de 7 días de Irán (grado B, señales mixtas, sin confirmar por Reuters), Polymarket cae de 13.3% a ~6%; baja P0006, riesgo de rebote del WTI antes del arranque en real del 28-sep
 2026-09-26 10:23 UTC · cripto · OK · (este commit) · pulso 04:17 CDMX en bitacora/cripto/2026-09-26.md (BTC 84,151 −0.39%, ETH 2,689 −0.43%, sin cambio de régimen); sin órdenes vencidas ni alertas
 2026-09-26 06:24 UTC · cripto · OK · (este commit) · pulso 00:17 CDMX en bitacora/cripto/2026-09-26.md (BTC 83,880 −0.29%, ETH 2,684 +0.28%, sin cambio de régimen); sin órdenes vencidas ni alertas
 2026-09-26 03:44 UTC · supervisor-vespertino · PARCIAL · (este commit) · rutinas 1-8, 10, 12-16 con latido de hoy; rutina 11 (revisión) sin latido (disparador no se ejecutó solo) → disparada a mano, ver bitacora/bloqueos.md; rutina 9 sin corridas hoy pero explicado (disparador creado a las 14:40 CDMX, ya al final de su ventana 08:40-14:40); sin dudas >48h en decisiones-pendientes
