@@ -1,0 +1,6 @@
+Ventanas de 85 días hábiles, 2014-09-02 a 2026-09-25, en MXN (n=2594, ~30 independientes).
+modo                                                                    mediana     p10     p90   ≥40%   ≥60%  ≥200%  tope GBM  tope BTC
+A · actual (83% índice, 17% efectivo; 40% BTC)                             6.4%   -7.1%   20.7%   0.8%   0.0%   0.0%      0.0%      0.3%
+B · máximo sin apalancar (100% índice; 65% BTC)                            8.9%  -10.5%   31.5%   6.6%   1.3%   0.0%      0.0%      0.3%
+C · tope actual de apalancados (50% 3x NDX + 50% índice; 100% BTC)        18.4%  -19.2%   58.0%  19.9%   9.5%   0.4%      0.0%      5.6%
+D · todo apalancado (100% 3x NDX; 100% BTC)                               23.9%  -24.5%   68.6%  31.5%  14.5%   0.5%      9.6%      5.6%

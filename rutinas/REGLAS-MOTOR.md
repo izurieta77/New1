@@ -140,6 +140,9 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
 
 ## 7. Pendientes para la próxima rutina (se borran al cumplirse)
 
+- [ ] **Comité del viernes 2-oct-2026 (rutina 4 + skill `comite-de-inversion`): rediseño al modo C por mandato del dueño.** Lee `config/parametros.json` → `meta_temporada_dueno`. Candidatas: GBM con hasta 50% en un ETF 3x del Nasdaq o del S&P (TQQQ/SPXL, solo si el dueño confirmó que aparece en la app de GBM y con `filtro_apalancados` encendido) + índice 1x; Binance hasta 100% BTC con filtro. Resuelve de frente la objeción del abogado del diablo de W39 (no SPXL con el 10a ≥ 5%) y la condición del 25-sep (6 reportes de rivales antes de apalancar): el apetito de riesgo lo fijó el dueño; la seguridad operativa no se negocia. El gestor de riesgo conserva el veto. Registra P(tocar −12/−20/−28/−35%) del diseño elegido con el mismo método que `arena/modelos/meta_dueno_40_60_200.py`.
+- [ ] **Pre-apertura del lunes 28-sep:** pide al dueño en el brief que confirme si TQQQ y SPXL aparecen en el buscador de la app de GBM (mercado SIC). Es requisito del comité del 2-oct.
+
 - [ ] **Pre-apertura del lunes 28-sep-2026:** hay boletas reales para ese día en `bitacora/boletas/2026-09-28.md`. Copia las boletas al inicio del brief, para que el dueño las vea primero, con el estado de futuros del S&P y del VIX a esa hora. La condición de validez formal se evalúa a las 08:45.
 - [ ] **Supervisión de las 08:40 del lunes 28-sep (y del martes 29-sep si quedó EN ESPERA):**
   - Evalúa la condición de validez de la boleta GBM con Yahoo (intervalo 1m): SPYM > 88.98 USD y ^VIX < 25.

@@ -6,6 +6,8 @@ Actualizado: 25-sep-2026, por la sesión principal (orquestador). Parámetros en
 
 Terminar la temporada con el **mayor TWR en MXN** entre las cuentas de IA. Cada IA arranca con **30,000 MXN: 20,000 en GBM y 10,000 en Binance (cripto)**. La métrica es la cuenta combinada, y además se reportan GBM y Binance por separado. **Temporada actual: 4 meses, del 28-sep-2026 al 28-ene-2027** (dueño, 25-sep).
 
+**Meta del dueño (25-sep-2026), para las tres IAs: +40% (mínimo), +60% (bueno) o +200% (excepcional) en la temporada.** Choca con sus topes de pérdida; el dueño decidió mantener los topes y operar con la máxima agresividad que permiten (modo C: hasta 50% en ETF 3x con filtro y hasta 100% BTC con filtro; probabilidad histórica de +40% ≈ 20%, de +60% ≈ 10%, de +200% ≈ 0; `config/parametros.json` → `meta_temporada_dueno`, `arena/modelos/meta_dueno_40_60_200.py`). El comité del 2-oct rediseña hacia ese modo; el lunes 28-sep entra la cartera ya aprobada.
+
 Hay que lograrlo sin salir del juego. La pérdida máxima que tolera el dueño es de **10,000 MXN en GBM** y **5,000 MXN en cripto**. Los cortacircuitos del perfil `arena_agresivo` (−12%, −20%, −28% y −35%) se disparan antes; rige siempre el límite más restrictivo.
 
 Lo que está en juego:
