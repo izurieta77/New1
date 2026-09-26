@@ -124,7 +124,7 @@ Decisión del dueño (25-sep-2026): describió el patrón de horarios de un riva
 | Portafolio de papel: TWR / drawdown máximo | Sin fondear; arranca el 28-sep (O0001-O0002) | 25-sep-2026 |
 | Benchmarks de la semana 18→25-sep (MXN) | S&P 500 TR en MXN +4.25% (SP500TR +1.23% y USD/MXN +2.99%); IPC +2.55% (precio); CETES ~+0.12% (proxy 6.23% anual) | 25-sep-2026 |
 | Estado de dominio | 33 temas: 1 Localizado, 20 Documentado, 1 Comprendido con comprobación, 2 Contrastado, 9 Replicado | 25-sep-2026 |
-| Laboratorio | 13 pruebas con fila (0 ventaja demostrada, 3 oportunidad investigable, 7 descartadas, 3 en curso) + R05-R09 sin fila | 25-sep-2026 |
+| Laboratorio | 18 pruebas con fila: 0 ventaja demostrada, 4 oportunidad investigable, 11 descartadas, 3 en curso | 26-sep-2026 |
 | Rivales con datos | 0 | — |
 | Días para fin de fase 0 del patrimonio principal | 94 (28-dic-2026) | 25-sep-2026 |
 | Días para fin de la temporada arena | 125 (28-ene-2027) | 25-sep-2026 |
