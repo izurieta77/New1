@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-26 02:15 UTC · inteligencia · OK · (este commit) · cierre del día 20:05 CDMX en bitacora/inteligencia/2026-09-25.md (plan de 7 días de Irán detallado, T-MEC aplazado a oct, calendario 28-sep/3-oct); P0020 (Core PCE ago>=3.30%, resuelve 30-sep) registrado; sin alertas
 2026-09-26 01:32 UTC · decisor-vespertino · OK · (este commit) · nada amerita actuar antes del viernes; sin alertas, sin posiciones, órdenes del 28-sep intactas
 2026-09-26 01:25 UTC · trabajo-continuo · OK · (este commit) · tabla maestra: filas R05-R09 agregadas desde sus fichas (18 pruebas; 0 ventaja, 4 investigables, 11 descartadas, 3 en curso); pendiente del registro de errores cerrado
 2026-09-26 00:52 UTC · cripto (cascada vespertina 18:42) · OK · (este commit) · pulso en bitacora/cripto/2026-09-25.md (BTC 83,916 −0.85%, ETH 2,686 −0.21%); filtro de tendencia: SMA200=70,965, salida=68,836, filtro ENCENDIDO; sin órdenes vencidas ni alertas
