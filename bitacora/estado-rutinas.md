@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-26 21:12 UTC · inteligencia · OK · (este commit) · actualización 15:05 CDMX en bitacora/inteligencia/2026-09-26.md; alerta Irán/Ormuz sigue abierta y confirmada, sin novedad direccional (Polymarket estable ~4.6%); Pezeshkian a CBS matiza con posible flexibilidad nuclear (grado B); mercados de petróleo siguen cerrados hasta el lunes 28-sep
 2026-09-26 19:45 UTC · cripto (pulso extra 13:41) · OK · (este commit) · pulso extra en bitacora/cripto/2026-09-26.md (BTC 83,986 +0.01%, ETH 2,683 −0.32%, sin cambio de régimen); sin órdenes vencidas ni alertas
 2026-09-26 18:22 UTC · cripto · OK · (este commit) · pulso 12:17 CDMX en bitacora/cripto/2026-09-26.md (BTC 84,079 +0.06%, ETH 2,688 −0.35%, sin cambio de régimen pese a la alerta Irán confirmada); sin órdenes vencidas (O0003 es hasta el 28-sep) ni alertas cripto
 2026-09-26 17:15 UTC · inteligencia · OK · (este commit) · actualización 11:05 CDMX en bitacora/inteligencia/2026-09-26.md; ALERTA CONFIRMADA (grado B→A): Trump confirmó on-the-record el rechazo al plan de Irán, corroborado por 5 medios; Polymarket cae a ~4%; riesgo de rebote del WTI al reabrir mercados se sostiene
