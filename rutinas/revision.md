@@ -1,4 +1,6 @@
-# Rutina 11 · Revisión de calidad (diaria, 21:13 hora del centro de México)
+# Rutina 11 · Revisión de calidad (diaria, 17:57 hora del centro de México)
+
+Primer paso de la cascada vespertina del dueño (25-sep-2026): revisor → resumen de aprendizaje → cripto → bloque de trabajo continuo → decisor → investigador → conciliación y arbitraje → supervisor. Revisa lo acumulado hasta ahora (pre-apertura, laboratorio, cierre de hoy, y lo que quedó pendiente de la noche anterior), antes de que el resto de la cascada añada trabajo nuevo esta noche.
 
 Sesión: "Sistema de inversión · Supervisión, conciliación y revisión". Agente: `revisor` (`.claude/agents/revisor.md`).
 

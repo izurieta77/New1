@@ -68,8 +68,14 @@ Los procedimientos están versionados en `rutinas/*.md` y se cambian ahí. La se
 | 7. Inteligencia | `vigia-de-informacion` | Diario 07:05, 11:05, 15:05 y 20:05 | Redes, prensa, revistas, papers, ensayos y YouTube graduados A-D; alertas |
 | 8. Cripto | `analista-cripto` | Cada 4 h, 24/7 (estudio profundo a las 08:17) | Pulso de BTC/ETH, carrera cripto en `conocimiento/cripto/` y un pronóstico diario |
 | 9. Supervisión en vivo | `supervisor` + `herramientas/supervision.py` | L-V cada hora, 08:40-14:40 | Stops, cortacircuitos, tope de 10k, filtro de apalancados, latidos y bloqueos |
-| 10. Conciliación y arbitraje | `conciliador-arbitro` | Diario 18:23 | Registros cuadrados y fallos sobre desacuerdos de hechos o reglas |
-| 11. Revisión de calidad | `revisor` | Diario 21:13 | Lista de calidad sobre todo lo del día y resumen para el dueño en el brief |
+| 10. Conciliación y arbitraje | `conciliador-arbitro` | Diario 20:57 | Registros cuadrados y fallos sobre desacuerdos de hechos o reglas |
+| 11. Revisión de calidad | `revisor` | Diario 17:57 | Lista de calidad sobre lo acumulado del día |
+| 12. Resumen diario de aprendizaje | orquestador (Motor) | Diario 18:08 | Qué aprendió el sistema hoy, para el dueño |
+| 13. Cripto, cascada vespertina | `analista-cripto` | Diario 18:42 | Pulso de cripto dentro de la cascada (rutina 8, §8b) |
+| 14. Bloque de trabajo continuo | orquestador (Motor) | Diario 19:09 | Avanza una tarea de la cola del plan |
+| 15. Decisor, corrida vespertina | `decisor` | Diario 19:27 | ¿Alguna alerta amerita actuar antes del viernes? |
+| 16. Investigador, corrida vespertina | `investigador-academico` | Diario 20:12 | Barrido corto de literatura nueva |
+| 17. Supervisor, cierre del día | `supervisor` | Diario 21:42 | Confirma que todas las rutinas de hoy dejaron latido |
 
 **Comité completo:**
 - `analista-macro`, `analista-fundamental`, `analista-cuantitativo` y `analista-geopolitico`;
@@ -83,6 +89,10 @@ Los procedimientos están versionados en `rutinas/*.md` y se cambian ahí. La se
 - Las dudas se deciden de forma conservadora y se anotan en `bitacora/decisiones-pendientes.md`; nunca se quedan esperando.
 - Las alertas van a `bitacora/alertas.md`.
 - Las boletas reales, a `bitacora/boletas/`.
+
+## 5b. Cascada vespertina (rutinas 11-17, ver `rutinas/REGLAS-MOTOR.md` §0b)
+
+Decisión del dueño (25-sep-2026): describió el patrón de horarios de un rival (sin nombrarlo) y pidió adoptarlo, adaptado a nuestros agentes. Corre todos los días, 17:57 a 21:42 hora del centro de México, sin depender de que haya mercado abierto. Registro de competencia en `arena/investigacion/07-horarios-de-la-competencia.md`.
 
 ## 6. Qué necesita el sistema del dueño
 

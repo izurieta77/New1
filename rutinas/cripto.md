@@ -1,4 +1,8 @@
-# Rutina 8 · Cripto (cada 4 horas, todos los días: 00:17, 04:17, 08:17, 12:17, 16:17 y 20:17, hora del centro de México)
+# Rutina 8 · Cripto (pulso cada 4 horas: 00:17, 04:17, 08:17, 12:17 y 16:17, hora del centro de México)
+
+## 8b · Cripto, cascada vespertina (18:42, todos los días)
+
+Mismo agente, mismo procedimiento de "pulso" (paso 1 de abajo), pero es el paso que alimenta la cascada de la noche del dueño (25-sep-2026): revisor (17:57) → resumen de aprendizaje (18:08) → **cripto (18:42)** → bloque de trabajo continuo (19:09) → decisor (19:27) → investigador (20:12) → conciliación y arbitraje (20:57) → supervisor (21:42). Reemplaza el pulso de las 20:17 de la rutina anterior; no corras los dos.
 
 Sesión: "Sistema de inversión · Inteligencia y cripto". Agente: `analista-cripto` (`.claude/agents/analista-cripto.md`).
 

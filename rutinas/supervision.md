@@ -19,3 +19,14 @@ Sesión: "Sistema de inversión · Supervisión, conciliación y revisión". Age
    - commit `supervision: AAAA-MM-DD HH:MM` solo si hubo cambios;
    - pull --rebase y push;
    - respuesta final de 3 líneas o menos.
+
+## 9b · Supervisor, cierre de la cascada vespertina (21:42, todos los días)
+
+Último paso de la cascada del dueño (25-sep-2026). No es supervisión de mercado (eso ya lo hizo la sección de arriba en horario bursátil): es una auditoría de que **todas** las rutinas de hoy dejaron su latido.
+
+1. Lee `bitacora/estado-rutinas.md` completo (no solo la última línea) y arma la lista de rutinas que debieron correr hoy según sus horarios en `rutinas/REGLAS-MOTOR.md` §6.
+2. Para cada una, confirma que hay un latido de hoy. Si falta uno:
+   - si la rutina es de mercado y hoy es fin de semana o feriado (NYSE/BMV cerradas), no es una falla: anótalo así;
+   - si no hay motivo para que faltara, es un bloqueo: escríbelo en `bitacora/bloqueos.md` con la rutina, la hora esperada y que nadie dejó latido.
+3. Revisa también `bitacora/decisiones-pendientes.md`: si algo lleva más de 48 horas sin cerrarse, escala con una alerta.
+4. **Cierre:** una línea en `bitacora/estado-rutinas.md` ("supervisor-vespertino · OK | N sin latido"); commit `supervision-vespertina: AAAA-MM-DD` solo si hubo bloqueos nuevos; pull --rebase y push; respuesta final de 4 líneas o menos.

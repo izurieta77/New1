@@ -14,6 +14,10 @@ Los procedimientos de cada rutina viven en `rutinas/*.md`:
 - `supervision.md`
 - `conciliacion-arbitraje.md`
 - `revision.md`
+- `resumen-diario-aprendizaje.md`
+- `bloque-trabajo-continuo.md`
+- `decisor-vespertino.md`
+- `investigador-vespertino.md`
 
 Los disparadores solo despiertan la sesión y le indican seguir esos archivos. Para cambiar una rutina se edita su archivo en git; no hace falta tocar el disparador.
 
@@ -22,6 +26,25 @@ Los disparadores solo despiertan la sesión y le indican seguir esos archivos. P
 - Jamás entra al sistema información no pública sobre emisoras, venga de quien venga, incluida cualquier persona del entorno del dueño con acceso a decisiones de emisoras o de inversionistas institucionales.
 - Todo insumo debe ser público y verificable. El marco es la Ley del Mercado de Valores (uso de información privilegiada) y, cuando aplique, la regla 10b-5 de la SEC.
 - Si algo parece información privilegiada, se descarta sin usarlo y se anota como "descartado por cumplimiento", sin detalles.
+
+## 0b. Cascada vespertina (todos los días, hora del centro de México)
+
+Decisión del dueño (25-sep-2026, "con otros horarios o agentes mejorados pero van más o menos así"): describió el patrón de un rival y pidió adoptarlo, adaptado. Es una segunda pasada diaria, además de las rutinas de mercado (1-6), que no depende de que la BMV o el NYSE estén abiertos.
+
+| Hora | Rutina | Agente | Qué hace |
+|---|---|---|---|
+| 17:57 | `revision.md` | `revisor` | Revisa lo acumulado del día antes de que seas de la noche |
+| 18:08 | `resumen-diario-aprendizaje.md` | orquestador (Motor) | Resumen de lo que el sistema aprendió hoy, para el dueño |
+| 18:42 | `cripto.md` §8b | `analista-cripto` | Pulso de cripto, cascada vespertina (reemplaza el pulso de las 20:17) |
+| 19:09 | `bloque-trabajo-continuo.md` | orquestador (Motor) | Avanza una tarea de la cola del plan |
+| 19:27 | `decisor-vespertino.md` | `decisor` | ¿Alguna alerta de hoy amerita actuar antes del viernes? Casi siempre no |
+| 20:12 | `investigador-vespertino.md` | `investigador-academico` | Barrido corto de literatura nueva (no el trimestral completo) |
+| 20:57 | `conciliacion-arbitraje.md` | `conciliador-arbitro` | Resuelve lo que haya quedado abierto |
+| 21:42 | `supervision.md` §9b | `supervisor` | Cierra el día: revisa que todas las rutinas de hoy dejaron latido |
+
+**Por qué en este orden:** el revisor va primero porque revisa lo pendiente del investigador y del cripto de ayer, no lo de hoy; el decisor y el investigador van después de que cripto y el bloque de trabajo continuo produjeron algo nuevo; conciliación y supervisor van al final porque resuelven y auditan lo que dejó el resto de la noche.
+
+**Costo:** son 6 corridas nuevas por día (2 retiman rutinas que ya existían). El límite semanal de uso sigue siendo el mismo (§7 de `PLAN.md`); si se agota, se detienen todas por igual.
 
 ## 1. Autonomía: nunca te quedes esperando
 

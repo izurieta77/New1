@@ -1,4 +1,6 @@
-# Rutina 10 · Conciliación y arbitraje (diaria, 18:23 hora del centro de México)
+# Rutina 10 · Conciliación y arbitraje (diaria, 20:57 hora del centro de México)
+
+Séptimo paso de la cascada vespertina del dueño (25-sep-2026, ver `rutinas/REGLAS-MOTOR.md` §6b): corre después del decisor y del investigador vespertino, para resolver cualquier desacuerdo que hayan dejado.
 
 Sesión: "Sistema de inversión · Supervisión, conciliación y revisión". Agente: `conciliador-arbitro` (`.claude/agents/conciliador-arbitro.md`).
 
