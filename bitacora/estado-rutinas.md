@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-26 02:57 UTC · conciliación · OK · (este commit) · conciliación 2026-09-26: órdenes/real/papel/pronósticos OK (20 pronósticos, PLAN.md §8 pendiente de refresco por auditoría del viernes); sin arbitrajes nuevos, los 2 puntos abiertos son de dirección y siguen escalados al 2-oct
 2026-09-26 02:20 UTC · investigador-vespertino · OK · (este commit) · barrido corto (arXiv q-fin 25-sep, NBER w35725-w35787, 3 búsquedas dirigidas): nada nuevo que cambie reglas; sin cambios en conocimiento/
 2026-09-26 02:15 UTC · inteligencia · OK · (este commit) · cierre del día 20:05 CDMX en bitacora/inteligencia/2026-09-25.md (plan de 7 días de Irán detallado, T-MEC aplazado a oct, calendario 28-sep/3-oct); P0020 (Core PCE ago>=3.30%, resuelve 30-sep) registrado; sin alertas
 2026-09-26 01:32 UTC · decisor-vespertino · OK · (este commit) · nada amerita actuar antes del viernes; sin alertas, sin posiciones, órdenes del 28-sep intactas
