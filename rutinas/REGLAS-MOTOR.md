@@ -46,6 +46,18 @@ Decisión del dueño (25-sep-2026, "con otros horarios o agentes mejorados pero 
 
 **Costo:** son 6 corridas nuevas por día (2 retiman rutinas que ya existían). El límite semanal de uso sigue siendo el mismo (§7 de `PLAN.md`); si se agota, se detienen todas por igual.
 
+## 0c. Pulsos extra de cripto para acortar los huecos del día (decisión del dueño, 26-sep-2026)
+
+El dueño pidió ver actividad más seguida: durante el día, entre el pulso de cripto (rutina 8, cada 4h: 00:17/04:17/08:17/12:17/16:17) y la siguiente corrida de inteligencia (rutina 7, cada ~4h: 07:05/11:05/15:05/20:05), quedaban tres huecos de ~2h48 sin ninguna corrida (04:17→07:05, 08:17→11:05, 12:17→15:05). Se optó por el punto medio (no cadencia estrictamente horaria en toda la cascada, que arriesgaría agotar otra vez el límite semanal como el 25-sep): solo se agregaron 3 disparadores nuevos, uno a la mitad de cada uno de esos tres huecos, con el mismo procedimiento de "Pulso" (paso 1) de `rutinas/cripto.md`, sin estudio profundo ni pronóstico:
+
+| Hora | Rutina | Cierra el hueco entre |
+|---|---|---|
+| 05:41 | `cripto.md` paso 1 (pulso extra) | pulso 04:17 → inteligencia 07:05 |
+| 09:41 | `cripto.md` paso 1 (pulso extra) | pulso 08:17 → inteligencia 11:05 |
+| 13:41 | `cripto.md` paso 1 (pulso extra) | pulso 12:17 → inteligencia 15:05 |
+
+**Costo:** 3 corridas nuevas por día, todas ligeras (solo pulso, sin subagente). El hueco nocturno (21:42→00:17, ~2h35) y el de la tarde (16:17→17:57, ~1h40) se dejaron igual: el dueño solo pidió cerrar los huecos de "mañana/mediodía".
+
 ## 1. Autonomía: nunca te quedes esperando
 
 - No termines un turno con una pregunta al dueño ni esperes respuesta. Nadie la va a contestar a tiempo y la siguiente rutina llega a una sesión detenida.
