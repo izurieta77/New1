@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-26 14:35 UTC · cripto · OK · (este commit) · 08:17 CDMX: filtro ENCENDIDO (SMA200=70,965, +22.2%); P0021 registrado (BTC no toca salida del filtro en 30d, p=0.05); estudio G1 (ejercicio de reversión propio, sin acceso nuevo a Dinero Roto 9-30); contraparte Binance sin disparadores, sin alerta
 2026-09-26 13:15 UTC · inteligencia · OK · (este commit) · barrido completo 07:05 CDMX en bitacora/inteligencia/2026-09-26.md; ALERTA ALTA: WSJ dice que Trump rechazó el plan de 7 días de Irán (grado B, señales mixtas, sin confirmar por Reuters), Polymarket cae de 13.3% a ~6%; baja P0006, riesgo de rebote del WTI antes del arranque en real del 28-sep
 2026-09-26 10:23 UTC · cripto · OK · (este commit) · pulso 04:17 CDMX en bitacora/cripto/2026-09-26.md (BTC 84,151 −0.39%, ETH 2,689 −0.43%, sin cambio de régimen); sin órdenes vencidas ni alertas
 2026-09-26 06:24 UTC · cripto · OK · (este commit) · pulso 00:17 CDMX en bitacora/cripto/2026-09-26.md (BTC 83,880 −0.29%, ETH 2,684 +0.28%, sin cambio de régimen); sin órdenes vencidas ni alertas

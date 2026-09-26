@@ -182,3 +182,15 @@
   - Dinero Roto caps. 21-27, si el dueño compra el ebook;
   - el PDF original del Diploma 2025, si reaparece.
 - **Candidatos para `registro-de-errores.md`** (los decide el orquestador): los errores de los recursos 15, 20 y 29 marcados en sus fichas. Ninguno es error nuestro.
+
+## 8. Adenda del 26-sep-2026 · ejercicio propio de reversión con 6 confirmaciones
+
+Avance del pendiente "Leer Dinero Roto caps. 9-30 y ejercicio propio de reversión con 6 confirmaciones" (`estado-de-dominio.csv`, fila `cripto/01`). Ficha completa: [fichas/2026-09-26-reversion-6-confirmaciones.md](fichas/2026-09-26-reversion-6-confirmaciones.md).
+
+- **Caps. 9-30 de Dinero Roto: reintenté el acceso legal y sigue sin haberlo.** Revisé `dineroroto.com` (redirige al índice más allá del cap. 8), Swan (solo caps. 7-8) y busqué entrevistas o reseñas de 2026 nuevas sobre esos capítulos: no encontré ninguna. **No leí esos capítulos; el pendiente de lectura íntegra sigue abierto**, condicionado a la compra del ebook.
+- **Ejercicio de reversión (independiente del libro), con klines diarios de BTCUSDT (Binance, 2017-2026):**
+  - 17 episodios históricos de caída ≥20% desde el máximo de cierre. La tasa base de recuperar el 50% de la caída en 90 días es **76.5% (13/17)**, sin condicionar en nada — **grado B**, reproducible con todo el historial disponible.
+  - Exigir 6 señales técnicas simultáneas (RSI, SMA20, SMA50, MACD, volumen, ruptura de 10 días) dentro de 30 días del mínimo solo se cumplió en **3 de 17 episodios**, los 3 con reversión exitosa, contra 71.4% (10/14) sin esa confirmación. La diferencia **no es estadísticamente distinguible de ruido** (Fisher exacto, p = 0.54, n=3). **Grado C**: no se puede afirmar que las 6 confirmaciones agreguen valor con esta muestra.
+  - El episodio en curso (trough 30-jun-2026 en 58,624.71, −53.0% desde el máximo del 6-oct-2025) es, junto con 2018 y 2022, uno de los 3 que a 90 días de su mínimo **no** habían recuperado el 50% de la caída — congruente con el −32.8% que ya reportaba este capítulo.
+- **Para invertir:** el filtro de tendencia operativo de `arena-claude-binance` (SMA200 × 0.97/1.03) es una regla distinta y ya decidida por el comité; este ejercicio es de estudio y no la reemplaza ni la valida directamente.
+- **Nuevo pendiente:** conseguir acceso legal a los caps. 9-30 (compra del ebook) y ampliar el ejercicio de reversión con más ventanas (10/60 días) y con ETH, para ver si el resultado de n=3 se sostiene con más casos.

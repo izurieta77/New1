@@ -207,3 +207,12 @@
 - **Global: B-C.** Es el mejor recurso del grupo para entender **por qué** existe demanda de Bitcoin y para pensar en riesgo de contraparte. No sirve para decidir cuándo comprar.
 
 **Estado:** estudiado el 25-sep-2026 (sección). Pendiente: si el dueño compra el libro (ebook €5), leer los caps. 21-27 y subir el acceso a "íntegro". Síntesis en [01-bitcoin-protocolo-dinero-y-autocustodia.md](../01-bitcoin-protocolo-dinero-y-autocustodia.md).
+
+## 8. Adenda del 26-sep-2026 · reintento de acceso legal a los caps. 9-30
+
+- **Resultado: sin acceso nuevo.** Antes de repetir el intento de compra, probé si había alguna vía legal nueva:
+  - `dineroroto.com`: intenté entrar directo a una URL de capítulo posterior al 8; redirige a la portada/índice, igual que el 25-sep. No hay capítulos nuevos liberados por la editorial.
+  - `swanbitcoin.com/broken-money-chapter-8`: confirmado que **solo** ofrece los caps. 7 y 8 ("Swan Bitcoin has made Chapter 7 and 8 available for free download"), sin cambio.
+  - Busqué una entrevista o reseña de 2026 que cubriera específicamente el contenido de los caps. 9-30 más allá de lo ya citado (MacroVoices, The Investor's Podcast, SLP518, "Conflated"): no encontré ninguna nueva.
+  - Everand/Scribd ofrece "leer gratis 30 días", pero es una prueba de **suscripción de pago** (pide método de pago), no un acceso legal gratuito equivalente a las transcripciones ya usadas. No lo cuento como acceso.
+- **No leí los caps. 9-30.** El pendiente de lectura íntegra sigue abierto, condicionado a que el dueño compre el ebook (€5). Detalle completo en [fichas/2026-09-26-reversion-6-confirmaciones.md](../fichas/2026-09-26-reversion-6-confirmaciones.md), que también documenta el ejercicio propio de reversión con 6 confirmaciones (independiente del libro) que cierra la otra mitad del pendiente de `cripto/01`.
