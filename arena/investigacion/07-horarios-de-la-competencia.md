@@ -34,4 +34,6 @@ Adoptamos la **secuencia y el espaciamiento** (una cascada vespertina de 8 pasos
 
 ## Pendiente
 
+[I] Podría ser ChatGPT: su protocolo (`08-chatgpt-protocolo-maquiavelo.md`) dice "rutinas activas" desde la versión 1.1. No confirmado.
+
 Si el dueño precisa cuál rival mostró este patrón, se agrega aquí y se compara contra lo que ya sabemos de él en `06-barebone-ai-competidor.md` o en `competencia/rivales.csv`.
