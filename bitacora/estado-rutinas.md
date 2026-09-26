@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-26 18:22 UTC · cripto · OK · (este commit) · pulso 12:17 CDMX en bitacora/cripto/2026-09-26.md (BTC 84,079 +0.06%, ETH 2,688 −0.35%, sin cambio de régimen pese a la alerta Irán confirmada); sin órdenes vencidas (O0003 es hasta el 28-sep) ni alertas cripto
 2026-09-26 17:15 UTC · inteligencia · OK · (este commit) · actualización 11:05 CDMX en bitacora/inteligencia/2026-09-26.md; ALERTA CONFIRMADA (grado B→A): Trump confirmó on-the-record el rechazo al plan de Irán, corroborado por 5 medios; Polymarket cae a ~4%; riesgo de rebote del WTI al reabrir mercados se sostiene
 2026-09-26 14:35 UTC · cripto · OK · (este commit) · 08:17 CDMX: filtro ENCENDIDO (SMA200=70,965, +22.2%); P0021 registrado (BTC no toca salida del filtro en 30d, p=0.05); estudio G1 (ejercicio de reversión propio, sin acceso nuevo a Dinero Roto 9-30); contraparte Binance sin disparadores, sin alerta
 2026-09-26 13:15 UTC · inteligencia · OK · (este commit) · barrido completo 07:05 CDMX en bitacora/inteligencia/2026-09-26.md; ALERTA ALTA: WSJ dice que Trump rechazó el plan de 7 días de Irán (grado B, señales mixtas, sin confirmar por Reuters), Polymarket cae de 13.3% a ~6%; baja P0006, riesgo de rebote del WTI antes del arranque en real del 28-sep
