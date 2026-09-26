@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-26 00:52 UTC · cripto (cascada vespertina 18:42) · OK · (este commit) · pulso en bitacora/cripto/2026-09-25.md (BTC 83,916 −0.85%, ETH 2,686 −0.21%); filtro de tendencia: SMA200=70,965, salida=68,836, filtro ENCENDIDO; sin órdenes vencidas ni alertas
 2026-09-26 00:20 UTC · aprendizaje · OK · (este commit) · resumen del 25-sep en bitacora/aprendizaje/2026-09-25.md (5 hallazgos, 2 temas suben, 57 errores registrados); sección en el brief
 2026-09-25 23:20 UTC · auditoría semanal 2026-W39 · OK · (este commit) · 3 afirmaciones auditadas (2 corregidas en decisión y brief), abogado del diablo se abstiene sobre cartera A (agenda 2-oct), radar 5 papers C, PLAN Avance; sin comité por regla
 2026-09-25 22:23 UTC · cripto · OK · (este commit) · pulso 16:17 CDMX en bitacora/cripto/2026-09-25.md (BTC ~85,200, ETH ~2,738, tendencia alcista sobre SMA200, flujos ETF positivos); sin órdenes vencidas ni alertas
