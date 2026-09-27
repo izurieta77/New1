@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-27 00:48 UTC · cripto (cascada vespertina 18:42) · OK · (este commit) · pulso en bitacora/cripto/2026-09-26.md (BTC 84,354 +0.52%, ETH 2,695 +0.32%); filtro de tendencia reconfirmado: SMA200=71,038, salida=68,907, ENCENDIDO (+18.8%); sin órdenes vencidas ni alertas
 2026-09-27 00:20 UTC · aprendizaje · OK · (este commit) · resumen del 26-sep en bitacora/aprendizaje/2026-09-26.md (3 hallazgos: reversión BTC 76.5% base, ciclo lento, rival ChatGPT); brief del sábado creado solo con esa sección
 2026-09-26 23:57 UTC · revisión · OK · (este commit) · revisión de calidad 2026-09-26 en bitacora/revisiones/2026-09-26.md: 1 hallazgo menor (PLAN.md §1 omite el sleeve de 10k MXN en Binance por IA; cifras ya correctas en config y en §Meta del dueño), sin bloqueantes; sección Revisión agregada al brief del 25-sep; el hueco de revisión del 25-sep sigue sin cubrirse (ver bitacora/bloqueos.md)
 2026-09-26 22:22 UTC · cripto · OK · (este commit) · pulso 16:17 CDMX en bitacora/cripto/2026-09-26.md (BTC 84,298 +0.41%, ETH 2,689 +0.09%, sin cambio de régimen); sin órdenes vencidas ni alertas
