@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-27 02:20 UTC · investigador-vespertino · OK · (este commit) · barrido corto del sábado (sin listados arXiv; NBER sin números nuevos; 3 búsquedas): único candidato Hsieh arXiv:2609.23272 (teoría de control de drawdown, grado C) confirma la base de los cortacircuitos sin cambiar criterios; sin cambios en conocimiento/
 2026-09-27 02:15 UTC · inteligencia · OK · (este commit) · cierre del día 20:05 CDMX en bitacora/inteligencia/2026-09-26.md; alerta Irán/Ormuz estable (Polymarket 4.6% >5h sin cambio); P0022 (WTI>=93.50 el 28-sep, resuelve 29-sep) registrado; corregido escape CSV inválido (`\"` → `""`) en P0022, 23 filas verificadas con csv.reader; lunes 28-sep sin dato macro de primer nivel, riesgo es la reapertura del petróleo
 2026-09-27 01:35 UTC · decisor-vespertino · OK · (este commit) · alerta alta Irán/Ormuz revisada: no amerita actuar antes del viernes (sin posiciones; condiciones de validez del lunes la cubren); sin órdenes nuevas
 2026-09-27 01:30 UTC · trabajo-continuo · OK · (este commit) · AC-05: doble ejecución independiente de R08 (^SP500TR + FIX Banxico) concordante en estado y conclusión; tabla maestra (19 pruebas), R08 con nota, estado de dominio R08 → Contrastado
