@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-27 23:57 UTC · revisión · OK · (este commit) · revisión de calidad 2026-09-27 en bitacora/revisiones/2026-09-27.md: 1 hallazgo menor (tabla-maestra.md fila R08, orden "X contra Y" inconsistente entre R08 y AC-05 al citar MDD; cifras verificadas correctas contra el README de AC-05), sin bloqueantes; sección Revisión agregada al brief del 26-sep
 2026-09-27 22:23 UTC · cripto · OK · (este commit) · pulso 16:17 CDMX en bitacora/cripto/2026-09-27.md (BTC 84,406 +0.13%, ETH 2,677 −0.42%, sin cambio de régimen); petróleo ya debería haber reabierto, sin reflejo en cripto; sin órdenes vencidas ni alertas
 2026-09-27 21:15 UTC · inteligencia · OK · (este commit) · actualización 15:05 CDMX en bitacora/inteligencia/2026-09-27.md; petróleo aún sin abrir (reabre 22:00 UTC, se cubre en la corrida de las 20:05); Polymarket Irán revirtió parcialmente a 4.9% (era 5.9%); Trump dice a Axios que espera reanudar pláticas esta semana; reporte iraní de ataque a buque sin corroborar (Fars News, fuente única) — sin subir alerta
 2026-09-27 19:45 UTC · cripto (pulso extra 13:41) · OK · (este commit) · pulso extra en bitacora/cripto/2026-09-27.md (BTC 84,796 +0.96%, ETH 2,695 +0.43%, sin cambio de régimen); petróleo reabre hoy ~22:00 UTC, después de esta corrida; sin órdenes vencidas ni alertas
