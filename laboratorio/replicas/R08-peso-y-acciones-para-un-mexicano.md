@@ -606,6 +606,7 @@ Alcance: mercado accionario de EUA (CRSP; S&P 500 TR como sensibilidad), mensual
 - Resto de las huellas: `R08-datos/SHA256SUMS.txt`.
 - Fecha de la corrida final: 2026-09-25 06:56 UTC.
 - Revisión independiente (`auditor-de-replicas`): pendiente. No hay segunda implementación con código independiente. La segunda fuente de datos (S1 FIX, S3a `^SP500TR`) solo concuerda con los mismos cálculos.
+  - **Nota del 2026-09-27 (bloque de trabajo continuo):** ya hay segunda implementación independiente: [AC-05](../auditorias/AC-05-peso-y-acciones/README.md), con código desde cero, protocolo ciego y fuentes principales distintas (`^SP500TR`, FIX de Banxico SF43718, CETES FMI, TB3MS). Concuerda en el estado ("No replicado") y en la conclusión operable. Diferencias < 0.05 de Sharpe y < 1 pp de CAGR: corr completa −0.364 (A −0.370); ΔVol fuera de muestra con cobertura +2.49 pp (A +2.60); MDD fuera de muestra −31.3% / −49.4% (A −30.0% / −48.7%). El texto de arriba se conserva como estaba.
 
 #### Conclusión operable
 

@@ -1,0 +1,139 @@
+==============================================================================
+AC-05  Segunda ejecucion independiente de R08  (B: ^SP500TR x FIX Banxico; CETES FMI; TB3MS)
+==============================================================================
+Meses: (1994, 1) a (2026, 7)  n=391  faltantes=[]
+n completo=391 dentro=161 fuera=230
+
+[QC] Nivel fin de mes MXN=X/FIX-1: max abs = 0.0179 en (2009, 2) ; DEXMXUS/FIX-1: max abs = 0.0136 en (1995, 1)
+
+[Metricas] neto de costo de entrada 0.34%; 50/50 con costo de rebalanceo. Sharpe vs CETES (MXN) o TB3MS (USD).
+variante               segm         CAGR    vol  Sharpe     MDD
+mxn_h000               completo    16.94  16.53   0.394  -39.83
+mxn_h000               dentro      22.01  20.16   0.250  -39.83
+mxn_h000               fuera       13.52  13.38   0.558  -31.30
+mxn_h025               completo    17.69  15.12   0.465  -37.90
+mxn_h025               dentro      23.20  17.61   0.326  -37.90
+mxn_h025               fuera       13.98  13.05   0.600  -35.84
+mxn_h050               completo    18.32  14.47   0.523  -40.55
+mxn_h050               dentro      24.24  15.80   0.411  -37.18
+mxn_h050               fuera       14.34  13.40   0.612  -40.55
+mxn_h075               completo    18.82  14.67   0.552  -45.06
+mxn_h075               dentro      25.12  15.00   0.486  -36.56
+mxn_h075               fuera       14.59  14.38   0.596  -45.06
+mxn_h100               completo    19.18  15.69   0.549  -49.37
+mxn_h100               dentro      25.81  15.35   0.525  -35.98
+mxn_h100               fuera       14.74  15.87   0.564  -49.37
+mxn_hminvar_exp36      completo    19.13  17.14   0.499  -45.07
+mxn_hminvar_exp36      dentro      26.52  20.68   0.431  -36.28
+mxn_hminvar_exp36      fuera       14.22  14.04   0.584  -45.07
+bench50_h000           completo    14.26   8.54   0.390  -12.37
+bench50_h000           dentro      20.53  10.48   0.246  -12.37
+bench50_h000           fuera       10.07   6.67   0.553  -12.22
+bench50_h100           completo    15.33   8.32   0.544  -24.24
+bench50_h100           dentro      22.20   8.58   0.520  -12.74
+bench50_h100           fuera       10.76   7.93   0.559  -24.24
+usd_referencia         completo    10.93  14.97   0.607  -50.95
+usd_referencia         dentro      11.23  14.11   0.554  -44.73
+usd_referencia         fuera       10.73  15.58   0.640  -50.95
+cetes_100              completo    11.03   2.85     nan    0.00
+cetes_100              dentro      18.16   3.67     nan    0.00
+cetes_100              fuera        6.30   0.70     nan    0.00
+
+[H1] corr(R, x) mensual; IC95 bootstrap bloques 12, 5000 rep, semilla 20260925
+  completo   n=391 corr=-0.364 [-0.567, -0.204]   beta=-0.340 tNW= -6.56 beta(R<0)=-0.532 beta(R>=0)=-0.362
+  dentro     n=161 corr=-0.159 [-0.452, -0.022]   beta=-0.185 tNW= -2.91 beta(R<0)=-0.262 beta(R>=0)=-0.363
+  fuera      n=230 corr=-0.559 [-0.683, -0.402]   beta=-0.429 tNW= -6.75 beta(R<0)=-0.665 beta(R>=0)=-0.347
+  2008-2026  n=223 corr=-0.559 [-0.683, -0.407]   beta=-0.431 tNW= -6.70 beta(R<0)=-0.665 beta(R>=0)=-0.349
+  2016-2026  n=127 corr=-0.420 [-0.563, -0.205]   beta=-0.336 tNW= -3.77 beta(R<0)=-0.631 beta(R>=0)=-0.274
+  1996-2026  n=367 corr=-0.503                    beta=-0.352 tNW= -6.83 beta(R<0)=-0.565 beta(R>=0)=-0.300
+  2023-2026  n= 43 corr=-0.433                    beta=-0.307 tNW= -3.45 beta(R<0)=-0.664 beta(R>=0)=-0.299
+  H1 refutada=False; signo negativo en todas=True; completo en [-0.60,-0.35]=True
+
+[H2] meses extremos, completo 1994-01..2026-07
+  R<-5%        n= 38 R= -7.77 x=  3.57 U= -4.55 R^1= -7.57 %x>0=0.74 A=0.414
+  peor_decil   n= 39 R= -7.70 x=  3.59 U= -4.45 R^1= -7.50 %x>0=0.74 A=0.422
+  R>+5%        n= 62 R=  6.99 x= -1.54 U=  5.33 R^1=  7.61 %x>0=0.19 A=0.237
+  mejor_decil  n= 39 R=  7.85 x= -1.73 U=  5.99 R^1=  8.47 %x>0=0.18 A=0.238
+  H2 en rango=True; signo=True
+
+[H3] caidas diarias por ventana (^SP500TR diario; FX = FIX mismo dia y, contraste, MXN=X)
+  FIX     crisis_fin USD  -55.3 (2007-10-09->2009-03-09)  MXN  -38.3 (2007-10-09->2008-11-20)  MXNcub  -52.8
+  FIX     anio_2008  USD  -47.7 (2007-12-31->2008-11-20)  MXN  -35.0 (2007-12-31->2008-11-20)  MXNcub  -46.1
+  FIX     2020       USD  -33.8 (2020-02-19->2020-03-23)  MXN  -17.3 (2020-02-20->2020-03-16)  MXNcub  -34.2
+  FIX     2022       USD  -24.5 (2022-01-03->2022-10-12)  MXN  -26.5 (2022-01-03->2022-10-11)  MXNcub  -21.6
+  FIX     episodio Lehman 2008-09-12->2009-03-09: USD  -45.1  MXN  -20.4  MXNcub  -44.7
+  FIX     episodio COVID  2020-02-19->2020-03-23: USD  -33.8  MXN  -10.7  MXNcub  -34.2
+  MXN=X   crisis_fin USD  -55.3 (2007-10-09->2009-03-09)  MXN  -36.6 (2007-10-09->2009-03-06)  MXNcub  -54.7
+  MXN=X   anio_2008  USD  -47.7 (2007-12-31->2008-11-20)  MXN  -33.0 (2007-12-31->2008-11-20)  MXNcub  -47.9
+  MXN=X   2020       USD  -33.8 (2020-02-19->2020-03-23)  MXN  -17.2 (2020-02-10->2020-03-16)  MXNcub  -33.8
+  MXN=X   2022       USD  -24.5 (2022-01-03->2022-10-12)  MXN  -26.2 (2022-01-03->2022-10-11)  MXNcub  -21.2
+  MXN=X   episodio Lehman 2008-09-12->2009-03-09: USD  -45.1  MXN  -19.1  MXNcub  -46.8
+  MXN=X   episodio COVID  2020-02-19->2020-03-23: USD  -33.8  MXN  -11.9  MXNcub  -33.8
+  DEXMXUS crisis_fin USD  -55.3 (2007-10-09->2009-03-09)  MXN  -38.3 (2007-10-09->2008-11-20)  MXNcub  -52.3
+  DEXMXUS anio_2008  USD  -47.7 (2007-12-31->2008-11-20)  MXN  -35.0 (2007-12-31->2008-11-20)  MXNcub  -45.6
+  DEXMXUS 2020       USD  -33.8 (2020-02-19->2020-03-23)  MXN  -14.9 (2020-02-20->2020-03-16)  MXNcub  -34.6
+  DEXMXUS 2022       USD  -24.5 (2022-01-03->2022-10-12)  MXN  -26.5 (2022-01-03->2022-10-11)  MXNcub  -21.6
+  DEXMXUS episodio Lehman 2008-09-12->2009-03-09: USD  -45.1  MXN  -20.2  MXNcub  -44.2
+  DEXMXUS episodio COVID  2020-02-19->2020-03-23: USD  -33.8  MXN  -10.5  MXNcub  -34.6
+  Ventaja MXN sobre USD (pp, FIX): crisis_fin=17.0, anio_2008=12.7, 2020=16.4, 2022=-2.0
+  H3 refutada=False; cumple completa=True
+
+[H4] volatilidad y caida por razon de cobertura (neto)
+  completo  vol h=0..1:  16.53  15.12  14.47  14.67  15.69 | MDD:  -39.8  -37.9  -40.5  -45.1  -49.4
+  dentro    vol h=0..1:  20.16  17.61  15.80  15.00  15.35 | MDD:  -39.8  -37.9  -37.2  -36.6  -36.0
+  fuera     vol h=0..1:  13.38  13.05  13.40  14.38  15.87 | MDD:  -31.3  -35.8  -40.5  -45.1  -49.4
+  completo  vol(h=1)-vol(h=0) = -0.84 pp  IC95 [-5.99, 3.17]
+  fuera     vol(h=1)-vol(h=0) =  2.49 pp  IC95 [-0.01, 4.97]
+  dentro    vol(h=1)-vol(h=0) = -4.81 pp  IC95 [-14.15, 2.42]
+  h minima varianza (sin recortar): completo=0.567, dentro=0.799, fuera=0.245
+  H4 refutada (nucleo)=True; partes: {'dvol>=1pp_completo': False, 'dvol>=1pp_dentro': False, 'dvol>=1pp_fuera': True, 'mdd_h1_peor_5pp_completo': True, 'mdd_h1_peor_5pp_fuera': True, 'vol_monotona_completo': False, 'hminvar_completo<=0.25': False}
+
+[H5] costo de no cubrir
+  completo  CAGR(h1)-CAGR(h0)=  2.23 pp; media(f-x)= 0.157%/mes (x12= 1.89) tNW= 0.72 tIID= 0.76
+  dentro    CAGR(h1)-CAGR(h0)=  3.80 pp; media(f-x)= 0.207%/mes (x12= 2.49) tNW= 0.50 tIID= 0.54
+  fuera     CAGR(h1)-CAGR(h0)=  1.22 pp; media(f-x)= 0.122%/mes (x12= 1.47) tNW= 0.52 tIID= 0.54
+  H5 cumple=True
+
+[H6] benchmark 50/50 (acciones EUA + CETES)
+  completo  vol h0= 8.54 h1= 8.32 | MDD h0= -12.4 h1= -24.2 | CAGR h0=14.26 h1=15.33
+  dentro    vol h0=10.48 h1= 8.58 | MDD h0= -12.4 h1= -12.7 | CAGR h0=20.53 h1=22.20
+  fuera     vol h0= 6.67 h1= 7.93 | MDD h0= -12.2 h1= -24.2 | CAGR h0=10.07 h1=10.76
+  H6 cumple (completo y fuera)=False; fuera=True
+
+[H7] minima varianza expansiva (min 36 meses, recorte [0,1])
+  h: min=0.562 mediana=0.637 max=0.929; media fuera=0.624
+  reduccion vol fuera vs h0 = -0.66 pp; MDD(h0)-MDD(P6) fuera = 13.77 pp
+  H7 cumple (no reduce >=0.5 pp)=True; P6 adoptable=False
+
+[Contrastes de fuente] corr(R,x), vol h0/h1, dvol, dCAGR
+  B_principal(SP500TR,FIX,INTG,TB3MS)  completo  n=391 corr=-0.364 vol0=16.53 vol1=15.69 dvol=-0.84 dCAGR= 2.23
+  B_principal(SP500TR,FIX,INTG,TB3MS)  dentro    n=161 corr=-0.159 vol0=20.16 vol1=15.35 dvol=-4.81 dCAGR= 3.80
+  B_principal(SP500TR,FIX,INTG,TB3MS)  fuera     n=230 corr=-0.559 vol0=13.38 vol1=15.87 dvol= 2.49 dCAGR= 1.22
+  FX=DEXMXUS                           completo  n=391 corr=-0.366 vol0=16.49 vol1=15.69 dvol=-0.80 dCAGR= 2.23
+  FX=DEXMXUS                           dentro    n=161 corr=-0.164 vol0=20.06 vol1=15.35 dvol=-4.71 dCAGR= 3.80
+  FX=DEXMXUS                           fuera     n=230 corr=-0.557 vol0=13.42 vol1=15.87 dvol= 2.46 dCAGR= 1.22
+  CETES=Banxico28                      completo  n=391 corr=-0.364 vol0=16.53 vol1=15.71 dvol=-0.82 dCAGR= 2.38
+  CETES=Banxico28                      dentro    n=161 corr=-0.159 vol0=20.16 vol1=15.39 dvol=-4.77 dCAGR= 4.02
+  CETES=Banxico28                      fuera     n=230 corr=-0.559 vol0=13.38 vol1=15.87 dvol= 2.49 dCAGR= 1.31
+  FIX_2004-01+                         completo  n=271 corr=-0.553 vol0=12.62 vol1=14.86 dvol= 2.24 dCAGR= 1.98
+  FIX_2004-01+                         dentro    n= 41 corr=-0.401 vol0= 7.01 vol1= 6.97 dvol=-0.04 dCAGR= 6.26
+  FIX_2004-01+                         fuera     n=230 corr=-0.559 vol0=13.38 vol1=15.87 dvol= 2.49 dCAGR= 1.22
+  FX=MXN=X_2004-01+                    completo  n=271 corr=-0.572 vol0=12.50 vol1=14.88 dvol= 2.38 dCAGR= 1.85
+  FX=MXN=X_2004-01+                    dentro    n= 41 corr=-0.423 vol0= 6.81 vol1= 6.98 dvol= 0.17 dCAGR= 6.13
+  FX=MXN=X_2004-01+                    fuera     n=230 corr=-0.577 vol0=13.27 vol1=15.90 dvol= 2.63 dCAGR= 1.09
+
+[S3b] capitulo 16: ^GSPC precio x DEXMXUS; corr con dln(USD/MXN); vol; CAGR
+  1996-2026: corr=-0.502 vol USD=15.3 MXN=13.6 CAGR USD=8.51 MXN=11.41
+  2008-2026: corr=-0.558 vol USD=15.7 MXN=13.5 CAGR USD=9.16 MXN=11.91
+  2016-2026: corr=-0.415 vol USD=15.2 MXN=15.0 CAGR USD=13.06 MXN=13.13
+  2023-2026: corr=-0.437 vol USD=12.7 MXN=12.0 CAGR USD=20.50 MXN=16.59
+  A3 (1996-2026, ^GSPC<-5%): n=40 R=-7.8 x=3.7 U=-4.5
+  A4 2007-2009: MDD USD=-56.8 MXN=-39.8
+  A4 2020: MDD USD=-33.9 MXN=-15.0
+  A4 2022: MDD USD=-25.4 MXN=-27.4
+
+[Veredicto con criterios pre-registrados]
+  Estado: No replicado
+  Condiciones fuera de muestra: {'H1_fuera': True, 'H3_crisis_y_2020': True, 'H4_fuera': True, 'H6_fuera': True}
+  Cobertura parcial domina a h0 fuera: {'mxn_h025': False, 'mxn_h050': False}; modifica por H5: False
+  Conclusion operable: CONFLICTO de reglas del pre-registro: las cuatro condiciones de 'se confirma' se cumplen fuera de muestra (no cubrir), pero 'se descarta si se refuta H4' se activa porque vol(h=1) <= vol(h=0) en la muestra completa. Lectura fuera de muestra: no cubrir; lectura literal de refutacion: se descarta

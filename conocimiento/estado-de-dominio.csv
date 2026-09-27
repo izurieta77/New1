@@ -18,7 +18,7 @@ Momentum de series de tiempo,14,Replicado,R02,2026-09-25,Auditor-de-replicas con
 Efecto Halloween,14,Contrastado,"R04 (A) y AC-04 (B, código y fuente independientes): concuerdan fuera de muestra; el estado histórico de EUA depende de CRSP",2026-09-25,Decisión del dueño sobre el estado de la ficha R04; versión NAFTRAC neta en MXN
 Efecto cambio de mes,14,Replicado,R09 (con _verificacion),2026-09-25,Segunda fuente independiente
 Eventos corporativos e insiders,15,Documentado,Capítulo 15,2026-09-25,Estudio de evento propio Form 4
-Peso mexicano y acciones para inversionista en MXN,16,Replicado,R08 (sin _verificacion),2026-09-25,Doble ejecución independiente
+Peso mexicano y acciones para inversionista en MXN,16,Contrastado,R08 (A) y AC-05 (B: código y fuente independientes) concordantes; no replicado en la muestra completa; fuera de muestra no cubrir reduce caídas,2026-09-27,Versión con ETF en SIC (IVV/SPYM contra IVVPESO) neta de spread cambiario de GBM
 Benchmarks en pesos,16,Localizado,V04 pre-registro,2026-09-25,Ejecutar V04
 Crisis y burbujas,17,Documentado,Capítulo 17,2026-09-25,Ficha de patrones con 3 casos medidos
 SPIVA y gestión activa,10/19,Contrastado,V05 (doble ejecución independiente),2026-09-25,Actualizar con SPIVA Latinoamérica/México
