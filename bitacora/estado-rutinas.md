@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-27 18:22 UTC · cripto · OK · (este commit) · pulso 12:17 CDMX en bitacora/cripto/2026-09-27.md (BTC 84,652 +0.68%, ETH 2,695 +0.27%, sin cambio de régimen; repunte de Polymarket sobre Irán sin reflejo en cripto); sin órdenes vencidas ni alertas
 2026-09-27 17:15 UTC · inteligencia · OK · (este commit) · actualización 11:05 CDMX en bitacora/inteligencia/2026-09-27.md; futuros de petróleo aún sin reabrir (reabren 22:00 UTC hoy); alerta Irán/Ormuz: IRGC afirma capturar 2° dron de EUA (CENTCOM lo niega, disputado), Polymarket repunta a 5.9% (primer repunte de la semana); sin cambio de signo en pronósticos
 2026-09-27 15:45 UTC · cripto (pulso extra 09:41) · OK · (este commit) · pulso extra en bitacora/cripto/2026-09-27.md (BTC 84,481 +0.45%, ETH 2,688 −0.16%, sin cambio de régimen); sin órdenes vencidas ni alertas
 2026-09-27 14:35 UTC · cripto · OK · (este commit) · 08:17 CDMX: filtro RECONFIRMADO ENCENDIDO (SMA200=71,038, +22.5%), crítico para O0003 mañana 08:45 CDMX; P0023 registrado (ETH>=3,000 en 30d, p=0.38); estudio G1 ampliado (reversión 10/60/90d en BTC y primera vez en ETH, sin poder estadístico en 6/6 señales); contraparte sin disparadores, sin alerta
