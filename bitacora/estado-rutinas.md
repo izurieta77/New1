@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-27 10:22 UTC · cripto · OK · (este commit) · pulso 04:17 CDMX en bitacora/cripto/2026-09-27.md (BTC 85,038 +1.05%, ETH 2,716 +1.03%, nuevo máximo local, filtro sin cambio); sin órdenes vencidas ni alertas
 2026-09-27 06:22 UTC · cripto · OK · (este commit) · pulso 00:17 CDMX en bitacora/cripto/2026-09-27.md (BTC 84,584 +0.84%, ETH 2,710 +0.99%, sin cambio de régimen); sin órdenes vencidas hoy (O0003 se evalúa mañana 08:45 CDMX) ni alertas
 2026-09-27 03:42 UTC · supervisor-vespertino · OK · (este commit) · cierre del 26-sep: rutinas 7,8,10,11,12,13,14,15,16 con latido completo (rutina 11 ya se disparó sola, sin repetir el fallo de ayer); rutina 9 sin corridas por ser sábado (correcto); pulsos extra 8b/8c sin correr hoy pero explicado (disparadores nacieron a las 13:12 CDMX, después de esas dos ventanas); sin dudas >48h
 2026-09-27 02:57 UTC · conciliación · OK · (este commit) · conciliación 2026-09-27: órdenes/real/papel/pronósticos OK (22 pronósticos, CSV verificado sin filas rotas); sin arbitrajes nuevos, los 3 puntos de hechos/registros llegaron ya cerrados y los 2 de dirección siguen escalados al 2-oct
