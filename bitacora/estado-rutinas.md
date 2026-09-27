@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-27 01:35 UTC · decisor-vespertino · OK · (este commit) · alerta alta Irán/Ormuz revisada: no amerita actuar antes del viernes (sin posiciones; condiciones de validez del lunes la cubren); sin órdenes nuevas
 2026-09-27 01:30 UTC · trabajo-continuo · OK · (este commit) · AC-05: doble ejecución independiente de R08 (^SP500TR + FIX Banxico) concordante en estado y conclusión; tabla maestra (19 pruebas), R08 con nota, estado de dominio R08 → Contrastado
 2026-09-27 00:48 UTC · cripto (cascada vespertina 18:42) · OK · (este commit) · pulso en bitacora/cripto/2026-09-26.md (BTC 84,354 +0.52%, ETH 2,695 +0.32%); filtro de tendencia reconfirmado: SMA200=71,038, salida=68,907, ENCENDIDO (+18.8%); sin órdenes vencidas ni alertas
 2026-09-27 00:20 UTC · aprendizaje · OK · (este commit) · resumen del 26-sep en bitacora/aprendizaje/2026-09-26.md (3 hallazgos: reversión BTC 76.5% base, ciclo lento, rival ChatGPT); brief del sábado creado solo con esa sección
