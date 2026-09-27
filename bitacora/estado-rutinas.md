@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-27 13:35 UTC · inteligencia · OK · (este commit) · barrido completo 07:05 CDMX en bitacora/inteligencia/2026-09-27.md; alerta Irán/Ormuz estable, Polymarket sigue bajando (3.5%, cuarta baja consecutiva); matiz nuevo: flujo físico de petróleo por Ormuz se duplicó (escoltas navales de EUA), reduce el riesgo de rebote fuerte del WTI mañana; sin dato de apertura de futuros aún (fuera de ventana)
 2026-09-27 11:45 UTC · cripto (pulso extra 05:41) · OK · (este commit) · pulso extra en bitacora/cripto/2026-09-27.md (BTC 84,880 +0.83%, ETH 2,709 +0.70%, sin cambio de régimen); primer disparo de la rutina 8b; sin órdenes vencidas ni alertas
 2026-09-27 10:22 UTC · cripto · OK · (este commit) · pulso 04:17 CDMX en bitacora/cripto/2026-09-27.md (BTC 85,038 +1.05%, ETH 2,716 +1.03%, nuevo máximo local, filtro sin cambio); sin órdenes vencidas ni alertas
 2026-09-27 06:22 UTC · cripto · OK · (este commit) · pulso 00:17 CDMX en bitacora/cripto/2026-09-27.md (BTC 84,584 +0.84%, ETH 2,710 +0.99%, sin cambio de régimen); sin órdenes vencidas hoy (O0003 se evalúa mañana 08:45 CDMX) ni alertas
