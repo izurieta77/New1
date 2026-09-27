@@ -194,3 +194,14 @@ Avance del pendiente "Leer Dinero Roto caps. 9-30 y ejercicio propio de reversi�
   - El episodio en curso (trough 30-jun-2026 en 58,624.71, −53.0% desde el máximo del 6-oct-2025) es, junto con 2018 y 2022, uno de los 3 que a 90 días de su mínimo **no** habían recuperado el 50% de la caída — congruente con el −32.8% que ya reportaba este capítulo.
 - **Para invertir:** el filtro de tendencia operativo de `arena-claude-binance` (SMA200 × 0.97/1.03) es una regla distinta y ya decidida por el comité; este ejercicio es de estudio y no la reemplaza ni la valida directamente.
 - **Nuevo pendiente:** conseguir acceso legal a los caps. 9-30 (compra del ebook) y ampliar el ejercicio de reversión con más ventanas (10/60 días) y con ETH, para ver si el resultado de n=3 se sostiene con más casos.
+
+## 9. Adenda del 27-sep-2026 · reversión con ventanas de 10/60/90 días, y ETH
+
+Cierra la mitad cuantitativa del pendiente anterior. Ficha completa: [fichas/2026-09-27-reversion-btc-eth-ventanas.md](fichas/2026-09-27-reversion-btc-eth-ventanas.md).
+
+- **Dinero Roto caps. 9-30:** tercer intento de acceso legal (25, 26 y 27-sep), sin vía nueva. Sigue bloqueado, condicionado a que el dueño compre el ebook.
+- **BTC, 17 episodios (2017-2026):** tasa de recuperar el 50% de la caída es 35.3% a 10 días, y **76.5% tanto a 60 como a 90 días** — ningún episodio revirtió entre el día 60 y el 90 en esta muestra, así que extender la ventana más allá de 60 días no agrega casos en BTC.
+- **ETH, 15 episodios (primera vez que se corre este ejercicio en ETH):** tasas sistemáticamente menores que BTC en los tres horizontes (20.0% / 46.7% / 53.3%). La brecha de 90 días (53.3% vs. 76.5%) es el hallazgo más sólido de la ampliación, **grado B** por ser reproducible con todo el historial, aunque con muestra chica y episodios no independientes (varios cuelgan del mismo pico de nov-2021).
+- **6/6 señales de confirmación:** sigue sin poder estadístico en BTC (n=2, no 3 como el 26-sep: un caso límite de jul-2021 cambió de "6/6" a "5/6" al recomputar el código desde cero, evidencia de que la regla es sensible a convenciones de suavizado de RSI/MACD) y en ETH (n=1). **Se mantiene el grado C.**
+- El episodio en curso de BTC (trough 30-jun-2026) cierra su ventana de 90 días justo mañana, 28-sep-2026, sin haber recuperado el 50% de la caída, uniéndose a 2018 y 2022 como los únicos 3 de 17 episodios que no lo logran en ese plazo.
+- **Pendiente que queda:** Dinero Roto caps. 9-30 (compra del dueño) y, como siguiente tarea de bajo nivel sin depender de esa compra, leer a detalle *Mastering Bitcoin* caps. 2, 3 y 8 (MuSig2/FROST).
