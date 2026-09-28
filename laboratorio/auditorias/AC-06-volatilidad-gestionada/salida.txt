@@ -1,0 +1,88 @@
+AC-06: segunda ejecucion independiente de R05 (volatilidad gestionada, mercado de EUA)
+====================================================================================================
+  sha256 fred_M1329AUSM193NNBR.csv: 9025de20bf0ee087437b7fd470a1f70b8f86ed01dbaba9dae96bdad642ac7320
+  sha256 fred_TB3MS.csv: ebf04b1ae5bc5729ba3bb2b35dbb0e0c5e22dace36bea0c02632782d625ae6ab
+  sha256 french_F-F_Research_Data_Factors_CSV.zip: 593f4fbef03181bc0b22ff6292f217689dd1fb79355049ca905d95b262040a66
+  sha256 french_F-F_Research_Data_Factors_daily_CSV.zip: 2f29e22546069914890a712680a6f81f3680ebc3543b52864484d209ca13a7db
+  sha256 shiller_datahub.csv: ed6a0faf1864d60161806b594b45a2642f6149f59b26b3d7b32c2ce38758dc6f
+  sha256 yahoo_GSPC_1d.json: 07aeb4d429031632217a8e0f074cb0dbf9608f61724f53fa6250d9d61375d2da
+  sha256 yahoo_SP500TR_1d.json: ac96fd45a7c0a1010d2c85447cdc3c44f177665adc69acd943664fe3df750938
+
+B: meses con rendimiento 1928-01 a 2026-08; RV2 1928-01 a 2026-08
+Control de dividendos (SP500TR - [GSPC+Shiller], 1988-02 a 2023-06, N=425): media +0.067 pp/a, sd 0.063 pp/mes
+French (control C): diario 'This file was created by using the 202608 CRSP database.' / mensual 'This file was created using the 202608 CRSP database.'
+
+PARTE A: estadistica de MM (c de toda la ventana; look-ahead a proposito; no es estrategia)
+  [B ventana articulo] 1928-02 a 2015-12 N=1055  alfa=4.21%/a t_IID=2.54 t_HC0=2.59 t_NW12=2.27 beta=0.580 R2=0.336 AR=0.273
+      Sharpe mercado=0.402 gestionada=0.455 (dif +0.054, p JKM=0.58)  pesos P50=0.89 P99=7.26
+  [C French 1928-02] 1928-02 a 2015-12 N=1055  alfa=4.71%/a t_IID=2.92 t_HC0=2.98 t_NW12=2.65 beta=0.600 R2=0.360 AR=0.314
+      Sharpe mercado=0.402 gestionada=0.492 (dif +0.090, p JKM=0.35)  pesos P50=0.92 P99=7.33
+  [C French 1926-08] 1926-08 a 2015-12 N=1073  alfa=4.88%/a t_IID=3.07 t_HC0=3.13 t_NW12=2.78 beta=0.601 R2=0.362 AR=0.327
+      Sharpe mercado=0.415 gestionada=0.511 (dif +0.096, p JKM=0.31)  pesos P50=0.94 P99=7.27
+  [B con RV de ^GSPC en todo el periodo] 1928-02 a 2015-12 N=1055  alfa=4.21%/a t_IID=2.55 t_HC0=2.59 t_NW12=2.28 beta=0.579 R2=0.336 AR=0.274
+      Sharpe mercado=0.402 gestionada=0.456 (dif +0.054, p JKM=0.58)  pesos P50=0.89 P99=7.26
+  [B solo SP500TR 1988-02] 1988-02 a 2015-12 N=335  alfa=5.03%/a t_IID=2.46 t_HC0=2.49 t_NW12=2.13 beta=0.670 R2=0.449 AR=0.470
+      Sharpe mercado=0.521 gestionada=0.699 (dif +0.177, p JKM=0.26)  pesos P50=0.87 P99=4.89
+  [B sin 1928-1937] 1938-01 a 2015-12 N=936  alfa=1.88%/a t_IID=1.43 t_HC0=1.40 t_NW12=1.31 beta=0.672 R2=0.451 AR=0.164
+      Sharpe mercado=0.511 gestionada=0.465 (dif -0.046, p JKM=0.62)  pesos P50=0.79 P99=6.06
+
+H2: despues de publicarse, c fija de la ventana del articulo
+  [B post 2017-08] 2017-08 a 2026-08 N=109  alfa=-0.27%/a t_IID=-0.05 t_HC0=-0.04 t_NW12=-0.04 beta=0.769 R2=0.343 AR=-0.016
+      Sharpe mercado=0.807 gestionada=0.460 (dif -0.347, p JKM=0.26)  pesos P50=0.83 P99=4.74
+  [B post a 2026-07] 2017-08 a 2026-07 N=108  alfa=-0.32%/a t_IID=-0.05 t_HC0=-0.05 t_NW12=-0.05 beta=0.768 R2=0.343 AR=-0.018
+      Sharpe mercado=0.794 gestionada=0.450 (dif -0.344, p JKM=0.26)  pesos P50=0.81 P99=4.74
+  [C French post] 2017-08 a 2026-08 N=109  alfa=-0.69%/a t_IID=-0.16 t_HC0=-0.14 t_NW12=-0.13 beta=0.588 R2=0.356 AR=-0.053
+      Sharpe mercado=0.772 gestionada=0.418 (dif -0.354, p JKM=0.24)  pesos P50=0.64 P99=3.61
+  [B 2016-01 a ult] 2016-01 a 2026-08 N=128  alfa=2.48%/a t_IID=0.48 t_HC0=0.43 t_NW12=0.37 beta=0.780 R2=0.342 AR=0.151
+      Sharpe mercado=0.866 gestionada=0.630 (dif -0.236, p JKM=0.41)  pesos P50=0.90 P99=5.36
+
+PARTE C: vol_c1 operable, w=min(1, k_t/RV(t-1)), k_t expansivo (>=120 meses), costo 0.34% por lado
+  [B | dentro_muestra] 1938-02 a 2015-12 N=935
+      vol_c1 neto : CAGR=10.57% vol=14.07% Sharpe=0.520 MDD=-37.9%   w medio=0.946 rotacion media=0.0514/mes costo≈0.21%/a  meses con operacion=293
+      comprar/mantener: CAGR=10.95% vol=15.46% Sharpe=0.509 MDD=-50.9%
+      alfa vol_c1 vs mercado: 0.31%/a t_IID=0.90 t_HC0=0.80 t_NW12=0.73 beta=0.890
+  [B | fuera_muestra] 2017-08 a 2026-08 N=109
+      vol_c1 neto : CAGR=12.49% vol=12.97% Sharpe=0.780 MDD=-18.1%   w medio=0.891 rotacion media=0.0940/mes costo≈0.38%/a  meses con operacion=52
+      comprar/mantener: CAGR=15.17% vol=16.03% Sharpe=0.807 MDD=-23.9%
+      alfa vol_c1 vs mercado: 0.21%/a t_IID=0.15 t_HC0=0.19 t_NW12=0.22 beta=0.765
+  [B | fuera_muestra_a_2026_07] 2017-08 a 2026-07 N=108
+      vol_c1 neto : CAGR=12.28% vol=13.02% Sharpe=0.764 MDD=-18.1%   w medio=0.890 rotacion media=0.0937/mes costo≈0.38%/a  meses con operacion=51
+      comprar/mantener: CAGR=14.97% vol=16.09% Sharpe=0.794 MDD=-23.9%
+      alfa vol_c1 vs mercado: 0.16%/a t_IID=0.11 t_HC0=0.14 t_NW12=0.16 beta=0.765
+  [B | total] 1938-02 a 2026-08 N=1063
+      vol_c1 neto : CAGR=10.83% vol=13.86% Sharpe=0.556 MDD=-37.9%   w medio=0.940 rotacion media=0.0558/mes costo≈0.23%/a  meses con operacion=351
+      comprar/mantener: CAGR=11.45% vol=15.42% Sharpe=0.551 MDD=-50.9%
+      alfa vol_c1 vs mercado: 0.26%/a t_IID=0.77 t_HC0=0.71 t_NW12=0.65 beta=0.876
+  [C French | dentro_muestra_1936_08] 1936-08 a 2015-12 N=953
+      vol_c1 neto : CAGR=9.91% vol=14.00% Sharpe=0.491 MDD=-42.2%   w medio=0.930 rotacion media=0.0625/mes costo≈0.25%/a  meses con operacion=342
+      comprar/mantener: CAGR=10.38% vol=15.72% Sharpe=0.482 MDD=-50.3%
+      alfa vol_c1 vs mercado: 0.32%/a t_IID=0.85 t_HC0=0.77 t_NW12=0.73 beta=0.866
+  [C French | dentro_muestra_1938_02] 1938-02 a 2015-12 N=935
+      vol_c1 neto : CAGR=10.38% vol=13.89% Sharpe=0.520 MDD=-41.1%   w medio=0.930 rotacion media=0.0614/mes costo≈0.25%/a  meses con operacion=337
+      comprar/mantener: CAGR=11.02% vol=15.60% Sharpe=0.517 MDD=-50.3%
+      alfa vol_c1 vs mercado: 0.24%/a t_IID=0.63 t_HC0=0.56 t_NW12=0.52 beta=0.867
+  [C French | fuera_muestra] 2017-08 a 2026-08 N=109
+      vol_c1 neto : CAGR=11.48% vol=12.62% Sharpe=0.731 MDD=-16.2%   w medio=0.853 rotacion media=0.1154/mes costo≈0.47%/a  meses con operacion=71
+      comprar/mantener: CAGR=14.86% vol=16.60% Sharpe=0.772 MDD=-24.8%
+      alfa vol_c1 vs mercado: 0.12%/a t_IID=0.08 t_HC0=0.09 t_NW12=0.11 beta=0.709
+  [C French | fuera_muestra_a_2026_07] 2017-08 a 2026-07 N=108
+      vol_c1 neto : CAGR=11.25% vol=12.66% Sharpe=0.713 MDD=-16.2%   w medio=0.852 rotacion media=0.1145/mes costo≈0.47%/a  meses con operacion=70
+      comprar/mantener: CAGR=14.65% vol=16.67% Sharpe=0.758 MDD=-24.8%
+      alfa vol_c1 vs mercado: 0.05%/a t_IID=0.03 t_HC0=0.04 t_NW12=0.05 beta=0.709
+
+Sensibilidad: var_c1 (min(1, c_t/RV2)) en B
+  [B var_c1 | dentro_muestra] 1938-02 a 2015-12 N=935
+      vol_c1 neto : CAGR=8.91% vol=11.67% Sharpe=0.470 MDD=-41.7%   w medio=0.809 rotacion media=0.1325/mes costo≈0.54%/a  meses con operacion=493
+      comprar/mantener: CAGR=10.95% vol=15.46% Sharpe=0.509 MDD=-50.9%
+      alfa vol_c1 vs mercado: 0.13%/a t_IID=0.22 t_HC0=0.20 t_NW12=0.18 beta=0.681
+  [B var_c1 | fuera_muestra] 2017-08 a 2026-08 N=109
+      vol_c1 neto : CAGR=8.95% vol=9.61% Sharpe=0.679 MDD=-10.6%   w medio=0.693 rotacion media=0.2212/mes costo≈0.90%/a  meses con operacion=90
+      comprar/mantener: CAGR=15.17% vol=16.03% Sharpe=0.807 MDD=-23.9%
+      alfa vol_c1 vs mercado: 0.16%/a t_IID=0.09 t_HC0=0.09 t_NW12=0.11 beta=0.491
+
+VEREDICTOS (criterios del pre-registro de R05 aplicados a B)
+  H1 (alfa en ventana del articulo): Replicado
+  H2 (post 2017-08): refutada
+  H4 (vol_c1 contra comprar y mantener, OOS): refutada (Sharpe neto OOS <= B&H o MDD no menor)
+  Uso como freno (MDD menor en OOS o en dentro de muestra): se sostiene
+  Alfa operable con t>=3 dentro y fuera: no

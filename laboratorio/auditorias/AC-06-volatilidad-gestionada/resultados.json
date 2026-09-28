@@ -1,0 +1,495 @@
+{
+ "fecha_corrida": "2026-09-28",
+ "costos_por_lado": 0.0034,
+ "archivos": {
+  "fred_M1329AUSM193NNBR.csv": "9025de20bf0ee087437b7fd470a1f70b8f86ed01dbaba9dae96bdad642ac7320",
+  "fred_TB3MS.csv": "ebf04b1ae5bc5729ba3bb2b35dbb0e0c5e22dace36bea0c02632782d625ae6ab",
+  "french_F-F_Research_Data_Factors_CSV.zip": "593f4fbef03181bc0b22ff6292f217689dd1fb79355049ca905d95b262040a66",
+  "french_F-F_Research_Data_Factors_daily_CSV.zip": "2f29e22546069914890a712680a6f81f3680ebc3543b52864484d209ca13a7db",
+  "shiller_datahub.csv": "ed6a0faf1864d60161806b594b45a2642f6149f59b26b3d7b32c2ce38758dc6f",
+  "yahoo_GSPC_1d.json": "07aeb4d429031632217a8e0f074cb0dbf9608f61724f53fa6250d9d61375d2da",
+  "yahoo_SP500TR_1d.json": "ac96fd45a7c0a1010d2c85447cdc3c44f177665adc69acd943664fe3df750938"
+ },
+ "control_dividendos": {
+  "N": 425,
+  "media_pp_anual": 0.067273,
+  "sd_pp_mes": 0.063095
+ },
+ "parte_A": {
+  "B_articulo": {
+   "ventana": "1928-02 a 2015-12",
+   "N": 1055,
+   "c": 0.001095,
+   "alfa_anual_pct": 4.208206,
+   "t_iid": 2.544329,
+   "t_hc0": 2.586778,
+   "t_nw12": 2.273329,
+   "beta": 0.579663,
+   "R2": 0.336009,
+   "AR": 0.273173,
+   "sharpe_mercado": 0.401538,
+   "sharpe_gestionada": 0.45546,
+   "p_jkm": 0.583629,
+   "peso_P50": 0.888302,
+   "peso_P99": 7.26085
+  },
+  "C_French_misma_ventana": {
+   "ventana": "1928-02 a 2015-12",
+   "N": 1055,
+   "c": 0.000934,
+   "alfa_anual_pct": 4.711517,
+   "t_iid": 2.921242,
+   "t_hc0": 2.983941,
+   "t_nw12": 2.65119,
+   "beta": 0.599791,
+   "R2": 0.359749,
+   "AR": 0.313644,
+   "sharpe_mercado": 0.401786,
+   "sharpe_gestionada": 0.492071,
+   "p_jkm": 0.347295,
+   "peso_P50": 0.924796,
+   "peso_P99": 7.331517
+  },
+  "C_French_ventana_MM": {
+   "ventana": "1926-08 a 2015-12",
+   "N": 1073,
+   "c": 0.000928,
+   "alfa_anual_pct": 4.876469,
+   "t_iid": 3.068734,
+   "t_hc0": 3.133785,
+   "t_nw12": 2.782363,
+   "beta": 0.601444,
+   "R2": 0.361735,
+   "AR": 0.326854,
+   "sharpe_mercado": 0.4154,
+   "sharpe_gestionada": 0.51109,
+   "p_jkm": 0.314347,
+   "peso_P50": 0.935047,
+   "peso_P99": 7.27156
+  },
+  "B_solo_GSPC_RV": {
+   "ventana": "1928-02 a 2015-12",
+   "N": 1055,
+   "c": 0.001095,
+   "alfa_anual_pct": 4.214795,
+   "t_iid": 2.54793,
+   "t_hc0": 2.590628,
+   "t_nw12": 2.275558,
+   "beta": 0.579491,
+   "R2": 0.33581,
+   "AR": 0.27356,
+   "sharpe_mercado": 0.401538,
+   "sharpe_gestionada": 0.455739,
+   "p_jkm": 0.581757,
+   "peso_P50": 0.888034,
+   "peso_P99": 7.258659
+  },
+  "B_1988_2015": {
+   "ventana": "1988-02 a 2015-12",
+   "N": 335,
+   "c": 0.001185,
+   "alfa_anual_pct": 5.027768,
+   "t_iid": 2.455907,
+   "t_hc0": 2.490934,
+   "t_nw12": 2.127215,
+   "beta": 0.669767,
+   "R2": 0.448588,
+   "AR": 0.470067,
+   "sharpe_mercado": 0.521433,
+   "sharpe_gestionada": 0.69882,
+   "p_jkm": 0.255196,
+   "peso_P50": 0.868161,
+   "peso_P99": 4.891866
+  },
+  "B_1938_2015": {
+   "ventana": "1938-01 a 2015-12",
+   "N": 936,
+   "c": 0.00086,
+   "alfa_anual_pct": 1.879469,
+   "t_iid": 1.42955,
+   "t_hc0": 1.4043,
+   "t_nw12": 1.314429,
+   "beta": 0.671831,
+   "R2": 0.451356,
+   "AR": 0.163618,
+   "sharpe_mercado": 0.511036,
+   "sharpe_gestionada": 0.464588,
+   "p_jkm": 0.615537,
+   "peso_P50": 0.792628,
+   "peso_P99": 6.061038
+  },
+  "B_post": {
+   "ventana": "2017-08 a 2026-08",
+   "N": 109,
+   "c": 0.001095,
+   "alfa_anual_pct": -0.274811,
+   "t_iid": -0.047129,
+   "t_hc0": -0.042043,
+   "t_nw12": -0.040656,
+   "beta": 0.768695,
+   "R2": 0.343288,
+   "AR": -0.01606,
+   "sharpe_mercado": 0.806894,
+   "sharpe_gestionada": 0.45969,
+   "p_jkm": 0.257353,
+   "peso_P50": 0.830113,
+   "peso_P99": 4.738361
+  },
+  "B_post_a_2026_07": {
+   "ventana": "2017-08 a 2026-07",
+   "N": 108,
+   "c": 0.001095,
+   "alfa_anual_pct": -0.316754,
+   "t_iid": -0.053865,
+   "t_hc0": -0.048206,
+   "t_nw12": -0.046581,
+   "beta": 0.768458,
+   "R2": 0.342988,
+   "AR": -0.018425,
+   "sharpe_mercado": 0.794241,
+   "sharpe_gestionada": 0.450144,
+   "p_jkm": 0.26375,
+   "peso_P50": 0.813571,
+   "peso_P99": 4.739121
+  },
+  "C_French_post": {
+   "ventana": "2017-08 a 2026-08",
+   "N": 109,
+   "c": 0.000928,
+   "alfa_anual_pct": -0.694241,
+   "t_iid": -0.155051,
+   "t_hc0": -0.136643,
+   "t_nw12": -0.1314,
+   "beta": 0.587602,
+   "R2": 0.356147,
+   "AR": -0.052718,
+   "sharpe_mercado": 0.771534,
+   "sharpe_gestionada": 0.417937,
+   "p_jkm": 0.241806,
+   "peso_P50": 0.644535,
+   "peso_P99": 3.613879
+  },
+  "B_2016_ult": {
+   "ventana": "2016-01 a 2026-08",
+   "N": 128,
+   "c": 0.001095,
+   "alfa_anual_pct": 2.484264,
+   "t_iid": 0.479679,
+   "t_hc0": 0.426313,
+   "t_nw12": 0.372402,
+   "beta": 0.78029,
+   "R2": 0.342481,
+   "AR": 0.151428,
+   "sharpe_mercado": 0.866138,
+   "sharpe_gestionada": 0.630155,
+   "p_jkm": 0.406414,
+   "peso_P50": 0.900231,
+   "peso_P99": 5.364272
+  }
+ },
+ "parte_C": {
+  "B": {
+   "dentro_muestra": {
+    "vol_c1": {
+     "ventana": "1938-02 a 2015-12",
+     "N": 935,
+     "CAGR_pct": 10.569044,
+     "vol_pct": 14.07063,
+     "sharpe": 0.520031,
+     "MDD_pct": -37.856668
+    },
+    "comprar_y_mantener": {
+     "ventana": "1938-02 a 2015-12",
+     "N": 935,
+     "CAGR_pct": 10.951956,
+     "vol_pct": 15.461113,
+     "sharpe": 0.509495,
+     "MDD_pct": -50.948768
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.307548,
+     "t_iid": 0.901142,
+     "t_hc0": 0.79578,
+     "t_nw12": 0.725337,
+     "beta": 0.88996
+    },
+    "w_medio": 0.945505,
+    "rotacion_media_mes": 0.051404,
+    "costo_anual_pct": 0.209729,
+    "meses_con_operacion": 293
+   },
+   "fuera_muestra": {
+    "vol_c1": {
+     "ventana": "2017-08 a 2026-08",
+     "N": 109,
+     "CAGR_pct": 12.486501,
+     "vol_pct": 12.970556,
+     "sharpe": 0.78047,
+     "MDD_pct": -18.141987
+    },
+    "comprar_y_mantener": {
+     "ventana": "2017-08 a 2026-08",
+     "N": 109,
+     "CAGR_pct": 15.168025,
+     "vol_pct": 16.02544,
+     "sharpe": 0.806894,
+     "MDD_pct": -23.867344
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.211478,
+     "t_iid": 0.148538,
+     "t_hc0": 0.185179,
+     "t_nw12": 0.221021,
+     "beta": 0.765364
+    },
+    "w_medio": 0.89094,
+    "rotacion_media_mes": 0.093997,
+    "costo_anual_pct": 0.383508,
+    "meses_con_operacion": 52
+   },
+   "fuera_muestra_a_2026_07": {
+    "vol_c1": {
+     "ventana": "2017-08 a 2026-07",
+     "N": 108,
+     "CAGR_pct": 12.27853,
+     "vol_pct": 13.019532,
+     "sharpe": 0.76439,
+     "MDD_pct": -18.141987
+    },
+    "comprar_y_mantener": {
+     "ventana": "2017-08 a 2026-07",
+     "N": 108,
+     "CAGR_pct": 14.974956,
+     "vol_pct": 16.092929,
+     "sharpe": 0.794241,
+     "MDD_pct": -23.867344
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.158982,
+     "t_iid": 0.110814,
+     "t_hc0": 0.137949,
+     "t_nw12": 0.163702,
+     "beta": 0.765068
+    },
+    "w_medio": 0.88993,
+    "rotacion_media_mes": 0.093725,
+    "costo_anual_pct": 0.382397,
+    "meses_con_operacion": 51
+   },
+   "total": {
+    "vol_c1": {
+     "ventana": "1938-02 a 2026-08",
+     "N": 1063,
+     "CAGR_pct": 10.831398,
+     "vol_pct": 13.863923,
+     "sharpe": 0.556008,
+     "MDD_pct": -37.856668
+    },
+    "comprar_y_mantener": {
+     "ventana": "1938-02 a 2026-08",
+     "N": 1063,
+     "CAGR_pct": 11.450123,
+     "vol_pct": 15.417304,
+     "sharpe": 0.551439,
+     "MDD_pct": -50.948768
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.260825,
+     "t_iid": 0.76802,
+     "t_hc0": 0.706995,
+     "t_nw12": 0.653214,
+     "beta": 0.876046
+    },
+    "w_medio": 0.940079,
+    "rotacion_media_mes": 0.055808,
+    "costo_anual_pct": 0.227698,
+    "meses_con_operacion": 351
+   }
+  },
+  "C_French": {
+   "dentro_muestra_1936_08": {
+    "vol_c1": {
+     "ventana": "1936-08 a 2015-12",
+     "N": 953,
+     "CAGR_pct": 9.909012,
+     "vol_pct": 13.99976,
+     "sharpe": 0.491468,
+     "MDD_pct": -42.24051
+    },
+    "comprar_y_mantener": {
+     "ventana": "1936-08 a 2015-12",
+     "N": 953,
+     "CAGR_pct": 10.382915,
+     "vol_pct": 15.723749,
+     "sharpe": 0.482019,
+     "MDD_pct": -50.311707
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.318094,
+     "t_iid": 0.851311,
+     "t_hc0": 0.766797,
+     "t_nw12": 0.733937,
+     "beta": 0.866234
+    },
+    "w_medio": 0.929794,
+    "rotacion_media_mes": 0.0625,
+    "costo_anual_pct": 0.254999,
+    "meses_con_operacion": 342
+   },
+   "dentro_muestra_1938_02": {
+    "vol_c1": {
+     "ventana": "1938-02 a 2015-12",
+     "N": 935,
+     "CAGR_pct": 10.377049,
+     "vol_pct": 13.891925,
+     "sharpe": 0.519924,
+     "MDD_pct": -41.079227
+    },
+    "comprar_y_mantener": {
+     "ventana": "1938-02 a 2015-12",
+     "N": 935,
+     "CAGR_pct": 11.023157,
+     "vol_pct": 15.595872,
+     "sharpe": 0.517447,
+     "MDD_pct": -50.311707
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.235393,
+     "t_iid": 0.628529,
+     "t_hc0": 0.562358,
+     "t_nw12": 0.523133,
+     "beta": 0.86666
+    },
+    "w_medio": 0.930109,
+    "rotacion_media_mes": 0.061418,
+    "costo_anual_pct": 0.250585,
+    "meses_con_operacion": 337
+   },
+   "fuera_muestra": {
+    "vol_c1": {
+     "ventana": "2017-08 a 2026-08",
+     "N": 109,
+     "CAGR_pct": 11.476185,
+     "vol_pct": 12.616083,
+     "sharpe": 0.730961,
+     "MDD_pct": -16.184439
+    },
+    "comprar_y_mantener": {
+     "ventana": "2017-08 a 2026-08",
+     "N": 109,
+     "CAGR_pct": 14.859407,
+     "vol_pct": 16.596467,
+     "sharpe": 0.771534,
+     "MDD_pct": -24.844932
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.121851,
+     "t_iid": 0.079814,
+     "t_hc0": 0.093232,
+     "t_nw12": 0.105938,
+     "beta": 0.709427
+    },
+    "w_medio": 0.853431,
+    "rotacion_media_mes": 0.115402,
+    "costo_anual_pct": 0.470838,
+    "meses_con_operacion": 71
+   },
+   "fuera_muestra_a_2026_07": {
+    "vol_c1": {
+     "ventana": "2017-08 a 2026-07",
+     "N": 108,
+     "CAGR_pct": 11.249025,
+     "vol_pct": 12.660364,
+     "sharpe": 0.71319,
+     "MDD_pct": -16.184439
+    },
+    "comprar_y_mantener": {
+     "ventana": "2017-08 a 2026-07",
+     "N": 108,
+     "CAGR_pct": 14.648304,
+     "vol_pct": 16.665419,
+     "sharpe": 0.758344,
+     "MDD_pct": -24.844932
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.053305,
+     "t_iid": 0.034663,
+     "t_hc0": 0.040468,
+     "t_nw12": 0.045774,
+     "beta": 0.709023
+    },
+    "w_medio": 0.852073,
+    "rotacion_media_mes": 0.114539,
+    "costo_anual_pct": 0.46732,
+    "meses_con_operacion": 70
+   }
+  },
+  "B_var_c1": {
+   "dentro_muestra": {
+    "vol_c1": {
+     "ventana": "1938-02 a 2015-12",
+     "N": 935,
+     "CAGR_pct": 8.91129,
+     "vol_pct": 11.668252,
+     "sharpe": 0.470328,
+     "MDD_pct": -41.65177
+    },
+    "comprar_y_mantener": {
+     "ventana": "1938-02 a 2015-12",
+     "N": 935,
+     "CAGR_pct": 10.951956,
+     "vol_pct": 15.461113,
+     "sharpe": 0.509495,
+     "MDD_pct": -50.948768
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.128747,
+     "t_iid": 0.221337,
+     "t_hc0": 0.203741,
+     "t_nw12": 0.177159,
+     "beta": 0.680555
+    },
+    "w_medio": 0.809114,
+    "rotacion_media_mes": 0.132483,
+    "costo_anual_pct": 0.54053,
+    "meses_con_operacion": 493
+   },
+   "fuera_muestra": {
+    "vol_c1": {
+     "ventana": "2017-08 a 2026-08",
+     "N": 109,
+     "CAGR_pct": 8.952301,
+     "vol_pct": 9.613668,
+     "sharpe": 0.679458,
+     "MDD_pct": -10.602546
+    },
+    "comprar_y_mantener": {
+     "ventana": "2017-08 a 2026-08",
+     "N": 109,
+     "CAGR_pct": 15.168025,
+     "vol_pct": 16.02544,
+     "sharpe": 0.806894,
+     "MDD_pct": -23.867344
+    },
+    "alfa_vs_mercado": {
+     "alfa_anual_pct": 0.163894,
+     "t_iid": 0.087493,
+     "t_hc0": 0.087129,
+     "t_nw12": 0.106748,
+     "beta": 0.490906
+    },
+    "w_medio": 0.693306,
+    "rotacion_media_mes": 0.221212,
+    "costo_anual_pct": 0.902546,
+    "meses_con_operacion": 90
+   }
+  }
+ },
+ "veredictos": {
+  "H1": "Replicado",
+  "H2": "refutada",
+  "H4": "refutada (Sharpe neto OOS <= B&H o MDD no menor)",
+  "freno": true,
+  "alfa_t3": false
+ }
+}

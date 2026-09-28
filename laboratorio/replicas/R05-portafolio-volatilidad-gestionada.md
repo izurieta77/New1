@@ -582,6 +582,7 @@ Alcance: mercado total de EUA (índice CRSP de French, no invertible), 1926-2026
   - `sha256` diario: 1916d331c2c51d2aee3d00215897d2b8e5995cb387f1f4569ba46bff5fb049a8
 - DEXMXUS de FRED se descargó el 2026-09-25; su último dato es del 2026-09-18.
 - Fecha de la corrida final: 2026-09-25.
+- **Nota del 2026-09-28 (laboratorio):** la revisión independiente ya existe: [AC-06](../auditorias/AC-06-volatilidad-gestionada/README.md), con código desde cero, protocolo ciego y otra fuente (`^SP500TR` + `^GSPC`/Shiller desde 1928, TB3MS). Es **concordante** en el estado y en la conclusión operable. α en el periodo del artículo: 4.21%/año (t HC0 2.59) contra 4.88 (3.13); sin 1928-1937 cae a 1.88 (t 1.40). Post-2017: α −0.32 contra −0.75. `vol_c1` fuera de muestra: CAGR 12.28% contra 14.97% de comprar y mantener (A: 11.24 contra 14.65); MDD −18.1% contra −23.9%. Por eso el costo de CAGR de `vol_c1` fuera de muestra se lee como rango, **≈ −2.7 a −3.4 pp/año**, según la fuente. Las cifras de arriba se conservan como estaban.
 - Pendiente:
   - Revisión independiente (`auditor-de-replicas`).
   - Fila de R05 en `laboratorio/tabla-maestra.md`.
