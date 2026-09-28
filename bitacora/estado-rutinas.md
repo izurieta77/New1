@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-28 01:35 UTC · decisor-vespertino · OK · (este commit) · nada amerita actuar: alerta Irán sin novedad, ES=F plano y WTI +1% al reabrir; órdenes del lunes quedan a su condición de validez
 2026-09-28 01:25 UTC · trabajo-continuo · OK · (este commit) · tabla maestra al día con V04 (Replicado con diferencias → oportunidad investigable) y V05 (Verificado con matices → no aplica); estado de dominio Benchmarks en pesos → Replicado; error de desfase registrado
 2026-09-28 00:48 UTC · cripto (cascada vespertina 18:42) · OK · (este commit) · pulso en bitacora/cripto/2026-09-27.md (BTC 84,288 −0.07%, ETH 2,676 −0.70%); filtro reconfirmado: SMA200=71,109, salida=68,976, ENCENDIDO (+18.8%), crítico para O0003 mañana 08:45 CDMX; petróleo reabrió sin reflejo aún en cripto; sin órdenes vencidas ni alertas
 2026-09-28 00:20 UTC · aprendizaje · OK · (este commit) · resumen del 27-sep (ETH revierte menos que BTC; 60≈90 días en BTC; 6/6 frágil); 2 errores propios corregidos (orden MDD fila R08 en tabla maestra, conteo 6/6); brief del domingo creado
