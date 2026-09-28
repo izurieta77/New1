@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 datos/cache/
 .venv/
+
+# credenciales locales, nunca en git
+banxico_token
+.env

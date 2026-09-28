@@ -17,7 +17,7 @@ Este procedimiento escrito manda sobre el texto del disparador, que ya indica se
    - resuelve sus pronósticos numéricos y binarios (`herramientas/pronosticos.py`);
    - escribe `empresas/<TICKER>/post-mortem-AAAA-MM-DD.md` con la skill `post-mortem`;
    - actualiza la ficha con una adenda fechada, sin sobrescribir pronósticos.
-5. **Actualiza `competencia/marcador.md`** con el TWR, el drawdown máximo y los días invertidos del papel. Si el dueño agregó filas en `competencia/rivales.csv`, suma los rendimientos de los rivales: TWR cuando haya flujos, y sin atribuir habilidad solo por el saldo final. Sin datos de rivales, escribe "sin datos".
+5. **Actualiza `competencia/marcador.md`** con el TWR, el drawdown máximo y los días invertidos del papel. Para el benchmark CETES 28 usa `python3 herramientas/banxico.py` (serie SF43936) si `BANXICO_TOKEN` está en el entorno; si no, el proxy documentado, marcado como proxy. El token nunca se escribe en el repo. Si el dueño agregó filas en `competencia/rivales.csv`, suma los rendimientos de los rivales: TWR cuando haya flujos, y sin atribuir habilidad solo por el saldo final. Sin datos de rivales, escribe "sin datos".
 6. Agrega una sección "Cierre" de 10 líneas o menos en `bitacora/briefs/AAAA-MM-DD.md`.
 7. **Cierre de la rutina:**
    - deja el latido (REGLAS §3);
