@@ -1,1 +1,4 @@
 fecha,ticker,lado,cantidad,precio,moneda,comision,stop,tesis_id,estrategia,notas
+2026-09-28,EFECTIVO,deposito,20000.0,1.0,MXN,0.0,,,,Depósito inicial de la arena (REGLAS §4)
+2026-09-28,SPYM,compra,7.0,90.055,USD,1.8281,,CARTERA-2026-09-25,arena,O0001; vela 1m 14:45 UTC open 90.055; VIX 16.29; FX MXN=X 17.825; sin stop por línea
+2026-09-28,QQQM,compra,1.0,301.95,USD,0.8757,,CARTERA-2026-09-25,arena,O0002; vela 1m 14:45 UTC open 301.95; FX MXN=X 17.825; sin stop por línea

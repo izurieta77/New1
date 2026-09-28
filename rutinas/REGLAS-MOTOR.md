@@ -160,7 +160,6 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
   - Evalúa la condición de validez de la boleta GBM con Yahoo (intervalo 1m): SPYM > 88.98 USD y ^VIX < 25.
   - Calcula los límites exactos, precio NYSE × MXN=X × 1.003, de SPYM (7 títulos; 6 si 7 × límite > 12,000 MXN) y de QQQM (1 título).
   - Escribe al inicio de `bitacora/alertas.md` y de la boleta: VIGENTE o EN ESPERA, con los dos límites y la hora.
-- [ ] **Cierre del lunes 28-sep:** ejecuta en papel O0001 y O0002 según su `regla_precio` (vela de 1 minuto de las 14:45 UTC, no la apertura). Registra primero el depósito de 20,000 MXN. La O0003 (cripto) no es tuya.
 - [ ] **Boleta de Binance del lunes 28-sep:**
   - **Supervisión de las 08:40:** evalúa la condición de validez de C1 (BTC/USDT ≥ 77,000 y ningún cierre diario desde el 25-sep < SMA200 × 0.97, con klines de Binance). Calcula el tope sintético BTC/USDT × USDT/MXN × 1.003 y escribe VIGENTE o EN ESPERA en `bitacora/alertas.md` y al inicio de la sección de Binance de la boleta.
   - **Rutina cripto de las 12:17:** ejecuta la O0003 en papel.
