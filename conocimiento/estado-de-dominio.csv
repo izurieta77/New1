@@ -19,7 +19,7 @@ Efecto Halloween,14,Contrastado,"R04 (A) y AC-04 (B, código y fuente independie
 Efecto cambio de mes,14,Replicado,R09 (con _verificacion),2026-09-25,Segunda fuente independiente
 Eventos corporativos e insiders,15,Documentado,Capítulo 15,2026-09-25,Estudio de evento propio Form 4
 Peso mexicano y acciones para inversionista en MXN,16,Contrastado,R08 (A) y AC-05 (B: código y fuente independientes) concordantes; no replicado en la muestra completa; fuera de muestra no cubrir reduce caídas,2026-09-27,Versión con ETF en SIC (IVV/SPYM contra IVVPESO) neta de spread cambiario de GBM
-Benchmarks en pesos,16,Localizado,V04 pre-registro,2026-09-25,Ejecutar V04
+Benchmarks en pesos,16,Replicado,"V04 ejecutada (reproducir.py) y doble ejecución con código independiente sobre los mismos datos; metas MXN 2008-2026: S&P TR 13.97%, CETES 6.37%, IPC ≥6.11%",2026-09-27,Segunda fuente independiente (p. ej. índice S&P en MXN de S&P DJI) y NAFTRAC con dividendos
 Crisis y burbujas,17,Documentado,Capítulo 17,2026-09-25,Ficha de patrones con 3 casos medidos
 SPIVA y gestión activa,10/19,Contrastado,V05 (doble ejecución independiente),2026-09-25,Actualizar con SPIVA Latinoamérica/México
 Geopolítica y GPR,23,Documentado,Capítulo 23; herramientas/geopolitica.py,2026-09-25,Replicar Caldara-Iacoviello: GPR alto → rendimiento siguiente
