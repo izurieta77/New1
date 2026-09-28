@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-28 19:41 UTC · cripto (pulso extra 13:41) · OK · (este commit) · pulso 13:41 CDMX en bitacora/cripto/2026-09-28.md (BTC 83,219 −1.85%, ETH 2,670 −0.90%, sin cambio material vs 12:17, sin cruzar umbral 8%/4h); filtro de tendencia sin cambio, ENCENDIDO; O0003 ya ejecutada, posición BTC-USD 0.002698 sin cambios de gestión; sin órdenes vencidas ni alertas
 2026-09-28 18:17 UTC · cripto (pulso 12:17, ejecución O0003) · OK · (este commit) · pulso BTC/USDT 83,920.96 −0.84%; condición de O0003 reconfirmada VIGENTE (≥77,000, filtro SMA200 encendido, salida 68,975.90); ejecutada O0003 en papel, primera operación real de la cuenta cripto: depósito 10,000 MXN + compra 0.002698 BTC-USD @ 83,002.5234 USD (vela 1h Yahoo 15:00 UTC), FX 17.85989, comisión 0.223966 USD; libro nuevo en bitacora/papel-binance/ (valuado: equity 10,040.49 MXN, BTC 40.3% del portafolio); O0003 marcada ejecutada en ordenes-pendientes.csv
 
 2026-09-28 18:25 UTC · laboratorio · OK · (este commit) · ficha cortacircuitos arena (P(-12% desde pico) 16.5% en MXN, -28% nunca desde 1996; tema → Comprendido); AC-06 doble ejecución de R05 concordante (tema → Contrastado); Li arXiv:2609.29530 en cap. 07 (C)
