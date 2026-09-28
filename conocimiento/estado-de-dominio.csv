@@ -8,7 +8,7 @@ Curva invertida y recesión,04,Replicado,R07 (con _verificacion),2026-09-25,Segu
 Derivados y prima de volatilidad,05,Documentado,Capítulo 05,2026-09-25,Réplica VRP con VIX vs realizada
 Anomalías long-only EUA,06,Replicado,V03,2026-09-25,Versión en MXN con costos GBM
 Kelly y Kelly fraccional (kelly.fraccion_max),07,Comprendido con comprobación,fichas/2026-09-25-kelly-fraccional.md (fórmula + Monte Carlo + binario),2026-09-25,Contrastar con rendimientos históricos y μ estimado en ventana móvil
-Cortacircuitos de drawdown y rachas,07,Documentado,Capítulo 07; herramientas/riesgo.py; metricas.prob_racha_perdedora,2026-09-25,Backtest de los niveles -8/-12/-15/-20% sobre R01 y 60/40 MXN
+Cortacircuitos de drawdown y rachas,07,Comprendido con comprobación,"fichas/2026-09-28-cortacircuitos-arena.md: fórmula cerrada + 1,493 temporadas históricas en MXN y USD (1996-2026) + simulación E[MDD]",2026-09-28,Repetir con 1.5x y 3x sintéticos y filtro SMA200 para el comité del 2-oct; costo de activaciones en falso
 Deflated Sharpe / PSR / MinBTL,07/20,Documentado,Capítulo 07; herramientas/metricas.py; usado en R04,2026-09-25,Ficha con derivación y ejercicio numérico
 Volatilidad gestionada,07,Replicado,R05 (con _verificacion),2026-09-25,Auditoría con segunda fuente (Xu 2026 vs Cederburg)
 Apalancados y filtro de tendencia,07/14,Replicado,R06 (con _verificacion),2026-09-25,Segunda fuente independiente
