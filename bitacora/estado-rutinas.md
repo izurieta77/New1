@@ -1,5 +1,6 @@
 # Estado de las rutinas (la más reciente arriba)
 
+2026-09-28 13:15 UTC · pre-apertura · OK · (este commit) · boletas al inicio del brief (indicativo VIGENTE: SPYM ~90.4 vs 88.98, VIX 16.06, BTC 83,439); régimen MIXTO +1; Irán escala (crudo +4%); 4 pronósticos nuevos P0025-P0028; papel sin fondear hasta el cierre
 2026-09-28 11:41 UTC · cripto (pulso extra 05:41) · OK · (este commit) · pulso 05:41 CDMX en bitacora/cripto/2026-09-28.md (BTC 83,092 −2.11%, ETH 2,669 −1.46%, recuperación leve vs 04:18, sin cruzar umbral 8%/4h); filtro de tendencia sin cambio, sigue ENCENDIDO; sin órdenes vencidas ni alertas
 2026-09-28 10:18 UTC · cripto · OK · (este commit) · pulso 04:18 CDMX en bitacora/cripto/2026-09-28.md (BTC 82,779 −2.63%, ETH 2,648 −2.47%, sin cambio material vs 00:17, sin cruzar umbral 8%/4h); filtro de tendencia sin recalcular (pulso liviano, se reconfirma a las 08:17), sigue ENCENDIDO con amplio margen; O0003 se evalúa 08:45 CDMX y se ejecuta en la corrida de las 12:17; sin órdenes vencidas ni alertas
 2026-09-28 06:17 UTC · cripto · OK · (este commit) · pulso 00:17 CDMX en bitacora/cripto/2026-09-28.md (BTC 83,058 −1.85%, ETH 2,647 −2.33%, baja moderada sin cruzar umbral 8%/4h); filtro de tendencia sin cambio (SMA200≈71,109, +16.8% sobre salida, ENCENDIDO), crítico para la condición de O0003 hoy 08:45 CDMX; sin órdenes vencidas ni alertas
