@@ -152,7 +152,6 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
 
 ## 7. Pendientes para la próxima rutina (se borran al cumplirse)
 
-- [ ] **Martes 29-sep, pre-apertura y supervisión 08:40:** las cuentas reales siguen SIN FONDEAR (GBM 223.47 MXN; Binance 1,095.72 MXN al 28-sep 19:12 CDMX; `competencia/rivales.csv`). Las boletas del 28-sep siguen vigentes: recalcula el semáforo y los límites a las 08:45 con la misma regla y ponlos al inicio del brief y de `bitacora/alertas.md`. No registres nada en `bitacora/real/` hasta que el dueño reporte depósito y ejecución. La temporada real de la cuenta arranca el día del fondeo; el papel ya corre desde el 28-sep.
 
 - [ ] **Comité del 2-oct, punto adicional: exchange cripto.** Lee `arena/investigacion/10-exchange-cripto-mexico.md` (investigación verificada del 27/28-sep). **El dueño ya decidió (27-sep): Binance operativa + Bitso plan B; los disparadores ya están en `config/parametros.json` → `cripto_binance.contingencia_contraparte`.** Al comité solo le toca: (a) confirmar que el plan B quedó probado (nivel ≥2, SPEI de prueba, Lightning de prueba) y, si no, ponerle fecha; (b) decidir dónde esperan los pesos fuera de posición (Binance o banco, con SPEI el día de la compra).
 
