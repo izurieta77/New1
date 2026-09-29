@@ -156,11 +156,4 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
 
 - [ ] **Comité del viernes 2-oct-2026 (rutina 4 + skill `comite-de-inversion`): rediseño al modo C por mandato del dueño.** Lee `config/parametros.json` → `meta_temporada_dueno`. Candidatas: GBM con hasta 50% en un ETF 3x del Nasdaq o del S&P (TQQQ/SPXL, solo si el dueño confirmó que aparece en la app de GBM y con `filtro_apalancados` encendido) + índice 1x; Binance hasta 100% BTC con filtro. Resuelve de frente la objeción del abogado del diablo de W39 (no SPXL con el 10a ≥ 5%) y la condición del 25-sep (6 reportes de rivales antes de apalancar): el apetito de riesgo lo fijó el dueño; la seguridad operativa no se negocia. El gestor de riesgo conserva el veto. Registra P(tocar −12/−20/−28/−35%) del diseño elegido con el mismo método que `arena/modelos/meta_dueno_40_60_200.py`.
 
-- [ ] **Supervisión de las 08:40 del lunes 28-sep (y del martes 29-sep si quedó EN ESPERA):**
-  - Evalúa la condición de validez de la boleta GBM con Yahoo (intervalo 1m): SPYM > 88.98 USD y ^VIX < 25.
-  - Calcula los límites exactos, precio NYSE × MXN=X × 1.003, de SPYM (7 títulos; 6 si 7 × límite > 12,000 MXN) y de QQQM (1 título).
-  - Escribe al inicio de `bitacora/alertas.md` y de la boleta: VIGENTE o EN ESPERA, con los dos límites y la hora.
-- [ ] **Boleta de Binance del lunes 28-sep:**
-  - **Supervisión de las 08:40:** evalúa la condición de validez de C1 (BTC/USDT ≥ 77,000 y ningún cierre diario desde el 25-sep < SMA200 × 0.97, con klines de Binance). Calcula el tope sintético BTC/USDT × USDT/MXN × 1.003 y escribe VIGENTE o EN ESPERA en `bitacora/alertas.md` y al inicio de la sección de Binance de la boleta.
-  - **Rutina cripto de las 12:17:** ejecuta la O0003 en papel.
-  - **Rutina cripto de las 20:17 de cada día:** calcula el nivel de salida del filtro y lo publica en `bitacora/cripto/AAAA-MM-DD.md`.
+- [ ] **Rutina cripto de las 20:17 de cada día:** calcula el nivel de salida del filtro y lo publica en `bitacora/cripto/AAAA-MM-DD.md`.
