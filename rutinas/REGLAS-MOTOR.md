@@ -152,6 +152,8 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
 
 ## 7. Pendientes para la próxima rutina (se borran al cumplirse)
 
+- [ ] **Capital nuevo (dueño, 29-sep 17:25 CDMX): 10,000 GBM + 5,000 Binance por IA.** Boleta Binance de esta noche: `bitacora/boletas/2026-09-29-binance-5000.md` (2,000 MXN en BTC/MXN). Cuando el dueño reporte el depósito y la ejecución, regístralos en `bitacora/real-binance/` (depósito 5,000 + compra) y en `competencia/rivales.csv` (arena-claude-binance). **Miércoles 30-sep, pre-apertura y supervisión 08:40:** boleta GBM redimensionada a 10,000 MXN (la fija el gestor de riesgo del 29-sep; el orquestador la deja en `bitacora/boletas/2026-09-30.md`), semáforo con la misma regla (SPYM > 88.98, VIX < 25). Topes provisionales 5,000/2,500 hasta confirmación del dueño.
+
 
 - [ ] **Comité del 2-oct, punto adicional: exchange cripto.** Lee `arena/investigacion/10-exchange-cripto-mexico.md` (investigación verificada del 27/28-sep). **El dueño ya decidió (27-sep): Binance operativa + Bitso plan B; los disparadores ya están en `config/parametros.json` → `cripto_binance.contingencia_contraparte`.** Al comité solo le toca: (a) confirmar que el plan B quedó probado (nivel ≥2, SPEI de prueba, Lightning de prueba) y, si no, ponerle fecha; (b) decidir dónde esperan los pesos fuera de posición (Binance o banco, con SPEI el día de la compra).
 
