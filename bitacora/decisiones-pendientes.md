@@ -26,3 +26,13 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Hecho:** el dueño declaró la meta '+40/60/200% en 4 meses, para las tres IAs'. Se le mostró que choca con sus topes (10k/5k) y la probabilidad histórica de 4 modos (`arena/modelos/salida_meta_dueno_40_60_200.txt`).
 - **Decisión del dueño:** mantener topes y operar en modo C (máxima agresividad que permiten). Registrada en `config/parametros.json` → `meta_temporada_dueno`.
 - **Qué sigue:** nada cambia el lunes 28-sep; el comité del 2-oct rediseña (REGLAS §7). Estado: abierto hasta el 2-oct.
+
+## 2026-09-29 · bloque de trabajo continuo · Insumo para el comité del 2-oct (modo C)
+- **Qué hay:** `conocimiento/fichas/2026-09-29-cortacircuitos-apalancados.md`. Con 50% en 3x del S&P **y filtro SMA200**:
+  - la mediana de temporada casi no cambia (+5.2% contra +4.8% de la cartera A);
+  - el p90 sube de +14% a +21%;
+  - P(tocar −12%) sube de 17% a 29%;
+  - ninguna temporada desde 1997 pasa de −28%.
+- **Sin filtro:** el tope de 10,000 MXN se toca en 0.8% de las temporadas y la pausa de −28% en 14%.
+- **La meta del dueño (+40%)** tiene 0-4% de probabilidad histórica en cualquier candidata.
+- **Qué decidí:** nada; no es competencia de esta rutina. El comité debe pesar estos números y decirle al dueño con claridad cuánto riesgo implica acercarse a su meta.
