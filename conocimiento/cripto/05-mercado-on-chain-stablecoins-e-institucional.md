@@ -1,6 +1,6 @@
 # 05 · Mercado, on-chain, stablecoins e institucional (grupo G5)
 
-> **Nivel:** maestría con frontera · **Actualizado:** 25-sep-2026 por `analista-cripto` · **Grado de evidencia global: C.**
+> **Nivel:** maestría con frontera · **Actualizado:** 29-sep-2026 por `analista-cripto` (adenda §9) · **Grado de evidencia global: C.**
 > - Las identidades on-chain (precio realizado, MVRV, NUPL) son exactas y se reproducen con datos gratuitos: grado A-B.
 > - Su poder para **predecir** a 1-4 meses es débil o nulo en el rango de hoy: grado C por nuestro propio cálculo.
 > - Las narrativas de proveedores con conflicto de interés son grado D.
@@ -14,6 +14,7 @@
 > - Seguimiento de las 26 predicciones: `arena/investigacion/fuentes-terceros/2026-09-25-galaxy-predicciones-2026.md`
 >
 > **Examen:** [banco-g5-mercado](examen/banco-g5-mercado.md)
+> - **Adenda (29-sep-2026):** [ficha del 29-sep · BTC frente a Nasdaq, USD/MXN y tasa real](fichas/2026-09-29-btc-nasdaq-usdmxn-beta.md), ver §9.
 
 ## 0. En una página
 
@@ -305,3 +306,13 @@ for h in (30, 90, 120):                    # tasa base: dias con MVRV a +-0.10 d
    - probar si un **percentil móvil de MVRV** mejora la señal de techos fuera de muestra, con pre-registro;
    - fuente estable para flujos de ETF;
    - calificación final de Galaxy el 31-dic-2026.
+
+## 9. Adenda (29-sep-2026): beta y correlación de BTC con el Nasdaq y con la tasa real, en MXN
+
+Cálculo propio (ficha completa: [fichas/2026-09-29-btc-nasdaq-usdmxn-beta.md](fichas/2026-09-29-btc-nasdaq-usdmxn-beta.md)), motivado por el tema 3 de "temas que no cubren los 35 recursos" (`00-plan-de-estudio.md`) y por la caída conjunta de hoy de BTC (~−1.3%) y el Nasdaq, con el 10 años nominal en su nivel más alto desde 2007.
+
+- **Muestra completa (2 años, 444 días hábiles comunes, Yahoo Finance):** correlación BTC(USD)-QQQ(USD) = **0.424**, beta = **0.886**; en MXN, correlación 0.441 y beta 0.936. BTC-USD/MXN: correlación débil, −0.066.
+- **Rodante de 90 días:** hoy la correlación con el Nasdaq (0.322) y la beta (0.602) están **por debajo** de su mediana de 2 años (0.491 y 1.046); nunca se ha vuelto negativa (mín. 0.142) — a diferencia de BTC-DXY, que sí cambia de signo (ficha del 28-sep-2026).
+- **Últimos 30 días:** beta = **1.580**, muy por encima de la mediana de 2 años: régimen de "beta alta" reciente, aunque la correlación (0.454) no es excepcional.
+- **Tasa real (FRED DFII10):** subió de 2.18% (19-may) a 2.83% (25-sep-2026). Correlación de su cambio diario con el retorno diario de BTC: ≈0 en la muestra completa (−0.005), pero −0.232 en los últimos 90 días — el canal "tasa real más alta presiona a BTC" tiene el signo correcto hoy, pero no es estable en 2 años de historia.
+- **Conclusión aplicada:** confirma la idea #6 de este capítulo (la correlación de BTC cambia de régimen) con cálculo propio y con la versión en MXN que faltaba, y añade que el acoplamiento con el Nasdaq de hoy **no** está en un extremo histórico pese a la narrativa de prensa. No cambia el filtro de tendencia de la cuenta (solo mira el precio de BTC). **Grado B** para el cálculo, **C** para su uso predictivo (mismo patrón de inestabilidad que el resto del capítulo).

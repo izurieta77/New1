@@ -102,6 +102,12 @@
 - **Limpias:** flujos (E1), PoR (E3), retiros (E6) y liquidez (E9).
 - El contagio por el hackeo a Bitget (E10) se vigila día a día.
 
+**Seguimiento del 29-sep-2026** [I] — cierra el hilo del reporte de salida de 13,800 BTC del 27/28-sep (fuente única, TheCoinRepublic/CryptoQuant, no confirmado entonces por DefiLlama):
+- **E1 (flujo neto 7 días, ex-BNB, método F):** **−0.43%** (recalculado con `api.llama.fi/protocol/binance-cex`, 29-sep vs. 22-sep). Sigue **limpio**, muy lejos del umbral ámbar (−2.1%).
+- **BTC en carteras rastreadas por DefiLlama:** 645,091 (25-sep) → 643,115 (26-sep) → 641,711 (27-sep) → 641,692 (28-sep, prácticamente plano) → **649,504 (29-sep, +7,812 BTC intradía)**. **No se confirma continuación de una salida**; al contrario, hoy DefiLlama muestra un repunte.
+- **Aviso importante para no sobre-interpretar el repunte:** Binance anunció que **hoy, 29-sep-2026, empieza la migración de cuentas "Funding" a cuentas "Spot"** (depósitos on-chain a Funding se cierran hoy; todo se mueve a Spot hasta ene-2027; [CryptoTimes, 23-sep-2026](https://www.cryptotimes.io/2026/09/23/binance-funding-account-crypto-migration-starts-september-29-2026/)). Es exactamente el tipo de **reasignación interna entre carteras** que la sección F de este documento ya advierte que "crea saltos" en los datos de DefiLlama. **Lo más probable es que el salto de hoy (+7,812 BTC) sea un efecto de la migración, no una entrada neta real de clientes**, así como el reporte de salida del 27/28-sep tampoco se corroboró como salida real. No cambia la lectura: **ni el reporte de salida ni el repunte de hoy pasan el umbral de disparador**; se seguirá vigilando con el ruido de la migración explícitamente descontado hasta que se estabilice (el calendario oficial de la migración va de oct-2026 a ene-2027).
+- **E5 y demás señales:** sin cambio frente al 25-sep. **Sin señales ROJAS ni disparador de contingencia** (`bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`).
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
