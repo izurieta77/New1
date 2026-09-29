@@ -36,3 +36,8 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Sin filtro:** el tope de 10,000 MXN se toca en 0.8% de las temporadas y la pausa de −28% en 14%.
 - **La meta del dueño (+40%)** tiene 0-4% de probabilidad histórica en cualquier candidata.
 - **Qué decidí:** nada; no es competencia de esta rutina. El comité debe pesar estos números y decirle al dueño con claridad cuánto riesgo implica acercarse a su meta.
+
+## 2026-09-29 · pre-apertura · Para el conciliador: tipo de cambio de ejecución en `portafolio.py`
+- **Problema:** `_fx_de` convierte las compras en USD con MXN=X "del cierre del día de la operación". El 28-sep ese dato era intradía (17.9865). Al día siguiente Yahoo lo fijó con otro valor, y el efectivo de la misma cartera pasó de 3,181.94 a 3,404.32 MXN sin ninguna operación nueva.
+- **Qué decidí:** borré el snapshot prematuro del 29-sep en `bitacora/equity.csv` y no toqué el código, porque no es tarea de esta rutina.
+- **Propuesta:** agregar una columna opcional `tipo_cambio` en `operaciones.csv` (la ejecución fue a 17.825) y usarla en `_fx_de` cuando exista. Después, reconstruir el 28-sep.
