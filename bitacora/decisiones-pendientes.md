@@ -43,11 +43,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Propuesta:** agregar una columna opcional `tipo_cambio` en `operaciones.csv` (la ejecución fue a 17.825) y usarla en `_fx_de` cuando exista. Después, reconstruir el 28-sep.
 
 ## 2026-09-29 · laboratorio · Insumo adicional para el comité del 2-oct (AC-07, ETF reales, MXN, temporadas de 4 meses)
-| Cartera | P(DD ≥ 12 / 20 / 28 / 35%) | p10 / mediana / p90 |
-|---|---|---|
-| 50% UPRO filtrado + 50% SPY | 30.3 / 8.5 / 0.4 / 0.0% | −9.2 / +7.4 / +22.3% |
-| 50% TQQQ filtrado + 50% QQQ | 62.7 / 19.9 / 4.0 / 0.4% | −12.0 / +10.0 / +30.0% |
-| 100% SPY | 13.1 / 0 / 0 / 0% | −4.6 / +5.6 / +14.2% |
+- **Resultados** (P(DD ≥ 12/20/28/35%); p10 / mediana / p90):
+  - 50% UPRO filtrado + 50% SPY: 30.3 / 8.5 / 0.4 / 0.0%; −9.2 / +7.4 / +22.3%
+  - 50% TQQQ filtrado + 50% QQQ: 62.7 / 19.9 / 4.0 / 0.4%; −12.0 / +10.0 / +30.0%
+  - 100% SPY: 13.1 / 0 / 0 / 0%; −4.6 / +5.6 / +14.2%
 - **Lectura:**
   - La mezcla con TQQQ activa el cortacircuitos de −20% en 1 de cada 5 temporadas; la de UPRO, en 1 de cada 12.
   - La regla debe fijar qué serie da la señal: SPY y ^GSPC dan 21.6% y 17.5% de CAGR en UPRO.
