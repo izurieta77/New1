@@ -31,7 +31,9 @@ class TestPerfilArena(unittest.TestCase):
         self.assertIn("accion_pausa", self.arena["rachas"])
         self.assertIn("accion", self.arena["limites_perdida"])
         self.assertEqual(self.arena["kelly"]["fraccion_max"], prof["kelly_fraccion_max"])
-        self.assertEqual(self.arena["perdida_maxima_tolerable_mxn"]["valor"], 10000)
+        self.assertEqual(self.arena["perdida_maxima_tolerable_mxn"]["valor"], 5000)  # provisional 29-sep (50% de 10,000)
+        self.assertEqual(self.arena["perdida_maxima_tolerable_mxn"]["valor_dueno_25_sep"], 10000)
+        self.assertEqual(prof["orden_minima_mxn"], 2500)  # provisional 29-sep (25% de 10,000)
         with self.assertRaises(KeyError):
             parametros_efectivos("no_existe")
 
@@ -46,11 +48,12 @@ class TestPerfilArena(unittest.TestCase):
         self.assertAlmostEqual(riesgo.estado_cortacircuitos(curva, self.arena)["nivel_activado"], -0.20)
 
     def test_tope_absoluto_de_perdida(self):
-        self.assertFalse(riesgo.estado_tope_perdida(19_000, 20_000, self.arena)["activado"])
-        t = riesgo.estado_tope_perdida(9_990, 20_000, self.arena)
+        # Tope provisional del 29-sep: 5,000 MXN con capital de 10,000 (el del dueno, 10,000, queda en valor_dueno_25_sep).
+        self.assertFalse(riesgo.estado_tope_perdida(9_500, 10_000, self.arena)["activado"])
+        t = riesgo.estado_tope_perdida(4_990, 10_000, self.arena)
         self.assertTrue(t["activado"])
         self.assertAlmostEqual(t["margen_mxn"], -10)
-        self.assertFalse(riesgo.estado_tope_perdida(9_990, 20_000, parametros_efectivos("estandar"))["aplica"])
+        self.assertFalse(riesgo.estado_tope_perdida(4_990, 10_000, parametros_efectivos("estandar"))["aplica"])
 
     def test_riesgo_por_operacion_arena(self):
         # 20,000 MXN; compra de 5,000 MXN con stop a -11.6% = 580 MXN = 2.9% < 3% (arena) pero > 1% (estandar).
@@ -81,12 +84,14 @@ class TestPerfilArena(unittest.TestCase):
 class TestPerfilCripto(unittest.TestCase):
     def test_perfil_cripto_binance(self):
         c = parametros_efectivos("cripto_binance")
-        self.assertEqual(c["perdida_maxima_tolerable_mxn"]["valor"], 5000)
+        self.assertEqual(c["perdida_maxima_tolerable_mxn"]["valor"], 2500)  # provisional 29-sep (50% de 5,000)
+        self.assertEqual(c["perdida_maxima_tolerable_mxn"]["valor_dueno_25_sep"], 5000)
         self.assertEqual([n["nivel"] for n in niveles_cortacircuitos(c)], [-0.2, -0.3, -0.4, -0.5])
         self.assertEqual(c["concentracion"]["cripto_max"], 1.0)
         self.assertEqual(c["estructura"]["satelite_max"], 1.0)
-        t = riesgo.estado_tope_perdida(4_990, 10_000, c)
+        t = riesgo.estado_tope_perdida(2_490, 5_000, c)
         self.assertTrue(t["activado"])
+        self.assertFalse(riesgo.estado_tope_perdida(2_600, 5_000, c)["activado"])
 
     def test_compra_cripto_no_viola_limites_del_perfil(self):
         c = parametros_efectivos("cripto_binance")

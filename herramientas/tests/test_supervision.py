@@ -44,14 +44,15 @@ class TestSupervision(unittest.TestCase):
 
     def test_tope_absoluto_y_cortacircuitos(self):
         self.libro_papel()
-        # Posiciones de ~10,080 + 5,220 MXN; con precios a la mitad se pierden ~7,650 MXN (margen < 20% del tope).
+        # Posiciones de ~10,080 + 5,220 MXN; con precios a la mitad se pierden ~7,650 MXN: rebasa el tope
+        # provisional del 29-sep (5,000 MXN) -> ALERTA con margen negativo.
         salida = sv.supervisar(self.ahora, self.params, self.precios(40.0, 145.0), None, None, 18.0, fx, self.b)
-        tope = [x for x in salida if "tope -10,000" in x[1]][0]
+        tope = [x for x in salida if "tope -5,000" in x[1]][0]
         pnl = float(tope[1].split("P&L ")[1].split(" MXN")[0].replace(",", ""))
         margen = float(tope[1].split("margen ")[1].rstrip(")").replace(",", ""))
         self.assertLess(pnl, -7000)
-        self.assertAlmostEqual(margen, pnl + 10_000, delta=1)
-        self.assertEqual(tope[0], sv.AVISO if margen < 2_000 else sv.OK)
+        self.assertAlmostEqual(margen, pnl + 5_000, delta=1)
+        self.assertEqual(tope[0], sv.ALERTA)
         # Curva de equity: 20,000 el 28-sep; hoy ~12,350 -> -38%: cortacircuitos activado.
         pf.escribir_equity(self.b / "equity.csv", [{"fecha": date(2026, 9, 28), "efectivo_mxn": 4_700.0,
                                                   "posiciones_mxn": 15_300.0, "equity_mxn": 20_000.0,
@@ -71,9 +72,10 @@ class TestSupervision(unittest.TestCase):
         salida = sv.supervisar(self.ahora, self.params, precios, None, None, 1.0, lambda _d: (lambda _f: 1.0),
                                self.b, params_cripto=cripto)
         tope = [x for x in salida if x[1].startswith("real-binance: P&L")][0]
-        self.assertIn("tope -5,000", tope[1])
-        # 0.08 x 60,000 = 4,800 + 2,000 de efectivo = 6,800: P&L -3,200, margen 1,800 > 20% del tope (1,000).
-        self.assertEqual(tope[0], sv.OK)
+        self.assertIn("tope -2,500", tope[1])  # provisional 29-sep
+        # 0.08 x 60,000 = 4,800 + 2,000 de efectivo = 6,800: P&L -3,200 rebasa el tope de 2,500 -> ALERTA.
+        self.assertEqual(tope[0], sv.ALERTA)
+        self.assertIn("margen -700", tope[1])
 
     def test_filtro_apalancados(self):
         serie_ok = lambda _t: [(date(2026, 1, 1) + timedelta(days=i), 100.0 + i) for i in range(250)]  # noqa: E731
