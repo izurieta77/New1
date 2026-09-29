@@ -982,3 +982,18 @@ Se aplican las reglas fijadas en la sección 2. `config/parametros.json` **no** 
    - Con 50% en 3x filtrado, el −20% se tocó en 3.0% de las temporadas (1.5% con UPRO y 13.5% con TQQQ).
    - Los días con pérdida de 5% o más fueron 0.11% (simulado), 0.09% (UPRO) y 0.43% (TQQQ).
 5. **Ninguna regla pasa a dinero** sin papel durante 3 meses y 30 operaciones (README del laboratorio, sección 1). Faltan también la liquidez real en el SIC y el spread cambiario de GBM.
+
+### 18. Doble ejecución independiente (AC-07), 2026-09-29
+
+> Sección agregada en el laboratorio del 29-sep-2026. No cambia el pre-registro ni las cifras de A.
+
+- **Qué es:** código desde cero con protocolo ciego ([AC-07](../auditorias/AC-07-apalancados-filtro/README.md)). La simulación usa `^SP500TR` + DTB3 en lugar de French/CRSP, más los ETFs reales SSO, UPRO, QLD y TQQQ.
+- **Concordante:** el estado sigue en "Replicado con diferencias" y el veredicto fuera de muestra es "Solo protección" en los 4 ETF reales (S&P y Nasdaq, al cierre y con rezago). Con la señal de A, los 8 casos de ETF reales se reproducen a 0.06-0.08 pp de CAGR.
+- **Diferencias fuera de tolerancia (de fuente, no de código):** LRS 3x fuera de muestra +1.4 pp de CAGR (22.44 contra 21.02); en 1990-2015 el LRS de B rinde 1.2-1.6 pp más con MDD 9-11 pp menos profundo (menos cruces falsos que CRSP).
+- **Matiz a §17.1:** que "el rezago de 1 día costó 1.84-3.56 pp/año" **no es robusto**. Con la señal sobre `^GSPC` el rezago mejoró el CAGR de SSO y UPRO; lo robusto es que el MDD empeora 5-7 pp. **La regla debe fijar la serie de la señal:** UPRO filtrado rinde 21.6% con señal en SPY y 17.5% con señal en ^GSPC (fuera de muestra).
+- **Temporadas en MXN (85 días hábiles, ETF reales, rezago de 1 día, DD desde el pico):**
+  - 50% UPRO filtrado + 50% SPY: P(−12/−20/−28/−35%) = 30.3/8.5/0.4/0.0%.
+  - 50% TQQQ filtrado + 50% QQQ: 62.7/19.9/4.0/0.4%.
+  - SPY solo: 13.1/0/0/0%.
+  - Frente al "3.0% de −20%" de §17 hay tres diferencias de definición: temporada de 6 meses contra 4, USD contra MXN, y otra medida del drawdown. Además, la muestra de ETF reales no incluye 2000-2002.
+

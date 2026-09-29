@@ -1,0 +1,340 @@
+AC-07  segunda ejecucion independiente de R06 (fuente B: Yahoo + FRED DTB3)
+Costo por cambio 0.34% por lado; gasto simulado 0.9%/año; SMA 200
+
+datos SP500TR  1988-01-04 a 2026-09-28  9757 dias  huecos>5d: 1 [('2001-09-10', 7)]  |r|>0.25: []
+datos GSPC     1927-12-30 a 2026-09-28  24802 dias  huecos>5d: 2 [('1933-03-03', 12), ('2001-09-10', 7)]  |r|>0.25: []
+datos NDX      1985-10-01 a 2026-09-28  10327 dias  huecos>5d: 1 [('2001-09-10', 7)]  |r|>0.25: []
+datos SPY      1993-01-29 a 2026-09-28  8473 dias  huecos>5d: 1 [('2001-09-10', 7)]  |r|>0.25: []
+datos QQQ      1999-03-10 a 2026-09-28  6931 dias  huecos>5d: 1 [('2001-09-10', 7)]  |r|>0.25: []
+datos SSO      2006-06-21 a 2026-09-28  5099 dias  huecos>5d: 0 []  |r|>0.4: []
+datos UPRO     2009-06-25 a 2026-09-28  4341 dias  huecos>5d: 0 []  |r|>0.6: []
+datos QLD      2006-06-21 a 2026-09-28  5099 dias  huecos>5d: 0 []  |r|>0.4: []
+datos TQQQ     2010-02-11 a 2026-09-28  4182 dias  huecos>5d: 0 []  |r|>0.6: []
+
+====================================================================================================
+1) SIMULADO desde ^SP500TR: r_L = L*r - (L-1)*rf - 0.9%*dd/365.25; efectivo = DTB3
+====================================================================================================
+Senal SMA200 ^SP500TR vs ^GSPC: mismo estado en 97.3% de 9558 dias
+
+-- dentro_1988_2015  (1988-11-01 a 2015-10-30)
+  bh_L1                    CAGR  10.10%  vol  17.8%  Sharpe  0.45  MDD  -55.3%  camb/año  0.0  inv  100%
+  sma200_L1                CAGR   7.51%  vol  11.7%  Sharpe  0.40  MDD  -27.4%  camb/año  6.1  inv   77%
+  sma200_L1_rezago         CAGR   7.36%  vol  11.8%  Sharpe  0.39  MDD  -26.5%  camb/año  6.1  inv   77%
+  sma200gspc_L1            CAGR   6.73%  vol  11.5%  Sharpe  0.35  MDD  -31.1%  camb/año  6.6  inv   74%
+  bh_L2                    CAGR  12.69%  vol  35.7%  Sharpe  0.42  MDD  -87.6%  camb/año  0.0  inv  100%
+  sma200_L2                CAGR  11.94%  vol  23.4%  Sharpe  0.46  MDD  -50.8%  camb/año  6.1  inv   77%
+  sma200_L2_rezago         CAGR  11.64%  vol  23.5%  Sharpe  0.45  MDD  -45.6%  camb/año  6.1  inv   77%
+  sma200gspc_L2            CAGR  10.63%  vol  22.9%  Sharpe  0.42  MDD  -55.3%  camb/año  6.6  inv   74%
+  bh_L3                    CAGR  12.67%  vol  53.5%  Sharpe  0.43  MDD  -97.9%  camb/año  0.0  inv  100%
+  sma200_L3                CAGR  15.75%  vol  35.1%  Sharpe  0.50  MDD  -67.9%  camb/año  6.1  inv   77%
+  sma200_L3_rezago         CAGR  15.28%  vol  35.2%  Sharpe  0.49  MDD  -61.2%  camb/año  6.1  inv   77%
+  sma200gspc_L3            CAGR  13.91%  vol  34.3%  Sharpe  0.46  MDD  -72.0%  camb/año  6.6  inv   74%
+  efectivo                 CAGR   3.25%  vol   0.2%  Sharpe  0.00  MDD   -0.0%  camb/año  0.0  inv    0%
+  sma200_L2_sin_costo      CAGR  14.30%  vol  23.4%  Sharpe  0.55  MDD  -44.4%  camb/año  6.1  inv   77%
+  sma200_L3_sin_costo      CAGR  18.18%  vol  35.1%  Sharpe  0.56  MDD  -63.7%  camb/año  6.1  inv   77%
+
+-- dentro_1990_2015_(ventana_bloque_F_de_A)  (1990-01-02 a 2015-10-30)
+  bh_L1                    CAGR   9.41%  vol  18.0%  Sharpe  0.42  MDD  -55.3%  camb/año  0.0  inv  100%
+  sma200_L1                CAGR   6.72%  vol  11.7%  Sharpe  0.36  MDD  -27.4%  camb/año  6.3  inv   76%
+  sma200_L1_rezago         CAGR   6.57%  vol  11.7%  Sharpe  0.35  MDD  -26.5%  camb/año  6.3  inv   76%
+  sma200gspc_L1            CAGR   5.99%  vol  11.4%  Sharpe  0.31  MDD  -31.1%  camb/año  6.8  inv   73%
+  bh_L2                    CAGR  11.44%  vol  36.1%  Sharpe  0.40  MDD  -87.6%  camb/año  0.0  inv  100%
+  sma200_L2                CAGR  10.67%  vol  23.3%  Sharpe  0.42  MDD  -50.8%  camb/año  6.3  inv   76%
+  sma200_L2_rezago         CAGR  10.36%  vol  23.4%  Sharpe  0.41  MDD  -45.6%  camb/año  6.3  inv   76%
+  sma200gspc_L2            CAGR   9.43%  vol  22.8%  Sharpe  0.38  MDD  -55.3%  camb/año  6.8  inv   73%
+  bh_L3                    CAGR  10.80%  vol  54.1%  Sharpe  0.41  MDD  -97.9%  camb/año  0.0  inv  100%
+  sma200_L3                CAGR  13.96%  vol  35.0%  Sharpe  0.46  MDD  -67.9%  camb/año  6.3  inv   76%
+  sma200_L3_rezago         CAGR  13.48%  vol  35.0%  Sharpe  0.45  MDD  -61.2%  camb/año  6.3  inv   76%
+  sma200gspc_L3            CAGR  12.25%  vol  34.1%  Sharpe  0.42  MDD  -72.0%  camb/año  6.8  inv   73%
+  efectivo                 CAGR   3.02%  vol   0.2%  Sharpe  0.00  MDD   -0.0%  camb/año  0.0  inv    0%
+  sma200_L2_sin_costo      CAGR  13.08%  vol  23.3%  Sharpe  0.52  MDD  -44.4%  camb/año  6.3  inv   76%
+  sma200_L3_sin_costo      CAGR  16.46%  vol  35.0%  Sharpe  0.53  MDD  -63.7%  camb/año  6.3  inv   76%
+
+-- sub_2000_01_a_2015_10  (2000-01-03 a 2015-10-30)
+  bh_L1                    CAGR   4.19%  vol  20.1%  Sharpe  0.22  MDD  -55.3%  camb/año  0.0  inv  100%
+  sma200_L1                CAGR   2.53%  vol  11.2%  Sharpe  0.12  MDD  -25.0%  camb/año  7.2  inv   68%
+  sma200_L1_rezago         CAGR   2.79%  vol  11.2%  Sharpe  0.15  MDD  -26.5%  camb/año  7.2  inv   68%
+  sma200gspc_L1            CAGR   1.84%  vol  10.9%  Sharpe  0.06  MDD  -27.7%  camb/año  7.6  inv   66%
+  bh_L2                    CAGR   1.50%  vol  40.3%  Sharpe  0.20  MDD  -87.6%  camb/año  0.0  inv  100%
+  sma200_L2                CAGR   3.90%  vol  22.4%  Sharpe  0.21  MDD  -46.3%  camb/año  7.2  inv   68%
+  sma200_L2_rezago         CAGR   4.43%  vol  22.4%  Sharpe  0.23  MDD  -45.6%  camb/año  7.2  inv   68%
+  sma200gspc_L2            CAGR   2.74%  vol  21.7%  Sharpe  0.15  MDD  -49.7%  camb/año  7.6  inv   66%
+  bh_L3                    CAGR  -4.27%  vol  60.4%  Sharpe  0.20  MDD  -97.9%  camb/año  0.0  inv  100%
+  sma200_L3                CAGR   4.61%  vol  33.5%  Sharpe  0.25  MDD  -62.7%  camb/año  7.2  inv   68%
+  sma200_L3_rezago         CAGR   5.41%  vol  33.6%  Sharpe  0.27  MDD  -60.3%  camb/año  7.2  inv   68%
+  sma200gspc_L3            CAGR   3.02%  vol  32.5%  Sharpe  0.20  MDD  -65.9%  camb/año  7.6  inv   66%
+  efectivo                 CAGR   1.77%  vol   0.2%  Sharpe  0.00  MDD   -0.0%  camb/año  0.0  inv    0%
+  sma200_L2_sin_costo      CAGR   6.48%  vol  22.3%  Sharpe  0.32  MDD  -40.2%  camb/año  7.2  inv   68%
+  sma200_L3_sin_costo      CAGR   7.20%  vol  33.5%  Sharpe  0.32  MDD  -58.4%  camb/año  7.2  inv   68%
+
+-- sub_2015_11_a_2019_12  (2015-11-02 a 2019-12-31)
+  bh_L1                    CAGR  13.46%  vol  13.0%  Sharpe  0.94  MDD  -19.4%  camb/año  0.0  inv  100%
+  sma200_L1                CAGR   7.43%  vol  10.7%  Sharpe  0.61  MDD  -14.3%  camb/año  5.8  inv   88%
+  sma200_L1_rezago         CAGR   6.00%  vol  10.8%  Sharpe  0.48  MDD  -17.8%  camb/año  5.8  inv   88%
+  sma200gspc_L1            CAGR   5.00%  vol  10.4%  Sharpe  0.40  MDD  -17.7%  camb/año  7.7  inv   86%
+  bh_L2                    CAGR  23.82%  vol  26.0%  Sharpe  0.91  MDD  -36.3%  camb/año  0.0  inv  100%
+  sma200_L2                CAGR  13.95%  vol  21.4%  Sharpe  0.66  MDD  -24.7%  camb/año  5.8  inv   88%
+  sma200_L2_rezago         CAGR  10.91%  vol  21.6%  Sharpe  0.53  MDD  -31.1%  camb/año  5.8  inv   88%
+  sma200gspc_L2            CAGR   9.67%  vol  20.7%  Sharpe  0.49  MDD  -31.1%  camb/año  7.7  inv   86%
+  bh_L3                    CAGR  34.04%  vol  39.0%  Sharpe  0.92  MDD  -50.2%  camb/año  0.0  inv  100%
+  sma200_L3                CAGR  20.41%  vol  32.0%  Sharpe  0.70  MDD  -34.3%  camb/año  5.8  inv   88%
+  sma200_L3_rezago         CAGR  15.59%  vol  32.4%  Sharpe  0.57  MDD  -42.8%  camb/año  5.8  inv   88%
+  sma200gspc_L3            CAGR  14.16%  vol  31.1%  Sharpe  0.54  MDD  -43.6%  camb/año  7.7  inv   86%
+  efectivo                 CAGR   1.29%  vol   0.1%  Sharpe  0.00  MDD    0.0%  camb/año  0.0  inv    0%
+  sma200_L2_sin_costo      CAGR  16.21%  vol  21.4%  Sharpe  0.75  MDD  -21.6%  camb/año  5.8  inv   88%
+  sma200_L3_sin_costo      CAGR  22.79%  vol  32.1%  Sharpe  0.76  MDD  -31.4%  camb/año  5.8  inv   88%
+
+-- sub_2020_01_a_2026_07  (2020-01-02 a 2026-07-31)
+  bh_L1                    CAGR  15.34%  vol  20.4%  Sharpe  0.66  MDD  -33.8%  camb/año  0.0  inv  100%
+  sma200_L1                CAGR  10.11%  vol  12.7%  Sharpe  0.60  MDD  -23.8%  camb/año  5.5  inv   80%
+  sma200_L1_rezago         CAGR   9.89%  vol  12.7%  Sharpe  0.58  MDD  -26.8%  camb/año  5.5  inv   80%
+  sma200gspc_L1            CAGR   9.04%  vol  12.5%  Sharpe  0.53  MDD  -22.9%  camb/año  6.1  inv   79%
+  bh_L2                    CAGR  22.82%  vol  40.8%  Sharpe  0.64  MDD  -59.1%  camb/año  0.0  inv  100%
+  sma200_L2                CAGR  17.27%  vol  25.3%  Sharpe  0.65  MDD  -40.1%  camb/año  5.5  inv   80%
+  sma200_L2_rezago         CAGR  16.79%  vol  25.3%  Sharpe  0.63  MDD  -45.3%  camb/año  5.5  inv   80%
+  sma200gspc_L2            CAGR  15.30%  vol  24.9%  Sharpe  0.58  MDD  -39.0%  camb/año  6.1  inv   79%
+  bh_L3                    CAGR  26.35%  vol  61.2%  Sharpe  0.65  MDD  -76.6%  camb/año  0.0  inv  100%
+  sma200_L3                CAGR  23.75%  vol  37.9%  Sharpe  0.68  MDD  -53.3%  camb/año  5.5  inv   80%
+  sma200_L3_rezago         CAGR  22.98%  vol  37.9%  Sharpe  0.66  MDD  -59.4%  camb/año  5.5  inv   80%
+  sma200gspc_L3            CAGR  20.84%  vol  37.4%  Sharpe  0.62  MDD  -52.1%  camb/año  6.1  inv   79%
+  efectivo                 CAGR   2.91%  vol   0.2%  Sharpe  0.00  MDD   -0.0%  camb/año  0.0  inv    0%
+  sma200_L2_sin_costo      CAGR  19.47%  vol  25.3%  Sharpe  0.72  MDD  -35.5%  camb/año  5.5  inv   80%
+  sma200_L3_sin_costo      CAGR  26.07%  vol  37.9%  Sharpe  0.73  MDD  -49.7%  camb/año  5.5  inv   80%
+
+-- fuera_2015_11_a_2026_08  (2015-11-02 a 2026-08-31)
+  bh_L1                    CAGR  14.77%  vol  17.8%  Sharpe  0.74  MDD  -33.8%  camb/año  0.0  inv  100%
+  sma200_L1                CAGR   9.26%  vol  11.9%  Sharpe  0.61  MDD  -23.8%  camb/año  5.5  inv   83%
+  sma200_L1_rezago         CAGR   8.56%  vol  12.0%  Sharpe  0.56  MDD  -26.8%  camb/año  5.5  inv   83%
+  sma200gspc_L1            CAGR   7.66%  vol  11.7%  Sharpe  0.50  MDD  -22.9%  camb/año  6.6  inv   82%
+  bh_L2                    CAGR  23.56%  vol  35.7%  Sharpe  0.71  MDD  -59.1%  camb/año  0.0  inv  100%
+  sma200_L2                CAGR  16.36%  vol  23.8%  Sharpe  0.66  MDD  -40.1%  camb/año  5.5  inv   83%
+  sma200_L2_rezago         CAGR  14.87%  vol  23.9%  Sharpe  0.61  MDD  -45.3%  camb/año  5.5  inv   83%
+  sma200gspc_L2            CAGR  13.48%  vol  23.4%  Sharpe  0.56  MDD  -39.0%  camb/año  6.6  inv   82%
+  bh_L3                    CAGR  29.87%  vol  53.5%  Sharpe  0.72  MDD  -76.6%  camb/año  0.0  inv  100%
+  sma200_L3                CAGR  23.05%  vol  35.7%  Sharpe  0.70  MDD  -53.3%  camb/año  5.5  inv   83%
+  sma200_L3_rezago         CAGR  20.67%  vol  35.8%  Sharpe  0.64  MDD  -59.4%  camb/año  5.5  inv   83%
+  sma200gspc_L3            CAGR  18.82%  vol  35.0%  Sharpe  0.61  MDD  -52.2%  camb/año  6.6  inv   82%
+  efectivo                 CAGR   2.29%  vol   0.2%  Sharpe  0.00  MDD   -0.0%  camb/año  0.0  inv    0%
+  sma200_L2_sin_costo      CAGR  18.58%  vol  23.8%  Sharpe  0.74  MDD  -35.5%  camb/año  5.5  inv   83%
+  sma200_L3_sin_costo      CAGR  25.39%  vol  35.7%  Sharpe  0.75  MDD  -49.7%  camb/año  5.5  inv   83%
+
+-- fuera_hasta_2026_07_(ventana_A)  (2015-11-02 a 2026-07-31)
+  bh_L1                    CAGR  14.60%  vol  17.9%  Sharpe  0.73  MDD  -33.8%  camb/año  0.0  inv  100%
+  sma200_L1                CAGR   9.06%  vol  11.9%  Sharpe  0.60  MDD  -23.8%  camb/año  5.6  inv   83%
+  sma200_L1_rezago         CAGR   8.36%  vol  12.0%  Sharpe  0.54  MDD  -26.8%  camb/año  5.6  inv   83%
+  sma200gspc_L1            CAGR   7.45%  vol  11.7%  Sharpe  0.48  MDD  -22.9%  camb/año  6.7  inv   81%
+  bh_L2                    CAGR  23.21%  vol  35.8%  Sharpe  0.70  MDD  -59.1%  camb/año  0.0  inv  100%
+  sma200_L2                CAGR  15.97%  vol  23.8%  Sharpe  0.65  MDD  -40.1%  camb/año  5.6  inv   83%
+  sma200_L2_rezago         CAGR  14.47%  vol  23.9%  Sharpe  0.59  MDD  -45.3%  camb/año  5.6  inv   83%
+  sma200gspc_L2            CAGR  13.08%  vol  23.4%  Sharpe  0.55  MDD  -39.0%  camb/año  6.7  inv   81%
+  bh_L3                    CAGR  29.28%  vol  53.7%  Sharpe  0.71  MDD  -76.6%  camb/año  0.0  inv  100%
+  sma200_L3                CAGR  22.44%  vol  35.7%  Sharpe  0.69  MDD  -53.3%  camb/año  5.6  inv   83%
+  sma200_L3_rezago         CAGR  20.06%  vol  35.9%  Sharpe  0.63  MDD  -59.4%  camb/año  5.6  inv   83%
+  sma200gspc_L3            CAGR  18.20%  vol  35.1%  Sharpe  0.59  MDD  -52.2%  camb/año  6.7  inv   81%
+  efectivo                 CAGR   2.28%  vol   0.2%  Sharpe  0.00  MDD   -0.0%  camb/año  0.0  inv    0%
+  sma200_L2_sin_costo      CAGR  18.20%  vol  23.8%  Sharpe  0.73  MDD  -35.5%  camb/año  5.6  inv   83%
+  sma200_L3_sin_costo      CAGR  24.79%  vol  35.7%  Sharpe  0.74  MDD  -49.7%  camb/año  5.6  inv   83%
+
+-- post_publicacion_2016_03_04  (2016-03-04 a 2026-08-31)
+  bh_L1                    CAGR  15.65%  vol  17.8%  Sharpe  0.78  MDD  -33.8%  camb/año  0.0  inv  100%
+  sma200_L1                CAGR  10.58%  vol  12.0%  Sharpe  0.71  MDD  -23.8%  camb/año  5.1  inv   85%
+  sma200_L1_rezago         CAGR   9.90%  vol  12.0%  Sharpe  0.65  MDD  -26.8%  camb/año  5.1  inv   84%
+  sma200gspc_L1            CAGR   9.09%  vol  11.8%  Sharpe  0.60  MDD  -22.9%  camb/año  5.8  inv   83%
+  bh_L2                    CAGR  25.41%  vol  35.6%  Sharpe  0.75  MDD  -59.1%  camb/año  0.0  inv  100%
+  sma200_L2                CAGR  18.89%  vol  23.9%  Sharpe  0.75  MDD  -40.1%  camb/año  5.1  inv   85%
+  sma200_L2_rezago         CAGR  17.42%  vol  24.0%  Sharpe  0.69  MDD  -45.3%  camb/año  5.1  inv   84%
+  sma200gspc_L2            CAGR  16.07%  vol  23.6%  Sharpe  0.65  MDD  -39.0%  camb/año  5.8  inv   83%
+  bh_L3                    CAGR  32.74%  vol  53.5%  Sharpe  0.76  MDD  -76.6%  camb/año  0.0  inv  100%
+  sma200_L3                CAGR  26.90%  vol  35.9%  Sharpe  0.78  MDD  -53.3%  camb/año  5.1  inv   85%
+  sma200_L3_rezago         CAGR  24.55%  vol  36.0%  Sharpe  0.73  MDD  -59.4%  camb/año  5.1  inv   84%
+  sma200gspc_L3            CAGR  22.64%  vol  35.4%  Sharpe  0.69  MDD  -52.2%  camb/año  5.8  inv   83%
+  efectivo                 CAGR   2.36%  vol   0.2%  Sharpe  0.00  MDD   -0.0%  camb/año  0.0  inv    0%
+  sma200_L2_sin_costo      CAGR  20.95%  vol  23.9%  Sharpe  0.82  MDD  -35.5%  camb/año  5.1  inv   85%
+  sma200_L3_sin_costo      CAGR  29.10%  vol  35.9%  Sharpe  0.83  MDD  -49.7%  camb/año  5.1  inv   85%
+
+-- toda_1988_2026_08  (1988-11-01 a 2026-08-31)
+  bh_L1                    CAGR  11.42%  vol  17.8%  Sharpe  0.53  MDD  -55.3%  camb/año  0.0  inv  100%
+  sma200_L1                CAGR   8.01%  vol  11.8%  Sharpe  0.46  MDD  -27.4%  camb/año  5.9  inv   79%
+  sma200_L1_rezago         CAGR   7.71%  vol  11.8%  Sharpe  0.44  MDD  -26.8%  camb/año  5.9  inv   79%
+  sma200gspc_L1            CAGR   7.00%  vol  11.5%  Sharpe  0.39  MDD  -31.1%  camb/año  6.6  inv   76%
+  bh_L2                    CAGR  15.71%  vol  35.7%  Sharpe  0.51  MDD  -87.6%  camb/año  0.0  inv  100%
+  sma200_L2                CAGR  13.19%  vol  23.5%  Sharpe  0.52  MDD  -50.8%  camb/año  5.9  inv   79%
+  sma200_L2_rezago         CAGR  12.56%  vol  23.6%  Sharpe  0.50  MDD  -45.6%  camb/año  5.9  inv   79%
+  sma200gspc_L2            CAGR  11.44%  vol  23.0%  Sharpe  0.46  MDD  -55.3%  camb/año  6.6  inv   76%
+  bh_L3                    CAGR  17.35%  vol  53.5%  Sharpe  0.51  MDD  -97.9%  camb/año  0.0  inv  100%
+  sma200_L3                CAGR  17.79%  vol  35.3%  Sharpe  0.56  MDD  -67.9%  camb/año  5.9  inv   79%
+  sma200_L3_rezago         CAGR  16.80%  vol  35.4%  Sharpe  0.54  MDD  -61.2%  camb/año  5.9  inv   79%
+  sma200gspc_L3            CAGR  15.29%  vol  34.5%  Sharpe  0.50  MDD  -72.0%  camb/año  6.6  inv   76%
+  efectivo                 CAGR   2.98%  vol   0.2%  Sharpe  0.00  MDD   -0.0%  camb/año  0.0  inv    0%
+  sma200_L2_sin_costo      CAGR  15.51%  vol  23.5%  Sharpe  0.61  MDD  -44.4%  camb/año  5.9  inv   79%
+  sma200_L3_sin_costo      CAGR  20.20%  vol  35.3%  Sharpe  0.62  MDD  -63.7%  camb/año  5.9  inv   79%
+
+VEREDICTO fuera de muestra (simulado, al cierre, 2015-11 a 2026-08): Solo protección
+  mismo, ventana de A (hasta 2026-07): Solo protección;  con rezago de 1 dia: Solo protección
+Refutacion dentro de muestra 1988-2015 (LRS2x <= 1x en CAGR o Sharpe): NO
+
+====================================================================================================
+2) ETFs REALES (Yahoo adjclose), filtro SMA200 sobre ^GSPC (SSO, UPRO) o ^NDX (QLD, TQQQ)
+   efectivo = DTB3; costo 0.34% por cambio; 'cierre' = senal t-1; 'rezago' = senal t-2
+====================================================================================================
+
+-- SSO (2x, 1x = SPY)  toda
+  SSO_bh                   CAGR  15.77%  vol  38.1%  Sharpe  0.53  MDD  -84.7%  camb/año  0.0  inv  100%
+  SSO_sma200               CAGR  10.80%  vol  22.8%  Sharpe  0.49  MDD  -41.2%  camb/año  6.6  inv   77%
+  SSO_sma200_rezago        CAGR  11.31%  vol  22.9%  Sharpe  0.51  MDD  -45.9%  camb/año  6.6  inv   77%
+  SSO_sma200_senalSPY      CAGR  12.76%  vol  23.3%  Sharpe  0.56  MDD  -43.8%  camb/año  5.8  inv   79%
+  SSO_sma200_senalSPY_rezago CAGR  11.04%  vol  23.4%  Sharpe  0.50  MDD  -46.5%  camb/año  5.8  inv   79%
+  SPY_bh                   CAGR  11.39%  vol  19.4%  Sharpe  0.57  MDD  -55.2%  camb/año  0.0  inv  100%
+  SPY_sma200               CAGR   6.20%  vol  11.5%  Sharpe  0.44  MDD  -24.2%  camb/año  6.6  inv   77%
+  sim2x_SPY_bh             CAGR  16.48%  vol  38.7%  Sharpe  0.55  MDD  -84.2%  camb/año  0.0  inv  100%
+  sim2x_SPY_sma200         CAGR  11.20%  vol  22.8%  Sharpe  0.51  MDD  -40.9%  camb/año  6.6  inv   77%
+
+-- SSO (2x, 1x = SPY)  fuera_2015_11_a_2026_08
+  SSO_bh                   CAGR  22.62%  vol  35.5%  Sharpe  0.69  MDD  -59.3%  camb/año  0.0  inv  100%
+  SSO_sma200               CAGR  12.80%  vol  23.2%  Sharpe  0.54  MDD  -39.3%  camb/año  6.6  inv   82%
+  SSO_sma200_rezago        CAGR  13.78%  vol  23.3%  Sharpe  0.58  MDD  -43.9%  camb/año  6.6  inv   82%
+  SSO_sma200_senalSPY      CAGR  16.02%  vol  23.6%  Sharpe  0.65  MDD  -40.2%  camb/año  5.5  inv   83%
+  SSO_sma200_senalSPY_rezago CAGR  14.19%  vol  23.7%  Sharpe  0.59  MDD  -45.3%  camb/año  5.5  inv   83%
+  SPY_bh                   CAGR  14.66%  vol  17.7%  Sharpe  0.73  MDD  -33.7%  camb/año  0.0  inv  100%
+  SPY_sma200               CAGR   7.52%  vol  11.7%  Sharpe  0.49  MDD  -23.2%  camb/año  6.6  inv   82%
+  sim2x_SPY_bh             CAGR  23.39%  vol  35.4%  Sharpe  0.71  MDD  -58.8%  camb/año  0.0  inv  100%
+  sim2x_SPY_sma200         CAGR  13.20%  vol  23.3%  Sharpe  0.55  MDD  -39.4%  camb/año  6.6  inv   82%
+
+-- SSO (2x, 1x = SPY)  fuera_hasta_2026_07
+  SSO_bh                   CAGR  22.27%  vol  35.5%  Sharpe  0.68  MDD  -59.3%  camb/año  0.0  inv  100%
+  SSO_sma200               CAGR  12.40%  vol  23.2%  Sharpe  0.53  MDD  -39.3%  camb/año  6.7  inv   81%
+  SSO_sma200_rezago        CAGR  13.39%  vol  23.3%  Sharpe  0.56  MDD  -43.9%  camb/año  6.7  inv   81%
+  SSO_sma200_senalSPY      CAGR  15.64%  vol  23.6%  Sharpe  0.64  MDD  -40.2%  camb/año  5.6  inv   83%
+  SSO_sma200_senalSPY_rezago CAGR  13.80%  vol  23.7%  Sharpe  0.57  MDD  -45.3%  camb/año  5.6  inv   83%
+  SPY_bh                   CAGR  14.50%  vol  17.8%  Sharpe  0.73  MDD  -33.7%  camb/año  0.0  inv  100%
+  SPY_sma200               CAGR   7.32%  vol  11.7%  Sharpe  0.47  MDD  -23.2%  camb/año  6.7  inv   81%
+  sim2x_SPY_bh             CAGR  23.04%  vol  35.5%  Sharpe  0.70  MDD  -58.8%  camb/año  0.0  inv  100%
+  sim2x_SPY_sma200         CAGR  12.81%  vol  23.3%  Sharpe  0.54  MDD  -39.4%  camb/año  6.7  inv   81%
+  validacion simulador: rho diaria 0.9956; CAGR sim - real +0.72 pp/año
+
+-- UPRO (3x, 1x = SPY)  toda
+  UPRO_bh                  CAGR  32.90%  vol  51.1%  Sharpe  0.79  MDD  -76.8%  camb/año  0.0  inv  100%
+  UPRO_sma200              CAGR  19.48%  vol  35.3%  Sharpe  0.64  MDD  -53.1%  camb/año  6.1  inv   83%
+  UPRO_sma200_rezago       CAGR  21.30%  vol  35.5%  Sharpe  0.68  MDD  -57.8%  camb/año  6.1  inv   83%
+  UPRO_sma200_senalSPY     CAGR  23.11%  vol  36.1%  Sharpe  0.72  MDD  -54.1%  camb/año  5.2  inv   85%
+  UPRO_sma200_senalSPY_rezago CAGR  20.52%  vol  36.2%  Sharpe  0.66  MDD  -59.4%  camb/año  5.2  inv   85%
+  SPY_bh                   CAGR  15.12%  vol  17.1%  Sharpe  0.83  MDD  -33.7%  camb/año  0.0  inv  100%
+  SPY_sma200               CAGR   7.69%  vol  11.9%  Sharpe  0.56  MDD  -23.2%  camb/año  6.1  inv   83%
+  sim3x_SPY_bh             CAGR  34.43%  vol  51.2%  Sharpe  0.81  MDD  -76.2%  camb/año  0.0  inv  100%
+  sim3x_SPY_sma200         CAGR  20.31%  vol  35.5%  Sharpe  0.66  MDD  -52.6%  camb/año  6.1  inv   83%
+
+-- UPRO (3x, 1x = SPY)  fuera_2015_11_a_2026_08
+  UPRO_bh                  CAGR  27.90%  vol  53.1%  Sharpe  0.69  MDD  -76.8%  camb/año  0.0  inv  100%
+  UPRO_sma200              CAGR  17.48%  vol  34.7%  Sharpe  0.58  MDD  -53.1%  camb/año  6.6  inv   82%
+  UPRO_sma200_rezago       CAGR  18.90%  vol  34.9%  Sharpe  0.61  MDD  -57.8%  camb/año  6.6  inv   82%
+  UPRO_sma200_senalSPY     CAGR  22.17%  vol  35.4%  Sharpe  0.68  MDD  -53.4%  camb/año  5.5  inv   83%
+  UPRO_sma200_senalSPY_rezago CAGR  19.30%  vol  35.5%  Sharpe  0.61  MDD  -59.4%  camb/año  5.5  inv   83%
+  SPY_bh                   CAGR  14.66%  vol  17.7%  Sharpe  0.73  MDD  -33.7%  camb/año  0.0  inv  100%
+  SPY_sma200               CAGR   7.52%  vol  11.7%  Sharpe  0.49  MDD  -23.2%  camb/año  6.6  inv   82%
+  sim3x_SPY_bh             CAGR  29.70%  vol  53.2%  Sharpe  0.72  MDD  -76.2%  camb/año  0.0  inv  100%
+  sim3x_SPY_sma200         CAGR  18.39%  vol  34.9%  Sharpe  0.60  MDD  -52.6%  camb/año  6.6  inv   82%
+
+-- UPRO (3x, 1x = SPY)  fuera_hasta_2026_07
+  UPRO_bh                  CAGR  27.33%  vol  53.2%  Sharpe  0.68  MDD  -76.8%  camb/año  0.0  inv  100%
+  UPRO_sma200              CAGR  16.88%  vol  34.8%  Sharpe  0.56  MDD  -53.1%  camb/año  6.7  inv   81%
+  UPRO_sma200_rezago       CAGR  18.30%  vol  34.9%  Sharpe  0.60  MDD  -57.8%  camb/año  6.7  inv   81%
+  UPRO_sma200_senalSPY     CAGR  21.58%  vol  35.4%  Sharpe  0.67  MDD  -53.4%  camb/año  5.6  inv   83%
+  UPRO_sma200_senalSPY_rezago CAGR  18.71%  vol  35.6%  Sharpe  0.60  MDD  -59.4%  camb/año  5.6  inv   83%
+  SPY_bh                   CAGR  14.50%  vol  17.8%  Sharpe  0.73  MDD  -33.7%  camb/año  0.0  inv  100%
+  SPY_sma200               CAGR   7.32%  vol  11.7%  Sharpe  0.47  MDD  -23.2%  camb/año  6.7  inv   81%
+  sim3x_SPY_bh             CAGR  29.12%  vol  53.3%  Sharpe  0.71  MDD  -76.2%  camb/año  0.0  inv  100%
+  sim3x_SPY_sma200         CAGR  17.79%  vol  35.0%  Sharpe  0.58  MDD  -52.6%  camb/año  6.7  inv   81%
+  validacion simulador: rho diaria 0.9983; CAGR sim - real +1.53 pp/año
+
+-- QLD (2x, 1x = QQQ)  toda
+  QLD_bh                   CAGR  25.06%  vol  43.9%  Sharpe  0.69  MDD  -83.1%  camb/año  0.0  inv  100%
+  QLD_sma200               CAGR  19.50%  vol  30.8%  Sharpe  0.68  MDD  -48.7%  camb/año  6.2  inv   80%
+  QLD_sma200_rezago        CAGR  19.50%  vol  31.3%  Sharpe  0.68  MDD  -44.3%  camb/año  6.2  inv   80%
+  QLD_sma200_senalQQQ      CAGR  18.95%  vol  31.0%  Sharpe  0.66  MDD  -48.4%  camb/año  6.1  inv   81%
+  QLD_sma200_senalQQQ_rezago CAGR  18.84%  vol  31.5%  Sharpe  0.65  MDD  -48.4%  camb/año  6.1  inv   81%
+  QQQ_bh                   CAGR  16.43%  vol  22.1%  Sharpe  0.73  MDD  -53.4%  camb/año  0.0  inv  100%
+  QQQ_sma200               CAGR  10.76%  vol  15.5%  Sharpe  0.63  MDD  -31.4%  camb/año  6.2  inv   80%
+  sim2x_QQQ_bh             CAGR  25.85%  vol  44.1%  Sharpe  0.71  MDD  -82.4%  camb/año  0.0  inv  100%
+  sim2x_QQQ_sma200         CAGR  19.44%  vol  30.9%  Sharpe  0.68  MDD  -51.5%  camb/año  6.2  inv   80%
+
+-- QLD (2x, 1x = QQQ)  fuera_2015_11_a_2026_08
+  QLD_bh                   CAGR  30.72%  vol  44.4%  Sharpe  0.78  MDD  -63.7%  camb/año  0.0  inv  100%
+  QLD_sma200               CAGR  25.71%  vol  32.7%  Sharpe  0.80  MDD  -41.0%  camb/año  4.8  inv   82%
+  QLD_sma200_rezago        CAGR  25.67%  vol  33.3%  Sharpe  0.79  MDD  -41.5%  camb/año  4.8  inv   82%
+  QLD_sma200_senalQQQ      CAGR  24.51%  vol  32.9%  Sharpe  0.77  MDD  -43.8%  camb/año  4.8  inv   83%
+  QLD_sma200_senalQQQ_rezago CAGR  24.16%  vol  33.6%  Sharpe  0.75  MDD  -45.9%  camb/año  4.8  inv   83%
+  QQQ_bh                   CAGR  19.41%  vol  22.2%  Sharpe  0.81  MDD  -35.1%  camb/año  0.0  inv  100%
+  QQQ_sma200               CAGR  14.61%  vol  16.4%  Sharpe  0.78  MDD  -22.8%  camb/año  4.8  inv   82%
+  sim2x_QQQ_bh             CAGR  31.46%  vol  44.4%  Sharpe  0.79  MDD  -63.3%  camb/año  0.0  inv  100%
+  sim2x_QQQ_sma200         CAGR  26.10%  vol  32.8%  Sharpe  0.81  MDD  -40.9%  camb/año  4.8  inv   82%
+
+-- QLD (2x, 1x = QQQ)  fuera_hasta_2026_07
+  QLD_bh                   CAGR  30.08%  vol  44.4%  Sharpe  0.77  MDD  -63.7%  camb/año  0.0  inv  100%
+  QLD_sma200               CAGR  25.05%  vol  32.7%  Sharpe  0.78  MDD  -41.0%  camb/año  4.8  inv   82%
+  QLD_sma200_rezago        CAGR  25.02%  vol  33.3%  Sharpe  0.77  MDD  -41.5%  camb/año  4.8  inv   82%
+  QLD_sma200_senalQQQ      CAGR  23.85%  vol  32.9%  Sharpe  0.75  MDD  -43.8%  camb/año  4.8  inv   82%
+  QLD_sma200_senalQQQ_rezago CAGR  23.50%  vol  33.6%  Sharpe  0.73  MDD  -45.9%  camb/año  4.8  inv   82%
+  QQQ_bh                   CAGR  19.12%  vol  22.2%  Sharpe  0.80  MDD  -35.1%  camb/año  0.0  inv  100%
+  QQQ_sma200               CAGR  14.30%  vol  16.4%  Sharpe  0.76  MDD  -22.8%  camb/año  4.8  inv   82%
+  sim2x_QQQ_bh             CAGR  30.82%  vol  44.5%  Sharpe  0.78  MDD  -63.3%  camb/año  0.0  inv  100%
+  sim2x_QQQ_sma200         CAGR  25.45%  vol  32.8%  Sharpe  0.79  MDD  -40.9%  camb/año  4.8  inv   82%
+  validacion simulador: rho diaria 0.9960; CAGR sim - real +0.79 pp/año
+
+-- TQQQ (3x, 1x = QQQ)  toda
+  TQQQ_bh                  CAGR  42.43%  vol  61.2%  Sharpe  0.86  MDD  -81.7%  camb/año  0.0  inv  100%
+  TQQQ_sma200              CAGR  30.76%  vol  46.6%  Sharpe  0.78  MDD  -55.3%  camb/año  5.9  inv   84%
+  TQQQ_sma200_rezago       CAGR  28.09%  vol  47.6%  Sharpe  0.73  MDD  -56.9%  camb/año  5.9  inv   84%
+  TQQQ_sma200_senalQQQ     CAGR  29.58%  vol  47.0%  Sharpe  0.76  MDD  -57.8%  camb/año  6.0  inv   85%
+  TQQQ_sma200_senalQQQ_rezago CAGR  26.66%  vol  48.0%  Sharpe  0.71  MDD  -62.6%  camb/año  6.0  inv   85%
+  QQQ_bh                   CAGR  19.42%  vol  20.7%  Sharpe  0.89  MDD  -35.1%  camb/año  0.0  inv  100%
+  QQQ_sma200               CAGR  12.07%  vol  15.7%  Sharpe  0.71  MDD  -22.8%  camb/año  5.9  inv   84%
+  sim3x_QQQ_bh             CAGR  43.90%  vol  62.0%  Sharpe  0.88  MDD  -81.3%  camb/año  0.0  inv  100%
+  sim3x_QQQ_sma200         CAGR  30.97%  vol  47.1%  Sharpe  0.78  MDD  -55.7%  camb/año  5.9  inv   84%
+
+-- TQQQ (3x, 1x = QQQ)  fuera_2015_11_a_2026_08
+  TQQQ_bh                  CAGR  37.01%  vol  65.7%  Sharpe  0.78  MDD  -81.7%  camb/año  0.0  inv  100%
+  TQQQ_sma200              CAGR  35.25%  vol  48.7%  Sharpe  0.82  MDD  -55.3%  camb/año  4.8  inv   82%
+  TQQQ_sma200_rezago       CAGR  34.74%  vol  49.6%  Sharpe  0.81  MDD  -56.9%  camb/año  4.8  inv   82%
+  TQQQ_sma200_senalQQQ     CAGR  33.23%  vol  48.9%  Sharpe  0.79  MDD  -57.8%  camb/año  4.8  inv   83%
+  TQQQ_sma200_senalQQQ_rezago CAGR  32.26%  vol  50.0%  Sharpe  0.77  MDD  -61.0%  camb/año  4.8  inv   83%
+  QQQ_bh                   CAGR  19.41%  vol  22.2%  Sharpe  0.81  MDD  -35.1%  camb/año  0.0  inv  100%
+  QQQ_sma200               CAGR  14.61%  vol  16.4%  Sharpe  0.78  MDD  -22.8%  camb/año  4.8  inv   82%
+  sim3x_QQQ_bh             CAGR  38.81%  vol  66.6%  Sharpe  0.80  MDD  -81.3%  camb/año  0.0  inv  100%
+  sim3x_QQQ_sma200         CAGR  35.97%  vol  49.2%  Sharpe  0.83  MDD  -55.7%  camb/año  4.8  inv   82%
+
+-- TQQQ (3x, 1x = QQQ)  fuera_hasta_2026_07
+  TQQQ_bh                  CAGR  35.99%  vol  65.8%  Sharpe  0.77  MDD  -81.7%  camb/año  0.0  inv  100%
+  TQQQ_sma200              CAGR  34.23%  vol  48.6%  Sharpe  0.81  MDD  -55.3%  camb/año  4.8  inv   82%
+  TQQQ_sma200_rezago       CAGR  33.72%  vol  49.6%  Sharpe  0.80  MDD  -56.9%  camb/año  4.8  inv   82%
+  TQQQ_sma200_senalQQQ     CAGR  32.21%  vol  48.9%  Sharpe  0.77  MDD  -57.8%  camb/año  4.8  inv   82%
+  TQQQ_sma200_senalQQQ_rezago CAGR  31.24%  vol  50.0%  Sharpe  0.76  MDD  -61.0%  camb/año  4.8  inv   82%
+  QQQ_bh                   CAGR  19.12%  vol  22.2%  Sharpe  0.80  MDD  -35.1%  camb/año  0.0  inv  100%
+  QQQ_sma200               CAGR  14.30%  vol  16.4%  Sharpe  0.76  MDD  -22.8%  camb/año  4.8  inv   82%
+  sim3x_QQQ_bh             CAGR  37.78%  vol  66.7%  Sharpe  0.79  MDD  -81.3%  camb/año  0.0  inv  100%
+  sim3x_QQQ_sma200         CAGR  34.94%  vol  49.2%  Sharpe  0.82  MDD  -55.7%  camb/año  4.8  inv   82%
+  validacion simulador: rho diaria 0.9989; CAGR sim - real +1.47 pp/año
+
+Veredicto con ETFs reales, fuera de muestra (2x y 3x del mismo indice contra su 1x):
+  S&P  sma200        : Solo protección
+  S&P  sma200_rezago : Solo protección
+  NDX  sma200        : Solo protección
+  NDX  sma200_rezago : Solo protección
+
+====================================================================================================
+3) TEMPORADAS en MXN: 85 dias habiles, inicio cada 5 dias; carteras con ETFs reales
+   50% 3x filtrado (fuera -> T-bill USD) + 50% 1x; bandas de rebalanceo 50% +- 5 pp;
+   costo 0.34% sobre cada pierna de ETF operada; MXN = USD * DEXMXUS (ultimo <= fecha)
+====================================================================================================
+
+cartera                    desde         n  P(DD>=12%) P(>=20%) P(>=28%) P(>=35%)   p10    mediana   p90   | peor DD
+50UPROfilt+50SPY_rezago MXN 2009-06-26  848     30.3%     8.5%    0.4%    0.0%    -9.2%    7.4%   22.3% |  -28.7%
+50UPROfilt+50SPY_rezago USD 2009-06-26  848     44.3%     9.4%    2.0%    0.0%   -13.3%    7.4%   24.1% |  -30.9%
+50UPROfilt+50SPY_cierre MXN 2009-06-26  848     30.7%     8.7%    0.0%    0.0%    -8.6%    7.0%   22.2% |  -27.7%
+50UPRObh+50SPY MXN         2009-06-26  848     39.4%    16.2%    9.9%    2.7%   -10.3%   10.4%   25.6% |  -45.7%
+100SPY MXN                 2009-06-26  848     13.1%     0.0%    0.0%    0.0%    -4.6%    5.6%   14.2% |  -19.1%
+50TQQQfilt+50QQQ_rezago MXN 2010-02-12  816     62.7%    19.9%    4.0%    0.4%   -12.0%   10.0%   30.0% |  -35.3%
+50TQQQfilt+50QQQ_rezago USD 2010-02-12  816     61.9%    28.8%    6.0%    1.7%   -15.1%    9.4%   31.2% |  -44.3%
+50TQQQfilt+50QQQ_cierre MXN 2010-02-12  816     61.9%    18.1%    4.9%    0.4%   -11.9%   10.7%   30.1% |  -36.0%
+50TQQQbh+50QQQ MXN         2010-02-12  816     69.5%    29.5%   11.2%    8.7%   -11.0%   14.3%   32.1% |  -47.1%
+100QQQ MXN                 2010-02-12  816     16.3%     5.6%    0.0%    0.0%    -4.7%    8.2%   18.1% |  -25.0%
+Nota: temporadas traslapadas (17 por ventana); no son independientes.
