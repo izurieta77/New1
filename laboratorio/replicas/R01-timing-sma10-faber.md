@@ -7,7 +7,7 @@
 | Fecha de publicación (primera versión pública) | Working paper de 2006 (la portada de 2013 dice "May 2006"; el PDF de 2006 dice "July 2006"). Revista: primavera de 2007. |
 | Pre-registro escrito el | 2026-09-25, alrededor de las 05:21 UTC, **antes de cualquier corrida de backtest**. Antes de escribirlo solo se descargaron los datos y se revisaron metadatos (versión, rango y faltantes). No se calculó ninguna métrica de ninguna regla. |
 | Responsable | Claude (laboratorio de réplicas, fase 0). Mandato: Eduardo Iván Izurieta Martínez |
-| Estado | **Replicado con diferencias** (2026-09-25). Veredicto fuera de muestra: **"Se sostiene"**, con matices en la sección 14 |
+| Estado | **Replicado con diferencias** (2026-09-25; concordante en AC-09, 2026-09-30). Veredicto fuera de muestra: A dio **"Se sostiene"** (sección 14); la doble ejecución independiente AC-09 con S&P 500 TR da "Solo protección", y rige el más conservador: **"Solo protección"** (ver la última sección) |
 
 ---
 
@@ -658,3 +658,25 @@ La regla afectada es **R1** del capítulo 14 (`conocimiento/14-analisis-tecnico-
 5. **No se valida R2** (filtro de apalancados: media de 200 días diaria + VIX): queda pendiente de su propia réplica.
 
 **Uso con dinero.** Ninguna regla pasa a dinero con esta réplica. Falta la capa de impuestos, el papel de 3 meses con 30 operaciones y la aprobación del dueño (fase 0).
+
+---
+
+## Doble ejecución independiente (AC-09), 2026-09-30
+
+> Agregada después de la corrida final de A. No cambia el pre-registro (secciones 1-9) ni las cifras de A (secciones 10-16). Detalle completo en `laboratorio/auditorias/AC-09-sma10-faber/README.md`.
+
+**Qué es B.** Código escrito desde cero y a ciegas (`AC09.py`, sha256 `f5ad1cc6…7476`; solo leí el pre-registro antes de fijar cifras), con biblioteca estándar y otra fuente: S&P 500 con rendimiento total = cierre de fin de mes de `^GSPC` + dividendos de Shiller (`ie_data.xls`, guardado 2026-09-02) hasta 1988-01 y `^SP500TR` (Yahoo) desde 1988-02; rf = TB3MS (FRED) desde 1934 y NBER M1329 antes. Primera decisión 1929-01 (A: 1927-07). Costos 0.34% por lado, exposición inicial 0.
+
+| Métrica | A (French CRSP) | B (S&P TR) | ¿En tolerancia (1 pp, 0.05)? |
+|---|---|---|---|
+| Fuera 2007-01 a 2026-07, B&H: CAGR / Sharpe / MDD | 11.02% / 0.645 / −50.31% | 10.96% / 0.654 / −50.95% | Sí |
+| Fuera, sma10: CAGR / Sharpe / MDD | 8.85% / 0.699 / −19.31% | 7.91% / 0.617 / −22.93% | CAGR sí (−0.94); **Sharpe no (−0.082)** |
+| Fuera, veredicto pre-registrado | Se sostiene | **Solo protección** (0.617 < 0.654) | **No concordante** |
+| Dentro 1929-01 a 2006-12, sma10 (A = control C con datos de A) | 8.78% / 0.436 / −43.50% | 8.91% / 0.432 / −54.33% | CAGR y Sharpe sí; MDD no (junio de 1930) |
+| C1 / C2 / C3 / C4 (artículo, sin costos) | 0.487 / −0.216 pp / 0.713 / 0.74 | 0.355 / −0.27 pp / 0.705 / 0.70 | Mismo resultado: C2 falla, el resto cumple |
+| t NW6 sma10 − B&H, dentro / fuera | −1.03 / −0.94 | −1.07 / −1.24 | Sí |
+| MXN fuera, salida a Cetes: reducción del MDD | 0.523 | 0.368 | Mismo signo |
+
+**Por qué difieren.** (1) El código de B sobre el zip French 202607 de A reproduce a A (9.31% / 0.472 / −43.50% dentro; 8.85% / 0.699 / −19.33% fuera; C1 0.4867), así que la causa es la fuente. (2) Fuera de muestra la señal del S&P y la de CRSP difieren en 4 de 235 meses (2009-06, 2016-01, 2022-02, 2022-04), todos con el índice a menos de 2.3% de su media; el S&P se quedó dentro en 2016-01 y en febrero y abril de 2022. Con la señal de CRSP sobre los rendimientos del S&P, el Sharpe sube a 0.722: la diferencia es de señal, no de rendimientos. (3) Dentro de muestra, el S&P estaba 0.3% arriba de su media en mayo-junio de 1930 y CRSP abajo; B cargó el −16.1% de junio de 1930. (4) En MXN 1994-2006 B queda +4.85 pp arriba porque su señal estaba dentro en diciembre de 1994 (devaluación: 3.44 → 5.00 MXN por USD).
+
+**Dictamen.** Estado pre-registrado concordante: **Replicado con diferencias** en A y B. El veredicto fuera de muestra **no se sostiene de forma robusta**: rige el más conservador, **"Solo protección"**. Con la regla del §2, R1 pasa de "se confirma" a **"se modifica"**: se mantiene solo como control de drawdown, con costo de CAGR declarado (−2.2 pp en A y −3.0 pp en B, fuera de muestra, neto). La reducción del drawdown sí se confirma con segunda fuente (fuera de muestra 0.616 en A y 0.550 en B). El margen de Sharpe fuera de muestra depende de la serie y de cuatro cruces al filo; en B, las seis variantes vecinas (sma6, sma8, sma12, mom12, rezago, señal de precio) superan al índice en Sharpe y la sma10 no. Etiqueta sin cambio: oportunidad investigable.

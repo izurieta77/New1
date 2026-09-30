@@ -1,0 +1,260 @@
+AC-09 | auditoria ciega de R01 (SMA 10 meses, Faber) | fuentes: Shiller + Yahoo ^GSPC/^SP500TR + FRED
+  sha256 0b71c05f77c3663baa78d1f3b2db2a4e1a4fbf538b7002d4f0d783a30ae53e4b  fred_DEXMXUS.csv
+  sha256 6ffbf4e5f6682a53c1a859f0f1b0156c54090559664f31d89d0a21745bf89e22  fred_INTGSTMXM193N.csv
+  sha256 9025de20bf0ee087437b7fd470a1f70b8f86ed01dbaba9dae96bdad642ac7320  fred_M1329AUSM193NNBR.csv
+  sha256 ebf04b1ae5bc5729ba3bb2b35dbb0e0c5e22dace36bea0c02632782d625ae6ab  fred_TB3MS.csv
+  sha256 b840dba55d319f4818fc7300e65c52eff5f64870c8d495fa58ff5d4cd749f5eb  french_F-F_Research_Data_Factors_CSV_202607.zip
+  sha256 044196dafe44c3030b2facbdea023975b3f6aa68b4e52f8f9bafc403e19589c1  shiller_ie_data.xls
+  sha256 89528b5e5c0011f1b3782901d9aa556718dd4da10ddfe26e205db5381596b255  yahoo_GSPC_1d.json
+  sha256 18d373c825cfbf9e6ab3a691d8683b8005a0a477f02f815e366819cd34c67193  yahoo_SP500TR_1d.json
+  sha256 b8e9af3131226b280dc814e7cfb3ee71e1f2591d038b0c3b451e9699b855fee0  yahoo_SP500TR_1d_30y.json
+  sha256 110e1bf3c8b65065f3dd76fad55a3d0f403760e0b92fdaf286ab88d1f4581a3f  yahoo_SP500TR_1mo_30y.json
+Shiller P: 1871-01 a 2026-09; D: 1871-01 a 2026-06
+^GSPC fin de mes: 1927-12 a 2026-08; ^SP500TR: 1988-01 a 2026-08
+TB3MS hasta 2026-08; DEXMXUS fin de mes hasta 2026-09; Cetes FMI hasta 2026-07
+Control ^SP500TR range=30y vs period1 (fin de mes, 360 meses): dif. relativa max 0.00e+00
+Traslape 1988-02-2026-06: CAGR ^GSPC+D Shiller 11.41% vs ^SP500TR 11.49%
+
+==============================================================================================================
+B1 (principal): ^GSPC fin de mes + dividendos Shiller hasta 1988-01; ^SP500TR desde 1988-02; rf NBER/TB3MS
+Senal: I_{t-1} > media(I_{t-10..t-1}) -> w_t = 1; costo |dw| x 0.34%; exposicion inicial 0
+==============================================================================================================
+
+-- dentro: 1929-01 a 2006-12
+  comprar_y_mantener         CAGR   9.68% | vol 19.19% | Sharpe 0.381 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 936
+  efectivo                   CAGR   3.85% | vol  0.90% | Sharpe 0.000 | MDD    0.00% | inv   0.0% | salidas/año 0.00 | n 936
+  sma6                       CAGR   8.12% | vol 13.44% | Sharpe 0.366 | MDD  -44.17% | inv  68.6% | salidas/año 1.12 | n 936
+  sma8                       CAGR   8.52% | vol 12.94% | Sharpe 0.406 | MDD  -57.87% | inv  69.8% | salidas/año 0.88 | n 936
+  sma10                      CAGR   8.91% | vol 13.04% | Sharpe 0.432 | MDD  -54.33% | inv  70.8% | salidas/año 0.69 | n 936
+  sma12                      CAGR   9.58% | vol 12.87% | Sharpe 0.483 | MDD  -48.80% | inv  71.4% | salidas/año 0.63 | n 936
+  mom12                      CAGR   9.00% | vol 13.26% | Sharpe 0.433 | MDD  -53.41% | inv  73.0% | salidas/año 0.47 | n 936
+  sma10_rezago1m             CAGR   8.27% | vol 13.24% | Sharpe 0.383 | MDD  -57.67% | inv  70.8% | salidas/año 0.69 | n 936
+  sma10_senal_precio_GSPC    CAGR   9.43% | vol 12.09% | Sharpe 0.494 | MDD  -47.89% | inv  65.4% | salidas/año 0.73 | n 936
+  sma10_sin_costos           CAGR   9.43% | vol 13.03% | Sharpe 0.469 | MDD  -53.59% | inv  70.8% | salidas/año 0.69 | n 936
+  bh_sin_costos              CAGR   9.69% | vol 19.19% | Sharpe 0.381 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 936
+  sma10_c044                 CAGR   8.76% | vol 13.04% | Sharpe 0.421 | MDD  -54.56% | inv  70.8% | salidas/año 0.69 | n 936
+  sma10_c059                 CAGR   8.53% | vol 13.05% | Sharpe 0.405 | MDD  -54.90% | inv  70.8% | salidas/año 0.69 | n 936
+  sma10_c068                 CAGR   8.39% | vol 13.06% | Sharpe 0.395 | MDD  -55.11% | inv  70.8% | salidas/año 0.69 | n 936
+
+-- fuera_A: 2007-01 a 2026-07
+  comprar_y_mantener         CAGR  10.96% | vol 15.46% | Sharpe 0.654 | MDD  -50.95% | inv 100.0% | salidas/año 0.00 | n 235
+  efectivo                   CAGR   1.55% | vol  0.53% | Sharpe 0.000 | MDD    0.00% | inv   0.0% | salidas/año 0.00 | n 235
+  sma6                       CAGR   9.78% | vol 10.30% | Sharpe 0.809 | MDD  -15.49% | inv  75.3% | salidas/año 0.92 | n 235
+  sma8                       CAGR   9.27% | vol 10.66% | Sharpe 0.741 | MDD  -22.93% | inv  78.3% | salidas/año 0.77 | n 235
+  sma10                      CAGR   7.91% | vol 10.80% | Sharpe 0.617 | MDD  -22.93% | inv  79.1% | salidas/año 0.82 | n 235
+  sma12                      CAGR   8.63% | vol 11.08% | Sharpe 0.666 | MDD  -17.58% | inv  79.6% | salidas/año 0.66 | n 235
+  mom12                      CAGR   9.88% | vol 12.17% | Sharpe 0.711 | MDD  -19.86% | inv  83.4% | salidas/año 0.36 | n 235
+  sma10_rezago1m             CAGR   9.39% | vol 11.45% | Sharpe 0.710 | MDD  -19.86% | inv  79.1% | salidas/año 0.82 | n 235
+  sma10_senal_precio_GSPC    CAGR   8.55% | vol 10.64% | Sharpe 0.680 | MDD  -22.93% | inv  77.9% | salidas/año 0.82 | n 235
+  sma10_sin_costos           CAGR   8.52% | vol 10.77% | Sharpe 0.670 | MDD  -21.29% | inv  79.1% | salidas/año 0.82 | n 235
+  bh_sin_costos              CAGR  10.96% | vol 15.46% | Sharpe 0.654 | MDD  -50.95% | inv 100.0% | salidas/año 0.00 | n 235
+  sma10_c044                 CAGR   7.74% | vol 10.82% | Sharpe 0.601 | MDD  -23.41% | inv  79.1% | salidas/año 0.82 | n 235
+  sma10_c059                 CAGR   7.47% | vol 10.84% | Sharpe 0.578 | MDD  -24.12% | inv  79.1% | salidas/año 0.82 | n 235
+  sma10_c068                 CAGR   7.31% | vol 10.85% | Sharpe 0.563 | MDD  -24.54% | inv  79.1% | salidas/año 0.82 | n 235
+
+-- fuera_ext: 2007-01 a 2026-08
+  comprar_y_mantener         CAGR  11.07% | vol 15.43% | Sharpe 0.660 | MDD  -50.95% | inv 100.0% | salidas/año 0.00 | n 236
+  efectivo                   CAGR   1.56% | vol  0.53% | Sharpe 0.000 | MDD    0.00% | inv   0.0% | salidas/año 0.00 | n 236
+  sma6                       CAGR   9.89% | vol 10.28% | Sharpe 0.819 | MDD  -15.49% | inv  75.4% | salidas/año 0.92 | n 236
+  sma8                       CAGR   9.37% | vol 10.65% | Sharpe 0.750 | MDD  -22.93% | inv  78.4% | salidas/año 0.76 | n 236
+  sma10                      CAGR   8.03% | vol 10.79% | Sharpe 0.627 | MDD  -22.93% | inv  79.2% | salidas/año 0.81 | n 236
+  sma12                      CAGR   8.74% | vol 11.07% | Sharpe 0.675 | MDD  -17.58% | inv  79.7% | salidas/año 0.66 | n 236
+  mom12                      CAGR   9.98% | vol 12.15% | Sharpe 0.720 | MDD  -19.86% | inv  83.5% | salidas/año 0.36 | n 236
+  sma10_rezago1m             CAGR   9.50% | vol 11.43% | Sharpe 0.718 | MDD  -19.86% | inv  79.2% | salidas/año 0.81 | n 236
+  sma10_senal_precio_GSPC    CAGR   8.66% | vol 10.63% | Sharpe 0.689 | MDD  -22.93% | inv  78.0% | salidas/año 0.81 | n 236
+  sma10_sin_costos           CAGR   8.63% | vol 10.76% | Sharpe 0.680 | MDD  -21.29% | inv  79.2% | salidas/año 0.81 | n 236
+  bh_sin_costos              CAGR  11.07% | vol 15.43% | Sharpe 0.660 | MDD  -50.95% | inv 100.0% | salidas/año 0.00 | n 236
+  sma10_c044                 CAGR   7.85% | vol 10.80% | Sharpe 0.611 | MDD  -23.41% | inv  79.2% | salidas/año 0.81 | n 236
+  sma10_c059                 CAGR   7.59% | vol 10.82% | Sharpe 0.587 | MDD  -24.12% | inv  79.2% | salidas/año 0.81 | n 236
+  sma10_c068                 CAGR   7.43% | vol 10.84% | Sharpe 0.573 | MDD  -24.54% | inv  79.2% | salidas/año 0.81 | n 236
+
+-- articulo_2005: 1929-01 a 2005-12
+  comprar_y_mantener         CAGR   9.61% | vol 19.30% | Sharpe 0.377 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 924
+  sma10                      CAGR   8.82% | vol 13.11% | Sharpe 0.425 | MDD  -54.33% | inv  70.5% | salidas/año 0.70 | n 924
+  sma10_sin_costos           CAGR   9.35% | vol 13.10% | Sharpe 0.462 | MDD  -53.59% | inv  70.5% | salidas/año 0.70 | n 924
+  bh_sin_costos              CAGR   9.61% | vol 19.30% | Sharpe 0.377 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 924
+
+-- articulo_2012: 1929-01 a 2012-12
+  comprar_y_mantener         CAGR   9.14% | vol 19.09% | Sharpe 0.366 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 1008
+  sma10                      CAGR   8.66% | vol 12.84% | Sharpe 0.434 | MDD  -54.33% | inv  70.4% | salidas/año 0.69 | n 1008
+  sma10_sin_costos           CAGR   9.17% | vol 12.83% | Sharpe 0.471 | MDD  -53.59% | inv  70.4% | salidas/año 0.69 | n 1008
+  bh_sin_costos              CAGR   9.14% | vol 19.09% | Sharpe 0.366 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 1008
+
+-- toda: 1929-01 a 2026-07
+  comprar_y_mantener         CAGR   9.94% | vol 18.49% | Sharpe 0.425 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 1171
+  efectivo                   CAGR   3.38% | vol  0.88% | Sharpe 0.000 | MDD    0.00% | inv   0.0% | salidas/año 0.00 | n 1171
+  sma6                       CAGR   8.45% | vol 12.87% | Sharpe 0.435 | MDD  -44.17% | inv  69.9% | salidas/año 1.08 | n 1171
+  sma8                       CAGR   8.67% | vol 12.52% | Sharpe 0.462 | MDD  -57.87% | inv  71.5% | salidas/año 0.86 | n 1171
+  sma10                      CAGR   8.71% | vol 12.62% | Sharpe 0.463 | MDD  -54.33% | inv  72.5% | salidas/año 0.72 | n 1171
+  sma12                      CAGR   9.39% | vol 12.53% | Sharpe 0.515 | MDD  -48.80% | inv  73.0% | salidas/año 0.64 | n 1171
+  mom12                      CAGR   9.18% | vol 13.04% | Sharpe 0.485 | MDD  -53.41% | inv  75.1% | salidas/año 0.45 | n 1171
+  sma10_rezago1m             CAGR   8.49% | vol 12.89% | Sharpe 0.441 | MDD  -57.67% | inv  72.5% | salidas/año 0.72 | n 1171
+  sma10_senal_precio_GSPC    CAGR   9.25% | vol 11.81% | Sharpe 0.527 | MDD  -47.89% | inv  67.9% | salidas/año 0.75 | n 1171
+  sma10_sin_costos           CAGR   9.24% | vol 12.60% | Sharpe 0.502 | MDD  -53.59% | inv  72.5% | salidas/año 0.72 | n 1171
+  bh_sin_costos              CAGR   9.94% | vol 18.50% | Sharpe 0.426 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 1171
+  sma10_c044                 CAGR   8.55% | vol 12.62% | Sharpe 0.451 | MDD  -54.56% | inv  72.5% | salidas/año 0.72 | n 1171
+  sma10_c059                 CAGR   8.32% | vol 12.64% | Sharpe 0.434 | MDD  -54.90% | inv  72.5% | salidas/año 0.72 | n 1171
+  sma10_c068                 CAGR   8.18% | vol 12.64% | Sharpe 0.423 | MDD  -55.11% | inv  72.5% | salidas/año 0.72 | n 1171
+
+  Criterios [B1] tramo articulo articulo_2005, sin costos:
+    C1 reduccion relativa MDD 0.355 (cumple; rango 0.30-0.60)
+    C2 dif. CAGR -0.27 pp (NO cumple; (0, +1.91])
+    C3 tiempo invertido 0.705 (cumple; 0.60-0.80)
+    C4 salidas/año 0.70 (cumple; 0.40-1.00)
+    Refutacion (dentro, neto): red. MDD 0.347; Sharpe sma10 0.432 vs B&H 0.381 -> no refutado
+    Fuera de muestra (fuera_A, neto): red. MDD 0.550; Sharpe 0.617 vs 0.654 -> Solo protección
+    Estado segun reglas del pre-registro: Replicado con diferencias
+
+  Criterios [B1, fuera hasta 2026-08] tramo articulo articulo_2005, sin costos:
+    C1 reduccion relativa MDD 0.355 (cumple; rango 0.30-0.60)
+    C2 dif. CAGR -0.27 pp (NO cumple; (0, +1.91])
+    C3 tiempo invertido 0.705 (cumple; 0.60-0.80)
+    C4 salidas/año 0.70 (cumple; 0.40-1.00)
+    Refutacion (dentro, neto): red. MDD 0.347; Sharpe sma10 0.432 vs B&H 0.381 -> no refutado
+    Fuera de muestra (fuera_ext, neto): red. MDD 0.550; Sharpe 0.627 vs 0.660 -> Solo protección
+    Estado segun reglas del pre-registro: Replicado con diferencias
+
+-- Significancia (B1)
+  dentro    sma10 - B&H neto: media -0.140%/mes (×12 -1.68%), t NW6 -1.07; ΔSharpe +0.051 IC95 bootstrap bloques [-0.134, +0.258]
+  fuera_A   sma10 - B&H neto: media -0.285%/mes (×12 -3.42%), t NW6 -1.24; ΔSharpe -0.037 IC95 bootstrap bloques [-0.449, +0.440]
+  toda      sma10 - B&H neto: media -0.169%/mes (×12 -2.03%), t NW6 -1.48; ΔSharpe +0.037 IC95 bootstrap bloques [-0.142, +0.226]
+  DSR sma10 dentro, N=5: 0.999 (SR mensual 0.1248, SR0 0.0148, V[SR] de 5 ensayos 1.53e-04); PSR(0) 1.000
+  DSR sma10 dentro, N=20: 0.998 (SR mensual 0.1248, SR0 0.0235, V[SR] de 5 ensayos 1.53e-04); PSR(0) 1.000
+
+==============================================================================================================
+B2 (sensibilidad): ^GSPC fin de mes + dividendos Shiller en todo el periodo (hasta 2026-06)
+-- dentro: 1929-01 a 2006-12
+  comprar_y_mantener         CAGR   9.66% | vol 19.19% | Sharpe 0.380 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 936
+  sma10                      CAGR   8.87% | vol 13.04% | Sharpe 0.430 | MDD  -54.33% | inv  70.7% | salidas/año 0.71 | n 936
+  sma10_sin_costos           CAGR   9.40% | vol 13.02% | Sharpe 0.467 | MDD  -53.59% | inv  70.7% | salidas/año 0.71 | n 936
+  bh_sin_costos              CAGR   9.67% | vol 19.19% | Sharpe 0.380 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 936
+-- articulo_2005: 1929-01 a 2005-12
+  comprar_y_mantener         CAGR   9.59% | vol 19.30% | Sharpe 0.376 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 924
+  sma10                      CAGR   8.79% | vol 13.10% | Sharpe 0.423 | MDD  -54.33% | inv  70.3% | salidas/año 0.71 | n 924
+  sma10_sin_costos           CAGR   9.32% | vol 13.09% | Sharpe 0.461 | MDD  -53.59% | inv  70.3% | salidas/año 0.71 | n 924
+  bh_sin_costos              CAGR   9.59% | vol 19.30% | Sharpe 0.376 | MDD  -83.14% | inv 100.0% | salidas/año 0.00 | n 924
+-- fuera_hasta_finD: 2007-01 a 2026-06
+  comprar_y_mantener         CAGR  10.96% | vol 15.49% | Sharpe 0.653 | MDD  -50.96% | inv 100.0% | salidas/año 0.00 | n 234
+  sma10                      CAGR   7.89% | vol 10.82% | Sharpe 0.615 | MDD  -22.93% | inv  79.1% | salidas/año 0.82 | n 234
+  sma10_sin_costos           CAGR   8.50% | vol 10.79% | Sharpe 0.669 | MDD  -21.29% | inv  79.1% | salidas/año 0.82 | n 234
+  bh_sin_costos              CAGR  10.96% | vol 15.49% | Sharpe 0.653 | MDD  -50.96% | inv 100.0% | salidas/año 0.00 | n 234
+
+==============================================================================================================
+B3 (sensibilidad): Shiller puro, (P_t + D_t/12)/P_(t-1) con P = promedio mensual; desde 1927-07 (hasta 2026-06)
+   Advertencia: el promedio mensual suaviza y autocorrelaciona los rendimientos; favorece al timing.
+-- dentro: 1927-07 a 2006-12
+  comprar_y_mantener         CAGR  10.23% | vol 15.90% | Sharpe 0.454 | MDD  -81.76% | inv 100.0% | salidas/año 0.00 | n 954
+  sma10                      CAGR  11.46% | vol 11.03% | Sharpe 0.699 | MDD  -49.42% | inv  71.3% | salidas/año 0.58 | n 954
+  sma10_sin_costos           CAGR  11.90% | vol 11.04% | Sharpe 0.734 | MDD  -47.40% | inv  71.3% | salidas/año 0.58 | n 954
+  bh_sin_costos              CAGR  10.23% | vol 15.90% | Sharpe 0.454 | MDD  -81.76% | inv 100.0% | salidas/año 0.00 | n 954
+  sma10_rezago1m             CAGR   9.09% | vol 10.85% | Sharpe 0.511 | MDD  -55.05% | inv  71.3% | salidas/año 0.58 | n 954
+-- articulo_2005: 1927-07 a 2005-12
+  comprar_y_mantener         CAGR  10.18% | vol 15.99% | Sharpe 0.450 | MDD  -81.76% | inv 100.0% | salidas/año 0.00 | n 942
+  sma10                      CAGR  11.43% | vol 11.08% | Sharpe 0.694 | MDD  -49.42% | inv  70.9% | salidas/año 0.59 | n 942
+  sma10_sin_costos           CAGR  11.87% | vol 11.09% | Sharpe 0.730 | MDD  -47.40% | inv  70.9% | salidas/año 0.59 | n 942
+  bh_sin_costos              CAGR  10.18% | vol 15.99% | Sharpe 0.450 | MDD  -81.76% | inv 100.0% | salidas/año 0.00 | n 942
+  sma10_rezago1m             CAGR   9.03% | vol 10.90% | Sharpe 0.505 | MDD  -55.05% | inv  70.9% | salidas/año 0.59 | n 942
+-- fuera_hasta_fin: 2007-01 a 2026-06
+  comprar_y_mantener         CAGR  10.93% | vol 13.05% | Sharpe 0.749 | MDD  -49.04% | inv 100.0% | salidas/año 0.00 | n 234
+  sma10                      CAGR  10.91% | vol  9.69% | Sharpe 0.966 | MDD  -19.18% | inv  79.1% | salidas/año 0.51 | n 234
+  sma10_sin_costos           CAGR  11.29% | vol  9.68% | Sharpe 1.003 | MDD  -18.92% | inv  79.1% | salidas/año 0.51 | n 234
+  bh_sin_costos              CAGR  10.93% | vol 13.05% | Sharpe 0.749 | MDD  -49.04% | inv 100.0% | salidas/año 0.00 | n 234
+  sma10_rezago1m             CAGR   9.21% | vol  9.75% | Sharpe 0.801 | MDD  -18.92% | inv  79.1% | salidas/año 0.51 | n 234
+
+  Criterios [B3 Shiller puro] tramo articulo articulo_2005, sin costos:
+    C1 reduccion relativa MDD 0.420 (cumple; rango 0.30-0.60)
+    C2 dif. CAGR +1.69 pp (cumple; (0, +1.91])
+    C3 tiempo invertido 0.709 (cumple; 0.60-0.80)
+    C4 salidas/año 0.59 (cumple; 0.40-1.00)
+    Refutacion (dentro, neto): red. MDD 0.396; Sharpe sma10 0.699 vs B&H 0.454 -> no refutado
+    Fuera de muestra (fuera_hasta_fin, neto): red. MDD 0.609; Sharpe 0.966 vs 0.749 -> Se sostiene
+    Estado segun reglas del pre-registro: Replicado
+
+==============================================================================================================
+MXN (bloque G): senal sma10 en USD sobre B1; r_MXN = (1+r_USD)·FX_t/FX_(t-1) − 1; FX = DEXMXUS fin de mes
+   Sharpe en MXN: exceso sobre Cetes (FMI INTGSTMXM193N/1200 del mismo mes)
+-- 1994-2006
+  comprar_y_mantener         CAGR  22.07% | vol 20.35% | Sharpe 0.242 | MDD  -40.05% | n 156
+  sma10_caja_TbillUSD        CAGR  23.49% | vol 18.63% | Sharpe 0.309 | MDD   -8.68% | n 156
+  sma10_caja_Cetes           CAGR  25.41% | vol 18.23% | Sharpe 0.401 | MDD   -8.68% | n 156
+  efectivo_TbillUSD          CAGR  14.39% | vol 16.76% | Sharpe -0.146 | MDD  -10.87% | n 156
+  efectivo_Cetes             CAGR  18.49% | vol  3.69% | Sharpe 0.000 | MDD    0.00% | n 156
+-- fuera_A
+  comprar_y_mantener         CAGR  13.67% | vol 13.30% | Sharpe 0.569 | MDD  -31.22% | n 235
+  sma10_caja_TbillUSD        CAGR  10.55% | vol 13.38% | Sharpe 0.357 | MDD  -31.16% | n 235
+  sma10_caja_Cetes           CAGR  12.00% | vol 10.71% | Sharpe 0.539 | MDD  -19.74% | n 235
+  efectivo_TbillUSD          CAGR   4.03% | vol 11.87% | Sharpe -0.127 | MDD  -26.71% | n 235
+  efectivo_Cetes             CAGR   6.32% | vol  0.69% | Sharpe 0.000 | MDD    0.00% | n 235
+-- 1994-2026
+  comprar_y_mantener         CAGR  16.95% | vol 16.50% | Sharpe 0.400 | MDD  -40.05% | n 391
+  sma10_caja_TbillUSD        CAGR  15.54% | vol 15.75% | Sharpe 0.331 | MDD  -31.16% | n 391
+  sma10_caja_Cetes           CAGR  17.17% | vol 14.28% | Sharpe 0.453 | MDD  -19.74% | n 391
+  efectivo_TbillUSD          CAGR   8.05% | vol 14.08% | Sharpe -0.134 | MDD  -26.71% | n 391
+  efectivo_Cetes             CAGR  11.02% | vol  2.85% | Sharpe 0.000 | MDD    0.00% | n 391
+
+==============================================================================================================
+CONCILIACION CON A (post-hoc, agregada despues de leer R01 §10-§16; no cambia las cifras de arriba)
+==============================================================================================================
+  MDD B1 sma10                dentro    -54.33%  pico 1929-08  valle 1933-03
+  MDD B1 sma10                fuera_A   -22.93%  pico 2021-12  valle 2023-02
+  MDD B1 comprar_y_mantener   dentro    -83.14%  pico 1929-08  valle 1932-05
+  MDD B1 comprar_y_mantener   fuera_A   -50.95%  pico 2007-10  valle 2009-02
+
+  Control C: codigo B sobre French 202607 (Mkt-RF + RF; rf = RF de French), decisiones desde 1927-07
+  -- dentro_A: 1927-07 a 2006-12
+     comprar_y_mantener     CAGR  10.07% | vol 18.98% | Sharpe 0.408 | MDD  -83.65% | inv 100.0% | salidas/año 0.00 | n 954
+     sma10                  CAGR   9.31% | vol 12.92% | Sharpe 0.472 | MDD  -43.50% | inv  71.7% | salidas/año 0.73 | n 954
+     sma10_sin_costos       CAGR   9.86% | vol 12.91% | Sharpe 0.512 | MDD  -42.94% | inv  71.7% | salidas/año 0.73 | n 954
+     bh_sin_costos          CAGR  10.07% | vol 18.98% | Sharpe 0.408 | MDD  -83.65% | inv 100.0% | salidas/año 0.00 | n 954
+     sma10_rezago1m         CAGR   8.82% | vol 13.16% | Sharpe 0.431 | MDD  -51.02% | inv  71.7% | salidas/año 0.73 | n 954
+     mom12                  CAGR  10.18% | vol 13.20% | Sharpe 0.525 | MDD  -45.17% | inv  74.0% | salidas/año 0.39 | n 954
+     sma12                  CAGR   9.74% | vol 12.93% | Sharpe 0.502 | MDD  -46.26% | inv  72.0% | salidas/año 0.64 | n 954
+     sma8                   CAGR   8.06% | vol 12.70% | Sharpe 0.387 | MDD  -54.62% | inv  69.7% | salidas/año 0.91 | n 954
+     sma6                   CAGR   8.50% | vol 13.34% | Sharpe 0.403 | MDD  -46.99% | inv  69.6% | salidas/año 1.12 | n 954
+  -- fuera_A: 2007-01 a 2026-07
+     comprar_y_mantener     CAGR  11.02% | vol 15.91% | Sharpe 0.645 | MDD  -50.31% | inv 100.0% | salidas/año 0.00 | n 235
+     sma10                  CAGR   8.85% | vol 10.83% | Sharpe 0.699 | MDD  -19.33% | inv  78.3% | salidas/año 0.77 | n 235
+     sma10_sin_costos       CAGR   9.42% | vol 10.80% | Sharpe 0.749 | MDD  -17.64% | inv  78.3% | salidas/año 0.77 | n 235
+     bh_sin_costos          CAGR  11.02% | vol 15.91% | Sharpe 0.645 | MDD  -50.31% | inv 100.0% | salidas/año 0.00 | n 235
+     sma10_rezago1m         CAGR   9.46% | vol 11.95% | Sharpe 0.692 | MDD  -21.52% | inv  78.3% | salidas/año 0.77 | n 235
+     mom12                  CAGR   9.34% | vol 12.60% | Sharpe 0.655 | MDD  -21.34% | inv  81.7% | salidas/año 0.36 | n 235
+     sma12                  CAGR   8.30% | vol 11.19% | Sharpe 0.636 | MDD  -19.33% | inv  78.7% | salidas/año 0.71 | n 235
+     sma8                   CAGR   9.79% | vol 10.65% | Sharpe 0.790 | MDD  -13.78% | inv  77.0% | salidas/año 0.77 | n 235
+     sma6                   CAGR   9.04% | vol 10.44% | Sharpe 0.737 | MDD  -16.82% | inv  74.5% | salidas/año 0.97 | n 235
+  -- articulo_A: 1927-07 a 2005-12
+     comprar_y_mantener     CAGR  10.00% | vol 19.09% | Sharpe 0.404 | MDD  -83.65% | inv 100.0% | salidas/año 0.00 | n 942
+     sma10                  CAGR   9.24% | vol 12.98% | Sharpe 0.466 | MDD  -43.50% | inv  71.3% | salidas/año 0.74 | n 942
+     sma10_sin_costos       CAGR   9.79% | vol 12.97% | Sharpe 0.506 | MDD  -42.94% | inv  71.3% | salidas/año 0.74 | n 942
+     bh_sin_costos          CAGR  10.01% | vol 19.09% | Sharpe 0.404 | MDD  -83.65% | inv 100.0% | salidas/año 0.00 | n 942
+     sma10_rezago1m         CAGR   8.74% | vol 13.23% | Sharpe 0.425 | MDD  -51.02% | inv  71.3% | salidas/año 0.74 | n 942
+     mom12                  CAGR  10.11% | vol 13.27% | Sharpe 0.519 | MDD  -45.17% | inv  73.7% | salidas/año 0.39 | n 942
+     sma12                  CAGR   9.67% | vol 12.99% | Sharpe 0.496 | MDD  -46.26% | inv  71.7% | salidas/año 0.65 | n 942
+     sma8                   CAGR   8.01% | vol 12.76% | Sharpe 0.383 | MDD  -54.62% | inv  69.4% | salidas/año 0.90 | n 942
+     sma6                   CAGR   8.43% | vol 13.41% | Sharpe 0.398 | MDD  -46.99% | inv  69.5% | salidas/año 1.12 | n 942
+  -- dentro_desde1929: 1929-01 a 2006-12
+     comprar_y_mantener     CAGR   9.54% | vol 19.03% | Sharpe 0.382 | MDD  -83.65% | inv 100.0% | salidas/año 0.00 | n 936
+     sma10                  CAGR   8.78% | vol 12.84% | Sharpe 0.436 | MDD  -43.50% | inv  71.2% | salidas/año 0.74 | n 936
+     sma10_sin_costos       CAGR   9.33% | vol 12.82% | Sharpe 0.475 | MDD  -42.94% | inv  71.2% | salidas/año 0.74 | n 936
+     bh_sin_costos          CAGR   9.54% | vol 19.03% | Sharpe 0.382 | MDD  -83.65% | inv 100.0% | salidas/año 0.00 | n 936
+     sma10_rezago1m         CAGR   8.27% | vol 13.08% | Sharpe 0.394 | MDD  -51.02% | inv  71.2% | salidas/año 0.74 | n 936
+     mom12                  CAGR   9.65% | vol 13.13% | Sharpe 0.490 | MDD  -45.17% | inv  73.5% | salidas/año 0.40 | n 936
+     sma12                  CAGR   9.21% | vol 12.85% | Sharpe 0.466 | MDD  -46.26% | inv  71.5% | salidas/año 0.65 | n 936
+     sma8                   CAGR   7.51% | vol 12.61% | Sharpe 0.347 | MDD  -54.62% | inv  69.1% | salidas/año 0.92 | n 936
+     sma6                   CAGR   7.95% | vol 13.27% | Sharpe 0.366 | MDD  -46.99% | inv  69.0% | salidas/año 1.14 | n 936
+  Control C, C1 reduccion MDD tramo articulo sin costos: 0.4867; C2 -0.216 pp
+
+  Senal sma10 S&P (B1) vs French, dentro: 25 de 936 meses distintos
+    1930-05(B1/F0), 1930-06(B1/F0), 1934-07(B0/F1), 1935-02(B0/F1), 1940-12(B0/F1), 1941-07(B0/F1), 1948-02(B0/F1), 1948-10(B1/F0), 1953-06(B0/F1), 1965-08(B0/F1), 1968-02(B0/F1), 1973-03(B1/F0), 1973-04(B1/F0), 1977-03(B0/F1), 1977-08(B0/F1), 1977-12(B0/F1), 1984-02(B1/F0), 1987-01(B1/F0), 1991-01(B1/F0), 1991-12(B0/F1), 1994-08(B1/F0), 1994-12(B1/F0), 2000-06(B1/F0), 2000-10(B0/F1), 2002-01(B0/F1)
+
+  Senal sma10 S&P (B1) vs French, fuera_A: 4 de 235 meses distintos
+    2009-06(B0/F1), 2016-01(B1/F0), 2022-02(B1/F0), 2022-04(B1/F0)
+
+  Descomposicion (neto, 0.34%/lado): senal x rendimientos
+    fuera_A           senal S&P  + rend S&P   (B1) CAGR   7.91% | vol 10.80% | Sharpe 0.617 | MDD  -22.93% | inv  79.1% | salidas/año 0.82 | n 235 || B&H Sharpe 0.654
+    fuera_A           senal French + rend S&P      CAGR   8.92% | vol 10.48% | Sharpe 0.722 | MDD  -17.58% | inv  78.3% | salidas/año 0.77 | n 235 || B&H Sharpe 0.654
+    fuera_A           senal S&P  + rend French     CAGR   7.79% | vol 11.19% | Sharpe 0.592 | MDD  -24.22% | inv  79.1% | salidas/año 0.82 | n 235 || B&H Sharpe 0.645
+    fuera_A           senal French + rend French   CAGR   8.85% | vol 10.83% | Sharpe 0.699 | MDD  -19.33% | inv  78.3% | salidas/año 0.77 | n 235 || B&H Sharpe 0.645
+    dentro_desde1929  senal S&P  + rend S&P   (B1) CAGR   8.91% | vol 13.04% | Sharpe 0.432 | MDD  -54.33% | inv  70.8% | salidas/año 0.69 | n 936 || B&H Sharpe 0.381
+    dentro_desde1929  senal French + rend S&P      CAGR   8.70% | vol 12.95% | Sharpe 0.419 | MDD  -47.70% | inv  71.2% | salidas/año 0.74 | n 936 || B&H Sharpe 0.381
+    dentro_desde1929  senal S&P  + rend French     CAGR   8.98% | vol 12.94% | Sharpe 0.447 | MDD  -53.67% | inv  70.8% | salidas/año 0.69 | n 936 || B&H Sharpe 0.381
+    dentro_desde1929  senal French + rend French   CAGR   8.77% | vol 12.83% | Sharpe 0.435 | MDD  -43.50% | inv  71.2% | salidas/año 0.74 | n 936 || B&H Sharpe 0.381

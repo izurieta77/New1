@@ -13,7 +13,7 @@ Deflated Sharpe / PSR / MinBTL,07/20,Comprendido con comprobación,"fichas/2026-
 Volatilidad gestionada,07,Contrastado,"R05 (A) y AC-06 (B: código independiente, ^SP500TR/^GSPC+Shiller) concordantes: α solo en el periodo del artículo, concentrado en 1928-37; freno con costo",2026-09-28,"Versión con ETF del SIC y varianza de ^GSPC en tiempo real, en MXN con costos GBM"
 Apalancados y filtro de tendencia,07/14,Contrastado,"R06 (A) y AC-07 (B: código independiente, ^SP500TR y ETF reales) concordantes: ""Solo protección""; temporadas MXN con ETF reales",2026-09-29,Fijar la serie de la señal (SPY o ^GSPC) y medir costos GBM + spread cambiario en SIC
 Pronóstico y puntuación Brier,08,Documentado,Capítulo 08; herramientas/pronosticos.py; bitacora/pronosticos.csv n=0 resueltos,2026-09-25,Calibración con los primeros 50 resueltos
-Timing SMA10 (Faber),14,Replicado,R01 (misma fuente A y B),2026-09-25,Segunda fuente independiente (Shiller) y versión MXN (V04)
+Timing SMA10 (Faber),14,Replicado,"R01 (A, French) y AC-09 (B: código ciego, Shiller + ^GSPC/^SP500TR + TB3MS): estado Replicado con diferencias; fuera de muestra B da ""Solo protección"" (A ""Se sostiene""): MDD −23% vs −51% y CAGR −3.0 pp",2026-09-30,Versión MXN con costos GBM y spread SIC (V04); fijar la serie de la señal (índice de precio vs CRSP) en la regla R1
 Momentum de series de tiempo,14,Replicado,R02,2026-09-25,Auditor-de-replicas con segunda fuente
 Efecto Halloween,14,Contrastado,"R04 (A) y AC-04 (B, código y fuente independientes): concuerdan fuera de muestra; el estado histórico de EUA depende de CRSP",2026-09-25,Decisión del dueño sobre el estado de la ficha R04; versión NAFTRAC neta en MXN
 Efecto cambio de mes,14,Replicado,R09 (con _verificacion),2026-09-25,Segunda fuente independiente
