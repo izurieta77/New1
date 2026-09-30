@@ -1,0 +1,2 @@
+fecha,ticker,lado,cantidad,precio,moneda,comision,stop,tesis_id,estrategia,notas
+2026-09-29,EFECTIVO,deposito,5000.0,1.0,MXN,0.0,,,,"Aportacion del dueno a la cuenta Binance compartida (3 IAs); 5,000 MXN corresponden a Claude. Confirmado por el dueno el 29-sep 18:12 CDMX (captura: 10,000.12 MXN disponibles en Spot). Sublibro de Claude: solo entran ejecuciones que el dueno reporte como de Claude."
