@@ -203,3 +203,8 @@ Aritmética recalculada con Python.
 - Si el techo de los SCA aplica a "los mayores" acuerdos: la frase "second calendar quarter" está en el 10-Q, pero no se leyó el párrafo completo.
 
 **Veredicto:** confiable en datos. El pronóstico original era sobreconfiado del lado alto; ya se corrigió.
+
+## Adenda 2026-09-30 · resultado del 4T FY26
+- **Resultado:** ingresos de US$54,229 M y UPA non-GAAP de 33.42, los dos dentro del p10-p90 registrado y arriba del consenso (51,200 y 31.56). Margen bruto non-GAAP de 87.0%. Guía del 1T FY27: 61.5 ± 1.5 mil M, margen de ~86.25% y UPA de 38.15 ± 1.00 ([8-K](https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm)).
+- **Escenario:** la guía de margen queda arriba de 86%, así que sigue el **base**.
+- **Detalle y lecciones:** `empresas/MU/post-mortem-2026-09-30.md`. Los pronósticos de la §8 no se modifican.

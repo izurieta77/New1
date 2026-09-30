@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+MU-ingresos-4TFY26,2026-09-30,54229,,-4.85,si,,https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm
+MU-upa_ajustada-4TFY26,2026-09-30,33.42,,-3.95,si,,https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm
+MU-ingresos_mayor_consenso-4TFY26,2026-09-30,54229,1,,,0.1936,https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm
+MU-upa_mayor_consenso-4TFY26,2026-09-30,33.42,1,,,0.1764,https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm
