@@ -1,5 +1,5 @@
 tema,capitulo,estado,evidencia,fecha,siguiente_prueba
-Crecimiento geométrico y matemática del compuesto,01,Documentado,Capítulo 01 escrito con fuentes,2026-09-25,Ejercicio propio volatility drag con datos French
+Crecimiento geométrico y matemática del compuesto,01,Comprendido con comprobación,fichas/2026-09-29-volatility-drag.md: G≈A−σ²/2 con French 1926-2026 (error ≤0.2 pp por década); g(L) diario sintético con L*=2.68 y MDD ≥98% si L≥2; UPRO real 2.22 pp/año debajo de la fórmula,2026-09-29,Repetir g(L) con filtro SMA200 y brecha de financiamiento de UPRO por tramos de tasa
 Portafolio media-varianza y CAPM,02,Documentado,Capítulo 02,2026-09-25,Frontera eficiente con ETFs SIC en MXN
 Primas de factores y decaimiento post-publicación,02/06,Replicado,V01; AC-01; AC-02; AC-03; V03; R03 en curso,2026-09-25,Completar R03 (McLean-Pontiff) con prueba de diferencia entre ventanas
 Valuación DCF y DCF inverso,03,Documentado,Capítulo 03; herramientas/modelo_integrado.py,2026-09-25,DCF inverso de 3 emisoras contra precio y auditoría

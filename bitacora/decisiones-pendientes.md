@@ -52,3 +52,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - La regla debe fijar qué serie da la señal: SPY y ^GSPC dan 21.6% y 17.5% de CAGR en UPRO.
   - La ficha del PSR (29-sep) muestra que 4 meses no distinguen habilidad de suerte.
 - **Qué decidí:** nada; es competencia del comité.
+
+## 2026-09-29 · bloque de trabajo continuo · Insumo para el comité del 2-oct (volatility drag)
+- **Qué hay:** `conocimiento/fichas/2026-09-29-volatility-drag.md`. Con σ = 17.5%, el L* por crecimiento es 2.68 si μ = 8.2% (100 años), pero cae a 1.31 si μ = 4% y a 0.66 si μ = 2%. UPRO real rindió 2.22 pp/año menos que la fórmula sin costos (2009-2026). Sin filtro, cualquier L ≥ 2 perdió 98% o más en 1929-1932.
+- **Qué decidí:** nada; es competencia del comité.
