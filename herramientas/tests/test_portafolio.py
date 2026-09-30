@@ -44,6 +44,24 @@ class TestLibro(unittest.TestCase):
         self.assertAlmostEqual(libro.efectivo_mxn, efectivo)
         self.assertAlmostEqual(libro.aportaciones_mxn, 1_000_000)
 
+    def test_tipo_cambio_de_ejecucion_fija_el_costo(self):
+        pf.registrar(self.ops, "2026-01-02", "", "deposito", 1_000_000)
+        pf.registrar(self.ops, "2026-01-06", "SPY", "compra", 10, 500, "USD", comision=1, tipo_cambio=17.5)
+        ops = pf.leer_operaciones(self.ops)
+        compra = [o for o in ops if o["ticker"] == "SPY"][0]
+        self.assertEqual(compra["tipo_cambio"], 17.5)
+        # fx_constante (20.0) no debe usarse: el costo se congela al tipo de cambio guardado.
+        libro = pf.construir_libro(ops, fx_constante)
+        self.assertAlmostEqual(libro.posiciones["SPY"]["costo_mxn"], 5_001 * 17.5)
+
+    def test_sin_tipo_cambio_guardado_usa_el_historico(self):
+        self.registrar_basico()
+        ops = pf.leer_operaciones(self.ops)
+        spy = [o for o in ops if o["ticker"] == "SPY"][0]
+        self.assertIsNone(spy["tipo_cambio"])
+        libro = pf.construir_libro(ops, fx_constante)
+        self.assertAlmostEqual(libro.posiciones["SPY"]["costo_mxn"], 5_001 * 20)
+
     def test_no_se_permiten_cortos(self):
         pf.registrar(self.ops, "2026-01-02", "", "deposito", 1000)
         with self.assertRaises(pf.ErrorPortafolio):

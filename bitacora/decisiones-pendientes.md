@@ -41,6 +41,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Problema:** `_fx_de` convierte las compras en USD con MXN=X "del cierre del día de la operación". El 28-sep ese dato era intradía (17.9865). Al día siguiente Yahoo lo fijó con otro valor, y el efectivo de la misma cartera pasó de 3,181.94 a 3,404.32 MXN sin ninguna operación nueva.
 - **Qué decidí:** borré el snapshot prematuro del 29-sep en `bitacora/equity.csv` y no toqué el código, porque no es tarea de esta rutina.
 - **Propuesta:** agregar una columna opcional `tipo_cambio` en `operaciones.csv` (la ejecución fue a 17.825) y usarla en `_fx_de` cuando exista. Después, reconstruir el 28-sep.
+- **Cerrado (conciliación, 30-sep):** implementado. Fallo completo en `bitacora/arbitraje/2026-09-30.md`. Resumen: `portafolio.py` ya soporta `--tipo-cambio` en `registrar` y usa ese valor congelado para el costo; `operaciones.csv` migrado con 17.825 en O0001/O0002; `equity.csv` reconstruido (28-sep: efectivo estable en 3,332.93; 29-sep: equity 20,193.12, TWR +1.01%); `competencia/marcador.md` actualizado; 2 pruebas nuevas, batería completa 281/281 OK. Instrucción agregada a `rutinas/REGLAS-MOTOR.md` §4 para que el Cierre pase `--tipo-cambio` de aquí en adelante.
 
 ## 2026-09-29 · laboratorio · Insumo adicional para el comité del 2-oct (AC-07, ETF reales, MXN, temporadas de 4 meses)
 - **Resultados** (P(DD ≥ 12/20/28/35%); p10 / mediana / p90):

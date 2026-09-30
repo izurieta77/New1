@@ -83,6 +83,7 @@ Al terminar cada rutina, agrega una línea **al inicio** de `bitacora/estado-rut
   - Precio: la **apertura** de ese día hábil en Yahoo (chart v8, campo `open`). Es el primer precio estrictamente posterior a la decisión; nunca uses un precio que ya se conocía al decidir.
   - **Si la fila trae su propia `regla_precio`** (condición de validez, hora, títulos fijos), **manda la fila**. Si la condición no se cumple, marca `estado=en_espera`, no ejecutes y anótalo en el brief.
   - Comisión GBM: 0.25% + IVA = **0.29% del monto**, en el campo `--comision`, convertida a la moneda de la operación.
+  - **Compras/ventas en USD: pasa siempre `--tipo-cambio` con el USD/MXN de la misma vela de ejecución** (el de `regla_precio`, no uno que se recalcule después). Sin esto, el costo en MXN queda al cierre del día que da Yahoo en el momento de valuar, que puede cambiar entre consultas y hacer que el efectivo de la cartera "se mueva" sin ninguna operación nueva (pasó el 28-29-sep-2026, corregido en `bitacora/arbitraje/2026-09-30.md`).
   - Marca la orden como `ejecutada`, con precio, fecha y commit.
   - El depósito inicial va con la primera ejecución: `--lado deposito --cantidad 20000 --moneda MXN`.
 - **Rebalanceo:**

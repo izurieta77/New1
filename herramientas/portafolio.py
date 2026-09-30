@@ -35,7 +35,7 @@ from herramientas import datos, metricas, riesgo
 from herramientas.parametros import DIR_BITACORA, obtener, parametros_efectivos
 
 COLUMNAS_OPS = ["fecha", "ticker", "lado", "cantidad", "precio", "moneda", "comision", "stop",
-                "tesis_id", "estrategia", "notas"]
+                "tesis_id", "estrategia", "notas", "tipo_cambio"]
 COLUMNAS_EQUITY = ["fecha", "efectivo_mxn", "posiciones_mxn", "equity_mxn", "aportaciones_netas_mxn", "indice"]
 RUTA_OPS = DIR_BITACORA / "operaciones.csv"
 RUTA_EQUITY = DIR_BITACORA / "equity.csv"
@@ -92,7 +92,7 @@ def leer_operaciones(ruta: str | Path = RUTA_OPS) -> list[dict]:
         ops.append({**f, "fecha": date.fromisoformat(f["fecha"]), "cantidad": float(f["cantidad"]),
                     "precio": float(f["precio"]), "comision": _flotante(f["comision"], 0.0),
                     "stop": _flotante(f["stop"]), "lado": f["lado"].lower(), "moneda": f["moneda"].upper(),
-                    "_orden": i})
+                    "tipo_cambio": _flotante(f.get("tipo_cambio")), "_orden": i})
     return sorted(ops, key=lambda o: (o["fecha"], o["_orden"]))
 
 
@@ -205,8 +205,13 @@ class Libro:
 
 
 def _fx_de(op: dict, fx_hist: FuncionFX | None) -> float:
+    """FX para el costo en MXN de una operacion: el de ejecucion si quedo guardado en la
+    operacion (columna tipo_cambio), y si no, el historico de la fecha (fx_hist)."""
     if op["moneda"] == "MXN":
         return 1.0
+    tipo_cambio = op.get("tipo_cambio")
+    if tipo_cambio:
+        return tipo_cambio
     if fx_hist is None:
         raise ErrorPortafolio("Se requiere tipo de cambio historico para operaciones en USD")
     return fx_hist(op["fecha"])
@@ -229,8 +234,13 @@ def _requiere_fx(operaciones: list[dict]) -> bool:
 
 def registrar(ruta: str | Path, fecha, ticker: str, lado: str, cantidad: float, precio: float = 1.0,
               moneda: str = "MXN", comision: float = 0.0, stop: float | None = None, tesis_id: str = "",
-              estrategia: str = "", notas: str = "") -> dict:
-    """Valida y agrega una operacion al libro (depositos/retiros usan ticker EFECTIVO y precio 1)."""
+              estrategia: str = "", notas: str = "", tipo_cambio: float | None = None) -> dict:
+    """Valida y agrega una operacion al libro (depositos/retiros usan ticker EFECTIVO y precio 1).
+
+    tipo_cambio: USD/MXN del minuto de ejecucion, si se conoce (p. ej. la vela de la orden).
+    Se guarda junto con la operacion y de ahi en adelante fija el costo en MXN de esa compra,
+    sin importar el MXN=X que Yahoo reporte despues como "cierre del dia" (puede cambiar entre
+    consultas). Si se omite, el costo usa el historico de la fecha, como antes."""
     lado, moneda = lado.lower(), moneda.upper()
     if lado not in LADOS:
         raise ErrorPortafolio(f"lado debe ser uno de {LADOS}")
@@ -242,11 +252,14 @@ def registrar(ruta: str | Path, fecha, ticker: str, lado: str, cantidad: float, 
         raise ErrorPortafolio("ticker obligatorio")
     if cantidad <= 0 or precio <= 0 or comision < 0:
         raise ErrorPortafolio("cantidad y precio positivos; comision >= 0")
+    if tipo_cambio is not None and tipo_cambio <= 0:
+        raise ErrorPortafolio("tipo_cambio debe ser positivo")
     fecha = date.fromisoformat(str(fecha))
     fila = {"fecha": fecha.isoformat(), "ticker": ticker.upper() if lado in ("deposito", "retiro") else ticker,
             "lado": lado, "cantidad": repr(float(cantidad)), "precio": repr(float(precio)), "moneda": moneda,
             "comision": repr(float(comision)), "stop": "" if stop is None else repr(float(stop)),
-            "tesis_id": tesis_id, "estrategia": estrategia, "notas": notas}
+            "tesis_id": tesis_id, "estrategia": estrategia, "notas": notas,
+            "tipo_cambio": "" if tipo_cambio is None else repr(float(tipo_cambio))}
     ops = leer_operaciones(ruta)
     if lado == "venta":
         tenencia = sum(o["cantidad"] * (1 if o["lado"] == "compra" else -1) for o in ops
@@ -575,6 +588,8 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--moneda", default="MXN", choices=MONEDAS)
     r.add_argument("--comision", type=float, default=0.0)
     r.add_argument("--stop", type=float, default=None)
+    r.add_argument("--tipo-cambio", type=float, default=None,
+                   help="USD/MXN del minuto de ejecucion; fija el costo en MXN de esta compra")
     r.add_argument("--tesis-id", default="")
     r.add_argument("--estrategia", default="")
     r.add_argument("--notas", default="")
@@ -616,7 +631,8 @@ def main(argv: list[str] | None = None) -> int:
                         return 2
                     notas = (notas + " | FORZADA: " + "; ".join(val["violaciones"])).strip(" |")
             fila = registrar(args.operaciones, args.fecha, args.ticker, args.lado, args.cantidad, args.precio,
-                             args.moneda, args.comision, args.stop, args.tesis_id, args.estrategia, notas)
+                             args.moneda, args.comision, args.stop, args.tesis_id, args.estrategia, notas,
+                             args.tipo_cambio)
             print(f"Registrado: {fila['fecha']} {fila['lado']} {fila['cantidad']} {fila['ticker']} @ "
                   f"{fila['precio']} {fila['moneda']}")
             return 0
