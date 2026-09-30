@@ -57,3 +57,14 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 ## 2026-09-29 · bloque de trabajo continuo · Insumo para el comité del 2-oct (volatility drag)
 - **Qué hay:** `conocimiento/fichas/2026-09-29-volatility-drag.md`. Con σ = 17.5%, el L* por crecimiento es 2.68 si μ = 8.2% (100 años), pero cae a 1.31 si μ = 4% y a 0.66 si μ = 2%. UPRO real rindió 2.22 pp/año menos que la fórmula sin costos (2009-2026). Sin filtro, cualquier L ≥ 2 perdió 98% o más en 1929-1932.
 - **Qué decidí:** nada; es competencia del comité.
+
+## 2026-09-30 · sesión principal · Tipo de cambio: para el comité del 2-oct-2026
+- **Hecho:** el dólar subió de 16.87 (FIX 4-sep) a 18.071 (FIX 29-sep). El dueño reclamó que nadie le avisó y mandó un podcast (El Arte de Invertir, presentado por GBM). Expediente: `arena/investigacion/12-dolar-peso-2026-09.md`; prueba del carry: `laboratorio/auditorias/AC-08-carry-peso/` (la regla "diferencial ≤3% ⇒ −14%" no se sostiene: n=2 regímenes opuestos).
+- **Qué decidí hoy:** nada en la cartera. La orden de GBM se ejecuta como está (solo se actualizaron los límites con la fórmula). Se instaló la regla FX-1 de alerta cambiaria.
+- **Para el comité (propuestas del verificador):**
+  1. Pesos ociosos (≈1,139 en Smart Cash de GBM y 3,001.83 en Binance): quedarse en pesos; convertirlos subiría la exposición al dólar de 72% a ~92% sin ventaja histórica (22 episodios: mediana −1.3% a 85 días, p = 0.53). El destino de los 3,001.83 lo define el mandato cripto (cuánto BTC), no una apuesta cambiaria.
+  2. Declarar una banda de exposición al dólar de 60-80% del capital combinado (hoy 72%).
+  3. Reemplazar el disparador de un solo lado del abogado del diablo (USD/MXN < 16.90) por uno de revisión en dos sentidos: FIX < 17.10 o > 19.10 (rango intercuartil a 85 días tras episodios como este).
+  4. Si el dueño quiere expresar la tesis del podcast: cobertura parcial (≤50% de los ociosos) con invalidación explícita (FIX < 17.20).
+  5. Calibración: P0027 (USD/MXN > 17.90 el 9-oct, p = 0.40) va del lado "sí"; P0041 y P0042 registran el 18.50 / 19.50 del podcast con plazo al 31-dic.
+- **Estado:** abierto hasta el 2-oct.
