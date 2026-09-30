@@ -1,0 +1,13 @@
+{
+ "registros": {
+  "ALERTA:sube": {
+   "direccion": "sube",
+   "fecha": "2026-09-30",
+   "motivo": "Δ10 +5.45%",
+   "nivel": 2,
+   "sigma10": 0.015187,
+   "usdmxn": 18.08737
+  }
+ },
+ "regla": "FX-1"
+}

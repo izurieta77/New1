@@ -50,3 +50,7 @@ Desde el 4-sep el peso (+6.4%) se depreció más que sus pares (COP +5.0, CLP +4
 ## Etiqueta
 
 **descartada** como regla de pronóstico ("≤3% ⇒ ~14%"). El diferencial y la velocidad del FIX quedan como **variables de vigilancia** (ver la regla de alerta de tipo de cambio en `rutinas/supervision.md`).
+
+## Regla FX-1 (vigilancia derivada de esta auditoría)
+
+`herramientas/fx_alerta.py`, calibrada con `calibracion_fx1.py` (en esta carpeta). AVISO si |Δ1| ≥ máx(1%, 2σd) o |Δ10| ≥ máx(3%, 2σd√10); ALERTA si |Δ10| ≥ máx(4.5%, 3σd√10) o un episodio de ±6% en ≤15 días hábiles. Con el FIX: AVISO el 23-sep-2026 y ALERTA el 28-sep-2026; en 5 años 56 AVISOS (35 al alza) y 11 ALERTAS (7 episodios); con Yahoo 68 y 10. Revisión adversarial en dos rondas: aprobada.

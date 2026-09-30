@@ -9,7 +9,9 @@ Revisa, con el perfil arena_agresivo:
   bitacora/papel-binance/ y bitacora/real-binance/, con el perfil cripto_binance): cortacircuitos
   sobre el indice time-weighted (con un punto intradia), tope absoluto de perdida y stops por posicion;
 - filtro de apalancados: subyacente sobre su SMA200 y VIX < 25;
-- ordenes pendientes vencidas, latido mas reciente, bloqueos y dudas abiertas.
+- ordenes pendientes vencidas, latido mas reciente, bloqueos y dudas abiertas;
+- regla FX-1 (herramientas/fx_alerta.py): alerta cambiaria USD/MXN en las dos direcciones, con el efecto
+  en MXN por cuenta por cada 1% del dolar; el estado de supresion va en bitacora/supervision/estado-fx.json.
 Codigo de salida: 0 = OK, 1 = AVISO, 2 = ALERTA.
 """
 from __future__ import annotations
@@ -24,7 +26,7 @@ from typing import Callable
 
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from herramientas import datos, portafolio, riesgo
+from herramientas import datos, fx_alerta, portafolio, riesgo
 from herramientas.parametros import DIR_BITACORA, parametros_efectivos
 
 OK, AVISO, ALERTA = 0, 1, 2
@@ -40,6 +42,7 @@ RE_LATIDO = re.compile(r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}) UTC · ([^·]+?) ·")
 Precios = Callable[[list[str]], tuple[dict, list[str]]]
 Serie = Callable[[str], list[tuple[date, float]]]
 FabricaFX = Callable[[date], Callable[[date], float]]  # desde -> fx historico USD/MXN
+DatosFX = Callable[[], dict]  # -> fx_alerta.obtener(...): spot, referencia y fuentes
 
 
 def _base_ticker(t: str) -> str:
@@ -51,21 +54,26 @@ def sma(valores: list[float], n: int = SMA_DIAS) -> float | None:
 
 
 def revisar_libro(nombre: str, ruta_ops: Path, ruta_equity: Path, params: dict, precios: Precios,
-                  fx_actual: float | None, fabrica_fx: FabricaFX | None) -> tuple[list[tuple[int, str]], list[str]]:
-    """Cortacircuitos, tope absoluto y stops de un libro. Devuelve ([(nivel, texto)], tickers)."""
+                  fx_actual: float | None, fabrica_fx: FabricaFX | None
+                  ) -> tuple[list[tuple[int, str]], list[str], dict | None]:
+    """Cortacircuitos, tope absoluto y stops de un libro.
+
+    Devuelve ([(nivel, texto)], tickers, cuenta) con cuenta = {'usd_mxn': parte en USD valuada en MXN,
+    'lotes': fx_alerta.lotes_usd} para la regla FX-1, o None si no se pudo valuar."""
+    vacia = {"usd_mxn": 0.0, "lotes": []}
     if not ruta_ops.exists():
-        return [(OK, f"{nombre}: sin libro ({ruta_ops.name} no existe)")], []
+        return [(OK, f"{nombre}: sin libro ({ruta_ops.name} no existe)")], [], None
     ops = portafolio.leer_operaciones(ruta_ops)
     if not ops:
-        return [(OK, f"{nombre}: libro vacío")], []
+        return [(OK, f"{nombre}: libro vacío")], [], vacia
     fx_hist = None
     if any(o["moneda"] == "USD" for o in ops):
         if fabrica_fx is None:
-            return [(AVISO, f"{nombre}: hay operaciones en USD y no hay tipo de cambio histórico")], []
+            return [(AVISO, f"{nombre}: hay operaciones en USD y no hay tipo de cambio histórico")], [], None
         fx_hist = fabrica_fx(min(o["fecha"] for o in ops))
     libro = portafolio.construir_libro(ops, fx_hist)
     if not libro.posiciones:
-        return [(OK, f"{nombre}: sin posiciones; efectivo {libro.efectivo_mxn:,.0f} MXN")], []
+        return [(OK, f"{nombre}: sin posiciones; efectivo {libro.efectivo_mxn:,.0f} MXN")], [], vacia
     px, errores = precios(sorted(libro.posiciones))
     val = portafolio.valuar_libro(libro, px, fx_actual or 1.0)
     salida: list[tuple[int, str]] = [(AVISO, f"{nombre}: sin precio de {e}") for e in errores]
@@ -96,7 +104,9 @@ def revisar_libro(nombre: str, ruta_ops: Path, ruta_equity: Path, params: dict, 
         salida.append((nivel, f"{nombre}: drawdown {cc['drawdown_actual']:.1%}; "
                               f"{'ACTIVADO ' + format(cc['nivel_activado'], '.0%') + ' -> ' + cc['accion'] if nivel else 'sin cortacircuitos'}"))
     salida.append((OK, f"{nombre}: equity {val['equity_mxn']:,.0f} MXN ({len(libro.posiciones)} posiciones)"))
-    return salida, list(libro.posiciones)
+    cuenta = ({"usd_mxn": fx_alerta.parte_usd(val["filas"]), "lotes": fx_alerta.lotes_usd(ops, val["filas"])}
+              if fx_actual else None)
+    return salida, list(libro.posiciones), cuenta
 
 
 def revisar_filtro_apalancados(tickers: list[str], serie: Serie, vix: float | None) -> list[tuple[int, str]]:
@@ -170,18 +180,42 @@ def libros(bitacora: Path, params: dict, params_cripto: dict | None) -> list[tup
     return salida
 
 
+def revisar_fx(datos_fx: DatosFX | None, expos: dict[str, float | None], ahora: datetime,
+               bitacora: Path, lotes: dict[str, list | None] | None = None) -> list[tuple[int, str]]:
+    """Regla FX-1; si dispara, registra la alerta en bitacora/supervision/estado-fx.json (supresion).
+
+    Siempre devuelve una linea FX-1 y nunca lanza: una falla de FX-1 no debe tumbar los stops, el tope
+    ni los cortacircuitos. La fecha es la de la Ciudad de Mexico."""
+    if datos_fx is None:
+        return [(OK, "FX-1 no evaluada (--sin-red: no se consultó el tipo de cambio); "
+                     "corre python3 herramientas/fx_alerta.py")]
+    try:
+        return fx_alerta.revisar(datos_fx(), expos, fx_alerta.fecha_local(ahora),
+                                 bitacora / "supervision" / "estado-fx.json", lotes=lotes)
+    except fx_alerta.ErrorFX as e:
+        return [(AVISO, f"FX-1 sin datos de tipo de cambio: {e}")]
+    except Exception as e:  # noqa: BLE001
+        return [(AVISO, f"FX-1 error ({type(e).__name__}: {e}); corre python3 herramientas/fx_alerta.py")]
+
+
 def supervisar(ahora: datetime, params: dict, precios: Precios | None, serie: Serie | None,
                vix: float | None, fx_actual: float | None, fabrica_fx: FabricaFX | None = None,
-               bitacora: Path = DIR_BITACORA, params_cripto: dict | None = None) -> list[tuple[int, str]]:
+               bitacora: Path = DIR_BITACORA, params_cripto: dict | None = None,
+               datos_fx: DatosFX | None = None) -> list[tuple[int, str]]:
     salida: list[tuple[int, str]] = []
     tickers: list[str] = []
+    expos: dict[str, float | None] = {}
+    lotes: dict[str, list | None] = {}
     if precios is not None:
         for nombre, ops, eq, prm in libros(bitacora, params, params_cripto):
-            lineas, tks = revisar_libro(nombre, ops, eq, prm, precios, fx_actual, fabrica_fx)
+            lineas, tks, cuenta = revisar_libro(nombre, ops, eq, prm, precios, fx_actual, fabrica_fx)
             salida += lineas
             tickers += tks
+            expos[nombre] = None if cuenta is None else cuenta["usd_mxn"]
+            lotes[nombre] = None if cuenta is None else cuenta["lotes"]
         if serie is not None:
             salida += revisar_filtro_apalancados(tickers, serie, vix)
+    salida += revisar_fx(datos_fx, expos, ahora, bitacora, lotes)
     salida += revisar_pendientes(bitacora / "ordenes-pendientes.csv", ahora.date())
     salida += revisar_latidos(bitacora / "estado-rutinas.md", ahora)
     for archivo, etiqueta in (("bloqueos.md", "bloqueos abiertos"), ("decisiones-pendientes.md", "dudas abiertas")):
@@ -209,7 +243,8 @@ def main(argv: list[str] | None = None) -> int:
             print(f"AVISO · datos de mercado no disponibles: {e}")
     salida = supervisar(ahora, params, precios, serie, vix, fx,
                         None if args.sin_red else portafolio.proveedor_fx_yahoo,
-                        params_cripto=parametros_efectivos("cripto_binance"))
+                        params_cripto=parametros_efectivos("cripto_binance"),
+                        datos_fx=None if args.sin_red else (lambda: fx_alerta.obtener(ahora)))
     peor = max([n for n, _ in salida], default=OK)
     print(f"{ahora:%Y-%m-%d %H:%M} UTC · supervisión · {NOMBRE[peor]}")
     for nivel, texto in sorted(salida, key=lambda x: -x[0]):
