@@ -306,7 +306,8 @@
         ],
         "fuente": "Gestor de riesgo del comité cripto, 25-sep-2026: el menor de tres métodos (stop, volatilidad objetivo, Kelly con tope 0.25); manda Kelly.",
         "mandato_dueno_25_sep": "Modo C: el dueño autoriza hasta 100% en BTC con filtro de tendencia (ver meta_temporada_dueno). La exposición operativa la fija el comité del 2-oct; hasta entonces rigen los tramos de arriba (40% inicial, 65% máximo).",
-        "nota_29_sep": "Recalculado a capital de 5,000 MXN (misma proporción 40% → 65%)."
+        "nota_29_sep": "Recalculado a capital de 5,000 MXN (misma proporción 40% → 65%).",
+        "orden_dueno_29_sep": "El dueño ordenó la noche del 29-sep-2026 invertir los 3,000 MXN restantes en BTC (exposición 100%) al saber que un rival invirtió 100% y otro 90%. Override del dueño, sin dictamen del gestor de riesgo: riesgo por operación 10.3% (tope 10%), rebasa el máximo aprobado de 65% y adelanta la decisión del comité del 2-oct. Boleta: bitacora/boletas/2026-09-29-binance-3000-dueno.md. Si se ejecuta, los tramos 2 y 3 quedan sin efecto; el comité del 2-oct revisa la exposición con el mandato modo C. Filtro de tendencia y cortacircuitos siguen vigentes."
       },
       "filtro_tendencia": {
         "dato": "Cierre diario de BTC/USDT en Binance (vela que cierra a las 00:00 UTC; data-api.binance.vision klines interval=1d)",
