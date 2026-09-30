@@ -15,6 +15,7 @@
 >
 > **Examen:** [banco-g5-mercado](examen/banco-g5-mercado.md)
 > - **Adenda (29-sep-2026):** [ficha del 29-sep · BTC frente a Nasdaq, USD/MXN y tasa real](fichas/2026-09-29-btc-nasdaq-usdmxn-beta.md), ver §9.
+> - **Adenda (30-sep-2026):** [ficha del 30-sep · funding, base e interés abierto en vivo](fichas/2026-09-30-microestructura-funding-basis-oi.md), ver §10.
 
 ## 0. En una página
 
@@ -316,3 +317,14 @@ Cálculo propio (ficha completa: [fichas/2026-09-29-btc-nasdaq-usdmxn-beta.md](f
 - **Últimos 30 días:** beta = **1.580**, muy por encima de la mediana de 2 años: régimen de "beta alta" reciente, aunque la correlación (0.454) no es excepcional.
 - **Tasa real (FRED DFII10):** subió de 2.18% (19-may) a 2.83% (25-sep-2026). Correlación de su cambio diario con el retorno diario de BTC: ≈0 en la muestra completa (−0.005), pero −0.232 en los últimos 90 días — el canal "tasa real más alta presiona a BTC" tiene el signo correcto hoy, pero no es estable en 2 años de historia.
 - **Conclusión aplicada:** confirma la idea #6 de este capítulo (la correlación de BTC cambia de régimen) con cálculo propio y con la versión en MXN que faltaba, y añade que el acoplamiento con el Nasdaq de hoy **no** está en un extremo histórico pese a la narrativa de prensa. No cambia el filtro de tendencia de la cuenta (solo mira el precio de BTC). **Grado B** para el cálculo, **C** para su uso predictivo (mismo patrón de inestabilidad que el resto del capítulo).
+
+## 10. Adenda (30-sep-2026): funding, base e interés abierto en vivo, con la API de futuros de Binance geo-restringida
+
+Cálculo propio (ficha completa: [fichas/2026-09-30-microestructura-funding-basis-oi.md](fichas/2026-09-30-microestructura-funding-basis-oi.md)), motivado por el tema 1 de "temas que no cubren los 35 recursos" (`00-plan-de-estudio.md`): *funding, base, interés abierto, cascadas de liquidación y profundidad de pares MXN*. La cascada de liquidaciones del 10-oct-2025 ya está documentada en el capítulo `03-defi-mecanica-riesgos-y-academia.md` §4; aquí solo se completa la parte de derivados en vivo que faltaba.
+
+- **`fapi.binance.com` confirmado geo-restringido hoy** (los tres endpoints de futuros probados devuelven "Service unavailable from a restricted location"); `api.bybit.com` también bloqueado por CDN. Fuentes usadas en su lugar, públicas y sin clave: **Deribit** y **OKX** (perpetuos BTC), más `data-api.binance.vision` para el spot y la profundidad de BTC/MXN.
+- **Funding del perpetuo BTC:** Deribit +13.2%/año instantáneo (media de 7 días +0.95%/año; de 30 días +3.94%/año, con 13.2% de periodos negativos); OKX +5.27%/año instantáneo. Positivo pero moderado en ambos: no hay señal de apalancamiento largo extremo como el que precedió al 10-oct-2025 (funding positivo persistente e interés abierto récord, según el capítulo 03).
+- **Base del futuro a 85.7 días de Deribit:** +5.17%/año contra el índice de Deribit y +4.97%/año contra el spot de Binance (difieren apenas 0.05% entre sí). Es un carry ligeramente por encima de la tasa libre de riesgo en dólares, sin señal de euforia (+20-40%/año) ni de pánico (base negativa).
+- **Open interest:** Deribit US$793.1 M (perpetuo) + US$312.6 M (futuro dic-2026); OKX US$2,329.2 M (27,686 BTC). Cobertura parcial (falta Binance y Bybit, geo-restringidos; CoinGlass, el agregador estándar, pide clave de pago), así que sirve para descartar una anomalía aislada, no para fijar un umbral absoluto de "récord".
+- **Profundidad de BTC/MXN en Binance:** notional de compra a ±0.5% subió de 18,786 MXN (25-sep) a 37,274 MXN (30-sep), con spread de 0.0275% (vs. 0.19%). Mejora, sin cambiar la regla de usar USDT/MXN como ruta de salida si el libro BTC/MXN se vacía.
+- **Grado B** para los números, **C** para la lectura de "sin señal de estrés" (cobertura parcial de exchanges, un solo corte de tiempo). No cambia ninguna decisión de la cuenta `arena-claude-binance`.
