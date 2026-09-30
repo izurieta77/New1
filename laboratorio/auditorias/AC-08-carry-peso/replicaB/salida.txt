@@ -1,0 +1,144 @@
+====================================================================================================
+1. SERIE CETES28 - DTB3 (semanal)
+obs semanales desde 2006: 1083; primera 2006-01-05, última 2026-10-01
+HOY: CETES28 6.01 (2026-10-01) - DTB3 4.10 (último dato FRED 2026-09-28) = 1.91
+Últimas 12 semanas:
+  2026-07-16  CETES  6.20  TB3  3.70  dif  2.50  FIX 17.4418
+  2026-07-23  CETES  6.18  TB3  3.81  dif  2.37  FIX 17.5130
+  2026-07-30  CETES  6.20  TB3  3.69  dif  2.51  FIX 17.3562
+  2026-08-06  CETES  6.17  TB3  3.74  dif  2.43  FIX 17.2195
+  2026-08-13  CETES  6.40  TB3  3.71  dif  2.69  FIX 17.0530
+  2026-08-20  CETES  6.15  TB3  3.71  dif  2.44  FIX 16.9583
+  2026-08-27  CETES  6.13  TB3  3.69  dif  2.44  FIX 16.9712
+  2026-09-03  CETES  6.49  TB3  3.75  dif  2.74  FIX 16.9560
+  2026-09-10  CETES  6.25  TB3  3.86  dif  2.39  FIX 16.9722
+  2026-09-17  CETES  6.25  TB3  3.97  dif  2.28  FIX 17.1872
+  2026-09-24  CETES  6.15  TB3  4.08  dif  2.07  FIX 17.6425
+  2026-10-01  CETES  6.01  TB3  4.10  dif  1.91  FIX 18.0710
+Promedios anuales del diferencial y % de semanas <=3:
+  2005: media  6.05  min  4.10  max  7.02  %<=3   0.0  n=52
+  2006: media  2.46  min  2.05  max  3.88  %<=3  86.5  n=52
+  2007: media  2.87  min  1.98  max  4.63  %<=3  61.5  n=52
+  2008: media  6.35  min  4.26  max  8.03  %<=3   0.0  n=53
+  2009: media  5.25  min  4.31  max  7.82  %<=3   0.0  n=52
+  2010: media  4.27  min  3.71  max  4.51  %<=3   0.0  n=52
+  2011: media  4.19  min  3.85  max  4.39  %<=3   0.0  n=52
+  2012: media  4.15  min  3.83  max  4.37  %<=3   0.0  n=52
+  2013: media  3.70  min  3.11  max  4.18  %<=3   0.0  n=52
+  2014: media  2.97  min  2.70  max  3.27  %<=3  56.6  n=53
+  2015: media  2.93  min  2.40  max  3.17  %<=3  80.8  n=52
+  2016: media  3.86  min  2.80  max  5.23  %<=3  13.5  n=52
+  2017: media  5.76  min  5.27  max  5.98  %<=3   0.0  n=52
+  2018: media  5.69  min  5.38  max  5.94  %<=3   0.0  n=52
+  2019: media  5.79  min  5.26  max  6.18  %<=3   0.0  n=52
+  2020: media  4.96  min  4.04  max  7.11  %<=3   0.0  n=53
+  2021: media  4.39  min  3.96  max  5.44  %<=3   0.0  n=52
+  2022: media  5.63  min  4.89  max  6.06  %<=3   0.0  n=52
+  2023: media  6.03  min  5.48  max  6.73  %<=3   0.0  n=52
+  2024: media  5.74  min  5.50  max  6.08  %<=3   0.0  n=52
+  2025: media  4.07  min  3.19  max  5.82  %<=3   0.0  n=53
+  2026: media  2.83  min  1.91  max  3.55  %<=3  66.7  n=39
+Máximo del diferencial en 2022-2026: (6.73, datetime.date(2023, 3, 16))
+Máximo del diferencial en 2024-2026: (6.08, datetime.date(2024, 1, 18))
+====================================================================================================
+2-3. EPISODIOS
+
+--- Umbral 2.5: cruces hacia abajo viniendo de arriba (separación >=12m), desde 2006
+  2006-04-27 dif 2.60->2.37 FIX 11.1135 | 1m +0.2 3m -1.9 6m -3.4 12m -1.6 | max12 +3.3 (2006-06-20, 11.4809) | Fed en 5.25% (fin del ciclo alza 2004-06); Banxico 7.0-7.25%; peso estable ~10.8-11.2
+  2007-05-24 dif 2.55->2.47 FIX 10.8354 | 1m -0.3 3m +2.0 6m +1.3 12m -4.0 | max12 +4.0 (2007-08-16, 11.2676) | Fed en 5.25% (fin del ciclo alza 2004-06); Banxico 7.0-7.25%; peso estable ~10.8-11.2
+  2015-01-08 dif 2.70->2.40 FIX 14.6274 | 1m +1.9 3m +2.9 6m +7.9 12m +22.6 | max12 +22.6 (2016-01-08, 17.9283) | Banxico en mínimo 3.0% (2014-15), Fed en 0-0.25; taper tantrum, desplome petróleo 2014-15, alza Fed dic-2015
+  2026-07-16 dif 2.60->2.50 FIX 17.4418 | 1m -2.4 3m   n/d 6m   n/d 12m   n/d | max12   n/d (None, None) [parcial: max +3.6% al 2026-09-29 (18.0710)] | ciclo de recortes Banxico hasta 6.50%; Fed 3.75-4.00%
+--- Umbral 2.5: estancias (tramos <=umbral, se unen huecos <=4 semanas)
+  2006-04-27 -> 2007-05-24  (55 sem <=u de 57) FIX 11.1135->10.8354 (-2.5% en la estancia) | desde inicio: 6m -3.4 12m -1.6 max12 +3.3 | max en estancia +3.3
+  2007-07-05 -> 2007-08-02  (5 sem <=u de 5) FIX 10.7936->10.9402 (+1.4% en la estancia) | desde inicio: 6m +0.8 12m -4.2 max12 +4.4 | max en estancia +1.9
+  2015-01-08 -> 2015-01-08  (1 sem <=u de 1) FIX 14.6274->14.6274 (+0.0% en la estancia) | desde inicio: 6m +7.9 12m +22.6 max12 +22.6 | max en estancia -0.3
+  2026-07-16 -> 2026-10-01  (9 sem <=u de 12) FIX 17.4418->18.0710 (+3.6% en la estancia) | desde inicio: 6m   n/d 12m   n/d max12   n/d | max en estancia +3.6
+
+--- Umbral 3.0: cruces hacia abajo viniendo de arriba (separación >=12m), desde 2006
+  2006-02-23 dif 3.11->3.00 FIX 10.4885 | 1m +3.5 3m +6.9 6m +4.1 12m +5.3 | max12 +9.5 (2006-06-20, 11.4809) | Fed en 5.25% (fin del ciclo alza 2004-06); Banxico 7.0-7.25%; peso estable ~10.8-11.2
+  2014-06-12 dif 3.25->2.88 FIX 12.9815 | 1m +0.0 3m +1.8 6m +13.0 12m +18.7 | max12 +20.9 (2015-06-05, 15.6958) | Banxico en mínimo 3.0% (2014-15), Fed en 0-0.25; taper tantrum, desplome petróleo 2014-15, alza Fed dic-2015
+  2015-10-08 dif 3.04->2.99 FIX 16.5464 | 1m +1.8 3m +6.7 6m +8.1 12m +16.6 | max12 +19.9 (2016-09-21, 19.8394) | Banxico en mínimo 3.0% (2014-15), Fed en 0-0.25; taper tantrum, desplome petróleo 2014-15, alza Fed dic-2015
+  2026-04-09 dif 3.03->3.00 FIX 17.3593 | 1m -0.9 3m +1.0 6m   n/d 12m   n/d | max12   n/d (None, None) [parcial: max +4.1% al 2026-09-29 (18.0710)] | ciclo de recortes Banxico hasta 6.50%; Fed 3.75-4.00%
+--- Umbral 3.0: estancias (tramos <=umbral, se unen huecos <=4 semanas)
+  2006-02-23 -> 2007-08-09  (77 sem <=u de 77) FIX 10.4885->10.9832 (+4.7% en la estancia) | desde inicio: 6m +4.1 12m +5.3 max12 +9.5 | max en estancia +9.5
+  2014-06-12 -> 2015-08-20  (60 sem <=u de 63) FIX 12.9815->16.7182 (+28.8% en la estancia) | desde inicio: 6m +13.0 12m +18.7 max12 +20.9 | max en estancia +30.3
+  2015-10-08 -> 2016-02-18  (19 sem <=u de 20) FIX 16.5464->18.1439 (+9.7% en la estancia) | desde inicio: 6m +8.1 12m +16.6 max12 +19.9 | max en estancia +15.9
+  2026-04-09 -> 2026-10-01  (26 sem <=u de 26) FIX 17.3593->18.0710 (+4.1% en la estancia) | desde inicio: 6m   n/d 12m   n/d max12   n/d | max en estancia +4.1
+
+--- Umbral 3.5: cruces hacia abajo viniendo de arriba (separación >=12m), desde 2006
+  2006-01-26 dif 3.64->3.39 FIX 10.5039 | 1m -0.3 3m +5.8 6m +3.7 12m +5.1 | max12 +9.3 (2006-06-20, 11.4809) | Fed en 5.25% (fin del ciclo alza 2004-06); Banxico 7.0-7.25%; peso estable ~10.8-11.2
+  2007-08-23 dif 3.52->3.41 FIX 11.0489 | 1m -0.9 3m -0.6 6m -2.3 12m -8.6 | max12 +0.9 (2007-09-17, 11.1471) | inicio crisis subprime; Fed recorta rápido; carry se ensancha
+  2013-09-26 dif 3.55->3.50 FIX 13.0119 | 1m -1.1 3m +0.3 6m +0.6 12m +3.4 | max12 +3.7 (2014-01-24, 13.493) | Banxico en mínimo 3.0% (2014-15), Fed en 0-0.25; taper tantrum, desplome petróleo 2014-15, alza Fed dic-2015
+  2016-03-10 dif 3.61->3.47 FIX 17.8601 | 1m -0.7 3m +2.3 6m +3.8 12m +9.9 | max12 +22.7 (2017-01-11, 21.9076) | Banxico sube desde 3.25%; Brexit, elección Trump (nov-2016)
+  2025-07-03 dif 3.79->3.44 FIX 18.6652 | 1m +1.3 3m -1.0 6m -3.6 12m -6.4 | max12 +1.3 (2025-08-01, 18.916) | ciclo de recortes Banxico hasta 6.50%; Fed 3.75-4.00%
+--- Umbral 3.5: estancias (tramos <=umbral, se unen huecos <=4 semanas)
+  2006-01-26 -> 2007-10-25  (88 sem <=u de 92) FIX 10.5039->10.8291 (+3.1% en la estancia) | desde inicio: 6m +3.7 12m +5.1 max12 +9.3 | max en estancia +9.3
+  2013-09-26 -> 2016-05-12  (130 sem <=u de 138) FIX 13.0119->17.9915 (+38.3% en la estancia) | desde inicio: 6m +0.6 12m +3.4 max12 +3.7 | max en estancia +47.4
+  2016-06-23 -> 2016-06-23  (1 sem <=u de 1) FIX 18.3207->18.3207 (+0.0% en la estancia) | desde inicio: 6m +13.1 12m -1.8 max12 +19.6 | max en estancia +3.0
+  2025-07-03 -> 2026-10-01  (58 sem <=u de 66) FIX 18.6652->18.0710 (-3.2% en la estancia) | desde inicio: 6m -3.6 12m -6.4 max12 +1.3 | max en estancia +1.3
+====================================================================================================
+4. TASA BASE INCONDICIONAL (todas las semanas 2006+ con ventana completa)
+  1m    todas      : n=1078 media  +0.2 mediana  -0.2 p10  -3.3 p90  +4.1 %>0   47 %>=10    1 %>=14    1
+  1m    dif<=2.5   : n=  66 media  +0.0 mediana  +0.1 p10  -2.3 p90  +2.1 %>0   50 %>=10    0 %>=14    0
+  1m    dif> 2.5   : n=1012 media  +0.2 mediana  -0.3 p10  -3.3 p90  +4.2 %>0   46 %>=10    1 %>=14    1
+  1m    dif<=3.0   : n= 177 media  +0.9 mediana  +0.9 p10  -1.7 p90  +4.1 %>0   63 %>=10    0 %>=14    0
+  1m    dif> 3.0   : n= 901 media  +0.0 mediana  -0.4 p10  -3.4 p90  +4.1 %>0   43 %>=10    1 %>=14    1
+  1m    dif<=3.5   : n= 272 media  +0.5 mediana  +0.4 p10  -2.0 p90  +3.6 %>0   56 %>=10    0 %>=14    0
+  1m    dif> 3.5   : n= 806 media  +0.1 mediana  -0.4 p10  -3.6 p90  +4.4 %>0   44 %>=10    2 %>=14    1
+  3m    todas      : n=1069 media  +0.8 mediana  -0.5 p10  -5.4 p90  +8.1 %>0   46 %>=10    7 %>=14    3
+  3m    dif<=2.5   : n=  61 media  -0.6 mediana  -0.7 p10  -3.1 p90  +1.8 %>0   44 %>=10    0 %>=14    0
+  3m    dif> 2.5   : n=1008 media  +0.9 mediana  -0.5 p10  -5.5 p90  +8.5 %>0   46 %>=10    7 %>=14    4
+  3m    dif<=3.0   : n= 168 media  +2.4 mediana  +1.5 p10  -2.2 p90  +8.9 %>0   69 %>=10    4 %>=14    1
+  3m    dif> 3.0   : n= 901 media  +0.5 mediana  -1.0 p10  -5.7 p90  +7.8 %>0   41 %>=10    7 %>=14    4
+  3m    dif<=3.5   : n= 263 media  +1.5 mediana  +0.9 p10  -2.5 p90  +7.5 %>0   60 %>=10    3 %>=14    0
+  3m    dif> 3.5   : n= 806 media  +0.6 mediana  -1.1 p10  -5.9 p90  +8.5 %>0   41 %>=10    8 %>=14    4
+  6m    todas      : n=1056 media  +1.5 mediana  -0.0 p10  -7.5 p90 +13.0 %>0   50 %>=10   15 %>=14    9
+  6m    dif<=2.5   : n=  61 media  -0.4 mediana  -0.4 p10  -2.5 p90  +1.8 %>0   43 %>=10    0 %>=14    0
+  6m    dif> 2.5   : n= 995 media  +1.6 mediana  +0.0 p10  -7.7 p90 +13.3 %>0   50 %>=10   16 %>=14    9
+  6m    dif<=3.0   : n= 156 media  +4.9 mediana  +3.1 p10  -1.8 p90 +12.8 %>0   72 %>=10   30 %>=14    6
+  6m    dif> 3.0   : n= 900 media  +0.9 mediana  -0.7 p10  -8.0 p90 +13.2 %>0   46 %>=10   12 %>=14    9
+  6m    dif<=3.5   : n= 250 media  +3.1 mediana  +1.1 p10  -3.5 p90 +12.5 %>0   60 %>=10   20 %>=14    4
+  6m    dif> 3.5   : n= 806 media  +1.0 mediana  -0.6 p10  -8.2 p90 +14.3 %>0   47 %>=10   13 %>=14   11
+  12m   todas      : n=1030 media  +3.0 mediana  +0.5 p10 -10.2 p90 +20.5 %>0   52 %>=10   25 %>=14   20
+  12m   dif<=2.5   : n=  61 media  -1.5 mediana  -1.5 p10  -4.9 p90  +0.9 %>0   26 %>=10    2 %>=14    2
+  12m   dif> 2.5   : n= 969 media  +3.3 mediana  +1.2 p10 -10.5 p90 +20.9 %>0   54 %>=10   27 %>=14   21
+  12m   dif<=3.0   : n= 156 media  +9.2 mediana  +7.8 p10  -4.2 p90 +23.5 %>0   64 %>=10   49 %>=14   45
+  12m   dif> 3.0   : n= 874 media  +1.9 mediana  +0.0 p10 -10.7 p90 +18.2 %>0   50 %>=10   21 %>=14   15
+  12m   dif<=3.5   : n= 231 media  +8.6 mediana  +9.6 p10  -4.9 p90 +22.7 %>0   68 %>=10   49 %>=14   39
+  12m   dif> 3.5   : n= 799 media  +1.4 mediana  -0.6 p10 -10.8 p90 +18.8 %>0   48 %>=10   18 %>=14   14
+  max12 todas      : n=1030 media +11.8 mediana  +8.1 p10  +0.9 p90 +27.3 %>0   97 %>=10   43 %>=14   34
+  max12 dif<=2.5   : n=  61 media  +3.1 mediana  +2.8 p10  +1.1 p90  +4.7 %>0   97 %>=10    2 %>=14    2
+  max12 dif> 2.5   : n= 969 media +12.3 mediana  +8.9 p10  +0.9 p90 +27.8 %>0   97 %>=10   45 %>=14   36
+  max12 dif<=3.0   : n= 156 media +13.6 mediana +14.5 p10  +2.3 p90 +26.9 %>0   99 %>=10   51 %>=14   51
+  max12 dif> 3.0   : n= 874 media +11.5 mediana  +7.9 p10  +0.8 p90 +27.7 %>0   96 %>=10   41 %>=14   31
+  max12 dif<=3.5   : n= 231 media +13.0 mediana +13.4 p10  +1.4 p90 +26.0 %>0   98 %>=10   53 %>=14   47
+  max12 dif> 3.5   : n= 799 media +11.5 mediana  +7.5 p10  +0.9 p90 +28.4 %>0   96 %>=10   40 %>=14   30
+====================================================================================================
+4b. REGRESIÓN: cambio % USD/MXN a h vs nivel del diferencial en t (semanal, 2006+), HAC Newey-West
+  6m    2006-2026                  lags= 26: y = +1.16 +0.08*dif | t_NW(b)=+0.08 (t_OLS +0.36) R2=0.000 n=1056
+  6m    2006-2026                  lags= 39: y = +1.16 +0.08*dif | t_NW(b)=+0.08 (t_OLS +0.36) R2=0.000 n=1056
+  6m    2009-2026 (sin 2006-08)    lags= 26: y = +7.64 -1.44*dif | t_NW(b)=-1.55 (t_OLS -6.17) R2=0.041 n=899
+  6m    2009-2026 (sin 2006-08)    lags= 39: y = +7.64 -1.44*dif | t_NW(b)=-1.44 (t_OLS -6.17) R2=0.041 n=899
+  6m    dummy dif<=3 2006-2026 lags=26: y = +0.92 +3.99*1[dif<=3] | t_NW=+1.67 R2=0.025 n=1056
+  12m   2006-2026                  lags= 52: y = +7.80 -1.04*dif | t_NW(b)=-0.67 (t_OLS -3.70) R2=0.013 n=1030
+  12m   2006-2026                  lags= 78: y = +7.80 -1.04*dif | t_NW(b)=-0.62 (t_OLS -3.70) R2=0.013 n=1030
+  12m   2009-2026 (sin 2006-08)    lags= 52: y = +19.27 -3.66*dif | t_NW(b)=-2.07 (t_OLS -11.67) R2=0.135 n=873
+  12m   2009-2026 (sin 2006-08)    lags= 78: y = +19.27 -3.66*dif | t_NW(b)=-1.94 (t_OLS -11.67) R2=0.135 n=873
+  12m   dummy dif<=3 2006-2026 lags=52: y = +1.93 +7.30*1[dif<=3] | t_NW=+1.27 R2=0.051 n=1030
+  max12 2006-2026                  lags= 52: y = +6.91 +1.07*dif | t_NW(b)=+0.68 (t_OLS +3.95) R2=0.015 n=1030
+  max12 2006-2026                  lags= 78: y = +6.91 +1.07*dif | t_NW(b)=+0.62 (t_OLS +3.95) R2=0.015 n=1030
+  max12 2009-2026 (sin 2006-08)    lags= 52: y = +19.07 -1.74*dif | t_NW(b)=-1.06 (t_OLS -6.10) R2=0.041 n=873
+  max12 2009-2026 (sin 2006-08)    lags= 78: y = +19.07 -1.74*dif | t_NW(b)=-0.99 (t_OLS -6.10) R2=0.041 n=873
+  max12 dummy dif<=3 2006-2026 lags=52: y = +11.48 +2.13*1[dif<=3] | t_NW=+0.39 R2=0.005 n=1030
+
+Predicción del modelo lineal (2006-2026) para dif de hoy:
+  6m: +1.3% con dif=1.91
+  12m: +5.8% con dif=1.91
+====================================================================================================
+Cruces a la baja de 3.0 SIN filtro de separación (para ver ruido):
+  2006-02-23 3.11->3.00
+  2014-06-12 3.25->2.88
+  2015-04-01 3.02->2.99
+  2015-10-08 3.04->2.99
+  2015-10-29 3.04->2.98
+  2026-04-09 3.03->3.00

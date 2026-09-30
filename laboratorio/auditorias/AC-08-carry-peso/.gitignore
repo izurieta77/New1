@@ -1,0 +1,4 @@
+# Datos descargados (se regeneran con fetch*.py / fred.py); no se versionan
+*.csv
+*.json
+__pycache__/

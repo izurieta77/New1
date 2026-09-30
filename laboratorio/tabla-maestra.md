@@ -50,6 +50,7 @@ La etiqueta responde a una sola pregunta: **¿hay una ventaja que el sistema pue
 | AC-05 | Auditoría ciega: peso y acciones de EUA (R08) | Concordante en estado ("No replicado") y en conclusión con segunda fuente | descartada (la cobertura como estrategia) |
 | AC-06 | Auditoría ciega: volatilidad gestionada (R05) | Concordante en estado y conclusión con segunda fuente; α del artículo más débil en S&P (4.21 contra 4.88) y concentrado en 1928-37 | descartada |
 | AC-07 | Auditoría ciega: apalancados con filtro de 200 días (R06) | Concordante ("Solo protección"); el efecto del rezago no es robusto; la serie de la señal importa (SPY contra ^GSPC) | oportunidad investigable |
+| AC-08 | Diferencial Banxico–Fed ≤3% y depreciación del peso (tesis de un podcast, 30-sep-2026) | No sostenida: n=2 regímenes con resultados opuestos (2006-07 +5%, 2014-16 +19-22%); no significativa; queda como variable de vigilancia | descartada |
 
 **Conteo por etiqueta:**
 
@@ -57,7 +58,7 @@ La etiqueta responde a una sola pregunta: **¿hay una ventaja que el sistema pue
 |---|---|
 | ventaja demostrada | 0 |
 | oportunidad investigable | 6 (R01, R06, V02, V04, AC-03, AC-07) |
-| descartada | 13 (R02, R04, R05, R07, R08, R09, V01, V03, AC-01, AC-02, AC-04, AC-05, AC-06) |
+| descartada | 14 (R02, R04, R05, R07, R08, R09, V01, V03, AC-01, AC-02, AC-04, AC-05, AC-06, AC-08) |
 | en curso | 1 (R03) |
 | no aplica | 1 (V05) |
 
@@ -109,6 +110,7 @@ La etiqueta responde a una sola pregunta: **¿hay una ventaja que el sistema pue
 | R07 | No | Parcial | No | No | No |
 | R08 / AC-05 | No (índice) | Sí (MXN) | **Sí** (AC-05 concordante) | Apoya no cubrir | — |
 | R09 | No | Parcial | Parcial (`^GSPC`) | No | No |
+| AC-08 | No aplica (tipo de cambio, no instrumento) | En MXN (FIX) | Sí: dos medidas y dos códigos independientes, más verificador (concordantes) | No (n=2 regímenes; p = 0.07-0.26) | — |
 | R03 | en curso | en curso | en curso | en curso | en curso |
 | V04 | ETF SPY (listado en SIC no verificado aquí) | Sí (MXN, costos GBM) | No (mismos datos; código independiente) | Solo control de caídas | No |
 | V05 | No aplica | No aplica | No aplica | No aplica | No aplica |
