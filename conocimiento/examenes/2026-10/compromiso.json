@@ -1,0 +1,38 @@
+{
+ "examen": "2026-10",
+ "fecha_utc": "2026-10-01",
+ "preguntas_sha256": "ef2c2729a872d2714ca7bb4942201567ea896d7c593f4eda30f4e7e7b9d3f6d3",
+ "clave_json_sha256": "ce5ce789c23eeca6474467c1d7273c8a08bc649ff365d4d5a92432c8c581d014",
+ "clave_enc_sha256": "4e2d3a6b4ec0fff7668ecbc4b151806308228754571818aa1902de58ab2e2918",
+ "huella_por_pregunta_sha256_utf8": {
+  "1": "2a440dfe8a000137dc9c69e1d307cd28216c6a78dabad3f15b26d43c53235859",
+  "2": "4eb7ab52868e40b150e1740144e6440800fb854865d92d2b74e422032c9bd050",
+  "3": "3acb59ba0d688f64ca32b25fe08bae8ae2b5064065bb1f4df944b8748c38c8ed",
+  "4": "e3ad370ca0e0f515635b7609cc8826fe664b9b08e7328b182c98b0ea65e5a8ee",
+  "5": "79e2c5e2634de8c61a19c6bfa925fe8f32d212cb9a4a5e2e622b39860d1bfaad",
+  "6": "cd08bcbdb1b7bd48d6134b2bd3dd9ef656dfc94f89c65e8a9d6aaae3ddbd7249",
+  "7": "ae045d5a0dddd96cacf5453e03cf8d3591d56b362053666d379dc8832ad06d30",
+  "8": "0db59887bed088ff00f8c54a17bce43c69356a575f69bd49caaa0d5db6c1a493",
+  "9": "f9353b60c6e0e599025add89ff1a5d0c0dd9b67df5d511927791b9d5b1bfbf8a",
+  "10": "60133d590f54289a1590d1ba6acc0fa2232fb219d4cf58574405ebe8c5a729bf",
+  "11": "aa26d34e0682954bec1947d0798a29c1504439e63f57649881911027cb90549c",
+  "12": "816594e3e8b441f2641d0a687b49d2c8fb72b761b95af77ebdf8ea0cfeba2710",
+  "13": "94057309d8710e8d0d8595c7b72cf9ff9a9fc15cdde58ed2aaf59e912e58c736",
+  "14": "6d7e6bedf42ebe22c59723f1495b0619126c0982816a9ab1074066e6964bcab4",
+  "15": "ef3cce7ce423421ad129be15414a03d00b0fae354e6d674ded12fefa9da490d1",
+  "16": "9d8c92ad04223b28d555cafffbddbd34606984ebf55094f75d152262a52287a4",
+  "17": "3d03350e2a50d889c167e7b67bffb71c105657389f742e787824bfa2192e4e63",
+  "18": "65d10a89a0880af7ad780bcf58f55f3bf4af9fc2a378b5799bed4e8867cf108f",
+  "19": "017563d3575086a6c1562f390670f7e8b8ad2b86603bf02d7b379cf11438aa4e",
+  "20": "09a13a6e176e602446cf356b20d8ce1afd58d0452b0f8f2d8eaa1762457f9d4d"
+ },
+ "cifrado": {
+  "herramienta": "OpenSSL (openssl enc)",
+  "algoritmo": "aes-256-cbc",
+  "derivacion_de_clave": "pbkdf2",
+  "digest_pbkdf2": "sha256",
+  "iteraciones": 200000,
+  "contrasena": "64 hex (openssl rand -hex 32); NO incluida, se revela despues de calificar",
+  "comando_cifrado": "openssl enc -aes-256-cbc -md sha256 -pbkdf2 -iter 200000 -salt -in clave.json -out clave.enc -pass pass:<contrasena>"
+ }
+}
