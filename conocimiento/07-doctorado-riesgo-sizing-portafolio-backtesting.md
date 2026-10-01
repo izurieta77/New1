@@ -184,6 +184,12 @@ Con 55% de aciertos, una racha de 5 es más probable que no en 100 operaciones. 
 - **Cripto:** Nefedov (2026, SSRN) encuentra que la evaluación ingenua infla el Sharpe **3.6×** en promedio. Con protocolo riguroso, ninguno de 6 factores sobrevive la deflación y 4 quedan con Sharpe OOS negativo, sobre todo por fricciones.
 
 ### 2.12 Rebalanceo e impuestos
+- **Perold y Sharpe (1988, FAJ), "Dynamic Strategies for Asset Allocation"** (adenda del examen 2026-10, grado A como resultado teórico):
+  - Comprar y mantener paga de forma **lineal**.
+  - La mezcla constante paga de forma **cóncava**: compra al bajar y vende al subir, lo que equivale a vender opciones. Gana en mercados que oscilan o revierten y pierde con tendencia.
+  - CPPI paga de forma **convexa**: compra al subir, lo que equivale a comprar un put. Gana con tendencia y pierde en mercados laterales.
+  - Lo que una estrategia convexa gana, alguien con estrategia cóncava lo paga.
+  - Conexión con el sistema: el rebalanceo por bandas es mezcla constante (cóncavo); los filtros de tendencia y los cortacircuitos son convexos (R06, AC-07, AC-09).
 
 - **Teoría:** Davis-Norman (1990) muestran que, con costos proporcionales, la política óptima es una **región de no-transacción** en forma de cuña. Solo se opera en sus fronteras, es decir, se lleva la posición **al borde** de la banda y no al objetivo.
 - **Práctica:**

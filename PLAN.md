@@ -120,13 +120,15 @@ Decisión del dueño (25-sep-2026): describió el patrón de horarios de un riva
 
 | Indicador | Valor | Fecha |
 |---|---|---|
-| Pronósticos registrados / resueltos | Bitácora 19 / 0; empresas 341 / 0. Primeros en resolverse: MU (1-oct), CPI de EUA (P0002, 14-oct) | 25-sep-2026 |
-| Brier acumulado | n/d (n = 0) | — |
+| Pronósticos registrados / resueltos | Bitácora 47 / 4; MU 4 / 4 (post-mortem del 30-sep) | 1-oct-2026 (balance mensual) |
+| Brier acumulado | 0.302 (n = 4, muestra insuficiente; objetivo ≤ 0.20 con 50+) | 1-oct-2026 |
 | Cuenta real arena: TWR / drawdown máximo | Arranca el 28-sep | — |
-| Portafolio de papel: TWR / drawdown máximo | Sin fondear; arranca el 28-sep (O0001-O0002) | 25-sep-2026 |
+| Portafolio de papel: TWR / drawdown máximo | GBM +1.30% / 0.00% (28-30 sep, benchmark +0.64%); Binance +0.12% / 0.00% | 1-oct-2026 |
 | Benchmarks de la semana 18→25-sep (MXN) | S&P 500 TR en MXN +4.25% (SP500TR +1.23% y USD/MXN +2.99%); IPC +2.55% (precio); CETES ~+0.12% (proxy 6.23% anual) | 25-sep-2026 |
-| Estado de dominio | 33 temas: 1 Localizado, 20 Documentado, 1 Comprendido con comprobación, 2 Contrastado, 9 Replicado | 25-sep-2026 |
-| Laboratorio | 21 pruebas: 0 ventaja demostrada, 6 oportunidad investigable, 13 descartadas, 1 en curso (R03), 1 no aplica (V05); AC-07 confirma R06 | 29-sep-2026 |
+| Estado de dominio | 34 temas: 16 Documentado, 1 Documentado con comprobación, 5 Comprendido con comprobación, 5 Contrastado, 7 Replicado | 1-oct-2026 |
+| Laboratorio | 23 pruebas: 0 ventaja demostrada, 7 oportunidad investigable, 14 descartadas, 1 en curso (R03), 1 no aplica (V05); AC-08 descarta el carry ≤3%; AC-09: SMA10 solo protección | 1-oct-2026 |
 | Rivales con datos | 0 | — |
-| Días para fin de fase 0 del patrimonio principal | 94 (28-dic-2026) | 25-sep-2026 |
-| Días para fin de la temporada arena | 125 (28-ene-2027) | 25-sep-2026 |
+| Examen de titulación | Diagnóstico 96.1% (25-sep); mensual oct 100% con clave comprometida (salvedad: examen fácil) | 1-oct-2026 |
+| Criterio de salida de fase 0 | NO se cumple: falta Brier ≤ 0.20 con 3 meses y 50+ resueltos | 1-oct-2026 |
+| Días para fin de fase 0 del patrimonio principal | 88 (28-dic-2026) | 1-oct-2026 |
+| Días para fin de la temporada arena | 119 (28-ene-2027) | 1-oct-2026 |

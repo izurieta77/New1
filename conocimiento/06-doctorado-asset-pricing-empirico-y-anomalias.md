@@ -85,6 +85,8 @@ El componente persistente x es pequeño y la volatilidad σ_t es estocástica. L
 
 **Inferencia:** el punto débil es que x_t casi no se detecta en los datos, y el modelo implica que P/D predice crecimiento, algo que Cochrane (2008) no encuentra en dividendos.
 
+**Condición IES > 1** (adenda del examen 2026-10, grado A como propiedad del modelo): Bansal-Yaron necesita ψ > 1 para que domine el efecto sustitución. Así, una buena noticia de crecimiento sube el P/D y el riesgo de largo plazo tiene precio positivo y alto. Con γ > 1/ψ hay preferencia por la resolución temprana de la incertidumbre. En el artículo, ψ = 1.5 y γ = 10.
+
 **Desastres raros (Rietz 1988; Barro 2006; Wachter 2013).** Una probabilidad pequeña de colapso del consumo explica la prima, la R_f baja y la volatilidad. La versión de trabajo de Barro (NBER w11310, 2005) calibra:
 
 - p = 1% anual de una contracción de 50% del PIB per cápita (b = ln 2);

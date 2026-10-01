@@ -51,6 +51,11 @@ Un bono a 30 años con cupón de 4.75% y rendimiento de 5.40% tiene D_mod = 15.2
 
 **Intuición:** la duración es el "beta" del bono frente a la tasa, y la convexidad es gamma larga.
 
+**Inmunización de un pasivo (Redington 1952)** (adenda del examen 2026-10, grado A, identidad de libro de texto):
+- Condiciones: (1) el valor presente de los activos es igual al del pasivo; (2) las duraciones son iguales; (3) la convexidad o dispersión de los activos es mayor que la del pasivo. Para un pasivo único, la dispersión del pasivo es 0.
+- **Ejemplo:** pasivo de 10 M MXN a 6 años, curva plana de 8%, VP de 6,301,696. Con ceros a 3 y 10 años, 3w + 10(1 − w) = 6, así que w₃ = 4/7. Van 3,600,969 al cero de 3 años y 2,700,727 al de 10. La dispersión es 48 − 36 = 12 > 0, así que cumple.
+- Protege solo contra desplazamientos paralelos pequeños. Un barbell pierde ante cambios de pendiente (riesgo de inmunización), y una bala con plazos cercanos al pasivo lo reduce.
+
 ### 2.3 La curva: spot, forward, nivel, pendiente, curvatura
 
 - Tasa spot z(t) = rendimiento de un cupón cero. Forward entre t₁ y t₂: (1+z₂)^{t₂} = (1+z₁)^{t₁}·(1+f)^{t₂−t₁}. La curva se ajusta con Nelson-Siegel (1987) o Svensson. La Fed publica la curva de Gürkaynak-Sack-Wright (2007) desde 1961.
