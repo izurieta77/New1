@@ -1,0 +1,736 @@
+AC-10, ejecucion B de R02 (TSMOM). Huellas de datos:
+  e060826220d6d3a9bdb3375ea50be5e36554020e231df9ff807264228dbab245  descarga_utc.txt
+  0b71c05f77c3663baa78d1f3b2db2a4e1a4fbf538b7002d4f0d783a30ae53e4b  fred_DEXMXUS.csv
+  9025de20bf0ee087437b7fd470a1f70b8f86ed01dbaba9dae96bdad642ac7320  fred_M1329AUSM193NNBR.csv
+  ebf04b1ae5bc5729ba3bb2b35dbb0e0c5e22dace36bea0c02632782d625ae6ab  fred_TB3MS.csv
+  b840dba55d319f4818fc7300e65c52eff5f64870c8d495fa58ff5d4cd749f5eb  french_F-F_Research_Data_Factors_CSV_202607.zip
+  1916d331c2c51d2aee3d00215897d2b8e5995cb387f1f4569ba46bff5fb049a8  french_F-F_Research_Data_Factors_daily_CSV_202607.zip
+  044196dafe44c3030b2facbdea023975b3f6aa68b4e52f8f9bafc403e19589c1  shiller_ie_data.xls
+  76c2c1e2c1638942c8638852be7a88bdabcad4121ff95a58e14b1c619d955c48  yahoo_DBC_1d_30y_div.json
+  44bbbeb7fd0df8b10e5da2e5c3d7d932d96726dc0def4196fe7406e58b0819e5  yahoo_EEM_1d_30y_div.json
+  ed3989bd4490eae6a8abc28b33baaca521fa464534d39723722be7a8e336b224  yahoo_EFA_1d_30y_div.json
+  e01ff1bc162f6809e613d157fe0743b07c780a88c7e33d28a106f32bdc99ff02  yahoo_GLD_1d_30y_div.json
+  e1c5a167960f2493fd0a0f0f99d5721683744c14e4a11328c1c6913754ac615f  yahoo_GSPC_1d.json
+  3ad382cc728e61bf8848225f3f4df66062c63ec6e1f891d2a6761ad1c9a421b6  yahoo_IEF_1d_30y_div.json
+  244d8687a37821e431cc6f8f4433ee93ede21334b9008a675ece8805aa668f94  yahoo_SP500TR_1d_30y.json
+  1d31a1dd8e9eeb61ea8ecec5be1c35b80aae88f7194dc0a29932153f28a57817  yahoo_SPY_1d_30y_div.json
+  e08cc3e3aa000f959fcc75613510d5c5ab4c41c111b46fee5418ab14786c4ac9  yahoo_TLT_1d_30y_div.json
+  34ebbfb8e24056da721cebd0a07a1bff92879fa6e91284f8bd5d3d9d11e16491  yahoo_VNQ_1d_30y_div.json
+
+(a) r_mercado: ^GSPC + D/12 de Shiller de 1928-01 a 1996-10; ^SP500TR (range=30y) de 1996-11 a 2026-08
+    traslape 1996-11 a 2026-06: ^GSPC+Shiller D 10.21%/a contra ^SP500TR 10.27%/a
+    primer mes evaluado (a): 1929-01 (A: 1927-07); meses con tope |w|=10: 0
+    peso medio |w| A_ls_vt40_L12: 2.978; max 7.78
+
+=== (a) S&P 500 TR, costos def ===
+-- total 1929-01 a 2026-07
+   A_ls_vt40_L3             CAGR  -3.77% | vol  43.18% | Sharpe  0.061 | t NW6  0.55 | Sortino  0.086 | MDD  -99.83% | n 1171 (1929-01 a 2026-07)
+   A_ls_vt40_L6             CAGR   4.92% | vol  43.24% | Sharpe  0.258 | t NW6  2.28 | Sortino  0.373 | MDD  -98.25% | n 1171 (1929-01 a 2026-07)
+   A_ls_vt40_L12            CAGR   6.09% | vol  43.12% | Sharpe  0.288 | t NW6  2.63 | Sortino  0.414 | MDD  -98.68% | n 1171 (1929-01 a 2026-07)
+   A_lo_L3                  CAGR   6.89% | vol  13.09% | Sharpe  0.321 | t NW6  3.02 | Sortino  0.471 | MDD  -62.77% | n 1171 (1929-01 a 2026-07)
+   A_lo_L6                  CAGR   8.39% | vol  11.93% | Sharpe  0.458 | t NW6  4.11 | Sortino  0.678 | MDD  -56.43% | n 1171 (1929-01 a 2026-07)
+   A_lo_L12                 CAGR   9.12% | vol  12.51% | Sharpe  0.496 | t NW6  4.73 | Sortino  0.749 | MDD  -53.40% | n 1171 (1929-01 a 2026-07)
+   A_ref_comprar_mantener   CAGR   9.93% | vol  18.49% | Sharpe  0.425 | t NW6  4.14 | Sortino  0.643 | MDD  -83.14% | n 1171 (1929-01 a 2026-07)
+   A_ref_efectivo           CAGR   3.38% | vol   0.88% | Sharpe  0.000 | t NW6  0.00 | Sortino  0.000 | MDD    0.00% | n 1171 (1929-01 a 2026-07)
+   A_ref_sma10              CAGR   8.68% | vol  12.61% | Sharpe  0.461 | t NW6  4.23 | Sortino  0.679 | MDD  -54.32% | n 1171 (1929-01 a 2026-07)
+   A_ref_largo_vt40         CAGR  14.35% | vol  42.91% | Sharpe  0.463 | t NW6  4.23 | Sortino  0.682 | MDD  -94.56% | n 1171 (1929-01 a 2026-07)
+-- dentro 1929-01 a 2011-12
+   A_ls_vt40_L3             CAGR  -5.65% | vol  44.08% | Sharpe  0.019 | t NW6  0.15 | Sortino  0.026 | MDD  -99.83% | n 996 (1929-01 a 2011-12)
+   A_ls_vt40_L6             CAGR   5.93% | vol  44.06% | Sharpe  0.276 | t NW6  2.30 | Sortino  0.403 | MDD  -98.25% | n 996 (1929-01 a 2011-12)
+   A_ls_vt40_L12            CAGR   4.80% | vol  44.01% | Sharpe  0.257 | t NW6  2.19 | Sortino  0.369 | MDD  -98.68% | n 996 (1929-01 a 2011-12)
+   A_lo_L3                  CAGR   6.35% | vol  13.57% | Sharpe  0.256 | t NW6  2.21 | Sortino  0.372 | MDD  -62.77% | n 996 (1929-01 a 2011-12)
+   A_lo_L6                  CAGR   8.52% | vol  12.05% | Sharpe  0.439 | t NW6  3.63 | Sortino  0.653 | MDD  -56.43% | n 996 (1929-01 a 2011-12)
+   A_lo_L12                 CAGR   8.82% | vol  12.60% | Sharpe  0.448 | t NW6  3.92 | Sortino  0.674 | MDD  -53.40% | n 996 (1929-01 a 2011-12)
+   A_ref_comprar_mantener   CAGR   9.05% | vol  19.17% | Sharpe  0.359 | t NW6  3.17 | Sortino  0.540 | MDD  -83.14% | n 996 (1929-01 a 2011-12)
+   A_ref_sma10              CAGR   8.60% | vol  12.87% | Sharpe  0.426 | t NW6  3.59 | Sortino  0.625 | MDD  -54.32% | n 996 (1929-01 a 2011-12)
+   A_ref_largo_vt40         CAGR  11.69% | vol  43.89% | Sharpe  0.402 | t NW6  3.33 | Sortino  0.589 | MDD  -94.56% | n 996 (1929-01 a 2011-12)
+-- pre1985 1929-01 a 1984-12
+   A_ls_vt40_L3             CAGR  -4.14% | vol  46.50% | Sharpe  0.081 | t NW6  0.55 | Sortino  0.114 | MDD  -97.48% | n 672 (1929-01 a 1984-12)
+   A_ls_vt40_L6             CAGR   9.22% | vol  46.30% | Sharpe  0.352 | t NW6  2.44 | Sortino  0.530 | MDD  -92.71% | n 672 (1929-01 a 1984-12)
+   A_ls_vt40_L12            CAGR  -1.72% | vol  46.51% | Sharpe  0.136 | t NW6  0.93 | Sortino  0.190 | MDD  -98.68% | n 672 (1929-01 a 1984-12)
+   A_lo_L3                  CAGR   6.17% | vol  14.72% | Sharpe  0.249 | t NW6  1.78 | Sortino  0.363 | MDD  -62.77% | n 672 (1929-01 a 1984-12)
+   A_lo_L6                  CAGR   8.62% | vol  12.35% | Sharpe  0.456 | t NW6  3.00 | Sortino  0.691 | MDD  -56.43% | n 672 (1929-01 a 1984-12)
+   A_lo_L12                 CAGR   7.64% | vol  12.62% | Sharpe  0.376 | t NW6  2.60 | Sortino  0.560 | MDD  -53.40% | n 672 (1929-01 a 1984-12)
+   A_ref_comprar_mantener   CAGR   8.43% | vol  20.64% | Sharpe  0.329 | t NW6  2.39 | Sortino  0.502 | MDD  -83.14% | n 672 (1929-01 a 1984-12)
+   A_ref_sma10              CAGR   7.83% | vol  13.32% | Sharpe  0.377 | t NW6  2.54 | Sortino  0.552 | MDD  -54.32% | n 672 (1929-01 a 1984-12)
+   A_ref_largo_vt40         CAGR   8.66% | vol  46.32% | Sharpe  0.350 | t NW6  2.33 | Sortino  0.510 | MDD  -94.56% | n 672 (1929-01 a 1984-12)
+-- articulo 1985-01 a 2009-12
+   A_ls_vt40_L3             CAGR  -9.68% | vol  38.94% | Sharpe -0.166 | t NW6 -0.75 | Sortino -0.223 | MDD  -97.97% | n 300 (1985-01 a 2009-12)
+   A_ls_vt40_L6             CAGR   2.46% | vol  39.20% | Sharpe  0.163 | t NW6  0.74 | Sortino  0.222 | MDD  -97.55% | n 300 (1985-01 a 2009-12)
+   A_ls_vt40_L12            CAGR  20.64% | vol  38.42% | Sharpe  0.580 | t NW6  2.98 | Sortino  0.905 | MDD  -70.41% | n 300 (1985-01 a 2009-12)
+   A_lo_L3                  CAGR   6.78% | vol  10.86% | Sharpe  0.257 | t NW6  1.17 | Sortino  0.367 | MDD  -24.23% | n 300 (1985-01 a 2009-12)
+   A_lo_L6                  CAGR   9.35% | vol  11.34% | Sharpe  0.463 | t NW6  2.30 | Sortino  0.662 | MDD  -23.26% | n 300 (1985-01 a 2009-12)
+   A_lo_L12                 CAGR  11.57% | vol  12.13% | Sharpe  0.609 | t NW6  3.18 | Sortino  0.922 | MDD  -29.59% | n 300 (1985-01 a 2009-12)
+   A_ref_comprar_mantener   CAGR  10.49% | vol  15.61% | Sharpe  0.442 | t NW6  2.09 | Sortino  0.623 | MDD  -50.95% | n 300 (1985-01 a 2009-12)
+   A_ref_sma10              CAGR  11.30% | vol  11.84% | Sharpe  0.600 | t NW6  3.01 | Sortino  0.891 | MDD  -23.76% | n 300 (1985-01 a 2009-12)
+   A_ref_largo_vt40         CAGR  19.00% | vol  38.66% | Sharpe  0.546 | t NW6  2.69 | Sortino  0.814 | MDD  -73.13% | n 300 (1985-01 a 2009-12)
+-- fuera 2012-01 a 2026-07
+   A_ls_vt40_L3             CAGR   7.65% | vol  37.61% | Sharpe  0.345 | t NW6  1.38 | Sortino  0.498 | MDD  -68.61% | n 175 (2012-01 a 2026-07)
+   A_ls_vt40_L6             CAGR  -0.61% | vol  38.25% | Sharpe  0.140 | t NW6  0.42 | Sortino  0.189 | MDD  -90.63% | n 175 (2012-01 a 2026-07)
+   A_ls_vt40_L12            CAGR  13.72% | vol  37.73% | Sharpe  0.491 | t NW6  1.67 | Sortino  0.724 | MDD  -73.57% | n 175 (2012-01 a 2026-07)
+   A_lo_L3                  CAGR  10.00% | vol   9.94% | Sharpe  0.845 | t NW6  3.41 | Sortino  1.397 | MDD  -15.72% | n 175 (2012-01 a 2026-07)
+   A_lo_L6                  CAGR   7.69% | vol  11.26% | Sharpe  0.569 | t NW6  2.00 | Sortino  0.825 | MDD  -28.29% | n 175 (2012-01 a 2026-07)
+   A_lo_L12                 CAGR  10.84% | vol  12.00% | Sharpe  0.784 | t NW6  3.05 | Sortino  1.213 | MDD  -19.86% | n 175 (2012-01 a 2026-07)
+   A_ref_comprar_mantener   CAGR  15.09% | vol  14.01% | Sharpe  0.961 | t NW6  5.05 | Sortino  1.550 | MDD  -23.87% | n 175 (2012-01 a 2026-07)
+   A_ref_sma10              CAGR   9.13% | vol  11.05% | Sharpe  0.697 | t NW6  2.57 | Sortino  1.056 | MDD  -22.88% | n 175 (2012-01 a 2026-07)
+   A_ref_largo_vt40         CAGR  30.79% | vol  36.83% | Sharpe  0.880 | t NW6  3.94 | Sortino  1.363 | MDD  -52.15% | n 175 (2012-01 a 2026-07)
+-- fuera_ext 2012-01 a 2026-08
+   A_ls_vt40_L3             CAGR   8.12% | vol  37.54% | Sharpe  0.356 | t NW6  1.44 | Sortino  0.515 | MDD  -68.61% | n 176 (2012-01 a 2026-08)
+   A_ls_vt40_L6             CAGR  -0.14% | vol  38.18% | Sharpe  0.152 | t NW6  0.46 | Sortino  0.205 | MDD  -90.63% | n 176 (2012-01 a 2026-08)
+   A_ls_vt40_L12            CAGR  14.17% | vol  37.64% | Sharpe  0.502 | t NW6  1.71 | Sortino  0.740 | MDD  -73.57% | n 176 (2012-01 a 2026-08)
+   A_lo_L3                  CAGR  10.14% | vol   9.92% | Sharpe  0.858 | t NW6  3.47 | Sortino  1.420 | MDD  -15.72% | n 176 (2012-01 a 2026-08)
+   A_lo_L6                  CAGR   7.84% | vol  11.24% | Sharpe  0.582 | t NW6  2.05 | Sortino  0.844 | MDD  -28.29% | n 176 (2012-01 a 2026-08)
+   A_lo_L12                 CAGR  10.98% | vol  11.97% | Sharpe  0.795 | t NW6  3.09 | Sortino  1.231 | MDD  -19.86% | n 176 (2012-01 a 2026-08)
+   A_ref_comprar_mantener   CAGR  15.21% | vol  13.98% | Sharpe  0.969 | t NW6  5.10 | Sortino  1.565 | MDD  -23.87% | n 176 (2012-01 a 2026-08)
+   A_ref_sma10              CAGR   9.27% | vol  11.03% | Sharpe  0.709 | t NW6  2.63 | Sortino  1.076 | MDD  -22.88% | n 176 (2012-01 a 2026-08)
+   A_ref_largo_vt40         CAGR  31.21% | vol  36.75% | Sharpe  0.890 | t NW6  3.99 | Sortino  1.379 | MDD  -52.15% | n 176 (2012-01 a 2026-08)
+
+=== (a) S&P 500 TR, costos bruto ===
+-- total 1929-01 a 2026-07
+   A_ls_vt40_L3             CAGR   3.32% | vol  43.34% | Sharpe  0.225 | t NW6  2.11 | Sortino  0.326 | MDD  -98.21% | n 1171 (1929-01 a 2026-07)
+   A_ls_vt40_L6             CAGR  10.17% | vol  43.19% | Sharpe  0.371 | t NW6  3.38 | Sortino  0.548 | MDD  -95.57% | n 1171 (1929-01 a 2026-07)
+   A_ls_vt40_L12            CAGR   9.78% | vol  43.20% | Sharpe  0.367 | t NW6  3.44 | Sortino  0.536 | MDD  -95.84% | n 1171 (1929-01 a 2026-07)
+   A_lo_L3                  CAGR   7.93% | vol  13.09% | Sharpe  0.395 | t NW6  3.78 | Sortino  0.586 | MDD  -61.39% | n 1171 (1929-01 a 2026-07)
+   A_lo_L6                  CAGR   9.05% | vol  11.93% | Sharpe  0.509 | t NW6  4.64 | Sortino  0.758 | MDD  -53.84% | n 1171 (1929-01 a 2026-07)
+   A_lo_L12                 CAGR   9.46% | vol  12.52% | Sharpe  0.521 | t NW6  5.01 | Sortino  0.788 | MDD  -51.95% | n 1171 (1929-01 a 2026-07)
+   A_ref_comprar_mantener   CAGR   9.93% | vol  18.49% | Sharpe  0.425 | t NW6  4.14 | Sortino  0.643 | MDD  -83.14% | n 1171 (1929-01 a 2026-07)
+   A_ref_efectivo           CAGR   3.38% | vol   0.88% | Sharpe  0.000 | t NW6  0.00 | Sortino  0.000 | MDD    0.00% | n 1171 (1929-01 a 2026-07)
+   A_ref_sma10              CAGR   9.23% | vol  12.60% | Sharpe  0.501 | t NW6  4.66 | Sortino  0.741 | MDD  -53.59% | n 1171 (1929-01 a 2026-07)
+   A_ref_largo_vt40         CAGR  16.18% | vol  42.95% | Sharpe  0.500 | t NW6  4.58 | Sortino  0.742 | MDD  -92.97% | n 1171 (1929-01 a 2026-07)
+-- dentro 1929-01 a 2011-12
+   A_ls_vt40_L3             CAGR   1.64% | vol  44.25% | Sharpe  0.187 | t NW6  1.59 | Sortino  0.269 | MDD  -98.21% | n 996 (1929-01 a 2011-12)
+   A_ls_vt40_L6             CAGR  11.30% | vol  44.04% | Sharpe  0.388 | t NW6  3.33 | Sortino  0.580 | MDD  -95.57% | n 996 (1929-01 a 2011-12)
+   A_ls_vt40_L12            CAGR   8.57% | vol  44.11% | Sharpe  0.338 | t NW6  2.94 | Sortino  0.492 | MDD  -95.84% | n 996 (1929-01 a 2011-12)
+   A_lo_L3                  CAGR   7.44% | vol  13.57% | Sharpe  0.331 | t NW6  2.90 | Sortino  0.486 | MDD  -61.39% | n 996 (1929-01 a 2011-12)
+   A_lo_L6                  CAGR   9.17% | vol  12.05% | Sharpe  0.489 | t NW6  4.11 | Sortino  0.731 | MDD  -53.84% | n 996 (1929-01 a 2011-12)
+   A_lo_L12                 CAGR   9.17% | vol  12.61% | Sharpe  0.473 | t NW6  4.18 | Sortino  0.713 | MDD  -51.95% | n 996 (1929-01 a 2011-12)
+   A_ref_comprar_mantener   CAGR   9.05% | vol  19.17% | Sharpe  0.359 | t NW6  3.17 | Sortino  0.540 | MDD  -83.14% | n 996 (1929-01 a 2011-12)
+   A_ref_sma10              CAGR   9.13% | vol  12.87% | Sharpe  0.464 | t NW6  3.96 | Sortino  0.683 | MDD  -53.59% | n 996 (1929-01 a 2011-12)
+   A_ref_largo_vt40         CAGR  13.47% | vol  43.93% | Sharpe  0.438 | t NW6  3.63 | Sortino  0.647 | MDD  -92.97% | n 996 (1929-01 a 2011-12)
+-- pre1985 1929-01 a 1984-12
+   A_ls_vt40_L3             CAGR   3.29% | vol  46.63% | Sharpe  0.240 | t NW6  1.68 | Sortino  0.350 | MDD  -95.75% | n 672 (1929-01 a 1984-12)
+   A_ls_vt40_L6             CAGR  14.73% | vol  46.33% | Sharpe  0.459 | t NW6  3.28 | Sortino  0.705 | MDD  -89.67% | n 672 (1929-01 a 1984-12)
+   A_ls_vt40_L12            CAGR   2.35% | vol  46.63% | Sharpe  0.223 | t NW6  1.57 | Sortino  0.318 | MDD  -95.84% | n 672 (1929-01 a 1984-12)
+   A_lo_L3                  CAGR   7.22% | vol  14.72% | Sharpe  0.316 | t NW6  2.30 | Sortino  0.466 | MDD  -61.39% | n 672 (1929-01 a 1984-12)
+   A_lo_L6                  CAGR   9.24% | vol  12.35% | Sharpe  0.502 | t NW6  3.35 | Sortino  0.764 | MDD  -53.84% | n 672 (1929-01 a 1984-12)
+   A_lo_L12                 CAGR   8.04% | vol  12.63% | Sharpe  0.405 | t NW6  2.83 | Sortino  0.607 | MDD  -51.95% | n 672 (1929-01 a 1984-12)
+   A_ref_comprar_mantener   CAGR   8.44% | vol  20.64% | Sharpe  0.329 | t NW6  2.39 | Sortino  0.503 | MDD  -83.14% | n 672 (1929-01 a 1984-12)
+   A_ref_sma10              CAGR   8.39% | vol  13.31% | Sharpe  0.416 | t NW6  2.84 | Sortino  0.612 | MDD  -53.59% | n 672 (1929-01 a 1984-12)
+   A_ref_largo_vt40         CAGR  10.54% | vol  46.36% | Sharpe  0.387 | t NW6  2.58 | Sortino  0.569 | MDD  -92.97% | n 672 (1929-01 a 1984-12)
+-- articulo 1985-01 a 2009-12
+   A_ls_vt40_L3             CAGR  -2.50% | vol  39.15% | Sharpe  0.030 | t NW6  0.14 | Sortino  0.042 | MDD  -94.36% | n 300 (1985-01 a 2009-12)
+   A_ls_vt40_L6             CAGR   7.75% | vol  39.03% | Sharpe  0.291 | t NW6  1.35 | Sortino  0.407 | MDD  -95.57% | n 300 (1985-01 a 2009-12)
+   A_ls_vt40_L12            CAGR  23.74% | vol  38.55% | Sharpe  0.646 | t NW6  3.40 | Sortino  1.024 | MDD  -69.16% | n 300 (1985-01 a 2009-12)
+   A_lo_L3                  CAGR   7.96% | vol  10.87% | Sharpe  0.359 | t NW6  1.67 | Sortino  0.519 | MDD  -23.26% | n 300 (1985-01 a 2009-12)
+   A_lo_L6                  CAGR  10.07% | vol  11.34% | Sharpe  0.521 | t NW6  2.63 | Sortino  0.751 | MDD  -23.26% | n 300 (1985-01 a 2009-12)
+   A_lo_L12                 CAGR  11.80% | vol  12.14% | Sharpe  0.626 | t NW6  3.29 | Sortino  0.948 | MDD  -29.59% | n 300 (1985-01 a 2009-12)
+   A_ref_comprar_mantener   CAGR  10.49% | vol  15.61% | Sharpe  0.442 | t NW6  2.09 | Sortino  0.623 | MDD  -50.95% | n 300 (1985-01 a 2009-12)
+   A_ref_sma10              CAGR  11.73% | vol  11.84% | Sharpe  0.632 | t NW6  3.23 | Sortino  0.942 | MDD  -23.26% | n 300 (1985-01 a 2009-12)
+   A_ref_largo_vt40         CAGR  20.56% | vol  38.71% | Sharpe  0.580 | t NW6  2.86 | Sortino  0.871 | MDD  -72.69% | n 300 (1985-01 a 2009-12)
+-- fuera 2012-01 a 2026-07
+   A_ls_vt40_L3             CAGR  13.41% | vol  37.80% | Sharpe  0.483 | t NW6  2.03 | Sortino  0.720 | MDD  -63.36% | n 175 (2012-01 a 2026-07)
+   A_ls_vt40_L6             CAGR   3.99% | vol  38.03% | Sharpe  0.257 | t NW6  0.80 | Sortino  0.355 | MDD  -88.49% | n 175 (2012-01 a 2026-07)
+   A_ls_vt40_L12            CAGR  16.93% | vol  37.66% | Sharpe  0.566 | t NW6  1.97 | Sortino  0.845 | MDD  -70.70% | n 175 (2012-01 a 2026-07)
+   A_lo_L3                  CAGR  10.77% | vol   9.92% | Sharpe  0.918 | t NW6  3.79 | Sortino  1.526 | MDD  -14.30% | n 175 (2012-01 a 2026-07)
+   A_lo_L6                  CAGR   8.37% | vol  11.25% | Sharpe  0.626 | t NW6  2.25 | Sortino  0.914 | MDD  -27.07% | n 175 (2012-01 a 2026-07)
+   A_lo_L12                 CAGR  11.16% | vol  11.99% | Sharpe  0.808 | t NW6  3.20 | Sortino  1.250 | MDD  -19.60% | n 175 (2012-01 a 2026-07)
+   A_ref_comprar_mantener   CAGR  15.09% | vol  14.01% | Sharpe  0.961 | t NW6  5.05 | Sortino  1.550 | MDD  -23.87% | n 175 (2012-01 a 2026-07)
+   A_ref_sma10              CAGR   9.77% | vol  11.01% | Sharpe  0.752 | t NW6  2.86 | Sortino  1.150 | MDD  -21.29% | n 175 (2012-01 a 2026-07)
+   A_ref_largo_vt40         CAGR  32.94% | vol  36.88% | Sharpe  0.925 | t NW6  4.15 | Sortino  1.445 | MDD  -50.35% | n 175 (2012-01 a 2026-07)
+-- fuera_ext 2012-01 a 2026-08
+   A_ls_vt40_L3             CAGR  13.87% | vol  37.72% | Sharpe  0.494 | t NW6  2.09 | Sortino  0.736 | MDD  -63.36% | n 176 (2012-01 a 2026-08)
+   A_ls_vt40_L6             CAGR   4.46% | vol  37.95% | Sharpe  0.268 | t NW6  0.84 | Sortino  0.371 | MDD  -88.49% | n 176 (2012-01 a 2026-08)
+   A_ls_vt40_L12            CAGR  17.39% | vol  37.58% | Sharpe  0.577 | t NW6  2.01 | Sortino  0.862 | MDD  -70.70% | n 176 (2012-01 a 2026-08)
+   A_lo_L3                  CAGR  10.91% | vol   9.90% | Sharpe  0.931 | t NW6  3.86 | Sortino  1.549 | MDD  -14.30% | n 176 (2012-01 a 2026-08)
+   A_lo_L6                  CAGR   8.52% | vol  11.23% | Sharpe  0.638 | t NW6  2.31 | Sortino  0.933 | MDD  -27.07% | n 176 (2012-01 a 2026-08)
+   A_lo_L12                 CAGR  11.29% | vol  11.97% | Sharpe  0.819 | t NW6  3.24 | Sortino  1.268 | MDD  -19.60% | n 176 (2012-01 a 2026-08)
+   A_ref_comprar_mantener   CAGR  15.21% | vol  13.98% | Sharpe  0.969 | t NW6  5.10 | Sortino  1.565 | MDD  -23.87% | n 176 (2012-01 a 2026-08)
+   A_ref_sma10              CAGR   9.91% | vol  10.99% | Sharpe  0.765 | t NW6  2.92 | Sortino  1.170 | MDD  -21.29% | n 176 (2012-01 a 2026-08)
+   A_ref_largo_vt40         CAGR  33.36% | vol  36.79% | Sharpe  0.935 | t NW6  4.20 | Sortino  1.461 | MDD  -50.35% | n 176 (2012-01 a 2026-08)
+
+=== (a) S&P 500 TR, costos medio ===
+-- total 1929-01 a 2026-07
+   A_ls_vt40_L3             CAGR  -5.79% | vol  43.18% | Sharpe  0.013 | t NW6  0.11 | Sortino  0.018 | MDD  -99.96% | n 1171 (1929-01 a 2026-07)
+   A_ls_vt40_L6             CAGR   3.41% | vol  43.29% | Sharpe  0.225 | t NW6  1.97 | Sortino  0.323 | MDD  -98.80% | n 1171 (1929-01 a 2026-07)
+   A_ls_vt40_L12            CAGR   5.01% | vol  43.11% | Sharpe  0.264 | t NW6  2.40 | Sortino  0.378 | MDD  -99.06% | n 1171 (1929-01 a 2026-07)
+   A_lo_L3                  CAGR   6.59% | vol  13.09% | Sharpe  0.300 | t NW6  2.80 | Sortino  0.438 | MDD  -63.18% | n 1171 (1929-01 a 2026-07)
+   A_lo_L6                  CAGR   8.20% | vol  11.93% | Sharpe  0.443 | t NW6  3.95 | Sortino  0.654 | MDD  -57.17% | n 1171 (1929-01 a 2026-07)
+   A_lo_L12                 CAGR   9.02% | vol  12.51% | Sharpe  0.489 | t NW6  4.64 | Sortino  0.737 | MDD  -53.82% | n 1171 (1929-01 a 2026-07)
+   A_ref_comprar_mantener   CAGR   9.93% | vol  18.49% | Sharpe  0.425 | t NW6  4.14 | Sortino  0.643 | MDD  -83.14% | n 1171 (1929-01 a 2026-07)
+   A_ref_efectivo           CAGR   3.38% | vol   0.88% | Sharpe  0.000 | t NW6  0.00 | Sortino  0.000 | MDD    0.00% | n 1171 (1929-01 a 2026-07)
+   A_ref_sma10              CAGR   8.52% | vol  12.62% | Sharpe  0.449 | t NW6  4.10 | Sortino  0.660 | MDD  -54.55% | n 1171 (1929-01 a 2026-07)
+   A_ref_largo_vt40         CAGR  13.82% | vol  42.90% | Sharpe  0.452 | t NW6  4.13 | Sortino  0.664 | MDD  -95.11% | n 1171 (1929-01 a 2026-07)
+-- dentro 1929-01 a 2011-12
+   A_ls_vt40_L3             CAGR  -7.72% | vol  44.09% | Sharpe -0.031 | t NW6 -0.25 | Sortino -0.042 | MDD  -99.96% | n 996 (1929-01 a 2011-12)
+   A_ls_vt40_L6             CAGR   4.38% | vol  44.10% | Sharpe  0.243 | t NW6  2.01 | Sortino  0.353 | MDD  -98.80% | n 996 (1929-01 a 2011-12)
+   A_ls_vt40_L12            CAGR   3.70% | vol  44.00% | Sharpe  0.233 | t NW6  1.97 | Sortino  0.333 | MDD  -99.06% | n 996 (1929-01 a 2011-12)
+   A_lo_L3                  CAGR   6.04% | vol  13.57% | Sharpe  0.234 | t NW6  2.01 | Sortino  0.338 | MDD  -63.18% | n 996 (1929-01 a 2011-12)
+   A_lo_L6                  CAGR   8.32% | vol  12.05% | Sharpe  0.425 | t NW6  3.49 | Sortino  0.630 | MDD  -57.17% | n 996 (1929-01 a 2011-12)
+   A_lo_L12                 CAGR   8.72% | vol  12.60% | Sharpe  0.441 | t NW6  3.85 | Sortino  0.662 | MDD  -53.82% | n 996 (1929-01 a 2011-12)
+   A_ref_comprar_mantener   CAGR   9.04% | vol  19.17% | Sharpe  0.359 | t NW6  3.17 | Sortino  0.539 | MDD  -83.14% | n 996 (1929-01 a 2011-12)
+   A_ref_sma10              CAGR   8.45% | vol  12.88% | Sharpe  0.415 | t NW6  3.48 | Sortino  0.608 | MDD  -54.55% | n 996 (1929-01 a 2011-12)
+   A_ref_largo_vt40         CAGR  11.17% | vol  43.88% | Sharpe  0.392 | t NW6  3.24 | Sortino  0.572 | MDD  -95.11% | n 996 (1929-01 a 2011-12)
+-- pre1985 1929-01 a 1984-12
+   A_ls_vt40_L3             CAGR  -6.25% | vol  46.51% | Sharpe  0.034 | t NW6  0.23 | Sortino  0.047 | MDD  -98.61% | n 672 (1929-01 a 1984-12)
+   A_ls_vt40_L6             CAGR   7.63% | vol  46.32% | Sharpe  0.321 | t NW6  2.20 | Sortino  0.480 | MDD  -93.43% | n 672 (1929-01 a 1984-12)
+   A_ls_vt40_L12            CAGR  -2.90% | vol  46.50% | Sharpe  0.110 | t NW6  0.75 | Sortino  0.153 | MDD  -99.06% | n 672 (1929-01 a 1984-12)
+   A_lo_L3                  CAGR   5.86% | vol  14.72% | Sharpe  0.230 | t NW6  1.63 | Sortino  0.333 | MDD  -63.18% | n 672 (1929-01 a 1984-12)
+   A_lo_L6                  CAGR   8.44% | vol  12.35% | Sharpe  0.442 | t NW6  2.90 | Sortino  0.669 | MDD  -57.17% | n 672 (1929-01 a 1984-12)
+   A_lo_L12                 CAGR   7.52% | vol  12.61% | Sharpe  0.367 | t NW6  2.53 | Sortino  0.547 | MDD  -53.82% | n 672 (1929-01 a 1984-12)
+   A_ref_comprar_mantener   CAGR   8.43% | vol  20.64% | Sharpe  0.329 | t NW6  2.39 | Sortino  0.502 | MDD  -83.14% | n 672 (1929-01 a 1984-12)
+   A_ref_sma10              CAGR   7.66% | vol  13.32% | Sharpe  0.365 | t NW6  2.46 | Sortino  0.534 | MDD  -54.55% | n 672 (1929-01 a 1984-12)
+   A_ref_largo_vt40         CAGR   8.12% | vol  46.31% | Sharpe  0.339 | t NW6  2.25 | Sortino  0.493 | MDD  -95.11% | n 672 (1929-01 a 1984-12)
+-- articulo 1985-01 a 2009-12
+   A_ls_vt40_L3             CAGR -11.71% | vol  38.94% | Sharpe -0.224 | t NW6 -0.99 | Sortino -0.297 | MDD  -98.50% | n 300 (1985-01 a 2009-12)
+   A_ls_vt40_L6             CAGR   0.94% | vol  39.28% | Sharpe  0.126 | t NW6  0.57 | Sortino  0.170 | MDD  -97.94% | n 300 (1985-01 a 2009-12)
+   A_ls_vt40_L12            CAGR  19.73% | vol  38.41% | Sharpe  0.560 | t NW6  2.85 | Sortino  0.870 | MDD  -70.77% | n 300 (1985-01 a 2009-12)
+   A_lo_L3                  CAGR   6.43% | vol  10.87% | Sharpe  0.227 | t NW6  1.03 | Sortino  0.322 | MDD  -24.68% | n 300 (1985-01 a 2009-12)
+   A_lo_L6                  CAGR   9.14% | vol  11.34% | Sharpe  0.446 | t NW6  2.21 | Sortino  0.636 | MDD  -23.26% | n 300 (1985-01 a 2009-12)
+   A_lo_L12                 CAGR  11.50% | vol  12.13% | Sharpe  0.604 | t NW6  3.14 | Sortino  0.914 | MDD  -29.59% | n 300 (1985-01 a 2009-12)
+   A_ref_comprar_mantener   CAGR  10.49% | vol  15.61% | Sharpe  0.442 | t NW6  2.09 | Sortino  0.623 | MDD  -50.95% | n 300 (1985-01 a 2009-12)
+   A_ref_sma10              CAGR  11.18% | vol  11.85% | Sharpe  0.590 | t NW6  2.95 | Sortino  0.875 | MDD  -23.91% | n 300 (1985-01 a 2009-12)
+   A_ref_largo_vt40         CAGR  18.54% | vol  38.65% | Sharpe  0.536 | t NW6  2.64 | Sortino  0.798 | MDD  -73.26% | n 300 (1985-01 a 2009-12)
+-- fuera 2012-01 a 2026-07
+   A_ls_vt40_L3             CAGR   6.00% | vol  37.59% | Sharpe  0.304 | t NW6  1.20 | Sortino  0.435 | MDD  -70.02% | n 175 (2012-01 a 2026-07)
+   A_ls_vt40_L6             CAGR  -1.94% | vol  38.34% | Sharpe  0.106 | t NW6  0.32 | Sortino  0.142 | MDD  -91.66% | n 175 (2012-01 a 2026-07)
+   A_ls_vt40_L12            CAGR  12.78% | vol  37.75% | Sharpe  0.469 | t NW6  1.59 | Sortino  0.688 | MDD  -74.36% | n 175 (2012-01 a 2026-07)
+   A_lo_L3                  CAGR   9.77% | vol   9.94% | Sharpe  0.823 | t NW6  3.30 | Sortino  1.358 | MDD  -16.17% | n 175 (2012-01 a 2026-07)
+   A_lo_L6                  CAGR   7.49% | vol  11.26% | Sharpe  0.552 | t NW6  1.92 | Sortino  0.799 | MDD  -28.78% | n 175 (2012-01 a 2026-07)
+   A_lo_L12                 CAGR  10.75% | vol  12.00% | Sharpe  0.777 | t NW6  3.01 | Sortino  1.202 | MDD  -19.94% | n 175 (2012-01 a 2026-07)
+   A_ref_comprar_mantener   CAGR  15.09% | vol  14.01% | Sharpe  0.961 | t NW6  5.05 | Sortino  1.550 | MDD  -23.87% | n 175 (2012-01 a 2026-07)
+   A_ref_sma10              CAGR   8.94% | vol  11.06% | Sharpe  0.680 | t NW6  2.49 | Sortino  1.029 | MDD  -23.35% | n 175 (2012-01 a 2026-07)
+   A_ref_largo_vt40         CAGR  30.16% | vol  36.82% | Sharpe  0.867 | t NW6  3.88 | Sortino  1.339 | MDD  -53.03% | n 175 (2012-01 a 2026-07)
+-- fuera_ext 2012-01 a 2026-08
+   A_ls_vt40_L3             CAGR   6.46% | vol  37.52% | Sharpe  0.315 | t NW6  1.26 | Sortino  0.452 | MDD  -70.02% | n 176 (2012-01 a 2026-08)
+   A_ls_vt40_L6             CAGR  -1.47% | vol  38.27% | Sharpe  0.118 | t NW6  0.36 | Sortino  0.158 | MDD  -91.66% | n 176 (2012-01 a 2026-08)
+   A_ls_vt40_L12            CAGR  13.24% | vol  37.67% | Sharpe  0.480 | t NW6  1.63 | Sortino  0.705 | MDD  -74.36% | n 176 (2012-01 a 2026-08)
+   A_lo_L3                  CAGR   9.91% | vol   9.93% | Sharpe  0.837 | t NW6  3.36 | Sortino  1.382 | MDD  -16.17% | n 176 (2012-01 a 2026-08)
+   A_lo_L6                  CAGR   7.64% | vol  11.24% | Sharpe  0.565 | t NW6  1.98 | Sortino  0.818 | MDD  -28.78% | n 176 (2012-01 a 2026-08)
+   A_lo_L12                 CAGR  10.89% | vol  11.98% | Sharpe  0.788 | t NW6  3.05 | Sortino  1.220 | MDD  -19.94% | n 176 (2012-01 a 2026-08)
+   A_ref_comprar_mantener   CAGR  15.21% | vol  13.98% | Sharpe  0.969 | t NW6  5.10 | Sortino  1.565 | MDD  -23.87% | n 176 (2012-01 a 2026-08)
+   A_ref_sma10              CAGR   9.09% | vol  11.04% | Sharpe  0.693 | t NW6  2.55 | Sortino  1.048 | MDD  -23.35% | n 176 (2012-01 a 2026-08)
+   A_ref_largo_vt40         CAGR  30.58% | vol  36.74% | Sharpe  0.877 | t NW6  3.93 | Sortino  1.355 | MDD  -53.03% | n 176 (2012-01 a 2026-08)
+
+-- (a) por decadas, costos por defecto (Sharpe ls_vt40_L12 / lo_L12 / comprar y mantener)
+   1920s 1929-01-1929-12: -0.173 / -0.395 / -0.295
+   1930s 1930-01-1939-12:  0.182 /  0.393 /  0.170
+   1940s 1940-01-1949-12:  0.303 /  0.450 /  0.593
+   1950s 1950-01-1959-12:  0.832 /  1.256 /  1.370
+   1960s 1960-01-1969-12: -0.401 / -0.019 /  0.346
+   1970s 1970-01-1979-12: -0.048 /  0.009 /  0.035
+   1980s 1980-01-1989-12:  0.199 /  0.384 /  0.524
+   1990s 1990-01-1999-12:  0.754 /  0.968 /  0.958
+   2000s 2000-01-2009-12:  0.512 /  0.263 / -0.144
+   2010s 2010-01-2019-12:  0.629 /  0.819 /  1.042
+   2020s 2020-01-2026-07:  0.281 /  0.640 /  0.760
+
+-- (a) descomposicion solo-largos (exceso mensual, sin costos): E[w]*E[x] + cov(w,x)
+   A_lo_L3      dentro: E[w] 0.613 x E[x] 0.575% = 0.353% ; cov +0.022%/mes
+   A_lo_L3      fuera : E[w] 0.766 x E[x] 1.122% = 0.859% ; cov -0.100%/mes
+   A_lo_L6      dentro: E[w] 0.648 x E[x] 0.575% = 0.372% ; cov +0.120%/mes
+   A_lo_L6      fuera : E[w] 0.817 x E[x] 1.122% = 0.917% ; cov -0.329%/mes
+   A_lo_L12     dentro: E[w] 0.669 x E[x] 0.575% = 0.384% ; cov +0.114%/mes
+   A_lo_L12     fuera : E[w] 0.880 x E[x] 1.122% = 0.987% ; cov -0.180%/mes
+   A_ref_sma10  dentro: E[w] 0.701 x E[x] 0.575% = 0.403% ; cov +0.096%/mes
+   A_ref_sma10  fuera : E[w] 0.857 x E[x] 1.122% = 0.961% ; cov -0.269%/mes
+
+=== (b) 8 ETFs, rendimiento total propio (cierre + dividendo ex) ===
+   SPY: desde 1996-11, 121 dividendos (0 sin barra), dif. max mensual contra adjclose 0.023 pp; CAGR propio 10.19% vs adjclose 10.18%
+   EFA: desde 2001-09, 47 dividendos (0 sin barra), dif. max mensual contra adjclose 0.065 pp; CAGR propio 6.70% vs adjclose 6.70%
+   EEM: desde 2003-05, 47 dividendos (0 sin barra), dif. max mensual contra adjclose 0.047 pp; CAGR propio 9.83% vs adjclose 9.83%
+   TLT: desde 2002-08, 288 dividendos (0 sin barra), dif. max mensual contra adjclose 0.015 pp; CAGR propio 3.49% vs adjclose 3.49%
+   IEF: desde 2002-08, 290 dividendos (0 sin barra), dif. max mensual contra adjclose 0.011 pp; CAGR propio 3.48% vs adjclose 3.48%
+   GLD: desde 2004-12, 0 dividendos (0 sin barra), dif. max mensual contra adjclose 0.000 pp; CAGR propio 10.66% vs adjclose 10.66%
+   DBC: desde 2006-03, 9 dividendos (0 sin barra), dif. max mensual contra adjclose 0.044 pp; CAGR propio 2.61% vs adjclose 2.61%
+   VNQ: desde 2004-10, 88 dividendos (0 sin barra), dif. max mensual contra adjclose 0.039 pp; CAGR propio 7.52% vs adjclose 7.53%
+   muestra comun desde 2006-03; primer mes evaluado 2007-03
+   meses sin sigma (>=120 dias): []
+
+=== (b) 8 ETFs, costos def ===
+-- total 2007-03 a 2026-07
+   B_ls_vt40_L3             CAGR   1.76% | vol  20.59% | Sharpe  0.112 | t NW6  0.51 | Sortino  0.172 | MDD  -58.66% | n 233 (2007-03 a 2026-07)
+   B_ls_vt40_L6             CAGR   2.64% | vol  19.17% | Sharpe  0.153 | t NW6  0.69 | Sortino  0.222 | MDD  -40.25% | n 233 (2007-03 a 2026-07)
+   B_ls_vt40_L12            CAGR   5.84% | vol  18.73% | Sharpe  0.316 | t NW6  1.46 | Sortino  0.478 | MDD  -45.35% | n 233 (2007-03 a 2026-07)
+   B_lo_vt10_L3             CAGR   3.26% | vol   3.57% | Sharpe  0.498 | t NW6  2.37 | Sortino  0.762 | MDD   -7.08% | n 233 (2007-03 a 2026-07)
+   B_lo_vt10_L6             CAGR   3.29% | vol   3.66% | Sharpe  0.494 | t NW6  2.41 | Sortino  0.754 | MDD   -5.19% | n 233 (2007-03 a 2026-07)
+   B_lo_vt10_L12            CAGR   3.65% | vol   3.77% | Sharpe  0.574 | t NW6  2.83 | Sortino  0.903 | MDD   -6.61% | n 233 (2007-03 a 2026-07)
+   B_lo_L3                  CAGR   4.97% | vol   6.21% | Sharpe  0.570 | t NW6  2.50 | Sortino  0.920 | MDD  -11.13% | n 233 (2007-03 a 2026-07)
+   B_lo_L6                  CAGR   4.79% | vol   5.98% | Sharpe  0.561 | t NW6  2.55 | Sortino  0.911 | MDD   -7.61% | n 233 (2007-03 a 2026-07)
+   B_lo_L12                 CAGR   4.85% | vol   6.35% | Sharpe  0.541 | t NW6  2.64 | Sortino  0.850 | MDD   -9.20% | n 233 (2007-03 a 2026-07)
+   B_ref_1N                 CAGR   6.17% | vol  10.98% | Sharpe  0.465 | t NW6  2.00 | Sortino  0.671 | MDD  -34.57% | n 233 (2007-03 a 2026-07)
+   B_ref_1N_sin_rebalanceo  CAGR   6.23% | vol  10.58% | Sharpe  0.485 | t NW6  2.15 | Sortino  0.696 | MDD  -30.11% | n 233 (2007-03 a 2026-07)
+   B_ref_efectivo           CAGR   1.52% | vol   0.53% | Sharpe  0.000 | t NW6  0.00 | Sortino  0.000 | MDD    0.00% | n 233 (2007-03 a 2026-07)
+   B_ref_1N_sma10           CAGR   4.94% | vol   6.11% | Sharpe  0.574 | t NW6  2.61 | Sortino  0.917 | MDD   -8.48% | n 233 (2007-03 a 2026-07)
+   B_ref_1N_vt10            CAGR   4.12% | vol   5.43% | Sharpe  0.496 | t NW6  2.35 | Sortino  0.724 | MDD  -10.90% | n 233 (2007-03 a 2026-07)
+   B_ref_largo_vt40         CAGR  10.30% | vol  22.43% | Sharpe  0.486 | t NW6  2.30 | Sortino  0.706 | MDD  -44.55% | n 233 (2007-03 a 2026-07)
+-- dentro 2007-03 a 2011-12
+   B_ls_vt40_L3             CAGR  17.21% | vol  20.25% | Sharpe  0.831 | t NW6  2.12 | Sortino  1.561 | MDD  -17.23% | n 58 (2007-03 a 2011-12)
+   B_ls_vt40_L6             CAGR   9.71% | vol  17.56% | Sharpe  0.555 | t NW6  1.39 | Sortino  0.893 | MDD  -20.17% | n 58 (2007-03 a 2011-12)
+   B_ls_vt40_L12            CAGR  13.88% | vol  16.85% | Sharpe  0.796 | t NW6  1.63 | Sortino  1.314 | MDD  -25.72% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L3             CAGR   5.10% | vol   3.60% | Sharpe  1.099 | t NW6  2.73 | Sortino  2.235 | MDD   -3.48% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L6             CAGR   4.08% | vol   3.22% | Sharpe  0.938 | t NW6  2.68 | Sortino  1.708 | MDD   -2.42% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L12            CAGR   4.52% | vol   3.87% | Sharpe  0.896 | t NW6  2.38 | Sortino  1.607 | MDD   -2.66% | n 58 (2007-03 a 2011-12)
+   B_lo_L3                  CAGR   8.71% | vol   8.04% | Sharpe  0.944 | t NW6  2.16 | Sortino  1.704 | MDD  -11.13% | n 58 (2007-03 a 2011-12)
+   B_lo_L6                  CAGR   7.42% | vol   6.96% | Sharpe  0.913 | t NW6  2.40 | Sortino  1.693 | MDD   -4.86% | n 58 (2007-03 a 2011-12)
+   B_lo_L12                 CAGR   6.03% | vol   8.67% | Sharpe  0.597 | t NW6  1.59 | Sortino  0.938 | MDD   -9.20% | n 58 (2007-03 a 2011-12)
+   B_ref_1N                 CAGR   5.66% | vol  15.07% | Sharpe  0.371 | t NW6  0.70 | Sortino  0.515 | MDD  -34.57% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_sin_rebalanceo  CAGR   5.38% | vol  13.63% | Sharpe  0.375 | t NW6  0.73 | Sortino  0.509 | MDD  -30.11% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_sma10           CAGR   7.00% | vol   7.65% | Sharpe  0.786 | t NW6  1.78 | Sortino  1.409 | MDD   -8.48% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_vt10            CAGR   4.57% | vol   4.82% | Sharpe  0.730 | t NW6  1.51 | Sortino  1.142 | MDD   -8.27% | n 58 (2007-03 a 2011-12)
+   B_ref_largo_vt40         CAGR  14.91% | vol  19.43% | Sharpe  0.760 | t NW6  1.55 | Sortino  1.192 | MDD  -31.56% | n 58 (2007-03 a 2011-12)
+-- fuera 2012-01 a 2026-07
+   B_ls_vt40_L3             CAGR  -2.89% | vol  20.58% | Sharpe -0.122 | t NW6 -0.50 | Sortino -0.177 | MDD  -58.66% | n 175 (2012-01 a 2026-07)
+   B_ls_vt40_L6             CAGR   0.40% | vol  19.68% | Sharpe  0.035 | t NW6  0.14 | Sortino  0.049 | MDD  -40.25% | n 175 (2012-01 a 2026-07)
+   B_ls_vt40_L12            CAGR   3.30% | vol  19.31% | Sharpe  0.178 | t NW6  0.76 | Sortino  0.265 | MDD  -45.35% | n 175 (2012-01 a 2026-07)
+   B_lo_vt10_L3             CAGR   2.66% | vol   3.56% | Sharpe  0.295 | t NW6  1.28 | Sortino  0.420 | MDD   -7.08% | n 175 (2012-01 a 2026-07)
+   B_lo_vt10_L6             CAGR   3.03% | vol   3.81% | Sharpe  0.372 | t NW6  1.55 | Sortino  0.549 | MDD   -5.19% | n 175 (2012-01 a 2026-07)
+   B_lo_vt10_L12            CAGR   3.36% | vol   3.75% | Sharpe  0.463 | t NW6  1.97 | Sortino  0.702 | MDD   -6.61% | n 175 (2012-01 a 2026-07)
+   B_lo_L3                  CAGR   3.76% | vol   5.45% | Sharpe  0.403 | t NW6  1.61 | Sortino  0.605 | MDD  -10.89% | n 175 (2012-01 a 2026-07)
+   B_lo_L6                  CAGR   3.93% | vol   5.62% | Sharpe  0.420 | t NW6  1.62 | Sortino  0.646 | MDD   -7.61% | n 175 (2012-01 a 2026-07)
+   B_lo_L12                 CAGR   4.46% | vol   5.40% | Sharpe  0.531 | t NW6  2.12 | Sortino  0.837 | MDD   -8.46% | n 175 (2012-01 a 2026-07)
+   B_ref_1N                 CAGR   6.33% | vol   9.28% | Sharpe  0.533 | t NW6  2.33 | Sortino  0.803 | MDD  -19.21% | n 175 (2012-01 a 2026-07)
+   B_ref_1N_sin_rebalanceo  CAGR   6.52% | vol   9.40% | Sharpe  0.547 | t NW6  2.35 | Sortino  0.826 | MDD  -21.49% | n 175 (2012-01 a 2026-07)
+   B_ref_1N_sma10           CAGR   4.26% | vol   5.52% | Sharpe  0.486 | t NW6  1.98 | Sortino  0.731 | MDD   -6.93% | n 175 (2012-01 a 2026-07)
+   B_ref_1N_vt10            CAGR   3.96% | vol   5.63% | Sharpe  0.429 | t NW6  1.85 | Sortino  0.618 | MDD  -10.90% | n 175 (2012-01 a 2026-07)
+   B_ref_largo_vt40         CAGR   8.82% | vol  23.39% | Sharpe  0.411 | t NW6  1.77 | Sortino  0.589 | MDD  -44.55% | n 175 (2012-01 a 2026-07)
+-- fuera_1 2012-01 a 2019-12
+   B_ls_vt40_L3             CAGR  -7.87% | vol  18.78% | Sharpe -0.379 | t NW6 -1.07 | Sortino -0.504 | MDD  -58.66% | n 96 (2012-01 a 2019-12)
+   B_ls_vt40_L6             CAGR  -1.41% | vol  18.95% | Sharpe -0.017 | t NW6 -0.05 | Sortino -0.025 | MDD  -38.25% | n 96 (2012-01 a 2019-12)
+   B_ls_vt40_L12            CAGR   1.56% | vol  20.37% | Sharpe  0.142 | t NW6  0.43 | Sortino  0.215 | MDD  -45.35% | n 96 (2012-01 a 2019-12)
+   B_lo_vt10_L3             CAGR   1.17% | vol   3.38% | Sharpe  0.160 | t NW6  0.53 | Sortino  0.220 | MDD   -7.08% | n 96 (2012-01 a 2019-12)
+   B_lo_vt10_L6             CAGR   2.06% | vol   3.65% | Sharpe  0.390 | t NW6  1.16 | Sortino  0.575 | MDD   -5.19% | n 96 (2012-01 a 2019-12)
+   B_lo_vt10_L12            CAGR   2.39% | vol   3.69% | Sharpe  0.473 | t NW6  1.49 | Sortino  0.699 | MDD   -6.61% | n 96 (2012-01 a 2019-12)
+   B_lo_L3                  CAGR   1.17% | vol   4.68% | Sharpe  0.126 | t NW6  0.42 | Sortino  0.169 | MDD  -10.89% | n 96 (2012-01 a 2019-12)
+   B_lo_L6                  CAGR   2.10% | vol   4.80% | Sharpe  0.315 | t NW6  0.94 | Sortino  0.447 | MDD   -7.61% | n 96 (2012-01 a 2019-12)
+   B_lo_L12                 CAGR   2.96% | vol   4.75% | Sharpe  0.492 | t NW6  1.55 | Sortino  0.742 | MDD   -8.46% | n 96 (2012-01 a 2019-12)
+   B_ref_1N                 CAGR   4.93% | vol   7.30% | Sharpe  0.604 | t NW6  1.91 | Sortino  0.947 | MDD  -11.86% | n 96 (2012-01 a 2019-12)
+   B_ref_1N_sin_rebalanceo  CAGR   4.65% | vol   7.16% | Sharpe  0.576 | t NW6  1.82 | Sortino  0.901 | MDD   -8.41% | n 96 (2012-01 a 2019-12)
+   B_ref_1N_sma10           CAGR   2.28% | vol   4.64% | Sharpe  0.362 | t NW6  1.27 | Sortino  0.517 | MDD   -6.93% | n 96 (2012-01 a 2019-12)
+   B_ref_1N_vt10            CAGR   3.31% | vol   4.89% | Sharpe  0.554 | t NW6  1.69 | Sortino  0.814 | MDD   -8.05% | n 96 (2012-01 a 2019-12)
+   B_ref_largo_vt40         CAGR  10.40% | vol  21.16% | Sharpe  0.545 | t NW6  1.65 | Sortino  0.793 | MDD  -30.34% | n 96 (2012-01 a 2019-12)
+-- fuera_2 2020-01 a 2026-07
+   B_ls_vt40_L3             CAGR   3.52% | vol  22.54% | Sharpe  0.136 | t NW6  0.41 | Sortino  0.214 | MDD  -37.13% | n 79 (2020-01 a 2026-07)
+   B_ls_vt40_L6             CAGR   2.64% | vol  20.65% | Sharpe  0.092 | t NW6  0.26 | Sortino  0.130 | MDD  -40.25% | n 79 (2020-01 a 2026-07)
+   B_ls_vt40_L12            CAGR   5.46% | vol  18.05% | Sharpe  0.227 | t NW6  0.72 | Sortino  0.332 | MDD  -28.61% | n 79 (2020-01 a 2026-07)
+   B_lo_vt10_L3             CAGR   4.50% | vol   3.72% | Sharpe  0.444 | t NW6  1.22 | Sortino  0.657 | MDD   -3.05% | n 79 (2020-01 a 2026-07)
+   B_lo_vt10_L6             CAGR   4.23% | vol   3.98% | Sharpe  0.351 | t NW6  0.98 | Sortino  0.521 | MDD   -2.87% | n 79 (2020-01 a 2026-07)
+   B_lo_vt10_L12            CAGR   4.54% | vol   3.81% | Sharpe  0.449 | t NW6  1.25 | Sortino  0.707 | MDD   -2.90% | n 79 (2020-01 a 2026-07)
+   B_lo_L3                  CAGR   6.99% | vol   6.17% | Sharpe  0.664 | t NW6  1.74 | Sortino  1.090 | MDD   -4.73% | n 79 (2020-01 a 2026-07)
+   B_lo_L6                  CAGR   6.19% | vol   6.45% | Sharpe  0.523 | t NW6  1.32 | Sortino  0.855 | MDD   -4.64% | n 79 (2020-01 a 2026-07)
+   B_lo_L12                 CAGR   6.31% | vol   6.08% | Sharpe  0.573 | t NW6  1.47 | Sortino  0.942 | MDD   -6.15% | n 79 (2020-01 a 2026-07)
+   B_ref_1N                 CAGR   8.06% | vol  11.27% | Sharpe  0.495 | t NW6  1.46 | Sortino  0.736 | MDD  -19.21% | n 79 (2020-01 a 2026-07)
+   B_ref_1N_sin_rebalanceo  CAGR   8.84% | vol  11.56% | Sharpe  0.549 | t NW6  1.61 | Sortino  0.819 | MDD  -21.49% | n 79 (2020-01 a 2026-07)
+   B_ref_1N_sma10           CAGR   6.72% | vol   6.39% | Sharpe  0.606 | t NW6  1.57 | Sortino  0.947 | MDD   -5.48% | n 79 (2020-01 a 2026-07)
+   B_ref_1N_vt10            CAGR   4.76% | vol   6.44% | Sharpe  0.319 | t NW6  0.92 | Sortino  0.454 | MDD  -10.90% | n 79 (2020-01 a 2026-07)
+   B_ref_largo_vt40         CAGR   6.92% | vol  25.97% | Sharpe  0.280 | t NW6  0.83 | Sortino  0.399 | MDD  -44.55% | n 79 (2020-01 a 2026-07)
+-- fuera_ext 2012-01 a 2026-08
+   B_ls_vt40_L3             CAGR  -3.10% | vol  20.53% | Sharpe -0.133 | t NW6 -0.55 | Sortino -0.193 | MDD  -58.66% | n 176 (2012-01 a 2026-08)
+   B_ls_vt40_L6             CAGR   0.45% | vol  19.63% | Sharpe  0.036 | t NW6  0.14 | Sortino  0.051 | MDD  -40.25% | n 176 (2012-01 a 2026-08)
+   B_ls_vt40_L12            CAGR   3.58% | vol  19.28% | Sharpe  0.191 | t NW6  0.82 | Sortino  0.285 | MDD  -45.35% | n 176 (2012-01 a 2026-08)
+   B_lo_vt10_L3             CAGR   2.67% | vol   3.55% | Sharpe  0.296 | t NW6  1.28 | Sortino  0.421 | MDD   -7.08% | n 176 (2012-01 a 2026-08)
+   B_lo_vt10_L6             CAGR   3.08% | vol   3.80% | Sharpe  0.381 | t NW6  1.60 | Sortino  0.563 | MDD   -5.19% | n 176 (2012-01 a 2026-08)
+   B_lo_vt10_L12            CAGR   3.43% | vol   3.75% | Sharpe  0.480 | t NW6  2.04 | Sortino  0.728 | MDD   -6.61% | n 176 (2012-01 a 2026-08)
+   B_lo_L3                  CAGR   3.76% | vol   5.43% | Sharpe  0.403 | t NW6  1.61 | Sortino  0.605 | MDD  -10.89% | n 176 (2012-01 a 2026-08)
+   B_lo_L6                  CAGR   4.02% | vol   5.61% | Sharpe  0.435 | t NW6  1.69 | Sortino  0.670 | MDD   -7.61% | n 176 (2012-01 a 2026-08)
+   B_lo_L12                 CAGR   4.64% | vol   5.42% | Sharpe  0.559 | t NW6  2.24 | Sortino  0.887 | MDD   -8.46% | n 176 (2012-01 a 2026-08)
+   B_ref_1N                 CAGR   6.51% | vol   9.28% | Sharpe  0.549 | t NW6  2.41 | Sortino  0.830 | MDD  -19.21% | n 176 (2012-01 a 2026-08)
+   B_ref_1N_sin_rebalanceo  CAGR   6.74% | vol   9.41% | Sharpe  0.568 | t NW6  2.47 | Sortino  0.861 | MDD  -21.49% | n 176 (2012-01 a 2026-08)
+   B_ref_1N_sma10           CAGR   4.36% | vol   5.51% | Sharpe  0.501 | t NW6  2.06 | Sortino  0.755 | MDD   -6.93% | n 176 (2012-01 a 2026-08)
+   B_ref_1N_vt10            CAGR   4.04% | vol   5.62% | Sharpe  0.440 | t NW6  1.90 | Sortino  0.634 | MDD  -10.90% | n 176 (2012-01 a 2026-08)
+   B_ref_largo_vt40         CAGR   9.08% | vol  23.34% | Sharpe  0.421 | t NW6  1.83 | Sortino  0.604 | MDD  -44.55% | n 176 (2012-01 a 2026-08)
+
+=== (b) 8 ETFs, costos bruto ===
+-- total 2007-03 a 2026-07
+   B_ls_vt40_L3             CAGR   8.98% | vol  20.73% | Sharpe  0.443 | t NW6  2.12 | Sortino  0.741 | MDD  -41.03% | n 233 (2007-03 a 2026-07)
+   B_ls_vt40_L6             CAGR   8.09% | vol  19.13% | Sharpe  0.424 | t NW6  1.96 | Sortino  0.650 | MDD  -31.20% | n 233 (2007-03 a 2026-07)
+   B_ls_vt40_L12            CAGR   9.89% | vol  18.78% | Sharpe  0.516 | t NW6  2.41 | Sortino  0.818 | MDD  -40.95% | n 233 (2007-03 a 2026-07)
+   B_lo_vt10_L3             CAGR   4.02% | vol   3.58% | Sharpe  0.703 | t NW6  3.41 | Sortino  1.128 | MDD   -6.27% | n 233 (2007-03 a 2026-07)
+   B_lo_vt10_L6             CAGR   3.89% | vol   3.66% | Sharpe  0.653 | t NW6  3.22 | Sortino  1.032 | MDD   -4.75% | n 233 (2007-03 a 2026-07)
+   B_lo_vt10_L12            CAGR   4.08% | vol   3.78% | Sharpe  0.684 | t NW6  3.38 | Sortino  1.105 | MDD   -6.09% | n 233 (2007-03 a 2026-07)
+   B_lo_L3                  CAGR   6.03% | vol   6.23% | Sharpe  0.730 | t NW6  3.25 | Sortino  1.224 | MDD  -10.75% | n 233 (2007-03 a 2026-07)
+   B_lo_L6                  CAGR   5.61% | vol   5.97% | Sharpe  0.693 | t NW6  3.18 | Sortino  1.158 | MDD   -7.00% | n 233 (2007-03 a 2026-07)
+   B_lo_L12                 CAGR   5.40% | vol   6.37% | Sharpe  0.624 | t NW6  3.05 | Sortino  0.997 | MDD   -9.13% | n 233 (2007-03 a 2026-07)
+   B_ref_1N                 CAGR   6.31% | vol  10.98% | Sharpe  0.477 | t NW6  2.05 | Sortino  0.690 | MDD  -34.45% | n 233 (2007-03 a 2026-07)
+   B_ref_1N_sin_rebalanceo  CAGR   6.25% | vol  10.58% | Sharpe  0.487 | t NW6  2.16 | Sortino  0.699 | MDD  -30.11% | n 233 (2007-03 a 2026-07)
+   B_ref_efectivo           CAGR   1.52% | vol   0.53% | Sharpe  0.000 | t NW6  0.00 | Sortino  0.000 | MDD    0.00% | n 233 (2007-03 a 2026-07)
+   B_ref_1N_sma10           CAGR   5.68% | vol   6.10% | Sharpe  0.691 | t NW6  3.17 | Sortino  1.130 | MDD   -8.20% | n 233 (2007-03 a 2026-07)
+   B_ref_1N_vt10            CAGR   4.30% | vol   5.43% | Sharpe  0.529 | t NW6  2.51 | Sortino  0.777 | MDD  -10.79% | n 233 (2007-03 a 2026-07)
+   B_ref_largo_vt40         CAGR  11.57% | vol  22.44% | Sharpe  0.537 | t NW6  2.55 | Sortino  0.789 | MDD  -43.74% | n 233 (2007-03 a 2026-07)
+-- dentro 2007-03 a 2011-12
+   B_ls_vt40_L3             CAGR  23.10% | vol  20.51% | Sharpe  1.065 | t NW6  2.89 | Sortino  2.128 | MDD  -14.13% | n 58 (2007-03 a 2011-12)
+   B_ls_vt40_L6             CAGR  14.33% | vol  17.52% | Sharpe  0.795 | t NW6  1.97 | Sortino  1.350 | MDD  -15.00% | n 58 (2007-03 a 2011-12)
+   B_ls_vt40_L12            CAGR  16.81% | vol  16.92% | Sharpe  0.946 | t NW6  1.95 | Sortino  1.617 | MDD  -22.99% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L3             CAGR   5.66% | vol   3.63% | Sharpe  1.238 | t NW6  3.12 | Sortino  2.613 | MDD   -3.27% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L6             CAGR   4.58% | vol   3.21% | Sharpe  1.099 | t NW6  3.10 | Sortino  2.082 | MDD   -2.31% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L12            CAGR   4.86% | vol   3.88% | Sharpe  0.977 | t NW6  2.59 | Sortino  1.794 | MDD   -2.62% | n 58 (2007-03 a 2011-12)
+   B_lo_L3                  CAGR   9.69% | vol   8.11% | Sharpe  1.049 | t NW6  2.44 | Sortino  1.943 | MDD  -10.75% | n 58 (2007-03 a 2011-12)
+   B_lo_L6                  CAGR   8.24% | vol   6.93% | Sharpe  1.028 | t NW6  2.69 | Sortino  1.952 | MDD   -4.75% | n 58 (2007-03 a 2011-12)
+   B_lo_L12                 CAGR   6.53% | vol   8.70% | Sharpe  0.648 | t NW6  1.73 | Sortino  1.031 | MDD   -9.13% | n 58 (2007-03 a 2011-12)
+   B_ref_1N                 CAGR   5.90% | vol  15.07% | Sharpe  0.386 | t NW6  0.73 | Sortino  0.537 | MDD  -34.45% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_sin_rebalanceo  CAGR   5.46% | vol  13.63% | Sharpe  0.381 | t NW6  0.74 | Sortino  0.516 | MDD  -30.11% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_sma10           CAGR   7.72% | vol   7.61% | Sharpe  0.877 | t NW6  1.99 | Sortino  1.601 | MDD   -8.20% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_vt10            CAGR   4.77% | vol   4.81% | Sharpe  0.772 | t NW6  1.60 | Sortino  1.218 | MDD   -8.19% | n 58 (2007-03 a 2011-12)
+   B_ref_largo_vt40         CAGR  16.18% | vol  19.36% | Sharpe  0.819 | t NW6  1.67 | Sortino  1.300 | MDD  -31.26% | n 58 (2007-03 a 2011-12)
+-- fuera 2012-01 a 2026-07
+   B_ls_vt40_L3             CAGR   4.66% | vol  20.73% | Sharpe  0.241 | t NW6  1.01 | Sortino  0.383 | MDD  -41.03% | n 175 (2012-01 a 2026-07)
+   B_ls_vt40_L6             CAGR   6.11% | vol  19.66% | Sharpe  0.315 | t NW6  1.26 | Sortino  0.473 | MDD  -31.20% | n 175 (2012-01 a 2026-07)
+   B_ls_vt40_L12            CAGR   7.69% | vol  19.37% | Sharpe  0.394 | t NW6  1.68 | Sortino  0.612 | MDD  -40.95% | n 175 (2012-01 a 2026-07)
+   B_lo_vt10_L3             CAGR   3.48% | vol   3.56% | Sharpe  0.522 | t NW6  2.29 | Sortino  0.779 | MDD   -6.27% | n 175 (2012-01 a 2026-07)
+   B_lo_vt10_L6             CAGR   3.66% | vol   3.81% | Sharpe  0.532 | t NW6  2.25 | Sortino  0.813 | MDD   -4.75% | n 175 (2012-01 a 2026-07)
+   B_lo_vt10_L12            CAGR   3.82% | vol   3.76% | Sharpe  0.584 | t NW6  2.48 | Sortino  0.909 | MDD   -6.09% | n 175 (2012-01 a 2026-07)
+   B_lo_L3                  CAGR   4.85% | vol   5.46% | Sharpe  0.595 | t NW6  2.41 | Sortino  0.933 | MDD   -9.28% | n 175 (2012-01 a 2026-07)
+   B_lo_L6                  CAGR   4.75% | vol   5.62% | Sharpe  0.561 | t NW6  2.20 | Sortino  0.888 | MDD   -7.00% | n 175 (2012-01 a 2026-07)
+   B_lo_L12                 CAGR   5.03% | vol   5.40% | Sharpe  0.633 | t NW6  2.54 | Sortino  1.021 | MDD   -7.93% | n 175 (2012-01 a 2026-07)
+   B_ref_1N                 CAGR   6.44% | vol   9.29% | Sharpe  0.543 | t NW6  2.38 | Sortino  0.821 | MDD  -19.14% | n 175 (2012-01 a 2026-07)
+   B_ref_1N_sin_rebalanceo  CAGR   6.52% | vol   9.40% | Sharpe  0.547 | t NW6  2.35 | Sortino  0.826 | MDD  -21.49% | n 175 (2012-01 a 2026-07)
+   B_ref_1N_sma10           CAGR   5.01% | vol   5.53% | Sharpe  0.616 | t NW6  2.56 | Sortino  0.952 | MDD   -6.27% | n 175 (2012-01 a 2026-07)
+   B_ref_1N_vt10            CAGR   4.14% | vol   5.63% | Sharpe  0.460 | t NW6  1.98 | Sortino  0.667 | MDD  -10.79% | n 175 (2012-01 a 2026-07)
+   B_ref_largo_vt40         CAGR  10.09% | vol  23.41% | Sharpe  0.461 | t NW6  1.99 | Sortino  0.667 | MDD  -43.74% | n 175 (2012-01 a 2026-07)
+-- fuera_1 2012-01 a 2019-12
+   B_ls_vt40_L3             CAGR  -0.21% | vol  18.83% | Sharpe  0.045 | t NW6  0.13 | Sortino  0.067 | MDD  -41.03% | n 96 (2012-01 a 2019-12)
+   B_ls_vt40_L6             CAGR   4.34% | vol  18.80% | Sharpe  0.282 | t NW6  0.78 | Sortino  0.434 | MDD  -31.20% | n 96 (2012-01 a 2019-12)
+   B_ls_vt40_L12            CAGR   5.92% | vol  20.28% | Sharpe  0.349 | t NW6  1.05 | Sortino  0.554 | MDD  -40.95% | n 96 (2012-01 a 2019-12)
+   B_lo_vt10_L3             CAGR   2.02% | vol   3.38% | Sharpe  0.410 | t NW6  1.36 | Sortino  0.591 | MDD   -6.27% | n 96 (2012-01 a 2019-12)
+   B_lo_vt10_L6             CAGR   2.68% | vol   3.64% | Sharpe  0.558 | t NW6  1.68 | Sortino  0.852 | MDD   -4.75% | n 96 (2012-01 a 2019-12)
+   B_lo_vt10_L12            CAGR   2.85% | vol   3.69% | Sharpe  0.595 | t NW6  1.88 | Sortino  0.901 | MDD   -6.09% | n 96 (2012-01 a 2019-12)
+   B_lo_L3                  CAGR   2.26% | vol   4.69% | Sharpe  0.356 | t NW6  1.20 | Sortino  0.499 | MDD   -9.28% | n 96 (2012-01 a 2019-12)
+   B_lo_L6                  CAGR   2.89% | vol   4.79% | Sharpe  0.477 | t NW6  1.44 | Sortino  0.698 | MDD   -7.00% | n 96 (2012-01 a 2019-12)
+   B_lo_L12                 CAGR   3.51% | vol   4.74% | Sharpe  0.605 | t NW6  1.92 | Sortino  0.933 | MDD   -7.93% | n 96 (2012-01 a 2019-12)
+   B_ref_1N                 CAGR   5.04% | vol   7.30% | Sharpe  0.618 | t NW6  1.96 | Sortino  0.971 | MDD  -11.71% | n 96 (2012-01 a 2019-12)
+   B_ref_1N_sin_rebalanceo  CAGR   4.65% | vol   7.16% | Sharpe  0.576 | t NW6  1.82 | Sortino  0.901 | MDD   -8.41% | n 96 (2012-01 a 2019-12)
+   B_ref_1N_sma10           CAGR   2.98% | vol   4.65% | Sharpe  0.508 | t NW6  1.81 | Sortino  0.744 | MDD   -6.27% | n 96 (2012-01 a 2019-12)
+   B_ref_1N_vt10            CAGR   3.48% | vol   4.89% | Sharpe  0.588 | t NW6  1.79 | Sortino  0.869 | MDD   -7.82% | n 96 (2012-01 a 2019-12)
+   B_ref_largo_vt40         CAGR  11.71% | vol  21.17% | Sharpe  0.601 | t NW6  1.83 | Sortino  0.883 | MDD  -29.48% | n 96 (2012-01 a 2019-12)
+-- fuera_2 2020-01 a 2026-07
+   B_ls_vt40_L3             CAGR  10.90% | vol  22.81% | Sharpe  0.438 | t NW6  1.38 | Sortino  0.754 | MDD  -30.23% | n 79 (2020-01 a 2026-07)
+   B_ls_vt40_L6             CAGR   8.29% | vol  20.75% | Sharpe  0.351 | t NW6  1.04 | Sortino  0.517 | MDD  -28.28% | n 79 (2020-01 a 2026-07)
+   B_ls_vt40_L12            CAGR   9.89% | vol  18.33% | Sharpe  0.452 | t NW6  1.42 | Sortino  0.689 | MDD  -25.16% | n 79 (2020-01 a 2026-07)
+   B_lo_vt10_L3             CAGR   5.28% | vol   3.72% | Sharpe  0.644 | t NW6  1.79 | Sortino  1.002 | MDD   -2.89% | n 79 (2020-01 a 2026-07)
+   B_lo_vt10_L6             CAGR   4.85% | vol   4.00% | Sharpe  0.501 | t NW6  1.42 | Sortino  0.771 | MDD   -2.74% | n 79 (2020-01 a 2026-07)
+   B_lo_vt10_L12            CAGR   5.02% | vol   3.84% | Sharpe  0.568 | t NW6  1.58 | Sortino  0.919 | MDD   -2.76% | n 79 (2020-01 a 2026-07)
+   B_lo_L3                  CAGR   8.08% | vol   6.19% | Sharpe  0.825 | t NW6  2.20 | Sortino  1.417 | MDD   -4.02% | n 79 (2020-01 a 2026-07)
+   B_lo_L6                  CAGR   7.05% | vol   6.47% | Sharpe  0.647 | t NW6  1.65 | Sortino  1.090 | MDD   -4.50% | n 79 (2020-01 a 2026-07)
+   B_lo_L12                 CAGR   6.92% | vol   6.10% | Sharpe  0.666 | t NW6  1.72 | Sortino  1.118 | MDD   -5.42% | n 79 (2020-01 a 2026-07)
+   B_ref_1N                 CAGR   8.18% | vol  11.27% | Sharpe  0.505 | t NW6  1.49 | Sortino  0.752 | MDD  -19.14% | n 79 (2020-01 a 2026-07)
+   B_ref_1N_sin_rebalanceo  CAGR   8.84% | vol  11.56% | Sharpe  0.549 | t NW6  1.61 | Sortino  0.819 | MDD  -21.49% | n 79 (2020-01 a 2026-07)
+   B_ref_1N_sma10           CAGR   7.55% | vol   6.40% | Sharpe  0.725 | t NW6  1.91 | Sortino  1.164 | MDD   -4.53% | n 79 (2020-01 a 2026-07)
+   B_ref_1N_vt10            CAGR   4.95% | vol   6.44% | Sharpe  0.347 | t NW6  1.00 | Sortino  0.498 | MDD  -10.79% | n 79 (2020-01 a 2026-07)
+   B_ref_largo_vt40         CAGR   8.15% | vol  26.01% | Sharpe  0.324 | t NW6  0.96 | Sortino  0.466 | MDD  -43.74% | n 79 (2020-01 a 2026-07)
+-- fuera_ext 2012-01 a 2026-08
+   B_ls_vt40_L3             CAGR   4.41% | vol  20.69% | Sharpe  0.229 | t NW6  0.96 | Sortino  0.363 | MDD  -41.03% | n 176 (2012-01 a 2026-08)
+   B_ls_vt40_L6             CAGR   6.13% | vol  19.60% | Sharpe  0.316 | t NW6  1.27 | Sortino  0.474 | MDD  -31.20% | n 176 (2012-01 a 2026-08)
+   B_ls_vt40_L12            CAGR   7.96% | vol  19.34% | Sharpe  0.406 | t NW6  1.74 | Sortino  0.633 | MDD  -40.95% | n 176 (2012-01 a 2026-08)
+   B_lo_vt10_L3             CAGR   3.49% | vol   3.55% | Sharpe  0.522 | t NW6  2.29 | Sortino  0.779 | MDD   -6.27% | n 176 (2012-01 a 2026-08)
+   B_lo_vt10_L6             CAGR   3.70% | vol   3.80% | Sharpe  0.541 | t NW6  2.29 | Sortino  0.827 | MDD   -4.75% | n 176 (2012-01 a 2026-08)
+   B_lo_vt10_L12            CAGR   3.89% | vol   3.75% | Sharpe  0.600 | t NW6  2.55 | Sortino  0.935 | MDD   -6.09% | n 176 (2012-01 a 2026-08)
+   B_lo_L3                  CAGR   4.85% | vol   5.45% | Sharpe  0.595 | t NW6  2.42 | Sortino  0.932 | MDD   -9.28% | n 176 (2012-01 a 2026-08)
+   B_lo_L6                  CAGR   4.84% | vol   5.62% | Sharpe  0.576 | t NW6  2.27 | Sortino  0.913 | MDD   -7.00% | n 176 (2012-01 a 2026-08)
+   B_lo_L12                 CAGR   5.21% | vol   5.43% | Sharpe  0.660 | t NW6  2.66 | Sortino  1.071 | MDD   -7.93% | n 176 (2012-01 a 2026-08)
+   B_ref_1N                 CAGR   6.62% | vol   9.28% | Sharpe  0.560 | t NW6  2.46 | Sortino  0.848 | MDD  -19.14% | n 176 (2012-01 a 2026-08)
+   B_ref_1N_sin_rebalanceo  CAGR   6.74% | vol   9.41% | Sharpe  0.568 | t NW6  2.47 | Sortino  0.861 | MDD  -21.49% | n 176 (2012-01 a 2026-08)
+   B_ref_1N_sma10           CAGR   5.11% | vol   5.52% | Sharpe  0.631 | t NW6  2.63 | Sortino  0.976 | MDD   -6.27% | n 176 (2012-01 a 2026-08)
+   B_ref_1N_vt10            CAGR   4.21% | vol   5.62% | Sharpe  0.471 | t NW6  2.04 | Sortino  0.683 | MDD  -10.79% | n 176 (2012-01 a 2026-08)
+   B_ref_largo_vt40         CAGR  10.35% | vol  23.36% | Sharpe  0.471 | t NW6  2.05 | Sortino  0.682 | MDD  -43.74% | n 176 (2012-01 a 2026-08)
+
+=== (b) 8 ETFs, costos medio ===
+-- total 2007-03 a 2026-07
+   B_ls_vt40_L3             CAGR  -0.28% | vol  20.57% | Sharpe  0.014 | t NW6  0.06 | Sortino  0.021 | MDD  -65.24% | n 233 (2007-03 a 2026-07)
+   B_ls_vt40_L6             CAGR   1.08% | vol  19.20% | Sharpe  0.073 | t NW6  0.33 | Sortino  0.105 | MDD  -43.39% | n 233 (2007-03 a 2026-07)
+   B_ls_vt40_L12            CAGR   4.67% | vol  18.73% | Sharpe  0.256 | t NW6  1.19 | Sortino  0.384 | MDD  -48.49% | n 233 (2007-03 a 2026-07)
+   B_lo_vt10_L3             CAGR   3.04% | vol   3.57% | Sharpe  0.437 | t NW6  2.07 | Sortino  0.661 | MDD   -7.37% | n 233 (2007-03 a 2026-07)
+   B_lo_vt10_L6             CAGR   3.12% | vol   3.67% | Sharpe  0.447 | t NW6  2.18 | Sortino  0.675 | MDD   -5.33% | n 233 (2007-03 a 2026-07)
+   B_lo_vt10_L12            CAGR   3.52% | vol   3.77% | Sharpe  0.541 | t NW6  2.66 | Sortino  0.845 | MDD   -6.81% | n 233 (2007-03 a 2026-07)
+   B_lo_L3                  CAGR   4.66% | vol   6.20% | Sharpe  0.522 | t NW6  2.28 | Sortino  0.834 | MDD  -12.11% | n 233 (2007-03 a 2026-07)
+   B_lo_L6                  CAGR   4.55% | vol   5.98% | Sharpe  0.522 | t NW6  2.37 | Sortino  0.841 | MDD   -7.79% | n 233 (2007-03 a 2026-07)
+   B_lo_L12                 CAGR   4.68% | vol   6.35% | Sharpe  0.517 | t NW6  2.51 | Sortino  0.808 | MDD   -9.22% | n 233 (2007-03 a 2026-07)
+   B_ref_1N                 CAGR   6.12% | vol  10.98% | Sharpe  0.461 | t NW6  1.98 | Sortino  0.665 | MDD  -34.61% | n 233 (2007-03 a 2026-07)
+   B_ref_1N_sin_rebalanceo  CAGR   6.23% | vol  10.58% | Sharpe  0.485 | t NW6  2.15 | Sortino  0.696 | MDD  -30.11% | n 233 (2007-03 a 2026-07)
+   B_ref_efectivo           CAGR   1.52% | vol   0.53% | Sharpe  0.000 | t NW6  0.00 | Sortino  0.000 | MDD    0.00% | n 233 (2007-03 a 2026-07)
+   B_ref_1N_sma10           CAGR   4.72% | vol   6.11% | Sharpe  0.540 | t NW6  2.44 | Sortino  0.857 | MDD   -8.57% | n 233 (2007-03 a 2026-07)
+   B_ref_1N_vt10            CAGR   4.06% | vol   5.43% | Sharpe  0.486 | t NW6  2.30 | Sortino  0.708 | MDD  -10.93% | n 233 (2007-03 a 2026-07)
+   B_ref_largo_vt40         CAGR   9.93% | vol  22.43% | Sharpe  0.470 | t NW6  2.23 | Sortino  0.682 | MDD  -44.79% | n 233 (2007-03 a 2026-07)
+-- dentro 2007-03 a 2011-12
+   B_ls_vt40_L3             CAGR  15.52% | vol  20.19% | Sharpe  0.760 | t NW6  1.91 | Sortino  1.402 | MDD  -18.12% | n 58 (2007-03 a 2011-12)
+   B_ls_vt40_L6             CAGR   8.38% | vol  17.58% | Sharpe  0.485 | t NW6  1.22 | Sortino  0.767 | MDD  -21.63% | n 58 (2007-03 a 2011-12)
+   B_ls_vt40_L12            CAGR  13.03% | vol  16.84% | Sharpe  0.752 | t NW6  1.54 | Sortino  1.228 | MDD  -26.51% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L3             CAGR   4.94% | vol   3.59% | Sharpe  1.058 | t NW6  2.61 | Sortino  2.127 | MDD   -3.55% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L6             CAGR   3.93% | vol   3.23% | Sharpe  0.891 | t NW6  2.55 | Sortino  1.602 | MDD   -2.45% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L12            CAGR   4.43% | vol   3.86% | Sharpe  0.872 | t NW6  2.32 | Sortino  1.553 | MDD   -2.68% | n 58 (2007-03 a 2011-12)
+   B_lo_L3                  CAGR   8.42% | vol   8.02% | Sharpe  0.913 | t NW6  2.08 | Sortino  1.635 | MDD  -11.24% | n 58 (2007-03 a 2011-12)
+   B_lo_L6                  CAGR   7.19% | vol   6.97% | Sharpe  0.880 | t NW6  2.31 | Sortino  1.619 | MDD   -4.92% | n 58 (2007-03 a 2011-12)
+   B_lo_L12                 CAGR   5.88% | vol   8.66% | Sharpe  0.581 | t NW6  1.55 | Sortino  0.911 | MDD   -9.22% | n 58 (2007-03 a 2011-12)
+   B_ref_1N                 CAGR   5.59% | vol  15.07% | Sharpe  0.366 | t NW6  0.69 | Sortino  0.509 | MDD  -34.61% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_sin_rebalanceo  CAGR   5.36% | vol  13.63% | Sharpe  0.374 | t NW6  0.73 | Sortino  0.507 | MDD  -30.11% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_sma10           CAGR   6.79% | vol   7.66% | Sharpe  0.759 | t NW6  1.72 | Sortino  1.354 | MDD   -8.57% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_vt10            CAGR   4.51% | vol   4.83% | Sharpe  0.717 | t NW6  1.48 | Sortino  1.120 | MDD   -8.29% | n 58 (2007-03 a 2011-12)
+   B_ref_largo_vt40         CAGR  14.53% | vol  19.46% | Sharpe  0.742 | t NW6  1.51 | Sortino  1.160 | MDD  -31.65% | n 58 (2007-03 a 2011-12)
+-- fuera 2012-01 a 2026-07
+   B_ls_vt40_L3             CAGR  -5.02% | vol  20.55% | Sharpe -0.229 | t NW6 -0.93 | Sortino -0.324 | MDD  -65.24% | n 175 (2012-01 a 2026-07)
+   B_ls_vt40_L6             CAGR  -1.23% | vol  19.71% | Sharpe -0.048 | t NW6 -0.18 | Sortino -0.066 | MDD  -43.39% | n 175 (2012-01 a 2026-07)
+   B_ls_vt40_L12            CAGR   2.04% | vol  19.30% | Sharpe  0.115 | t NW6  0.49 | Sortino  0.168 | MDD  -48.49% | n 175 (2012-01 a 2026-07)
+   B_lo_vt10_L3             CAGR   2.42% | vol   3.56% | Sharpe  0.229 | t NW6  0.99 | Sortino  0.321 | MDD   -7.37% | n 175 (2012-01 a 2026-07)
+   B_lo_vt10_L6             CAGR   2.85% | vol   3.81% | Sharpe  0.325 | t NW6  1.35 | Sortino  0.475 | MDD   -5.33% | n 175 (2012-01 a 2026-07)
+   B_lo_vt10_L12            CAGR   3.22% | vol   3.75% | Sharpe  0.428 | t NW6  1.82 | Sortino  0.643 | MDD   -6.81% | n 175 (2012-01 a 2026-07)
+   B_lo_L3                  CAGR   3.44% | vol   5.45% | Sharpe  0.346 | t NW6  1.37 | Sortino  0.513 | MDD  -12.11% | n 175 (2012-01 a 2026-07)
+   B_lo_L6                  CAGR   3.68% | vol   5.61% | Sharpe  0.379 | t NW6  1.46 | Sortino  0.577 | MDD   -7.79% | n 175 (2012-01 a 2026-07)
+   B_lo_L12                 CAGR   4.29% | vol   5.40% | Sharpe  0.501 | t NW6  2.00 | Sortino  0.785 | MDD   -8.66% | n 175 (2012-01 a 2026-07)
+   B_ref_1N                 CAGR   6.30% | vol   9.28% | Sharpe  0.529 | t NW6  2.31 | Sortino  0.797 | MDD  -19.23% | n 175 (2012-01 a 2026-07)
+   B_ref_1N_sin_rebalanceo  CAGR   6.52% | vol   9.40% | Sharpe  0.547 | t NW6  2.35 | Sortino  0.826 | MDD  -21.49% | n 175 (2012-01 a 2026-07)
+   B_ref_1N_sma10           CAGR   4.04% | vol   5.52% | Sharpe  0.447 | t NW6  1.82 | Sortino  0.668 | MDD   -7.12% | n 175 (2012-01 a 2026-07)
+   B_ref_1N_vt10            CAGR   3.91% | vol   5.63% | Sharpe  0.420 | t NW6  1.81 | Sortino  0.604 | MDD  -10.93% | n 175 (2012-01 a 2026-07)
+   B_ref_largo_vt40         CAGR   8.44% | vol  23.38% | Sharpe  0.396 | t NW6  1.71 | Sortino  0.566 | MDD  -44.79% | n 175 (2012-01 a 2026-07)
+-- fuera_1 2012-01 a 2019-12
+   B_ls_vt40_L3             CAGR -10.03% | vol  18.79% | Sharpe -0.503 | t NW6 -1.41 | Sortino -0.652 | MDD  -64.62% | n 96 (2012-01 a 2019-12)
+   B_ls_vt40_L6             CAGR  -3.05% | vol  19.01% | Sharpe -0.104 | t NW6 -0.28 | Sortino -0.146 | MDD  -40.20% | n 96 (2012-01 a 2019-12)
+   B_ls_vt40_L12            CAGR   0.31% | vol  20.41% | Sharpe  0.082 | t NW6  0.25 | Sortino  0.122 | MDD  -48.49% | n 96 (2012-01 a 2019-12)
+   B_lo_vt10_L3             CAGR   0.92% | vol   3.38% | Sharpe  0.087 | t NW6  0.28 | Sortino  0.117 | MDD   -7.37% | n 96 (2012-01 a 2019-12)
+   B_lo_vt10_L6             CAGR   1.88% | vol   3.66% | Sharpe  0.341 | t NW6  1.01 | Sortino  0.498 | MDD   -5.33% | n 96 (2012-01 a 2019-12)
+   B_lo_vt10_L12            CAGR   2.26% | vol   3.69% | Sharpe  0.437 | t NW6  1.37 | Sortino  0.642 | MDD   -6.81% | n 96 (2012-01 a 2019-12)
+   B_lo_L3                  CAGR   0.85% | vol   4.68% | Sharpe  0.058 | t NW6  0.19 | Sortino  0.077 | MDD  -12.11% | n 96 (2012-01 a 2019-12)
+   B_lo_L6                  CAGR   1.87% | vol   4.80% | Sharpe  0.268 | t NW6  0.80 | Sortino  0.377 | MDD   -7.79% | n 96 (2012-01 a 2019-12)
+   B_lo_L12                 CAGR   2.80% | vol   4.76% | Sharpe  0.459 | t NW6  1.44 | Sortino  0.687 | MDD   -8.66% | n 96 (2012-01 a 2019-12)
+   B_ref_1N                 CAGR   4.90% | vol   7.30% | Sharpe  0.600 | t NW6  1.90 | Sortino  0.940 | MDD  -11.90% | n 96 (2012-01 a 2019-12)
+   B_ref_1N_sin_rebalanceo  CAGR   4.65% | vol   7.16% | Sharpe  0.576 | t NW6  1.82 | Sortino  0.901 | MDD   -8.41% | n 96 (2012-01 a 2019-12)
+   B_ref_1N_sma10           CAGR   2.07% | vol   4.64% | Sharpe  0.318 | t NW6  1.11 | Sortino  0.451 | MDD   -7.12% | n 96 (2012-01 a 2019-12)
+   B_ref_1N_vt10            CAGR   3.26% | vol   4.89% | Sharpe  0.544 | t NW6  1.66 | Sortino  0.798 | MDD   -8.12% | n 96 (2012-01 a 2019-12)
+   B_ref_largo_vt40         CAGR  10.02% | vol  21.16% | Sharpe  0.529 | t NW6  1.60 | Sortino  0.767 | MDD  -30.59% | n 96 (2012-01 a 2019-12)
+-- fuera_2 2020-01 a 2026-07
+   B_ls_vt40_L3             CAGR   1.43% | vol  22.48% | Sharpe  0.045 | t NW6  0.14 | Sortino  0.070 | MDD  -40.96% | n 79 (2020-01 a 2026-07)
+   B_ls_vt40_L6             CAGR   1.03% | vol  20.64% | Sharpe  0.016 | t NW6  0.04 | Sortino  0.022 | MDD  -43.39% | n 79 (2020-01 a 2026-07)
+   B_ls_vt40_L12            CAGR   4.19% | vol  17.98% | Sharpe  0.160 | t NW6  0.50 | Sortino  0.230 | MDD  -30.82% | n 79 (2020-01 a 2026-07)
+   B_lo_vt10_L3             CAGR   4.28% | vol   3.72% | Sharpe  0.385 | t NW6  1.06 | Sortino  0.562 | MDD   -3.09% | n 79 (2020-01 a 2026-07)
+   B_lo_vt10_L6             CAGR   4.04% | vol   3.98% | Sharpe  0.306 | t NW6  0.85 | Sortino  0.450 | MDD   -2.91% | n 79 (2020-01 a 2026-07)
+   B_lo_vt10_L12            CAGR   4.40% | vol   3.81% | Sharpe  0.414 | t NW6  1.15 | Sortino  0.646 | MDD   -2.94% | n 79 (2020-01 a 2026-07)
+   B_lo_L3                  CAGR   6.68% | vol   6.17% | Sharpe  0.616 | t NW6  1.61 | Sortino  0.998 | MDD   -5.17% | n 79 (2020-01 a 2026-07)
+   B_lo_L6                  CAGR   5.93% | vol   6.44% | Sharpe  0.486 | t NW6  1.22 | Sortino  0.788 | MDD   -4.68% | n 79 (2020-01 a 2026-07)
+   B_lo_L12                 CAGR   6.13% | vol   6.08% | Sharpe  0.546 | t NW6  1.40 | Sortino  0.891 | MDD   -6.37% | n 79 (2020-01 a 2026-07)
+   B_ref_1N                 CAGR   8.03% | vol  11.27% | Sharpe  0.493 | t NW6  1.45 | Sortino  0.731 | MDD  -19.23% | n 79 (2020-01 a 2026-07)
+   B_ref_1N_sin_rebalanceo  CAGR   8.84% | vol  11.56% | Sharpe  0.549 | t NW6  1.61 | Sortino  0.819 | MDD  -21.49% | n 79 (2020-01 a 2026-07)
+   B_ref_1N_sma10           CAGR   6.48% | vol   6.38% | Sharpe  0.571 | t NW6  1.47 | Sortino  0.885 | MDD   -5.76% | n 79 (2020-01 a 2026-07)
+   B_ref_1N_vt10            CAGR   4.71% | vol   6.44% | Sharpe  0.311 | t NW6  0.89 | Sortino  0.442 | MDD  -10.93% | n 79 (2020-01 a 2026-07)
+   B_ref_largo_vt40         CAGR   6.56% | vol  25.96% | Sharpe  0.267 | t NW6  0.79 | Sortino  0.379 | MDD  -44.79% | n 79 (2020-01 a 2026-07)
+-- fuera_ext 2012-01 a 2026-08
+   B_ls_vt40_L3             CAGR  -5.21% | vol  20.51% | Sharpe -0.241 | t NW6 -0.98 | Sortino -0.339 | MDD  -65.24% | n 176 (2012-01 a 2026-08)
+   B_ls_vt40_L6             CAGR  -1.17% | vol  19.66% | Sharpe -0.046 | t NW6 -0.18 | Sortino -0.064 | MDD  -43.39% | n 176 (2012-01 a 2026-08)
+   B_ls_vt40_L12            CAGR   2.32% | vol  19.27% | Sharpe  0.128 | t NW6  0.55 | Sortino  0.188 | MDD  -48.49% | n 176 (2012-01 a 2026-08)
+   B_lo_vt10_L3             CAGR   2.44% | vol   3.55% | Sharpe  0.229 | t NW6  0.99 | Sortino  0.322 | MDD   -7.37% | n 176 (2012-01 a 2026-08)
+   B_lo_vt10_L6             CAGR   2.89% | vol   3.80% | Sharpe  0.334 | t NW6  1.40 | Sortino  0.489 | MDD   -5.33% | n 176 (2012-01 a 2026-08)
+   B_lo_vt10_L12            CAGR   3.29% | vol   3.75% | Sharpe  0.444 | t NW6  1.89 | Sortino  0.669 | MDD   -6.81% | n 176 (2012-01 a 2026-08)
+   B_lo_L3                  CAGR   3.45% | vol   5.43% | Sharpe  0.346 | t NW6  1.38 | Sortino  0.513 | MDD  -12.11% | n 176 (2012-01 a 2026-08)
+   B_lo_L6                  CAGR   3.78% | vol   5.61% | Sharpe  0.394 | t NW6  1.52 | Sortino  0.601 | MDD   -7.79% | n 176 (2012-01 a 2026-08)
+   B_lo_L12                 CAGR   4.47% | vol   5.42% | Sharpe  0.529 | t NW6  2.12 | Sortino  0.834 | MDD   -8.66% | n 176 (2012-01 a 2026-08)
+   B_ref_1N                 CAGR   6.47% | vol   9.28% | Sharpe  0.546 | t NW6  2.40 | Sortino  0.824 | MDD  -19.23% | n 176 (2012-01 a 2026-08)
+   B_ref_1N_sin_rebalanceo  CAGR   6.74% | vol   9.41% | Sharpe  0.568 | t NW6  2.47 | Sortino  0.861 | MDD  -21.49% | n 176 (2012-01 a 2026-08)
+   B_ref_1N_sma10           CAGR   4.14% | vol   5.51% | Sharpe  0.463 | t NW6  1.89 | Sortino  0.692 | MDD   -7.12% | n 176 (2012-01 a 2026-08)
+   B_ref_1N_vt10            CAGR   3.98% | vol   5.62% | Sharpe  0.431 | t NW6  1.86 | Sortino  0.620 | MDD  -10.93% | n 176 (2012-01 a 2026-08)
+   B_ref_largo_vt40         CAGR   8.71% | vol  23.33% | Sharpe  0.407 | t NW6  1.76 | Sortino  0.581 | MDD  -44.79% | n 176 (2012-01 a 2026-08)
+
+-- (b) ordenes por mes (activos con |dW|>0) y apalancamiento bruto medio, fuera de muestra, costos def
+   B_ls_vt40_L3             ordenes/mes 8.00 | giro anual 21.93 | |W| bruto medio  3.20
+   B_ls_vt40_L6             ordenes/mes 8.00 | giro anual 16.19 | |W| bruto medio  3.20
+   B_ls_vt40_L12            ordenes/mes 8.00 | giro anual 12.20 | |W| bruto medio  3.20
+   B_lo_vt10_L3             ordenes/mes 5.71 | giro anual  2.33 | |W| bruto medio  0.42
+   B_lo_vt10_L6             ordenes/mes 5.50 | giro anual  1.77 | |W| bruto medio  0.43
+   B_lo_vt10_L12            ordenes/mes 5.20 | giro anual  1.32 | |W| bruto medio  0.42
+   B_lo_L3                  ordenes/mes 5.71 | giro anual  3.07 | |W| bruto medio  0.59
+   B_lo_L6                  ordenes/mes 5.50 | giro anual  2.32 | |W| bruto medio  0.60
+   B_lo_L12                 ordenes/mes 5.20 | giro anual  1.62 | |W| bruto medio  0.59
+   B_ref_1N                 ordenes/mes 8.00 | giro anual  0.30 | |W| bruto medio  1.00
+   B_ref_1N_sin_rebalanceo  ordenes/mes 0.00 | giro anual  0.00 | |W| bruto medio  1.00
+   B_ref_efectivo           ordenes/mes 0.00 | giro anual  0.00 | |W| bruto medio  0.00
+   B_ref_1N_sma10           ordenes/mes 5.81 | giro anual  2.12 | |W| bruto medio  0.64
+   B_ref_1N_vt10            ordenes/mes 8.00 | giro anual  0.50 | |W| bruto medio  0.70
+   B_ref_largo_vt40         ordenes/mes 8.00 | giro anual  3.42 | |W| bruto medio  3.20
+
+-- H4, fuera de muestra 2012-01 a 2026-07, costos por defecto: diferencia mensual (t NW6)
+   B_lo_vt10_L12 - B_ref_1N: -0.268%/mes, t -1.98
+   B_lo_vt10_L12 - B_ref_1N_sma10: -0.080%/mes, t -1.08
+   B_lo_vt10_L12 - B_ref_1N_vt10: -0.056%/mes, t -0.85
+   B_lo_L12 - B_ref_1N: -0.173%/mes, t -1.52
+   B_lo_L12 - B_ref_1N_sma10: +0.015%/mes, t +0.24
+   B_lo_L12 - B_ref_1N_vt10: +0.039%/mes, t +0.56
+   B_lo_vt10_L3 - B_ref_1N: -0.324%/mes, t -2.32
+   B_lo_vt10_L3 - B_ref_1N_sma10: -0.136%/mes, t -2.26
+   B_lo_vt10_L3 - B_ref_1N_vt10: -0.113%/mes, t -1.44
+   B_lo_vt10_L6 - B_ref_1N: -0.294%/mes, t -2.21
+   B_lo_vt10_L6 - B_ref_1N_sma10: -0.106%/mes, t -1.84
+   B_lo_vt10_L6 - B_ref_1N_vt10: -0.082%/mes, t -1.19
+
+-- DSR fuera de muestra (2012-01 a 2026-07, costos def), V[SR] de los 15 ensayos, N = 15
+   A_ls_vt40_L12: SR mensual 0.1423, SR0 0.1326, DSR 0.549
+   B_ls_vt40_L12: SR mensual 0.0516, SR0 0.1326, DSR 0.142
+   B_lo_vt10_L12: SR mensual 0.1341, SR0 0.1326, DSR 0.508
+   A_ls_vt40_L12 dentro (V de 6 ensayos de (a), N = 15): DSR 0.428
+
+-- MXN (DEXMXUS ultimo dato <= fin de mes), fuera de muestra 2012-01 a 2026-07, costos def
+   B_ls_vt40_L12            CAGR   4.85% | vol 23.36% | MDD  -43.33%
+   B_lo_vt10_L12            CAGR   4.90% | vol 10.84% | MDD  -24.33%
+   B_lo_L12                 CAGR   6.02% | vol 10.59% | MDD  -21.66%
+   B_ref_1N                 CAGR   7.92% | vol 10.16% | MDD  -27.19%
+   B_ref_1N_sma10           CAGR   5.82% | vol 11.16% | MDD  -22.20%
+   B_ref_1N_vt10            CAGR   5.52% | vol  9.88% | MDD  -23.13%
+
+=== Criterios de la seccion 2 (B) ===
+   (i)  H1b bruto 1985-2009: Sharpe 0.646 -> cumple
+   (ii) H1 neto 1929-01 a 2011-12: Sharpe 0.257, t 2.19 -> cumple
+   H2 neto 2012-01 a 2026-07: Sharpe 0.491, t 1.67
+   (iii) H3 neto 2012-01 a 2026-07: Sharpe 0.178, t 0.76 -> no cumple
+   Estado B: Replicado con diferencias
+   H4 B_lo_vt10_L12: Sharpe 0.463 MDD -6.61% | 1/N 0.533 -19.21% | 1/N-SMA10 0.486 -6.93% | 1/N-vt10 0.429 -10.90%
+   H4 contra 1/N: no agrega valor frente a 1/N; contra 1/N-SMA10: no agrega valor frente a la regla sencilla
+
+=== CONCILIACION (agregada despues de leer los resultados de A; no cambia nada de arriba) ===
+-- Control C: codigo de B sobre French CRSP 202607 de A (mensual Mkt-RF+RF, RF, sigma de Mkt-RF diario), desde 1927-07
+   [def] dentro
+      A_ls_vt40_L3             CAGR  -8.38% | vol  50.38% | Sharpe  0.041 | t NW6  0.34 | Sortino  0.056 | MDD  -99.99% | n 1014 (1927-07 a 2011-12)
+      A_ls_vt40_L6             CAGR  -0.53% | vol  50.31% | Sharpe  0.205 | t NW6  1.67 | Sortino  0.286 | MDD  -99.71% | n 1014 (1927-07 a 2011-12)
+      A_ls_vt40_L12            CAGR   6.41% | vol  49.98% | Sharpe  0.335 | t NW6  2.97 | Sortino  0.483 | MDD  -98.48% | n 1014 (1927-07 a 2011-12)
+      A_lo_L3                  CAGR   6.98% | vol  13.21% | Sharpe  0.311 | t NW6  2.65 | Sortino  0.455 | MDD  -59.69% | n 1014 (1927-07 a 2011-12)
+      A_lo_L6                  CAGR   7.86% | vol  12.44% | Sharpe  0.389 | t NW6  3.17 | Sortino  0.553 | MDD  -56.75% | n 1014 (1927-07 a 2011-12)
+      A_lo_L12                 CAGR   9.53% | vol  12.61% | Sharpe  0.507 | t NW6  4.59 | Sortino  0.762 | MDD  -45.17% | n 1014 (1927-07 a 2011-12)
+      A_ref_comprar_mantener   CAGR   9.47% | vol  19.00% | Sharpe  0.386 | t NW6  3.38 | Sortino  0.579 | MDD  -83.65% | n 1014 (1927-07 a 2011-12)
+      A_ref_sma10              CAGR   9.03% | vol  12.78% | Sharpe  0.467 | t NW6  3.90 | Sortino  0.687 | MDD  -43.50% | n 1014 (1927-07 a 2011-12)
+      A_ref_largo_vt40         CAGR  12.06% | vol  50.03% | Sharpe  0.440 | t NW6  3.59 | Sortino  0.643 | MDD  -98.59% | n 1014 (1927-07 a 2011-12)
+   [def] dentro_1929
+      A_ls_vt40_L3             CAGR  -8.93% | vol  49.91% | Sharpe  0.025 | t NW6  0.20 | Sortino  0.034 | MDD  -99.99% | n 996 (1929-01 a 2011-12)
+      A_ls_vt40_L6             CAGR  -2.56% | vol  49.88% | Sharpe  0.162 | t NW6  1.32 | Sortino  0.224 | MDD  -99.71% | n 996 (1929-01 a 2011-12)
+      A_ls_vt40_L12            CAGR   4.37% | vol  49.57% | Sharpe  0.296 | t NW6  2.62 | Sortino  0.421 | MDD  -98.48% | n 996 (1929-01 a 2011-12)
+      A_lo_L3                  CAGR   6.65% | vol  13.19% | Sharpe  0.288 | t NW6  2.43 | Sortino  0.418 | MDD  -59.69% | n 996 (1929-01 a 2011-12)
+      A_lo_L6                  CAGR   7.33% | vol  12.35% | Sharpe  0.351 | t NW6  2.85 | Sortino  0.493 | MDD  -56.75% | n 996 (1929-01 a 2011-12)
+      A_lo_L12                 CAGR   9.03% | vol  12.52% | Sharpe  0.473 | t NW6  4.27 | Sortino  0.702 | MDD  -45.17% | n 996 (1929-01 a 2011-12)
+      A_ref_comprar_mantener   CAGR   8.97% | vol  19.04% | Sharpe  0.361 | t NW6  3.13 | Sortino  0.539 | MDD  -83.65% | n 996 (1929-01 a 2011-12)
+      A_ref_sma10              CAGR   8.53% | vol  12.69% | Sharpe  0.432 | t NW6  3.59 | Sortino  0.628 | MDD  -43.50% | n 996 (1929-01 a 2011-12)
+      A_ref_largo_vt40         CAGR  10.02% | vol  49.64% | Sharpe  0.403 | t NW6  3.26 | Sortino  0.582 | MDD  -98.59% | n 996 (1929-01 a 2011-12)
+   [def] pre1985
+      A_ls_vt40_L3             CAGR  -7.66% | vol  53.86% | Sharpe  0.095 | t NW6  0.64 | Sortino  0.133 | MDD  -99.78% | n 690 (1927-07 a 1984-12)
+      A_ls_vt40_L6             CAGR   1.74% | vol  53.62% | Sharpe  0.274 | t NW6  1.83 | Sortino  0.390 | MDD  -99.71% | n 690 (1927-07 a 1984-12)
+      A_ls_vt40_L12            CAGR   3.86% | vol  53.41% | Sharpe  0.310 | t NW6  2.26 | Sortino  0.446 | MDD  -98.48% | n 690 (1927-07 a 1984-12)
+      A_lo_L3                  CAGR   6.91% | vol  14.19% | Sharpe  0.311 | t NW6  2.16 | Sortino  0.458 | MDD  -59.69% | n 690 (1927-07 a 1984-12)
+      A_lo_L6                  CAGR   7.94% | vol  12.85% | Sharpe  0.405 | t NW6  2.65 | Sortino  0.581 | MDD  -56.75% | n 690 (1927-07 a 1984-12)
+      A_lo_L12                 CAGR   9.18% | vol  12.68% | Sharpe  0.497 | t NW6  3.59 | Sortino  0.755 | MDD  -45.17% | n 690 (1927-07 a 1984-12)
+      A_ref_comprar_mantener   CAGR   9.07% | vol  20.25% | Sharpe  0.367 | t NW6  2.63 | Sortino  0.561 | MDD  -83.65% | n 690 (1927-07 a 1984-12)
+      A_ref_sma10              CAGR   8.84% | vol  13.11% | Sharpe  0.462 | t NW6  3.10 | Sortino  0.688 | MDD  -43.50% | n 690 (1927-07 a 1984-12)
+      A_ref_largo_vt40         CAGR   9.85% | vol  53.48% | Sharpe  0.415 | t NW6  2.72 | Sortino  0.609 | MDD  -98.59% | n 690 (1927-07 a 1984-12)
+   [def] articulo
+      A_ls_vt40_L3             CAGR -11.56% | vol  42.58% | Sharpe -0.151 | t NW6 -0.75 | Sortino -0.201 | MDD  -98.81% | n 300 (1985-01 a 2009-12)
+      A_ls_vt40_L6             CAGR  -2.76% | vol  42.82% | Sharpe  0.080 | t NW6  0.37 | Sortino  0.106 | MDD  -98.65% | n 300 (1985-01 a 2009-12)
+      A_ls_vt40_L12            CAGR  12.26% | vol  42.33% | Sharpe  0.409 | t NW6  2.02 | Sortino  0.595 | MDD  -81.73% | n 300 (1985-01 a 2009-12)
+      A_lo_L3                  CAGR   7.04% | vol  10.91% | Sharpe  0.283 | t NW6  1.34 | Sortino  0.400 | MDD  -26.31% | n 300 (1985-01 a 2009-12)
+      A_lo_L6                  CAGR   8.66% | vol  11.45% | Sharpe  0.407 | t NW6  1.96 | Sortino  0.566 | MDD  -24.24% | n 300 (1985-01 a 2009-12)
+      A_lo_L12                 CAGR  10.43% | vol  11.96% | Sharpe  0.532 | t NW6  2.79 | Sortino  0.764 | MDD  -24.24% | n 300 (1985-01 a 2009-12)
+      A_ref_comprar_mantener   CAGR  10.46% | vol  15.90% | Sharpe  0.437 | t NW6  2.08 | Sortino  0.608 | MDD  -50.31% | n 300 (1985-01 a 2009-12)
+      A_ref_sma10              CAGR  10.43% | vol  11.98% | Sharpe  0.530 | t NW6  2.61 | Sortino  0.762 | MDD  -24.84% | n 300 (1985-01 a 2009-12)
+      A_ref_largo_vt40         CAGR  17.54% | vol  42.29% | Sharpe  0.521 | t NW6  2.57 | Sortino  0.756 | MDD  -74.17% | n 300 (1985-01 a 2009-12)
+   [def] fuera
+      A_ls_vt40_L3             CAGR   2.52% | vol  37.57% | Sharpe  0.216 | t NW6  0.81 | Sortino  0.305 | MDD  -74.10% | n 175 (2012-01 a 2026-07)
+      A_ls_vt40_L6             CAGR   2.27% | vol  37.81% | Sharpe  0.215 | t NW6  0.67 | Sortino  0.293 | MDD  -89.27% | n 175 (2012-01 a 2026-07)
+      A_ls_vt40_L12            CAGR   8.93% | vol  37.57% | Sharpe  0.379 | t NW6  1.24 | Sortino  0.549 | MDD  -81.86% | n 175 (2012-01 a 2026-07)
+      A_lo_L3                  CAGR   9.09% | vol  10.33% | Sharpe  0.743 | t NW6  2.74 | Sortino  1.213 | MDD  -18.38% | n 175 (2012-01 a 2026-07)
+      A_lo_L6                  CAGR   8.25% | vol  11.64% | Sharpe  0.605 | t NW6  2.13 | Sortino  0.886 | MDD  -30.52% | n 175 (2012-01 a 2026-07)
+      A_lo_L12                 CAGR  10.03% | vol  12.48% | Sharpe  0.705 | t NW6  2.62 | Sortino  1.082 | MDD  -24.52% | n 175 (2012-01 a 2026-07)
+      A_ref_comprar_mantener   CAGR  14.94% | vol  14.52% | Sharpe  0.928 | t NW6  4.63 | Sortino  1.497 | MDD  -24.84% | n 175 (2012-01 a 2026-07)
+      A_ref_sma10              CAGR  10.30% | vol  10.98% | Sharpe  0.803 | t NW6  3.04 | Sortino  1.272 | MDD  -19.31% | n 175 (2012-01 a 2026-07)
+      A_ref_largo_vt40         CAGR  28.43% | vol  36.66% | Sharpe  0.835 | t NW6  3.65 | Sortino  1.278 | MDD  -54.97% | n 175 (2012-01 a 2026-07)
+   [bruto] dentro
+      A_ls_vt40_L3             CAGR  -0.51% | vol  50.55% | Sharpe  0.203 | t NW6  1.74 | Sortino  0.289 | MDD  -99.49% | n 1014 (1927-07 a 2011-12)
+      A_ls_vt40_L6             CAGR   5.47% | vol  50.43% | Sharpe  0.320 | t NW6  2.68 | Sortino  0.457 | MDD  -99.47% | n 1014 (1927-07 a 2011-12)
+      A_ls_vt40_L12            CAGR  10.84% | vol  50.27% | Sharpe  0.417 | t NW6  3.79 | Sortino  0.612 | MDD  -97.92% | n 1014 (1927-07 a 2011-12)
+      A_lo_L3                  CAGR   8.02% | vol  13.23% | Sharpe  0.384 | t NW6  3.32 | Sortino  0.568 | MDD  -58.76% | n 1014 (1927-07 a 2011-12)
+      A_lo_L6                  CAGR   8.51% | vol  12.44% | Sharpe  0.438 | t NW6  3.62 | Sortino  0.626 | MDD  -55.10% | n 1014 (1927-07 a 2011-12)
+      A_lo_L12                 CAGR   9.85% | vol  12.63% | Sharpe  0.530 | t NW6  4.84 | Sortino  0.798 | MDD  -44.23% | n 1014 (1927-07 a 2011-12)
+      A_ref_comprar_mantener   CAGR   9.47% | vol  19.00% | Sharpe  0.386 | t NW6  3.38 | Sortino  0.580 | MDD  -83.65% | n 1014 (1927-07 a 2011-12)
+      A_ref_sma10              CAGR   9.58% | vol  12.77% | Sharpe  0.507 | t NW6  4.29 | Sortino  0.749 | MDD  -42.94% | n 1014 (1927-07 a 2011-12)
+      A_ref_largo_vt40         CAGR  14.42% | vol  50.13% | Sharpe  0.481 | t NW6  3.94 | Sortino  0.710 | MDD  -98.25% | n 1014 (1927-07 a 2011-12)
+   [bruto] dentro_1929
+      A_ls_vt40_L3             CAGR  -1.16% | vol  50.07% | Sharpe  0.187 | t NW6  1.59 | Sortino  0.265 | MDD  -99.49% | n 996 (1929-01 a 2011-12)
+      A_ls_vt40_L6             CAGR   3.37% | vol  50.00% | Sharpe  0.280 | t NW6  2.33 | Sortino  0.394 | MDD  -99.47% | n 996 (1929-01 a 2011-12)
+      A_ls_vt40_L12            CAGR   8.73% | vol  49.85% | Sharpe  0.379 | t NW6  3.44 | Sortino  0.548 | MDD  -97.92% | n 996 (1929-01 a 2011-12)
+      A_lo_L3                  CAGR   7.68% | vol  13.20% | Sharpe  0.361 | t NW6  3.09 | Sortino  0.530 | MDD  -58.76% | n 996 (1929-01 a 2011-12)
+      A_lo_L6                  CAGR   7.99% | vol  12.35% | Sharpe  0.401 | t NW6  3.30 | Sortino  0.566 | MDD  -55.10% | n 996 (1929-01 a 2011-12)
+      A_lo_L12                 CAGR   9.35% | vol  12.54% | Sharpe  0.496 | t NW6  4.51 | Sortino  0.738 | MDD  -44.23% | n 996 (1929-01 a 2011-12)
+      A_ref_comprar_mantener   CAGR   8.97% | vol  19.04% | Sharpe  0.361 | t NW6  3.13 | Sortino  0.539 | MDD  -83.65% | n 996 (1929-01 a 2011-12)
+      A_ref_sma10              CAGR   9.08% | vol  12.69% | Sharpe  0.472 | t NW6  3.98 | Sortino  0.690 | MDD  -42.94% | n 996 (1929-01 a 2011-12)
+      A_ref_largo_vt40         CAGR  12.31% | vol  49.72% | Sharpe  0.445 | t NW6  3.61 | Sortino  0.647 | MDD  -98.25% | n 996 (1929-01 a 2011-12)
+   [bruto] pre1985
+      A_ls_vt40_L3             CAGR   0.51% | vol  53.99% | Sharpe  0.251 | t NW6  1.74 | Sortino  0.360 | MDD  -99.06% | n 690 (1927-07 a 1984-12)
+      A_ls_vt40_L6             CAGR   8.01% | vol  53.81% | Sharpe  0.385 | t NW6  2.65 | Sortino  0.559 | MDD  -99.47% | n 690 (1927-07 a 1984-12)
+      A_ls_vt40_L12            CAGR   8.74% | vol  53.76% | Sharpe  0.396 | t NW6  2.96 | Sortino  0.581 | MDD  -97.92% | n 690 (1927-07 a 1984-12)
+      A_lo_L3                  CAGR   7.90% | vol  14.21% | Sharpe  0.376 | t NW6  2.66 | Sortino  0.560 | MDD  -58.76% | n 690 (1927-07 a 1984-12)
+      A_lo_L6                  CAGR   8.55% | vol  12.85% | Sharpe  0.448 | t NW6  2.98 | Sortino  0.648 | MDD  -55.10% | n 690 (1927-07 a 1984-12)
+      A_lo_L12                 CAGR   9.53% | vol  12.70% | Sharpe  0.521 | t NW6  3.80 | Sortino  0.795 | MDD  -44.23% | n 690 (1927-07 a 1984-12)
+      A_ref_comprar_mantener   CAGR   9.08% | vol  20.25% | Sharpe  0.367 | t NW6  2.63 | Sortino  0.562 | MDD  -83.65% | n 690 (1927-07 a 1984-12)
+      A_ref_sma10              CAGR   9.40% | vol  13.10% | Sharpe  0.502 | t NW6  3.41 | Sortino  0.750 | MDD  -42.94% | n 690 (1927-07 a 1984-12)
+      A_ref_largo_vt40         CAGR  12.46% | vol  53.60% | Sharpe  0.459 | t NW6  3.02 | Sortino  0.680 | MDD  -98.25% | n 690 (1927-07 a 1984-12)
+   [bruto] articulo
+      A_ls_vt40_L3             CAGR  -4.16% | vol  42.84% | Sharpe  0.037 | t NW6  0.19 | Sortino  0.051 | MDD  -96.24% | n 300 (1985-01 a 2009-12)
+      A_ls_vt40_L6             CAGR   2.95% | vol  42.75% | Sharpe  0.212 | t NW6  1.00 | Sortino  0.288 | MDD  -97.35% | n 300 (1985-01 a 2009-12)
+      A_ls_vt40_L12            CAGR  15.86% | vol  42.45% | Sharpe  0.484 | t NW6  2.46 | Sortino  0.715 | MDD  -78.23% | n 300 (1985-01 a 2009-12)
+      A_lo_L3                  CAGR   8.19% | vol  10.93% | Sharpe  0.382 | t NW6  1.85 | Sortino  0.546 | MDD  -24.24% | n 300 (1985-01 a 2009-12)
+      A_lo_L6                  CAGR   9.41% | vol  11.45% | Sharpe  0.467 | t NW6  2.28 | Sortino  0.654 | MDD  -24.24% | n 300 (1985-01 a 2009-12)
+      A_lo_L12                 CAGR  10.71% | vol  11.97% | Sharpe  0.553 | t NW6  2.94 | Sortino  0.797 | MDD  -24.24% | n 300 (1985-01 a 2009-12)
+      A_ref_comprar_mantener   CAGR  10.46% | vol  15.90% | Sharpe  0.437 | t NW6  2.08 | Sortino  0.608 | MDD  -50.31% | n 300 (1985-01 a 2009-12)
+      A_ref_sma10              CAGR  10.91% | vol  11.97% | Sharpe  0.567 | t NW6  2.84 | Sortino  0.818 | MDD  -24.33% | n 300 (1985-01 a 2009-12)
+      A_ref_largo_vt40         CAGR  19.38% | vol  42.36% | Sharpe  0.558 | t NW6  2.75 | Sortino  0.815 | MDD  -73.51% | n 300 (1985-01 a 2009-12)
+   [bruto] fuera
+      A_ls_vt40_L3             CAGR   8.00% | vol  37.65% | Sharpe  0.355 | t NW6  1.39 | Sortino  0.516 | MDD  -64.61% | n 175 (2012-01 a 2026-07)
+      A_ls_vt40_L6             CAGR   6.08% | vol  37.66% | Sharpe  0.311 | t NW6  0.99 | Sortino  0.432 | MDD  -86.87% | n 175 (2012-01 a 2026-07)
+      A_ls_vt40_L12            CAGR  12.17% | vol  37.53% | Sharpe  0.457 | t NW6  1.53 | Sortino  0.672 | MDD  -78.16% | n 175 (2012-01 a 2026-07)
+      A_lo_L3                  CAGR   9.91% | vol  10.28% | Sharpe  0.819 | t NW6  3.09 | Sortino  1.346 | MDD  -16.70% | n 175 (2012-01 a 2026-07)
+      A_lo_L6                  CAGR   8.79% | vol  11.65% | Sharpe  0.647 | t NW6  2.32 | Sortino  0.954 | MDD  -29.32% | n 175 (2012-01 a 2026-07)
+      A_lo_L12                 CAGR  10.39% | vol  12.48% | Sharpe  0.731 | t NW6  2.77 | Sortino  1.123 | MDD  -23.22% | n 175 (2012-01 a 2026-07)
+      A_ref_comprar_mantener   CAGR  14.94% | vol  14.52% | Sharpe  0.928 | t NW6  4.63 | Sortino  1.497 | MDD  -24.84% | n 175 (2012-01 a 2026-07)
+      A_ref_sma10              CAGR  10.89% | vol  10.96% | Sharpe  0.854 | t NW6  3.32 | Sortino  1.362 | MDD  -17.64% | n 175 (2012-01 a 2026-07)
+      A_ref_largo_vt40         CAGR  30.44% | vol  36.69% | Sharpe  0.877 | t NW6  3.85 | Sortino  1.354 | MDD  -52.81% | n 175 (2012-01 a 2026-07)
+
+-- Descomposicion: cada fila cambia un insumo de B (S&P TR, TB3MS, sigma ^GSPC) por el de A (French)
+   A_ls_vt40_L12 | B puro (S&P, TB3MS, sigma S&P)                   | dentro29 neto 0.257 (t 2.19) | articulo bruto 0.646 | fuera neto 0.491 (t 1.67)
+   A_ls_vt40_L12 | B con rf French (efectivo y senal)               | dentro29 neto 0.260 (t 2.21) | articulo bruto 0.630 | fuera neto 0.491 (t 1.67)
+   A_ls_vt40_L12 | B con sigma French                               | dentro29 neto 0.258 (t 2.17) | articulo bruto 0.626 | fuera neto 0.480 (t 1.63)
+   A_ls_vt40_L12 | B con senal French (r y rf French en la senal)   | dentro29 neto 0.291 (t 2.58) | articulo bruto 0.530 | fuera neto 0.424 (t 1.42)
+   A_ls_vt40_L12 | rendimientos S&P, senal+sigma+rf French          | dentro29 neto 0.290 (t 2.53) | articulo bruto 0.513 | fuera neto 0.412 (t 1.37)
+   A_ls_vt40_L12 | rendimientos French, senal+sigma+rf S&P/TB3MS    | dentro29 neto 0.243 (t 2.07) | articulo bruto 0.611 | fuera neto 0.452 (t 1.51)
+   A_ls_vt40_L12 | A puro (French)                                  | dentro29 neto 0.296 (t 2.62) | articulo bruto 0.484 | fuera neto 0.379 (t 1.24)
+   A_lo_L12 | B puro (S&P, TB3MS, sigma S&P)                   | dentro29 neto 0.448 (t 3.92) | articulo bruto 0.626 | fuera neto 0.784 (t 3.05)
+   A_lo_L12 | B con rf French (efectivo y senal)               | dentro29 neto 0.453 (t 3.97) | articulo bruto 0.620 | fuera neto 0.786 (t 3.06)
+   A_lo_L12 | B con sigma French                               | dentro29 neto 0.448 (t 3.92) | articulo bruto 0.626 | fuera neto 0.784 (t 3.05)
+   A_lo_L12 | B con senal French (r y rf French en la senal)   | dentro29 neto 0.463 (t 4.17) | articulo bruto 0.585 | fuera neto 0.745 (t 2.86)
+   A_lo_L12 | rendimientos S&P, senal+sigma+rf French          | dentro29 neto 0.469 (t 4.23) | articulo bruto 0.588 | fuera neto 0.747 (t 2.86)
+   A_lo_L12 | rendimientos French, senal+sigma+rf S&P/TB3MS    | dentro29 neto 0.443 (t 3.88) | articulo bruto 0.593 | fuera neto 0.738 (t 2.77)
+   A_lo_L12 | A puro (French)                                  | dentro29 neto 0.472 (t 4.26) | articulo bruto 0.553 | fuera neto 0.705 (t 2.62)
+
+-- Meses con signo TSMOM-12 distinto (S&P/TB3MS contra French), por segmento
+   1929-1984: 22 de 672: 1935-01, 1939-07, 1940-01, 1940-09, 1953-07, 1960-02, 1962-05, 1966-07, 1967-04, 1968-04, 1973-03, 1973-04, 1977-02, 1977-03, 1978-05, 1978-11, 1978-12, 1979-01, 1979-06, 1979-08, 1981-08, 1984-03
+   1985-2009: 6 de 300: 1987-11, 1990-05, 1991-02, 1998-09, 1998-10, 2003-07
+   2010-2011: 0 de 24: 
+   2012-2026-07: 6 de 175: 2016-04, 2016-05, 2016-06, 2019-09, 2019-10, 2022-05
+   Ventana del articulo, A_ls_vt40_L12 bruto, meses con signo distinto: w_B, w_A, exceso S&P, exceso French
+      1987-11: w_B +0.75, w_A -0.86, x_S&P -8.72%, x_French -7.76% -> exceso de la regla B -6.6% contra A +6.7%
+      1990-05: w_B +3.06, w_A -3.44, x_S&P +8.84%, x_French +8.43% -> exceso de la regla B +27.1% contra A -29.0%
+      1991-02: w_B +2.29, w_A -2.43, x_S&P +6.53%, x_French +7.19% -> exceso de la regla B +14.9% contra A -17.4%
+      1998-09: w_B +1.74, w_A -1.79, x_S&P +6.02%, x_French +6.19% -> exceso de la regla B +10.5% contra A -11.1%
+      1998-10: w_B +1.48, w_A -1.54, x_S&P +7.80%, x_French +6.98% -> exceso de la regla B +11.5% contra A -10.8%
+      2003-07: w_B -1.96, w_A +2.03, x_S&P +1.69%, x_French +2.33% -> exceso de la regla B -3.3% contra A +4.7%
+      2016-04: w_B +2.34, w_A -2.29, x_S&P +0.37%, x_French +0.92% -> exceso de la regla B +0.9% contra A -2.1%
+      2016-05: w_B +2.61, w_A -2.55, x_S&P +1.77%, x_French +1.78% -> exceso de la regla B +4.6% contra A -4.5%
+      2016-06: w_B +2.82, w_A -2.75, x_S&P +0.24%, x_French -0.03% -> exceso de la regla B +0.7% contra A +0.1%
+      2019-09: w_B +2.49, w_A -2.40, x_S&P +1.71%, x_French +1.41% -> exceso de la regla B +4.3% contra A -3.4%
+      2019-10: w_B +2.79, w_A -2.67, x_S&P +2.03%, x_French +2.07% -> exceso de la regla B +5.7% contra A -5.5%
+      2022-05: w_B +1.85, w_A -1.75, x_S&P +0.10%, x_French -0.34% -> exceso de la regla B +0.2% contra A +0.6%
+   sigma ^GSPC / sigma French Mkt-RF, media 1929-1984: 1.157
+   sigma ^GSPC / sigma French Mkt-RF, media 1985-2009: 1.050
+   sigma ^GSPC / sigma French Mkt-RF, media 2012-2026-07: 0.967
+   A_ls_vt40_L12 French 1927-07 a 1928-12 (fuera de la ventana de B): CAGR 209.88% | vol  62.28% | Sharpe  2.118 | t NW6  4.89 | Sortino  5.927 | MDD  -19.32% | n 18 (1927-07 a 1928-12)
+
+-- (b) con RF de French en lugar de TB3MS (efectivo, senal y exceso), costos def, fuera 2012-01 a 2026-07
+   B_ls_vt40_L12    fuera CAGR   3.80% | vol  19.20% | Sharpe  0.207 | t NW6  0.88 | Sortino  0.310 | MDD  -45.31% | n 175 (2012-01 a 2026-07)
+                    dentro CAGR  13.82% | vol  16.85% | Sharpe  0.789 | t NW6  1.62 | Sortino  1.300 | MDD  -25.75% | n 58 (2007-03 a 2011-12)
+   B_lo_vt10_L12    fuera CAGR   3.37% | vol   3.75% | Sharpe  0.487 | t NW6  2.09 | Sortino  0.742 | MDD   -6.69% | n 175 (2012-01 a 2026-07)
+                    dentro CAGR   4.56% | vol   3.86% | Sharpe  0.886 | t NW6  2.36 | Sortino  1.589 | MDD   -2.61% | n 58 (2007-03 a 2011-12)
+   B_lo_L12         fuera CAGR   4.54% | vol   5.40% | Sharpe  0.559 | t NW6  2.26 | Sortino  0.884 | MDD   -8.51% | n 175 (2012-01 a 2026-07)
+                    dentro CAGR   6.05% | vol   8.66% | Sharpe  0.590 | t NW6  1.57 | Sortino  0.928 | MDD   -9.16% | n 58 (2007-03 a 2011-12)
+   B_ref_1N         fuera CAGR   6.33% | vol   9.28% | Sharpe  0.541 | t NW6  2.38 | Sortino  0.816 | MDD  -19.21% | n 175 (2012-01 a 2026-07)
+                    dentro CAGR   5.66% | vol  15.07% | Sharpe  0.366 | t NW6  0.69 | Sortino  0.508 | MDD  -34.57% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_sma10   fuera CAGR   4.21% | vol   5.52% | Sharpe  0.491 | t NW6  2.01 | Sortino  0.739 | MDD   -6.96% | n 175 (2012-01 a 2026-07)
+                    dentro CAGR   7.02% | vol   7.64% | Sharpe  0.778 | t NW6  1.77 | Sortino  1.394 | MDD   -8.43% | n 58 (2007-03 a 2011-12)
+   B_ref_1N_vt10    fuera CAGR   3.93% | vol   5.63% | Sharpe  0.437 | t NW6  1.89 | Sortino  0.630 | MDD  -11.08% | n 175 (2012-01 a 2026-07)
+                    dentro CAGR   4.60% | vol   4.82% | Sharpe  0.719 | t NW6  1.48 | Sortino  1.125 | MDD   -8.22% | n 58 (2007-03 a 2011-12)

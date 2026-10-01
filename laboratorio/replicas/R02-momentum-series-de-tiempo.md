@@ -9,7 +9,7 @@
 | Fecha de publicación | Recibido el 16-ago-2010, revisado el 11-jul-2011, aceptado el 12-ago-2011, **disponible en línea el 11-dic-2011** y publicado en el número de mayo de 2012 (datos de la primera página del PDF). Hubo una versión de trabajo en 2010 (presentada en la AFA de enero de 2011, según los agradecimientos) |
 | Pre-registro escrito el | 2026-09-25, antes de descargar los ETFs y antes de calcular cualquier rendimiento de las estrategias |
 | Responsable | Claude (laboratorio del sistema). Revisión independiente hecha el 2026-09-25 (sección "Verificacion independiente (2026-09-25)", al final; script `laboratorio/replicas/R02_verificacion.py`) |
-| Estado | **Replicado con diferencias** (regla pre-registrada, sección 16). Confirmado por la verificación independiente del 2026-09-25: las cifras se reproducen exactamente con una segunda implementación. Fuera de muestra, no significativo; la versión operable no supera a 1/N ni a 1/N-SMA10. No es candidata para dinero (sección 17) |
+| Estado | **Replicado con diferencias** (regla pre-registrada, sección 16). Confirmado por la verificación independiente del 2026-09-25: las cifras se reproducen exactamente con una segunda implementación. Fuera de muestra, no significativo; la versión operable no supera a 1/N ni a 1/N-SMA10. No es candidata para dinero (sección 17). **Doble ejecución independiente AC-10 (2026-10-01), con S&P 500 TR y TB3MS: estado concordante, Replicado con diferencias**; H2, H3 y H4 concordantes; las magnitudes de la parte (a) dependen de la serie (ver la última sección) |
 
 **Conocimiento previo declarado.** El pre-registro no es "ciego" a la historia pública. Antes de correr ya sabía cuatro cosas. (1) Los CTAs de tendencia tuvieron un periodo débil entre 2012 y 2019 y uno fuerte en 2022. (2) El S&P 500 subió mucho entre 2012 y 2026. (3) El capítulo 14 del sistema reporta al SG Trend Index con −15.05% en los 12 meses a junio de 2025. (4) Existen críticas publicadas (Huang et al. 2020; Kim-Tse-Wald 2016). Las hipótesis se escriben igual, con el signo que predice el artículo.
 
@@ -576,3 +576,31 @@ No se modificó `config/parametros.json`.
    - Además no es implementable en fase 1.
 4. **Tensión con el objetivo del sistema.** El objetivo es maximizar el CAGR en MXN sujeto al drawdown. En MXN, la versión solo-largos con volatilidad objetivo redujo poco el drawdown (−24.64% frente a −27.20%) y sacrificó CAGR (4.92% frente a 7.93%). **No se recomienda usar TSMOM-12 multiactivo como núcleo del portafolio en MXN** con la evidencia actual.
 5. **Fuera del alcance de R02:** R2 (`filtro_apalancados`, media de 200 días más VIX, diaria, sobre ETFs apalancados). R02 ni lo confirma ni lo descarta.
+
+## Doble ejecución independiente (AC-10), 2026-10-01
+
+> Agregada después de la corrida final de A. No cambia el pre-registro (secciones 1-9) ni las cifras de A (secciones 10-17). Detalle completo en `laboratorio/auditorias/AC-10-tsmom/README.md`.
+
+**Qué es B.** Código escrito desde cero y a ciegas (`AC10.py`; versión ciega sha256 `84ce8f7f…553f`, final con la conciliación `a7e11be1…a1a4`; solo leí las secciones 1 a 9 antes de fijar cifras), con biblioteca estándar y otra fuente. (a) S&P 500 con rendimiento total: `^GSPC` diario de Yahoo (fin de mes y volatilidad EWMA) + dividendos de Shiller (`ie_data.xls`) hasta 1996-10, y `^SP500TR` (Yahoo, `range=30y`) desde 1996-11; rf = TB3MS (FRED) desde 1934 y NBER M1329 antes. (b) Los mismos 8 ETFs, pero con rendimiento total construido con el cierre diario de Yahoo + los eventos de dividendo (no `adjclose` ni barras `1mo`); rf = TB3MS. B empieza en 1929-01 en (a) (no hay cierres diarios de `^GSPC` antes de 1927-12-30); A en 1927-07. (b) empieza en 2007-03 en las dos.
+
+| Métrica | A (French CRSP; `adjclose`) | B (S&P TR; TR propio; TB3MS) | ¿En tolerancia (1 pp, 0.05)? |
+|---|---|---|---|
+| (i) H1b `A_ls_vt40_L12` bruto 1985-2009, Sharpe (t) | 0.4836 (2.45) | 0.646 (3.40) | **No (+0.162)**; ambos cumplen |
+| (ii) H1 `A_ls_vt40_L12` neto dentro, Sharpe (t) | 0.3348 (2.97), desde 1927-07 | 0.257 (2.19), desde 1929-01 | **No (−0.078)**; ambos cumplen t ≥ 2 |
+| H2 `A_ls_vt40_L12` neto 2012-01 a 2026-07 | 0.3790 (1.23) | 0.491 (1.67) | **No (+0.112)**; ambos no significativos |
+| `A_lo_L12` fuera: Sharpe / MDD | 0.7052 / −24.52% | 0.784 / −19.86% | **No (+0.079)** |
+| Comprar y mantener (a) fuera: CAGR / Sharpe | 14.94% / 0.9282 | 15.09% / 0.961 | Sí |
+| (iii) H3 `B_ls_vt40_L12` neto fuera, Sharpe (t) | 0.2071 (0.88) | 0.178 (0.76) | Sí; ambos no cumplen |
+| H4 `B_lo_vt10_L12` fuera: CAGR / Sharpe / MDD | 3.37% / 0.4874 / −6.69% | 3.36% / 0.463 / −6.61% | Sí |
+| 1/N y 1/N-SMA10 fuera: Sharpe / MDD | 0.5406 / −19.22%; 0.4906 / −6.96% | 0.533 / −19.21%; 0.486 / −6.93% | Sí |
+| H4 bruto: `B_lo_vt10_L12` / 1/N / 1/N-SMA10 | 0.6036 / 0.5515 / 0.6211 | 0.584 / 0.543 / 0.616 | Sí (mismo orden) |
+| MXN `B_lo_vt10_L12` contra 1/N: MDD | −24.64% / −27.20% | −24.33% / −27.19% | Sí |
+| DSR fuera (N = 15, V de las 15): `A_ls_vt40_L12` / `B_ls_vt40_L12` / `B_lo_vt10_L12` | 0.43 / 0.20 / 0.59 (máximo de A: `A_lo_L12` 0.84) | 0.55 / 0.14 / 0.51 | Sí: ninguna ≥ 0.95 |
+| Estado (§2) y H4 | Replicado con diferencias; H4 refutada | Replicado con diferencias; H4 refutada | **Concordante** |
+
+**Por qué difieren.** (1) El código de B sobre los zip French 202607 de A (mensual y diario, desde 1927-07) reproduce a A a tres decimales (0.335 / t 2.97; 0.484 bruto; 0.379; `A_lo_L12` 0.507 y 0.705), y en (b), cambiando solo TB3MS por la RF de French, reproduce 0.207, 0.487, 0.541 y 0.491 exactos: no hay error de código. (2) En (a), el signo de 12 meses del S&P 500 y el del mercado CRSP difieren en 6 meses de 1985-2009 y 6 de 2012-2026; en 1990-05, 1991-02 y 1998-09/10 el S&P (grandes) tenía exceso de 12 meses positivo y el mercado amplio negativo, y con w ≈ 1.5-3 esos cuatro meses suman ≈ +64 pp de exceso a B y −68 pp a A. Con la señal de French y todo lo demás de B, el Sharpe bruto 1985-2009 baja de 0.646 a 0.530 y el neto fuera de 0.491 a 0.424; la σ y la rf pesan ≤ 0.02. Es el mismo mecanismo de AC-09 (cruces al filo, S&P contra CRSP), amplificado por el apalancamiento. (3) H1 dentro: los 18 meses 1927-07 a 1928-12 que solo tiene A dieron Sharpe 2.12 a la regla; con French desde 1929-01 A daría 0.296 (t 2.62). La mitad de la diferencia es ventana y la otra mitad, señal. (4) En (b), las diferencias ≤ 0.03 vienen de TB3MS (1.67% anual en 2012-2026) contra la T-bill a 1 mes de French (1.59%).
+
+**Lo que no es robusto a la serie** (no cambia el estado ni la etiqueta): (a) la conclusión 2 (orden 12 > 6 > 3) se sostiene en la ventana del artículo, pero en 1929-2011 con S&P L6 supera a L12 (0.276 contra 0.257 neto); (b) la conclusión 4 falla con S&P en 1985-2009 (largo/corto bruto 0.646 contra 0.580 del largo vt40), aunque se sostiene dentro y fuera de muestra; (c) la conclusión operable 2 ("SMA10 fue igual o mejor fuera de muestra en EUA") se invierte con S&P: `A_lo_L12` 0.784 / −19.86% contra SMA10 0.697 / −22.88%; las dos siguen debajo de comprar y mantener (0.961); (d) el margen del criterio (ii) baja de t 2.97 a 2.19.
+
+**Dictamen.** Estado pre-registrado concordante: **Replicado con diferencias** en A y en B (i cumple, ii cumple, iii no cumple la significancia). H2, H3 y H4 concordantes: la regla del artículo no es significativa después de 2012 en ninguna ejecución, y la versión operable no supera a 1/N ni a 1/N-SMA10 neta de costos GBM. **Estado de la doble ejecución: Replicado con diferencias** (magnitudes de la parte (a) fuera de tolerancia, explicadas por la fuente y la ventana). **La etiqueta "descartada" se sostiene.**
+
