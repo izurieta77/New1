@@ -97,3 +97,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** no se abre ni se actualiza ninguna fila de FX-1 en `bitacora/alertas.md` en esta corrida. Se documenta la proximidad con urgencia Media en la tabla de `bitacora/inteligencia/2026-10-01.md` (sección 11:05 CDMX) y se deja constancia aquí para que la próxima corrida (15:05 CDMX) vuelva a correr `fx_alerta.py` como primera acción.
 - **Por qué:** la regla de `rutinas/inteligencia.md` dice "un AVISO o una ALERTA de FX-1 cuenta como urgencia alta", lo cual presupone que la herramienta emitió un AVISO/ALERTA real, no solo que el valor esté cerca de un umbral. Escalar sin un disparo real sería inconsistente con el criterio ya usado en corridas previas (p. ej. 07:05 de hoy, con el mismo patrón a 18.1894). Es la lectura más conservadora sin perder la señal: queda anotada la cercanía extrema para que no se pase por alto en la siguiente corrida.
 - **Estado:** abierto — pendiente de que la corrida de las 15:05 CDMX confirme si cruzó el umbral.
+
+## 2026-10-01 · laboratorio · PROPUESTA AL DUEÑO: el criterio de salida "Brier ≤ 0.20" no mide habilidad
+- **Hallazgo** (`conocimiento/fichas/2026-10-01-brier-poder.md`): con la mezcla de preguntas que hoy registra el sistema, un pronosticador **perfectamente calibrado** tiene un Brier esperado de **0.207** y solo **39%** de probabilidad de quedar en ≤ 0.20 con 50 pronósticos. Uno sin habilidad que elija preguntas fáciles (p de 0.15/0.85) lo pasa **97%** de las veces. Para distinguir 0.20 de 0.25 con 80% de poder hacen falta ~61 pronósticos.
+- **Propuesta (no aplicada; `config/parametros.json` no se toca):** sustituir o complementar `brier_objetivo` 0.20 por:
+  - (a) Brier skill score > 0 contra una referencia externa por pregunta (mercado de predicción, consenso o tasa base), significativo al 5% con n ≥ 60;
+  - (b) calibración: Z de Spiegelhalter no significativa, o REL < 0.01.
+- **Qué decidí:** seguir registrando probabilidades verdaderas, sin inflarlas para pasar el umbral. Lo decide el dueño; se presenta en el comité del 2-oct como punto informativo.

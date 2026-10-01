@@ -208,6 +208,7 @@ Enlaces internos que este módulo no repite: cap. 06 (decaimiento de anomalías 
       - neto de costos, no le ganan limpiamente al índice.
     - Ninguno de los dos está revisado por pares (grado C).
 24. **Mauboussin y Callahan (Counterpoint Global, 2025-2026)** [84]: *Drawdowns and Recoveries* (2025), *Probabilities and Payoffs* (2025), *Bayes and Base Rates* 1 y 2.0 (2026), *Who Is On the Other Side?* (2026) y *The Wisdom of Crowds in Markets* (2026). Títulos confirmados; contenido no leído porque Morgan Stanley bloqueó la descarga (no verificado).
+25. **Nechepurenko y Shuvalov, "Foresight Arena" (arXiv 2605.00420, v2 4-may-2026; preprint, sin datos en vivo aún)** [104]. Para la diferencia de Brier contra una referencia b (mercado o tasa base), δ = (b − x)² − (p − x)², derivan Var(δ) = 4q(1 − q)(b − p)²; con α = 0.05 unilateral, potencia 80%, q = 0.5 y |b − p| = 0.15, hacen falta n ≈ 0.139/α*²: **~348 pronósticos para una ventaja de 0.02 en Brier** y ~1,392 para 0.01. Verificado aquí: con n = 50 solo se detecta una ventaja ≥ ~0.053. Aplicación: el criterio de fase 0 (Brier ≤ 0.20 con ≥ 50) mide nivel, no habilidad; la habilidad exige BSS contra referencia con intervalo, y 50 pronósticos solo detectan ventajas grandes. Limitaciones: supone independencia (en preguntas correlacionadas, bootstrap por bloques) y la sección empírica es solo simulación. Grado C (álgebra correcta y estándar, sin evidencia empírica) (laboratorio 2026-10-01).
 
 ---
 
@@ -507,3 +508,4 @@ Contra un rival que sobretradea (R3 de arena/03: 5–9% de comisiones por tempor
 101. Qu & Chen (2026), CLQT, arXiv 2606.29771. https://arxiv.org/abs/2606.29771
 102. Interno: `arena/investigacion/01-gbm-operativa-y-costos.md` y `arena/investigacion/03-teoria-de-torneos-y-estrategia-competitiva.md` (costos GBM, horarios, Alpha Arena, modelo P(ganar)).
 103. Gervais & Odean, "Learning to Be Overconfident" (WP 1997). https://doi.org/10.2139/ssrn.36313
+104. Nechepurenko & Shuvalov (2026), "Foresight Arena: An On-Chain Benchmark for Evaluating AI Forecasting Agents", arXiv 2605.00420 (v1 1-may-2026, v2 4-may-2026). https://arxiv.org/abs/2605.00420
