@@ -177,7 +177,11 @@ def validar_orden(portafolio: dict, orden: dict, parametros: dict | None = None)
       "fase": 0|1|2,
     }
     orden = {"ticker", "lado": "compra"|"venta", "cantidad", "precio", "tipo_cambio": 1.0,
-             "clase", "sector", "tactica": bool, "stop": float|None, "emisor", "fase_prueba": bool}
+             "clase", "sector", "tactica": bool, "stop": float|None, "emisor", "fase_prueba": bool,
+             "subclase": "indice"|"apalancado"|None   (solo para clase 'etf')}
+    Si el perfil trae concentracion.etf_indice_max / etf_apalancado_max, un ETF se revisa por
+    posicion contra el que corresponda (sin subclase se trata como de indice, con advertencia).
+    Si el perfil trae orden_minima_mxn, una compra menor a ese monto es violacion.
     Ordenes que solo reducen exposicion se aprueban siempre (con advertencias).
     """
     p = parametros if parametros is not None else cargar_parametros()
@@ -236,6 +240,21 @@ def validar_orden(portafolio: dict, orden: dict, parametros: dict | None = None)
         return {"aprobada": True, "violaciones": [], "advertencias": advertencias,
                 "metricas_post": metricas_post}
 
+    if nueva.get("clase") == "etf":
+        subclase = orden.get("subclase", nueva.get("subclase"))
+        clave_etf = "etf_apalancado_max" if subclase == "apalancado" else "etf_indice_max"
+        if clave_etf in conc:
+            if subclase is None:
+                advertencias.append("ETF sin subclase: se revisa contra etf_indice_max")
+            if metricas_post["peso_posicion"] > conc[clave_etf] + 1e-12:
+                violaciones.append(f"ETF {ticker} {metricas_post['peso_posicion']:.1%} > "
+                                   f"{conc[clave_etf]:.0%} ({clave_etf})")
+    perfil = p.get("perfiles_riesgo", {}).get(p.get("perfil_activo") or "")
+    minima = perfil.get("orden_minima_mxn") if isinstance(perfil, dict) else None
+    if minima is None:
+        minima = p.get("orden_minima_mxn")
+    if minima is not None and lado == "compra" and monto < float(minima) - 1e-9:
+        violaciones.append(f"Orden de {monto:,.2f} MXN < orden minima {float(minima):,.0f} MXN")
     if nueva.get("clase") == "accion" and metricas_post["peso_posicion"] > conc["accion_individual_max"]:
         violaciones.append(f"Accion individual {metricas_post['peso_posicion']:.1%} > "
                            f"{conc['accion_individual_max']:.0%}")

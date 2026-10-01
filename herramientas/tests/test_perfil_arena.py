@@ -67,6 +67,47 @@ class TestPerfilArena(unittest.TestCase):
         self.assertFalse(any("Riesgo al stop" in v for v in arena["violaciones"]))
         self.assertTrue(any("Riesgo al stop" in v for v in est["violaciones"]))
 
+    def _orden(self, monto, **extra):
+        return {"ticker": "QQQM", "lado": "compra", "cantidad": 1, "precio": monto, "clase": "etf", **extra}
+
+    def test_etf_indice_max_por_posicion(self):
+        # Capital 10,000 (29-sep): 1 QQQM de 5,502 (55%) pasa; 6,500 (65%) viola el 60% del perfil.
+        port = {"capital": 10_000, "fase": 1, "posiciones": {}}
+        ok = riesgo.validar_orden(port, self._orden(5_502, subclase="indice"), self.arena)
+        self.assertTrue(ok["aprobada"], ok["violaciones"])
+        mal = riesgo.validar_orden(port, self._orden(6_500, subclase="indice"), self.arena)
+        self.assertTrue(any("etf_indice_max" in v for v in mal["violaciones"]))
+        # El estandar no trae etf_indice_max: no se revisa ese limite.
+        est = riesgo.validar_orden(port, self._orden(6_500), parametros_efectivos("estandar"))
+        self.assertFalse(any("etf_" in v for v in est["violaciones"]))
+
+    def test_etf_sin_subclase_se_trata_como_indice_con_advertencia(self):
+        port = {"capital": 10_000, "fase": 1, "posiciones": {}}
+        r = riesgo.validar_orden(port, self._orden(6_500), self.arena)
+        self.assertTrue(any("etf_indice_max" in v for v in r["violaciones"]))
+        self.assertTrue(any("sin subclase" in a for a in r["advertencias"]))
+
+    def test_etf_apalancado_max(self):
+        port = {"capital": 10_000, "fase": 1, "posiciones": {}}
+        r = riesgo.validar_orden(port, {**self._orden(5_500, subclase="apalancado"), "ticker": "TQQQ"}, self.arena)
+        self.assertTrue(any("etf_apalancado_max" in v for v in r["violaciones"]))
+        r = riesgo.validar_orden(port, {**self._orden(4_900, subclase="apalancado"), "ticker": "TQQQ"}, self.arena)
+        self.assertFalse(any("etf_" in v for v in r["violaciones"]))
+
+    def test_orden_minima_del_perfil(self):
+        port = {"capital": 10_000, "fase": 1, "posiciones": {}}
+        chica = riesgo.validar_orden(port, self._orden(2_000, subclase="indice"), self.arena)
+        self.assertTrue(any("orden minima" in v for v in chica["violaciones"]))
+        justa = riesgo.validar_orden(port, self._orden(2_500, subclase="indice"), self.arena)
+        self.assertFalse(any("orden minima" in v for v in justa["violaciones"]))
+        est = riesgo.validar_orden(port, self._orden(2_000), parametros_efectivos("estandar"))
+        self.assertFalse(any("orden minima" in v for v in est["violaciones"]))
+        # Vender (reducir) nunca choca con la orden minima.
+        port_pos = {"capital": 10_000, "fase": 1,
+                    "posiciones": {"QQQM": {"valor_mxn": 5_500, "clase": "etf", "tactica": False}}}
+        venta = riesgo.validar_orden(port_pos, {**self._orden(1_000), "lado": "venta"}, self.arena)
+        self.assertTrue(venta["aprobada"])
+
     def test_reporte_muestra_perfil_y_tope(self):
         ops = [{"fecha": date(2026, 9, 28), "ticker": "EFECTIVO", "lado": "deposito", "cantidad": 20_000.0,
                 "precio": 1.0, "moneda": "MXN", "comision": 0.0, "stop": None, "tesis_id": "", "estrategia": "",
