@@ -11,7 +11,7 @@
 | Fecha de publicación | Primera versión pública verificada: NBER WP 5379, diciembre de 1995. Revista: febrero de 1998. El hallazgo general (la pendiente predice recesiones) es anterior: Estrella y Hardouvelis (1991, *Journal of Finance*); Harvey (1988) |
 | Pre-registro escrito el | 2026-09-25, antes de cualquier corrida con datos |
 | Responsable | Claude (laboratorio del sistema). Revisión independiente pendiente (`auditor-de-replicas`) |
-| Estado | **Replicado** en el periodo del artículo (H1 y H2 dentro de la tolerancia pre-registrada). **Después de la publicación, negativo:** H3 refutada (el probit en tiempo real no le gana a la climatología en 1998-2025, por el falso positivo de 2022-2024) y H6 refutada (ninguna regla de salida por curva supera a comprar y mantener fuera de muestra). No es candidata para dinero (secciones 16 y 17) |
+| Estado | **Replicado** en el periodo del artículo (H1 y H2 dentro de la tolerancia pre-registrada). **Después de la publicación, negativo:** H3 refutada (el probit en tiempo real no le gana a la climatología en 1998-2025, por el falso positivo de 2022-2024) y H6 refutada (ninguna regla de salida por curva supera a comprar y mantener fuera de muestra). No es candidata para dinero (secciones 16 y 17). **Doble ejecución independiente AC-11 (2026-10-02), con DGS10/DTB3 diarios promediados, fechas oficiales del NBER y S&P 500 TR: estado concordante, Replicado (confirmado)**; H1-H6 concordantes (ver la última sección) |
 
 **Conocimiento previo declarado.** Este pre-registro no es ciego. Antes de escribirlo ya conocía:
 
@@ -510,3 +510,42 @@ La réplica afecta tres puntos del sistema: el cap. 04 §5.1 y §7 (trampa 3); l
 - **Dimensión "Curva" de `tablero.py`:** se mantiene como descripción del régimen, sin peso de decisión.
 - **Estado actual (2026-09-25):** la curva no aporta puntos al tablero. Los últimos 3 meses de T10Y3M y de S son positivos, T10Y3M = +0.94 y P = 0.105.
 - **No se modificaron** el capítulo 04, `herramientas/tablero.py` ni `config/parametros.json`. Los textos de arriba quedan como propuesta para quien mantiene esos archivos.
+
+## Doble ejecución independiente (AC-11), 2026-10-02
+
+> Agregada después de la corrida final de A. No cambia el pre-registro (secciones 1-9) ni las cifras de A (secciones 10-17). Detalle completo en `laboratorio/auditorias/AC-11-curva-recesion/README.md`.
+
+**Qué es B.** Código escrito desde cero y a ciegas (`AC11.py`; versión ciega sha256 `ebf44e1a…8787`, final con la conciliación `a59e34a0…367d`; salida ciega `1ef24abe…59be`). Antes de fijar cifras solo leí el encabezado y las secciones 1 a 9. Usa Python con numpy; el probit (Newton-Raphson), Newey-West, el pseudo R² de Estrella, las etiquetas en tiempo real, el motor y el DSR son propios. Fuentes distintas de A:
+
+- **10 años:** promedio mensual del diario FRED `DGS10` desde 1962-01, y antes la serie OCDE `IRLTLT01USM156N`.
+- **3 meses:** FRED `DTB3` diario, pasado a BEY día por día y luego promediado.
+- **Recesiones:** fechas oficiales del NBER (`business_cycle_dates.json`, la tabla de trimestres de picos y valles y la página de anuncios), en lugar de `USREC`, `USRECQ` y ALFRED.
+- **Mercado:** S&P 500 TR (`^GSPC` + D/12 de Shiller hasta 1996-10, `^SP500TR` después) en lugar de French.
+- **Efectivo:** DTB3/1200.
+
+S_B − S_A tiene |máx| 0.0097 pp y un solo mes con signo distinto: 2019-05.
+
+| Métrica | A | B | ¿En tolerancia? |
+|---|---|---|---|
+| H1 k = 4: β / t NW(3) / pseudo R² | −0.7838 / −4.72 / 0.287 | −0.7837 / −4.72 / 0.287 | Sí (k = 1..8 iguales a 3 decimales) |
+| H2 k = 4 (k = 5; k = 1) | 0.294 (0.280; 0.041) | 0.294 (0.279; 0.041) | Sí |
+| H3 tiempo real 1998-03 a 2025-08: R² / Brier / clima / AUC | −0.0336 / 0.0899 / 0.0819 / 0.709 | −0.034 / 0.0900 / 0.0819 / 0.709 | Sí |
+| H4: meses invertidos / racha diaria / máx. P en tiempo real | 27 / 534 / 0.713 | 27 / 534 / 0.712 | Sí |
+| P(recesión en 12 m) con S de 2026-08 (tiempo real; coef. 1959-94) | 0.105; 0.124 | 0.105; 0.124 | Sí. B con S de 2026-09 (+0.95): 0.098 |
+| H5: media 12 m de los eventos / t | 3.01% / −1.68 (inicio 2019-06) | 3.91% / −1.55 (inicio 2019-05) | Sí (mismo veredicto) |
+| H6 `inv_fuera12`: Sharpe dentro / fuera / MDD fuera | 0.6143 / 0.4331 / −46.06% | 0.620 / 0.418 / −46.6% | Sí |
+| Comprar y mantener fuera: Sharpe / CAGR / MDD | 0.5092 / 9.28% / −50.31% | 0.509 / 9.11% / −50.9% | Sí |
+| SMA10 fuera: Sharpe / MDD | 0.5881 / −19.31% | 0.554 / −22.9% | Sharpe sí; MDD −3.6 pp |
+| Comprar y mantener dentro: MDD | −46.51% | −42.7% | MDD +3.8 pp |
+| DSR `inv_fuera12` fuera, N = 8 / 16 | 0.973 / 0.969 | 0.964 / 0.958 | Sí (contra 0) |
+| Veredictos H1 / H2 / H3 / H4 / H5 / H6 / freno | Repl. / Repl. / refutada / falso positivo / se sostiene / refutada / no refutado | iguales | **Concordante** |
+
+**Por qué difieren.**
+
+1. **No es el código.** El control C (código de B con GS10/TB3MS y French 202607) reproduce la tabla de H6 de A a cuatro decimales: 0.6143 / 0.4331 / −46.06%, comprar y mantener 0.5092 / −50.31% y SMA10 0.5881 / −19.31%. También reproduce H5: 3.01% con t −1.69.
+2. **Un mes de spread al filo.** En 2019-05, S_B = −0.005 y S_A = +0.00. Eso cambia el inicio de la inversión de 2019 en H5 y explica la mayor parte de las diferencias de `inv_fuera12` e `inv1` fuera de muestra (−0.015 y −0.027 de Sharpe). Es la misma fragilidad cerca de cero que esta ficha documenta para jun-ago 2025.
+3. **S&P 500 TR contra CRSP.** Explica las MDD distintas y la SMA10 fuera de muestra (−0.034, mismo mecanismo que AC-09). Ningún criterio cambia.
+4. **La parte A no depende de la fuente de tasas ni de recesiones.** Por eso las diferencias de A contra el artículo en k = 5 y k = 1 fuera de muestra no son de código ni de datos.
+
+**Dictamen.** Estado pre-registrado concordante: **Replicado** en A y en B. Después de la publicación, H3 refutada, H4 falso positivo a la fecha, H5 se sostiene y H6 refutada (no se refuta el uso como freno), en las dos ejecuciones. **Estado de la doble ejecución: Replicado (confirmado)**. Ninguna diferencia de Sharpe, CAGR o pseudo R² queda fuera de tolerancia; las de MDD y la fecha de inicio de 2019 se explican por la fuente. **La etiqueta "descartada" se sostiene.**
+

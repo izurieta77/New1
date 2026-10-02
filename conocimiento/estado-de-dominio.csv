@@ -4,7 +4,7 @@ Portafolio media-varianza y CAPM,02,Comprendido con comprobación,"fichas/2026-0
 Primas de factores y decaimiento post-publicación,02/06,Replicado,V01; AC-01; AC-02; AC-03; V03; R03 en curso,2026-09-25,Completar R03 (McLean-Pontiff) con prueba de diferencia entre ventanas
 Valuación DCF y DCF inverso,03,Documentado,Capítulo 03; herramientas/modelo_integrado.py,2026-09-25,DCF inverso de 3 emisoras contra precio y auditoría
 Renta fija: duración y curva,04,Documentado,Capítulo 04,2026-09-25,Comprobar duración/convexidad de un bono M con precio Banxico
-Curva invertida y recesión,04,Replicado,R07 (con _verificacion),2026-09-25,Segunda fuente independiente
+Curva invertida y recesión,04,Replicado,"R07 (A, GS10/TB3MS mensual + USREC) y AC-11 (B: DGS10/DTB3 diarios promediados + fechas NBER oficiales, probit propio): concordante a 3 decimales; P(recesión 12m) 0.098 con spread 2026-09; descartada como regla, no se refuta como freno",2026-10-02,Versión con spread de México (bono M 10a − Cetes 28) para recesión en México
 Derivados y prima de volatilidad,05,Documentado,Capítulo 05,2026-09-25,Réplica VRP con VIX vs realizada
 Anomalías long-only EUA,06,Replicado,V03,2026-09-25,Versión en MXN con costos GBM
 Kelly y Kelly fraccional (kelly.fraccion_max),07,Comprendido con comprobación,fichas/2026-09-25-kelly-fraccional.md (fórmula + Monte Carlo + binario),2026-09-25,Contrastar con rendimientos históricos y μ estimado en ventana móvil

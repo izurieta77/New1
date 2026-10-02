@@ -1,0 +1,185 @@
+AC-11: doble ejecucion independiente de R07 (curva 10a-3m y recesion). Fase 0, no es recomendacion.
+Archivos de datos (sha256):
+  40323f225e61...  control_fred_GS10.csv
+  631bc444a8c5...  control_fred_TB3MS.csv
+  b840dba55d31...  control_french_F-F_Research_Data_Factors_CSV_202607.zip
+  f1b90c0f6b37...  descarga_utc.txt
+  0b71c05f77c3...  fred_DEXMXUS.csv
+  bddfe0bd82ba...  fred_DGS10.csv
+  4055df631e50...  fred_DGS3MO.csv
+  1e9dbca88cc4...  fred_DTB3.csv
+  17339e707c37...  fred_IRLTLT01USM156N.csv
+  4085b93bfbc4...  fred_T10Y3M.csv
+  ef9110e9ff76...  nber_bcdc_announcements.html
+  675edfab2320...  nber_business_cycle_dates.json
+  13f7a42aeabb...  nber_expansions_contractions.html
+  044196dafe44...  shiller_ie_data.xls
+  e1c5a167960f...  yahoo_GSPC_1d.json
+  244d8687a378...  yahoo_SP500TR_1d_30y.json
+
+[datos] Spread mensual B (10a: OECD 1953-04..1961-12, DGS10 promedio diario desde 1962-01; 3m: DTB3 -> BEY diario y promedio): 1954-01 a 2026-09, n=873
+  anuncios NBER leidos: 12; ultimo pico NBER: 2020-02; ultimo valle: 2020-04
+  picos NBER posteriores a 2020-02: 0
+  control: S_B - promedio mensual T10Y3M, 1982-02..2026-09: media +0.0088 pp, |max| 0.1271 pp
+  trimestres 1959T1-1995T1 donde la tabla trimestral NBER difiere de 'mayoria de meses': ['1960T2', '1980T1', '1980T3', '1981T3', '1990T3']
+
+[A1/H1] Probit trimestral dentro de muestra, origenes 1959T1..1995T1-k (articulo: R2 k=4 0.296, t -4.57)
+   k     n   alfa     beta    t MV   t NW(k-1)  pseudoR2 | articulo R2   t
+   1   144 -0.7737  -0.2996   -2.88    -2.87     0.061  |   0.071   -2.71
+   2   143 -0.6238  -0.5954   -4.58    -4.27     0.197  |   0.211   -4.21
+   3   142 -0.5891  -0.7457   -5.00    -5.08     0.269  |   0.271   -4.71
+   4   141 -0.5879  -0.7837   -5.08    -4.72     0.287  |   0.296   -4.57
+   5   140 -0.6059  -0.6779   -4.79    -4.03     0.234  |   0.256   -3.87
+   6   139 -0.6676  -0.4786   -3.95    -3.86     0.136  |   0.149   -4.13
+   7   138 -0.7676  -0.3442   -3.05    -2.93     0.075  |   0.078   -3.02
+   8   137 -0.8831  -0.2176   -2.02    -1.58     0.031  |   0.031   -1.63
+  k=4: spread con P=50% = -0.750 pp (Current Issues: -0.82 +- 0.25); P(2.74)=0.0031; P(-2.18)=0.8688
+  H1: Replicado; k con R2 maximo = 4; R2 k=1 0.061, k=8 0.031 (<0.10?)
+  Sensibilidades k=4: 
+    t NW con k rezagos                       n=141 beta -0.7837 t NW -4.97 R2 0.287
+    objetivos 1959T1..1995T1                 n=145 beta -0.7932 t NW -4.75 R2 0.286
+    spread base descuento                    n=141 beta -0.8271 t NW -4.50 R2 0.272
+    solo fuentes diarias, origenes 1962T1..  n=129 beta -0.8055 t NW -4.42 R2 0.302
+
+[A2/H2] Fuera de muestra trimestral, objetivos 1971T1..1995T1, estimacion s>=1959T1, s+k<=q, cronologia final
+   k    n   R2 fuera (Lc ventana)  R2 (Lc recursiva)  Brier  Brier clim | articulo
+   1   97      0.041                0.053        0.1224 0.1250  | 0.072  fallos=0
+   2   97      0.218                0.245        0.0964 0.1271  | 0.236  fallos=0
+   3   97      0.297                0.332        0.0809 0.1283  | 0.328  fallos=0
+   4   97      0.294                0.333        0.0817 0.1289  | 0.295  fallos=0
+   5   97      0.279                0.318        0.0863 0.1288  | 0.155  fallos=0
+   6   97      0.176                0.210        0.0995 0.1283  | 0.141  fallos=0
+   7   97     -0.004                0.029        0.1238 0.1281  | negativo  fallos=0
+   8   97     -0.216               -0.182        0.1459 0.1284  | negativo  fallos=0
+  H2: Replicado (k=4 R2 fuera 0.294)
+
+[A3] Probit mensual, 12 meses adelante, dentro de muestra
+  1959-01..1994-03             n=423 alfa -0.5694 beta -0.6727 t MV -8.54 t NW11 -4.10 (NW12 -4.11) R2 0.250 AUC 0.870; P=50% en -0.846 pp
+  1959-01..2025-08 (completa)  n=800 alfa -0.7691 beta -0.5531 t MV -9.63 t NW11 -4.54 (NW12 -4.54) R2 0.155 AUC 0.831; P=50% en -1.390 pp
+
+[A3] Fuera de muestra mensual recursivo (estimacion s>=1959-01, s+12<=m; evaluacion con cronologia final)
+  tramo / etiquetas                       n  unos  R2(Lc ven)  R2(Lc rec)  Brier   B.clim   AUC   ac.30 ac.50 n>0.5 fallos
+  1970-01..1998-02 final                338   46      0.251      0.291   0.0850  0.1230  0.903  0.879 0.882   34 0
+  1970-01..1998-02 tiempo real          338   46      0.278      0.317   0.0807  0.1232  0.905  0.885 0.891   35 0
+  1998-03..2025-08 final                330   28     -0.031      0.002   0.0899  0.0812  0.715  0.836 0.864   17 0
+  1998-03..2025-08 tiempo real (H3)     330   28     -0.034      0.004   0.0900  0.0819  0.709  0.836 0.864   17 0
+  1998-03..2024-02 tiempo real (sens.)  312   28      0.005      0.042   0.0873  0.0858  0.737  0.853 0.869   13 0
+  1998-03..2025-08 coef fijos 59-94     330   28     -0.018      0.020   0.0910  0.0819  0.737  0.836 0.858   19 0
+  H3: refutada (R2 -0.034, Brier 0.0900 contra clim 0.0819, AUC 0.709)
+
+[A4/H4] Episodio 2022-2024
+  meses con S_B<0: 27 (2022-11..2025-04); con T10Y3M mensual<0: 30 (2022-11..2025-08); min S_B -1.702 en 2023-05
+  racha mas larga de sesiones T10Y3M<0: 534 (2022-10-25 a 2024-12-12), minimo -1.89 el 2023-05-04
+  meses en recesion (calendario NBER) de 2022-12 a 2026-04: 0; picos NBER posteriores a 2020-02: 0 -> falso positivo
+  probit en tiempo real 2022-01..2025-08: meses con P>0.5: 17 (2023-01..2024-08); max 0.712 en 2023-05
+  probabilidad actual con S_B de 2026-08 = 0.872 pp: modelo completo (origenes 1959-01..2025-08) 0.1054; tiempo real en el origen 0.1054
+  probabilidad actual con S_B de 2026-09 = 0.952 pp: modelo completo (origenes 1959-01..2025-08) 0.0976
+  ultimo diario T10Y3M 2026-10-01 = 1.07: modelo completo 0.0868; coef. implicitos de Current Issues 0.0626
+
+[A5/H5] Mercado de EUA (S&P 500 TR: ^GSPC + D/12 Shiller hasta 1996-10, ^SP500TR despues) tras el inicio de inversiones
+  inicios: ['1966-01', '1968-12', '1973-06', '1978-11', '1989-06', '2000-07', '2006-08', '2019-05', '2022-11']
+  1966-01: 6m   -8.54% 12m   -3.53% 18m    7.23% 24m    6.02% ex12   -8.51% MDD24 -15.7% mes max 23 meses a pico NBER 47
+  1968-12: 6m   -4.47% 12m   -8.47% 18m  -26.29% 24m   -4.82% ex12  -15.35% MDD24 -26.9% mes max 5 meses a pico NBER 12
+  1973-06: 6m   -4.93% 12m  -14.60% 18m  -30.18% 24m   -0.96% ex12  -22.79% MDD24 -39.1% mes max 4 meses a pico NBER 5
+  1978-11: 6m    7.39% 12m   18.08% 18m   27.05% 24m   64.41% ex12    7.81% MDD24 -9.8% mes max 24 meses a pico NBER 14
+  1989-06: 6m   12.87% 12m   16.26% 18m    9.23% 24m   24.80% ex12    8.23% MDD24 -14.6% mes max 23 meses a pico NBER 13
+  2000-07: 6m   -3.98% 12m  -14.33% 18m  -19.48% 24m  -34.57% ex12  -19.36% MDD24 -38.4% mes max 1 meses a pico NBER 8
+  2006-08: 6m    8.93% 12m   15.13% 18m    5.01% 24m    2.31% ex12   10.22% MDD24 -16.9% mes max 14 meses a pico NBER 16
+  2019-05: 6m   15.26% 12m   12.84% 18m   35.38% 24m   58.33% ex12   11.46% MDD24 -19.6% mes max 24 meses a pico NBER 9
+  2022-11: 6m    3.33% 12m   13.84% 18m   32.46% 24m   52.42% ex12    8.74% MDD24 -8.3% mes max 24 meses a pico NBER None
+  media 12m eventos 3.91% (n=9) contra incondicional 12.34% (n=860, sd 16.32%): t aprox -1.55 -> H5 se sostiene (no es menor)
+
+[B/H6] Motor mensual: S&P 500 TR contra efectivo (DTB3/1200). Decisiones 1971-01..2026-07; dentro 1971-01..1998-02, fuera 1998-03..2026-07
+  costo 0.34%/lado          | dentro: CAGR    vol   Sharpe   MDD   oper | fuera: CAGR    vol   Sharpe   MDD   oper  exp
+  inv1                     |  14.76%  13.1%  0.601  -29.6%   14 |   7.98%  14.3%  0.463  -50.9%   12 0.85
+  inv3                     |  15.34%  14.0%  0.607  -29.6%    8 |   8.16%  14.8%  0.464  -50.9%    8 0.89
+  inv3_medio               |  14.43%  14.3%  0.541  -33.1%    8 |   8.66%  14.9%  0.492  -50.9%    8 0.94
+  probit50                 |  15.32%  14.1%  0.604  -29.6%   14 |   8.54%  15.2%  0.479  -50.9%    6 0.95
+  probit30                 |  14.82%  13.3%  0.597  -29.6%   12 |   7.61%  14.8%  0.429  -50.9%    8 0.88
+  probit_cont              |  14.13%  12.9%  0.564  -29.4%  326 |   7.86%  13.6%  0.471  -49.9%  341 0.87
+  inv_fuera12              |  14.15%  11.6%  0.620  -29.6%    7 |   6.86%  12.8%  0.418  -46.6%    8 0.70
+  desinv12                 |  12.74%  12.8%  0.473  -29.6%    9 |   9.34%  14.0%  0.560  -41.8%    8 0.86
+  comprar_mantener         |  13.45%  15.0%  0.464  -42.7%    0 |   9.11%  15.4%  0.509  -50.9%    0 1.00
+  efectivo                 |   7.01%   0.8%  0.005    0.0%    0 |   2.12%   0.6% -0.262    0.0%    0 0.00
+  sma10                    |  11.84%  12.4%  0.419  -23.8%   38 |   7.71%  10.7%  0.554  -22.9%   42 0.75
+  elegida por Sharpe dentro: inv_fuera12 (0.620)
+  fuera: inv_fuera12 Sharpe 0.418 MDD -46.6% | comprar y mantener 0.509 -50.9% | SMA10 0.554 -22.9%
+  agrega valor frente a comprar y mantener: False; frente a SMA10: False; DSR N=8 0.964, N=16 0.958
+  H6: refutada (Sharpe fuera <= comprar y mantener); uso como freno: no refutado
+  (informativo) mejor variante fuera: desinv12 0.560
+  Sharpe fuera por costo (def / medio / bruto):
+    inv1                 0.463 / 0.468 / 0.473
+    inv3                 0.464 / 0.468 / 0.471
+    inv3_medio           0.492 / 0.494 / 0.495
+    probit50             0.479 / 0.481 / 0.483
+    probit30             0.429 / 0.433 / 0.436
+    probit_cont          0.471 / 0.474 / 0.477
+    inv_fuera12          0.418 / 0.422 / 0.426
+    desinv12             0.560 / 0.564 / 0.567
+    comprar_mantener     0.509 / 0.509 / 0.509
+    sma10                0.554 / 0.580 / 0.602
+  sens. spread descuento inv1         Sharpe dentro 0.636 fuera 0.471 MDD fuera -50.9%
+  sens. spread descuento inv3         Sharpe dentro 0.588 fuera 0.426 MDD fuera -50.9%
+  sens. spread descuento inv3_medio   Sharpe dentro 0.532 fuera 0.472 MDD fuera -50.9%
+  MXN (DEXMXUS ultimo dato del mes), 1994-01..2026-07:
+    inv_fuera12        CAGR 14.84% MDD -27.2%
+    comprar_mantener   CAGR 16.95% MDD -40.1%
+    sma10              CAGR 15.47% MDD -31.1%
+
+[CONCILIACION] Agregada despues de fijar las cifras ciegas y leer R07 secciones 10-17. Control C: FRED GS10/TB3MS (spread de A) y French 202607 (rendimientos de A).
+  S_B - S_A 1954-01..2026-08: media +0.0002 pp, |max| 0.0097 pp; 1962-01..2026-08 |max| 0.0097 pp
+  meses con signo distinto (S<0): ['2019-05']
+  meses con P>0.5 distinto (S_B contra S_A, tiempo real): ['1979-02']
+  B: S_B + S&P TR + DTB3: elegida inv_fuera12
+    inv1               dentro 0.6009 -29.59% CAGR 14.76% | fuera 0.4627 -50.95% CAGR  7.98%
+    inv3               dentro 0.6067 -29.59% CAGR 15.34% | fuera 0.4640 -50.95% CAGR  8.16%
+    inv3_medio         dentro 0.5413 -33.11% CAGR 14.43% | fuera 0.4919 -50.95% CAGR  8.66%
+    probit50           dentro 0.6039 -29.59% CAGR 15.32% | fuera 0.4789 -50.95% CAGR  8.54%
+    probit30           dentro 0.5966 -29.59% CAGR 14.82% | fuera 0.4292 -50.95% CAGR  7.61%
+    probit_cont        dentro 0.5640 -29.36% CAGR 14.13% | fuera 0.4708 -49.88% CAGR  7.86%
+    inv_fuera12        dentro 0.6197 -29.59% CAGR 14.15% | fuera 0.4182 -46.59% CAGR  6.86%
+    desinv12           dentro 0.4726 -29.59% CAGR 12.74% | fuera 0.5601 -41.82% CAGR  9.34%
+    comprar_mantener   dentro 0.4642 -42.74% CAGR 13.45% | fuera 0.5091 -50.95% CAGR  9.11%
+    sma10              dentro 0.4190 -23.76% CAGR 11.84% | fuera 0.5536 -22.88% CAGR  7.71%
+  S_B + French: elegida inv_fuera12
+    inv1               dentro 0.6002 -29.85% CAGR 14.70% | fuera 0.4748 -50.31% CAGR  8.28%
+    inv3               dentro 0.6043 -29.85% CAGR 15.25% | fuera 0.4778 -50.31% CAGR  8.51%
+    inv3_medio         dentro 0.5430 -36.54% CAGR 14.40% | fuera 0.4992 -50.31% CAGR  8.92%
+    probit50           dentro 0.5982 -32.85% CAGR 15.20% | fuera 0.4817 -50.31% CAGR  8.74%
+    probit30           dentro 0.5929 -29.85% CAGR 14.70% | fuera 0.4401 -50.31% CAGR  7.89%
+    probit_cont        dentro 0.5660 -29.62% CAGR 14.10% | fuera 0.4795 -49.22% CAGR  8.10%
+    inv_fuera12        dentro 0.6143 -29.85% CAGR 14.01% | fuera 0.4163 -46.06% CAGR  6.89%
+    desinv12           dentro 0.4589 -34.47% CAGR 12.51% | fuera 0.5521 -41.62% CAGR  9.39%
+    comprar_mantener   dentro 0.4676 -46.51% CAGR 13.47% | fuera 0.5092 -50.31% CAGR  9.28%
+    sma10              dentro 0.4123 -24.84% CAGR 11.63% | fuera 0.5881 -19.31% CAGR  8.20%
+  S_A + S&P TR + DTB3: elegida inv_fuera12
+    inv1               dentro 0.6009 -29.59% CAGR 14.76% | fuera 0.4780 -50.95% CAGR  8.23%
+    inv3               dentro 0.6067 -29.59% CAGR 15.34% | fuera 0.4597 -50.95% CAGR  8.09%
+    inv3_medio         dentro 0.5413 -33.11% CAGR 14.43% | fuera 0.4898 -50.95% CAGR  8.62%
+    probit50           dentro 0.6146 -29.59% CAGR 15.50% | fuera 0.4789 -50.95% CAGR  8.54%
+    probit30           dentro 0.5966 -29.59% CAGR 14.82% | fuera 0.4292 -50.95% CAGR  7.61%
+    probit_cont        dentro 0.5640 -29.36% CAGR 14.13% | fuera 0.4708 -49.89% CAGR  7.86%
+    inv_fuera12        dentro 0.6197 -29.59% CAGR 14.15% | fuera 0.4350 -46.59% CAGR  7.11%
+    desinv12           dentro 0.4726 -29.59% CAGR 12.74% | fuera 0.5601 -41.82% CAGR  9.34%
+    comprar_mantener   dentro 0.4642 -42.74% CAGR 13.45% | fuera 0.5091 -50.95% CAGR  9.11%
+    sma10              dentro 0.4190 -23.76% CAGR 11.84% | fuera 0.5536 -22.88% CAGR  7.71%
+  C: S_A + French (= A): elegida inv_fuera12
+    inv1               dentro 0.6002 -29.85% CAGR 14.70% | fuera 0.4899 -50.31% CAGR  8.54%
+    inv3               dentro 0.6043 -29.85% CAGR 15.25% | fuera 0.4715 -50.31% CAGR  8.41%
+    inv3_medio         dentro 0.5430 -36.54% CAGR 14.40% | fuera 0.4961 -50.31% CAGR  8.87%
+    probit50           dentro 0.6097 -32.85% CAGR 15.40% | fuera 0.4817 -50.31% CAGR  8.74%
+    probit30           dentro 0.5929 -29.85% CAGR 14.70% | fuera 0.4401 -50.31% CAGR  7.89%
+    probit_cont        dentro 0.5660 -29.62% CAGR 14.10% | fuera 0.4794 -49.22% CAGR  8.10%
+    inv_fuera12        dentro 0.6143 -29.85% CAGR 14.01% | fuera 0.4331 -46.06% CAGR  7.15%
+    desinv12           dentro 0.4589 -34.47% CAGR 12.51% | fuera 0.5521 -41.62% CAGR  9.39%
+    comprar_mantener   dentro 0.4676 -46.51% CAGR 13.47% | fuera 0.5092 -50.31% CAGR  9.28%
+    sma10              dentro 0.4123 -24.84% CAGR 11.63% | fuera 0.5881 -19.31% CAGR  8.20%
+  H5 S_B + French: inicios ['1966-01', '1968-12', '1973-06', '1978-11', '1989-06', '2000-07', '2006-08', '2019-05', '2022-11']; media 12m 3.57% contra 12.49% (n=859, sd 16.78%), t -1.60
+  H5 S_A + French (= A): inicios ['1966-01', '1968-12', '1973-06', '1978-11', '1989-06', '2000-07', '2006-08', '2019-06', '2022-11']; media 12m 3.01% contra 12.49% (n=859, sd 16.78%), t -1.69
+  H5 S_A + S&P TR: inicios ['1966-01', '1968-12', '1973-06', '1978-11', '1989-06', '2000-07', '2006-08', '2019-06', '2022-11']; media 12m 3.32% contra 12.33% (n=859, sd 16.32%), t -1.66
+  MXN fuera 1998-03..2026-07 (B):
+    inv_fuera12        CAGR 9.56% MDD -27.2%
+    comprar_mantener   CAGR 11.86% MDD -40.1%
+    sma10              CAGR 10.43% MDD -31.1%
+  P(recesion 12m) con coef. fijos 1959-01..1994-03 y S_B 2026-08: 0.1239
+  probit en tiempo real con S_A: max 2022-2025 0.7132
