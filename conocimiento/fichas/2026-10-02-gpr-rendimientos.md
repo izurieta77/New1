@@ -37,6 +37,11 @@ Cuando el índice de riesgo geopolítico (GPR) da un salto, ¿el mercado de EUA 
 2. **No hay señal operable** ni para vender después del choque ni para comprar en el rebote. Coincide con lo que el cap. 23 dice de los mercados de predicción y con Känzig-Stock-Zanotti (el daño llega por tasas).
 3. **Para la alerta Irán/Ormuz en ALTA:** la evidencia respalda la decisión del decisor de **no actuar por la noticia en sí**. Solo actuar si se disparan reglas medibles (cortacircuitos, filtro, FX-1) o si cambia el canal de tasas e inflación.
 
+**Contraste con la literatura** (agregado tras verificar el paper del día):
+- Hirshleifer, Mai y Pukthuanthong (2025, *RFS* 38(2)) encuentran una **prima por riesgo de guerra**: con el GPR, +1 DE anticipa +2.5% a +7.3% anualizado de exceso al mes siguiente (t de 1.7 a 2.3; R² ≤ 1.4%).
+- Nuestro signo (+0.68 pp/mes por unidad de log-choque, rebote de +1.1 pp tras los choques extremos) **va en la misma dirección**, pero no es significativo con un choque medido contra la media de 12 meses.
+- Lectura conjunta: si hay algo, es una prima **a favor de mantener o comprar** tras el choque, no de vender, y es demasiado pequeña e inestable para operarla.
+
 ## 6. Contraejemplo y límites
 - **Contraejemplo:** en 1990 (Kuwait) y en 2001-02, el mercado sí siguió cayendo meses después del choque. Pero esa caída se mezcla con una recesión ya en curso; el GPR no la anticipó por sí solo.
 - **Límites:**
