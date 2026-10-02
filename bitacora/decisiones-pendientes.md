@@ -120,3 +120,11 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Por qué es conservador:** la cifra pasa la única verificación independiente disponible con los datos que sí quedaron en git; no hay evidencia de que esté mal, solo falta el dato primario (precio de cierre sin el margen de la fórmula de límites) para una auditoría más directa en el futuro.
 - **Propuesta hacia adelante:** la rutina de Cierre debería guardar el precio de cierre crudo de cada ticker (no solo el equity resultante o el límite con margen) en algún lado auditable, para que una revisión futura no dependa de despejar una fórmula de orden.
 - **Estado:** Cerrado para efectos de esta revisión (sin hallazgo bloqueante); la propuesta de registrar el precio crudo queda abierta para quien mantenga `rutinas/diaria-cierre.md`.
+
+## 2026-10-01 · bloque de trabajo continuo · Insumo para el comité del 2-oct: serie y banda de `filtro_apalancados`
+- **Hallazgo** (`conocimiento/fichas/2026-10-01-serie-senal-filtro.md`):
+  - La serie de la señal (índice de precio, ETF ajustado o ETF sin ajustar) mueve el CAGR de un 3x filtrado entre 0.2 y 1.8 pp, sin un ganador estable.
+  - La **banda de ±3%** domina: con el S&P 3x, CAGR de 13.8% → 21.4%, cambios de 6.7 → 1.0 por año y MDD de −71% → −53%.
+  - **El 3x del Nasdaq filtrado perdió 93.6% en 2000-2003**, aun con banda.
+- **Propuesta (no aplicada):** fijar la señal sobre el **índice de precio** (^GSPC / ^NDX) al cierre, con banda de ±3% y ejecución al día siguiente. Si se usa un 3x del Nasdaq, dimensionarlo con el −94% de 2000-2003 como escenario de cola.
+- **Qué decidí:** nada; es competencia del comité.
