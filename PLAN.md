@@ -116,19 +116,19 @@ Decisión del dueño (25-sep-2026): describió el patrón de horarios de un riva
 
 ## 8. Avance (lo actualiza la auditoría del viernes)
 
-Última actualización: auditoría semanal 2026-W39 (25-sep-2026, 23:00 UTC). Detalle en `bitacora/semanal/2026-W39.md`.
+Última actualización: auditoría semanal 2026-W40 (2-oct-2026, 00:30 UTC del 3-oct). Detalle en `bitacora/semanal/2026-W40.md`.
 
 | Indicador | Valor | Fecha |
 |---|---|---|
-| Pronósticos registrados / resueltos | Bitácora 47 / 4; MU 4 / 4 (post-mortem del 30-sep) | 1-oct-2026 (balance mensual) |
-| Brier acumulado | 0.302 (n = 4, muestra insuficiente; objetivo ≤ 0.20 con 50+) | 1-oct-2026 |
+| Pronósticos registrados / resueltos | Bitácora 55 / 8; MU 4 / 4 | 2-oct-2026 |
+| Brier acumulado | 0.318 (n = 8; claude 0.346, vigía 0.290); muestra insuficiente | 2-oct-2026 |
 | Cuenta real arena: TWR / drawdown máximo | Arranca el 28-sep | — |
-| Portafolio de papel: TWR / drawdown máximo | GBM +1.30% / 0.00% (28-30 sep, benchmark +0.64%); Binance +0.12% / 0.00% | 1-oct-2026 |
+| Portafolio de papel: TWR / drawdown máximo | GBM +2.68% / 0.00% (S&P TR MXN +2.77%, IPC −0.64%, CETES +0.07%); Binance +0.12% / 0.00%. W40: modo C moderado (2 UPRO con stop) desde el 5-oct | 2-oct-2026 |
 | Benchmarks de la semana 18→25-sep (MXN) | S&P 500 TR en MXN +4.25% (SP500TR +1.23% y USD/MXN +2.99%); IPC +2.55% (precio); CETES ~+0.12% (proxy 6.23% anual) | 25-sep-2026 |
-| Estado de dominio | 34 temas: 16 Documentado, 1 Documentado con comprobación, 5 Comprendido con comprobación, 5 Contrastado, 7 Replicado | 1-oct-2026 |
-| Laboratorio | 23 pruebas: 0 ventaja demostrada, 7 oportunidad investigable, 14 descartadas, 1 en curso (R03), 1 no aplica (V05); AC-08 descarta el carry ≤3%; AC-09: SMA10 solo protección | 1-oct-2026 |
+| Estado de dominio | 34 temas: 14 Documentado, 1 Documentado con comprobación, 7 Comprendido con comprobación, 5 Contrastado, 7 Replicado | 2-oct-2026 |
+| Laboratorio | 25 pruebas: 0 ventaja demostrada, 7 oportunidad investigable, 16 descartadas, 1 en curso (R03), 1 no aplica (V05); AC-05 a AC-11 en la semana | 2-oct-2026 |
 | Rivales con datos | 0 | — |
 | Examen de titulación | Diagnóstico 96.1% (25-sep); mensual oct 100% con clave comprometida (salvedad: examen fácil) | 1-oct-2026 |
 | Criterio de salida de fase 0 | NO se cumple: falta Brier ≤ 0.20 con 3 meses y 50+ resueltos | 1-oct-2026 |
-| Días para fin de fase 0 del patrimonio principal | 88 (28-dic-2026) | 1-oct-2026 |
-| Días para fin de la temporada arena | 119 (28-ene-2027) | 1-oct-2026 |
+| Días para fin de fase 0 del patrimonio principal | 87 (28-dic-2026) | 2-oct-2026 |
+| Días para fin de la temporada arena | 118 (28-ene-2027) | 2-oct-2026 |

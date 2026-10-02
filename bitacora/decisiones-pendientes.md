@@ -135,3 +135,13 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **El 3x del Nasdaq filtrado perdió 93.6% en 2000-2003**, aun con banda.
 - **Propuesta (no aplicada):** fijar la señal sobre el **índice de precio** (^GSPC / ^NDX) al cierre, con banda de ±3% y ejecución al día siguiente. Si se usa un 3x del Nasdaq, dimensionarlo con el −94% de 2000-2003 como escenario de cola.
 - **Qué decidí:** nada; es competencia del comité.
+
+## 2026-10-02 · comité W40 · Lo que el comité necesita del dueño
+- **Decidido** (`bitacora/decisiones/2026-10-02-CARTERA-W40-modo-C-moderado.md`): modo C moderado. Alrededor de 27% en UPRO (3x S&P) con stop obligatorio y filtro, nunca TQQQ; Binance en 40% BTC; tipo de cambio sin cobertura, como decisión explícita. Topes provisionales 5,000/2,500 y orden mínima de 2,500 ratificados por el gestor de riesgo.
+- **Pendiente del dueño (no aplicado):**
+  - (1) fondear GBM con 10,000;
+  - (2) confirmar que **UPRO** (o SPXL) aparece en la app de GBM;
+  - (3) ratificar la nueva regla de `filtro_apalancados`: ^GSPC con banda de ±3% (entrada sobre SMA200 × 1.03, salida bajo × 0.97) más VIX < 25. Hasta entonces rige como regla operativa de la decisión, más estricta que el texto vigente;
+  - (4) propuesta del criterio de Brier (1-oct);
+  - (5) plan B de Bitso: ¿ya se probó el nivel 2, el SPEI y Lightning?
+- **Qué decidí:** dejar las órdenes de papel O0004 y O0005 para el lunes y la boleta real condicionada a (1) y (2).
