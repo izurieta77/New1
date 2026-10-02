@@ -1,6 +1,6 @@
 # 05 · Mercado, on-chain, stablecoins e institucional (grupo G5)
 
-> **Nivel:** maestría con frontera · **Actualizado:** 29-sep-2026 por `analista-cripto` (adenda §9) · **Grado de evidencia global: C.**
+> **Nivel:** maestría con frontera · **Actualizado:** 2-oct-2026 por `analista-cripto` (adenda §11) · **Grado de evidencia global: C.**
 > - Las identidades on-chain (precio realizado, MVRV, NUPL) son exactas y se reproducen con datos gratuitos: grado A-B.
 > - Su poder para **predecir** a 1-4 meses es débil o nulo en el rango de hoy: grado C por nuestro propio cálculo.
 > - Las narrativas de proveedores con conflicto de interés son grado D.
@@ -16,6 +16,7 @@
 > **Examen:** [banco-g5-mercado](examen/banco-g5-mercado.md)
 > - **Adenda (29-sep-2026):** [ficha del 29-sep · BTC frente a Nasdaq, USD/MXN y tasa real](fichas/2026-09-29-btc-nasdaq-usdmxn-beta.md), ver §9.
 > - **Adenda (30-sep-2026):** [ficha del 30-sep · funding, base e interés abierto en vivo](fichas/2026-09-30-microestructura-funding-basis-oi.md), ver §10.
+> - **Adenda (2-oct-2026):** [ficha del 2-oct · flujos de ETF spot como variable de demanda](fichas/2026-10-02-flujos-etf-spot-demanda.md), ver §11.
 
 ## 0. En una página
 
@@ -328,3 +329,14 @@ Cálculo propio (ficha completa: [fichas/2026-09-30-microestructura-funding-basi
 - **Open interest:** Deribit US$793.1 M (perpetuo) + US$312.6 M (futuro dic-2026); OKX US$2,329.2 M (27,686 BTC). Cobertura parcial (falta Binance y Bybit, geo-restringidos; CoinGlass, el agregador estándar, pide clave de pago), así que sirve para descartar una anomalía aislada, no para fijar un umbral absoluto de "récord".
 - **Profundidad de BTC/MXN en Binance:** notional de compra a ±0.5% subió de 18,786 MXN (25-sep) a 37,274 MXN (30-sep), con spread de 0.0275% (vs. 0.19%). Mejora, sin cambiar la regla de usar USDT/MXN como ruta de salida si el libro BTC/MXN se vacía.
 - **Grado B** para los números, **C** para la lectura de "sin señal de estrés" (cobertura parcial de exchanges, un solo corte de tiempo). No cambia ninguna decisión de la cuenta `arena-claude-binance`.
+
+## 11. Adenda (2-oct-2026): flujos de ETF spot como variable de demanda
+
+Cálculo propio (ficha completa: [fichas/2026-10-02-flujos-etf-spot-demanda.md](fichas/2026-10-02-flujos-etf-spot-demanda.md)), motivado por el tema 4 de "temas que no cubren los 35 recursos" (`00-plan-de-estudio.md`): *flujos de los ETF spot como variable de demanda*. El acceso directo a la API de flujos sigue bloqueado hoy (Farside 403, SoSoValue 403/sin respuesta, CoinGlass gratis con error 500 interno), igual que documenta §3.3 y §7 de este capítulo; la novedad de hoy es (a) una reconciliación de una discrepancia real de fecha entre fuentes de prensa y (b) el primer ejercicio numérico propio que convierte el flujo en USD a BTC equivalente y lo compara con el precio y el volumen.
+
+- **Mecanismo:** los ETF spot de BTC en EUA crean/redimen en efectivo (un participante autorizado entrega dólares, el emisor compra BTC en el mercado abierto y entrega acciones), a diferencia de un fondo cerrado con descuento/premio. Por eso el flujo neto debería reflejar, con rezago de liquidación de T+1-T+2, compra o venta real de BTC — pero es una variable **coincidente o con rezago corto**, no líder, consistente con la idea 4 de §2.
+- **Discrepancia de fecha resuelta:** una nota (CryptoTimes) etiquetó "−149M USD el 1-oct" citando un corte de SoSoValue a las 18:00 UTC (14:00 hora de Nueva York, mercado de EUA aún abierto); en realidad esa cifra es el cierre del **30-sep**, confirmada por 4 fuentes de prensa independientes (The Block, Chaincatcher, Panews, Bloomingbit) con una desviación máxima entre ellas de solo 0.21%. El flujo real del **1-oct** fue **+US$103M** (IBIT +196M, FBTC −60.73M, GBTC +14.59M, según KuCoin/ME News vía SoSoValue).
+- **Ejercicio numérico (verificado dos veces, script en `scratchpad/g5_etf/flujos_etf_vs_precio.py`):** el outflow del 30-sep (−148.7M USD) equivale a **−1,778.2 BTC** al precio de ese día (−7.76% del volumen de 24h de Binance spot, un solo exchange); el inflow del 1-oct (+103.0M USD) equivale a **+1,213.5 BTC** (+5.30% del mismo volumen de referencia). Para contexto de magnitud, el peor mes de 2026 (junio, −65,800 BTC) promedia −2,193 BTC/día, del mismo orden que el 30-sep: el día "malo" de esta semana no es atípico.
+- **Lectura con n=2 (grado D si se usa para predecir):** el día de salida neta el precio quedó plano (−0.05%) y el día de entrada neta subió +1.50%. Dirección consistente, pero el tamaño de muestra no permite ninguna conclusión; es el inicio de una serie que la rutina puede seguir acumulando.
+- **Regla operativa nueva para el pulso:** verificar la fecha de un flujo de ETF citado por una sola nota de prensa contra una segunda fuente antes de usarlo, porque un corte intradía citado como "de hoy" puede en realidad ser el cierre del día anterior.
+- **Grado B** para los números de flujo y precio; **grado D** para cualquier lectura predictiva del cruce flujo-retorno con esta muestra. No cambia ninguna decisión de la cuenta `arena-claude-binance` (el filtro de tendencia solo mira precio).
