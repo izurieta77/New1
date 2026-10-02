@@ -34,6 +34,8 @@
 
 4. **Poder estadístico:** para distinguir un Brier de 0.20 de uno de 0.25 (una cola al 5%, poder de 80%) hacen falta **~61 pronósticos** con la mezcla actual y **~116** si las preguntas son de 0.25/0.75. Con n = 50, el error estándar del Brier es de 0.022 a 0.031.
 
+> **Nota de verificación (2026-10-02, W40):** las cifras se reproducen con código propio (numpy, 200,000 simulaciones) sobre el CSV de 47 filas (commit `80dbe10`): E[p(1−p)] = 0.2068, P(Brier ≤ 0.20) = 0.386, IC 90% de 0.171 a 0.244, sobreconfiado P = 0.32, n ≈ 61 y ≈ 116. La mezcla ya cambió. Con las **52 filas al 2-oct**: |p − 0.5| medio de 0.156, **E[p(1−p)] = 0.210**, **P(Brier ≤ 0.20 | calibrado, n = 50) ≈ 0.33** (0.35 si se repite la mezcla fija en lugar de remuestrearla), n ≈ 58 y sobreconfiado P ≈ 0.28. La conclusión de §6 se refuerza: la mezcla se está acercando a 0.5. "Mezcla actual" quiere decir al 1-oct (47 pronósticos).
+
 ## 5. Contraejemplo y segunda comprobación
 - **Contraejemplo:** un pronosticador sin ninguna habilidad puede pasar el umbral si **elige preguntas fáciles** (p cerca de 0 o 1). Con preguntas de 0.15/0.85 bien calibradas, pasa 97% de las veces. El umbral premia **elegir preguntas**, no **saber**.
 - **Segunda comprobación (analítica):** E[q(1 − q)] con la mezcla actual (0.2068) coincide con la media simulada (0.2068). La identidad de Murphy cuadra al sexto decimal.
