@@ -1,0 +1,9 @@
+calib 2010+: UPRO real CAGR 29.67% synth 30.14%
+1994
+n=5540 P(stop)=33% P(salida filtro)=25% DD -12/20/28/35: 13.8/0.6/0.0/0.00 med 5.1% peor -21.7
+n=5540 P(stop)=33% P(salida filtro)=25% DD -12/20/28/35: 4.6/0.0/0.0/0.00 med 3.1% peor -16.7
+n=5540 P(stop)=0% P(salida filtro)=43% DD -12/20/28/35: 18.9/1.5/0.0/0.00 med 5.9% peor -24.5
+2004
+n=4063 P(stop)=34% P(salida filtro)=25% DD -12/20/28/35: 10.5/0.2/0.0/0.00 med 3.8% peor -20.8
+n=4063 P(stop)=34% P(salida filtro)=25% DD -12/20/28/35: 3.5/0.0/0.0/0.00 med 2.5% peor -16.7
+n=4063 P(stop)=0% P(salida filtro)=44% DD -12/20/28/35: 14.9/1.0/0.0/0.00 med 4.7% peor -21.3

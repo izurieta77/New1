@@ -10,7 +10,7 @@ Actualizado: 2026-10-02 (cierre). El TWR del papel arranca con índice 100 al ci
 |---|---|---|---|---|
 | arena-claude (papel, GBM) | **+2.68%** (índice 102.68 al 2-oct; valor 20,441.67 MXN). Casi todo por USD/MXN 17.825 → 18.145; en USD la cartera va +0.8% sobre costo. Costo con el tipo de cambio de ejecución (`bitacora/arbitraje/2026-09-30.md`) | 0.00% (pico el 2-oct) | 4 | `bitacora/equity.csv` |
 | arena-claude-binance (papel) | **+0.12%** (índice 100.12 al 29-sep; valor 10,055.01 MXN, serie re-expresada por la rutina cripto) | 0.00% | 1 | `bitacora/papel-binance/equity.csv` |
-| arena-claude (real, GBM) | sin fondear: 4 días hábiles con la boleta del 30-sep VIGENTE y sin depósito ni llenados reportados; la decisión pasa al comité | — | 0 | dueño |
+| arena-claude (real, GBM) | sin fondear. La boleta del 30-sep quedó ANULADA en el comité W40 y la sustituye `bitacora/boletas/2026-10-05.md` (3 SPYM + 1 UPRO con stop), condicionada a fondeo y a que el ticker aparezca en GBM | — | 0 | dueño |
 | arena-claude-binance (real) | **−0.09% sobre la aportación** (el TWR arranca en 100 con esta valuación; valor 4,995.30 MXN al 30-sep 00:25 UTC; 0.001325 BTC + 3,001.83 MXN) | 0.00% | 1 | `bitacora/real-binance/equity.csv`, `rivales.csv` |
 | chatgpt-gbm / chatgpt-binance | sin datos | sin datos | — | dueño |
 | grok-gbm / grok-binance | sin datos de cuenta real. Grok reportó **papel** al 25-sep (GBM 19,893.69; Binance 9,921.24): no entra al marcador real | sin datos | — | dueño (`rivales.csv`) |

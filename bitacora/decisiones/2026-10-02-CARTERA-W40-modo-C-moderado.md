@@ -6,7 +6,7 @@
 **APROBADO: modo C moderado en GBM.** Se agrega un **27% en UPRO (3x del S&P 500) con stop obligatorio y filtro de tendencia**; el resto sigue en índices 1x. **Nunca TQQQ.** **Binance se mantiene en 40% BTC**, sin ETH. **Tipo de cambio: exposición en USD sin cobertura, como decisión explícita.**
 
 ## Tesis y cómo se refuta
-- **Tesis:** dentro del mandato del dueño (modo C, máxima agresividad que permiten los topes), un 3x del S&P de tamaño moderado, con filtro y stop, sube la mediana de la temporada (+6.3% contra +5.2-5.9% de la cartera A) sin acercar la cuenta al −20%: P(−20%) es de 0.6% con stop y 2.6% sin stop. El Nasdaq 3x queda descartado por su cola histórica (−93.6% filtrado en 2000-03).
+- **Tesis:** dentro del mandato del dueño (modo C, máxima agresividad que permiten los topes), un 3x del S&P de tamaño moderado, con filtro y stop, sube la mediana de la temporada (+6.3% contra +4.9% de la cartera A, 1994-2026 en MXN; corregido el 3-oct, ver nota al final) sin acercar la cuenta al −20%: P(−20%) es de 0.6% con stop y 2.6% sin stop. El Nasdaq 3x queda descartado por su cola histórica (−93.6% filtrado en 2000-03).
 - **Refutación (al 28-ene-2027):** la tesis falla si se cumple cualquiera de estas:
   - (a) el TWR queda debajo de la cartera A calculada en sombra menos 3 pp;
   - (b) la cuenta toca −20%;
@@ -65,3 +65,10 @@ El orquestador recalculó las cifras que sostienen la decisión: pesos 40.2/27.4
 - **P0053 (comité):** la cuenta GBM de papel toca −12% antes del 28-ene-2027, p = 0.15.
 - **P0054 (geopolítico):** el cese al fuego EUA-Irán se sostiene hasta el 31-oct, p = 0.52.
 - **P0055 (geopolítico):** Ormuz normalizado antes del 31-dic, p = 0.15.
+
+## Nota de corrección (3-oct-2026, decisor vespertino, tras el hallazgo bloqueante de la revisión del 2-oct)
+- **Artefacto archivado:** los scripts y datos del gestor de riesgo ahora están en `arena/modelos/comite_w40_riesgo/` (README, `sim.py`, `stop.py`, salidas y SHA256). Re-ejecutados el 3-oct, reproducen exactamente:
+  - P(−12/−20/−28/−35%): 23.5/2.6/0/0% sin stop y 13.8/0.6/0/0% con stop (1994-2026, MXN); 10.5/0.2% con stop (2004-2026);
+  - mediana del modo C moderado: +6.3%.
+- **Error corregido:** la mediana de la cartera A en esa misma salida es **+4.9%** (1994-2026) y **+4.1%** (2004-2026), no "+5.2-5.9%". Ese rango venía del dictamen cuantitativo, con otra configuración, y se etiquetó mal. Su P(−12%) es 8.9% (1994-2026).
+- **La decisión no cambia:** la brecha de mediana a favor del modo C en la historia (+1.4 pp) es mayor de lo que se citó. Pero esa historia tiene una prima de ~8%. Con una prima de ~4%, la ficha `conocimiento/fichas/2026-10-02-costo-del-apetito.md` estima que el modo C crece ~0.9 pp **menos** por temporada. El comité del 9-oct debe ver las dos cifras juntas.
