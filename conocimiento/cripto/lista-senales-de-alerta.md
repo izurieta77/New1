@@ -108,6 +108,14 @@
 - **Aviso importante para no sobre-interpretar el repunte:** Binance anunció que **hoy, 29-sep-2026, empieza la migración de cuentas "Funding" a cuentas "Spot"** (depósitos on-chain a Funding se cierran hoy; todo se mueve a Spot hasta ene-2027; [CryptoTimes, 23-sep-2026](https://www.cryptotimes.io/2026/09/23/binance-funding-account-crypto-migration-starts-september-29-2026/)). Es exactamente el tipo de **reasignación interna entre carteras** que la sección F de este documento ya advierte que "crea saltos" en los datos de DefiLlama. **Lo más probable es que el salto de hoy (+7,812 BTC) sea un efecto de la migración, no una entrada neta real de clientes**, así como el reporte de salida del 27/28-sep tampoco se corroboró como salida real. No cambia la lectura: **ni el reporte de salida ni el repunte de hoy pasan el umbral de disparador**; se seguirá vigilando con el ruido de la migración explícitamente descontado hasta que se estabilice (el calendario oficial de la migración va de oct-2026 a ene-2027).
 - **E5 y demás señales:** sin cambio frente al 25-sep. **Sin señales ROJAS ni disparador de contingencia** (`bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`).
 
+**Seguimiento del 3-oct-2026** [I] — revisión de contraparte de la corrida de las 08:17, aprovechando el estudio del tema 5 del plan (ficha [`fichas/2026-10-03-prueba-de-reservas-y-riesgo-de-exchange.md`](fichas/2026-10-03-prueba-de-reservas-y-riesgo-de-exchange.md)):
+
+- **E3 (PoR mensual):** verificado hoy que **no hay un 47.º reporte publicado** (snapshot esperado del 1-oct-2026). Sigue vigente el **46.º reporte** (snapshot 1-sep-2026, publicado 17-sep-2026, ~682,000 BTC de usuarios, ratio "de al menos 1:1"); sin cambio en la fila de este cuadro. Con el rezago histórico de los dos últimos reportes (18 y 16 días, media 17), se proyecta la publicación del 47.º hacia el **~18-oct-2026** (ventana 15-21 oct); el umbral ÁMBAR de "rezago > 30 días" no aplica todavía (recién mediría algo después del 31-oct si para entonces sigue sin aparecer). **Limpio.**
+- **E5:** búsqueda dirigida hoy confirma que el DOJ sigue en fase de investigación/decomiso civil (US$61 millones, 14-sep-2026), **sin cargos penales nuevos contra la entidad**. ÁMBAR sin cambio desde el 25-sep.
+- **E1/E2 (indicio, no la metodología exacta):** el TVL total rastreado por DefiLlama (`api.llama.fi/protocol/binance-cex`, incluye BNB y efecto precio, no es el cálculo ex-BNB de la sección F porque el script no está disponible en este entorno) se mantuvo estable en US$177.5-179.5 mil millones entre el 25-sep y el 3-oct, sin caída abrupta. Se deja pendiente repetir con la metodología exacta cuando el script de la sección F esté disponible.
+- **E6, E10:** sin novedad.
+- **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
