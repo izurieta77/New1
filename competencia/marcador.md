@@ -9,7 +9,7 @@ Actualizado: 2026-10-02 (cierre). El TWR del papel arranca con índice 100 al ci
 | Cuenta | TWR | Drawdown máximo | Días invertidos | Fuente |
 |---|---|---|---|---|
 | arena-claude (papel, GBM) | **+2.68%** (índice 102.68 al 2-oct; valor 20,441.67 MXN). Casi todo por USD/MXN 17.825 → 18.145; en USD la cartera va +0.8% sobre costo. Costo con el tipo de cambio de ejecución (`bitacora/arbitraje/2026-09-30.md`) | 0.00% (pico el 2-oct) | 4 | `bitacora/equity.csv` |
-| arena-claude-binance (papel) | **+0.12%** (índice 100.12 al 29-sep; valor 10,055.01 MXN, serie re-expresada por la rutina cripto) | 0.00% | 1 | `bitacora/papel-binance/equity.csv` |
+| arena-claude-binance (papel) | **+0.87%** (índice 100.87 al 3-oct; valor 10,129.95 MXN). **Nota (conciliación, 3-oct):** sin fila para 30-sep/1-oct/2-oct — tercer incumplimiento consecutivo de la revaluación diaria por la rutina de cierre (ver `bitacora/arbitraje/2026-10-03-papel-binance-tercera-vez.md`); el valor de hoy lo registró la rutina de aprendizaje con el precio en vivo del momento, no una reconstrucción retroactiva | 0.00% | 1 | `bitacora/papel-binance/equity.csv` |
 | arena-claude (real, GBM) | sin fondear. La boleta del 30-sep quedó ANULADA en el comité W40 y la sustituye `bitacora/boletas/2026-10-05.md` (3 SPYM + 1 UPRO con stop), condicionada a fondeo y a que el ticker aparezca en GBM | — | 0 | dueño |
 | arena-claude-binance (real) | **−0.09% sobre la aportación** (el TWR arranca en 100 con esta valuación; valor 4,995.30 MXN al 30-sep 00:25 UTC; 0.001325 BTC + 3,001.83 MXN) | 0.00% | 1 | `bitacora/real-binance/equity.csv`, `rivales.csv` |
 | chatgpt-gbm / chatgpt-binance | sin datos | sin datos | — | dueño |
