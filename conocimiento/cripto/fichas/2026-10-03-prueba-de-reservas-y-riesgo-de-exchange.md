@@ -78,7 +78,7 @@ print(f"Variacion 45->46: {variacion:+,} BTC ({variacion_pct:+.2f}%)")
 **Resultado:**
 
 - Oferta estimada de BTC al bloque 969,738 (hoy): **≈20,092,931 BTC** (verificado con el supuesto de 19,687,500 BTC emitidos al bloque 840,000, hecho de red ya usado en `conocimiento/cripto/01-bitcoin-protocolo-dinero-y-autocustodia.md`, más 129,738 bloques × 3.125 BTC).
-- Los **682,000 BTC** de saldos de usuario del 46.º reporte de Binance equivalen a **≈3.39% de toda la oferta de BTC que existirá alguna vez** concentrada en un solo exchange, en una sola jurisdicción no supervisada en México y bajo investigación activa del DOJ (E5, sin cargos).
+- Los **682,000 BTC** de saldos de usuario del 46.º reporte de Binance equivalen a **≈3.39% de la oferta de BTC emitida hoy** (≈3.25% del tope de 21 millones; corrección del 3-oct, rutina de aprendizaje: la cifra original decía "de toda la oferta que existirá", pero el denominador es la oferta actual) concentrada en un solo exchange, en una sola jurisdicción no supervisada en México y bajo investigación activa del DOJ (E5, sin cargos).
 - De 657,000 (45.º reporte) a 682,000 (46.º reporte): **+25,000 BTC (+3.81%)** en saldos de usuario en un mes, consistente con el régimen alcista del período y con el repunte de +7,812 BTC del 29-sep ya documentado en la lista de señales (atribuido en su momento, correctamente, a la migración de cuentas Funding→Spot y no a una entrada neta de clientes).
 - **Por qué importa para la cuenta `arena-claude-binance`:** no cambia el riesgo de mercado, pero cuantifica la escala del riesgo de contraparte: un solo exchange custodia una fracción no trivial de toda la oferta de BTC existente, lo que hace que cualquier evento de insolvencia (A1-A8 de la lista de señales) tenga un efecto sistémico sobre el mercado spot, más allá del riesgo idiosincrático de nuestros 10,000 MXN.
 
@@ -100,7 +100,7 @@ Reviso "Señales para vigilar Binance hoy" (`lista-senales-de-alerta.md`, secci�
 
 - No cambia el filtro de tendencia (solo mira el precio de BTC/USDT) ni el tamaño de la posición.
 - Se agrega una regla operativa: el umbral de "rezago > 30 días" de E3 debe medirse desde el **snapshot**, no desde "hoy sin reporte"; con un rezago histórico de 16-18 días, no hay nada que vigilar hasta fines de octubre si el 47.º reporte no ha aparecido para entonces.
-- El ejercicio del §4 (3.39% de la oferta total en un solo exchange) es un argumento cuantitativo nuevo, no solo cualitativo, para mantener el tope de pérdida y la contingencia de Bitso como están: el riesgo de contraparte en Binance no es solo nuestro, es un riesgo de concentración de mercado.
+- El ejercicio del §4 (3.39% de la oferta emitida en un solo exchange) es un argumento cuantitativo nuevo, no solo cualitativo, para mantener el tope de pérdida y la contingencia de Bitso como están: el riesgo de contraparte en Binance no es solo nuestro, es un riesgo de concentración de mercado.
 
 ## 7. Contrapuntos y límites
 
