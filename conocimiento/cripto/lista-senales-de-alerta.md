@@ -116,6 +116,14 @@
 - **E6, E10:** sin novedad.
 - **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio.
 
+**Seguimiento del 4-oct-2026** [I] — revisión de contraparte de la corrida de las 08:17, aprovechando el estudio del tema 6 (y último) del plan (ficha [`fichas/2026-10-04-fiscalidad-cripto-mexico.md`](fichas/2026-10-04-fiscalidad-cripto-mexico.md)):
+
+- **E3 (PoR mensual):** búsqueda dirigida hoy ("Binance proof of reserves 47th report October 2026") no encuentra el 47.º reporte. Sigue vigente el 46.º (snapshot 1-sep-2026, ~682,000 BTC, ratio "al menos 1:1"), sin cambio en la fila de este cuadro. Consistente con la ventana proyectada el 3-oct (~15-21 oct-2026); la ausencia de hoy sigue siendo el escenario esperado, no una alerta. **Limpio.**
+- **E5:** sin novedad desde el 3-oct; el DOJ sigue sin cargos penales nuevos contra la entidad. ÁMBAR sin cambio desde el 25-sep.
+- **E1/E2 (indicio, no la metodología exacta):** TVL total de DefiLlama (`api.llama.fi/protocol/binance-cex`, verificado en vivo hoy) = **US$179.8 mil millones**, dentro del rango estable (US$177.5-179.8 mil millones del 25-sep al 4-oct), sin caída abrupta. Sigue pendiente repetir con la metodología exacta ex-BNB de la sección F cuando el script esté disponible.
+- **E6, E10:** sin novedad.
+- **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio desde el 25-sep.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
