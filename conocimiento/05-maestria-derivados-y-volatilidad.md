@@ -98,6 +98,8 @@ Extensiones con la cita confirmada:
 
 En unidades de varianza, la brecha media (VIX² − RV²)/100 cayó de 1.75 en los noventa a 0.74 en 2020-2026. **Lectura:** el vendedor de volatilidad gana casi siempre y poco, y pierde rara vez y mucho. El 20-feb-2020 el VIX estaba en 15.56 y la volatilidad realizada del mes siguiente fue 87.5. El VIX no es negociable directamente, así que esta brecha es una cota bruta, no un P&L implementable.
 
+**Adenda 2026-10-03 (trabajo continuo):** la tabla quedó replicada de forma independiente con código versionado (`conocimiento/fichas/2026-10-03-vrp-vix.md`; las diferencias son de 0.03 o menos al extender la muestra a sep-2026). Esa ficha agrega dos resultados. Primero, el VIX predice la RV de los 21 días siguientes con correlación 0.72 (RV ≈ −1.7 + 0.88·VIX). Segundo, con VIX ≥ 25 el S&P rindió más en el mes siguiente, no menos (+1.89% contra +0.59%; sin traslape, t de 1.25 a 2.84 según el desfase; grado C). Es un insumo para revisar el VIX < 25 de `filtro_apalancados`.
+
 ### 2.6 VIX, futuros de VIX y ETPs
 
 - El VIX se lanzó en 1993 sobre el OEX y se rediseñó en 2003 sobre el SPX. Los futuros de VIX existen desde el 26-mar-2004 y las opciones desde febrero de 2006 (Wikipedia, "VIX"). Máximo de cierre: **82.69** el 16-mar-2020.
