@@ -124,6 +124,14 @@
 - **E6, E10:** sin novedad.
 - **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio desde el 25-sep.
 
+**Seguimiento del 5-oct-2026** [I] — revisión semanal de contraparte de la corrida de las 08:17, aprovechando el estudio del tema de hoy (ficha [`fichas/2026-10-05-beta-correlacion-oro-sp500.md`](fichas/2026-10-05-beta-correlacion-oro-sp500.md), que no toca riesgo de exchange directamente):
+
+- **E3 (PoR mensual):** búsqueda dirigida hoy ("Binance proof of reserves 47th report October 2026") sigue sin encontrar el 47.º reporte; solo aparece el 47.º reporte de **Bitget** (otro exchange, 30-sep-2026, ratio 131%), que no sustituye al de Binance. Sigue vigente el 46.º reporte de Binance (snapshot 1-sep-2026, ~682,000 BTC, ratio "al menos 1:1"), sin cambio en la fila de este cuadro. Consistente con la ventana proyectada desde el 3-oct (~15-21 oct-2026); la ausencia de hoy sigue siendo el escenario esperado, no una alerta. **Limpio.**
+- **E5:** búsqueda dirigida hoy confirma que el DOJ sigue en fase de investigación (reportada el 21/22-sep-2026 por Bloomberg) y la demanda civil de decomiso de US$61 millones (14-sep-2026, ligada a Blessed Trust y Hexa Whale) sigue sin convertirse en cargos penales contra la entidad; Binance niega haber actuado mal. **ÁMBAR sin cambio desde el 25-sep.**
+- **E1/E2 (indicio, no la metodología exacta):** TVL total de DefiLlama (`api.llama.fi/protocol/binance-cex`, verificado en vivo hoy) = **US$179.69 mil millones**, dentro del rango estable (US$177.5-179.8 mil millones del 25-sep al 5-oct), sin caída abrupta. Sigue pendiente repetir con la metodología exacta ex-BNB de la sección F cuando el script esté disponible.
+- **E6, E10:** sin novedad; sin pausas de retiro ni incidentes nuevos en Binance en las búsquedas de hoy.
+- **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio desde el 25-sep. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
