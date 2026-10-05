@@ -51,3 +51,12 @@ Con un sleeve 3x diario sobre el mercado de EUA y la banda SMA200 de ±3% (entra
 
 ## 7. Lo que cambia para el sistema (inferencia, no regla)
 **Para el comité del 9-oct:** en 36 años y en las dos mitades, quitar la condición VIX < 25 y quedarse con la banda SMA200 ±3% habría dado más crecimiento (+4.2 pp por año) sin peor MDD. Si el comité quiere un freno de volatilidad, el escalado continuo con K ≈ 22 cuesta menos (−1.9 pp) que el interruptor. La decisión es del comité, con el stop vigente en cualquier caso. Grado: B en la dirección (robusta a fuente, rezago y submuestra) y C en las magnitudes (sin stop, swap supuesto).
+
+## 8. Contraste con la literatura (investigador vespertino, nota 2026-10-04)
+- **Bongaerts, Kang y van Dijk (2020), "Conditional Volatility Targeting", *FAJ* 76(4), 54-71, doi:10.1080/0015198X.2020.1790853.** Leído íntegro (acceso abierto, repub.eur.nl/pub/130215). Grado **C**. Detalle en cap. 07 §2.4.
+  - **Regla:** w = σ_obj/σ̂_{t−1} (1/σ, con volatilidad realizada mensual) **solo** si σ̂ cae en el quintil superior de su historia; apalanca hasta 2x en el quintil inferior y queda en 1x en el resto.
+  - **Resultados en EUA (1982-2019, netos):** +0.16 de Sharpe (significativo al 5%) y −8.3 pp de MDD sobre 52.8%. En el promedio de 10 mercados: +0.07 de Sharpe y −6.6 pp de MDD.
+- **Qué confirma:** el umbral VIX ≥ 25 está en la misma zona que su "quintil alto": 17.3% de los días de 1990-2026, con p80 = 24.2 (comprobación rápida, grado D). En esa zona es donde la volatilidad predice mejor y la relación con el rendimiento futuro es más negativa.
+- **Qué no confirma:** ellos **reducen en proporción**, no salen a cero. No prueban un interruptor 1/0 ni reportan CAGR, así que su evidencia no contradice nuestro §4.1, pero tampoco lo prueba. Apoya la variante de escalado (§4.2) por encima del interruptor.
+- **Por qué nuestra ganancia de MDD es menor que la suya:** ellos escalan sin filtro de tendencia. Aquí la banda SMA200 ya hace casi todo el trabajo contra la cola (§4.3), y el targeting y la tendencia son en buena parte la misma apuesta (Hood-Raughtigan 2025). Por eso K=22 sobre la banda no baja la MDD.
+- No cambia la conclusión de §7 ni su grado.
