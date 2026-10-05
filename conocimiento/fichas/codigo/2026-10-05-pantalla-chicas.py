@@ -94,6 +94,7 @@ def get(url: str, headers: dict, cache_h: float | None = 20, sec: bool = False, 
 
 def jget(url, headers, **kw):
     t = get(url, headers, **kw)
+    t = t.lstrip()
     i = t.find("({")
     if t.startswith("for(;;);") and i >= 0:
         return json.JSONDecoder().raw_decode(t[i + 1:])[0]
