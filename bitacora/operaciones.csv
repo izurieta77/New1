@@ -2,3 +2,5 @@ fecha,ticker,lado,cantidad,precio,moneda,comision,stop,tesis_id,estrategia,notas
 2026-09-28,EFECTIVO,deposito,20000.0,1.0,MXN,0.0,,,,Depósito inicial de la arena (REGLAS §4),
 2026-09-28,SPYM,compra,7.0,90.055,USD,1.8281,,CARTERA-2026-09-25,arena,O0001; vela 1m 14:45 UTC open 90.055; VIX 16.29; FX MXN=X 17.825; sin stop por línea,17.825
 2026-09-28,QQQM,compra,1.0,301.95,USD,0.8757,,CARTERA-2026-09-25,arena,O0002; vela 1m 14:45 UTC open 301.95; FX MXN=X 17.825; sin stop por línea,17.825
+2026-10-05,SPYM,venta,2.0,90.89,USD,0.5272,,CARTERA-W40,arena,"O0004; vela 1m 14:45 UTC open 90.89; ^GSPC cierre previo 7,722.72 > SMA200x1.03 7,442.59; VIX 15.52; FX MXN=X 18.1705",18.1705
+2026-10-05,UPRO,compra,2.0,152.4,USD,0.8839,135.76,CARTERA-W40,arena,O0005; ETF apalancado 3x (subclase etf_apalancado); vela 1m 14:45 UTC open 152.40; VIX 15.52; FX MXN=X 18.1705; stop 152.40x0.8908=135.76 USD; salida del filtro: GSPC < SMA200x0.97 o VIX>=25,18.1705
