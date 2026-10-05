@@ -74,11 +74,12 @@ base_cap_IV = ganancia_nominal        # Cap.IV: base = ganancia (venta - costo),
 base_cap_IX = valor_hoy_mxn           # Cap.IX, lectura literal estricta del art.141: todo lo percibido
 # base_cap_IX / base_cap_IV = 39.8x mas base bajo la lectura estricta de Cap.IX
 
-# 6) Tarifa anual art.152 (aprox. 2025 como proxy de 2026; la cifra exacta 2026 no esta en el
-#    texto de la ley misma, se indexa cada enero por INPC via Anexo 8 RMF -- declarado como
-#    aproximacion, no como cifra primaria verificada)
-# Bracket 1 (hasta 8,952.49): cuota fija 0, tasa 1.92%
-isr_cap_IV = base_cap_IV * 0.0192     # = 0.99 MXN
+# 6) Tarifa anual art.152, EJERCICIO ORIGINAL: aprox. 2025 como proxy de 2026 (declarado como
+#    aproximacion, no como cifra primaria verificada). VERIFICADO Y CORREGIDO por la conciliacion
+#    del 5-oct-2026 contra la tarifa 2026 real (Anexo 8 RMF 2026, DOF 28-dic-2025; bracket 1
+#    sube de 8,952.49 a 10,135.11, misma tasa 1.92%): ver nota fechada bajo la tabla de abajo.
+# Bracket 1 2026 (hasta 10,135.11): cuota fija 0, tasa 1.92% (sin cambio de tasa vs. 2025)
+isr_cap_IV = base_cap_IV * 0.0192     # = 0.99 MXN (sin cambio: ambas bases caen en el bracket 1 en 2025 y 2026)
 isr_cap_IX = base_cap_IX * 0.0192     # = 39.33 MXN (39.8x mas, mismo bracket, misma tasa)
 
 # 7) Escala realista: venta hipotetica de 0.05 BTC (costo 50,000 MXN a 1,000,000 MXN/BTC)
@@ -86,11 +87,19 @@ btc_2 = 0.05
 costo_2 = 50000.00
 valor_2 = btc_2 * precio_mxn_btc_hoy            # = 77,290.45 MXN
 ganancia_2 = valor_2 - costo_2                  # = 27,290.45 MXN
-# Cap.IV (bracket 2, cuota fija 171.88 + 6.40% del excedente sobre 8,952.50): ISR ~= 1,345.51 MXN
-# Cap.IX (bracket 3, cuota fija 4,461.94 + 10.88% del excedente sobre 75,984.56): ISR ~= 4,604.02 MXN
-# Diferencia: 3,258.51 MXN (242% mas ISR bajo la lectura estricta de Cap.IX) -- la ambiguedad
-# SI importa a escala realista, aunque a escala de nuestra posicion actual (51 MXN de ganancia)
-# sea trivial en pesos absolutos.
+# EJERCICIO ORIGINAL (tarifa 2025 como proxy):
+#   Cap.IV (bracket 2, cuota fija 171.88 + 6.40% del excedente sobre 8,952.50): ISR ~= 1,345.51 MXN
+#   Cap.IX (bracket 3, cuota fija 4,461.94 + 10.88% del excedente sobre 75,984.56): ISR ~= 4,604.02 MXN
+#   Diferencia: 3,258.51 MXN (242% mas ISR bajo la lectura estricta de Cap.IX)
+# CORREGIDO con la tarifa 2026 real (conciliacion, 5-oct-2026; ver nota fechada abajo):
+#   Cap.IV (bracket 2, cuota fija 194.59 + 6.40% del excedente sobre 10,135.12): ISR ~= 1,292.53 MXN
+#   Cap.IX (bracket 2 TAMBIEN en 2026, no bracket 3: el limite superior del bracket 2 sube a
+#     86,022.11, por arriba de los 77,290.45 de este ejercicio; cuota fija 194.59 + 6.40% del
+#     excedente sobre 10,135.12): ISR ~= 4,492.53 MXN
+#   Diferencia: 3,200.00 MXN (247.6% mas ISR bajo la lectura estricta de Cap.IX) -- la conclusion
+#   cualitativa no cambia (la ambiguedad SI importa a escala realista; es trivial a escala de la
+#   posicion actual), solo bajan ligeramente las cifras en pesos (-4% y -2.4%) y cambia el bracket
+#   exacto de la lectura Cap.IX (2 en vez de 3).
 # Monto de esta venta (77,290.45 MXN) SI supera el umbral de Aviso de LFPIORPI (24,635.10 MXN)
 # -- pero ese umbral aplica a la plataforma obligada (Binance), no a esta cuenta.
 
@@ -113,7 +122,8 @@ cifra_correcta_3_smg = 3 * smg_anual_2026       # = 344,968.80 MXN (texto real d
 | Ganancia nominal hoy de la posición real (si se vendiera) | **51.53 MXN** (2.58% en 5 días) |
 | Umbral de retención/pago provisional (art. 126) | **$227,400.00 MXN** (cifra fija, no indexada) |
 | Base gravable: Cap. IV (ganancia) vs. Cap. IX (ingreso bruto), posición actual | **51.53 vs. 2,048.20 MXN** (39.8× de diferencia) |
-| Misma comparación, venta hipotética de 0.05 BTC | ISR ~1,345.51 (Cap. IV) vs. ~4,604.02 MXN (Cap. IX); 242% más con la lectura estricta |
+| Misma comparación, venta hipotética de 0.05 BTC (tarifa 2025, proxy original) | ISR ~1,345.51 (Cap. IV) vs. ~4,604.02 MXN (Cap. IX); 242% más con la lectura estricta |
+| Misma comparación, con la tarifa 2026 real verificada (conciliación, 5-oct-2026) | ISR ~1,292.53 (Cap. IV) vs. ~4,492.53 MXN (Cap. IX, cae en bracket 2, no 3); 247.6% más con la lectura estricta |
 | Exención art. 93 fr. XIX-b): cifra que circula en blogs (3×UMA) | $128,454.45 MXN — **incorrecta** |
 | Exención art. 93 fr. XIX-b): cifra correcta con el texto de la ley (3×SMG) | **$344,968.80 MXN** |
 
@@ -128,7 +138,7 @@ cifra_correcta_3_smg = 3 * smg_anual_2026       # = 344,968.80 MXN (texto real d
 
 - **No hay criterio oficial del SAT ni jurisprudencia** que resuelva cuál capítulo de la LISR aplica a cripto. La lectura de Capítulo IV (enajenación de bienes) es la dominante entre PRODECON (estudio preliminar, no vinculante) y despachos fiscales, pero sigue siendo una analogía razonada, no una regla escrita. Un cambio de postura del SAT (o una miscelánea fiscal futura que mencione expresamente activos virtuales) podría cambiar esta conclusión sin aviso previo.
 - **La cifra de UMA y de SMG 2026 son secundarias** (prensa especializada convergente), no verificadas contra el DOF/INEGI/CONASAMI de forma directa en esta corrida (ambas páginas oficiales son dinámicas y no expusieron el dato a `WebFetch`). El riesgo de error es bajo porque convergen 3-5 fuentes independientes para cada cifra, pero no es lectura de fuente primaria.
-- **La tarifa del art. 152 usada en el ejercicio (§4) es la de 2025**, como aproximación; la tarifa exacta 2026 (indexada por INPC vía Anexo 8 de la RMF) no está en el texto de la ley misma y no la verifiqué en esta corrida. El efecto sobre las conclusiones cualitativas (qué capítulo aplica, qué umbrales existen) es nulo; sí cambiaría las cifras exactas de ISR en pesos del ejercicio a escala realista (§4.7).
+- **La tarifa del art. 152 usada originalmente en el ejercicio (§4) era la de 2025**, como aproximación declarada. **Corregido (conciliación, 5-oct-2026):** se verificó la tarifa 2026 real contra el Anexo 8 de la RMF 2026 (DOF 28-dic-2025, factor de actualización 1.1321 sobre 2023-2025; tabla completa de 11 brackets confirmada por `sdv.com.mx/recursos/tablas-isr-2026/`, que cita explícitamente esa publicación). El bracket 1 sube de $8,952.49 a $10,135.11 (misma tasa 1.92%); el bracket 2 sube de $8,952.50-$75,984.55 a $10,135.12-$86,022.11 (misma tasa 6.40%, cuota fija de $194.59 en vez de $171.88). Efecto: nulo sobre la posición real (cae en bracket 1 en ambas tarifas) y menor sobre el ejercicio a escala realista de 0.05 BTC (las cifras de ISR bajan ~2-4% y la lectura Cap. IX cae ahora en el bracket 2, no el 3, porque su techo subió por arriba del ingreso bruto del ejercicio); la conclusión cualitativa (Cap. IX implica ~240-250% más ISR que Cap. IV) no cambia. Corrección registrada en `conocimiento/registro-de-errores.md`.
 - **La pregunta de si el art. 126 genera una obligación de autodeclaración en 15 días por cada venta en un exchange extranjero** es una lectura literal mía del texto, no confirmada por ningún criterio oficial — podría ser una lectura excesivamente estricta (es plausible que la práctica fiscal real sea declarar la ganancia anual sin pagos provisionales individuales cuando no hay fedatario ni retenedor), pero no encontré fuente que lo zanjara.
 - **No investigué el IVA** (si la venta de cripto por un particular sin actividad empresarial habitual causa IVA); el enfoque de esta ficha fue estrictamente ISR y LFPIORPI, como pidió la rutina.
 
