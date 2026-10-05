@@ -240,3 +240,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Hecho:** `rutinas/trimestral-investigacion.md` §3 pide revisar `estrategias/catalogo.md`, pero ese archivo y la carpeta `estrategias/` no existen en el repositorio. Hoy la función de catálogo la cumplen `laboratorio/tabla-maestra.md` (26 pruebas con etiqueta) y `conocimiento/ideas-adoptadas-2026-09-25.md`.
 - **Qué decidí:** no crear un catálogo nuevo, porque duplicaría la tabla maestra. En este barrido revisé la tabla maestra (R03 salió de "en curso" con AC-12) y el estado de dominio. Propuesta para el dueño o el orquestador: corregir la referencia de la rutina para que apunte a `laboratorio/tabla-maestra.md`.
 - **Estado:** Abierto (cambio de procedimiento; no urgente).
+
+## 2026-10-05 · mandato del dueño · Tres doctorados: ¿condicionan la salida de la fase 0 o las operaciones reales?
+- **Hecho:** el dueño ordenó (5-oct) que el sistema se gradúe en doctorado de finanzas, derecho fiscal y contabilidad, y pidió que no se olvide. Quedó grabado en `rutinas/REGLAS-MOTOR.md` §0d, `conocimiento/doctorados/` (programa y matriz de áreas), `config/parametros.json` (`mandatos_permanentes_dueno`), `PLAN.md` y las rutinas de estudio. Cobertura al 5-oct: finanzas 5 de 11 áreas comprobadas; derecho fiscal 0 de 11; contabilidad 0 de 10.
+- **Qué decidí:** tratarlo como mandato de formación en paralelo, con metas de calendario propuestas (candidatura ene-abr 2027, graduación jun-2027). **No** cambia el criterio de salida de la fase 0 ni bloquea lo ya autorizado (cuentas arena de GBM y Binance), porque el dueño no lo pidió.
+- **Por qué es conservador:** condicionar las operaciones a una graduación cambiaría reglas que el dueño ya fijó; si lo quiere, que lo diga por escrito y se agrega a `criterio_salida`.
+- **Estado:** Abierto → dueño (puede mover las metas o convertirlo en condición).

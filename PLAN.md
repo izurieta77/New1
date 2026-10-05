@@ -43,6 +43,7 @@ Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 2
 | Hito | Criterio | Estado al 25-sep | Fecha |
 |---|---|---|---|
 | Examen de titulación | ≥90% global y ≥85% por sección | Cumplido: 96.1% | 25-sep-2026 |
+| **Tres doctorados (mandato del dueño, 5-oct-2026)** | Finanzas, derecho fiscal y contabilidad: cobertura total, examen de candidatura (90% / 85% por área) y tesis verificada (`conocimiento/doctorados/`) | En curso: finanzas 5 de 11 áreas comprobadas; derecho fiscal 0 de 11; contabilidad 0 de 10 | metas ene-abr 2027, graduación jun-2027 |
 | Cartera inicial de la arena | Aprobada por el comité y registrada en git antes de ejecutarse | **Cumplido:** cartera A (7 SPYM + 1 QQQM + liquidez); gestor de riesgo aprueba con cambios | 25-sep-2026 |
 | Arena en real (GBM) | El dueño captura las boletas en GBM si se cumple la condición de validez de las 08:45. Stop por línea solo en lo táctico o apalancado (enmienda del 25-sep) | Boletas listas en `bitacora/boletas/2026-09-28.md` | 28-sep-2026 |
 | Cartera cripto (Binance) | Comité cripto: solo spot, tope de 5,000 MXN | **Cumplido:** 40% BTC (4,000 MXN) + 60% MXN, filtro SMA200 ±3%, sin ETH; gestor de riesgo aprueba con cambios. Boleta en `bitacora/boletas/2026-09-28.md` | 28-sep-2026 |

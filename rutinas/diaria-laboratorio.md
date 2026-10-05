@@ -6,7 +6,7 @@ Este procedimiento escrito manda sobre el texto del disparador, que ya indica se
    - **Objetivo:** subir de nivel los temas de `conocimiento/estado-de-dominio.csv`.
    - **Niveles:** Pendiente, Localizado, Documentado, Comprendido con comprobación, Contrastado, Replicado.
 1. Si no existe `conocimiento/estado-de-dominio.csv`, créalo con las columnas `tema,capitulo,estado,evidencia,fecha,siguiente_prueba` y los temas principales de `conocimiento/`.
-2. **Elige un tema:** el de mayor valor con el estado más bajo. Da prioridad a los que sostienen reglas de riesgo o la cartera de papel vigente.
+2. **Elige un tema:** el de mayor valor con el estado más bajo. Da prioridad a los que sostienen reglas de riesgo o la cartera de papel vigente. **Mandato del dueño (REGLAS §0d):** los lunes, miércoles y viernes elige un tema "Doctorado ..." de derecho fiscal o contabilidad (las áreas más descubiertas); los demás días, el criterio anterior. Actualiza `conocimiento/doctorados/ESTADO.md` cuando un área cambie de cobertura.
 3. **Escribe `conocimiento/fichas/AAAA-MM-DD-<tema>.md`** con:
    - pregunta;
    - fuente y versión, con el nivel de acceso real (lectura íntegra, sección o resumen);

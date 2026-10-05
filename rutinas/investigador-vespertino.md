@@ -7,6 +7,7 @@ Nace de una instrucción del dueño (25-sep-2026): que el investigador académic
 0. `git pull --rebase --autostash`. Lee `rutinas/REGLAS-MOTOR.md`.
 1. **Barrido corto** (no el barrido trimestral completo): revisa qué hay nuevo desde ayer en SSRN (Financial Economics eJournal), arXiv q-fin (cs.CE si toca cripto) y NBER, con dos o tres búsquedas dirigidas a los temas que hoy sostienen una regla del sistema (cortacircuitos, tamaño de posición, filtro de tendencia, prima cripto).
 2. **Si hay un paper que cambia algo:** agrégalo al capítulo que corresponda con grado A-D y nota fechada, y anótalo en `conocimiento/registro-de-errores.md` si corrige algo nuestro. Si no hay nada que cambie algo, dilo así y no fuerces una entrada.
+2b. **Mandato de doctorados (REGLAS §0d):** una de cada tres corridas, en vez de la búsqueda de reglas de riesgo, busca lo nuevo en derecho fiscal (DOF, SAT, SCJN, TFJA, PRODECON) o contabilidad (CINIF, IASB, FASB, SEC) que afecte a la cartera del dueño o a las empresas del universo.
 3. **Presupuesto:** máximo un paper por corrida, verificado de verdad (no solo el abstract), mejor que cinco por encima. El barrido profundo semestral sigue siendo el trimestral (rutina 6).
 4. **Cierre de la rutina:**
    - latido;

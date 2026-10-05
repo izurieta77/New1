@@ -16,3 +16,5 @@ Este procedimiento escrito es el principal; el texto del disparador lo complemen
    - deja el latido;
    - commit `balance mensual: AAAA-MM`, pull --rebase y push;
    - respuesta final de 15 líneas o menos.
+
+**Mandato de doctorados (REGLAS §0d):** el balance incluye una sección "Doctorados" con la matriz de `conocimiento/doctorados/ESTADO.md` (áreas por nivel de cobertura, comparadas con el mes anterior y con las metas de `conocimiento/doctorados/README.md` §3), y el examen mensual incluye al menos 3 preguntas de áreas doctorales ya cubiertas de derecho fiscal o contabilidad.

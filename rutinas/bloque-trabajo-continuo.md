@@ -8,6 +8,7 @@ Nace de una instrucción del dueño (25-sep-2026): un bloque diario que **sigue 
 1. **Elige UNA tarea** de la cola, en este orden de prioridad:
    - tareas del sistema de tareas (`TaskList`) marcadas `in_progress` que no avanzaron en las últimas 24 horas;
    - huecos que la auditoría semanal o la revisión de calidad hayan dejado anotados como pendientes;
+   - **áreas de los tres doctorados con menor cobertura** (mandato del dueño, REGLAS §0d; cola en `conocimiento/doctorados/ESTADO.md` y temas "Doctorado ..." de `estado-de-dominio.csv`); alterna con el plan de cobertura del §7 de REGLAS;
    - la tarea de mayor valor de `estado-de-dominio.csv` en el nivel más bajo (igual que el laboratorio, pero sin limitarse a un tema del laboratorio: puede ser una ficha de empresa, un capítulo de conocimiento, una réplica o una pregunta del banco de examen).
 2. **Avánzala de verdad en esta corrida**, no solo la anotes: un capítulo, una ficha, una réplica, una verificación. Verifica dos veces cualquier cifra antes de escribirla.
 3. **Actualiza el sistema de tareas** (`TaskUpdate`) y `estado-de-dominio.csv` si aplica.

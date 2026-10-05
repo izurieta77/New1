@@ -462,5 +462,15 @@
       "Debe resolver de frente la objeción del abogado del diablo de la auditoría W39 (no usar SPXL mientras el 10a esté en 5% o más) y la condición de la decisión del 25-sep (ETF apalancado verificado en la app de GBM; 6 reportes semanales de rivales antes de apalancar). El mandato del dueño sobre apetito de riesgo prevalece; las condiciones operativas (ETF disponible en GBM, filtro encendido) no se negocian.",
       "La meta se reporta en competencia/marcador.md como columna 'meta del dueño (40/60/200%)' para las tres IAs, con lo que el dueño reporte de cada una."
     ]
+  },
+  "mandatos_permanentes_dueno": {
+    "doctorados": {
+      "fecha": "2026-10-05",
+      "texto_del_dueno": "no volveré a repetirlo y jamás lo olvides debes de graduarte en doctorado de finanzas, doctorado de derecho fiscal y doctorado de contabilidad",
+      "programa": "conocimiento/doctorados/README.md",
+      "estado": "conocimiento/doctorados/ESTADO.md",
+      "criterio": "cobertura total de las áreas + examen de candidatura >=90% global y >=85% por área + tesis verificada",
+      "regla": "rutinas/REGLAS-MOTOR.md §0d; no se rebaja ni se borra sin orden escrita del dueño"
+    }
   }
 }

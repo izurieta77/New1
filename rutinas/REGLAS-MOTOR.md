@@ -58,6 +58,15 @@ El dueño pidió ver actividad más seguida: durante el día, entre el pulso de 
 
 **Costo:** 3 corridas nuevas por día, todas ligeras (solo pulso, sin subagente). El hueco nocturno (21:42→00:17, ~2h35) y el de la tarde (16:17→17:57, ~1h40) se dejaron igual: el dueño solo pidió cerrar los huecos de "mañana/mediodía".
 
+## 0d. Mandato permanente del dueño: tres doctorados (5-oct-2026, no se olvida)
+
+El dueño ordenó, y dijo que no lo repetirá: **graduarse en doctorado de finanzas, doctorado de derecho fiscal y doctorado de contabilidad.** Es un mandato permanente, igual de duro que §0. Qué dice y cómo se cumple está en `conocimiento/doctorados/README.md` (criterios de graduación: cobertura de todas las áreas, examen de candidatura con 90% global y 85% por área, y tesis verificada) y `conocimiento/doctorados/ESTADO.md` (matriz de áreas y avance).
+
+- **Toda rutina de estudio** (laboratorio, trabajo continuo, investigador vespertino y trimestral) da prioridad a las áreas del doctorado con menor cobertura. Los temas "Pendiente" y "Localizado" de `estado-de-dominio.csv` cuyo nombre empieza con "Doctorado" son su cola.
+- El **balance mensual** reporta el avance de los tres doctorados con cifras; el **examen mensual** incluye áreas doctorales conforme se cubran.
+- **Nunca declares una graduación** sin examen y tesis aprobados, y no rebajes ni borres este mandato sin una orden escrita del dueño.
+- Fuentes primarias para ley y norma (DOF, diputados.gob.mx, SAT, CINIF, IFRS, FASB); lo secundario se marca así. Todo trámite real lo presenta el dueño con su contador.
+
 ## 1. Autonomía: nunca te quedes esperando
 
 - No termines un turno con una pregunta al dueño ni esperes respuesta. Nadie la va a contestar a tiempo y la siguiente rutina llega a una sesión detenida.
@@ -153,6 +162,7 @@ Referencia: `config/parametros.json`, sección `prioridad_actual.excepcion_cuent
 
 ## 7. Pendientes para la próxima rutina (se borran al cumplirse)
 
+- [ ] **Doctorados (dueño, 5-oct): ver §0d.** Orden de trabajo en `conocimiento/doctorados/ESTADO.md`: derecho fiscal D2, D1, D3; contabilidad C1, C2, C4; finanzas F7 y F11. El trabajo continuo toma uno por noche, alternando con el plan de cobertura de abajo.
 - [ ] **Plan de cobertura (dueño, 5-oct): cerrar los huecos frente a las otras IAs.** El dueño teme que ChatGPT y Grok estudien más (papers, datos en vivo, empresas a fondo, energía, elecciones, megaempresas). Auditoría del 5-oct sobre el repositorio: hay 27 capítulos, 85 fichas de empresas grandes (S&P 500 e IPC), SPIVA, 15 papers nuevos en el barrido de hoy y réplicas auditadas, **pero** gas natural casi no existe (una mención en un reporte de WALMEX), data centers y energía solo aparecen en los caps. 21 y 23 y en las fichas de NVDA y AMD, no hay un estudio de cómo se financian las megaempresas (OpenAI, Anthropic, SpaceX, Nvidia, Microsoft), el universo no tiene empresas pequeñas, y no hay un sistema de alertas de entrada y salida por empresa. Orden de trabajo (el trabajo continuo toma UNO por noche; el investigador vespertino y el vigía lo alimentan; todo con información pública, §0, y en papel: fase 0 no recomienda inversiones reales):
   1. **Energía y data centers** (capítulo nuevo 28): gas natural de EUA (Henry Hub, exportaciones de GNL, plantas de gas), demanda eléctrica de los centros de datos, quién captura el gasto y qué descuenta el precio. Primera versión lanzada el 5-oct.
   2. **Cómo se financian las megaempresas** (cap. 28 o 29): capex de hiperescaladores, deuda, arrendamientos y acuerdos circulares entre proveedores y clientes; para las privadas, solo lo reportado públicamente.
