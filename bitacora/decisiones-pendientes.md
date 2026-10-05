@@ -234,3 +234,8 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** nada cambia hoy. La boleta real del 5-oct ya prevé este caso: si UPRO no aparece en la app, se busca SPXL; pero 1 SPXL pesa ~52% de los 10,000 MXN y rebasa `etf_apalancado_max`, así que la boleta dice no comprarlo y quedarse solo con los 3 SPYM. La orden de papel O0005 (UPRO) sigue su regla, porque el papel replica la decisión del comité.
 - **Para el comité del 9-oct:** decidir el vehículo 3x operable (SPXL con 1 título de ~5,250 MXN sobre 20,000 de papel ≈ 26%; o un tamaño o vehículo distinto) y el stop correspondiente. **Para el dueño:** confirmar en la app de GBM si aparecen UPRO o SPXL (ya estaba pedido en la boleta).
 - **Estado:** Abierto → comité del 9-oct.
+
+## 2026-10-05 · barrido trimestral (rutina 6) · `estrategias/catalogo.md` no existe
+- **Hecho:** `rutinas/trimestral-investigacion.md` §3 pide revisar `estrategias/catalogo.md`, pero ese archivo y la carpeta `estrategias/` no existen en el repositorio. Hoy la función de catálogo la cumplen `laboratorio/tabla-maestra.md` (26 pruebas con etiqueta) y `conocimiento/ideas-adoptadas-2026-09-25.md`.
+- **Qué decidí:** no crear un catálogo nuevo, porque duplicaría la tabla maestra. En este barrido revisé la tabla maestra (R03 salió de "en curso" con AC-12) y el estado de dominio. Propuesta para el dueño o el orquestador: corregir la referencia de la rutina para que apunte a `laboratorio/tabla-maestra.md`.
+- **Estado:** Abierto (cambio de procedimiento; no urgente).
