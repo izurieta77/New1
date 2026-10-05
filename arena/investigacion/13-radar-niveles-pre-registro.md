@@ -22,3 +22,22 @@
 ## Qué se entrega
 1. `13-radar-cripto-2026-10-05.md`, `14-radar-eua-2026-10-05.md` y `15-radar-bmv-2026-10-05.md`: tablas con puertas, puntaje por componente, nivel, contraparte, alertas de entrada y de salida y riesgos.
 2. `16-radar-niveles-resultado-2026-10-05.md`: la lista consolidada por nivel, con el comparativo contra lo que ya tiene la cartera.
+
+---
+
+## Adenda 2026-10-05 (definición del dueño de los niveles por rendimiento y plazo)
+
+> El dueño definió los niveles el mismo día, **antes de que se puntuara ningún candidato**. Esta adenda manda sobre la tabla "Niveles" de arriba para el **nombre** del nivel; las puertas y el puntaje de §6.2 se conservan.
+
+| Nivel | Qué es, según el dueño | Objetivo de la tesis | Plazo |
+|---|---|---|---|
+| **Diamante** | Buena ganancia | **más de +40%** | **2 a 3 meses** |
+| **Platino** | Máxima ganancia | **más de +50%** | **3 a 5 meses** |
+| **Oro** | Ganancia media | **+20% a +30%** | **5 a 7 meses** |
+
+**Cómo se aplica:**
+- El nivel lo da el **objetivo de la tesis con su plazo**, razonado con datos (escenario favorable), y **nunca es una promesa de rendimiento**. Cada candidato reporta: objetivo, plazo, **probabilidad honesta de alcanzarlo** (con tasa base histórica), *stop* y pérdida en el *stop*, asimetría (ganancia al objetivo contra pérdida al *stop*, mínimo 2:1) y valor esperado neto de costos.
+- Las **puertas P1-P6 siguen siendo obligatorias.** Una oportunidad que cumple el objetivo, pero falla una puerta, queda **sin nivel**.
+- El **puntaje de §6.2** pasa a ser el orden dentro del nivel y la regla de avance: ≥ 80 dossier y comité prioritarios; 70-79 dossier y comité; 55-69 vigilancia con alerta; < 55 descarte.
+- Si ningún candidato cumple, se dice "no hay Diamantes (o Platinos, u Oros) hoy". No se infla un objetivo para entrar en un nivel.
+- **Coherencia con la meta del dueño** para la temporada de 4 meses (+40% mínimo, +60% bueno, +200% excepcional; `config/parametros.json`): el nivel Diamante y el Platino describen oportunidades que, si salen, aportan a esa meta. El riesgo por operación (3% en arena, 10% en Binance) y los *stops* se mantienen.

@@ -203,6 +203,14 @@ def paralelo(fn, items, n=6):
         return list(ex.map(fn, items))
 
 
+def adv_origen_usd(sym_us: str) -> float | None:
+    """Importe diario mediano (60 sesiones) en la bolsa de origen (USD). El SIC ejecuta contra el mercado de origen."""
+    ch = chart(sym_us, "6mo")
+    if not ch or len(ch["filas"]) < 40:
+        return None
+    return st.median([x["c"] * x["v"] for x in ch["filas"][-60:]])
+
+
 def fx_usdmxn() -> float:
     ch = chart("MXN=X", "5d")
     return ch["filas"][-1]["c"]
@@ -225,6 +233,7 @@ def operabilidad() -> list[dict]:
         u.update(liquidez(ch))
         u["moneda"] = (ch or {}).get("meta", {}).get("currency")
     tss = paralelo(lambda u: ts(u["sym"]) if u.get("precio") else {}, uni)
+    sic_banda = []
     for u, t in zip(uni, tss):
         u["_ts"] = t
         acc = ult(t.get("quarterlyOrdinarySharesNumber")) or ult(t.get("annualOrdinarySharesNumber"))
@@ -233,12 +242,21 @@ def operabilidad() -> list[dict]:
             u["mcap_usd"] = u["precio"] * u["acciones"] / fx
         else:
             u["mcap_usd"] = None
+    # liquidez en origen para SIC en banda de tamano (informativa; F8 sigue siendo la del registro previo)
+    for u, a in zip([u for u in uni if u["origen"] == "SIC" and u.get("cik") and en_banda(u)],
+                    paralelo(adv_origen_usd, [u["sym"][:-3] for u in uni if u["origen"] == "SIC" and u.get("cik") and en_banda(u)])):
+        u["adv_origen_usd"] = a
     return uni, fx
 
 
+SPREAD_PISO = 0.003  # el estimador de Corwin-Schultz subestima en series delgadas; piso de 0.30% (doc 01 de arena)
+
+
 def costo_rt(monto, spread):
+    """Costo de ida y vuelta en MXN y en fraccion: 2 comisiones (0.25% + IVA) + spread de ida y vuelta."""
+    sp = max(spread or 0.0, SPREAD_PISO)
     com = 2 * monto * PARAMS["comision_lado"]
-    return com + monto * (spread or 0.0), (com + monto * (spread or 0.0)) / monto
+    return com + monto * sp, (com + monto * sp) / monto
 
 
 def escribe_operabilidad(uni, fx):
@@ -253,6 +271,7 @@ def escribe_operabilidad(uni, fx):
                           dias_operados=round(u["dias_op"], 2) if u.get("precio") else "",
                           spread_cs=round(sp, 4) if sp is not None else "",
                           mcap_usd_m=round(u["mcap_usd"] / 1e6) if u.get("mcap_usd") else "",
+                          adv_origen_usd=round(u["adv_origen_usd"]) if u.get("adv_origen_usd") else "",
                           costo_rt_pos2500=round(c10, 4) if c10 else ""))
     with open(SALIDA / "pantalla-chicas-2026-10-05-operabilidad.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(filas[0]))
@@ -283,6 +302,8 @@ def resumen_operabilidad(uni, fx) -> dict:
             total=len([u for u in uni if u["origen"] == org]), con_cik=len(g) if org == "SIC" else None,
             con_precio=len(conp), en_banda=len(band),
             banda_liq=len([u for u in band if pasa_liq(u)]),
+            banda_origen_adv_1M_usd=len([u for u in band if (u.get("adv_origen_usd") or 0) >= 1e6]),
+            banda_origen_y_titulo=len([u for u in band if (u.get("adv_origen_usd") or 0) >= 1e6 and u["precio"] <= P["titulo_max_mxn"]]),
             banda_liq_titulo=len([u for u in band if pasa_liq(u) and u["precio"] <= P["titulo_max_mxn"]]),
             sin_dato_mcap=len([u for u in conp if u.get("mcap_usd") is None]),
             mediana_mcap_usd_m=round(st.median([u["mcap_usd"] for u in conp if u.get("mcap_usd")]) / 1e6) if any(u.get("mcap_usd") for u in conp) else None,
@@ -426,9 +447,12 @@ def pantalla(uni, fx) -> tuple[list[dict], dict]:
     emb["fallas_por_filtro_en_banda"] = dict(cnt)
     # ranking de los que pasan fundamentales (aunque no sean operables) para mostrar el costo de la operabilidad
     def rangos(lista, clave, desc):
-        orden = sorted(lista, key=lambda e: e[1][clave] if e[1][clave] is not None else -1e18, reverse=desc)
+        peor = -1e18 if desc else 1e18
+        orden = sorted(lista, key=lambda e: e[1][clave] if e[1].get(clave) is not None else peor, reverse=desc)
         return {id(e[0]): i + 1 for i, e in enumerate(orden)}
-    buenos = [e for e in evals if e[2]]
+    # "casi": falla a lo mas un filtro fundamental (post-hoc, SOLO informativo; no es la pantalla pre-registrada)
+    buenos = [e for e in evals if len(e[1]["fallas"]) <= 1 and "ni0" in e[1] and "roic" in e[1] and "ev_ebit" in e[1]]
+    emb["casi_pasan_(<=1_falla)"] = len(buenos)
     if buenos:
         r1, r2 = rangos(buenos, "roic", True), rangos(buenos, "cagr_ni_2a", True)
         r3 = rangos(buenos, "ev_ebit", False)
@@ -436,12 +460,11 @@ def pantalla(uni, fx) -> tuple[list[dict], dict]:
             e[1]["score_rango"] = (r1[id(e[0])] + r2[id(e[0])] + r3[id(e[0])]) / 3
     salida = []
     for u, m, fund_ok, liq_ok, tit_ok in sorted(evals, key=lambda e: (not e[2], e[1].get("score_rango", 1e9))):
-        if not fund_ok and len(salida) >= 40:
-            continue
-        if not fund_ok:
+        if "score_rango" not in m:
             continue
         sym_us = u["sym"][:-3] if u["origen"] == "SIC" else None
-        fila = dict(origen=u["origen"], clave=u["bmv"], simbolo=u["sym"], operable=("SI" if liq_ok and tit_ok else "NO"),
+        fila = dict(origen=u["origen"], clave=u["bmv"], simbolo=u["sym"], pasa_pantalla=("SI" if fund_ok else "NO (casi)"), falla=";".join(m["fallas"]),
+                    operable=("SI" if liq_ok and tit_ok else "NO"), adv_origen_usd=round(u["adv_origen_usd"]) if u.get("adv_origen_usd") else "",
                     motivo_no=("" if liq_ok and tit_ok else ("liquidez/spread " if not liq_ok else "") + ("titulo>2500 MXN" if not tit_ok else "")),
                     precio_mxn=round(u["precio"], 2), mcap_usd_m=round(u["mcap_usd"] / 1e6),
                     mediana_importe_mxn=round(u["mediana_mxn"]), dias_operados=round(u["dias_op"], 2),
@@ -461,7 +484,7 @@ def pantalla(uni, fx) -> tuple[list[dict], dict]:
         else:
             fila["edgar"] = "BMV: segunda fuente no disponible gratis (XBRL BMV no automatizado); verificar a mano"
         salida.append(fila)
-    return salida, emb
+    return salida[: PARAMS["top_n"] * 3], emb
 
 
 # ------------------------------------------------------------------ backtest
@@ -589,11 +612,15 @@ def backtest():
                 fila.update(estado="sin_precio_en_t")
                 detalle.append(fila)
                 continue
+            if not f["sh0"]:
+                fila.update(estado="sin_acciones_xbrl")
+                detalle.append(fila)
+                continue
             mcap = p0[0] * f["sh0"]
             ult60 = ch["filas"][max(0, p0[2] - 59):p0[2] + 1]
             adv = st.median([x["c"] * x["v"] for x in ult60]) if ult60 else 0
             ebit = f["op"]
-            ev = mcap + f["debt"] - f["cash"]
+            ev = mcap + f["debt"] - (f["cash"] or 0)
             fila.update(mcap_m=round(mcap / 1e6), adv_usd=round(adv), ev_ebit=round(ev / ebit, 1) if ebit and ebit > 0 else "")
             # fin de ventana
             if not p1 or ch["filas"][p1[2]]["f"] < t1 - timedelta(days=15):
