@@ -226,10 +226,12 @@ Lectura (Inferencia):
 
 | Periodo | Reversión: β (t) | Continuación: β (t) | Lectura |
 |---|---|---|---|
-| 1926-2024 | −0.276 (−3.04) | +0.270 (+3.01) | Reproduce la tabla 2 a 3 decimales |
+| 1926-2024 | −0.276 (−3.04) | +0.270 (+3.01) | Reproduce la tabla 2 con diferencia de 0.001 (paper: −0.277 y +0.271, t −3.04 y 3.03) [corregido por verificador 2026-10-05: decía "a 3 decimales"] |
 | 1974-2024 | −0.180 (−2.11) | +0.147 (+2.41) | Más débil, como su panel C |
 | 2000-2026 | −0.234 (−2.10) | +0.149 (+1.74) | Sigue presente |
 | 2013-2026 (n ≈ 55) | −0.227 (−1.35) | **−0.113 (−0.92)** | La continuación cambia de signo; poca muestra |
+
+[Nota del verificador 2026-10-05: réplica independiente con el mismo archivo de French (hasta 2026-08) y errores White da −0.276 (−3.04)/+0.270 (+3.01), −0.180 (−2.11)/+0.147 (+2.41), −0.234 (−2.10)/+0.147 (+1.72) y −0.227 (−1.35)/−0.115 (−0.94). Las diferencias de ≤0.002 en la rama de continuación de las dos últimas filas no son materiales, pero confirman que falta un script versionado.]
 
 - **Limitaciones:** documento de trabajo sin réplica externa. Todavía no hay datos posteriores a la publicación, y la historia del cap. 26 §5.3 muestra que los efectos de calendario mueren al publicarse. La estrategia completa va en largo y en corto contra el mercado.
 - **Grado B−.**

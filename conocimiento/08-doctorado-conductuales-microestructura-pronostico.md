@@ -223,13 +223,13 @@ Enlaces internos que este módulo no repite: cap. 06 (decaimiento de anomalías 
     - **Limitaciones:** los rendimientos no están anualizados ni ajustados por plazo. El signo cambia según la ponderación. Es un preprint.
     - **Grado C.**
 27. **Zitzewitz, Eric (2026), "Limits to Arbitrage and Prediction Market Efficiency: the Case of PredictIt", NBER Working Paper 35845 (oct-2026), doi:10.3386/w35845. [solo abstract]** [106]
-    - En PredictIt (2016-22, tope de US$850 por contrato), los sesgos de precio fueron mayores que en otros mercados de predicción. Las ofertas de compra sumaban persistentemente **más de 110** (arbitraje inmediato aun después de comisiones), y la sobrevaloración de *longshots* fue mayor que en otros mercados.
+    - En PredictIt (2016-22, tope de US$850 por contrato), los sesgos de precio fueron mayores que en otros mercados de predicción. Las ofertas de compra a menudo sumaban, de forma persistente, **más de 110** [corregido por verificador 2026-10-05: el abstract dice "often persistently"] (arbitraje inmediato aun después de comisiones), y la sobrevaloración de *longshots* fue mayor que en otros mercados.
     - Conclusión del autor: limitar los montos debilita la exactitud de las probabilidades.
     - **Grado B−:** autor de referencia en el tema, pero sin lectura íntegra.
 28. **Zitzewitz, Eric (2026), "Are Prediction Markets Politically Biased?", NBER Working Paper 35846 (oct-2026), doi:10.3386/w35846. [solo abstract]** [106]
     - Con rendimientos de mercados de predicción de **1880 a 2025**, no encuentra sobrevaloración de candidatos de izquierda ni de derecha, ni por género, raza o edad en elecciones recientes.
     - Sí encuentra **sesgo favorito-*longshot*** en la mayoría de los mercados políticos y una sobrevaloración muy pequeña de resultados "de izquierda" en mercados de encuestas de corto plazo.
-    - El autor advierte que es preliminar y que lo revisará tras las intermedias de 2026.
+    - El autor advierte que es preliminar y que lo revisará tras las intermedias de 2026 (no verificado: no aparece en el abstract ni en la página de NBER).
     - **Grado B−:** sin lectura íntegra.
 - **Qué cambia (27-28 en conjunto):**
   - Para §2.5 y el protocolo de §6.3: cuando se use un precio de Polymarket o Kalshi como referencia *b* en el Brier (cap. 23 §5.3), los precios **bajos** (≲ 10¢) son, en promedio, **cotas superiores** de la probabilidad, y más en mercados con poca liquidez o con topes de monto. En elecciones, el mercado no muestra sesgo partidista sistemático.

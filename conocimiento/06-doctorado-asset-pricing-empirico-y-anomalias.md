@@ -308,7 +308,7 @@ El rendimiento esperado se descompone en **carry** (lo que se gana si el precio 
   - SYS muestra **continuación** (momentum de corto plazo).
   - RES− revierte rápido: 29% de la reversión ocurre el primer día y casi toda en un mes. RES+ revierte lento (4% el primer día) y predice rendimientos hasta 10 semanas después.
   - El factor AIR (ASRES) tiene **Sharpe anualizado de 2.55**, más del doble que el mejor factor de JKP en la misma muestra (1.17), y *appraisal* CAPM de 2.6.
-  - En Fama-MacBeth, la prima de IVOL desaparece al controlar por RES+ y RES−. AIR también subsume MAX, MAX5, sesgo, Amihud, *spread*, rotación y los otros 13 predictores de un mes.
+  - En Fama-MacBeth, la prima de IVOL desaparece al controlar por RES+ y RES−. AIR también subsume los 13 predictores de un mes que prueban (entre ellos MAX, MAX5, sesgo, Amihud, *spread* y rotación). [corregido por verificador 2026-10-05: decía "MAX, MAX5, ... y los otros 13"; esos seis forman parte de los trece, nota 2 del paper]
   - Los autores reconocen que el Sharpe y el *information ratio* del AIR **han bajado con el tiempo**.
 - **Limitaciones:**
   - La rotación es de ~76-80% mensual por lado, en largo-corto.
