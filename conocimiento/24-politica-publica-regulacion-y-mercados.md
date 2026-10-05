@@ -534,3 +534,16 @@ T+0: si no hay orden publicada, el instrumento es frágil y no se vende en páni
 **Sigue sin verificar:** balance primario y SHRFSP en los Criterios Generales; la magnitud de Cooper-Gulen-Ovtchinnikov (el resumen no la da); el resumen de Eggers-Hainmueller; la cita de Trump a Warsh (CNBC); la cita "*two-way street*" de Warsh; la encuesta de CNBC (49/19); el nivel B1 de Pemex y el apoyo de ~US$35 mil millones en 2025; la instalación de la CRT el 17-oct-2025 y la sectorización de la Comisión Antimonopolio; los datos del peso en 2024 de CNN/EFE; el número de 1,463 fracciones; el litigio de la CFTC con estados; el calendario del INE.
 
 **Inferencias que no se pueden verificar:** la ponderación entre señal costosa y señal barata (6.1, paso 5) y las vidas medias de la tabla 2.4 son inferencias del panel. Se calibran con el *ledger* (N ≥ 30 por tipo) y no son hechos.
+
+---
+
+## Adenda 2026-10-05 (barrido trimestral 2026-Q4): §4.7, Paquete Económico 2027 con fuente primaria
+
+La nota de verificación de arriba decía que el portal de Hacienda estaba caído. Ahora los textos se obtuvieron completos de la **Gaceta Parlamentaria núm. 7121** (8-sep-2026), anexos A a N. **Grado A** como iniciativa; **no es ley vigente.**
+
+- [H] **El paquete trae más que la LIF.** Incluye la iniciativa de LIF 2027 (A), el PEF (B), los Criterios (C) y reformas a la Ley Federal de Derechos (D), a la **LISR (E)** y a la Ley Aduanera (F). Además propone expedir la Ley de Economía Digital para Pagos Digitales y Electrónicos (G) y la Ley General para el Fortalecimiento y Armonización Catastral y Registral (H). **En la Gaceta del 8-sep no hay iniciativa de reforma al CFF, al IVA ni al IEPS** (se revisaron todos los anexos; las medidas de IEPS y de plataformas van dentro de la LIF). La frase "sin impuestos nuevos" de la tabla de §4.7 se sostiene: no se crean impuestos. Pero la LISR sí se reforma: hay un mecanismo de control de deducciones y pérdidas para personas morales (arts. 78-A a 78-F), cambios al RESICO (tope de 5 millones de MXN) y se deroga el régimen opcional para grupos.
+- [H] **Marco macro de los Criterios (anexo C):** PIB 2027 de [1.5, 2.5]%; inflación de 3.0% dic/dic y 3.2% promedio; CETES 28 de 6.0% al cierre y 6.1% promedio; tipo de cambio de **18.0** al cierre y 17.9 promedio. Esto **confirma con fuente primaria** el 18.00 que en la tabla dependía de una sola fuente secundaria (Investing).
+- [H] **Mercados:** se propone una retención de intereses de 0.68% (0.90% en 2026) y un estímulo de 10% de ISR a quienes vendan en una OPI en la BMV, dentro de la LIF. Detalle en los caps. 11 y 27.
+- [H, prensa] **Calendario:** la Comisión de Hacienda votaría los dictámenes el 14-15 de octubre (Excélsior y Capital México); se mantienen los plazos del 20-oct y el 31-oct. [I] La aprobación sigue siendo casi segura por la mayoría. Lo que hay que vigilar son los cambios en comisión al mecanismo de deducciones de personas morales, que es lo que más mueve las utilidades después de impuestos de las emisoras (cap. 25).
+
+Fuentes: https://gaceta.diputados.gob.mx/Gaceta/66/2026/sep/20260908.html · anexo C: https://gaceta.diputados.gob.mx/PDF/66/2026/sep/20260908-C.pdf · anexo E: https://gaceta.diputados.gob.mx/PDF/66/2026/sep/20260908-E.pdf · https://www.excelsior.com.mx/nacional/ley-ingresos-2027

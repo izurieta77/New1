@@ -500,3 +500,51 @@ Verificación con fxtwitter y oEmbed [49]: el nombre, la biografía y el sitio d
 - El periodo muestral exacto de *Finfluencers* y de Chen et al. 2014.
 - Que la organización de Crawford-Gray-Kern sea VIC: se infiere del resultado de Scholar, no del *abstract*.
 - Cargos actuales de @ValeriaMoy y el antecedente de Banxico de @esquivelgerardo (no se afirman en la tabla).
+
+---
+
+## Adenda 2026-10-05 (barrido trimestral 2026-Q4)
+
+> Bloque B del barrido (practicantes, SPIVA, Morningstar). No borra nada de arriba: actualiza §4, §5.1 y la lista de "no verificado". Lo que hay que corregir de arriba quedó anotado en `conocimiento/registro-de-errores.md`.
+
+**1. SPIVA U.S. Scorecard Mid-Year 2026** (S&P DJI; Ganti, Flaherty y Didio; corte al 30-jun-2026; publicado hacia el 16-17 de septiembre de 2026). Es un reporte de la industria con metodología pública y corrección por supervivencia. **Acceso:** se leyó completo, en el texto extraído del PDF congelado en `laboratorio/replicas/V05-spiva-y-fiscalidad-sic/datos/spiva/spiva-us-mid-year-2026.txt` (captura del Internet Archive de la URL oficial, ya que spglobal.com da 403). **Grado A.**
+
+- [H] En el semestre, el S&P 500 subió 10%, el MidCap 400 17% y el SmallCap 600 24%, con más amplitud de mercado. Aun así, **67%** de los fondos *large-cap* quedó por debajo del S&P 500, contra 79% en todo 2025 (Summary).
+- [H] Report 1a, % de fondos por debajo de su índice (rendimiento absoluto):
+
+| Categoría | Año corrido | 1 a | 3 a | 5 a | 10 a | 15 a | 20 a |
+|---|---|---|---|---|---|---|---|
+| Todos los domésticos vs S&P 1500 | 48.25 | 60.82 | 79.31 | 91.40 | 88.19 | 93.25 | **94.89** |
+| *Large-cap* vs S&P 500 | 67.18 | 78.69 | 76.63 | 89.32 | **83.33** | 90.49 | 92.61 |
+| *Mid-cap* vs MidCap 400 | 74.39 | 76.21 | 72.26 | 76.95 | 78.38 | 87.72 | 90.53 |
+| *Small-cap* vs SmallCap 600 | 68.50 | 68.50 | 54.76 | 55.58 | 71.08 | 91.12 | 91.16 |
+| *Large-cap growth* vs S&P 500 Growth | 84.91 | 91.84 | 95.44 | 95.48 | 93.02 | 100.00 | 99.52 |
+| *Large-cap value* vs S&P 500 Value | 29.45 | 45.80 | 41.09 | 77.69 | 82.29 | 92.19 | 86.05 |
+| Globales vs S&P World | 53.04 | 65.99 | 80.17 | 91.19 | 91.39 | 94.71 | 94.39 |
+
+- [H] Ajustado por riesgo (Report 1b), pierde 95.39% de los *large-cap* a 10 años y 98.96% a 15. Supervivencia de los domésticos a 20 años: **37.85%** (Report 2; al cierre de 2024 era 36.4%, ver §2).
+- [I] Esto **confirma** la regla vigente: la señal robusta está en 10-20 años (83-95%). El 67% del semestre, en un mercado más amplio que favorecía a los activos, muestra otra vez que el dato de 1 año depende del régimen (trampa 1 de §7).
+
+**2. Morningstar US Active/Passive Barometer, mitad de 2026** (Morningstar Manager Research, con Brendan McCann y Brian Paoli entre los autores; corte al 30-jun-2026; publicado el 6-ago-2026; 9,226 fondos y ~US$29 billones). **Acceso:** se leyó la nota de Morningstar (edición de Australia) y la reseña de InvestmentNews. La página de EUA y el PDF dieron 403. **Grado B** (fuente del autor más una secundaria que coinciden; no se vio la tabla completa).
+
+- [H] **Poco más de 40%** de los fondos activos sobrevivió y le ganó a su compuesto pasivo en el año a junio de 2026, 7 pp más que un año antes. Acciones de EUA: 36% (+5 pp). *Large-cap*: 27% (−5 pp). Bonos: 52% (+22 pp). Elegir un activo al azar implica **60%** de probabilidad de perder contra el pasivo promedio (Morningstar).
+- [H] **A 10 años: 25%** de éxito en general (InvestmentNews). *Large growth*: 5%, el peor. Bonos: 45%. Emergentes: 37%. Quintil más barato: **33%**; quintil más caro: **20%**. En *large blend*: 23% contra 9% (InvestmentNews; el 33/20 lo confirma Morningstar).
+- [I] Matiza la frase de §5.1 "a 10 años gana ~1 de cada 5" y el "31% contra 17%" por costo: esas cifras son del barómetro de **cierre de 2025** (18-feb). A mitad de 2026 son 25% y 33% contra 20%. **El criterio no cambia:** el costo sigue siendo el único predictor estable y la mayoría pierde a 10 años.
+
+**3. U.S. Persistence Scorecard Year-End 2025** (S&P DJI; reseña de VettaFi/Advisor Perspectives del 8-may-2026). **Acceso:** solo el resumen del buscador. El PDF oficial dio 403, la captura del Internet Archive guardó el 403 y Advisor Perspectives también dio 403. **Grado C.**
+
+- [H, nv] Ningún fondo *small-cap* ni *mid-cap* del cuartil superior en 2021 se mantuvo ahí hasta 2025. Solo **4.5%** de los *large-cap* por encima de la mediana se mantuvo arriba, contra 6.25% esperado por azar.
+- [I] Si se confirma, **refuerza** la regla de no elegir gestores ni estrategias por su rendimiento reciente (Carhart; Choi-Zhao en el cap. 02).
+
+**4. SPIVA Latin America Mid-Year 2026** (publicado ~12-sep-2026, en inglés, español y portugués). **Acceso:** solo el anuncio de S&P reproducido en un blog (notimx.mx). El PDF dio 403 y el Internet Archive cortó la conexión. **Grado C.**
+
+- [H, nv] En la región, de 25% a 46% de los fondos activos quedó por debajo en el semestre y de 67% a 93% a 10 años. Para México, el anuncio solo dice "72%" de fondos de **acciones de EUA** domiciliados en México por debajo (sin horizonte claro).
+- **Las cifras de fondos de acciones mexicanas contra el S&P/BMV IRT al 30-jun-2026 no se obtuvieron.** La última cifra completa sigue siendo la de cierre de 2025 (§5.1).
+
+**Sigue sin verificar (5-oct-2026):** la tabla completa de Persistencia de cierre de 2025, la de México de mitad de 2026 y el PDF del Barómetro de mitad de 2026.
+
+**Fuentes de la adenda:**
+- SPIVA U.S. Mid-Year 2026: https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-mid-year-2026.pdf (texto congelado en V05). Resumen secundario: https://sustainableinvest.com/chart-of-the-week-september-28-2026-most-large-cap-active-funds-trailed-the-sp-500-in-h1-2026/
+- Morningstar, "Active fund manager success rates ticked up in 2026...": https://www.morningstar.com.au/funds/active-fund-manager-success-rates-ticked-up-2026-passive-funds-still-hold-advantage · InvestmentNews: https://www.investmentnews.com/practice-management/active-funds-gained-ground-in-2026-but-75-still-trail-passive-over-10-years/267793
+- U.S. Persistence Scorecard Year-End 2025: https://www.spglobal.com/spdji/en/documents/spiva/persistence-scorecard-year-end-2025.pdf (403) · https://www.advisorperspectives.com/commentaries/2026/05/08/s-p-persistence-scorecard-reveals-universal-struggles-for-active-strategies (403)
+- SPIVA Latin America Mid-Year 2026 (anuncio): https://www.notimx.mx/2026/09/s-dow-jones-indices-are-pleased-to.html

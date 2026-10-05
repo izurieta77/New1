@@ -407,3 +407,14 @@ Verificador adversarial. Revisé contra fuentes primarias (PDFs y FAQs de GBM, B
 - Compra directa de CETES dentro de la cuenta.
 - Tratamiento fiscal de las ganancias en Trading USA.
 - Calendario oficial CNBV 2027.
+
+---
+
+## Adenda 2026-10-05 (barrido trimestral 2026-Q4)
+
+**Consultas directas del 5-oct-2026, alrededor de las 11:40 CDMX.** [H] = hecho con fuente; [I] = inferencia.
+
+1. **Comisiones.** [H] La FAQ "¿Qué comisiones cobran al invertir en GBM?" sigue igual: renta variable en Trading MX de 0.1% a 0.25% según el monto operado promedio de los últimos 3 meses, con **0.25% hasta 1,000,000 MXN**, más IVA (Guía V1025, [1][2]). No apareció ninguna versión nueva de la Guía de Servicios. **Sin cambios.** Grado A.
+2. **ETFs apalancados en el SIC.** [H] **SPXL** (US25459W8626) y **TQQQ** (US74347X8314) siguen como TRAC extranjero con estatus **ACTIVA** en sus perfiles de la BMV, consultados hoy [35][44]. **UPRO** (ProShares UltraPro S&P500, ISIN US74347X8645): **sigue sin verificarse que esté listado en la BMV o el SIC.** No hay perfil localizable en bmv.com.mx. La búsqueda solo devuelve UPRO en la Bolsa de Lima (TradingView "BVL-UPRO") y un resumen automático que lo confunde con "UltraPro QQQ", que no sirve como evidencia. Que GBM los habilite en la app tampoco se verificó para ninguno de los dos. [I] **La boleta del 5-oct (`bitacora/boletas/2026-10-05.md`, paso 2) ya contempla SPXL como respaldo.** Con fuente primaria, el único 3x del S&P 500 que hoy consta como listado y activo es SPXL. 1 SPXL ≈ 5,253 MXN, contra ≈2,746 MXN de 1 UPRO, lo que cambia el peso de la línea en una cuenta de 20,000 MXN. **Va al comité del 9-oct.**
+3. **Retención de ISR sobre intereses (Smart Cash, CETES).** [H] La iniciativa de LIF 2027 (art. 24) propone **0.68%** para 2027, contra 0.90% vigente en 2026. Es una propuesta, no ley: Diputados vota a más tardar el 20-oct y el Senado el 31-oct. Hasta el 31-dic-2026 se aplica 0.90%. Fuente: Gaceta Parlamentaria 7121-A, https://gaceta.diputados.gob.mx/PDF/66/2026/sep/20260908-A.pdf. Detalle en el cap. 11 (adenda del 2026-10-05).
+4. **Régimen del 10% (art. 129) y dividendos (arts. 140 y 142).** [H] La iniciativa de reforma a la LISR para 2027 (Gaceta 7121-E) no los toca. **La tabla de impuestos de este documento sigue vigente.**

@@ -379,3 +379,12 @@ Satélites 2023-2026, cada uno después de su libro madre: *The Missing Billiona
 48. Open Library, API: https://openlibrary.org/developers/api
 
 **Registro de verificación (2026-09-25).** Sin WebSearch (cuota agotada): ~30 lecturas con WebFetch, ~60 extractos de Wikipedia y ~90 consultas a Open Library. **No verificado:** el número de la edición de 2019 de las *Essays* y si hay ediciones posteriores a la de Wiley de 2021; el título del artículo de Samuelson de 1979; el contenido del libro de Carver anunciado para dic-2026; la fecha exacta de la muerte de Simons.
+
+---
+
+## Adenda 2026-10-05 (barrido trimestral 2026-Q4)
+
+- **Filas 21 y 22, y la convergencia "el índice barato le gana a la mayoría" (§5.1).** [H] El SPIVA U.S. Mid-Year 2026 (corte al 30-jun-2026; texto completo en `laboratorio/replicas/V05-spiva-y-fiscalidad-sic/`) da **67%** de los fondos *large-cap* por debajo del S&P 500 en el semestre, **83.33%** a 10 años y **92.61%** a 20 años. El Barómetro de Morningstar de mitad de 2026 da **25%** de éxito a 10 años, con 33% para el quintil más barato y 20% para el más caro. **Grado A** para SPIVA y **B** para Morningstar. Los detalles están en la adenda del cap. 10.
+- [I] La tesis de Malkiel y Bogle **se sostiene sin cambios**: el grado A se mantiene. El "79%" de 2025 que cita la tabla es un dato de 1 año y depende del régimen. Para citar el canon conviene usar el rango de 10-20 años (83-95%).
+- México: la cifra de 75.6% a 10 años sigue siendo la más reciente que se tiene completa (cierre de 2025). La edición de mitad de 2026 de SPIVA Latinoamérica existe, pero no se obtuvo (403).
+- **Libros nuevos:** este barrido no propone ninguno. Ningún título publicado en 2026 cumplió la jerarquía de §2.1 (datos públicos replicados), y no se agrega nada solo por ser reciente.

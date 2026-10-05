@@ -67,3 +67,11 @@ No en usuarios ni tráfico — ya tienen tracción y nosotros empezamos hoy. El 
 ## Qué no se pudo verificar de forma independiente
 
 No pude confirmar el segundo cofundador que menciona una reseña de terceros, ni auditar directamente el portafolio de LinkedIn del founder (no hay acceso a su cuenta de corretaje), ni encontrar cobertura de prensa financiera de peso. Todo lo anterior queda marcado como "no localizado", no como "no existe", siguiendo la regla del sistema.
+
+---
+
+## Adenda 2026-10-05 (barrido trimestral 2026-Q4)
+
+- [H] **Barebone AI no ha publicado ningún historial auditado ni verificable desde el 25-sep-2026.** Se revisaron el buscador y la página propia "How Accurate Is AI Stock Analysis?" (barebone.ai/resources, 10-jun-2026). Esa página no da cifras de rendimiento de sus señales ni de ningún portafolio. Dice que es "a research and analysis tool, not a financial advisor or broker" y que nadie, humano o IA, tiene precisión predictiva ("Anyone selling it is selling something else"). Lo único que publica como métricas son calificaciones de tiendas de apps y número de usuarios (4.8/5, "100,000+"), que siguen siendo inconsistentes con las de §4. Grado B (página propia). https://barebone.ai/resources/how-accurate-is-ai-stock-analysis
+- [H] **Rivales ChatGPT y Grok (docs 08 y 09):** ninguno publicó un historial auditado. Ninguno de los dos tiene un panel público que se pueda auditar (ver el doc 07).
+- [I] Sigue en pie el veredicto de §9: el terreno donde se les puede ganar es un historial calibrado y público.

@@ -267,3 +267,15 @@ La ventaja fiscal y estructural es **segura y medible**: se conoce de antemano y
 - `reproducir.py` de V05 busca **29 frases literales** en los textos legales congelados (LISR, LIF 2026, 706-NA, eCFR, USC, tratados, Revenue y GBM) y falla si alguna falta. Las 29 están.
 - La tarifa de 26 USC 2001(c) se verifica tramo por tramo contra el texto antes de usarse en la ilustración.
 - No verificado: la Resolución Miscelánea Fiscal 2026 (reglas sobre ETFs del SIC), el trato de los ETFs de renta fija del SIC, que GBM permita comprar UCITS desde la app, el TER de VUAA, la existencia de una regla de *wash sale* para personas físicas y la cifra de SPIVA Latin America Year-End 2025.
+
+---
+
+## Adenda 2026-10-05 (barrido trimestral 2026-Q4)
+
+**Acceso:** se leyeron completos los anexos 7121-A, C y E de la Gaceta Parlamentaria del 8-sep-2026. El detalle y las fuentes están en la adenda del cap. 11. Son **propuestas, no ley vigente**.
+
+- **§2.2 (art. 129, 10% sobre ganancias en bolsa y SIC) y §2.3 (dividendos, arts. 140 y 142):** [H] la iniciativa de reforma a la LISR para 2027 **no los toca**. A diferencia de 2026, en 2027 **sí hay** iniciativa de reforma a la LISR, pero se concentra en personas morales (control de deducciones y pérdidas, arts. 78-A a 78-F; costo de acciones, art. 22; derogación del régimen opcional para grupos) y en el RESICO. **El régimen de §2 y las reglas de §6 siguen igual.** Grado A, como texto de la iniciativa.
+- **§2.4 (retención de intereses):** [H] se propone **0.68%** para 2027 (0.90% en 2026), con la fórmula en el art. 24 de la LIF: (CETES 28 promedio − inflación promedio) × 23.5%. [Cálculo propio] Con los Criterios 2027, (6.1 − 3.2) × 0.235 = 0.68. [I] Baja el pago provisional, no el impuesto anual sobre el interés real. Para la cuenta arena el efecto es marginal: menos efectivo retenido en Smart Cash o CETES mientras se espera.
+- **§4, punto 2 (SPIVA U.S. Mid-Year 2026):** se confirma 83.33% a 10 años. Se agregan 67.18% en el semestre y 92.61% a 20 años (texto congelado en V05). **Grado A.**
+- **§4, punto 3 (SPIVA Latin America):** ya se publicó la edición de mitad de 2026 (~12-sep-2026), pero **no se obtuvo** (403 en spglobal.com; el Internet Archive cortó la conexión). La cifra de México al 30-jun-2026 sigue pendiente.
+- **Estado legislativo:** dictámenes en comisión previstos para el 14-15 de octubre; plazos del 20-oct (Diputados) y del 31-oct (Senado). **Mientras no se publique en el DOF, no se modifica ningún parámetro.** La RMF 2027 se revisará en el barrido de enero de 2027.

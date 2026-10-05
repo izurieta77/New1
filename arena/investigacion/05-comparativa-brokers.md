@@ -234,3 +234,11 @@ Descargué el PDF oficial del Anexo 7 de la RMF 2026 (DOF 09-01-2026) directamen
 ### Veredicto: **se sostiene con condiciones**
 
 La recomendación de quedarse en GBM para esta temporada **sobrevive el ataque**, pero solo después de corregir dos omisiones que sí importaban (el costo de salida de IBKR estaba subestimado en el propio documento, y la protección al inversionista nunca se mencionó como factor). Ninguna de las dos correcciones cambia el sentido de la recomendación —si acaso, la primera la refuerza (IBKR es una ventaja de costo menos automática de lo que decía el documento si no se confirma el cargo bancario de recepción) y la segunda la matiza (quedarse en GBM no es "quedarse sin riesgo", es aceptar un riesgo operativo distinto al de IBKR). La condición para revisar la decisión sigue siendo la misma que ya proponía el documento original: una confirmación fiscal sobre ETFs en el SIC, o restringir la estrategia a acciones individuales — y, agregado aquí, **confirmar por escrito el cargo del banco receptor antes de mover dinero a IBKR**, porque de eso depende si la ventaja de costo para el dueño aparece a las 5 operaciones al año o hasta las 45.
+
+---
+
+## Adenda 2026-10-05 (barrido trimestral 2026-Q4)
+
+- [H] **Fiscalidad (sección 4):** la iniciativa de reforma a la LISR para 2027 (Gaceta Parlamentaria 7121-E, 8-sep-2026) **no modifica** el régimen de 10% sobre ganancias en bolsa ni en el SIC (art. 129), ni el de dividendos (arts. 140 y 142). Se propone bajar la retención sobre intereses de 0.90% a **0.68%** (iniciativa de LIF 2027, art. 24); a la fecha es solo propuesta. Grado A como texto de la iniciativa. https://gaceta.diputados.gob.mx/PDF/66/2026/sep/20260908-E.pdf
+- [H] **Costos de GBM:** sin cambios en la FAQ de comisiones al 5-oct-2026 (0.25% + IVA hasta 1 millón de MXN). No se re-verificaron IBKR ni los demás brókers en este barrido.
+- [I] **La recomendación de la sección 5 (quedarse en GBM) no cambia.** La condición de 5.2 que haría cambiarla no se activó. Hay un matiz operativo: el 3x del S&P 500 que consta listado en el SIC es SPXL. Que UPRO esté en el SIC no se ha verificado (ver la adenda del doc 01).
