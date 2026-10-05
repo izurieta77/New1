@@ -295,6 +295,31 @@ El rendimiento esperado se descompone en **carry** (lo que se gana si el precio 
 | jul-2026 (NBER w35413) | Haddad, He, Huebner, Kondor, Loualiche | Qué identifican los experimentos naturales en demanda de activos | B (método) |
 | jul-2026 (NBER w35431) | Koijen, Levy | Benchmark en tiempo real para IA agéntica: R² en anuncios de resultados de 8% → ≈ 20% | C |
 | jul-2026 (French, CRSP 202607) | Dato propio | UMD **−12.2%** en julio de 2026, 15° peor mes desde mediados de 1928, **fuera** del estado bear | Hecho |
+| oct-2026 (NBER w35840; versión del autor 22-sep-2026) | Baldi-Lanfranchi, Collin-Dufresne, Daniel, "Asymmetric Reversals" | El residuo idiosincrático revierte y el componente sistemático continúa. Las sorpresas negativas revierten rápido y las positivas lento (hasta 10 semanas). El factor AIR tiene Sharpe de 2.55 bruto (1972-2022) y subsume IVOL, MAX y el "zoo" de corto plazo (adenda 2026-10-05) | B− |
+
+**Adenda 2026-10-05 (barrido trimestral 2026-Q4).**
+
+**Baldi-Lanfranchi, Federico, Pierre Collin-Dufresne y Kent D. Daniel (2026), "Asymmetric Reversals", NBER Working Paper 35840 (oct-2026), doi:10.3386/w35840.**
+- **Tipo y acceso:** documento de trabajo. El PDF de NBER pide suscripción, así que se leyó la versión del 22-sep-2026 en el sitio de Daniel (https://www.kentdaniel.net/papers/unpublished/BCD_20260922.pdf, 87 págs.): introducción, datos y secciones de rotación.
+- **Muestra:** acciones comunes de EUA en CRSP (versión CIZ), de 1972 a 2022, con un filtro de tamaño de ≥ 0.003% de la capitalización total para entrar. Eso excluye micro *caps*.
+- **Método:** descompone el rendimiento mensual de cada acción en SYS (factores, industria y anuncios públicos) y RES (residuo ortogonal). El residuo se separa por signo (RES+ y RES−).
+- **Hallazgos:**
+  - Un largo-corto por RES gana **1.07% mensual**, cuatro veces la reversión con rendimientos brutos.
+  - SYS muestra **continuación** (momentum de corto plazo).
+  - RES− revierte rápido: 29% de la reversión ocurre el primer día y casi toda en un mes. RES+ revierte lento (4% el primer día) y predice rendimientos hasta 10 semanas después.
+  - El factor AIR (ASRES) tiene **Sharpe anualizado de 2.55**, más del doble que el mejor factor de JKP en la misma muestra (1.17), y *appraisal* CAPM de 2.6.
+  - En Fama-MacBeth, la prima de IVOL desaparece al controlar por RES+ y RES−. AIR también subsume MAX, MAX5, sesgo, Amihud, *spread*, rotación y los otros 13 predictores de un mes.
+  - Los autores reconocen que el Sharpe y el *information ratio* del AIR **han bajado con el tiempo**.
+- **Limitaciones:**
+  - La rotación es de ~76-80% mensual por lado, en largo-corto.
+  - Supone ejecución en la subasta de cierre sin *spread*: para nosotros, con 0.58% por vuelta en GBM, no es implementable.
+  - Es un documento de trabajo sin réplica independiente todavía.
+- **Grado B−:** autores de primer nivel con datos estándar, pero sin arbitraje ni réplica.
+- **Qué cambia:** ningún criterio. Tres consecuencias para el sistema:
+  - (i) No es operable con nuestros costos ni con cuenta solo larga.
+  - (ii) Como **regla de entrada** en acciones individuales del satélite, refuerza no perseguir un salto idiosincrático positivo grande sin noticia pública que lo explique: su rendimiento esperado del mes siguiente es negativo. Si el salto viene de información pública o sistemática (SYS), tiende a continuar.
+  - (iii) Da otra explicación de la anomalía de baja volatilidad idiosincrática (§2.9): no sería riesgo ni "lotería", sino reversión asimétrica. Mientras no haya réplica, IVOL no se usa como señal independiente.
+
 
 ---
 
@@ -566,6 +591,7 @@ La muestra completa reproduce la magnitud de Ehsani-Linnainmaa (51 vs 6). Despu�
 70. Kelly, Kuznetsov, Malamud, Xu (2025), NBER w33351 — https://www.nber.org/papers/w33351 ; Koijen, Levy (2026), NBER w35431 — https://www.nber.org/papers/w35431 ; Cong, Feng, He, Wang (2026), NBER w35158 — https://www.nber.org/papers/w35158 ; Gormsen, Lazarus (2026), NBER w34814 — https://www.nber.org/papers/w34814
 71. Kenneth French Data Library (CRSP 202607) — https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html ; Shiller, ie_data.xls (datos a sep-2024) — http://www.econ.yale.edu/~shiller/data/ie_data.xls
 72. Réplicas internas: `laboratorio/replicas/R02-momentum-series-de-tiempo.md`, `V01-momentum-y-rentabilidad/`, `V03-anomalias-long-only-eua/` y `C06-predictibilidad-y-momentum/` (esta última, exploratoria)
+73. Baldi-Lanfranchi, Collin-Dufresne, Daniel (2026), "Asymmetric Reversals", NBER w35840 — https://www.nber.org/papers/w35840 ; versión del autor (22-sep-2026): https://www.kentdaniel.net/papers/unpublished/BCD_20260922.pdf
 
 **No verificado en esta versión.**
 - La calibración publicada de Barro 2006 (probabilidades y tamaños de desastre de la versión QJE): se usó el borrador de 2005.

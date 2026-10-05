@@ -190,6 +190,31 @@ El índice amplio del dólar cayó **−7.6% en el 1S-2025** y **−7.4% en el a
 - **Bartram-Grinblatt-Xu (NBER w33423, 2025):** la restricción relativa de M1, medida con regresiones de panel fuera de muestra sobre datos de archivo, predice el rendimiento de las monedas de 1 mes a 3 años y **subsume al *carry***. Grado **C**: es un solo estudio y la señal cuesta construirla.
 - **BIS Bulletin 90:** el *carry* moderno es apalancamiento con márgenes procíclicos. El *unwind* es rápido y se estabiliza si no hay daño de solvencia.
 
+**Adenda 2026-10-05 (barrido trimestral 2026-Q4).**
+
+**Viceira, Luis M. y Sally Shen (2026), "Optimal Currency Strategies Under Deviations From Interest Parity", NBER Working Paper 35498 (jul-2026), doi:10.3386/w35498; HBS Working Paper 27-007.**
+- **Tipo y acceso:** documento de trabajo; según HBS, una versión simplificada fue aceptada en el *Journal of Portfolio Management*. El PDF de NBER pide suscripción, así que se leyó la versión de HBS (86 págs.): secciones de resultados y tablas 1d, 2a, 4a y 5a. https://www.hbs.edu/ris/Publication%20Files/27-007_9abd8366-b3f4-4880-b86d-4874b37c0cb8.pdf
+- **Muestra:** acciones y bonos de 10 países (incluido México) de 1975 a ago-2023. La serie de México empieza en 1987-12 para acciones y en 2001 para bonos.
+- **Método:** extiende Campbell-Serfaty-de Medeiros-Viceira (2010). Combina la demanda de divisas que **minimiza riesgo** con los costos de cobertura medidos (desviaciones de la CIP) y la demanda **por rendimiento esperado** (desviaciones de la UIP, con factores RX y HML de Lustig-Roussanov-Verdelhan).
+- **Hallazgos, desde la óptica de un inversionista en USD:**
+  - Para minimizar riesgo en acciones de cada país conviene **sobrecubrir** las monedas emergentes y las commodity. **MXN: coeficiente 1.58 (significativo al 1%)**, es decir, quedar *net long* USD 158% sobre la posición en acciones mexicanas. Solo el USD y el EUR (y el JPY en parte) son "buenas" monedas para un inversionista en acciones.
+  - Para bonos, lo óptimo es cubrir casi todo. En bonos mexicanos el coeficiente total es 0.07 (no significativo, cobertura ≈ 107%). En la descomposición por factores, el MXN es el único con componentes no nulos.
+  - La prima esperada del MXN según sus factores es **4.68% anual** (promedio muestral de 2.79%). La del BRL es 6.13%.
+  - El costo de oportunidad es grande. Acciones mexicanas, 1990s-2023, dentro de muestra:
+
+| Política cambiaria | Exceso anual | Sharpe |
+|---|---|---|
+| Sin cubrir | 9.00% | 0.27 |
+| Cubiertas al 100% | 4.98% | 0.20 |
+| Política estática de mínimo riesgo | −1.91% | −0.11 |
+
+  - Aun con aversión al riesgo moderada, el motivo de cobertura **domina** la demanda total de MXN, salvo con tolerancia al riesgo alta.
+- **Traducción al inversionista en MXN** (inferencia mía, no la calcula el paper): el MXN se mueve **con** las acciones y el USD **contra** ellas. Por eso, para quien mide en pesos, tener activos en USD **sin cubrir** reduce el riesgo, a cambio de renunciar al *carry* del peso, que en sus estimaciones es de ~3-5 pp al año.
+- **Limitaciones:** las cifras de rendimiento y Sharpe son dentro de muestra. La óptica es la de un inversionista en USD y la del inversionista en MXN es inferencia por simetría. Los datos de factores llegan a 2021.
+- **Grado B:** coautor de referencia en el tema, panel largo y coherente con Campbell et al. (2010). Es documento de trabajo.
+- **Qué cambia:** ningún criterio. **Confirma** §5.4 ("el USD como seguro del mexicano") y la tabla de §6.4 (acciones globales: no cubrir; bonos o efectivo en USD: cubrir o sustituir por deuda en MXN) con un panel internacional independiente de nuestro cálculo. También cuantifica que la cobertura natural cuesta el *carry*, como ya decía §5.4. No hay error que registrar.
+
+
 ---
 
 ## 5. Evidencia real: qué funciona, qué no, magnitudes
@@ -492,5 +517,6 @@ Para un inversionista que mide en MXN, **la decisión cambiaria es la más grand
 42. Derivados de 2008: https://expansion.mx/expansion/2008/11/12/doble-o-nada · https://expansion.mx/negocios/2008/10/15/derivados-maldicion-del-peso-y-empresas
 43. Series FRED usadas en los cálculos propios (descargadas el 2026-09-25): DEXMXUS https://fred.stlouisfed.org/series/DEXMXUS · IR3TIB01MXM156N https://fred.stlouisfed.org/series/IR3TIB01MXM156N · TB3MS https://fred.stlouisfed.org/series/TB3MS · VIXCLS https://fred.stlouisfed.org/series/VIXCLS · DGS10, DFII10, T10YIE, DTWEXBGS, RBMXBIS y TRESEGMXM052N (misma raíz https://fred.stlouisfed.org/series/)
 44. S&P 500 (^GSPC, Yahoo Finance, 30 años diarios): https://finance.yahoo.com/quote/%5EGSPC/history
+45. Viceira, Shen (2026), "Optimal Currency Strategies Under Deviations From Interest Parity", NBER w35498 (https://www.nber.org/papers/w35498) · HBS WP 27-007: https://www.hbs.edu/ris/Publication%20Files/27-007_9abd8366-b3f4-4880-b86d-4874b37c0cb8.pdf
 
 **Registro de verificación (2026-09-25):** 35 búsquedas web y alrededor de 34 lecturas de páginas y PDFs (MSSS 2012, BNP 2008, LRV 2008 y Calvo-Izquierdo-Mejía 2004 leídos en texto completo). Cálculos propios reproducibles con `herramientas/datos.py`. **Pendiente de verificar:** el estado 2024-2026 del programa de coberturas de Banxico, el tamaño del contrato de dólar en MexDer, la muestra exacta de Kaminsky-Reinhart, el número de casos de *Big Debt Crises*, el tipo fijo "desde 1954", la fecha de la moratoria de 1982, el mandato exacto de los índices ante una degradación a *junk* y las cifras de la CBO (vistas sólo por fuente secundaria).

@@ -211,6 +211,35 @@ Lectura (Inferencia):
 
 **Veredicto:** McConnell-Xu [20] y Bouman-Jacobsen [21] describen un mundo que ya no existe en EUA. La estacionalidad del mismo mes (Keloharju et al. [18], Heston-Sadka [19]) es transversal, exige rotación alta y queda fuera de alcance con los costos de GBM. **Grado D como señal de entrada.** Sirve, cuando mucho, para **no pelear** con flujos de fin de mes o de fin de año en el momento de ejecutar.
 
+
+**Adenda 2026-10-05 (barrido trimestral 2026-Q4).**
+
+**1. Guo, Hongye y Jessica A. Wachter (2026), "Correlation Neglect in Asset Prices", NBER Working Paper 35753 (sep-2026), doi:10.3386/w35753.**
+- **Tipo y acceso:** documento de trabajo; se leyó íntegro el PDF de NBER (66 págs.).
+- **Muestra:** mercado de EUA (CRSP), mensual de 1926 a 2024. Para el R² fuera de muestra se extiende a 1872.
+- **Hallazgo:** en el mercado, el primer mes de cada trimestre (enero, abril, julio y octubre, temporada de resultados) tiene correlación negativa con el **segundo** mes del trimestre anterior. Coeficiente −0.277 (t −3.04) en la rama de reversión.
+  - El primer mes, a su vez, predice positivamente al segundo: +0.271 (t 3.03), la rama de continuación.
+  - El *timing* beta-neutral con ambas ramas tiene un Sharpe de ≈ 0.4 dentro de muestra.
+  - R² fuera de muestra, en tiempo real desde 1926: 2.75% (solo reversión), 3.20% (solo continuación) y 5.95% (ambas). La mediana de los 19 predictores con R² positivo de Goyal-Welch-Zafirov es 0.26%.
+  - La explicación propuesta es que el mercado no descuenta que los resultados del segundo mes repiten información del primero.
+- **Comprobación propia rápida (2026-10-05):** con Mkt-RF de French (`datos/cache/french/`, hasta 2026-08), sin script versionado, grado D.
+
+| Periodo | Reversión: β (t) | Continuación: β (t) | Lectura |
+|---|---|---|---|
+| 1926-2024 | −0.276 (−3.04) | +0.270 (+3.01) | Reproduce la tabla 2 a 3 decimales |
+| 1974-2024 | −0.180 (−2.11) | +0.147 (+2.41) | Más débil, como su panel C |
+| 2000-2026 | −0.234 (−2.10) | +0.149 (+1.74) | Sigue presente |
+| 2013-2026 (n ≈ 55) | −0.227 (−1.35) | **−0.113 (−0.92)** | La continuación cambia de signo; poca muestra |
+
+- **Limitaciones:** documento de trabajo sin réplica externa. Todavía no hay datos posteriores a la publicación, y la historia del cap. 26 §5.3 muestra que los efectos de calendario mueren al publicarse. La estrategia completa va en largo y en corto contra el mercado.
+- **Grado B−.**
+- **Qué cambia:** ningún criterio. Va al radar como **candidato de laboratorio**, no como señal: replicar con el protocolo de V/R y ver si sirve para ajustar el tamaño de exposición del satélite **solo** en enero, abril, julio y octubre. Encaja con el calendario de §6.6, porque octubre de 2026 es mes de resultados. Hoy es grado D como señal operable.
+
+**2. Laarits (2026), "Discounting timing strategies", JFE 185, 104364** (detalle en el cap. 07, adenda de §4).
+- En la muestra completa desde 1926, "Sell in May" conserva un α CAPM de 2.63% a 1 mes y 1.96% a 10 años. El cambio de mes conserva 5.43% y 4.70%.
+- No contradice la tabla de arriba: Laarits no analiza 2013-2026 por separado, y en esa ventana nuestro cálculo da ambos efectos ≈ 0 o invertidos en EUA.
+- No cambia ningún criterio. El veredicto de §5.3 se mantiene.
+
 ### 5.4 Oportunidades que murieron o se volvieron trampas
 
 | Antes | Ahora | Causa | Fuente |
@@ -483,6 +512,8 @@ R: Caben 8 operaciones al mes. Se toma el mejor, se vuelve a puntuar el resto co
 42. FRED, DGS10 (serie diaria, consultada el 25-sep-2026). https://fred.stlouisfed.org/series/DGS10
 43. Tesoro de EUA, *refunding* trimestral (5-ago-2026), que anuncia el siguiente para el miércoles 4-nov-2026. https://home.treasury.gov/news/press-releases/sb0590
 44. Al Jazeera (24-sep-2026), *Hostile but hooked: What's behind the US-China trade truce extension*. https://www.aljazeera.com/news-analysis/2026/9/24/hostile-but-hooked-whats-behind-the-us-china-trade-truce-extension
+45. Guo, Wachter (2026), "Correlation Neglect in Asset Prices", NBER w35753. https://www.nber.org/papers/w35753
+46. Laarits (2026), "Discounting timing strategies", JFE 185, 104364. https://doi.org/10.1016/j.jfineco.2026.104364
 
 **Capítulos y archivos enlazados:** 01, 02, 03, 04, 11, 13, 14, 15, 16, 17, 22, 23 y 24; `arena/investigacion/01` a `04`.
 

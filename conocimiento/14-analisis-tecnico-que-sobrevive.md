@@ -217,6 +217,50 @@ La amplitud (medida como avances − retrocesos) predice a corto plazo entre pa�
 | Velas japonesas | 0 frente a aleatorio | — | — | D |
 | CAN SLIM / IBD 50 | +1.81% mensual IS 1984-92 (vía resumen secundario); FFTY 3.47% anual en vivo vs SPY ~13.9% | En vivo, ~10 pp anuales bajo el mercado | Fracaso en vivo | D |
 
+
+### 5.14 Adenda 2026-10-05 (barrido trimestral 2026-Q4)
+
+**1. Kurth, Jutta G., Zoltan Eisler, Adam Rej y Jean-Philippe Bouchaud (2026), "Is Trend Still Your Friend? A Microstructural Account of the Demise of Short-Term Trend-Following", arXiv:2607.01550 [q-fin.TR], v1 3-jul-2026.**
+- **Tipo y acceso:** preprint. Se leyeron íntegras las secciones 1-3 y 5 (31 págs.). Tres de los autores son de CFM o están vinculados a CFM.
+- **Muestra:** ~100 futuros líquidos de 1995 a 2025, más una serie de tendencia desde 1950 y el índice SG CTA.
+- **Método:** señales EWM τ/4τ con τ de 5, 10, 20 y 50 días, normalizadas por volatilidad.
+- **Hallazgos:**
+  - La ruptura de ~2009 es **abrupta** y no se ha recuperado.
+  - Sharpe de 1995-2009 contra el de 2009-2025: **0.84 → 0.12** (τ = 5), 0.83 → 0.22, 0.79 → 0.27 y **0.70 → 0.40** (τ = 50). Lo lento resiste mejor.
+  - Por sector, la tendencia "prácticamente desapareció" en **índices accionarios y divisas** y sigue en bonos y la mayoría de las materias primas.
+  - La variable que mejor separa lo que sobrevivió es el ***tick* normalizado por volatilidad**. En contratos de *tick* chico, el Sharpe posterior a la ruptura es ≈ 0 (antes, ≈ 0.8). En los de *tick* grande se mantiene en 1.0-1.2 (antes, 1.4).
+  - Rechazan la capacidad, la electronificación y el cambio en el flujo de órdenes como explicaciones. La que proponen es que los *market makers* HFT retiran liquidez ante el flujo direccional predecible.
+- **Limitaciones:** son portafolios largo-corto de futuros con señales de días a ~10 semanas, que no prueban la SMA de 200 días ni la de 10 meses solo en largo. Los datos son de la industria y el mecanismo es una interpretación.
+- **Réplica:** consistente con Lempérière et al. (2014) y Schmidhuber (2021), citados por los autores.
+- **Grado B−:** preprint, pero los autores tienen datos institucionales y resultados en varias muestras.
+- **Qué cambia:** ningún criterio. Refuerza §5.2 (reglas cortas sobre índices: D) y matiza §5.3. La tendencia **en índices accionarios** ya no es fuente de rendimiento en futuros desde 2009, lo que coincide con que R01/AC-09 dan "solo protección" fuera de muestra. R1 y R2 se mantienen como **filtros de régimen**, no como alfa. Si algún día se propone tendencia rápida (días o semanas) sobre índices, este paper es un argumento en contra.
+
+**2. Sepp, Artur y Vladimir Lucic (2026), "The Science and Practice of Trend-Following Systems", arXiv:2607.19497 [q-fin.ST], versión del 20-jul-2026.**
+- **Tipo y acceso:** preprint de practicantes. Se leyeron las secciones 1-2, 5 y 7.2-7.3 (46 págs.).
+- **Muestra:** 84 futuros, con costos por volumen tomados de Hurst et al. (2017).
+- **Método:** identidad exacta entre la P&L de una tendencia EWMA y la autocorrelación y la deriva de los rendimientos normalizados, más Sharpe cerrado (bruto y neto) y sesgo.
+- **Hallazgos:**
+  - La tendencia gana si la masa espectral de baja frecuencia es mayor que 1: hace falta autocorrelación **de largo plazo** positiva, aunque haya reversión de corto plazo.
+  - Con *spans* largos, además, gana por la **deriva al cuadrado**: estar del lado de la tendencia de fondo.
+  - Con las autocorrelaciones observadas en el primer rezago, el costo de equilibrio queda **por debajo** de los costos realistas: la predictibilidad de memoria corta no se puede explotar neta.
+  - En 1999-2026, netos de costos y comisiones, sus tres implementaciones dan Sharpe de 0.47, 0.50 y 0.55, contra 0.47 del SG Trend Index (correlación ≈ 80%).
+  - La fórmula reproduce los Sharpe realizados de los 84 contratos con correlación de 0.99, pero **dentro de muestra** (los autores dejan la prueba fuera de muestra para trabajo futuro).
+  - El sesgo positivo de los rendimientos de tendencia es estructural.
+- **Grado C:** preprint con validación solo dentro de muestra.
+- **Qué cambia:** nada. Da el fundamento de §5.1: un filtro lento sobre un índice gana sobre todo por la deriva (estar invertido cuando el índice sube) y por recortar colas, no por explotar autocorrelación de corto plazo. También explica por qué el filtro mejora la geometría (sesgo positivo) más que la media.
+
+**3. Roskill, Damian (2026), "Which Trend Signal? Price versus Slope on Diversified Asset-Class Baskets", SSRN 7429179 (sep-2026). [solo abstract]**
+- **Acceso:** SSRN dio 403; el resumen se obtuvo vía buscador.
+- **Qué dice:** compara la regla de precio sobre su media (estilo Faber) con la de pendiente de la media, aplicadas por clase de activo con T-bills como efectivo.
+  - En canastas de ETF de 2007 a 2026, las dos son casi equivalentes y funcionan como "perilla de reducción de *drawdown*".
+  - En una canasta multiactivo de EUA de 1988 a 2026, la pendiente conserva 94% del rendimiento (7.7% contra 8.2%) con un tercio de la MDD (−10% contra −29%) y un Sharpe de 1.20 contra 1.09.
+- **Grado D:** documento de trabajo de un solo autor, sin lectura íntegra y sin costos reportados en el resumen.
+- **Qué cambia:** nada. Como mucho, es candidato para una variante de prueba de R1 (pendiente de la SMA de 10 meses en vez de cruce) **solo** si pasa el protocolo de §6.3. En la muestra reciente no hay diferencia.
+
+**Cruces con otros capítulos del mismo barrido:**
+- Laarits (JFE 2026), Strahle (SSRN 2026) y Hsieh-Chang-Chen (arXiv 2025) en el cap. 07, adenda de §4. El último muestra que la autocorrelación decide si un 3x supera a 3 veces el subyacente, otro argumento para condicionar R2 a la tendencia.
+- Guo-Wachter (NBER w35753), sobre el patrón entre meses de temporada de resultados, en el cap. 26 §5.3.
+
 ---
 
 ## 6. Traducción operable
@@ -422,6 +466,9 @@ Obligatorio, en este orden, con los valores de `validacion_estrategias`:
 72. Top Traders Unplugged, Trend Following Performance Report, diciembre 2024: https://www.toptradersunplugged.com/trend-following-performance-report-december-2024/
 73. Ready (1998), "Profits from Technical Trading Rules", versión de trabajo con datos intradía: https://doi.org/10.2139/ssrn.64168
 74. Olson, Nelson, Witt, Mossman (1998), "A test of the Investor's Daily stock ranking system", Financial Review 33(2): 161-176, https://doi.org/10.1111/j.1540-6288.1998.tb01375.x
+75. Kurth, Eisler, Rej, Bouchaud (2026), "Is Trend Still Your Friend?", arXiv:2607.01550: https://arxiv.org/abs/2607.01550
+76. Sepp, Lucic (2026), "The Science and Practice of Trend-Following Systems", arXiv:2607.19497: https://arxiv.org/abs/2607.19497
+77. Roskill (2026), "Which Trend Signal? Price versus Slope on Diversified Asset-Class Baskets", SSRN 7429179 (solo abstract): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7429179
 
 ---
 

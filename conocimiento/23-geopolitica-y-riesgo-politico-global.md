@@ -230,6 +230,8 @@ Reacción de mercados:
 - El 25-sep Polymarket da **98.3%** a "US x Iran ceasefire continues through September 25", mientras GlobalSecurity dice que no hay alto al fuego formal. No es contradicción: esa familia de mercados define el "effective ceasefire" como una **pausa de 2 semanas**, que es exactamente la pausa iraní que describe GlobalSecurity.
 - Las sospechas de *insider trading* en los mercados sobre Irán documentadas por Bloomberg **(no verificado en esta ronda)**.
 - **Regla:** un mercado de predicción es un *prior* útil y barato. Antes de usarlo hay que leer (1) la regla exacta de resolución, (2) el volumen y (3) si hay ventaja informativa de *insiders*. Grado para uso táctico: **C**.
+- **Adenda 2026-10-05 (barrido trimestral 2026-Q4): cuarto punto de lectura.** Hay que considerar **(4) el sesgo favorito-*longshot***. Con 588 millones de operaciones de Polymarket (nov-2022 a mar-2026), las compras por debajo de 10¢ pierden en promedio 19.3¢ por dólar y las de 90¢ o más ganan 0.83¢. El efecto es robusto en Política y Cripto, aunque su tamaño depende de cómo se agrupen los contratos (Cardozo y Rivero-Wildemauwe, arXiv 2609.12878, grado C). En PredictIt, con tope de US$850, el sesgo fue aún mayor (Zitzewitz, NBER w35845, solo abstract). En elecciones no hay sesgo partidista sistemático de 1880 a 2025 (Zitzewitz, NBER w35846, solo abstract). Detalle en el cap. 08 §4, ítems 26-28.
+  - **Consecuencia:** una probabilidad de un dígito en un mercado (p. ej. "China invade Taiwán en 2026" a 3.75% el 25-sep) se lee como **cota superior** del *prior*, no como estimación central. Los precios de 90% o más son ligeramente conservadores. Ninguna regla operable cambia, porque los mercados de predicción no disparan órdenes. Cambio de criterio de lectura registrado en `registro-de-errores.md`.
 
 ---
 
@@ -381,6 +383,8 @@ Entender procesos, plazos legales e incentivos burocráticos, por ejemplo antici
 
 **Académicas**
 - Caldara & Iacoviello (2022), AER: https://www.aeaweb.org/articles?id=10.1257/aer.20191823
+- Cardozo & Rivero-Wildemauwe (2026), arXiv 2609.12878 (sesgo favorito-*longshot* en Polymarket; adenda 2026-10-05): https://arxiv.org/abs/2609.12878
+- Zitzewitz (2026), NBER w35845 y w35846 (solo abstract; adenda 2026-10-05): https://www.nber.org/papers/w35845 · https://www.nber.org/papers/w35846
 - Datos del GPR (descargados el 2026-09-25): https://www.matteoiacoviello.com/gpr_files/data_gpr_export.xls · https://www.matteoiacoviello.com/gpr.htm
 - Caldara, Conlisk, Iacoviello & Penn (2026), JIE: https://www.matteoiacoviello.com/research_files/JIE_2026.pdf
 - Baker, Bloom & Davis, EPU: https://www.policyuncertainty.com/

@@ -210,6 +210,33 @@ Enlaces internos que este módulo no repite: cap. 06 (decaimiento de anomalías 
 24. **Mauboussin y Callahan (Counterpoint Global, 2025-2026)** [84]: *Drawdowns and Recoveries* (2025), *Probabilities and Payoffs* (2025), *Bayes and Base Rates* 1 y 2.0 (2026), *Who Is On the Other Side?* (2026) y *The Wisdom of Crowds in Markets* (2026). Títulos confirmados; contenido no leído porque Morgan Stanley bloqueó la descarga (no verificado).
 25. **Nechepurenko y Shuvalov, "Foresight Arena" (arXiv 2605.00420, v2 4-may-2026; preprint, sin datos en vivo aún)** [104]. Para la diferencia de Brier contra una referencia b (mercado o tasa base), δ = (b − x)² − (p − x)², derivan Var(δ) = 4q(1 − q)(b − p)²; con α = 0.05 unilateral, potencia 80%, q = 0.5 y |b − p| = 0.15, hacen falta n ≈ 0.139/α*²: **~348 pronósticos para una ventaja de 0.02 en Brier** y ~1,392 para 0.01. Verificado aquí: con n = 50 solo se detecta una ventaja ≥ ~0.053. Aplicación: el criterio de fase 0 (Brier ≤ 0.20 con ≥ 50) mide nivel, no habilidad; la habilidad exige BSS contra referencia con intervalo, y 50 pronósticos solo detectan ventajas grandes. Limitaciones: supone independencia (en preguntas correlacionadas, bootstrap por bloques) y la sección empírica es solo simulación. Grado C (álgebra correcta y estándar, sin evidencia empírica) (laboratorio 2026-10-01).
 
+**Adenda 2026-10-05 (barrido trimestral 2026-Q4): mercados de predicción y sesgo favorito-*longshot*.**
+
+26. **Cardozo, Marcos y José Ignacio Rivero-Wildemauwe (2026), "The Favorite–Longshot Bias in Prediction Markets: Evidence from Polymarket", arXiv:2609.12878 [econ.GN], 11-sep-2026** [105].
+    - **Tipo y acceso:** preprint (Universidad Católica del Uruguay). Se leyeron íntegras la introducción, los datos y los resultados principales (51 págs.).
+    - **Muestra:** 588 millones de operaciones de 2.48 millones de cuentas en Polymarket, del 11-nov-2022 al 29-mar-2026 (*dataset* de Akey et al. 2026, v1.3). Son US$22.5 mil millones en mercados resueltos.
+    - **Hallazgos:**
+      - En el flujo observado, las compras **por debajo de 10¢ pierden 19.3¢ por dólar** y las de 90¢ o más **ganan 0.83¢**.
+      - El resultado depende de cómo se agrupen los contratos. Con cada contrato con el mismo peso, los *longshots* pierden 6.3¢. Si primero se agrupan por evento padre, **ganan** 4.1¢.
+      - El patrón de dos lados es robusto en Cripto y Política y **no aparece en Deportes**.
+      - El decil de cuentas más aficionado a los *longshots* hace 26.6% de las compras baratas del mes siguiente, pero no gana menos que los demás.
+    - **Limitaciones:** los rendimientos no están anualizados ni ajustados por plazo. El signo cambia según la ponderación. Es un preprint.
+    - **Grado C.**
+27. **Zitzewitz, Eric (2026), "Limits to Arbitrage and Prediction Market Efficiency: the Case of PredictIt", NBER Working Paper 35845 (oct-2026), doi:10.3386/w35845. [solo abstract]** [106]
+    - En PredictIt (2016-22, tope de US$850 por contrato), los sesgos de precio fueron mayores que en otros mercados de predicción. Las ofertas de compra sumaban persistentemente **más de 110** (arbitraje inmediato aun después de comisiones), y la sobrevaloración de *longshots* fue mayor que en otros mercados.
+    - Conclusión del autor: limitar los montos debilita la exactitud de las probabilidades.
+    - **Grado B−:** autor de referencia en el tema, pero sin lectura íntegra.
+28. **Zitzewitz, Eric (2026), "Are Prediction Markets Politically Biased?", NBER Working Paper 35846 (oct-2026), doi:10.3386/w35846. [solo abstract]** [106]
+    - Con rendimientos de mercados de predicción de **1880 a 2025**, no encuentra sobrevaloración de candidatos de izquierda ni de derecha, ni por género, raza o edad en elecciones recientes.
+    - Sí encuentra **sesgo favorito-*longshot*** en la mayoría de los mercados políticos y una sobrevaloración muy pequeña de resultados "de izquierda" en mercados de encuestas de corto plazo.
+    - El autor advierte que es preliminar y que lo revisará tras las intermedias de 2026.
+    - **Grado B−:** sin lectura íntegra.
+- **Qué cambia (27-28 en conjunto):**
+  - Para §2.5 y el protocolo de §6.3: cuando se use un precio de Polymarket o Kalshi como referencia *b* en el Brier (cap. 23 §5.3), los precios **bajos** (≲ 10¢) son, en promedio, **cotas superiores** de la probabilidad, y más en mercados con poca liquidez o con topes de monto. En elecciones, el mercado no muestra sesgo partidista sistemático.
+  - Ninguna cifra de `parametros.json` cambia. La regla de lectura del cap. 23 §5.3 se precisa (registrado en `registro-de-errores.md`, 2026-10-05).
+  - Otros preprints del trimestre revisados, que no se agregan: Nechepurenko (arXiv 2609.15368 y 2609.16642, resolución en Polymarket y Kalshi) y Crosier (arXiv 2609.23969, mercados contra pronóstico del clima). Repiten la lección de "leer la regla de resolución", que ya está en el cap. 23.
+
+
 ---
 
 ## 5. Evidencia real: qué funciona, qué no, magnitudes netas, decaimiento post-publicación
@@ -509,3 +536,5 @@ Contra un rival que sobretradea (R3 de arena/03: 5–9% de comisiones por tempor
 102. Interno: `arena/investigacion/01-gbm-operativa-y-costos.md` y `arena/investigacion/03-teoria-de-torneos-y-estrategia-competitiva.md` (costos GBM, horarios, Alpha Arena, modelo P(ganar)).
 103. Gervais & Odean, "Learning to Be Overconfident" (WP 1997). https://doi.org/10.2139/ssrn.36313
 104. Nechepurenko & Shuvalov (2026), "Foresight Arena: An On-Chain Benchmark for Evaluating AI Forecasting Agents", arXiv 2605.00420 (v1 1-may-2026, v2 4-may-2026). https://arxiv.org/abs/2605.00420
+105. Cardozo & Rivero-Wildemauwe (2026), "The Favorite–Longshot Bias in Prediction Markets: Evidence from Polymarket", arXiv 2609.12878. https://arxiv.org/abs/2609.12878
+106. Zitzewitz (2026), NBER w35845 (https://www.nber.org/papers/w35845) y w35846 (https://www.nber.org/papers/w35846). Solo abstract.

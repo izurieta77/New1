@@ -265,6 +265,9 @@ Con 55% de aciertos, una racha de 5 es más probable que no en 100 operaciones. 
 | Avellaneda, Zhang | 2010 | Path-Dependence of Leveraged ETF Returns | SIAM J. Financial Math. 1(1), 586-603 | El rendimiento depende de la trayectoria y de la varianza realizada | 10.1137/090760805 | A |
 | Chaudhuri, Burnham, Lo | 2020 | An Empirical Evaluation of Tax-Loss-Harvesting Alpha | FAJ 76(3), 99-108 | 1.08%/año (0.82% con wash sale), antes de costos, EUA | 10.1080/0015198X.2020.1760064 | B |
 | Brown, Harlow, Starks | 1996 | Of Tournaments and Temptations | JF 51(1), 85-110 | Los que van perdiendo a mitad de año suben el riesgo | 10.1111/j.1540-6261.1996.tb05203.x | B |
+| Dachraoui | 2018 | On the Optimality of Target Volatility Strategies | JPM 44(5), 58-67 | Condición necesaria y suficiente: el *target volatility* mejora si la covarianza entre volatilidad y rendimiento ajustado por riesgo es negativa. Cifras de segunda mano: S&P 500 1990-2015, Sharpe 0.34 contra 0.30 (adenda 2026-10-05) [solo abstract] | 10.3905/jpm.2018.44.5.058 | C (condición) / D (cifras) |
+| Liu, Tang, Zhou | 2019 | Volatility-Managed Portfolio: Does It Really Work? | JPM 46(1), 38-51 | La versión de Moreira-Muir aplicada al mercado tiene *look-ahead*. Corregida, la MDD es de 68% a 93% y solo gana en la crisis de 2008 (adenda 2026-10-05) [solo abstract] | 10.3905/jpm.2019.1.107 | C |
+| Wang, Yan | 2021 | Downside risk and the performance of volatility-managed portfolios | J. Banking & Finance 131, 106198 | Escalar con semivolatilidad supera a escalar con volatilidad total: en tiempo real gana en 70 de 103 estrategias contra 50. En el **mercado**, Sharpe de 0.46 contra 0.51, sin significancia (adenda 2026-10-05) | 10.1016/j.jbankfin.2021.106198 | B |
 
 ---
 
@@ -292,6 +295,128 @@ Con 55% de aciertos, una racha de 5 es más probable que no en 100 operaciones. 
 | 2026 (SSRN) | Nefedov, *How Much Sharpe is Illusory?* | Cripto: el protocolo ingenuo infla el SR 3.6×; ningún factor sobrevive | WP → C |
 | 2026 (SSRN) | Sadaqat, Butt, Demirer | Stop-loss en momentum asiático: 2.8% a 5.3% mensual | WP → D |
 | 2022-2026 (datos propios) | RPAR, ALLW, LETF, correlación SPY-IEF, VM SPY después de publicación | Ver §2.1, §2.4 y §2.5 | Cálculo reproducible |
+| sep-2026 (JFE 185, 104364; doi:10.1016/j.jfineco.2026.104364) | Laarits, *Discounting timing strategies* | 39 estrategias de *timing*: el Sharpe promedio baja de 0.57 a 1 mes a 0.38 a 10 años y el alfa FF4 de 5.5% a 2.1%. En el mercado gestionado por volatilidad, el alfa CAPM baja de 4.63% a 1.25% (adenda 2026-10-05) | Publicado; leída la versión del autor (may-2026) → B |
+| sep-2026 (arXiv 2609.07946 [q-fin.PM]) | Devanathan, Tzikas, Boyd, *Simple Dynamic Stock/Bond/Gold Portfolios* | 2006-2026, con costos de 5 pb: el 60/40 con control de volatilidad al 7% sube el Sharpe de 0.56 a 0.71, baja la MDD de 33.7% a 16.9% y deja el rendimiento de 8.1% en 7.1% (adenda 2026-10-05) | Preprint; leído íntegro → C |
+| abr-2025 (arXiv 2504.20116 [q-fin.ST]; anterior al periodo, venía en la cola) | Hsieh, Chang, Chen, *Compounding Effects in Leveraged ETFs* | El efecto compuesto **esperado** (aritmético) de un LETF depende de la autocorrelación, no solo del *drag*: favorece al 3x con tendencia y lo castiga con reversión (adenda 2026-10-05) | Preprint; leído íntegro → C |
+| oct-2026 (arXiv 2610.01115 [stat.ME]) | Bonacorsi, *Certified Alpha Capacity* | Una señal con Sharpe anual de 1 necesita una vida media de ≥ 11.9 años para certificarse al 5% con potencia de 90% (adenda 2026-10-05) | Preprint de un solo autor; leído (secciones 1-3, 5, 6.3, 7 y 9) → D |
+| sep-2026 (SSRN 7542498) | Strahle, *How Does Reducing Exposure During Drawdowns Impact Portfolio Performance?* | SPY 2000-2025: las tres reglas bajan la MDD (con media móvil, de −55.2% a −22.0%) y el CAGR (de 8.03% a 5.27%-7.41%). Ninguna mejora el Sharpe (adenda 2026-10-05) | WP; [solo abstract] → D |
+
+### Adenda 2026-10-05 (barrido trimestral 2026-Q4)
+
+Se agregan cinco trabajos de la cola de las corridas vespertinas y dos del trimestre. **Acceso:** SSRN devolvió 403 todo el barrido, y los PDF de NBER del trimestre piden suscripción. Por eso se buscaron versiones de los autores y se marca **[solo abstract]** lo que no se leyó completo.
+
+**1. Wang, Feifei y Xuemin (Sterling) Yan (2021), "Downside risk and the performance of volatility-managed portfolios", *Journal of Banking & Finance* 131, 106198. doi:10.1016/j.jbankfin.2021.106198.**
+- **Tipo y acceso:** publicado y arbitrado. Se leyó íntegro el PDF publicado (18 págs.) en el sitio del autor: https://www.lehigh.edu/~xuy219/research/Downside.pdf
+- **Muestra:** 9 factores (MKT, SMB y HML desde ago-1926) y 94 anomalías, hasta dic-2018.
+- **Método:** el escalamiento usa la **semivolatilidad** (solo los días negativos del mes) en vez de la volatilidad total. Se evalúa de tres formas: *spanning*, Sharpe directo y estrategias en tiempo real como las de Cederburg et al. (entrenamiento de 120 meses con ventana expansiva, γ = 5 y |w| ≤ 5). Costos de 1 a 50 pb.
+- **Hallazgos:**
+  - *Spanning*, MKT: α = 3.34% anual (t 3.39) con volatilidad total y **4.83% (t 4.10)** con semivolatilidad.
+  - Tiempo real con pesos estimados: la combinación gana al original en **50 de 103** estrategias con volatilidad total y en **70 de 103** con semivolatilidad (prueba binomial, p < 1%).
+  - **MKT en tiempo real (tabla 7):** Sharpe de 0.46 sin gestionar, 0.48 con volatilidad total y 0.51 con semivolatilidad. Las diferencias **no son significativas** (p 0.76 y 0.63).
+  - **Pesos fijos (tabla 9):** con 25% gestionado y 75% sin gestionar, el Sharpe de MKT sube **+0.05 (p 0.03)** con semivolatilidad y +0.03 (p 0.14) con volatilidad total. En las 94 anomalías, la semivolatilidad con pesos fijos da 72 diferencias positivas (29 significativas) contra 22 negativas.
+  - Con costos de 25-50 pb, la mayoría de los α de *spanning* de los factores se vuelve negativa con volatilidad total.
+- **Limitaciones:**
+  - Las pruebas en tiempo real **no** descuentan costos y permiten apalancamiento de hasta 5x.
+  - La mejora viene del *return timing*: la semivolatilidad predice rendimientos con signo negativo. Esa es justo la parte que Cederburg et al. encuentran inestable.
+  - No se localizó una réplica independiente para el mercado. Mao et al. (EFMA 2025) extienden el resultado; no se leyó.
+- **Grado B.**
+- **Qué cambia:** ningún criterio. Para el **mercado**, la ganancia en tiempo real es de +0.05 de Sharpe como máximo, así que "freno, no alfa" sigue en pie (R05 y AC-06). Quedan dos insumos para el comité del 9-oct:
+  - (a) si se mide el régimen con volatilidad realizada, la semivolatilidad es la variante con mejor evidencia;
+  - (b) mezclar en proporción fija una parte gestionada y una sin gestionar es más robusto que optimizar el peso. Eso equivale a **escalar parcialmente**, como en la ficha `fichas/2026-10-04-escalado-vix-3x.md`, y no a un interruptor 1/0.
+- Con esto queda verificado el pendiente de §9 ("hallazgo no leído").
+
+**2. Liu, Fang, Xiaoxiao Tang y Guofu Zhou (2019), "Volatility-Managed Portfolio: Does It Really Work?", *Journal of Portfolio Management* 46(1), 38-51. doi:10.3905/jpm.2019.1.107. [solo abstract]**
+- **Acceso:** abstract y "Key Findings" vía Semantic Scholar. La vista previa de ProQuest solo trae metadatos y el WP (SSRN 3283395) dio 403.
+- **Qué dice:** la aplicación típica al mercado (Moreira-Muir) tiene sesgo de *look-ahead*, porque la constante de escala usa toda la muestra. Corregido ese sesgo, la **MDD es de 68% a 93%** "en casi todos los casos", y la estrategia solo le gana al mercado en la crisis de 2008. Tres variantes alternativas tampoco le ganan. Wang-Yan (leído) lo citan en el mismo sentido.
+- **Grado C:** revista de practicantes y sin lectura íntegra.
+- **Qué cambia:** nada. Confirma la tabla propia de §2.4 (sin tope, MDD de −46.1% en 2017-2026) y el apalancamiento bruto máximo de 1.0x.
+
+**3. Dachraoui, Kais (2018), "On the Optimality of Target Volatility Strategies", *Journal of Portfolio Management* 44(5), 58-67. doi:10.3905/jpm.2018.44.5.058. [solo abstract]**
+- **Acceso:** abstract del editor y un resumen secundario en chino (Sina Finanzas, 2-ago-2019). El artículo es de pago; Semantic Scholar lo marca como cerrado.
+- **Qué dice:**
+  - El *target volatility* mejora a la cartera estática **si y solo si** la covarianza entre la volatilidad y el rendimiento ajustado por riesgo es negativa. No hace falta una relación inversa entre volatilidad y rendimiento.
+  - Cifras de **segunda mano, no verificadas:** S&P 500 1990-2015, Sharpe de 0.34 contra 0.30; el S&P GSCI no mejora; el índice de bonos de JP Morgan sí.
+- **Grado:** C para la condición, D para las cifras.
+- **Qué cambia:** nada. La condición equivale a lo que comprobé en Božović (μ/σ² baja de ≈ 1.19 a ≈ 0.31 entre el quintil bajo y el alto del VIX). Crossref registra un trabajo nuevo del mismo autor, SSRN 7459731 (2026), "Target Volatility Strategies as Mean-Preserving Contractions". No se leyó (403) y queda como candidato.
+
+**4. Laarits, Toomas (2026), "Discounting timing strategies", *Journal of Financial Economics* 185, 104364. doi:10.1016/j.jfineco.2026.104364.**
+- **Tipo y acceso:** publicado (en línea el 19-sep-2026). Se leyó íntegra la versión del autor del 12-may-2026 (76 págs., enlazada desde https://sites.google.com/view/toomaslaarits/). La versión final de la revista no se leyó.
+- **Muestra y método:** replica 39 estrategias de *timing*, todas publicadas: calendario, estacionalidad del mismo mes, gestión por volatilidad de 12 factores al estilo Moreira-Muir, eventos (resultados, FOMC), día de la semana, *value spreads* y ML. Usa CRSP desde 1926. Acumula los rendimientos mensuales rebalanceados a 12, 60 y 120 meses y mide Sharpe, α FF4 y *variance ratios*.
+- **Hallazgos:**
+  - Al pasar de 1 a 120 meses, el Sharpe promedio baja de **0.57 a 0.38**, el α FF4 de **5.5% a 2.1%** y el *appraisal ratio* de 0.6 a ≈ 0.2. El VR(120) promedio es 2.1, y 79% de las estrategias tiene VR(60) > 1: sus rendimientos tienen autocorrelación positiva.
+  - **Mercado gestionado por volatilidad (mktrf):** Sharpe de 0.49 a 1 mes. El α CAPM pasa de **4.63% → 3.46% → 2.46% → 1.25%** (1, 12, 60 y 120 meses). El α FF4 ya es de 2.30% a 1 mes (t 1.29, no significativo) y baja a 1.03%.
+  - **"Sell in May"** (en el mercado de noviembre a mayo): α CAPM de 2.63% (t 3.3) a 1 mes y 1.96% a 10 años.
+  - **Cambio de mes:** 5.43% → 4.70%. Es el más robusto del grupo en la muestra completa.
+  - Después de la publicación, el intercepto es de −1.1% (t 1.2): pierden poco en promedio.
+- **Limitaciones:**
+  - A 10 años hay pocas observaciones independientes.
+  - Su interpretación (compensación por riesgo de largo plazo) es un modelo, no un hecho.
+  - No analiza 2013-2026 por separado. Nuestro cálculo del cap. 26 §5.3 da el cambio de mes y Halloween ≈ 0 o invertidos en EUA desde 2013.
+- **Grado B.**
+- **Qué cambia:** ningún criterio. Agrega una **prueba** al protocolo de §6.4 como propuesta (no modifica `parametros.json`). Toda estrategia de *timing* (volatilidad, calendario o filtro) se evalúa también con rendimientos acumulados a la duración de la temporada y a 3-5 años, con su *variance ratio*, y no solo con el Sharpe mensual. Un Sharpe mensual alto con VR > 1 sobrestima lo que gana quien mantiene la estrategia varios años. Es coherente con R05: el α del mercado gestionado ya era débil a 1 mes.
+
+**5. Devanathan, Nikhil, Alexandros E. Tzikas y Stephen P. Boyd (2026), "Simple Dynamic Stock/Bond/Gold Portfolios", arXiv:2609.07946 [q-fin.PM], v1 7-sep-2026.**
+- **Tipo y acceso:** preprint. Se leyó íntegro (43 págs.: tablas 1, 2 y 13 y apéndices de robustez). El código es abierto.
+- **Muestra y método:** SPY, AGG, GLD y efectivo, 2006-2026, rebalanceo mensual, costos de 5 pb, objetivo de volatilidad de 7%.
+- **Hallazgos (tabla 1):**
+
+| Cartera | Rendimiento | Volatilidad | Sharpe | MDD | Rotación |
+|---|---|---|---|---|---|
+| 60/40 | 8.1% | 11.3% | 0.56 | 33.7% | 3.4% |
+| 60/40 con control de volatilidad | 7.1% | 7.4% | 0.71 | 16.9% | 85% |
+| 50/30/20 (con oro) | 9.1% | 10.3% | 0.70 | 27.1% | 4.0% |
+| 50/30/20 con control de volatilidad | 7.8% | 7.3% | 0.82 | 15.9% | 79% |
+| "Markowitz" con pronóstico de rendimientos | 11.6% | 9.0% | 1.08 | 18.1% | 284% |
+
+  - Por quinquenio, el 60/40 con control de volatilidad da 0.35, 0.99, 0.96 y 0.57 de Sharpe, contra 0.13, 0.99, 0.87 y 0.48 del 60/40 simple.
+  - Elegir la especificación de Markowitz año con año (*walk-forward*) da 0.93-1.00 de Sharpe, contra 1.00-1.08 de la especificación fija. Los autores reportan un DSR > 0.99 con 17 especificaciones, pero admiten que lo subestiman porque los ensayos están muy correlacionados.
+- **Limitaciones:** es una sola trayectoria de 20 años, en USD y sin impuestos. El Markowitz depende de pronósticos de rendimiento, y en este capítulo no aceptamos pronósticos de rendimiento sin réplica.
+- **Grado C.**
+- **Qué cambia:** nada. Confirma "freno con costo": el control de volatilidad reduce la MDD a la mitad y sube el Sharpe, pero cuesta ≈ 1 pp de rendimiento. Con nuestro objetivo de máximo CAGR sujeto a drawdown, solo conviene cuando la restricción de drawdown está activa. El Markowitz con oro queda como **candidato de laboratorio**: el código es abierto y habría que replicarlo en MXN con los costos de GBM. No se adopta.
+
+**6. Hsieh, Chung-Han, Jow-Ran Chang y Hui Hsiang Chen (2025), "Compounding Effects in Leveraged ETFs: Beyond the Volatility Drag Paradigm", arXiv:2504.20116 [q-fin.ST], v1 28-abr-2025.**
+- **Tipo y acceso:** preprint en revisión. Se leyó íntegro (34 págs.). Es anterior al periodo, pero venía en la cola.
+- **Método:** define el efecto compuesto como el rendimiento del LETF **menos β veces** el rendimiento acumulado del subyacente. Deriva E[CE_n] ≈ −nf + Σ_k (n−k)[β(β−1)γ_k − 2βfμ], donde γ_k es la autocovarianza a k rezagos, y usa modelos AR(1), AR-GARCH y de cambio de régimen. La parte empírica cubre SPY y QQQ, de 2006 a 2023, en seis regímenes.
+- **Hallazgos:**
+  - Sin costos y con rendimientos independientes, E[CE] = 0. Es una esperanza **aritmética** de la riqueza final.
+  - Con autocorrelación positiva (tendencia), el 3x supera a 3 veces el subyacente; con reversión, queda por debajo.
+  - Recuperación 2009-13, 3x sobre SPY: +1.86 (sintético). Lateral 2014-15: −0.064.
+  - El AR(1) diario de SPY en 2010-2023 es −0.049, con α+β de GARCH ≈ 0.97.
+  - Media simulada de CE: SPXL +0.244 (d.e. 0.638) y TQQQ +0.403 (d.e. 0.965). Fricciones de 0.8-1.0 pp al año.
+- **Limitaciones:** la media aritmética la domina la cola derecha (la d.e. es mayor que la media). No mide la mediana ni el crecimiento geométrico, que es lo que optimiza el sistema.
+- **Grado C.**
+- **Qué cambia:** nada; **acota** §2.1. La fórmula g_L ≈ r + L(μ − r) − L²σ²/2 supone rendimientos independientes y sigue siendo la referencia para la mediana. Omite un término de autocorrelación: con tendencia diaria persistente un 3x rinde más que la fórmula, y con reversión diaria (SPY 2010-2023) rinde menos. Eso da otra razón para el filtro de tendencia de R8: selecciona los tramos donde la autocorrelación favorece al apalancado.
+
+**7. Bonacorsi, Nicolò (2026), "Certified Alpha Capacity: Statistical Evidence, Economic Lifetime, and Arbitrage under Decay", arXiv:2610.01115 [stat.ME], v1 1-oct-2026.**
+- **Tipo y acceso:** preprint de un solo autor (Columbia, Física Aplicada). Se leyeron las secciones 1-3, 5.4-5.5, 6.3, 7 y 9 de 39 páginas.
+- **Hallazgos teóricos:** con una señal que decae exponencialmente, certificarla al nivel α con potencia 1−β exige una vida media h ≥ 2·ln2·(z_{1−α} + z_{1−β})²/S², donde S es el Sharpe instantáneo. Con α = 5% y potencia de 90%:
+
+| Sharpe anual | Vida media mínima |
+|---|---|
+| 1.0 | **11.9 años** |
+| 1.5 | 5.3 años |
+| 2.0 | 3.0 años |
+| 3.0 | 1.3 años |
+
+  Probar M candidatas con Bonferroni sube el umbral.
+- **Hallazgos empíricos:**
+  - En 205 predictores de Open Source Asset Pricing, su proxy de factibilidad **no** predice cuánto decae la señal después de publicarse (Spearman 0.059, IC de [−0.086, 0.199]).
+  - En las *funding rates* de BTC y ETH (6 exchanges, 543 eventos), su puntaje de vida tiene ρ = 0.476 con el *funding* de los 7 días siguientes.
+- **Limitaciones:** un solo autor, sin revisión, el modelo es gaussiano y los ejercicios son retrospectivos.
+- **Grado D.**
+- **Qué cambia:** nada. Es otra forma de MinBTL (§2.10): una señal con Sharpe anual de 1 que se muere en menos de ~12 años no se puede certificar antes de que muera. Respalda `backtest_min_anios` = 10 más el periodo en papel, y la desconfianza ante señales de vida corta. El hallazgo de *funding* no aplica, porque la cuenta cripto es solo spot.
+
+**8. Strahle, Oscar (2026), "How Does Reducing Exposure During Drawdowns Impact Portfolio Performance?", SSRN 7542498 (30-sep-2026). [solo abstract]**
+- **Acceso:** SSRN dio 403; el resumen se obtuvo vía buscador.
+- **Qué dice:** compara tres reglas en SPY de 2000 a 2025: umbrales fijos de *drawdown*, escalamiento lineal y medias móviles.
+  - Todas bajan la volatilidad y la MDD. Con medias móviles, la volatilidad pasa de 19.38% a 9.35% y la MDD de −55.19% a −21.97%.
+  - Todas bajan el CAGR: de 8.03% a entre 5.27% y 7.41%. **Ninguna** mejora el Sharpe ni el Sortino.
+  - El Calmar sube (0.24 contra 0.15 con medias móviles).
+  - Las pérdidas vienen de quedarse subexpuesto en las recuperaciones y de latigazos en caídas poco profundas.
+- **Grado D:** documento de trabajo de un solo autor, sin lectura íntegra.
+- **Qué cambia:** nada. Coincide con R01/AC-09 ("solo protección") y con los cortacircuitos como freno, no como fuente de rendimiento.
+
+**Revisados sin agregarse:** Bongiorno-Manolakis-Mantegna (arXiv 2607.23068, "volatility drag" con apalancamiento). Es sobre una red neuronal de mínima varianza, no sobre ETF apalancados, así que no es material para R8.
 
 ---
 
@@ -479,7 +604,7 @@ Mostrar: drawdown vigente frente a cortacircuitos (`riesgo.estado_cortacircuitos
 9. Harvey, Hoyle, Korgaonkar, Rattray, Sargaison, Van Hemert (2018). JPM 45(1). https://doi.org/10.3905/jpm.2018.45.1.014
 10. DeMiguel, Martín-Utrera, Uppal (2024). JF 79(6). https://doi.org/10.1111/jofi.13395
 11. Xu (2026). Critical Finance Review 15. https://doi.org/10.1108/cfr-03-2023-2491
-12. Wang, Yan (2021). J. Banking & Finance 131, 106198 (cita verificada; hallazgo no leído). https://doi.org/10.1016/j.jbankfin.2021.106198
+12. Wang, Yan (2021). J. Banking & Finance 131, 106198 (cita verificada; hallazgo no leído). https://doi.org/10.1016/j.jbankfin.2021.106198 — **Actualización 2026-10-05:** leído íntegro, ver la adenda de §4 y la ref. 71.
 13. Asness, Frazzini, Pedersen (2012). FAJ 68(1). https://doi.org/10.2469/faj.v68.n1.1
 14. Filho, Gaspar (2024). JPM 50. https://doi.org/10.3905/jpm.2024.1.585
 15. DeMiguel, Garlappi, Uppal (2009). RFS 22(5). https://doi.org/10.1093/rfs/hhm075
@@ -536,6 +661,14 @@ Mostrar: drawdown vigente frente a cortacircuitos (`riesgo.estado_cortacircuitos
 66. BCBS (2019). Minimum capital requirements for market risk. https://www.bis.org/bcbs/publ/d457.htm
 67. Datos de precios (cálculos propios de RPAR, AOR, SPY, AGG, TLT, IEF, QQQ, QLD, TQQQ, SSO, UPRO, ALLW, GLD y USDMXN; cierre ajustado): Yahoo Finance chart API, https://query1.finance.yahoo.com/v8/finance/chart/SPY (y los demás tickers)
 68. Tasa libre de riesgo para el backtest de gestión por volatilidad: FRED TB3MS. https://fred.stlouisfed.org/series/TB3MS
+69. Liu, Tang, Zhou (2019). JPM 46(1), 38-51. https://doi.org/10.3905/jpm.2019.1.107 (adenda 2026-10-05; solo abstract)
+70. Dachraoui (2018). JPM 44(5), 58-67. https://doi.org/10.3905/jpm.2018.44.5.058 (adenda 2026-10-05; solo abstract) · resumen secundario: https://finance.sina.com.cn/stock/stockzmt/2019-08-02/doc-ihytcitm6334416.shtml
+71. Wang, Yan (2021), PDF publicado en el sitio del autor (leído íntegro el 2026-10-05). https://www.lehigh.edu/~xuy219/research/Downside.pdf
+72. Laarits (2026). JFE 185, 104364. https://doi.org/10.1016/j.jfineco.2026.104364 · versión del autor (may-2026): https://sites.google.com/view/toomaslaarits/
+73. Devanathan, Tzikas, Boyd (2026). arXiv:2609.07946. https://arxiv.org/abs/2609.07946
+74. Hsieh, Chang, Chen (2025). arXiv:2504.20116. https://arxiv.org/abs/2504.20116
+75. Bonacorsi (2026). arXiv:2610.01115. https://arxiv.org/abs/2610.01115
+76. Strahle (2026). SSRN 7542498. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7542498 (solo abstract)
 
 **Nota de verificación (25-sep-2026):** la herramienta WebSearch agotó su presupuesto de sesión (200/200) antes de este módulo. Las citas se verificaron por otras vías:
 - Metadatos (autores, año, revista, volumen, páginas, DOI) con la API de Crossref.
@@ -547,5 +680,5 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
 - El nivel de 97.5% del ES de Basilea.
 - El volumen y las páginas del artículo de PBO.
 - Las cifras de Han-Zhou-Zhu.
-- El hallazgo de Wang-Yan (2021).
+- El hallazgo de Wang-Yan (2021). **Verificado el 2026-10-05** (lectura íntegra; adenda de §4).
 - La existencia de una regla *wash sale* mexicana fuera del art. 129.
