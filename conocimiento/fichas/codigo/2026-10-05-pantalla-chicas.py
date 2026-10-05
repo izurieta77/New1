@@ -502,7 +502,7 @@ def frame(tag, unidad, per):
 
 
 def bt_fundamentales(t_anio: int) -> dict[int, dict]:
-    """PIT: ejercicio t-1 (y t-2, t-3) con accesion de a lo sumo el anio t."""
+    """Ejercicio t-1 (y t-2, t-3) terminado >= 90 dias antes de la formacion (sin filtro de fecha de presentacion: ver nota)."""
     y = t_anio - 1
     ann = {}
     for tag in ("NetIncomeLoss",):
@@ -517,8 +517,8 @@ def bt_fundamentales(t_anio: int) -> dict[int, dict]:
     shs = {k: frame("WeightedAverageNumberOfDilutedSharesOutstanding", "shares", f"CY{k}") for k in (y, y - 2)}
     out = {}
     for cik, (ni0, accn, end) in ann[("NetIncomeLoss", y)].items():
-        if int(accn.split("-")[1]) > t_anio % 100 and t_anio < 2100:  # presentada despues de la formacion
-            continue
+        # Nota: frames devuelve el valor de la presentacion MAS RECIENTE para ese periodo; no permite filtrar por fecha de
+        # presentacion (un filtro por anio de accesion eliminaria a los sobrevivientes). Se declara la anticipacion por reexpresion.
         if date.fromisoformat(end) > date(t_anio, 6, 30) - timedelta(days=90):
             continue
         ni1 = ann[("NetIncomeLoss", y - 1)].get(cik)

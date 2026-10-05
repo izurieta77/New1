@@ -8,6 +8,7 @@ Sesión: "Sistema de inversión · Inteligencia y cripto". Agente: `vigia-de-inf
    - los pronósticos abiertos (`bitacora/pronosticos.csv`);
    - la última tabla de `bitacora/inteligencia/`;
    - el tipo de cambio y la regla FX-1: `python3 herramientas/fx_alerta.py` (solo lectura) y la última línea `FX-1` de `bitacora/supervision/`.
+1b. **Entradas del dueño (REGLAS §0e):** lee lo que el dueño pegó en `datos/entrada-dueno/` (últimas 48 h) y `datos/fuentes-del-dueno.csv`. Procésalo primero: califícalo de A a D (lo de redes empieza en D), verifícalo con fuente primaria, agrégalo a la tabla del día y anota la fuente en el marcador de fuentes. Lo que diga ser información privilegiada se descarta por cumplimiento.
 2. **Barrido.** Lánzalo con el subagente `vigia-de-informacion`. Si tu sesión no reconoce ese tipo, aplica tú el rol de su archivo.
    - Prioridad 1: lo que afecta a las posiciones abiertas y a los pronósticos abiertos.
    - Prioridad 2: macro, geopolítica y política de EUA y México.

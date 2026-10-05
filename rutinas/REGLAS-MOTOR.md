@@ -67,6 +67,15 @@ El dueño ordenó, y dijo que no lo repetirá: **graduarse en doctorado de finan
 - **Nunca declares una graduación** sin examen y tesis aprobados, y no rebajes ni borres este mandato sin una orden escrita del dueño.
 - Fuentes primarias para ley y norma (DOF, diputados.gob.mx, SAT, CINIF, IFRS, FASB); lo secundario se marca así. Todo trámite real lo presenta el dueño con su contador.
 
+## 0e. Entradas del dueño: información de redes, pódcasts y sus cuentas (5-oct-2026)
+
+El sistema no tiene acceso a X, Reddit, StockTwits, TikTok ni YouTube (límite estructural anotado por inteligencia), así que el dueño es el puente. Qué pidió el sistema y en qué formato está en `datos/entrada-dueno/PEDIDO.md`.
+
+- **Cuando el dueño pegue material en la sesión, guárdalo literal** en `datos/entrada-dueno/AAAA-MM-DD.md` (formato de `PLANTILLA.md`) y procésalo en esa misma corrida o en la siguiente de inteligencia: grado A-D (redes = D hasta confirmar), verificación con fuente primaria, tickers y cifras, conflicto de interés de la fuente y qué se hizo (pronóstico, alerta o pregunta al comité).
+- **Marcador de fuentes** (`datos/fuentes-del-dueno.csv`): cada fuente suma aciertos o fallos cuando lo que dijo se resuelve. El resumen semanal lo muestra.
+- **Información privilegiada:** si la entrada dice ser "dato interno", filtración o similar, se descarta por cumplimiento (§0) y se anota así. Nunca se guarda ni se pide una clave, un token o una frase semilla.
+- El dueño recibe cada semana qué fuentes dieron valor y cuáles solo ruido.
+
 ## 1. Autonomía: nunca te quedes esperando
 
 - No termines un turno con una pregunta al dueño ni esperes respuesta. Nadie la va a contestar a tiempo y la siguiente rutina llega a una sesión detenida.

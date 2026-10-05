@@ -206,6 +206,8 @@ def main(argv=None):
         if t not in datos:
             continue
         s = datos[t]
+        if len(s) < 253:
+            print(f"{t}: solo {len(s)} sesiones; fila con datos parciales", file=sys.stderr)
         px = [x[0] for _, x in s]
         raw = [x[1] for _, x in s]
         vol = [x[2] for _, x in s]
@@ -224,9 +226,9 @@ def main(argv=None):
         lg = [math.log(px[i] / px[i - 1]) for i in range(len(px) - 60, len(px))]
         f["vol_60d"] = statistics.stdev(lg) * math.sqrt(252)
         sma = statistics.mean(px[-200:])
-        f["dist_sma200"] = px[-1] / sma - 1
+        f["dist_sma200"] = px[-1] / sma - 1 if len(px) >= 200 else None
         f["dist_max_52s"] = px[-1] / max(px[-252:]) - 1
-        pico, dd = px[-252], 0
+        pico, dd = px[-min(252, len(px))], 0
         for x in px[-252:]:
             pico = max(pico, x)
             dd = min(dd, x / pico - 1)

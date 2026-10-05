@@ -103,6 +103,22 @@ def corr(a: dict, b: dict, n=60):
     return sum((i - mx) * (j - my) for i, j in zip(x, y)) / (sx * sy) if sx and sy else None
 
 
+def corr5(serie_pc, spy_mxn, n=120):
+    """Correlacion de rendimientos de 5 sesiones (traslapados) sobre las ultimas n sesiones comunes.
+    Reduce el sesgo a la baja del desfase horario BMV (14:00 CDMX) / NYSE (15:00 CDMX) / FX."""
+    a = dict(serie_pc)
+    b = dict(spy_mxn)
+    ks = sorted(set(a) & set(b))[-(n + 5):]
+    if len(ks) < 60:
+        return None
+    x = [math.log(a[ks[i]] / a[ks[i - 5]]) for i in range(5, len(ks))]
+    y = [math.log(b[ks[i]] / b[ks[i - 5]]) for i in range(5, len(ks))]
+    mx, my = statistics.mean(x), statistics.mean(y)
+    sx = math.sqrt(sum((i - mx) ** 2 for i in x))
+    sy = math.sqrt(sum((i - my) ** 2 for i in y))
+    return sum((i - mx) * (j - my) for i, j in zip(x, y)) / (sx * sy) if sx and sy else None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--salida", required=True)
@@ -149,12 +165,14 @@ def main():
             "spread_cs_pct": round(100 * (corwin_schultz(b) or 0), 3),
             "rho60_spy_mxn": None if (r := corr(rend([(d, c) for d, c, *_ in b]), r_spy)) is None else round(r, 3),
             "rho60_naftrac": None if (r := corr(rend([(d, c) for d, c, *_ in b]), r_naf)) is None else round(r, 3),
+            "rho120_5d_spy_mxn": None if (r5 := corr5([(d, c) for d, c, *_ in b], spy)) is None else round(r5, 3),
+            "precio_24sep": next((round(x[1], 4) for x in b if x[0] == date(2026, 9, 24)), None),
             "div12m_ps": round(div12, 4), "rend_div12m": round(div12 / p, 4) if div12 else 0.0,
             "moneda": meta.get("currency"), "nombre": meta.get("longName") or meta.get("shortName"),
         })
     campos = ["ticker", "estado", "fecha", "precio", "sma200", "dist_sma200", "max_252", "min_252",
               "dist_max", "ret_1m", "ret_3m", "ret_6m", "ret_12m", "vol60", "liq30_mxn_mm",
-              "dias_op_30", "spread_cs_pct", "rho60_spy_mxn", "rho60_naftrac", "div12m_ps",
+              "dias_op_30", "spread_cs_pct", "rho60_spy_mxn", "rho60_naftrac", "rho120_5d_spy_mxn", "precio_24sep", "div12m_ps",
               "rend_div12m", "moneda", "nombre"]
     with open(a.salida, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=campos)
