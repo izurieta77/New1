@@ -198,6 +198,10 @@ def simbolo_loc(x):
     return x["cveCorta"].strip().replace(" ", "") + ("" if s in ("*", "") else s.replace(" ", "")) + ".MX"
 
 
+def rd(x, div=1, nd=2):
+    return "" if x is None else round(x / div, nd)
+
+
 def paralelo(fn, items, n=6):
     with ThreadPoolExecutor(n) as ex:
         return list(ex.map(fn, items))
@@ -470,10 +474,10 @@ def pantalla(uni, fx) -> tuple[list[dict], dict]:
                     mediana_importe_mxn=round(u["mediana_mxn"]), dias_operados=round(u["dias_op"], 2),
                     spread_cs=round(u["spread_cs"], 4) if u.get("spread_cs") is not None else "",
                     costo_rt_pos2000=round(costo_rt(2000, u.get("spread_cs"))[1], 4),
-                    ni0_m=round(m["ni0"] / 1e6, 1), ni_2_m=round(m["ni_2"] / 1e6, 1), cagr_ni_2a=round(m["cagr_ni_2a"], 3),
-                    roic=round(m["roic"], 3), nd_ebitda=round(m["nd_ebitda"], 2), fcf0_m=round(m["fcf0"] / 1e6, 1),
-                    fcf_udm_m=round(m["fcf_udm"] / 1e6, 1), ev_ebit=round(m["ev_ebit"], 1),
-                    pu=round(m["pu"], 1) if m["pu"] else "", dilucion_2a=round(m["dilucion_2a"], 3),
+                    ni0_m=rd(m["ni0"], 1e6, 1), ni_2_m=rd(m["ni_2"], 1e6, 1), cagr_ni_2a=rd(m.get("cagr_ni_2a"), 1, 3),
+                    roic=rd(m.get("roic"), 1, 3), nd_ebitda=rd(m.get("nd_ebitda"), 1, 2), fcf0_m=rd(m.get("fcf0"), 1e6, 1),
+                    fcf_udm_m=rd(m.get("fcf_udm"), 1e6, 1), ev_ebit=rd(m.get("ev_ebit"), 1, 1),
+                    pu=rd(m.get("pu"), 1, 1), dilucion_2a=rd(m.get("dilucion_2a"), 1, 3),
                     score_rango=round(m["score_rango"], 1))
         if sym_us:
             if not tiene_10k(sym_us):
