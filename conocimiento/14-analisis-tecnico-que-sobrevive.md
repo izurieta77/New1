@@ -221,7 +221,7 @@ La amplitud (medida como avances − retrocesos) predice a corto plazo entre pa�
 ### 5.14 Adenda 2026-10-05 (barrido trimestral 2026-Q4)
 
 **1. Kurth, Jutta G., Zoltan Eisler, Adam Rej y Jean-Philippe Bouchaud (2026), "Is Trend Still Your Friend? A Microstructural Account of the Demise of Short-Term Trend-Following", arXiv:2607.01550 [q-fin.TR], v1 3-jul-2026.**
-- **Tipo y acceso:** preprint. Se leyeron íntegras las secciones 1-3 y 5 (31 págs.). Tres de los autores son de CFM o están vinculados a CFM.
+- **Tipo y acceso:** preprint. Se leyeron íntegras las secciones 1-3 y 5 (31 págs.). Rej y Bouchaud son de Capital Fund Management (CFM); Kurth es del Econophysics Lab del Institut Louis Bachelier y Eisler de Imperial College.
 - **Muestra:** ~100 futuros líquidos de 1995 a 2025, más una serie de tendencia desde 1950 y el índice SG CTA.
 - **Método:** señales EWM τ/4τ con τ de 5, 10, 20 y 50 días, normalizadas por volatilidad.
 - **Hallazgos:**
