@@ -27,7 +27,7 @@ Capítulos relacionados que aquí no se repiten: [27 Fiscalidad 2026 y estructur
 
 | Texto | Última reforma en el PDF leído | Hash sha256 del PDF (descargado 2026-10-06) |
 |---|---|---|
-| CFF | **DOF 09-04-2026** (reforma al art. 141, párrafos primero y segundo) | `be427b20d3552775ab42018f8f87578078770095bf8cf46322c25e36ee3aa7d` |
+| CFF | **DOF 09-04-2026** (reforma al art. 141, párrafos primero y segundo) | `be7427b20d3552775ab42018f8f87578078770095bf8cf46322c25e36ee3aa7d` (corregido el 2026-10-06: antes decía `be427b20...`, con 63 caracteres; se recalculó sobre una descarga nueva) |
 | LFPCA | **DOF 09-06-2026** (decreto extenso: la lista de artículos reformados ocupa varias líneas del PDF) | `d2a25adcb45f622bbbf2a4e58f1139fb5236961fe86de3dd9ad9de2dfa21d54e` |
 | Ley de Amparo | DOF 16-10-2025 | `05560493ac2b17b9e77eeb9741843176ee0fde76f05e75f853465b13621be78d` |
 | LOPRODECON | DOF 11-05-2022 | `abd471f5236a24bd22875ad819769769b3618a8c3ffb7640cf58efc77967fd90` |
