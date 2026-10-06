@@ -9,7 +9,7 @@ La pre-apertura corre a las 6:52 y los barridos de inteligencia a las 7:05, 11:0
    - cuentas que dan el dato **antes** que la prensa (incidentes en Ormuz, flujos de ETFs, cadena de suministro de chips y energía, datos en cadena de cripto);
    - **tesis concretas**, con ticker, cifra y fecha;
    - cuentas mexicanas de finanzas, fiscal y contabilidad (también alimentan los doctorados).
-2. **1 pódcast o video** que oíste: la **transcripción pegada**, o los 3 a 5 minutos clave con su minuto. Con programa, episodio, invitado y fecha. Si no hay transcripción, dime los tickers, las cifras y los minutos que mencionaron.
+2. **1 pódcast o video** que oíste: la **transcripción pegada** (la hace Grok; **no importa si el programa no la publica gratis**), o los 3 a 5 minutos clave con su minuto. Con programa, episodio, invitado y fecha. Si no hay transcripción, dime los tickers, las cifras y los minutos que mencionaron.
 3. **Lo tuyo:** mensajes de GBM o Binance, depósitos, órdenes que ejecutaste (precio, hora, comisión), capturas de pantalla de tus posiciones.
 4. Si un día no hay nada, mándame "sin novedades": así sé que no se perdió algo.
 
