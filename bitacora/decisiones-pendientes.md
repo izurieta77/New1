@@ -246,3 +246,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** tratarlo como mandato de formación en paralelo, con metas de calendario propuestas (candidatura ene-abr 2027, graduación jun-2027). **No** cambia el criterio de salida de la fase 0 ni bloquea lo ya autorizado (cuentas arena de GBM y Binance), porque el dueño no lo pidió.
 - **Por qué es conservador:** condicionar las operaciones a una graduación cambiaría reglas que el dueño ya fijó; si lo quiere, que lo diga por escrito y se agrega a `criterio_salida`.
 - **Estado:** Abierto → dueño (puede mover las metas o convertirlo en condición).
+
+## 2026-10-05 · radar de niveles · ¿Se abre un segundo camino, "oportunidad por catalizador", cuando la puerta de la contraparte deja el radar vacío?
+- **Hecho:** el primer radar (cripto, BMV, EUA y empresas pequeñas; 140 instrumentos puntuados) dio 0 Diamantes, 0 Platinos y 0 Oros. La puerta P1 (contraparte con restricción o sesgo identificable) falla en 73 de 76 en EUA. Resultado y lista de vigilancia: `arena/investigacion/16-radar-niveles-resultado-2026-10-05.md` y `bitacora/vigilancia-niveles.md`.
+- **Qué decidí:** no cambiar la puerta ni bajar el listón. Dejé una lista de vigilancia con disparadores de entrada y de salida y un repunte cada viernes. Propuse al comité del 9-oct un segundo camino por catalizador con la contraparte definida como "analistas anclados" o "vendedor forzado", y con evidencia de grado B.
+- **Por qué es conservador:** abrir el camino sube el riesgo de falsos positivos y el sistema no tiene ventaja demostrada; el cambio de regla es del comité y del dueño.
+- **Estado:** Abierto → comité del 9-oct.
