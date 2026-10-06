@@ -81,6 +81,7 @@ UNIVERSO_US = ["WMT", "COST", "KO", "PG", "PM", "AMZN", "TSLA", "HD", "XOM", "CV
 FUERA = ["TSM", "ASML", "UBER"]
 ETFS = ["SPYM", "QQQM", "SPXL", "UPRO", "TQQQ", "TECL", "SOXL", "GLD", "IAU", "GDX", "COPX", "XLE", "XLK", "XLV",
         "XLU", "XLP", "XLF", "XLI", "SMH", "SOXX", "TLT", "IEF", "HYG"]
+ALIAS_MX = {"BRK-B": "BRKB"}  # clave en el SIC
 AUX = ["^GSPC", "^NDX", "^VIX", "SPY", "QQQ"]
 
 
@@ -183,7 +184,7 @@ def main(argv=None):
     sic = {}
     for t in UNIVERSO_US + FUERA + ETFS:
         try:
-            s, _ = grafica(t + ".MX", "3mo", cache)
+            s, _ = grafica(ALIAS_MX.get(t, t) + ".MX", "3mo", cache)
             s = [(d, x) for d, x in s if d <= corte][-22:]
             sic[t] = (sum(1 for _, x in s if x[2] > 0), s[-1][1][1] if s else None, s[-1][0] if s else None)
         except ErrorDatos:

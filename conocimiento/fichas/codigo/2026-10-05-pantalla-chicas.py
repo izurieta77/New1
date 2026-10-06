@@ -337,6 +337,8 @@ def evalua(u, fx) -> dict:
     m["ni_udm"] = udm[0] if udm else None
     if not udm or udm[0] <= 0 or udm[0] < P["udm_vs_anual"] * ni[-1]:
         fall.append("F2 UDM")
+    ea3 = ult(t.get("annualEBIT"), 3)
+    m["ebit_cagr_2a"] = (ea3[-1] / ea3[0]) ** 0.5 - 1 if len(ea3) == 3 and ea3[0] > 0 and ea3[-1] > 0 else None
     ebit = (ult(t.get("trailingEBIT")) or ebit_a or [None])[0]
     m["ebit"] = ebit
     tasa = (ult(t.get("annualTaxRateForCalcs")) or [0.21])[0]
@@ -688,9 +690,10 @@ def universo_b():
     P = PARAMS
     fx = fx_usdmxn()
     tick = json.loads(get("https://www.sec.gov/files/company_tickers.json", UA_SEC, cache_h=72, sec=True))
-    tk = {}
+    tk, nombre = {}, {}
     for v in tick.values():
         tk.setdefault(v["cik_str"], v["ticker"])
+        nombre.setdefault(v["ticker"], v["title"])
     fu = bt_fundamentales(2026)
     pas = [c for c, f in fu.items() if c in tk and bt_prefiltro(f)]
     print(f"[universoB] filers FY2025 con NI y 3 anios: {len(fu)} | preseleccion fundamental EDGAR: {len(pas)}", flush=True)
@@ -733,12 +736,17 @@ def universo_b():
         r1, r2, r3 = rank(lst, "roic", True), rank(lst, "cagr_ni_2a", True), rank(lst, "ev_ebit", False)
         for u, m in lst:
             sc = (r1[id(u)] + r2[id(u)] + r3[id(u)]) / 3
-            fila = dict(grupo=grupo, ticker=u["sym"], falla=";".join(m["fallas"]), precio_usd=round(u["precio"], 2),
+            chm = chart(u["sym"] + ".MX")
+            lq = liquidez(chm)
+            fila = dict(grupo=grupo, ticker=u["sym"], nombre=nombre.get(u["sym"], ""), falla=";".join(m["fallas"]), precio_usd=round(u["precio"], 2),
                         mcap_usd_m=round(u["mcap_usd"] / 1e6), adv_origen_usd=round(u["adv_usd"]),
                         spread_cs=rd(u.get("spread_cs"), 1, 4), ni0_m=rd(m["ni0"], 1e6, 1), ni_2_m=rd(m["ni_2"], 1e6, 1),
-                        cagr_ni_2a=rd(m.get("cagr_ni_2a"), 1, 3), roic=rd(m.get("roic"), 1, 3), nd_ebitda=rd(m.get("nd_ebitda"), 1, 2),
+                        cagr_ni_2a=rd(m.get("cagr_ni_2a"), 1, 3), cagr_ebit_2a=rd(m.get("ebit_cagr_2a"), 1, 3),
+                        roic=rd(m.get("roic"), 1, 3), nd_ebitda=rd(m.get("nd_ebitda"), 1, 2),
                         fcf0_m=rd(m.get("fcf0"), 1e6, 1), fcf_udm_m=rd(m.get("fcf_udm"), 1e6, 1), ev_ebit=rd(m.get("ev_ebit"), 1, 1),
                         pu=rd(m.get("pu"), 1, 1), dilucion_2a=rd(m.get("dilucion_2a"), 1, 3),
+                        sic_mx_precio_mxn=rd(lq.get("precio"), 1, 2), sic_mx_mediana_mxn=rd(lq.get("mediana_mxn"), 1, 0),
+                        sic_mx_dias_op=rd(lq.get("dias_op"), 1, 2),
                         costo_rt_fx03=round(2 * P["comision_lado"] + 0.006, 4), costo_rt_fx10=round(2 * P["comision_lado"] + 0.02, 4),
                         score_rango=round(sc, 1))
             fila.update(verifica_edgar(u["sym"], u["_ts"]))

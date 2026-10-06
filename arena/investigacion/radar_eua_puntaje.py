@@ -241,9 +241,93 @@ def puntaje(m, t):
     for n in ('Diamante', 'Platino'):
         e, mu = edge_de(m, n)
         extra[f'edge_mult_{n}'] = mu
+        extra[f'total_plantilla_{n}'] = total - c_edge + escala_edge(mu)
     return dict(**extra, total_si_tasa_propia=sens, edge_mult_propia_oro=mult_o, edge_alfa_oro=edge, edge_mult=mult, c_edge=c_edge, c_evid=c_evid, c_cat=c_cat, c_asim=c_asim,
                 c_liq=c_liq, c_cost=c_cost, c_corr=c_corr, c_geo=c_geo, c_adv=c_adv, c_crowd=c_crowd,
                 total=total, g_consenso=g, obj_7m_consenso=obj7, objetivo_sustentado=sustentado)
+
+
+def pct(x, d=1):
+    v = f(x)
+    return "n/d" if v is None else f"{v*100:.{d}f}%"
+
+
+def num(x, d=2):
+    v = f(x)
+    return "n/d" if v is None else f"{v:,.{d}f}"
+
+
+def tablas(out):
+    """Tablas markdown para el reporte (solo los candidatos presentados: con hecho que refuta escrito)."""
+    pres = [r for r in out if r["P5"] in (True, "True")]
+    L = []
+    L.append("### T1. Resumen ordenado (puntaje con tasa base honesta)\n")
+    L.append("| # | Ticker | Tipo | Nivel | Puntaje | Pts si tasa propia | Puertas falladas (cuenta real) | Falla en papel |")
+    L.append("|---|---|---|---|---|---|---|---|")
+    for i, r in enumerate(pres, 1):
+        fall_p = [n for n, ok in zip(["P1", "P3", "P4"], [r["P1"] in (True, "True"), r["P3_papel"] in (True, "True"), r["P4"] in (True, "True")]) if not ok]
+        if r["objetivo_sustentado"] in (False, "False"):
+            fall_p.append("objetivo")
+        L.append(f"| {i} | {r['ticker']} | {r['tipo'].replace('accion_universo','acción').replace('accion_fuera','acción fuera').replace('etf','ETF')} | {r['nivel']} | {r['total']} | {r['total_si_tasa_propia']} | {r['puertas_falladas']} | {' '.join(fall_p)} |")
+    L.append("\n### T2. Objetivo Oro (+25% en 7 meses, stop −12.5%, 2:1): tasa base, stop y valor esperado\n")
+    L.append("| Ticker | Precio USD | Objetivo por consenso a 7m (múltiplo constante) | Ventanas ≥+20% a 7m: propio / grupo | P(objetivo) honesta (fuente) | P(stop) | Stop USD | EV bruto honesto | EV neto de costos | Alfa vs SPYM (× costo) |")
+    L.append("|---|---|---|---|---|---|---|---|---|---|")
+    for r in pres:
+        px = f(r["precio_usd"])
+        ev_net = f(r["Oro_hon_ev_neto"])
+        costo = f(r["costo_rt"])
+        ps = r["Oro_own_p_stop"] if r["Oro_hon_fuente"] == "propia" else r["Oro_grp_p_stop"]
+        L.append(f"| {r['ticker']} | {px:,.2f} | {pct(r['obj_7m_consenso']) if r['obj_7m_consenso'] else 'sin par verificado'} | "
+                 f"{pct(r['Oro_fin_own_p'],0)} / {pct(r['Oro_fin_grp_p'],0)} | {pct(r['Oro_hon_p_obj'],0)} ({r['Oro_hon_fuente']}) | {pct(ps,0)} | "
+                 f"{px*0.875:,.2f} | {pct(ev_net+costo if ev_net is not None else None)} | {pct(ev_net)} | {num(r['edge_mult'],1)}× |")
+    L.append("\n### T3. Diamante (+40% en 3m, stop −20%) y Platino (+50% en 5m, stop −25%): solo tasa base\n")
+    L.append("| Ticker | D: ventanas ≥+40% a 3m propio / grupo | D: P(obj) honesta · P(stop) | D: EV neto | D: alfa (× costo) | P: ventanas ≥+50% a 5m propio / grupo | P: P(obj) honesta | P: EV neto | P: alfa (× costo) |")
+    L.append("|---|---|---|---|---|---|---|---|---|")
+    for r in pres:
+        psd = r["Diamante_own_p_stop"] if r["Diamante_hon_fuente"] == "propia" else r["Diamante_grp_p_stop"]
+        L.append(f"| {r['ticker']} | {pct(r['Diamante_fin_own_p'],0)} / {pct(r['Diamante_fin_grp_p'],0)} | {pct(r['Diamante_hon_p_obj'],0)} · {pct(psd,0)} | {pct(r['Diamante_hon_ev_neto'])} | {num(r['edge_mult_Diamante'],1)}× | "
+                 f"{pct(r['Platino_fin_own_p'],0)} / {pct(r['Platino_fin_grp_p'],0)} | {pct(r['Platino_hon_p_obj'],0)} | {pct(r['Platino_hon_ev_neto'])} | {num(r['edge_mult_Platino'],1)}× |")
+    L.append("\n### T4. Puntaje por componente (plantilla de referencia Oro)\n")
+    L.append("| Ticker | Edge/costo (25) | Evidencia (15) | Catalizador (10) | Asimetría (15) | Liquidez (5) | Costos (5) | Correlación (10) | Geo/reg. (10) | Ventaja propia (5) | Crowding (−10..0) | Total |")
+    L.append("|---|---|---|---|---|---|---|---|---|---|---|---|")
+    for r in pres:
+        L.append(f"| {r['ticker']} | {r['c_edge']} | {r['c_evid']} | {r['c_cat']} | {r['c_asim']} | {r['c_liq']} | {r['c_cost']} | {r['c_corr']} (ρ {num(r['corr60_mxn_cartera'])}) | {r['c_geo']} | {r['c_adv']} | {r['c_crowd']} | **{r['total']}** |")
+    L.append("\n### T5. Ejecutable (P3), liquidez y costo de ida y vuelta\n")
+    L.append("| Ticker | Título en MXN | Cabe en la cuenta real (10,000) | Cabe en papel (20,486) | SIC | Costo ida y vuelta | Volumen EUA 63d (MM USD/día) |")
+    L.append("|---|---|---|---|---|---|---|")
+    for r in pres:
+        L.append(f"| {r['ticker']} | {num(r['precio_mxn_titulo'],0)} | {'sí' if r['cabe_real'] in (True,'True') else 'no'} | {'sí' if r['cabe_papel'] in (True,'True') else 'no'} | {r['sic']} | {pct(r['costo_rt'],2)} | {num(r['usd_vol_medio_63d_mm'],0)} |")
+    L.append("\n### T6. Alertas de entrada y de salida\n")
+    L.append("| Ticker | Alerta de entrada (sube de nivel) | Alerta de salida: stop −12.5% · cierre bajo SMA200 | Reporte (estado de la fecha) | Hecho que refuta la tesis |")
+    L.append("|---|---|---|---|---|")
+    for r in pres:
+        px = f(r["precio_usd"])
+        s200, s50, mx = f(r["sma200"]), f(r["sma50"]), f(r["max_52s"])
+        if f(r["dist_sma200"], 0) < 0:
+            ent = f"2 cierres sobre SMA200 ({s200:,.2f})"
+        else:
+            ent = f"≤ SMA50 ({s50:,.2f}) o ≤ −15% del máx. 52s ({mx*0.85:,.2f}); no perseguir"
+        sal = f"{px*0.875:,.2f} · {s200:,.2f}" if f(r["dist_sma200"], 0) >= 0 else f"{px*0.875:,.2f} · (ya está bajo la SMA200 de {s200:,.2f})"
+        L.append(f"| {r['ticker']} | {ent} | {sal} | {r['fecha_reporte'] or 'sin fecha del activo'} ({r['estado_fecha'] or CAT_INDICE}) | {r['hecho_que_refuta']} |")
+    L.append("\n### T7. Contraparte (P1) y qué descuenta el precio\n")
+    L.append("| Ticker | P1 | Contraparte y condición | Qué descuenta el precio |")
+    L.append("|---|---|---|---|")
+    for r in pres:
+        L.append(f"| {r['ticker']} | {'cumple' if r['P1'] in (True,'True') else 'falla'} | {r['contraparte_P1']} | {r['que_descuenta'] or 'ETF: ver §Lectura'} |")
+    L.append("\n### T8. Apalancados: filtro (subyacente > SMA200×1.03 y VIX < 25) y costo por volatilidad\n")
+    L.append("| ETF | Filtro hoy | Subyacente: vol 60d · ret 12m | ETF ret 12m vs 3× subyacente | Arrastre teórico anual (L²−L)/2·σ² | Diamante con filtro: P(obj) · P(stop) · EV bruto | Platino con filtro | Oro con filtro |")
+    L.append("|---|---|---|---|---|---|---|---|")
+    for r in out:
+        if r["ticker"] in APALANCADOS:
+            L.append(f"| {r['ticker']} | {'encendido' if r.get('filtro_hoy') in (True,'True') else 'apagado'} | {pct(r.get('suby_vol_60d'))} · {pct(r.get('suby_ret_12m'))} | {pct(r['ret_12m'])} vs {pct(3*f(r.get('suby_ret_12m'),0))} | {pct(r.get('drag_teorico_anual'))} | "
+                     f"{pct(r['Diamante_filtro_p_obj'])} · {pct(r['Diamante_filtro_p_stop'])} · {pct(r['Diamante_filtro_ev_bruto'])} | {pct(r['Platino_filtro_p_obj'])} · {pct(r['Platino_filtro_p_stop'])} · {pct(r['Platino_filtro_ev_bruto'])} | {pct(r['Oro_filtro_p_obj'])} · {pct(r['Oro_filtro_p_stop'])} · {pct(r['Oro_filtro_ev_bruto'])} |")
+    L.append("\n### T9. Resto del universo (sin tesis escrita): puntaje automático y qué puerta falla\n")
+    L.append("| Ticker | Precio USD | Ret 3m · 6m | Sobre SMA200 | Puntaje | Puertas falladas | Reporte |")
+    L.append("|---|---|---|---|---|---|---|")
+    for r in out:
+        if r["P5"] not in (True, "True"):
+            L.append(f"| {r['ticker']} | {num(r['precio_usd'])} | {pct(r['ret_3m'],0)} · {pct(r['ret_6m'],0)} | {pct(r['dist_sma200'],0)} | {r['total']} | {r['puertas_falladas']} | {r['fecha_reporte'] or '—'} |")
+    return "\n".join(L)
 
 
 def main():
@@ -299,6 +383,8 @@ def main():
         for k in ("ret_1m", "ret_3m", "ret_6m", "ret_12m", "vol_60d", "dist_sma200", "dist_max_52s", "sma50", "sma200",
                   "max_52s", "corr60_mxn_cartera", "costo_rt", "usd_vol_medio_63d_mm"):
             row[k] = m.get(k)
+        for k in ("filtro_hoy", "suby", "suby_vol_60d", "suby_ret_12m", "drag_teorico_anual"):
+            row[k] = m.get(k)
         for n in ("Diamante", "Platino", "Oro"):
             for k in (f"{n}_own_p_obj", f"{n}_grp_p_obj", f"{n}_hon_p_obj", f"{n}_hon_fuente", f"{n}_hon_ev_neto",
                       f"{n}_fin_own_p", f"{n}_fin_grp_p", f"{n}_own_p_stop", f"{n}_grp_p_stop", f"{n}_ref_spym_ev_bruto",
@@ -322,12 +408,12 @@ def main():
         w.writeheader()
         w.writerows(out)
     print(f"CSV: {a.salida} ({len(out)} filas)")
+    if a.tablas:
+        Path(a.tablas).write_text(tablas(out), encoding="utf-8")
     niveles = {}
     for r in out:
         niveles[r["nivel"]] = niveles.get(r["nivel"], 0) + 1
     print("Niveles:", niveles)
-    for r in out[:40]:
-        print(r["ticker"], r["total"], r["nivel"], r["puertas_falladas"], "edge x", r["edge_mult"], "obj7", r["obj_7m_consenso"])
 
 
 if __name__ == "__main__":
