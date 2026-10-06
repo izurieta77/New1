@@ -266,3 +266,5 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** subir de prioridad el capítulo 29 (CFF y defensa fiscal, en preparación hoy) y preparar un **árbol de plazos** con los artículos leídos en el texto oficial. No se asume nada del caso: sin el documento, no se calcula ningún plazo. Al dueño se le pidió el documento (texto o foto), la autoridad que lo emite, el monto, la fecha de notificación y si ya interpuso algún medio de defensa.
 - **Por qué es conservador:** es un trámite real del dueño; el sistema investiga y dictamina con la ley en la mano, y la presentación ante el SAT o el TFJA la hace el dueño con su contador o abogado.
 - **Estado:** Abierto → dueño (necesita el documento).
+
+- 2026-10-06 · Multa SAT SGM: documentos recibidos y analizados (`datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`). Plazos: ~21-oct reingreso SAC; 28-oct decidir; 29-oct pago con 20%/recurso/juicio; 31-oct (sáb) límite estímulo. Pendiente del dueño: elegibilidad y firma con contador/abogado.
