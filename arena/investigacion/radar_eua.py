@@ -237,6 +237,8 @@ def main(argv=None):
              "fecha": s[-1][0].isoformat(), "precio_usd": round(raw[-1], 2)}
         if f["fecha"] != corte.isoformat():
             f["nota_fecha"] = "ultimo dato " + f["fecha"]
+        d24 = dict(s).get(date(2026, 9, 24))
+        f["precio_24sep"] = round(d24[1], 2) if d24 else None   # cierre de referencia de los P/U de las fichas
         f["precio_mxn_titulo"] = round(raw[-1] * usdmxn, 0)
         f["cabe_real"] = f["precio_mxn_titulo"] <= (CAP_APALANCADO_REAL if t in SUBY else CAP_ACCION_REAL)
         f["cabe_papel"] = f["precio_mxn_titulo"] <= (0.5 * 20486.35 if t in SUBY else CAP_ACCION_PAPEL)

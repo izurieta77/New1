@@ -122,9 +122,9 @@ DESC = {
     "UBER": "Sin ficha: fundamentales no verificados",
 }
 REF_ETF = {
-    "SPYM": "Cierre del S&P 500 bajo su SMA200 (7,442.59 hoy) o VIX >= 25",
+    "SPYM": "Cierre del S&P 500 bajo su SMA200 (7,230.7 al 5-oct) o VIX >= 25",
     "QQQM": "Cierre de Nasdaq-100 bajo su SMA200 o VIX >= 25",
-    "UPRO": "Filtro del comite: ^GSPC < SMA200 x 0.97 (7,009) o VIX >= 25, o stop de 134-136 USD",
+    "UPRO": "Filtro del comite: ^GSPC < SMA200 x 0.97 (7,013.8 al 5-oct; 7,009 el 2-oct) o VIX >= 25, o stop de 134-136 USD",
     "SPXL": "Igual que UPRO; 1 titulo (5,326 MXN) rebasa 50% de la cuenta real",
     "TQQQ": "Nasdaq-100 < SMA200 x 0.97 o VIX >= 25; decision del comite: nunca TQQQ",
     "TECL": "XLK < SMA200 x 0.97 o VIX >= 25",
@@ -262,13 +262,13 @@ def tablas(out):
     pres = [r for r in out if r["P5"] in (True, "True")]
     L = []
     L.append("### T1. Resumen ordenado (puntaje con tasa base honesta)\n")
-    L.append("| # | Ticker | Tipo | Nivel | Puntaje | Pts si tasa propia | Puertas falladas (cuenta real) | Falla en papel |")
+    L.append("| # | Ticker | Tipo | Nivel | Puntaje | Pts si tasa propia | P4 por plantilla (Oro/Diam./Plat.) | Puertas falladas (cuenta real) |")
     L.append("|---|---|---|---|---|---|---|---|")
     for i, r in enumerate(pres, 1):
         fall_p = [n for n, ok in zip(["P1", "P3", "P4"], [r["P1"] in (True, "True"), r["P3_papel"] in (True, "True"), r["P4"] in (True, "True")]) if not ok]
         if r["objetivo_sustentado"] in (False, "False"):
             fall_p.append("objetivo")
-        L.append(f"| {i} | {r['ticker']} | {r['tipo'].replace('accion_universo','acción').replace('accion_fuera','acción fuera').replace('etf','ETF')} | {r['nivel']} | {r['total']} | {r['total_si_tasa_propia']} | {r['puertas_falladas']} | {' '.join(fall_p)} |")
+        L.append(f"| {i} | {r['ticker']} | {r['tipo'].replace('accion_universo','acción').replace('accion_fuera','acción fuera').replace('etf','ETF')} | {r['nivel']} | {r['total']} | {r['total_si_tasa_propia']} | {r['P4_Oro_Diamante_Platino']} | {r['puertas_falladas']} |")
     L.append("\n### T2. Objetivo Oro (+25% en 7 meses, stop −12.5%, 2:1): tasa base, stop y valor esperado\n")
     L.append("| Ticker | Precio USD | Objetivo por consenso a 7m (múltiplo constante) | Ventanas ≥+20% a 7m: propio / grupo | P(objetivo) honesta (fuente) | P(stop) | Stop USD | EV bruto honesto | EV neto de costos | Alfa vs SPYM (× costo) |")
     L.append("|---|---|---|---|---|---|---|---|---|---|")
@@ -310,10 +310,15 @@ def tablas(out):
         sal = f"{px*0.875:,.2f} · {s200:,.2f}" if f(r["dist_sma200"], 0) >= 0 else f"{px*0.875:,.2f} · (ya está bajo la SMA200 de {s200:,.2f})"
         L.append(f"| {r['ticker']} | {ent} | {sal} | {r['fecha_reporte'] or 'sin fecha del activo'} ({r['estado_fecha'] or CAT_INDICE}) | {r['hecho_que_refuta']} |")
     L.append("\n### T7. Contraparte (P1) y qué descuenta el precio\n")
-    L.append("| Ticker | P1 | Contraparte y condición | Qué descuenta el precio |")
-    L.append("|---|---|---|---|")
+    L.append("| Ticker | P1 | Contraparte y condición | P/U adelantado: ficha 24-sep → hoy (EPS de la ficha) | Qué descuenta el precio |")
+    L.append("|---|---|---|---|---|")
     for r in pres:
-        L.append(f"| {r['ticker']} | {'cumple' if r['P1'] in (True,'True') else 'falla'} | {r['contraparte_P1']} | {r['que_descuenta'] or 'ETF: ver §Lectura'} |")
+        pu = "n/d"
+        if r.get("pu1_hoy"):
+            pu = f"{r['pu1_ficha_24sep']}x → {r['pu1_hoy']}x"
+            if r.get("pu2_hoy"):
+                pu += f" / {r['pu2_ficha_24sep']}x → {r['pu2_hoy']}x"
+        L.append(f"| {r['ticker']} | {'cumple' if r['P1'] in (True,'True') else 'falla'} | {r['contraparte_P1']} | {pu} | {r['que_descuenta'] or 'ETF: ver §Lectura'} |")
     L.append("\n### T8. Apalancados: filtro (subyacente > SMA200×1.03 y VIX < 25) y costo por volatilidad\n")
     L.append("| ETF | Filtro hoy | Subyacente: vol 60d · ret 12m | ETF ret 12m vs 3× subyacente | Arrastre teórico anual (L²−L)/2·σ² | Diamante con filtro: P(obj) · P(stop) · EV bruto | Platino con filtro | Oro con filtro |")
     L.append("|---|---|---|---|---|---|---|---|")
@@ -360,7 +365,10 @@ def main():
         p3_real = cabe_real and sesmx is not None and sesmx >= 10
         p3_papel = cabe_papel and sesmx is not None and sesmx >= 10
         p4 = pt["edge_mult"] is not None and pt["edge_mult"] >= 2
-        p5 = t in REF or t in REF_ETF  # stop, plazo y hecho que refuta escritos solo para los presentados
+        p4d = (pt["edge_mult_Diamante"] or 0) >= 2
+        p4p = (pt["edge_mult_Platino"] or 0) >= 2
+        p4_txt = "/".join("sí" if x else "no" for x in (p4, p4d, p4p))
+        p5 = bool((REF.get(t) not in (None, 'n/d')) or t in REF_ETF)  # stop, plazo y hecho que refuta escritos solo para los presentados
         p6 = True
         sust = pt["objetivo_sustentado"]
         gates_real = [p1ok, p2, p3_real, p4, p5, p6]
@@ -373,12 +381,12 @@ def main():
             nivel = "Oro (solo papel)"
         else:
             nivel = "Sin nivel"
-        fallan = [n for n, ok in zip(["P1", "P2", "P3", "P4", "P5", "P6"], gates_real) if not ok]
+        fallan = [n for n, ok in zip(["P1", "P2", "P3", "P4", "P5", "P6"], gates_real) if not ok and not (n == "P4" and not sust)]
         if not sust:
             fallan.append("objetivo")
         row = dict(ticker=t, tipo=m["tipo"], precio_usd=m["precio_usd"], precio_mxn_titulo=m["precio_mxn_titulo"],
                    cabe_real=cabe_real, cabe_papel=cabe_papel, sic=sic, P1=p1ok, P2=p2, P3_real=p3_real,
-                   P3_papel=p3_papel, P4=p4, P5=p5, P6=p6, nivel=nivel, nivel_potencial=pot, puertas_falladas=" ".join(fallan))
+                   P3_papel=p3_papel, P4=p4, P4_Oro_Diamante_Platino=p4_txt, P5=p5, P6=p6, nivel=nivel, nivel_potencial=pot, puertas_falladas=" ".join(fallan))
         row.update({k: (round(v, 4) if isinstance(v, float) else v) for k, v in pt.items()})
         for k in ("ret_1m", "ret_3m", "ret_6m", "ret_12m", "vol_60d", "dist_sma200", "dist_max_52s", "sma50", "sma200",
                   "max_52s", "corr60_mxn_cartera", "costo_rt", "usd_vol_medio_63d_mm"):
@@ -391,6 +399,12 @@ def main():
                       f"{n}_filtro_p_obj", f"{n}_filtro_p_stop", f"{n}_filtro_ev_bruto", f"{n}_own_n", f"{n}_grp_n"):
                 row[k] = m.get(k)
         rep = FICHA.get(t)
+        p24 = f(m.get("precio_24sep"))
+        if rep and p24 and rep[2]:
+            row["pu1_ficha_24sep"], row["pu1_hoy"] = rep[2], round(rep[2] * f(m["precio_usd"]) / p24, 1)
+        if rep and p24 and rep[3]:
+            row["pu2_ficha_24sep"], row["pu2_hoy"] = rep[3], round(rep[3] * f(m["precio_usd"]) / p24, 1)
+        row["precio_24sep"] = m.get("precio_24sep")
         row["fecha_reporte"] = rep[0] if rep else ""
         row["estado_fecha"] = rep[1] if rep else ""
         row["contraparte_P1"] = p1txt
