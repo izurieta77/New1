@@ -9,7 +9,7 @@
 | Artículo de extensión (fuera de muestra de L&S) | McConnell, J. J. y Xu, W. (2008). "Equity Returns at the Turn of the Month". *Financial Analysts Journal* 64(2): 49-64, marzo/abril de 2008. doi:10.2469/faj.v64.n2.11. Cita verificada con Crossref, CFA Institute e IDEAS. **Versión leída:** Xu y McConnell, "Equity Returns at the Turn of the Month", versión de trabajo del 14-jul-2006 (primer borrador de noviembre de 2004; SSRN 917884), 50 páginas, leída completa con `pypdf` desde https://www.chesler.us/resources/academia/turn_of_the_month_stock_returns.pdf. **La versión publicada en el FAJ no se leyó** (tandfonline y SSRN responden 403; el PDF de Purdue redirige). El resumen publicado sí se leyó (CFA Institute) |
 | Fecha de publicación | L&S: octubre de 1988. McConnell-Xu: versión de trabajo en SSRN desde 2006; revista el 1-mar-2008 |
 | Pre-registro escrito el | 2026-09-25, antes de cualquier corrida con rendimientos |
-| Responsable | Claude (laboratorio del sistema). Revisión independiente pendiente (`auditor-de-replicas`) |
+| Responsable | Claude (laboratorio del sistema). Revisión independiente hecha el 2026-10-06 (AC-13, al final de esta ficha): concordante |
 | Estado | **Replicado** según la regla pre-registrada (sección 16): casi exacto en 1926-2005. Fuera de muestra (2008-03 al final), mismo signo, **no significativo y ≈11% de la magnitud** de dentro de muestra. Como estrategia con costos GBM no sobrevive en ningún tramo. No es candidata para dinero (sección 17) |
 
 **Conocimiento previo declarado.** Este pre-registro no es ciego. Antes de escribirlo ya conocía:
@@ -794,3 +794,27 @@ Traducción a una cuenta de 20,000 MXN (salida textual; es una simulación, no u
    - Si ya se va a comprar, no hay que esperar al cambio de mes ni retrasar la entrada: después de 2008 el premio estuvo en todo el mes.
    - Operar el TOM costaría 24 lados al año, ≈1,632 MXN (8.2% de la cuenta).
    - Es consistente con R04: "no arrancar en efectivo" se sostiene con la prima de mercado, no con el calendario.
+
+---
+
+## Doble ejecución independiente (2026-10-06)
+
+Auditoría AC-13: `laboratorio/auditorias/AC-13-R09/` (`AC13.py`, `salida.txt`, `resultados.json`, `README.md`). Código nuevo en Python estándar, sin `herramientas/` ni `R09.py`; datos descargados de nuevo (French 202608; Yahoo `^GSPC`, `^SP500TR`, SPY; FRED SP500 y DJIA). No fue ciega en las cifras: leí partes de `R09-salida.txt` antes de escribir el código.
+
+| Cifra | R09 (original) | AC-13 (independiente) | Dif. |
+|---|---|---|---|
+| δ_MX 1926-2005 (French), t MCO | 0.1487, 8.03 | 0.1487, 8.03 | 0 |
+| δ_MX 1926-2005 (`^GSPC`), t MCO | 0.1517, 7.01 | 0.1517, 7.01 | 0 |
+| δ dentro de muestra, t NW10 | 0.1405, 7.75 | 0.1405, 7.75 | 0 |
+| δ fuera de muestra (French), t NW10 | 0.0150, 0.35 | 0.0150, 0.35 | 0 |
+| δ fuera (`^GSPC`), t NW10 | 0.0198, 0.47 | 0.0198, 0.47 | 0 |
+| E fuera (%, t) | 0.2307, 1.58 | 0.2306, 1.58 | 0.0001 (vintage 202608; con 202607 es igual) |
+| IC95 de D_m fuera | [−0.0623, 0.0920] | [−0.0622, 0.0906] | RNG del bootstrap |
+| `US_tom_m1_p3` neta fuera: CAGR, Sharpe, MDD | −4.18%, −0.616, −59.3% | −4.18%, −0.616, −59.3% | 0 |
+| Comprar y mantener fuera: CAGR, Sharpe | 12.04%, 0.598 | 12.05%, 0.598 | ≤ 0.01 pp |
+| Exceso bruto anual dentro de muestra | 6.78% | 6.45% | Convención de anualización (265 contra 252 datos por año, por los sábados de French hasta 1952); en fuera de muestra son iguales |
+
+- **Segunda fuente fuera de muestra:** Yahoo `^SP500TR`, SPY, FRED SP500 y FRED DJIA dan δ de 0.0130 a 0.0214 pp/día con t NW10 de 0.24 a 0.47. La regla del artículo, neta de costos GBM, pierde de 4.0% a 4.5% anual con `^SP500TR`, SPY, `^GSPC` y French.
+- **Límite:** para 1926-2005 no hay tercer proveedor diario además de French y `^GSPC` (Stooq no responde desde el proxy). Las fuentes nuevas solo cubren 1988+, 1993+ o 2016+.
+- **Error de B (no de A):** una primera versión mía del "resto del mes" de L&S incluía los días +1..+3; corregido antes de fijar la salida.
+- **Estado:** se confirma **Replicado** (condiciones (i)-(iv) cumplidas por B). La debilidad señalada en las "Desviaciones" (las condiciones (iii) y (iv) solo piden signo) sigue en pie. Etiqueta sin cambio: descartada.
