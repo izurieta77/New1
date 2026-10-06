@@ -132,6 +132,14 @@
 - **E6, E10:** sin novedad; sin pausas de retiro ni incidentes nuevos en Binance en las búsquedas de hoy.
 - **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio desde el 25-sep. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
 
+**Seguimiento del 6-oct-2026** [I] — revisión semanal de contraparte de la corrida de las 08:17, con el estudio profundo de hoy centrado en Ethereum/Glamsterdam (sin tocar riesgo de exchange):
+
+- **E3 (PoR mensual):** búsqueda dirigida hoy ("Binance proof of reserves 47th report October 2026") no encuentra el 47.º reporte; los resultados son del 45.º reporte (ago-2026) y coberturas antiguas. Sigue vigente el 46.º reporte (snapshot 1-sep-2026, ~682,000 BTC, ratio "al menos 1:1"), sin cambio en la fila de este cuadro. Consistente con la ventana proyectada desde el 3-oct (~15-21-oct-2026). **Limpio.**
+- **E5:** búsqueda dirigida hoy ("Binance DOJ investigation charges October 2026") solo devolvió cobertura reciclada de 2023 (la ronda de US$4.3 mil millones, ya resuelta y registrada en A8) y nada con fecha verificable de 2026 más allá de lo ya conocido (investigación por sanciones a Irán, reportada por Bloomberg el 21/22-sep, sin cargos nuevos contra la entidad). **ÁMBAR sin cambio desde el 25-sep.**
+- **E1/E2 (indicio, no la metodología exacta):** TVL total de DefiLlama (`api.llama.fi/protocol/binance-cex`, verificado en vivo hoy, último dato 14:16 UTC) = **US$178.87 mil millones**, dentro del rango estable de la semana (US$177.5-181.0 mil millones del 25-sep al 6-oct), sin caída abrupta. Sigue pendiente repetir con la metodología exacta ex-BNB de la sección F cuando el script esté disponible.
+- **E6, E10:** sin novedad; sin pausas de retiro ni incidentes nuevos en Binance en las búsquedas de hoy.
+- **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio desde el 25-sep. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)

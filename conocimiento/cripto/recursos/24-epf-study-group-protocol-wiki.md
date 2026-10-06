@@ -138,3 +138,12 @@
 - La mecánica que describe coincide con las especificaciones y la escriben o revisan personas del núcleo: grado B.
 - El estado del protocolo (qué ya está en mainnet, parámetros, fechas) está desfasado en varias páginas: grado C, verifíquese siempre contra la configuración del nodo o el blog de la EF.
 - No sirve como evidencia sobre precio ni valuación.
+
+## Adenda 6-oct-2026 — Sepolia activó Glamsterdam; el `GLOAS_FORK_EPOCH` de Sepolia ya no es FAR_FUTURE
+
+El punto 11 de la §3 y la fila de "catalizadores" de la §4 anotaban, el 25-sep-2026, que `GLOAS_FORK_EPOCH` = FAR_FUTURE en dos nodos de Sepolia (el fork todavía no tenía época fija a esa fecha para esa red; el calendario público ya apuntaba al 6-oct). Hoy se repitió la consulta directamente contra la red, no contra la configuración estática del cliente:
+
+- **Verificado con la API estándar de beacon (`eth/v1/beacon/states/head/finality_checkpoints`) de dos nodos independientes** (ethPandaOps y PublicNode, ambos con la misma raíz de bloque): Sepolia **finalizó la época 353,026**, dos épocas después de la época de activación anunciada (353,024, 13:53:36 UTC de hoy). La red sigue viva y finalizando con normalidad tras el fork.
+- El endpoint `eth/v1/config/spec` del nodo de checkpoint-sync consultado hoy **no devuelve el campo `GLOAS_FORK_EPOCH`** (solo expone 24 campos básicos, es un servidor ligero de checkpoint-sync, no un nodo de beacon completo) — no se pudo repetir exactamente la misma consulta que el 25-sep. La evidencia de hoy es indirecta pero más fuerte: la finalidad observada en vivo, no un campo de configuración.
+- **Nuevo, no estaba en la ficha original:** el meta-EIP de Glamsterdam (`eips.ethereum.org/EIPS/eip-7773`) lista los 18 EIPs programados para inclusión; de ellos, solo **EIP-8246** ("Remove SELFDESTRUCT Burn") toca la quema de ETH, con un efecto cuantificado hoy como marginal (≤0.09% de la emisión anual; ver `fichas/2026-10-06-glamsterdam-sepolia-emision-quema.md`). El punto 9 de la §3 de esta ficha ("la base fee se quema... la comisión de blobs se quema") sigue vigente sin cambios: Glamsterdam no toca esos dos mecanismos.
+- **No cambia la decisión.** ETH sigue fuera de la cuenta cripto (capítulo 02, §8); esto solo avanza, parcialmente, la condición B (ejecución del protocolo).
