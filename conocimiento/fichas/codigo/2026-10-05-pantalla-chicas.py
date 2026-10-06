@@ -554,7 +554,7 @@ def bt_prefiltro(f) -> bool:
     fcf = f["ocf"] - abs(f["capex"] or 0)
     if fcf <= 0 or fcf / ni[2] < P["fcf_ni_min"]:
         return False
-    return f["sh0"] / f["sh2"] <= P["dilucion_max"]
+    return f["sh2"] > 0 and f["sh0"] / f["sh2"] <= P["dilucion_max"]
 
 
 def hist(sym):

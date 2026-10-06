@@ -1,7 +1,7 @@
 """Radar EUA 2026-10-05: metricas verificables + tasas base de las plantillas de nivel (solo biblioteca estandar).
 
 Uso:
-    python3 arena/investigacion/radar_eua.py --salida arena/investigacion/radar-eua-2026-10-05.csv [--corte 2026-10-05]
+    python3 arena/investigacion/radar_eua.py --salida arena/investigacion/radar-eua-2026-10-05-metricas.csv [--corte 2026-10-05]
 
 Que calcula (todo con Yahoo chart v8 via herramientas/datos.py; nada posterior al corte):
   * precio, retornos 1/3/6m, vol 60d, distancia a SMA200, drawdown 1a, distancia al maximo 52s;
@@ -65,7 +65,9 @@ GRUPOS = {
     "industrial_defensa": ["CAT", "GE", "GEV", "RTX", "SPCX", "XLI"],
     "consumo": ["WMT", "COST", "KO", "PG", "PM", "HD", "XLP"],
     "indices": ["SPYM", "QQQM", "SPY", "QQQ"],
-    "apalancados": ["UPRO", "SPXL", "TQQQ", "TECL", "SOXL"],
+    "apalancado_sp500": ["UPRO", "SPXL"],
+    "apalancado_nasdaq_tec": ["TQQQ", "TECL"],
+    "apalancado_semis": ["SOXL"],
     "oro": ["GLD", "IAU"],
     "mineras": ["GDX", "COPX"],
     "bonos": ["TLT", "IEF", "HYG"],
@@ -131,6 +133,15 @@ def ventanas(cierres: list[float], T: float, S: float, H: int, mask=None):
             res = ("plazo", cierres[i + H] / p0 - 1)
         out.append(res)
     return out
+
+
+def frac_final(cierres, T, H):
+    """Fraccion de ventanas moviles (todas las fechas de inicio) cuyo retorno al plazo H es >= T."""
+    n = len(cierres) - H
+    if n <= 0:
+        return 0, None
+    k = sum(1 for i in range(n) if cierres[i + H] / cierres[i] - 1 >= T)
+    return n, k / n
 
 
 def resumen(v):
@@ -201,6 +212,8 @@ def main(argv=None):
         for m in ms:
             grupo_de.setdefault(m, []).append(g)
 
+    ref = {nombre: resumen(plant_res[("SPYM", nombre)])["ev"] for nombre in PLANTILLAS}
+    FINAL = {"Diamante": (0.40, 63), "Platino": (0.50, 105), "Oro": (0.20, 147)}
     filas = []
     for t in UNIVERSO_US + FUERA + ETFS:
         if t not in datos:
@@ -267,6 +280,22 @@ def main(argv=None):
                 f[f"{nombre}_hon_p_obj"] = round(h["p_obj"], 4)
                 f[f"{nombre}_hon_ev_neto"] = round(h["ev"] - f["costo_rt"], 4)
                 f[f"{nombre}_hon_ev_mult"] = round(h["ev"] / f["costo_rt"], 2)
+        for nombre, (Tf, Hf) in FINAL.items():
+            n1, p1 = frac_final(px, Tf, Hf)
+            f[f"{nombre}_fin_own_p"] = round(p1, 4) if p1 is not None else None
+            acum_n = acum_k = 0
+            for g in gr:
+                for m in GRUPOS[g]:
+                    if m in cier:
+                        nn, pp = frac_final(cier[m], Tf, Hf)
+                        if pp is not None:
+                            acum_n += nn
+                            acum_k += pp * nn
+            f[f"{nombre}_fin_grp_p"] = round(acum_k / acum_n, 4) if acum_n else None
+            f[f"{nombre}_ref_spym_ev_bruto"] = round(ref[nombre], 4)
+        f["sma50"] = round(statistics.mean(raw[-50:]), 2) if len(raw) >= 50 else None
+        f["sma200"] = round(statistics.mean(raw[-200:]), 2) if len(raw) >= 200 else None
+        f["max_52s"] = round(max(raw[-252:]), 2)
         # apalancados con filtro
         if t in SUBY and SUBY[t] in cier and "^VIX" in cier:
             u = dict(datos[SUBY[t]])

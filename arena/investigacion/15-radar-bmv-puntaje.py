@@ -149,13 +149,13 @@ def main():
         pos_val = min(TOPE_POS * CAP, RIESGO * CAP / S)
         tit = int(pos_val // precio)
         p3 = precio <= TOPE_POS * CAP
-        p4 = ev_net is not None and ev_net >= 2 * costo and ev_net > 0
+        p4 = T is not None and ev_net is not None and ev_net >= 2 * costo and ev_net > 0
         p1 = s["p1"] == "S"
         # puntaje
         edge_pts = min(10, pts_ratio(ratio)) if p4 else 0  # tope: edge no validado fuera de muestra
         ev_pts = 5
         cat_pts = 10 if s["reporte_conf"] == "S" else 2
-        asim_pts = pts_asim(asim)
+        asim_pts = pts_asim(asim) if T else 0
         liq_pts = 3 if liq >= 20 else 0
         cos_pts = 5 if costo <= 0.007 else 3 if costo <= 0.012 else 0
         rho = max(float(d["rho60_spy_mxn"] or 0), float(d["rho120_5d_spy_mxn"] or 0), 0)
@@ -167,10 +167,10 @@ def main():
         if float(d["dist_sma200"]) > 0.15 or float(d["ret_12m"] or 0) > 0.40:
             crowd = -8
         if t in ("GMEXICOB.MX", "GFNORTEO.MX", "AMXB.MX", "FEMSAUBD.MX", "WALMEX.MX"):
-            crowd = min(0, crowd - 3)
+            crowd = max(-10, min(0, crowd - 3))
         total = edge_pts + ev_pts + cat_pts + asim_pts + liq_pts + cos_pts + cor_pts + geo_pts + own_pts + crowd
         puertas = p1 and p3 and p4 and (T is not None)
-        if puertas and T >= 0.20 and asim >= 2 and total >= 55:
+        if puertas and T >= 0.20 and asim >= 2 and total >= 55:  # Oro: ver adenda del pre-registro
             nivel = "Oro"
         else:
             nivel = "Sin nivel"
@@ -185,14 +185,14 @@ def main():
             falla.append("objetivo<20%")
         elif T < 0.20:
             falla.append("objetivo<20%")
-        if asim < 2:
+        if T and asim < 2:
             falla.append("asimetria<2:1")
         fila = {
             "ticker": t, "clase": s["clase"], "fecha": d["fecha"], "precio": precio, "dist_sma200": d["dist_sma200"],
             "sma200": d["sma200"], "ret_3m": d["ret_3m"], "ret_12m": d["ret_12m"], "vol60": vol, "liq30_mxn_mm": liq,
             "spread_cs_pct": d["spread_cs_pct"], "spread_supuesto_pct": round(100 * spread, 2),
             "costo_ida_vuelta_pct": round(100 * costo, 2), "objetivo_pct": None if T is None else round(100 * T, 1),
-            "plazo_meses": 7, "stop_pct": round(100 * S, 1), "asimetria": round(asim, 2),
+            "plazo_meses": 7, "stop_pct": round(100 * S, 1), "asimetria": round(asim, 2) if T else None,
             "p20_7m": None if r20 is None else round(r20, 3), "p30_7m": None if r30 is None else round(r30, 3),
             "p40_3m": None if r40 is None else round(r40, 3), "p50_5m": None if r50 is None else round(r50, 3),
             "n_ventanas": n20,
