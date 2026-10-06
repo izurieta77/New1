@@ -103,7 +103,7 @@ Capital (deuda, flujo propio, capital de socios) → capex y arrendamientos de c
 | **LBNL (diciembre de 2024), vía comunicado del DOE** [10] | Centros de datos: 58 TWh (2014) → **176 TWh (2023) = 4.4%** de la electricidad de EUA → **325-580 TWh en 2028 = 6.7-12%** | Proyección de EUA; rango 1.8x. El PDF de LBNL devolvió 403; cifras tomadas del comunicado oficial del DOE | B |
 | **EIA STEO (9-sep-2026)** [1] | Ventas de electricidad **4,135 BkWh (2026) y 4,211 (2027)**; sector comercial +3.3% y +2.7%, **63% y 56%** del crecimiento; crecimiento total ≈ +2%/año | No aísla centros de datos; "impulsado por desarrollo de centros de datos y manufactura" | A (dato), C (atribución) |
 | **EIA, Sur Central Oeste** [1] | Ventas 761 (2026) y **790 BkWh (2027) contra 829 previstas** (−4.7%) por la **pausa de Texas** | Recorte explícito al pronóstico por frenar conexiones | A |
-| **NERC LTRA 2025 (enero de 2026)** [11] | Pico de verano a 10 años: **+224 GW (69% más que los +132 GW del año previo)**; pico de invierno **+245 GW**; "13 de 23 áreas" con problemas de suficiencia; PJM: **45 GW de cargas grandes a 2030 (23 GW centros de datos)**; MISO: 18 GW de centros de datos | Con datos de mediados de 2025. NERC avisa que ERCOT y PJM ya revisaron a la baja proyectos que "se retrasaron o no se materializaron" en el corto plazo, aunque suben las solicitudes para años posteriores | A (cita), C (proyección) |
+| **NERC LTRA 2025 (enero de 2026)** [11] | Pico de verano a 10 años: **+224 GW (69% más que los +132 GW del año previo)**; pico de invierno **+245 GW**; "13 de 23 áreas" con problemas de suficiencia; **ERCOT** (no PJM): **45 GW de cargas grandes a 2030 (23 GW centros de datos)**; PJM: pico de verano **+56 GW hasta 210 GW en 2035** (invierno +62 GW), sin cifra de cargas grandes en GW en lo que revisé; MISO: 18 GW de centros de datos a 2035 [corregido por verificador 2026-10-05: el borrador atribuía a PJM los 45 GW/23 GW, que el PDF del LTRA asigna a ERCOT (sección ERCOT: "large loads totaling 45 GW by 2030, of which 23 GW are data centers"); PJM +56 GW/210 GW del mismo PDF] | Con datos de mediados de 2025. NERC avisa que ERCOT y PJM ya revisaron a la baja proyectos que "se retrasaron o no se materializaron" en el corto plazo, aunque suben las solicitudes para años posteriores | A (cita), C (proyección) |
 | **ERCOT (cola de cargas grandes)** [13] | **474 GW (junio) → 498 GW en 688 solicitudes (29-jul)**, ~90% centros de datos, más de 5x el pico récord de la red | [solo secundaria] (despachos legales y prensa); casi toda la cola es especulativa | D |
 | **IEA, *Energy and AI* (abr-2025)** [14] | Centros de datos del mundo **415 TWh en 2024 (1.5%)** → **945 TWh en 2030**; EUA = 45% del consumo de 2024 | [solo secundaria]: iea.org devolvió 403 | C |
 
@@ -183,7 +183,7 @@ Columna "Universo" = presencia exacta del ticker en `empresas/universo.csv` (rev
 | Alphabet | 46.5 | **98.2** | **+51.7** | 2026: **US$20.0 mil M** en dólares (cupón 4.80%, 15 años) y **US$31.8 mil M** en divisas (£, CHF, €, C$, ¥) |
 | Amazon | 65.6 | **128.9** | **+63.3** | US$67.0 mil M de ingresos por deuda en 1S26; **+US$25.0 mil M tras el 30-jun** (cupones 4.60-6.25%, vencen 2029-2066) |
 | Meta | 58.7 | **83.7** | **+25.0** | **US$25.0 mil M** en mayo 2026 (seis series) |
-| **Suma cuatro** | **206.2** | **341.9** | **+135.7 (+66%)** | |
+| **Suma cuatro** | **206.4** | **341.8** | **+135.4 (+66%)** | [corregido por verificador 2026-10-05: antes 206.2 / 341.9 / +135.7, sumados con cifras ya redondeadas; XBRL exacto: 206.364 y 341.790] |
 | Oracle (31-ago-26) | 129.5 (may-26) | **125.3** (7.6 corriente + 117.7) | −4.2 | **US$43.0 mil M** de notas en el FY26; **US$19.9 mil M** de capital vía programa ATM en el 1T FY27 |
 | Nvidia (26-jul-26) | 8.5 (ene-26) | **33.4** (32.4 + 1.0) | **+24.9** | Primera emisión grande; también **US$39.0 mil M** de recompras en 1S FY27 |
 
@@ -265,7 +265,7 @@ SpaceX salió a bolsa en junio de 2026 (424B4 del 12-jun) y ya presenta 10-Q. **
 | Nocional neto de CDS de tecnología | US$12.5 mil M (+500% desde 2T25); Oracle 6.5 | [24] [solo secundaria] | D |
 | Notas de Oracle: valor razonable / principal | **US$105.7 mil M / US$125.0 mil M = 84.6%** (31-ago) | Mayo: 114.4 / 128.1 = 89.3% | Cotizan bajo la par; con el 10 años en 5.28% parte del descuento es **tasa**, no solo crédito (B) |
 | Emisión de grado de inversión de tecnología en 2026 | "récord de US$182 mil M" | prensa [24] | D |
-| FCF contra capex | **Cuatro: capex = 91% del flujo operativo**; Amazon 138%; Oracle FCF **−US$5.4 mil M** en un trimestre (**−US$17.2 mil M** sin los prepagos de clientes por 11.4: cálculo propio); Amazon FCF de ene-jun **−US$27.0 mil M** (caja operativa − capex de caja) | 10-Q [17][19] | Estrés de flujo (A) |
+| FCF contra capex | **Cuatro: capex = 91% del flujo operativo**; Amazon 138%; Oracle FCF **−US$5.4 mil M** en un trimestre (**−US$16.8 mil M** sin los prepagos de clientes por 11.4 [11,363 M en el flujo operativo]: cálculo propio) [corregido por verificador 2026-10-05: antes −17.2; −5,396 − 11,363 = −16,759]; Amazon FCF de ene-jun **−US$27.0 mil M** (caja operativa − capex de caja) | 10-Q [17][19] | Estrés de flujo (A) |
 
 **Lectura global (inferencia B):** el **crédito público no muestra estrés sistémico** (spreads en el rango de 12 meses), pero hay **estrés idiosincrático** en el eslabón más apalancado y concentrado (Oracle: capex 123% del flujo operativo, 87% del backlog a más de 12 meses, financiamiento con deuda y capital propio a la vez, **−54%** de su máximo). Los hiperescaladores con flujo grande (Microsoft, Alphabet, Meta) se financian con deuda "sin estrés"; Amazon y Oracle ya tienen FCF negativo. **Sin CDS en vivo no se puede decir si el mercado de crédito ya está cambiando.**
 
@@ -346,7 +346,7 @@ Este apartado **no duplica** los caps. 16 (peso), 23 (probabilidades de Eurasia/
 2. ¿Cuál es la guía correcta de capex de Microsoft (FY27): ~US$175 mil M, US$255-260 mil M o un rango con la reclasificación de arrendamientos? Falta la transcripción primaria.
 3. ¿A cuánto cotiza hoy el CDS de Oracle, Nvidia y los hiperescaladores? No hay fuente gratuita verificable; el dato disponible es del 28-jul.
 4. ¿Cuál fue el precio real de las notas de Oracle (rendimiento a vencimiento) en 2026? El 10-Q da solo el valor razonable agregado.
-5. ¿Qué parte de los 45 GW (NERC/PJM) y los 498 GW (ERCOT) es firme (con contrato de interconexión y garantía) y qué parte especulativa?
+5. ¿Qué parte de los 45 GW (NERC/ERCOT a 2030) y los 498 GW (cola de ERCOT) [corregido por verificador 2026-10-05: antes "NERC/PJM"] es firme (con contrato de interconexión y garantía) y qué parte especulativa?
 6. ¿La pausa de Texas y el "procuramiento de respaldo" de PJM llegan a retrasar el calendario del backlog? La EIA ya recortó la demanda de Sur Central Oeste 2027 un 4.7%.
 7. ¿Cuántas de las pérdidas de generadores (CEG −24%, NRG −39%) reflejan topes de precio, política o rotación? No hay prueba.
 8. ¿El ritmo de inyección de septiembre (+161 Bcf en tres semanas, tan bajo como en 2024) es un cambio de tendencia o clima? Falta el desglose de quema eléctrica semanal.
@@ -418,7 +418,7 @@ Cifras comprobadas **dos veces** (descarga de la fuente y recálculo o segunda r
 | Oracle: 664 RPO (13%), 288 arrendamientos, 28.5 capex, FCF −5.4, ATM 19.9 | 10-Q | Tabla de FCF del 10-Q |
 | Nvidia: 279, 99 + 25, 105 + 3.5, 16% | 10-Q | Tabla de compromisos y garantías |
 | SpaceX: 7.81, 12.51, 28.5, 93.5, 38.4, 47.5 | 10-Q | Notas de deuda y de ingresos |
-| NERC +224 GW / +245 GW; PJM 45 GW / 23 GW | PDF del LTRA | Resumen de NERC (búsqueda) |
+| NERC +224 GW / +245 GW; ERCOT 45 GW / 23 GW [corregido por verificador 2026-10-05: antes "PJM"] | PDF del LTRA | Releído íntegro por el verificador el 2026-10-05 (el "Resumen de NERC" no se usó) |
 | PJM US$325, 138,318 MW, −6,831 MW | Comunicado de PJM | Prensa (APPA, OPIS) |
 | Polymarket: 92.5% y 65.5% | API Gamma | Cap. 23 (92.5% / 62.5% el 25-sep) |
 
