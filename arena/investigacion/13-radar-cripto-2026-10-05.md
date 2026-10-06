@@ -188,3 +188,5 @@ Sin ROJA ni disparador de contingencia. Plan B Bitso: sin cambio (rutas y dispar
 - Tarifa real de la app, existencia de cada par en la app de México y ETF de ether en el SIC: [NV].
 - Correlaciones calculadas en USDT, no en MXN; la cartera completa incluye el libro GBM aún sin fondear.
 - Backtest dentro de muestra con sesgo de supervivencia; el recorte de 0.5 a las probabilidades es mío [I].
+
+> **Nota del 2026-10-06 (paquete diario del dueño):** el conflicto del flujo de ETF de BTC del 2-oct (+189.8 M de tftc contra +627 M de un resumen de búsqueda) queda resuelto: la tabla de Farside muestra **+189.9 M**; la cifra de +627 M se descarta. El 5-oct, Farside publicó FBTC −74.5 M y FETH −18.9 M (parcial).

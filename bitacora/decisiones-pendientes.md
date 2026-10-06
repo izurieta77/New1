@@ -252,3 +252,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** no cambiar la puerta ni bajar el listón. Dejé una lista de vigilancia con disparadores de entrada y de salida y un repunte cada viernes. Propuse al comité del 9-oct un segundo camino por catalizador con la contraparte definida como "analistas anclados" o "vendedor forzado", y con evidencia de grado B.
 - **Por qué es conservador:** abrir el camino sube el riesgo de falsos positivos y el sistema no tiene ventaja demostrada; el cambio de regla es del comité y del dueño.
 - **Estado:** Abierto → comité del 9-oct.
+
+## 2026-10-06 · primer paquete diario del dueño · tres puntos para el dueño y el comité
+- **Hecho:** el paquete del 5-oct (`datos/entrada-dueno/2026-10-05.md`) se guardó literal y se procesó. Dos hallazgos relevantes: (1) FRED DCOILBRENTEU (spot) estaba en 114-121 USD mientras el futuro de Brent estaba en ~100-102, así que mi pronóstico P0049 (≥ 100, p = 0.47) quedó mal calibrado (error propio registrado; P0069 ≥ 110, p = 0.78, abierto); (2) el paquete dice que Banxico decide el 8-oct, pero nuestra inteligencia dice que ya decidió el 24-sep y el 8-oct serían las minutas.
+- **Qué decidí:** no reescribir P0049 ni cambiar ninguna regla; marcar el posible error de Banxico y esperar el calendario oficial; no adoptar los niveles del "marco" del paquete (BTC entrada 83,000, objetivo 91,000, stop 79,000), que no son los del sistema.
+- **Propuesta para el dueño (sin cambio hasta que responda):** reemplazar en las 50 cuentas las corporativas @nvidia y @Vertiv por **@FarsideUK** (flujos diarios de ETF, que el paquete usó hoy) y **@JKempEnergy** (crudo físico, que el paquete usó hoy). Sus enlaces vienen en el paquete, pero no se pudieron abrir.
+- **Por qué es conservador:** los dos cambios de lista son del dueño; no cambia ninguna regla de riesgo.
+- **Estado:** Abierto → dueño.
