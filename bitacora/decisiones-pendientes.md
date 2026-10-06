@@ -268,3 +268,4 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Estado:** Abierto → dueño (necesita el documento).
 
 - 2026-10-06 · Multa SAT SGM: documentos recibidos y analizados (`datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`). Plazos: ~21-oct reingreso SAC; 28-oct decidir; 29-oct pago con 20%/recurso/juicio; 31-oct (sáb) límite estímulo. Pendiente del dueño: elegibilidad y firma con contador/abogado.
+- 2026-10-06 · Multa SGM: línea de captura se pide por ficha 47/CFF (Mi portal, "LÍNEA CAPTURA CRÉDITO FISCAL", Formato 47/CFF; resuelve en 6 días). Meta: solicitarla antes del 14-oct; verificar importe $31,488; pagar antes del 26-oct. Corrige la ruta SAC anterior.

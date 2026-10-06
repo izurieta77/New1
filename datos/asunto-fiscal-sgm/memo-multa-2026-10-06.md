@@ -32,3 +32,6 @@ Punto de equilibrio de P(aprobación) del estímulo frente a pagar con 20%: ≈2
 
 ## Pendientes del dueño
 Confirmar elegibilidad (punto 2), entregar a su contador/abogado, decidir ruta antes del 28-oct.
+
+## Actualización 6-oct (cap. 30 verificado): cómo se pide la línea de captura
+No hay ficha específica de "pago con reducción". Se solicita con la **ficha 47/CFF** (regla 2.1.47 RMF): Mi portal → trámite "LÍNEA CAPTURA CRÉDITO FISCAL", dirigido a la ADR, con el **Formato 47/CFF** (el Anexo 1 lo exige desde la modificación al Anexo 2 del 17-jul-2026). El SAT resuelve en **6 días**. Ninguna ficha dice si la línea sale ya con el 20%: comparar el importe con $31,488 antes de pagar. Plazos: pedirla a más tardar el 14-oct (margen), límite duro 21-oct; pago a más tardar 26-oct; vence 29-oct. Esto sustituye la ruta "caso SAC" del memo inicial.
