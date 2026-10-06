@@ -47,4 +47,6 @@ TICKERS O TEMAS (opcional):
 4. No hace falta que sea bonito: lo literal más el enlace es lo mejor.
 
 ## 7. Lo que NO necesitas pasarme (ya lo tengo solo)
+**Transcripciones que leo solo:** Odd Lots (feed RSS oficial con transcripción, verificado el 6-oct), Columbia Energy Exchange y Acquired. De esos programas **basta con avisarme el episodio**; no hace falta pegar la transcripción.
+
 Precios y tipos de cambio en vivo; FRED, Banxico y tasas; reportes y filings de EDGAR; flujos de ETFs de bitcoin; datos de Binance; mercados de predicción (Polymarket y Kalshi); inventarios de la EIA; prensa abierta (Reuters, AP, gCaptain); comunicados oficiales.
