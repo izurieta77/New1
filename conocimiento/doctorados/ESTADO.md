@@ -21,8 +21,8 @@
 | # | Área | Dónde está hoy | Cobertura |
 |---|---|---|---|
 | D1 | Teoría general y principios constitucionales (legalidad, proporcionalidad, equidad; art. 31 fr. IV de la Constitución) | nada | Sin |
-| D2 | Código Fiscal de la Federación: obligaciones, facultades de comprobación, prescripción, infracciones y delitos | nada | Sin |
-| D3 | Medios de defensa: recurso de revocación, juicio de nulidad, amparo, PRODECON | ficha cripto (mención de PRODECON) | Parcial |
+| D2 | Código Fiscal de la Federación: obligaciones, facultades de comprobación, prescripción, infracciones y delitos | cap. 29 (verificado 6-oct) | Capítulo (grado A en la letra) |
+| D3 | Medios de defensa: recurso de revocación, juicio de nulidad, amparo, PRODECON | cap. 29 §7 (verificado 6-oct) | Capítulo (grado A en la letra) |
 | D4 | LISR de personas físicas (enajenación, intereses, dividendos, exenciones, RESICO) | caps. 11 y 27, V05 | Capítulo (grado A en la letra) |
 | D5 | LISR de personas morales y grupos | nada | Sin |
 | D6 | IVA e IEPS | nada | Sin |
