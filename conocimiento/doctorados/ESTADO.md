@@ -32,7 +32,7 @@
 | D10 | Fiscalidad comparada de EUA (venta ficticia, *wash sale*, PFIC, contratos 1256) | nada | Sin |
 | D11 | Planeación fiscal y abuso (cláusula general antiabuso, razón de negocios) | nada | Sin |
 
-## Doctorado en contabilidad (10 áreas)
+## Doctorado en contabilidad (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
 |---|---|---|---|
 | C1 | Marco conceptual y normas: NIF, NIIF y US GAAP, y sus diferencias | nada | Sin |
@@ -45,13 +45,14 @@
 | C8 | Contabilidad empírica: relevancia de valor, gestión de utilidades, informatividad | nada | Sin |
 | C9 | Auditoría, gobierno corporativo y regulación de emisoras | nada | Sin |
 | C10 | Contabilidad de las emisoras mexicanas (NIIF obligatorias, efectos de inflación) | `empresas/*/modelo` | Parcial |
+| C11 | Costos y contabilidad gerencial (asignación, costos relevantes y hundidos, costo de oportunidad) | ficha 6-oct (resumen del dueño con 5 ejercicios) | Parcial |
 
 ## Resumen
 | Doctorado | Áreas | Comprobada | Capítulo | Parcial | Sin |
 |---|---|---|---|---|---|
 | Finanzas | 11 | 5 | 4 | 2 | 0 |
 | Derecho fiscal | 11 | 0 | 1 | 4 | 6 |
-| Contabilidad | 10 | 0 | 1 | 4 | 5 |
+| Contabilidad | 11 | 0 | 1 | 5 | 5 |
 
 **Lectura honesta:** finanzas está a medio camino; derecho fiscal y contabilidad están en su inicio. Lo que ya existe en lo fiscal es de personas físicas y del SIC; falta casi toda la teoría general, el CFF, la defensa fiscal y las personas morales. En contabilidad falta casi todo el cuerpo de normas.
 
