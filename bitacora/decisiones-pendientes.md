@@ -259,3 +259,4 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Propuesta para el dueño (sin cambio hasta que responda):** reemplazar en las 50 cuentas las corporativas @nvidia y @Vertiv por **@FarsideUK** (flujos diarios de ETF, que el paquete usó hoy) y **@JKempEnergy** (crudo físico, que el paquete usó hoy). Sus enlaces vienen en el paquete, pero no se pudieron abrir.
 - **Por qué es conservador:** los dos cambios de lista son del dueño; no cambia ninguna regla de riesgo.
 - **Estado:** Abierto → dueño.
+- **Actualización 6-oct:** el dueño aceptó el cambio de cuentas. @FarsideUK y @JKempEnergy sustituyen a @nvidia y @Vertiv en `datos/fuentes-recomendadas/cuentas-x.md` y en el marcador. Esa parte queda **cerrada**; siguen abiertos P0049 (error registrado) y la fecha de Banxico.
