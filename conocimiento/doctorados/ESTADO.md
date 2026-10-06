@@ -60,3 +60,7 @@
 1. **Derecho fiscal:** D2 (CFF), D1 (principios) y D3 (medios de defensa), que son la base de todo lo demás; luego D7 y D8 con la cartera real del dueño, que alimentan la tesis.
 2. **Contabilidad:** C1 (marco y normas), C2 (ingresos) y C4 (consolidación y partes relacionadas), que son lo que más pesa para las megaempresas del plan de cobertura.
 3. **Finanzas:** F7 (finanzas corporativas empíricas) y F11 (intermediación y riesgo sistémico), que son sus dos huecos; luego fichas comprobadas de F1, F8, F9 y F10.
+
+
+## Mandato adicional del dueño (6-oct-2026)
+D12: operación del nuevo portal del SAT de la A a la Z, como persona moral (cap. 30) y como persona física (cap. 31). Pendientes de lectura: fichas de trámite RMF 2026, guías del SAT. Lo que requiere sesión iniciada solo se aprende con capturas del dueño (nunca credenciales).
