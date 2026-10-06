@@ -121,6 +121,20 @@ DESC = {
     "ASML": "P/U adelantado ~33x (pares en fichas AMAT/LRCX); fundamentales propios no verificados",
     "UBER": "Sin ficha: fundamentales no verificados",
 }
+REF_ETF = {
+    "SPYM": "Cierre del S&P 500 bajo su SMA200 (7,442.59 hoy) o VIX >= 25",
+    "QQQM": "Cierre de Nasdaq-100 bajo su SMA200 o VIX >= 25",
+    "UPRO": "Filtro del comite: ^GSPC < SMA200 x 0.97 (7,009) o VIX >= 25, o stop de 134-136 USD",
+    "SPXL": "Igual que UPRO; 1 titulo (5,326 MXN) rebasa 50% de la cuenta real",
+    "TQQQ": "Nasdaq-100 < SMA200 x 0.97 o VIX >= 25; decision del comite: nunca TQQQ",
+    "TECL": "XLK < SMA200 x 0.97 o VIX >= 25",
+    "SOXL": "SOXX < SMA200 x 0.97 o VIX >= 25; cola historica de -90%",
+    "SMH": "Cierre bajo SMA200; el desarme de crowding de jul-2026 se repite",
+    "XLK": "Cierre bajo SMA200",
+    "GLD": "Tasa real de 10a > 3% y sin cierre sobre SMA200",
+    "GDX": "Oro cierra bajo su minimo reciente",
+    "XLE": "Cese al fuego EUA-Iran y petroleo a la baja",
+}
 REF = {
     "NVDA": "Guia del 4T (17-nov) bajo el consenso, DSO > 70 dias, margen bruto < 71% o evento de credito de OpenAI",
     "MU": "Precios contrato 4T26 (TrendForce, oct) planos o a la baja; margen bruto < 86% en el 1T FY27",
@@ -154,20 +168,30 @@ def f(x, d=None):
         return d
 
 
+def edge_de(m, nombre, fuente="hon"):
+    """(alfa sobre SPYM, multiplo del costo) de una plantilla; fuente: hon (la menor de propia/grupo) o own."""
+    costo = f(m["costo_rt"])
+    if fuente == "hon":
+        ev_net = f(m.get(f"{nombre}_hon_ev_neto"))
+        ev = None if ev_net is None else ev_net + costo
+    else:
+        ev = f(m.get(f"{nombre}_own_ev_bruto"))
+    ref = f(m.get(f"{nombre}_ref_spym_ev_bruto"))
+    if ev is None or ref is None:
+        return None, None
+    return ev - ref, (ev - ref) / costo
+
+
+def escala_edge(mult):
+    return 0 if mult is None or mult < 2 else (10 if mult < 3 else (18 if mult < 5 else 25))
+
+
 def puntaje(m, t):
     """Devuelve dict con componentes."""
     costo = f(m["costo_rt"])
-    # edge honesto Oro
-    ev_net = f(m.get("Oro_hon_ev_neto"))
-    ref = f(m.get("Oro_ref_spym_ev_bruto"))
-    if ev_net is None:
-        edge = None
-        mult = None
-    else:
-        ev_bruto = ev_net + costo
-        edge = ev_bruto - ref
-        mult = edge / costo
-    c_edge = 0 if mult is None or mult < 2 else (10 if mult < 3 else (18 if mult < 5 else 25))
+    edge, mult = edge_de(m, "Oro")
+    edge_o, mult_o = edge_de(m, "Oro", "own")
+    c_edge = escala_edge(mult)
     c_evid = 5  # C para todos: laboratorio 0 ventajas demostradas de 26 pruebas
     rep = FICHA.get(t)
     if t in APALANCADOS | INDICES | SECTOR_ETF or rep is None:
@@ -212,7 +236,12 @@ def puntaje(m, t):
     if t in APALANCADOS:
         c_crowd = max(-10, c_crowd - 2)
     total = c_edge + c_evid + c_cat + c_asim + c_liq + c_cost + c_corr + c_geo + c_adv + c_crowd
-    return dict(edge_alfa_oro=edge, edge_mult=mult, c_edge=c_edge, c_evid=c_evid, c_cat=c_cat, c_asim=c_asim,
+    sens = total - c_edge + escala_edge(mult_o)
+    extra = {}
+    for n in ('Diamante', 'Platino'):
+        e, mu = edge_de(m, n)
+        extra[f'edge_mult_{n}'] = mu
+    return dict(**extra, total_si_tasa_propia=sens, edge_mult_propia_oro=mult_o, edge_alfa_oro=edge, edge_mult=mult, c_edge=c_edge, c_evid=c_evid, c_cat=c_cat, c_asim=c_asim,
                 c_liq=c_liq, c_cost=c_cost, c_corr=c_corr, c_geo=c_geo, c_adv=c_adv, c_crowd=c_crowd,
                 total=total, g_consenso=g, obj_7m_consenso=obj7, objetivo_sustentado=sustentado)
 
@@ -247,7 +276,7 @@ def main():
         p3_real = cabe_real and sesmx is not None and sesmx >= 10
         p3_papel = cabe_papel and sesmx is not None and sesmx >= 10
         p4 = pt["edge_mult"] is not None and pt["edge_mult"] >= 2
-        p5 = t in REF  # stop, plazo y hecho que refuta escritos solo para los presentados
+        p5 = t in REF or t in REF_ETF  # stop, plazo y hecho que refuta escritos solo para los presentados
         p6 = True
         sust = pt["objetivo_sustentado"]
         gates_real = [p1ok, p2, p3_real, p4, p5, p6]
@@ -280,7 +309,7 @@ def main():
         row["estado_fecha"] = rep[1] if rep else ""
         row["contraparte_P1"] = p1txt
         row["que_descuenta"] = DESC.get(t, "")
-        row["hecho_que_refuta"] = REF.get(t, "")
+        row["hecho_que_refuta"] = REF.get(t, REF_ETF.get(t, ""))
         out.append(row)
     out.sort(key=lambda r: (r["nivel"] == "Sin nivel", -r["total"]))
     campos = []

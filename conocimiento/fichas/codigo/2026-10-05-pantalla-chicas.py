@@ -677,19 +677,84 @@ def resumen_bt(por_anio, detalle):
         se = r["sd_exceso"] / math.sqrt(len(exc_bruto))
         r["error_est"] = se
         r["efecto_min_detectable_80pot"] = 2.8 * se
-    # sensibilidad a supervivencia: los que faltan al final se suponen con rendimiento X
-    sens = {}
-    for X in (0.0, -0.5, -1.0):
-        exc = []
-        for a in v:
-            nS, mS = a["n_S"], a["faltan_S"]
-            nC, mC = a["n_C"], a["faltan_C"]
-            S = (a["ret_S"] * nS + X * mS) / (nS + mS)
-            C = (a["ret_C"] * nC + X * mC) / (nC + mC)
-            exc.append(S - P["bt_costo_rt"] - C)
-        sens[X] = st.mean(exc)
-    r["sens_faltantes"] = sens
+    # Supervivencia: no se puede hacer sensibilidad (los deslistados no existen en Yahoo; ver 'superv' en la salida).
     return r
+
+
+# ------------------------------------------------------------------ universo B (Trading USA, disponibilidad por verificar)
+def universo_b():
+    """Misma pantalla F1-F7 sobre emisoras de EUA con 10-K (EDGAR frames FY2025 como preseleccion), liquidez de origen
+    (importe diario mediano en USD >= 1 M). Operable SOLO si Trading USA de GBM ofrece el ticker (no verificado en la app)."""
+    P = PARAMS
+    fx = fx_usdmxn()
+    tick = json.loads(get("https://www.sec.gov/files/company_tickers.json", UA_SEC, cache_h=72, sec=True))
+    tk = {}
+    for v in tick.values():
+        tk.setdefault(v["cik_str"], v["ticker"])
+    fu = bt_fundamentales(2026)
+    pas = [c for c, f in fu.items() if c in tk and bt_prefiltro(f)]
+    print(f"[universoB] filers FY2025 con NI y 3 anios: {len(fu)} | preseleccion fundamental EDGAR: {len(pas)}", flush=True)
+    items = [dict(origen="USA", bmv=tk[c], sym=tk[c], cik=c) for c in pas]
+    chs = paralelo(lambda u: chart(u["sym"], "6mo"), items)
+    for u, ch in zip(items, chs):
+        if not ch or len(ch["filas"]) < 40:
+            u["precio"] = None
+            continue
+        f60 = ch["filas"][-60:]
+        u["precio"] = f60[-1]["c"]
+        u["adv_usd"] = st.median([x["c"] * x["v"] for x in f60])
+        u["spread_cs"] = corwin_schultz(f60)
+    items = [u for u in items if u.get("precio")]
+    for u, t in zip(items, paralelo(lambda u: ts(u["sym"]), items)):
+        u["_ts"] = t
+        acc = ult(t.get("quarterlyOrdinarySharesNumber")) or ult(t.get("annualOrdinarySharesNumber"))
+        u["acciones"] = acc[0] if acc else None
+    items = [u for u in items if u["acciones"]]
+    for u in items:
+        u["mcap_usd"] = u["precio"] * u["acciones"]
+    emb = dict(preseleccion_edgar=len(pas), con_precio_y_acciones=len(items))
+    items = [u for u in items if P["mcap_min_usd"] <= u["mcap_usd"] <= P["mcap_max_usd"]]
+    emb["F1_tamano"] = len(items)
+    items = [u for u in items if u["adv_usd"] >= P["bt_liq_usd_min"]]
+    emb["liquidez_origen_>=1M_usd"] = len(items)
+    ev = [(u, evalua(u, fx)) for u in items]
+    ok = [(u, m) for u, m in ev if not m["fallas"]]
+    emb["pasan_F2_a_F7"] = len(ok)
+    near = [(u, m) for u, m in ev if len(m["fallas"]) == 1 and "roic" in m and "ev_ebit" in m]
+    emb["casi_(1_falla)"] = len(near)
+    filas = []
+    def rank(lst, k, desc):
+        peor = -1e18 if desc else 1e18
+        o = sorted(lst, key=lambda e: e[1][k] if e[1].get(k) is not None else peor, reverse=desc)
+        return {id(e[0]): i + 1 for i, e in enumerate(o)}
+    for grupo, lst in (("PASA", ok), ("casi", near)):
+        if not lst:
+            continue
+        r1, r2, r3 = rank(lst, "roic", True), rank(lst, "cagr_ni_2a", True), rank(lst, "ev_ebit", False)
+        for u, m in lst:
+            sc = (r1[id(u)] + r2[id(u)] + r3[id(u)]) / 3
+            fila = dict(grupo=grupo, ticker=u["sym"], falla=";".join(m["fallas"]), precio_usd=round(u["precio"], 2),
+                        mcap_usd_m=round(u["mcap_usd"] / 1e6), adv_origen_usd=round(u["adv_usd"]),
+                        spread_cs=rd(u.get("spread_cs"), 1, 4), ni0_m=rd(m["ni0"], 1e6, 1), ni_2_m=rd(m["ni_2"], 1e6, 1),
+                        cagr_ni_2a=rd(m.get("cagr_ni_2a"), 1, 3), roic=rd(m.get("roic"), 1, 3), nd_ebitda=rd(m.get("nd_ebitda"), 1, 2),
+                        fcf0_m=rd(m.get("fcf0"), 1e6, 1), fcf_udm_m=rd(m.get("fcf_udm"), 1e6, 1), ev_ebit=rd(m.get("ev_ebit"), 1, 1),
+                        pu=rd(m.get("pu"), 1, 1), dilucion_2a=rd(m.get("dilucion_2a"), 1, 3),
+                        costo_rt_fx03=round(2 * P["comision_lado"] + 0.006, 4), costo_rt_fx10=round(2 * P["comision_lado"] + 0.02, 4),
+                        score_rango=round(sc, 1))
+            fila.update(verifica_edgar(u["sym"], u["_ts"]))
+            fila["alertas_8k"] = alertas_8k(u["sym"])
+            filas.append(fila)
+    filas.sort(key=lambda r: (r["grupo"] != "PASA", r["score_rango"]))
+    cols = []
+    for r in filas:
+        for k in r:
+            if k not in cols:
+                cols.append(k)
+    with open(SALIDA / "pantalla-chicas-2026-10-05-universoB.csv", "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=cols or ["sin_filas"])
+        w.writeheader()
+        w.writerows(filas)
+    return filas, emb
 
 
 # ------------------------------------------------------------------ main
@@ -725,6 +790,10 @@ def main(arg: str):
         out_md.append("## Embudo\n\n```json\n%s\n```\n" % json.dumps(emb, indent=1, ensure_ascii=False))
         out_md.append("## Candidatos (fundamentales OK; columna operable)\n\n| " + " | ".join(["origen", "simbolo", "operable", "mcap USD M", "NI0 M", "CAGR NI", "ROIC", "ND/EBITDA", "EV/EBIT", "costo RT 2k", "edgar"]) + " |\n|" + "---|" * 11 + "\n"
                       + "\n".join("| %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s |" % (r["origen"], r["simbolo"], r["operable"], r["mcap_usd_m"], r["ni0_m"], r["cagr_ni_2a"], r["roic"], r["nd_ebitda"], r["ev_ebit"], r["costo_rt_pos2000"], r.get("edgar", "")[:30]) for r in sal) + "\n")
+    if arg in ("universob", "todo"):
+        fb, eb = universo_b()
+        print(json.dumps(eb, indent=1))
+        out_md.append("## Universo B (EUA, 10-K; Trading USA por verificar)\n\n```json\n%s\n```\n\n%s\n" % (json.dumps(eb, indent=1), "\n".join("| %s | %s | %s | mcap %s M | ROIC %s | ND/EBITDA %s | EV/EBIT %s | NI0 %s M | %s | %s |" % (r["grupo"], r["ticker"], r["falla"], r["mcap_usd_m"], r["roic"], r["nd_ebitda"], r["ev_ebit"], r["ni0_m"], r.get("edgar"), r.get("alertas_8k")) for r in fb)))
     if arg in ("backtest", "todo"):
         por_anio, detalle, superv = backtest()
         cols = []

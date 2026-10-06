@@ -1,5 +1,81 @@
 # Pantalla de empresas chicas, 2026-10-05 (salida automatica del script)
 
+## Operabilidad (BMV y SIC, datos al 2026-10-05)
+
+```json
+{
+ "BMV": {
+  "total": 110,
+  "con_cik": null,
+  "con_precio": 106,
+  "en_banda": 47,
+  "banda_liq": 25,
+  "banda_origen_adv_1M_usd": 0,
+  "banda_origen_y_titulo": 0,
+  "banda_liq_titulo": 25,
+  "sin_dato_mcap": 12,
+  "mediana_mcap_usd_m": 1962,
+  "menores_2b": 47,
+  "menores_10b": 77
+ },
+ "SIC": {
+  "total": 449,
+  "con_cik": 412,
+  "con_precio": 326,
+  "en_banda": 53,
+  "banda_liq": 2,
+  "banda_origen_adv_1M_usd": 52,
+  "banda_origen_y_titulo": 52,
+  "banda_liq_titulo": 1,
+  "sin_dato_mcap": 10,
+  "mediana_mcap_usd_m": 33734,
+  "menores_2b": 35,
+  "menores_10b": 95
+ }
+}
+```
+
+## Embudo
+
+```json
+{
+ "universo_total": 559,
+ "con_precio_y_cik_o_bmv": 432,
+ "F1_tamano": 100,
+ "F8_liquidez": 27,
+ "F9_titulo": 26,
+ "fundamentales_F2_a_F7": 0,
+ "fundamentales_y_liquidez": 0,
+ "TODOS_los_filtros": 0,
+ "fallas_por_filtro_en_banda": {
+  "F3 ROIC": 86,
+  "F4 ND/EBITDA": 72,
+  "F6 EV/EBIT": 72,
+  "F2 UDM": 57,
+  "F7 dilucion": 31,
+  "F2 NI(0)": 28,
+  "F5 FCF": 59,
+  "F2 NI": 50
+ },
+ "casi_pasan_(<=1_falla)": 10
+}
+```
+
+## Candidatos (fundamentales OK; columna operable)
+
+| origen | simbolo | operable | mcap USD M | NI0 M | CAGR NI | ROIC | ND/EBITDA | EV/EBIT | costo RT 2k | edgar |
+|---|---|---|---|---|---|---|---|---|---|---|
+| BMV | CIEB.MX | NO | 991 | 11134.4 | 2.031 | 0.957 | -0.34 | 1.0 | 0.0088 | BMV: segunda fuente no disponi |
+| BMV | PINFRAL.MX | NO | 4104 | 14643.3 | 0.557 | 0.272 | -1.02 | 1.8 | 0.0088 | BMV: segunda fuente no disponi |
+| BMV | HERDEZ.MX | SI | 974 | 1786.4 | 0.163 | 0.287 | 0.27 | 3.4 | 0.0097 | BMV: segunda fuente no disponi |
+| BMV | GPROFUT.MX | NO | 1878 | 4067.7 | 0.239 | 0.277 | 0.62 | 5.4 | 0.0088 | BMV: segunda fuente no disponi |
+| BMV | CMOCTEZ.MX | NO | 3985 | 6260.6 | 0.008 | 0.423 | -0.77 | 6.7 | 0.0088 | BMV: segunda fuente no disponi |
+| BMV | LABB.MX | SI | 678 | 1614.0 | 0.254 | 0.109 | 1.54 | 5.7 | 0.0131 | BMV: segunda fuente no disponi |
+| BMV | FRAGUAB.MX | NO | 2248 | 4902.0 | 0.242 | 0.12 | -0.38 | 7.9 | 0.0088 | BMV: segunda fuente no disponi |
+| BMV | BOLSAA.MX | SI | 1167 | 1602.0 | 0.031 | 0.234 | -1.05 | 6.9 | 0.0131 | BMV: segunda fuente no disponi |
+| BMV | OMAB.MX | SI | 4607 | 5341.7 | 0.032 | 0.263 | 1.15 | 10.3 | 0.0088 | BMV: segunda fuente no disponi |
+| BMV | GRUMAB.MX | SI | 4406 | 519.3 | 0.1 | 0.129 | 1.67 | 111.3 | 0.0124 | BMV: segunda fuente no disponi |
+
 ## Backtest
 
 ```json
@@ -19,12 +95,7 @@
  "ret_C_medio": 0.13352096326434176,
  "iwm_medio": 0.12036872474040063,
  "error_est": 0.027820000870938194,
- "efecto_min_detectable_80pot": 0.07789600243862693,
- "sens_faltantes": {
-  "0.0": -0.007711282092622813,
-  "-0.5": -0.007711282092622813,
-  "-1.0": -0.007711282092622813
- }
+ "efecto_min_detectable_80pot": 0.07789600243862693
 }
 ```
 

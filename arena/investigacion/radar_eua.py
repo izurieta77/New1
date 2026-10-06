@@ -99,7 +99,15 @@ def grafica(t: str, rango: str, cache: float):
     q = r["indicators"]["quote"][0]
     adj = (r["indicators"].get("adjclose") or [{}])[0].get("adjclose")
     filas = {}
-    for i, ts in enumerate(r.get("timestamp") or []):
+    ts_list = r.get("timestamp") or []
+    rmp, rmt = r["meta"].get("regularMarketPrice"), r["meta"].get("regularMarketTime")
+    for i, ts in enumerate(ts_list):
+        # Yahoo a veces deja la ultima vela en null justo despues del cierre: se usa regularMarketPrice del mismo dia
+        if i == len(ts_list) - 1 and q["close"][i] is None and rmp and rmt and \
+                datetime.fromtimestamp(rmt + off, tz=timezone.utc).date() == datetime.fromtimestamp(ts + off, tz=timezone.utc).date():
+            q["close"][i] = rmp
+            if adj and i < len(adj):
+                adj[i] = rmp
         c = (adj[i] if adj and i < len(adj) and adj[i] is not None else
              (q["close"][i] if i < len(q["close"]) else None))
         if c is None:
