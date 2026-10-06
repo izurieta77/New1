@@ -35,7 +35,7 @@
 ## Doctorado en contabilidad (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
 |---|---|---|---|
-| C1 | Marco conceptual y normas: NIF, NIIF y US GAAP, y sus diferencias | nada | Sin |
+| C1 | Marco conceptual y normas: NIF, NIIF y US GAAP, y sus diferencias | ficha 6-oct (arrendamientos: IFRS 16 vs ASC 842) | Parcial |
 | C2 | Reconocimiento de ingresos (NIF D-1, IFRS 15, ASC 606) | cap. 25 (mención) | Parcial |
 | C3 | Arrendamientos, instrumentos financieros y deterioro (IFRS 16 y 9; ASC 842 y 326) | nada | Sin |
 | C4 | Consolidación, combinaciones de negocios, entidades de interés variable y partes relacionadas | nada | Sin |
