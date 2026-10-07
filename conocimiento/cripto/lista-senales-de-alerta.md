@@ -140,6 +140,14 @@
 - **E6, E10:** sin novedad; sin pausas de retiro ni incidentes nuevos en Binance en las búsquedas de hoy.
 - **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio desde el 25-sep. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
 
+**Seguimiento del 7-oct-2026** [I] — revisión semanal de contraparte de la corrida de las 08:17, con el estudio profundo de hoy centrado en el catalizador macro de la caída sostenida (ficha [`fichas/2026-10-07-catalizador-macro-ormuz-derivados.md`](fichas/2026-10-07-catalizador-macro-ormuz-derivados.md)):
+
+- **E3 (PoR mensual):** búsqueda dirigida hoy ("Binance proof of reserves 47th report October 2026") sigue sin encontrar el 47.º reporte; solo aparecen coberturas del 45.º (ago-2026). Sigue vigente el 46.º reporte (snapshot 1-sep-2026, ~682,000 BTC, ratio "al menos 1:1"), sin cambio en la fila de este cuadro. Consistente con la ventana proyectada desde el 3-oct (~15-21-oct-2026). **Limpio.**
+- **E5:** búsqueda dirigida hoy ("Binance DOJ sanctions investigation charges October 7 2026") no encontró ningún acto procesal nuevo con fecha verificable de oct-2026 contra la entidad; solo cobertura reciclada de la ronda de 2023 (ya registrada en A8) y la investigación por sanciones a Irán ya conocida desde el 21/22-sep. **ÁMBAR sin cambio desde el 25-sep.**
+- **E1/E2 (indicio, no la metodología exacta):** TVL total de DefiLlama (`api.llama.fi/protocol/binance-cex`, verificado en vivo hoy, 14:22 UTC) = **US$174.09 mil millones**, −2.68% frente a los US$178.87 mil millones del 6-oct — del mismo orden que la caída de precio de BTC/ETH en 24h (−3.5%/−5.4%), consistente con efecto precio sobre activos custodiados, no con una salida neta de unidades. Sigue pendiente repetir con la metodología exacta ex-BNB de la sección F cuando el script esté disponible.
+- **E6, E10:** sin novedad; sin pausas de retiro ni incidentes nuevos en Binance en las búsquedas de hoy.
+- **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio desde el 25-sep. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`. La caída de precio sostenida de estos días **no tiene, hasta hoy, ningún correlato en esta lista** (ni en exchange, ni en stablecoin, ni en token): refuerza la lectura de la ficha de hoy de que el origen es macro/idiosincrático de precio, no de contraparte.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
