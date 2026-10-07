@@ -84,7 +84,7 @@ Capítulos relacionados que aquí no se repiten: [29 Código Fiscal de la Federa
 
 **Tasa y traslado (art. 1) [A].** "la tasa del 16%"; el IVA "en ningún caso se considerará que forma parte de dichos valores"; el traslado es "en forma expresa y por separado". El contribuyente paga la diferencia entre el impuesto a su cargo y el trasladado o pagado en importación, "siempre que sean acreditables".
 
-**Valor en enajenaciones (art. 12) [A].** Precio pactado más "las cantidades que además se carguen o cobren al adquirente por otros impuestos, derechos, intereses..." Esto metería el IEPS en la base, **salvo** la cuota del art. 2-A LIEPS (ver §2.6).
+**Valor en enajenaciones (art. 12) [A].** Precio pactado más "las cantidades que además se carguen o cobren al adquirente por otros impuestos, derechos, intereses normales o moratorios" Esto metería el IEPS en la base, **salvo** la cuota del art. 2-A LIEPS (ver §2.6).
 
 **Acreditamiento (arts. 4 y 5) [A].** Es restar el impuesto acreditable (el trasladado y el pagado en importación "en el mes de que se trate"). Requisitos del art. 5: (I) gastos "estrictamente indispensables", que son los deducibles para ISR (si son parcialmente deducibles, el IVA acredita en esa proporción); (II) traslado expreso y por separado en comprobante; (III) **efectivamente pagado** en el mes; (IV) retenciones enteradas; (V) proporciones cuando hay actividades gravadas y no gravadas, e inversiones con ajuste a 60 meses.
 
@@ -121,7 +121,7 @@ Capítulos relacionados que aquí no se repiten: [29 Código Fiscal de la Federa
 
 **Obligaciones LIEPS que no tiene la estación [A].** Art. 5.º (pago mensual el día 17), art. 19 fr. I y II (contabilidad y comprobantes) y art. 21 (declaraciones semestrales de volúmenes los días 20 de septiembre y 20 de marzo) son de los contribuyentes del inciso D). La estación sí queda en el CFF art. 28 y en RMF 2.7.1.48 (CFDI con el "Complemento Concepto para la facturación de Hidrocarburos y Petrolíferos" y claves 15101505, 15101514 y 15101515).
 
-**Anexos 5 y 8 [A].** Se leyeron completos en lo que importa: **no contienen ninguna cuota ni estímulo de combustibles** (0 coincidencias de gasolina, diésel y combustible). El Anexo 8 son tarifas de ISR de personas físicas (art. 96 LISR); el Anexo 5, cantidades actualizadas de otras leyes. Los estímulos de combustibles se publican por **acuerdo y decreto**, no por anexo.
+**Anexos 5 y 8 [A].** Se leyeron completos en lo que importa: **no contienen ninguna cuota ni estímulo de combustibles** (0 coincidencias de gasolina, diésel y combustible). El Anexo 8 son tarifas de ISR de personas físicas (art. 96 LISR); el Anexo 5, "Cantidades Actualizadas del Código Fiscal de la Federación" (art. 17-A, sexto párrafo). Los estímulos de combustibles se publican por **acuerdo y decreto**, no por anexo.
 
 ### 2.7 El caso: estación de servicio, persona moral, régimen general
 
@@ -133,12 +133,12 @@ Capítulos relacionados que aquí no se repiten: [29 Código Fiscal de la Federa
 
 **Estructura económica por litro (ejercicio 1, SUPUESTO de precios y márgenes).** Con precio de bomba de $24.00 (gasolina menor a 91), la base de IVA es el precio sin IVA menos la cuota del art. 2.º-A. El IVA correcto es **$3.22877**, no los $3.31034 que resultan de dividir entre 1.16 (diferencia de $0.08157 por litro, 0.34% del precio). El IEPS que va dentro del precio es $1.8701 + $0.59139 = $2.46149 por litro (con el estímulo de la semana). Sin estímulo serían $7.29149 por litro. **Estos importes son de la cadena que paga Pemex; la estación solo los ve como parte del costo.**
 
-**Márgenes bajos y la regla de oro.** Con los supuestos del §5 la estación gana un margen bruto de 5.92% de sus ingresos y utilidad fiscal de 0.65% (ejercicio 3). Las cifras bajas de utilidad, junto con el art. 14 (coeficiente), explican dos hechos: el coeficiente del año anterior puede ser mayor al real y el saldo a favor de ISR anual (ejercicio 3) es normal; y la iniciativa 2027 golpea en forma directa a este perfil de empresa (ejercicio 4).
+**Márgenes bajos.** Con los supuestos del §5 la estación gana un margen bruto de 5.92% de sus ingresos y utilidad fiscal de 0.65% (ejercicio 3). Con utilidades así de pequeñas, el coeficiente del año anterior puede quedar por encima del margen real (y generar saldo a favor de ISR anual, como en el ejercicio 3), y la iniciativa 2027 afecta de forma directa a este perfil de empresa (ejercicio 4).
 
 ### 2.8 Iniciativa fiscal 2027 (fuente primaria: Gaceta Parlamentaria de la Cámara de Diputados, 8-sep-2026)
 
 **Hechos [A, sobre el texto de la iniciativa; no son ley].**
-1. **LISR, Anexo E de la Gaceta 7121 [12]:** se adiciona el **Capítulo X** (arts. 78-A a 78-F) "Del mecanismo de control de las deducciones autorizadas y de las pérdidas fiscales"; aplica a PM residentes con ingresos acumulables "superiores a 50 millones de pesos" que "determinen utilidad fiscal del ejercicio". **Art. 78-B:** si las deducciones autorizadas son menores o iguales a ingresos por **0.9667**, el límite es el total de las deducciones por 0.9900; si son mayores, el límite es ingresos por 0.9667. Lo no disminuido pasa a "los veinte ejercicios siguientes", actualizado. **Art. 78-C:** las pérdidas de ejercicios anteriores solo disminuyen hasta la utilidad fiscal (después del límite de deducciones) por **0.5000**; el excedente de pérdidas se aplica en veinte ejercicios (y las generadas antes de la reforma se aplican en veinte ejercicios, según la exposición de motivos). **Art. 78-D:** el mismo 50% en los PP. **Art. 78-E:** exclusiones (coordinados, agrícolas, maquila, quiebra, otros). Se **deroga** el Capítulo VI del Título II (arts. 59 a 71). El decreto entra en vigor el 1-ene-2027 (Artículo Único del decreto de vigencia del documento).
+1. **LISR, Anexo E de la Gaceta 7121 [12]:** se adiciona el **Capítulo X** (arts. 78-A a 78-F) "Del mecanismo de control de las deducciones autorizadas y de las pérdidas fiscales"; aplica a PM residentes con ingresos acumulables "superiores a 50 millones de pesos" que "determinen utilidad fiscal del ejercicio". **Art. 78-B:** si las deducciones autorizadas son menores o iguales a ingresos por **0.9667**, el límite es el total de las deducciones por 0.9900; si son mayores, el límite es ingresos por 0.9667. Lo no disminuido pasa a "los veinte ejercicios siguientes", actualizado. **Art. 78-C:** las pérdidas de ejercicios anteriores solo disminuyen hasta la utilidad fiscal (después del límite de deducciones) por **0.5000**; el excedente de pérdidas se aplica en veinte ejercicios (y las generadas antes de la reforma se aplican en veinte ejercicios, según la exposición de motivos). **Art. 78-D:** el mismo 50% en los PP. **Art. 78-E:** exclusiones (coordinados, agrícolas, maquila, quiebra, otros). Se **deroga** el Capítulo VI del Título II (arts. 59 a 71). El último artículo del proyecto de decreto dice que entra en vigor el 1-ene-2027.
 2. **Transitorio Segundo, fr. I, para los PP de 2027:** si las deducciones de la última anual son menores o iguales a ingresos por 0.9667, el coeficiente se multiplica por **1.0658**; si son mayores, por **2.6162**; y la pérdida solo se disminuye hasta 0.5000 de la utilidad del PP.
 3. **LIF 2027, Anexo A [11], art. 25, fr. XIX:** las personas diferentes de fabricantes, productores e importadores que enajenen combustibles automotrices y fósiles del tipo gasolinas y diésel "estarán obligadas a aplicar las cuotas" del art. 2.º, fr. I, D y H, y del 2.º-A "sin estímulo, disminución o acreditamiento alguno" a "la diferencia positiva" entre las unidades enajenadas y las adquiridas en el mes. Pago mensual a más tardar el día 17; se calcula "finalizado el mes"; "no trasladarán" el impuesto ni lo incluirán en el precio; la autoridad revisa con controles volumétricos, comprobantes y pedimentos; **entra en vigor el 1-jul-2027**.
 4. La exposición de motivos afirma que el IEPS lo paga solo quien fabrica, produce o importa (art. 8, fr. I, c) y que quienes salgan del régimen "resentirán el impuesto en su propio peculio".
@@ -174,7 +174,7 @@ Capítulos relacionados que aquí no se repiten: [29 Código Fiscal de la Federa
 
 ## 4. Lo más reciente (estado al 7-oct-2026)
 
-1. **Iniciativa 2027 (8-sep-2026):** LISR con límite a deducciones (0.9667 y 0.9900), límite del 50% a la pérdida fiscal, 20 años de arrastre y modificación del coeficiente de los PP de 2027; LIF 2027 con régimen del IEPS para quienes no son fabricantes, productores ni importadores de combustibles, desde el **1-jul-2027**. Ambos son proyectos: **pueden cambiar** en la discusión del Congreso. Por plazo constitucional se espera su aprobación a más tardar en octubre y noviembre (no verificado; nv).
+1. **Iniciativa 2027 (8-sep-2026):** LISR con límite a deducciones (0.9667 y 0.9900), límite del 50% a la pérdida fiscal, 20 años de arrastre y modificación del coeficiente de los PP de 2027; LIF 2027 con régimen del IEPS para quienes no son fabricantes, productores ni importadores de combustibles, desde el **1-jul-2027**. Ambos son proyectos: **pueden cambiar** en la discusión del Congreso. Fecha de aprobación y contenido final: nv.
 2. **Estímulos 2026 a combustibles:** vigentes hasta el 31-dic-2026 (Decreto DOF 31-12-2025). En la semana del 26-sep al 2-oct-2026 el diésel tiene 100% de estímulo (cuota disminuida $0.0000) y las gasolinas más de 72%.
 3. **RMF:** la Primera Modificación (DOF 09-07-2026) reformó la regla 11.7.1 (devolución del estímulo fronterizo) y agregó la regla 11.7.3 (precio base del diésel, con reducciones de $0.28 a $1.04 por litro entre el 1-abr y el 2-jul-2026).
 4. **Sin cambios en 2026:** LISR (DOF 01-04-2024) y LIVA (DOF 12-11-2021).
@@ -183,7 +183,7 @@ Capítulos relacionados que aquí no se repiten: [29 Código Fiscal de la Federa
 
 ## 5. Evidencia: ejercicios con cifras
 
-Todas las cifras de este capítulo se obtuvieron con un script (`cap32_check.py`, §10) y se leyeron de su salida. **SUPUESTO** marca los datos inventados: litros, precios de bomba, márgenes, gastos operativos, saldos, el 10% de PTU y los INPC ilustrativos.
+Todas las cifras de este capítulo se obtuvieron con un script (apéndice al final, §10) y se leyeron de su salida. **SUPUESTO** marca los datos inventados: litros, precios de bomba, márgenes, gastos operativos, saldos, el 10% de PTU y los INPC ilustrativos.
 
 **Ejercicio 1: las cuotas 2026 reproducen el Acuerdo 179/2025 (art. 17-A CFF).**
 - Factor exacto = 142.645 / 137.424 = **1.037992**. El Acuerdo publica **1.0379**: **truncó a cuatro decimales** (redondeado habría sido 1.0380). Hallazgo: la cuota 2026 sale de multiplicar la de 2025 por 1.0379 y truncar: gasolina menor a 91: 6.4555 × 1.0379 = 6.700163, publicada **6.7001**; diésel: 7.0946 × 1.0379 = 7.363485, publicada **7.3634** (redondear daría 7.3635); art. 2.º-A, magna: 56.9795 × 1.0379 = 59.1390.
@@ -199,13 +199,13 @@ Todas las cifras de este capítulo se obtuvieron con un script (`cap32_check.py`
 
 Con litros mensuales SUPUESTO de 300,000 (< 91), 80,000 (≥ 91) y 120,000 (diésel), márgenes brutos SUPUESTO sin IVA de $1.30, $1.50 y $1.10 por litro y los precios de la tabla: ingresos del mes **$10,847,454.27**, costo **$10,205,454.27**, margen **$642,000.00** (5.92% de los ingresos). IVA trasladado **$1,688,545.73**; IVA acreditable (el que le trasladó el proveedor sobre la misma mecánica) **$1,585,825.73**; **IVA a cargo $102,720.00** = 0.16 × margen. No hay IEPS en la declaración de la estación.
 
-**Ejercicio 3: PP con coeficiente, PTU y saldo a favor (art. 14).** SUPUESTO: ejercicio 2025 con ingresos $126,000,000, deducciones autorizadas $124,590,000 y PTU pagada en 2025 de $130,000; utilidad fiscal 2025 = 126,000,000 − 124,590,000 − 130,000 = **$1,280,000**; coeficiente = 1,280,000 / 126,000,000 = **0.010159**. PTU de 2025 (renta gravable $1,410,000; porcentaje 10% SUPUESTO) = **$141,000**, pagadera a más tardar el **30-may-2026** (31-mar + 60 días, art. 122 LFT). En 2026, con los ingresos del ejercicio 2 constantes, los PP son: enero a abril **$33,058.91** cada mes (utilidad PP 110,196.36 × 30%), y de mayo a diciembre **$27,771.41** cada mes al restar la PTU en ocho partes iguales de $17,625.00. Acumulado a septiembre: utilidad del PP $903,642.25 e ISR acumulado $271,092.67. Al cierre: ingresos del ejercicio $130,169,451.21, utilidad fiscal real **$843,000** (después de PTU pagada de $141,000), ISR anual **$252,900**, PP acumulados **$354,406.90**: **saldo a favor $101,506.90**. El coeficiente real fue 0.006476 contra 0.010159 aplicado. **Lección:** con márgenes que caen, el art. 14 (inciso b del último párrafo) permite pedir un coeficiente menor desde el segundo semestre; si no se hace, se adelanta caja al fisco.
+**Ejercicio 3: PP con coeficiente, PTU y saldo a favor (art. 14).** SUPUESTO: ejercicio 2025 con ingresos $126,000,000, deducciones autorizadas $124,590,000 y PTU pagada en 2025 de $130,000; utilidad fiscal 2025 = 126,000,000 − 124,590,000 − 130,000 = **$1,280,000**; coeficiente = 1,280,000 / 126,000,000 = **0.0101587** (se usa sin redondear; el redondeo reglamentario es nv). PTU de 2025 (renta gravable $1,410,000; porcentaje 10% SUPUESTO) = **$141,000**, pagadera a más tardar el **30-may-2026** (31-mar + 60 días, art. 122 LFT). En 2026, con los ingresos del ejercicio 2 constantes, los PP son: enero a abril **$33,058.91** cada mes (utilidad PP 110,196.36 × 30%), y de mayo a diciembre **$27,771.41** cada mes al restar la PTU en ocho partes iguales de $17,625.00. Acumulado a septiembre: utilidad del PP $903,642.25 e ISR acumulado $271,092.67. Al cierre: ingresos del ejercicio $130,169,451.21, utilidad fiscal real **$843,000** (después de PTU pagada de $141,000), ISR anual **$252,900**, PP acumulados **$354,406.90**: **saldo a favor $101,506.90**. El coeficiente real fue 0.006476 contra 0.0101587 aplicado. **Lección:** con márgenes que caen, el art. 14 (inciso b del último párrafo) permite pedir un coeficiente menor desde el segundo semestre; si no se hace, se adelanta caja al fisco.
 
 **Ejercicio 4: efecto de la iniciativa 2027 sobre el mismo perfil (SUPUESTO: igual al de 2025 con PTU de 2027 de $141,000).** Deducciones / ingresos = 124,590,000 / 126,000,000 = **0.98881 > 0.9667**.
 - Ley actual: utilidad fiscal = 126,000,000 − 124,590,000 − 141,000 = **$1,269,000**; ISR **$380,700**.
 - Art. 78-B (límite = 0.9667 × 126,000,000 = **$121,804,200**): deducciones no disminuibles del año **$2,785,800** (arrastre de 20 años); utilidad fiscal = 126,000,000 − 121,804,200 − 141,000 = **$4,054,800**; ISR **$1,216,440**; aumento **$835,740** (3.2 veces) con la misma operación económica. (**Inferencia C:** se supone que la PTU pagada se sigue deduciendo por el art. 9, fr. I, que la iniciativa no altera según lo leído.)
 - Art. 78-C con pérdida pendiente de $3,000,000: límite = 0.5000 × 4,054,800 = **$2,027,400**; utilidad tras pérdida $2,027,400; ISR **$608,220** (hoy, art. 57: la pérdida absorbería toda la utilidad y el ISR sería **$0**).
-- PP 2027 (transitorio Segundo): coeficiente 0.010159 × 2.6162 = **0.026577**, 2.6 veces más caja en los PP.
+- PP 2027 (transitorio Segundo): coeficiente 0.0101587 × 2.6162 = **0.026577**, 2.6 veces más caja en los PP.
 - **Lectura:** el umbral de 0.9667 equivale a un margen de utilidad antes de PTU de **3.33%** de los ingresos acumulables; una estación con margen menor tributa como si lo tuviera, siempre que **determine utilidad fiscal** (si el ejercicio da pérdida, el mecanismo no aplica según el art. 78-A).
 
 **Ejercicio 5: CUFIN y dividendos (art. 77, 10 y 140).** SUPUESTO: resultado fiscal $1,000,000, ISR pagado $300,000, partidas no deducibles (sin las excepciones de las frs. VIII y IX) $50,000. **UFN = 1,000,000 − 300,000 − 50,000 = $650,000.**
@@ -214,7 +214,7 @@ Con litros mensuales SUPUESTO de 300,000 (< 91), 80,000 (≥ 91) y 120,000 (dié
 
 **Ejercicio 6: AAI (art. 44), factor ilustrativo.** El factor legal usa diciembre contra diciembre; **no se tienen aquí esos índices**; se usó el cociente de noviembre de 2025 (142.645) entre noviembre de 2024 (137.424) menos uno = **0.037992** solo como ilustración. SUPUESTO: deudas promedio $2,700,000 (proveedores $2,400,000 y contribuciones por pagar $300,000), créditos promedio $1,800,000 (cuentas por cobrar de tarjetas; la caja **no** cuenta, art. 45, fr. VII). Diferencia $900,000 × 0.037992 = **AAI acumulable $34,192.72**. Si fuera al revés (créditos mayores en $700,000): AAI **deducible $26,594.34**. El AAI acumulable no entra a los ingresos nominales del PP (art. 14).
 
-**Ejercicio 7: IVA con inversión y devolución.** SUPUESTO: se compran tanques y dispensarios por $3,000,000 más IVA de **$480,000** en el mes 1. IVA a cargo del mes (ejercicio 2) $102,720.00; saldo a favor **$377,280.00** (art. 6 LIVA). Si se acredita contra los meses siguientes se agota en el quinto mes (4 meses más y queda un saldo remanente de $33,600.00 en el quinto). Si se solicita devolución, lo solicitado ya no se acredita; el plazo del art. 22 CFF es de cuarenta días (sin contar requerimientos) y la RMF 2.3.4 exige tener presentada la DIOT del periodo.
+**Ejercicio 7: IVA con inversión y devolución.** SUPUESTO: se compran tanques y dispensarios por $3,000,000 más IVA de **$480,000** en el mes 1. IVA a cargo del mes (ejercicio 2) $102,720.00; saldo a favor **$377,280.00** (art. 6 LIVA). Si se acredita contra los meses siguientes, el saldo baja a $274,560.00, $171,840.00 y $69,120.00 (meses 2 a 4) y se agota en el mes 5, en el que la estación paga $33,600.00 (102,720.00 − 69,120.00). Si se solicita devolución, lo solicitado ya no se acredita; el plazo del art. 22 CFF es de cuarenta días (sin contar requerimientos) y la RMF 2.3.4 exige tener presentada la DIOT del periodo.
 
 **Ejercicio 8: acreditamiento del cliente transportista (LIF 2026, art. 20, A, IV).** Si un autotransportista compra **10,000 litros de diésel**, el monto acreditable que dice la ley es 10,000 × 7.3634 = **$73,634.00**, contra su ISR, **siempre que pague con tarjeta, monedero, cheque o transferencia**. Pero en la semana del Acuerdo 145/2026 la cuota disminuida del diésel es $0.0000; la LIF dice "con los ajustes que, en su caso, correspondan" y **no se leyó la regla que explique esos ajustes** (nv): no se debe prometer el monto completo a un cliente sin leerla.
 
@@ -270,14 +270,14 @@ PP de ISR (art. 14) · IVA (art. 5-D) y DIOT (art. 32, fr. VIII) · retenciones 
 2. **¿Puede la estación acreditar IEPS? ¿Y trasladarlo?**
    No. Art. 8, fr. I, c): "no se consideran contribuyentes" por la enajenación; art. 4: no procede el acreditamiento cuando quien lo pretende "no sea contribuyente del impuesto por la enajenación del bien"; art. 2.º-A: el monto se traslada en el precio, nunca "expresa y por separado". El IEPS es costo del combustible.
 
-3. **Calcule el pago provisional de mayo con coeficiente 0.010159, ingresos acumulados de $54,237,271.34 y PTU de $141,000. ¿En cuántas partes se resta la PTU?**
-   Se resta en 8 partes iguales ($17,625) en mayo a diciembre; en mayo se resta una parte. Utilidad del PP = 54,237,271.34 × 0.010159 − 17,625 = 533,356.80; ISR acumulado a 30% = $160,007.04; PP del mes = 160,007.04 − 132,235.63 (PP de enero a abril) = **$27,771.41**. Art. 14, fr. II, a).
+3. **Calcule el pago provisional de mayo con coeficiente 0.0101587 (1,280,000 / 126,000,000), ingresos acumulados de $54,237,271.34 y PTU de $141,000. ¿En cuántas partes se resta la PTU?**
+   Se resta en 8 partes iguales ($17,625) en mayo a diciembre; en mayo se resta una parte. Utilidad del PP = 54,237,271.34 × 0.0101587 − 17,625 = 533,356.80; ISR acumulado a 30% = $160,007.04; PP del mes = 160,007.04 − 132,235.63 (PP de enero a abril) = **$27,771.41**. Art. 14, fr. II, a).
 
 4. **Un ejercicio da pérdida fiscal de $2,000,000 y la estación pagó PTU de $100,000. ¿De cuánto es la pérdida fiscal y en cuántos ejercicios se amortiza hoy y con la iniciativa 2027?**
    $2,100,000: el art. 57 la incrementa con la PTU pagada. Hoy se amortiza en los diez ejercicios siguientes (actualizada). La iniciativa propone veinte y límite del 50% de la utilidad fiscal para quien tenga ingresos mayores a 50 millones y determine utilidad (art. 78-C). El punto del 50% se calcula después del límite a deducciones (art. 78-B).
 
 5. **La sociedad tiene UFN de $650,000 y reparte $800,000 a una persona física. ¿Qué impuestos hay y a cargo de quién?**
-   La sociedad paga art. 10 sobre el exceso de $150,000: 150,000 × 1.4286 × 30% = $64,287 (definitivo; se acredita en el ISR del ejercicio y dos más). Además retiene 10% de $800,000 = $80,000 (art. 140, definitivo, se entera con el PP). La persona física puede acreditar el ISR pagado por la sociedad solo si acumula dividendo e impuesto y tiene la constancia (art. 140, 1.er párrafo); el 10% es adicional. (Hay que advertir que la acumulación aplica únicamente cuando se opta por la mecánica del 1.er párrafo, y que no se leyó el efecto de dividendos de utilidades de ejercicios anteriores a 2014: nv.)
+   La sociedad paga art. 10 sobre el exceso de $150,000: 150,000 × 1.4286 × 30% = $64,287 (definitivo; se acredita en el ISR del ejercicio y dos más). Además retiene 10% de $800,000 = $80,000 (art. 140, definitivo, se entera con el PP). La persona física acumula el dividendo y puede acreditar el ISR pagado por la sociedad solo si acumula también ese impuesto y tiene la constancia (art. 140, 1.er párrafo); el 10% es adicional (2.º párrafo).
 
 6. **Una estación tiene saldo a favor de IVA de $377,280 por inversión. ¿Puede acreditarlo y pedir devolución del mismo monto? ¿Cuánto tarda?**
    No ambas: lo solicitado en devolución no puede acreditarse (art. 6 LIVA). Debe pedir devolución del total del saldo. El CFF art. 22 da cuarenta días desde que la solicitud esté completa; la autoridad puede pedir datos en veinte días y esos requerimientos suspenden el plazo. RMF 2.3.4: DIOT del periodo presentada. La regla de trece días hábiles (RMF 11.7.1) es del estímulo fronterizo, no del IVA.
@@ -307,12 +307,12 @@ PP de ISR (art. 14) · IVA (art. 5-D) y DIOT (art. 32, fr. VIII) · retenciones 
 ## 10. Registro de verificación (7-oct-2026)
 
 - **Descargas.** Con `curl` y el proxy del entorno: `diputados.gob.mx` (LISR, LIVA, LIEPS, LIF 2026, CFF, LFT, Acuerdo 179/2025, índice de leyes), `sat.gob.mx` (RMF compilada, Anexos 1, 5 y 8, Decreto 31-12-2025), `sidof.segob.gob.mx` (acuerdos 144 y 145/2026) y `gaceta.diputados.gob.mx` (Anexos A, D, E, F y otros de la Gaceta 7121). Extracción con `pdf2txt.py` (pdfminer.six). Los hashes (16 caracteres) están en el §3. `www.dof.gob.mx` y `hacienda.gob.mx` fallan por certificado y no se debilitó la verificación TLS. El hash del CFF coincide con el del cap. 30; el hash de la RMF compilada coincide con el del cap. 30.
-- **Verificación de cifras en Python** (`cap32_check.py` en el directorio de trabajo de la sesión): factor 1.0379 (truncado, no redondeado), cuotas 2026 a partir de 2025, montos del Acuerdo 145/2026, IVA con exclusión del art. 2.º-A, PP mensuales, PTU y su plazo (31-mar + 60 días = 30-may-2026), límite 78-B y 78-C, CUFIN y dividendos, AAI, saldo a favor de IVA, fr. XIX del art. 25 de la LIF 2027. Resumen del cálculo central:
+- **Verificación de cifras en Python** (script completo al final de este capítulo): factor 1.0379 (truncado, no redondeado), cuotas 2026 a partir de 2025, montos del Acuerdo 145/2026, IVA con exclusión del art. 2.º-A, PP mensuales, PTU y su plazo (31-mar + 60 días = 30-may-2026), límite 78-B y 78-C, CUFIN y dividendos, AAI, saldo a favor de IVA, fr. XIX del art. 25 de la LIF 2027. Resumen del cálculo central:
   - `S = (P + 0.16·c2A)/1.16` y `IVA = 0.16·(S − c2A)`; para P = 24.00 y c2A = 0.591390: S = 20.77123 e IVA = 3.22877; P = S + IVA = 24.00000.
   - `uf25 = 126,000,000 − 124,590,000 − 130,000 = 1,280,000`; `coef = 1,280,000 / 126,000,000 = 0.0101587`.
   - `limite78B = 0.9667 × 126,000,000 = 121,804,200`; `UF = 126,000,000 − 121,804,200 − 141,000 = 4,054,800`.
   - `dividendo: 150,000 × 1.4286 × 0.30 = 64,287`.
-- **Verificación mecánica de frases.** Se extrajeron las cadenas entrecomilladas de 20 o más caracteres del capítulo y se buscaron, con espacios normalizados, en los textos extraídos de los documentos del §3. Resultado en la sección final de este registro.
+- **Verificación mecánica de frases.** Se extrajeron las cadenas entrecomilladas de 20 o más caracteres del capítulo y se buscaron, con espacios normalizados, en los textos extraídos de los documentos del §3. Resultado: 87 cadenas; las que no aparecen literalmente son artefactos del emparejamiento de comillas (texto entre dos citas), la frase del encargo "IEPS trasladado y acreditable" y ninguna cita de ley sin coincidencia tras corregir una (art. 12 LIVA, que se había abreviado con puntos suspensivos).
 - **Hallazgos de cuidado.** (1) El encargo suponía "ventas a Pemex" y "IEPS trasladado y acreditable" en la estación: ninguna de las dos premisas es cierta en derecho (art. 8, fr. I, c, LIEPS). (2) El encargo suponía el control volumétrico como requisito de deducibilidad de la LISR: no existe esa causal expresa (0 menciones en LISR, LIVA, LIEPS y LIF). (3) Los Anexos 5 y 8 no traen nada de combustibles. (4) Los estímulos semanales se publican por acuerdo de SHCP, no por anexo. (5) El factor del Acuerdo 179/2025 está truncado, no redondeado. (6) La LISR y la LIVA de Diputados no van atrasadas: el índice de leyes muestra las mismas fechas. (7) La iniciativa 2027 sí tiene fuente primaria en la Gaceta; dos medios secundarios (idconline, EY) solo sirvieron de guía.
 - **Seguridad.** No se pidió ni se usó ninguna credencial, e.firma o contraseña.
 
@@ -330,3 +330,107 @@ PP de ISR (art. 14) · IVA (art. 5-D) y DIOT (art. 32, fr. VIII) · retenciones 
 10. Jurisprudencia y criterios no vinculativos del SAT (Anexo 7).
 11. Las mediciones de la Primera Modificación de la RMF posteriores a 09-07-2026 y la Segunda (01-10-2026) en lo que toca IEPS.
 12. Dictámenes de laboratorio y reglas 2.6.1.x de controles volumétricos (en el cap. 30).
+
+### Apéndice: script de verificación (Python 3, sin dependencias)
+
+```python
+# Verificacion numerica del cap. 32 (todas las cifras de entrada salen de fuentes leidas o estan marcadas SUPUESTO)
+from decimal import Decimal as D, ROUND_HALF_UP, ROUND_DOWN
+def r2(x): return float(D(str(x)).quantize(D('0.01'),rounding=ROUND_HALF_UP))
+print("== E1 cuotas 2026 (Acuerdo 179/2025)")
+f=142.645/137.424; print("factor exacto",f,"truncado 4:",int(f*1e4)/1e4,"redondeado 4:",round(f,4))
+old={"magna_2ID":6.4555,"prem_2ID":5.4513,"dsl_2ID":7.0946,"magna_2A":0.569795,"prem_2A":0.695255,"dsl_2A":0.472895}
+new={"magna_2ID":6.7001,"prem_2ID":5.6579,"dsl_2ID":7.3634,"magna_2A":0.591390,"prem_2A":0.721605,"dsl_2A":0.490817}
+for k in old:
+    p=old[k]*1.0379; print(k,old[k],"x1.0379 =",round(p,6),"publicada",new[k], "trunc4",int(p*1e4)/1e4, "round4",round(p,4))
+print("== E1b Acuerdo 145/2026 (26-sep a 2-oct-2026)")
+cuota={"magna":6.7001,"prem":5.6579,"dsl":7.3634}
+pct={"magna":.7209,"prem":.7211,"dsl":1.0}
+mon={"magna":4.8300,"prem":4.0800,"dsl":7.3634}
+cd={"magna":1.8701,"prem":1.5779,"dsl":0.0}
+for k in cuota:
+    m=cuota[k]*pct[k]; print(k,"cuota*pct=",round(m,4),"monto publicado",mon[k],"cuota-monto=",round(cuota[k]-mon[k],4),"cuota disminuida publicada",cd[k])
+print("== E2 estructura de precio por litro (precios de bomba SUPUESTO)")
+c2A={"magna":.591390,"prem":.721605,"dsl":.490817}
+P={"magna":24.00,"prem":26.50,"dsl":26.80}
+marg={"magna":1.30,"prem":1.50,"dsl":1.10}   # SUPUESTO margen bruto sin IVA por litro
+L={"magna":300000,"prem":80000,"dsl":120000}  # SUPUESTO litros/mes
+S={};IVA={};Sc={};IVAc={}
+for k in P:
+    S[k]=(P[k]+0.16*c2A[k])/1.16
+    IVA[k]=0.16*(S[k]-c2A[k])
+    Sc[k]=S[k]-marg[k]; IVAc[k]=0.16*(Sc[k]-c2A[k])
+    naive=P[k]/1.16*0.16
+    ieps=cd[k]+c2A[k]
+    print(k,"P",P[k],"S",round(S[k],5),"IVA",round(IVA[k],5),"check P",round(S[k]+IVA[k],5),"IVA ingenuo",round(naive,5),"dif",round(naive-IVA[k],5),"IEPS en precio (cuota disminuida+2A)",round(ieps,5),"IEPS bruto sin estimulo",round(cuota[k]+c2A[k],5))
+ing=sum(S[k]*L[k] for k in L); cost=sum(Sc[k]*L[k] for k in L)
+ivat=sum(IVA[k]*L[k] for k in L); ivac=sum(IVAc[k]*L[k] for k in L)
+gm=sum(marg[k]*L[k] for k in L)
+print("ingresos mes",r2(ing),"costo",r2(cost),"margen",r2(gm),"margen/ing",gm/ing)
+print("IVA trasladado",r2(ivat),"IVA acreditable",r2(ivac),"IVA a cargo",r2(ivat-ivac),"=0.16*margen",r2(0.16*gm))
+opex=560000 # SUPUESTO
+print("opex",opex,"utilidad antes de PTU mes",r2(gm-opex),"ratio deducciones/ingresos",(cost+opex)/ing)
+print("== E3 pagos provisionales 2026 (art. 14 LISR)")
+ing25=126_000_000; ded25=124_590_000; ptu_paid25=130_000
+uf25=ing25-ded25-ptu_paid25; coef=uf25/ing25
+print("utilidad fiscal 2025",uf25,"coef",coef)
+renta_ptu25=ing25-ded25; ptu25=0.10*renta_ptu25
+print("renta gravable PTU 2025",renta_ptu25,"PTU 10% (supuesto de tasa)",ptu25)
+import datetime
+print("fecha limite declaracion anual 31-mar-2026 +60 dias:",datetime.date(2026,3,31)+datetime.timedelta(days=60))
+ing_m=ing/1  # mensual
+prev=0;ptu_month=ptu25/8
+for m in range(1,10):
+    acum=ing_m*m
+    ptu_acum= ptu_month*max(0,m-4)   # mayo=5 -> 1 parte
+    base=acum*coef-ptu_acum
+    pp=base*0.30-prev
+    print(m,"ing acum",r2(acum),"util PP",r2(base),"ISR acum",r2(base*.3),"PP del mes",r2(pp))
+    prev+=pp
+print("== E4 2027 inic.: limite deducciones 78-B y perdidas 78-C")
+ing27=126_000_000; ded27=124_590_000; ptu27=141_000; pf=3_000_000
+print("ratio",ded27/ing27,">0.9667?",ded27/ing27>0.9667)
+uf_act=ing27-ded27-ptu27; isr_act=0.30*uf_act
+lim=0.9667*ing27; nodeduc=ded27-lim
+uf_prop=ing27-lim-ptu27; isr_prop=0.30*uf_prop
+print("limite",lim,"no deducible del ejercicio",nodeduc,"UF actual",uf_act,"ISR actual",isr_act,"UF propuesta",uf_prop,"ISR propuesto",isr_prop,"diferencia",isr_prop-isr_act)
+lim78c=0.5*uf_prop; aplic=min(pf,lim78c)
+print("perdida pendiente",pf,"limite 78-C",lim78c,"aplicada",aplic,"UF tras perdida",uf_prop-aplic,"ISR",0.30*(uf_prop-aplic),"vs actual art.57 (aplica toda)",0.30*max(0,uf_act-pf))
+print("coef 2027 PP: 0.010159 x 2.6162 =",coef*2.6162,"x1.0658",coef*1.0658)
+ded25_ratio=ded25/ing25; print("ratio 2025",ded25_ratio)
+print("== E5 dividendos y CUFIN")
+rf=1_000_000; isr=300_000; nd=50_000
+ufn=rf-isr-nd; print("UFN",ufn)
+for div in (500_000,800_000):
+    exc=max(0,div-ufn); imp=exc*1.4286*0.30
+    print("dividendo",div,"exceso sobre CUFIN",exc,"ISR art.10",r2(imp),"retencion 10% PF",0.10*div,"1.4286 chk",1/0.7)
+print("UFN a disminuir por acreditamiento art 10 f.II: impuesto/0.4286 =",r2(imp/0.4286))
+print("== E6 ajuste anual por inflacion (art. 44) factor ilustrativo Nov/Nov")
+fa=142.645/137.424-1; print("factor ilus",fa)
+deu=2_400_000+300_000; cre=1_800_000+0; print("deudas prom",deu,"creditos prom",cre,"dif",deu-cre,"AAI acumulable",r2((deu-cre)*fa))
+print("creditos>deudas: dif 700000 ->deducible",r2(700000*fa))
+print("== E7 IVA saldo a favor")
+capex=3_000_000; iva_c=0.16*capex
+a_cargo=0.16*gm
+print("IVA capex",iva_c,"a cargo mes",r2(a_cargo),"saldo a favor mes1",r2(iva_c-a_cargo))
+s=iva_c-a_cargo;n=1
+while s>0:
+    s-=a_cargo;n+=1
+print("meses para agotar acreditando (incl. mes 1):",n, "resto",r2(s))
+print("== E8 LIF 20-A-IV diesel 10,000 L")
+print(10000*7.3634, 10000*0.0, "cuota disminuida dsl",cd["dsl"])
+print("== E9 2027 LIEPS fr XIX")
+c=6.7001+0.591390
+print("cuota sin estimulo magna 2026",c)
+print("compra 500000 vende 503000 ->",3000*c)
+print("mes1 compra 520000 vende 500000 ->",0,"; mes2 compra 480000 vende 500000 ->",20000*c)
+print("tolerancia 0.5% sobre 500000 L =",500000*0.005)
+print("== E10 estimulo LIF 20-A-I agro 0.355 sobre precio con IVA")
+print("ejemplo 100,000 pesos con IVA ->",100000*0.355)
+print("== E3b cierre 2026")
+ing_a=ing*12; cost_a=cost*12; opex_a=opex*12; ptu26=141000
+uf26=ing_a-cost_a-opex_a-ptu26; isr26=uf26*0.3
+pp_total=(ing_a*coef-ptu26)*0.30
+print("ingresos 2026",r2(ing_a),"UF 2026",r2(uf26),"ISR anual",r2(isr26),"PP acumulados dic",r2(pp_total),"saldo a favor",r2(pp_total-isr26),"coef real",uf26/ing_a)
+print("coef real*ing acum dic ->",r2((ing_a*(uf26/ing_a)-ptu26)*.3))
+```
