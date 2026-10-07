@@ -24,8 +24,8 @@
 | D2 | Código Fiscal de la Federación: obligaciones, facultades de comprobación, prescripción, infracciones y delitos | cap. 29 (verificado 6-oct) | Capítulo (grado A en la letra) |
 | D3 | Medios de defensa: recurso de revocación, juicio de nulidad, amparo, PRODECON | cap. 29 §7 (verificado 6-oct) | Capítulo (grado A en la letra) |
 | D4 | LISR de personas físicas (enajenación, intereses, dividendos, exenciones, RESICO) | caps. 11 y 27, V05 | Capítulo (grado A en la letra) |
-| D5 | LISR de personas morales y grupos | nada | Sin |
-| D6 | IVA e IEPS | nada | Sin |
+| D5 | LISR de personas morales y grupos | cap. 32 (verificado 7-oct) | Capítulo (grado A en la letra) |
+| D6 | IVA e IEPS | cap. 32 (verificado 7-oct) | Capítulo (grado A en la letra) |
 | D7 | Fiscalidad internacional: tratados, residencia, fuente de riqueza, regímenes fiscales preferentes, FATCA/CRS | cap. 27 (SIC) | Parcial |
 | D8 | Fiscalidad de activos financieros: SIC, ETFs extranjeros y apalancados, derivados, cripto | cap. 27, ficha cripto 4-oct | Parcial |
 | D9 | Derecho bursátil y antilavado (LMV, CNBV, LFPIORPI) | arena 01 y ficha cripto | Parcial |

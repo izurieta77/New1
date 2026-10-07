@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-07 02:10 UTC · trabajo-continuo · OK · trabajo-continuo: 2026-10-06 · cap. 32 LISR PM, IVA e IEPS verificado (D5-D6 con capítulo)
 2026-10-07 01:35 UTC · decisor-vespertino · OK · decisor-vespertino: 2026-10-06 · sin alertas que obliguen a actuar; FX-1 sin disparo; boleta modo C en espera de fondeo
 2026-10-07 00:42 UTC · cripto (cascada vespertina 18:42, reconfirmación completa del filtro) · OK · (pendiente commit del orquestador) · pulso BTC 85,512.01 (−0.34% 24h) / ETH 2,697.70 (−0.56% 24h), vs. 16:17 sin cambio material (BTC −0.05%, ETH +0.05%), lejos del umbral 8%/4h; reconfirmación §4 con klines frescos: SMA200 71,693.21 (vs. 71,618.01 de las 08:17), salida 69,542.41, reentrada 73,844.00, cierre 6-oct 85,549.93 a 23.02% sobre la salida, ENCENDIDO sin cambio de estado; sin órdenes/pronósticos cripto vencidos; sin alertas de 8%/4h ni evento de cola; bitacora/cripto/2026-10-06.md
 2026-10-07 00:12 UTC · aprendizaje · OK · aprendizaje: 2026-10-06 · 4 temas subieron de nivel; 26 errores propios corregidos
