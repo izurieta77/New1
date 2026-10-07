@@ -161,14 +161,14 @@ Esto obliga a **toda estación de servicio** (que "enajena" petrolíferos) a: (1
 
 | Supuesto (art. 81, fr. XXV) | Multa (art. 82, fr. XXV) |
 |---|---|
-| No tener el dictamen de laboratorio o el certificado de operación (inciso a) | $39,360 a $69,160 |
-| Registrar un tipo de hidrocarburo distinto al real, detectado por el SAT o por los CFDI (inciso a, segundo párrafo) | $1,124,500 a $1,686,750 |
-| Registrar octanaje distinto al real en gasolinas, detectado por el SAT o por los CFDI (inciso b) | $2,249,000 a $3,373,500, **más clausura de 1 a 3 meses** |
+| Incumplimiento genérico del art. 28 fr. I (primer párrafo de la fr. XXV; art. 82 XXV inciso a) | $39,360 a $69,160 |
+| No tener el dictamen de laboratorio o el certificado de operación (art. 81 XXV, segundo párrafo, inciso a; art. 82 XXV inciso b) | $1,124,500 a $1,686,750 |
+| Registrar un tipo de hidrocarburo u octanaje distinto al real, detectado por el SAT o por los CFDI (art. 81 XXV inciso b; art. 82 XXV inciso c) | $2,249,000 a $3,373,500, **más clausura de 1 a 3 meses** |
 | No tener los equipos/programas de control volumétrico, o alterarlos/inutilizarlos/destruirlos (incisos c y d) | $3,373,500 a $5,622,500, **más clausura de 3 a 6 meses** |
 | No enviar, enviar tarde, o enviar incompleto/con errores cada reporte de información (incisos e, f, g, h) | $39,360 a $69,160 **por cada reporte** |
 | Romper o alterar los sellos de una clausura ya impuesta (inciso i) | $39,360 a $69,160, **más el doble del plazo de clausura previa** |
 
-Todas estas cifras están compiladas por Resolución Miscelánea Fiscal hasta el 28-12-2025, vigentes en 2026.
+Todas estas cifras están compiladas por Resolución Miscelánea Fiscal hasta el 28-12-2025, vigentes en 2026. **Corregido 7-oct-2026:** la versión anterior de esta tabla tenía los montos recorridos un renglón (asignaba $39,360 a "no tener dictamen"); se verificó contra el texto del PDF oficial del CFF (DOF 09-04-2026), arts. 81 XXV y 82 XXV.
 
 **Además hay delito penal.** El art. 111 Bis del CFF impone **de 3 a 8 años de prisión** a quien no cuente con los controles volumétricos del art. 28 fr. I apartado B, o los altere, inutilice o destruya; a quien no tenga o no mantenga en operación los equipos y programas; a quien no tenga, altere o falsifique los certificados; o a quien fabrique, obtenga, instale o comercialice un sistema para alterar los registros de volumen.
 
