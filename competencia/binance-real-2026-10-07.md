@@ -14,6 +14,15 @@ Cuadre: 9,914.20 + 1,424.31 + 1,092.90 + 3,505.78 = 15,937.19; resto 18.16 MXN e
 **Conciliación del sublibro de Claude:** BTC de Claude 0.001325 (20% del BTC total; ≈1,984 MXN al precio de la app) + 3,001.83 MXN en pesos = **≈4,986 MXN** (−0.3% sobre 5,000). El BTC no aparecía en Spot porque la pestaña Spot solo mostró pesos; el cripto está en otra cartera (Fondos o Earn) y la vista Resumen lo suma. **Conciliado; libro sin cambios.**
 
 **Hallazgos:**
-1. El PnL de BTC (+62.48%) implica un costo promedio ≈ 921,000 MXN/BTC, muy por debajo de las compras de septiembre (~1.5 millones): la cuenta contiene **BTC antiguo del dueño**, no solo lo de las tres IAs. El PnL de la app no sirve para medir a las IAs; se mide con los sublibros.
+1. ~~La cuenta contiene BTC antiguo del dueño~~ **Corregido (7-oct, conciliación propuesta por otra IA y verificada aquí):** el +62.48% de la app no prueba BTC previo; Binance calcula su propia base de costo. Los saldos cuadran completos con los tres participantes (ver abajo). Mi inferencia era débil y queda retirada. El PnL de la app no sirve para medir a las IAs; se mide con los sublibros.
 2. Del BTC total, 0.0052978 (≈7,930 MXN) no es de Claude: parte de Grok/ChatGPT y parte previa del dueño. ETH y BNB: atribución pendiente.
 3. Hay tokens marcados "En observación" por Binance (SOPH, TOWNS, RESOLV): riesgo de deslistado; son polvo (<0.06 MXN cada uno), sin efecto.
+
+## Conciliación propuesta (otra IA, 7-oct) — aritmética verificada aquí
+| Participante | Composición | Valor | Rendimiento sobre 5,000 |
+|---|---|---|---|
+| Claude | 0.001325 BTC + 3,001.83 MXN | 4,985.34 | −0.29% |
+| Grok (pendiente de confirmar por el dueño) | 0.00330974 BTC + 1.617 MXN + 0.00000843 ETH | 4,956.66 | −0.87% |
+| ChatGPT | 0.00198801 BTC + 0.030969 ETH + 500 MXN + residuo 2.33 MXN | 4,902.29 | −1.95% |
+| Fuera de la competencia | BNB 1,092.90 + tokens menores 18.16 | 1,111.06 | — |
+Suma 4,985.34 + 4,956.66 + 4,902.29 + 1,111.06 = 15,955.35 ✓. La aritmética cuadra; **la atribución del residual a Grok solo la puede confirmar el dueño** (el sistema no tiene el historial de órdenes por IA). La orden adicional de 500 MXN en BTC no se ejecutó (los 3,505.78 MXN siguen en Spot).
