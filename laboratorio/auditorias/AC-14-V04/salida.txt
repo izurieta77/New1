@@ -1,0 +1,293 @@
+AC-14: doble ejecucion independiente de V04. Fase 0, formacion; no es recomendacion.
+Huellas sha256 de los datos leidos:
+  B alfred_DEXMXUS.csv f7dab31a7780fc32
+  B alfred_INTGSTMXM193N.csv 6a08256055fde1cb
+  B alfred_SPASTT01MXM661N.csv e42ea31ac78bbfb2
+  B banxico_CETES_SF43936_SF282.csv 6fe72efc8bf88e32
+  B banxico_FIX_SF43718.csv 52770e280c711efe
+  B fred_SP500_de_AC13.csv 551b282c417da2e7
+  B french_daily_descarga.zip 2f29e22546069914
+  B yahoo_NAFTRAC.MX_1d.json 5215065d55efb1bf
+  A yahoo_SPY_1d.json eb419b5fc0a7853b
+  A fred_DEXMXUS.csv 676efa2ae952594c
+  A banxico_CF107_cetes28_SF43936.csv da601dd6bfcdf891
+  A banxico_CF102_fix_SF43718.csv 59d0e5abdd4dfe25
+  A yahoo_NAFTRAC.MX_1d.json 6820fd513f555946
+  A yahoo_SP500TR_1d.json fb7bfa5f21fbe91d
+  A yahoo_GSPC_1d.json d5eb95072b940286
+  A fred_INTGSTMXM193N.csv 6ffbf4e5f6682a53
+
+FIX Banxico (B) contra DEXMXUS (A): 7981 fechas comunes; mediana |dif| 0.055%, p90 0.188%, max 2.97%
+DEXMXUS vintage 2026-10-07 (ALFRED) contra la de A: 0 fechas con valor distinto; fechas solo en A: 0, solo en B (<=2026-09-18): 0
+USD W1: SPY adjclose (A) 11.29%  |  French CRSP VW (B) 11.48%
+FRED SP500 (precio, via AC-13) contra Yahoo ^GSPC (A): 2504 fechas comunes 2016-10-06..2026-09-24, 2 con |dif| > 0.01%, max 0.119%
+S&P precio en MXN 2016-10-31..2026-08-31: FRED SP500 x FIX 12.76%  |  Yahoo ^GSPC x DEXMXUS 12.81%
+
+====================================================================================================
+CONFIGURACION: A-datos: SPY adjclose (Yahoo) x DEXMXUS (FRED, V04) ; CETES subasta SF43936 (V04) [control de codigo]
+  fechas comunes activo y FX: 8191 (1993-11-08 a 2026-09-18)
+  Benchmarks (CAGR, sin costos):  ventana | desde..hasta | S&P TR MXN | S&P TR USD | CETES
+    W1: 2007-12-31..2026-08-31 |  13.97% |  11.29% |  6.37%
+    W2: 2008-01-31..2026-08-31 |  14.47% |  11.72% |  6.37%
+    W3: 2008-01-02..2026-09-18 |  14.05% |  11.29% |  6.37%
+    W4: 2007-12-31..2025-12-31 |  14.10% |  10.97% |  6.35%
+  Sensibilidad de inicio (cierres 2007-01..2009-12 a 2026-08): S&P MXN de 13.41% a 17.18%
+  Ano 2008 entre fechas fijas: USD -36.8%  MXN -19.9%
+  S&P MXN - CETES 2008-2026: media x12 +7.84 pp, t NW6 2.39 (apoyo)
+  SMA y comprar y mantener (costos GBM 0.34% por lado)
+    corrida             segmento   | CAGR    | vol    | MDD     | Sharpe | invert. | cambios
+    SMA10-MXN-T1        2008-2026 |  15.50% | 11.55% |  -12.7% |  0.772 |  78.6% | 17
+    SMA10-MXN-T1        1995-2007 |  18.26% | 12.83% |  -19.0% |  0.056 |  80.1% | 20
+    SMA10-MXN-T1        1995-2026 |  16.63% | 12.08% |  -19.0% |  0.468 |  79.2% | 38
+    BH-T1               2008-2026 |  13.97% | 14.38% |  -29.5% |  0.552 | 100.0% | 0
+    BH-T1               1995-2007 |  17.02% | 14.97% |  -36.3% | -0.006 | 100.0% | 0
+    BH-T1               1995-2026 |  15.21% | 14.61% |  -36.3% |  0.323 | 100.0% | 0
+    SMA10-MXN-T0        2008-2026 |  15.23% | 11.21% |  -12.2% |  0.770 |  78.6% | 17
+    SMA10-MXN-T0        1995-2007 |  18.86% | 13.77% |  -20.4% |  0.099 |  80.1% | 20
+    SMA10-MXN-T0        1995-2026 |  16.71% | 12.32% |  -20.4% |  0.468 |  79.2% | 38
+    BH-T0               2008-2026 |  13.97% | 13.46% |  -28.4% |  0.579 | 100.0% | 0
+    BH-T0               1995-2007 |  18.01% | 15.85% |  -39.9% |  0.058 | 100.0% | 0
+    BH-T0               1995-2026 |  15.61% | 14.48% |  -39.9% |  0.350 | 100.0% | 0
+    SMA10-USD-T1        2008-2026 |  12.16% | 11.08% |  -21.7% |  0.534 |  78.1% | 31
+    SMA10-USD-T1        1995-2007 |  20.83% | 12.29% |  -10.8% |  0.239 |  78.2% | 10
+    SMA10-USD-T1        1995-2026 |  15.64% | 11.62% |  -21.7% |  0.409 |  78.2% | 42
+    SMA10-USD-T0        2008-2026 |  12.26% | 10.78% |  -19.9% |  0.552 |  78.1% | 31
+    SMA10-USD-T0        1995-2007 |  21.22% | 13.14% |   -8.7% |  0.256 |  78.2% | 10
+    SMA10-USD-T0        1995-2026 |  15.85% | 11.84% |  -19.9% |  0.419 |  78.2% | 42
+  Diferencia mensual neta SMA10 - comprar y mantener (misma ejecucion), NW(6)
+    SMA10-MXN-T1 2008-2026: +0.987 pp/ano, t 0.548 (inconcluso, n=224)
+    SMA10-MXN-T1 1995-2007: +0.769 pp/ano, t 0.346 (inconcluso, n=156)
+    SMA10-MXN-T1 1995-2026: +0.898 pp/ano, t 0.642 (inconcluso, n=380)
+    SMA10-MXN-T0 2008-2026: +0.839 pp/ano, t 0.461 (inconcluso, n=224)
+    SMA10-MXN-T0 1995-2007: +0.415 pp/ano, t 0.179 (inconcluso, n=156)
+    SMA10-MXN-T0 1995-2026: +0.665 pp/ano, t 0.464 (inconcluso, n=380)
+    SMA10-USD-T1 2008-2026: -2.029 pp/ano, t -1.014 (inconcluso, n=224)
+    SMA10-USD-T1 1995-2007: +2.882 pp/ano, t 1.189 (inconcluso, n=156)
+    SMA10-USD-T1 1995-2026: -0.013 pp/ano, t -0.008 (inconcluso, n=380)
+    SMA10-USD-T0 2008-2026: -1.848 pp/ano, t -0.932 (inconcluso, n=224)
+    SMA10-USD-T0 1995-2007: +2.333 pp/ano, t 0.912 (inconcluso, n=156)
+    SMA10-USD-T0 1995-2026: -0.132 pp/ano, t -0.082 (inconcluso, n=380)
+  16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
+    2008-2026: MDD variantes -21.7% a -10.4%; comprar y mantener T0 -28.4% / T1 -29.5%; todas con menor caida: si
+    1995-2007: MDD variantes -20.4% a -8.7%; comprar y mantener T0 -39.9% / T1 -36.3%; todas con menor caida: si
+
+====================================================================================================
+CONFIGURACION: B1 (segunda fuente principal): French CRSP VW TR x FIX Banxico ; CETES SF282 promedio mensual Banxico
+  fechas comunes activo y FX: 8514 (1991-11-12 a 2026-08-31)
+  Benchmarks (CAGR, sin costos):  ventana | desde..hasta | S&P TR MXN | S&P TR USD | CETES
+    W1: 2007-12-31..2026-08-31 |  14.16% |  11.48% |  6.36%
+    W2: 2008-01-31..2026-08-31 |  14.67% |  11.92% |  6.35%
+    W3: sin datos hasta 2026-09-18 (ultimo dato comun 2026-08-31)
+    W4: 2007-12-31..2025-12-31 |  14.33% |  11.20% |  6.34%
+  Sensibilidad de inicio (cierres 2007-01..2009-12 a 2026-08): S&P MXN de 13.62% a 17.31%
+  Ano 2008 entre fechas fijas: USD -36.5%  MXN -19.5%
+  S&P MXN - CETES 2008-2026: media x12 +8.09 pp, t NW6 2.40 (apoyo)
+  SMA y comprar y mantener (costos GBM 0.34% por lado)
+    corrida             segmento   | CAGR    | vol    | MDD     | Sharpe | invert. | cambios
+    SMA10-MXN-T1        2008-2026 |  15.27% | 11.55% |  -13.0% |  0.756 |  79.0% | 19
+    SMA10-MXN-T1        1995-2007 |  19.37% | 12.54% |  -10.4% |  0.147 |  82.1% | 16
+    SMA10-MXN-T1        1995-2026 |  16.94% | 11.96% |  -13.0% |  0.501 |  80.3% | 36
+    BH-T1               2008-2026 |  14.27% | 14.62% |  -28.5% |  0.565 | 100.0% | 0
+    BH-T1               1995-2007 |  17.13% | 15.20% |  -36.9% |  0.014 | 100.0% | 0
+    BH-T1               1995-2026 |  15.44% | 14.85% |  -36.9% |  0.338 | 100.0% | 0
+    SMA10-MXN-T0        2008-2026 |  15.05% | 11.53% |  -12.7% |  0.740 |  79.0% | 19
+    SMA10-MXN-T0        1995-2007 |  20.44% | 13.67% |   -9.4% |  0.214 |  82.1% | 16
+    SMA10-MXN-T0        1995-2026 |  17.23% | 12.45% |  -12.7% |  0.508 |  80.3% | 36
+    BH-T0               2008-2026 |  14.16% | 13.86% |  -27.6% |  0.580 | 100.0% | 0
+    BH-T0               1995-2007 |  18.12% | 16.14% |  -39.2% |  0.076 | 100.0% | 0
+    BH-T0               1995-2026 |  15.77% | 14.83% |  -39.2% |  0.359 | 100.0% | 0
+    SMA10-USD-T1        2008-2026 |  12.79% | 11.20% |  -14.9% |  0.581 |  77.2% | 29
+    SMA10-USD-T1        1995-2007 |  19.89% | 12.22% |  -10.4% |  0.184 |  77.6% | 14
+    SMA10-USD-T1        1995-2026 |  15.65% | 11.65% |  -14.9% |  0.414 |  77.4% | 44
+    SMA10-USD-T0        2008-2026 |  13.08% | 10.99% |  -14.0% |  0.612 |  77.2% | 29
+    SMA10-USD-T0        1995-2007 |  20.10% | 13.17% |  -13.1% |  0.193 |  77.6% | 14
+    SMA10-USD-T0        1995-2026 |  15.91% | 11.95% |  -14.0% |  0.426 |  77.4% | 44
+  Diferencia mensual neta SMA10 - comprar y mantener (misma ejecucion), NW(6)
+    SMA10-MXN-T1 2008-2026: +0.483 pp/ano, t 0.257 (inconcluso, n=224)
+    SMA10-MXN-T1 1995-2007: +1.543 pp/ano, t 0.684 (inconcluso, n=156)
+    SMA10-MXN-T1 1995-2026: +0.918 pp/ano, t 0.635 (inconcluso, n=380)
+    SMA10-MXN-T0 2008-2026: +0.485 pp/ano, t 0.256 (inconcluso, n=224)
+    SMA10-MXN-T0 1995-2007: +1.593 pp/ano, t 0.665 (inconcluso, n=156)
+    SMA10-MXN-T0 1995-2026: +0.940 pp/ano, t 0.631 (inconcluso, n=380)
+    SMA10-USD-T1 2008-2026: -1.746 pp/ano, t -0.795 (inconcluso, n=224)
+    SMA10-USD-T1 1995-2007: +1.941 pp/ano, t 0.798 (inconcluso, n=156)
+    SMA10-USD-T1 1995-2026: -0.232 pp/ano, t -0.140 (inconcluso, n=380)
+    SMA10-USD-T0 2008-2026: -1.316 pp/ano, t -0.603 (inconcluso, n=224)
+    SMA10-USD-T0 1995-2007: +1.242 pp/ano, t 0.477 (inconcluso, n=156)
+    SMA10-USD-T0 1995-2026: -0.266 pp/ano, t -0.158 (inconcluso, n=380)
+  16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
+    2008-2026: MDD variantes -17.3% a -10.8%; comprar y mantener T0 -27.6% / T1 -28.5%; todas con menor caida: si
+    1995-2007: MDD variantes -15.3% a -9.4%; comprar y mantener T0 -39.2% / T1 -36.9%; todas con menor caida: si
+
+====================================================================================================
+CONFIGURACION: B2: French CRSP VW TR x DEXMXUS (ALFRED 2026-10-07) ; CETES FMI INTGSTMXM193N (ALFRED)
+  fechas comunes activo y FX: 8178 (1993-11-08 a 2026-08-31)
+  Benchmarks (CAGR, sin costos):  ventana | desde..hasta | S&P TR MXN | S&P TR USD | CETES
+    W1: 2007-12-31..2026-08-31 |  14.16% |  11.48% |  6.36%
+    W2: 2008-01-31..2026-08-31 |  14.68% |  11.92% |  6.35%
+    W3: sin datos hasta 2026-09-18 (ultimo dato comun 2026-08-31)
+    W4: 2007-12-31..2025-12-31 |  14.33% |  11.20% |  6.34%
+  Sensibilidad de inicio (cierres 2007-01..2009-12 a 2026-08): S&P MXN de 13.62% a 17.30%
+  Ano 2008 entre fechas fijas: USD -36.5%  MXN -19.5%
+  S&P MXN - CETES 2008-2026: media x12 +8.08 pp, t NW6 2.39 (apoyo)
+  SMA y comprar y mantener (costos GBM 0.34% por lado)
+    corrida             segmento   | CAGR    | vol    | MDD     | Sharpe | invert. | cambios
+    SMA10-MXN-T1        2008-2026 |  15.17% | 11.80% |  -13.0% |  0.735 |  79.0% | 19
+    SMA10-MXN-T1        1995-2007 |  19.48% | 12.59% |  -11.0% |  0.156 |  81.4% | 16
+    SMA10-MXN-T1        1995-2026 |  16.92% | 12.13% |  -13.0% |  0.496 |  80.0% | 36
+    BH-T1               2008-2026 |  14.26% | 14.84% |  -28.4% |  0.558 | 100.0% | 0
+    BH-T1               1995-2007 |  17.14% | 15.23% |  -36.9% |  0.015 | 100.0% | 0
+    BH-T1               1995-2026 |  15.43% | 14.98% |  -36.9% |  0.337 | 100.0% | 0
+    SMA10-MXN-T0        2008-2026 |  15.02% | 11.54% |  -12.9% |  0.737 |  79.0% | 19
+    SMA10-MXN-T0        1995-2007 |  20.63% | 13.53% |   -9.1% |  0.228 |  81.4% | 16
+    SMA10-MXN-T0        1995-2026 |  17.29% | 12.40% |  -12.9% |  0.515 |  80.0% | 36
+    BH-T0               2008-2026 |  14.16% | 13.85% |  -27.5% |  0.580 | 100.0% | 0
+    BH-T0               1995-2007 |  18.11% | 16.05% |  -39.5% |  0.075 | 100.0% | 0
+    BH-T0               1995-2026 |  15.77% | 14.78% |  -39.5% |  0.360 | 100.0% | 0
+    SMA10-USD-T1        2008-2026 |  12.75% | 11.33% |  -14.8% |  0.572 |  77.2% | 29
+    SMA10-USD-T1        1995-2007 |  19.59% | 12.24% |  -11.0% |  0.163 |  76.9% | 16
+    SMA10-USD-T1        1995-2026 |  15.51% | 11.73% |  -14.8% |  0.402 |  77.1% | 46
+    SMA10-USD-T0        2008-2026 |  13.01% | 10.95% |  -14.2% |  0.608 |  77.2% | 29
+    SMA10-USD-T0        1995-2007 |  19.66% | 13.00% |  -15.5% |  0.164 |  76.9% | 16
+    SMA10-USD-T0        1995-2026 |  15.69% | 11.85% |  -15.5% |  0.412 |  77.1% | 46
+  Diferencia mensual neta SMA10 - comprar y mantener (misma ejecucion), NW(6)
+    SMA10-MXN-T1 2008-2026: +0.397 pp/ano, t 0.208 (inconcluso, n=224)
+    SMA10-MXN-T1 1995-2007: +1.638 pp/ano, t 0.714 (inconcluso, n=156)
+    SMA10-MXN-T1 1995-2026: +0.907 pp/ano, t 0.617 (inconcluso, n=380)
+    SMA10-MXN-T0 2008-2026: +0.468 pp/ano, t 0.246 (inconcluso, n=224)
+    SMA10-MXN-T0 1995-2007: +1.762 pp/ano, t 0.718 (inconcluso, n=156)
+    SMA10-MXN-T0 1995-2026: +0.999 pp/ano, t 0.663 (inconcluso, n=380)
+    SMA10-USD-T1 2008-2026: -1.792 pp/ano, t -0.808 (inconcluso, n=224)
+    SMA10-USD-T1 1995-2007: +1.689 pp/ano, t 0.701 (inconcluso, n=156)
+    SMA10-USD-T1 1995-2026: -0.363 pp/ano, t -0.219 (inconcluso, n=380)
+    SMA10-USD-T0 2008-2026: -1.375 pp/ano, t -0.628 (inconcluso, n=224)
+    SMA10-USD-T0 1995-2007: +0.869 pp/ano, t 0.332 (inconcluso, n=156)
+    SMA10-USD-T0 1995-2026: -0.454 pp/ano, t -0.269 (inconcluso, n=380)
+  16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
+    2008-2026: MDD variantes -17.1% a -10.6%; comprar y mantener T0 -27.5% / T1 -28.4%; todas con menor caida: si
+    1995-2007: MDD variantes -15.5% a -9.1%; comprar y mantener T0 -39.5% / T1 -36.9%; todas con menor caida: si
+
+====================================================================================================
+CONFIGURACION: B3 (aisla FX): SPY adjclose (A) x FIX Banxico ; CETES subasta SF43936 (descarga nueva)
+  fechas comunes activo y FX: 8235 (1993-01-29 a 2026-09-24)
+  Benchmarks (CAGR, sin costos):  ventana | desde..hasta | S&P TR MXN | S&P TR USD | CETES
+    W1: 2007-12-31..2026-08-31 |  13.97% |  11.29% |  6.37%
+    W2: 2008-01-31..2026-08-31 |  14.47% |  11.72% |  6.37%
+    W3: 2008-01-02..2026-09-18 |  14.05% |  11.29% |  6.37%
+    W4: 2007-12-31..2025-12-31 |  14.10% |  10.97% |  6.35%
+  Sensibilidad de inicio (cierres 2007-01..2009-12 a 2026-08): S&P MXN de 13.41% a 17.19%
+  Ano 2008 entre fechas fijas: USD -36.8%  MXN -19.9%
+  S&P MXN - CETES 2008-2026: media x12 +7.85 pp, t NW6 2.40 (apoyo)
+  SMA y comprar y mantener (costos GBM 0.34% por lado)
+    corrida             segmento   | CAGR    | vol    | MDD     | Sharpe | invert. | cambios
+    SMA10-MXN-T1        2008-2026 |  15.37% | 11.16% |  -12.8% |  0.785 |  77.7% | 19
+    SMA10-MXN-T1        1995-2007 |  18.34% | 12.78% |  -18.1% |  0.061 |  80.1% | 20
+    SMA10-MXN-T1        1995-2026 |  16.58% | 11.84% |  -18.1% |  0.472 |  78.7% | 40
+    BH-T1               2008-2026 |  13.98% | 14.15% |  -29.7% |  0.560 | 100.0% | 0
+    BH-T1               1995-2007 |  17.02% | 14.92% |  -36.2% | -0.007 | 100.0% | 0
+    BH-T1               1995-2026 |  15.22% | 14.45% |  -36.2% |  0.325 | 100.0% | 0
+    SMA10-MXN-T0        2008-2026 |  15.33% | 11.06% |  -12.1% |  0.787 |  77.7% | 19
+    SMA10-MXN-T0        1995-2007 |  18.85% | 13.94% |  -20.3% |  0.099 |  80.1% | 20
+    SMA10-MXN-T0        1995-2026 |  16.77% | 12.31% |  -20.3% |  0.472 |  78.7% | 40
+    BH-T0               2008-2026 |  13.97% | 13.48% |  -28.5% |  0.579 | 100.0% | 0
+    BH-T0               1995-2007 |  18.02% | 15.99% |  -39.6% |  0.059 | 100.0% | 0
+    BH-T0               1995-2026 |  15.61% | 14.55% |  -39.6% |  0.349 | 100.0% | 0
+    SMA10-USD-T1        2008-2026 |  12.13% | 10.97% |  -21.8% |  0.536 |  78.1% | 31
+    SMA10-USD-T1        1995-2007 |  20.62% | 12.28% |  -10.1% |  0.222 |  78.2% | 10
+    SMA10-USD-T1        1995-2026 |  15.54% | 11.56% |  -21.8% |  0.402 |  78.2% | 42
+    SMA10-USD-T0        2008-2026 |  12.30% | 10.81% |  -19.7% |  0.555 |  78.1% | 31
+    SMA10-USD-T0        1995-2007 |  21.20% | 13.31% |   -9.0% |  0.252 |  78.2% | 10
+    SMA10-USD-T0        1995-2026 |  15.87% | 11.94% |  -19.7% |  0.418 |  78.2% | 42
+  Diferencia mensual neta SMA10 - comprar y mantener (misma ejecucion), NW(6)
+    SMA10-MXN-T1 2008-2026: +0.849 pp/ano, t 0.471 (inconcluso, n=224)
+    SMA10-MXN-T1 1995-2007: +0.840 pp/ano, t 0.377 (inconcluso, n=156)
+    SMA10-MXN-T1 1995-2026: +0.845 pp/ano, t 0.604 (inconcluso, n=380)
+    SMA10-MXN-T0 2008-2026: +0.906 pp/ano, t 0.501 (inconcluso, n=224)
+    SMA10-MXN-T0 1995-2007: +0.406 pp/ano, t 0.175 (inconcluso, n=156)
+    SMA10-MXN-T0 1995-2026: +0.701 pp/ano, t 0.491 (inconcluso, n=380)
+    SMA10-USD-T1 2008-2026: -2.041 pp/ano, t -1.031 (inconcluso, n=224)
+    SMA10-USD-T1 1995-2007: +2.709 pp/ano, t 1.111 (inconcluso, n=156)
+    SMA10-USD-T1 1995-2026: -0.091 pp/ano, t -0.058 (inconcluso, n=380)
+    SMA10-USD-T0 2008-2026: -1.807 pp/ano, t -0.915 (inconcluso, n=224)
+    SMA10-USD-T0 1995-2007: +2.306 pp/ano, t 0.898 (inconcluso, n=156)
+    SMA10-USD-T0 1995-2026: -0.118 pp/ano, t -0.074 (inconcluso, n=380)
+  16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
+    2008-2026: MDD variantes -21.8% a -11.0%; comprar y mantener T0 -28.5% / T1 -29.7%; todas con menor caida: si
+    1995-2007: MDD variantes -20.3% a -9.0%; comprar y mantener T0 -39.6% / T1 -36.2%; todas con menor caida: si
+
+====================================================================================================
+CONFIGURACION: B4 (aisla activo): French CRSP VW TR x DEXMXUS (A) ; CETES subasta SF43936 (A)
+  fechas comunes activo y FX: 8178 (1993-11-08 a 2026-08-31)
+  Benchmarks (CAGR, sin costos):  ventana | desde..hasta | S&P TR MXN | S&P TR USD | CETES
+    W1: 2007-12-31..2026-08-31 |  14.16% |  11.48% |  6.37%
+    W2: 2008-01-31..2026-08-31 |  14.68% |  11.92% |  6.37%
+    W3: sin datos hasta 2026-09-18 (ultimo dato comun 2026-08-31)
+    W4: 2007-12-31..2025-12-31 |  14.33% |  11.20% |  6.35%
+  Sensibilidad de inicio (cierres 2007-01..2009-12 a 2026-08): S&P MXN de 13.62% a 17.30%
+  Ano 2008 entre fechas fijas: USD -36.5%  MXN -19.5%
+  S&P MXN - CETES 2008-2026: media x12 +8.06 pp, t NW6 2.39 (apoyo)
+  SMA y comprar y mantener (costos GBM 0.34% por lado)
+    corrida             segmento   | CAGR    | vol    | MDD     | Sharpe | invert. | cambios
+    SMA10-MXN-T1        2008-2026 |  15.17% | 11.80% |  -13.0% |  0.734 |  79.0% | 19
+    SMA10-MXN-T1        1995-2007 |  19.50% | 12.59% |  -11.0% |  0.143 |  81.4% | 16
+    SMA10-MXN-T1        1995-2026 |  16.93% | 12.13% |  -13.0% |  0.490 |  80.0% | 36
+    BH-T1               2008-2026 |  14.26% | 14.84% |  -28.4% |  0.557 | 100.0% | 0
+    BH-T1               1995-2007 |  17.14% | 15.23% |  -36.9% |  0.004 | 100.0% | 0
+    BH-T1               1995-2026 |  15.43% | 14.98% |  -36.9% |  0.331 | 100.0% | 0
+    SMA10-MXN-T0        2008-2026 |  15.03% | 11.54% |  -12.9% |  0.736 |  79.0% | 19
+    SMA10-MXN-T0        1995-2007 |  20.65% | 13.53% |   -9.1% |  0.216 |  81.4% | 16
+    SMA10-MXN-T0        1995-2026 |  17.30% | 12.40% |  -12.9% |  0.509 |  80.0% | 36
+    BH-T0               2008-2026 |  14.16% | 13.85% |  -27.5% |  0.579 | 100.0% | 0
+    BH-T0               1995-2007 |  18.11% | 16.05% |  -39.5% |  0.065 | 100.0% | 0
+    BH-T0               1995-2026 |  15.77% | 14.78% |  -39.5% |  0.354 | 100.0% | 0
+    SMA10-USD-T1        2008-2026 |  12.76% | 11.33% |  -14.8% |  0.571 |  77.2% | 29
+    SMA10-USD-T1        1995-2007 |  19.59% | 12.24% |  -11.0% |  0.149 |  76.9% | 16
+    SMA10-USD-T1        1995-2026 |  15.51% | 11.73% |  -14.8% |  0.395 |  77.1% | 46
+    SMA10-USD-T0        2008-2026 |  13.02% | 10.95% |  -14.2% |  0.607 |  77.2% | 29
+    SMA10-USD-T0        1995-2007 |  19.65% | 13.00% |  -15.5% |  0.151 |  76.9% | 16
+    SMA10-USD-T0        1995-2026 |  15.70% | 11.85% |  -15.5% |  0.405 |  77.1% | 46
+  Diferencia mensual neta SMA10 - comprar y mantener (misma ejecucion), NW(6)
+    SMA10-MXN-T1 2008-2026: +0.401 pp/ano, t 0.210 (inconcluso, n=224)
+    SMA10-MXN-T1 1995-2007: +1.651 pp/ano, t 0.718 (inconcluso, n=156)
+    SMA10-MXN-T1 1995-2026: +0.914 pp/ano, t 0.622 (inconcluso, n=380)
+    SMA10-MXN-T0 2008-2026: +0.471 pp/ano, t 0.248 (inconcluso, n=224)
+    SMA10-MXN-T0 1995-2007: +1.776 pp/ano, t 0.722 (inconcluso, n=156)
+    SMA10-MXN-T0 1995-2026: +1.006 pp/ano, t 0.667 (inconcluso, n=380)
+    SMA10-USD-T1 2008-2026: -1.788 pp/ano, t -0.806 (inconcluso, n=224)
+    SMA10-USD-T1 1995-2007: +1.686 pp/ano, t 0.697 (inconcluso, n=156)
+    SMA10-USD-T1 1995-2026: -0.362 pp/ano, t -0.218 (inconcluso, n=380)
+    SMA10-USD-T0 2008-2026: -1.371 pp/ano, t -0.626 (inconcluso, n=224)
+    SMA10-USD-T0 1995-2007: +0.866 pp/ano, t 0.330 (inconcluso, n=156)
+    SMA10-USD-T0 1995-2026: -0.453 pp/ano, t -0.268 (inconcluso, n=380)
+  16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
+    2008-2026: MDD variantes -17.1% a -10.6%; comprar y mantener T0 -27.5% / T1 -28.4%; todas con menor caida: si
+    1995-2007: MDD variantes -15.5% a -9.1%; comprar y mantener T0 -39.5% / T1 -36.9%; todas con menor caida: si
+
+====================================================================================================
+Meses con senal SMA10-MXN distinta de A-datos (w de A -> w de B); misma regla, mismo codigo
+  B1 (segunda fuente principal): 10 meses: 2000-03:0->1 2000-10:0->1 2000-11:1->0 2002-04:0->1 2002-05:0->1 2004-09:1->0 2005-11:0->1 2010-08:0->1 2011-10:1->0 2025-07:0->1
+  B2: 9 meses: 2000-03:0->1 2000-11:1->0 2002-04:0->1 2002-05:0->1 2004-09:1->0 2005-11:0->1 2010-08:0->1 2011-10:1->0 2025-07:0->1
+  B3 (aisla FX): 2 meses: 2010-06:1->0 2018-04:1->0
+  B4 (aisla activo): 9 meses: 2000-03:0->1 2000-11:1->0 2002-04:0->1 2002-05:0->1 2004-09:1->0 2005-11:0->1 2010-08:0->1 2011-10:1->0 2025-07:0->1
+  Margen de la senal MXN (P/SMA10 - 1) en A y en B1 para los meses distintos de B1:
+    2000-03:0->1: A -0.05%  B1 +7.38%
+    2000-10:0->1: A -0.40%  B1 +0.05%
+    2000-11:1->0: A +0.55%  B1 -0.63%
+    2002-04:0->1: A -0.50%  B1 +0.70%
+    2002-05:0->1: A -1.67%  B1 +0.43%
+    2004-09:1->0: A +0.32%  B1 -0.62%
+    2005-11:0->1: A -0.52%  B1 +0.38%
+    2010-08:0->1: A -0.21%  B1 +0.22%
+    2011-10:1->0: A +0.94%  B1 -0.15%
+    2025-07:0->1: A -0.13%  B1 +0.17%
+  MDD SMA10-MXN-T1 1995-2007 A-datos: -19.0% de 1999-07-01 a 2000-12-01
+  MDD SMA10-MXN-T1 1995-2007 B1 (segunda fuente principal): -10.4% de 1995-04-03 a 1995-05-02
+
+Meses de CETES con tasa arrastrada (falta el dato): SF282 []; FMI [(2026, 8)]
+
+====================================================================================================
+IPC (A2): NAFTRAC adjclose Yahoo (piso: sin dividendos en varios anos) y OECD precio (promedio mensual)
+  NAFTRAC A (V04, 2026-09-25): 2008-01-02..2026-08-31 CAGR 6.11% (a 2026-06-30: 6.29%); anos sin dividendo 2008-2025: [2008, 2009, 2010, 2011, 2012, 2021]
+  NAFTRAC B (descarga 2026-10-07): 2008-01-02..2026-08-31 CAGR 6.11% (a 2026-06-30: 6.29%); anos sin dividendo 2008-2025: [2008, 2009, 2010, 2011, 2012, 2021]
+  OECD SPASTT01MXM661N (precio, promedio mensual) dic-2007..ago-2026: 4.28% (sin dividendos)
+  ^MXX precio (A) 2007-12-31..2026-08-31: 4.35% (referencia del precio con la serie de A)
