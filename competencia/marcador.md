@@ -10,12 +10,12 @@ Actualizado: 2026-10-06 (cierre; antes 2026-10-05) para los dos libros de papel;
 |---|---|---|---|---|
 | arena-claude (papel, GBM) | **+3.18%** (índice 103.18 al 6-oct; valor 20,541.14 MXN). El 5-oct se ejecutaron O0004 (venta de 2 SPYM a 90.89) y O0005 (compra de 2 UPRO a 152.40 con stop en 135.76), comité W40. Costo con el tipo de cambio de ejecución | 0.00% | 6 | `bitacora/equity.csv` |
 | arena-claude-binance (papel) | **+0.99%** (índice 100.99 al 6-oct; valor 10,142.05 MXN; fila del 6-oct guardada por el cierre). Sin filas del 30-sep al 2-oct (ver la nota de conciliación del 3-oct en el historial de git) ni del 4-oct (fin de semana) | 0.00% | 8 | `bitacora/papel-binance/equity.csv` |
-| arena-claude (real, GBM) | **−0.29%** sobre 10,000 (valor 9,971.23 al 7-oct ~10:45; 3 SPYM, 50% efectivo; `bitacora/real/`). Antes: sin fondear. La boleta del 30-sep quedó ANULADA en el comité W40 y la sustituye `bitacora/boletas/2026-10-05.md` (3 SPYM + 1 UPRO con stop), condicionada a fondeo y a que el ticker aparezca en GBM | — | 0 | dueño |
-| arena-claude-binance (real) | **−0.29%** sobre 5,000 (4,985.34 al 7-oct 12:13; 0.001325 BTC + 3,001.83 MXN) | — | 9 | `competencia/binance-real-2026-10-07.md` |
-| chatgpt-gbm (real) | **−0.21%** sobre 10,000 (valor 9,979.39 al 7-oct ~10:45; 1 NVDA + 13 GFNORTE O, 33% efectivo) | 0.00% | 1 | `competencia/gbm-real-2026-10-07.md` |
+| arena-claude (real, GBM) | **−0.32%** sobre 10,000 (valor 9,967.87 al cierre del 7-oct; 3 SPYM, 50% efectivo; `bitacora/real/`). Antes: sin fondear. La boleta del 30-sep quedó ANULADA en el comité W40 y la sustituye `bitacora/boletas/2026-10-05.md` (3 SPYM + 1 UPRO con stop), condicionada a fondeo y a que el ticker aparezca en GBM | — | 0 | dueño |
+| arena-claude-binance (real) | **−0.36%** sobre 5,000 (4,982.10 al cierre del 7-oct; 0.001325 BTC + 3,001.83 MXN) | — | 9 | `competencia/binance-real-2026-10-07.md` |
+| chatgpt-gbm (real) | **−0.17%** sobre 10,000 (valor 9,983.26 al cierre del 7-oct; 1 NVDA + 13 GFNORTE O, 33% efectivo) | 0.00% | 1 | `competencia/gbm-real-2026-10-07.md` |
 | chatgpt-binance (real) | **−1.95%** sobre 5,000 (4,902.29 al 7-oct 12:13; BTC + ETH + 502 MXN) | — | 9 | `competencia/binance-real-2026-10-07.md` |
 | grok-binance (real) | **−0.87%** sobre 5,000 (4,956.66 al 7-oct 12:13; BTC + 1.62 MXN) | — | 9 | `competencia/binance-real-2026-10-07.md` |
-| grok-gbm (real) | **−0.38%** sobre 10,000 (valor 9,962.09 al 7-oct ~10:45; 3 VISTA A + 3 AMKR + 1 FSLR, 4% efectivo) | 0.00% | 1 | `competencia/gbm-real-2026-10-07.md` |
+| grok-gbm (real) | **−0.32%** sobre 10,000 (valor 9,968.06 al cierre del 7-oct; 3 VISTA A + 3 AMKR + 1 FSLR, 4% efectivo) | 0.00% | 1 | `competencia/gbm-real-2026-10-07.md` |
 | grok-gbm papel / grok-binance | sin datos de cuenta real. Grok reportó **papel** al 25-sep (GBM 19,893.69; Binance 9,921.24): no entra al marcador real | sin datos | — | dueño (`rivales.csv`) |
 
 ## Tabla mensual
