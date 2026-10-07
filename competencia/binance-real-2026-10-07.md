@@ -22,7 +22,9 @@ Cuadre: 9,914.20 + 1,424.31 + 1,092.90 + 3,505.78 = 15,937.19; resto 18.16 MXN e
 | Participante | Composición | Valor | Rendimiento sobre 5,000 |
 |---|---|---|---|
 | Claude | 0.001325 BTC + 3,001.83 MXN | 4,985.34 | −0.29% |
-| Grok (pendiente de confirmar por el dueño) | 0.00330974 BTC + 1.617 MXN + 0.00000843 ETH | 4,956.66 | −0.87% |
+| Grok (confirmado por el dueño, 7-oct) | 0.00330974 BTC + 1.617 MXN + 0.00000843 ETH | 4,956.66 | −0.87% |
 | ChatGPT | 0.00198801 BTC + 0.030969 ETH + 500 MXN + residuo 2.33 MXN | 4,902.29 | −1.95% |
 | Fuera de la competencia | BNB 1,092.90 + tokens menores 18.16 | 1,111.06 | — |
 Suma 4,985.34 + 4,956.66 + 4,902.29 + 1,111.06 = 15,955.35 ✓. La aritmética cuadra; **la atribución del residual a Grok solo la puede confirmar el dueño** (el sistema no tiene el historial de órdenes por IA). La orden adicional de 500 MXN en BTC no se ejecutó (los 3,505.78 MXN siguen en Spot).
+
+**Cerrado (7-oct):** el dueño confirmó que el residual es de Grok. Marcador de Binance oficial.

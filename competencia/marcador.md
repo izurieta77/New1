@@ -13,7 +13,8 @@ Actualizado: 2026-10-06 (cierre; antes 2026-10-05) para los dos libros de papel;
 | arena-claude (real, GBM) | **−0.29%** sobre 10,000 (valor 9,971.23 al 7-oct ~10:45; 3 SPYM, 50% efectivo; `bitacora/real/`). Antes: sin fondear. La boleta del 30-sep quedó ANULADA en el comité W40 y la sustituye `bitacora/boletas/2026-10-05.md` (3 SPYM + 1 UPRO con stop), condicionada a fondeo y a que el ticker aparezca en GBM | — | 0 | dueño |
 | arena-claude-binance (real) | **−0.09% sobre la aportación** (el TWR arranca en 100 con esta valuación; valor 4,995.30 MXN al 30-sep 00:25 UTC; 0.001325 BTC + 3,001.83 MXN). **Nota (conciliación, 7-oct): este valor sigue siendo el de la apertura de la posición, el 30-sep — el libro real nunca se revaluó desde entonces (hueco de 7 días), a diferencia del papel. No es el valor de hoy. Corregido hacia adelante en `rutinas/diaria-cierre.md` §2; fallo en `bitacora/arbitraje/2026-10-07-real-binance-valuacion.md`.** | 0.00% | 1 (sin actualizar desde el 30-sep) | `bitacora/real-binance/equity.csv`, `rivales.csv` |
 | chatgpt-gbm (real) | **−0.21%** sobre 10,000 (valor 9,979.39 al 7-oct ~10:45; 1 NVDA + 13 GFNORTE O, 33% efectivo) | 0.00% | 1 | `competencia/gbm-real-2026-10-07.md` |
-| chatgpt-binance | sin datos | sin datos | — | dueño |
+| chatgpt-binance (real) | **−1.95%** sobre 5,000 (4,902.29 al 7-oct 12:13; BTC + ETH + 502 MXN) | — | 9 | `competencia/binance-real-2026-10-07.md` |
+| grok-binance (real) | **−0.87%** sobre 5,000 (4,956.66 al 7-oct 12:13; BTC + 1.62 MXN) | — | 9 | `competencia/binance-real-2026-10-07.md` |
 | grok-gbm (real) | **−0.38%** sobre 10,000 (valor 9,962.09 al 7-oct ~10:45; 3 VISTA A + 3 AMKR + 1 FSLR, 4% efectivo) | 0.00% | 1 | `competencia/gbm-real-2026-10-07.md` |
 | grok-gbm papel / grok-binance | sin datos de cuenta real. Grok reportó **papel** al 25-sep (GBM 19,893.69; Binance 9,921.24): no entra al marcador real | sin datos | — | dueño (`rivales.csv`) |
 
