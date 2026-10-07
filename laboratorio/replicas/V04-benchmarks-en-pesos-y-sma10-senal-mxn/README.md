@@ -4,6 +4,8 @@
 >
 > **Doble ejecución independiente (2026-09-25):** `independiente.py` se escribió sin leer `reproducir.py` y reproduce las 871 cifras comparadas, todas dentro de tolerancia e idénticas al redondeo impreso. No se corrigió nada. Detalle al final.
 >
+> **Doble ejecución independiente con segunda fuente (2026-10-07, AC-14):** código propio (`laboratorio/auditorias/AC-14-V04/AC14.py`) con French CRSP VW × FIX de Banxico y CETES SF282/FMI. Confirma las metas (S&P TR en MXN 14.16% con CRSP VW contra 13.97% con SPY, una diferencia de índice; CETES 6.36%) y la reducción de MDD sin ventaja de rendimiento significativa (t 0.26 contra 0.55). No se sostiene con CRSP VW que "en 1995-2007 la señal USD fue mejor". Estado sin cambio: **Replicado con diferencias**. Detalle al final.
+>
 > Para reproducir, desde la raíz del repo: `python3 laboratorio/replicas/V04-benchmarks-en-pesos-y-sma10-senal-mxn/reproducir.py`. El script no usa red. Los datos están congelados en `datos/` y sus huellas, junto con la del pre-registro (`84aabaa6…`, fijada a las 05:40:32 UTC antes de la primera corrida), en `SHA256SUMS.txt`. La salida `resultados.json` es determinista (dos corridas dan la misma huella). El registro del motor, `V04-variantes.csv`, solo agrega filas.
 
 ## Resumen
@@ -455,7 +457,7 @@ En la búsqueda post-hoc, 7 de las 8 ventanas que empiezan en 2007 reproducen la
 2. El spread cambiario implícito del SIC en GBM.
 3. La capa de impuestos (ISR de 10% SIC, W-8BEN, retención de CETES).
 4. ~~Doble ejecución independiente por `auditor-de-replicas`.~~ Hecha el 2026-09-25: las 871 cifras comparadas coinciden. Ver "Doble ejecución independiente (2026-09-25)".
-5. Replicar la SMA en MXN sobre el mercado de EUA de French (1926-) convertido a MXN, para tener una muestra más larga que 1995-2026. Solo es posible desde 1993 con DEXMXUS; antes, con FIX desde 1991.
+5. ~~Replicar la SMA en MXN sobre el mercado de EUA de French convertido a MXN~~ Hecho en parte por AC-14 (2026-10-07): French CRSP VW × FIX, 1995-2026 (ver la sección de AC-14). Falta extender la muestra a 1992 con el FIX (desde 1991-11).
 
 **Archivos:**
 
@@ -570,3 +572,27 @@ Además se revisó si la cifra propia, redondeada a los decimales impresos, es *
 - No hay segunda fuente de datos. Son los mismos archivos de Yahoo, FRED y Banxico.
 
 **Estado después de la doble ejecución:** sin cambios. Las cifras de V04 se reproducen con código independiente. El estado ("Replicado con diferencias"), la calificación ("confirmada con matices"), la conclusión operable (la SMA10 en MXN es control de riesgo, no fuente de rendimiento) y las metas en MXN quedan igual.
+
+## Doble ejecución independiente con segunda fuente (2026-10-07, AC-14)
+
+Detalle completo en `laboratorio/auditorias/AC-14-V04/README.md`, con su `salida.txt` y `resultados.json`. Código escrito desde cero, sin leer `reproducir.py` ni `independiente.py`. No fue ciega en las cifras: el encargo y el Resumen ya traían las cifras objetivo.
+
+**Fuentes de B:** French diario 202608 (Mkt-RF + RF, CRSP VW, rendimiento total en USD), en lugar de SPY de Yahoo; Banxico FIX SF43718, en lugar de FRED DEXMXUS; CETES con Banxico SF282 (promedio mensual) y FMI INTGSTMXM193N, en lugar de la subasta SF43936. La descarga es del 2026-10-07. Para NAFTRAC solo hubo una descarga nueva de Yahoo (misma fuente).
+
+| Cifra | V04 (A) | AC-14, datos A | AC-14 B1 (French × FIX; SF282) |
+|---|---|---|---|
+| S&P TR en MXN, W1 | 13.97% | 13.97% | 14.16% |
+| CETES 28, W1 | 6.37% | 6.37% | 6.36% |
+| NAFTRAC `adjclose`, W1 (piso) | 6.11% | 6.11% | 6.11% (misma fuente) |
+| SMA10-MXN-T1 contra comprar y mantener T1, 2008-2026 | 15.50% / −12.7% contra 13.97% / −29.5% | igual (diferencia máxima 4.8e-13) | 15.27% / −13.0% contra 14.27% / −28.5% |
+| Dif. ×12, t NW6 (2008-2026) | +0.99 pp, t 0.55 | +0.987, t 0.548 | +0.48 pp, t 0.26 |
+| 16 variantes reducen la MDD en los dos subperiodos | Sí | Sí | Sí |
+| 1995-2007, SMA10-T1, señal USD contra MXN | 20.8% / −10.8% contra 18.3% / −19.0% | igual | 19.9% / −10.4% contra 19.4% / −10.4% |
+
+**Diferencias explicadas** (todas en AC-14):
+
+1. La brecha de 0.19 pp en el S&P es del **índice**: CRSP VW es todo el mercado, sin gasto; SPY es el S&P 500 con gasto. Con FIX en lugar de DEXMXUS da 13.97% otra vez. Para medir SPYM la meta sigue siendo 13.97%-14.05% (SPY a `^SP500TR`).
+2. La ventaja de la SMA baja porque 10 meses de señal quedan al filo de la media. El mayor es 2000-03 (S&P 500 −0.05% contra CRSP VW +7.38% respecto de su SMA10, por Nasdaq). Solo cambiar el tipo de cambio mueve 2 meses.
+3. Convenciones: NW con T−1 (A) contra T (B), que da ≤0.001 de t; cambios de señal +1 en A (cuenta el primer mes del segmento); el último periodo T1 de French cierra el 08-31 (+0.06 a +0.07 pp en CAGR, misma t).
+
+**Estado después de AC-14: se confirma "Replicado con diferencias"** y la conclusión operable: la SMA10-MXN es control de riesgo, no fuente de rendimiento. Las metas en MXN se mantienen. Con segunda fuente **no se sostiene** la conclusión secundaria de que en 1995-2007 la señal en USD fue mejor que la de MXN: depende del índice. Hallazgos anotados en `conocimiento/registro-de-errores.md` (2026-10-07).

@@ -67,6 +67,8 @@ CONFIGURACION: A-datos: SPY adjclose (Yahoo) x DEXMXUS (FRED, V04) ; CETES subas
     SMA10-USD-T0 2008-2026: -1.848 pp/ano, t -0.932 (inconcluso, n=224)
     SMA10-USD-T0 1995-2007: +2.333 pp/ano, t 0.912 (inconcluso, n=156)
     SMA10-USD-T0 1995-2026: -0.132 pp/ano, t -0.082 (inconcluso, n=380)
+  Parejas (8) 2008-2026: senal MXN con mas CAGR que USD en 8; senal USD con menor caida en 2
+  Parejas (8) 1995-2007: senal MXN con mas CAGR que USD en 2; senal USD con menor caida en 8
   16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
     2008-2026: MDD variantes -21.7% a -10.4%; comprar y mantener T0 -28.4% / T1 -29.5%; todas con menor caida: si
     1995-2007: MDD variantes -20.4% a -8.7%; comprar y mantener T0 -39.9% / T1 -36.3%; todas con menor caida: si
@@ -115,6 +117,8 @@ CONFIGURACION: B1 (segunda fuente principal): French CRSP VW TR x FIX Banxico ; 
     SMA10-USD-T0 2008-2026: -1.316 pp/ano, t -0.603 (inconcluso, n=224)
     SMA10-USD-T0 1995-2007: +1.242 pp/ano, t 0.477 (inconcluso, n=156)
     SMA10-USD-T0 1995-2026: -0.266 pp/ano, t -0.158 (inconcluso, n=380)
+  Parejas (8) 2008-2026: senal MXN con mas CAGR que USD en 8; senal USD con menor caida en 4
+  Parejas (8) 1995-2007: senal MXN con mas CAGR que USD en 4; senal USD con menor caida en 2
   16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
     2008-2026: MDD variantes -17.3% a -10.8%; comprar y mantener T0 -27.6% / T1 -28.5%; todas con menor caida: si
     1995-2007: MDD variantes -15.3% a -9.4%; comprar y mantener T0 -39.2% / T1 -36.9%; todas con menor caida: si
@@ -163,6 +167,8 @@ CONFIGURACION: B2: French CRSP VW TR x DEXMXUS (ALFRED 2026-10-07) ; CETES FMI I
     SMA10-USD-T0 2008-2026: -1.375 pp/ano, t -0.628 (inconcluso, n=224)
     SMA10-USD-T0 1995-2007: +0.869 pp/ano, t 0.332 (inconcluso, n=156)
     SMA10-USD-T0 1995-2026: -0.454 pp/ano, t -0.269 (inconcluso, n=380)
+  Parejas (8) 2008-2026: senal MXN con mas CAGR que USD en 8; senal USD con menor caida en 4
+  Parejas (8) 1995-2007: senal MXN con mas CAGR que USD en 4; senal USD con menor caida en 2
   16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
     2008-2026: MDD variantes -17.1% a -10.6%; comprar y mantener T0 -27.5% / T1 -28.4%; todas con menor caida: si
     1995-2007: MDD variantes -15.5% a -9.1%; comprar y mantener T0 -39.5% / T1 -36.9%; todas con menor caida: si
@@ -211,6 +217,8 @@ CONFIGURACION: B3 (aisla FX): SPY adjclose (A) x FIX Banxico ; CETES subasta SF4
     SMA10-USD-T0 2008-2026: -1.807 pp/ano, t -0.915 (inconcluso, n=224)
     SMA10-USD-T0 1995-2007: +2.306 pp/ano, t 0.898 (inconcluso, n=156)
     SMA10-USD-T0 1995-2026: -0.118 pp/ano, t -0.074 (inconcluso, n=380)
+  Parejas (8) 2008-2026: senal MXN con mas CAGR que USD en 8; senal USD con menor caida en 3
+  Parejas (8) 1995-2007: senal MXN con mas CAGR que USD en 2; senal USD con menor caida en 8
   16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
     2008-2026: MDD variantes -21.8% a -11.0%; comprar y mantener T0 -28.5% / T1 -29.7%; todas con menor caida: si
     1995-2007: MDD variantes -20.3% a -9.0%; comprar y mantener T0 -39.6% / T1 -36.2%; todas con menor caida: si
@@ -259,6 +267,8 @@ CONFIGURACION: B4 (aisla activo): French CRSP VW TR x DEXMXUS (A) ; CETES subast
     SMA10-USD-T0 2008-2026: -1.371 pp/ano, t -0.626 (inconcluso, n=224)
     SMA10-USD-T0 1995-2007: +0.866 pp/ano, t 0.330 (inconcluso, n=156)
     SMA10-USD-T0 1995-2026: -0.453 pp/ano, t -0.268 (inconcluso, n=380)
+  Parejas (8) 2008-2026: senal MXN con mas CAGR que USD en 8; senal USD con menor caida en 4
+  Parejas (8) 1995-2007: senal MXN con mas CAGR que USD en 4; senal USD con menor caida en 1
   16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)
     2008-2026: MDD variantes -17.1% a -10.6%; comprar y mantener T0 -27.5% / T1 -28.4%; todas con menor caida: si
     1995-2007: MDD variantes -15.5% a -9.1%; comprar y mantener T0 -39.5% / T1 -36.9%; todas con menor caida: si
@@ -282,6 +292,11 @@ Meses con senal SMA10-MXN distinta de A-datos (w de A -> w de B); misma regla, m
     2025-07:0->1: A -0.13%  B1 +0.17%
   MDD SMA10-MXN-T1 1995-2007 A-datos: -19.0% de 1999-07-01 a 2000-12-01
   MDD SMA10-MXN-T1 1995-2007 B1 (segunda fuente principal): -10.4% de 1995-04-03 a 1995-05-02
+
+Datos A recortados a 2026-08-31 (como B1/B2/B4, sin el 2026-09-01 que cierra el ultimo periodo T1):
+  SMA10-MXN-T1 2008-2026: CAGR 15.57%  MDD -12.7%  hasta 2026-08-31
+  BH-T1 2008-2026: CAGR 14.03%  MDD -29.5%  hasta 2026-08-31
+  dif SMA10-MXN-T1 - BH-T1 2008-2026: +0.987 pp/ano, t 0.548
 
 Meses de CETES con tasa arrastrada (falta el dato): SF282 []; FMI [(2026, 8)]
 

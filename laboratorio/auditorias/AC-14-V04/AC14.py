@@ -373,6 +373,18 @@ def correr(u):
                 d = dif_nw(corr[(10, s, ej)], corr[("BH", ej)], a_, b_)
                 r["dif"][f"SMA10-{s}-{ej}|{sn}"] = d
                 p(f"    SMA10-{s}-{ej} {sn}: {d['anual_pp']:+.3f} pp/ano, t {d['t']:.3f} ({d['veredicto']}, n={d['n']})")
+    # Parejas senal MXN contra USD (mismo n y ejecucion)
+    r["parejas"] = {}
+    for sn in ("2008-2026", "1995-2007"):
+        a_, b_ = SEG[sn]
+        mxn_mas_cagr = usd_menos_caida = 0
+        for n in (6, 8, 10, 12):
+            for ej in ("T0", "T1"):
+                mm, mu = metricas(corr[(n, "MXN", ej)], a_, b_), metricas(corr[(n, "USD", ej)], a_, b_)
+                mxn_mas_cagr += mm["cagr"] > mu["cagr"]
+                usd_menos_caida += mu["mdd"] > mm["mdd"]
+        r["parejas"][sn] = {"mxn_mas_cagr": mxn_mas_cagr, "usd_menos_caida": usd_menos_caida}
+        p(f"  Parejas (8) {sn}: senal MXN con mas CAGR que USD en {mxn_mas_cagr}; senal USD con menor caida en {usd_menos_caida}")
     p("  16 variantes: rango de MDD (y si todas quedan arriba de comprar y mantener)")
     r["variantes"] = {}
     for sn in ("2008-2026", "1995-2007"):
@@ -504,6 +516,17 @@ def main():
             if v / pico - 1 < peor:
                 peor, rango_ = v / pico - 1, (ip, f[2])
         p(f"  MDD SMA10-MXN-T1 1995-2007 {u.nombre.split(':')[0]}: {peor*100:.1f}% de {rango_[0]} a {rango_[1]}")
+    # Efecto de terminar T1 el 2026-08-31 (French no tiene 2026-09-01): datos A recortados
+    ua = Universo("A recortado a 2026-08-31", {d: v for d, v in spy_a.items() if d <= date(2026, 8, 31)}, dex_a, cet_a)
+    p("")
+    p("Datos A recortados a 2026-08-31 (como B1/B2/B4, sin el 2026-09-01 que cierra el ultimo periodo T1):")
+    for clave, nom in (((10, "MXN", "T1"), "SMA10-MXN-T1"), (None, "BH-T1")):
+        f = ua.sim(10, "MXN", "T1", bh=(clave is None))
+        mt = metricas(f, (2008, 1), (2026, 8))
+        p(f"  {nom} 2008-2026: CAGR {mt['cagr']*100:.2f}%  MDD {mt['mdd']*100:.1f}%  hasta {mt['hasta']}")
+    d = dif_nw(ua.sim(10, "MXN", "T1"), ua.sim(10, "MXN", "T1", bh=True), (2008, 1), (2026, 8))
+    p(f"  dif SMA10-MXN-T1 - BH-T1 2008-2026: {d['anual_pp']:+.3f} pp/ano, t {d['t']:.3f}")
+    RES["A_recortado_0831"] = d
     if cet_men_b.arrastre or cet_fmi.arrastre:
         p("")
         p(f"Meses de CETES con tasa arrastrada (falta el dato): SF282 {sorted(cet_men_b.arrastre)}; FMI {sorted(cet_fmi.arrastre)}")
