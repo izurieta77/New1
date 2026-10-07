@@ -20,7 +20,7 @@
 ## Doctorado en derecho fiscal (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
 |---|---|---|---|
-| D1 | Teoría general y principios constitucionales (legalidad, proporcionalidad, equidad; art. 31 fr. IV de la Constitución) | nada | Sin |
+| D1 | Teoría general y principios constitucionales (legalidad, proporcionalidad, equidad; art. 31 fr. IV de la Constitución) | ficha 7-oct (art. 31 fr. IV, progresividad del art. 152 vs cedular 10% del art. 129; tesis SCJN nv en fuente oficial) | Parcial |
 | D2 | Código Fiscal de la Federación: obligaciones, facultades de comprobación, prescripción, infracciones y delitos | cap. 29 (verificado 6-oct) | Capítulo (grado A en la letra) |
 | D3 | Medios de defensa: recurso de revocación, juicio de nulidad, amparo, PRODECON | cap. 29 §7 (verificado 6-oct) | Capítulo (grado A en la letra) |
 | D4 | LISR de personas físicas (enajenación, intereses, dividendos, exenciones, RESICO) | caps. 11 y 27, V05 | Capítulo (grado A en la letra) |
