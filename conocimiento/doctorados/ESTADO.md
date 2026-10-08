@@ -26,7 +26,7 @@
 | D4 | LISR de personas físicas (enajenación, intereses, dividendos, exenciones, RESICO) | caps. 11 y 27, V05 | Capítulo (grado A en la letra) |
 | D5 | LISR de personas morales y grupos | cap. 32 (verificado 7-oct) | Capítulo (grado A en la letra) |
 | D6 | IVA e IEPS | cap. 32 (verificado 7-oct) | Capítulo (grado A en la letra) |
-| D7 | Fiscalidad internacional: tratados, residencia, fuente de riqueza, regímenes fiscales preferentes, FATCA/CRS | cap. 27 (SIC) | Parcial (ficha 8-oct: arts. 1, 129, 176) |
+| D7 | Fiscalidad internacional: tratados, residencia, fuente de riqueza, regímenes fiscales preferentes, FATCA/CRS | cap. 27 (SIC) | Documentado con comprobación (ficha 8-oct; ejercicio ETF) |
 | D8 | Fiscalidad de activos financieros: SIC, ETFs extranjeros y apalancados, derivados, cripto | cap. 27, ficha cripto 4-oct | Parcial |
 | D9 | Derecho bursátil y antilavado (LMV, CNBV, LFPIORPI) | arena 01 y ficha cripto | Parcial |
 | D10 | Fiscalidad comparada de EUA (venta ficticia, *wash sale*, PFIC, contratos 1256) | nada | Sin |
