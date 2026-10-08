@@ -32,7 +32,7 @@ La etiqueta responde a una sola pregunta: **¿hay una ventaja que el sistema pue
 | R01 | SMA de 10 meses (Faber) sobre el mercado de EUA | Replicado con diferencias; reduce caídas fuera de muestra; rinde menos que comprar y mantener. Fuera de muestra, "Solo protección" tras AC-09 (A daba "Se sostiene"; con S&P 500 TR el Sharpe queda debajo del índice) | oportunidad investigable |
 | R02 | Momentum de series de tiempo (TSMOM) | Replicado con diferencias; post-publicación no significativo; la versión operable no supera a 1/N (AC-10 concordante con segunda fuente; las magnitudes de EUA dependen de la serie S&P contra CRSP) | descartada |
 | R03 | Primas de factores antes y después de publicarse | Replicado con diferencias (AC-12 concordante a 4 decimales, vintage 202607 y 202608): D = 68.1%, IC 95% [−174%, 288%] incluye 0; los cinco factores bajan después de publicarse; ninguno tiene t NW ≥ 2 después de publicarse; H4 (crashes de momentum) y H5 (muerte del value: −57.8% de 2006 a 2020) confirmadas | descartada |
-| R04 | Efecto Halloween en EUA y México | Replicado con diferencias (ficha actualizada el 2026-09-25; A daba "Replicado", AC-04 no): el criterio (ii) solo se cumple con CRSP/French. Fuera de muestra, mismo signo y no significativo en A y B | descartada
+| R04 | Efecto Halloween en EUA y México | Replicado con diferencias (ficha actualizada el 2026-09-25; A daba "Replicado", AC-04 no): el criterio (ii) solo se cumple con CRSP/French. Fuera de muestra, mismo signo y no significativo en A y B. AC-15 (2026-10-08): la tercera fuente (Shiller) no sirve para el calendario, porque su precio mensual es un promedio (corr. en rezago 0 = 0.67, en −1 = 0.04). El código se validó con French (reproduce α₁ 0.6819 y 0.2886). Con Shiller: α₁ dentro 0.39 (t NW 1.20) y fuera 0.43 (t 1.01), mismo signo; el criterio (ii) no se cumple. Por regla, el estado se mantiene; no hay tercera fuente válida de 1926-2002 | descartada
 | R05 | Volatilidad gestionada (Moreira-Muir) frente a Cederburg et al. | Replicado en el periodo del artículo; α post-2017 −0.75% (t −0.15); ninguna versión operable supera al índice en Sharpe; `vol_c1` frena caídas con costo de CAGR (AC-06 concordante con segunda fuente) | descartada |
 | R06 | Apalancados 2x/3x con filtro de 200 días (Gayed-Bilello) | Replicado con diferencias; fuera de muestra "Solo protección": baja la MDD del apalancado real (UPRO −77% → −54%) con menos CAGR y Sharpe menor que el índice 1x; VIX < 25 no ayuda (AC-07 concordante con segunda fuente) | oportunidad investigable |
 | R07 | Curva 10a-3m y recesión (Estrella-Mishkin) | Replicado en el periodo del artículo; post-1998 el probit no le gana a la climatología (Brier 0.0899 contra 0.0819); salir por la curva no mejora el Sharpe (AC-11 concordante con segunda fuente; cifras iguales a 3 decimales) | descartada |
@@ -47,6 +47,7 @@ La etiqueta responde a una sola pregunta: **¿hay una ventaja que el sistema pue
 | AC-02 | Auditoría ciega: rentabilidad (RMW) de EUA | La significancia desde 2000 solo aparece con French | descartada |
 | AC-03 | Auditoría ciega: momentum internacional | Concuerda con V02; emergentes sin segunda fuente | oportunidad investigable |
 | AC-04 | Auditoría ciega: efecto Halloween (R04) | No concordante en el estado por la fuente de EUA antes de 2003; concordante fuera de muestra | descartada
+| AC-15 | Auditoría con tercera fuente: efecto Halloween (R04), `auditorias/AC-15-R04/` | Sin tercera fuente válida de 1926-2002 con cierre de fin de mes (Shiller y OECD promedian el mes; FRED SP500 y DJIA empiezan en 2016). Código validado con French. Con Shiller: mismo signo fuera de muestra, no significativo; criterio (ii) no se cumple | descartada
 | AC-05 | Auditoría ciega: peso y acciones de EUA (R08) | Concordante en estado ("No replicado") y en conclusión con segunda fuente | descartada (la cobertura como estrategia) |
 | AC-06 | Auditoría ciega: volatilidad gestionada (R05) | Concordante en estado y conclusión con segunda fuente; α del artículo más débil en S&P (4.21 contra 4.88) y concentrado en 1928-37 | descartada |
 | AC-07 | Auditoría ciega: apalancados con filtro de 200 días (R06) | Concordante ("Solo protección"); el efecto del rezago no es robusto; la serie de la señal importa (SPY contra ^GSPC) | oportunidad investigable |
@@ -62,7 +63,7 @@ La etiqueta responde a una sola pregunta: **¿hay una ventaja que el sistema pue
 |---|---|
 | ventaja demostrada | 0 |
 | oportunidad investigable | 7 (R01, R06, V02, V04, AC-03, AC-07, AC-09) |
-| descartada | 18 (R02, R03, R04, R05, R07, R08, R09, V01, V03, AC-01, AC-02, AC-04, AC-05, AC-06, AC-08, AC-10, AC-11, AC-12) |
+| descartada | 19 (R02, R03, R04, R05, R07, R08, R09, V01, V03, AC-01, AC-02, AC-04, AC-05, AC-06, AC-08, AC-10, AC-11, AC-12, AC-15) |
 | en curso | 0 |
 | no aplica | 1 (V05) |
 
@@ -124,7 +125,7 @@ La etiqueta responde a una sola pregunta: **¿hay una ventaja que el sistema pue
 | AC-01 | No | No | Sí (es la segunda fuente de V01) | No después de 2006 | No |
 | AC-02 | No | No | No concordante en 2000-2025 | No después de 2015 | No |
 | AC-03 | No | No | Sí, salvo emergentes | Factor: sí | Factor: sí |
-| R04 / AC-04 | No (índices; NAFTRAC solo como sensibilidad) | Solo sensibilidad MXN | Sí (AC-04); el estado difiere antes de 2003 | No | No |
+| R04 / AC-04, AC-15 | No (índices; NAFTRAC solo como sensibilidad) | Solo sensibilidad MXN | **No verificable con tercera fuente**: AC-04 difiere antes de 2003; AC-15 con Shiller no sirve para el calendario (precio mensual promedio); con Shiller, fuera de muestra mismo signo y no significativo | No | No |
 | R05 / AC-06 | No (índice) | Parcial (USD) | **Sí** (AC-06 concordante) | No | No |
 | R06 / AC-07 | ETFs: no verificado en SIC | Parcial (USD; temporadas en MXN en AC-07) | **Sí** (AC-07 concordante) | Solo protección | Solo protección |
 | R07 / AC-11 | No | Parcial | **Sí** (AC-11 concordante en estado y en H1-H6) | No | No |

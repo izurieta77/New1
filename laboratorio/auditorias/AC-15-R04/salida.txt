@@ -1,0 +1,143 @@
+=== AC-15 / R04: replica independiente (fuente de EUA: Shiller) ===
+Shiller: primer mes con TR 1871-02, ultimo 2023-06 (D disponible hasta 2023-06; el archivo termina en 2023-09 sin D)
+French F-F factores: 1926-07 a 2026-08; sha256 593f4fbef03181bc...
+TB3MS: 1934-01 a 2026-09; sha256 631bc444a8c5370c...
+Shiller sha256 b0fe4bc0bd01908d... (xls: 0df9392b7dacf91f...)
+Costo por defecto por lado: 0.34% (0.29% GBM + 0.05% spread)
+
+--- 1. Verificacion de alineacion (Shiller contra French Mkt-RF+RF, 1926-07 a 2023-06) ---
+  rezago -1: corr(TR_Shiller[t+-1], French_t) = 0.0449 (n=1164)
+  rezago +0: corr(TR_Shiller[t+0], French_t) = 0.6719 (n=1164)
+  rezago +1: corr(TR_Shiller[t+1], French_t) = 0.6106 (n=1163)
+  media mensual TR Shiller 0.9135% vs French 0.9444%
+  Lectura: con cierre de fin de mes, corr en rezago 0 debe ser ~0.95 o mas.
+  Un promedio mensual de precios produce corr 0 y +1 cercanas a sqrt(0.5)=0.707 y corr -1 cercana a 0.
+  Control de fecha: French Mkt-RF 1987-10 = -23.19%, 1987-11 = -7.76% (crac de octubre de 1987)
+
+--- 1b. Diagnostico: efecto con French mezclado de forma analoga al promedio de Shiller ---
+  Serie mezclada: log(1+R_b,t) = 0.5*log(1+R_t) + 0.5*log(1+R_{t-1}) (solo diagnostico)
+  dentro_muestra 1926-07 a 2002-12     French a1=0.682 (t_NW 2.07)  |  French mezclado a1=0.540 (t_NW 1.63)  |  Shiller a1=0.391 (t_NW 1.20)
+  ARTICULO 1970-01 a 1998-08           French a1=1.038 (t_NW 2.32)  |  French mezclado a1=0.804 (t_NW 1.83)  |  Shiller a1=0.619 (t_NW 1.49)
+  fuera_muestra 2003-01 a 2023-06      French a1=0.406 (t_NW 1.01)  |  French mezclado a1=0.243 (t_NW 0.51)  |  Shiller a1=0.430 (t_NW 1.01)
+
+--- 2. Efecto Halloween, EUA Shiller TR (modelo A: y=100ln(1+R), S=1 nov-abr) ---
+completo 1926-07 a 2023-06           n=1164  a1=  0.3993  t_MCO=  1.54  t_HC1=  1.54  t_NW=  1.47  mu=  0.6120
+dentro_muestra 1926-07 a 2002-12     n= 918  a1=  0.3912  t_MCO=  1.29  t_HC1=  1.29  t_NW=  1.20  mu=  0.6196
+fuera_muestra 2003-01 a 2023-06      n= 246  a1=  0.4297  t_MCO=  0.90  t_HC1=  0.90  t_NW=  1.01  mu=  0.5835
+pre-articulo 1926-07 a 1969-12       n= 522  a1= -0.0186  t_MCO= -0.04  t_HC1= -0.04  t_NW= -0.04  mu=  0.7922
+ARTICULO 1970-01 a 1998-08           n= 344  a1=  0.6187  t_MCO=  1.63  t_HC1=  1.63  t_NW=  1.49  mu=  0.7118
+hueco 1998-09 a 2002-12              n=  52  a1=  2.9988  t_MCO=  2.57  t_HC1=  2.57  t_NW=  2.29  mu= -1.7297
+contraste WP1997 1973-01 a 1996-12   n= 288  a1=  0.4689  t_MCO=  1.13  t_HC1=  1.13  t_NW=  1.03  mu=  0.7255
+contraste JZ-OOS 1998-09 a 2011-07   n= 155  a1=  1.2053  t_MCO=  1.79  t_HC1=  1.78  t_NW=  1.88  mu= -0.3251
+extra Shiller 1872-01 a 1925-12      n= 648  a1=  0.2402  t_MCO=  0.94  t_HC1=  0.94  t_NW=  0.89  mu=  0.4680
+
+--- 2b. Sensibilidad: solo precio (PR, sin dividendos) ---
+completo 1926-07 a 2023-06           n=1164  a1=  0.3984  t_MCO=  1.53  t_HC1=  1.53  t_NW=  1.47  mu=  0.3062
+dentro_muestra 1926-07 a 2002-12     n= 918  a1=  0.3896  t_MCO=  1.28  t_HC1=  1.28  t_NW=  1.19  mu=  0.2748
+fuera_muestra 2003-01 a 2023-06      n= 246  a1=  0.4287  t_MCO=  0.90  t_HC1=  0.90  t_NW=  1.01  mu=  0.4243
+pre-articulo 1926-07 a 1969-12       n= 522  a1= -0.0216  t_MCO= -0.05  t_HC1= -0.05  t_NW= -0.05  mu=  0.3973
+ARTICULO 1970-01 a 1998-08           n= 344  a1=  0.6175  t_MCO=  1.62  t_HC1=  1.62  t_NW=  1.48  mu=  0.4086
+
+--- 2c. Sensibilidad de alineacion: S desplazado un mes (error de fecha hipotetico) ---
+  ARTICULO 1970-01 a 1998-08 con S desplazado -1: a1=0.7808 t_NW=1.89
+  ARTICULO 1970-01 a 1998-08 con S desplazado +1: a1=0.5210 t_NW=1.16
+
+--- 2d. Modelos B (dummies oct-1987, ago-1998) y C (+enero), TR ---
+  B: a1=0.4936 t_MCO=1.33 t_NW=1.17 a2(dummy)=-13.453
+  C: a1=0.4464 t_MCO=1.12 t_NW=1.02 a3(enero)=1.0219
+
+--- 3. Diferencia anual pareada D_Y (invierno menos verano), TR ---
+  completo 1926-07 a 2023-06           N= 96  mediaD=   2.458  t_iid= 1.35  IC95=[-1.198, 5.983]  D>0=60/96  p_signo=0.0092
+  dentro_muestra 1926-07 a 2002-12     N= 76  mediaD=   2.388  t_iid= 1.11  IC95=[-1.848, 6.514]  D>0=46/76  p_signo=0.0423
+  fuera_muestra 2003-01 a 2023-06      N= 19  mediaD=   3.461  t_iid= 1.03  IC95=[-3.288, 9.175]  D>0=14/19  p_signo=0.0318
+  pre-articulo 1926-07 a 1969-12       N= 43  mediaD=   0.155  t_iid= 0.05  IC95=[-6.251, 6.300]  D>0=25/43  p_signo=0.1802
+  ARTICULO 1970-01 a 1998-08           N= 27  mediaD=   3.401  t_iid= 1.34  IC95=[-1.477, 8.218]  D>0=17/27  p_signo=0.1239
+
+--- 4. Exceso sobre efectivo (TB3MS desde 1934-01) por mitad del ano, TR ---
+  Nota: TB3MS empieza en 1934-01; las pruebas con efectivo se recortan a ese mes.
+  completo 1926-07 a 2023-06           nov-abr= 0.8300 (t_NW  4.54)  may-oct= 0.3249 (t_NW  1.58)
+  dentro_muestra 1926-07 a 2002-12     nov-abr= 0.8075 (t_NW  3.70)  may-oct= 0.2806 (t_NW  1.16)
+  fuera_muestra 2003-01 a 2023-06      nov-abr= 0.9050 (t_NW  2.88)  may-oct= 0.4754 (t_NW  1.19)
+  pre-articulo 1926-07 a 1969-12       nov-abr= 0.8216 (t_NW  2.77)  may-oct= 0.6645 (t_NW  1.92)
+  ARTICULO 1970-01 a 1998-08           nov-abr= 0.7694 (t_NW  2.39)  may-oct= 0.1511 (t_NW  0.49)
+
+--- 5. Ventanas moviles: cuando cambia la conclusion (TR) ---
+  5a. Ventana creciente desde 1926-07, fin en diciembre de cada anio
+    fin 1950: a1=-0.7539  t_NW=-1.02
+    fin 1955: a1=-0.5111  t_NW=-0.82
+    fin 1960: a1=-0.3472  t_NW=-0.64
+    fin 1965: a1=-0.1002  t_NW=-0.20
+    fin 1970: a1=-0.0096  t_NW=-0.02
+    fin 1975: a1=0.1850  t_NW=0.42
+    fin 1980: a1=0.1200  t_NW=0.30
+    fin 1985: a1=0.1469  t_NW=0.39
+    fin 1990: a1=0.2230  t_NW=0.62
+    fin 1995: a1=0.2369  t_NW=0.70
+    fin 2000: a1=0.3275  t_NW=1.00
+    fin 2005: a1=0.3790  t_NW=1.21
+    fin 2010: a1=0.3701  t_NW=1.23
+    fin 2015: a1=0.4306  t_NW=1.50
+    fin 2020: a1=0.3707  t_NW=1.34
+    fin 2023: a1=0.3993  t_NW=1.47
+  5b. Ventanas de 20 anios que empiezan en enero de cada anio
+    1926-1945: a1=-1.0763  t_NW=-1.24
+    1931-1950: a1=-0.9854  t_NW=-1.16
+    1936-1955: a1=-0.5218  t_NW=-0.86
+    1941-1960: a1=0.0152  t_NW=0.04
+    1946-1965: a1=0.7582  t_NW=1.87
+    1951-1970: a1=0.8995  t_NW=2.40
+    1956-1975: a1=1.2136  t_NW=2.61
+    1961-1980: a1=0.9268  t_NW=1.78
+    1966-1985: a1=0.6359  t_NW=1.24
+    1971-1990: a1=0.7400  t_NW=1.40
+    1976-1995: a1=0.3632  t_NW=0.80
+    1981-2000: a1=0.8908  t_NW=1.79
+    1986-2005: a1=1.0690  t_NW=2.07
+    1991-2010: a1=0.8449  t_NW=1.68
+    1996-2015: a1=1.1043  t_NW=2.20
+    2001-2020: a1=0.5326  t_NW=1.12
+    ventanas de 20 anios con t_NW < 2: 58 de 78; inicios: [1926, 1927, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1935, 1936, 1937]...
+
+  5c. Decadas (diagnostico)
+    1926-07 a 1929-12: a1=-1.3592  t_NW=-0.89  n=42
+    1930-01 a 1939-12: a1=-0.8944  t_NW=-0.53  n=120
+    1940-01 a 1949-12: a1=-0.3787  t_NW=-0.47  n=120
+    1950-01 a 1959-12: a1=0.5241  t_NW=1.51  n=120
+    1960-01 a 1969-12: a1=1.1736  t_NW=1.84  n=120
+    1970-01 a 1979-12: a1=1.1603  t_NW=1.65  n=120
+    1980-01 a 1989-12: a1=0.1349  t_NW=0.19  n=120
+    1990-01 a 1999-12: a1=1.1738  t_NW=1.45  n=120
+    2000-01 a 2009-12: a1=0.4816  t_NW=0.69  n=120
+    2010-01 a 2019-12: a1=1.0911  t_NW=2.33  n=120
+    2020-01 a 2023-06: a1=-0.2589  t_NW=-0.15  n=42
+
+--- 6. Criterios pre-registrados (EUA) con la fuente Shiller TR ---
+  (i)   1970-01 a 1998-08: a1=0.6187 (|a1-1.0349|=0.4162), t_MCO=1.63 -> NO CUMPLE
+  (ii)  1926-07 a 2002-12: a1=0.3912, t_NW=1.20 -> NO CUMPLE
+  (iii) 2003-01 a 2023-06: a1=0.4297, t_NW=1.01 -> a1 > 0: CUMPLE
+  (iv)  Mexico: no se re-ejecuta con esta fuente (ver README).
+
+--- 7. Estrategias EUA Shiller (costos por defecto, cash = TB3MS) ---
+  dentro 1934-01 a 2002-12
+    Halloween nov-abr    CAGR=  8.50%  vol=  8.58%  Sharpe= 0.530  MDD= -51.48%  ops/anio= 2.00  costo/anio= 0.68%
+    Comprar y mantener   CAGR= 11.09%  vol= 12.94%  Sharpe= 0.569  MDD= -41.57%  ops/anio= 0.00  costo/anio= 0.00%
+    Efectivo             CAGR=  4.07%  vol=  0.93%  Sharpe=   nan  MDD=   0.00%  ops/anio= 0.00  costo/anio= 0.00%
+    Verano may-oct       CAGR=  5.12%  vol=  9.86%  Sharpe= 0.151  MDD= -37.42%  ops/anio= 2.00  costo/anio= 0.68%
+    SMA10 (nivel TR)     CAGR= 11.48%  vol=  9.64%  Sharpe= 0.763  MDD= -49.42%  ops/anio= 1.20  costo/anio= 0.41%
+
+  fuera 2003-01 a 2023-06
+    Halloween nov-abr    CAGR=  6.29%  vol=  9.05%  Sharpe= 0.577  MDD= -28.99%  ops/anio= 2.00  costo/anio= 0.68%
+    Comprar y mantener   CAGR= 10.08%  vol= 12.59%  Sharpe= 0.726  MDD= -49.04%  ops/anio= 0.00  costo/anio= 0.00%
+    Efectivo             CAGR=  1.31%  vol=  0.45%  Sharpe=   nan  MDD=   0.00%  ops/anio= 0.00  costo/anio= 0.00%
+    Verano may-oct       CAGR=  3.51%  vol=  8.94%  Sharpe= 0.287  MDD= -30.49%  ops/anio= 2.00  costo/anio= 0.68%
+    SMA10 (nivel TR)     CAGR= 10.03%  vol=  9.31%  Sharpe= 0.937  MDD= -19.18%  ops/anio= 1.02  costo/anio= 0.35%
+
+  Halloween bruto (fuera 2003-01 a 2023-06): CAGR=7.01% Sharpe=0.652 MDD=-28.23%
+--- 8. Control de codigo: misma logica sobre French (fuente del original) ---
+  Referencia: cifras publicadas en R04-efecto-halloween.md (seccion 11), no del .py
+  French a1 1926-07..2002-12 = 0.6819 (orig. 0.6819), t_NW=2.07 (orig. 2.07)
+  French a1 2003-01..2026-07 = 0.2886 (orig. 0.2886), t_NW=0.70 (orig. 0.70)
+  dentro 1927-05 a 2002-12: US_nov_abr CAGR=0.0822 (orig. 0.0821) vol=0.1254 (orig. 0.1253) Sharpe=0.3965 (orig. 0.3962) MDD=-0.5763 (orig. -0.5760) ops=1.9956 (orig. 1.9955)
+  dentro 1927-05 a 2002-12: comprar y mantener CAGR=0.0980 (orig. 0.0980) vol=0.1936 (orig. 0.1936) Sharpe=0.3876 (orig. 0.3874) MDD=-0.8365 (orig. -0.8365)
+  fuera 2003-01 a 2026-07: US_nov_abr CAGR=0.0688 (orig. 0.0687) vol=0.1080 (orig. 0.1079) Sharpe=0.5167 (orig. 0.5161) MDD=-0.3035 (orig. -0.3032) ops=1.9929 (orig. 1.9931)
+
