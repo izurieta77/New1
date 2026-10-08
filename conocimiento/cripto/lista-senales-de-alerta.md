@@ -148,6 +148,12 @@
 - **E6, E10:** sin novedad; sin pausas de retiro ni incidentes nuevos en Binance en las búsquedas de hoy.
 - **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio desde el 25-sep. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`. La caída de precio sostenida de estos días **no tiene, hasta hoy, ningún correlato en esta lista** (ni en exchange, ni en stablecoin, ni en token): refuerza la lectura de la ficha de hoy de que el origen es macro/idiosincrático de precio, no de contraparte.
 
+**Seguimiento del 8-oct-2026** [I] — revisión semanal de contraparte de la corrida de las 08:17, con el estudio profundo de hoy centrado en el segundo catalizador de petróleo (huracán Isaías, distinto de Ormuz) y en flujos de ETF (ficha [`fichas/2026-10-08-isaias-vs-ormuz-y-flujos-etf.md`](fichas/2026-10-08-isaias-vs-ormuz-y-flujos-etf.md)):
+
+- **E1/E2 (indicio, TVL DefiLlama):** `api.llama.fi/protocol/binance-cex` hoy (12:41 UTC) = **US$172.37 mil millones**, −2.85% frente a los US$177.42 mil millones de ayer 00:00 UTC. BTC cayó ~3.4% en la misma ventana: la caída de TVL sigue del orden del efecto precio, no de una salida neta de unidades. **Limpio**, mismo patrón que el 7-oct.
+- **E3, E5, E6, E10: no se repitió la búsqueda dirigida hoy** (tiempo de esta corrida dedicado al catalizador de Isaías y a los flujos de ETF, prioridad explícita de la tarea de hoy). Se declara así para no afirmar "limpio" sin haberlo revisado; última verificación con hallazgo fue la del 7-oct (sin cambio desde entonces en lo que sí se revisó).
+- **Conclusión: sin disparador nuevo identificado hoy**, con la salvedad explícita de la cobertura parcial de esta corrida. Pendiente para la próxima corrida: retomar la búsqueda dirigida completa de E3 (ventana proyectada del 47.º PoR ~15-21-oct) y E5.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
