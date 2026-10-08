@@ -93,9 +93,21 @@ class TestLibro(unittest.TestCase):
         self.assertAlmostEqual(sum(f["peso"] for f in val["filas"]), val["posiciones_mxn"] / val["equity_mxn"])
         filas = pf.guardar_snapshot(self.eq, date(2026, 2, 2), val)
         self.assertEqual(len(filas), 1)
-        self.assertAlmostEqual(filas[0]["indice"], 100.0)
+        # Base 100 al fondeo: la primera fila ya refleja el resultado desde la aportacion.
+        self.assertAlmostEqual(filas[0]["indice"], 100.0 * val["equity_mxn"] / val["aportaciones_netas_mxn"])
         filas = pf.guardar_snapshot(self.eq, date(2026, 2, 2), val)  # reemplaza el mismo dia
         self.assertEqual(len(filas), 1)
+
+    def test_indice_incluye_el_primer_dia(self):
+        # Fallo 2026-10-08 (base TWR): 10,000 aportados que al primer cierre valen 9,967.87
+        # deben dar indice 99.6787, no 100.
+        filas = [{"fecha": date(2026, 10, 7), "efectivo_mxn": 5040.16, "posiciones_mxn": 4927.71,
+                  "equity_mxn": 9967.87, "aportaciones_netas_mxn": 10000.0},
+                 {"fecha": date(2026, 10, 8), "efectivo_mxn": 5040.16, "posiciones_mxn": 4959.84,
+                  "equity_mxn": 10000.0, "aportaciones_netas_mxn": 10000.0}]
+        pf.recalcular_indice(filas)
+        self.assertAlmostEqual(filas[0]["indice"], 99.6787)
+        self.assertAlmostEqual(filas[1]["indice"], 100.0)
 
     def test_indice_neutral_a_flujos(self):
         filas = [

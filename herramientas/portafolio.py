@@ -112,10 +112,18 @@ def escribir_equity(ruta: str | Path, filas: list[dict]) -> None:
 
 
 def recalcular_indice(filas: list[dict]) -> list[dict]:
-    """Indice time-weighted base 100: I_t = I_{t-1} * (E_t - flujo_t) / E_{t-1}."""
+    """Indice time-weighted base 100 AL FONDEO: I_t = I_{t-1} * (E_t - flujo_t) / E_{t-1}.
+
+    La primera fila parte de la aportacion, no de su propio cierre: I_0 = 100 * E_0 / A_0
+    (si A_0 > 0). Asi el indice incluye el resultado del primer dia (comisiones y movimiento
+    desde la compra), como pide `metrica_competencia` ("TWR ... desde el fondeo"). Fallo
+    bitacora/arbitraje/2026-10-08-base-twr.md: antes la primera fila valia 100 y omitia el dia 1.
+    """
     indice = 100.0
     for i, r in enumerate(filas):
-        if i > 0 and filas[i - 1]["equity_mxn"] > EPS:
+        if i == 0 and r.get("aportaciones_netas_mxn", 0.0) > EPS:
+            indice = 100.0 * r["equity_mxn"] / r["aportaciones_netas_mxn"]
+        elif i > 0 and filas[i - 1]["equity_mxn"] > EPS:
             flujo = r["aportaciones_netas_mxn"] - filas[i - 1]["aportaciones_netas_mxn"]
             indice *= (r["equity_mxn"] - flujo) / filas[i - 1]["equity_mxn"]
         r["indice"] = indice

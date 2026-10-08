@@ -157,7 +157,7 @@ Esto obliga a **toda estación de servicio** (que "enajena" petrolíferos) a: (1
 
 ### 6.2 Consecuencias de no cumplir: multas exactas y hasta clausura o prisión
 
-**Hecho, texto literal verificado contra el PDF oficial del CFF (última reforma DOF 09-04-2026).** El art. 81, fr. XXV describe ocho supuestos de incumplimiento (no tener el dictamen o el certificado; registrar hidrocarburo u octanaje distinto al real; no tener los equipos o alterarlos; no tener los controles o alterarlos; no enviar los reportes; enviarlos tarde; enviarlos incompletos o con errores; no generarlos o conservarlos). El art. 82, fr. XXV fija las multas exactas:
+**Hecho, texto literal verificado contra el PDF oficial del CFF (última reforma DOF 09-04-2026).** El art. 81, fr. XXV describe ocho supuestos de incumplimiento (no tener el dictamen o el certificado; registrar hidrocarburo u octanaje distinto al real; no tener los equipos o alterarlos; no tener los controles o alterarlos; no enviar los reportes; enviarlos tarde; enviarlos incompletos o con errores; no generarlos o conservarlos). **[Precisión, conciliación 8-oct-2026, cotejado con el PDF oficial del CFF, DOF 09-04-2026, sha256 `be7427b2…`]:** además del primer párrafo genérico, el segundo párrafo de la fr. XXV tiene **nueve** incisos, a) a i): los ocho de arriba (a-h) más el i), romper o alterar los sellos de clausura (adicionado DOF 07-11-2025). Las letras del art. 82 fr. XXV corresponden así: primer párrafo → 82 a); 81 a) → 82 b); 81 b) → 82 c); 81 c) y d) → 82 d); 81 e), f), g), h) e i) → 82 e), f), g), h) e i), **la misma letra**. Por eso "no enviar" es 82 XXV e) y "reporte incompleto o con errores" es 82 XXV g). El art. 82, fr. XXV fija las multas exactas:
 
 | Supuesto (art. 81, fr. XXV) | Multa (art. 82, fr. XXV) |
 |---|---|
@@ -166,7 +166,7 @@ Esto obliga a **toda estación de servicio** (que "enajena" petrolíferos) a: (1
 | Registrar un tipo de hidrocarburo u octanaje distinto al real, detectado por el SAT o por los CFDI (art. 81 XXV inciso b; art. 82 XXV inciso c) | $2,249,000 a $3,373,500, **más clausura de 1 a 3 meses** |
 | No tener los equipos/programas de control volumétrico, o alterarlos/inutilizarlos/destruirlos (art. 81 XXV incisos c y d; art. 82 XXV inciso d) | $3,373,500 a $5,622,500, **más clausura de 3 a 6 meses** |
 | No enviar, enviar tarde, o enviar incompleto/con errores cada reporte de información (art. 81 XXV incisos e a h; art. 82 XXV incisos e a h) | $39,360 a $69,160 **por cada reporte** |
-| Romper o alterar los sellos de una clausura ya impuesta (inciso i) | $39,360 a $69,160, **más el doble del plazo de clausura previa** |
+| Romper o alterar los sellos de una clausura ya impuesta (art. 81 XXV inciso i; art. 82 XXV inciso i) | $39,360 a $69,160, **más el doble del plazo de clausura previa** |
 
 Todas estas cifras están compiladas por Resolución Miscelánea Fiscal hasta el 28-12-2025, vigentes en 2026. **Corregido 7-oct-2026:** la versión anterior de esta tabla tenía los montos recorridos un renglón (asignaba $39,360 a "no tener dictamen"); se verificó contra el texto del PDF oficial del CFF (DOF 09-04-2026), arts. 81 XXV y 82 XXV.
 

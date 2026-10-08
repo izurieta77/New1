@@ -9,7 +9,7 @@ Este procedimiento escrito es el principal; el texto del disparador lo complemen
    - cambios fiscales y regulatorios en México, en el SIC y en GBM.
 2. **Actualiza los capítulos de `conocimiento/`** con adendas fechadas y verificación adversarial (subagente `verificador`).
 3. **Revisiones:**
-   - `estrategias/catalogo.md`, la bibliografía y el estado de dominio;
+   - `laboratorio/tabla-maestra.md` (hace las veces de catálogo de estrategias; `estrategias/catalogo.md` nunca existió: corregido 8-oct-2026 por la conciliación, fallo `bitacora/arbitraje/2026-10-08-pendientes-de-registro.md`), la bibliografía y el estado de dominio;
    - los competidores de `arena/investigacion/`, como Barebone AI: ¿publicaron algún historial auditado?
 4. Registra los cambios de criterio en `conocimiento/registro-de-errores.md`.
 5. **Cierre de la rutina:**
