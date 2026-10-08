@@ -164,8 +164,8 @@ Esto obliga a **toda estación de servicio** (que "enajena" petrolíferos) a: (1
 | Incumplimiento genérico del art. 28 fr. I (primer párrafo de la fr. XXV; art. 82 XXV inciso a) | $39,360 a $69,160 |
 | No tener el dictamen de laboratorio o el certificado de operación (art. 81 XXV, segundo párrafo, inciso a; art. 82 XXV inciso b) | $1,124,500 a $1,686,750 |
 | Registrar un tipo de hidrocarburo u octanaje distinto al real, detectado por el SAT o por los CFDI (art. 81 XXV inciso b; art. 82 XXV inciso c) | $2,249,000 a $3,373,500, **más clausura de 1 a 3 meses** |
-| No tener los equipos/programas de control volumétrico, o alterarlos/inutilizarlos/destruirlos (incisos c y d) | $3,373,500 a $5,622,500, **más clausura de 3 a 6 meses** |
-| No enviar, enviar tarde, o enviar incompleto/con errores cada reporte de información (incisos e, f, g, h) | $39,360 a $69,160 **por cada reporte** |
+| No tener los equipos/programas de control volumétrico, o alterarlos/inutilizarlos/destruirlos (art. 81 XXV incisos c y d; art. 82 XXV inciso d) | $3,373,500 a $5,622,500, **más clausura de 3 a 6 meses** |
+| No enviar, enviar tarde, o enviar incompleto/con errores cada reporte de información (art. 81 XXV incisos e a h; art. 82 XXV incisos e a h) | $39,360 a $69,160 **por cada reporte** |
 | Romper o alterar los sellos de una clausura ya impuesta (inciso i) | $39,360 a $69,160, **más el doble del plazo de clausura previa** |
 
 Todas estas cifras están compiladas por Resolución Miscelánea Fiscal hasta el 28-12-2025, vigentes en 2026. **Corregido 7-oct-2026:** la versión anterior de esta tabla tenía los montos recorridos un renglón (asignaba $39,360 a "no tener dictamen"); se verificó contra el texto del PDF oficial del CFF (DOF 09-04-2026), arts. 81 XXV y 82 XXV.
