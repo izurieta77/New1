@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-09 01:35 UTC · decisor-vespertino · OK · decisor-vespertino: 2026-10-08 · sin alertas que obliguen a actuar; FX-1 sin disparo (peso +1.04% en el día); cuatro libros sin cortacircuitos
 2026-10-09 01:20 UTC · trabajo-continuo · OK · trabajo-continuo: 2026-10-09 · D10-D11 (preferentes y transparencia LISR 4-B/176-178) de Pendiente a Localizado
 2026-10-09 00:42 UTC · cripto (cascada vespertina 18:42, §8b) · OK · (este commit) · recálculo completo del filtro en bitacora/cripto/2026-10-08.md: SMA200=71,834.70 (roll +0.10% vs. 71,765.23), salida=69,679.66, reentrada=73,989.74; BTC 81,862.68 (−1.65% 24h), colchón +17.48%, **ENCENDIDO** sin boleta de venta; ETH 2,480.71 (−3.55% 24h); tercera lectura seguida prácticamente plana, estabilización desde el mínimo de 80,393.56 se sostiene; OI Deribit en su nivel más alto del día (US$846.05M) junto con el precio, sin señal de estrés; sin órdenes ni pronósticos cripto pendientes; vigilancia elevada mantenida para el pulso de las 00:17 del 9-oct
 2026-10-09 00:15 UTC · aprendizaje · OK · aprendizaje: 2026-10-08 · 2 temas subieron de nivel; 9 errores propios corregidos
