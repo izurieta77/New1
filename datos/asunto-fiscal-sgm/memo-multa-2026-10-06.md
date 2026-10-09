@@ -10,7 +10,7 @@ Análisis de dictaminador con el texto de la ley en mano (CFF, LIF 2026, LFPCA, 
 ## Plazos (CFF 12: días hábiles sin fines de semana ni inhábiles)
 | Acto | Fecha límite |
 |---|---|
-| Pago con 20% de reducción (CFF 75 VII) / recurso de revocación (CFF 121) / juicio (LFPCA 13; vía sumaria 58-2 II: multa < 30 UMA anualizada) | **jue 29-oct-2026** (30º día hábil tras 17-sep) |
+| Pago con 20% de reducción (CFF 75 VII) / recurso de revocación (CFF 121) / juicio (LFPCA 13; vía sumaria 58-2 II: multa < 30 UMA anualizada) | **jue 29-oct-2026** (30º día hábil tras 17-sep) **[Verificado 9-oct-2026]:** CFF 75 VII y CFF 121 dicen "30 días siguientes a que surta efectos la notificación"; CFF 12 (primer párrafo) los hace hábiles. CFF 135 da efectos al "día hábil siguiente": 15-sep → 16-sep es inhábil (CFF 12) → 17-sep. Con 18-sep como día 1 el vencimiento es 29-oct. **Nota:** CFF 12 no fija expresamente el día inicial del cómputo (otros artículos sí dicen "a partir del día siguiente"); si se contara el 17-sep, el vencimiento sería 28-oct. **Usar 28-oct como límite interno.** Inhábiles entre 17-sep y 29-oct: ninguno en la copia secundaria de la RMF 2026 (regla 1.6) que revisé; el DOF no se consultó directamente (nv). Los hechos de la notificación (15-sep 09:30) no son verificables aquí: los originales no están versionados. LFPCA 13 / 58-2 II: no verificados (nv). |
 | Reingreso por SAC del estímulo (SAT pidió esperar 20 días hábiles) | ~21-oct |
 | Solicitud de estímulo LIF 2026, Vigésimo Segundo Transitorio | **31-oct-2026 (sábado)** — presentar antes |
 | Tras la forma de pago: pagar | 15 días naturales |
