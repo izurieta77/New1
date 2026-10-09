@@ -387,3 +387,13 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Régimen fiscal:** el de la ficha D7, sin el 10% del art. 129.
   - **Falta:** la tarifa vigente y el contrato de GBM (lo puede ver el dueño en la app).
   - **Estado:** hecho **cerrado**. Lo que se haga con él (UPRO, IBIT, stop mental) sigue **abierto → comité del 9-oct / dueño**.
+
+## 2026-10-09 · orquestador (09:00 CDMX aprox.) · Criterio del dueño sobre el ritmo de los doctorados fiscal/contable/finanzas
+- **Pidió el dueño (mensaje directo, no es rutina):** confirmó que el ritmo actual (laboratorio lun/mié/vie, trabajo-continuo diario, investigador-vespertino 1 de 3 corridas, balance mensual) le parece suficiente en frecuencia, **pero exige más grosor, profundidad y profesionalidad** en el contenido de cada avance. Contexto explícito del dueño: quiere "sumergirse en todas las vías legales, estrategias fiscales, contables y de finanzas para ganar siempre" — entendido como cobertura exhaustiva de palancas legales (nunca como instrucción de evadir o incumplir, y sin que esto cambie la regla de fase 0: documentar, no recomendar).
+- **Qué significa en la práctica para las próximas corridas que toquen D1-D12 (fiscal), C1-C11 (contabilidad) o F1-F11 (finanzas):**
+  - Preferir lectura de la norma/fuente primaria completa (DOF, SCJN/SJF, CINIF, IASB, SAT, PRODECON) sobre resúmenes de despachos o notas de prensa, y marcar expresamente el nivel de acceso (íntegro/resumen/rubro) como ya hace el cap. 12 y el cap. 22.
+  - Agotar más a fondo cada área antes de pasar a la siguiente: las fichas deben llegar a "Comprobada" (capítulo + ficha con ejercicio en `estado-de-dominio.csv`), no quedarse en "Parcial" o "Capítulo" sin comprobación.
+  - Dar prioridad a D11 (planeación fiscal y abuso, art. 5-A CFF — hoy en "Sin") y a los 5 huecos de contabilidad (C3-C5, C8-C9 — hoy en "Sin"), que es donde más se nota la falta de grosor según `conocimiento/doctorados/ESTADO.md`.
+  - No relajar el rigor de verificación de dos pasadas ya exigido por el dueño en otras instrucciones: cada cifra, artículo o tesis se confirma con fuente primaria antes de escribirse como hecho.
+- **Qué decidí:** nada de riesgo ni de cartera; es un criterio de calidad para el trabajo de conocimiento, que ya estaba dentro del mandato de doctorados (REGLAS §0d). No crea una rutina nueva ni cambia la cadencia.
+- **Estado:** criterio activo, visible para cualquier rutina (laboratorio, trabajo-continuo, investigador-vespertino, balance mensual) que entre a un área de doctorado fiscal, contable o de finanzas.
