@@ -29,7 +29,7 @@
 | D7 | Fiscalidad internacional: tratados, residencia, fuente de riqueza, regímenes fiscales preferentes, FATCA/CRS | cap. 27 (SIC) | Documentado con comprobación (ficha 8-oct; ejercicio ETF) |
 | D8 | Fiscalidad de activos financieros: SIC, ETFs extranjeros y apalancados, derivados, cripto | cap. 27, ficha cripto 4-oct | Parcial |
 | D9 | Derecho bursátil y antilavado (LMV, CNBV, LFPIORPI) | arena 01 y ficha cripto | Parcial |
-| D10 | Fiscalidad comparada de EUA (venta ficticia, *wash sale*, PFIC, contratos 1256) | nada | Sin |
+| D10 | Fiscalidad comparada de EUA (venta ficticia, *wash sale*, PFIC, contratos 1256) | ficha 9-oct: LISR arts. 4-B, 176-178 (México; PFIC de EUA pendiente) | Localizado |
 | D11 | Planeación fiscal y abuso (cláusula general antiabuso, razón de negocios) | nada | Sin |
 
 ## Doctorado en contabilidad (11 áreas)
