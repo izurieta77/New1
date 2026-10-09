@@ -26,10 +26,10 @@
 | D4 | LISR de personas físicas (enajenación, intereses, dividendos, exenciones, RESICO) | caps. 11 y 27, V05 | Capítulo (grado A en la letra) |
 | D5 | LISR de personas morales y grupos | cap. 32 (verificado 7-oct) | Capítulo (grado A en la letra) |
 | D6 | IVA e IEPS | cap. 32 (verificado 7-oct) | Capítulo (grado A en la letra) |
-| D7 | Fiscalidad internacional: tratados, residencia, fuente de riqueza, regímenes fiscales preferentes, FATCA/CRS | cap. 27 (SIC) | Documentado con comprobación (ficha 8-oct; ejercicio ETF) |
+| D7 | Fiscalidad internacional: tratados, residencia, fuente de riqueza, regímenes fiscales preferentes, FATCA/CRS | cap. 27 (SIC); ficha 8-oct (LISR arts. 1, 129 y 176; ejercicio ETF) | Parcial. **[Corregido 9-oct-2026, conciliación, fallo `bitacora/arbitraje/2026-10-09-etiquetas-doctorados.md`]:** decía "Documentado con comprobación", etiqueta que no existe en la leyenda de L3. La ficha no cubre tratados, residencia ni FATCA/CRS, y falta el criterio sobre la entidad extranjera. |
 | D8 | Fiscalidad de activos financieros: SIC, ETFs extranjeros y apalancados, derivados, cripto | cap. 27, ficha cripto 4-oct | Parcial |
 | D9 | Derecho bursátil y antilavado (LMV, CNBV, LFPIORPI) | arena 01 y ficha cripto | Parcial |
-| D10 | Fiscalidad comparada de EUA (venta ficticia, *wash sale*, PFIC, contratos 1256) | ficha 9-oct: LISR arts. 4-B, 176-178 (México; PFIC de EUA pendiente) | Localizado |
+| D10 | Fiscalidad comparada de EUA (venta ficticia, *wash sale*, PFIC, contratos 1256) | ficha 9-oct: LISR arts. 4-B, 176-178 (México; PFIC de EUA pendiente) | Parcial. **[Corregido 9-oct-2026, conciliación, mismo fallo]:** decía "Localizado", que es un nivel de `estado-de-dominio.csv` y no una cobertura de esta leyenda. |
 | D11 | Planeación fiscal y abuso (cláusula general antiabuso, razón de negocios) | nada | Sin |
 
 ## Doctorado en contabilidad (11 áreas)
@@ -48,10 +48,13 @@
 | C11 | Costos y contabilidad gerencial (asignación, costos relevantes y hundidos, costo de oportunidad) | ficha 6-oct (resumen del dueño con 5 ejercicios) | Parcial |
 
 ## Resumen
+
+Nota (conciliación, 9-oct-2026): la fila de derecho fiscal decía 0/1/4/6. Recontada contra la tabla de arriba, queda en 0 Comprobada (ninguna), 5 Capítulo (D2-D6), 5 Parcial (D1, D7, D8, D9, D10) y 1 Sin (D11). Finanzas y contabilidad cuadran. No es una graduación (§0d).
+
 | Doctorado | Áreas | Comprobada | Capítulo | Parcial | Sin |
 |---|---|---|---|---|---|
 | Finanzas | 11 | 5 | 4 | 2 | 0 |
-| Derecho fiscal | 11 | 0 | 1 | 4 | 6 |
+| Derecho fiscal | 11 | 0 | 5 | 5 | 1 |
 | Contabilidad | 11 | 0 | 1 | 5 | 5 |
 
 **Lectura honesta:** finanzas está a medio camino; derecho fiscal y contabilidad están en su inicio. Lo que ya existe en lo fiscal es de personas físicas y del SIC; falta casi toda la teoría general, el CFF, la defensa fiscal y las personas morales. En contabilidad falta casi todo el cuerpo de normas.

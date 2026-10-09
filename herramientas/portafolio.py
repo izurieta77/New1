@@ -438,16 +438,24 @@ def _periodos_por_anio(fechas: list[date]) -> float:
     return (len(fechas) - 1) / anios if anios > 0 else 252.0
 
 
-def metricas_curva(curva: list[tuple[date, float]], rf: float = 0.0) -> dict:
-    """Metricas de una curva (fecha, valor); CAGR solo con >= 1 anio; ratios con >= 20 rendimientos."""
+def metricas_curva(curva: list[tuple[date, float]], rf: float = 0.0, base: float | None = None) -> dict:
+    """Metricas de una curva (fecha, valor); CAGR solo con >= 1 anio; ratios con >= 20 rendimientos.
+
+    `base`: valor de la curva al fondeo (100 para el indice de `recalcular_indice`). Si se da,
+    el rendimiento del periodo y el drawdown se miden desde esa base y no desde la primera fila,
+    para no omitir el primer dia (fallo bitacora/arbitraje/2026-10-08-base-twr.md; correccion de
+    `reporte` en bitacora/arbitraje/2026-10-09-reporte-base-twr.md). Sin `base`, igual que antes.
+    """
     fechas = [f for f, _ in curva]
     rends = metricas.rendimientos(curva)
     dias = (fechas[-1] - fechas[0]).days
     ppa = _periodos_por_anio(fechas)
+    inicial = base if base is not None else curva[0][1]
+    curva_dd = ([(fechas[0], base)] + list(curva)) if base is not None else curva
     r = {"inicio": fechas[0], "fin": fechas[-1], "dias": dias, "n_rend": len(rends),
-         "rendimiento_total": curva[-1][1] / curva[0][1] - 1,
+         "rendimiento_total": curva[-1][1] / inicial - 1,
          "cagr": metricas.cagr(curva) if dias >= 365 else None,
-         "max_drawdown": metricas.max_drawdown(curva)["valor"], "ppa": ppa,
+         "max_drawdown": metricas.max_drawdown(curva_dd)["valor"], "ppa": ppa,
          "volatilidad": None, "sharpe": None, "sortino": None, "calmar": None}
     if len(rends) >= MIN_OBS_METRICAS:
         r["volatilidad"] = metricas.volatilidad_anualizada(rends, round(ppa))
@@ -487,7 +495,10 @@ def construir_reporte(operaciones: list[dict], equity: list[dict], libro: Libro,
     if len(curva) < 2:
         lineas.append("Un solo punto en la curva de equity: metricas no disponibles todavia.")
     else:
-        mp = metricas_curva(curva, rf or 0.0)
+        # Base 100 = aportacion al fondeo para el indice y para el benchmark (serie_benchmark arranca
+        # en 100 al cierre previo a `desde`). Nota 2026-10-09 (conciliacion): antes se medía contra la
+        # primera fila y el brief del 8-oct reporto +3.01% en vez de +2.53%.
+        mp = metricas_curva(curva, rf or 0.0, base=100.0)
         mb = None
         if benchmark:
             alineada = []
@@ -496,7 +507,7 @@ def construir_reporte(operaciones: list[dict], equity: list[dict], libro: Libro,
                 if punto is not None:
                     alineada.append((f, punto[1]))
             if len(alineada) == len(curva):
-                mb = metricas_curva(alineada, rf or 0.0)
+                mb = metricas_curva(alineada, rf or 0.0, base=100.0)
                 rp = metricas.rendimientos(curva)
                 rb = metricas.rendimientos(alineada)
                 activos = [a - b for a, b in zip(rp, rb)]

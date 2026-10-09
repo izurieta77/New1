@@ -8,7 +8,7 @@
 | LISR, texto de Diputados, última reforma DOF 01-04-2024 (PDF completo, 3.0 MB, SHA-256 803c2875c09c751c…), arts. 1, 2, 129, 176 | Lectura del artículo íntegro | A (texto) |
 | Art. 129 (10% definitivo sobre enajenación de acciones en bolsas de valores concesionadas o mercados de derivados reconocidos) | Íntegro | A |
 | Art. 176 (regímenes fiscales preferentes) | Primer párrafo y la regla de 75% | A |
-| Prohibición de la BMV/BIVA a fondos extranjeros con cripto (dato del dueño, 8-oct) | **No localizada** en búsqueda pública; no se usa | nv |
+| Prohibición de la BMV/BIVA a fondos extranjeros con cripto (dato del dueño, 8-oct) | **No localizada** en búsqueda pública; no se usa. **[Corregido 9-oct-2026, conciliación, `bitacora/arbitraje/2026-10-09-registros-del-8-oct.md`]:** para la **BMV está confirmada**: disposición 4.019.00 de su Reglamento Interior, autorizada con el oficio CNBV 312-2/42112/2024 y en vigor desde el 17-abr-2024 (fallo `bitacora/arbitraje/2026-10-08-bmv-fondos-cripto.md`, 03:14 UTC del 8-oct, anterior a esta ficha). **BIVA sigue sin verificar.** | A (BMV); nv (BIVA) |
 | Reglamento y resoluciones de la CNBV | No leídos | nv |
 
 ## Derivación
@@ -37,7 +37,7 @@ Un residente que vende en EUA una acción de sociedad mexicana cotizada en BMV s
 ## Límites
 - No se leyó el Reglamento de la LISR ni criterios del SAT sobre fondos extranjeros.
 - No se leyó el texto de los artículos 90–95 (ganancias de fondos del extranjero) ni la fracción de inversiones en activos virtuales.
-- La prohibición de la BMV para fondos extranjeros con cripto no se pudo confirmar (nv).
+- La prohibición de la BMV para fondos extranjeros con cripto no se pudo confirmar (nv). **[Corregido 9-oct-2026, conciliación]:** para la BMV sí está confirmada (grado A, ver la tabla de fuentes); solo falta BIVA.
 
 ## Estado nuevo
 **Documentado con comprobación** (8-oct): texto de arts. 1, 129 y 176 leído íntegro y ejercicio numérico reproducible con la tarifa 2026. Falta: lectura de los arts. 90–95 y del reglamento, y criterio del SAT o de un contador sobre si un ETF de EUA es entidad extranjera del art. 176. Esa es la única pregunta que decide el resultado.

@@ -109,6 +109,21 @@ class TestLibro(unittest.TestCase):
         self.assertAlmostEqual(filas[0]["indice"], 99.6787)
         self.assertAlmostEqual(filas[1]["indice"], 100.0)
 
+    def test_reporte_mide_desde_el_fondeo(self):
+        # Conciliacion 2026-10-09 (bitacora/arbitraje/2026-10-09-reporte-base-twr.md): con la curva
+        # real del papel GBM, `reporte` daba +3.01% (102.532207/99.5376 - 1); con base 100 al
+        # fondeo es +2.53%, y el drawdown incluye la perdida del primer dia (-0.46%).
+        curva = [(date(2026, 9, 28), 99.5376), (date(2026, 10, 6), 102.7057), (date(2026, 10, 8), 102.532207)]
+        sin_base = pf.metricas_curva(curva)
+        self.assertAlmostEqual(sin_base["rendimiento_total"], 102.532207 / 99.5376 - 1)
+        con_base = pf.metricas_curva(curva, base=100.0)
+        self.assertAlmostEqual(con_base["rendimiento_total"], 0.02532207)
+        self.assertAlmostEqual(con_base["max_drawdown"], 99.5376 / 100 - 1)
+        filas = [{"fecha": f, "efectivo_mxn": 0.0, "posiciones_mxn": v * 200, "equity_mxn": v * 200,
+                  "aportaciones_netas_mxn": 20000.0, "indice": v} for f, v in curva]
+        texto = pf.construir_reporte([], filas, pf.Libro(), None, None, [])
+        self.assertIn("| Rendimiento del periodo | +2.53% |", texto)
+
     def test_indice_neutral_a_flujos(self):
         filas = [
             {"fecha": date(2026, 1, 1), "efectivo_mxn": 0, "posiciones_mxn": 100, "equity_mxn": 100, "aportaciones_netas_mxn": 100},
