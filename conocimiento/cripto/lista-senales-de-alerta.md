@@ -162,6 +162,13 @@
 - **E6, E10:** sin búsqueda dirigida nueva hoy (tiempo de esta corrida dedicado al estudio profundo de DAT, prioridad de la tarea de hoy); última revisión con hallazgo (8-oct, sin novedad) sigue vigente, declarado explícitamente como no repetido hoy.
 - **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9, sin cambio desde el 25-sep. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
 
+**Seguimiento del 10-oct-2026** [I] — revisión semanal de contraparte de la corrida de las 08:17 (sábado; mercados de equity cerrados, cripto y DefiLlama operan 24/7), con el estudio profundo de hoy centrado en el texto de los indentures de notas convertibles de Strategy (ficha [`fichas/2026-10-10-covenants-notas-convertibles-mstr.md`](fichas/2026-10-10-covenants-notas-convertibles-mstr.md)), que no toca riesgo de exchange de forma directa:
+
+- **E1/E2 (indicio, TVL DefiLlama):** `api.llama.fi/protocol/binance-cex` hoy (10-oct, 14:30 UTC) = **US$172.50 mil millones** (suma de `currentChainTvls`), frente a US$171.32 mil millones de ayer (9-oct, 12:50 UTC) = **+0.69%**, en línea con BTC prácticamente plano en la ventana (−0.4% 24h). Dentro del ruido normal; muy lejos de los umbrales de la sección F. **Limpio.**
+- **E3 (PoR mensual):** búsqueda dirigida hoy ("Binance proof of reserves 47th report October 2026") sigue sin encontrar el 47.º reporte; resultados devueltos son del 45.º reporte (ago-2026) y coberturas antiguas. Sigue vigente el 46.º reporte (snapshot 1-sep-2026), sin cambio en la fila de este cuadro. Consistente con la ventana proyectada (~15-21-oct-2026). **Limpio.**
+- **E5, E6, E10:** sin búsqueda dirigida nueva hoy (tiempo de esta corrida dedicado al estudio de los indentures de MSTR, prioridad de la tarea de hoy); última revisión con hallazgo (9-oct, sin novedad) sigue vigente, declarado explícitamente como no repetido hoy. ÁMBAR de E5/A9 se mantiene sin cambio desde el 25-sep por defecto (no por verificación nueva).
+- **Conclusión: sin disparador.** Ninguna señal ROJA identificada hoy; ÁMBAR solo en E5 y A9 (sin verificación nueva hoy, sin cambio desde el 25-sep). No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
