@@ -27,7 +27,7 @@
 | D5 | LISR de personas morales y grupos | cap. 32 (verificado 7-oct) | Capítulo (grado A en la letra) |
 | D6 | IVA e IEPS | cap. 32 (verificado 7-oct) | Capítulo (grado A en la letra) |
 | D7 | Fiscalidad internacional: tratados, residencia, fuente de riqueza, regímenes fiscales preferentes, FATCA/CRS | cap. 27 (SIC); ficha 8-oct (LISR arts. 1, 129 y 176; ejercicio ETF) | Parcial. **[Corregido 9-oct-2026, conciliación, fallo `bitacora/arbitraje/2026-10-09-etiquetas-doctorados.md`]:** decía "Documentado con comprobación", etiqueta que no existe en la leyenda de L3. La ficha no cubre tratados, residencia ni FATCA/CRS, y falta el criterio sobre la entidad extranjera. |
-| D8 | Fiscalidad de activos financieros: SIC, ETFs extranjeros y apalancados, derivados, cripto | cap. 27, ficha cripto 4-oct | Parcial |
+| D8 | Fiscalidad de activos financieros: SIC, ETFs extranjeros y apalancados, derivados, cripto | cap. 27, ficha cripto 4-oct; ficha 10-oct (LISR 129: costo promedio, pérdidas 10 años) | Documentado con comprobación |
 | D9 | Derecho bursátil y antilavado (LMV, CNBV, LFPIORPI) | arena 01 y ficha cripto | Parcial |
 | D10 | Fiscalidad comparada de EUA (venta ficticia, *wash sale*, PFIC, contratos 1256) | ficha 9-oct: LISR arts. 4-B, 176-178 (México; PFIC de EUA pendiente) | Parcial. **[Corregido 9-oct-2026, conciliación, mismo fallo]:** decía "Localizado", que es un nivel de `estado-de-dominio.csv` y no una cobertura de esta leyenda. |
 | D11 | Planeación fiscal y abuso (cláusula general antiabuso, razón de negocios) | nada | Sin |
