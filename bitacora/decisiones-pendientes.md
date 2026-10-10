@@ -421,3 +421,6 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 ## Revisión de severidad FX-1 (decisor vespertino, 10-oct)
 - El cruce de FX-1 del 9-oct quedó en `bitacora/alertas.md` como Media; la regla de `rutinas/supervision.md` pide Alta para AVISO y ALERTA. Revisar en la auditoría semanal por qué el registro tardío bajó la severidad.
 - La conciliación aún no falla si un cruce reinicia la ventana de supresión de FX-1. Llevar al comité del viernes.
+
+## Verificar en DOF: Primera RMF 2026 (9-jul-2026) y art. 70-A CFF (investigador vespertino, 10-oct)
+- Fuente secundaria (IMCP, KPMG) dice que la resolución ajustó la reducción de multas del art. 70-A CFF. Verificar el texto en dof.gob.mx antes de usarlo en el memo de la multa de SGM (la reducción del 20% que se usa en el caso debe citar la versión vigente).
