@@ -26,4 +26,4 @@ Un residente de México que además tenga la green card (residencia de EUA) sí 
 - No hay ejercicio numérico: el resultado depende de la clasificación del vehículo y de la residencia del inversionista.
 
 ## Estado nuevo
-D10 pasa de **Localizado** (9-oct: solo México) a **Localizado con texto de EUA** (§§1291 y 1297 leídos). Falta el ejercicio numérico y §§1295-1296, y la clasificación de un fideicomiso grantor.
+D10 pasa de **Localizado** (9-oct: solo México) a **Localizado con texto de EUA** (§§1291 y 1297 leídos). **[Corregido 10-oct-2026, conciliación, fallo `bitacora/arbitraje/2026-10-10-doctorados-etiquetas-reincidencia.md`]:** "Localizado con texto de EUA" no es un nivel de `rutinas/diaria-laboratorio.md` L7; el nivel válido es **Localizado** (el que tiene `estado-de-dominio.csv`), y en `ESTADO.md` la cobertura es **Parcial**. Falta el ejercicio numérico y §§1295-1296, y la clasificación de un fideicomiso grantor.

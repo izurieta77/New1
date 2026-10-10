@@ -32,4 +32,4 @@ Una pérdida en una emisora no compensa la ganancia de otra si el texto determin
 - La cripto no está en la LISR ni en el CFF de este texto: su tratamiento no se deduce de la ley y queda sin ficha.
 
 ## Estado nuevo
-D8 pasa de **Parcial** a **Documentado con comprobación**: texto de art. 129 leído, reglas de costo y pérdidas probadas con código. Falta el art. 16-C CFF, la RMF 2026 y el criterio de compensación entre emisoras.
+D8 pasa de **Parcial** a **Documentado con comprobación**: texto de art. 129 leído, reglas de costo y pérdidas probadas con código. **[Corregido 10-oct-2026, conciliación, fallo `bitacora/arbitraje/2026-10-10-doctorados-etiquetas-reincidencia.md`]:** esa etiqueta no existe en ninguna de las dos escalas. En `ESTADO.md` D8 sigue **Parcial** (la ficha no cubre apalancados, derivados ni cripto) y en `estado-de-dominio.csv` el nivel es **Documentado**; sube a Comprendido con comprobación cuando se cierre lo que falta abajo. Falta el art. 16-C CFF, la RMF 2026 y el criterio de compensación entre emisoras.
