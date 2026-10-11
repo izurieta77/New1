@@ -1,4 +1,4 @@
-# Investigador, corrida vespertina · 2026-10-10 (02:12 UTC)
+# Investigador, corrida vespertina · 2026-10-09 (20:12 CDMX; 02:12 UTC del 10-oct)
 
 **Barrido corto. Resultado: nada que cambie una regla del sistema hoy.**
 
