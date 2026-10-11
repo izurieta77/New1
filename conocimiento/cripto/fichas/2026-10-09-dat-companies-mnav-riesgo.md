@@ -106,3 +106,10 @@ caída necesaria desde hoy (83,092.80) = 68.5%
 - Dar seguimiento al pronóstico registrado hoy (ver `bitacora/pronosticos.csv`) sobre el ritmo de acumulación de BTC de Strategy.
 
 Script de esta sesión: `scratchpad/.../dat_mstr.py` (fuera del repositorio).
+
+## Adenda 11-oct-2026 (fichas/2026-10-11-galaxy-prediccion-23-ventas-forzadas-dat.md)
+
+Dos correcciones a lo escrito arriba, con fuente primaria verificada hoy:
+
+1. **El "reporte de Galaxy Digital (mar-2026)" del §5 no es de marzo ni un reporte aislado.** Es la predicción #23 de "26 Predictions for Crypto in 2026" (recurso #35 del dueño), publicada el 18-dic-2025, y ya evaluada "cumplida" en nuestra propia base desde el 25-sep-2026 (`arena/investigacion/fuentes-terceros/2026-09-25-galaxy-predicciones-2026.md`), con 5 casos documentados (secundario, grado C): Empery Digital, Genius Group, Nakamoto, Smarter Web Company y Satsuma (1,584 BTC en conjunto).
+2. **El §4 ("la venta forzada de BTC [...] es un escenario de cola lejano") omitió, sin contradecirlo, que Strategy ya vendió BTC dos veces en 2026** (1,638 BTC el 3-ago-2026 y 1,690 BTC el 10-ago-2026, verificado hoy contra los dos 8-K primarios de SEC EDGAR), para financiar dividendos de preferentes y recompras de STRC — no por *default* de deuda, sino por elección, bajo mNAV deprimido. Es una versión pequeña (0.39% de las tenencias actuales) y controlada del mismo mecanismo que el §4 ya identificaba como el riesgo de corto plazo real (presión de caja de preferentes), ya materializada, no solo hipotética. La lectura central (sin riesgo inminente de *default* de deuda) se sostiene.
