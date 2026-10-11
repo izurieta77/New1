@@ -26,3 +26,6 @@ Materia: una regla que choca con otra (división de trabajo inteligencia/supervi
 - `bitacora/alertas.md`, fila del 10-oct 00:25: severidad y destinatario, con nota fechada.
 - `bitacora/decisiones-pendientes.md`: punto (4) del revisor, la entrada del vigía y la del decisor vespertino, cerrados como arbitraje; la pregunta del registro retroactivo queda escalada.
 - `conocimiento/registro-de-errores.md`: dos filas (cierre sin escalar a las 15:05; severidad Media en el registro tardío).
+
+## Nota fechada · 2026-10-11 (conciliación de la noche del 10-oct; fallo `bitacora/arbitraje/2026-10-11-fx1-umbral-vigente.md`)
+El "~18.53 con σd 0.77%" del punto 3 era el umbral de la corrida de las 02:59 UTC del 10-oct, no un valor fijo. `herramientas/fx_alerta.py` (L175-176 y L437) recalcula σd con la ventana de cierres de cada corrida y el umbral = 18.08737 × exp(σd·√10). **El umbral operativo es el que imprime el script en cada corrida** (a las 02:59 UTC del 11-oct: **18.4818**, σd 0.68%). La fecha no cambia: "no se repite hasta el 14-oct" = suprime hasta el 13-oct inclusive. El texto de arriba se deja tal cual.
