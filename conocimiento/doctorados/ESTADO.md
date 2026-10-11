@@ -30,7 +30,7 @@
 | D8 | Fiscalidad de activos financieros: SIC, ETFs extranjeros y apalancados, derivados, cripto | cap. 27, ficha cripto 4-oct; ficha 10-oct (LISR 129: costo promedio, pérdidas 10 años, con ejercicio) | Parcial. **[Corregido 10-oct-2026, conciliación, fallo `bitacora/arbitraje/2026-10-10-doctorados-etiquetas-reincidencia.md`]:** `d2bd959` puso "Documentado con comprobación", la misma etiqueta inexistente fallada el 9-oct para D7 (reincidencia). La ficha cubre el SIC (art. 129) pero no ETFs apalancados, derivados ni cripto (su propia sección Límites lo dice), así que "no cubre el área": Parcial. |
 | D9 | Derecho bursátil y antilavado (LMV, CNBV, LFPIORPI) | arena 01 y ficha cripto | Parcial |
 | D10 | Fiscalidad comparada de EUA (venta ficticia, *wash sale*, PFIC, contratos 1256) | ficha 9-oct PFIC (IRC §§1291 y 1297 leídos en LII: no aplica a residente sin condición de US person; sin ejercicio) | Parcial. **[Nota 10-oct-2026, conciliación, fallo `bitacora/arbitraje/2026-10-10-doctorados-etiquetas-reincidencia.md`]:** decía "ficha 9-oct: LISR arts. 4-B, 176-178 (México; PFIC de EUA pendiente)": esos artículos son de D7 y el PFIC ya se leyó. Faltan venta ficticia, *wash sale* y contratos 1256. **[Corregido 9-oct-2026, conciliación, mismo fallo]:** decía "Localizado", que es un nivel de `estado-de-dominio.csv` y no una cobertura de esta leyenda. |
-| D11 | Planeación fiscal y abuso (cláusula general antiabuso, razón de negocios) | nada | Sin |
+| D11 | Planeación fiscal y abuso (cláusula general antiabuso, razón de negocios) | ficha 10-oct (CFF 5o.-A íntegro, versión Diputados; pendiente: reglas del órgano colegiado, jurisprudencia) | Documentado |
 
 ## Doctorado en contabilidad (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
