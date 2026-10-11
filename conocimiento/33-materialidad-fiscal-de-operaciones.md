@@ -55,7 +55,7 @@ Fuentes: CFF, versión Cámara de Diputados con "Última Reforma DOF 09-04-2026"
 | **CFF 76** | Omisión de contribuciones descubierta en facultades. | Multa del **55% al 75%** de lo omitido; reducida si se paga durante la revisión (remite a LFDC 17). | A (CFF 76); LFDC 17 no releído hoy |
 | **CFF 113 Bis** | Expedir, enajenar, comprar o adquirir CFDI que amparen operaciones **inexistentes, falsas o simuladas**; **(desde DOF 07-11-2025)** también **dar efectos fiscales a comprobantes falsos**. | **2 a 9 años de prisión**; se persigue con independencia del procedimiento administrativo; reparación del daño. | A |
 | **CFF 115 Ter (adicionado DOF 07-11-2025)** | **A sabiendas**, declarar hechos o datos falsos, o **presentar documentación falsa o alterada en cualquier procedimiento** del CFF. | **3 a 6 años de prisión**; independiente del procedimiento administrativo. | A |
-| **CFF 111 Bis** | Petrolíferos: no tener certificados de los controles volumétricos o alterarlos; dar registros volumétricos **falsos, incompletos o inexactos**; programas para alterar volumen; litros recibidos o entregados que difieran en más de **1.5%** (líquidos) de los amparados por CFDI o pedimentos. | **3 a 8 años de prisión**; requiere querella de SHCP. | A |
+| **CFF 111 Bis** | Petrolíferos: no tener certificados de los controles volumétricos o alterarlos; dar registros volumétricos **falsos, incompletos o inexactos**; programas para alterar volumen (fr. III-V: **3 a 8 años**). Párrafo aparte: **enajenar petrolíferos de procedencia ilícita, 6 a 12 años**; se presume ilícita si (a) el balance mensual del tanque difiere más de **1.5%** (líquidos), (b) los litros **entregados** según volumétricos exceden en más de 1.5% los **vendidos** según CFDI de venta, o (c) los litros entregados exceden en más de 1.5% los **recibidos** según CFDI de compra o pedimentos. | 3 a 8 años y 6 a 12 años; requiere querella de SHCP. | A |
 | **CFF 108/109** | Defraudación fiscal y equiparables (uso de documentos falsos, deducciones falsas, operaciones simuladas). | Prisión según monto. | A (existencia del tipo); montos no releídos hoy |
 
 **Lectura (D):** el 115 Ter cambia el cálculo de riesgo del "armado" de materialidad. Antes, un documento fabricado arriesgaba el rechazo de la deducción; hoy arriesga un delito **autónomo**, que no depende de que exista omisión de impuesto. Por eso todo lo que se genere ahora debe llevar la **fecha real en que se generó** y decir con claridad qué hecho pasado describe.
@@ -148,7 +148,7 @@ Ordenada de más fuerte a más débil (D, con base en 2.1). La estrategia es sub
 
 | Tipo de gasto | Mínimo indispensable | Lo que la vuelve sólida | Riesgo |
 |---|---|---|---|
-| **Compra de combustible** (Pemex, ExxonMobil u otro) | CFDI, pago | **Volumétricos** que cuadren litros del CFDI con recepción en tanque; Carta Porte del autotanque; dictámenes de calidad; estado de cuenta | Bajo si el volumétrico cuadra; **alto** si no cuadra: el art. 111 Bis castiga con 3 a 8 años registros volumétricos falsos, incompletos o inexactos y diferencias de litros mayores a 1.5% (líquidos) contra los CFDI |
+| **Compra de combustible** (Pemex, ExxonMobil u otro) | CFDI, pago | **Volumétricos** que cuadren litros del CFDI con recepción en tanque; Carta Porte del autotanque; dictámenes de calidad; estado de cuenta | Bajo si el volumétrico cuadra; **alto** si no cuadra: diferencias de litros mayores a 1.5% contra los CFDI de compra activan la presunción de procedencia ilícita del art. 111 Bis (6 a 12 años) |
 | **Mantenimiento de dispensarios, tanques, equipo** | CFDI, pago, contrato u orden | Reportes de servicio firmados al terminar, fotos antes/después, piezas reemplazadas, bitácora, certificados de calibración | Medio |
 | **Servicios especializados** (limpieza, seguridad, personal) | CFDI, pago, contrato, **REPSE del proveedor a la fecha** | CFDI de nómina, IMSS e Infonavit del personal asignado (LISR 27 fr. V), listas de asistencia, ICSOE | **Alto** si falta REPSE o la documentación laboral: la deducción no procede por requisito legal, no solo por prueba |
 | **Obra, remodelación, herrería, carpintería** | CFDI, pago, presupuesto | Estimaciones, bitácora, fotos fechadas, planos, compras de material, actas de entrega, licencia de construcción si aplica | Medio-alto |
@@ -200,6 +200,65 @@ Ordenada de más fuerte a más débil (D, con base en 2.1). La estrategia es sub
 2. Releer LISR 27 y LIVA 5 en su versión 2026 (las copias locales son de 2024 y 2021).
 3. Releer LFDC art. 17 (porcentajes de multa reducida durante la revisión) y CFF 73 (cumplimiento espontáneo) antes de usarlos en una decisión.
 4. NOM-151-SCFI-2016 y Código de Comercio 49: no releídos hoy.
-5. Montos del art. 108 (defraudación): no releídos hoy. El art. 111 Bis sí se leyó (fracciones III-V y el párrafo de diferencias de litros).
+5. Montos del art. 108 (defraudación): no releídos hoy. El art. 111 Bis sí se leyó (fracciones III-VI y el párrafo de procedencia ilícita con sus incisos a-c). **Corrección 11-oct:** la primera versión de este capítulo atribuía a las diferencias de 1.5% la pena de 3 a 8 años; corresponde la de 6 a 12 años (procedencia ilícita).
 
 **Grado del capítulo:** ley **A** (CFF reforma DOF 9-abr-2026, RCFF, LISR/LIVA con la salvedad del punto 2); criterios judiciales **B** (claves identificadas, texto oficial no leído); método y recomendaciones **D** (análisis propio).
+
+---
+
+## 9. Lado emisor: materialidad de las facturas de venta de diésel y gasolina (estación de servicio)
+
+> Añadido el 11-oct-2026 a petición del dueño: "me refiero a las facturas que yo le hago a mis clientes de diésel y gasolina".
+
+### 9.1 Por qué al emisor también le piden materialidad
+
+- **Compulsa:** cuando el SAT revisa a un cliente, le pide a la estación (CFF 42 fr. II) que confirme la venta. Si la estación no puede probar que el combustible salió de su dispensario hacia ese cliente, el cliente pierde la deducción y la estación queda señalada.
+- **69-B contra el emisor:** si la estación factura litros que no salieron de sus tanques, el SAT presume operaciones inexistentes, aunque la estación sí tenga activos, porque la capacidad se mide contra **el volumen**, no contra la existencia del negocio (D, a partir del texto del 69-B y del 28 apartado B).
+- **Restricción del sello digital (17-H Bis)** si en facultades conoce que los CFDI ampararon operaciones inexistentes, simuladas o ilícitas (A).
+- **Delito del 113 Bis** para quien **expide** CFDI de operaciones inexistentes (2 a 9 años) (A).
+
+### 9.2 Las dos direcciones del riesgo de volumen (A)
+
+| Dirección | Qué significa | Norma |
+|---|---|---|
+| **Litros facturados > litros entregados** (según volumétricos) | Se facturó combustible que no salió: típica "venta de facturas" | 69-B, 113 Bis, 17-H Bis |
+| **Litros entregados > litros facturados en más de 1.5%** | Se vendió combustible sin CFDI | **111 Bis, inciso b): presunción de procedencia ilícita, 6 a 12 años** |
+
+El 28 apartado B del CFF obliga a que los reportes diarios y mensuales de volumétricos contengan **los datos de los CFDI** de compra y venta. El SAT ya tiene los dos lados: puede cruzar CFDI emitidos contra entregas sin pedir nada. La primera revisión que hará es esa.
+
+### 9.3 Reglas de facturación que cambian la lectura de los años pasados (A, RMF 2026 leída)
+
+- **Sin factura global desde el 1-may-2019:** la regla 2.7.1.21 (RMF 2026) termina: "La facilidad establecida en esta regla no es aplicable tratándose de los sujetos señalados en la regla 2.6.1.2." La 2.6.1.2 fr. VIII incluye a quien **enajena petrolíferos con permiso de la CNE**: la estación. Según IDC (2019, C), el cambio entró el 1-may-2019 por la tercera modificación a la RMF 2018. Consecuencia: en los años abiertos (2021 en adelante) cada venta debía tener su CFDI. Un mes con un CFDI global a público en general es un hallazgo por sí mismo.
+- **Monederos electrónicos (3.3.1.7):** la estación **no** emite CFDI al cliente por lo pagado con monedero autorizado; el emisor del monedero emite el complemento al cliente. La estación emite, con la misma periodicidad con que recibe el CFDI de egresos con "Complemento de Consumo de Combustibles", un CFDI por tipo de combustible con litros, precio e impuestos, con la clave de la estación, el folio del CFDI de egresos y el RFC del emisor del monedero, y **los importes deben coincidir**.
+- **Requisitos del lado del cliente (LISR 27 fr. III, párrafo reformado DOF 12-11-2021):** el combustible solo es deducible si se paga con transferencia, cheque nominativo, tarjeta o monedero autorizado, **aunque sea menos de 2,000 pesos**, y el CFDI debe traer **el permiso vigente** del proveedor (Ley de Hidrocarburos), no suspendido. Un CFDI nominativo con forma de pago "01 efectivo" no le sirve al cliente y llama la atención.
+
+### 9.4 Expediente de materialidad de una factura de venta de combustible
+
+| Pieza | Fuente (con fecha propia) | Nivel (sección 4) |
+|---|---|---|
+| Despacho: fecha, hora, dispensario, manguera, litros, folio de ticket | Sistema de control de dispensarios / punto de venta; registro de entrega del volumétrico | 1 |
+| CFDI con el folio de ticket o de despacho relacionado | Timbrado del SAT | 1 |
+| Pago | Liquidación de la terminal bancaria (TPV), SPEI del cliente, estado de cuenta del emisor de tarjeta de flotilla o monedero | 1 |
+| Cliente identificado | Constancia fiscal, contrato o carta de crédito (flotillas), placas o tarjetas por unidad | 2 |
+| Crédito a flotillas | CFDI PPD + **complemento de pago (REP)** que cuadre con depósitos; estado de cuenta del cliente; cobranza | 1-2 |
+| Volumen del mes | Reporte mensual de volumétricos: entregas por producto = suma de CFDI de venta (± 1.5%) | 1 |
+| Precio | Precio publicado del día (reportes de precios al regulador) consistente con el precio unitario del CFDI | 1-2 |
+
+### 9.5 Señales de alerta para revisar en el historial propio (D)
+
+1. Meses con litros facturados mayores que las entregas volumétricas (o menores en más de 1.5%).
+2. CFDI nominativos emitidos días o semanas después del despacho sin ticket relacionado.
+3. Tickets facturados a público en general y luego refacturados a un cliente **sin cancelar** el CFDI original (litros dobles).
+4. CFDI nominativos con forma de pago 01 (efectivo) o 99.
+5. Clientes en listas 69-B, sin vehículos, o con consumos desproporcionados a su flota.
+6. Precio unitario distinto al precio de bomba del día sin explicación (descuento por contrato documentado).
+7. CFDI globales posteriores al 1-may-2019, salvo el de monederos de la regla 3.3.1.7.
+
+### 9.6 Herramienta
+
+`datos/asunto-fiscal-sgm/conciliacion_ventas_cfdi.py` concilia, por mes y producto, los litros de los XML de CFDI emitidos (descarga masiva del SAT, excluye cancelados con el archivo de metadatos) contra las entregas del reporte mensual de volumétricos, separa público en general de nominativos, marca diferencias de más de 1.5% en ambos sentidos, lista los nominativos pagados en efectivo o "por definir" y los UUID repetidos. Probada con datos sintéticos el 11-oct. Las claves de producto usadas son 15101505 (diésel), 15101514 (regular) y 15101515 (premium); hay que confirmar que son las que usa la estación.
+
+### 9.7 Límites de esta sección
+
+- La fecha del 1-may-2019 viene de fuente secundaria (IDC Online, 2019); el texto de la regla vigente sí se leyó en la RMF 2026 (DOF 28-dic-2025).
+- No se leyeron los Anexos 21, 30 y 31 (especificaciones de volumétricos) ni la regla de cancelación y sustitución de CFDI para refacturar tickets.
