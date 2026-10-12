@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-12 01:30 UTC · decisor-vespertino · OK · (este commit) · sin alertas de mercado que obliguen a actuar; FX-1 OK 18.395 (umbral 18.4829); las dos Alta fiscales del revisor marcadas resueltas (27c93fb)
 2026-10-12 01:16 UTC · trabajo-continuo · OK · (este commit) · trabajo-continuo: 2026-10-11 · C5 impuesto diferido (NIC 12 resumen oficial, LISR 9/34/36, ejercicio con aserciones) de Sin a Parcial; pensiones, NIIF 2 y C4 pendientes
 2026-10-12 00:44 UTC · cripto (rutina 8, §8b cascada vespertina 18:42 CDMX) · OK · (este commit) · pulso + recálculo completo del filtro de tendencia: SMA200=72,017.69, salida=69,857.16, reentrada=74,178.22, colchón +20.03%, ENCENDIDO sin cambio de estado; sin boleta de venta, sin alerta 8%/4h, sin orden/pronóstico cripto vencido
 2026-10-12 00:20 UTC · aprendizaje · OK · (este commit) · resumen del 11-oct: materialidad (cap. 33), 115 Ter y 113 Bis, umbrales 0.5%/1.5%, factura global hasta 31-dic-2026; 7 errores propios corregidos
