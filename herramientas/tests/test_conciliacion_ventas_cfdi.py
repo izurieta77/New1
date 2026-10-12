@@ -59,6 +59,19 @@ class TestConciliacion(unittest.TestCase):
         _, _, _, errores, _ = cv.conciliar(self.d, self.vol)
         self.assertEqual(len(errores), 1)
 
+    def test_cfdi_40_y_33_juntos_y_32_rechazado(self):
+        # Conciliación 12-oct-2026: 4.0 y 3.3 suman; 3.2 (mismo namespace cfd/3) es error visible.
+        xml(self.d, "a40.xml", "U1", q=600, v="4")
+        xml(self.d, "a33.xml", "U2", q=400, v="3")
+        with open(os.path.join(self.d, "a32.xml"), "w", encoding="utf-8") as h:
+            h.write('<?xml version="1.0"?><cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" '
+                    'version="3.2" fecha="2026-01-05T10:00:00" tipoDeComprobante="ingreso"/>')
+        self.entregas([("2026-01", "diesel", 1000)])
+        filas, _, _, errores, _ = cv.conciliar(self.d, self.vol)
+        f = self.fila(filas, "2026-01", "diesel")
+        self.assertEqual((f[2], f[8]), (1000, "OK"))
+        self.assertEqual([a for a, _ in errores], ["a32.xml"])
+
     def test_cancelado_por_metadata_se_excluye(self):
         xml(self.d, "a.xml", "U1", q=1000)
         xml(self.d, "b.xml", "U2", q=500)

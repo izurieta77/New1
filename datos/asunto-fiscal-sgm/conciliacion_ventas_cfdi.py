@@ -6,7 +6,7 @@ Uso:
       [--metadata metadata_sat.txt] [--salida reporte.md] [--restar-egresos]
 
 Entradas:
-  --xml           carpeta (se recorre completa) con los XML de CFDI 4.0 EMITIDOS por la estación
+  --xml           carpeta (se recorre completa) con los XML de CFDI 3.3 o 4.0 EMITIDOS por la estación
                   (descarga masiva del SAT).
   --volumetricos  CSV con columnas: mes (AAAA-MM), producto (diesel|regular|premium), litros_entregados
                   Se capturan del reporte mensual de controles volumétricos (Anexo 30/31) de cada mes.
@@ -74,6 +74,10 @@ def leer_cfdi(ruta):
     ns = raiz.tag[1:].split("}")[0] if raiz.tag.startswith("{") else ""
     if ns not in NS_CFDI or not raiz.tag.endswith("Comprobante"):
         raise ValueError("no es CFDI 3.3 ni 4.0")
+    # cfd/3 también es el namespace del CFDI 3.2 (atributo "version" en minúscula, sin ClaveProdServ):
+    # se rechaza con error visible en vez de contarlo (conciliación 12-oct-2026).
+    if raiz.get("Version") not in ("3.3", "4.0"):
+        raise ValueError("versión de CFDI no soportada: %r" % (raiz.get("Version") or raiz.get("version")))
     q = lambda t: "{%s}%s" % (ns, t)
     tfd = raiz.find(".//" + NS_TFD)
     uuid = tfd.get("UUID").upper() if tfd is not None else None

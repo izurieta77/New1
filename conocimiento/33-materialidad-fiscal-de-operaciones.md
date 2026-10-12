@@ -149,7 +149,7 @@ Ordenada de más fuerte a más débil (D, con base en 2.1). La estrategia es sub
 
 | Tipo de gasto | Mínimo indispensable | Lo que la vuelve sólida | Riesgo |
 |---|---|---|---|
-| **Compra de combustible** (Pemex, ExxonMobil u otro) | CFDI, pago | **Volumétricos** que cuadren litros del CFDI con recepción en tanque; Carta Porte del autotanque; dictámenes de calidad; estado de cuenta | Bajo si el volumétrico cuadra; **alto** si no cuadra: diferencias de litros mayores a 1.5% contra los CFDI de compra activan la presunción de procedencia ilícita del art. 111 Bis (6 a 12 años) |
+| **Compra de combustible** (Pemex, ExxonMobil u otro) | CFDI, pago | **Volumétricos** que cuadren litros del CFDI con recepción en tanque; Carta Porte del autotanque; dictámenes de calidad; estado de cuenta | Bajo si el volumétrico cuadra; **alto** si no cuadra: diferencias de litros mayores a 1.5% contra los CFDI de compra activan la presunción de procedencia ilícita del art. 111 Bis (6 a 12 años); desde más de 0.5%, determinación presuntiva (55 VII e) y f) 2). *Nota 12-oct, conciliación* |
 | **Mantenimiento de dispensarios, tanques, equipo** | CFDI, pago, contrato u orden | Reportes de servicio firmados al terminar, fotos antes/después, piezas reemplazadas, bitácora, certificados de calibración | Medio |
 | **Servicios especializados** (limpieza, seguridad, personal) | CFDI, pago, contrato, **REPSE del proveedor a la fecha** | CFDI de nómina, IMSS e Infonavit del personal asignado (LISR 27 fr. V), listas de asistencia, ICSOE | **Alto** si falta REPSE o la documentación laboral: la deducción no procede por requisito legal, no solo por prueba |
 | **Obra, remodelación, herrería, carpintería** | CFDI, pago, presupuesto | Estimaciones, bitácora, fotos fechadas, planos, compras de material, actas de entrega, licencia de construcción si aplica | Medio-alto |
@@ -248,7 +248,7 @@ El 28 apartado B del CFF obliga a que los reportes diarios y mensuales de volum�
 
 ### 9.5 Señales de alerta para revisar en el historial propio (D)
 
-1. Meses con litros facturados mayores que las entregas volumétricas (o menores en más de 1.5%).
+1. Meses con litros facturados mayores que las entregas volumétricas (o menores en más de 0.5%, presuntiva del 55 VII; más de 1.5%, además 111 Bis). *(Corregido 12-oct, conciliación: decía solo 1.5%, en contra de la tabla 1.3 y de §9.2.)*
 2. CFDI nominativos emitidos días o semanas después del despacho sin ticket relacionado.
 3. Tickets facturados a público en general y luego refacturados a un cliente **sin cancelar** el CFDI original (litros dobles).
 4. CFDI nominativos con forma de pago 01 (efectivo) o 99.

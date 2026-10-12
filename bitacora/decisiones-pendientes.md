@@ -472,3 +472,25 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** no inventar ni aproximar ninguna cifra de Metaplanet. Dejo el pendiente igual de abierto en la ficha de hoy y en `estado-de-dominio.csv`, con la pista nueva (la IR en inglés sí es accesible) para que la próxima corrida intente un acceso distinto (por ejemplo, buscar directamente el PDF de cada aviso por su título en un motor de búsqueda, en vez de depender de los hrefs de la página índice).
 - **Por qué es conservador:** es más seguro dejarlo pendiente y explícito que forzar una cifra de prensa sin fuente primaria, rompiendo la regla de acceso del plan de estudio.
 - **Estado:** Abierto — tercer intento fallido; no requiere escalación al dueño todavía (no bloquea ninguna decisión de la cartera), pero si sigue sin resolverse varias corridas más, valdría la pena que el orquestador sugiera una vía de acceso alterna.
+
+## 2026-10-12 · conciliación (noche del 11-oct) · Cierres de la revisión del 11-oct y una escalación de mecanismo
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-12-cap33-111bis-55vii-cfdi.md`):
+  - bloqueante 1 (factura global), ratificado;
+  - bloqueante 2 (conciliador CFDI): resuelto en `27c93fb` y reforzado con el rechazo del 3.2;
+  - 111 Bis: gana el de 6 a 12 años / 1.5%; `fiscal/04` estaba incompleto;
+  - el 0.5% está en el art. 55 fr. VII, no en el 56: cap. 30 corregido.
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-12-registros-del-11-oct.md`):
+  - latido retroactivo de `55987a6`;
+  - P0103: manda el criterio literal;
+  - menores de cripto y de inteligencia, con nota.
+- **ESCALADO AL DUEÑO: horas de latido posteriores al commit, tercera jornada seguida** (9 de 11 latidos del 11-oct, en casi todas las rutinas). Hay precedente (3-oct y 10-oct): no se refuerza el texto otra vez. **Opciones:**
+  - (a) `herramientas/latido.py`, que escriba la hora con `date -u`;
+  - (b) un control de latido contra commit en `supervision.py`;
+  - (c) REGLAS §3 con "hora de inicio" y la del commit como oficial;
+  - (d) aceptarlo.
+  - **Qué decidí:** no reescribir líneas ni implementar nada. **Estado:** Abierto → dueño.
+- **Pendientes de hechos de más de 24 h:**
+  - **BIVA:** sigue **abierto**. `biva.mx/empresas/marco_normativo` da 200 pero es una aplicación de una página. La búsqueda del 12-oct solo devuelve la reforma de la BMV a la 4.019.00 (oficio CNBV 312-2/42112/2024, vigente desde el 17-abr-2024).
+  - **Mora de GFNORTEO:** sigue **abierto**. `portafolioinfo.cnbv.gob.mx` da 000 (03:0x UTC del 12-oct), y la API del SIE de Banxico da 400 sin token.
+  - **Metaplanet:** sigue abierto, con el cripto.
+  - **Sin cambio** (no los decide la conciliación): marcador, sesión extraordinaria y registro retroactivo de FX-1 (dueño); escala de `estado-de-dominio.csv` (orquestador); agenda del comité del 16-oct.
