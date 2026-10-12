@@ -55,7 +55,8 @@ Fuentes: CFF, versión Cámara de Diputados con "Última Reforma DOF 09-04-2026"
 | **CFF 76** | Omisión de contribuciones descubierta en facultades. | Multa del **55% al 75%** de lo omitido; reducida si se paga durante la revisión (remite a LFDC 17). | A (CFF 76); LFDC 17 no releído hoy |
 | **CFF 113 Bis** | Expedir, enajenar, comprar o adquirir CFDI que amparen operaciones **inexistentes, falsas o simuladas**; **(desde DOF 07-11-2025)** también **dar efectos fiscales a comprobantes falsos**. | **2 a 9 años de prisión**; se persigue con independencia del procedimiento administrativo; reparación del daño. | A |
 | **CFF 115 Ter (adicionado DOF 07-11-2025)** | **A sabiendas**, declarar hechos o datos falsos, o **presentar documentación falsa o alterada en cualquier procedimiento** del CFF. | **3 a 6 años de prisión**; independiente del procedimiento administrativo. | A |
-| **CFF 111 Bis** | Petrolíferos: no tener certificados de los controles volumétricos o alterarlos; dar registros volumétricos **falsos, incompletos o inexactos**; programas para alterar volumen (fr. III-V: **3 a 8 años**). Párrafo aparte: **enajenar petrolíferos de procedencia ilícita, 6 a 12 años**; se presume ilícita si (a) el balance mensual del tanque difiere más de **1.5%** (líquidos), (b) los litros **entregados** según volumétricos exceden en más de 1.5% los **vendidos** según CFDI de venta, o (c) los litros entregados exceden en más de 1.5% los **recibidos** según CFDI de compra o pedimentos. | 3 a 8 años y 6 a 12 años; requiere querella de SHCP. | A |
+| **CFF 111 Bis** | Primer párrafo, **3 a 8 años**, fr. I-VI: no tener controles volumétricos o alterarlos (I); no tener o no operar los equipos y programas (II); no tener los certificados o alterarlos (III); dar registros volumétricos falsos, incompletos o inexactos (IV); programas para alterar volumen (V); dar efecto fiscal a CFDI de hidrocarburos de un emisor en lista 69-B sin materializar ni corregir (VI). Párrafo siguiente, **6 a 12 años**: enajenar petrolíferos **de procedencia ilícita**, que se presume si (a) el balance mensual del tanque difiere más de **1.5%** (líquidos), (b) los litros **entregados** según volumétricos exceden en más de 1.5% los **vendidos** según CFDI de venta, o (c) los litros entregados exceden en más de 1.5% los **recibidos** según CFDI de compra o pedimentos. Requiere querella previa de la SHCP. | 3 a 8 años y 6 a 12 años | A (cotejo literal 12-oct contra el PDF de Diputados, sha256 `be7427b2…`, el mismo del fallo del 8-oct) |
+| **CFF 55 fr. VII y 56 fr. VII** | Determinación **presuntiva** para quien lleva volumétricos: entre otros supuestos, cuando en un mes los litros entregados según volumétricos exceden en más de **0.5%** (líquidos) los vendidos según CFDI de venta (55 VII f) 1), o los recibidos según CFDI de compra (f) 2), o los recibidos exceden a los vendidos (f) 3); también si el balance del tanque difiere más de 0.5% (d). El 56 VII da el método de cálculo. | Determinación presuntiva de ingresos (no es delito) | A (leído 12-oct) |
 | **CFF 108/109** | Defraudación fiscal y equiparables (uso de documentos falsos, deducciones falsas, operaciones simuladas). | Prisión según monto. | A (existencia del tipo); montos no releídos hoy |
 
 **Lectura (D):** el 115 Ter cambia el cálculo de riesgo del "armado" de materialidad. Antes, un documento fabricado arriesgaba el rechazo de la deducción; hoy arriesga un delito **autónomo**, que no depende de que exista omisión de impuesto. Por eso todo lo que se genere ahora debe llevar la **fecha real en que se generó** y decir con claridad qué hecho pasado describe.
@@ -200,7 +201,7 @@ Ordenada de más fuerte a más débil (D, con base en 2.1). La estrategia es sub
 2. Releer LISR 27 y LIVA 5 en su versión 2026 (las copias locales son de 2024 y 2021).
 3. Releer LFDC art. 17 (porcentajes de multa reducida durante la revisión) y CFF 73 (cumplimiento espontáneo) antes de usarlos en una decisión.
 4. NOM-151-SCFI-2016 y Código de Comercio 49: no releídos hoy.
-5. Montos del art. 108 (defraudación): no releídos hoy. El art. 111 Bis sí se leyó (fracciones III-VI y el párrafo de procedencia ilícita con sus incisos a-c). **Corrección 11-oct:** la primera versión de este capítulo atribuía a las diferencias de 1.5% la pena de 3 a 8 años; corresponde la de 6 a 12 años (procedencia ilícita).
+5. Montos del art. 108 (defraudación): no releídos hoy. El art. 111 Bis se cotejó literalmente el 12-oct (fr. I-VI con 3 a 8 años y párrafo de procedencia ilícita con 6 a 12 años e incisos a-c). **Corrección 11-oct:** la primera versión de este capítulo atribuía a las diferencias de 1.5% la pena de 3 a 8 años; corresponde la de 6 a 12 años (procedencia ilícita).
 
 **Grado del capítulo:** ley **A** (CFF reforma DOF 9-abr-2026, RCFF, LISR/LIVA con la salvedad del punto 2); criterios judiciales **B** (claves identificadas, texto oficial no leído); método y recomendaciones **D** (análisis propio).
 
@@ -222,7 +223,8 @@ Ordenada de más fuerte a más débil (D, con base en 2.1). La estrategia es sub
 | Dirección | Qué significa | Norma |
 |---|---|---|
 | **Litros facturados > litros entregados** (según volumétricos) | Se facturó combustible que no salió: típica "venta de facturas" | 69-B, 113 Bis, 17-H Bis |
-| **Litros entregados > litros facturados en más de 1.5%** | Se vendió combustible sin CFDI | **111 Bis, inciso b): presunción de procedencia ilícita, 6 a 12 años** |
+| **Litros entregados > litros facturados en más de 0.5%** | Se vendió combustible sin CFDI | **Determinación presuntiva de ventas (CFF 55 fr. VII f) 1)** |
+| **Litros entregados > litros facturados en más de 1.5%** | Lo mismo, más grave | Además, **111 Bis inciso b): presunción de procedencia ilícita, 6 a 12 años** |
 
 El 28 apartado B del CFF obliga a que los reportes diarios y mensuales de volumétricos contengan **los datos de los CFDI** de compra y venta. El SAT ya tiene los dos lados: puede cruzar CFDI emitidos contra entregas sin pedir nada. La primera revisión que hará es esa.
 
@@ -241,7 +243,7 @@ El 28 apartado B del CFF obliga a que los reportes diarios y mensuales de volum�
 | Pago | Liquidación de la terminal bancaria (TPV), SPEI del cliente, estado de cuenta del emisor de tarjeta de flotilla o monedero | 1 |
 | Cliente identificado | Constancia fiscal, contrato o carta de crédito (flotillas), placas o tarjetas por unidad | 2 |
 | Crédito a flotillas | CFDI PPD + **complemento de pago (REP)** que cuadre con depósitos; estado de cuenta del cliente; cobranza | 1-2 |
-| Volumen del mes | Reporte mensual de volumétricos: entregas por producto = suma de CFDI de venta (± 1.5%) | 1 |
+| Volumen del mes | Reporte mensual de volumétricos: entregas por producto = suma de CFDI de venta; meta por debajo de **0.5%** (CFF 55 VII), no de 1.5% | 1 |
 | Precio | Precio publicado del día (reportes de precios al regulador) consistente con el precio unitario del CFDI | 1-2 |
 
 ### 9.5 Señales de alerta para revisar en el historial propio (D)
@@ -256,7 +258,14 @@ El 28 apartado B del CFF obliga a que los reportes diarios y mensuales de volum�
 
 ### 9.6 Herramienta
 
-`datos/asunto-fiscal-sgm/conciliacion_ventas_cfdi.py` concilia, por mes y producto, los litros de los XML de CFDI emitidos (descarga masiva del SAT, excluye cancelados con el archivo de metadatos) contra las entregas del reporte mensual de volumétricos, separa público en general de nominativos, marca diferencias de más de 1.5% en ambos sentidos, lista los nominativos pagados en efectivo o "por definir" y los UUID repetidos. Probada con datos sintéticos el 11-oct. Las claves de producto usadas son 15101505 (diésel), 15101514 (regular) y 15101515 (premium); hay que confirmar que son las que usa la estación.
+`datos/asunto-fiscal-sgm/conciliacion_ventas_cfdi.py` concilia, por mes y producto, los litros de los XML de CFDI emitidos (descarga masiva del SAT; excluye cancelados con el archivo de metadatos) contra las entregas del reporte mensual de volumétricos. **Versión del 12-oct**, corregida tras la revisión de calidad del 11-oct (`bitacora/revisiones/2026-10-11.md` §1.3-§1.7):
+- lee **CFDI 3.3 y 4.0** (la primera versión solo leía 4.0 y, con XML de 2021-2023, habría marcado venta sin CFDI en todos los meses); un XML que no sea CFDI se reporta como error;
+- marca **dos bandas**: más de 0.5% (determinación presuntiva, 55 VII) y más de 1.5% (111 Bis); y "facturado > entregado" cuando hay litros facturados con entregas en 0;
+- las notas de crédito (egresos) **no restan litros** por omisión (muchas son solo descuentos de precio); se reportan aparte y se restan con `--restar-egresos`;
+- cuenta aparte los conceptos sin clave de combustible (p. ej., un global con clave genérica);
+- lista nominativos en efectivo o "por definir" y UUID repetidos.
+
+Pruebas: `herramientas/tests/test_conciliacion_ventas_cfdi.py` (10 casos; suite completa 336 OK). Claves de producto: 15101505 (diésel), 15101514 (regular), 15101515 (premium); confirmar que son las de la estación. **Pendiente:** cómo llena el Apéndice 3 de la guía del CFDI global los litros y la clave en un global de hidrocarburos (no leído).
 
 ### 9.7 Límites de esta sección
 
