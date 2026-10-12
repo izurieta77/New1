@@ -682,3 +682,9 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
 - Las cifras de Han-Zhou-Zhu.
 - El hallazgo de Wang-Yan (2021). **Verificado el 2026-10-05** (lectura íntegra; adenda de §4).
 - La existencia de una regla *wash sale* mexicana fuera del art. 129.
+
+### Adenda (12-oct-2026, laboratorio): control proporcional de la volatilidad objetivo — Devanathan, Boyd, Candès, Hastie et al. (arXiv:2603.01298, v2 del 30-mar-2026)
+
+- **Qué propone:** construir un índice de un activo riesgoso y uno libre de riesgo que mantenga una **volatilidad objetivo fija**. En lugar del método habitual de "lazo abierto" (exposición inversa al pronóstico de varianza), corrige el error de seguimiento de la volatilidad con **retroalimentación proporcional**, con pocos parámetros interpretables.
+- **Evidencia:** solo **simulación**. Los autores reportan que el control proporcional cumple el objetivo de volatilidad con más consistencia que el lazo abierto, que sufre rotación alta, picos de apalancamiento y sensibilidad al error de estimación. No hay rendimientos históricos ni comparación neta de costos contra comprar y mantener.
+- **Lectura y grado:** grado **C** (artículo de método, sin prueba empírica). Es útil para **ingeniería** (cómo apalancar sin picos de rotación), no como evidencia de que la volatilidad gestionada genere rendimiento: la réplica R05 y su auditoría AC-06 ya encontraron que ninguna versión operable supera al índice en Sharpe después de 2017. **No cambia ninguna regla.** Leído el resumen completo en la API de arXiv; el PDF no se leyó.

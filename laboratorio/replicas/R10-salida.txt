@@ -1,0 +1,23 @@
+BTCUSDT 1d: 3343 cierres, 2017-08-17 a 2026-10-11, sha256 5aca7a215d622cad…
+huecos de fecha: 0
+
+== completo
+principal SMA200 ±3% t+1     CAGR +29.9% vol 43.0% Sharpe 0.82 MDD -51.6% salidas 13 falsas 4 (31%) | B&H CAGR +26.0% Sharpe 0.69 MDD -76.6% [2018-03-05→2026-10-11]
+sin banda                    CAGR +27.9% vol 43.1% Sharpe 0.79 MDD -55.0% salidas 32 falsas 21 (66%) | B&H CAGR +26.0% Sharpe 0.69 MDD -76.6% [2018-03-05→2026-10-11]
+banda ±5%                    CAGR +32.8% vol 43.2% Sharpe 0.87 MDD -52.3% salidas 11 falsas 2 (18%) | B&H CAGR +26.0% Sharpe 0.69 MDD -76.6% [2018-03-05→2026-10-11]
+SMA100 ±3%                   CAGR +49.4% vol 46.5% Sharpe 1.09 MDD -64.0% salidas 21 falsas 7 (33%) | B&H CAGR +29.0% Sharpe 0.72 MDD -83.2% [2017-11-25→2026-10-11]
+mismo día t                  CAGR +30.6% vol 42.8% Sharpe 0.84 MDD -52.5% salidas 13 falsas 4 (31%) | B&H CAGR +25.9% Sharpe 0.69 MDD -76.6% [2018-03-04→2026-10-11]
+
+== 2018-2020
+principal SMA200 ±3% t+1     CAGR +49.4% vol 45.9% Sharpe 1.11 MDD -51.6% salidas 4 falsas 1 (25%) | B&H CAGR +38.7% Sharpe 0.83 MDD -72.0% [2018-03-05→2020-12-31]
+sin banda                    CAGR +49.9% vol 45.7% Sharpe 1.12 MDD -53.0% salidas 6 falsas 2 (33%) | B&H CAGR +38.7% Sharpe 0.83 MDD -72.0% [2018-03-05→2020-12-31]
+banda ±5%                    CAGR +51.8% vol 46.1% Sharpe 1.14 MDD -49.7% salidas 4 falsas 1 (25%) | B&H CAGR +38.7% Sharpe 0.83 MDD -72.0% [2018-03-05→2020-12-31]
+SMA100 ±3%                   CAGR +82.3% vol 56.1% Sharpe 1.35 MDD -64.0% salidas 8 falsas 2 (25%) | B&H CAGR +47.2% Sharpe 0.89 MDD -83.2% [2017-11-25→2020-12-31]
+mismo día t                  CAGR +49.5% vol 45.9% Sharpe 1.11 MDD -51.5% salidas 4 falsas 1 (25%) | B&H CAGR +38.4% Sharpe 0.82 MDD -72.1% [2018-03-04→2020-12-31]
+
+== 2021-hoy
+principal SMA200 ±3% t+1     CAGR +21.0% vol 41.6% Sharpe 0.67 MDD -47.1% salidas 9 falsas 3 (33%) | B&H CAGR +19.9% Sharpe 0.60 MDD -76.6% [2021-01-01→2026-10-11]
+sin banda                    CAGR +18.0% vol 41.8% Sharpe 0.61 MDD -55.0% salidas 26 falsas 19 (73%) | B&H CAGR +19.9% Sharpe 0.60 MDD -76.6% [2021-01-01→2026-10-11]
+banda ±5%                    CAGR +24.0% vol 41.8% Sharpe 0.72 MDD -52.3% salidas 7 falsas 1 (14%) | B&H CAGR +19.9% Sharpe 0.60 MDD -76.6% [2021-01-01→2026-10-11]
+SMA100 ±3%                   CAGR +33.9% vol 40.4% Sharpe 0.92 MDD -34.9% salidas 13 falsas 5 (38%) | B&H CAGR +19.9% Sharpe 0.60 MDD -76.6% [2021-01-01→2026-10-11]
+mismo día t                  CAGR +22.0% vol 41.3% Sharpe 0.69 MDD -52.5% salidas 9 falsas 3 (33%) | B&H CAGR +19.9% Sharpe 0.60 MDD -76.6% [2021-01-01→2026-10-11]
