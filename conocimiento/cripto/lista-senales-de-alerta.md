@@ -177,6 +177,14 @@
 - **E6, E10:** sin búsqueda dirigida nueva hoy (tiempo de esta corrida dedicado al estudio profundo de la predicción #23 de Galaxy y al hallazgo de las ventas de BTC de Strategy); última revisión con hallazgo (10-oct, sin novedad) sigue vigente, declarado explícitamente como no repetido hoy.
 - **Conclusión: sin disparador.** Ninguna señal ROJA identificada hoy; ÁMBAR solo en E5 y A9 (sin cambio desde el 25-sep). No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
 
+**Seguimiento del 12-oct-2026** [I] — revisión semanal de contraparte de la corrida de las 08:17 (lunes; NYSE/BMV/Nasdaq abiertos normal, solo bonos de EUA cerrados por Columbus Day), con el estudio profundo de hoy centrado en la ausencia de un término "Indebtedness" definido en los indentures de Strategy (ficha [`fichas/2026-10-12-indebtedness-no-definido-y-metaplanet-bloqueado.md`](fichas/2026-10-12-indebtedness-no-definido-y-metaplanet-bloqueado.md)), que no toca riesgo de exchange de forma directa:
+
+- **E1/E2 (indicio, TVL DefiLlama):** `api.llama.fi/protocol/binance-cex` hoy (12-oct, ~14:32 UTC, campo `tvl` más reciente) = **US$171.31 mil millones**, frente a US$172.93 mil millones del 11-oct = **−0.94%**, del mismo orden que la caída de precio de BTC/ETH en el fin de semana (BTC −0.15% a −1.5% según ventana, ETH +1.1%). Sin caída abrupta ni fuera del rango de las últimas 2 semanas (US$171-180 mil millones). **Limpio.**
+- **E3 (PoR mensual):** búsqueda dirigida hoy ("Binance proof of reserves 47th report snapshot October 2026") sigue sin encontrar el 47.º reporte; resultados devueltos son del 45.º reporte (snapshot 1-ago-2026) y coberturas antiguas. Sigue vigente el 46.º reporte (snapshot 1-sep-2026, ~682,000 BTC de usuarios), sin cambio en la fila de este cuadro. Consistente con la ventana proyectada desde el 3-oct (~15-21-oct-2026); hoy (12-oct) sigue dentro de lo esperado, no es una alerta. **Limpio.**
+- **E5:** búsqueda dirigida hoy ("Binance DOJ sanctions investigation charges October 12 2026") solo devolvió cobertura reciclada de la ronda de 2023 (US$4.3 mil millones, ya registrada en A8) y de los reportes de Bloomberg/WSJ sobre Rusia e Irán ya conocidos desde sep-2026, sin cargos nuevos verificables contra la entidad con fecha de oct-2026. **ÁMBAR sin cambio desde el 25-sep.**
+- **E6, E10:** sin búsqueda dirigida nueva hoy (tiempo de esta corrida dedicado al estudio profundo de los indentures y al reintento de Metaplanet, ver §3 de la ficha de hoy); última revisión con hallazgo (11-oct, sin novedad) sigue vigente, declarado explícitamente como no repetido hoy.
+- **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9 (sin cambio desde el 25-sep). No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
