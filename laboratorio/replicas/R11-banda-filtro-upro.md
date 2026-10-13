@@ -66,9 +66,30 @@ Días sin dato de alguna serie se descartan y se reportan.
 
 ### Desviaciones del pre-registro
 
+- Yahoo devuelve barras mensuales con `range=max`; A descarga con `period1`/`period2` desde 1989 (diario). El periodo efectivo empieza el 1990-10-17 (200 cierres comunes con VIX + 2 días de rezago de ejecución).
+
 ### 10. Variantes probadas
 
 ### 11. Resultados
+
+**Ejecución A** (`R11.py`; Yahoo `^GSPC`, `^SP500TR`, `^VIX` y FRED `DTB3`; 9,262 días comunes del 1990-01-02 al 2026-10-12; sha256 `b55f0e60…`; salida en `R11-salida.txt`). 3x sintético: 3 × TR − 2 × rf − 0.91%/252; costo 0.10% por lado; rf fuera del mercado.
+
+| Periodo | Configuración | CAGR | Sharpe | MDD | Salidas | Invertido |
+|---|---|---:|---:|---:|---:|---:|
+| 1990-10-17 → 2026-10-12 | **Vigente: banda −3% + VIX** | +15.4% | 0.54 | −73.7% | 108 | 75% |
+| | Sin banda + VIX | +13.8% | 0.52 | −75.3% | 169 | 71% |
+| | Banda −3% sin VIX | **+21.4%** | **0.65** | **−58.4%** | 32 | 81% |
+| | Banda −5% + VIX | +14.3% | 0.51 | −79.5% | 104 | 76% |
+| | 3x comprar y mantener | +18.7% | 0.54 | −97.9% | — | 100% |
+| 1990-2008 | Vigente / sin banda | +13.6% / +10.7% | 0.46 / 0.39 | −73.7% / −75.3% | 47 / 87 | — |
+| 2009-07 → hoy | Vigente / sin banda | +17.8% / +17.6% | 0.64 / 0.65 | −49.3% / −54.0% | 61 / 82 | — |
+| 2009-07 → hoy | Banda −3% sin VIX / 3x B&H | +26.2% / +34.8% | 0.77 / 0.81 | −55.0% / −76.6% | 19 / — | — |
+
+**Contra la hipótesis (vigente contra sin banda):** salidas 108 contra 169 (−36%); MDD 1.6 pp mejor; Sharpe +0.02. **No se refuta** en el periodo completo. Por subperiodo, el efecto en Sharpe es +0.07 (1990-2008) y −0.01 (2009-hoy): **cambia de signo**, así que el estado sería "Replicado con diferencias" (§2).
+
+**Hallazgo no pre-registrado como hipótesis (variante):** la condición de **VIX ≥ 25 sin banda propia** genera la mayoría de las salidas (108 con VIX contra 32 sin VIX) y empeora todo: sin VIX, Sharpe 0.65 contra 0.54 y MDD −58% contra −74% en el periodo completo. Es una de N = 4 configuraciones; se reporta como candidato a investigar, no como cambio de regla.
+
+**Ejecución B** (auditor, segunda fuente): en curso.
 
 ### 12. Sensibilidad
 

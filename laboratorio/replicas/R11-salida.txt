@@ -1,0 +1,19 @@
+9262 días comunes 1990-01-02 a 2026-10-12; sha256 b55f0e6033d67997…
+
+== completo
+banda -3% + VIX (vigente)  CAGR +15.4% Sharpe 0.54 MDD -73.7% salidas 108 invertido 75% | 3x B&H CAGR +18.7% Sharpe 0.54 MDD -97.9% [1990-10-17→2026-10-12]
+sin banda + VIX            CAGR +13.8% Sharpe 0.52 MDD -75.3% salidas 169 invertido 71% | 3x B&H CAGR +18.7% Sharpe 0.54 MDD -97.9% [1990-10-17→2026-10-12]
+banda -3% sin VIX          CAGR +21.4% Sharpe 0.65 MDD -58.4% salidas 32 invertido 81% | 3x B&H CAGR +18.7% Sharpe 0.54 MDD -97.9% [1990-10-17→2026-10-12]
+banda -5% + VIX            CAGR +14.3% Sharpe 0.51 MDD -79.5% salidas 104 invertido 76% | 3x B&H CAGR +18.7% Sharpe 0.54 MDD -97.9% [1990-10-17→2026-10-12]
+
+== 1990-2008
+banda -3% + VIX (vigente)  CAGR +13.6% Sharpe 0.46 MDD -73.7% salidas 47 invertido 71% | 3x B&H CAGR +6.1% Sharpe 0.31 MDD -96.7% [1990-10-17→2008-12-31]
+sin banda + VIX            CAGR +10.7% Sharpe 0.39 MDD -75.3% salidas 87 invertido 66% | 3x B&H CAGR +6.1% Sharpe 0.31 MDD -96.7% [1990-10-17→2008-12-31]
+banda -3% sin VIX          CAGR +18.2% Sharpe 0.55 MDD -58.4% salidas 13 invertido 77% | 3x B&H CAGR +6.1% Sharpe 0.31 MDD -96.7% [1990-10-17→2008-12-31]
+banda -5% + VIX            CAGR +14.0% Sharpe 0.46 MDD -79.5% salidas 44 invertido 74% | 3x B&H CAGR +6.1% Sharpe 0.31 MDD -96.7% [1990-10-17→2008-12-31]
+
+== 2009-07-hoy
+banda -3% + VIX (vigente)  CAGR +17.8% Sharpe 0.64 MDD -49.3% salidas 61 invertido 81% | 3x B&H CAGR +34.8% Sharpe 0.81 MDD -76.6% [2009-07-01→2026-10-12]
+sin banda + VIX            CAGR +17.6% Sharpe 0.65 MDD -54.0% salidas 82 invertido 78% | 3x B&H CAGR +34.8% Sharpe 0.81 MDD -76.6% [2009-07-01→2026-10-12]
+banda -3% sin VIX          CAGR +26.2% Sharpe 0.77 MDD -55.0% salidas 19 invertido 86% | 3x B&H CAGR +34.8% Sharpe 0.81 MDD -76.6% [2009-07-01→2026-10-12]
+banda -5% + VIX            CAGR +15.0% Sharpe 0.56 MDD -54.6% salidas 60 invertido 81% | 3x B&H CAGR +34.8% Sharpe 0.81 MDD -76.6% [2009-07-01→2026-10-12]
