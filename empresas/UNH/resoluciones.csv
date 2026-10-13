@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+UNH-ingresos-3T26,2026-10-13,112694,,-0.70,si,,https://www.sec.gov/Archives/edgar/data/731766/000073176626000255/earningsrelease3q26unh.htm
+UNH-upa_ajustada-3T26,2026-10-13,4.69,,-6.18,si,,https://www.sec.gov/Archives/edgar/data/731766/000073176626000255/earningsrelease3q26unh.htm
+UNH-ingresos_mayor_consenso-3T26,2026-10-13,112694,1,,,0.1444,https://www.sec.gov/Archives/edgar/data/731766/000073176626000255/earningsrelease3q26unh.htm
+UNH-upa_mayor_consenso-3T26,2026-10-13,4.69,1,,,0.1156,https://www.sec.gov/Archives/edgar/data/731766/000073176626000255/earningsrelease3q26unh.htm
