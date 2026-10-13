@@ -83,3 +83,9 @@ Capitalización de US$336.6 mil M y VE de 386.0 mil M [8]. **P/U ajustado 2026e 
 10. MarketBeat (consultado el 25-sep-2026): https://www.marketbeat.com/stocks/NYSE/UNH/earnings/
 11. Yahoo chart de UNH.MX (consultado el 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/UNH.MX
 12. Simply Wall St/Yahoo (22-sep-2026): https://finance.yahoo.com/markets/stocks/articles/unitedhealth-group-unh-stock-trades-011448797.html · Motley Fool (21-sep-2026): https://www.fool.com/investing/2026/09/21/should-you-buy-unitedhealth-group-stock-before-oct-13/
+
+## Adenda 13-oct-2026 (resultado del 3T26)
+- **Reportó el 13-oct-2026** antes de la apertura (8-K, Items 2.02 y 9.01): https://www.sec.gov/Archives/edgar/data/731766/000073176626000255/earningsrelease3q26unh.htm
+- Total revenues de **US$112,694 M** (punto 111,900; consenso 111,489): error del punto de −0.70%, dentro de [110,300-113,300]. UPA ajustada de **US$4.69** (punto 4.40; consenso 4.149): error de −6.18%, dentro de [3.90-4.95]. Ambos binarios resultaron **Sí**: Brier 0.1444 (p = 0.62) y 0.1156 (p = 0.66).
+- MCR de 88.4% con US$610 M de desarrollo favorable de reservas (sin él, *inferencia*, la UPA ajustada habría sido de ~4.14). La guía de UPA ajustada 2026 sube a **al menos US$20.50** (antes 19.50-20.00). El disparador bajista (MCR mayor a 90%) no ocurrió: escenario **base con sesgo alcista** hasta la guía 2027.
+- Detalle y lecciones en `empresas/UNH/post-mortem-2026-10-13.md`; resoluciones en `empresas/UNH/resoluciones.csv`.

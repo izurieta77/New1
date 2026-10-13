@@ -126,3 +126,6 @@ Verificador adversarial. Fuentes primarias leídas: reporte 2T26 (íntegro: esta
 - El punto de ingresos (243,000) y el binario (0.45) van contra la tasa base de 7/7 sorpresas positivas. Si AMX vuelve a superar el consenso por ~1%, habrá sido un sesgo pesimista.
 
 **Veredicto:** confiable con correcciones. Las cifras del 2T26 y la tabla coinciden con la fuente primaria. Los errores estaban en la fecha del próximo reporte y en un binario cuya lógica (suspensión = baja) contradecía al propio reporte de AMX.
+
+## Adenda 13-oct-2026 (fecha del reporte 3T26)
+- **No reportó el 13-oct-2026.** La invitación oficial de AMX a la llamada del 3T26 confirma que publicará el **martes 20-oct-2026 después del cierre**, con llamada el miércoles 21-oct a las 9:00 (CDMX): https://s22.q4cdn.com/604986553/files/content_files/Conference-Call-Invitation-3Q26.pdf. En EDGAR (CIK 0001129137) el último 6-K es del 2-oct-2026 (adquisición de Desktop en Brasil), sin resultados. La corrección del verificador (20-oct → 13-oct) era errónea: la fecha original de Investing (20-oct) era la correcta. Los pronósticos del 3T26 quedan **pendientes**; su `fecha_resolucion` (2026-10-13) debe leerse como 2026-10-21, porque los resultados salen tras el cierre del 20-oct. No se editó el CSV.
