@@ -108,3 +108,12 @@ El FCF y la deuda neta no aplican a un intermediario: el flujo operativo de 2025
 16. Zacks vía Yahoo, Palmer Square (23-sep-2026): https://finance.yahoo.com/markets/stocks/articles/goldman-eyes-palmer-square-buyout-143000242.html
 17. Arnold & Porter (26-mar-2026): https://www.arnoldporter.com/en/perspectives/advisories/2026/03/agencies-capital-proposals-seek-to-reduce-regulatory-burden · Reuters (titular, 19-mar-2026): https://www.reuters.com/sustainability/boards-policy-regulation/us-bank-regulators-unveil-long-awaited-capital-rule-rewrite-2026-03-19/
 18. Conocimiento interno: `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.1-4.3 y `bitacora/briefs/2026-09-25-tablero.md`.
+
+## Adenda (13-oct-2026): resultado del 3T26
+Fuente: 8-K del 13-oct-2026, ex. 99.1 y 99.2 ([comunicado](https://www.sec.gov/Archives/edgar/data/886982/000088698226000529/a3q26gsearningsresults.htm) · [presentación](https://www.sec.gov/Archives/edgar/data/886982/000088698226000529/a3q26gsearningsresultspr.htm)). Evaluación completa en `post-mortem-2026-10-13.md`; resoluciones en `resoluciones.csv`.
+- **Net revenues:** US$18,679 M (pronóstico 17,900; consenso 17,590): error del punto −4.17%, dentro de 16,400-19,400. Binario > 17,590: **sí** (p = 0.58; Brier 0.1764).
+- **UPA diluida GAAP:** US$17.01 (pronóstico 15.00; consenso 15.73): error del punto −11.82%, dentro de 12.60-17.60. Binario > 15.73: **sí** (p = 0.38; Brier 0.3844). Las donaciones restaron ~US$1.00 por acción.
+- **Segmentos:** banca de inversión 3,224, FICC 3,471, Equities 6,441, otros 322, AWM 5,051 y Platform 170. Compensación de 27.4% de los ingresos, no-comp de 6,186 M, provisiones de 368 M y tasa de 24.4%.
+- **Disparadores de la §7:** Equities 6,441 contra 3,736 del 3T25 (alza). FICC 3,471, prácticamente igual al 3T25 (la presentación del 3T26 muestra 3,493 para el 3T25, no los 3,472 de la §7; probable reclasificación). **CET1 estandarizado de 12.4%, debajo del umbral de 12.5%**: señal hacia el escenario bajista activada. El *backlog* bajó contra el 2T.
+- **Estado:** sigue el escenario base con la señal de capital activada; las ponderaciones de la §7 no se cambian aquí y se revisan en la próxima actualización de la ficha.
+- **Precio (Yahoo, secundaria):** abrió +3.2% y cerró en US$891.91 (−0.2%).

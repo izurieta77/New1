@@ -131,3 +131,8 @@ Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 2T26 (ínte
 **Calibración (para el post-mortem):** con los últimos 4 trimestres, las sorpresas aplicadas al consenso dan 1.98, 1.79, 1.87 y 2.15. Solo el 2.15 (ganancias de VC y beneficio fiscal no recurrentes) queda fuera de 1.74-2.05, así que el intervalo es razonable. Los binarios (0.57 y 0.63) son coherentes con los intervalos (probabilidades implícitas de 0.60 y 0.67).
 
 **Veredicto:** muy confiable. Las cifras, la guía, la fecha y la cadena causal coinciden con la fuente primaria. Solo hubo precisiones menores de base y de aritmética.
+
+## Adenda 2026-10-13 · resultado del 3T26
+- **Resultado:** ingresos de US$21,870 M (NII 12,517 y comisiones 9,353), abajo del consenso (22,340) y 30 M abajo del p10 registrado (21,900). UPA diluida de 1.87, dentro del p10-p90 y arriba del consenso (1.84), pero con ~0.056 de beneficios fiscales discretos (170 M); sin ellos, ~1.81. Binarios: ingresos No (Brier 0.3249) y UPA Sí (Brier 0.1369). CET1 de 10.0%, ROTCE de 16.3%; guía 2026 de NII (±50 mil M) y gasto (~55.7) sin cambio, NII del 4T26 de ~13 mil M ([8-K ex. 99.1](https://www.sec.gov/Archives/edgar/data/0000072971/000007297126000318/wfc3qer10-13x26ex991xrelea.htm) · [ex. 99.3](https://www.sec.gov/Archives/edgar/data/0000072971/000007297126000318/ex993-wellsfargo3q26pres.htm)).
+- **Escenario:** el CET1 quedó exactamente en el umbral de 10.0% (el disparador bajista es < 10.0%), así que sigue el **base, en vigilancia** para el 4T26.
+- **Detalle y lecciones:** `empresas/WFC/post-mortem-2026-10-13.md`. Los pronósticos de la §8 no se modifican.

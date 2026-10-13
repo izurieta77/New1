@@ -104,3 +104,8 @@ Múltiplos: P/U de 12 meses de 14.5x GAAP (UPA 23.34) y 15.1x sin partidas (22.3
 19. Visa 8-K, canje de acciones clase B (12-may-2026): https://www.sec.gov/Archives/edgar/data/1403161/000119312526219432/d64238d8k.htm
 20. Freshfields, re-propuestas de capital (23-mar-2026): https://www.freshfields.com/en/our-thinking/blogs/a-fresh-take/basel-iii-endgame-take-two-8-key-takeaways-from-the-federal-banking-agencies-c-102mnm3
 21. CNBC, 3T25 (14-oct-2025; sólo titular: trading "record of nearly $9 billion"): https://www.cnbc.com/2025/10/14/jpmorgan-chase-jpm-earnings-q3-2025.html
+
+## Adenda 2026-10-13 · resultado del 3T26
+- **Resultado:** ingresos reportados de US$50,172 M (administrados 50,907), utilidad neta de 15,305 M y UPA diluida GAAP de 5.57 (5.75 sin la pérdida de 658 M en valores de inversión, −0.18). Los dos numéricos quedaron dentro del p10-p90 registrado, pero abajo del consenso (50,847 y 5.91): los dos binarios resuelven No (Brier 0.25 y 0.36). NII de 27.1 mil M, Markets de 10.3 (+15%), IB de 3.0 (+14%), CET1 de 13.9% y recompras netas de solo 0.66 mil M ([8-K ex. 99.1](https://www.sec.gov/Archives/edgar/data/0000019617/000162828026065582/a3q26erfexhibit991narrative.htm) · [ex. 99.2](https://www.sec.gov/Archives/edgar/data/0000019617/000162828026065582/a3q26erfex992supplement.htm)).
+- **Escenario:** NII > 26 mil M y Markets < +20%, así que sigue el **base**. Salvedad: el base suponía recompras de ~7 mil M por trimestre; si el recorte persiste, la UPA 2027 pierde parte de ese apoyo.
+- **Detalle y lecciones:** `empresas/JPM/post-mortem-2026-10-13.md`. Los pronósticos de la §8 no se modifican.

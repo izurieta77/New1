@@ -126,3 +126,14 @@ Verificador adversarial. Nivel de acceso: comunicado 8-K del 2T26 (lectura ínte
 
 **Sigue sin verificar (ya marcado):** calificación AAA; precios de la IRA para Stelara y Xarelto; inversión de US$55 mil M (comunicado de J&J [12], que no se volvió a leer); divisa de las notas.
 **Veredicto:** confiable. Resultados, guía, fecha, consenso y cadena causal (talco y Stelara) coinciden con la fuente primaria. Solo hubo correcciones menores de detalle, y los pronósticos están bien calibrados frente a la historia de sorpresas.
+
+## Adenda (13-oct-2026): resultado del 3T26
+Fuente: 8-K del 13-oct-2026, ex. 99.1 y 99.2 ([comunicado](https://www.sec.gov/Archives/edgar/data/200406/000020040626000189/a2026q3exhibit991.htm) · [tablas](https://www.sec.gov/Archives/edgar/data/200406/000020040626000189/a2026q3exhibit992.htm)). Evaluación completa en `post-mortem-2026-10-13.md`; resoluciones en `resoluciones.csv`.
+- **Reported sales:** US$25,399 M (+5.9%; +6.0% operacional; divisas −0.1 pp). Pronóstico 25,550; consenso 25,291: error del punto +0.59%, dentro de 25,050-26,050. Binario > 25,291: **sí** (p = 0.72; Brier 0.0784).
+- **Adjusted EPS (diluted):** US$2.59 (incluye el efecto de Firefly y Sail, según el comunicado). Pronóstico 2.46; consenso 2.45: error del punto −5.02%, dentro de 2.32-2.60 (a 0.01 del p90). Binario > 2.45: **sí** (p = 0.55; Brier 0.2025).
+- **UPA GAAP:** US$0.09, por un cargo de litigio de 5,519 M antes de impuestos (talco de ovario), como anticipaba la cadena causal A. Deterioros de IPR&D de 339 M (excluidos de la ajustada).
+- **Segmentos:** Innovative Medicine 16,757 (+7.9% operacional; Stelara resta ~690 pb). MedTech 8,642 (+2.5% operacional, desacelera desde +3.6%).
+- **Guía 2026:** ventas reportadas de 101.0-101.4 mil M y UPA ajustada de 11.05-11.15 (+0.06 en el punto medio).
+- **Disparadores de la §7:** Innovative Medicine arriba del umbral de 5% operacional: no hay señal bajista por ese lado. El comunicado no informa la participación en el acuerdo del talco (no verificado).
+- **Estado:** sigue el escenario base.
+- **Precio (Yahoo, secundaria):** cerró en US$248.61 (−5.7%) pese a superar el consenso; causa no verificada.
