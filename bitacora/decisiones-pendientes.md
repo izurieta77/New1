@@ -524,3 +524,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 
 ## Para el comité del viernes 16-oct: condición de VIX del filtro de apalancados (laboratorio 13-oct, R11/AC-17)
 - En A y B, la regla vigente del UPRO de papel con VIX ≥ 25 sin banda genera ~110 salidas en 1990-2026 y queda peor que la misma regla sin VIX (Sharpe 0.48-0.54 contra 0.59-0.65; MDD −74% contra −58%). Es una variante entre cuatro: propuesta de pre-registrar R12 (quitar el VIX o darle banda/confirmación) con prueba fuera de muestra antes de cualquier cambio. La regla vigente no cambia.
+
+## 2026-10-13 · cripto (pulso 16:17 CDMX) · Resolución de P0034
+- **Pregunta:** P0034 vence hoy y su criterio dice "FRED DFII10 del 2026-10-13; si falta ese día exacto (… o rezago de publicación), se usa el último dato publicado con fecha ≤ 2026-10-13". A las 22:17 UTC FRED solo tiene hasta el 9-oct (2.91 → SÍ), pero el Tesoro (fuente madre de DFII10) ya publicó 2.88 para el 13-oct (→ NO).
+- **Decisión tomada:** no resolver hoy; esperar a que FRED publique el 13-oct (normalmente al día siguiente) y resolver con ese valor.
+- **Por qué:** el dato del día exacto ya existe; resolver con el 9-oct por un rezago de un día daría el resultado contrario al hecho observable. Es la lectura conservadora del espíritu del criterio. Si el dueño prefiere la lectura literal (último dato publicado al vencimiento), el resultado cambia a SÍ.
+- **Estado:** abierta hasta que FRED publique.
