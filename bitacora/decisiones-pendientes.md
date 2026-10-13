@@ -521,3 +521,6 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 
 ## Revisar `fx_alerta.py --brief`: "cierre previo" de los libros GBM (pre-apertura 13-oct)
 - El 13-oct la línea dice "desde el cierre del 9-oct" para papel y real GBM, aunque el cierre del 12-oct ya guardó filas en `bitacora/equity.csv` y `bitacora/real/equity.csv`. Parece tomar el último cierre de precio disponible y no la fila del libro (o trata el 12-oct como sin sesión). Verificar y corregir en el script; no cambia ninguna alerta.
+
+## Para el comité del viernes 16-oct: condición de VIX del filtro de apalancados (laboratorio 13-oct, R11/AC-17)
+- En A y B, la regla vigente del UPRO de papel con VIX ≥ 25 sin banda genera ~110 salidas en 1990-2026 y queda peor que la misma regla sin VIX (Sharpe 0.48-0.54 contra 0.59-0.65; MDD −74% contra −58%). Es una variante entre cuatro: propuesta de pre-registrar R12 (quitar el VIX o darle banda/confirmación) con prueba fuera de muestra antes de cualquier cambio. La regla vigente no cambia.

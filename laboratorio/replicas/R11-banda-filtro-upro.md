@@ -7,7 +7,7 @@
 | Fecha de publicación (primera versión pública) | Regla aprobada el 5-oct-2026 |
 | Pre-registro escrito el | 2026-10-13, antes de cualquier corrida |
 | Responsable | A: orquestador (laboratorio). B: `auditor-de-replicas`, código desde cero y segunda fuente |
-| Estado | Pendiente |
+| Estado | Replicado con diferencias (13-oct-2026, tras AC-17) |
 
 ---
 
@@ -70,6 +70,8 @@ Días sin dato de alguna serie se descartan y se reportan.
 
 ### 10. Variantes probadas
 
+Las cuatro declaradas en §8 (vigente, sin banda, banda −3% sin VIX, banda −5%) más comprar y mantener. N = 4; ninguna agregada después.
+
 ### 11. Resultados
 
 **Ejecución A** (`R11.py`; Yahoo `^GSPC`, `^SP500TR`, `^VIX` y FRED `DTB3`; 9,262 días comunes del 1990-01-02 al 2026-10-12; sha256 `b55f0e60…`; salida en `R11-salida.txt`). 3x sintético: 3 × TR − 2 × rf − 0.91%/252; costo 0.10% por lado; rf fuera del mercado.
@@ -89,14 +91,30 @@ Días sin dato de alguna serie se descartan y se reportan.
 
 **Hallazgo no pre-registrado como hipótesis (variante):** la condición de **VIX ≥ 25 sin banda propia** genera la mayoría de las salidas (108 con VIX contra 32 sin VIX) y empeora todo: sin VIX, Sharpe 0.65 contra 0.54 y MDD −58% contra −74% en el periodo completo. Es una de N = 4 configuraciones; se reporta como candidato a investigar, no como cambio de regla.
 
-**Ejecución B** (auditor, segunda fuente): en curso.
+**Ejecución B** (`auditorias/AC-17-R11/`, código desde cero; S&P 500 de CBOE desde 1975 contrastado con FRED; total return aproximado con el rendimiento por dividendos mensual de multpl.com; VIX oficial de CBOE; DTB3; UPRO real de Yahoo como sensibilidad). Periodo completo: vigente Sharpe 0.477 y MDD −73.5% con 112 salidas, contra 0.431, −75.1% y 177 sin banda. Banda −3% sin VIX: 0.59, −58.4%, 35 salidas. Subperiodos (vigente − sin banda, Sharpe): 1990-2008 +0.094; 2009-hoy −0.003 (sintético) y +0.0004 (UPRO real).
 
 ### 12. Sensibilidad
 
+- **Quitar el VIX:** domina en A y en B (Sharpe 0.59-0.65 contra 0.48-0.54; MDD −58% contra −74%; 32-35 salidas contra 108-112). La condición VIX ≥ 25 sin banda propia provoca la mayoría de las salidas y reentradas.
+- **Banda −5%:** peor que −3% en MDD (−79.5%) en las dos ejecuciones.
+- **UPRO real (B, 2009-hoy):** misma lectura que el sintético; el sintético rinde ~1.6 pp por año más que UPRO.
+- **Ninguna regla con VIX evita una caída cercana a −73% en 1998-2003.**
+
 ### 13. Diferencia frente al artículo
+
+No hay artículo. A contra B: mismo signo y orden en todas las comparaciones; los niveles difieren por la aproximación del total return en B (dividendos repartidos de forma uniforme), el arranque (A arranca según la señal; B fuera) y la fuente del S&P (Yahoo contra CBOE). Concordantes.
 
 ### 14. Conclusiones permitidas
 
+- La banda de −3% en la salida **reduce las salidas ~36%** y **mejora ligeramente la MDD** (1.6 pp) sin bajar el Sharpe en el periodo completo; su beneficio de Sharpe está en 1990-2008 y en 2009-hoy es nulo.
+- La condición de **VIX ≥ 25 tal como está escrita** (sin banda ni confirmación) **empeora** el filtro del 3x en las dos fuentes.
+
 ### 15. Conclusiones que NO se sostienen
 
+- Que la banda mejore el Sharpe en el régimen reciente (2009-hoy): diferencia de cero.
+- Que haya que quitar el VIX ya: es una variante entre cuatro; necesita su propio pre-registro y una prueba fuera de muestra antes de tocar la regla.
+- Que el filtro le gane a comprar y mantener el 3x desde 2009: no (Sharpe 0.61-0.64 contra 0.81).
+
 ### 16. Estado y reproducción
+
+**Estado: Replicado con diferencias** (A y B concordantes; el Sharpe cambia de signo en 2009-hoy con el sintético, §2). **Etiqueta: oportunidad investigable (protección).** La regla vigente **no cambia**. Propuesta para el comité del viernes: pre-registrar R12 sobre la condición de VIX (quitarla, o darle banda/confirmación) con prueba fuera de muestra. Reproducción: `python3 -I laboratorio/replicas/R11.py` (A) y `python3 -I laboratorio/auditorias/AC-17-R11/b.py` (B).
