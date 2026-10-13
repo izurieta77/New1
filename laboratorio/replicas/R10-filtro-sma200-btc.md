@@ -7,7 +7,7 @@
 | Fecha de publicación (primera versión pública) | Regla aprobada el 25-sep-2026 |
 | Pre-registro escrito el | 2026-10-12, antes de cualquier corrida |
 | Responsable | Laboratorio (A: orquestador; B: `auditor-de-replicas`, código desde cero y segunda fuente) |
-| Estado | Replicado con diferencias (12-oct-2026, tras AC-16) |
+| Estado | **No replicado** (hipótesis refutada en B, historia larga: mejora de MDD 19.1 pp < 25). [Corrección 13-oct-2026, conciliación, fallo `bitacora/arbitraje/2026-10-13-r10-estado.md`: decía "Replicado con diferencias (12-oct-2026, tras AC-16)"; ese estado es, según el §2, para el cambio de signo del Sharpe en un subperiodo, no para una refutación.] |
 
 ---
 
@@ -115,4 +115,4 @@ No hay artículo. Frente a la cifra del gestor de riesgo (salidas en falso de 36
 
 ### 16. Estado y reproducción
 
-**Estado: Replicado con diferencias** (rige la más conservadora de A y B: B refuta el umbral de MDD en la historia larga). **Etiqueta: oportunidad investigable**, con el uso de protección; la regla de la cuenta **no cambia**. Para el comité queda la propuesta de estudiar la banda de ±5% y SMA100 con un pre-registro nuevo y datos fuera de muestra. Reproducción: `python3 -I laboratorio/replicas/R10.py` (A) y `python3 -I laboratorio/auditorias/AC-16-R10/b.py` (B).
+**Estado: No replicado** (rige la más conservadora de A y B: B refuta el umbral de MDD en la historia larga, que el §6 define como su periodo completo; en A el umbral se cumple por 0.08 pp). [Corrección 13-oct-2026, conciliación, fallo `bitacora/arbitraje/2026-10-13-r10-estado.md`: decía "Replicado con diferencias". `laboratorio/README.md`: "No replicado = se cumple el criterio de refutación pre-registrado". Las conclusiones permitidas del §14 no cambian: la regla reduce la caída 19-26 pp y mejora el Sharpe en las dos fuentes; lo refutado es el umbral de 25 pp.] **Etiqueta: oportunidad investigable**, con el uso de protección; la regla de la cuenta **no cambia**. Para el comité queda la propuesta de estudiar la banda de ±5% y SMA100 con un pre-registro nuevo y datos fuera de muestra. Reproducción: `python3 -I laboratorio/replicas/R10.py` (A) y `python3 -I laboratorio/auditorias/AC-16-R10/b.py` (B).

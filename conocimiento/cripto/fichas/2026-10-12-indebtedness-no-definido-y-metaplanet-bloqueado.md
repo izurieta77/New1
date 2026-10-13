@@ -84,3 +84,9 @@ Conclusión (n=2 series, 100% de cobertura de las dos ya leídas): NO hay defini
 - Dar seguimiento al pronóstico P0111 (nueva emisión de deuda convertible de Strategy en los próximos 30 días).
 
 Script de esta sesión: `scratchpad/g4calc/indebtedness_check.py` (fuera del repositorio, usa `indentureA.html` e `indentureB.html` descargados en vivo el 12-oct-2026 de las URLs citadas en §1).
+
+## Adenda 13-oct-2026 (conciliación, fallo `bitacora/arbitraje/2026-10-13-registros-del-12-oct.md` §4): Metaplanet ya tiene fuente primaria
+- **Acceso:** el 13-oct a las 03:04 UTC, `www.release.tdnet.info` respondió 200 (no 403) y `disclosure2.edinet-fsa.go.jp` también 200. La vía nueva es la lista diaria de TDnet (`/inbs/I_list_001_20261005.html`), código 33500.
+- **Documento:** aviso de Metaplanet del 5-oct-2026, 18:45 JST, "ビットコインの追加購入に関するお知らせ（流動性の実証を目的としたビットコインの売却・再取得の実施を含む）", `https://www.release.tdnet.info/inbs/140120261005546273.pdf` (sha256 `77430f97646b8801c65f3bd115b84ccf1d67c2a7810af9fb1e0ebbc42cf75870`) [A].
+- **Cifras literales:** tenencia total del grupo al **30-sep-2026: 44,000 BTC**; en el 3T compró **11,000 BTC** y vendió **10,000 BTC** (neto **+1,000**) para "demostrar la liquidez" de su BTC (vendió más que el saldo de su deuda con intereses y guardó el efectivo); la venta generó una pérdida fiscal en EUA cuyo activo diferido aún no se determina.
+- **Efecto:** las cifras de prensa (17,132 / 20,136 / 25,555 BTC) no son la tenencia vigente. Es un segundo caso documentado de una DAT que **vende** BTC (después de Strategy, ago-2026), aunque aquí con recompra en el mismo trimestre. No se usó para ninguna decisión. Los otros 3 avisos del 5-oct (ingreso neto por intereses, resultados 3T del negocio de ingresos con BTC y política de asignación de capital) no se leyeron.

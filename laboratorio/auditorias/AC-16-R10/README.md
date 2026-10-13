@@ -118,7 +118,7 @@ El tramo 2015-04 a 2016, que no estaba en el pre-registro y se reporta solo como
 
 ## Veredicto de B
 
-**Replicado con diferencias.**
+**Replicado con diferencias.** [Nota 13-oct-2026, conciliación, fallo `bitacora/arbitraje/2026-10-13-r10-estado.md`: el estado consolidado de R10 es **No replicado**, porque el criterio literal del §2 del pre-registro se cumple en el periodo completo de B (historia larga, 19.1 pp < 25). El texto de B se conserva como lo entregó el auditor.]
 
 - En el periodo comparable con la serie de la regla (Binance, desde marzo de 2018), con una segunda fuente y código independiente, la hipótesis **no se refuta**. La regla mejora el MDD en 25.9 pp, gana 3.6 pp de CAGR y 0.13 de Sharpe, y la mejora de Sharpe tiene el mismo signo en los dos subperiodos.
 - El margen en MDD es de solo 0.9 pp sobre el umbral de 25 pp. Diferencias de nivel entre fuentes (Yahoo agregado contra Binance BTCUSDT) del orden de 1-2% en un cierre clave podrían cambiar el resultado.
