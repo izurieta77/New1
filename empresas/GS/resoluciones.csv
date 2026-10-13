@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+GS-ingresos-3T26,2026-10-13,18679,,-4.17,si,,https://www.sec.gov/Archives/edgar/data/886982/000088698226000529/a3q26gsearningsresults.htm
+GS-upa-3T26,2026-10-13,17.01,,-11.82,si,,https://www.sec.gov/Archives/edgar/data/886982/000088698226000529/a3q26gsearningsresults.htm
+GS-ingresos_mayor_consenso-3T26,2026-10-13,18679,1,,,0.1764,https://www.sec.gov/Archives/edgar/data/886982/000088698226000529/a3q26gsearningsresults.htm
+GS-upa_mayor_consenso-3T26,2026-10-13,17.01,1,,,0.3844,https://www.sec.gov/Archives/edgar/data/886982/000088698226000529/a3q26gsearningsresults.htm

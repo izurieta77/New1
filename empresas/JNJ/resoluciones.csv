@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+JNJ-ventas-3T26,2026-10-13,25399,,0.59,si,,https://www.sec.gov/Archives/edgar/data/200406/000020040626000189/a2026q3exhibit991.htm
+JNJ-upa_ajustada-3T26,2026-10-13,2.59,,-5.02,si,,https://www.sec.gov/Archives/edgar/data/200406/000020040626000189/a2026q3exhibit991.htm
+JNJ-ventas_mayor_consenso-3T26,2026-10-13,25399,1,,,0.0784,https://www.sec.gov/Archives/edgar/data/200406/000020040626000189/a2026q3exhibit991.htm
+JNJ-upa_mayor_consenso-3T26,2026-10-13,2.59,1,,,0.2025,https://www.sec.gov/Archives/edgar/data/200406/000020040626000189/a2026q3exhibit991.htm

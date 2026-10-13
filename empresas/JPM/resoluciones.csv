@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+JPM-ingresos-3T26,2026-10-13,50172,,1.25,si,,https://www.sec.gov/Archives/edgar/data/0000019617/000162828026065582/a3q26erfexhibit991narrative.htm
+JPM-upa-3T26,2026-10-13,5.57,,7.54,si,,https://www.sec.gov/Archives/edgar/data/0000019617/000162828026065582/a3q26erfexhibit991narrative.htm
+JPM-ingresos_mayor_consenso-3T26,2026-10-13,50172,0,,,0.2500,https://www.sec.gov/Archives/edgar/data/0000019617/000162828026065582/a3q26erfexhibit991narrative.htm
+JPM-upa_mayor_consenso-3T26,2026-10-13,5.57,0,,,0.3600,https://www.sec.gov/Archives/edgar/data/0000019617/000162828026065582/a3q26erfexhibit991narrative.htm
