@@ -518,3 +518,6 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Horas de latido:** conteo actualizado en la alerta (9 de 29 el 12-oct). Sigue Abierto → dueño.
 - **Pendientes de hechos de más de 24 h:** BIVA y mora de GFNORTEO siguen **abiertos** (SPA sin reglamento; CNBV falla en TLS y el SIE pide token).
 - **Sin cambio** (no los decide la conciliación): marcador, sesión extraordinaria y registro retroactivo de FX-1 (dueño); escala de `estado-de-dominio.csv` (orquestador); agenda del comité del 16-oct.
+
+## Revisar `fx_alerta.py --brief`: "cierre previo" de los libros GBM (pre-apertura 13-oct)
+- El 13-oct la línea dice "desde el cierre del 9-oct" para papel y real GBM, aunque el cierre del 12-oct ya guardó filas en `bitacora/equity.csv` y `bitacora/real/equity.csv`. Parece tomar el último cierre de precio disponible y no la fila del libro (o trata el 12-oct como sin sesión). Verificar y corregir en el script; no cambia ninguna alerta.
