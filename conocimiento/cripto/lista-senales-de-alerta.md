@@ -185,6 +185,16 @@
 - **E6, E10:** sin búsqueda dirigida nueva hoy (tiempo de esta corrida dedicado al estudio profundo de los indentures y al reintento de Metaplanet, ver §3 de la ficha de hoy); última revisión con hallazgo (11-oct, sin novedad) sigue vigente, declarado explícitamente como no repetido hoy.
 - **Conclusión: sin disparador.** Ninguna señal ROJA; ÁMBAR solo en E5 y A9 (sin cambio desde el 25-sep). No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
 
+
+**Seguimiento del 13-oct-2026** [I] — revisión de contraparte de la corrida de las 08:17 del martes. El estudio de hoy fue sobre el texto de la GENIUS Act y el estado de su reglamentación ([`fichas/2026-10-13-genius-reloj-de-vigencia-y-reservas.md`](fichas/2026-10-13-genius-reloj-de-vigencia-y-reservas.md)):
+
+- **E1 (flujo ex-BNB a 7 días, aproximación del método F):** `api.llama.fi/protocol/binance-cex`, 14:20 UTC. Se tomó el cambio de unidades por token, sin BNB, de la última fila diaria de cada cadena del 6-oct al 13-oct, valuado a precios de hoy. Resultado: **−0.59%** (−US$0.87 mil millones), contra un umbral ÁMBAR de −2.1%. **Limpio.** El TVL bruto (US$180.08 → 172.22 mil millones, −4.36%) cae más por el efecto precio.
+- **E2:** BTC rastreado pasó de 641,960 a 634,577 (−1.15% en 7 días), contra un umbral ÁMBAR de −5%. **Limpio.**
+- **E3:** una búsqueda dirigida no encuentra el 47.º reporte de PoR. Seguimos dentro de la ventana proyectada (15–21-oct). **Limpio.**
+- **E5:** no hay cargos nuevos contra la entidad. **ÁMBAR sin cambio.** Hay contexto regulatorio en EUA: el ANPRM de la CFTC 2026-20888, de hoy, y la vigencia de GENIUS fija el 18-ene-2027. Nada de eso es una acción contra Binance.
+- **E8:** USDC/USDT 1.00115 y FDUSD/USDT 0.9991 (Binance, 14:20 UTC). Desvío < 0.12%. **Limpio.**
+- **E6, E10:** sin novedad en la búsqueda general de hoy.
+- **Conclusión: no hay disparador.** No hay ninguna señal ROJA; las ÁMBAR son solo E5 y A9. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
