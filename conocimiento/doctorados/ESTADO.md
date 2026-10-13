@@ -1,6 +1,6 @@
 # Estado de los tres doctorados
 
-> Actualizado: 2026-10-10 (conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
+> Actualizado: 2026-10-12 (laboratorio: D10; antes 2026-10-10, conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
 
 ## Doctorado en finanzas (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |

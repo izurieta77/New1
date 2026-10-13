@@ -35,3 +35,15 @@ Confirmar elegibilidad (punto 2), entregar a su contador/abogado, decidir ruta a
 
 ## Actualización 6-oct (cap. 30 verificado): cómo se pide la línea de captura
 No hay ficha específica de "pago con reducción". Se solicita con la **ficha 47/CFF** (regla 2.1.47 RMF): Mi portal → trámite "LÍNEA CAPTURA CRÉDITO FISCAL", dirigido a la ADR, con el **Formato 47/CFF** (el Anexo 1 lo exige desde la modificación al Anexo 2 del 17-jul-2026). El SAT resuelve en **6 días**. Ninguna ficha dice si la línea sale ya con el 20%: comparar el importe con $31,488 antes de pagar. Plazos: pedirla a más tardar el 14-oct (margen), límite duro 21-oct; pago a más tardar 26-oct; vence 29-oct. Esto sustituye la ruta "caso SAC" del memo inicial.
+
+## Actualización 13-oct-2026 (trabajo continuo, tras la revisión del 12-oct §1.1): qué se pierde al pagar con el 20%
+
+**Texto verificado hoy:** LIF 2026, transitorio Vigésimo Segundo (Cámara de Diputados, "Nueva Ley DOF 07-11-2025"), y CFF 70-A y 75 VII (versión con reforma DOF 9-abr-2026).
+
+1. **El estímulo del 90% exige un crédito firme o consentido y que se cumpla la obligación omitida.** El transitorio aplica a "créditos fiscales firmes o consentidos" y, cuando el crédito es solo una multa por obligación distinta de la de pago, da **90% de la multa** "siempre que cumplan con la obligación omitida que haya dado origen a la multa". Para multas firmes no impugnadas (o con desistimiento), la solicitud se presenta **a más tardar el 31-oct-2026**. El SAT emite el formulario de pago en 15 días naturales y el pago se hace en otros 15. "En ningún caso dará lugar a devolución". La respuesta del SAT no se puede impugnar.
+2. **Consecuencia práctica (inferencia):** si el dueño **paga primero** los $31,488 con la reducción del 20%, el crédito queda extinguido y ya no hay multa a la cual aplicar el 90%. El estímulo no da devolución, así que la diferencia de **$27,552** ($31,488 − $3,936) se pierde. Las dos rutas se excluyen: hay que elegir una **antes del 28-oct**.
+3. **Defensa:** pedir el estímulo exige no impugnar o desistirse. Impugnar (revocación o juicio, vencen el 29-oct) cierra la vía del estímulo mientras dure el medio de defensa.
+4. **"Consentimiento" por pagar con la reducción:** el CFF 70-A dice de forma expresa que solicitar su reducción tiene por consentida la infracción. **El 75 VII (la reducción del 20%) no trae esa frase** en el texto leído. El cap. 29 no desarrolla el tema; lo que sí se sabe es que, al pagar, el crédito se extingue y la vía del estímulo se pierde. Si además se puede impugnar después, es una pregunta para el abogado.
+5. **Requisito a confirmar:** que el informe volumétrico omitido **ya se envió** (el dueño dijo el 6-oct que "la respuesta trae el volumétrico y la declaración"). Sin eso no procede el 90%.
+
+**Frase para cada brief que recuerde esta multa:** "Pagar con el 20% ($31,488) extingue la multa y cierra la vía del estímulo del 90% ($3,936) y la defensa; decídelo con tu contador antes del 28-oct". El sistema no decide la ruta.
