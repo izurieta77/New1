@@ -1,8 +1,8 @@
 # Tabla maestra de pruebas del laboratorio
 
-> Fase 0 (formación). **No recomienda inversiones.** Actualizada el 2026-10-13 (conciliación: estado de R10 a "No replicado", conteo y encabezado); antes, el 2026-10-12 (filas R10 / AC-16); antes, el 2026-10-07 (fila V04 / AC-14); antes, el 2026-10-06 (fila R09 / AC-13); antes, el 2026-10-02 (fila AC-11); antes, el 2026-10-01 (fila AC-10) y el 2026-09-25 a las ~05:55 UTC.
+> Fase 0 (formación). **No recomienda inversiones.** Actualizada el 2026-10-14 (conciliación: conteo y encabezado por la fila R11 / AC-17 del laboratorio del 13-oct); antes, el 2026-10-13 (laboratorio: filas R11 / AC-17; conciliación: estado de R10 a "No replicado", conteo y encabezado); antes, el 2026-10-12 (filas R10 / AC-16); antes, el 2026-10-07 (fila V04 / AC-14); antes, el 2026-10-06 (fila R09 / AC-13); antes, el 2026-10-02 (fila AC-11); antes, el 2026-10-01 (fila AC-10) y el 2026-09-25 a las ~05:55 UTC.
 >
-> Tiene **una fila por cada prueba** que existe en `laboratorio/replicas/` y `laboratorio/auditorias/`. Hoy son 28 en el Resumen (corrección 13-oct: decía 26; con AC-15 del 8-oct ya eran 27 y R10 suma una; la tabla de detalle tiene 26 porque AC-08 y AC-15 no tienen fila de detalle). Si una prueba aún no tiene resultados ni estado asignado, se marca "en curso" y no lleva etiqueta.
+> Tiene **una fila por cada prueba** que existe en `laboratorio/replicas/` y `laboratorio/auditorias/`. Hoy son 29 en el Resumen (corrección 14-oct, conciliación: decía 28; R11/AC-17 del 13-oct suma una; la tabla de detalle tiene 27 porque AC-08 y AC-15 no tienen fila de detalle. Corrección anterior, 13-oct: decía 26; con AC-15 del 8-oct ya eran 27 y R10 sumó una). Si una prueba aún no tiene resultados ni estado asignado, se marca "en curso" y no lleva etiqueta.
 >
 > Las cifras se copian de la ficha, del `resultados.json` o del `variantes.csv` de cada prueba. Nada se recalcula aquí. Si esta tabla y una ficha no coinciden, vale la ficha: corrige esta tabla y anota el error en `conocimiento/registro-de-errores.md`.
 

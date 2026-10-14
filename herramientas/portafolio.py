@@ -105,6 +105,10 @@ def leer_equity(ruta: str | Path = RUTA_EQUITY) -> list[dict]:
 
 
 def escribir_equity(ruta: str | Path, filas: list[dict]) -> None:
+    # El indice se calcula con los montos YA redondeados a 2 decimales, los mismos que se guardan.
+    # Antes la ultima fila usaba la valuacion sin redondear y, al reescribir el archivo al dia
+    # siguiente, su indice cambiaba en el 5o-6o decimal (fallo bitacora/arbitraje/2026-10-13.md §7).
+    filas = [{**r, **{c: round(r[c], 2) for c in COLUMNAS_EQUITY[1:5] if c in r}} for r in filas]
     filas = recalcular_indice(sorted(filas, key=lambda r: r["fecha"]))
     salida = [{"fecha": r["fecha"].isoformat(), **{c: f"{r[c]:.2f}" for c in COLUMNAS_EQUITY[1:5]},
                "indice": f"{r['indice']:.6f}"} for r in filas]

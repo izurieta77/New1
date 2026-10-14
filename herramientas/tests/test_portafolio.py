@@ -98,6 +98,19 @@ class TestLibro(unittest.TestCase):
         filas = pf.guardar_snapshot(self.eq, date(2026, 2, 2), val)  # reemplaza el mismo dia
         self.assertEqual(len(filas), 1)
 
+    def test_reescribir_no_cambia_filas_guardadas(self):
+        # Fallo 2026-10-13 (conciliacion del 14-oct): el cierre reescribia el indice de la fila del
+        # dia anterior (103.392376 -> 103.392400) porque lo calculaba con la valuacion sin redondear.
+        val = {"efectivo_mxn": 1071.96, "posiciones_mxn": 19606.523456, "equity_mxn": 20678.483456,
+               "aportaciones_netas_mxn": 20000.0}
+        pf.guardar_snapshot(self.eq, date(2026, 10, 12), val)
+        antes = Path(self.eq).read_text(encoding="utf-8")
+        val2 = {**val, "posiciones_mxn": 19726.301234, "equity_mxn": 20798.261234}
+        pf.guardar_snapshot(self.eq, date(2026, 10, 13), val2)
+        despues = Path(self.eq).read_text(encoding="utf-8")
+        self.assertTrue(despues.startswith(antes))
+        self.assertIn("2026-10-12,1071.96,19606.52,20678.48,20000.00,103.392400", antes)
+
     def test_indice_incluye_el_primer_dia(self):
         # Fallo 2026-10-08 (base TWR): 10,000 aportados que al primer cierre valen 9,967.87
         # deben dar indice 99.6787, no 100.

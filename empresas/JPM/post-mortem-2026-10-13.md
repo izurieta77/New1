@@ -9,7 +9,7 @@
 - **Partida significativa:** pérdidas netas de US$658 M en valores de inversión en Corporate (−US$0.18 de UPA). Sin ella, utilidad de 15.8 mil M y UPA de 5.75.
 - **Desglose (administrado):** NII de 27.1 mil M (+13%); NII sin Markets de 24.7 (+6%); Markets de 10.3 (+15%; renta fija −4% y acciones +49%); comisiones de IB de 3.0 (+14%). Gasto de 27,295 M; provisión de 2,743 M (castigos netos de 2.2 mil M y creación de reserva de 539 M).
 - **Capital y otros:** CET1 estandarizado de 13.9%; NCO de tarjeta de 2.91%; ROTCE de 20% (21% sin la partida). Recompras netas de solo US$664 M: Dimon dijo que "reducimos las recompras" para desplegar capital en el negocio.
-- **Reacción del precio:** no consultada en fuente verificable al cierre de esta rutina; no se reporta.
+- **Reacción del precio:** no consultada en fuente verificable al cierre de esta rutina; no se reporta. **[Nota, conciliación 14-oct-2026 ~03:00 UTC, Yahoo chart v8 1d, consultado 03:0x UTC; fuente secundaria; `bitacora/arbitraje/2026-10-13.md` §6]:** abrió en 339.97 (+1.7% contra el cierre del 12-oct, 334.30) y cerró en 331.43 (−0.86%); es el mismo cierre que resolvió P0064 en NO.
 
 ## 2. Pronósticos contra resultado
 | Pronóstico | Nuestro | Consenso | Real | Error nuestro | Error consenso | Puntuación |

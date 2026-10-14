@@ -11,7 +11,7 @@
 - **Gasto y crédito:** gasto de 13,743 M (−1%); provisión de 1,029 M; castigos netos de 0.38% (0.34% en el 2T).
 - **Capital:** CET1 de **10.0%** (10.3% en el 2T); ROTCE de 16.3%; recompras de US$2.5 mil M (28.6 M de acciones).
 - **Guía:** NII 2026 de ±US$50 mil M y gasto de ~55.7 mil M, ambos sin cambio; NII del 4T26 de ~13 mil M.
-- **Reacción del precio:** no consultada en fuente verificable al cierre de esta rutina; no se reporta.
+- **Reacción del precio:** no consultada en fuente verificable al cierre de esta rutina; no se reporta. **[Nota, conciliación 14-oct-2026 ~03:00 UTC, Yahoo chart v8 1d, consultado 03:0x UTC; fuente secundaria; `bitacora/arbitraje/2026-10-13.md` §6]:** abrió en 80.57 (−3.3% contra el cierre del 12-oct, 83.32) y cerró en 80.74 (−3.10%).
 
 ## 2. Pronósticos contra resultado
 | Pronóstico | Nuestro | Consenso | Real | Error nuestro | Error consenso | Puntuación |
