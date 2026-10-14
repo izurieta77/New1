@@ -1,6 +1,6 @@
 # Estado de los tres doctorados
 
-> Actualizado: 2026-10-12 (laboratorio: D10; antes 2026-10-10, conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
+> Actualizado: 2026-10-14 (laboratorio: C8 de Sin a Parcial); antes 2026-10-12 (laboratorio: D10; antes 2026-10-10, conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
 
 ## Doctorado en finanzas (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
@@ -42,7 +42,7 @@
 | C5 | Impuestos diferidos, pensiones y pagos basados en acciones | ficha 11-oct (impuesto diferido: resumen oficial NIC 12, LISR, ejercicio en código); pensiones y NIIF 2 pendientes | Parcial |
 | C6 | Análisis y reformulación de estados financieros; calidad de utilidades | caps. 03 y 25 | Capítulo |
 | C7 | Valuación basada en contabilidad (ingreso residual) | cap. 03 | Parcial |
-| C8 | Contabilidad empírica: relevancia de valor, gestión de utilidades, informatividad | nada | Sin |
+| C8 | Contabilidad empírica: relevancia de valor, gestión de utilidades, informatividad | ficha 14-oct (devengos, Sloan 1996 leído por secciones; ejercicio) y réplica R13 (Replicado, A y B); faltan Ball-Brown y gestión de utilidades | Parcial |
 | C9 | Auditoría, gobierno corporativo y regulación de emisoras | nada | Sin |
 | C10 | Contabilidad de las emisoras mexicanas (NIIF obligatorias, efectos de inflación) | `empresas/*/modelo` | Parcial |
 | C11 | Costos y contabilidad gerencial (asignación, costos relevantes y hundidos, costo de oportunidad) | ficha 6-oct (resumen del dueño con 5 ejercicios) | Parcial |
@@ -55,7 +55,7 @@ Nota (conciliación, 9-oct-2026): la fila de derecho fiscal decía 0/1/4/6. Reco
 |---|---|---|---|---|---|
 | Finanzas | 11 | 5 | 4 | 2 | 0 |
 | Derecho fiscal | 11 | 0 | 5 | 5 | 1 |
-| Contabilidad | 11 | 0 | 1 | 5 | 5 |
+| Contabilidad | 11 | 0 | 1 | 6 | 4 |
 
 **Lectura honesta:** finanzas está a medio camino; derecho fiscal y contabilidad están en su inicio. Lo que ya existe en lo fiscal es de personas físicas y del SIC; falta casi toda la teoría general, el CFF, la defensa fiscal y las personas morales. En contabilidad falta casi todo el cuerpo de normas.
 

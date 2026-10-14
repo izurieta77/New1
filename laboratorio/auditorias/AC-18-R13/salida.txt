@@ -1,0 +1,232 @@
+AC-18-R13 ejecucion B (codigo independiente)
+Directorio de datos: /home/user/New1/laboratorio/auditorias/AC-18-R13/datos
+  sha256 d1790e831b621069379d5584d3114292ac52e8cdc36e44e302e880bd0c972b7c  PredictorAltPorts_DecilesVW.zip
+  sha256 b49364d5ddaa3ffa789b67b0757e3e38bc4291473510751593cae3273e5ee103  PredictorAltPorts_DecilesEW.zip
+  sha256 03c2358f223670b6ce21853f2f9d86404012f6cea9a14e76d116ca05f20d5070  PredictorAltPorts_QuintilesVW.zip
+  sha256 2be3c54459f5de8ee1bf4a474b9a3ea7a74cb3d37b8c690ade0dff773b77a0c6  PredictorAltPorts_QuintilesEW.zip
+  sha256 6cdaf0ff051222b813e6f8404d7a30b94e146b421625f202bd04473fe97a1817  PredictorPortsFull.csv
+  sha256 36756c5c2559648519ac4b22913d860c6afd865cfebce920e3e8927f8e2d10b7  F-F_Research_Data_5_Factors_2x3_CSV.zip
+  sha256 6710cd881e625f48b39d48d4cf77cb11a6deef3e67e4b091551289b9005a413e  Portfolios_Formed_on_AC_CSV.zip
+Factores FF5: 1963-07..2026-08
+OSAP Accruals deciles VW: puertos ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', 'LS'], 1952-07..2024-12
+OSAP quintiles VW: puertos ['01', '02', '03', '04', '05', 'LS']
+Chequeo OP deciles EW     max|(p10-p01) - LS_OSAP| = 8.1e-14 (n=870)
+Chequeo Alt deciles VW    max|(p10-p01) - LS_OSAP| = 9.1e-14 (n=870)
+Chequeo Alt deciles EW    max|(p10-p01) - LS_OSAP| = 8.1e-14 (n=870)
+Chequeo Alt quintiles VW  max|(p05-p01) - LS_OSAP| = 7.1e-14 (n=870)
+Chequeo Alt quintiles EW  max|(p05-p01) - LS_OSAP| = 9.1e-14 (n=870)
+signallag medio por puerto (OP): 01:-0.114, 02:-0.036, 03:-0.012, 04:0.004, 05:0.017, 06:0.029, 07:0.041, 08:0.056, 09:0.076, 10:0.140
+=> la senal esta firmada (-devengos): Lo devengos = p10 (p05 en quintiles), Hi = p01
+Chequeo DecilesEW (alt) vs OP (EW deciles): max|dif p01| = 0.00e+00
+
+== OSAP PRINCIPAL VW deciles Lo10-Hi10
+  bruto  pre  1963-07..1996-06         n=396  media=  0.488%  sd= 3.288  t=  2.95  tNW6=  3.10
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.405%  sd= 3.288  t=  2.45  tNW6=  2.57
+                                         media anual simple=  5.86%  (neta=  4.86%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  alfa CAPM pre  1963-07..1996-06       a=  0.621%/mes t=  4.03 tNW6=  4.30 beta=-0.285 (n=396)
+  alfa FF5  pre  1963-07..1996-06       a=  0.439%/mes t=  2.81 tNW6=  2.83  b(Mkt,SMB,HML,RMW,CMA)=-0.14,-0.34,0.22,0.25,0.22
+  bruto  post 1996-07..2024-12         n=342  media=  0.107%  sd= 3.379  t=  0.59  tNW6=  0.59
+  1%/ano post 1996-07..2024-12         n=342  media=  0.024%  sd= 3.379  t=  0.13  tNW6=  0.13
+                                         media anual simple=  1.29%  (neta=  0.29%)
+  Mkt-RF post 1996-07..2024-12         n=342  media=  0.725%  sd= 4.624  t=  2.90  tNW6=  2.88
+  alfa CAPM post 1996-07..2024-12       a=  0.066%/mes t=  0.36 tNW6=  0.34 beta= 0.057 (n=342)
+  alfa FF5  post 1996-07..2024-12       a=  0.170%/mes t=  0.93 tNW6=  0.91  b(Mkt,SMB,HML,RMW,CMA)=0.05,-0.19,-0.20,-0.16,0.03
+  bruto  2001+ 2001-01..2024-12        n=288  media=  0.024%  sd= 3.163  t=  0.13  tNW6=  0.13
+  1%/ano 2001+ 2001-01..2024-12        n=288  media= -0.059%  sd= 3.163  t= -0.32  tNW6= -0.32
+                                         media anual simple=  0.29%  (neta= -0.71%)
+  Mkt-RF 2001+ 2001-01..2024-12        n=288  media=  0.677%  sd= 4.532  t=  2.53  tNW6=  2.44
+  alfa CAPM 2001+ 2001-01..2024-12      a= -0.024%/mes t= -0.13 tNW6= -0.13 beta= 0.071 (n=288)
+  alfa FF5  2001+ 2001-01..2024-12      a=  0.075%/mes t=  0.40 tNW6=  0.39  b(Mkt,SMB,HML,RMW,CMA)=0.07,-0.10,-0.27,-0.21,0.11
+  caida de la media post vs pre: 78.0%
+
+== OSAP V1 EW deciles Lo10-Hi10
+  bruto  pre  1963-07..1996-06         n=396  media=  0.666%  sd= 1.880  t=  7.05  tNW6=  6.23
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.583%  sd= 1.880  t=  6.17  tNW6=  5.45
+                                         media anual simple=  7.99%  (neta=  6.99%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2024-12         n=342  media=  0.103%  sd= 1.836  t=  1.04  tNW6=  0.89
+  1%/ano post 1996-07..2024-12         n=342  media=  0.019%  sd= 1.836  t=  0.20  tNW6=  0.17
+                                         media anual simple=  1.23%  (neta=  0.23%)
+  Mkt-RF post 1996-07..2024-12         n=342  media=  0.725%  sd= 4.624  t=  2.90  tNW6=  2.88
+  bruto  2001+ 2001-01..2024-12        n=288  media= -0.004%  sd= 1.748  t= -0.04  tNW6= -0.04
+  1%/ano 2001+ 2001-01..2024-12        n=288  media= -0.088%  sd= 1.748  t= -0.85  tNW6= -0.82
+                                         media anual simple= -0.05%  (neta= -1.05%)
+  Mkt-RF 2001+ 2001-01..2024-12        n=288  media=  0.677%  sd= 4.532  t=  2.53  tNW6=  2.44
+  caida de la media post vs pre: 84.6%
+
+== OSAP V2 VW quintiles Lo20-Hi20
+  bruto  pre  1963-07..1996-06         n=396  media=  0.265%  sd= 2.532  t=  2.08  tNW6=  2.02
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.182%  sd= 2.532  t=  1.43  tNW6=  1.39
+                                         media anual simple=  3.18%  (neta=  2.18%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2024-12         n=342  media=  0.159%  sd= 2.889  t=  1.02  tNW6=  1.00
+  1%/ano post 1996-07..2024-12         n=342  media=  0.076%  sd= 2.889  t=  0.48  tNW6=  0.47
+                                         media anual simple=  1.91%  (neta=  0.91%)
+  Mkt-RF post 1996-07..2024-12         n=342  media=  0.725%  sd= 4.624  t=  2.90  tNW6=  2.88
+  bruto  2001+ 2001-01..2024-12        n=288  media=  0.168%  sd= 2.670  t=  1.07  tNW6=  1.14
+  1%/ano 2001+ 2001-01..2024-12        n=288  media=  0.085%  sd= 2.670  t=  0.54  tNW6=  0.57
+                                         media anual simple=  2.02%  (neta=  1.02%)
+  Mkt-RF 2001+ 2001-01..2024-12        n=288  media=  0.677%  sd= 4.532  t=  2.53  tNW6=  2.44
+  caida de la media post vs pre: 40.1%
+
+== OSAP V3 EW quintiles Lo20-Hi20
+  bruto  pre  1963-07..1996-06         n=396  media=  0.456%  sd= 1.512  t=  6.01  tNW6=  4.97
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.373%  sd= 1.512  t=  4.91  tNW6=  4.06
+                                         media anual simple=  5.48%  (neta=  4.48%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2024-12         n=342  media=  0.084%  sd= 1.513  t=  1.03  tNW6=  0.85
+  1%/ano post 1996-07..2024-12         n=342  media=  0.001%  sd= 1.513  t=  0.01  tNW6=  0.01
+                                         media anual simple=  1.01%  (neta=  0.01%)
+  Mkt-RF post 1996-07..2024-12         n=342  media=  0.725%  sd= 4.624  t=  2.90  tNW6=  2.88
+  bruto  2001+ 2001-01..2024-12        n=288  media=  0.016%  sd= 1.488  t=  0.18  tNW6=  0.16
+  1%/ano 2001+ 2001-01..2024-12        n=288  media= -0.067%  sd= 1.488  t= -0.77  tNW6= -0.68
+                                         media anual simple=  0.19%  (neta= -0.81%)
+  Mkt-RF 2001+ 2001-01..2024-12        n=288  media=  0.677%  sd= 4.532  t=  2.53  tNW6=  2.44
+  caida de la media post vs pre: 81.5%
+
+French AC: 1963-07..2026-08 (secciones: Value Weighted Returns -- Monthly | Equal Weighted Returns -- Monthly)
+
+== FRENCH VW deciles Lo10-Hi10
+  bruto  pre  1963-07..1996-06         n=396  media=  0.414%  sd= 2.617  t=  3.15  tNW6=  3.30
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.331%  sd= 2.617  t=  2.51  tNW6=  2.63
+                                         media anual simple=  4.97%  (neta=  3.97%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  alfa CAPM pre  1963-07..1996-06       a=  0.472%/mes t=  3.64 tNW6=  3.80 beta=-0.124 (n=396)
+  alfa FF5  pre  1963-07..1996-06       a=  0.445%/mes t=  3.23 tNW6=  3.64  b(Mkt,SMB,HML,RMW,CMA)=-0.06,-0.13,0.16,-0.20,0.03
+  bruto  post 1996-07..2026-08         n=362  media=  0.163%  sd= 3.229  t=  0.96  tNW6=  0.93
+  1%/ano post 1996-07..2026-08         n=362  media=  0.080%  sd= 3.229  t=  0.47  tNW6=  0.45
+                                         media anual simple=  1.96%  (neta=  0.96%)
+  Mkt-RF post 1996-07..2026-08         n=362  media=  0.749%  sd= 4.578  t=  3.11  tNW6=  3.12
+  alfa CAPM post 1996-07..2026-08       a=  0.178%/mes t=  1.03 tNW6=  1.04 beta=-0.020 (n=362)
+  alfa FF5  post 1996-07..2026-08       a=  0.118%/mes t=  0.68 tNW6=  0.69  b(Mkt,SMB,HML,RMW,CMA)=0.04,-0.15,-0.13,0.09,0.14
+  bruto  2001+ 2001-01..2026-08        n=308  media=  0.062%  sd= 2.939  t=  0.37  tNW6=  0.34
+  1%/ano 2001+ 2001-01..2026-08        n=308  media= -0.021%  sd= 2.939  t= -0.13  tNW6= -0.12
+                                         media anual simple=  0.74%  (neta= -0.26%)
+  Mkt-RF 2001+ 2001-01..2026-08        n=308  media=  0.708%  sd= 4.483  t=  2.77  tNW6=  2.70
+  alfa CAPM 2001+ 2001-01..2026-08      a=  0.084%/mes t=  0.49 tNW6=  0.47 beta=-0.031 (n=308)
+  alfa FF5  2001+ 2001-01..2026-08      a=  0.017%/mes t=  0.10 tNW6=  0.09  b(Mkt,SMB,HML,RMW,CMA)=0.01,-0.03,-0.16,0.12,0.14
+  caida de la media post vs pre: 60.6%
+
+== FRENCH VW deciles Lo10-Hi10 [periodo comun con OSAP, post hasta 2024-12]
+  bruto  pre  1963-07..1996-06         n=396  media=  0.414%  sd= 2.617  t=  3.15  tNW6=  3.30
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.331%  sd= 2.617  t=  2.51  tNW6=  2.63
+                                         media anual simple=  4.97%  (neta=  3.97%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2024-12         n=342  media=  0.146%  sd= 3.124  t=  0.86  tNW6=  0.81
+  1%/ano post 1996-07..2024-12         n=342  media=  0.063%  sd= 3.124  t=  0.37  tNW6=  0.35
+                                         media anual simple=  1.75%  (neta=  0.75%)
+  Mkt-RF post 1996-07..2024-12         n=342  media=  0.725%  sd= 4.624  t=  2.90  tNW6=  2.88
+  bruto  2001+ 2001-01..2024-12        n=288  media=  0.034%  sd= 2.777  t=  0.21  tNW6=  0.18
+  1%/ano 2001+ 2001-01..2024-12        n=288  media= -0.049%  sd= 2.777  t= -0.30  tNW6= -0.26
+                                         media anual simple=  0.41%  (neta= -0.59%)
+  Mkt-RF 2001+ 2001-01..2024-12        n=288  media=  0.677%  sd= 4.532  t=  2.53  tNW6=  2.44
+  caida de la media post vs pre: 64.7%
+
+== FRENCH EW deciles Lo10-Hi10
+  bruto  pre  1963-07..1996-06         n=396  media=  0.416%  sd= 1.566  t=  5.28  tNW6=  4.91
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.333%  sd= 1.566  t=  4.23  tNW6=  3.93
+                                         media anual simple=  4.99%  (neta=  3.99%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2026-08         n=362  media=  0.266%  sd= 2.137  t=  2.37  tNW6=  1.96
+  1%/ano post 1996-07..2026-08         n=362  media=  0.183%  sd= 2.137  t=  1.63  tNW6=  1.34
+                                         media anual simple=  3.19%  (neta=  2.19%)
+  Mkt-RF post 1996-07..2026-08         n=362  media=  0.749%  sd= 4.578  t=  3.11  tNW6=  3.12
+  bruto  2001+ 2001-01..2026-08        n=308  media=  0.181%  sd= 2.160  t=  1.47  tNW6=  1.28
+  1%/ano 2001+ 2001-01..2026-08        n=308  media=  0.098%  sd= 2.160  t=  0.79  tNW6=  0.69
+                                         media anual simple=  2.17%  (neta=  1.17%)
+  Mkt-RF 2001+ 2001-01..2026-08        n=308  media=  0.708%  sd= 4.483  t=  2.77  tNW6=  2.70
+  caida de la media post vs pre: 36.0%
+
+== FRENCH EW deciles Lo10-Hi10 [periodo comun con OSAP, post hasta 2024-12]
+  bruto  pre  1963-07..1996-06         n=396  media=  0.416%  sd= 1.566  t=  5.28  tNW6=  4.91
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.333%  sd= 1.566  t=  4.23  tNW6=  3.93
+                                         media anual simple=  4.99%  (neta=  3.99%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2024-12         n=342  media=  0.354%  sd= 2.036  t=  3.22  tNW6=  2.66
+  1%/ano post 1996-07..2024-12         n=342  media=  0.271%  sd= 2.036  t=  2.46  tNW6=  2.03
+                                         media anual simple=  4.25%  (neta=  3.25%)
+  Mkt-RF post 1996-07..2024-12         n=342  media=  0.725%  sd= 4.624  t=  2.90  tNW6=  2.88
+  bruto  2001+ 2001-01..2024-12        n=288  media=  0.279%  sd= 2.048  t=  2.32  tNW6=  2.03
+  1%/ano 2001+ 2001-01..2024-12        n=288  media=  0.196%  sd= 2.048  t=  1.63  tNW6=  1.42
+                                         media anual simple=  3.35%  (neta=  2.35%)
+  Mkt-RF 2001+ 2001-01..2024-12        n=288  media=  0.677%  sd= 4.532  t=  2.53  tNW6=  2.44
+  caida de la media post vs pre: 14.9%
+
+== FRENCH VW quintiles Lo20-Hi20
+  bruto  pre  1963-07..1996-06         n=396  media=  0.382%  sd= 2.124  t=  3.58  tNW6=  3.62
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.299%  sd= 2.124  t=  2.80  tNW6=  2.83
+                                         media anual simple=  4.58%  (neta=  3.58%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2026-08         n=362  media=  0.167%  sd= 2.575  t=  1.23  tNW6=  1.20
+  1%/ano post 1996-07..2026-08         n=362  media=  0.084%  sd= 2.575  t=  0.62  tNW6=  0.60
+                                         media anual simple=  2.00%  (neta=  1.00%)
+  Mkt-RF post 1996-07..2026-08         n=362  media=  0.749%  sd= 4.578  t=  3.11  tNW6=  3.12
+  bruto  2001+ 2001-01..2026-08        n=308  media=  0.109%  sd= 2.292  t=  0.83  tNW6=  0.80
+  1%/ano 2001+ 2001-01..2026-08        n=308  media=  0.026%  sd= 2.292  t=  0.20  tNW6=  0.19
+                                         media anual simple=  1.31%  (neta=  0.31%)
+  Mkt-RF 2001+ 2001-01..2026-08        n=308  media=  0.708%  sd= 4.483  t=  2.77  tNW6=  2.70
+  caida de la media post vs pre: 56.3%
+
+== FRENCH VW quintiles Lo20-Hi20 [periodo comun con OSAP, post hasta 2024-12]
+  bruto  pre  1963-07..1996-06         n=396  media=  0.382%  sd= 2.124  t=  3.58  tNW6=  3.62
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.299%  sd= 2.124  t=  2.80  tNW6=  2.83
+                                         media anual simple=  4.58%  (neta=  3.58%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2024-12         n=342  media=  0.164%  sd= 2.519  t=  1.21  tNW6=  1.13
+  1%/ano post 1996-07..2024-12         n=342  media=  0.081%  sd= 2.519  t=  0.59  tNW6=  0.56
+                                         media anual simple=  1.97%  (neta=  0.97%)
+  Mkt-RF post 1996-07..2024-12         n=342  media=  0.725%  sd= 4.624  t=  2.90  tNW6=  2.88
+  bruto  2001+ 2001-01..2024-12        n=288  media=  0.102%  sd= 2.196  t=  0.78  tNW6=  0.71
+  1%/ano 2001+ 2001-01..2024-12        n=288  media=  0.018%  sd= 2.196  t=  0.14  tNW6=  0.13
+                                         media anual simple=  1.22%  (neta=  0.22%)
+  Mkt-RF 2001+ 2001-01..2024-12        n=288  media=  0.677%  sd= 4.532  t=  2.53  tNW6=  2.44
+  caida de la media post vs pre: 57.0%
+
+== FRENCH EW quintiles Lo20-Hi20
+  bruto  pre  1963-07..1996-06         n=396  media=  0.368%  sd= 1.245  t=  5.89  tNW6=  5.19
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.285%  sd= 1.245  t=  4.55  tNW6=  4.02
+                                         media anual simple=  4.42%  (neta=  3.42%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2026-08         n=362  media=  0.211%  sd= 1.593  t=  2.52  tNW6=  2.09
+  1%/ano post 1996-07..2026-08         n=362  media=  0.128%  sd= 1.593  t=  1.53  tNW6=  1.27
+                                         media anual simple=  2.53%  (neta=  1.53%)
+  Mkt-RF post 1996-07..2026-08         n=362  media=  0.749%  sd= 4.578  t=  3.11  tNW6=  3.12
+  bruto  2001+ 2001-01..2026-08        n=308  media=  0.139%  sd= 1.599  t=  1.52  tNW6=  1.34
+  1%/ano 2001+ 2001-01..2026-08        n=308  media=  0.055%  sd= 1.599  t=  0.61  tNW6=  0.54
+                                         media anual simple=  1.66%  (neta=  0.66%)
+  Mkt-RF 2001+ 2001-01..2026-08        n=308  media=  0.708%  sd= 4.483  t=  2.77  tNW6=  2.70
+  caida de la media post vs pre: 42.7%
+
+== FRENCH EW quintiles Lo20-Hi20 [periodo comun con OSAP, post hasta 2024-12]
+  bruto  pre  1963-07..1996-06         n=396  media=  0.368%  sd= 1.245  t=  5.89  tNW6=  5.19
+  1%/ano pre  1963-07..1996-06         n=396  media=  0.285%  sd= 1.245  t=  4.55  tNW6=  4.02
+                                         media anual simple=  4.42%  (neta=  3.42%)
+  Mkt-RF pre  1963-07..1996-06         n=396  media=  0.467%  sd= 4.347  t=  2.14  tNW6=  2.05
+  bruto  post 1996-07..2024-12         n=342  media=  0.278%  sd= 1.513  t=  3.40  tNW6=  2.88
+  1%/ano post 1996-07..2024-12         n=342  media=  0.194%  sd= 1.513  t=  2.38  tNW6=  2.01
+                                         media anual simple=  3.33%  (neta=  2.33%)
+  Mkt-RF post 1996-07..2024-12         n=342  media=  0.725%  sd= 4.624  t=  2.90  tNW6=  2.88
+  bruto  2001+ 2001-01..2024-12        n=288  media=  0.213%  sd= 1.508  t=  2.40  tNW6=  2.18
+  1%/ano 2001+ 2001-01..2024-12        n=288  media=  0.130%  sd= 1.508  t=  1.46  tNW6=  1.33
+                                         media anual simple=  2.55%  (neta=  1.55%)
+  Mkt-RF 2001+ 2001-01..2024-12        n=288  media=  0.677%  sd= 4.532  t=  2.53  tNW6=  2.44
+  caida de la media post vs pre: 24.5%
+
+Correlacion mensual LS VW deciles OSAP vs French (1963-07..2024-12): 0.403
+
+== Faltantes (-99.99/-999/NA) encontrados: 0
+
+== VEREDICTO segun criterio del par. 2 del pre-registro
+  OSAP PRINCIPAL VW deciles Lo10-Hi10    H1=sostenida H2=sostenida caida= 78.0% -> Replicado
+  OSAP V1 EW deciles Lo10-Hi10           H1=sostenida H2=sostenida caida= 84.6% -> Replicado
+  OSAP V2 VW quintiles Lo20-Hi20         H1=sostenida H2=refutada caida= 40.1% -> Replicado con diferencias
+  OSAP V3 EW quintiles Lo20-Hi20         H1=sostenida H2=sostenida caida= 81.5% -> Replicado
+  FRENCH VW deciles Lo10-Hi10            H1=sostenida H2=sostenida caida= 60.6% -> Replicado
+  FRENCH EW deciles Lo10-Hi10            H1=sostenida H2=refutada caida= 36.0% -> Replicado con diferencias
+  FRENCH VW quintiles Lo20-Hi20          H1=sostenida H2=sostenida caida= 56.3% -> Replicado
+  FRENCH EW quintiles Lo20-Hi20          H1=sostenida H2=refutada caida= 42.7% -> Replicado con diferencias
+  FRENCH VW deciles Lo10-Hi10 [comun ..2024-12]      H1=sostenida H2=sostenida caida= 64.7% -> Replicado
+  FRENCH EW deciles Lo10-Hi10 [comun ..2024-12]      H1=sostenida H2=refutada caida= 14.9% -> Replicado con diferencias
+  FRENCH VW quintiles Lo20-Hi20 [comun ..2024-12]    H1=sostenida H2=sostenida caida= 57.0% -> Replicado
+  FRENCH EW quintiles Lo20-Hi20 [comun ..2024-12]    H1=sostenida H2=refutada caida= 24.5% -> Replicado con diferencias

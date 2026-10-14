@@ -6,3 +6,4 @@ datos/cache/
 # credenciales locales, nunca en git
 banxico_token
 .env
+laboratorio/auditorias/AC-18-R13/datos/

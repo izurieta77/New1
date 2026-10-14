@@ -62,11 +62,11 @@ Una adquisición pagada con caja sube ΔAC en 100 y ΔPC en 30 en el balance con
 
 ## Segunda comprobación
 - Media de A recalculada con un parser propio sobre el CSV crudo: 0.41391 y 0.16320 % al mes; coincide con `R13.py`.
-- La ejecución B independiente (auditor, AC-18) está en curso; su resultado se anota en la réplica.
+- Ejecución B independiente (AC-18, OSAP oct-2025, código desde cero): VW deciles pre 0.488%/mes (t NW 3.10), post 0.107% (0.59), caída 78.0%. **Concordante: R13 Replicado.** El EW sobrevive con t ≈ 2 en French, pero no en OSAP.
 
 ## Uso en el sistema
 - En la ficha de empresa (expediente de 10 puntos, calidad de utilidades), una razón devengos/activos alta debe bajar la probabilidad de "supera al consenso el próximo trimestre" respecto a la tasa base. Es una regla para pronósticos, no para la cartera.
 - **Pendiente:** medir si mejora el Brier de los binarios del 4T26.
 
 ## Estado nuevo
-C8 pasa de **Pendiente** a **Comprendido con comprobación** (ejercicio y réplica A). Si la ejecución B es concordante, el tema puede subir a **Replicado** en la parte de la anomalía, no en toda el área C8.
+C8 pasa de **Pendiente** a **Comprendido con comprobación**. La anomalía de devengos en sí queda **Replicada** (R13, A y B), pero el área C8 completa no: faltan relevancia de valor (Ball-Brown) y gestión de utilidades.
