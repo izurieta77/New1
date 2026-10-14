@@ -530,3 +530,8 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Decisión tomada:** no resolver hoy; esperar a que FRED publique el 13-oct (normalmente al día siguiente) y resolver con ese valor.
 - **Por qué:** el dato del día exacto ya existe; resolver con el 9-oct por un rezago de un día daría el resultado contrario al hecho observable. Es la lectura conservadora del espíritu del criterio. Si el dueño prefiere la lectura literal (último dato publicado al vencimiento), el resultado cambia a SÍ.
 - **Estado:** abierta hasta que FRED publique.
+
+## 2026-10-13 · revisión (rutina 11, 17:58 CDMX) · Dudas de la revisión del 13-oct
+- **P0087 y P0099 con `resultado = SI`:** ¿se codifican como 1 (así darían Brier global 0.2009, n = 25)? **Qué decidí:** no editar `bitacora/pronosticos.csv`, porque cambia el Brier publicado y la corrección le toca a la conciliación. Las dos notas dicen "→ SI" sin ambigüedad. **Estado:** Abierto → conciliación.
+- **P0034 (DFII10 del 13-oct):** ¿se resuelve con la cláusula literal ("rezago de publicación" → último dato ≤ 13-oct = 2.91 → SÍ) o se espera a FRED (2.88 → NO)? **Qué decidí:** no resolverlo y registrarlo para arbitraje. Mi lectura conservadora es la literal, porque el fallo `2026-10-10-clausula-ultimo-dato.md` cita a P0034 justo como el caso que cubre el rezago y la decisión de esperar se tomó después de conocer el dato. **Estado:** Abierto → conciliación.
+- **USD/MXN de Yahoo revisado (12-oct: 18.2215 o 18.2225 → 18.4186):** ¿qué vela usa FX-1 como "cierre"? **Qué decidí:** no re-valuar nada. La supervisión del 14-oct anota la vela y el cierre que usa el script antes de registrar una ALERTA. **Estado:** Abierto → supervisor y conciliación.
