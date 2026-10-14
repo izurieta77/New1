@@ -431,3 +431,18 @@ Se cerró, con certeza (no solo inferencia), el pendiente explícito de la adend
   - El texto oficial cita "(1)(D)" en la Sec. 4(a)(3)(A), aunque el reporte mensual está en (1)(C): es una referencia mal numerada.
 - **Para la cuenta [I]:** no hay catalizador regulatorio de stablecoins en EUA en los próximos 30 días que cambie el riesgo de USDT en Binance para una cuenta mexicana. El evento abierto es la regla final de la OCC (P0117, p=0.30 al 12-nov). La CFTC publicó hoy un ANPRM sobre mercados de criptoactivos (2026-20888); es solo el inicio de un proceso.
 - **Pendientes:** Circular 4/2019 de Banxico (DOF), MiCA (EUR-Lex), el estado de CLARITY y el texto completo del ANPRM de la CFTC.
+
+### Adenda (14-oct-2026): Circular 4/2019 de Banxico, el perímetro mexicano deja fuera a Binance por diseño
+
+- **Fuente:** texto compilado oficial de Banxico (Circular 4/2019 más la 37/2020), cotejado contra el facsímil del DOF del 8-mar-2019 (pp. 90-92). La lista oficial de normativa de Banxico se revisó hasta la 12/2026. Se leyeron íntegros la LRITF (arts. 30-34 y 88; última reforma DOF 14-11-2025, sin cambios en ese capítulo) y el comunicado conjunto del 28-jun-2021. Ficha: [`fichas/2026-10-14-circular-4-2019-banxico-perimetro-mexicano.md`](fichas/2026-10-14-circular-4-2019-banxico-perimetro-mexicano.md).
+- **Del texto [H, A]:**
+  - La circular solo aplica a "Instituciones", es decir, bancos e ITF. Solo permite "Operaciones Internas", con autorización previa, y obliga a impedir que el riesgo pase a los clientes.
+  - La 3.a declara **no elegibles** los servicios directos de intercambio, transmisión o custodia de activos virtuales a clientes.
+  - La única reforma es la 37/2020 (11.a, fr. II, de forma).
+  - El compilado coincide con el DOF en 18 de 19 disposiciones; la 11.a difiere solo por esa reforma (verificado en Python con dos métodos).
+  - Lleva 2,776 días en vigor y 2,204 sin cambios.
+- **Hallazgo [H/I, B]:** la LRITF (arts. 31-33) contempla la custodia y la compraventa de cripto por ITF con clientes, pero la circular la vuelve no autorizable. En México **no hay vía supervisada** para ofrecer al público intercambio o custodia de cripto.
+  - Binance no es "Institución": la circular no le aplica, y su único régimen mexicano es la LFPIORPI (art. 17, fr. XVI), que no protege al cliente.
+  - El punto frágil mexicano es el riel de pesos (Medá, IFPE): es una "Institución" y está sujeta a la "sana distancia" de 2021. Es grado C y no hay acción observada.
+- **Para la cuenta [I]:** no hay catalizador regulatorio mexicano a 30 días. El riesgo es operativo (SPEI/Medá) y lo mide el disparador "SPEI > 48 h" del plan de contingencia. El tope de 10,000 MXN sigue siendo la única defensa de contraparte.
+- **Pendientes:** MiCA (EUR-Lex), CLARITY, el ANPRM de la CFTC 2026-20888, las Disposiciones de la CNBV para IFPE y las iniciativas mexicanas de 2026.

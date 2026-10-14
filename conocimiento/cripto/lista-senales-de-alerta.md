@@ -195,6 +195,16 @@
 - **E8:** USDC/USDT 1.00115 y FDUSD/USDT 0.9991 (Binance, 14:20 UTC). Desvío < 0.12%. **Limpio.**
 - **E6, E10:** sin novedad en la búsqueda general de hoy.
 - **Conclusión: no hay disparador.** No hay ninguna señal ROJA; las ÁMBAR son solo E5 y A9. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
+
+**Seguimiento del 14-oct-2026** [I] — revisión de contraparte de la corrida de las 08:17 del miércoles, día del CPI caliente de EUA. El estudio de hoy fue la Circular 4/2019 de Banxico ([`fichas/2026-10-14-circular-4-2019-banxico-perimetro-mexicano.md`](fichas/2026-10-14-circular-4-2019-banxico-perimetro-mexicano.md)):
+
+- **E1 (flujo ex-BNB a 7 días, aproximación del método F):** `api.llama.fi/protocol/binance-cex`, 14:20 UTC; última fila diaria por cadena (14-oct) contra la de 7 días antes, valuada a precios de hoy: **+0.15%** (+US$0.21 mil millones). **Limpio.** TVL bruto US$171.16 mil millones.
+- **E2:** BTC rastreado pasó de 628,084 a 633,182 (+0.81%). La composición es BTC 30.4%, USDT 23.4%, **BNB 15.4%** (umbral ÁMBAR: 20%) y USDC 4.7%. **Limpio.** La fila del 14-oct puede estar incompleta: los datos del día llegan con retraso (límite de la sección F).
+- **E3:** una búsqueda dirigida ("Binance 47th proof of reserves report October 2026") **no encuentra el 47.º reporte**; solo aparecen coberturas del 45.º. Seguimos dentro de la ventana proyectada (15–21-oct); el umbral de rezago > 30 días aplicaría después del 31-oct. **Limpio.** P0057 sigue abierto.
+- **E5:** no hay cargos nuevos contra la entidad en la búsqueda de hoy. **ÁMBAR sin cambio.** Del estudio sale una precisión: la Circular 4/2019 no aplica a Binance (solo a bancos e ITF), así que un "aviso de restricción para México" vendría de Binance, de la UIF y la SHCP o del riel de pesos (Medá, IFPE), no de Banxico vía esa circular.
+- **E8:** USDC/USDT 1.00089 y FDUSD/USDT 0.9980 (Binance, 14:20 UTC). Desvío < 0.21%. **Limpio.**
+- **E6, E10:** sin novedad en la búsqueda general de hoy.
+- **Conclusión: no hay disparador.** No hay ninguna señal ROJA; las ÁMBAR son solo E5 y A9. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
