@@ -1,0 +1,43 @@
+Fuente A: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Portfolios_Formed_on_AC_CSV.zip | CRSP 202608 | sha256 6710cd881e625f48b39d48d4cf77cb11a6deef3e67e4b091551289b9005a413e
+Meses: 1963-07-31 a 2026-08-31; faltantes en tabla VW: 0
+Factores: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_5_Factors_2x3_CSV.zip | sha256 36756c5c2559648519ac4b22913d860c6afd865cfebce920e3e8927f8e2d10b7 | hasta 2026-08-31
+
+== VW_deciles (Lo 10 - Hi 10) ==
+  1963-07..1996-06   n= 396 media=+0.414%/mes (x12 +4.97%) t_iid=+3.15 t_NW6=+3.29
+  1996-07..fin       n= 362 media=+0.163%/mes (x12 +1.96%) t_iid=+0.96 t_NW6=+0.93
+  2001-01..fin       n= 308 media=+0.062%/mes (x12 +0.74%) t_iid=+0.37 t_NW6=+0.34
+  neto 1% pre        n= 396 media=+0.331%/mes (x12 +3.97%) t_iid=+2.51 t_NW6=+2.63
+  neto 1% post       n= 362 media=+0.080%/mes (x12 +0.96%) t_iid=+0.47 t_NW6=+0.45
+  caida de la media pre->post: 60.6%
+  alfa_capm_pre   +0.472%/mes t_NW6=+3.93 n=396
+  alfa_capm_post  +0.178%/mes t_NW6=+1.01 n=362
+  alfa_ff5_pre    +0.445%/mes t_NW6=+3.85 n=396
+  alfa_ff5_post   +0.118%/mes t_NW6=+0.69 n=362
+  mercado_pre     Mkt-RF +0.467%/mes t_NW6=+2.05
+  mercado_post    Mkt-RF +0.749%/mes t_NW6=+3.11
+
+== EW_deciles (Lo 10 - Hi 10) ==
+  1963-07..1996-06   n= 396 media=+0.416%/mes (x12 +4.99%) t_iid=+5.28 t_NW6=+4.90
+  1996-07..fin       n= 362 media=+0.266%/mes (x12 +3.19%) t_iid=+2.37 t_NW6=+1.95
+  2001-01..fin       n= 308 media=+0.181%/mes (x12 +2.17%) t_iid=+1.47 t_NW6=+1.28
+  neto 1% pre        n= 396 media=+0.333%/mes (x12 +3.99%) t_iid=+4.23 t_NW6=+3.92
+  neto 1% post       n= 362 media=+0.183%/mes (x12 +2.19%) t_iid=+1.63 t_NW6=+1.34
+  caida de la media pre->post: 36.0%
+
+== VW_quintiles (Lo 20 - Hi 20) ==
+  1963-07..1996-06   n= 396 media=+0.382%/mes (x12 +4.58%) t_iid=+3.58 t_NW6=+3.61
+  1996-07..fin       n= 362 media=+0.167%/mes (x12 +2.00%) t_iid=+1.23 t_NW6=+1.20
+  2001-01..fin       n= 308 media=+0.109%/mes (x12 +1.31%) t_iid=+0.83 t_NW6=+0.79
+  neto 1% pre        n= 396 media=+0.299%/mes (x12 +3.58%) t_iid=+2.80 t_NW6=+2.83
+  neto 1% post       n= 362 media=+0.084%/mes (x12 +1.00%) t_iid=+0.62 t_NW6=+0.60
+  caida de la media pre->post: 56.3%
+
+== EW_quintiles (Lo 20 - Hi 20) ==
+  1963-07..1996-06   n= 396 media=+0.368%/mes (x12 +4.42%) t_iid=+5.89 t_NW6=+5.19
+  1996-07..fin       n= 362 media=+0.211%/mes (x12 +2.53%) t_iid=+2.52 t_NW6=+2.09
+  2001-01..fin       n= 308 media=+0.139%/mes (x12 +1.66%) t_iid=+1.52 t_NW6=+1.34
+  neto 1% pre        n= 396 media=+0.285%/mes (x12 +3.42%) t_iid=+4.55 t_NW6=+4.01
+  neto 1% post       n= 362 media=+0.128%/mes (x12 +1.53%) t_iid=+1.53 t_NW6=+1.27
+  caida de la media pre->post: 42.7%
+
+Veredicto A (principal VW deciles): H1 sostenida; H2 sostenida -> Replicado

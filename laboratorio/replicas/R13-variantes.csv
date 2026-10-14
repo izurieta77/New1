@@ -1,0 +1,5 @@
+id,largo,corto,seccion,media_pre,t_nw_pre,media_post,t_nw_post,caida
+VW_deciles,Lo 10,Hi 10,Value Weighted Returns -- Monthly,0.004139,3.294,0.001632,0.928,0.6057
+EW_deciles,Lo 10,Hi 10,Equal Weighted Returns -- Monthly,0.004160,4.904,0.002662,1.953,0.3601
+VW_quintiles,Lo 20,Hi 20,Value Weighted Returns -- Monthly,0.003821,3.615,0.001669,1.196,0.5632
+EW_quintiles,Lo 20,Hi 20,Equal Weighted Returns -- Monthly,0.003682,5.188,0.002110,2.092,0.4268

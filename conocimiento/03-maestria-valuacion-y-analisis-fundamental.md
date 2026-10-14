@@ -142,6 +142,9 @@ Mauboussin y Rappaport (2021, edición revisada) proponen partir del precio y pr
    - Utilidad = flujo de caja + accruals. Los accruals son menos persistentes y el mercado los sobrevalora.
    - Medida de balance: ΔActivo circulante − ΔCaja − (ΔPasivo circulante − ΔDeuda de corto plazo − ΔImpuestos por pagar) − Depreciación, entre activo total promedio. Hoy se usa la versión de flujos: (Utilidad neta − CFO)/Activo.
    - La cobertura bajo menos alto rindió **~10-12% anual** in-sample (cifra de fuentes secundarias [13]; el original no se consultó).
+   - **[Adenda 14-oct-2026, laboratorio; Sloan 1996 leído por secciones, grado A]:** el original (NYSE/AMEX, 1962-1991, 40,679 años-empresa) da para el decil bajo menos alto, ajustado por tamaño, **+10.4% (t = 4.71)** el primer año, 4.8% (t = 3.15) el segundo y 2.9% (t = 1.64) el tercero. Las persistencias son 0.765 para los devengos y 0.855 para el flujo (tabla 3). Queda dentro del rango "~10-12%".
+   - **Réplica R13 (A, French AC/B, CRSP 202608):** el ponderado por valor rinde +0.414%/mes (t NW 3.29) en 1963-1996 y +0.163% (t NW 0.93) después (caída de 60.6%). El ponderado por igual sigue en el límite (t NW 1.95-2.09): la anomalía sobrevive algo en empresas pequeñas. Ficha: `fichas/2026-10-14-doctorado-contabilidad-c8-devengos-sloan.md`.
+   - **Explicación rival (grado C, solo resumen):** Wu, Zhang y Zhang (2010, *JAR* 48: 177-223) dicen que los factores de inversión reducen sustancialmente la anomalía. En R13, el alfa FF5 (con CMA) de 1963-1996 sigue en +0.445%/mes (t NW 3.85), así que no lo confirma con este archivo.
 2. **F-score (Piotroski 2000).** Nueve señales binarias:
    - Rentabilidad: ROA > 0; CFO > 0; ΔROA > 0; CFO > utilidad neta (accrual).
    - Apalancamiento y liquidez: ΔApalancamiento < 0; ΔRazón circulante > 0; sin emisión de acciones.
@@ -183,7 +186,7 @@ Mauboussin y Rappaport (2021, edición revisada) proponen partir del precio y pr
 | Graham, Dodd (7a ed. con Klarman) | 1934/2023 | Security Analysis | McGraw Hill | Margen de seguridad, poder de ganancia normalizado | ISBN 9781264932405 [25] | A (marco) |
 | Ohlson | 1995 | Earnings, Book Values, and Dividends in Equity Valuation | CAR 11:661-687 | Valor = libro + VP de utilidades anormales | 10.1111/j.1911-3846.1995.tb00461.x | A (teoría) |
 | Frankel, Lee | 1998 | Accounting valuation, market expectation, and cross-sectional stock returns | JAE 25(3):283-319 | V/P con residual income predice rendimientos hasta 3 años | sciencedirect S0165410198000263 | B |
-| Sloan | 1996 | Do stock prices fully reflect information in accruals and cash flows about future earnings? | TAR 71:289-315 | Cobertura de accruals ~10-12% anual in-sample (fuente secundaria) | [13] | B antes / D EUA post-2000 |
+| Sloan | 1996 | Do stock prices fully reflect information in accruals and cash flows about future earnings? | TAR 71:289-315 | Cobertura de accruals +10.4% (t 4.71) primer año, ajustado por tamaño, 1962-1991 (original leído por secciones, 14-oct-2026) | [13] | B antes / D EUA post-2000 |
 | Green, Hand, Soliman | 2011 | Going, Going, Gone? The Apparent Demise of the Accruals Anomaly | Mgmt Sci 57(5):797-816 | Las coberturas de accruals en EUA ya no son confiablemente positivas; causa: capital de hedge funds | 10.1287/mnsc.1110.1320 | A (del decaimiento) |
 | Pincus, Rajgopal, Venkatachalam | 2007 | The Accrual Anomaly: International Evidence | TAR 82(1):169 | La anomalía aparece fuera de EUA (el detalle por país no se verificó) | [15] | C |
 | Piotroski | 2000 | Value Investing: The Use of Historical Financial Statement Information… | JAR 38:1-41 | +7.5% anual para value; cobertura de 23% anual en 1976-1996 | SSRN 249455 | C en EUA post-publicación / B internacional |
