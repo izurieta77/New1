@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+BAC-ingresos-3T26,2026-10-14,29958,,1.31,si,,https://www.sec.gov/Archives/edgar/data/70858/000007085826000481/bac09302026ex991.htm
+BAC-upa-3T26,2026-10-14,0.91,,24.18,no,,https://www.sec.gov/Archives/edgar/data/70858/000007085826000481/bac09302026ex991.htm
+BAC-ingresos_mayor_consenso-3T26,2026-10-14,29958,0,,,0.0169,https://www.sec.gov/Archives/edgar/data/70858/000007085826000481/bac09302026ex991.htm
+BAC-upa_mayor_consenso-3T26,2026-10-14,0.91,0,,,0.1089,https://www.sec.gov/Archives/edgar/data/70858/000007085826000481/bac09302026ex991.htm

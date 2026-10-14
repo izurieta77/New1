@@ -106,3 +106,8 @@ Múltiplos: P/U de 12 meses de 12.9x (UPA 4.34); adelantado 12.1x para 2026 y 10
 19. Yahoo Finance, Investor Day (6-nov-2025): https://finance.yahoo.com/news/bank-of-america-outlines-plans-for-earnings-growth-and-ai-in-first-investors-day-in-years-100056619.html
 20. Conocimiento interno: `conocimiento/24-...` §4.1, `conocimiento/23-...` §4.3 y `bitacora/briefs/2026-09-25-tablero-v2.md`.
 21. PR Newswire vía FT, anuncio de la fecha del 2T26 (30-jun-2026): https://markets.ft.com/data/announce/detail?dockey=600-202606300900PR_NEWS_USPRX____NY94735-1
+
+## Adenda 2026-10-14 · resultado del 3T26
+- **Resultado:** ingresos GAAP de US$29,958 M (30,119 FTE), utilidad neta de 6,933 M y UPA diluida GAAP de 0.91 (1.08 sin el cargo de 1.2 mil M, no deducible, por multas de OCC y FinCEN sobre BSA/AML y sanciones; −0.17). Ingresos dentro del p10-p90 (error de +1.31%, contra +4.00% del consenso). UPA **fuera** del intervalo (p10 de 1.05); sin la multa habría quedado dentro. Los dos binarios resuelven No (Brier de 0.0169 y 0.1089). NII de 16.45 mil M, S&T de 5.1 (renta fija −17%), IB de 1.8 (en la guía), CET1 de 10.9% y recompras de 6.0 mil M ([8-K ex. 99.1](https://www.sec.gov/Archives/edgar/data/70858/000007085826000481/bac09302026ex991.htm)). Precio: 51.39 contra 53.96 (−4.76%; Yahoo).
+- **Escenario:** NII > 16.2 mil M y recompras de ~6 mil M, así que sigue el **base**. Salvedad: ROTCE ajustado de 14.9%, abajo de la meta de 16-18%, y CET1 a la baja. Riesgo que faltaba en la §9: multas por las órdenes de consentimiento de BSA/AML (ya materializado).
+- **Detalle y lecciones:** `empresas/BAC/post-mortem-2026-10-14.md`. Los pronósticos de la §8 no se modifican.

@@ -109,3 +109,8 @@ El FCF y la deuda neta no aplican a un intermediario: el flujo operativo mezcla 
 17. Arnold & Porter, propuestas de capital (26-mar-2026): https://www.arnoldporter.com/en/perspectives/advisories/2026/03/agencies-capital-proposals-seek-to-reduce-regulatory-burden · Reuters (titular, 19-mar-2026): https://www.reuters.com/sustainability/boards-policy-regulation/us-bank-regulators-unveil-long-awaited-capital-rule-rewrite-2026-03-19/
 18. Conocimiento interno: `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.1-4.3 y `bitacora/briefs/2026-09-25-tablero.md` (DGS10 = 5.11%).
 19. Yahoo (titular, 23-sep-2026): https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-investment-bank-deal-124657863.html
+
+## Adenda 2026-10-14 · resultado del 3T26
+- **Resultado:** ingresos netos de US$20,338 M, utilidad neta de 4,909 M y UPA diluida de 3.03. Los dos numéricos quedaron dentro del p10-p90 (errores de +2.76% y +9.57%), pero abajo del consenso de Yahoo (20,840 y 3.16): los dos binarios resuelven No (Brier de 0.2809 y 0.5184). Margen antes de impuestos de 32% (modelamos 34%), Equity de 5.8 mil M (+41%), WM de 9.07 récord con NNA de 232.4 mil M, IM de 1.46 (−12%), ROTCE de 22.6% y CET1 de 14.9% ([8-K ex. 99.1](https://www.sec.gov/Archives/edgar/data/895421/000089542126000288/a3q26msearningsrelease.htm)). Precio: 181.51 contra 186.64 (−2.75%; Yahoo).
+- **Escenario:** NNA y flujos *fee-based* muy por encima de lo previsto, y ROTCE dentro del rango de 22-25%, así que sigue el **base** con sesgo alcista en WM. Pendiente: qué parte de los NNA viene de OPIs del canal Workplace.
+- **Detalle y lecciones:** `empresas/MS/post-mortem-2026-10-14.md`. Los pronósticos de la §8 no se modifican.
