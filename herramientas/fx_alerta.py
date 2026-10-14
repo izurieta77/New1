@@ -635,9 +635,12 @@ def obtener(ahora: datetime, fuentes: dict[str, Callable] | None = None) -> dict
 
 # ---------------------------------------------------------------- CLI (solo lectura)
 
-def _posiciones_con_cierres(libro, grafica: Callable | None = None) -> tuple[list[dict], list[str]]:
-    """([{'ticker','cantidad','p0','f0','p1','f1','moneda'}], tickers omitidos) con los dos ultimos
-    cierres diarios de Yahoo. Los omitidos (sin datos) se devuelven para anotarlos, no se callan."""
+def _posiciones_con_cierres(libro, grafica: Callable | None = None,
+                            hoy: date | None = None) -> tuple[list[dict], list[str]]:
+    """([{'ticker','cantidad','p0','f0','p1','f1','moneda'}], tickers omitidos) con cierres diarios de Yahoo.
+    Con `hoy`: si la serie todavia no tiene vela de hoy (pre-apertura, o dia sin sesion), el cierre previo
+    es la ultima vela y el precio actual es el de mercado (meta.regularMarketPrice, o ese mismo cierre);
+    sin `hoy`, o si ya hay vela de hoy, son las dos ultimas velas. Los omitidos se devuelven para anotarlos."""
     grafica = grafica or datos.yahoo_grafica
     salida, omitidos = [], []
     for t, p in sorted(libro.posiciones.items()):
@@ -651,6 +654,11 @@ def _posiciones_con_cierres(libro, grafica: Callable | None = None) -> tuple[lis
             omitidos.append(t)
             continue
         moneda = str(g["meta"].get("currency", "")).upper() or p["moneda"]
+        if hoy is not None and serie[-1][0] < hoy:
+            actual = g["meta"].get("regularMarketPrice") or serie[-1][1]
+            salida.append({"ticker": t, "cantidad": p["cantidad"], "p0": serie[-1][1], "f0": serie[-1][0],
+                           "p1": float(actual), "f1": hoy, "moneda": moneda})
+            continue
         salida.append({"ticker": t, "cantidad": p["cantidad"], "p0": serie[-2][1], "f0": serie[-2][0],
                        "p1": serie[-1][1], "f1": serie[-1][0], "moneda": moneda})
     return salida, omitidos
@@ -660,7 +668,7 @@ def cuentas_vacias() -> dict:
     return {"expos": {}, "efectos": {}, "lotes": {}, "previos": {}, "notas": []}
 
 
-def por_cuenta(bitacora: Path, referencia: Serie, spot: float) -> dict:
+def por_cuenta(bitacora: Path, referencia: Serie, spot: float, hoy: date | None = None) -> dict:
     """Por libro (red: Yahoo): {'expos': parte en USD al spot (MXN), 'efectos': descomposicion precio/
     cambio del cierre previo de cada posicion a este momento (fx0 = referencia de la fecha del previo),
     'lotes': lotes_usd, 'previos': (fecha minima, maxima) de los previos, 'notas'}."""
@@ -677,7 +685,7 @@ def por_cuenta(bitacora: Path, referencia: Serie, spot: float) -> dict:
                 continue
             fx_hist = portafolio.proveedor_fx_yahoo(min(o["fecha"] for o in operaciones)) \
                 if any(o["moneda"] == "USD" for o in operaciones) else None
-            pos, omitidos = _posiciones_con_cierres(portafolio.construir_libro(operaciones, fx_hist))
+            pos, omitidos = _posiciones_con_cierres(portafolio.construir_libro(operaciones, fx_hist), hoy=hoy)
         except Exception as e:  # noqa: BLE001 - un libro que no se puede valuar no tumba la linea
             c["expos"][nombre] = c["efectos"][nombre] = c["lotes"][nombre] = c["previos"][nombre] = None
             c["notas"].append(f"{nombre}: no se pudo valuar ({type(e).__name__}: {e})")
@@ -738,7 +746,7 @@ def main(argv: list[str] | None = None) -> int:
     d["notas"] = list(d["notas"]) + notas_estado
     dec = decidir(ev, estado)  # el estado lo escribe la supervision (o --registrar, al final)
     try:
-        cuentas = por_cuenta(DIR_BITACORA, d["referencia"], d["spot"])
+        cuentas = por_cuenta(DIR_BITACORA, d["referencia"], d["spot"], hoy)
     except Exception as e:  # noqa: BLE001 - sin libros la regla se dice igual
         cuentas = cuentas_vacias()
         cuentas["notas"].append(f"sin libros valuados ({type(e).__name__}: {e})")

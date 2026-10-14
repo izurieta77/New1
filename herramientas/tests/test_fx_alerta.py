@@ -511,6 +511,22 @@ class TestRevision(unittest.TestCase):
         self.assertIn((sv.OK, "FX-1 no evaluada (--sin-red: no se consultó el tipo de cambio); "
                               "corre python3 herramientas/fx_alerta.py"), salida)
 
+    def test_brief_preapertura_usa_la_ultima_vela_como_cierre_previo(self):
+        class Libro:
+            posiciones = {"SPYM": {"cantidad": 3, "moneda": "USD"}}
+
+        def grafica(t, *_a):  # pre-apertura del 13-oct: la última vela es la del 12-oct
+            return {"meta": {"currency": "USD", "regularMarketPrice": 91.6},
+                    "serie": [(date(2026, 10, 9), 91.64), (date(2026, 10, 12), 91.58)]}
+        pos, _ = fx._posiciones_con_cierres(Libro(), grafica, hoy=date(2026, 10, 13))
+        self.assertEqual((pos[0]["f0"], pos[0]["p0"], pos[0]["p1"], pos[0]["f1"]),
+                         (date(2026, 10, 12), 91.58, 91.6, date(2026, 10, 13)))
+        # Con vela de hoy (sesión abierta o cripto) se mantienen las dos últimas velas.
+        def grafica_hoy(t, *_a):
+            return {"meta": {"currency": "USD"}, "serie": [(date(2026, 10, 12), 91.58), (date(2026, 10, 13), 92.0)]}
+        pos, _ = fx._posiciones_con_cierres(Libro(), grafica_hoy, hoy=date(2026, 10, 13))
+        self.assertEqual((pos[0]["f0"], pos[0]["p0"], pos[0]["p1"]), (date(2026, 10, 12), 91.58, 92.0))
+
     def test_brief_misma_ventana_y_tickers_omitidos(self):
         class Libro:
             posiciones = {"SPYM": {"cantidad": 7, "moneda": "USD"}, "XYZ": {"cantidad": 1, "moneda": "USD"}}
