@@ -271,3 +271,10 @@ Pruebas: `herramientas/tests/test_conciliacion_ventas_cfdi.py` (10 casos; suite 
 
 - La fecha del 1-may-2019 viene de fuente secundaria (IDC Online, 2019); el texto de la regla vigente sí se leyó en la RMF 2026 (DOF 28-dic-2025).
 - No se leyeron los Anexos 21, 30 y 31 (especificaciones de volumétricos) ni la regla de cancelación y sustitución de CFDI para refacturar tickets.
+
+### 9.8 Adenda 14-oct-2026 (investigador vespertino): Paquete Económico 2027, IEPS sobre diferencias de litros (B, iniciativa, no ley)
+
+- **Fuente:** EY Tax Flash "Paquete Económico 2027, Resumen ejecutivo" (10-sep-2026), leído completo. Es secundaria: falta leer la iniciativa en la Gaceta Parlamentaria. **Grado B.**
+- **Qué propone:** "el pago mensual del IEPS a cargo de comercializadores de gasolinas y diésel sobre la diferencia positiva entre litros enajenados y adquiridos".
+- **Por qué importa a la estación:** la diferencia de litros deja de ser solo prueba para la presunción (CFF 55 VII f y 111 Bis, §9.2) y pasa a ser base de pago mensual. Si se aprueba, la conciliación del §9.6 tendría que hacerse cada mes con tres series: litros comprados, entregados y facturados.
+- **Estado al 14-oct-2026:** es iniciativa. La Cámara de Diputados tiene hasta el 20-oct y el Senado hasta el 31-oct. **No cambia nada de los años pasados** y no se aplica antes de su publicación en el DOF. Cuando salga el texto aprobado hay que releer el artículo de la LIEPS y su transitorio.

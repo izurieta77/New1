@@ -47,3 +47,8 @@ No hay ficha específica de "pago con reducción". Se solicita con la **ficha 47
 5. **Requisito a confirmar:** que el informe volumétrico omitido **ya se envió** (el dueño dijo el 6-oct que "la respuesta trae el volumétrico y la declaración"). Sin eso no procede el 90%.
 
 **Frase para cada brief que recuerde esta multa:** "Pagar con el 20% ($31,488) extingue la multa y cierra la vía del estímulo del 90% ($3,936) y la defensa; decídelo con tu contador antes del 28-oct". El sistema no decide la ruta.
+
+## Actualización 14-oct-2026 (investigador vespertino): programa de regularización propuesto para 2027 (iniciativa, no ley)
+
+- **Qué propone:** según el EY Tax Flash del 10-sep-2026 (fuente secundaria; falta leer la iniciativa), la iniciativa de LIF 2027 **mantendría en 2027 el programa de regularización**. Aplicaría a contribuyentes con ingresos de 2025 de hasta 300 millones de pesos y a créditos **firmes o consentidos**, incluidas multas por incumplimiento. El beneficio sería una reducción del 100% de multas, recargos y gastos, o del 90% para ciertas multas. La solicitud vencería el 31-oct-2027 y se podría volver a entrar aunque ya se haya usado un programa anterior.
+- **Qué significa para esta multa:** pagar con el 20% extingue el crédito, así que también cerraría este posible programa. Si no se paga, podría haber una segunda ventana en 2027, pero **todavía no es ley**: el Congreso tiene hasta el 31-oct. No cambia la frase obligatoria de los briefs; es un dato más para la decisión del dueño con su contador antes del 28-oct.
