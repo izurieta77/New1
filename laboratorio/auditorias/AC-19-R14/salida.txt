@@ -1,0 +1,271 @@
+AC-19-R14 ejecución B  |  corte de datos: 2026-10-14 (15-oct-2026 excluido)
+
+== Limpieza ==
+S&P 500 (Yahoo ^GSPC): 1927-12-30 a 2026-10-14, 24501 cierres; sin cierre descartados 0; cierres repetidos descartados 313 (primeros: 1928-03-02, 1928-04-18, 1928-09-14, 1928-09-19, 1928-11-07)
+Nasdaq (FRED NASDAQCOM): 1971-02-05 a 2026-10-14, 14028 cierres; sin cierre descartados 487; cierres repetidos descartados 13 (primeros: 1971-06-17, 1972-08-22, 1976-05-05, 1976-12-13, 1977-09-27)
+Nikkei (FRED NIKKEI225): 1949-05-16 a 2026-10-14, 19125 cierres; sin cierre descartados 980; cierres repetidos descartados 93 (primeros: 1949-11-18, 1950-06-01, 1950-06-20, 1950-11-09, 1956-09-18)
+KOSPI (Yahoo ^KS11): 1996-12-11 a 2026-10-14, 7339 cierres; sin cierre descartados 150; cierres repetidos descartados 4 (primeros: 2000-02-18, 2005-03-16, 2008-02-26, 2018-10-16)
+
+Cotejo S&P: FRED SP500 vs Yahoo ^GSPC, 2511 fechas comunes (2016-10-17 a 2026-10-14), máx. dif. relativa de cierre 1.19e-03
+  umbral -5%: desplomes FRED ['2020-03-09', '2020-03-12', '2020-03-16', '2020-03-18', '2020-06-11', '2025-04-04'] | Yahoo ['2020-03-09', '2020-03-12', '2020-03-16', '2020-03-18', '2020-06-11', '2025-04-04']
+  umbral -7%: desplomes FRED ['2020-03-09', '2020-03-12', '2020-03-16'] | Yahoo ['2020-03-09', '2020-03-12', '2020-03-16']
+
+==================== umbral -5%, h=11 ====================
+-- S&P 500 (Yahoo ^GSPC)
+   media incondicional 11d +0.3494%, frec. positiva incondicional 58.4%
+   eventos 87  episodios 46
+   frec. positiva 60.9%  media 11d +1.832%  exceso medio +1.482%  t(episodios) 3.16
+   solo primer desplome: frec. 54.3%  exceso medio +0.149%  t 0.12
+     ep 1929-10-23 -5.9% -> -25.3%; 1929-10-28 -12.9% -> -15.4%; 1929-10-29 -10.2% -> -0.6%; 1929-11-04 -5.3% -> -7.0%; 1929-11-06 -9.9% -> +4.9%; 1929-11-11 -6.2% -> +4.0%; 1929-11-12 -5.7% -> +11.7%; 1929-11-13 -5.7% -> +18.6%
+     ep 1929-12-12 -5.4% -> -1.3%
+     ep 1930-06-16 -7.6% -> -1.6%
+     ep 1931-01-07 -6.4% -> +8.8%
+     ep 1931-09-24 -7.3% -> -1.2%; 1931-10-05 -9.1% -> +23.1%
+     ep 1932-01-04 -6.9% -> +12.2%
+     ep 1932-02-23 -5.7% -> +6.2%
+     ep 1932-03-31 -5.6% -> -12.2%
+     ep 1932-05-27 -5.5% -> +6.0%; 1932-05-31 -7.5% -> +8.1%; 1932-06-08 -5.8% -> -1.3%; 1932-06-17 -5.7% -> -7.9%
+     ep 1932-08-12 -8.0% -> +22.6%
+     ep 1932-09-12 -6.9% -> -0.2%; 1932-09-14 -5.8% -> +10.2%
+     ep 1932-10-05 -8.2% -> -7.7%; 1932-10-07 -5.5% -> -3.7%; 1932-10-10 -8.5% -> +7.3%; 1932-10-21 -5.7% -> +6.2%
+     ep 1933-02-14 -5.1% -> -10.6%; 1933-02-27 -6.3% -> +13.0%
+     ep 1933-06-15 -7.0% -> +12.0%
+     ep 1933-07-20 -8.9% -> -4.2%; 1933-07-21 -8.7% -> +4.1%
+     ep 1933-09-21 -6.2% -> +0.2%
+     ep 1933-10-16 -6.5% -> -2.7%; 1933-10-19 -5.1% -> +10.8%; 1933-10-30 -5.2% -> +6.0%
+     ep 1934-07-26 -7.8% -> +6.8%
+     ep 1935-04-16 -10.0% -> +12.8%
+     ep 1935-05-16 -6.8% -> +5.7%
+     ep 1935-08-16 -8.0% -> +5.6%
+     ep 1936-09-16 -5.8% -> +6.9%
+     ep 1937-09-10 -5.3% -> -3.9%
+     ep 1937-10-05 -5.4% -> -5.3%; 1937-10-18 -9.1% -> +7.1%
+     ep 1937-11-19 -5.8% -> +7.7%
+     ep 1938-03-25 -5.5% -> +6.4%; 1938-03-29 -5.8% -> +15.7%
+     ep 1938-08-29 -5.2% -> -4.6%; 1938-09-13 -5.7% -> +1.0%
+     ep 1938-10-11 -7.7% -> +3.8%
+     ep 1939-01-23 -6.4% -> +3.3%
+     ep 1940-05-13 -5.5% -> -17.3%; 1940-05-14 -7.5% -> -10.0%; 1940-05-17 -5.1% -> -7.2%; 1940-05-21 -6.6% -> +0.9%
+     ep 1946-09-03 -9.9% -> -1.3%; 1946-09-09 -5.2% -> -1.9%
+     ep 1950-06-26 -5.4% -> -6.8%
+     ep 1955-09-26 -6.6% -> -4.2%
+     ep 1962-05-28 -6.7% -> +0.0%
+     ep 1987-10-16 -5.2% -> -9.5%; 1987-10-19 -20.5% -> +11.6%; 1987-10-26 -8.3% -> +5.0%
+     ep 1988-01-08 -6.8% -> +3.6%
+     ep 1989-10-13 -6.1% -> +0.4%
+     ep 1997-10-27 -6.9% -> +5.3%
+     ep 1998-08-31 -6.8% -> +9.2%
+     ep 2000-04-14 -5.8% -> +6.6%
+     ep 2008-09-29 -8.8% -> -9.8%; 2008-10-07 -5.7% -> -10.0%; 2008-10-09 -7.6% -> -3.6%; 2008-10-15 -9.0% -> +5.1%; 2008-10-22 -6.1% -> +0.9%; 2008-11-05 -5.3% -> -21.0%; 2008-11-06 -5.0% -> -11.6%; 2008-11-12 -5.2% -> +5.2%; 2008-11-19 -6.1% -> +8.6%; 2008-11-20 -6.7% -> +20.9%; 2008-12-01 -8.9% -> +11.9%
+     ep 2009-01-20 -5.3% -> +3.4%
+     ep 2011-08-08 -6.7% -> +3.8%
+     ep 2020-03-09 -7.6% -> -10.9%; 2020-03-12 -9.5% -> +2.5%; 2020-03-16 -12.0% -> +8.3%; 2020-03-18 -5.2% -> +5.4%
+     ep 2020-06-11 -5.9% -> +0.2%
+     ep 2025-04-04 -6.0% -> +4.2%
+-- Nasdaq (FRED NASDAQCOM)
+   media incondicional 11d +0.5314%, frec. positiva incondicional 59.7%
+   eventos 48  episodios 21
+   frec. positiva 58.3%  media 11d +2.053%  exceso medio +1.521%  t(episodios) 1.84
+   solo primer desplome: frec. 42.9%  exceso medio -2.429%  t -1.32
+     ep 1980-03-27 -6.1% -> +10.1%
+     ep 1987-10-19 -11.4% -> -11.0%; 1987-10-20 -9.0% -> -2.3%; 1987-10-26 -9.0% -> +5.4%
+     ep 1997-10-27 -7.0% -> +3.2%
+     ep 1998-08-31 -8.6% -> +12.7%
+     ep 1999-04-19 -5.6% -> +5.9%
+     ep 2000-01-04 -5.6% -> +7.4%
+     ep 2000-04-03 -7.6% -> -10.2%; 2000-04-10 -5.8% -> -13.3%; 2000-04-12 -7.1% -> +2.4%; 2000-04-14 -9.7% -> +14.0%
+     ep 2000-05-10 -5.6% -> -5.3%; 2000-05-23 -5.9% -> +20.9%
+     ep 2000-10-25 -5.6% -> -0.9%; 2000-11-08 -5.4% -> -10.1%; 2000-11-10 -5.4% -> -9.7%; 2000-11-20 -5.0% -> -2.8%; 2000-11-28 -5.1% -> +3.2%
+     ep 2000-12-20 -7.1% -> +2.7%; 2001-01-02 -7.2% -> +20.8%; 2001-01-05 -6.2% -> +18.0%
+     ep 2001-03-09 -5.3% -> -6.5%; 2001-03-12 -6.3% -> +2.5%
+     ep 2001-03-28 -6.0% -> +5.8%; 2001-04-03 -6.2% -> +30.4%
+     ep 2001-09-17 -6.8% -> -5.5%
+     ep 2008-09-29 -9.1% -> -10.3%; 2008-10-07 -5.8% -> -7.9%; 2008-10-09 -5.5% -> -5.7%; 2008-10-15 -8.5% -> +4.3%
+     ep 2008-11-05 -5.5% -> -21.7%; 2008-11-12 -5.2% -> +2.4%; 2008-11-14 -5.0% -> -4.4%; 2008-11-19 -6.5% -> +8.9%; 2008-11-20 -5.1% -> +19.4%; 2008-12-01 -9.0% -> +13.7%
+     ep 2009-01-20 -5.8% -> +5.1%
+     ep 2011-08-04 -5.1% -> -8.4%; 2011-08-08 -6.9% -> +3.7%; 2011-08-18 -5.2% -> +4.2%
+     ep 2020-03-09 -7.3% -> -6.7%; 2020-03-12 -9.4% -> +4.2%; 2020-03-16 -12.3% -> +11.5%
+     ep 2020-06-11 -5.3% -> +2.8%
+     ep 2022-09-13 -5.2% -> -5.0%
+     ep 2025-04-03 -6.0% -> -4.1%; 2025-04-04 -5.8% -> +4.6%
+-- Nikkei (FRED NIKKEI225)
+   media incondicional 11d +0.4314%, frec. positiva incondicional 56.9%
+   eventos 56  episodios 36
+   frec. positiva 76.8%  media 11d +3.650%  exceso medio +3.219%  t(episodios) 4.94
+   solo primer desplome: frec. 77.8%  exceso medio +2.086%  t 2.00
+     ep 1949-12-14 -7.0% -> +10.2%
+     ep 1953-03-05 -10.0% -> +8.7%
+     ep 1953-03-30 -8.5% -> +0.3%
+     ep 1959-12-21 -6.0% -> +7.5%
+     ep 1967-11-20 -5.2% -> +0.1%
+     ep 1970-04-30 -8.7% -> -3.1%
+     ep 1971-08-16 -7.2% -> -9.2%; 1971-08-19 -5.9% -> +7.2%; 1971-08-23 -5.3% -> +8.2%
+     ep 1972-06-26 -8.0% -> +10.4%
+     ep 1973-03-05 -5.0% -> +7.5%
+     ep 1974-10-09 -5.4% -> +6.7%
+     ep 1987-10-20 -14.9% -> +3.3%
+     ep 1990-04-02 -6.6% -> +1.6%
+     ep 1990-08-23 -5.8% -> +0.9%
+     ep 1991-08-19 -6.0% -> +4.7%
+     ep 1995-01-23 -5.6% -> +4.0%
+     ep 1997-11-19 -5.3% -> +3.7%; 1997-11-25 -5.1% -> +3.8%
+     ep 1997-12-19 -5.2% -> -2.1%
+     ep 1998-09-11 -5.1% -> -3.7%
+     ep 1998-10-08 -5.8% -> +8.6%
+     ep 2000-04-17 -7.0% -> -3.0%
+     ep 2001-03-29 -5.0% -> +2.4%
+     ep 2001-09-12 -6.6% -> +1.7%; 2001-09-17 -5.0% -> +4.4%
+     ep 2003-10-23 -5.1% -> +1.6%
+     ep 2007-08-17 -5.4% -> +8.2%
+     ep 2008-01-22 -5.6% -> +4.2%
+     ep 2008-10-08 -9.4% -> -16.9%; 2008-10-10 -9.6% -> -7.9%; 2008-10-16 -11.4% -> +1.4%; 2008-10-22 -6.8% -> -1.1%; 2008-10-24 -9.6% -> +15.2%; 2008-10-27 -6.4% -> +21.4%; 2008-10-31 -5.0% -> -2.9%; 2008-11-06 -6.5% -> -11.1%; 2008-11-13 -5.3% -> +1.9%; 2008-11-20 -6.9% -> +8.1%; 2008-12-02 -6.4% -> +9.5%; 2008-12-12 -5.6% -> +9.8%
+     ep 2011-03-14 -6.2% -> +0.9%; 2011-03-15 -10.6% -> +13.4%
+     ep 2013-05-23 -7.3% -> -11.1%; 2013-05-30 -5.1% -> -6.6%; 2013-06-13 -6.4% -> +9.9%
+     ep 2016-02-09 -5.4% -> +0.3%
+     ep 2016-06-24 -7.9% -> +5.1%
+     ep 2016-11-09 -5.4% -> +13.1%
+     ep 2018-12-25 -5.0% -> +6.7%
+     ep 2020-03-09 -5.1% -> -0.8%; 2020-03-13 -6.1% -> +8.5%
+     ep 2024-08-02 -5.8% -> +6.0%; 2024-08-05 -12.4% -> +20.6%
+     ep 2025-04-07 -7.8% -> +9.9%
+     ep 2026-03-09 -5.2% -> +1.9%
+-- KOSPI (Yahoo ^KS11)
+   media incondicional 11d +0.4966%, frec. positiva incondicional 56.0%
+   eventos 81  episodios 45  (sin ventana completa, excluidos: [datetime.date(2026, 10, 13)])
+   frec. positiva 61.7%  media 11d +3.658%  exceso medio +3.162%  t(episodios) 3.13
+   solo primer desplome: frec. 60.0%  exceso medio +2.503%  t 1.78
+     ep 1997-10-24 -5.5% -> -8.0%; 1997-10-27 -7.1% -> -1.6%; 1997-10-28 -6.6% -> +4.5%; 1997-11-07 -6.9% -> -12.6%
+     ep 1997-11-24 -11.0% -> -13.9%
+     ep 1997-12-09 -6.5% -> -3.3%; 1997-12-11 -5.6% -> +7.7%; 1997-12-12 -7.1% -> +16.8%; 1997-12-19 -5.1% -> +16.8%; 1997-12-23 -7.5% -> +38.1%
+     ep 1998-01-21 -5.0% -> +6.9%
+     ep 1998-02-16 -5.8% -> +19.7%
+     ep 1998-03-05 -6.5% -> -1.8%
+     ep 1998-04-14 -5.5% -> -10.8%
+     ep 1998-05-04 -7.0% -> -5.8%
+     ep 1998-05-25 -6.2% -> -2.2%; 1998-05-26 -6.0% -> +5.4%
+     ep 1998-06-12 -8.1% -> -1.2%
+     ep 1998-07-23 -5.7% -> -5.8%
+     ep 1998-09-11 -5.4% -> -4.6%
+     ep 1998-12-16 -5.8% -> +16.8%
+     ep 1999-01-21 -5.1% -> -5.3%; 1999-01-22 -5.4% -> -0.9%
+     ep 1999-06-09 -5.9% -> +9.2%
+     ep 1999-07-23 -7.3% -> +4.9%
+     ep 2000-01-05 -6.9% -> -4.1%
+     ep 2000-02-21 -5.8% -> +8.3%; 2000-02-28 -5.3% -> +2.3%
+     ep 2000-04-17 -11.6% -> +6.4%
+     ep 2000-05-22 -5.3% -> +18.9%; 2000-05-26 -6.1% -> +22.5%
+     ep 2000-06-15 -5.9% -> +6.5%
+     ep 2000-07-24 -5.8% -> -9.7%
+     ep 2000-09-18 -8.1% -> +3.6%; 2000-09-22 -7.2% -> +6.3%
+     ep 2000-10-11 -5.3% -> -6.0%; 2000-10-17 -6.8% -> +7.0%
+     ep 2001-01-26 -5.7% -> +1.3%
+     ep 2001-09-12 -12.0% -> -0.7%
+     ep 2001-11-28 -5.7% -> +7.1%; 2001-12-10 -5.1% -> -2.2%
+     ep 2002-06-26 -7.2% -> +13.0%
+     ep 2002-10-10 -5.8% -> +12.3%
+     ep 2004-05-10 -5.7% -> -0.8%; 2004-05-17 -5.1% -> +10.3%
+     ep 2007-08-16 -6.9% -> +10.7%
+     ep 2008-09-16 -6.1% -> +3.7%
+     ep 2008-10-08 -5.8% -> -18.4%; 2008-10-16 -9.4% -> -8.3%; 2008-10-22 -5.1% -> -3.7%; 2008-10-23 -7.5% -> +8.1%; 2008-10-24 -10.6% -> +22.8%; 2008-11-06 -7.6% -> -8.1%; 2008-11-20 -6.7% -> +8.4%
+     ep 2009-01-15 -6.0% -> +4.7%
+     ep 2011-08-19 -6.2% -> +2.3%
+     ep 2011-09-23 -5.7% -> +6.6%; 2011-10-05 -5.8% -> +8.3%
+     ep 2020-03-19 -8.4% -> +18.4%; 2020-03-23 -5.3% -> +23.0%
+     ep 2024-08-05 -8.8% -> +10.6%
+     ep 2025-04-07 -5.6% -> +6.8%
+     ep 2026-02-02 -5.3% -> +17.4%
+     ep 2026-03-03 -7.2% -> +2.3%; 2026-03-04 -12.1% -> +13.1%; 2026-03-09 -6.0% -> +5.8%; 2026-03-23 -6.5% -> +1.6%
+     ep 2026-05-15 -6.1% -> +17.5%
+     ep 2026-06-05 -5.5% -> +11.7%; 2026-06-08 -8.3% -> +9.6%
+     ep 2026-06-23 -10.0% -> -11.7%; 2026-06-26 -5.8% -> -19.1%; 2026-07-02 -7.9% -> -14.8%; 2026-07-08 -5.3% -> -7.7%; 2026-07-13 -8.9% -> -16.8%; 2026-07-16 -6.4% -> -8.3%; 2026-07-24 -5.7% -> -5.8%; 2026-07-28 -10.8% -> +9.2%; 2026-07-29 -6.0% -> +20.3%; 2026-08-03 -5.1% -> +3.4%
+     ep 2026-08-19 -5.8% -> +1.7%
+** AGRUPADO umbral -5%, h=11: eventos 272, episodios 148
+   frec. positiva 64.0% | exceso medio (por evento) +2.347% | media de medias por episodio +3.376% | t episodios 6.17 | t ingenua por evento 4.04
+   solo primer desplome: frec. 60.1% | exceso medio +0.970% | t 1.40
+   H1 se sostiene; H2 se sostiene -> Replicado
+
+==================== umbral -5%, h=22 ====================
+-- S&P 500 (Yahoo ^GSPC)
+   media incondicional 22d +0.7062%, frec. positiva incondicional 60.4%
+   eventos 87  episodios 46
+   frec. positiva 63.2%  media 22d +3.675%  exceso medio +2.969%  t(episodios) 2.63
+   solo primer desplome: frec. 58.7%  exceso medio +0.171%  t 0.11
+-- Nasdaq (FRED NASDAQCOM)
+   media incondicional 22d +1.0773%, frec. positiva incondicional 61.4%
+   eventos 48  episodios 21
+   frec. positiva 60.4%  media 22d +3.381%  exceso medio +2.303%  t(episodios) 1.96
+   solo primer desplome: frec. 61.9%  exceso medio +0.586%  t 0.25
+-- Nikkei (FRED NIKKEI225)
+   media incondicional 22d +0.8701%, frec. positiva incondicional 58.7%
+   eventos 56  episodios 36
+   frec. positiva 67.9%  media 22d +4.569%  exceso medio +3.699%  t(episodios) 3.73
+   solo primer desplome: frec. 69.4%  exceso medio +3.082%  t 2.31
+-- KOSPI (Yahoo ^KS11)
+   media incondicional 22d +1.0250%, frec. positiva incondicional 56.6%
+   eventos 81  episodios 45  (sin ventana completa, excluidos: [datetime.date(2026, 10, 13)])
+   frec. positiva 59.3%  media 22d +3.227%  exceso medio +2.202%  t(episodios) 1.03
+   solo primer desplome: frec. 57.8%  exceso medio +0.352%  t 0.17
+** AGRUPADO umbral -5%, h=22: eventos 272, episodios 148
+   frec. positiva 62.5% | exceso medio (por evento) +2.774% | media de medias por episodio +3.304% | t episodios 4.05 | t ingenua por evento 3.76
+   solo primer desplome: frec. 61.5% | exceso medio +0.993% | t 1.10
+   H1 se sostiene; H2 se sostiene -> Replicado
+
+==================== umbral -7%, h=11 ====================
+-- S&P 500 (Yahoo ^GSPC)
+   media incondicional 11d +0.3494%, frec. positiva incondicional 58.4%
+   eventos 28  episodios 18
+   frec. positiva 60.7%  media 11d +3.000%  exceso medio +2.651%  t(episodios) 2.21
+   solo primer desplome: frec. 50.0%  exceso medio +1.206%  t 0.51
+-- Nasdaq (FRED NASDAQCOM)
+   media incondicional 11d +0.5314%, frec. positiva incondicional 59.7%
+   eventos 16  episodios 9
+   frec. positiva 68.8%  media 11d +3.407%  exceso medio +2.875%  t(episodios) 1.42
+   solo primer desplome: frec. 55.6%  exceso medio -0.697%  t -0.21
+-- Nikkei (FRED NIKKEI225)
+   media incondicional 11d +0.4314%, frec. positiva incondicional 56.9%
+   eventos 15  episodios 12
+   frec. positiva 66.7%  media 11d +2.668%  exceso medio +2.236%  t(episodios) 1.26
+   solo primer desplome: frec. 66.7%  exceso medio +2.181%  t 0.68
+-- KOSPI (Yahoo ^KS11)
+   media incondicional 11d +0.4966%, frec. positiva incondicional 56.0%
+   eventos 24  episodios 15
+   frec. positiva 62.5%  media 11d +4.424%  exceso medio +3.927%  t(episodios) 1.85
+   solo primer desplome: frec. 60.0%  exceso medio +2.717%  t 1.08
+** AGRUPADO umbral -7%, h=11: eventos 83, episodios 54
+   frec. positiva 63.9% | exceso medio (por evento) +2.988% | media de medias por episodio +4.059% | t episodios 3.47 | t ingenua por evento 2.56
+   solo primer desplome: frec. 57.4% | exceso medio +1.525% | t 1.13
+   H1 se sostiene; H2 se sostiene -> Replicado
+
+==================== umbral -7%, h=22 ====================
+-- S&P 500 (Yahoo ^GSPC)
+   media incondicional 22d +0.7062%, frec. positiva incondicional 60.4%
+   eventos 28  episodios 18
+   frec. positiva 67.9%  media 22d +5.780%  exceso medio +5.074%  t(episodios) 3.19
+   solo primer desplome: frec. 55.6%  exceso medio +2.025%  t 1.01
+-- Nasdaq (FRED NASDAQCOM)
+   media incondicional 22d +1.0773%, frec. positiva incondicional 61.4%
+   eventos 16  episodios 9
+   frec. positiva 62.5%  media 22d +4.440%  exceso medio +3.363%  t(episodios) 0.66
+   solo primer desplome: frec. 55.6%  exceso medio -0.455%  t -0.10
+-- Nikkei (FRED NIKKEI225)
+   media incondicional 22d +0.8701%, frec. positiva incondicional 58.7%
+   eventos 15  episodios 12
+   frec. positiva 53.3%  media 22d +4.187%  exceso medio +3.317%  t(episodios) 1.43
+   solo primer desplome: frec. 58.3%  exceso medio +3.741%  t 1.25
+-- KOSPI (Yahoo ^KS11)
+   media incondicional 22d +1.0250%, frec. positiva incondicional 56.6%
+   eventos 24  episodios 15
+   frec. positiva 54.2%  media 22d +2.039%  exceso medio +1.014%  t(episodios) 0.41
+   solo primer desplome: frec. 46.7%  exceso medio -0.913%  t -0.22
+** AGRUPADO umbral -7%, h=22: eventos 83, episodios 54
+   frec. positiva 60.2% | exceso medio (por evento) +3.253% | media de medias por episodio +3.592% | t episodios 2.34 | t ingenua por evento 2.36
+   solo primer desplome: frec. 53.7% | exceso medio +1.177% | t 0.71
+   H1 se sostiene; H2 se sostiene -> Replicado
+
+== Resumen ==
+variante | eventos | episodios | frec+ | exceso medio | t episodios | 1er: frec+ | 1er: exceso | 1er: t | veredicto §2
+umbral -5%, h=11 | 272 | 148 | 64.0% | +2.35% | 6.17 | 60.1% | +0.97% | 1.40 | Replicado
+umbral -5%, h=22 | 272 | 148 | 62.5% | +2.77% | 4.05 | 61.5% | +0.99% | 1.10 | Replicado
+umbral -7%, h=11 | 83 | 54 | 63.9% | +2.99% | 3.47 | 57.4% | +1.53% | 1.13 | Replicado
+umbral -7%, h=22 | 83 | 54 | 60.2% | +3.25% | 2.34 | 53.7% | +1.18% | 0.71 | Replicado
+Veredicto principal (umbral -5%, h=11): Replicado
