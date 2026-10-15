@@ -1,6 +1,6 @@
 # Réplica R13: anomalía de devengos (Sloan, 1996), antes y después de publicarse
 
-> Fase 0: formación. No recomienda inversiones. Las secciones 1 a 9 son el pre-registro, escrito el 2026-10-14 (≈17:55 UTC) antes de calcular cualquier rendimiento con estos datos. El ID R12 queda reservado para la propuesta del comité sobre la condición de VIX del filtro del UPRO (R11).
+> Fase 0: formación. No recomienda inversiones. Las secciones 1 a 9 son el pre-registro, escrito el 2026-10-14 (≈17:49 UTC, commit `1b4be70` a las 17:49:42; **[corregido, conciliación 15-oct-2026, `bitacora/arbitraje/2026-10-14.md` §2]:** decía "≈17:55 UTC", que coincide con el commit de cierre del laboratorio, `4d54614`, a las 17:55:56; la ejecución A, `e857a99`, es de las 17:53:21, después del pre-registro; se conserva la cifra vieja aquí y en "Desviaciones"; las hipótesis y criterios no cambian) antes de calcular cualquier rendimiento con estos datos. El ID R12 queda reservado para la propuesta del comité sobre la condición de VIX del filtro del UPRO (R11).
 
 | Campo | Valor |
 |---|---|

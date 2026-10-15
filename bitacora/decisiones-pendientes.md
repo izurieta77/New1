@@ -554,15 +554,30 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - conteo de la tabla maestra (29);
   - conteo de latidos (5 de 41; sigue escalado).
 - **Pendientes de hechos de más de 48 h:** BIVA y mora de GFNORTEO siguen **abiertos** (sin vía nueva).
-- **Nuevo, al trabajo continuo:** `referencia_yahoo` debe preferir la apertura de la barra en curso sobre `previousClose` cuando difieran más de 0.1%, con una prueba. Es código que implementa el docstring vigente, no un parámetro. **Estado:** Abierto → trabajo continuo.
+- **Nuevo, al trabajo continuo:** `referencia_yahoo` debe preferir la apertura de la barra en curso sobre `previousClose` cuando difieran más de 0.1%, con una prueba. Es código que implementa el docstring vigente, no un parámetro. **Estado:** Abierto → trabajo continuo. **[Cerrado (retirado), conciliación 15-oct-2026, `bitacora/arbitraje/2026-10-14.md` §1]:** el `previousClose` y la apertura de la barra en curso son el mismo número, así que el cambio no cambiaría nada.
 - **Sin cambio** (no los decide la conciliación): mecanismos escalados al dueño (marcador, latidos, stop y filtro del UPRO en el cierre), sesión extraordinaria y registro retroactivo de FX-1 (dueño); escala de `estado-de-dominio.csv` (orquestador); agenda del comité del 16-oct.
 
 ## 2026-10-14 · revisión (rutina 11, 17:58 CDMX) · Dudas de la revisión del 14-oct
-- **¿Cuál es el "cierre" de Yahoo del USD/MXN, si la barra completa también cambia la apertura?** El 13-oct pasó de 18.3547 a 18.3739. Ver `bitacora/revisiones/2026-10-14.md` 1.1. **Qué decidí:** no re-valuar ni editar nada. El fallo §5.2 ya ordena citar la base que imprime el script, con su hora UTC, y ningún disparo cambia. **Estado:** Abierto → conciliación, antes de que el trabajo continuo implemente §5.4.
-- **¿Se quita el correo del dueño del código y de las notas?** Está en `conocimiento/fichas/codigo/2026-10-05-pantalla-chicas.py` L37 y en `empresas/NVDA/notas-y-modelo.md` L395. **Qué decidí:** no editar código ajeno. Lo registro como corregir: la opción conservadora es que el código no traiga un valor por defecto con datos personales. **Estado:** Abierto → orquestador.
+- **¿Cuál es el "cierre" de Yahoo del USD/MXN, si la barra completa también cambia la apertura?** El 13-oct pasó de 18.3547 a 18.3739. Ver `bitacora/revisiones/2026-10-14.md` 1.1. **Qué decidí:** no re-valuar ni editar nada. El fallo §5.2 ya ordena citar la base que imprime el script, con su hora UTC, y ningún disparo cambia. **Estado:** Abierto → conciliación, antes de que el trabajo continuo implemente §5.4. **[Cerrado, conciliación 15-oct-2026, `bitacora/arbitraje/2026-10-14.md` §1]:** el último cierre es provisional (la cotización de ~22:00 UTC) y Yahoo lo reescribe al completarse la barra; las barras completas son estables. El script ya lo dice en sus notas (prueba nueva, suite 341 OK), y `rutinas/supervision.md` §3b tiene las reglas (e) y (f).
+- **¿Se quita el correo del dueño del código y de las notas?** Está en `conocimiento/fichas/codigo/2026-10-05-pantalla-chicas.py` L37 y en `empresas/NVDA/notas-y-modelo.md` L395. **Qué decidí:** no editar código ajeno. Lo registro como corregir: la opción conservadora es que el código no traiga un valor por defecto con datos personales. **Estado:** Abierto → orquestador. **[Conciliación 15-oct-2026, `bitacora/arbitraje/2026-10-14.md` §4]:** pasa al dueño; ver la entrada del 15-oct abajo.
 - **¿Los pronósticos que vencen en horas sobre una brecha ya conocida (como P0118) cuentan igual en el Brier?** **Qué decidí:** no cambiar nada. P0118 es válido con su criterio. **Estado:** Abierto → comité del 16-oct (redacción de la regla de pronósticos).
 
 ## 2026-10-15 · trabajo continuo (19:09 CDMX del 14-oct) · Revisión del 14-oct
 - **Resuelto (2.5):** la línea OK de `fx_alerta.py` imprime siempre los niveles de USD/MXN que dispararían una ALERTA: episodio (mínimo de 15 días × 1.06), Δ10 (ref10 × (1 + umbral)) y el nivel a la baja. Prueba nueva; suite 340 OK. Con la corrida de las 01:11 UTC da 18.5938, igual a la verificación de la revisión.
 - **Atendidos con nota (2.1, 2.2, 2.4):** drawdown de la pre-apertura, etiqueta de P0119 y fuente de la LIF 2027 en el brief.
-- **Sin tocar:** la apertura de la barra en curso en `referencia_yahoo` (§5.4). La revisión §1.1 mostró que Yahoo también cambia la apertura de la barra completa; la conciliación revisa el criterio antes de que se implemente. **Estado:** Abierto → conciliación.
+- **Sin tocar:** la apertura de la barra en curso en `referencia_yahoo` (§5.4). La revisión §1.1 mostró que Yahoo también cambia la apertura de la barra completa; la conciliación revisa el criterio antes de que se implemente. **Estado:** Abierto → conciliación. **[Cerrado (retirado), conciliación 15-oct-2026, `bitacora/arbitraje/2026-10-14.md` §1]:** no se implementa.
+
+## 2026-10-15 · conciliación (noche del 14-oct) · Cierres de la revisión del 14-oct y una decisión del dueño
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-14.md`):
+  - criterio del cierre de Yahoo del USD/MXN: el último cierre es provisional; §5.4 queda retirado; nota en el script con prueba (suite 341 OK); §3b (e)-(f);
+  - hora del pre-registro de R13 corregida a ≈17:49 UTC (`1b4be70`), con nota;
+  - latidos de inteligencia: error de registro menor, 4 de 28 el 14-oct; conteo actualizado;
+  - menores 2.1, 2.2, 2.4, 2.5 y 2.6.
+- **DECISIÓN DEL DUEÑO (nuevo): contacto en el User-Agent de la SEC.** La SEC exige un contacto real (recibió 403 sin correo el 25-sep), y qué contacto se envía es configuración del dueño, no del sistema. El aprendizaje (`d4e9f4f`) ya quitó el correo de `conocimiento/fichas/codigo/2026-10-05-pantalla-chicas.py` L37 y de `empresas/NVDA/notas-y-modelo.md`, pero L59 del script sigue leyendo `os.environ["SEC_USER_AGENT"]` sin respaldo: sin la variable, el script termina con `KeyError`.
+  - **Opciones:** (a) restaurar su valor por defecto en el código; (b) **leerlo de una variable de entorno**, `SEC_USER_AGENT`, que el dueño define en el entorno de las rutinas, con `edgar.agente_usuario()` en L59 para que el script no truene si falta.
+  - **Qué decidí:** no tocar el código ni restaurar el valor anterior. **Estado:** Abierto → dueño.
+- **Pendientes de hechos de más de 48 h:** BIVA y mora de GFNORTEO siguen **abiertos** (sin vía nueva el 15-oct a las 03:0x UTC).
+- **Sin cambio** (no los decide la conciliación):
+  - dueño: los mecanismos ya escalados (marcador; latidos, ahora acotados a inteligencia; stop y filtro del UPRO en el cierre), la sesión extraordinaria y el registro retroactivo de FX-1;
+  - orquestador: la escala de `estado-de-dominio.csv`;
+  - comité del 16-oct: la agenda, la marca de los pronósticos de menos de 1 día (P0118).

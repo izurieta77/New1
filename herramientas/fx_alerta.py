@@ -546,7 +546,12 @@ def referencia_yahoo(cierres: Serie, fecha_londres: date, cierre_previo: float |
     maximo 0.17%, 3 meses al 30-sep-2026): la barra del dia D es el cierre del dia habil anterior a D.
     La barra en curso (fecha de Londres de hoy) trae el precio en vivo y se descarta; en su lugar va el
     cierre anterior: el previousClose de la consulta 1m o, si esa fallo, la apertura de la barra en
-    curso (es la misma cotizacion de las 00:00 de Londres).
+    curso (son el mismo numero: 18.3547 y 18.3547 el 14-oct, 18.4754 y 18.4754 el 15-oct-2026).
+    Ese ultimo cierre es PROVISIONAL: es la cotizacion de ~21:50-22:00 UTC, y cuando la barra se
+    completa Yahoo reescribe su apertura y su cierre con otro valor (12-oct 18.2225 -> 18.2616, +0.21%;
+    13-oct 18.3547 -> 18.3739, +0.10%). Las barras ya completas no cambiaron en 24 h. Por eso preferir
+    la apertura de la barra en curso no cambia nada, y obtener() lo dice en una nota
+    (fallo de conciliacion bitacora/arbitraje/2026-10-14.md §1).
     """
     salida: dict[date, float] = {}
     for f, v in cierres:
@@ -556,6 +561,12 @@ def referencia_yahoo(cierres: Serie, fecha_londres: date, cierre_previo: float |
     if previo:
         salida[dia_habil_anterior(fecha_londres)] = float(previo)
     return sorted(salida.items())
+
+
+def nota_provisional(f: date) -> str:
+    """Nota de la linea FX-1 cuando la referencia del dia habil f salio de la barra en curso de Yahoo."""
+    return (f"la referencia del {fecha_corta(f)} es provisional (previousClose de Yahoo, cotización de "
+            f"~22:00 UTC): Yahoo la reescribe al completarse la barra (+0.21% el 12-oct y +0.10% el 13-oct)")
 
 
 def diario_yahoo() -> dict:
@@ -635,9 +646,11 @@ def obtener(ahora: datetime, fuentes: dict[str, Callable] | None = None) -> dict
             d = f["diario_yahoo"]()
             if fecha_londres is None:
                 fecha_londres = (ahora + timedelta(seconds=d.get("gmtoffset", 0))).date()
-            referencia = referencia_yahoo(d["cierres"], fecha_londres, cierre_previo,
-                                          d.get("aperturas", {}).get(fecha_londres))
+            apertura = d.get("aperturas", {}).get(fecha_londres)
+            referencia = referencia_yahoo(d["cierres"], fecha_londres, cierre_previo, apertura)
             fuente_ref = "cierres diarios Yahoo MXN=X (3mo, 1d) como sustituto del FIX"
+            if cierre_previo or apertura:
+                notas.append(nota_provisional(dia_habil_anterior(fecha_londres)))
         except datos.ErrorDatos as e:
             notas.append(f"cierres de Yahoo no disponibles ({e})")
             try:

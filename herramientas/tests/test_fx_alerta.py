@@ -224,6 +224,17 @@ class TestFuentes(unittest.TestCase):
         self.assertEqual(d["referencia"][-1], (AYER, 17.1))
         self.assertEqual(fx.evaluar(d["referencia"], d["spot"], HOY)["ref1"], (AYER, 17.1))
 
+    def test_la_referencia_de_la_barra_en_curso_se_marca_provisional(self):
+        # Conciliacion 14-oct-2026 (bitacora/arbitraje/2026-10-14.md §1): el previousClose de Yahoo
+        # (= apertura de la barra en curso) cambia al completarse la barra (13-oct: 18.3547 -> 18.3739).
+        with mock.patch.dict(os.environ, {"BANXICO_TOKEN": ""}):
+            d = fx.obtener(self.AHORA, self.fuentes(fix=banxico.rango))
+        provisionales = [n for n in d["notas"] if "provisional" in n]
+        self.assertEqual(len(provisionales), 1)
+        self.assertIn("referencia del 29-sep es provisional", provisionales[0])
+        # Con el FIX de Banxico no hay barra en curso: no hay nota.
+        self.assertFalse(any("provisional" in n for n in fx.obtener(self.AHORA, self.fuentes())["notas"]))
+
     def test_si_yahoo_falla_usa_binance_con_nota_de_base(self):
         d = fx.obtener(self.AHORA, self.fuentes(fix=lambda *_a: (_ for _ in ()).throw(banxico.SinToken("x")),
                                                 spot_yahoo=self.falla, diario_yahoo=self.falla))
