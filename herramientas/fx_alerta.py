@@ -415,6 +415,27 @@ def frase_dueno(cand: dict, expos: dict[str, float | None], hoy: date, efecto: f
             f"no hay que hacer nada hoy, {comite}")
 
 
+def niveles_alerta(ev: dict) -> dict:
+    """Niveles de USD/MXN que dispararian una ALERTA en esta corrida (antes de la supresion).
+
+    episodio: min15 x (1 + EPISODIO) al alza y max15 x (1 - EPISODIO) a la baja;
+    d10: ref10 x (1 +/- umbral de ALERTA por D10). Se imprimen siempre en la linea OK para que la
+    supervision no tenga que inferirlos (revision del 14-oct-2026, hallazgo 2.5).
+    """
+    u10 = ev["umbral"]["alerta_d10"]
+    ref10 = ev["ref10"][1]
+    return {"episodio_sube": ev["min15"][1] * (1 + EPISODIO), "episodio_baja": ev["max15"][1] * (1 - EPISODIO),
+            "d10_sube": ref10 * (1 + u10), "d10_baja": ref10 * (1 - u10)}
+
+
+def texto_niveles(ev: dict) -> str:
+    n = niveles_alerta(ev)
+    return (f" · ALERTA si el USD/MXN llega a ≥ {n['episodio_sube']:.4f} (episodio: mínimo de 15 días "
+            f"{ev['min15'][1]:.4f} del {fecha_corta(ev['min15'][0])} +{EPISODIO * 100:.0f}%) o "
+            f"≥ {n['d10_sube']:.4f} (Δ10 {ev['umbral']['alerta_d10'] * 100:.2f}%); a la baja, "
+            f"≤ {max(n['episodio_baja'], n['d10_baja']):.4f}")
+
+
 def lineas(ev: dict, dec: dict, fuente: dict, expos: dict[str, float | None],
            lotes: dict[str, list | None] | None = None) -> list[tuple[int, str]]:
     """Salida para la supervision: [(nivel, texto)]. 'lotes' (lotes_usd por libro) da el efecto real
@@ -439,7 +460,7 @@ def lineas(ev: dict, dec: dict, fuente: dict, expos: dict[str, float | None],
                    f"ya se avisó con la {NOMBRE[r['nivel']]} del {fecha_corta(f0)}; no se repite hasta el "
                    f"{fecha_corta(sumar_habiles(f0, DIAS_SUPRESION))} salvo que el USD/MXN "
                    f"{'pase de' if signo > 0 else 'baje de'} {umbral:.4f}")
-        return [(OK, f"FX-1 OK · sin disparo nuevo · {medida}{sup}{efecto}{notas}")]
+        return [(OK, f"FX-1 OK · sin disparo nuevo · {medida}{sup}{texto_niveles(ev)}{efecto}{notas}")]
     txt = (f"FX-1 {NOMBRE[c['nivel']]} · el dólar {c['direccion']}: {c['motivo']} {_pct(c['cambio'])} "
            f"(umbral {c['umbral'] * 100:.2f}%"
            + (f", {c['dias']} días hábiles" if c["motivo"] == "episodio" else "") + ") · "

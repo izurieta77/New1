@@ -52,6 +52,22 @@ class TestNiveles(unittest.TestCase):
         for pieza in ("FX-1 OK", "Δ1 +0.20%", "Δ10", "σd", "referencia FIX Banxico", "15:00 UTC", "papel ±100 MXN"):
             self.assertIn(pieza, texto)
 
+    def test_linea_ok_imprime_niveles_de_alerta(self):
+        ref = serie(RUIDO + [0.001] * 5)
+        ev = fx.evaluar(ref, ref[-1][1] * 1.002, HOY)
+        n = fx.niveles_alerta(ev)
+        self.assertAlmostEqual(n["episodio_sube"], ev["min15"][1] * 1.06, places=10)
+        self.assertAlmostEqual(n["episodio_baja"], ev["max15"][1] * 0.94, places=10)
+        self.assertAlmostEqual(n["d10_sube"], ev["ref10"][1] * (1 + ev["umbral"]["alerta_d10"]), places=10)
+        # un spot en el nivel de episodio dispara la ALERTA; uno apenas abajo no
+        en_nivel = fx.evaluar(ref, n["episodio_sube"] * 1.0001, HOY)
+        abajo = fx.evaluar(ref, n["episodio_sube"] * 0.999, HOY)
+        self.assertIn("episodio", [c["motivo"] for c in en_nivel["candidatos"] if c["nivel"] == fx.ALERTA])
+        self.assertNotIn("episodio", [c["motivo"] for c in abajo["candidatos"] if c["nivel"] == fx.ALERTA])
+        (_, texto), = fx.lineas(ev, fx.decidir(ev, {}), datos_fx(ref, ev["spot"]), {"papel": 10_000.0})
+        self.assertIn(f"ALERTA si el USD/MXN llega a ≥ {n['episodio_sube']:.4f}", texto)
+        self.assertIn(f"≥ {n['d10_sube']:.4f}", texto)
+
     def test_aviso_por_d1(self):
         ref = serie(RUIDO + [0.0] * 5)
         ev = fx.evaluar(ref, ref[-1][1] * 1.012, HOY)
