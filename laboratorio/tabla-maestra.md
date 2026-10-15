@@ -65,8 +65,8 @@ La etiqueta responde a una sola pregunta: **¿hay una ventaja que el sistema pue
 | Etiqueta | Filas |
 |---|---|
 | ventaja demostrada | 0 |
-| oportunidad investigable | 8 (R01, R06, R10, V02, V04, AC-03, AC-07, AC-09) [13-oct: se agregó R10; decía 7] |
-| descartada | 19 (R02, R03, R04, R05, R07, R08, R09, V01, V03, AC-01, AC-02, AC-04, AC-05, AC-06, AC-08, AC-10, AC-11, AC-12, AC-15) |
+| oportunidad investigable | 9 (R01, R06, R10, R11, V02, V04, AC-03, AC-07, AC-09) [13-oct: se agregó R10; decía 7] [14-oct, revisión: se agregó R11 (fila del 13-oct); decía 8] |
+| descartada | 20 (R02, R03, R04, R05, R07, R08, R09, R13, V01, V03, AC-01, AC-02, AC-04, AC-05, AC-06, AC-08, AC-10, AC-11, AC-12, AC-15) [14-oct, revisión: se agregó R13; decía 19] |
 | en curso | 0 |
 | no aplica | 1 (V05) |
 
