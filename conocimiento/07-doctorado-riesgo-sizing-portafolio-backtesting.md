@@ -688,3 +688,25 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
 - **Qué propone:** construir un índice de un activo riesgoso y uno libre de riesgo que mantenga una **volatilidad objetivo fija**. En lugar del método habitual de "lazo abierto" (exposición inversa al pronóstico de varianza), corrige el error de seguimiento de la volatilidad con **retroalimentación proporcional**, con pocos parámetros interpretables.
 - **Evidencia:** solo **simulación**. Los autores reportan que el control proporcional cumple el objetivo de volatilidad con más consistencia que el lazo abierto, que sufre rotación alta, picos de apalancamiento y sensibilidad al error de estimación. No hay rendimientos históricos ni comparación neta de costos contra comprar y mantener.
 - **Lectura y grado:** grado **C** (artículo de método, sin prueba empírica). Es útil para **ingeniería** (cómo apalancar sin picos de rotación), no como evidencia de que la volatilidad gestionada genere rendimiento: la réplica R05 y su auditoría AC-06 ya encontraron que ninguna versión operable supera al índice en Sharpe después de 2017. **No cambia ninguna regla.** Leído el resumen completo en la API de arXiv; el PDF no se leyó.
+
+### Adenda (15-oct-2026, investigador vespertino): puts y seguimiento de tendencia como protecciones complementarias. Noguer i Alonso y Al Fallouji (arXiv:2607.00883, v1 del 1-jul-2026)
+
+- **Acceso:** resumen y secciones 1-7.2 del HTML; no se leyeron las secciones 8 y 9. **Grado C:** es un marco teórico (CVaR en tiempo continuo, Heston con saltos) con Monte Carlo estilizado (2,000 trayectorias de un año), sin datos históricos. Los autores dicen que los niveles son "ilustrativos".
+- **Qué dice:**
+  - Las puts fuera del dinero se revalúan **en el impacto** de un salto.
+  - La tendencia llega **tarde al primer choque**: su señal tiene que cruzar cero, y un salto solo la voltea si es mayor que la señal acumulada. A cambio, se vuelve defensiva en caídas persistentes sin pagar prima.
+  - En su caso base (put 10% OTM renovada cada mes y señal EWMA de 1, 3 y 12 meses), el CVaR95 terminal en log-pérdida es:
+
+    | Estrategia | CVaR95 |
+    |---|---:|
+    | Acciones | 0.713 |
+    | Put | 0.627 |
+    | Tendencia | 0.473 |
+    | Híbrido 50/50 | 0.277 |
+
+    Los autores dicen que las diferencias deben leerse en forma cualitativa.
+- **Conexión con el sistema:**
+  - Es el mecanismo detrás de dos resultados nuestros. R06 y R11: el filtro del UPRO "es solo protección" y no evita una caída cercana a −73% en 1998-2003. R10: el filtro de BTC reduce las caídas largas, no los saltos.
+  - El stop de 135.76 y el filtro de la SMA200 son protección de **tendencia**. No cubren un salto de un día en el 3x; por eso existe el tope de tamaño.
+  - La cuenta en GBM no tiene acceso a opciones, así que el híbrido no es operable hoy.
+- **Acción:** ninguna regla cambia. Se suma como argumento para pre-registrar R12 (condición de VIX, que reacciona más rápido que la SMA200 pero, según R11, sale demasiadas veces).
