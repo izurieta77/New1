@@ -34,7 +34,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(RAIZ))
-os.environ.setdefault("SEC_USER_AGENT", "SistemaInversionNew1 izurieta77@gmail.com")
+# [15-oct-2026] Sin valor por defecto con correo: edgar.agente_usuario() usa SEC_USER_AGENT del entorno o AGENTE_DEFECTO.
 from herramientas import edgar  # noqa: E402
 
 SALIDA = RAIZ / "arena" / "investigacion"

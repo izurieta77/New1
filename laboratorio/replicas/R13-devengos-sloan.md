@@ -68,6 +68,7 @@ Valores −99.99 o −999 se tratan como faltantes y se reportan.
 ## RESULTADOS (se llenan después de correr)
 
 ### Desviaciones del pre-registro
+- **[Corrección de registro, 15-oct-2026, revisión del 14-oct §1.3]:** el encabezado dice "≈17:55 UTC". La hora real del pre-registro es **17:49:42 UTC** (commit `1b4be70`), anterior a la ejecución A (`e857a99`, 17:53:21) y a las descargas de AC-18 (17:50-17:51). El orden fue correcto; la hora escrita era una estimación. El encabezado no se edita por ser parte del pre-registro.
 - Ninguna en A. B usó como segunda fuente Open Source Asset Pricing (release de oct-2025, datos hasta 2024-12). Su señal no resta la depreciación y excluye acciones con precio < 5. Como cotejo usó French con código propio.
 
 ### 10. Variantes probadas
