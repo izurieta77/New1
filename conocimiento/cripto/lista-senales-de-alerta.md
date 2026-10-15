@@ -205,6 +205,16 @@
 - **E8:** USDC/USDT 1.00089 y FDUSD/USDT 0.9980 (Binance, 14:20 UTC). Desvío < 0.21%. **Limpio.**
 - **E6, E10:** sin novedad en la búsqueda general de hoy.
 - **Conclusión: no hay disparador.** No hay ninguna señal ROJA; las ÁMBAR son solo E5 y A9. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
+
+**Seguimiento del 15-oct-2026** [I] — revisión de contraparte de la corrida de las 08:17 del jueves; BTC tocó 79,800 tras la apertura de NY (venta de IA/chips). El estudio de hoy fue MiCA ([`fichas/2026-10-15-mica-stablecoins-y-transicion-casp.md`](fichas/2026-10-15-mica-stablecoins-y-transicion-casp.md)):
+
+- **E1 (flujo ex-BNB, aproximación del método F):** `api.llama.fi/protocol/binance-cex`, 14:20 UTC; última fila por cadena (15-oct) contra la más cercana a 7 días antes disponible (9-oct, 6 días), valuada a precios de hoy: **+0.86%** (+US$1.21 mil millones). **Limpio.** TVL bruto US$167.45 mil millones. La fila del 15-oct puede estar incompleta.
+- **E2:** BTC rastreado pasó de 625,891 a 631,353 (+0.87%). La composición es BTC 30.4%, USDT 24.0%, **BNB 15.3%** (umbral ÁMBAR: 20%), WETH 9.8% y USDC 4.8%. **Limpio.**
+- **E3:** una búsqueda dirigida ("Binance 47th proof of reserves October 2026") **no encuentra el 47.º reporte**; la página oficial no es legible sin JavaScript desde este entorno. Hoy abre la ventana proyectada (15–21-oct); el umbral de rezago > 30 días aplicaría después del 31-oct. **Limpio.** P0057 sigue abierto.
+- **E5:** no hay cargos nuevos contra la entidad. **ÁMBAR sin cambio.** Dato primario nuevo: Binance **no aparece** en el registro de CASP de MiCA de ESMA (`esma.europa.eu/sites/default/files/2024-12/CASPS.csv`, 365 LEI, actualizado al 6-oct-2026), lo que confirma el "solo retiros en la UE" desde el fin de la transición del art. 143(3) (1-jul-2026). Se propone añadir ese CSV como fuente de E5: una fila de Binance sería una señal positiva.
+- **E8:** USDC/USDT 1.00105 y FDUSD/USDT 0.9984 (Binance, 14:20 UTC). Desvío < 0.17%. **Limpio.**
+- **E6, E10:** sin novedad en la búsqueda general de hoy.
+- **Conclusión: no hay disparador.** No hay ninguna señal ROJA; las ÁMBAR son solo E5 y A9. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)

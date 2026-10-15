@@ -446,3 +446,15 @@ Se cerró, con certeza (no solo inferencia), el pendiente explícito de la adend
   - El punto frágil mexicano es el riel de pesos (Medá, IFPE): es una "Institución" y está sujeta a la "sana distancia" de 2021. Es grado C y no hay acción observada.
 - **Para la cuenta [I]:** no hay catalizador regulatorio mexicano a 30 días. El riesgo es operativo (SPEI/Medá) y lo mide el disparador "SPEI > 48 h" del plan de contingencia. El tope de 10,000 MXN sigue siendo la única defensa de contraparte.
 - **Pendientes:** MiCA (EUR-Lex), CLARITY, el ANPRM de la CFTC 2026-20888, las Disposiciones de la CNBV para IFPE y las iniciativas mexicanas de 2026.
+
+### Adenda (15-oct-2026): MiCA, títulos III-IV y art. 143; Binance fuera del registro de ESMA
+
+- **Fuente:** Reglamento (UE) 2023/1114, texto del DOUE (L 150, 9-jun-2023) en inglés y en español, más la consolidación vigente 02023R1114-20240109, de la Oficina de Publicaciones de la UE (Cellar). EUR-Lex directo dio HTTP 202 vacío. Registro provisional de MiCA de ESMA (`CASPS.csv` y `EMTWP.csv`, última actualización 6-oct-2026). Ficha: [`fichas/2026-10-15-mica-stablecoins-y-transicion-casp.md`](fichas/2026-10-15-mica-stablecoins-y-transicion-casp.md).
+- **Del texto [H, A]:**
+  - EMT: solo la emite una entidad de crédito o de dinero electrónico (art. 48). Reembolso a la par, en cualquier momento y sin comisión (art. 49). **Al menos 30% de los fondos en depósitos bancarios** separados y el resto en activos líquidos de la misma moneda (art. 54).
+  - **Prohibición de intereses también para los CASP** (arts. 40(2) y 50(2)), con una definición amplia de "interés" que incluye cualquier beneficio ligado al tiempo de tenencia (ap. 3). GENIUS solo se la dirige al emisor.
+  - Tope de uso como medio de cambio: 1 millón de operaciones y 200 millones de EUR diarios (art. 23), aplicable a las EMT en moneda no-UE (art. 58(3)).
+  - Transición de los CASP: **hasta el 1-jul-2026** o hasta la decisión sobre la autorización, lo que ocurra antes (art. 143(3)). Títulos III-IV aplicables desde el 30-jun-2024 y el resto desde el 30-dic-2024 (art. 149).
+- **Del registro [H, A]:** 365 CASP únicos; **ningún Binance** (dos métodos). Coinbase, Kraken, OKX, Crypto.com, Bybit, Bitstamp, Gemini, KuCoin y Revolut sí están; Bitget no. EMT: 25 emisores; Circle y Paxos sí, Tether no. Hay 75 autorizaciones en jun-2026 y ~16-17 al mes después del precipicio. El registro trae dos fechas imposibles (errores de captura).
+- **Para la cuenta [I]:** no hay acción. Confirma con fuente primaria el ÁMBAR de E5 (Binance fuera de la UE) y propone `CASPS.csv` como fuente de E5. La diferencia MiCA-GENIUS sobre el rendimiento es la misma disputa que frena CLARITY.
+- **Pendientes:** CLARITY después del 15-sep; normas técnicas de la EBA (art. 36(4)) y directrices de ESMA sobre la solicitud inversa (art. 61); ANPRM de la CFTC 2026-20888; reintentar EUR-Lex directo.
