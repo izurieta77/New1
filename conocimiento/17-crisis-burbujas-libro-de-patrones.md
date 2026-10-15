@@ -455,3 +455,16 @@ Yardeni [13] hasta 2022; cálculo propio de 2023 a 2026. "Recuperación" = prime
 45. Yahoo Finance, API de gráficas (cierres diarios, descarga del 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC (mismo *endpoint* para los demás *tickers*)
 46. Progress.org, resumen de Kindleberger: https://www.progress.org/wiki/kindleberger-manias-panics-crashes/
 47. Reinhart y Rogoff (2009), AER P&P (PDF): https://faculty.sites.iastate.edu/tesfatsi/archive/econ502/tesfatsion/AftermathOfFinancialCrisis.ReinhartRogoff.AER2009.pdf
+
+### Adenda (15-oct-2026, laboratorio): tres casos medidos y un paper sobre concentración
+- **Tres casos medidos** (ficha `fichas/2026-10-15-crisis-tres-casos-medidos.md`, Yahoo, índices de precio):
+  - Nasdaq 2000-02: −77.9% en 647 días hábiles.
+  - S&P 500 2007-09: −56.8% en 355 días.
+  - Nasdaq 2021-22: −36.4% en 277 días.
+  - La primera salida del filtro vigente (SMA200 × 0.97) llegó con el índice ya 8-30% abajo y evitó 61-86% de la caída (sin contar latigazos).
+  - Recuperar el pico tomó 2.3-15 años.
+- **Ceco, Shi y Wong, arXiv:2609.27113** (v2 del 14-oct-2026), "Active Portfolio Management in Concentrated Equity Markets". Solo se leyó el resumen; **grado C**.
+  - La cartera equiponderada rinde menos que la ponderada por capitalización cuando sube la concentración y la correlación, en particular en burbujas.
+  - Su modelo de diversidad y dispersión, que reparte entre las dos carteras, supera fuera de muestra (1995-2024, después de 15 pb de costos) a ambas.
+  - Para el sistema: la concentración del S&P 500 en IA es un riesgo de régimen que el SPYM/QQQM del papel carga completo. No cambia ninguna regla.
+

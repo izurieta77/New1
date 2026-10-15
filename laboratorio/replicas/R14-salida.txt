@@ -1,0 +1,38 @@
+^GSPC: 1970-01-02 a 2026-10-14, 14289 cierres, 29 descartados, sha256 d7af4d8d7860ac3f…
+^IXIC: 1971-02-05 a 2026-10-14, 14002 cierres, 38 descartados, sha256 ebfb35d47dbf6faf…
+^N225: 1970-01-05 a 2026-10-14, 13849 cierres, 658 descartados, sha256 eb85cd0258f41d7d…
+^KS11: 1996-12-11 a 2026-10-14, 7339 cierres, 154 descartados, sha256 1b4c57ac364647ed…
+
+== Umbral -5%, horizonte 11 días ==
+  ^GSPC  eventos  27 episodios  12 | positivos 74.1% (incond. 59.2%) | exceso medio +1.29% (media incond. +0.40%)
+  ^IXIC  eventos  48 episodios  21 | positivos 58.3% (incond. 59.6%) | exceso medio +1.52% (media incond. +0.53%)
+  ^N225  eventos  52 episodios  32 | positivos 75.0% (incond. 56.5%) | exceso medio +2.97% (media incond. +0.36%)
+  ^KS11  eventos  81 episodios  45 | positivos 61.7% (incond. 56.0%) | exceso medio +3.16% (media incond. +0.50%)
+  AGRUPADO: 208 eventos, 110 episodios | positivos 65.9% | exceso medio +2.49% (por episodio +3.44%, t +5.40)
+  Solo primer desplome: positivos 62.7%, exceso +1.03%, t +1.31
+
+== Umbral -5%, horizonte 22 días ==
+  ^GSPC  eventos  27 episodios  12 | positivos 70.4% (incond. 61.8%) | exceso medio +2.54% (media incond. +0.80%)
+  ^IXIC  eventos  48 episodios  21 | positivos 60.4% (incond. 61.5%) | exceso medio +2.30% (media incond. +1.08%)
+  ^N225  eventos  52 episodios  32 | positivos 65.4% (incond. 58.3%) | exceso medio +4.05% (media incond. +0.71%)
+  ^KS11  eventos  81 episodios  45 | positivos 59.3% (incond. 56.6%) | exceso medio +2.20% (media incond. +1.02%)
+  AGRUPADO: 208 eventos, 110 episodios | positivos 62.5% | exceso medio +2.73% (por episodio +3.41%, t +3.52)
+  Solo primer desplome: positivos 62.7%, exceso +1.25%, t +1.17
+
+== Umbral -7%, horizonte 11 días ==
+  ^GSPC  eventos   9 episodios   4 | positivos 66.7% (incond. 59.2%) | exceso medio +1.82% (media incond. +0.40%)
+  ^IXIC  eventos  16 episodios   9 | positivos 68.8% (incond. 59.6%) | exceso medio +2.88% (media incond. +0.53%)
+  ^N225  eventos  13 episodios  10 | positivos 61.5% (incond. 56.5%) | exceso medio +1.79% (media incond. +0.36%)
+  ^KS11  eventos  24 episodios  15 | positivos 62.5% (incond. 56.0%) | exceso medio +3.93% (media incond. +0.50%)
+  AGRUPADO: 62 eventos, 38 episodios | positivos 64.5% | exceso medio +2.90% (por episodio +4.02%, t +2.71)
+  Solo primer desplome: positivos 57.9%, exceso +1.35%, t +0.80
+
+== Umbral -7%, horizonte 22 días ==
+  ^GSPC  eventos   9 episodios   4 | positivos 77.8% (incond. 61.8%) | exceso medio +4.09% (media incond. +0.80%)
+  ^IXIC  eventos  16 episodios   9 | positivos 62.5% (incond. 61.5%) | exceso medio +3.37% (media incond. +1.08%)
+  ^N225  eventos  13 episodios  10 | positivos 53.8% (incond. 58.3%) | exceso medio +4.26% (media incond. +0.71%)
+  ^KS11  eventos  24 episodios  15 | positivos 54.2% (incond. 56.6%) | exceso medio +1.01% (media incond. +1.02%)
+  AGRUPADO: 62 eventos, 38 episodios | positivos 59.7% | exceso medio +2.75% (por episodio +3.35%, t +1.63)
+  Solo primer desplome: positivos 55.3%, exceso +0.97%, t +0.43
+
+Veredicto A (principal -5%, 11 días): H1 sostenida; H2 sostenida -> Replicado

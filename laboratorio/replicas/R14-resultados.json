@@ -1,0 +1,83 @@
+{
+  "indices": {
+    "^GSPC": {
+      "inicio": "1970-01-02",
+      "fin": "2026-10-14",
+      "n": 14289,
+      "descartes": 29,
+      "sha256": "d7af4d8d7860ac3f50da76c7a4bda4539bd3221a6f58e84de744acfbf47256d2"
+    },
+    "^IXIC": {
+      "inicio": "1971-02-05",
+      "fin": "2026-10-14",
+      "n": 14002,
+      "descartes": 38,
+      "sha256": "ebfb35d47dbf6faf5fa45e66a65cd74101872ec98366265bbc60f499e0cd2480"
+    },
+    "^N225": {
+      "inicio": "1970-01-05",
+      "fin": "2026-10-14",
+      "n": 13849,
+      "descartes": 658,
+      "sha256": "eb85cd0258f41d7d7ce0f5fd1d4f2d73113ae54d56cbebfdcd35b73854d024a1"
+    },
+    "^KS11": {
+      "inicio": "1996-12-11",
+      "fin": "2026-10-14",
+      "n": 7339,
+      "descartes": 154,
+      "sha256": "1b4c57ac364647ed3df12fdf9a6986e238fe23510a223970abd8cd7edd312d53"
+    }
+  },
+  "variantes": {
+    "u-5_h11": {
+      "eventos": 208,
+      "episodios": 110,
+      "frecuencia_positivos": 0.6586538461538461,
+      "exceso_medio_eventos": 0.024919430640562883,
+      "exceso_medio_episodios": 0.034431566918312964,
+      "t_episodios": 5.397188135961186,
+      "primeros_frecuencia": 0.6272727272727273,
+      "primeros_exceso": 0.010309637813503992,
+      "primeros_t": 1.3056264124943322
+    },
+    "u-5_h22": {
+      "eventos": 208,
+      "episodios": 110,
+      "frecuencia_positivos": 0.625,
+      "exceso_medio_eventos": 0.027311058830356005,
+      "exceso_medio_episodios": 0.03408229722238762,
+      "t_episodios": 3.5225285701843245,
+      "primeros_frecuencia": 0.6272727272727273,
+      "primeros_exceso": 0.012488780199991889,
+      "primeros_t": 1.1740461907262707
+    },
+    "u-7_h11": {
+      "eventos": 62,
+      "episodios": 38,
+      "frecuencia_positivos": 0.6451612903225806,
+      "exceso_medio_eventos": 0.02902633092452958,
+      "exceso_medio_episodios": 0.04018447747019265,
+      "t_episodios": 2.71014042491322,
+      "primeros_frecuencia": 0.5789473684210527,
+      "primeros_exceso": 0.013530314940408435,
+      "primeros_t": 0.8037681828991834
+    },
+    "u-7_h22": {
+      "eventos": 62,
+      "episodios": 38,
+      "frecuencia_positivos": 0.5967741935483871,
+      "exceso_medio_eventos": 0.027509651496964053,
+      "exceso_medio_episodios": 0.03353382924802166,
+      "t_episodios": 1.627382689833243,
+      "primeros_frecuencia": 0.5526315789473685,
+      "primeros_exceso": 0.009685799957696795,
+      "primeros_t": 0.4344688112344224
+    }
+  },
+  "veredicto": {
+    "H1": true,
+    "H2": true,
+    "estado_A": "Replicado"
+  }
+}
