@@ -546,10 +546,12 @@ def referencia_yahoo(cierres: Serie, fecha_londres: date, cierre_previo: float |
     maximo 0.17%, 3 meses al 30-sep-2026): la barra del dia D es el cierre del dia habil anterior a D.
     La barra en curso (fecha de Londres de hoy) trae el precio en vivo y se descarta; en su lugar va el
     cierre anterior: el previousClose de la consulta 1m o, si esa fallo, la apertura de la barra en
-    curso (son el mismo numero: 18.3547 y 18.3547 el 14-oct, 18.4754 y 18.4754 el 15-oct-2026).
+    curso (casi el mismo numero: 18.3547 y 18.3547 el 14-oct, 18.4754 y 18.4754 el 15-oct-2026, pero
+    18.389 y 18.3948, 0.03%, el 16-oct a las 03:03 UTC; conciliacion 15-oct §3).
     Ese ultimo cierre es PROVISIONAL: es la cotizacion de ~21:50-22:00 UTC, y cuando la barra se
-    completa Yahoo reescribe su apertura y su cierre con otro valor (12-oct 18.2225 -> 18.2616, +0.21%;
-    13-oct 18.3547 -> 18.3739, +0.10%). Las barras ya completas no cambiaron en 24 h. Por eso preferir
+    completa Yahoo reescribe su apertura y su cierre con otro valor, al alza o a la baja (12-oct
+    18.2225 -> 18.2616, +0.21%; 13-oct 18.3547 -> 18.3739, +0.10%; 14-oct 18.4754 -> 18.4637, -0.06%,
+    conciliacion 15-oct). Las barras ya completas no cambiaron en 24 h. Por eso preferir
     la apertura de la barra en curso no cambia nada, y obtener() lo dice en una nota
     (fallo de conciliacion bitacora/arbitraje/2026-10-14.md §1).
     """
@@ -563,10 +565,23 @@ def referencia_yahoo(cierres: Serie, fecha_londres: date, cierre_previo: float |
     return sorted(salida.items())
 
 
-def nota_provisional(f: date) -> str:
-    """Nota de la linea FX-1 cuando la referencia del dia habil f salio de la barra en curso de Yahoo."""
-    return (f"la referencia del {fecha_corta(f)} es provisional (previousClose de Yahoo, cotización de "
-            f"~22:00 UTC): Yahoo la reescribe al completarse la barra (+0.21% el 12-oct y +0.10% el 13-oct)")
+def nota_provisional(f: date, hoy: date | None = None) -> str:
+    """Nota de la linea FX-1 cuando la referencia del dia habil f salio de la barra en curso de Yahoo.
+
+    Sin magnitudes fijas: las reescrituras observadas van en las dos direcciones (12-oct +0.21%,
+    13-oct +0.10%, 14-oct -0.06%) y su registro vive en rutinas/supervision.md §3b, no aqui
+    (fallo de conciliacion bitacora/arbitraje/2026-10-15.md §3). Con `hoy` (fecha CDMX) dice que papel
+    juega en evaluar(): de dia (f < hoy) es la base de D1 y entra en sd y en el minimo/maximo de 15
+    dias; de noche, entre ~23:00 y ~06:00 UTC, la fecha de Londres ya es la de manana, f == hoy y la
+    referencia es el nivel que compara el episodio (D1, D10 y sd usan barras completas) (§4).
+    """
+    texto = (f"la referencia del {fecha_corta(f)} es provisional (previousClose de Yahoo, cotización de "
+             f"~22:00 UTC): Yahoo la reescribe al completarse la barra, al alza o a la baja")
+    if hoy is None:
+        return texto
+    if f < hoy:
+        return texto + "; hoy es la base de Δ1"
+    return texto + "; es el nivel que compara el episodio (Δ1 y Δ10 usan barras completas)"
 
 
 def diario_yahoo() -> dict:
@@ -650,7 +665,7 @@ def obtener(ahora: datetime, fuentes: dict[str, Callable] | None = None) -> dict
             referencia = referencia_yahoo(d["cierres"], fecha_londres, cierre_previo, apertura)
             fuente_ref = "cierres diarios Yahoo MXN=X (3mo, 1d) como sustituto del FIX"
             if cierre_previo or apertura:
-                notas.append(nota_provisional(dia_habil_anterior(fecha_londres)))
+                notas.append(nota_provisional(dia_habil_anterior(fecha_londres), hoy))
         except datos.ErrorDatos as e:
             notas.append(f"cierres de Yahoo no disponibles ({e})")
             try:

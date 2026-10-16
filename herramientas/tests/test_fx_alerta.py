@@ -235,6 +235,26 @@ class TestFuentes(unittest.TestCase):
         # Con el FIX de Banxico no hay barra en curso: no hay nota.
         self.assertFalse(any("provisional" in n for n in fx.obtener(self.AHORA, self.fuentes())["notas"]))
 
+    def test_la_nota_provisional_dice_su_papel_de_dia_y_de_noche_sin_magnitudes_fijas(self):
+        # Conciliacion 15-oct-2026 (bitacora/arbitraje/2026-10-15.md §3-§4): Yahoo tambien reescribe a la
+        # baja (14-oct 18.4754 -> 18.4637), y de noche (~23:00-06:00 UTC) la referencia provisional es la
+        # de hoy en CDMX: entra en el episodio, no en Δ1.
+        with mock.patch.dict(os.environ, {"BANXICO_TOKEN": ""}):
+            dia = fx.obtener(self.AHORA, self.fuentes(fix=banxico.rango))
+            noche_ahora = datetime(2026, 9, 30, 23, 30, tzinfo=timezone.utc)  # 17:30 CDMX; Londres 1-oct
+            noche = fx.obtener(noche_ahora, self.fuentes(fix=banxico.rango))
+        n_dia = [n for n in dia["notas"] if "provisional" in n][0]
+        n_noche = [n for n in noche["notas"] if "provisional" in n][0]
+        self.assertIn("referencia del 29-sep", n_dia)
+        self.assertIn("base de Δ1", n_dia)
+        self.assertIn("referencia del 30-sep", n_noche)
+        self.assertIn("episodio", n_noche)
+        self.assertNotIn("base de Δ1", n_noche)
+        for n in (n_dia, n_noche):
+            self.assertNotRegex(n, r"\d+\.\d+%")
+        # Y el calculo respalda la nota: de noche la referencia de hoy no es la base de Δ1.
+        self.assertEqual(fx.evaluar(noche["referencia"], noche["spot"], HOY)["ref1"][0] < HOY, True)
+
     def test_si_yahoo_falla_usa_binance_con_nota_de_base(self):
         d = fx.obtener(self.AHORA, self.fuentes(fix=lambda *_a: (_ for _ in ()).throw(banxico.SinToken("x")),
                                                 spot_yahoo=self.falla, diario_yahoo=self.falla))
