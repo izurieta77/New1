@@ -1,0 +1,10 @@
+FRED DEXMXUS: 1993-11-08 a 2026-10-09, 8254 datos, 336 faltantes, sha256 7c4936202038eebd…
+
+completa   h=10: episodios 37 | media posterior +1.17% (incond. +0.25%) | t exceso +0.79 | positivos 49% | +3% o más 19% (incond. 8%)
+completa   h=20: episodios 37 | media posterior +2.02% (incond. +0.51%) | t exceso +1.00 | positivos 57% | +3% o más 27% (incond. 15%)
+desde1996  h=10: episodios 33 | media posterior +0.18% (incond. +0.14%) | t exceso +0.07 | positivos 48% | +3% o más 18% (incond. 8%)
+desde1996  h=20: episodios 33 | media posterior +0.66% (incond. +0.27%) | t exceso +0.38 | positivos 55% | +3% o más 24% (incond. 14%)
+
+Episodios (desde 1996, primer día): 1996-10-30, 1997-10-28, 1998-08-21, 1999-01-13, 2003-01-29, 2008-09-16, 2009-01-14, 2009-04-28, 2010-05-20, 2011-08-09, 2011-09-19, 2011-11-21, 2012-05-14, 2013-05-30, 2013-08-30, 2014-12-08, 2015-08-24, 2016-01-15, 2016-05-17, 2016-09-16, 2016-11-09, 2017-01-11, 2017-10-12, 2018-05-02, 2018-10-30, 2020-02-28, 2020-06-26, 2020-09-24, 2021-03-05, 2021-11-26, 2023-10-05, 2024-06-03, 2024-07-30
+Espejo a la baja (informativo, desde 1996, h=20): episodios 16, media posterior +0.35%, t +0.06
+Veredicto A (20 días, desde 1996): H1 refutada; H2 sostenida -> Replicado con diferencias
