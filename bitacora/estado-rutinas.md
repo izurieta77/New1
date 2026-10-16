@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-16 19:42 UTC · cripto (pulso extra 13:41) · OK · (este commit) · BTC 81,380.01 (+0.05% vs 12:17), ETH 2,406.19, OI 856.52M (+1.04%), funding 3.587e-05; colchón +16.00%, ENCENDIDO; BTC −0.55% en pesos; sin vencidos cripto
 2026-10-16 19:41 UTC · supervisión (13:41 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · cuatro libros sin cortacircuitos (real GBM 10,021 MXN verificado en vivo; UPRO de papel 7.4% sobre su stop); VIX 20.2 (máx. 22.3), a 4.8 pts de la salida; FX-1 sin disparo, USD/MXN 18.504
 2026-10-16 18:41 UTC · supervisión (12:41 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · cuatro libros sin cortacircuitos (real GBM 10,017 MXN verificado en vivo; UPRO de papel 7.4% sobre su stop, ^GSPC −1.2%); VIX 21.3 (máx. 22.3), a 3.7 pts de la salida (25, al cierre); FX-1 sin disparo, USD/MXN 18.485
 2026-10-16 18:18 UTC · cripto (pulso 12:17) · OK · (este commit) · BTC 81,342.32 (−0.41% vs 09:41, −0.84% 4h), ETH 2,416.92, OI 847.68M (−0.64%), funding 3.28e-05; colchón +15.95%, ENCENDIDO; sin vencidos cripto
