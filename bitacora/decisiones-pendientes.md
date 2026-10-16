@@ -601,3 +601,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - dueño: mecanismo de latidos (recomendación: `date -u` en `rutinas/inteligencia.md`), contacto del User-Agent de la SEC, marcador, stop y filtro del UPRO en el cierre, sesión extraordinaria y registro retroactivo de FX-1;
   - orquestador: la escala de `estado-de-dominio.csv`;
   - comité del 16-oct: la agenda, P0118 y la condición de VIX (R11/AC-17).
+
+## 2026-10-16 · inteligencia (rutina 7, 07:05 CDMX) · P0048: estado contradictorio entre la pre-apertura y la conciliación
+
+- **Pregunta:** ¿P0048 (vigía; DEXMXUS ≥ 18.40 algún día del 2 al 16-oct) queda resuelto SÍ o sigue abierto hasta el H.10 del lunes 19-oct?
+- **Hechos:** la pre-apertura del 16-oct escribió `resultado=1, fecha_resuelto=2026-10-16` en `bitacora/pronosticos.csv`, leyendo "si falta ese día" como "todavía no publicado" y usando el cierre de Yahoo del 14-oct (18.4637). La conciliación de la noche del 15-oct (entrada de arriba) lo dejó **abierto hasta el H.10 del 19-oct**. Dato primario adicional: FIX Banxico del 14-oct = 18.4888 (no es la serie del criterio).
+- **Qué decidí:** no editar el CSV (no revierto lo que escribió otra rutina ni lo confirmo). La conciliación del 19-oct contrasta con DEXMXUS del 13-16 oct: si alguno es ≥ 18.40, el SÍ queda firme; si ninguno lo es, decide si "falta" incluía "aún no publicado" y, en su caso, corrige el resultado y el Brier.
+- **Por qué:** es lo conservador; el resultado probable no cambia (el FIX y Yahoo del 14-oct están por encima de 18.40), pero la serie del criterio todavía no existe para esos días.
