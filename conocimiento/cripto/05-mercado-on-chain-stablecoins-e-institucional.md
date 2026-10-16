@@ -464,3 +464,19 @@ Se cerró, con certeza (no solo inferencia), el pendiente explícito de la adend
 - **Qué afirma:** los flujos netos a los ETF spot "predicen" el **nivel** del precio de BTC con R² de 95%. Además, la mayor parte del cambio de precio ocurre fuera del horario de los ETF, las subidas de precio generan volumen anormal en los ETF y las entradas a ETF de BTC coinciden con salidas de ETF de oro. La muestra son las primeras semanas de 2024; el periodo exacto no está en el resumen.
 - **Por qué grado D:** una regresión de niveles (o de flujos acumulados) contra niveles de dos series con tendencia da R² altos aunque no haya relación: es el problema de la regresión espuria de Granger y Newbold. Además, que el precio se mueva fuera del horario de los ETF y que las subidas atraigan volumen sugiere causalidad **del precio a los flujos**, no al revés.
 - **Para el sistema:** no usar "los flujos de ETF predicen el precio" como argumento de una tesis ni de un pronóstico. Los flujos diarios (P0087 y similares) sirven como termómetro de demanda, no como señal adelantada. Ninguna regla cambia.
+
+### Adenda (16-oct-2026): CLARITY Act (H.R. 3633), estado, división SEC/CFTC y rendimiento sobre stablecoins
+- **Fuente:** textos EH (Cámara, 17-jul-2025) y RS (Senado, reportado por Banking el 1-jun-2026, Calendar No. 423) de GPO/govinfo; voto 00234 y el índice de votaciones de la sesión 119-2 en senate.gov. congress.gov dio 403/429. Ficha: [`fichas/2026-10-16-clarity-act-estado-y-division-sec-cftc.md`](fichas/2026-10-16-clarity-act-estado-y-division-sec-cftc.md).
+- **Estado [H, A]:** el 15-sep-2026 se rechazó, **49-50**, la cloture sobre la moción para proceder (49 R a favor; en contra 44 D, 2 I y 4 R: Collins, Hawley, Moran y Tillis). No hubo ninguna votación nominal sobre H.R. 3633 hasta el 16-oct; la última votación del Senado es del 30-sep. Faltan 7 votos demócratas e independientes si votan los 53 republicanos. El 119.º Congreso termina en 79 días.
+- **Texto [H, A]:**
+  - La Cámara reparte las competencias en un solo texto: SEC en el título III y CFTC en el título IV (registro de exchanges, brokers y dealers de *digital commodities*).
+  - El texto de Banking del Senado solo cubre valores: crea el "ancillary asset" (nueva sec. 4B de la Securities Act) y da por hecho el registro en la CFTC, que vive en el texto de Agricultura (12-11, ene-2026, grado C).
+  - Sec. 105(b)(2): no es valor un token que el 1-ene-2026 era el activo principal de un ETP listado (BTC y ETH seguro).
+  - Sec. 404: prohíbe a los exchanges y sus afiliadas pagar rendimiento sobre stablecoins a clientes de EUA, salvo las recompensas por actividad de buena fe (queda a medio camino entre GENIUS 4(a)(11) y MiCA 50(2)).
+  - Sec. 605: protege la autocustodia.
+  - Sec. 906: vigencia a los 360 días.
+- **Para la cuenta [I]:**
+  - Sin efecto a 30 días.
+  - Aun firmada en el *lame duck*, la ley no regiría antes de dic-2027.
+  - P0019 se mantiene en 0.04 (Kalshi 5.9% medio, Polymarket 6.05%).
+  - Nuevo P0134: ¿hay una votación nominal sobre H.R. 3633 antes del 15-nov?

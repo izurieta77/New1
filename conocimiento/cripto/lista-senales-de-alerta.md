@@ -215,6 +215,23 @@
 - **E8:** USDC/USDT 1.00105 y FDUSD/USDT 0.9984 (Binance, 14:20 UTC). Desvío < 0.17%. **Limpio.**
 - **E6, E10:** sin novedad en la búsqueda general de hoy.
 - **Conclusión: no hay disparador.** No hay ninguna señal ROJA; las ÁMBAR son solo E5 y A9. No se cumple ningún disparador del plan de contingencia de `bitacora/decisiones/2026-09-25-CRIPTO-inicial.md`.
+
+**Seguimiento del 16-oct-2026** [I] — revisión de contraparte de la corrida de las 08:17 del viernes. El estudio de hoy fue CLARITY ([`fichas/2026-10-16-clarity-act-estado-y-division-sec-cftc.md`](fichas/2026-10-16-clarity-act-estado-y-division-sec-cftc.md)):
+
+- **E1 (método F):** `api.llama.fi/protocol/binance-cex`, 14:2x UTC. Solo se usan filas de 00:00 UTC, porque la API agrega una fila intradía (14:03) que, si se suma, duplica el total. Fila del 16-oct contra la del 9-oct: **+0.69%** (+US$0.99 mil millones). TVL US$170.5 mil millones. **Limpio.**
+- **E2:** BTC rastreado 630,250 → 631,736 (+0.24% en 7 días); **BNB 15.3%**. **Limpio.**
+- **E3, corrección:** **el reporte de PoR con foto del 1-oct (el 47.º por secuencia) sí salió, hacia el 6-oct**, nueve días antes de la ventana proyectada. Las revisiones del 8 al 15-oct no lo encontraron porque buscaban "47th", y la prensa no lo numera.
+  - **Fuentes (secundarias, grado B por coincidir tres):**
+    - [ChainCatcher, 6-oct 19:55](https://www.chaincatcher.com/en/article/2294416): BTC **100.35%**, USDT 103.88%, ETH 100%, BNB 100.47%; cita datos oficiales y el X de Binance;
+    - [Phemex/PANews, 6-oct](https://phemex.com/news/article/binance-october-proof-of-reserves-user-btc-holdings-rise-537m-eth-drops-498m-98954): ratios de BTC y USDT "mejoraron", todos ≥ 100%;
+    - [AMBCrypto, 8-oct](https://ambcrypto.com/binance-users-hold-6217-more-bitcoin-as-ethereum-balances-drop-details/): "del 1-sep al 1-oct"; ~688,600 BTC de usuarios (+0.91%), 3.799 millones de ETH (−4.61%), 32.03 mil millones de USDT (−0.87%) y 43.04 millones de BNB (−0.77%).
+  - La página oficial no se pudo leer (HTTP 202 vacío; WebFetch sin cifras).
+  - **Lectura contra el umbral:** el ratio de BTC fue 100.25% (ago), < 100.35% (sep; "mejoró" hasta 100.35%) y 100.35% (oct). **Son dos meses o más por debajo de 100.5%: el umbral ÁMBAR de E3 se cumple.** [I] El umbral parece demasiado estricto, porque un ratio de ~100% es el diseño (reservas 1:1, no excedente). Se pasa al gestor de riesgo en `bitacora/decisiones-pendientes.md`. No es ROJA: ningún activo < 100% y no hay reporte retirado.
+- **E8:** USDC/USDT 1.00111 y FDUSD/USDT 0.9990 (Binance); USDT/USD 0.99877 (Kraken). Desvío < 0.13%. **Limpio.**
+- **E9:** el libro de BTCMXN (Binance, 14:2x UTC) tiene un diferencial de **0.61%** (compra 1,505,749 y venta 1,515,002; tres muestras en 45 s idénticas). **Pasa el umbral ÁMBAR (> 0.5%).** El lado de compra está ~0.7% bajo el precio implícito (82,378 × 18.4046 = 1,516,134 MXN). Profundidad a ±0.5%: 54,571 MXN en compra y 517,505 en venta, unas 27 veces el libro real de BTC (~2,000 MXN). Para una salida, se recomienda orden límite y no de mercado.
+- **E5:** no hay cargos nuevos; **ÁMBAR sin cambio**.
+- **E6, E7, E10:** sin novedad en la búsqueda general (no hay hackeo ni pérdida de paridad fechados el 15/16-oct).
+- **Conclusión: no hay disparador.** No hay ninguna ROJA. Las ÁMBAR son E5 y A9 (sin cambio), más E3 (por umbral, a calibrar) y E9 (puntual, por diferencial). El plan de contingencia solo se dispara con ROJAS o con sus disparadores propios.
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
