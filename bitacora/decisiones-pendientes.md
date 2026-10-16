@@ -628,3 +628,12 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Por qué:** es lo conservador; el decisor ve el cruce de hoy sin tener que leer una fila de tres días. Ninguna regla se dispara (stop a 8.2%, filtro cumplido).
 - **Pendiente para el orquestador o la conciliación:** si se prefiere una sola fila viva por posición, cerrar la del 14-oct al cierre de hoy.
 - **Estado:** Abierto → orquestador.
+
+## 2026-10-16 · inteligencia (rutina 7, 15:05 CDMX) · P0028 resuelto con un VIX a un centavo del umbral
+
+- **Pregunta:** ¿se resuelve P0028 (VIX ≥ 20.00 al cierre del 16-oct) hoy con el cierre de 19.99, o se espera a que CBOE publique la fila del 16-oct en `VIX_History.csv`?
+- **Hechos:** el cierre de CBOE (`delayed_quotes/quotes/_VIX.json`: close 19.99, `last_trade_time` 16:15:01 ET) y Yahoo chart v8 `^VIX` (19.99) coinciden; el criterio nombra "Yahoo chart v8 / CBOE". `VIX_History.csv` todavía no traía el 16-oct a las 21:08 UTC.
+- **Qué decidí:** resolverlo **NO** (resultado 0, Brier 0.0625), con nota de fuente en el CSV, y sin pronóstico nuevo.
+- **Por qué:** las dos fuentes del criterio dan el mismo valor, que es el cierre oficial de las 16:15 ET. Esperar no cambia el dato; dejarlo abierto solo retrasaría el Brier.
+- **Control:** la conciliación, o la pre-apertura del 19-oct, coteja con la fila del 16-oct de `VIX_History.csv`. Si CBOE publica ≥ 20.00, se corrige a 1 con una nota fechada.
+- **Estado:** Abierto → conciliación (solo el cotejo).
