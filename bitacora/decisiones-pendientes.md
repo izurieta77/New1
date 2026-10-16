@@ -581,3 +581,8 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - dueño: los mecanismos ya escalados (marcador; latidos, ahora acotados a inteligencia; stop y filtro del UPRO en el cierre), la sesión extraordinaria y el registro retroactivo de FX-1;
   - orquestador: la escala de `estado-de-dominio.csv`;
   - comité del 16-oct: la agenda, la marca de los pronósticos de menos de 1 día (P0118).
+
+## 2026-10-15 · revisión (rutina 11, 17:58 CDMX) · Dudas de la revisión del 15-oct
+- **¿Se resuelven P0032 y P0037 juntos?** Son la misma pregunta (BTC-USD > 85,000 al cierre del 15-oct, autor claude) y el brief solo menciona P0032. **Qué decidí:** no editar el CSV, porque los resuelve quien tenga el cierre UTC de esta noche. Lo registro como corregir en `bitacora/revisiones/2026-10-15.md` 1.1, y marcar los duplicados va al comité del 16-oct (2.3). **Estado:** Abierto → cripto 18:42 o conciliación; comité.
+- **Regla (f) de `rutinas/supervision.md` §3b:** de noche, entre las ~23:00 y las ~06:00 UTC, la referencia provisional entra en el episodio, no en Δ1. **Qué decidí:** no editar la rutina, porque el texto es de la conciliación. Tampoco el código, porque la nota del script es correcta. **Estado:** Abierto → conciliación.
+- **Reescritura del 14-oct (18.4754 → 18.4637):** según la regla (e), ningún disparo cambia. **Qué decidí:** solo anotarlo (revisión 2.1). **Estado:** Abierto → conciliación, para el registro.
