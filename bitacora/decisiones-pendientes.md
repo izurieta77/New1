@@ -620,3 +620,11 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Estado:** Abierto → conciliación.
 - **E3 en ÁMBAR por umbral:** el ratio de BTC fue 100.25% (ago), menor que 100.35% (sep, inferido de "mejoró") y 100.35% (oct). Es ≥ 2 meses < 100.5%. **Qué decidí:** anotarlo como ÁMBAR, sin alerta alta ni boleta, porque no es ROJA ni disparador de contingencia. **Pregunta al gestor de riesgo:** ¿se recalibra el umbral? Un ratio de ~100% es el diseño de un PoR 1:1; quizá el ÁMBAR deba ser "< 100.0% en cualquier activo" o "caída de > 1 pp en un mes". **Estado:** Abierto → gestor de riesgo.
 - **E9 en ÁMBAR puntual:** el diferencial de BTCMXN fue 0.61% a las 14:2x UTC (el umbral es 0.5%). El lado de compra está ~0.7% bajo el precio implícito, pero hay 54,571 MXN a ±0.5%, ~27 veces el libro real. **Qué decidí:** no hacer nada. Si hay una venta S, va con **orden límite**, no de mercado. Se vuelve a medir a las 18:42; si sigue > 0.5% dos pulsos seguidos, se avisa al gestor de riesgo. **Estado:** Abierto → cripto 18:42.
+
+## 2026-10-16 · inteligencia (rutina 7, 11:05 CDMX) · UPRO de papel cruza −2% en pesos: ¿fila nueva o se actualiza la del 14-oct?
+
+- **Pregunta:** el UPRO de papel volvió a cruzar −2% en pesos (−2.58% contra el cierre del 15-oct). ¿Se abre otra fila Alta en `alertas.md` o se agrega una actualización a la del 14-oct, que sigue "Abierta (informativa)"?
+- **Qué decidí:** abrir una **fila nueva** (2026-10-16 17:10 UTC) que remite a la del 14-oct. Es un cruce nuevo contra otra base (el cierre del 15-oct), con otra causa (rotación fuera de tecnología más tasas). La regla de "no abrir otra" solo aplica a las filas FX-1 de la supervisión. Para el FX de referencia usé 18.4070 (continuidad con la sección 07:05) y anoté que con la base de FX-1 (18.3890) también cruza (−2.49%).
+- **Por qué:** es lo conservador; el decisor ve el cruce de hoy sin tener que leer una fila de tres días. Ninguna regla se dispara (stop a 8.2%, filtro cumplido).
+- **Pendiente para el orquestador o la conciliación:** si se prefiere una sola fila viva por posición, cerrar la del 14-oct al cierre de hoy.
+- **Estado:** Abierto → orquestador.
