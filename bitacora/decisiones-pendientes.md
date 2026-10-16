@@ -637,3 +637,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Por qué:** las dos fuentes del criterio dan el mismo valor, que es el cierre oficial de las 16:15 ET. Esperar no cambia el dato; dejarlo abierto solo retrasaría el Brier.
 - **Control:** la conciliación, o la pre-apertura del 19-oct, coteja con la fila del 16-oct de `VIX_History.csv`. Si CBOE publica ≥ 20.00, se corrige a 1 con una nota fechada.
 - **Estado:** Abierto → conciliación (solo el cotejo).
+
+## 2026-10-16 · comité W42 (auditoría semanal)
+- **Boleta real del 19-oct (1 VT):** espera la confirmación del dueño y la verificación de que VT existe en GBM. Si no existe, el comité del 23-oct elige entre RSP y VEA. **Estado:** Abierto → dueño y supervisión.
+- **R12 (condición de VIX del filtro):** aprobado el pre-registro, solo para evaluación fuera de muestra. Debe estar en git antes del 23-oct y antes de cualquier cierre del VIX ≥ 25. **Estado:** Abierto → laboratorio o trabajo continuo (prioridad).

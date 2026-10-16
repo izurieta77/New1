@@ -117,19 +117,17 @@ Decisión del dueño (25-sep-2026): describió el patrón de horarios de un riva
 
 ## 8. Avance (lo actualiza la auditoría del viernes)
 
-Última actualización: auditoría semanal 2026-W40 (2-oct-2026, 00:30 UTC del 3-oct). Detalle en `bitacora/semanal/2026-W40.md`.
+Última actualización: auditoría semanal 2026-W42 (16-oct-2026, ~23:30 UTC). Detalle en `bitacora/semanal/2026-W42.md`. (Antes: W40, 2-oct.)
 
 | Indicador | Valor | Fecha |
 |---|---|---|
-| Pronósticos registrados / resueltos | Bitácora 55 / 8; MU 4 / 4 | 2-oct-2026 |
-| Brier acumulado | 0.318 (n = 8; claude 0.346, vigía 0.290); muestra insuficiente | 2-oct-2026 |
-| Cuenta real arena: TWR / drawdown máximo | Arranca el 28-sep | — |
-| Portafolio de papel: TWR / drawdown máximo | GBM +2.68% / 0.00% (S&P TR MXN +2.77%, IPC −0.64%, CETES +0.07%); Binance +0.12% / 0.00%. W40: modo C moderado (2 UPRO con stop) desde el 5-oct | 2-oct-2026 |
-| Benchmarks de la semana 18→25-sep (MXN) | S&P 500 TR en MXN +4.25% (SP500TR +1.23% y USD/MXN +2.99%); IPC +2.55% (precio); CETES ~+0.12% (proxy 6.23% anual) | 25-sep-2026 |
-| Estado de dominio | 34 temas: 14 Documentado, 1 Documentado con comprobación, 7 Comprendido con comprobación, 5 Contrastado, 7 Replicado | 2-oct-2026 |
-| Laboratorio | 25 pruebas: 0 ventaja demostrada, 7 oportunidad investigable, 16 descartadas, 1 en curso (R03), 1 no aplica (V05); AC-05 a AC-11 en la semana | 2-oct-2026 |
-| Rivales con datos | 0 | — |
-| Examen de titulación | Diagnóstico 96.1% (25-sep); mensual oct 100% con clave comprometida (salvedad: examen fácil) | 1-oct-2026 |
-| Criterio de salida de fase 0 | NO se cumple: falta Brier ≤ 0.20 con 3 meses y 50+ resueltos | 1-oct-2026 |
-| Días para fin de fase 0 del patrimonio principal | 87 (28-dic-2026) | 2-oct-2026 |
-| Días para fin de la temporada arena | 118 (28-ene-2027) | 2-oct-2026 |
+| Pronósticos registrados / resueltos | Bitácora 136 / 41; empresas: 16 numéricos con intervalo (14 dentro del p10-p90, 87.5%) | 16-oct-2026 |
+| Brier acumulado | 0.2205 (n = 41; claude 0.2518 n = 19, vigía 0.1959 n = 19, cripto 0.1788 n = 3); muestra insuficiente (mín. 50) | 16-oct-2026 |
+| Cuenta real arena: TWR / drawdown máximo | GBM +0.20% / −0.67%; Binance +0.00% / −0.63% | 16-oct-2026 |
+| Portafolio de papel: TWR / drawdown máximo | GBM +0.92% / −3.35% (benchmark 50/50 +1.74%; S&P 500 TR en MXN ≈ +2.6%; IPC +6.1%; CETES ≈ +0.3%, proxy); Binance +0.66% / −1.77% | 16-oct-2026 (desde el 28-sep) |
+| Estado de dominio | 56 temas: 16 Documentado, 8 Documentado con comprobación, 13 Comprendido con comprobación, 5 Contrastado, 7 Replicado, 4 Capítulo, 3 Localizado. En la semana subieron 5 y se agregaron 6 | 16-oct-2026 |
+| Laboratorio | 32 pruebas en el resumen: 0 ventaja demostrada, 9 oportunidad investigable, 22 descartadas. En la semana: R10, R11, R13, R14, R15 (AC-16 a AC-20) | 16-oct-2026 |
+| Rivales con datos | 4 cuentas reales (Grok y ChatGPT, GBM y Binance); valuación diaria del sistema | 16-oct-2026 |
+| Criterio de salida de fase 0 | NO se cumple: Brier 0.2205 > 0.20 y 41 < 50 resueltos | 16-oct-2026 |
+| Días para fin de fase 0 del patrimonio principal | 73 (28-dic-2026) | 16-oct-2026 |
+| Días para fin de la temporada arena | 104 (28-ene-2027) | 16-oct-2026 |
