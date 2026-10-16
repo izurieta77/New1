@@ -1,0 +1,109 @@
+AC-20-R15 ejecución B. Fuente: FIX Banxico (SF43718, columna Determinación).
+Serie: 1991-11-12 a 2026-10-15, 8779 días con dato. Corte 2026-10-15.
+Días hábiles lun-vie sin dato (N/E, feriados MX) descartados: 334.
+Cambios diarios > 8% en valor absoluto (control de redenominación/errores): [('1994-12-20', 13.71), ('1994-12-22', 22.28), ('1994-12-27', 12.99), ('1995-01-30', 14.14), ('1995-01-31', -9.23), ('1995-02-22', 8.78), ('1995-03-06', 9.26), ('1995-03-09', 11.21), ('1995-03-10', -14.76)]
+
+====================================================================================================
+AL ALZA (FX-1)
+====================================================================================================
+-- serie completa, h=10: días=8779, eventos=324, episodios=43 (con ventana completa 43; sin ventana completa: [])
+   media posterior +0.86% | mediana -0.13% | t +0.83 | incondicional +0.24% | >0: 21/43
+   frecuencia +3% o más punto a punto: 16.3% (incondicional 7.9%) | en algún día de la ventana: 18.6% (incondicional 12.1%)
+-- serie completa, h=20: días=8779, eventos=324, episodios=43 (con ventana completa 42; sin ventana completa: ['2026-09-29'])
+   media posterior +1.36% | mediana +0.31% | t +1.11 | incondicional +0.48% | >0: 22/42
+   frecuencia +3% o más punto a punto: 23.8% (incondicional 14.1%) | en algún día de la ventana: 38.1% (incondicional 23.7%)
+-- desde 1996-01-01, h=10: días=7746, eventos=240, episodios=39 (con ventana completa 39; sin ventana completa: [])
+   media posterior -0.05% | mediana -0.13% | t -0.09 | incondicional +0.14% | >0: 19/39
+   frecuencia +3% o más punto a punto: 15.4% (incondicional 7.7%) | en algún día de la ventana: 17.9% (incondicional 12.0%)
+-- desde 1996-01-01, h=20: días=7746, eventos=240, episodios=39 (con ventana completa 38; sin ventana completa: ['2026-09-29'])
+   media posterior +0.16% | mediana -0.29% | t +0.17 | incondicional +0.28% | >0: 18/38
+   frecuencia +3% o más punto a punto: 21.1% (incondicional 14.0%) | en algún día de la ventana: 36.8% (incondicional 24.2%)
+
+====================================================================================================
+ESPEJO A LA BAJA (informativo)
+====================================================================================================
+-- serie completa, h=10: días=8779, eventos=144, episodios=12 (con ventana completa 12; sin ventana completa: [])
+   media posterior +0.53% | mediana +0.31% | t +0.57 | incondicional +0.24% | >0: 6/12
+   frecuencia -3% o más punto a punto: 8.3% (incondicional 4.6%) | en algún día de la ventana: 25.0% (incondicional 6.5%)
+-- serie completa, h=20: días=8779, eventos=144, episodios=12 (con ventana completa 12; sin ventana completa: [])
+   media posterior +0.10% | mediana -0.78% | t +0.07 | incondicional +0.48% | >0: 4/12
+   frecuencia -3% o más punto a punto: 33.3% (incondicional 8.8%) | en algún día de la ventana: 50.0% (incondicional 14.5%)
+-- desde 1996-01-01, h=10: días=7746, eventos=78, episodios=10 (con ventana completa 10; sin ventana completa: [])
+   media posterior -0.27% | mediana -0.12% | t -0.36 | incondicional +0.14% | >0: 4/10
+   frecuencia -3% o más punto a punto: 10.0% (incondicional 4.6%) | en algún día de la ventana: 20.0% (incondicional 6.3%)
+-- desde 1996-01-01, h=20: días=7746, eventos=78, episodios=10 (con ventana completa 10; sin ventana completa: [])
+   media posterior -0.50% | mediana -0.85% | t -0.33 | incondicional +0.28% | >0: 3/10
+   frecuencia -3% o más punto a punto: 40.0% (incondicional 9.3%) | en algún día de la ventana: 50.0% (incondicional 15.1%)
+
+Detalle de episodios al alza (serie completa). Fecha, nivel, alza sobre mín 15d, cambio 10d, 20d, máx 20d
+  1994-03-09     3.3150  +6.75%  10d   +1.32%  20d   +1.53%  máx20   +1.53%
+  1994-12-20     3.9413  +14.64%  10d  +39.55%  20d  +34.66%  máx20  +46.65%
+  1995-05-30     6.2600  +6.31%  10d   -1.27%  20d   +0.19%  máx20   +0.43%
+  1995-10-10     6.8133  +8.05%  10d   -0.77%  20d  +14.78%  máx20  +14.78%
+  1997-10-28     8.2967  +7.48%  10d   +0.16%  20d   -1.17%  máx20   +1.00%
+  1998-08-21     9.6900  +8.61%  10d   +5.23%  20d   +4.19%  máx20   +9.18%
+  1999-01-13    10.6000  +8.64%  10d   -4.01%  20d   -5.86%  máx20   -0.58%
+  1999-06-01     9.8156  +6.08%  10d   -3.20%  20d   -4.07%  máx20   -0.51%
+  2003-01-29    10.9863  +6.03%  10d   -0.13%  20d   +0.43%  máx20   +0.66%
+  2008-09-17    10.8702  +7.18%  10d   +1.02%  20d  +17.01%  máx20  +20.39%
+  2009-01-14    14.1083  +7.09%  10d   +0.30%  20d   +3.49%  máx20   +3.49%
+  2009-02-27    15.0698  +6.58%  10d   -3.32%  20d   -4.54%  máx20   +1.96%
+  2009-04-28    13.8667  +6.25%  10d   -3.96%  20d   -5.10%  máx20   -0.16%
+  2009-06-10    13.6507  +6.07%  10d   -2.53%  20d   -1.59%  máx20   -1.33%
+  2009-09-02    13.6427  +6.39%  10d   -3.03%  20d   -0.14%  máx20   -0.14%
+  2010-05-07    12.9179  +6.25%  10d   +0.90%  20d   -0.45%  máx20   +2.04%
+  2011-08-09    12.3710  +6.49%  10d   -0.29%  20d   +1.13%  máx20   +1.33%
+  2011-09-19    13.1860  +7.54%  10d   +5.39%  20d   +0.83%  máx20   +5.96%
+  2011-11-22    13.9812  +6.62%  10d   -3.46%  20d   -0.92%  máx20   +1.88%
+  2012-05-16    13.7747  +6.26%  10d   +2.18%  20d   +1.42%  máx20   +4.50%
+  2013-05-30    12.7781  +6.66%  10d   +0.02%  20d   +1.92%  máx20   +4.90%
+  2013-08-27    13.3366  +6.13%  10d   -1.68%  20d   -2.88%  máx20   +0.77%
+  2014-12-08    14.4042  +6.42%  10d   +2.06%  20d   +1.55%  máx20   +3.77%
+  2015-08-24    17.0975  +6.11%  10d   -0.64%  20d   -1.32%  máx20   +0.05%
+  2016-01-20    18.6080  +8.15%  10d   -2.25%  20d   -2.49%  máx20   +3.05%
+  2016-05-17    18.3217  +6.67%  10d   +0.49%  20d   +3.60%  máx20   +3.60%
+  2016-09-19    19.6097  +7.26%  10d   -1.47%  20d   -3.76%  máx20   +1.17%
+  2016-11-09    19.9250  +7.65%  10d   +3.92%  20d   +2.47%  máx20   +5.65%
+  2017-01-11    21.9076  +6.91%  10d   -2.57%  20d   -6.81%  máx20   -0.01%
+  2017-10-13    18.9008  +6.49%  10d   +1.30%  20d   +1.41%  máx20   +1.68%
+  2017-12-27    19.7867  +6.14%  10d   -2.24%  20d   -6.61%  máx20   -0.26%
+  2018-05-02    19.0943  +6.21%  10d   +3.22%  20d   +3.34%  máx20   +4.39%
+  2018-10-30    20.0258  +6.69%  10d   +1.86%  20d   +0.98%  máx20   +2.52%
+  2020-02-28    19.7760  +6.49%  10d  +10.89%  20d  +22.80%  máx20  +27.02%
+  2020-06-26    22.9715  +6.43%  10d   -1.90%  20d   -2.56%  máx20   +0.70%
+  2020-09-24    22.3678  +6.67%  10d   -4.18%  20d   -5.98%  máx20   +0.40%
+  2021-03-05    21.2635  +6.57%  10d   -3.22%  20d   -5.11%  máx20   +0.73%
+  2021-11-25    21.5462  +6.23%  10d   -2.38%  20d   -4.12%  máx20   +1.26%
+  2022-06-15    20.6675  +6.01%  10d   -2.53%  20d   +0.45%  máx20   +0.58%
+  2023-10-05    18.2407  +7.15%  10d   +0.26%  20d   -4.54%  máx20   +0.59%
+  2024-06-03    17.6338  +6.44%  10d   +5.05%  20d   +4.29%  máx20   +6.52%
+  2024-07-30    18.7900  +6.46%  10d   +1.32%  20d   +4.68%  máx20   +4.68%
+  2026-09-29    18.0710  +6.96%  10d   +1.56%  20d      n/d  máx20      n/d
+
+Detalle de episodios a la baja (serie completa): fecha, nivel, cambio 20d
+  1994-12-28     5.3250  20d +7.04%
+  1995-11-23     7.6350  20d -0.84%
+  2000-07-11     9.4280  20d -0.98%
+  2008-10-31    12.7125  20d +6.82%
+  2009-03-17    14.0502  20d -7.11%
+  2012-02-02    12.8038  20d -0.25%
+  2016-03-01    17.9432  20d -3.40%
+  2017-02-02    20.5757  20d -4.67%
+  2018-07-04    19.4284  20d -4.32%
+  2020-03-26    23.0970  20d +7.59%
+  2020-05-22    22.7928  20d -0.71%
+  2022-03-25    19.9577  20d +2.00%
+
+Sensibilidad de agrupación (unir si < 20 días del PRIMER día del episodio, no del evento anterior):
+  serie completa, h=10: episodios=51, media +1.04%, t +1.15, frec +3% pp 19.6%
+  serie completa, h=20: episodios=51, media +1.43%, t +1.32, frec +3% pp 24.0%
+  desde 1996-01-01, h=10: episodios=43, media -0.06%, t -0.12, frec +3% pp 14.0%
+  desde 1996-01-01, h=20: episodios=43, media +0.09%, t +0.10, frec +3% pp 19.0%
+Sensibilidad 'desde 1996' = episodios de la serie completa con primer día >= 1996-01-01:
+  h=10: episodios=39, media -0.05%, t -0.09, frec +3% pp 15.4%
+  h=20: episodios=38, media +0.16%, t +0.17, frec +3% pp 21.1%
+
+VEREDICTO (principal: 20 días, desde 1996, frecuencia punto a punto):
+  H1 reversión: media +0.16% vs incondicional +0.28%, t +0.17 -> REFUTADA
+  H2 no continuación: frecuencia +3% 21.1% (umbral 30%) -> SOSTENIDA
+  Estado según §2: Replicado con diferencias
