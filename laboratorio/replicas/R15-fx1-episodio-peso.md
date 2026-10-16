@@ -71,7 +71,7 @@ Sin costos: es una pregunta de pronóstico, no una estrategia. Comparación: el 
 - **Espejo a la baja (desde 1996, 20 días; informativo):** en A, 16 episodios con media +0.35% (t +0.06); en B, 10 episodios con media −0.50% (t −0.33).
 
 ### 14. Conclusiones permitidas
-- Después de una depreciación del peso de 6% en 15 días, **el peso no recupera en promedio** en los 10-20 días siguientes. El t está entre −0.1 y +1.1 en las 8 combinaciones de fuente y variante. La intuición de reversión del pre-registro no se sostiene.
+- Después de una depreciación del peso de 6% en 15 días, **el peso no recupera en promedio** en los 10-20 días siguientes. El t está entre −0.1 y +1.1 en las 8 combinaciones de fuente y variante. La intuición de reversión del pre-registro no se sostiene. [Precisión 16-oct-2026, auditoría semanal: "no recupera" quiere decir que no hay reversión distinguible de cero. En B, desde 1996, la media a 10 días es −0.05% y la de 20 días (+0.16%) queda por debajo de la incondicional (+0.28%); las dos con t ≈ 0. Recalculado con código propio sobre FRED DEXMXUS: las 4 variantes de A y las 33 fechas coinciden. Las ventanas de 20 días no se traslapan (separación mínima de 28 días hábiles) y no hay look-ahead. La mediana es +1.02% y, sin 2008-09-16 (+18.5%), la media queda en +0.10% (t −0.19).]
 - **La cola de continuación es mayor de lo normal:** otro +3% punto a punto ocurre en 21-24% de los episodios (contra 14% incondicional), y tocar +3% en algún momento de la ventana, en ~37%.
 
 ### 15. Conclusiones que NO se sostienen

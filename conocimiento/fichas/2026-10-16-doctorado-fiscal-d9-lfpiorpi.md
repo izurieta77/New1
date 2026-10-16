@@ -7,7 +7,7 @@
 
 ## Fuente y nivel de acceso
 - **LFPIORPI, texto vigente de la Cámara de Diputados** (`diputados.gob.mx/LeyesBiblio/pdf/LFPIORPI.pdf`, 39 páginas, "Última reforma DOF 16-07-2025"). **Lectura de los artículos 17 (fracciones I a XVI) y 32. Grado A.**
-- **UMA 2026:** diaria 117.31, vigente del 1-feb-2026 al 31-ene-2027, según fuentes secundarias (Alegra, IDC). **Grado B.** Se comprueba aritméticamente: 113.14 × 1.0369 = 117.31. No se leyó el DOF del 9-ene-2026.
+- **UMA 2026:** diaria 117.31, vigente del 1-feb-2026 al 31-ene-2027, según fuentes secundarias (Alegra, IDC). **Grado B.** Se comprueba aritméticamente: 113.14 × 1.0369 = 117.31. No se leyó el DOF del 9-ene-2026. [Corregido 16-oct-2026, auditoría semanal: verificado en fuente primaria. DOF 9-ene-2026, aviso del INEGI "Unidad de medida y actualización" (dof.gob.mx/nota_detalle.php?codigo=5778072&fecha=09/01/2026, firmado el 8-ene): diaria $117.31, mensual $3,566.22, anual $42,794.64, vigentes a partir del 1-feb-2026; coincide con el comunicado INEGI 1/26. Pasa a **Grado A**.]
 
 ## Lo que dice la ley (A)
 - **Art. 17 XVI (reformado en 2025):** es actividad vulnerable el intercambio habitual y profesional de **activos virtuales** por plataformas que no son entidades financieras, incluidas las que operan con mexicanos desde otra jurisdicción. El aviso procede cuando una operación de un cliente es **≥ 210 UMA**, o cuando la comisión cobrada es **≥ 4 UMA**. La obligación es **de la plataforma**, no del usuario.
@@ -33,11 +33,11 @@ Código: `conocimiento/fichas/codigo/2026-10-16-d9-lfpiorpi-umbrales.py` (aserci
 - **Binance real (~5,000 MXN):** la obligación de aviso es de la plataforma. Una operación del dueño de ≥ 24,635 MXN haría que la plataforma lo reporte. No es ilegal ni lo sanciona a él, pero conviene tener el soporte del origen de los fondos.
 - **Construcción y remodelación:** la fracción V exige que haya **compraventa de los propios inmuebles**. Un servicio de remodelación a terceros, sin vender el inmueble, no encaja en V según la lectura literal. Un desarrollo propio para vender o rentar sí (V y V Bis).
 - **Gasolinera:** la venta de combustibles **no aparece** entre las actividades vulnerables del art. 17 (busqué "combustible" en el texto: 0 resultados). Su riesgo es fiscal y de controles volumétricos (cap. 33), no de avisos LFPIORPI.
-- **Efectivo:** ningún vehículo de más de 376,565 MXN ni inmueble de más de 941,413 MXN se puede pagar en efectivo, aunque se deposite en un banco.
+- **Efectivo:** ningún vehículo de 376,565.10 MXN o más ni inmueble de 941,412.75 MXN o más se puede pagar en efectivo, aunque se deposite en un banco. [Corregido 16-oct-2026, auditoría semanal: decía "de más de"; el art. 32 I-II dice "igual o superior", así que el umbral exacto ya está prohibido.]
 
 ## Límites
 - No se leyeron el Reglamento ni las Reglas de Carácter General (plazos de aviso, identificación y expediente), ni el art. 17 XVI completo sobre la información del originante y del receptor.
-- La UMA 2026 viene de fuente secundaria.
+- La UMA 2026 viene de fuente secundaria. [Corregido 16-oct-2026, auditoría semanal: ya se verificó en el DOF; ver Fuente.]
 
 ## Contraejemplo
 Un inversionista que compra 30,000 MXN de BTC en una sola orden en una plataforma registrada en México genera un aviso de la plataforma, aunque la operación sea perfectamente lícita. El aviso no es una sanción: el umbral mide exposición a reporte, no ilegalidad.
