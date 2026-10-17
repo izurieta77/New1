@@ -649,3 +649,4 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Pregunta 2:** el colchón del límite es ×1.005 en la boleta y ×1.003 en la convención (REGLAS §7 y la boleta del 5-oct). ¿Cuál publica la supervisión?
   - **Qué decidí:** lo conservador es **×1.003**, salvo que el comité ratifique 1.005. Paga menos, y si no llena, la orden simplemente vence en el día.
 - **Estado:** Abierto → orquestador (pregunta 1) y supervisión de las 08:40 del 19-oct (pregunta 2).
+- **[Actualización 17-oct, trabajo continuo]:** R12 quedó pre-registrado en `laboratorio/replicas/R12-condicion-vix-filtro.md`, en git antes del 23-oct, con el VIX en 19.99. Diseño: Nasdaq-100 3x, fuera de muestra respecto a R11, con 4 variantes. Falta correrlo con doble ejecución; queda para el laboratorio. **Estado:** pre-registro cerrado; la corrida sigue abierta → laboratorio.
