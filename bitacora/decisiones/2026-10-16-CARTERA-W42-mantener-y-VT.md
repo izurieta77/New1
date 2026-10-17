@@ -1,6 +1,6 @@
 # Decisión de cartera · comité semanal W42 · viernes 16-oct-2026
 
-> Skill `comite-de-inversion`; el orquestador preside con el rol de `decisor`. Pasaron 10 días hábiles desde la decisión W40 del 2-oct (REGLAS §4). Fase 0, con la excepción de la cuenta arena vigente. Tesis y contexto: `/tmp/.../scratchpad/comite/tesis.md`, resumido abajo.
+> Skill `comite-de-inversion`; el orquestador preside con el rol de `decisor`. Pasaron 10 días hábiles desde la decisión W40 del 2-oct (REGLAS §4). Fase 0, con la excepción de la cuenta arena vigente. Tesis y contexto: `bitacora/comite/2026-10-16-expediente.md` (copiado al repositorio el 17-oct por la revisión §1.2; antes apuntaba a un archivo temporal).
 
 ## Decisión
 1. **Papel GBM: MANTENER (A).** Se quedan 5 SPYM, 1 QQQM, 2 UPRO (stop 135.76) y 1,072 MXN de efectivo. Sin órdenes nuevas. El stop y el filtro se aplican **sin discreción**.
@@ -74,7 +74,7 @@
   - Ningún escenario se acerca al tope de 5,000 MXN.
 - **Advertencia del gestor:** B2 se justifica por exposición, no por edge. El beneficio esperado (~40 MXN) apenas supera el costo (~29 MXN).
 
-## Verificación (orquestador, 16-oct ~23:20 UTC)
+## Verificación (orquestador, 16-oct antes del commit `75726c2` de las 22:56 UTC) [Corregido 17-oct-2026, revisión §1.2: decía "~23:20 UTC", hora posterior al commit]
 - **VT** = 156.82 USD (Yahoo). 1 VT = 2,897.88 MXN, que es 28.92% de 10,020.07.
 - **SPYM +1** llevaría la posición a 66.27%.
 - **Pérdida con stop:** 2 × (146.43 − 135.76) × 18.479 = 394.34 MXN.
@@ -89,6 +89,7 @@
 ## Pronósticos registrados
 - **P0135:** índice del papel ≥ 100.92 al 23-oct (0.55).
 - **P0136:** WTI CL=F ≥ 100 en algún cierre del 19 al 30-oct (0.70).
+- **P0137 (agregado el 17-oct, revisión §1.1):** VT > 156.82 el 13-nov (0.56), pronóstico propio de la decisión B2.
 - **Previos ligados:** P0127 (UPRO > 135.76 al 30-oct, 0.82) y P0131 (alza de la Fed el 28-oct, 0.13).
 
 ## Ejecución

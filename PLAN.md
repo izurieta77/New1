@@ -117,7 +117,7 @@ Decisión del dueño (25-sep-2026): describió el patrón de horarios de un riva
 
 ## 8. Avance (lo actualiza la auditoría del viernes)
 
-Última actualización: auditoría semanal 2026-W42 (16-oct-2026, ~23:30 UTC). Detalle en `bitacora/semanal/2026-W42.md`. (Antes: W40, 2-oct.)
+Última actualización: auditoría semanal 2026-W42 (16-oct-2026, commit `75726c2` de las 22:56 UTC; corregido el 17-oct, decía "~23:30 UTC"). Detalle en `bitacora/semanal/2026-W42.md`. (Antes: W40, 2-oct.)
 
 | Indicador | Valor | Fecha |
 |---|---|---|
