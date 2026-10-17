@@ -6,7 +6,7 @@
 ## Revisado
 - **`bitacora/alertas.md`:** hay dos alertas Altas del vigía, las dos informativas por la regla §3:
   - UPRO de papel: −3.04% en USD a media sesión. Cerró en 146.43 USD, 7.9% arriba de su stop.
-  - QQQM de papel: −2.51% en pesos al cierre.
+  - QQQM de papel: −2.51% en pesos al cierre. [Corregido 17-oct-2026, conciliación, fallo §5.4: −2.51% es en USD (292.26 / 299.79 − 1); en pesos es −2.13% (con 18.4790 contra 18.4070), como dice la fila Alta de `alertas.md`.]
   - Ninguna toca stop, cortacircuitos ni filtro.
 - **Filtro del UPRO:** se cumple. ^GSPC 7,659.44 contra SMA200 × 0.97 ≈ 7,053; VIX ~20.0, lejos de 25. La supervisión confirma que no hay venta del lunes.
 - **Papel GBM:** drawdown −3.35%, contra un primer cortacircuitos en −12%.

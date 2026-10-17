@@ -10,8 +10,14 @@ Sesión: "Sistema de inversión · Supervisión, conciliación y revisión". Age
    - evalúa la condición con Yahoo chart v8, intervalo 1m;
    - calcula los precios límite que pida la boleta;
    - escribe VIGENTE o EN ESPERA, con límites y hora, al inicio de la boleta y de `bitacora/alertas.md`.
+   - **Colchón del precio límite (convención; fallo de conciliación del 17-oct-2026, `bitacora/arbitraje/2026-10-16.md` §3; no es un parámetro nuevo):** si la boleta no fija otra cifra con fundamento en su decisión, el límite de compra es último precio (1m) × USD/MXN (1m, mismo minuto) × **1.003**, redondeado a centavos hacia abajo. En la sección USA de GBM es precio × 1.003 en USD. Así lo hacían las boletas del 28-sep, 30-sep y 5-oct y REGLAS §7. Publica el número final en MXN por título, no la fórmula.
    Si la condición no se cumple, marca las órdenes sombra correspondientes de `bitacora/ordenes-pendientes.csv` como `en_espera`.
 3. Aplica el método del agente `supervisor`: stops, cortacircuitos, tope de 10,000 MXN, filtro de apalancados, órdenes vencidas, latidos, bloqueos y dudas abiertas.
+   - **Distancia al stop: cómo se escribe (fallo de conciliación del 17-oct-2026, `bitacora/arbitraje/2026-10-16.md` §5.2).** Hay dos métricas, y las dos son correctas si llevan su nombre:
+     - **"X% sobre el stop"** = precio / stop − 1. Es la que imprime `herramientas/supervision.py` y la base de su AVISO de < 2%. Ejemplo del 16-oct: 7.9%.
+     - **"le falta Y% para el stop"** = 1 − stop / precio, la caída que necesita el precio. Ejemplo: 7.29%.
+     - Cuando se hable del riesgo de tocar el stop, usa la segunda. Para un 3x, la caída del índice en un día que lo toca es ≈ Y / 3 (≈ −2.4% del S&P el 16-oct).
+     - No mezcles las dos en una misma frase sin nombrarlas.
 3b. **Regla FX-1, alerta cambiaria (30-sep-2026).** La evalúa el mismo `supervision.py` (código en `herramientas/fx_alerta.py`); su línea empieza con `FX-1`. Informa y pide revisión; **nunca** genera boleta URGENTE ni órdenes: el paso 4 no aplica a FX-1.
    - Qué mide: spot USD/MXN (Yahoo `MXN=X`, 1m) contra la referencia diaria: el FIX de Banxico (SF43718) si `BANXICO_TOKEN` está en el entorno; si no, cierres diarios de Yahoo; si Yahoo falla, Binance USDT/MXN (base 0.1-0.25%). La línea dice qué fuente usó.
    - Niveles: **AVISO** si |Δ1| ≥ máx(1%, 2σd) o |Δ10| ≥ máx(3%, 2σd√10); **ALERTA** si |Δ10| ≥ máx(4.5%, 3σd√10) o el USD/MXN está 6% o más arriba del mínimo (o abajo del máximo) de los últimos 15 días hábiles. En las dos direcciones: un peso que se aprecia también avisa.

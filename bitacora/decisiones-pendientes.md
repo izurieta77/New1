@@ -617,7 +617,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** no resolver hoy; queda abierto hasta su vencimiento (2-nov).
   - **Propuesta para la conciliación:** resolver **SÍ** con nota, porque el evento de fondo (el reporte mensual de la foto del 1-oct publicado antes del 2-nov) ocurrió y el número es solo una forma de identificarlo. Si se exige la letra, queda pendiente hasta que alguien cite "47th" o la página oficial sea legible.
   - **Por qué:** es lo conservador; no toco el resultado de un pronóstico propio con un criterio ambiguo.
-  - **Estado:** Abierto → conciliación.
+  - **Estado:** Abierto → conciliación. **[Fallo, conciliación 17-oct-2026, `bitacora/arbitraje/2026-10-16.md` §6]:** abierto hasta el 2-nov. Se resuelve SÍ si la página de Binance es legible con la foto del 1-oct o si una fuente de la lista dice "47th". Si ninguna ruta literal se cumple, SÍ por la ruta de binance.com, con evidencia secundaria (PANews más la secuencia: el 25.º fue el del 1-dic-2024) y nota. NO solo si hay evidencia de que no se publicó.
 - **E3 en ÁMBAR por umbral:** el ratio de BTC fue 100.25% (ago), menor que 100.35% (sep, inferido de "mejoró") y 100.35% (oct). Es ≥ 2 meses < 100.5%. **Qué decidí:** anotarlo como ÁMBAR, sin alerta alta ni boleta, porque no es ROJA ni disparador de contingencia. **Pregunta al gestor de riesgo:** ¿se recalibra el umbral? Un ratio de ~100% es el diseño de un PoR 1:1; quizá el ÁMBAR deba ser "< 100.0% en cualquier activo" o "caída de > 1 pp en un mes". **Estado:** Abierto → gestor de riesgo.
 - **E9 en ÁMBAR puntual:** el diferencial de BTCMXN fue 0.61% a las 14:2x UTC (el umbral es 0.5%). El lado de compra está ~0.7% bajo el precio implícito, pero hay 54,571 MXN a ±0.5%, ~27 veces el libro real. **Qué decidí:** no hacer nada. Si hay una venta S, va con **orden límite**, no de mercado. Se vuelve a medir a las 18:42; si sigue > 0.5% dos pulsos seguidos, se avisa al gestor de riesgo. **Estado:** Abierto → cripto 18:42.
 
@@ -627,7 +627,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** abrir una **fila nueva** (2026-10-16 17:10 UTC) que remite a la del 14-oct. Es un cruce nuevo contra otra base (el cierre del 15-oct), con otra causa (rotación fuera de tecnología más tasas). La regla de "no abrir otra" solo aplica a las filas FX-1 de la supervisión. Para el FX de referencia usé 18.4070 (continuidad con la sección 07:05) y anoté que con la base de FX-1 (18.3890) también cruza (−2.49%).
 - **Por qué:** es lo conservador; el decisor ve el cruce de hoy sin tener que leer una fila de tres días. Ninguna regla se dispara (stop a 8.2%, filtro cumplido).
 - **Pendiente para el orquestador o la conciliación:** si se prefiere una sola fila viva por posición, cerrar la del 14-oct al cierre de hoy.
-- **Estado:** Abierto → orquestador.
+- **Estado:** Abierto → orquestador. **[Cerrado, conciliación 17-oct-2026, `bitacora/arbitraje/2026-10-16.md` §6]:** la fila nueva es válida y queda una sola fila informativa viva por posición. La del 14-oct quedó Cerrada (sustituida) en `alertas.md`.
 
 ## 2026-10-16 · inteligencia (rutina 7, 15:05 CDMX) · P0028 resuelto con un VIX a un centavo del umbral
 
@@ -636,7 +636,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** resolverlo **NO** (resultado 0, Brier 0.0625), con nota de fuente en el CSV, y sin pronóstico nuevo.
 - **Por qué:** las dos fuentes del criterio dan el mismo valor, que es el cierre oficial de las 16:15 ET. Esperar no cambia el dato; dejarlo abierto solo retrasaría el Brier.
 - **Control:** la conciliación, o la pre-apertura del 19-oct, coteja con la fila del 16-oct de `VIX_History.csv`. Si CBOE publica ≥ 20.00, se corrige a 1 con una nota fechada.
-- **Estado:** Abierto → conciliación (solo el cotejo).
+- **Estado:** Abierto → conciliación (solo el cotejo). **[Cerrado, conciliación 17-oct-2026, `bitacora/arbitraje/2026-10-16.md` §4]:** `VIX_History.csv` trae el 16-oct con close 19.99. NO queda firme y el Brier no cambia (0.2205, n = 41).
 
 ## 2026-10-16 · comité W42 (auditoría semanal)
 - **Boleta real del 19-oct (1 VT):** espera la confirmación del dueño y la verificación de que VT existe en GBM. Si no existe, el comité del 23-oct elige entre RSP y VEA. **Estado:** Abierto → dueño y supervisión.
@@ -648,7 +648,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Por qué:** el pronóstico es del comité. Si no está antes de que el dueño capture la boleta, la pre-apertura del 19-oct lo anota en el brief, sin frenar la boleta, porque ningún parámetro se rompe.
 - **Pregunta 2:** el colchón del límite es ×1.005 en la boleta y ×1.003 en la convención (REGLAS §7 y la boleta del 5-oct). ¿Cuál publica la supervisión?
   - **Qué decidí:** lo conservador es **×1.003**, salvo que el comité ratifique 1.005. Paga menos, y si no llena, la orden simplemente vence en el día.
-- **Estado:** Abierto → orquestador (pregunta 1) y supervisión de las 08:40 del 19-oct (pregunta 2).
+- **Estado:** Abierto → orquestador (pregunta 1) y supervisión de las 08:40 del 19-oct (pregunta 2). **[Cerrado, conciliación 17-oct-2026, `bitacora/arbitraje/2026-10-16.md` §1 y §3]:** (1) P0137 cumple la regla del comité y no se registra otro antes de la boleta. Lleva nota: la probabilidad la puso el orquestador y la tasa base real es ~0.63, no 0.56. (2) Se ratifica × 1.003, con la instrucción para las 08:40 en la boleta y en `rutinas/supervision.md` paso 2.
 - **[Actualización 17-oct, trabajo continuo]:** R12 quedó pre-registrado en `laboratorio/replicas/R12-condicion-vix-filtro.md`, en git antes del 23-oct, con el VIX en 19.99. Diseño: Nasdaq-100 3x, fuera de muestra respecto a R11, con 4 variantes. Falta correrlo con doble ejecución; queda para el laboratorio. **Estado:** pre-registro cerrado; la corrida sigue abierta → laboratorio.
 
 ## 2026-10-16 · inteligencia (rutina 7, cierre 20:05 CDMX; 02:1x UTC del 17-oct) · ID del pronóstico, fecha de ASUR y nota reciclada
@@ -662,4 +662,25 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Pregunta 3:** Google News fechó el 16-oct a las 22:37 UTC una nota de EnergyNow ("mediators propose US-Iran ceasefire") que es del 21-jul-2026. ¿Se usa?
   - **Qué decidí:** **descartada por mal fechado**, con el mismo criterio que El Gaia y la nota de AP de julio.
 - **Nota menor para el orquestador:** el decisor vespertino escribió "QQQM −2.51% en pesos"; es −2.51% en USD y −2.13% en pesos. No cambia la decisión, así que no edité su archivo.
-- **Estado:** Abierto → orquestador (1 y la nota) y radar o pre-apertura (2).
+- **Estado:** Abierto → orquestador (1 y la nota) y radar o pre-apertura (2). **[Conciliación 17-oct-2026, `bitacora/arbitraje/2026-10-16.md` §5.4 y §6]:** (1) P0138 es correcto; cerrado. (3) Descarte correcto; cerrado. Nota: QQQM corregido a −2.13% en pesos en el archivo del decisor. (2) ASUR sigue abierto → radar o pre-apertura.
+
+## 2026-10-17 · conciliación (noche del 16-oct) · Cierres de la revisión del 16-oct y del comité W42
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-16.md`):
+  - P0137 cumple la regla del comité y lleva nota;
+  - horas contra `75726c2` (22:56:23 UTC) ratificadas;
+  - tesis de /tmp: ya no existe; el expediente se acepta con nota de procedencia;
+  - × 1.003 ratificado (boleta y `rutinas/supervision.md` paso 2);
+  - P0028 = NO firme según `VIX_History.csv`;
+  - BTC 81,616 era la vela abierta; el cierre previo era 82,245.93 y la vela del 16-oct cerró en 81,615.64;
+  - convención de la distancia al stop (7.9% sobre el stop contra 7.29% de caída; −2.4% del S&P) en `rutinas/supervision.md` paso 3;
+  - "3 a 1" es correcto según `SKILL.md` (el gestor no vota);
+  - QQQM −2.13% en pesos;
+  - fila del UPRO del 14-oct cerrada;
+  - P0138 bien numerado.
+  - Suite: 342 OK, sin cambios de código.
+- **Para el comité del 23-oct (nuevo, opcional):**
+  - registrar la refutación de B2 (VT contra Smart Cash + 1% al 28-ene) con una serie pública, por ejemplo CETES 28 días de Banxico, y su propia probabilidad;
+  - decidir la zona horaria de `fecha_creacion` en `pronosticos.csv` (P0137 lleva fecha UTC y P0138 fecha CDMX).
+  - **Qué decidí:** no registrar ni editar nada de esto. Son decisiones del comité. **Estado:** Abierto → comité del 23-oct.
+- **Escalado al gestor de riesgo y al dueño (parámetro):** el umbral E3 del PoR. Sin cambio.
+- **Más de 48 h:** P0048 → conciliación del 19-oct (H.10). BIVA, GFNORTEO y Metaplanet siguen sin vía nueva.

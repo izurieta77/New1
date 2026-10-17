@@ -7,7 +7,7 @@
 2. **Real GBM: B2 en la versión del gestor de riesgo.** Comprar **1 VT** (Vanguard Total World Stock, ~2,898 MXN, 28.9% de la cuenta); el resto (~2,134 MXN) sigue en Smart Cash.
    - B2 en SPYM queda **VETADO**, porque rompe `etf_indice_max` = 60% por ETF.
    - Antes de ejecutar hay que **verificar que VT exista en GBM** y el **dueño debe firmar la boleta** (`bitacora/boletas/2026-10-19.md`).
-3. **Real Binance: MANTENER (A).** BTC se queda en 40%. B3 se rechaza: el cierre de 81,616 no supera 87,396 y el calendario de tramos no permite antes del 30-oct.
+3. **Real Binance: MANTENER (A).** BTC se queda en 40%. B3 se rechaza: el cierre de 81,616 no supera 87,396 y el calendario de tramos no permite antes del 30-oct. [Corregido 17-oct-2026, conciliación, `bitacora/arbitraje/2026-10-16.md` §5.1: al decidir, 81,616 era el precio en vivo de la vela 1d abierta del 16-oct, no un cierre; el último cierre era 82,245.93 (BTCUSDT 1d del 15-oct, Binance). La vela del 16-oct cerró a las 00:00 UTC del 17-oct en 81,615.64. Con cualquiera de las tres cifras B3 sigue fuera (< 87,396).]
 4. **R12: se aprueba el pre-registro** de la condición de VIX, **solo para evaluación fuera de muestra**. El filtro vivo no cambia. Debe estar en git **antes del 23-oct** y antes de cualquier cierre del VIX ≥ 25.
 
 ## Tesis y cómo se refuta
@@ -32,7 +32,7 @@
 - **Geopolítico (60): B1, y B2 después del FOMC.**
   - El GPR diario llegó a 342, el máximo en 90 días. El AI-GPR petrolero está en el percentil 99.
   - Kalshi y Polymarket dan 13.5% a un alza en octubre y ~76% en diciembre.
-  - Con el stop a 7.9%, un día de −2.7% del S&P lo dispara.
+  - Con el stop a 7.9%, un día de −2.7% del S&P lo dispara. [Corregido 17-oct-2026, conciliación, fallo §5.2: 7.9% es el precio sobre el stop (146.43 / 135.76 − 1). La caída que lo toca es 7.29% (1 − 135.76 / 146.43), o sea un S&P de ≈ −2.4% en un día con el 3x, no −2.7%.]
 - **Cripto (75): A en Binance.**
   - Vol30 de 37.4% (≤ 45%, cumple), pero el cierre de 82,246 queda debajo de 87,396.
   - Pasar de 40% a 65% sube la vol de la cuenta de ~15% a ~24%.
@@ -54,7 +54,7 @@
 | abogado-del-diablo | A (con condiciones) | B2 con otro índice 1x | A | 60-65 |
 | gestor-de-riesgo | A | B2 = 1 VT; **veto a SPYM** | A | 70 / 60 |
 
-- **Papel:** 3 a 1 a favor de A, con confianza media de 60.7 entre los que votaron A. Aprobada.
+- **Papel:** 3 a 1 a favor de A, con confianza media de 60.7 entre los que votaron A. Aprobada. [Aclarado 17-oct-2026, conciliación, fallo §5.3: el conteo es correcto. Según `.claude/skills/comite-de-inversion/SKILL.md` pasos 2, 3 y 5, votan los dictámenes del paso 2 (macro, cuantitativo, geopolítico y abogado; el cripto no votó en papel). El gestor de riesgo dimensiona y puede vetar, pero no vota; su "A" de la tabla es su validación. Si se le contara, quedaría 4 a 1 con media de 63.0, y el resultado sería el mismo.]
 - **Real GBM:** 5 de 5 a favor de B2. El instrumento lo fija el gestor de riesgo: el veto a SPYM manda y VT es la versión que cumple todo.
 - **Binance:** unánime por A.
 
@@ -82,7 +82,7 @@
 - **Brent:** el abogado dijo "~85.6"; **es incorrecto**. Yahoo BZ=F da 109.69 el 16-oct (+3.6%) y FRED DCOILBRENTEU (spot) 126.55 el 14-oct. La lectura estanflacionaria de la tesis se sostiene.
 
 ## Disenso (se conserva)
-- **Geopolítico:** quería B1, bajar UPRO a 1 título. Su argumento es el régimen geopolítico alto y el stop a 7.9%. Con B1, la pérdida en un día tipo 16-mar-2020 sería −13.1% y no −17.9%. Se revisa el 23-oct con sus disparadores: VIX ≥ 22 con 10a ≥ 5.25%, o HY > 3.55%.
+- **Geopolítico:** quería B1, bajar UPRO a 1 título. Su argumento es el régimen geopolítico alto y el stop a 7.9% (precio sobre el stop; la caída que lo toca es 7.29%, ≈ −2.4% del S&P; nota de conciliación del 17-oct). Con B1, la pérdida en un día tipo 16-mar-2020 sería −13.1% y no −17.9%. Se revisa el 23-oct con sus disparadores: VIX ≥ 22 con 10a ≥ 5.25%, o HY > 3.55%.
 - **Momento de B2:** el geopolítico quería esperar al FOMC del 28-oct y el cuantitativo, escalonar. La boleta es una sola orden de ~2,898 MXN, con semáforo que la frena si el USD/MXN ≥ 18.81 o el VIX ≥ 25.
 - **Modo torneo:** el abogado y el gestor corrigen la tesis. No se activa, porque la ventaja es de ~1 pp contra una regla de 5 pp.
 
