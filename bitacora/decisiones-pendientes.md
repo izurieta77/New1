@@ -692,3 +692,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** no escribir el resultado en `pronosticos.csv`, porque `rutinas/inteligencia.md` no le da al vigía la tarea de resolver pronósticos de otro autor. **Estado:** Abierto → la rutina que resuelva vencidos (cierre o conciliación).
 - **HR Ratings (15-oct) no se registró en cuatro corridas de inteligencia** (evento relevante de la BMV, grado A).
   - **Qué decidí:** registrarlo hoy como "media", no como "alta", porque es una agencia local y el peso ya cotizó después del evento. **Estado:** Abierto → orquestador: decidir si se agregan los eventos de calificadoras de la BMV (`eventoca`) al barrido fijo.
+
+## 2026-10-17 · cripto (rutina 8, 08:17 CDMX) · Señal D6 de autocustodia (Ledger/CryptoBilis) y flujo ETF del 16-oct con una sola fuente
+
+- **Propuesta de señal D6 para `conocimiento/cripto/lista-senales-de-alerta.md` (sección D):** "Dispositivo de autocustodia de canal no directo (revendedor, mercado en línea, devuelto o preconfigurado) o con señales de apertura → ROJA: no configurar". Caso: Ledger/CryptoBilis, oct-2026 (ficha `conocimiento/cripto/fichas/2026-10-17-ledger-cadena-suministro-autocustodia.md`). **Qué decidí:** no editar la lista; dejo la propuesta en la ficha y en la adenda §8 del capítulo 04. **Por qué:** la lista la usa el plan de contingencia; cambiarla le toca al orquestador o al gestor de riesgo. Hoy no hay exposición (custodia en Binance; plan B en Bitso, también custodia). **Estado:** Abierto → orquestador/gestor de riesgo.
+- **Flujo ETF BTC del 16-oct (−82.4 M USD) con una sola fuente** (tftc.io; bitbo sin actualizar, Farside 403). **Qué decidí:** reportarlo como grado B- y reconfirmarlo a las 18:42. **Estado:** Abierto → pulso de las 18:42.
+- **E9:** volvió a VERDE (diferencial 0.053%); la ÁMBAR del 16-oct fue puntual y no se repitió dos pulsos seguidos. No se escala al gestor de riesgo. **Estado:** Cerrado.
