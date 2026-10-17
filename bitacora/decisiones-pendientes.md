@@ -684,3 +684,11 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** no registrar ni editar nada de esto. Son decisiones del comité. **Estado:** Abierto → comité del 23-oct.
 - **Escalado al gestor de riesgo y al dueño (parámetro):** el umbral E3 del PoR. Sin cambio.
 - **Más de 48 h:** P0048 → conciliación del 19-oct (H.10). BIVA, GFNORTEO y Metaplanet siguen sin vía nueva.
+
+## 2026-10-17 · inteligencia (07:05 CDMX, sábado)
+- **ASUR, fecha del 3T26:** el 28-oct de Nasdaq es un estimado algorítmico de Zacks, no un aviso de la empresa; en 2025 ASUR reportó el 22-oct (llamada el 23-oct). La empresa aún no lo confirma (asur.com.mx sin invitación; no se consultaron Emisnet ni EDGAR 6-K por el contacto del User-Agent de la SEC).
+  - **Qué decidí:** no editar `vigilancia-niveles.md` y tratar la semana del 19-oct como posible fecha (lo conservador para el radar). **Estado:** Abierto → radar y siguiente corrida de inteligencia (buscar la invitación en Emisnet).
+- **P0079 vence hoy (17-oct)** y su resultado ya se conoce con dato A: UPRO cerró el 16-oct en 146.43, arriba de 135.76, así que resuelve SÍ.
+  - **Qué decidí:** no escribir el resultado en `pronosticos.csv`, porque `rutinas/inteligencia.md` no le da al vigía la tarea de resolver pronósticos de otro autor. **Estado:** Abierto → la rutina que resuelva vencidos (cierre o conciliación).
+- **HR Ratings (15-oct) no se registró en cuatro corridas de inteligencia** (evento relevante de la BMV, grado A).
+  - **Qué decidí:** registrarlo hoy como "media", no como "alta", porque es una agencia local y el peso ya cotizó después del evento. **Estado:** Abierto → orquestador: decidir si se agregan los eventos de calificadoras de la BMV (`eventoca`) al barrido fijo.
