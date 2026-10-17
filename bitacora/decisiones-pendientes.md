@@ -650,3 +650,16 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** lo conservador es **×1.003**, salvo que el comité ratifique 1.005. Paga menos, y si no llena, la orden simplemente vence en el día.
 - **Estado:** Abierto → orquestador (pregunta 1) y supervisión de las 08:40 del 19-oct (pregunta 2).
 - **[Actualización 17-oct, trabajo continuo]:** R12 quedó pre-registrado en `laboratorio/replicas/R12-condicion-vix-filtro.md`, en git antes del 23-oct, con el VIX en 19.99. Diseño: Nasdaq-100 3x, fuera de muestra respecto a R11, con 4 variantes. Falta correrlo con doble ejecución; queda para el laboratorio. **Estado:** pre-registro cerrado; la corrida sigue abierta → laboratorio.
+
+## 2026-10-16 · inteligencia (rutina 7, cierre 20:05 CDMX; 02:1x UTC del 17-oct) · ID del pronóstico, fecha de ASUR y nota reciclada
+
+- **Pregunta 1:** el orquestador indicó P0135 como siguiente ID libre, pero en `pronosticos.csv` ya existen P0135 y P0136 (comité W42) y P0137 (aprendizaje, decisión VT). ¿Qué ID usa el vigía?
+  - **Qué decidí:** **P0138**, el siguiente después del máximo verificado. No toqué P0135-P0137.
+  - **Por qué:** sobrescribir o duplicar un ID rompería la trazabilidad del Brier. La sección 15:05 decía "siguiente ID libre P0135" porque se escribió antes del comité.
+- **Pregunta 2:** `bitacora/vigilancia-niveles.md` da a ASUR B "~21-oct"; el calendario de Nasdaq pone ASR el 28-oct (C). ¿Se corrige la lista?
+  - **Qué decidí:** no la edito (es del radar). Anoto la discrepancia en la bitácora del día; ninguna fecha está confirmada por la empresa.
+  - **Control:** el radar o la pre-apertura del 19-oct la confirma en Emisnet o en el sitio de relación con inversionistas de ASUR.
+- **Pregunta 3:** Google News fechó el 16-oct a las 22:37 UTC una nota de EnergyNow ("mediators propose US-Iran ceasefire") que es del 21-jul-2026. ¿Se usa?
+  - **Qué decidí:** **descartada por mal fechado**, con el mismo criterio que El Gaia y la nota de AP de julio.
+- **Nota menor para el orquestador:** el decisor vespertino escribió "QQQM −2.51% en pesos"; es −2.51% en USD y −2.13% en pesos. No cambia la decisión, así que no edité su archivo.
+- **Estado:** Abierto → orquestador (1 y la nota) y radar o pre-apertura (2).
