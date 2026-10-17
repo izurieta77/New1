@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-17 19:42 UTC · cripto (pulso extra 13:41) · OK · (este commit) · BTC 81,638.98 (+0.10% vs 12:17), ETH 2,420.00; OI 838.29M, funding 2.923e-05; colchón +16.25%, ENCENDIDO; sin vencidos cripto
 2026-10-17 18:18 UTC · cripto (pulso 12:17) · OK · (este commit) · BTC 81,556.55 (+0.09% vs 09:41), ETH 2,418.31; OI 838.20M (−0.21%), funding 2.156e-05; colchón +16.13%, ENCENDIDO; sin vencidos cripto
 2026-10-17 17:16 UTC · inteligencia (11:05) · OK · (este commit) · actualización del sábado, 7 filas en bitacora/inteligencia/2026-10-17.md §11:05: Polymarket 4641065 en 0.805 (sin cambio, liquidez 434k); Ormuz: tercer incidente según Irán (D), CENTCOM dice que ≈97% de los buques cruzan (B); 'life support' descartado por reciclado (es de mayo); Ley Graham sin contraataque rápido del Congreso (B); China, HR/Hacienda y Francia sin novedad; FX-1 sin disparo (18.4790, fijo); sin alertas; sin pronósticos (siguiente P0140)
 2026-10-17 15:42 UTC · cripto (pulso extra 09:41) · OK · (este commit) · BTC 81,486.64 (0.00% vs 08:17), ETH 2,414.60; OI 839.98M, funding 1.39e-06; colchón +16.03%, ENCENDIDO; sin vencidos cripto
