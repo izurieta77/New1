@@ -641,3 +641,11 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 ## 2026-10-16 · comité W42 (auditoría semanal)
 - **Boleta real del 19-oct (1 VT):** espera la confirmación del dueño y la verificación de que VT existe en GBM. Si no existe, el comité del 23-oct elige entre RSP y VEA. **Estado:** Abierto → dueño y supervisión.
 - **R12 (condición de VIX del filtro):** aprobado el pre-registro, solo para evaluación fuera de muestra. Debe estar en git antes del 23-oct y antes de cualquier cierre del VIX ≥ 25. **Estado:** Abierto → laboratorio o trabajo continuo (prioridad).
+
+## 2026-10-16 · revisión (rutina 11, 17:58 CDMX) · boleta VT del 19-oct: pronóstico y límite
+- **Pregunta 1:** la decisión real B2 (1 VT) no tiene pronóstico registrado. ¿Lo registra la revisión?
+  - **Qué decidí:** no. La revisión no reescribe el trabajo ajeno; queda como hallazgo "corregir" 1.1.
+  - **Por qué:** el pronóstico es del comité. Si no está antes de que el dueño capture la boleta, la pre-apertura del 19-oct lo anota en el brief, sin frenar la boleta, porque ningún parámetro se rompe.
+- **Pregunta 2:** el colchón del límite es ×1.005 en la boleta y ×1.003 en la convención (REGLAS §7 y la boleta del 5-oct). ¿Cuál publica la supervisión?
+  - **Qué decidí:** lo conservador es **×1.003**, salvo que el comité ratifique 1.005. Paga menos, y si no llena, la orden simplemente vence en el día.
+- **Estado:** Abierto → orquestador (pregunta 1) y supervisión de las 08:40 del 19-oct (pregunta 2).
