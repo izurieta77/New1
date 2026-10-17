@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-17 22:18 UTC · cripto (pulso 16:17) · OK · (este commit) · BTC 81,285.85 (−0.43% vs 13:41), ETH 2,389.34 (−1.27%); OI 842.54M (+0.51%), funding 3.63e-05; colchón +15.75%, ENCENDIDO; sin vencidos cripto
 2026-10-17 21:13 UTC · inteligencia (15:05) · OK · (este commit) · sábado, mercados cerrados: 7 filas; UKMTO (vía NYPost, B−) récord semanal de 12 ataques en Ormuz → media; Francia escala (≈550k, B); Polymarket 4641065 0.805 sin cambio; FX-1 sin disparo (18.4790); sin alertas ni pronósticos
 2026-10-17 19:42 UTC · cripto (pulso extra 13:41) · OK · (este commit) · BTC 81,638.98 (+0.10% vs 12:17), ETH 2,420.00; OI 838.29M, funding 2.923e-05; colchón +16.25%, ENCENDIDO; sin vencidos cripto
 2026-10-17 18:18 UTC · cripto (pulso 12:17) · OK · (este commit) · BTC 81,556.55 (+0.09% vs 09:41), ETH 2,418.31; OI 838.20M (−0.21%), funding 2.156e-05; colchón +16.13%, ENCENDIDO; sin vencidos cripto
