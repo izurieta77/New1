@@ -278,3 +278,12 @@ Pruebas: `herramientas/tests/test_conciliacion_ventas_cfdi.py` (10 casos; suite 
 - **Qué propone:** "el pago mensual del IEPS a cargo de comercializadores de gasolinas y diésel sobre la diferencia positiva entre litros enajenados y adquiridos".
 - **Por qué importa a la estación:** la diferencia de litros deja de ser solo prueba para la presunción (CFF 55 VII f y 111 Bis, §9.2) y pasa a ser base de pago mensual. Si se aprueba, la conciliación del §9.6 tendría que hacerse cada mes con tres series: litros comprados, entregados y facturados.
 - **Estado al 14-oct-2026:** es iniciativa. La Cámara de Diputados tiene hasta el 20-oct y el Senado hasta el 31-oct. **No cambia nada de los años pasados** y no se aplica antes de su publicación en el DOF. Cuando salga el texto aprobado hay que releer el artículo de la LIEPS y su transitorio.
+
+### 9.9 Adenda 17-oct-2026 (investigador vespertino): Diputados aprobó la LIF 2027 con el IEPS por diferencias de litros (prensa, grado C; falta el texto oficial)
+- **Hecho (prensa):** el 14-oct-2026 la Cámara de Diputados aprobó en lo general la LIF 2027 (331 a favor, 118 en contra), según Excélsior, La Razón y Expansión. Falta el Senado, que tiene plazo al 31-oct, y la publicación en el DOF.
+- **Contenido reportado:** cobro del IEPS por **diferencias no justificadas entre litros comprados y vendidos** de gasolinas y diésel, **sin acreditamiento ni disminución**, para combatir el huachicol fiscal. Ejecentral y La Razón (15-oct) lo atribuyen al dictamen.
+- **Lo que falta saber:** la prensa no da el método de medición ni los umbrales. Hay que leer el texto aprobado (Gaceta Parlamentaria o DOF) antes de usar cualquier cifra.
+- **Implicación para la estación (inferencia):**
+  - La conciliación de tres series (compras, entregas volumétricas y CFDI de venta), por mes y por producto, deja de ser una defensa opcional y se vuelve la base del pago.
+  - "Justificar" una diferencia exigirá la evidencia del §9.4: mermas documentadas, calibraciones y lecturas de tanque.
+  - Hay que preparar desde ahora la serie de compras con CFDI del proveedor. El conciliador del §9.6 hoy solo cruza ventas contra entregas.
