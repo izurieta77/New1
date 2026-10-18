@@ -717,3 +717,18 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Hecho:** R12 corrió con doble ejecución: A (Yahoo) y B (AC-21, FRED, código desde cero). Las dos concuerdan: **"No replicado"**. Quitar el VIX sube el Sharpe (0.64 contra 0.57) pero empeora la MDD ~17 pp en el Nasdaq-100 1990-2026; la secundaria S&P 1986-89 con VXO va en el mismo sentido. **La condición de VIX ≥ 25 se queda**; el comité del 23-oct no tiene base para cambiar la regla del UPRO de papel. Esto cierra el pendiente "R12 (condición de VIX del filtro)" de esta lista.
 - **Duda que queda (decidida en lo conservador):** la nota que pidió la revisión del 17-oct (pregunta 1) se escribió **después** de la corrida, no antes. Se registró como error de proceso. El veredicto no cambia con ninguna lectura, así que la prueba no se repite.
 - **Estado:** Cerrado (R12) → insumo para el comité del 23-oct.
+
+## 2026-10-17 · inteligencia (cierre 20:05 CDMX, sábado; 02:1x UTC del 18-oct)
+- **P0104 (vigía, vence el 18-oct):** `pronosticos.py vencidos` ya lo lista, pero su criterio dice "hasta el 2026-10-18 (inclusive)" y a la hora de esta corrida faltan ~22 h de ventana.
+  - **Qué decidí:** no resolverlo todavía. Lo resuelve la inteligencia de las 20:05 CDMX del 18-oct (02:05 UTC del 19-oct) con el criterio literal. Hoy va hacia **NO**: no se localizó ninguna atribución de UKMTO, CENTCOM, Reuters, AP o Bloomberg para los impactos concretos del 10 y 11-oct.
+  - **Criterio de lectura (conservador):** la frase genérica de CENTCOM ("Iran's attempted attacks", "97% cross safely") **no** cuenta como atribución de esos dos impactos, porque no los nombra. Si una fuente de la lista atribuye uno de esos dos, es SÍ.
+  - **Por qué:** resolver antes de que cierre la ventana podría fallar contra el criterio escrito. **Estado:** Abierto → inteligencia 20:05 del 18-oct.
+- **Ormuz, criterio de urgencia alta (abierto a las 15:05):** sigue en **media** porque no hay precio.
+  - Dejé la lista de umbrales en `bitacora/inteligencia/2026-10-17.md` §20:05: Brent ≥ 113.16 o ≤ 106.56; WTI ≥ 101.99 o ≤ 96.05; UPRO ±2% en pesos ≈ ES ±0.67% con el FX fijo (7,755.6 / 7,652.9); SPYM ≈ ES ±2%; QQQM ≈ NQ ±2%.
+  - **Qué decidí (conservador):** escalar solo si el movimiento se sostiene ≥ 30 min o lo confirma una segunda fuente, para no alertar por un pico ilíquido de Globex. Para el Brent uso el umbral más exigente: 109.86, de Yahoo, y no el liquidado de 109.69.
+  - **Estado:** Abierto → la primera corrida con precio. Hoy no hay ninguna programada entre las 22:00 UTC del domingo y la inteligencia de las 07:05 CDMX del lunes, salvo el pulso cripto de las 00:17 o la supervisión. Si el orquestador quiere vigilar la reapertura, tendría que lanzar una corrida extra.
+- **Se escapó a las 15:05 la nota de Reuters (14:23 UTC) de Egipto y Arabia Saudita.** Se registró a las 20:05 como media.
+  - **Qué decidí:** no editar la sección de las 15:05. La omisión queda anotada en la fila. **Estado:** Cerrado (informativo).
+- **P0079 (claude, venció el 17-oct; resuelve SÍ con UPRO 146.43 > 135.76, A)** sigue sin `resultado` en el CSV. La revisión se lo asignó a la conciliación de esta noche.
+  - **Qué decidí:** no lo toco, porque no es del vigía. **Estado:** Abierto → conciliación 20:57.
+- **P0140:** se usó `fecha_creacion` = 2026-10-17 (CDMX), igual que P0138, mientras el comité del 23-oct decide la zona horaria. **Estado:** Abierto → comité del 23-oct (punto ya listado).
