@@ -3,7 +3,7 @@
  "veredicto": {
   "H1": false,
   "H2": true,
-  "estado_A": "Replicado con diferencias"
+  "estado_A": "No replicado"
  },
  "resultados": {
   "completo|V0 vigente (VIX>=25)": {
@@ -245,6 +245,48 @@
     "salidas": 0,
     "invertido": 1.0
    }
+  },
+  "secundaria_SP500_VXO_1986_1989": {
+   "V0 vigente (VXO>=25)": [
+    {
+     "desde": "1986-10-20",
+     "hasta": "1989-12-29",
+     "cagr": 0.28876843121793194,
+     "sharpe": 0.7309942181110064,
+     "mdd": -0.48934940718664666,
+     "salidas": 9,
+     "invertido": 0.6946847960444994
+    },
+    {
+     "desde": "1986-10-20",
+     "hasta": "1989-12-29",
+     "cagr": 0.033229387975971525,
+     "sharpe": 0.34895164952574587,
+     "mdd": -0.8079157518304849,
+     "salidas": 0,
+     "invertido": 1.0
+    }
+   ],
+   "V1 sin VXO": [
+    {
+     "desde": "1986-10-20",
+     "hasta": "1989-12-29",
+     "cagr": -0.06096489010318762,
+     "sharpe": 0.10330792759367381,
+     "mdd": -0.8222044907574869,
+     "salidas": 1,
+     "invertido": 0.7948084054388134
+    },
+    {
+     "desde": "1986-10-20",
+     "hasta": "1989-12-29",
+     "cagr": 0.033229387975971525,
+     "sharpe": 0.34895164952574587,
+     "mdd": -0.8079157518304849,
+     "salidas": 0,
+     "invertido": 1.0
+    }
+   ]
   }
  }
 }

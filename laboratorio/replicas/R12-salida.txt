@@ -18,4 +18,8 @@ V1 sin VIX               CAGR +30.1% Sharpe 0.76 MDD -62.8% salidas  13 invertid
 V2 VIX>=25 dos cierres   CAGR +26.2% Sharpe 0.74 MDD -62.8% salidas  35 invertido 75% | 3x B&H CAGR +43.7% Sharpe 0.87 MDD -81.8% [2009-01-02→2026-10-16]
 V3 VIX>=30               CAGR +25.1% Sharpe 0.71 MDD -62.8% salidas  37 invertido 79% | 3x B&H CAGR +43.7% Sharpe 0.87 MDD -81.8% [2009-01-02→2026-10-16]
 
-Veredicto A: H1 refutada; H2 sostenida -> Replicado con diferencias
+Veredicto A: H1 refutada; H2 sostenida -> No replicado
+
+Secundaria (informativa): S&P 500 (^GSPC) con VXO (FRED VXOCLS), señal desde 200 cierres comunes hasta 1989-12-29
+V0 vigente (VXO>=25)     CAGR +28.9% Sharpe 0.73 MDD -48.9% salidas   9 invertido 69% | 3x B&H CAGR +3.3% MDD -80.8% [1986-10-20→1989-12-29]
+V1 sin VXO               CAGR -6.1% Sharpe 0.10 MDD -82.2% salidas   1 invertido 79% | 3x B&H CAGR +3.3% MDD -80.8% [1986-10-20→1989-12-29]

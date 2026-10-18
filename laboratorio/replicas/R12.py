@@ -33,8 +33,8 @@ def cargar():
     return {k: {d: v for d, v in val} for k, val in s.items()}, hashlib.sha256(raw).hexdigest()
 
 
-def preparar(s):
-    fechas = sorted(set(s["^NDX"]) & set(s["^VIX"]))
+def preparar(s, idx="^NDX", vol="^VIX"):
+    fechas = sorted(set(s[idx]) & set(s[vol]))
     rf, ult, j = {}, None, 0
     tb = sorted(s["DTB3"].items())
     for d in fechas:
@@ -64,9 +64,9 @@ def senales(px, vix, usar_vix=True, umbral=25.0, confirmar=1):
     return out
 
 
-def simular(s, fechas, rf, desde=None, hasta=None, **kw):
-    px = [s["^NDX"][d] for d in fechas]
-    vix = [s["^VIX"][d] for d in fechas]
+def simular(s, fechas, rf, desde=None, hasta=None, idx="^NDX", vol="^VIX", **kw):
+    px = [s[idx][d] for d in fechas]
+    vix = [s[vol][d] for d in fechas]
     sen = senales(px, vix, **kw)
     i0 = next(i for i, x in enumerate(sen) if x is not None) + 2
     if desde: i0 = max(i0, next(i for i, d in enumerate(fechas) if d >= desde))
@@ -97,6 +97,22 @@ def met(eq, exc, d0, d1, salidas, inv):
     return dict(desde=d0, hasta=d1, cagr=eq[-1] ** (1 / a) - 1, sharpe=m / sd * math.sqrt(252), mdd=mdd, salidas=salidas, invertido=inv)
 
 
+def secundaria(dtb3):
+    ruta = os.path.join(BASE, "R12-datos", "secundaria.json")
+    if not os.path.exists(ruta):
+        q = urllib.parse.urlencode({"period1": 473385600, "period2": 631152000, "interval": "1d"})
+        req = urllib.request.Request(f"https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?{q}", headers={"User-Agent": "Mozilla/5.0"})
+        r = json.load(urllib.request.urlopen(req, timeout=60))["chart"]["result"][0]
+        gs = [(str(date.fromtimestamp(t)), float(c)) for t, c in zip(r["timestamp"], r["indicators"]["quote"][0]["close"]) if c is not None]
+        txt = urllib.request.urlopen("https://fred.stlouisfed.org/graph/fredgraph.csv?id=VXOCLS", timeout=60).read().decode()
+        vx = [(l.split(",")[0], float(l.split(",")[1])) for l in txt.splitlines()[1:] if l.split(",")[1] not in ("", ".") and l[:4] <= "1989"]
+        json.dump({"^GSPC": gs, "VXO": vx}, open(ruta, "w"))
+    d = json.load(open(ruta))
+    s2 = {"^GSPC": dict(d["^GSPC"]), "VXO": dict(d["VXO"]), "DTB3": dtb3}
+    f2, rf2 = preparar(s2, "^GSPC", "VXO")
+    return {vn: simular(s2, f2, rf2, idx="^GSPC", vol="VXO", **kw) for vn, kw in (("V0 vigente (VXO>=25)", {}), ("V1 sin VXO", dict(usar_vix=False)))}
+
+
 if __name__ == "__main__":
     s, sha = cargar()
     fechas, rf = preparar(s)
@@ -115,8 +131,15 @@ if __name__ == "__main__":
     v0, v1 = out["completo|V0 vigente (VIX>=25)"]["regla"], out["completo|V1 sin VIX"]["regla"]
     h1 = v1["sharpe"] > v0["sharpe"] and v1["mdd"] >= v0["mdd"] - 0.03
     h2 = v1["salidas"] <= 0.6 * v0["salidas"]
-    estado = "Replicado" if h1 and h2 else ("Replicado con diferencias" if h2 else "No replicado")
+    # Pre-registro §2: "H1 refutada: No replicado" rige sobre "solo H2 sostenida" (lectura conservadora).
+    estado = "Replicado" if h1 and h2 else ("No replicado" if not h1 else "Replicado con diferencias")
     lineas.append(f"\nVeredicto A: H1 {'sostenida' if h1 else 'refutada'}; H2 {'sostenida' if h2 else 'refutada'} -> {estado}")
+    sec = secundaria(s["DTB3"])
+    out["secundaria_SP500_VXO_1986_1989"] = sec
+    lineas.append("\nSecundaria (informativa): S&P 500 (^GSPC) con VXO (FRED VXOCLS), señal desde 200 cierres comunes hasta 1989-12-29")
+    for vn, (r, bh) in sec.items():
+        lineas.append(f"{vn:24s} CAGR {r['cagr']:+.1%} Sharpe {r['sharpe']:.2f} MDD {r['mdd']:.1%} salidas {r['salidas']:3d} "
+                      f"invertido {r['invertido']:.0%} | 3x B&H CAGR {bh['cagr']:+.1%} MDD {bh['mdd']:.1%} [{r['desde']}→{r['hasta']}]")
     txt = "\n".join(lineas) + "\n"
     open(os.path.join(BASE, "R12-salida.txt"), "w").write(txt)
     json.dump({"sha256": sha, "veredicto": {"H1": h1, "H2": h2, "estado_A": estado}, "resultados": out},
