@@ -759,3 +759,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - del dueño: latidos, User-Agent de la SEC (no se toca), marcador, stop y filtro del UPRO en el cierre, sesión extraordinaria, FX-1 retroactivo y datos personales en el código (no se tocan);
   - del orquestador: escala de dominio, "Kawa", D6 y `eventoca`;
   - ASUR (radar).
+
+## 2026-10-18 · inteligencia (07:05 CDMX, domingo)
+- **¿El avance de Egipto hacia un despliegue militar en Arabia Saudita sube a urgencia alta antes de la reapertura?** Lo aprobó el Consejo de Defensa Nacional y el parlamento abrió su sesión de emergencia (B); la votación aún no se localiza.
+  - **Qué decidí:** urgencia **media**, sin fila en `alertas.md`. Es una escalada del frente hutí-saudí, pero la ruta de Yanbu y el Este-Oeste operan (B−/D), Polymarket 4641065 subió a 0.815 (A) y no hay precio negociable que mida más de 2% en pesos en ninguna posición. Manda el criterio de precio de las 15:05 del 17-oct (Brent/WTI ±3% o futuros ±2% en pesos, sostenido ≥ 30 min o con segunda fuente). **Estado:** Abierto → inteligencia 15:05 (votación) y 20:05 (precio de la reapertura y PIB de China).
+- **Notas recicladas** (EnergyNow con la nota de AP del 5-sep sobre el ataque de EUA a petroleros iraníes; Daily Star con los hundimientos del 14-oct). **Qué decidí:** no las cuento como hechos nuevos. Quedan anotadas como recicladas en la tabla, con sus fechas originales. **Estado:** Cerrado (informativo).
+- **SPEI:** un medio local dice que Banxico atribuyó las fallas a un "mantenimiento emergente", pero en banxico.org.mx no hay aviso. **Qué decidí:** la causa queda en C−. La boleta VT no depende del SPEI porque usa el efectivo que ya está en GBM. Para cualquier fondeo del lunes, primero hay que confirmar que el SPEI opera. **Estado:** Abierto → inteligencia 11:05 del lunes (¿hay aviso de Banxico?).
