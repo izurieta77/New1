@@ -1,0 +1,21 @@
+Yahoo ^NDX y ^VIX, FRED DTB3: 9266 días comunes 1990-01-02 a 2026-10-16; sha256 38bacfe1d4d34274…
+
+== completo
+V0 vigente (VIX>=25)     CAGR +19.6% Sharpe 0.57 MDD -73.7% salidas 108 invertido 69% | 3x B&H CAGR +17.2% Sharpe 0.56 MDD -100.0% [1990-10-17→2026-10-16]
+V1 sin VIX               CAGR +25.0% Sharpe 0.64 MDD -90.8% salidas  30 invertido 76% | 3x B&H CAGR +17.2% Sharpe 0.56 MDD -100.0% [1990-10-17→2026-10-16]
+V2 VIX>=25 dos cierres   CAGR +19.2% Sharpe 0.56 MDD -86.8% salidas  75 invertido 70% | 3x B&H CAGR +17.2% Sharpe 0.56 MDD -100.0% [1990-10-17→2026-10-16]
+V3 VIX>=30               CAGR +21.7% Sharpe 0.60 MDD -92.0% salidas  67 invertido 74% | 3x B&H CAGR +17.2% Sharpe 0.56 MDD -100.0% [1990-10-17→2026-10-16]
+
+== 1990-2008
+V0 vigente (VIX>=25)     CAGR +16.4% Sharpe 0.49 MDD -73.7% salidas  55 invertido 64% | 3x B&H CAGR -4.0% Sharpe 0.37 MDD -100.0% [1990-10-17→2008-12-31]
+V1 sin VIX               CAGR +20.1% Sharpe 0.55 MDD -90.8% salidas  17 invertido 70% | 3x B&H CAGR -4.0% Sharpe 0.37 MDD -100.0% [1990-10-17→2008-12-31]
+V2 VIX>=25 dos cierres   CAGR +12.7% Sharpe 0.44 MDD -86.7% salidas  40 invertido 65% | 3x B&H CAGR -4.0% Sharpe 0.37 MDD -100.0% [1990-10-17→2008-12-31]
+V3 VIX>=30               CAGR +18.6% Sharpe 0.53 MDD -92.0% salidas  30 invertido 68% | 3x B&H CAGR -4.0% Sharpe 0.37 MDD -100.0% [1990-10-17→2008-12-31]
+
+== 2009-hoy
+V0 vigente (VIX>=25)     CAGR +22.9% Sharpe 0.69 MDD -63.2% salidas  53 invertido 74% | 3x B&H CAGR +43.7% Sharpe 0.87 MDD -81.8% [2009-01-02→2026-10-16]
+V1 sin VIX               CAGR +30.1% Sharpe 0.76 MDD -62.8% salidas  13 invertido 82% | 3x B&H CAGR +43.7% Sharpe 0.87 MDD -81.8% [2009-01-02→2026-10-16]
+V2 VIX>=25 dos cierres   CAGR +26.2% Sharpe 0.74 MDD -62.8% salidas  35 invertido 75% | 3x B&H CAGR +43.7% Sharpe 0.87 MDD -81.8% [2009-01-02→2026-10-16]
+V3 VIX>=30               CAGR +25.1% Sharpe 0.71 MDD -62.8% salidas  37 invertido 79% | 3x B&H CAGR +43.7% Sharpe 0.87 MDD -81.8% [2009-01-02→2026-10-16]
+
+Veredicto A: H1 refutada; H2 sostenida -> Replicado con diferencias
