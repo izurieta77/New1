@@ -480,3 +480,16 @@ Se cerró, con certeza (no solo inferencia), el pendiente explícito de la adend
   - Aun firmada en el *lame duck*, la ley no regiría antes de dic-2027.
   - P0019 se mantiene en 0.04 (Kalshi 5.9% medio, Polymarket 6.05%).
   - Nuevo P0134: ¿hay una votación nominal sobre H.R. 3633 antes del 15-nov?
+
+### Adenda (18-oct-2026): ETF spot de ether con staking (ETHB), rendimiento realizado y liquidez
+
+Ficha [`fichas/2026-10-18-etf-ether-staking.md`](fichas/2026-10-18-etf-ether-staking.md). Es el punto 5 del plan de cobertura.
+- **Texto [H, A], según el prospecto 424B3 del 11-mar-2026 y el 10-Q del 30-jun-2026 en SEC EDGAR (CIK 0002099103):**
+  - 18% de la recompensa bruta queda en el patrocinador y el agente;
+  - el fondo stakea entre 70% y 95% (86.9% al 30-jun);
+  - la comisión es de 0.25%, con exención a 0.12% por 12 meses desde el 12-mar;
+  - si el colchón sin stakear no alcanza, el fondo puede buscar retrasar la liquidación de reembolsos con los AP.
+- **Cálculo [I, dos métodos]:** en el 2T-2026 el ingreso por staking fue de 0.85-0.86% anualizado del activo neto, frente a 2.43% teórico (APR medio de la red de 2.79% × 86.9%). Es decir, 35% del teórico. La espera media de entrada a staking entre el 12-mar y el 30-jun fue de 54 días (validatorqueue.com, grado B): es la explicación más probable (B-C).
+- **Liquidez [H, B]:** hoy desstakear toma ~24.4 días (16.1 de cola, 1.1 de retraso y 7.2 de barrido). El máximo histórico es de 46.4 días (13-sep-2025). La cola de salida saltó de 166k a 851k ETH entre el 29-sep y el 2-oct; no se sabe quién sale (D).
+- **Para la cuenta [I]:** sin efecto. ETH no está en el universo y el ETH de spot sin staking se queda así. ETHA y ETHB en el SIC siguen [NV].
+- **Pronóstico nuevo:** P0141 (cola de salida al 16-nov < 928,024 ETH, p=0.65).
