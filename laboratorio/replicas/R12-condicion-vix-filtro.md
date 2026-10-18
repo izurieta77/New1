@@ -59,7 +59,7 @@ Días sin dato de alguna serie se descartan y se reportan.
 
 ## RESULTADOS (se llenan después de correr)
 
-> **Nota fechada (18-oct-2026, ~01:45 UTC, trabajo continuo), escrita DESPUÉS de la primera corrida.** La revisión del 17-oct (hallazgo 1.1) pidió dos aclaraciones antes de correr la prueba, y no se hicieron a tiempo. Queda como error de proceso en `conocimiento/registro-de-errores.md`.
+> **Nota fechada (18-oct-2026, ~01:45 UTC, trabajo continuo), escrita DESPUÉS de la primera corrida.** [Corregido 18-oct-2026, conciliación, `bitacora/arbitraje/2026-10-17.md` §1: "~01:45 UTC" es imposible; esta nota entró en `374b203`, de las 01:17:13 UTC. La primera corrida es `bc59893` (01:12:22 UTC), 1 h 08 min después de que la revisión `f6ba0a0` (00:04:40 UTC) pidiera la enmienda **antes** de correr.] La revisión del 17-oct (hallazgo 1.1) pidió dos aclaraciones antes de correr la prueba, y no se hicieron a tiempo. Queda como error de proceso en `conocimiento/registro-de-errores.md`.
 > 1. **Conocimiento previo no declarado en §1:** R06 (bloque J) ya había corrido TQQQ/QQQ con VIX en 2010-2026. Ese tramo se traslapa con el subperiodo 2009-hoy de esta prueba, donde V1 sí gana. El juicio pre-registrado (1990-2026) va en contra de ese antecedente, así que el sesgo de confirmación no favoreció el resultado.
 > 2. **H1 contra §2:** §1 dice "MDD menor"; §2 tolera "no peor en más de 3 pp". El veredicto es el mismo con las dos lecturas: la MDD de V1 es ~17 pp peor.
 > 3. **Contradicción interna de §2:** "solo H2 sostenida → Replicado con diferencias" choca con "H1 refutada → No replicado". Rige la lectura conservadora explícita, "No replicado". La primera corrida de A (commit `bc59893`) la tenía al revés y se corrigió en `b749995`.
@@ -109,3 +109,13 @@ Subperiodos y prueba secundaria de B (CBOE SPX y VXOCLS): concuerdan con A en si
 - **V2 y V3 no son alternativas:** las dos empeoran la MDD más de 13 pp contra V0.
 - **Para el comité del 23-oct:** no hay base para cambiar la regla vigente.
 - **Etiqueta:** descartada como cambio de regla. La regla vigente queda respaldada como protección.
+
+### Fallo de la conciliación (18-oct-2026, `bitacora/arbitraje/2026-10-17.md` §1; no edita las secciones 1 a 9 ni las cifras)
+- **Cronología (git):** pre-registro `c977758` (17-oct 01:10:51 UTC) → revisión `f6ba0a0` pide enmendar antes de correr (18-oct 00:04:40) → corrida A `bc59893` (01:12:22, estado "Replicado con diferencias") → `b749995` (01:13:46, estado a "No replicado" y secundaria) → nota y AC-21 `374b203` (01:17:13). **La enmienda se hizo después de la corrida.**
+- **Las cifras son válidas:** A y B concuerdan con código y fuentes independientes. **H1 refutada** con las dos lecturas (MDD ~17 pp peor), y también solo en 1990-2008.
+- **Estado "No replicado": se sostiene.** No es una elección hecha después de ver los datos: lo fija la escala de `laboratorio/README.md` L23 ("No replicado: se cumple el criterio de refutación pre-registrado", en git desde el 25-sep). Precedente: el fallo de R10 (`bitacora/arbitraje/2026-10-13-r10-estado.md`). La primera versión del código contradecía esa escala.
+- **"Fuera de muestra": no lo es para el sistema, en ningún tramo.** El conocimiento previo no declarado va más allá de R06 J (2010-2026):
+  - R06 bloque H (`ndx_sma200_L3`, ^NDX 3x 1986-2026, sin VIX) ya había medido una MDD de −96.14%, con pico el 27-mar-2000;
+  - R06 post hoc (c) ya había comparado el 3x del Nasdaq-100 con y sin VIX: `posthoc_arena_k050_ndx_sma200_vix25_L3` dio MDD −65.96% (1990-2026) y `posthoc_arena_k050_ndx_sma200_L3` dio −74.27% (1986-2026).
+  - **El resultado de R12 era previsible con lo que ya había en git.** Va en contra de la H1 del autor, así que el sesgo no lo favoreció. Pero **R12 cuenta como réplica de lo que ya se sabía (R06 H/J), con la banda de ±3% y exposición completa, y no como confirmación independiente fuera de muestra** de la condición de VIX.
+- **Consecuencia:** la regla vigente no cambia (era el statu quo y el comité W42 aprobó R12 solo para evaluación). El hallazgo de R11 (S&P, dentro de muestra) **sigue sin una prueba limpia fuera de muestra**. Una prueba limpia necesitaría datos que el sistema no haya visto, por ejemplo índices fuera de EUA con su propio índice de volatilidad. Eso lo decide el comité del 23-oct; este fallo no lo pre-registra.

@@ -689,14 +689,14 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **ASUR, fecha del 3T26:** el 28-oct de Nasdaq es un estimado algorítmico de Zacks, no un aviso de la empresa; en 2025 ASUR reportó el 22-oct (llamada el 23-oct). La empresa aún no lo confirma (asur.com.mx sin invitación; no se consultaron Emisnet ni EDGAR 6-K por el contacto del User-Agent de la SEC).
   - **Qué decidí:** no editar `vigilancia-niveles.md` y tratar la semana del 19-oct como posible fecha (lo conservador para el radar). **Estado:** Abierto → radar y siguiente corrida de inteligencia (buscar la invitación en Emisnet).
 - **P0079 vence hoy (17-oct)** y su resultado ya se conoce con dato A: UPRO cerró el 16-oct en 146.43, arriba de 135.76, así que resuelve SÍ.
-  - **Qué decidí:** no escribir el resultado en `pronosticos.csv`, porque `rutinas/inteligencia.md` no le da al vigía la tarea de resolver pronósticos de otro autor. **Estado:** Abierto → la rutina que resuelva vencidos (cierre o conciliación).
+  - **Qué decidí:** no escribir el resultado en `pronosticos.csv`, porque `rutinas/inteligencia.md` no le da al vigía la tarea de resolver pronósticos de otro autor. **Estado:** Abierto → la rutina que resuelva vencidos (cierre o conciliación). **[Cerrado, conciliación 18-oct-2026, `bitacora/arbitraje/2026-10-17.md` §2]:** SÍ (Yahoo UPRO 1d del 16-oct: 146.43). Brier 0.2156 (n = 42).
 - **HR Ratings (15-oct) no se registró en cuatro corridas de inteligencia** (evento relevante de la BMV, grado A).
   - **Qué decidí:** registrarlo hoy como "media", no como "alta", porque es una agencia local y el peso ya cotizó después del evento. **Estado:** Abierto → orquestador: decidir si se agregan los eventos de calificadoras de la BMV (`eventoca`) al barrido fijo.
 
 ## 2026-10-17 · cripto (rutina 8, 08:17 CDMX) · Señal D6 de autocustodia (Ledger/CryptoBilis) y flujo ETF del 16-oct con una sola fuente
 
 - **Propuesta de señal D6 para `conocimiento/cripto/lista-senales-de-alerta.md` (sección D):** "Dispositivo de autocustodia de canal no directo (revendedor, mercado en línea, devuelto o preconfigurado) o con señales de apertura → ROJA: no configurar". Caso: Ledger/CryptoBilis, oct-2026 (ficha `conocimiento/cripto/fichas/2026-10-17-ledger-cadena-suministro-autocustodia.md`). **Qué decidí:** no editar la lista; dejo la propuesta en la ficha y en la adenda §8 del capítulo 04. **Por qué:** la lista la usa el plan de contingencia; cambiarla le toca al orquestador o al gestor de riesgo. Hoy no hay exposición (custodia en Binance; plan B en Bitso, también custodia). **Estado:** Abierto → orquestador/gestor de riesgo.
-- **Flujo ETF BTC del 16-oct (−82.4 M USD) con una sola fuente** (tftc.io; bitbo sin actualizar, Farside 403). **Qué decidí:** reportarlo como grado B- y reconfirmarlo a las 18:42. **Estado:** Abierto → pulso de las 18:42.
+- **Flujo ETF BTC del 16-oct (−82.4 M USD) con una sola fuente** (tftc.io; bitbo sin actualizar, Farside 403). **Qué decidí:** reportarlo como grado B- y reconfirmarlo a las 18:42. **Estado:** Abierto → pulso de las 18:42. **[Conciliación 18-oct-2026, `bitacora/arbitraje/2026-10-17.md` §6]:** el pulso de las 18:42 no lo reconfirmó, y bitbo.io sigue terminando en el 15-oct. Sigue en B− → siguiente pulso cripto con una segunda fuente.
 - **E9:** volvió a VERDE (diferencial 0.053%); la ÁMBAR del 16-oct fue puntual y no se repitió dos pulsos seguidos. No se escala al gestor de riesgo. **Estado:** Cerrado.
 
 ## 2026-10-17 · inteligencia (15:05 CDMX, sábado)
@@ -711,12 +711,12 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí (lectura conservadora):** solo si la supervisión de las 08:40 de ese día publica una línea VIGENTE con su límite nuevo. Si no la publica, la boleta espera al comité del 23-oct.
 - **Pregunta 3:** P0079 vence hoy y resuelve SÍ (UPRO 146.43 > 135.76, dato A). ¿Lo escribe la revisión?
   - **Qué decidí:** no; lo resuelve la conciliación de esta noche, que es la que cierra vencidos en fin de semana.
-- **Estado:** Abierto → trabajo continuo o laboratorio (1), conciliación (2 y 3).
+- **Estado:** Abierto → trabajo continuo o laboratorio (1), conciliación (2 y 3). **[Cerrado, conciliación 18-oct-2026, `bitacora/arbitraje/2026-10-17.md` §1, §2 y §4]:** (1) La enmienda se escribió después de la corrida (`bc59893` 01:12:22 → `374b203` 01:17:13 UTC). Las cifras, H1 refutada y el estado "No replicado" se sostienen; el estado lo fija `laboratorio/README.md` L23. **No es fuera de muestra:** R06 H y el post hoc (c) ya habían corrido el NDX 3x con y sin VIX. Cuenta como réplica de R06; va al comité del 23-oct. (2) Se ratifica la lectura conservadora, con candados (solo con el no-llenado reportado, 1 VT en total, del 20 al 22-oct), escrita en la boleta. (3) P0079 = SÍ.
 
 ## 2026-10-18 · trabajo continuo (rutina 14, 01:09 UTC) · R12 corrida
 - **Hecho:** R12 corrió con doble ejecución: A (Yahoo) y B (AC-21, FRED, código desde cero). Las dos concuerdan: **"No replicado"**. Quitar el VIX sube el Sharpe (0.64 contra 0.57) pero empeora la MDD ~17 pp en el Nasdaq-100 1990-2026; la secundaria S&P 1986-89 con VXO va en el mismo sentido. **La condición de VIX ≥ 25 se queda**; el comité del 23-oct no tiene base para cambiar la regla del UPRO de papel. Esto cierra el pendiente "R12 (condición de VIX del filtro)" de esta lista.
 - **Duda que queda (decidida en lo conservador):** la nota que pidió la revisión del 17-oct (pregunta 1) se escribió **después** de la corrida, no antes. Se registró como error de proceso. El veredicto no cambia con ninguna lectura, así que la prueba no se repite.
-- **Estado:** Cerrado (R12) → insumo para el comité del 23-oct.
+- **Estado:** Cerrado (R12) → insumo para el comité del 23-oct. **[Fallo, conciliación 18-oct-2026, `bitacora/arbitraje/2026-10-17.md` §1]:** el estado se sostiene por `laboratorio/README.md` L23. El conocimiento previo era mayor que R06 J: R06 H (`ndx_sma200_L3`, MDD −96.14% desde 2000) y R06 post hoc (c) (con VIX −65.96% contra sin VIX −74.27%). R12 no es fuera de muestra para el sistema y cuenta como réplica de R06. La nota de "~01:45 UTC" es de un commit de las 01:17:13. Notas en la ficha, la tabla maestra y el registro de errores.
 
 ## 2026-10-17 · inteligencia (cierre 20:05 CDMX, sábado; 02:1x UTC del 18-oct)
 - **P0104 (vigía, vence el 18-oct):** `pronosticos.py vencidos` ya lo lista, pero su criterio dice "hasta el 2026-10-18 (inclusive)" y a la hora de esta corrida faltan ~22 h de ventana.
@@ -730,5 +730,32 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Se escapó a las 15:05 la nota de Reuters (14:23 UTC) de Egipto y Arabia Saudita.** Se registró a las 20:05 como media.
   - **Qué decidí:** no editar la sección de las 15:05. La omisión queda anotada en la fila. **Estado:** Cerrado (informativo).
 - **P0079 (claude, venció el 17-oct; resuelve SÍ con UPRO 146.43 > 135.76, A)** sigue sin `resultado` en el CSV. La revisión se lo asignó a la conciliación de esta noche.
-  - **Qué decidí:** no lo toco, porque no es del vigía. **Estado:** Abierto → conciliación 20:57.
+  - **Qué decidí:** no lo toco, porque no es del vigía. **Estado:** Abierto → conciliación 20:57. **[Cerrado, conciliación 18-oct-2026, `bitacora/arbitraje/2026-10-17.md` §2]:** P0079 = SÍ.
 - **P0140:** se usó `fecha_creacion` = 2026-10-17 (CDMX), igual que P0138, mientras el comité del 23-oct decide la zona horaria. **Estado:** Abierto → comité del 23-oct (punto ya listado).
+
+## 2026-10-18 · conciliación (noche del 17-oct) · Cierres de la revisión del 17-oct y pendientes de más de 48 h
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-17.md`):
+  - **R12 (§1):** la enmienda fue posterior a la corrida. El resultado vale como réplica de R06, no como prueba fuera de muestra. La regla no cambia.
+  - **P0079 = SÍ (§2):** Brier 0.2156 (n = 42).
+  - **Latidos (§3):** conteo en `alertas.md` (14 de 14 de inteligencia, novena jornada).
+  - **Boleta VT (§4):** si no llena, se ratifica la lectura conservadora con candados.
+  - **Menores (§5):**
+    - BTC −0.63%;
+    - `PLAN.md` L50 (42 resueltos);
+    - fila de riesgos cripto en `estado-de-dominio.csv`;
+    - latido de la conciliación del 16-oct anterior a su trabajo.
+  - **Suite:** 342 OK, sin cambios de código.
+- **Para el comité del 23-oct (nuevo):** la lectura de R12. La regla del UPRO no cambia, y el hallazgo de R11 sigue sin una prueba limpia fuera de muestra. Decidir si se pre-registra una con datos no vistos. **Qué decidí:** no pre-registrar nada, porque es del comité y del laboratorio. **Estado:** Abierto → comité del 23-oct.
+- **Para el comité del 23-oct (de antes, no decidido en W42):** duplicados P0032/P0037, vencimientos cortos (P0118) y zona horaria de `fecha_creacion`. **Estado:** Abierto → comité del 23-oct.
+- **Para el orquestador (nuevo):**
+  - **(a)** que la supervisión de las 08:40 del 20 al 22-oct lea `bitacora/boletas/2026-10-19.md` aunque no sea "del día". Solo si el dueño reporta que la orden no llenó, o si no hay VT ni llenado reportado; tope de 1 VT. `rutinas/supervision.md` paso 2 hoy solo mira la boleta del día.
+  - **(b)** que la plantilla de pre-registro exija estados mutuamente excluyentes y una línea de "pruebas previas del sistema sobre los mismos datos".
+  - **Qué decidí:** no editar rutinas; la instrucción ya quedó en la boleta. **Estado:** Abierto → orquestador.
+- **Para el dueño (nuevo, dentro de la boleta):** si VT solo aparece en la sección USA, ¿cómo se paga desde Smart Cash en pesos? **Qué decidí:** mientras no se sepa, la instrucción conservadora es no capturar por la sección USA. **Estado:** Abierto → dueño.
+- **Sin cambio:**
+  - P0048 (H.10 del 19-oct; FRED llega al 9-oct) y P0057 (2-nov);
+  - E3 (gestor de riesgo y dueño);
+  - BIVA, GFNORTEO y Metaplanet;
+  - del dueño: latidos, User-Agent de la SEC (no se toca), marcador, stop y filtro del UPRO en el cierre, sesión extraordinaria, FX-1 retroactivo y datos personales en el código (no se tocan);
+  - del orquestador: escala de dominio, "Kawa", D6 y `eventoca`;
+  - ASUR (radar).

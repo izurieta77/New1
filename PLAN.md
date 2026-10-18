@@ -47,7 +47,7 @@ Confirmados por el dueño el 25-sep-2026: **ChatGPT** y **Grok**, cada uno con 2
 | Cartera inicial de la arena | Aprobada por el comité y registrada en git antes de ejecutarse | **Cumplido:** cartera A (7 SPYM + 1 QQQM + liquidez); gestor de riesgo aprueba con cambios | 25-sep-2026 |
 | Arena en real (GBM) | El dueño captura las boletas en GBM si se cumple la condición de validez de las 08:45. Stop por línea solo en lo táctico o apalancado (enmienda del 25-sep) | Boletas listas en `bitacora/boletas/2026-09-28.md` | 28-sep-2026 |
 | Cartera cripto (Binance) | Comité cripto: solo spot, tope de 5,000 MXN | **Cumplido:** 40% BTC (4,000 MXN) + 60% MXN, filtro SMA200 ±3%, sin ETH; gestor de riesgo aprueba con cambios. Boleta en `bitacora/boletas/2026-09-28.md` | 28-sep-2026 |
-| Pronósticos calibrados | ≥50 resueltos, Brier ≤ 0.20, 3 meses | 19 en bitácora + 341 de empresas (171 numéricos, 170 binarios), 0 resueltos | 25-dic-2026 |
+| Pronósticos calibrados | ≥50 resueltos, Brier ≤ 0.20, 3 meses | 19 en bitácora + 341 de empresas (171 numéricos, 170 binarios), 0 resueltos [Corregido 18-oct-2026, conciliación, `bitacora/arbitraje/2026-10-17.md` §5.2: la cifra era del 25-sep. Al 17-oct, la bitácora tiene **140 registrados y 42 resueltos**, con Brier **0.2156** (`pronosticos.py puntuar`, después de P0079). No se cumple: faltan 8 resueltos y el Brier está arriba de 0.20. La auditoría W43 actualiza esta fila y el Avance (L125 y L131 son la foto de W42: 41 y 0.2205)] | 25-dic-2026 |
 | Portafolio de papel (registro sombra) | 3 meses dentro de límites | Arranca el 28-sep | 28-dic-2026 |
 | Patrimonio principal en real | Fin de fase 0 con la regla completa | — | ~28-dic-2026 |
 
