@@ -702,3 +702,13 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 ## 2026-10-17 · inteligencia (15:05 CDMX, sábado)
 - **¿El récord semanal de ataques en Ormuz (UKMTO, citado por el NY Post; ukmto.org da 403) es urgencia alta para el lunes?** Por el riesgo de brecha en el crudo y, por contagio, en UPRO (3x).
   - **Qué decidí:** urgencia **media**, sin fila en `alertas.md`. Hoy no hay precio negociable que mida más de 2% en pesos en ninguna posición, la fuente primaria no se pudo leer y Polymarket 4641065 no se movió (0.805). **Estado:** Abierto → inteligencia 20:05 y la reapertura de futuros del domingo a las 22:00 UTC. Si el Brent o el WTI abren con más de 3%, o si el ES/NQ implica más de 2% en pesos en UPRO, SPYM o QQQM, se sube a alta.
+
+## 2026-10-17 · revisión (rutina 11, 17:58 CDMX, sábado) · R12, boleta VT y P0079
+- **Pregunta 1:** el pre-registro R12 dice que no se había corrido nada sobre el Nasdaq-100 con VIX, pero R06 (bloque J) ya lo hizo con TQQQ/QQQ y VIX 2010-2026, y su H1 no coincide con el criterio de refutación de la MDD. ¿Lo enmienda la revisión?
+  - **Qué decidí:** no. La revisión no reescribe el trabajo ajeno. Queda como hallazgo "corregir" 1.1 (`bitacora/revisiones/2026-10-17.md`).
+  - **Por qué:** el pre-registro todavía no se ha corrido, así que lo puede enmendar el trabajo continuo o el laboratorio con una nota fechada, sin romper la regla de no editarlo después de la primera corrida. Lo conservador es que nadie corra R12 hasta que esa nota esté en git.
+- **Pregunta 2:** si la boleta VT no llena el lunes, ¿la vuelve a capturar el dueño el martes?
+  - **Qué decidí (lectura conservadora):** solo si la supervisión de las 08:40 de ese día publica una línea VIGENTE con su límite nuevo. Si no la publica, la boleta espera al comité del 23-oct.
+- **Pregunta 3:** P0079 vence hoy y resuelve SÍ (UPRO 146.43 > 135.76, dato A). ¿Lo escribe la revisión?
+  - **Qué decidí:** no; lo resuelve la conciliación de esta noche, que es la que cierra vencidos en fin de semana.
+- **Estado:** Abierto → trabajo continuo o laboratorio (1), conciliación (2 y 3).
