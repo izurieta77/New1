@@ -1,0 +1,81 @@
+AC-21-R12 ejecución B (b.py). Fuentes: FRED NASDAQ100, VIXCLS, DTB3; VXOCLS + CBOE SPX (secundaria).
+NASDAQ100 FRED: 1986-01-02 a 2026-10-15 (10278 obs); VIXCLS: 1990-01-02 a 2026-10-15; DTB3 hasta 2026-10-15; VXOCLS 1986-01-02 a 2021-09-23
+Nota: FRED aún no publica el 2026-10-16; el último cierre común es el anterior.
+
+[Nasdaq-100 3x sintético (principal)] panel 1990-01-02 a 2026-10-15: 9261 días comunes; descartados 6 con precio sin vol, 35 con vol sin precio
+   precio sin vol: 1991-03-01, 1997-01-31, 1997-11-26, 1998-07-03, 2001-01-01, 2019-04-19
+   vol sin precio: 2002-01-29, 2004-06-11, 2022-05-30, 2022-06-20, 2022-07-04, 2022-09-05, 2022-11-24, 2023-01-16, 2023-02-20, 2023-05-29, 2023-06-19, 2023-07-04, 2023-09-04, 2023-11-23, 2024-01-15 ...
+
+== Nasdaq-100 3x sintético (principal) ==
+-- Completo: 1990-10-17 a 2026-10-15 (9060 días) --
+variante                       CAGR  Sharpe      MDD  salidas   %invert
+V0 vigente (VIX>=25)         19.64%   0.560   -73.7%      108     68.7%
+V1 solo SMA200 +-3%          25.13%   0.635   -90.7%       30     76.1%
+V2 VIX>=25 2 cierres         19.28%   0.553   -87.8%       75     69.7%
+V3 VIX>=30                   21.83%   0.590   -92.1%       67     73.6%
+B&H 3x                       17.04%   0.565  -100.0%        0    100.0%
+-- 1990-2008: 1990-10-17 a 2008-12-31 (4586 días) --
+variante                       CAGR  Sharpe      MDD  salidas   %invert
+V0 vigente (VIX>=25)         15.98%   0.477   -73.7%       55     63.6%
+V1 solo SMA200 +-3%          19.88%   0.548   -90.7%       17     70.3%
+V2 VIX>=25 2 cierres         12.32%   0.424   -86.7%       40     64.5%
+V3 VIX>=30                   18.20%   0.521   -92.0%       30     68.5%
+B&H 3x                       -4.68%   0.374  -100.0%        0    100.0%
+-- 2009-hoy: 2009-01-02 a 2026-10-15 (4474 días) --
+variante                       CAGR  Sharpe      MDD  salidas   %invert
+V0 vigente (VIX>=25)         23.51%   0.685   -63.2%       53     74.0%
+V1 solo SMA200 +-3%          30.74%   0.768   -62.8%       13     82.0%
+V2 VIX>=25 2 cierres         26.86%   0.744   -62.8%       35     75.1%
+V3 VIX>=30                   25.68%   0.707   -62.8%       37     78.9%
+B&H 3x                       44.46%   0.878   -81.8%        0    100.0%
+
+== Veredicto periodo completo (V1 contra V0) ==
+Sharpe V1 0.635 vs V0 0.560 -> V1 mayor
+MDD V1 -90.7% vs V0 -73.7% (dif -17.0 pp) -> peor en >3 pp
+H1: REFUTADA
+Salidas V1 30 vs V0 108 -> reducción 72% -> H2 sostenida
+Estado según §2: No replicado (H1 refutada; H2 sostenida)
+
+== Veredicto 1990-2008 (informativo) (V1 contra V0) ==
+Sharpe V1 0.548 vs V0 0.477 -> V1 mayor
+MDD V1 -90.7% vs V0 -73.7% (dif -17.0 pp) -> peor en >3 pp
+H1: REFUTADA
+Salidas V1 17 vs V0 55 -> reducción 69% -> H2 sostenida
+Estado según §2: No replicado (H1 refutada; H2 sostenida)
+
+== Veredicto 2009-hoy (informativo) (V1 contra V0) ==
+Sharpe V1 0.768 vs V0 0.685 -> V1 mayor
+MDD V1 -62.8% vs V0 -63.2% (dif +0.4 pp) -> ok (no peor en >3 pp)
+H1: sostenida
+Salidas V1 13 vs V0 53 -> reducción 75% -> H2 sostenida
+Estado según §2: Replicado
+
+== Sensibilidad: SMA200 con historia NDX desde 1986 (no pre-registrada) ==
+
+== Nasdaq-100, SMA con historia previa, desde 1990-01-04 ==
+-- Completo: 1990-01-04 a 2026-10-15 (9259 días) --
+variante                       CAGR  Sharpe      MDD  salidas   %invert
+V0 vigente (VIX>=25)         17.19%   0.515   -73.7%      110     67.9%
+V1 solo SMA200 +-3%          22.45%   0.596   -90.7%       32     75.1%
+V2 VIX>=25 2 cierres         16.85%   0.509   -87.8%       77     68.9%
+V3 VIX>=30                   19.29%   0.549   -92.1%       69     72.7%
+B&H 3x                       12.96%   0.518  -100.0%        0    100.0%
+
+[Secundaria S&P 500 3x con VXO 1986-1989] panel 1986-01-02 a 1989-12-29: 1010 días comunes; descartados 1 con precio sin vol, 0 con vol sin precio
+   precio sin vol: 1986-05-15
+
+== Secundaria S&P 500 3x con VXO 1986-1989 ==
+-- 1986-1989: 1986-10-20 a 1989-12-29 (809 días) --
+variante                       CAGR  Sharpe      MDD  salidas   %invert
+V0 vigente (VIX>=25)         26.50%   0.666   -48.9%        9     68.2%
+V1 solo SMA200 +-3%          -7.71%   0.067   -82.2%        1     78.2%
+V2 VIX>=25 2 cierres         17.97%   0.455   -57.0%        7     70.1%
+V3 VIX>=30                  -10.97%  -0.003   -82.2%        3     77.8%
+B&H 3x                        3.32%   0.349   -80.8%        0    100.0%
+
+== Veredicto secundaria S&P/VXO (informativa) (V1 contra V0) ==
+Sharpe V1 0.067 vs V0 0.666 -> V1 NO mayor
+MDD V1 -82.2% vs V0 -48.9% (dif -33.3 pp) -> peor en >3 pp
+H1: REFUTADA
+Salidas V1 1 vs V0 9 -> reducción 89% -> H2 sostenida
+Estado según §2: No replicado (H1 refutada; H2 sostenida)

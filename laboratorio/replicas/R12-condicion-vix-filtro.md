@@ -58,3 +58,54 @@ Días sin dato de alguna serie se descartan y se reportan.
 ---
 
 ## RESULTADOS (se llenan después de correr)
+
+> **Nota fechada (18-oct-2026, ~01:45 UTC, trabajo continuo), escrita DESPUÉS de la primera corrida.** La revisión del 17-oct (hallazgo 1.1) pidió dos aclaraciones antes de correr la prueba, y no se hicieron a tiempo. Queda como error de proceso en `conocimiento/registro-de-errores.md`.
+> 1. **Conocimiento previo no declarado en §1:** R06 (bloque J) ya había corrido TQQQ/QQQ con VIX en 2010-2026. Ese tramo se traslapa con el subperiodo 2009-hoy de esta prueba, donde V1 sí gana. El juicio pre-registrado (1990-2026) va en contra de ese antecedente, así que el sesgo de confirmación no favoreció el resultado.
+> 2. **H1 contra §2:** §1 dice "MDD menor"; §2 tolera "no peor en más de 3 pp". El veredicto es el mismo con las dos lecturas: la MDD de V1 es ~17 pp peor.
+> 3. **Contradicción interna de §2:** "solo H2 sostenida → Replicado con diferencias" choca con "H1 refutada → No replicado". Rige la lectura conservadora explícita, "No replicado". La primera corrida de A (commit `bc59893`) la tenía al revés y se corrigió en `b749995`.
+
+### Ejecución A (orquestador): `R12.py`, `R12-salida.txt`, `R12-resultados.json`
+Fuentes: Yahoo `^NDX` y `^VIX`, FRED `DTB3`. Son 9,266 días comunes, de 1990-01-02 al 2026-10-16. Métricas del 1990-10-17 al 2026-10-16.
+
+| Variante | CAGR | Sharpe | MDD | Salidas | Invertido |
+|---|---|---|---|---|---|
+| V0 vigente (VIX ≥ 25) | +19.6% | 0.57 | −73.7% | 108 | 69% |
+| V1 sin VIX | +25.0% | 0.64 | −90.8% | 30 | 76% |
+| V2 VIX ≥ 25 dos cierres | +19.2% | 0.56 | −86.8% | 75 | 70% |
+| V3 VIX ≥ 30 | +21.7% | 0.60 | −92.0% | 67 | 74% |
+| 3x comprar y mantener | +17.2% | 0.56 | −100.0% | 0 | 100% |
+
+Subperiodos (V0 contra V1):
+- **1990-2008:** Sharpe 0.49 contra 0.55; MDD −73.7% contra −90.8%.
+- **2009-hoy:** Sharpe 0.69 contra 0.76; MDD −63.2% contra −62.8%. Salidas: 53 contra 13.
+
+Secundaria (informativa; `^GSPC` y FRED `VXOCLS`, del 1986-10-20 al 1989-12-29):
+
+| Variante | CAGR | Sharpe | MDD | Salidas |
+|---|---|---|---|---|
+| V0 | +28.9% | 0.73 | −48.9% | 9 |
+| V1 | −6.1% | 0.10 | −82.2% | 1 |
+
+Las 108 salidas de V0 coinciden con las de R11 (S&P) porque casi todas las dispara el VIX, que es la misma serie en las dos pruebas. Las MDD difieren: −73.73% en R12 contra −73.66% en R11.
+
+### Ejecución B (auditor-de-replicas, código desde cero): `laboratorio/auditorias/AC-21-R12/`
+Fuentes: FRED `NASDAQ100`, `VIXCLS` y `DTB3`, hasta el 2026-10-15 (FRED tiene un día de rezago). Son 9,261 días comunes.
+
+| Variante | CAGR | Sharpe | MDD | Salidas |
+|---|---|---|---|---|
+| V0 | 19.64% | 0.560 | −73.7% | 108 |
+| V1 | 25.13% | 0.635 | −90.7% | 30 |
+| V2 | 19.28% | 0.553 | −87.8% | 75 |
+| V3 | 21.83% | 0.590 | −92.1% | 67 |
+| 3x comprar y mantener | 17.04% | 0.565 | −100.0% | 0 |
+
+Subperiodos y prueba secundaria de B (CBOE SPX y VXOCLS): concuerdan con A en signo y en orden de magnitud. En la secundaria, V0 da Sharpe 0.67 y MDD −48.9%; V1 da 0.07 y −82.2%.
+
+### Juicio
+- **H1 refutada en A y en B:** V1 sube el Sharpe (+0.07) pero empeora la MDD ~17 pp, por encima de la tolerancia de 3 pp. La pérdida viene del estallido de 2000-2002: la banda sola deja al 3x dentro de los rebotes bajistas.
+- **H2 sostenida:** 72% menos salidas.
+- **Estado (rige el más conservador; A y B concuerdan): "No replicado". La condición de VIX ≥ 25 se queda en la regla del UPRO de papel.**
+- **Lectura conjunta con R11:** en el S&P 1990-2026, quitar el VIX mejoraba la MDD (−58% contra −74%). En el Nasdaq-100 la empeora (−91% contra −74%), y en el crash de 1987 también. El resultado de R11 no se generaliza fuera de muestra: la condición de VIX es un seguro barato contra crashes rápidos (1987, 2000-2002 en tecnología) a cambio de ~75 salidas extra en 36 años.
+- **V2 y V3 no son alternativas:** las dos empeoran la MDD más de 13 pp contra V0.
+- **Para el comité del 23-oct:** no hay base para cambiar la regla vigente.
+- **Etiqueta:** descartada como cambio de regla. La regla vigente queda respaldada como protección.

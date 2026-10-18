@@ -712,3 +712,8 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Pregunta 3:** P0079 vence hoy y resuelve SÍ (UPRO 146.43 > 135.76, dato A). ¿Lo escribe la revisión?
   - **Qué decidí:** no; lo resuelve la conciliación de esta noche, que es la que cierra vencidos en fin de semana.
 - **Estado:** Abierto → trabajo continuo o laboratorio (1), conciliación (2 y 3).
+
+## 2026-10-18 · trabajo continuo (rutina 14, 01:09 UTC) · R12 corrida
+- **Hecho:** R12 corrió con doble ejecución: A (Yahoo) y B (AC-21, FRED, código desde cero). Las dos concuerdan: **"No replicado"**. Quitar el VIX sube el Sharpe (0.64 contra 0.57) pero empeora la MDD ~17 pp en el Nasdaq-100 1990-2026; la secundaria S&P 1986-89 con VXO va en el mismo sentido. **La condición de VIX ≥ 25 se queda**; el comité del 23-oct no tiene base para cambiar la regla del UPRO de papel. Esto cierra el pendiente "R12 (condición de VIX del filtro)" de esta lista.
+- **Duda que queda (decidida en lo conservador):** la nota que pidió la revisión del 17-oct (pregunta 1) se escribió **después** de la corrida, no antes. Se registró como error de proceso. El veredicto no cambia con ninguna lectura, así que la prueba no se repite.
+- **Estado:** Cerrado (R12) → insumo para el comité del 23-oct.
