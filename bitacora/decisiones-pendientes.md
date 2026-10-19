@@ -832,3 +832,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Decisión:** lo trato como **alta** y abrí una fila en `alertas.md` (lectura conservadora: es mejor avisar de más). Lo marqué "no es orden" y dejé la condición para que se cierre sola: un cierre por debajo de 149.70 USD con el FX del cierre.
 - **Por qué:** el umbral se cruzó de verdad, según las velas de 1m. El precedente del 14 y el 16-oct usó el precio intradía. Avisar no obliga a nadie a actuar.
 - **Para el orquestador:** decidir si las alertas de precio deben usar el máximo o el mínimo intradía, o solo el precio al correr. **Estado:** Abierto.
+
+## 2026-10-19 · laboratorio (rutina 2, 11:47 CDMX) · R16 y el stop del UPRO
+- **Hallazgo:** R16 (A y B concordantes) da "No replicado". El stop fijo de −10.92% del UPRO de papel empeora la MDD (~2.5 pp) y baja el Sharpe 0.14 frente al filtro solo, en el 3x del S&P de 1990 a 2026. 89% de sus disparos son redundantes con el filtro. El costo viene de que, tras un stop, la reentrada no está escrita (en la prueba, solo al reiniciarse el filtro).
+  - **Qué decidí:** no tocar el stop ni la cartera. El laboratorio no cambia reglas (REGLAS §4) y el stop también es el presupuesto de riesgo de 3% de la decisión W40.
+  - **Punto para el comité del viernes 23-oct:** (a) ¿se mantiene el stop de 135.76 tal cual? (b) Si se conserva, fijar por escrito la regla de reentrada tras un stop. Con reentrada a 21 días el costo en Sharpe desaparece (0.543 contra 0.537 en A).
+- **Estado:** Abierto → comité del 23-oct.
