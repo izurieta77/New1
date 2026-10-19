@@ -781,3 +781,8 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Umbral de USD/MXN del semáforo:** manda el número fijo **18.81** de la decisión W42 (L86), no el nivel vivo de ALERTA de FX-1 (hoy 19.0473), aunque L11 los llame igual (§2.1).
   - **Límite en USD (si VT solo está en la sección USA):** si la supervisión lo publica, va marcado "informativo: no capturar hasta resolver el pago en USD" (§2.2).
   - **Estado:** Abierto → conciliación de esta noche (nota fechada en la boleta) y orquestador (pendiente (a), lectura de la boleta por la supervisión del 20 al 22-oct).
+
+## 2026-10-18 · inteligencia (cierre 20:05 CDMX; corrida 02:1x UTC del 19-oct)
+- **P0104 se resuelve sin haber leído Reuters ni Bloomberg directo, y con ukmto.org en 403.** **Qué decidí:** resolverlo en **NO** con el criterio literal, porque en lo consultado no hay ninguna atribución de una fuente válida (gCaptain `iran-conflict`, más titulares de Reuters, AP y Bloomberg vía Google News RSS en 48 h). El límite de acceso quedó en la nota de la fila. **Estado:** si la conciliación encuentra una atribución con fecha ≤ 18-oct en una fuente válida, se corrige a SÍ con una nota.
+- **El ES quedó a 0.17% del umbral de UPRO (+2% en pesos).** **Qué decidí:** no abrir fila en `alertas.md`, porque no cruzó y el umbral se mide en el precio real. Queda para la apertura del lunes; la supervisión y la inteligencia de las 11:05 lo miden con UPRO real × `MXN=X`.
+- **FXLeaders dice "WTI −4 USD"; Yahoo dice −1.36 USD.** **Qué decidí:** manda Yahoo (A) y la nota se descarta como D.
