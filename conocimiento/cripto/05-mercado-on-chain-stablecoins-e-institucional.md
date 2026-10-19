@@ -493,3 +493,11 @@ Ficha [`fichas/2026-10-18-etf-ether-staking.md`](fichas/2026-10-18-etf-ether-sta
 - **Liquidez [H, B]:** hoy desstakear toma ~24.4 días (16.1 de cola, 1.1 de retraso y 7.2 de barrido). El máximo histórico es de 46.4 días (13-sep-2025). La cola de salida saltó de 166k a 851k ETH entre el 29-sep y el 2-oct; no se sabe quién sale (D).
 - **Para la cuenta [I]:** sin efecto. ETH no está en el universo y el ETH de spot sin staking se queda así. ETHA y ETHB en el SIC siguen [NV].
 - **Pronóstico nuevo:** P0141 (cola de salida al 16-nov < 928,024 ETH, p=0.65).
+
+### Adenda (19-oct-2026): momentum de serie de tiempo en BTC, Liu y Tsyvinski (RFS 2021) fuera de muestra
+
+Ficha [`fichas/2026-10-19-momentum-serie-de-tiempo-liu-tsyvinski.md`](fichas/2026-10-19-momentum-serie-de-tiempo-liu-tsyvinski.md). Es el primer paper de factores cripto en la base (nivel Doctorado).
+- **Texto [H, A], NBER WP 24877 (sección):** con datos de 2011 a may-2018, el rendimiento semanal de BTC predice el de 1 a 4 semanas después, con betas de 0.19, 0.22, 0.21 y 0.09. BTC no tiene exposición a los factores de acciones ni macro. LTW (JF 2022, WP 25882): mercado, tamaño y momentum explican el corte transversal; el momentum funciona solo entre las monedas grandes.
+- **Réplica [I, B], 438 semanas BTCUSDT de Binance (jun-2018 a oct-2026):** solo sobrevive h = 1 (beta 0.117, t NW 2.58); h = 2 y 3 dan cero. Desde ago-2022 la beta baja a 0.061 (t 1.07, no significativa). Q5−Q1 da +4.27 pp por semana, pero no es monótono y lo cargan pocas semanas. Una regla de "largo si la semana fue positiva" rinde menos que comprar y mantener aun sin costos (Sharpe 0.72 contra 0.77), con ~27 cambios al año.
+- **Para la cuenta [I]:** sin cambio. El filtro SMA200 es una tendencia de unos 7 meses y no se apoya en este paper; no se debe citar como su respaldo.
+- **Pronóstico nuevo:** P0148 (vela semanal BTCUSDT del 19 al 25-oct > 82,116.00, p=0.52).
