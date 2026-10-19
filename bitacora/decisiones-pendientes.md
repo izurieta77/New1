@@ -786,3 +786,8 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **P0104 se resuelve sin haber leído Reuters ni Bloomberg directo, y con ukmto.org en 403.** **Qué decidí:** resolverlo en **NO** con el criterio literal, porque en lo consultado no hay ninguna atribución de una fuente válida (gCaptain `iran-conflict`, más titulares de Reuters, AP y Bloomberg vía Google News RSS en 48 h). El límite de acceso quedó en la nota de la fila. **Estado:** si la conciliación encuentra una atribución con fecha ≤ 18-oct en una fuente válida, se corrige a SÍ con una nota.
 - **El ES quedó a 0.17% del umbral de UPRO (+2% en pesos).** **Qué decidí:** no abrir fila en `alertas.md`, porque no cruzó y el umbral se mide en el precio real. Queda para la apertura del lunes; la supervisión y la inteligencia de las 11:05 lo miden con UPRO real × `MXN=X`.
 - **FXLeaders dice "WTI −4 USD"; Yahoo dice −1.36 USD.** **Qué decidí:** manda Yahoo (A) y la nota se descarta como D.
+## 2026-10-18 · investigador vespertino (rutina 16, 20:12 CDMX) · API de arXiv
+- **Pregunta:** la API de arXiv (`export.arxiv.org/api/query`) dio HTTP 429 el 15, el 17 y el 18-oct. ¿Se cambia el procedimiento del barrido?
+  - **Qué decidí:** no editar `rutinas/investigador-vespertino.md`. Si la API da 429, la corrida usa el listado HTML `arxiv.org/list/q-fin/new` (hoy funcionó: 26 papers) y lo declara en su bitácora.
+  - **Por qué:** es un cambio de fuente, no de regla. Si el 429 sigue, el balance mensual decide si se fija en el procedimiento.
+- **Estado:** Abierto → balance mensual (informativo).
