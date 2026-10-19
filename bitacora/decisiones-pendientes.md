@@ -838,3 +838,15 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** no tocar el stop ni la cartera. El laboratorio no cambia reglas (REGLAS §4) y el stop también es el presupuesto de riesgo de 3% de la decisión W40.
   - **Punto para el comité del viernes 23-oct:** (a) ¿se mantiene el stop de 135.76 tal cual? (b) Si se conserva, fijar por escrito la regla de reentrada tras un stop. Con reentrada a 21 días el costo en Sharpe desaparece (0.543 contra 0.537 en A).
 - **Estado:** Abierto → comité del 23-oct.
+
+## 2026-10-19 · inteligencia (rutina 7, 15:05 CDMX) · P0140 y P0101 vencen hoy, pero su dato final no existe todavía
+- **P0140 (Brent BZ=F > 109.86 el 19-oct).**
+  - **Hecho:** la barra 1d de Yahoo del 19-oct marca 109.23 a las 20:57 UTC. El periodo de la barra de futuros sigue abierto hasta las 03:59 UTC del 20-oct.
+  - **Por qué la barra final será ≈109.4-109.6:** el 16-oct, el cierre diario de Yahoo (109.86) coincidió con la ventana de liquidación de ICE (18:28-18:30 UTC), no con el último operado. Las velas de 1m de esa ventana hoy van de 109.37 a 109.61.
+  - **Qué decidí:** **no lo resolví.** La lectura provisional es NO, pero el criterio literal pide el cierre diario con fecha 19-oct, y esa barra todavía no termina. La regla de respaldo de ICE solo aplica si Yahoo no publica la barra.
+  - **Siguiente paso:** la corrida de las 20:05 lo resuelve con la barra final. Si esa barra saliera > 109.86, el resultado es SÍ, aunque lo dudo.
+- **P0101 (diésel EIA, semana del 19-oct < 6.199 del 5-oct).**
+  - **Hecho:** EIA anuncia la próxima publicación para el martes 20-oct. El último dato es 6.179 (12-oct).
+  - **Qué decidí:** pendiente. El criterio ya prevé "la primera publicación disponible si se retrasa".
+- **Errata de la orden:** decía "base FX 18.4070". Usé **18.4790**, la base de las secciones previas, que es la que da el Δ1 −0.40%.
+- **Estado:** Abierto → vigía 20:05 (P0140); primera corrida del 20-oct con dato de EIA (P0101).
