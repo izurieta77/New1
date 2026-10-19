@@ -813,3 +813,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - ASUR (sin aviso de la empresa);
   - del dueño: latidos, User-Agent de la SEC (no se toca), marcador, stop y filtro del UPRO, sesión extraordinaria, FX-1 retroactivo, datos personales (no se tocan) y ruta USD de VT;
   - del orquestador: escala de dominio, "Kawa", D6, `eventoca`, plantilla de pre-registro y pendiente (a) de la supervisión.
+
+## 2026-10-19 · inteligencia (rutina 7, 07:05 CDMX) · ID libre de pronósticos y P0048
+- **Pregunta 1:** la orden de la corrida decía "siguiente ID libre P0143", pero la pre-apertura (12:59 UTC) ya registró P0143-P0147. ¿Cuál sigue?
+  - **Qué decidí:** el siguiente ID libre es **P0148**, porque manda `bitacora/pronosticos.csv`. A las 07:05 no registré ningún pronóstico; el del vigía va a las 20:05, con P0148 o el que siga si otra rutina toma ese número antes.
+- **Pregunta 2:** ¿se puede conciliar P0048 con el H.10?
+  - **Qué decidí:** no lo edité. FRED DEXMXUS llega solo al 9-oct (18.3990) y el H.10 de hoy sale hacia las 16:15 ET. La fila ya trae `resultado=1` por el cierre de Yahoo del 14-oct (18.4637).
+- **Estado:** Abierto → conciliación del 19-oct (P0048); pronóstico del vigía de las 20:05 (P0148+).
