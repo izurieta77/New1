@@ -1,0 +1,61 @@
+AC-22-R16 ejecución B  |  panel común SPX(CBOE) y VIX(CBOE): 1990-01-02 a 2026-10-16 n = 9262
+  días con SPX sin VIX descartados: 3 ['1991-03-01', '1997-01-31', '1997-11-26']
+  días con VIX sin SPX ignorados: 34
+  contraste SPX CBOE vs FRED SP500: días comunes 2512 | difieren >0.01%: 1 [('2019-02-28', 2792.38, 2784.49)]
+  rf: DTB3 (FRED, copia AC-17) + Tesoro 13 sem. para 5 días posteriores
+  último DTB3 disponible: 2026-10-16 = 4.08
+  inicio de evaluación (200 cierres comunes): 1990-10-15 | primer rendimiento: 1990-10-16
+
+=== completo: 1990-10-16 a 2026-10-16 (9062 rendimientos) ===
+regla               CAGR     Vol  Sharpe      MDD  sal stop    inv
+V0                15.11%   32.6%   0.516   -73.5%  108    0  74.7%
+S8                 9.88%   30.1%   0.378   -75.9%  108   24  64.2%
+S10.92             9.71%   30.4%   0.372   -76.0%  108   17  64.9%
+S15               14.44%   32.5%   0.499   -75.4%  108    5  74.7%
+S20               14.65%   32.5%   0.504   -73.5%  108    1  74.7%
+S10.92-reent21    15.23%   32.1%   0.522   -71.9%  110   17  73.7%
+BH3x              18.15%   54.0%   0.533   -97.9%    0    0 100.0%
+
+=== 1990-2008: 1990-10-16 a 2008-12-31 (4587 rendimientos) ===
+regla               CAGR     Vol  Sharpe      MDD  sal stop    inv
+V0                13.58%   32.1%   0.440   -73.5%   47    0  71.2%
+S8                 2.59%   28.4%   0.099   -75.9%   47   10  55.1%
+S10.92             2.55%   28.5%   0.098   -76.0%   47    9  55.4%
+S15               12.19%   31.8%   0.402   -75.4%   47    3  71.1%
+S20               12.70%   31.9%   0.416   -73.5%   47    1  71.2%
+S10.92-reent21    12.70%   31.5%   0.418   -71.9%   48    9  70.0%
+BH3x               5.75%   54.4%   0.307   -96.7%    0    0 100.0%
+
+=== 2009-hoy: 2009-01-02 a 2026-10-16 (4475 rendimientos) ===
+regla               CAGR     Vol  Sharpe      MDD  sal stop    inv
+V0                16.69%   33.2%   0.591   -49.3%   61    0  78.3%
+S8                17.87%   31.8%   0.634   -47.6%   61   14  73.5%
+S10.92            17.56%   32.2%   0.622   -48.4%   61    8  74.6%
+S15               16.78%   33.2%   0.593   -49.3%   61    2  78.3%
+S20               16.69%   33.2%   0.591   -49.3%   61    0  78.3%
+S10.92-reent21    17.88%   32.7%   0.626   -48.4%   62    8  77.5%
+BH3x              32.36%   53.6%   0.769   -76.6%    0    0 100.0%
+
+H1 [completo] S10.92 vs V0: mejora MDD = -2.53 pp (umbral +3), ΔSharpe = -0.143 (umbral -0.03) -> REFUTADA
+H1 [1990-2008] S10.92 vs V0: mejora MDD = -2.53 pp (umbral +3), ΔSharpe = -0.342 (umbral -0.03) -> REFUTADA
+H1 [2009-hoy] S10.92 vs V0: mejora MDD = +0.95 pp (umbral +3), ΔSharpe = +0.031 (umbral -0.03) -> REFUTADA
+H2: salidas por stop de S10.92 = 17; V0 sale en [0,21] días hábiles en 15 -> 88.2% (umbral 50%) -> SOSTENIDA
+   stop 1994-06-24  V0 sale 1994-06-27  (+1 dh)  <=21
+   stop 1994-12-08  V0 sale 1997-09-05  (+692 dh)  >21
+   stop 1997-10-27  V0 sale 1997-10-28  (+1 dh)  <=21
+   stop 2000-01-24  V0 sale 2000-01-31  (+5 dh)  <=21
+   stop 2000-02-18  V0 sale 2000-02-22  (+1 dh)  <=21
+   stop 2000-05-19  V0 sale 2000-05-22  (+1 dh)  <=21
+   stop 2002-04-11  V0 sale 2002-04-25  (+10 dh)  <=21
+   stop 2007-11-07  V0 sale 2007-11-08  (+1 dh)  <=21
+   stop 2007-12-17  V0 sale 2008-01-07  (+13 dh)  <=21
+   stop 2011-08-04  V0 sale 2011-08-05  (+1 dh)  <=21
+   stop 2016-01-06  V0 sale 2016-01-07  (+1 dh)  <=21
+   stop 2018-03-23  V0 sale 2018-10-25  (+150 dh)  >21
+   stop 2018-11-14  V0 sale 2018-11-21  (+5 dh)  <=21
+   stop 2022-01-20  V0 sale 2022-01-21  (+1 dh)  <=21
+   stop 2022-04-22  V0 sale 2022-04-25  (+1 dh)  <=21
+   stop 2023-03-10  V0 sale 2023-03-14  (+2 dh)  <=21
+   stop 2025-03-06  V0 sale 2025-03-11  (+3 dh)  <=21
+
+VEREDICTO (§2, periodo completo): H1 refutada -> estado 'No replicado'. H2 informativa: 88.2%.

@@ -68,3 +68,51 @@ Los días sin dato de alguna serie se descartan y se reportan.
 ---
 
 ## RESULTADOS (se llenan después de correr)
+
+### Ejecución A (orquestador): `R16.py`, `R16-salida.txt`, `R16-resultados.json`
+- **Datos:** Yahoo `^GSPC`/`^SP500TR`/`^VIX` y FRED DTB3: 9,266 días comunes, de 1990-01-02 al 2026-10-16. Descarga nueva; coincide con la caché de R11 sin diferencias (diferencia relativa máxima 0.00).
+- **Desviación declarada:** el pre-registro decía "se reutiliza la caché de R11 y se extiende". Se bajó la serie completa porque la sensibilidad (a) necesita apertura y mínimo. Con el cotejo se demuestra que es la misma serie.
+
+| Variante (1990-10-17 a 2026-10-16) | CAGR | Sharpe | MDD | Salidas (por stop) | Invertido |
+|---|---|---|---|---|---|
+| V0 filtro vigente | +15.2% | 0.537 | −73.7% | 108 (0) | 75% |
+| S8 | +10.0% | 0.398 | −75.9% | 108 (32) | 64% |
+| **S10.92 (vigente)** | **+9.8%** | **0.394** | **−76.1%** | 108 (18) | 65% |
+| S15 | +14.6% | 0.520 | −75.5% | 108 (8) | 75% |
+| S20 | +14.8% | 0.526 | −73.7% | 108 (1) | 75% |
+| S10.92, disparo intradía (sens. a) | +10.0% | 0.397 | −71.5% | 108 (27) | 65% |
+| S10.92, reentrada a 21 días (sens. b) | +15.4% | 0.543 | −72.0% | 110 (18) | 74% |
+| 3x comprar y mantener | +18.5% | 0.538 | −97.9% | — | 100% |
+
+- **Subperiodos:**
+  - 1990-2008: V0 Sharpe 0.457 contra S10.92 0.116 (CAGR +13.6% contra +2.6%).
+  - 2009-hoy: 0.616 contra 0.647 (MDD −49.3% contra −48.4%).
+- **H2:** en 16 de los 18 stops (89%) el filtro V0 sale dentro de 21 días hábiles.
+- **Por qué las salidas son 108 en todas las variantes:** con la reentrada por reinicio del filtro, cada ciclo del filtro tiene exactamente una salida, por stop o por filtro. No es un error.
+
+### Ejecución B (auditor-de-replicas, código desde cero): `laboratorio/auditorias/AC-22-R16/`
+- **Datos:** CBOE SPX más dividendos de multpl (rendimiento total aproximado), CBOE VIX y DTB3 de AC-17, completado con la tasa del Tesoro a 13 semanas (FRED no respondió). El SPX de CBOE coincide con FRED SP500 en 2,511 de 2,512 días.
+
+| Variante | CAGR | Sharpe | MDD | Salidas (por stop) |
+|---|---|---|---|---|
+| V0 | 15.11% | 0.516 | −73.5% | 108 (0) |
+| S8 | 9.88% | 0.378 | −75.9% | 108 (24) |
+| **S10.92** | **9.71%** | **0.372** | **−76.0%** | 108 (17) |
+| S15 | 14.44% | 0.499 | −75.4% | 108 (5) |
+| S20 | 14.65% | 0.504 | −73.5% | 108 (1) |
+| S10.92 reentrada 21 d | 15.23% | 0.522 | −71.9% | 110 (17) |
+| 3x comprar y mantener | 18.15% | 0.533 | −97.9% | 0 |
+
+- **H2:** 15 de 17 (88.2%).
+- **De dónde sale el costo, según B:** dos stops tempranos, el 1994-12-08 y el 2018-03-23. Como la reentrada exige que el filtro se apague y se vuelva a encender, la cuenta queda fuera hasta 1997 y hasta fines de 2018.
+
+### Juicio
+- **H1 refutada en A y en B por los dos criterios.** Con el stop vigente la MDD empeora (−2.4 pp en A, −2.5 pp en B; se pedía mejorar ≥ 3 pp) y el Sharpe baja 0.14 (el tope era −0.03).
+- **H2 sostenida:** ~89% de los stops son redundantes con el filtro.
+- **Estado (A y B concuerdan): "No replicado".** En esta prueba, el stop fijo de −10.92% no agrega protección encima del filtro y cuesta rendimiento.
+- **El costo depende de la reentrada:** con reentrada a los 21 días el Sharpe queda igual (0.543 / 0.522 contra 0.537 / 0.516) y la MDD mejora 1.6-1.7 pp. Tampoco llega a los 3 pp.
+- **Disparo intradía (a), solo A:** mejora la MDD 2.2 pp, pero el costo en Sharpe es el mismo.
+- **Consecuencia:** la regla no cambia en el laboratorio. El stop también es una regla de presupuesto de riesgo (3% del capital por operación, decisión W40) y su cambio lo decide el comité.
+  - **Insumo para el comité del 23-oct:** con la evidencia de R16, el stop vigente funciona como un seguro caro y casi siempre redundante.
+  - Si se conserva, la reentrada debería ser explícita y no esperar a que el filtro se reinicie. Hoy no está escrita y quedaría a discreción del comité.
+- **Etiqueta:** descartada (el stop como mejora del filtro).
