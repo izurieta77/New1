@@ -501,3 +501,16 @@ Ficha [`fichas/2026-10-19-momentum-serie-de-tiempo-liu-tsyvinski.md`](fichas/202
 - **Réplica [I, B], 438 semanas BTCUSDT de Binance (jun-2018 a oct-2026):** solo sobrevive h = 1 (beta 0.117, t NW 2.58); h = 2 y 3 dan cero. Desde ago-2022 la beta baja a 0.061 (t 1.07, no significativa). Q5−Q1 da +4.27 pp por semana, pero no es monótono y lo cargan pocas semanas. Una regla de "largo si la semana fue positiva" rinde menos que comprar y mantener aun sin costos (Sharpe 0.72 contra 0.77), con ~27 cambios al año.
 - **Para la cuenta [I]:** sin cambio. El filtro SMA200 es una tendencia de unos 7 meses y no se apoya en este paper; no se debe citar como su respaldo.
 - **Pronóstico nuevo:** P0148 (vela semanal BTCUSDT del 19 al 25-oct > 82,116.00, p=0.52).
+
+### Adenda (19-oct-2026, laboratorio): la "prima de tamaño" cripto vive donde no se puede operar (Ballis e Ioannidis, arXiv:2610.23283, 16-oct-2026)
+
+- **Fuente y acceso [H]:** HTML completo de arXiv (155 mil caracteres). Leídos el resumen, §2 (datos), §4.1-4.3 (prima en papel, deslistados, margen invertible), §7.5 (limitaciones) y §8 (conclusiones). **Grado B:** usan toda la población de CoinMarketCap (8,970 activos, 690 cortes semanales de 2013 a jul-2026, con entradas y salidas observadas) y declaran los sesgos. No se replicó.
+- **Hallazgo [H]:**
+  - **En papel:** el decil más chico rinde **27.5% por semana** (ajustado por mercado) en la era inicial, 8.0% en la de expansión y 2.8% en la de consolidación.
+  - **Con un filtro mínimo** (más de 10 mil USD de volumen diario), la prima de la era inicial cae a cero: el decil tenía 2 monedas en promedio y solo se podía formar en 35 semanas.
+  - **Deciles formados dentro del universo operable:** en la era de consolidación no hay gradiente de tamaño. La versión que sobrevive tiene una capacidad mediana de **293 mil USD**: 1.28% por semana sobre 293 mil son unos 3,757 USD.
+  - **Eficiencia débil:** la asimetría de movilidad entre deciles cae ~70% desde su máximo de 2014. El mercado se acerca a la eficiencia, y lo que converge es la rotación por entrada de monedas nuevas.
+- **Lectura para el sistema [I]:**
+  - Confirma la regla de usar solo activos líquidos (la cuenta Binance opera BTC; ETH queda en estudio).
+  - Cualquier backtest cripto que muestre rendimientos enormes en monedas chicas debe pasar tres pruebas antes de creerse: universo operable, capacidad y deslistados tratados como pérdida.
+  - **Sin cambio de regla.**

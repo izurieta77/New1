@@ -1,6 +1,6 @@
 # Estado de los tres doctorados
 
-> Actualizado: 2026-10-19 (trabajo continuo del 18-oct: C4 de Sin a Parcial); antes 2026-10-16 (trabajo continuo: C3 de Sin a Parcial); antes 2026-10-14 (laboratorio: C8 de Sin a Parcial); antes 2026-10-12 (laboratorio: D10; antes 2026-10-10, conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
+> Actualizado: 2026-10-19 (laboratorio: C9 de Sin a Parcial; contabilidad queda sin áreas en Sin); antes 2026-10-19 (trabajo continuo del 18-oct: C4 de Sin a Parcial); antes 2026-10-16 (trabajo continuo: C3 de Sin a Parcial); antes 2026-10-14 (laboratorio: C8 de Sin a Parcial); antes 2026-10-12 (laboratorio: D10; antes 2026-10-10, conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
 
 ## Doctorado en finanzas (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
@@ -43,7 +43,7 @@
 | C6 | Análisis y reformulación de estados financieros; calidad de utilidades | caps. 03 y 25 | Capítulo |
 | C7 | Valuación basada en contabilidad (ingreso residual) | cap. 03 | Parcial |
 | C8 | Contabilidad empírica: relevancia de valor, gestión de utilidades, informatividad | ficha 14-oct (devengos, Sloan 1996 leído por secciones; ejercicio) y réplica R13 (Replicado, A y B); faltan Ball-Brown y gestión de utilidades | Parcial |
-| C9 | Auditoría, gobierno corporativo y regulación de emisoras | nada | Sin |
+| C9 | Auditoría, gobierno corporativo y regulación de emisoras | ficha 19-oct (LMV vigente, DOF 14-11-2025: arts. 24-26, 42 y 43 leídos en texto íntegro por sección; verificador con aserciones de consejo, comités, independencia y exauditor); faltan CUAE, SOX §404/PCAOB y evidencia empírica | Parcial |
 | C10 | Contabilidad de las emisoras mexicanas (NIIF obligatorias, efectos de inflación) | `empresas/*/modelo` | Parcial |
 | C11 | Costos y contabilidad gerencial (asignación, costos relevantes y hundidos, costo de oportunidad) | ficha 6-oct (resumen del dueño con 5 ejercicios) | Parcial |
 
@@ -55,7 +55,7 @@ Nota (conciliación, 9-oct-2026): la fila de derecho fiscal decía 0/1/4/6. Reco
 |---|---|---|---|---|---|
 | Finanzas | 11 | 5 | 4 | 2 | 0 |
 | Derecho fiscal | 11 | 0 | 5 | 5 | 1 |
-| Contabilidad | 11 | 0 | 1 | 9 | 1 |
+| Contabilidad | 11 | 0 | 1 | 10 | 0 |
 
 Nota (trabajo continuo, 19-oct-2026): la fila de contabilidad decía 0/1/7/3. Recontada contra la tabla de arriba con C4 ya en Parcial, queda en 0 Comprobada, 1 Capítulo (C6), 9 Parcial (C1-C5, C7, C8, C10, C11) y 1 Sin (C9). Ya estaba desfasada antes de hoy: C8 (14-oct) y C3 (16-oct) habían pasado a Parcial y solo se había sumado uno.
 
