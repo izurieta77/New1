@@ -701,7 +701,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 
 ## 2026-10-17 · inteligencia (15:05 CDMX, sábado)
 - **¿El récord semanal de ataques en Ormuz (UKMTO, citado por el NY Post; ukmto.org da 403) es urgencia alta para el lunes?** Por el riesgo de brecha en el crudo y, por contagio, en UPRO (3x).
-  - **Qué decidí:** urgencia **media**, sin fila en `alertas.md`. Hoy no hay precio negociable que mida más de 2% en pesos en ninguna posición, la fuente primaria no se pudo leer y Polymarket 4641065 no se movió (0.805). **Estado:** Abierto → inteligencia 20:05 y la reapertura de futuros del domingo a las 22:00 UTC. Si el Brent o el WTI abren con más de 3%, o si el ES/NQ implica más de 2% en pesos en UPRO, SPYM o QQQM, se sube a alta.
+  - **Qué decidí:** urgencia **media**, sin fila en `alertas.md`. Hoy no hay precio negociable que mida más de 2% en pesos en ninguna posición, la fuente primaria no se pudo leer y Polymarket 4641065 no se movió (0.805). **Estado:** Abierto → inteligencia 20:05 y la reapertura de futuros del domingo a las 22:00 UTC. Si el Brent o el WTI abren con más de 3%, o si el ES/NQ implica más de 2% en pesos en UPRO, SPYM o QQQM, se sube a alta. **[Cerrado, conciliación 19-oct-2026, `bitacora/arbitraje/2026-10-18.md` §6]:** la reapertura no cruzó ningún umbral (BZ=F 108.05-108.19, ES 7,747.25, NQ 29,674.75). Media fue correcto.
 
 ## 2026-10-17 · revisión (rutina 11, 17:58 CDMX, sábado) · R12, boleta VT y P0079
 - **Pregunta 1:** el pre-registro R12 dice que no se había corrido nada sobre el Nasdaq-100 con VIX, pero R06 (bloque J) ya lo hizo con TQQQ/QQQ y VIX 2010-2026, y su H1 no coincide con el criterio de refutación de la MDD. ¿Lo enmienda la revisión?
@@ -722,11 +722,11 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **P0104 (vigía, vence el 18-oct):** `pronosticos.py vencidos` ya lo lista, pero su criterio dice "hasta el 2026-10-18 (inclusive)" y a la hora de esta corrida faltan ~22 h de ventana.
   - **Qué decidí:** no resolverlo todavía. Lo resuelve la inteligencia de las 20:05 CDMX del 18-oct (02:05 UTC del 19-oct) con el criterio literal. Hoy va hacia **NO**: no se localizó ninguna atribución de UKMTO, CENTCOM, Reuters, AP o Bloomberg para los impactos concretos del 10 y 11-oct.
   - **Criterio de lectura (conservador):** la frase genérica de CENTCOM ("Iran's attempted attacks", "97% cross safely") **no** cuenta como atribución de esos dos impactos, porque no los nombra. Si una fuente de la lista atribuye uno de esos dos, es SÍ.
-  - **Por qué:** resolver antes de que cierre la ventana podría fallar contra el criterio escrito. **Estado:** Abierto → inteligencia 20:05 del 18-oct.
+  - **Por qué:** resolver antes de que cierre la ventana podría fallar contra el criterio escrito. **Estado:** Abierto → inteligencia 20:05 del 18-oct. **[Cerrado, conciliación 19-oct-2026, `bitacora/arbitraje/2026-10-18.md` §3]:** resuelto NO por la inteligencia de las 20:05 y ratificado, con corte CDMX.
 - **Ormuz, criterio de urgencia alta (abierto a las 15:05):** sigue en **media** porque no hay precio.
   - Dejé la lista de umbrales en `bitacora/inteligencia/2026-10-17.md` §20:05: Brent ≥ 113.16 o ≤ 106.56; WTI ≥ 101.99 o ≤ 96.05; UPRO ±2% en pesos ≈ ES ±0.67% con el FX fijo (7,755.6 / 7,652.9); SPYM ≈ ES ±2%; QQQM ≈ NQ ±2%.
   - **Qué decidí (conservador):** escalar solo si el movimiento se sostiene ≥ 30 min o lo confirma una segunda fuente, para no alertar por un pico ilíquido de Globex. Para el Brent uso el umbral más exigente: 109.86, de Yahoo, y no el liquidado de 109.69.
-  - **Estado:** Abierto → la primera corrida con precio. Hoy no hay ninguna programada entre las 22:00 UTC del domingo y la inteligencia de las 07:05 CDMX del lunes, salvo el pulso cripto de las 00:17 o la supervisión. Si el orquestador quiere vigilar la reapertura, tendría que lanzar una corrida extra.
+  - **Estado:** Abierto → la primera corrida con precio. Hoy no hay ninguna programada entre las 22:00 UTC del domingo y la inteligencia de las 07:05 CDMX del lunes, salvo el pulso cripto de las 00:17 o la supervisión. Si el orquestador quiere vigilar la reapertura, tendría que lanzar una corrida extra. **[Cerrado, conciliación 19-oct-2026, `bitacora/arbitraje/2026-10-18.md` §6]:** la de las 20:05 del 18-oct aplicó la tabla con 4 h de barras: ningún umbral cruzado.
 - **Se escapó a las 15:05 la nota de Reuters (14:23 UTC) de Egipto y Arabia Saudita.** Se registró a las 20:05 como media.
   - **Qué decidí:** no editar la sección de las 15:05. La omisión queda anotada en la fila. **Estado:** Cerrado (informativo).
 - **P0079 (claude, venció el 17-oct; resuelve SÍ con UPRO 146.43 > 135.76, A)** sigue sin `resultado` en el CSV. La revisión se lo asignó a la conciliación de esta noche.
@@ -762,7 +762,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 
 ## 2026-10-18 · inteligencia (07:05 CDMX, domingo)
 - **¿El avance de Egipto hacia un despliegue militar en Arabia Saudita sube a urgencia alta antes de la reapertura?** Lo aprobó el Consejo de Defensa Nacional y el parlamento abrió su sesión de emergencia (B); la votación aún no se localiza.
-  - **Qué decidí:** urgencia **media**, sin fila en `alertas.md`. Es una escalada del frente hutí-saudí, pero la ruta de Yanbu y el Este-Oeste operan (B−/D), Polymarket 4641065 subió a 0.815 (A) y no hay precio negociable que mida más de 2% en pesos en ninguna posición. Manda el criterio de precio de las 15:05 del 17-oct (Brent/WTI ±3% o futuros ±2% en pesos, sostenido ≥ 30 min o con segunda fuente). **Estado:** Abierto → inteligencia 15:05 (votación) y 20:05 (precio de la reapertura y PIB de China).
+  - **Qué decidí:** urgencia **media**, sin fila en `alertas.md`. Es una escalada del frente hutí-saudí, pero la ruta de Yanbu y el Este-Oeste operan (B−/D), Polymarket 4641065 subió a 0.815 (A) y no hay precio negociable que mida más de 2% en pesos en ninguna posición. Manda el criterio de precio de las 15:05 del 17-oct (Brent/WTI ±3% o futuros ±2% en pesos, sostenido ≥ 30 min o con segunda fuente). **Estado:** Abierto → inteligencia 15:05 (votación) y 20:05 (precio de la reapertura y PIB de China). **[Cerrado, conciliación 19-oct-2026, `bitacora/arbitraje/2026-10-18.md` §6]:** la reapertura no cruzó umbrales y el PIB de China se leyó (+4.5%). La votación egipcia sigue en P0142.
 - **Notas recicladas** (EnergyNow con la nota de AP del 5-sep sobre el ataque de EUA a petroleros iraníes; Daily Star con los hundimientos del 14-oct). **Qué decidí:** no las cuento como hechos nuevos. Quedan anotadas como recicladas en la tabla, con sus fechas originales. **Estado:** Cerrado (informativo).
 - **SPEI:** un medio local dice que Banxico atribuyó las fallas a un "mantenimiento emergente", pero en banxico.org.mx no hay aviso. **Qué decidí:** la causa queda en C−. La boleta VT no depende del SPEI porque usa el efectivo que ya está en GBM. Para cualquier fondeo del lunes, primero hay que confirmar que el SPEI opera. **Estado:** Abierto → inteligencia 11:05 del lunes (¿hay aviso de Banxico?).
 
@@ -772,7 +772,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **ETHA/ETHB en el SIC de GBM:** la ficha `conocimiento/cripto/fichas/2026-10-18-etf-ether-staking.md` no pudo verificarlo; se marca [NV]. **Qué decidí:** ninguna propuesta de ETH vía GBM; ETH sigue fuera del universo. **Estado:** Abierto → si el comité reabre ETH, primero que el dueño lo confirme en la app.
 
 ## 2026-10-18 · inteligencia (15:05 CDMX, domingo)
-- **¿El "petrolero que choca con una mina y se incendia en Ormuz" (IRGC, vía marketscreener y Times of Israel, 20:48-20:59 UTC) sube a urgencia alta antes de la reapertura?** No pude leer el cuerpo de las notas (403), no hay buque identificado y puede ser la reiteración del caso del 17-oct. **Qué decidí:** urgencia **media**, sin fila en `alertas.md`. Sin precio no hay forma de medir un movimiento de más de 2% en pesos. Polymarket 4641065 subió a 0.835 (A) y el IRGC tiene un historial de afirmaciones desmentidas por CENTCOM. La corrida de las 20:05 la contrasta con `BZ=F`/`CL=F` y con UKMTO, CENTCOM y gCaptain. **Estado:** Abierto → inteligencia de las 20:05.
+- **¿El "petrolero que choca con una mina y se incendia en Ormuz" (IRGC, vía marketscreener y Times of Israel, 20:48-20:59 UTC) sube a urgencia alta antes de la reapertura?** No pude leer el cuerpo de las notas (403), no hay buque identificado y puede ser la reiteración del caso del 17-oct. **Qué decidí:** urgencia **media**, sin fila en `alertas.md`. Sin precio no hay forma de medir un movimiento de más de 2% en pesos. Polymarket 4641065 subió a 0.835 (A) y el IRGC tiene un historial de afirmaciones desmentidas por CENTCOM. La corrida de las 20:05 la contrasta con `BZ=F`/`CL=F` y con UKMTO, CENTCOM y gCaptain. **Estado:** Abierto → inteligencia de las 20:05. **[Cerrado, conciliación 19-oct-2026, `bitacora/arbitraje/2026-10-18.md` §6]:** a las 20:05 siguió en D, sin buque identificado, y el Brent bajó (−1.65%). Media fue correcto.
 - **Tick de Yahoo `MXN=X` 18.4625 (20:27 UTC) sin barras:** **Qué decidí:** no lo uso para FX-1 ni para mover la tabla de umbrales. Dejé la sensibilidad calculada en `bitacora/inteligencia/2026-10-18.md` §15:05; manda el `MXN=X` con barras a la hora de la lectura. **Estado:** Cerrado.
 
 ## 2026-10-18 · revisión (rutina 11, 17:58 CDMX; corrida del 19-oct 00:0x UTC) · Boleta VT si el lunes sale EN ESPERA
@@ -780,10 +780,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí (conservador):** **no.** Si el lunes sale EN ESPERA, no se publica ninguna línea VIGENTE del 20 al 22-oct y decide el comité. La ventana del 20 al 22 solo aplica si el lunes salió VIGENTE y la orden no llenó. No edité la boleta.
   - **Umbral de USD/MXN del semáforo:** manda el número fijo **18.81** de la decisión W42 (L86), no el nivel vivo de ALERTA de FX-1 (hoy 19.0473), aunque L11 los llame igual (§2.1).
   - **Límite en USD (si VT solo está en la sección USA):** si la supervisión lo publica, va marcado "informativo: no capturar hasta resolver el pago en USD" (§2.2).
-  - **Estado:** Abierto → conciliación de esta noche (nota fechada en la boleta) y orquestador (pendiente (a), lectura de la boleta por la supervisión del 20 al 22-oct).
+  - **Estado:** Abierto → conciliación de esta noche (nota fechada en la boleta) y orquestador (pendiente (a), lectura de la boleta por la supervisión del 20 al 22-oct). **[Cerrado en lo de la conciliación, 19-oct-2026, `bitacora/arbitraje/2026-10-18.md` §1]:** se RATIFICA. La regla específica (L14, W42) manda sobre la nota de L40. Quedan notas fechadas en L11, L14, L33 y L40: 18.81 fijo, el límite en USD es informativo y sin línea VIGENTE del 20 al 22-oct si el lunes sale EN ESPERA. Sigue abierto el pendiente (a) del orquestador.
 
 ## 2026-10-18 · inteligencia (cierre 20:05 CDMX; corrida 02:1x UTC del 19-oct)
-- **P0104 se resuelve sin haber leído Reuters ni Bloomberg directo, y con ukmto.org en 403.** **Qué decidí:** resolverlo en **NO** con el criterio literal, porque en lo consultado no hay ninguna atribución de una fuente válida (gCaptain `iran-conflict`, más titulares de Reuters, AP y Bloomberg vía Google News RSS en 48 h). El límite de acceso quedó en la nota de la fila. **Estado:** si la conciliación encuentra una atribución con fecha ≤ 18-oct en una fuente válida, se corrige a SÍ con una nota.
+- **P0104 se resuelve sin haber leído Reuters ni Bloomberg directo, y con ukmto.org en 403.** **Qué decidí:** resolverlo en **NO** con el criterio literal, porque en lo consultado no hay ninguna atribución de una fuente válida (gCaptain `iran-conflict`, más titulares de Reuters, AP y Bloomberg vía Google News RSS en 48 h). El límite de acceso quedó en la nota de la fila. **Estado:** si la conciliación encuentra una atribución con fecha ≤ 18-oct en una fuente válida, se corrige a SÍ con una nota. **[Conciliación 19-oct-2026, `bitacora/arbitraje/2026-10-18.md` §3]:** la reconsulta de las 03:00 UTC no encontró ninguna atribución. NO se ratifica; el corte CDMX queda en la nota de la fila. Cerrado.
 - **El ES quedó a 0.17% del umbral de UPRO (+2% en pesos).** **Qué decidí:** no abrir fila en `alertas.md`, porque no cruzó y el umbral se mide en el precio real. Queda para la apertura del lunes; la supervisión y la inteligencia de las 11:05 lo miden con UPRO real × `MXN=X`.
 - **FXLeaders dice "WTI −4 USD"; Yahoo dice −1.36 USD.** **Qué decidí:** manda Yahoo (A) y la nota se descarta como D.
 ## 2026-10-18 · investigador vespertino (rutina 16, 20:12 CDMX) · API de arXiv
@@ -791,3 +791,25 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** no editar `rutinas/investigador-vespertino.md`. Si la API da 429, la corrida usa el listado HTML `arxiv.org/list/q-fin/new` (hoy funcionó: 26 papers) y lo declara en su bitácora.
   - **Por qué:** es un cambio de fuente, no de regla. Si el 429 sigue, el balance mensual decide si se fija en el procedimiento.
 - **Estado:** Abierto → balance mensual (informativo).
+
+## 2026-10-19 · conciliación (noche del 18-oct) · Cierres de la revisión del 18-oct y pendientes de más de 48 h
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-18.md`):
+  - **Boleta VT (§1):** si el lunes sale EN ESPERA, decide el comité del 23-oct y no se publica ninguna línea VIGENTE del 20 al 22-oct. 18.81 es el número fijo de W42. El límite en USD es informativo. Error de L40 en el registro.
+  - **Latidos (§2):** 3 de 18 (+14, +12 y +17 min), los 3 de inteligencia; la de las 20:05 cuadra. Décima jornada, 17 de 17. Conteo en `alertas.md`.
+  - **P0104 (§3):** NO ratificado, con corte CDMX. Brier 0.2127 (n = 43).
+  - **P0141 (§4):** el respaldo se compara contra 914,652 (portada contra portada); la vía principal no cambia.
+  - **Menores (§5):** P0038, P0101 y P0140 quedan listos para el 19-oct; REGLAS §7.5 marcado; nota en el brief del 17-oct sobre R12.
+  - **Suite:** 342 OK, sin cambios de código.
+- **Para resolver el 19-oct (no antes de que haya dato):**
+  - **P0038:** el cierre, con FRED VIXCLS del 16-oct (Cboe 19.99).
+  - **P0101:** la inteligencia de las 20:05, con EIA de la semana del 19-oct contra 6.199.
+  - **P0140:** la inteligencia de las 20:05, con BZ=F 1d del 19-oct contra 109.86.
+  - **P0048:** la conciliación del 19-oct, con el H.10.
+  - **Estado:** Abierto → esas rutinas.
+- **Sin cambio:**
+  - el comité del 23-oct (duplicados, P0118, zona horaria y R12);
+  - E3;
+  - BIVA, GFNORTEO y Metaplanet;
+  - ASUR (sin aviso de la empresa);
+  - del dueño: latidos, User-Agent de la SEC (no se toca), marcador, stop y filtro del UPRO, sesión extraordinaria, FX-1 retroactivo, datos personales (no se tocan) y ruta USD de VT;
+  - del orquestador: escala de dominio, "Kawa", D6, `eventoca`, plantilla de pre-registro y pendiente (a) de la supervisión.
