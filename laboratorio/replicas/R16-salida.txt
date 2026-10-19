@@ -1,0 +1,33 @@
+Yahoo ^GSPC/^SP500TR/^VIX + FRED DTB3: 9266 días comunes 1990-01-02 a 2026-10-16; sha256 a4789527c9e19ceb…
+Cotejo con la caché de R11 (^SP500TR): 9514 días comunes, diferencia relativa máxima 0.00e+00
+
+== completo
+V0 filtro vigente               CAGR +15.2% Sharpe 0.537 MDD -73.7% salidas 108 (stop  0) invertido 75% [1990-10-17→2026-10-16]
+S8                              CAGR +10.0% Sharpe 0.398 MDD -75.9% salidas 108 (stop 32) invertido 64% [1990-10-17→2026-10-16]
+S10.92                          CAGR +9.8% Sharpe 0.394 MDD -76.1% salidas 108 (stop 18) invertido 65% [1990-10-17→2026-10-16]
+S15                             CAGR +14.6% Sharpe 0.520 MDD -75.5% salidas 108 (stop  8) invertido 75% [1990-10-17→2026-10-16]
+S20                             CAGR +14.8% Sharpe 0.526 MDD -73.7% salidas 108 (stop  1) invertido 75% [1990-10-17→2026-10-16]
+S10.92 intradía (sens. a)       CAGR +10.0% Sharpe 0.397 MDD -71.5% salidas 108 (stop 27) invertido 65% [1990-10-17→2026-10-16]
+S10.92 reentrada 21d (sens. b)  CAGR +15.4% Sharpe 0.543 MDD -72.0% salidas 110 (stop 18) invertido 74% [1990-10-17→2026-10-16]
+3x comprar y mantener           CAGR +18.5% Sharpe 0.538 MDD -97.9%
+
+== 1990-2008
+V0 filtro vigente               CAGR +13.6% Sharpe 0.457 MDD -73.7% salidas  47 (stop  0) invertido 71% [1990-10-17→2008-12-31]
+S8                              CAGR +2.6% Sharpe 0.116 MDD -75.9% salidas  47 (stop 15) invertido 55% [1990-10-17→2008-12-31]
+S10.92                          CAGR +2.6% Sharpe 0.116 MDD -76.1% salidas  47 (stop 10) invertido 55% [1990-10-17→2008-12-31]
+S15                             CAGR +12.3% Sharpe 0.419 MDD -75.5% salidas  47 (stop  4) invertido 71% [1990-10-17→2008-12-31]
+S20                             CAGR +12.8% Sharpe 0.434 MDD -73.7% salidas  47 (stop  1) invertido 71% [1990-10-17→2008-12-31]
+3x comprar y mantener           CAGR +6.1% Sharpe 0.313 MDD -96.7%
+
+== 2009-hoy
+V0 filtro vigente               CAGR +16.9% Sharpe 0.616 MDD -49.3% salidas  61 (stop  0) invertido 78% [2009-01-02→2026-10-16]
+S8                              CAGR +18.1% Sharpe 0.658 MDD -47.6% salidas  61 (stop 17) invertido 73% [2009-01-02→2026-10-16]
+S10.92                          CAGR +17.7% Sharpe 0.647 MDD -48.4% salidas  61 (stop  8) invertido 75% [2009-01-02→2026-10-16]
+S15                             CAGR +17.0% Sharpe 0.618 MDD -49.3% salidas  61 (stop  4) invertido 78% [2009-01-02→2026-10-16]
+S20                             CAGR +16.9% Sharpe 0.616 MDD -49.3% salidas  61 (stop  0) invertido 78% [2009-01-02→2026-10-16]
+3x comprar y mantener           CAGR +32.6% Sharpe 0.772 MDD -76.6%
+
+Stops de S10.92: 18; en 16 el filtro V0 sale dentro de 21 días hábiles (89%)
+Fechas de stop: 1994-06-24, 1994-12-08, 1997-10-27, 1998-08-04, 2000-01-24, 2000-02-18, 2000-05-19, 2002-04-11, 2007-11-07, 2007-12-17, 2011-08-04, 2016-01-06, 2018-03-23, 2018-11-14, 2022-01-20, 2022-04-22, 2023-03-10, 2025-03-06
+ΔMDD (S10.92 − V0) -2.4 pp; ΔSharpe -0.144
+Veredicto A: H1 refutada; H2 sostenida -> No replicado
