@@ -640,7 +640,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 
 ## 2026-10-16 · comité W42 (auditoría semanal)
 - **Boleta real del 19-oct (1 VT):** espera la confirmación del dueño y la verificación de que VT existe en GBM. Si no existe, el comité del 23-oct elige entre RSP y VEA. **Estado:** Abierto → dueño y supervisión.
-- **R12 (condición de VIX del filtro):** aprobado el pre-registro, solo para evaluación fuera de muestra. Debe estar en git antes del 23-oct y antes de cualquier cierre del VIX ≥ 25. **Estado:** Abierto → laboratorio o trabajo continuo (prioridad).
+- **R12 (condición de VIX del filtro):** aprobado el pre-registro, solo para evaluación fuera de muestra. Debe estar en git antes del 23-oct y antes de cualquier cierre del VIX ≥ 25. **Estado:** Abierto → laboratorio o trabajo continuo (prioridad). **[Cerrado, trabajo continuo 19-oct-2026]:** R12 corrió el 18-oct (01:12-01:17 UTC) con A y B concordantes: "No replicado", la condición VIX se queda. Fallo de la conciliación en `bitacora/arbitraje/2026-10-17.md` §1.
 
 ## 2026-10-16 · revisión (rutina 11, 17:58 CDMX) · boleta VT del 19-oct: pronóstico y límite
 - **Pregunta 1:** la decisión real B2 (1 VT) no tiene pronóstico registrado. ¿Lo registra la revisión?

@@ -1,6 +1,6 @@
 # Estado de los tres doctorados
 
-> Actualizado: 2026-10-16 (trabajo continuo: C3 de Sin a Parcial); antes 2026-10-14 (laboratorio: C8 de Sin a Parcial); antes 2026-10-12 (laboratorio: D10; antes 2026-10-10, conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
+> Actualizado: 2026-10-19 (trabajo continuo del 18-oct: C4 de Sin a Parcial); antes 2026-10-16 (trabajo continuo: C3 de Sin a Parcial); antes 2026-10-14 (laboratorio: C8 de Sin a Parcial); antes 2026-10-12 (laboratorio: D10; antes 2026-10-10, conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
 
 ## Doctorado en finanzas (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
@@ -38,7 +38,7 @@
 | C1 | Marco conceptual y normas: NIF, NIIF y US GAAP, y sus diferencias | ficha 6-oct (arrendamientos: IFRS 16 vs ASC 842) | Parcial |
 | C2 | Reconocimiento de ingresos (NIF D-1, IFRS 15, ASC 606) | cap. 25 (mención) | Parcial |
 | C3 | Arrendamientos, instrumentos financieros y deterioro (IFRS 16 y 9; ASC 842 y 326) | ficha 16-oct (IFRS 9 pérdida esperada: etapas y efecto escalón, con ejercicio; norma no leída en texto íntegro); arrendatario en la ficha de C1 | Parcial |
-| C4 | Consolidación, combinaciones de negocios, entidades de interés variable y partes relacionadas | nada | Sin |
+| C4 | Consolidación, combinaciones de negocios, entidades de interés variable y partes relacionadas | ficha 19-oct (IFRS 10 §7/§23/§25/B94, IFRS 3 §19/§32/§42 e IAS 24 §9 leídos en texto íntegro de EUR-Lex por sección; ejercicio en código: crédito mercantil parcial y completo, por etapas, compra de minoritarios y múltiplos con minoritario); faltan VIE (ASC 810), NIF B-7/B-8, IFRS 11/12, IAS 28/36 | Parcial |
 | C5 | Impuestos diferidos, pensiones y pagos basados en acciones | ficha 11-oct (impuesto diferido: resumen oficial NIC 12, LISR, ejercicio en código); pensiones y NIIF 2 pendientes | Parcial |
 | C6 | Análisis y reformulación de estados financieros; calidad de utilidades | caps. 03 y 25 | Capítulo |
 | C7 | Valuación basada en contabilidad (ingreso residual) | cap. 03 | Parcial |
@@ -55,7 +55,9 @@ Nota (conciliación, 9-oct-2026): la fila de derecho fiscal decía 0/1/4/6. Reco
 |---|---|---|---|---|---|
 | Finanzas | 11 | 5 | 4 | 2 | 0 |
 | Derecho fiscal | 11 | 0 | 5 | 5 | 1 |
-| Contabilidad | 11 | 0 | 1 | 7 | 3 |
+| Contabilidad | 11 | 0 | 1 | 9 | 1 |
+
+Nota (trabajo continuo, 19-oct-2026): la fila de contabilidad decía 0/1/7/3. Recontada contra la tabla de arriba con C4 ya en Parcial, queda en 0 Comprobada, 1 Capítulo (C6), 9 Parcial (C1-C5, C7, C8, C10, C11) y 1 Sin (C9). Ya estaba desfasada antes de hoy: C8 (14-oct) y C3 (16-oct) habían pasado a Parcial y solo se había sumado uno.
 
 **Lectura honesta:** finanzas está a medio camino; derecho fiscal y contabilidad están en su inicio. Lo que ya existe en lo fiscal es de personas físicas y del SIC; falta casi toda la teoría general, el CFF, la defensa fiscal y las personas morales. En contabilidad falta casi todo el cuerpo de normas.
 
