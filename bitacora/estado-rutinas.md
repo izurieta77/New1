@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-19 12:59 UTC · pre-apertura: 2026-10-19 · OK · (este commit) · régimen MIXTO (+0); FX-1 OK 18.4747; semáforo VT previo en verde (oficial a las 08:40); PIB China 4.5%, Trump pausa sanciones a Rusia (Brent 108.4), Francia en disturbios (Stoxx −1%); P0143-P0147 registrados; P0038/P0101/P0140 al cierre; papel 20,173.89, DD −3.35%, sin cortacircuitos
 2026-10-19 11:42 UTC · cripto (pulso extra 05:41) · OK · (este commit) · BTC 82,212.00 (−0.49% vs 04:17), ETH 2,417.25; OI 833.59M (−0.71%), funding 6.556e-05; colchón +16.85%, ENCENDIDO; sin vencidos cripto
 2026-10-19 10:19 UTC · cripto (pulso 04:17) · OK · (este commit) · BTC 82,616.00 (−0.14% vs 00:17; máx 83,158), ETH 2,431.86; OI 839.51M (−2.99%), funding 5.379e-05; colchón +17.42%, ENCENDIDO; sin vencidos cripto
 2026-10-19 06:25 UTC · cripto (pulso 00:17) · OK · (este commit) · pulso en bitacora/cripto/2026-10-19.md (archivo nuevo): BTC 82,734.14 (+0.42% vs cascada 18:42), ETH 2,431.70; OI 865.38M (+1.87%), funding 2.883e-05; filtro ENCENDIDO con 17.59% de colchón (SMA200=72,534.48); sin vencidos cripto
