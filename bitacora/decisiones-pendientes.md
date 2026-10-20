@@ -899,3 +899,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Pregunta 2:** tftc (+526.6 M; FBTC −83.6 y GBTC −54.9) y bitbo (+580.7 M; FBTC −10.8 y GBTC −1.7) no coinciden en la composición del flujo del 19-oct.
   - **Qué decidí:** se registra el rango de +527 a +581 M, con grado B en el signo y el orden de magnitud y C en la composición. Se confirma con la fuente primaria: las acciones en circulación de IBIT en iShares "as of Oct 20" deberían subir ~14.4 M si el +665 de tftc es correcto (~13.0 M si vale el +601 de bitbo). Le toca al pulso de las 08:17 del 21-oct.
 - **Estado:** Abierto → pulsos cripto de las 09:41 del 20-oct y de las 08:17 del 21-oct.
+
+## 2026-10-20 · cripto (pulso 09:41 CDMX) · E9 ÁMBAR dos pulsos seguidos → aviso al gestor de riesgo
+
+- **Hecho:** diferencial de BTCMXN 0.502% a las 08:17 y **0.599%** a las 09:41 (compra 1,514,876 / venta 1,523,972; compra a ±0.5%: 25,930 MXN). La compra queda −0.92% bajo el precio implícito.
+- **Qué decidí:** aplicar la regla del 16-oct: se avisa al gestor de riesgo. Sin operación; no es ROJA (libro no vacío, par activo) y la posición (~2,000 MXN) cabe en el lado de compra. Toda salida de BTC en MXN, incluida una S del filtro, va con **orden límite** al precio implícito menos 0.5%, nunca a mercado.
+- **Para el gestor de riesgo:** evaluar si el costo de salida (~0.9% bajo el implícito) debe restarse del colchón del filtro mientras E9 siga ÁMBAR.
+- **Estado:** Abierto → pulso cripto de las 12:17 del 20-oct (si vuelve a ≤ 0.5%, se cierra).
