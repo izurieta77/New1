@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-20 11:42 UTC · cripto (pulso extra 05:41) · OK · (este commit) · BTC 81,640.46 (+0.07% vs 04:17), ETH 2,388.96, 4h −0.21%, funding 4.11e-05, OI +1.31%; filtro ENCENDIDO (colchón +15.91%); flujos ETF pendientes para 08:17; sin alertas
 2026-10-20 10:18 UTC · cripto (pulso 04:17) · OK · (este commit) · BTC 81,584.00 (−0.17% vs 00:17), ETH 2,387.70, 4h −0.17%, funding 4.84e-05, OI −0.52%; filtro ENCENDIDO (colchón +15.83%); sin alertas
 2026-10-20 06:20 UTC · cripto (pulso 00:17) · OK · (este commit) · BTC 81,725.99 (+0.04% vs 18:42), ETH 2,394.75, 4h −0.09%, funding 7.41e-05, OI +1.24%; filtro ENCENDIDO (colchón +16.04%); sin alertas
 2026-10-20 03:43 UTC · supervisor-vespertino · OK | 0 sin latido · (este commit) · cierre de la cascada vespertina del lunes 19-oct: las 28 corridas esperadas dejaron latido (pre-apertura, 4 inteligencia, 7 supervisiones, laboratorio, cierre, 8 cripto, revisión, aprendizaje, trabajo-continuo, decisor, investigador, conciliación); sin bloqueos nuevos; pendiente del dueño: confirmar si tiene 1 VT del 19-oct (boleta EN ESPERA)
