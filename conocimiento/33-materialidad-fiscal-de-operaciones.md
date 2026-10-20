@@ -287,3 +287,25 @@ Pruebas: `herramientas/tests/test_conciliacion_ventas_cfdi.py` (10 casos; suite 
   - La conciliación de tres series (compras, entregas volumétricas y CFDI de venta), por mes y por producto, deja de ser una defensa opcional y se vuelve la base del pago.
   - "Justificar" una diferencia exigirá la evidencia del §9.4: mermas documentadas, calibraciones y lecturas de tanque.
   - Hay que preparar desde ahora la serie de compras con CFDI del proveedor. El conciliador del §9.6 hoy solo cruza ventas contra entregas.
+
+### 9.10 Adenda 20-oct-2026 (investigador vespertino, turno fiscal): mecánica que la prensa no daba (fuente secundaria, grado C; falta el texto oficial)
+- **Fuente:** facturando.mx (blog, 13-sep-2026). Cita la **iniciativa** de LIF 2027 de la Gaceta de Diputados y la Ley del IEPS. No se encontró el texto primario de la iniciativa ni del dictamen (búsqueda del 20-oct sin resultado en gaceta.diputados.gob.mx), así que todo lo que sigue es **grado C**. Puede haber cambiado en el dictamen que aprobó Diputados el 14-oct o en el Senado (plazo al 31-oct).
+- **Lo que reporta de la iniciativa:**
+  - Se agrega una **fracción XIX al art. 25** de la iniciativa de LIF 2027. Es una disposición de la LIF del año, no una reforma permanente a la LIEPS.
+  - **Sujetos:** personas distintas de fabricantes, productores e importadores que enajenen gasolinas y diésel. El blog pone como ejemplos las estaciones de servicio, los distribuidores y los comercializadores.
+  - **Base:** la diferencia **positiva mensual, por tipo de combustible**, entre litros vendidos y adquiridos.
+  - **Cuota:** la de la LIEPS (art. 2 fr. I incisos D) y H), numerales 3 y 5, y art. 2-A). Monto 2027 por confirmar.
+  - **Sin acreditamiento:** "sin estímulo, disminución o acreditamiento alguno".
+  - **Pago:** a más tardar el día 17 del mes siguiente.
+  - **Traslado prohibido:** "no podrán trasladar el impuesto en forma expresa o por separado". El costo lo absorbe el margen.
+  - **Vigencia:** **1-jul-2027** (transitorio). Del 1-jul al 31-dic-2027 no aplicaría la exención del art. 8 fr. I inciso c) de la LIEPS para esas operaciones.
+  - **Pruebas que puede revisar la autoridad:** existencias, controles volumétricos (CFF art. 28 fr. I apartado B), CFDI, pedimentos y contabilidad. **No hay tolerancia de merma explícita** ni fórmula para el inventario inicial legítimo. La exposición de motivos dice que "no tiene por objeto gravar diferencias legítimas".
+- **Contexto (prensa, C):** se proyectan 538.5 mil M de IEPS por combustibles automotrices en 2027 (La Razón, Expansión). Un diputado de Morena anticipó un cambio "a favor de las empresas", sin detalle.
+- **Implicación para la estación (inferencia):**
+  - Si sobrevive así, cada litro vendido sin compra documentada en el mismo mes paga la cuota completa del IEPS sin poder trasladarla.
+  - El riesgo práctico está en los desfases de mes (compras a fin de mes, ventas al siguiente) y en el inventario inicial al 1-jul-2027. El texto, según el blog, no los resuelve.
+  - **Preparación:**
+    1. Conciliar por mes y por producto las compras (CFDI del proveedor), el inventario de cierre y las ventas, empezando con datos de 2026 para medir la diferencia típica.
+    2. Documentar las mermas con controles volumétricos y calibraciones (§9.4).
+    3. Leer el texto final (Gaceta del Senado o DOF) antes de decidir nada.
+  - Todo trámite lo presenta el dueño con su contador.
