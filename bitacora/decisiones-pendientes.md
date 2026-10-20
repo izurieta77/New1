@@ -922,3 +922,12 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Para el comité del 23-oct:** la alternativa a VT según la disponibilidad que reporte el dueño (RSP o VEA, de la decisión W42). SP500S (UCITS de UBS, 152 MXN) y los fondos GBM solo como datos.
 - **Estado:** Abierto → dueño (aclaración) y comité del 23-oct.
 - **Seguimiento 13:41 CDMX (19:42 UTC):** E9 sigue ÁMBAR, con diferencial de 0.627%. El hueco volvió al lado de compra: −0.91% bajo el implícito, con 10,532 MXN en las cinco primeras posturas. Son cuatro pulsos seguidos > 0.5%, así que el patrón parece estructural (libro delgado, volumen de 24 h < 1 BTC) y no un barrido puntual. **Qué decidí:** sin operación; mantener el escalamiento y la orden límite. Propuesta para el gestor de riesgo: recalibrar el umbral ÁMBAR de E9 a > 1.0% o medirlo contra el precio implícito y no contra el punto medio. **Estado:** Abierto → supervisor/gestor de riesgo; se vuelve a medir a las 16:17.
+
+## 2026-10-20 · inteligencia (15:05 CDMX) · P0102 resuelto NO con riesgo de lectura
+
+- **Hecho:** gCaptain (16-oct) cita el resumen semanal de UKMTO del 16-oct: 12 ataques "en su último periodo" (10 en Ormuz, 1 en el Golfo Pérsico y 1 en el Golfo de Omán).
+  - El conteo es de todo tipo de buque: incluye al menos el portacontenedores GFS Pride, hundido el 13-oct, y otros portacontenedores (JMIC del 15-oct: 4 petroleros y 4 portacontenedores el 11 y el 13-oct).
+  - La ventana de UKMTO termina cerca del 15-oct, no el 12-oct. El PDF de UKMTO da 403, así que no la pude verificar.
+- **Qué decidí:** resolver P0102 = 0. El criterio pide un conteo "de ataques confirmados a petroleros o buques gaseros" ≥ 12, citando a Reuters, a fuentes de la industria marítima o a la OMI. Ningún reporte da esa cifra para petroleros y gaseros.
+- **Riesgo:** un árbitro podría leer los 12 de UKMTO como suficientes (≥ 12, fuente marítima, ventana solapada). Resolver NO favorece el Brier del vigía, que había dado p 0.30, así que conviene que lo revise un tercero.
+- **Estado:** Abierto → conciliación de las 20:57 del 20-oct (confirmar o revertir con el criterio literal).
