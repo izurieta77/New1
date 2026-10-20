@@ -710,3 +710,11 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
   - El stop de 135.76 y el filtro de la SMA200 son protección de **tendencia**. No cubren un salto de un día en el 3x; por eso existe el tope de tamaño.
   - La cuenta en GBM no tiene acceso a opciones, así que el híbrido no es operable hoy.
 - **Acción:** ninguna regla cambia. Se suma como argumento para pre-registrar R12 (condición de VIX, que reacciona más rápido que la SMA200 pero, según R11, sale demasiadas veces).
+
+### Adenda (20-oct-2026, laboratorio): filtros óptimos de ejecución con impacto transitorio (Smerlak, arXiv:2610.24558, 17-oct-2026, CFM)
+- **Acceso [H]:** HTML completo (55 mil caracteres). Leídos el resumen, la introducción y la conclusión; las secciones II-IV se recorrieron, sin seguir las derivaciones. **Grado C para el sistema:** es teoría (factorización de Wiener-Hopf del problema cuadrático con impacto transitorio) sin prueba empírica fuera de muestra.
+- **Lo que dice [H]:**
+  - La política óptima es "pronóstico condicional + filtro lineal causal".
+  - Con impacto exponencial recupera la cartera objetivo de Gârleanu-Pedersen. Con impacto de ley de potencia, el filtro necesita memoria fraccional.
+  - Sin costos, dos señales igual de predictivas valen lo mismo. Con costos, el valor neto depende de la media cuadrática del pronóstico ponderado por fricción, y hay una velocidad de señal intermedia óptima.
+- **Para el sistema [I]:** con órdenes de 2,500-10,000 MXN el impacto de precio es nulo; solo cuentan la comisión y el diferencial. La idea útil es cualitativa: las señales lentas (SMA200, filtro de 7 meses) son las que sobreviven a los costos. R16 y R17 lo confirman: las capas rápidas (stop fijo, volatilidad de 20 días) no agregan protección y sí costos. **Sin cambio de regla.**

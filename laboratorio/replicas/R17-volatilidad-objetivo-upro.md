@@ -53,3 +53,38 @@ La de R16.
 ---
 
 ## RESULTADOS (se llenan después de correr)
+
+### Ejecución A (orquestador): `R17.py` (sha256 8ef544ca…, sin cambios desde el pre-registro), `R17-salida.txt`, `R17-resultados.json`
+Datos de la caché de R16: 9,266 días, de 1990-01-02 al 2026-10-16.
+
+| Variante (1990-10-17 a 2026-10-16) | CAGR | Vol | Sharpe | MDD | Exposición media | Cambios |
+|---|---|---|---|---|---|---|
+| V0 filtro vigente | +15.2% | 32.6% | 0.537 | −73.7% | 0.75 | 217 |
+| VT30 | +12.9% | 25.9% | 0.519 | −61.5% | 0.62 | 520 |
+| **VT45** | **+14.5%** | 30.7% | **0.530** | **−71.9%** | 0.72 | 303 |
+| VT60 | +15.4% | 32.2% | 0.545 | −73.4% | 0.74 | 236 |
+
+Subperiodos, VT45 contra V0:
+- 1990-2008: MDD −71.9% contra −73.7%; Sharpe 0.448 contra 0.457.
+- 2009-hoy: MDD −45.3% contra −49.3%; Sharpe 0.610 contra 0.616.
+
+### Ejecución B (auditor-de-replicas, código desde cero): `laboratorio/auditorias/AC-23-R17/`
+Datos: CBOE SPX y VIX, multpl y DTB3 (los de AC-22, con sha256 iguales). Evaluación desde el 1990-10-01.
+
+| Variante | CAGR | Vol | Sharpe | MDD | Exposición media | Cambios |
+|---|---|---|---|---|---|---|
+| V0 | 15.15% | 32.6% | 0.516 | −73.5% | 0.75 | 217 |
+| VT30 | 12.91% | 25.9% | 0.498 | −60.8% | 0.62 | 522 |
+| **VT45** | **14.44%** | 30.7% | **0.509** | **−72.0%** | 0.71 | 304 |
+| VT60 | 15.38% | 32.1% | 0.525 | −73.0% | 0.74 | 235 |
+
+- **Sensibilidad (peso que deriva entre ajustes):** ΔMDD +1.9 pp y ΔSharpe −0.006.
+- **Por qué casi no mejora (B):** la MDD de V0 y la de VT45 caen en el mismo episodio, de 1998-07 a 2003-04. Fue un mercado bajista lento, con rebotes de volatilidad baja en los que el filtro volvía a entrar con exposición casi completa.
+
+### Juicio
+- **H1 refutada en A y en B:** con VT45, ΔMDD es +1.7 pp (A) y +1.5 pp (B), lejos del umbral de ≥ 5 pp; ΔSharpe −0.008 en las dos.
+- **H2 refutada.**
+- **Estado (A y B concuerdan): "No replicado".**
+- **Lo informativo (no decide, por pruebas múltiples):** VT30 baja la MDD 12-13 pp a cambio de 2.3 pp de CAGR y −0.018 de Sharpe. Es el mismo trade-off de "freno con costo" que R05 encontró en el 1x. Parece más una reducción de exposición (media 0.62 contra 0.75) que una mejor regla.
+- **Lectura conjunta con R16:** ni el stop fijo ni la volatilidad objetivo de 45% mejoran al filtro vigente en caídas lentas (2000-2002), que es donde está la MDD. La palanca que sí mueve la MDD es la **exposición media**. Esa decisión es de tamaño de la posición, y la toma el comité.
+- **Etiqueta:** descartada como mejora del filtro.
