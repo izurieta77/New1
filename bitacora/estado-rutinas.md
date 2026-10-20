@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-20 12:57 UTC · pre-apertura: 2026-10-20 · OK · (este commit) · régimen MIXTO (+0); FX-1 OK 18.4773; boleta VT VENCIDA y EN ESPERA (conciliación); GE y RTX superaron (8-K); Asia −1.3% (KOSPI −3.7%, deuda de IA); 8 pronósticos FRED resueltos; P0150-P0153 nuevos; Brier global 0.2103 con n=54 (NO cumple ≤0.20); papel DD −2.88%, sin cortacircuitos
 2026-10-20 11:42 UTC · cripto (pulso extra 05:41) · OK · (este commit) · BTC 81,640.46 (+0.07% vs 04:17), ETH 2,388.96, 4h −0.21%, funding 4.11e-05, OI +1.31%; filtro ENCENDIDO (colchón +15.91%); flujos ETF pendientes para 08:17; sin alertas
 2026-10-20 10:18 UTC · cripto (pulso 04:17) · OK · (este commit) · BTC 81,584.00 (−0.17% vs 00:17), ETH 2,387.70, 4h −0.17%, funding 4.84e-05, OI −0.52%; filtro ENCENDIDO (colchón +15.83%); sin alertas
 2026-10-20 06:20 UTC · cripto (pulso 00:17) · OK · (este commit) · BTC 81,725.99 (+0.04% vs 18:42), ETH 2,394.75, 4h −0.09%, funding 7.41e-05, OI +1.24%; filtro ENCENDIDO (colchón +16.04%); sin alertas
