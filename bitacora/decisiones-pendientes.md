@@ -914,3 +914,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** no tocar `config/parametros.json`. **Propuesta para el balance mensual** (que decide): reportar junto al Brier el esperado con calibración perfecta y la Z de Spiegelhalter, y evaluar "Brier real − esperado < 0, sostenido".
 - **Estado:** Abierto → comité del 23-oct (R16 y R17) y balance mensual (criterio del Brier).
 - **Seguimiento 12:17 CDMX (18:18 UTC):** E9 sigue ÁMBAR, con diferencial de 0.893%. La causa es el lado de venta, que está +0.55% sobre el implícito. La compra está a −0.35% del implícito y tiene ~22,800 MXN en las cinco primeras posturas, así que el costo de salida de la posición es ~0.35–0.5%. **Qué decidí:** mantener el aviso al gestor de riesgo y la regla de orden límite; no ajustar el colchón del filtro (17.34%) porque el costo es menor que 1%. **Estado:** Abierto → pulso de las 13:41.
+
+## 2026-10-20 · orquestador (mensaje del dueño) · VT no aparece al buscar "vanguard" en GBM y "10,940 pesos quedan"
+- **Hecho:** el dueño mandó 4 capturas de GBM (`datos/entrada-dueno/2026-10-20.md`). Al buscar "vanguard" solo aparecen ETF de bonos; no aparece VT. Pregunta en qué invertir "10,940 pesos".
+  - **Qué decidí:** sin orden antes del comité (REGLAS §4). La boleta VT sigue EN ESPERA.
+  - **Al dueño se le pidió:** (1) buscar los tickers VT, VEA, RSP y ACWI y decir dónde aparecen (SIC o EUA); (2) aclarar los 10,940, que no cuadran con el libro real (10,023.48 al 19-oct).
+- **Para el comité del 23-oct:** la alternativa a VT según la disponibilidad que reporte el dueño (RSP o VEA, de la decisión W42). SP500S (UCITS de UBS, 152 MXN) y los fondos GBM solo como datos.
+- **Estado:** Abierto → dueño (aclaración) y comité del 23-oct.
