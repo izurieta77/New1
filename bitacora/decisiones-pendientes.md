@@ -850,3 +850,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** pendiente. El criterio ya prevé "la primera publicación disponible si se retrasa".
 - **Errata de la orden:** decía "base FX 18.4070". Usé **18.4790**, la base de las secciones previas, que es la que da el Δ1 −0.40%.
 - **Estado:** Abierto → vigía 20:05 (P0140); primera corrida del 20-oct con dato de EIA (P0101).
+
+## 2026-10-19 · revisión (rutina 11, 17:57 CDMX; corrida 23:58-00:10 UTC del 20-oct) · Reingreso de VT con llenado probable sin reporte
+- **Pregunta:** la orden de VT del 19-oct venció sin reporte del dueño. La supervisión de las 14:40 dice que, si se capturó por SIC, "es probable que llenara". El candado ratificado permite una línea VIGENTE nueva del 20 al 22-oct "si no hay llenado reportado". Si el dueño compró y no reportó, esa línea lo lleva a comprar 2 VT. La cuenta GBM es compartida (20,399.99 MXN disponibles), así que el broker no lo rechaza, y el sublibro de Claude quedaría en ≈ −793 MXN.
+  - **Qué decidí (conservador):** no cambio el candado, porque lo ratificó la conciliación. Cualquier línea VIGENTE nueva debe **empezar** con "Si ya compraste 1 VT el 19-oct, NO captures: repórtalo", y antes de ella va una nota fechada "VENCIDA el 19-oct sin reporte" en la boleta y en `alertas.md` L6. No edité la boleta: no reescribo trabajo ajeno.
+  - **Por qué:** el error caro es comprar dos (sobregira el sublibro con dinero de otra IA). El barato es no comprar ninguna (espera al comité del 23-oct).
+  - **Estado:** Abierto → supervisión 08:40 del 20-oct (nota y advertencia); conciliación de esta noche (decide si se exige que el dueño confirme "no llenó" antes de cualquier línea nueva); orquestador (pendiente (a): que `rutinas/supervision.md` paso 2 lea la boleta del 19-oct del 20 al 22).
