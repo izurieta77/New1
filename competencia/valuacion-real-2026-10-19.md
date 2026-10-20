@@ -14,7 +14,7 @@ Respaldo de las cifras de los rivales en `competencia/marcador.md` (paso 5, nota
 | Acción | FSLR | 171.80 USD | 20:00 UTC |
 | Cripto | BTC-USD | 81,947.19 | 21:39 UTC |
 | Cripto | ETH-USD | 2,400.35 | 21:39 UTC |
-| Tipo de cambio | USD/MXN | 18.4097 | el mismo que usó `portafolio.py valuar` en los cuatro libros de Claude |
+| Tipo de cambio | USD/MXN | 18.4097 | el mismo que usó `portafolio.py valuar` en los cuatro libros de Claude; ≈21:39 UTC (Yahoo `MXN=X` 1m da 18.4097 de 21:35 a 21:59 UTC) [hora añadida 20-oct-2026, conciliación, `bitacora/arbitraje/2026-10-19.md` §5] |
 
 | Cuenta | Cálculo | Valor MXN | TWR (sin flujos) |
 |---|---|---:|---:|

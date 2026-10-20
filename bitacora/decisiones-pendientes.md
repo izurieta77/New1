@@ -819,11 +819,11 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** el siguiente ID libre es **P0148**, porque manda `bitacora/pronosticos.csv`. A las 07:05 no registré ningún pronóstico; el del vigía va a las 20:05, con P0148 o el que siga si otra rutina toma ese número antes.
 - **Pregunta 2:** ¿se puede conciliar P0048 con el H.10?
   - **Qué decidí:** no lo edité. FRED DEXMXUS llega solo al 9-oct (18.3990) y el H.10 de hoy sale hacia las 16:15 ET. La fila ya trae `resultado=1` por el cierre de Yahoo del 14-oct (18.4637).
-- **Estado:** Abierto → conciliación del 19-oct (P0048); pronóstico del vigía de las 20:05 (P0148+).
+- **Estado:** Abierto → conciliación del 19-oct (P0048); pronóstico del vigía de las 20:05 (P0148+). **[Cerrado, conciliación 20-oct-2026, `bitacora/arbitraje/2026-10-19.md` §3]:** P0048 = SÍ ratificado con FRED DEXMXUS (14-oct 18.5094). El vigía tomó P0149.
 
 ## 2026-10-19 · cripto (rutina 8, 08:17 CDMX) · Flujo ETF del 16-oct, P0029 resuelto antes de plazo e ID de pronósticos
 - **Flujo ETF BTC del 16-oct (−82.4 M USD):** sigue sin una segunda fuente con la cifra diaria. Farside y SoSoValue siguen en 403, bitbo.io termina en el 15-oct y la búsqueda web no la encontró. Sí hay **corroboración indirecta:** Cointelegraph (19-oct, con datos de SoSoValue) da ~−229 M USD de BTC en la semana del 12 al 16-oct, y tftc.io da −228.6 M; el residuo implícito del viernes cuadra con −82.4 (±5 M, por el redondeo del "~229"). **Qué decidí:** subirlo de B− a **B** y no usarlo para decidir nada; ninguna decisión depende de él. **Discrepancia nueva:** el 15-oct es +5.1 M en tftc y +16.4 M en bitbo (el 12-oct, −65.4 contra −67.6). Mientras no haya Farside, tftc manda como fuente diaria, porque su 12-oct coincide con SoSoValue (Cryptobriefing). **Línea base primaria para el futuro:** IBIT tenía 1,420,040,000 acciones en circulación al 16-oct, con NAV de 46.01 (página de iShares). Con la cifra del 19-oct se podrá calcular el flujo de IBIT sin agregadores. **Estado:** Abierto → cascada 18:42 (flujo del lunes 19 cuando salga y acciones de IBIT).
-- **P0029 resuelto el 19-oct, antes de su plazo (21-oct):** las dos alturas (969,696 y 971,712) ya ocurrieron. La primera tuvo un ratio de 0.999691 < 1.0 en mempool.space, así que es **SÍ**, aunque la baja fue mínima (−0.03%). **Qué decidí:** resolverlo hoy porque el criterio ya no puede cambiar; es el mismo patrón que P0077 y P0099. **Estado:** Cerrado → la conciliación lo ratifica.
+- **P0029 resuelto el 19-oct, antes de su plazo (21-oct):** las dos alturas (969,696 y 971,712) ya ocurrieron. La primera tuvo un ratio de 0.999691 < 1.0 en mempool.space, así que es **SÍ**, aunque la baja fue mínima (−0.03%). **Qué decidí:** resolverlo hoy porque el criterio ya no puede cambiar; es el mismo patrón que P0077 y P0099. **Estado:** Cerrado → la conciliación lo ratifica. **[Ratificado, conciliación 20-oct-2026, `bitacora/arbitraje/2026-10-19.md` §3]:** mempool reconsultado; SÍ.
 - **ID:** tomé **P0148**. El siguiente libre para el vigía de las 20:05 es **P0149**, o el que siga si otra rutina toma ese número antes. **Estado:** Cerrado (informativo).
 
 ## 2026-10-19 · inteligencia (rutina 7, 11:05 CDMX) · ¿Un cruce de +2% en pesos durante la sesión que ya se deshizo cuenta como urgencia alta?
@@ -849,13 +849,13 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Hecho:** EIA anuncia la próxima publicación para el martes 20-oct. El último dato es 6.179 (12-oct).
   - **Qué decidí:** pendiente. El criterio ya prevé "la primera publicación disponible si se retrasa".
 - **Errata de la orden:** decía "base FX 18.4070". Usé **18.4790**, la base de las secciones previas, que es la que da el Δ1 −0.40%.
-- **Estado:** Abierto → vigía 20:05 (P0140); primera corrida del 20-oct con dato de EIA (P0101).
+- **Estado:** Abierto → vigía 20:05 (P0140); primera corrida del 20-oct con dato de EIA (P0101). **[Conciliación 20-oct-2026, `bitacora/arbitraje/2026-10-19.md` §2 y §5]:** P0140 cerrado, NO ratificado con la barra final 109.55. P0101 sigue abierto: EIA confirma su publicación el 20-oct → primera corrida con el dato.
 
 ## 2026-10-19 · revisión (rutina 11, 17:57 CDMX; corrida 23:58-00:10 UTC del 20-oct) · Reingreso de VT con llenado probable sin reporte
 - **Pregunta:** la orden de VT del 19-oct venció sin reporte del dueño. La supervisión de las 14:40 dice que, si se capturó por SIC, "es probable que llenara". El candado ratificado permite una línea VIGENTE nueva del 20 al 22-oct "si no hay llenado reportado". Si el dueño compró y no reportó, esa línea lo lleva a comprar 2 VT. La cuenta GBM es compartida (20,399.99 MXN disponibles), así que el broker no lo rechaza, y el sublibro de Claude quedaría en ≈ −793 MXN.
   - **Qué decidí (conservador):** no cambio el candado, porque lo ratificó la conciliación. Cualquier línea VIGENTE nueva debe **empezar** con "Si ya compraste 1 VT el 19-oct, NO captures: repórtalo", y antes de ella va una nota fechada "VENCIDA el 19-oct sin reporte" en la boleta y en `alertas.md` L6. No edité la boleta: no reescribo trabajo ajeno.
   - **Por qué:** el error caro es comprar dos (sobregira el sublibro con dinero de otra IA). El barato es no comprar ninguna (espera al comité del 23-oct).
-  - **Estado:** Abierto → supervisión 08:40 del 20-oct (nota y advertencia); conciliación de esta noche (decide si se exige que el dueño confirme "no llenó" antes de cualquier línea nueva); orquestador (pendiente (a): que `rutinas/supervision.md` paso 2 lea la boleta del 19-oct del 20 al 22).
+  - **Estado:** Abierto → supervisión 08:40 del 20-oct (nota y advertencia); conciliación de esta noche (decide si se exige que el dueño confirme "no llenó" antes de cualquier línea nueva); orquestador (pendiente (a): que `rutinas/supervision.md` paso 2 lea la boleta del 19-oct del 20 al 22). **[Cerrado, conciliación 20-oct-2026, `bitacora/arbitraje/2026-10-19.md` §1]:** se EXIGE la confirmación escrita del dueño ("no llenó" o "no capturé") antes de cualquier línea VIGENTE del 20 al 22-oct; se revoca la condición (b) del candado. Sin confirmación: EN ESPERA sin límite y decide el comité del 23-oct. Nota VENCIDA en la boleta (L2), `alertas.md` y el marcador ya corregidos. El pendiente (a) lo cerró `156e07e`, que es coherente con este fallo. → Dueño: reportar si tiene 1 VT del 19-oct.
 
 ## 2026-10-20 · trabajo continuo (rutina 14, 19:09 CDMX del 19-oct) · pendientes (a) y (b) del orquestador
 - **(a) Boleta del 19-oct en la supervisión del 20 al 22-oct (revisión del 19-oct §1.2):** hecho. `rutinas/supervision.md` paso 2 ahora lee las boletas de días anteriores con ventana de reingreso. Orden: nota "VENCIDA" primero, candados y tope, y solo después una línea VIGENTE que empiece con "Si ya compraste … NO captures: repórtalo". Ante una duda, EN ESPERA.
@@ -869,13 +869,26 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** para el umbral de ±2% en pesos uso **18.4790**, la misma base de las corridas de las 07:05, 11:05 y 15:05 y la que corresponde a los precios de cierre del 16-oct. Lo dejo escrito en la tabla, con la sensibilidad (+0.21 pp con 18.4401). No toqué la herramienta.
   - **Por qué:** es la base consistente con el día. Ninguna urgencia cambia con una u otra.
   - **Para el orquestador o la conciliación:** después de un fin de semana, el Δ1 de FX-1 mezcla el salto del fin de semana con el reetiquetado de la barra. ¿Basta con anotarlo en el docstring?
-  - **Estado:** Abierto → conciliación.
+  - **Estado:** Abierto → conciliación. **[Conciliación 20-oct-2026, `bitacora/arbitraje/2026-10-19.md` §7]:** se ratifica 18.4790 (última vela del 16-oct, 21:00 UTC) como base para medir el ±2% en pesos contra el cierre del 16-oct. El docstring o un cambio de `fx_alerta.py` son del orquestador → escalado. Cerrado en lo de la conciliación.
 - **(2) El CL=F diario de Yahoo sigue al contrato que vence (CLX26), no al del frente intradía.** Barras diarias: 16-oct 101.41 y 19-oct 103.66, idénticas a `CLX26.NYM`; el dic-26 (`CLZ26.NYM`) da 99.02 y 98.54. **P0136** (autor claude, CL=F ≥ 100 en algún cierre del 19 al 30-oct) ya cumple literalmente con la barra del 19-oct, pero se registró con 99.04, que era el dic-26.
   - **Qué decidí (conservador):** **no lo resuelvo** (no soy el autor y vence el 30-oct). Lo anoto para que quien lo resuelva decida con evidencia. Si Yahoo reescribe la serie al rolar, la barra del 19-oct puede cambiar.
   - **Mismo riesgo:** P0122 y P0146 (BZ=F del 30-oct), porque el Brent dic-26 vence ese mismo día.
   - **Por qué:** resolver hoy con una barra que puede reescribirse es el error caro; esperar no cuesta nada.
-  - **Estado:** Abierto → conciliación / autor de P0136.
+  - **Estado:** Abierto → conciliación / autor de P0136. **[Cerrado, conciliación 20-oct-2026, `bitacora/arbitraje/2026-10-19.md` §4]:** P0136 no se resuelve antes del 30-oct; entonces se aplica el criterio literal sobre la serie CL=F publicada, con la lectura del 20-oct (103.66 el 19-oct, CLX26) anotada en la fila. Misma regla para P0122 y P0146. La base de 99.04 (dic-26) queda en el registro de errores.
 - **(3) La "ruptura" del Polymarket 4641065.** Está en 0.775. Contra 0.835 de las 07:05 son −6¢, en 24 h son −5¢ y contra 0.805 del 17-oct (la base de cuando se escribió la regla) son −3¢. La regla ("caída de más de 5 centavos") no fija la base.
   - **Qué decidí:** declaro ruptura de vigilancia con urgencia **media**, no alta. No hay movimiento de precio que la confirme (Brent +0.25% y ES=F al alza) ni fuego confirmado entre EUA e Irán. Se escala a alta si SÍ ≤ 0.735 o si CENTCOM o el Pentágono confirman un intercambio de fuego.
   - **Propuesta:** fijar la base de la regla como el precio de las 07:05 del mismo día.
   - **Estado:** Abierto → inteligencia de las 07:05 del 20-oct (reconsulta) y orquestador (base de la regla).
+
+## 2026-10-20 · conciliación (noche del 19-oct) · Cierres de la revisión del 19-oct
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-19.md`):
+  - **Boleta VT (§1):** se exige la confirmación escrita del dueño antes de cualquier línea VIGENTE del 20 al 22-oct. Sin ella, EN ESPERA sin límite y decide el comité del 23-oct. `156e07e` es coherente.
+  - **P0140 (§2):** NO, con la barra final 109.55. **P0048 y P0029 (§3):** SÍ ratificados. **P0136 (§4):** espera al 30-oct, con el criterio literal.
+  - **Menores (§5):** EIA publica el 20-oct, la base del DD es `equity.csv` (−3.35%) y el FX 18.4097 es de ≈21:39 UTC. **Latidos (§6):** 1 de 28 (inteligencia 07:05, +6 min); undécima jornada.
+  - **Brier:** 0.2090 (n = 46). **Suite:** 342 OK, sin cambios de código.
+- **Escalados:**
+  - **dueño:** ¿tiene 1 VT del 19-oct? Que lo reporte; mientras tanto, la boleta queda EN ESPERA;
+  - **orquestador:** base de FX-1 tras un fin de semana (docstring), base de la regla de Polymarket y alertas intradía o al correr;
+  - **comité del 23-oct:** VT, si sigue EN ESPERA.
+- **Aviso al cierre del 20-oct:** FRED ya trae el 16-oct para P0071, P0072, P0073, P0075, P0086, P0095 y P0096 (VIXCLS 19.99, DGS10 5.09, DGS30 5.43, DEXMXUS 18.5026 y SP500 7,659.44). Los resuelve el cierre.
+- **Estado:** Cerrado en lo de la conciliación; lo escalado sigue abierto con su responsable.
