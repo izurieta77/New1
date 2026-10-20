@@ -1,0 +1,6 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+NFLX-ingresos-3T26,2026-10-20,12874.2,,-0.35,si,,https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm
+NFLX-upa_diluida-3T26,2026-10-20,0.87,,3.57,si,,https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm
+NFLX-ingresos_mayor_consenso-3T26,2026-10-20,12874.2,0,,,0.3844,https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm
+NFLX-upa_mayor_consenso-3T26,2026-10-20,0.87,1,,,0.1600,https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm
+NFLX-guia4T26_desaceleracion-3T26,2026-10-20,13442,0,,,0.3364,https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm

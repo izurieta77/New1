@@ -119,3 +119,6 @@ Verificador adversarial. Nivel de acceso: comunicados 8-K del 1T26 y 2T26 (lectu
 
 **Sigue sin verificar (ya marcado):** calificación crediticia; monto de la recompra acelerada de 2023-2024; dividendo de 2026; historial de sorpresas de ingresos anterior al 2T26; probabilidad de Kalshi (conocimiento interno).
 **Veredicto:** confiable en hechos. Resultados, guía, consenso y cadena causal coinciden con la fuente primaria o con la transcripción. El defecto material era de calibración: los dos intervalos de 80% estaban cerrados por arriba frente a un historial de superaciones de doble dígito. Se corrigió el p90 y no cambia la tesis.
+
+## Adenda (20-oct-2026, cierre): resultado del 3T26
+Ventas 24,965 contra nuestro 24,100 (dentro del p10-p90) y UPA ajustada 2.26 contra 1.84 (fuera del p90). Sin la recuperación arancelaria IEEPA de 0.25, la UPA comparable es 2.01 (dentro). Los dos binarios salieron SÍ. Guía de UPA 2026: 7.65-7.75. Lecciones en `post-mortem-2026-10-20.md`: partidas IEEPA y punto desde la mediana histórica de sorpresa. Los pronósticos del 25-sep no se modifican.

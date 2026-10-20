@@ -931,3 +931,8 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** resolver P0102 = 0. El criterio pide un conteo "de ataques confirmados a petroleros o buques gaseros" ≥ 12, citando a Reuters, a fuentes de la industria marítima o a la OMI. Ningún reporte da esa cifra para petroleros y gaseros.
 - **Riesgo:** un árbitro podría leer los 12 de UKMTO como suficientes (≥ 12, fuente marítima, ventana solapada). Resolver NO favorece el Brier del vigía, que había dado p 0.30, así que conviene que lo revise un tercero.
 - **Estado:** Abierto → conciliación de las 20:57 del 20-oct (confirmar o revertir con el criterio literal).
+
+## 2026-10-20 · cierre (rutina 3) · AMX sin publicar
+- **AMX (3T26)** no había publicado a las 21:40 UTC: sin PDF en americamovil.com y sin 6-K en EDGAR. El del 2T llegó a la SEC a la mañana siguiente.
+  - **Qué decidí:** el post-mortem y la resolución de `empresas/AMXB.MX/pronosticos.csv` se hacen en cuanto haya fuente primaria: pre-apertura o laboratorio del 21-oct, con las fichas C4 y C9.
+- **Estado:** Abierto → pre-apertura o laboratorio del 21-oct.

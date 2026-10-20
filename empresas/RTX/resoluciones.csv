@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+RTX-ventas-3T26,2026-10-20,24965,,-3.46,si,,https://www.sec.gov/Archives/edgar/data/0000101829/000010182926000030/a2026-10x208xkerexhibit99.htm
+RTX-upa_ajustada-3T26,2026-10-20,2.26,,-18.58,no,,https://www.sec.gov/Archives/edgar/data/0000101829/000010182926000030/a2026-10x208xkerexhibit99.htm
+RTX-upa_mayor_consenso-3T26,2026-10-20,2.26,1,,,0.0784,https://www.sec.gov/Archives/edgar/data/0000101829/000010182926000030/a2026-10x208xkerexhibit99.htm
+RTX-ventas_mayor_consenso-3T26,2026-10-20,24965,1,,,0.2025,https://www.sec.gov/Archives/edgar/data/0000101829/000010182926000030/a2026-10x208xkerexhibit99.htm

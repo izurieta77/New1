@@ -151,3 +151,16 @@ U9. Entrada del dueño, 7-oct-2026 (notas sobre video de Dan Fuentes, grado D, n
 U10. Comentario verbal del dueño, 8-oct-2026 ("Netflix en mínimos históricos", tono exploratorio) — contexto de esta tarea, sin archivo fuente adicional.
 
 Nota de fase: esta sección es investigación, no una recomendación de compra ni de venta.
+
+## 12. Adenda — 20-oct-2026: resultado del 3T26 (no sobrescribe las secciones 1-11 ni los pronósticos de la §8)
+
+Fuente primaria: 8-K del 20-oct-2026, ítem 2.02 (accession 0001065280-26-000290), Ex. 99.1, carta a accionistas del 3T26: https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm. El post-mortem completo está en `empresas/NFLX/post-mortem-2026-10-20.md` y las resoluciones en `empresas/NFLX/resoluciones.csv`.
+
+- **3T26:** ingresos de US$12,874.2 M (+11.9%; +11% sin efecto cambiario) contra la guía de 12,860 y un consenso de 12,881. Margen operativo de 34.6% (guía 33.2%). UPA diluida GAAP de US$0.87, post-split 10:1 y en la misma base que el pronóstico, contra una guía de 0.82 y un consenso de 0.822. Acciones diluidas: 4,195.1 M. FCF: 2,883.5 M. No reporta suscriptores; el churn mejoró a/a.
+- **Guía del 4T26:** ingresos de US$13,442 M (+11.5% a/a contra 12,050.8), margen de 26.0% (con −120 pb por recortes de plantilla) y UPA de US$0.67. **2026:** ingresos de 51.1 mil M (antes 51.0-51.4), publicidad de ~2.7 mil M (antes ~3), margen de 31.5% y FCF de ~12.0 mil M (antes 12.5).
+- **Pronósticos de la §8:** ingresos con punto de 12,920 (error −0.35%), dentro del p10-p90. UPA con punto de 0.84 (error +3.6%), dentro del p10-p90 y a 0.01 del p90. P(ingresos > 12,881) = 0.62 → NO, Brier 0.3844. P(UPA > 0.822) = 0.60 → SÍ, Brier 0.16.
+- **Binario de la guía del 4T26** (registrado el 8-oct como `NFLX-guia4T26_desaceleracion-3T26` / P0094; la "sección 12" que citaba la §11.4 nunca se escribió): P(crecimiento < 10%) = 0.58 → NO (+11.5%), Brier 0.3364. La guía anual vigente ya implicaba un 4T de +10.6% a +13.9%.
+- **Escenarios (§7):** sin cambio de probabilidades. El dato sigue dentro del escenario base y no activa el gatillo bajista. La publicidad debajo de lo guiado resta al alcista y el churn mejor resta a la cadena causal #1. El dato decisivo sigue siendo la guía 2027 de enero.
+- Pendiente: la reacción del precio el 21-oct (P0145).
+
+Nota de fase: esta adenda es investigación, no una recomendación de compra ni de venta.

@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+GE-ingresos_ajustados-3T26,2026-10-20,13285,,-3.27,si,,https://www.sec.gov/Archives/edgar/data/0000040545/000004054526000063/ge3q2026earningsrelease.htm
+GE-upa_ajustada-3T26,2026-10-20,2.25,,-8.44,si,,https://www.sec.gov/Archives/edgar/data/0000040545/000004054526000063/ge3q2026earningsrelease.htm
+GE-ingresos_ajustados_mayor_consenso-3T26,2026-10-20,13285,1,,,0.2209,https://www.sec.gov/Archives/edgar/data/0000040545/000004054526000063/ge3q2026earningsrelease.htm
+GE-upa_ajustada_mayor_consenso-3T26,2026-10-20,2.25,1,,,0.0900,https://www.sec.gov/Archives/edgar/data/0000040545/000004054526000063/ge3q2026earningsrelease.htm
