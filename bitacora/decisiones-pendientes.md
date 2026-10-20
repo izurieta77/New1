@@ -906,3 +906,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** aplicar la regla del 16-oct: se avisa al gestor de riesgo. Sin operación; no es ROJA (libro no vacío, par activo) y la posición (~2,000 MXN) cabe en el lado de compra. Toda salida de BTC en MXN, incluida una S del filtro, va con **orden límite** al precio implícito menos 0.5%, nunca a mercado.
 - **Para el gestor de riesgo:** evaluar si el costo de salida (~0.9% bajo el implícito) debe restarse del colchón del filtro mientras E9 siga ÁMBAR.
 - **Estado:** Abierto → pulso cripto de las 12:17 del 20-oct (si vuelve a ≤ 0.5%, se cierra).
+
+## 2026-10-20 · laboratorio (rutina 2) · R17 y el criterio del Brier
+- **R17 (A y B concordantes): "No replicado".** La volatilidad objetivo de 45% sobre el 3x no mejora el filtro (MDD +1.5-1.7 pp). Con R16, ni el stop fijo ni el tamaño por volatilidad mejoran la MDD, que se concentra en el bajista lento de 2000-2002. Lo único que la mueve es la exposición media (VT30: −12 pp de MDD con −2.3 pp de CAGR).
+  - **Qué decidí:** nada cambia en el laboratorio. **Punto para el comité del 23-oct**, junto con R16: el riesgo del UPRO se controla con el tamaño de la posición (hoy 26.9% del papel), no con capas rápidas.
+- **Brier global 0.2103, NO cumple el objetivo de ≤ 0.20 (n = 54).** La ficha `fichas/2026-10-20-brier-contraste-real.md` muestra que no es mala calibración. El Brier real (0.2102) es mejor que el de un pronosticador perfectamente calibrado con las mismas probabilidades (0.2140), y ese pronosticador perfecto pasaría el umbral solo 23% de las veces.
+  - **Qué decidí:** no tocar `config/parametros.json`. **Propuesta para el balance mensual** (que decide): reportar junto al Brier el esperado con calibración perfecta y la Z de Spiegelhalter, y evaluar "Brier real − esperado < 0, sostenido".
+- **Estado:** Abierto → comité del 23-oct (R16 y R17) y balance mensual (criterio del Brier).
