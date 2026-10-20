@@ -232,6 +232,17 @@
 - **E5:** no hay cargos nuevos; **ÁMBAR sin cambio**.
 - **E6, E7, E10:** sin novedad en la búsqueda general (no hay hackeo ni pérdida de paridad fechados el 15/16-oct).
 - **Conclusión: no hay disparador.** No hay ninguna ROJA. Las ÁMBAR son E5 y A9 (sin cambio), más E3 (por umbral, a calibrar) y E9 (puntual, por diferencial). El plan de contingencia solo se dispara con ROJAS o con sus disparadores propios.
+
+**Seguimiento del 20-oct-2026** [I] — revisión de contraparte de la corrida de las 08:17 del martes. El estudio de hoy fue el ANPRM de la CFTC ([`fichas/2026-10-20-cftc-anprm-spot-apalancado.md`](fichas/2026-10-20-cftc-anprm-spot-apalancado.md)):
+
+- **E1 (método F):** `api.llama.fi/protocol/binance-cex`, 14:2x UTC, filas de 00:00 UTC (20-oct contra 13-oct): **+1.32%** sin BNB (+US$1.88 mil millones). **Limpio.**
+- **E2:** US$171.66 mil millones rastreados; BTC 635,689 (+0.30% en 7 días); **BNB 15.6%**. **Limpio.**
+- **E3:** sin reporte nuevo; el siguiente (foto del 1-nov) se espera a inicios de noviembre. ÁMBAR por umbral, sin cambio.
+- **E5:** no hay cargos nuevos. El ANPRM de la CFTC (91 FR 64811) regula a minoristas de EUA y no cambia el riesgo legal de Binance en México. **ÁMBAR sin cambio.**
+- **E8:** USDC/USDT 1.00104 y FDUSD/USDT 0.9985 (Binance); USDT/USD 0.99881 y USDC/USD 0.99980 (Kraken). **Limpio.**
+- **E9:** diferencial de BTCMXN de **0.502%** (compra 1,524,694 y venta 1,532,360). Se tomaron cinco muestras de 14:26 a 14:29 UTC, casi idénticas. **ÁMBAR puntual por umbral.** El lado de compra tiene apenas 13,012 MXN a ±0.5% y el de venta 525,071. Lo causó una compra a mercado que barrió las ventas hasta 1,530,000 a las 14:09:55 UTC, en el repunte de BTC, y el libro no se ha rellenado. El volumen de 24 h es de 0.347 BTC. Es el mismo patrón puntual del 16-oct (0.61%). Una venta del tamaño de la cuenta, ~2,000 MXN, cabe en ese lado.
+- **E6, E7, E10:** sin novedad.
+- **Conclusión: no hay disparador.** No hay ninguna ROJA. Las ÁMBAR son E5 y A9 (sin cambio), E3 (por umbral) y E9 (puntual).
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)

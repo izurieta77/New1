@@ -892,3 +892,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **comité del 23-oct:** VT, si sigue EN ESPERA.
 - **Aviso al cierre del 20-oct:** FRED ya trae el 16-oct para P0071, P0072, P0073, P0075, P0086, P0095 y P0096 (VIXCLS 19.99, DGS10 5.09, DGS30 5.43, DEXMXUS 18.5026 y SP500 7,659.44). Los resuelve el cierre.
 - **Estado:** Cerrado en lo de la conciliación; lo escalado sigue abierto con su responsable.
+
+## 2026-10-20 · cripto 08:17 CDMX · E9 ÁMBAR puntual y flujo ETF del 19-oct con composición discrepante
+- **Pregunta 1:** el diferencial de BTCMXN es 0.502% (> 0.5%, ÁMBAR de E9), con solo 13,012 MXN del lado de compra a ±0.5%. ¿Es señal de contraparte?
+  - **Qué decidí:** ÁMBAR puntual sin acción, igual que el 16-oct (0.61%). Lo causó una compra a mercado que barrió las ventas hasta 1,530,000 a las 14:09 UTC, en el repunte de BTC, y el libro no se ha rellenado. Una venta del tamaño de la cuenta (~2,000 MXN) cabe en el lado de compra. El pulso de las 09:41 vuelve a medir. Si dos pulsos seguidos dan > 0.5%, o si el lado de compra a ±0.5% baja de 5,000 MXN, se escala al gestor de riesgo para calibrar E9.
+- **Pregunta 2:** tftc (+526.6 M; FBTC −83.6 y GBTC −54.9) y bitbo (+580.7 M; FBTC −10.8 y GBTC −1.7) no coinciden en la composición del flujo del 19-oct.
+  - **Qué decidí:** se registra el rango de +527 a +581 M, con grado B en el signo y el orden de magnitud y C en la composición. Se confirma con la fuente primaria: las acciones en circulación de IBIT en iShares "as of Oct 20" deberían subir ~14.4 M si el +665 de tftc es correcto (~13.0 M si vale el +601 de bitbo). Le toca al pulso de las 08:17 del 21-oct.
+- **Estado:** Abierto → pulsos cripto de las 09:41 del 20-oct y de las 08:17 del 21-oct.

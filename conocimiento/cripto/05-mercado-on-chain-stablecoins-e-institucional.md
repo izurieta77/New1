@@ -514,3 +514,16 @@ Ficha [`fichas/2026-10-19-momentum-serie-de-tiempo-liu-tsyvinski.md`](fichas/202
   - Confirma la regla de usar solo activos líquidos (la cuenta Binance opera BTC; ETH queda en estudio).
   - Cualquier backtest cripto que muestre rendimientos enormes en monedas chicas debe pasar tres pruebas antes de creerse: universo operable, capacidad y deslistados tratados como pérdida.
   - **Sin cambio de regla.**
+
+### Adenda (20-oct-2026): el ANPRM de la CFTC sobre spot cripto minorista apalancado (91 FR 64811, RIN 3038-AF80)
+
+Ficha [`fichas/2026-10-20-cftc-anprm-spot-apalancado.md`](fichas/2026-10-20-cftc-anprm-spot-apalancado.md). Cierra el pendiente "texto completo del ANPRM de la CFTC 2026-20888", abierto desde el 13-oct.
+- **Texto [H, A], leído por sección (PDF de govinfo):**
+  - Es un aviso previo, no una regla. Comentarios hasta el 14-dic-2026. Votó solo el presidente Selig.
+  - **Regulation CTX:** la oferta de margen en los documentos del exchange es una "covered offer" que mete en la sección 2(c)(2)(D) de la CEA aun las compras pagadas al 100% de un minorista de EUA.
+  - **"Actual delivery":** según *Monex*, de forma preliminar exige poseer las llaves privadas. Un saldo en el libro interno del exchange es entrega constructiva y sigue sujeto al régimen de futuros.
+  - **Regulation CAM:** una subcategoría de bolsa registrada (DCM) con modelos integrados y un FCM obligatorio. El régimen de margen sigue abierto (~105 preguntas en IV-V).
+- **Ejercicio [I, A en los datos]:** probabilidad de liquidación en 28 días de un largo en BTC. A 5x, la fórmula con la vol30 de hoy (32%) da 1.6%; la historia de Binance con mínimos diarios da 21% (2017-2026) y 11% (desde ago-2022). A 10x, 46% y 36%. La fórmula subestima la cola.
+- **Fecha más temprana de vigencia [I]:** ~ago-2027, con una ruta mínima propia.
+- **Para la cuenta [I]:** nada directo; es solo spot y no está en EUA. Refuerza que el saldo en el exchange es riesgo de contraparte. E5 sigue en ÁMBAR, sin cambio.
+- **Pendientes:** V.B, V.E-V.H y el Apéndice A; los comentarios en regulations.gov; la URL del episodio de Bankless con Selig (grado C hasta verificarlo).

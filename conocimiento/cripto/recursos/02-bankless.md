@@ -166,3 +166,9 @@
 - **EIP-8363:** https://github.com/ethereum/EIPs, archivo `EIPS/eip-8363.md`.
 - **Oferta de ETH:** https://ultrasound.money/api/v2/fees/supply-over-time, consultado el 25-sep-2026.
 - **Precios:** Coinbase Exchange, velas diarias; Coinbase, Kraken y CoinGecko para el spot del 25-sep-2026.
+
+### Adenda (20-oct-2026): episodio con el presidente de la CFTC, Mike Selig, sobre el ANPRM de spot apalancado
+
+- **Acceso: no verificado.** El dueño lo marcó como tema del día (5-oct). Una búsqueda web del 20-oct no encontró la URL del episodio; solo notas de terceros que atribuyen a Selig la postura de que "solo los exchanges con regulación federal deberían ofrecer apalancamiento". **Grado C** hasta confirmarlo en el feed.
+- **Fuente primaria leída en su lugar:** el ANPRM (91 FR 64811, grado A) y el comunicado 9307-26 de la CFTC. Detalle en [`../fichas/2026-10-20-cftc-anprm-spot-apalancado.md`](../fichas/2026-10-20-cftc-anprm-spot-apalancado.md).
+- **Conflicto de interés:** Bankless tiene tenencias y patrocinios declarados (hoja de divulgaciones citada arriba), y un marco de la CFTC que traiga el apalancamiento a EUA le conviene al ecosistema. Lo que diga el invitado sobre plazos es una intención de política, no un hecho.
