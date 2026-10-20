@@ -1,0 +1,22 @@
+Datos de R16 (Yahoo + DTB3): 9266 días 1990-01-02 a 2026-10-16; sha256 a4789527c9e19ceb…
+
+== completo
+V0 filtro vigente  CAGR +15.2% vol 32.6% Sharpe 0.537 MDD -73.7% exposición media 0.75 cambios 217 [1990-10-17→2026-10-16]
+VT30               CAGR +12.9% vol 25.9% Sharpe 0.519 MDD -61.5% exposición media 0.62 cambios 520 [1990-10-17→2026-10-16]
+VT45               CAGR +14.5% vol 30.7% Sharpe 0.530 MDD -71.9% exposición media 0.72 cambios 303 [1990-10-17→2026-10-16]
+VT60               CAGR +15.4% vol 32.2% Sharpe 0.545 MDD -73.4% exposición media 0.74 cambios 236 [1990-10-17→2026-10-16]
+
+== 1990-2008
+V0 filtro vigente  CAGR +13.6% vol 32.1% Sharpe 0.457 MDD -73.7% exposición media 0.71 cambios 94 [1990-10-17→2008-12-31]
+VT30               CAGR +11.8% vol 24.9% Sharpe 0.437 MDD -61.5% exposición media 0.59 cambios 222 [1990-10-17→2008-12-31]
+VT45               CAGR +13.1% vol 30.1% Sharpe 0.448 MDD -71.9% exposición media 0.69 cambios 131 [1990-10-17→2008-12-31]
+VT60               CAGR +13.9% vol 31.6% Sharpe 0.467 MDD -73.4% exposición media 0.71 cambios 103 [1990-10-17→2008-12-31]
+
+== 2009-hoy
+V0 filtro vigente  CAGR +16.9% vol 33.2% Sharpe 0.616 MDD -49.3% exposición media 0.78 cambios 123 [2009-01-02→2026-10-16]
+VT30               CAGR +14.1% vol 26.8% Sharpe 0.599 MDD -41.8% exposición media 0.65 cambios 298 [2009-01-02→2026-10-16]
+VT45               CAGR +16.1% vol 31.3% Sharpe 0.610 MDD -45.3% exposición media 0.75 cambios 172 [2009-01-02→2026-10-16]
+VT60               CAGR +17.0% vol 32.8% Sharpe 0.622 MDD -48.6% exposición media 0.77 cambios 133 [2009-01-02→2026-10-16]
+
+ΔMDD (VT45 − V0) +1.7 pp; ΔSharpe -0.008
+Veredicto A: H1 refutada; H2 refutada -> No replicado
