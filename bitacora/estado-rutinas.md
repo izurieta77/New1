@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-20 17:41 UTC · supervisión (11:40 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,045.68 verificado en vivo; UPRO papel 10.5% sobre stop; FX-1 OK 18.4172; boleta VT EN ESPERA sin reporte
 2026-10-20 17:35 UTC · inteligencia (11:05) · OK · (este commit) · P0101 resuelto NO (EIA diésel 10/19 = 6.276, verificado en eia.gov); UPRO cruzó +2% en pesos 14:55-14:59 UTC y revirtió (alerta informativa, cerrada); CENTCOM desmiente minas (B−, titular); Brent 109.0; Polymarket 4641065 0.805; FX-1 OK 18.435
 2026-10-20 16:41 UTC · supervisión (10:40 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,042.39 verificado en vivo; UPRO papel 10.5% sobre stop; FX-1 OK 18.4173; boleta VT EN ESPERA sin reporte
 2026-10-20 15:42 UTC · cripto (pulso extra 09:41) · OK · (este commit) · BTC 82,694.01 (−0.27% vs 08:17), ETH 2,444.15, 4h +1.40%, OI +0.88%; filtro ENCENDIDO (colchón +17.41%); E9 BTCMXN 0.599% segundo pulso >0.5% → escalado al gestor de riesgo (decisiones-pendientes); sin alertas
