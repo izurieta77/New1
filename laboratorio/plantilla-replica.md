@@ -8,6 +8,7 @@
 | Artículo o hallazgo | Autores, año, título, revista o working paper, versión, URL |
 | Fecha de publicación (primera versión pública) | |
 | Pre-registro escrito el | AAAA-MM-DD, antes de cualquier corrida |
+| Commit del pre-registro y del código | hash del commit que trae **juntos** este archivo y el script de la ejecución A (o el sha256 del script escrito aquí). El script se corre solo **después** de ese commit. Nota del orquestador, 20-oct-2026, por la revisión del 19-oct §2.7: en R16, el pre-registro (`c067ef6`) entró sin `R16.py`, y git no puede probar que el código no corrió antes |
 | Responsable | |
 | Estado | Pendiente / Replicado / Replicado con diferencias / No replicado |
 

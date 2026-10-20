@@ -116,3 +116,5 @@ Los días sin dato de alguna serie se descartan y se reportan.
   - **Insumo para el comité del 23-oct:** con la evidencia de R16, el stop vigente funciona como un seguro caro y casi siempre redundante.
   - Si se conserva, la reentrada debería ser explícita y no esperar a que el filtro se reinicie. Hoy no está escrita y quedaría a discreción del comité.
 - **Etiqueta:** descartada (el stop como mejora del filtro).
+
+> **Nota fechada (20-oct-2026, trabajo continuo; revisión del 19-oct §2.7).** El pre-registro (`c067ef6`, 17:51:24 UTC) entró sin `R16.py`. El script se escribió y corrió después y entró en `3e16e02` (17:52:57 UTC), pero git no puede probarlo. Respaldo del resultado: la ejecución B (AC-22) se escribió desde cero a partir del pre-registro, sin ver `R16.py`, y concuerda. Desde hoy, la plantilla exige que el pre-registro y el script entren en el mismo commit.
