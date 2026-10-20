@@ -863,3 +863,19 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **(b) Plantilla de pre-registro (revisión §2.7):** hecho. `laboratorio/plantilla-replica.md` exige que el script entre en el mismo commit que el pre-registro (o su sha256). Nota fechada en R16.
 - **Error propio que la revisión señaló (§2.5, P0140):** en el cierre resolví NO "tras el cierre de CME Globex", pero la barra diaria de Yahoo sigue viva hasta las 03:59 UTC (CME reabre a las 22:00 UTC). El resultado no está en riesgo (109.22 a las 00:02 UTC contra 109.86). La nota fechada y la verificación de la barra final las hace la conciliación, como asignó la revisión.
 - **Estado:** Cerrado (a) y (b) en lo del orquestador → supervisión del 20-oct (aplica el paso nuevo).
+
+## 2026-10-20 · inteligencia (rutina 7, cierre 20:05 CDMX del 19-oct) · tres dudas
+- **(1) La base FX del cálculo en pesos.** `fx_alerta.py` ya da 18.4401 como "cierre del 16-oct" (antes daba 18.4790). Yahoo reescribió la barra de Londres del 19-oct al completarse. Las velas de 15m muestran que 18.4401 es la cotización del domingo 18-oct a las ~23:00-23:45 UTC, no la del viernes: la última vela del 16-oct es 18.4790 a las 21:00 UTC, y 18.5039 a las 20:00 UTC, al cierre del NYSE.
+  - **Qué decidí:** para el umbral de ±2% en pesos uso **18.4790**, la misma base de las corridas de las 07:05, 11:05 y 15:05 y la que corresponde a los precios de cierre del 16-oct. Lo dejo escrito en la tabla, con la sensibilidad (+0.21 pp con 18.4401). No toqué la herramienta.
+  - **Por qué:** es la base consistente con el día. Ninguna urgencia cambia con una u otra.
+  - **Para el orquestador o la conciliación:** después de un fin de semana, el Δ1 de FX-1 mezcla el salto del fin de semana con el reetiquetado de la barra. ¿Basta con anotarlo en el docstring?
+  - **Estado:** Abierto → conciliación.
+- **(2) El CL=F diario de Yahoo sigue al contrato que vence (CLX26), no al del frente intradía.** Barras diarias: 16-oct 101.41 y 19-oct 103.66, idénticas a `CLX26.NYM`; el dic-26 (`CLZ26.NYM`) da 99.02 y 98.54. **P0136** (autor claude, CL=F ≥ 100 en algún cierre del 19 al 30-oct) ya cumple literalmente con la barra del 19-oct, pero se registró con 99.04, que era el dic-26.
+  - **Qué decidí (conservador):** **no lo resuelvo** (no soy el autor y vence el 30-oct). Lo anoto para que quien lo resuelva decida con evidencia. Si Yahoo reescribe la serie al rolar, la barra del 19-oct puede cambiar.
+  - **Mismo riesgo:** P0122 y P0146 (BZ=F del 30-oct), porque el Brent dic-26 vence ese mismo día.
+  - **Por qué:** resolver hoy con una barra que puede reescribirse es el error caro; esperar no cuesta nada.
+  - **Estado:** Abierto → conciliación / autor de P0136.
+- **(3) La "ruptura" del Polymarket 4641065.** Está en 0.775. Contra 0.835 de las 07:05 son −6¢, en 24 h son −5¢ y contra 0.805 del 17-oct (la base de cuando se escribió la regla) son −3¢. La regla ("caída de más de 5 centavos") no fija la base.
+  - **Qué decidí:** declaro ruptura de vigilancia con urgencia **media**, no alta. No hay movimiento de precio que la confirme (Brent +0.25% y ES=F al alza) ni fuego confirmado entre EUA e Irán. Se escala a alta si SÍ ≤ 0.735 o si CENTCOM o el Pentágono confirman un intercambio de fuego.
+  - **Propuesta:** fijar la base de la regla como el precio de las 07:05 del mismo día.
+  - **Estado:** Abierto → inteligencia de las 07:05 del 20-oct (reconsulta) y orquestador (base de la regla).
