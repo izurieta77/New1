@@ -718,3 +718,16 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
   - Con impacto exponencial recupera la cartera objetivo de Gârleanu-Pedersen. Con impacto de ley de potencia, el filtro necesita memoria fraccional.
   - Sin costos, dos señales igual de predictivas valen lo mismo. Con costos, el valor neto depende de la media cuadrática del pronóstico ponderado por fricción, y hay una velocidad de señal intermedia óptima.
 - **Para el sistema [I]:** con órdenes de 2,500-10,000 MXN el impacto de precio es nulo; solo cuentan la comisión y el diferencial. La idea útil es cualitativa: las señales lentas (SMA200, filtro de 7 meses) son las que sobreviven a los costos. R16 y R17 lo confirman: las capas rápidas (stop fijo, volatilidad de 20 días) no agregan protección y sí costos. **Sin cambio de regla.**
+
+### Adenda (21-oct-2026, investigador vespertino): Kelly fraccional con escala conformal, pre-registrado, no supera al apalancamiento ingenuo (Ryan, arXiv:2608.01494 v3, 18-oct-2026; ICAIF '26)
+- **Acceso [H]:** HTML completo (94 mil caracteres). Leídos el resumen, §10.2-10.3 (resultado de la ventana sellada), §12 (limitaciones) y §13. **Grado B−:** pre-registro real con ventana sellada 2022-2024 y nulo reportado. Pero son 8 ETF de EUA, la ventana sellada dura 683 días y la regla está atada a un tope de apalancamiento bruto de 2.0, que restringió en 97.7% de los días.
+- **Hallazgo [H]:**
+  - La regla usa el ancho del intervalo conformal como escala de un Kelly fraccional topado.
+  - En desarrollo (2016-2021, búsqueda de un agente LLM sobre ~200 configuraciones) daba 28.5% de crecimiento logarítmico anual. En la ventana sellada dio **8.5%**, debajo de un portafolio igual-ponderado sin apalancar (9.5%) y de los apalancados pasivos (15.6-16.8%).
+  - **Quedó última de 11 en Sharpe y Calmar.** El control de caídas falló su criterio registrado.
+  - La cobertura marginal transfirió (0.745 contra 0.750), pero promedió 0.592 en 2022 y 0.842 después.
+- **Para el sistema [I]:**
+  1. Confirma R16 y R17: las reglas de tamaño más sofisticadas no superan al tamaño simple fuera de muestra.
+  2. **Lección de proceso:** una búsqueda automatizada de ~200 configuraciones infló el resultado de desarrollo más de 3 veces. Es exactamente el riesgo que el pre-registro y la doble ejecución del laboratorio buscan contener.
+  3. La regla Kelly con tope de 0.25 de `cripto_binance` no se toca: aquí el Kelly va con escala adaptativa y apalancamiento, que no es nuestro caso.
+  - **Sin cambio de regla.**
