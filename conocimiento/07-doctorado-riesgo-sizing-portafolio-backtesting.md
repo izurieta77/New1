@@ -731,3 +731,10 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
   2. **Lección de proceso:** una búsqueda automatizada de ~200 configuraciones infló el resultado de desarrollo más de 3 veces. Es exactamente el riesgo que el pre-registro y la doble ejecución del laboratorio buscan contener.
   3. La regla Kelly con tope de 0.25 de `cripto_binance` no se toca: aquí el Kelly va con escala adaptativa y apalancamiento, que no es nuestro caso.
   - **Sin cambio de regla.**
+
+### Adenda (21-oct-2026, laboratorio): asignación táctica por regímenes HMM con NCO, Indonesia 2019-2025 (arXiv:2610.27751, oct-2026)
+- **Acceso [H]:** HTML completo (33 mil caracteres). Leídos el resumen, la tabla fuera de muestra (§V-B), la discusión (§VI) y las limitaciones. **Grado D:** entrenamiento de 2 años (2019-2020), universo pequeño, sin deslizamiento ni divisas.
+- **Hallazgo [H]:** fuera de muestra (ene-2021 a ago-2025), el propuesto rinde **1.14% anual con Sharpe −0.95**. El 1/N rinde 12.97% con Sharpe 0.56, y comprar y mantener, 14.48%.
+  - La MDD de 4.44% que destaca la conclusión es la de una cartera casi en efectivo.
+  - El régimen decodificado cambió en **55 de 56 meses**; los propios autores lo atribuyen a la inestabilidad del HMM con ventanas cortas.
+- **Para el sistema [I]:** es el contraejemplo de manual de "protege la caída" (cap. 02 §6.1). Una MDD baja con rendimiento de efectivo no es protección, es no estar invertido. Hay que comparar siempre contra 1/N y contra el efectivo, igual que en R01 y R17. **Sin cambio de regla.**

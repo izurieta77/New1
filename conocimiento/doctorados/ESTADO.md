@@ -20,7 +20,7 @@
 ## Doctorado en derecho fiscal (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
 |---|---|---|---|
-| D1 | Teoría general y principios constitucionales (legalidad, proporcionalidad, equidad; art. 31 fr. IV de la Constitución) | ficha 7-oct (art. 31 fr. IV, progresividad del art. 152 vs cedular 10% del art. 129; tesis SCJN nv en fuente oficial) | Parcial |
+| D1 | Teoría general y principios constitucionales (legalidad, proporcionalidad, equidad; art. 31 fr. IV de la Constitución) | ficha 7-oct (art. 31 fr. IV, progresividad del art. 152 contra cedular 10% del art. 129); ficha 21-oct (art. 31 fr. IV vigente, DOF 07-10-2026; P./J. 10/2003, reg. 184291, reproducida en AR 1292/2017 de la SCJN; ejercicio: proporcionalidad del IEPS por diferencias de litros) | Parcial |
 | D2 | Código Fiscal de la Federación: obligaciones, facultades de comprobación, prescripción, infracciones y delitos | cap. 29 (verificado 6-oct); cap. 33, materialidad de operaciones (11-oct, `71f865d`, **pendiente del verificador**; agregado al índice por la conciliación del 11-oct, la cobertura no cambia) | Capítulo (grado A en la letra) |
 | D3 | Medios de defensa: recurso de revocación, juicio de nulidad, amparo, PRODECON | cap. 29 §7 (verificado 6-oct) | Capítulo (grado A en la letra) |
 | D4 | LISR de personas físicas (enajenación, intereses, dividendos, exenciones, RESICO) | caps. 11 y 27, V05 | Capítulo (grado A en la letra) |
