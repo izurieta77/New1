@@ -976,3 +976,4 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **orquestador:** alertas intradía y after-hours, y el formato de la tabla FX del brief;
   - **gestor de riesgo:** E9.
 - **Estado:** Cerrado en lo de la conciliación; lo escalado sigue abierto con su responsable.
+- **Cierre 21-oct 00:17 CDMX (06:21 UTC):** E9 vuelve a VERDE, con diferencial de 0.418% y la compra a −0.12% del implícito. Se cierra el episodio ÁMBAR del 20-oct (cinco pulsos > 0.5%). Queda abierta para el gestor de riesgo la propuesta de recalibrar el umbral (> 1.0% o medido contra el implícito). **Estado:** Cerrado (episodio); propuesta de umbral → gestor de riesgo.
