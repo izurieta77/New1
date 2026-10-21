@@ -1,0 +1,7 @@
+Datos: R16 + ^NDX de R12; 9065 días con todas las series, 1990-10-17 a 2026-10-16; sha256 R16 a4789527c9e19ceb…
+U0             P(−8% en 63d) 29.5% [1990-2008 32.2% | 2009-hoy 26.7%]   P(−12%) 14.8%   ventanas 9003
+U13            P(−8% en 63d) 36.4% [1990-2008 37.9% | 2009-hoy 34.9%]   P(−12%) 16.4%   ventanas 9003
+U27 (vigente)  P(−8% en 63d) 47.8% [1990-2008 49.6% | 2009-hoy 45.9%]   P(−12%) 21.0%   ventanas 9003
+U40            P(−8% en 63d) 55.6% [1990-2008 58.0% | 2009-hoy 53.2%]   P(−12%) 26.5%   ventanas 9003
+
+Veredicto A: H1 (P vigente ≤ 15%) refutada (47.8%); H2 (bajar a 13.5% reduce ≥ 5 pp) sostenida (11.3 pp) -> No replicado
