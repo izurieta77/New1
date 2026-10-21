@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-21 19:43 UTC · cripto (pulso extra 13:41) · OK · (este commit) · BTC 84,601.71 (−0.15% vs 12:17), ETH 2,498.06, 4h +0.03%; filtro ENCENDIDO (colchón +19.99%); E9 0.470% vuelve a VERDE (episodio cerrado); BTC +3.25% en pesos (alta vigente)
 2026-10-21 19:40 UTC · supervisión (13:40 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,130.72 verificado en vivo; UPRO papel 11.8% sobre stop; FX-1 OK 18.6570; sin mensajes nuevos del dueño; boleta VT EN ESPERA
 2026-10-21 18:41 UTC · supervisión (12:41 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,140.80 verificado en vivo; UPRO papel 12.5% sobre stop; FX-1 OK 18.6605; sin mensajes nuevos del dueño; boleta VT EN ESPERA
 2026-10-21 18:19 UTC · cripto (pulso 12:17) · OK · (este commit) · BTC 84,731.70 (+0.21% vs 09:41), ETH 2,518.77, 4h +1.08%, funding ~0; filtro ENCENDIDO (colchón +20.17%); BTC +3.32% en pesos (alta informativa vigente); E9 0.578% ÁMBAR intermitente

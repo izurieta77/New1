@@ -1022,3 +1022,4 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Resultado:** ingresos 250,634 M (arriba del p90); UPA 0.405 (en el p90); minoritarios −1,621 M (6.3%); Telcel −2.75 M líneas.
   - **Lección:** la BMV (Emisnet) publica antes que EDGAR. Para emisoras mexicanas, la fuente primaria del día es el evento relevante de la BMV, no el 6-K. El ID de AMX en la BMV es 6024.
 - **Estado:** Cerrado (AMX).
+- **Cierre 21-oct 13:41 CDMX (19:42 UTC):** E9 vuelve a VERDE, con diferencial de 0.470% y compra a −0.41% del implícito. Se cierra el episodio ÁMBAR del 21-oct. Sigue abierta para el gestor de riesgo la propuesta de recalibrar el umbral. **Estado:** Cerrado (episodio).
