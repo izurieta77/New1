@@ -936,3 +936,13 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **AMX (3T26)** no había publicado a las 21:40 UTC: sin PDF en americamovil.com y sin 6-K en EDGAR. El del 2T llegó a la SEC a la mañana siguiente.
   - **Qué decidí:** el post-mortem y la resolución de `empresas/AMXB.MX/pronosticos.csv` se hacen en cuanto haya fuente primaria: pre-apertura o laboratorio del 21-oct, con las fichas C4 y C9.
 - **Estado:** Abierto → pre-apertura o laboratorio del 21-oct.
+
+## 2026-10-20 · revisión (rutina 11, 21-oct 00:02 UTC) · ¿El mensaje del dueño del 20-oct cuenta como confirmación de la boleta VT?
+- **Pregunta:** el dueño escribió a las 19:37 UTC (`datos/entrada-dueno/2026-10-20.md`) que VT no aparece al buscar "vanguard" y que "quedan 10,940 pesos". ¿Basta para el fallo `bitacora/arbitraje/2026-10-19.md` §1, que pide confirmación escrita de "no llenó" o "no la capturé"?
+- **Qué decidí:** no basta. La boleta sigue EN ESPERA sin límite.
+- **Por qué:**
+  - No dice ninguna de las dos frases.
+  - La búsqueda por nombre no prueba que VT no exista (los ETF de acciones de Vanguard sí aparecen al buscar "voo").
+  - Los 10,940 no cuadran: el efectivo registrado de las tres IA suma 8,697.61, y 10,940 queda 2,242.39 por encima. Tampoco corresponde a Claude con o sin VT.
+  - Cuesta menos aplazar la compra hasta el comité que arriesgar comprar 2 VT.
+- **Estado:** Abierto → supervisión de las 08:40 del 21-oct (anotar la entrada en la boleta y en alertas, revisión §1.1), orquestador o dueño (los 10,940) y comité del 23-oct.
