@@ -1023,3 +1023,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Lección:** la BMV (Emisnet) publica antes que EDGAR. Para emisoras mexicanas, la fuente primaria del día es el evento relevante de la BMV, no el 6-K. El ID de AMX en la BMV es 6024.
 - **Estado:** Cerrado (AMX).
 - **Cierre 21-oct 13:41 CDMX (19:42 UTC):** E9 vuelve a VERDE, con diferencial de 0.470% y compra a −0.41% del implícito. Se cierra el episodio ÁMBAR del 21-oct. Sigue abierta para el gestor de riesgo la propuesta de recalibrar el umbral. **Estado:** Cerrado (episodio).
+
+## 2026-10-21 · inteligencia (rutina 7, 15:05 CDMX) · P0049 y P0069 vencen con FRED caído
+- **Hecho:** a las 21:0x UTC, fredgraph.csv no responde (código 000, dos intentos de hasta 60 s) en DCOILBRENTEU, DHHNGSP y DCOILWTICO. P0049 y P0069 tienen fecha de resolución de hoy y su criterio dice "si FRED no lo publica al 21-oct, primer dato publicado".
+- **Decidí:** no resolverlos hoy y dejarlos para mañana, como propuso la corrida de las 11:05. Si FRED vuelve, se resuelven con su primer dato del 16-oct (la EIA da Brent 119.33, así que se espera SÍ en los dos). Si sigue caído al vencer P0085 (22-oct), se mantiene la propuesta de las 11:05: la conciliación decide si se usa la EIA (fuente de origen de esas series) con nota.
+- **Por qué:** es la opción conservadora: el criterio literal nombra a FRED y "primer dato publicado" no tiene fecha límite.
+- **Estado:** Abierto → inteligencia 20:05 / conciliación de la noche del 21-oct.
