@@ -213,3 +213,6 @@ Aritmética recalculada con Python.
 - Deuda por tramo y ASR de mar-2026: el 10-K no se leyó completo.
 
 **Veredicto:** confiable en datos. Tenía una fecha regulatoria superada (tierras raras) y una resolución que podía vencer antes del reporte; ambas se corrigieron. Los pronósticos numéricos no cambian.
+
+## Adenda (21-oct-2026, cierre): resultado del 1T FY27
+Lam reportó el 21-oct, como decía Yahoo. Ingresos de 8,219.4 contra nuestro 8,300 (dentro del p10-p90) y UPA non-GAAP de 2.20 contra 2.33 (dentro, a 0.03 del p10). Los dos binarios salieron SÍ: ingresos > 8,135 (Brier 0.0676) y UPA ≥ 2.18 (Brier 0.0169). Guía de diciembre: 8.60 ± 0.40 mil M y UPA de 2.33 ± 0.15; China 35% de los ingresos (no > 35%). Movimiento posterior al cierre: −5.1% (provisional). Lecciones en `post-mortem-2026-10-21.md`: comprimir la superación esperada cuando la guía implica un salto t/t grande. Los pronósticos del 25-sep no se modifican.

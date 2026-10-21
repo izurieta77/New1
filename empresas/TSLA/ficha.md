@@ -123,3 +123,6 @@ Notas: la UPA non-GAAP excluye SBC, activos digitales, SpaceX y partidas fiscale
 7. Yahoo Finance quoteSummary y chart de TSLA, TSLA.MX, pares, SPCX, BTC-USD y Brent (25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/TSLA
 8. Nasdaq/Zacks, fecha y consenso (25-sep-2026): https://api.nasdaq.com/api/analyst/TSLA/earnings-date
 9. Conocimiento interno: `conocimiento/21-industrias-y-ciclos-sectoriales-2026.md` §4.14, `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.4 y `conocimiento/23-geopolitica-y-riesgo-politico-global.md` §4.3.
+
+## Adenda (21-oct-2026, cierre): resultado del 3T26
+Ingresos de 28,046 contra nuestro 27,800 (dentro del p10-p90) y UPA non-GAAP de 0.48 contra 0.38 (dentro, a 0.02 del p90). Los dos binarios salieron SÍ: ingresos > 27,524 (Brier 0.2025) y UPA > 0.4556 (Brier 0.5184, con p = 0.28). Margen bruto de 19.6% (automotriz sin créditos 18.1%), entregas de 486,532, FCF de 1,531 M y sin guía numérica. Movimiento posterior al cierre: −1.9% (provisional). Lecciones en `post-mortem-2026-10-21.md`: partir de la UPA sin partidas únicas y justificar binarios lejos de 0.5. Los pronósticos del 25-sep no se modifican.

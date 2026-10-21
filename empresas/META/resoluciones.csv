@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+META-ingresos-3T26,2026-10-21,64601,,-1.24,si,,https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm
+META-upa_diluida-3T26,2026-10-21,3.83,,-16.45,si,,https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm
+META-ingresos_mayor_consenso-3T26,2026-10-21,64601,1,,,0.0784,https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm
+META-guia_ingresos_4T_mayor_consenso-3T26,2026-10-21,74500,1,,,0.3600,https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm

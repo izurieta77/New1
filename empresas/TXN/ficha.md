@@ -191,3 +191,6 @@ Aritmética recalculada con Python.
 - El proxy y los 8-K 5.02 de 2026.
 
 **Veredicto:** confiable en datos. El intervalo de UPA era estrecho del lado alto; ya se corrigió. La fecha del reporte es la mayor incertidumbre operativa.
+
+## Adenda (21-oct-2026, cierre): resultado del 3T26
+TI reportó el 21-oct (ni el 27-oct ni el 20-oct estimados). Ingresos de 6,055 contra nuestro 6,040 (dentro del p10-p90) y UPA de 2.62 contra 2.49 (dentro; incluye −1 centavo no guiado). Los dos binarios salieron SÍ: ingresos > 5,907.8 (Brier 0.0784) y UPA > 2.415 (Brier 0.1024). Guía del 4T26: ingresos de 5.80-6.30 mil M (punto medio 6.05, arriba del umbral alcista de 6.0 de §7) y UPA de 2.45-2.79. Movimiento posterior al cierre: +0.7% (provisional). Lecciones en `post-mortem-2026-10-21.md`. Los pronósticos del 25-sep no se modifican.

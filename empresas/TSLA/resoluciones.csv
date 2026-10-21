@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+TSLA-ingresos-3T26,2026-10-21,28046,,-0.88,si,,https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm
+TSLA-upa_nongaap-3T26,2026-10-21,0.48,,-20.83,si,,https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm
+TSLA-ingresos_mayor_consenso-3T26,2026-10-21,28046,1,,,0.2025,https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm
+TSLA-upa_nongaap_mayor_consenso-3T26,2026-10-21,0.48,1,,,0.5184,https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm

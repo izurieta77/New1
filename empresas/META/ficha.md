@@ -105,3 +105,6 @@ Binarios:
 9. `herramientas/dossier.py META` y Yahoo quoteSummary (earningsTrend, calendarEvents, earningsHistory), 2026-09-25: empresas/META/dossier-2026-09-25.md
 10. Yahoo Finance chart META.MX, 2026-09-25: https://query1.finance.yahoo.com/v8/finance/chart/META.MX
 11. Tablero de mercado (FRED DGS10), 2026-09-25: bitacora/briefs/2026-09-25-tablero-v2.md
+
+## Adenda (21-oct-2026, cierre): resultado del 3T26
+Meta reportó el 21-oct (no el 28-oct estimado). Ingresos de 64,601 contra nuestro 63,800 (dentro del p10-p90) y UPA GAAP de 3.83 contra 3.20 (dentro), con un cargo legal de US$9.89 mil M (sin él, UPA de 7.40). Los dos binarios salieron SÍ: ingresos > consenso (Brier 0.0784) y punto medio de la guía del 4T (73-76 mil M) > 73.7 (Brier 0.36, con p = 0.40). Gastos 2026 suben a 175-179 mil M por el cargo; capex de 135-145 mil M. El 8-K anuncia además una acción clase C sin voto, repartida 1:1 como dividendo en acciones a partir del 19-ene-2027. Movimiento posterior al cierre: +3.8% (provisional). Lecciones en `post-mortem-2026-10-21.md`. Los pronósticos del 25-sep no se modifican; P0159 de la bitácora se resuelve con el cierre del 22-oct.
