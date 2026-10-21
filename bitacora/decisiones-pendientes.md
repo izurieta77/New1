@@ -977,3 +977,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **gestor de riesgo:** E9.
 - **Estado:** Cerrado en lo de la conciliación; lo escalado sigue abierto con su responsable.
 - **Cierre 21-oct 00:17 CDMX (06:21 UTC):** E9 vuelve a VERDE, con diferencial de 0.418% y la compra a −0.12% del implícito. Se cierra el episodio ÁMBAR del 20-oct (cinco pulsos > 0.5%). Queda abierta para el gestor de riesgo la propuesta de recalibrar el umbral (> 1.0% o medido contra el implícito). **Estado:** Cerrado (episodio); propuesta de umbral → gestor de riesgo.
+
+## 2026-10-21 · cripto (pulso 05:41 CDMX) · E9 ÁMBAR dos pulsos seguidos (nuevo episodio) → aviso al gestor de riesgo
+
+- **Hecho:** el diferencial de BTCMXN fue 0.958% a las 04:17 y 0.757% a las 05:41. La compra está a −0.59% y −0.61% del implícito, con la misma mejor postura (1,533,704) sin reposición, y 27,620 MXN en las cinco primeras. Es el segundo episodio en dos días; ayer sumó cinco pulsos.
+- **Qué decidí:** sin operación; toda salida va con orden límite. Reitero al gestor de riesgo la propuesta de recalibrar E9: medirlo contra el precio implícito (umbral > 1.0%) y no contra el punto medio, porque el libro en pesos se rezaga cuando se mueve el USD/MXN.
+- **Estado:** Abierto → gestor de riesgo; remedición a las 08:17.
