@@ -920,7 +920,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** sin orden antes del comité (REGLAS §4). La boleta VT sigue EN ESPERA.
   - **Al dueño se le pidió:** (1) buscar los tickers VT, VEA, RSP y ACWI y decir dónde aparecen (SIC o EUA); (2) aclarar los 10,940, que no cuadran con el libro real (10,023.48 al 19-oct).
 - **Para el comité del 23-oct:** la alternativa a VT según la disponibilidad que reporte el dueño (RSP o VEA, de la decisión W42). SP500S (UCITS de UBS, 152 MXN) y los fondos GBM solo como datos.
-- **Estado:** Abierto → dueño (aclaración) y comité del 23-oct.
+- **Estado:** Abierto → dueño (aclaración) y comité del 23-oct. **[Conciliación 21-oct-2026, `bitacora/arbitraje/2026-10-20.md` §1-§3]:** el mensaje NO es la confirmación del fallo 2026-10-19 §1 (VT EN ESPERA sin límite); por los 10,940 no se registra nada (ninguna combinación de libros cuadra; el efectivo del sublibro sigue en 5,040.16, sin confirmar). "¿En qué invertimos?" → comité del 23-oct. Cerrado en lo de hechos; sigue abierto con el dueño y el comité.
 - **Seguimiento 13:41 CDMX (19:42 UTC):** E9 sigue ÁMBAR, con diferencial de 0.627%. El hueco volvió al lado de compra: −0.91% bajo el implícito, con 10,532 MXN en las cinco primeras posturas. Son cuatro pulsos seguidos > 0.5%, así que el patrón parece estructural (libro delgado, volumen de 24 h < 1 BTC) y no un barrido puntual. **Qué decidí:** sin operación; mantener el escalamiento y la orden límite. Propuesta para el gestor de riesgo: recalibrar el umbral ÁMBAR de E9 a > 1.0% o medirlo contra el precio implícito y no contra el punto medio. **Estado:** Abierto → supervisor/gestor de riesgo; se vuelve a medir a las 16:17.
 
 ## 2026-10-20 · inteligencia (15:05 CDMX) · P0102 resuelto NO con riesgo de lectura
@@ -930,7 +930,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - La ventana de UKMTO termina cerca del 15-oct, no el 12-oct. El PDF de UKMTO da 403, así que no la pude verificar.
 - **Qué decidí:** resolver P0102 = 0. El criterio pide un conteo "de ataques confirmados a petroleros o buques gaseros" ≥ 12, citando a Reuters, a fuentes de la industria marítima o a la OMI. Ningún reporte da esa cifra para petroleros y gaseros.
 - **Riesgo:** un árbitro podría leer los 12 de UKMTO como suficientes (≥ 12, fuente marítima, ventana solapada). Resolver NO favorece el Brier del vigía, que había dado p 0.30, así que conviene que lo revise un tercero.
-- **Estado:** Abierto → conciliación de las 20:57 del 20-oct (confirmar o revertir con el criterio literal).
+- **Estado:** Abierto → conciliación de las 20:57 del 20-oct (confirmar o revertir con el criterio literal). **[Cerrado, conciliación 21-oct-2026, `bitacora/arbitraje/2026-10-20.md` §6]:** NO ratificado. Los 12 de UKMTO (gCaptain, 16-oct) son de todo tipo de buque mercante e incluyen portacontenedores; el criterio pide petroleros y gaseros. Nota en la fila.
 
 ## 2026-10-20 · cierre (rutina 3) · AMX sin publicar
 - **AMX (3T26)** no había publicado a las 21:40 UTC: sin PDF en americamovil.com y sin 6-K en EDGAR. El del 2T llegó a la SEC a la mañana siguiente.
@@ -945,17 +945,34 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - La búsqueda por nombre no prueba que VT no exista (los ETF de acciones de Vanguard sí aparecen al buscar "voo").
   - Los 10,940 no cuadran: el efectivo registrado de las tres IA suma 8,697.61, y 10,940 queda 2,242.39 por encima. Tampoco corresponde a Claude con o sin VT.
   - Cuesta menos aplazar la compra hasta el comité que arriesgar comprar 2 VT.
-- **Estado:** Abierto → supervisión de las 08:40 del 21-oct (anotar la entrada en la boleta y en alertas, revisión §1.1), orquestador o dueño (los 10,940) y comité del 23-oct.
+- **Estado:** Abierto → supervisión de las 08:40 del 21-oct (anotar la entrada en la boleta y en alertas, revisión §1.1), orquestador o dueño (los 10,940) y comité del 23-oct. **[Cerrado, conciliación 21-oct-2026, `bitacora/arbitraje/2026-10-20.md` §1 y §4]:** se ratifica que no basta. Las notas fechadas en la boleta del 19-oct y en `alertas.md` ya las puso la conciliación; a la supervisión de las 08:40 solo le queda revisar con `git log` si hay algo nuevo. Los 10,940 siguen con el dueño.
 
 ## 2026-10-21 · trabajo continuo (rutina 14, 19:09 CDMX del 20-oct) · revisión del 20-oct y AMX
 - **§1.1 (lectura de los mensajes del dueño por la supervisión):** hecho en `rutinas/supervision.md` paso 2. Revisa con `git log` los archivos de `datos/entrada-dueno/` modificados o nuevos desde la corrida anterior. La nota fechada en la boleta y en `alertas.md` la escribe la supervisión de las 08:40 del 21-oct, como asignó la revisión.
 - **§1.3 (hora del brief, error mío y reincidente):** regla en `rutinas/diaria-preapertura.md` paso 7 y fila en `registro-de-errores.md`.
 - **§1.2 (los 10,940):** sigue abierta; ya se le preguntó al dueño el 20-oct. Dato de la revisión: el efectivo de las tres IA suma 8,697.61, así que 10,940 queda 2,242.39 arriba. Nadie registra movimiento hasta que el dueño aclare.
 - **AMX 3T26:** a las 01:1x UTC del 21-oct no hay fuente primaria (el PDF da 404 y no hay 6-K en EDGAR). Fuentes secundarias (rallies.ai, smartkarma) dicen ingresos de 250.63 mil M, utilidad neta de 24.28 mil M y UPA básica de 0.41. **Qué decidí:** no resolver con fuentes secundarias. El post-mortem lo hace la pre-apertura o el laboratorio del 21-oct cuando haya 6-K o PDF.
-- **Estado:** Cerrado §1.1 y §1.3 (lo del orquestador) → supervisión del 21-oct. Abierto §1.2 → dueño. Abierto AMX → pre-apertura o laboratorio del 21-oct.
+- **Estado:** Cerrado §1.1 y §1.3 (lo del orquestador) → supervisión del 21-oct. Abierto §1.2 → dueño. Abierto AMX → pre-apertura o laboratorio del 21-oct. **[Conciliación 21-oct-2026, `bitacora/arbitraje/2026-10-20.md` §5]:** `b2654a0` es coherente. La nota de la supervisión tenía hora 00:13 con commit a las 00:03 y proponía `ls -t`, que no sirve en un clon nuevo: nota fechada en el archivo. Manda `git log`.
 
 ## 2026-10-21 · inteligencia (rutina 7, cierre 20:05 CDMX del 20-oct) · tres dudas
 - **UPRO cruzó +2% en pesos en el after-hours, pero con volumen 0.** ¿Es urgencia alta? **Decidí:** registrarlo en `alertas.md` como alta **informativa**, igual que los cruces intradía del 19 y el 20-oct. No es cierre y no lleva ninguna orden. **Por qué:** la regla §3 no distingue sesión. Escalar de más cuesta menos que callarlo, y el decisor ya tiene el patrón de cruces que se revierten.
 - **Base del FX:** `fx_alerta.py` cambió la referencia del 19-oct de 18.4135 a 18.4096 porque Yahoo reescribió la barra. **Decidí:** usar 18.4096 desde esta corrida y no reescribir las cifras de las 07:05, 11:05 y 15:05. La diferencia es de unos +0.02 pp y no cambia ningún umbral. **Por qué:** la tabla registra lo que se leyó en cada corrida, con su hora de corte.
 - **AMX 3T26 sigue sin fuente primaria.** No está en EDGAR, el IR da 403 y la página de BMV es dinámica. Solo hay AP/Zacks (B) y titulares. **Decidí:** registrar las cifras como B y abrir P0155 sobre la reacción del precio, que se resuelve con Yahoo y no con las cifras. No resuelvo nada que dependa del reporte. **Por qué:** es lo conservador y sigue el mismo criterio del trabajo continuo de las 01:1x UTC.
-- **Estado:** Abierto. La pre-apertura o el laboratorio del 21-oct revisan el 6-K de AMX, y la supervisión de las 08:40 revisa UPRO.
+- **Estado:** Abierto. La pre-apertura o el laboratorio del 21-oct revisan el 6-K de AMX, y la supervisión de las 08:40 revisa UPRO. **[Conciliación 21-oct-2026, `bitacora/arbitraje/2026-10-20.md` §9]:** la base FX 18.4096 se ratifica (cada tabla registra lo que se leyó en su corrida); after-hours como alta informativa sin orden, ratificado, y la regla sigue escalada al orquestador; AMX con fuentes B, ratificado. Cerrado en lo de la conciliación.
+
+## 2026-10-21 · conciliación (noche del 20-oct) · Cierres de la revisión del 20-oct
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-20.md`):
+  - **El mensaje del dueño (§1):** NO es la confirmación del fallo 2026-10-19 §1. La boleta VT sigue EN ESPERA sin límite; notas en la boleta (L2) y en `alertas.md`.
+  - **Los 10,940 (§2):** no se registra nada. Ninguna de 7 combinaciones de libros cuadra; la cifra supera todo el efectivo GBM de las tres IA (8,697.61). El efectivo del sublibro sigue en 5,040.16, sin confirmar.
+  - **Supervisiones de las 13:40 y 14:41 (§4):** la nota del orquestador se ratifica (hora real ≈00:03, no 00:13; manda `git log`, no `ls -t`).
+  - **`b2654a0` (§5):** coherente.
+  - **P0102 (§6):** NO ratificado.
+  - **Menores (§7):** RTX +0.64% en el brief; el latido del decisor del 20-oct y la supervisión, en el registro de errores.
+  - **Latidos (§8):** 5 de 31 (4 de inteligencia y el primero de cripto); duodécima jornada.
+- **Brier:** 0.2103 (n = 57), NO cumple ≤ 0.20. **Suite:** 342 OK, sin cambios de código.
+- **Escalados:**
+  - **dueño:** VT ("no llenó" o "no la capturé", o el reporte de compra), los 10,940, la búsqueda por ticker y el mecanismo de los latidos;
+  - **comité del 23-oct:** "¿en qué invertimos?" y VT;
+  - **orquestador:** alertas intradía y after-hours, y el formato de la tabla FX del brief;
+  - **gestor de riesgo:** E9.
+- **Estado:** Cerrado en lo de la conciliación; lo escalado sigue abierto con su responsable.
