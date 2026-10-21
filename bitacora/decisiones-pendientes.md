@@ -983,3 +983,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Hecho:** el diferencial de BTCMXN fue 0.958% a las 04:17 y 0.757% a las 05:41. La compra está a −0.59% y −0.61% del implícito, con la misma mejor postura (1,533,704) sin reposición, y 27,620 MXN en las cinco primeras. Es el segundo episodio en dos días; ayer sumó cinco pulsos.
 - **Qué decidí:** sin operación; toda salida va con orden límite. Reitero al gestor de riesgo la propuesta de recalibrar E9: medirlo contra el precio implícito (umbral > 1.0%) y no contra el punto medio, porque el libro en pesos se rezaga cuando se mueve el USD/MXN.
 - **Estado:** Abierto → gestor de riesgo; remedición a las 08:17.
+
+## 2026-10-21 · pre-apertura · AMX sigue sin fuente primaria
+- **Hecho:** a las ~13:00 UTC no hay 6-K del 3T26 en EDGAR (el último es del 2-oct), el PDF del CDN da 404 con varias variantes de nombre y el sitio de inversionistas no tiene liga. La prensa da ingresos de 250,634 M, utilidad de 24,282 M y EBITDA de 102,156 M.
+  - **Qué decidí:** no resolver con prensa. Intentarlo en el laboratorio de hoy con el reporte trimestral de la BMV (Emisnet) o con el PDF. Si para el cierre del 22-oct no hay fuente primaria, el cierre lo resuelve con la nota "fuente BMV/prensa, grado B" y lo marca así.
+- **Nota de proceso:** el subagente de la pre-apertura consultó EFTS con un User-Agent genérico de ejemplo (admin@example.com), no con datos del dueño. Cumple la regla de no mandar el correo del dueño.
+- **Estado:** Abierto → laboratorio del 21-oct.

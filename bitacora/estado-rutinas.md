@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-21 12:58 UTC · pre-apertura: 2026-10-21 · OK · (este commit) · régimen MIXTO (+0); FX-1 OK pero USD/MXN +0.86% (18.5730); PM (UPA 2.36) y TMO (6.68) reportaron (8-K); AMX sin fuente primaria; P0156-P0159 nuevos; P0049/P0069 esperan FRED; Brier 0.2103 (n=57); papel DD −2.50%, sin cortacircuitos; boleta VT EN ESPERA
 2026-10-21 11:42 UTC · cripto (pulso extra 05:41) · OK · (este commit) · BTC 83,433.42 (+0.17% vs 04:17), ETH 2,461.76, 4h +0.75%; filtro ENCENDIDO (colchón +18.33%); E9 BTCMXN 0.757% segundo pulso ÁMBAR → aviso al gestor de riesgo; sin alertas
 2026-10-21 10:19 UTC · cripto (pulso 04:17) · OK · (este commit) · BTC 83,288.00 (+0.75% vs 00:17), ETH 2,447.65, 4h +0.75%, funding 9.2e-05; filtro ENCENDIDO (colchón +18.12%); E9 BTCMXN 0.958% ÁMBAR puntual (USD/MXN 18.523); sin alertas
 2026-10-21 06:22 UTC · cripto (pulso 00:17) · OK · (este commit) · BTC 82,666.08 (−0.57% vs 18:42), ETH 2,437.76, 4h −0.40%, OI +0.16%; filtro ENCENDIDO (colchón +17.24% sobre salida 70,509.28); E9 BTCMXN 0.418% vuelve a VERDE (episodio cerrado); sin alertas
