@@ -118,3 +118,6 @@ Notas: FCF = flujo operativo − capex (el 1T es estacionalmente negativo). SBC 
 8. 8-K, prepago del crédito (29-jun-2026): https://www.sec.gov/Archives/edgar/data/1413329/000110465926078814/tm2618983d1_8k.htm
 9. Yahoo Finance quoteSummary y chart de PM, PM.MX, pares y divisas (25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/PM
 10. Nasdaq/Zacks, fecha y consenso (25-sep-2026): https://api.nasdaq.com/api/analyst/PM/earnings-date
+
+## Adenda (21-oct-2026, cierre): resultado del 3T26
+Ingresos netos de 11,438 contra nuestro 11,420 (dentro del p10-p90; orgánico +7.1%) y UPA ajustada de 2.36 contra nuestro 2.39 (dentro, pero peor que el consenso de 2.3425). Los dos binarios salieron SÍ (Brier 0.1764 y 0.0676). Sin recuperación arancelaria IEEPA. Guía de UPA 2026: 8.29-8.44 (antes 8.35-8.50), recortada solo por divisas. Embarques de libres de humo +2.7%. El precio abrió en −6.4% y cerró en −1.2%. Lecciones en `post-mortem-2026-10-21.md`: no aplicar el patrón de "supera el tope de la guía" cuando la guía se actualizó a mitad del trimestre y agregar un pronóstico de embarques de libres de humo. Los pronósticos del 25-sep no se modifican.

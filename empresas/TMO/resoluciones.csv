@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+TMO-ingresos-3T26,2026-10-21,12137,,-0.72,si,,https://www.sec.gov/Archives/edgar/data/0000097745/000009774526000173/q32026earnings8kex99_1.htm
+TMO-upa_ajustada-3T26,2026-10-21,6.68,,-2.40,si,,https://www.sec.gov/Archives/edgar/data/0000097745/000009774526000173/q32026earnings8kex99_1.htm
+TMO-ingresos_mayor_consenso-3T26,2026-10-21,12137,1,,,0.0729,https://www.sec.gov/Archives/edgar/data/0000097745/000009774526000173/q32026earnings8kex99_1.htm
+TMO-upa_mayor_consenso-3T26,2026-10-21,6.68,1,,,0.0484,https://www.sec.gov/Archives/edgar/data/0000097745/000009774526000173/q32026earnings8kex99_1.htm

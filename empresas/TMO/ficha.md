@@ -84,3 +84,6 @@ Capitalización de US$250.8 mil M y VE de 289.4 mil M. **P/U ajustado 2026e de 2
 11. StockStory, consenso del 2T26 (consultado el 25-sep-2026): https://stockstory.org/us/stocks/nyse/tmo
 12. Yahoo chart de TMO.MX (consultado el 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/TMO.MX
 13. Feed de eventos de relación con inversionistas de TMO (consultado el 25-sep-2026): https://ir.thermofisher.com/feed/Event.svc/GetEventList · Conocimiento interno `conocimiento/24-politica-publica-regulacion-y-mercados.md` (Sección 232 y MFN).
+
+## Adenda (21-oct-2026, cierre): resultado del 3T26
+Reportó el 21-oct, no el ~22 ni el 29-oct registrados. Ingresos de 12,137 contra nuestro 12,050 (dentro del p10-p90; orgánico +6%) y UPA ajustada de 6.68 contra nuestro 6.52 (dentro, a 0.04 del p90). Los dos binarios salieron SÍ (Brier 0.0729 y 0.0484). Sin recuperación arancelaria IEEPA. La guía 2026 se dio en la llamada y no está en el 8-K (no verificada). El precio abrió en −3.3% y cerró en +1.0%. Lecciones en `post-mortem-2026-10-21.md`: centrar la UPA ~4% sobre el consenso y registrar el orgánico como pronóstico. Los pronósticos del 25-sep no se modifican.
