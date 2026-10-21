@@ -48,3 +48,36 @@ Sin costos de rebalanceo: el rebalanceo es mensual y su costo es pequeño frente
 ---
 
 ## RESULTADOS (se llenan después de correr)
+
+### Ejecución A (orquestador): `R18.py` (sin cambios desde el pre-registro, `1e12150`), `R18-salida.txt`, `R18-resultados.json`
+9,065 días con todas las series (1990-10-17 a 2026-10-16); 9,003 ventanas de 63 días.
+
+| UPRO | P(caer ≥ 8% en 63 días) | 1990-2008 | 2009-hoy | P(≥ 12%) |
+|---|---|---|---|---|
+| 0% | 29.5% | 32.2% | 26.7% | 14.8% |
+| 13.5% | 36.4% | 37.9% | 34.9% | 16.4% |
+| **26.9% (vigente)** | **47.8%** | 49.6% | 45.9% | 21.0% |
+| 40% | 55.6% | 58.0% | 53.2% | 26.5% |
+
+### Ejecución B (auditor-de-replicas, código desde cero): `laboratorio/auditorias/AC-24-R18/`
+- **Datos:** CBOE SPX + multpl, CBOE VIX, DTB3, FRED NASDAQ100 y DEXMXUS. Son copias ya guardadas, porque FRED estaba en mantenimiento.
+- **Muestra:** 9,184 días, hasta el 15-oct.
+- **Control:** UPRO-V0 solo da MDD −72.6%, contra −73.5% / −73.7% de R16.
+
+| UPRO | P ≥ 8% | 1990-2008 | 2009-hoy | P ≥ 12% | P ≥ 8% en MXN, 1994-hoy (USD, mismo periodo) |
+|---|---|---|---|---|---|
+| 0% | 29.7% | 32.5% | 26.9% | 15.3% | 30.8% (32.6%) |
+| 13.5% | 36.7% | 38.2% | 35.2% | 16.6% | 33.9% (40.0%) |
+| **26.9%** | **48.0%** | 49.7% | 46.2% | 21.4% | 42.8% (50.2%) |
+| 40% | 56.1% | 58.4% | 53.7% | 26.9% | 52.3% (57.6%) |
+
+Con ventanas sin traslape, B da 49.3% para la vigente.
+
+### Juicio
+- **H1 refutada en A y en B:** con la mezcla vigente, la probabilidad de tocar el cortacircuitos de −8% en un trimestre es **~48%**, más del triple del umbral de 15%.
+- **H2 sostenida:** bajar UPRO a 13.5% la reduce 11.3 pp (8.9 pp en MXN).
+- **Estado (A y B concuerdan): "No replicado".**
+- **Lectura:** el −8% de `config/parametros.json` está dentro del ruido trimestral de una cartera de acciones. Incluso **sin UPRO**, la mezcla lo toca en ~30% de los trimestres. Con UPRO al 26.9%, cerca de uno de cada dos.
+  - Los cortacircuitos se diseñaron como freno ante algo anormal. Con esta mezcla se dispararían por volatilidad normal, y cada disparo obliga a reducir el satélite a la mitad: vender abajo, la misma mecánica que R16 midió en el stop.
+- **No es una recomendación de cambio.** Es insumo para el comité: ajustar el tamaño (UPRO a ~13.5% baja 11 pp) o recalibrar los niveles a la volatilidad de la mezcla. Las dos son decisiones del comité y del dueño (los cortacircuitos los fijó el dueño el 25-sep).
+- **Etiqueta:** no aplica (calibración de riesgo, no prueba de ventaja).

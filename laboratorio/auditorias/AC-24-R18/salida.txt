@@ -1,0 +1,37 @@
+Días comunes: 9184 (1990-01-02 a 2026-10-15); curva desde 1990-10-18
+V0 encendido: 74.7% de los días
+
+UPRO 0%: SPYM 0.679 | CAGR 12.33% vol 18.64% MDD -58.3%
+  completo                 P(>=8%) 29.7%  P(>=12%) 15.3%  (inicios 8921)
+  1990-2008                P(>=8%) 32.5%  P(>=12%) 18.0%  (inicios 4543)
+  2009-hoy                 P(>=8%) 26.9%  P(>=12%) 12.5%  (inicios 4378)
+  completo_sin_traslape    P(>=8%) 31.0%  P(>=12%) 16.2%  (inicios 142)
+  MXN_1994-hoy             P(>=8%) 30.8%  P(>=12%) 13.9%  (inicios 8121)
+  USD_1994-hoy             P(>=8%) 32.6%  P(>=12%) 16.8%  (inicios 8121)
+
+UPRO 13.5%: SPYM 0.544 | CAGR 13.15% vol 19.23% MDD -57.0%
+  completo                 P(>=8%) 36.7%  P(>=12%) 16.6%  (inicios 8921)
+  1990-2008                P(>=8%) 38.2%  P(>=12%) 17.7%  (inicios 4543)
+  2009-hoy                 P(>=8%) 35.2%  P(>=12%) 15.5%  (inicios 4378)
+  completo_sin_traslape    P(>=8%) 38.7%  P(>=12%) 19.0%  (inicios 142)
+  MXN_1994-hoy             P(>=8%) 33.9%  P(>=12%) 13.7%  (inicios 8121)
+  USD_1994-hoy             P(>=8%) 40.0%  P(>=12%) 18.2%  (inicios 8121)
+
+UPRO 26.9% (vigente): SPYM 0.410 | CAGR 13.86% vol 20.44% MDD -55.8%
+  completo                 P(>=8%) 48.0%  P(>=12%) 21.4%  (inicios 8921)
+  1990-2008                P(>=8%) 49.7%  P(>=12%) 23.5%  (inicios 4543)
+  2009-hoy                 P(>=8%) 46.2%  P(>=12%) 19.2%  (inicios 4378)
+  completo_sin_traslape    P(>=8%) 49.3%  P(>=12%) 23.9%  (inicios 142)
+  MXN_1994-hoy             P(>=8%) 42.8%  P(>=12%) 19.0%  (inicios 8121)
+  USD_1994-hoy             P(>=8%) 50.2%  P(>=12%) 23.5%  (inicios 8121)
+
+UPRO 40%: SPYM 0.279 | CAGR 14.44% vol 22.11% MDD -54.6%
+  completo                 P(>=8%) 56.1%  P(>=12%) 26.9%  (inicios 8921)
+  1990-2008                P(>=8%) 58.4%  P(>=12%) 27.1%  (inicios 4543)
+  2009-hoy                 P(>=8%) 53.7%  P(>=12%) 26.6%  (inicios 4378)
+  completo_sin_traslape    P(>=8%) 57.0%  P(>=12%) 28.2%  (inicios 142)
+  MXN_1994-hoy             P(>=8%) 52.3%  P(>=12%) 22.3%  (inicios 8121)
+  USD_1994-hoy             P(>=8%) 57.6%  P(>=12%) 29.4%  (inicios 8121)
+
+H1: P vigente = 48.0% -> REFUTADA (umbral 15%)
+H2: reducción al bajar a 13.5% = 11.3 pp -> sostenida (umbral 5 pp)
