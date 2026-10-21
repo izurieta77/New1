@@ -1016,3 +1016,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** no tocar cortacircuitos, pesos ni cartera. Los niveles los fijó el dueño (25-sep) y el tamaño es del comité.
   - **Punto para el comité del 23-oct (junto con R16 y R17):** el −8% está dentro del ruido normal de esta mezcla. Opciones a discutir: (a) bajar UPRO (~13.5% quita 11 pp); (b) proponer al dueño recalibrar los niveles a la volatilidad de la cartera; (c) dejarlo así sabiendo que el primer nivel se disparará con frecuencia.
 - **Estado:** Abierto → comité del 23-oct; dueño si se propone recalibrar.
+
+## 2026-10-21 · laboratorio · AMX resuelto con fuente primaria de la BMV
+- **Hecho:** evento relevante de la BMV del 20-oct a las 15:37 (`bmv.com.mx/docs-pub/eventemi/eventemi_1596486_1.pdf`), cotejado con el XBRL IFRS (ifrsxbrl_1596479). Post-mortem en `empresas/AMXB.MX/post-mortem-2026-10-21.md`; 4 pronósticos resueltos en `resoluciones.csv`.
+  - **Resultado:** ingresos 250,634 M (arriba del p90); UPA 0.405 (en el p90); minoritarios −1,621 M (6.3%); Telcel −2.75 M líneas.
+  - **Lección:** la BMV (Emisnet) publica antes que EDGAR. Para emisoras mexicanas, la fuente primaria del día es el evento relevante de la BMV, no el 6-K. El ID de AMX en la BMV es 6024.
+- **Estado:** Cerrado (AMX).

@@ -129,3 +129,23 @@ Verificador adversarial. Fuentes primarias leídas: reporte 2T26 (íntegro: esta
 
 ## Adenda 13-oct-2026 (fecha del reporte 3T26)
 - **No reportó el 13-oct-2026.** La invitación oficial de AMX a la llamada del 3T26 confirma que publicará el **martes 20-oct-2026 después del cierre**, con llamada el miércoles 21-oct a las 9:00 (CDMX): https://s22.q4cdn.com/604986553/files/content_files/Conference-Call-Invitation-3Q26.pdf. En EDGAR (CIK 0001129137) el último 6-K es del 2-oct-2026 (adquisición de Desktop en Brasil), sin resultados. La corrección del verificador (20-oct → 13-oct) era errónea: la fecha original de Investing (20-oct) era la correcta. Los pronósticos del 3T26 quedan **pendientes**; su `fecha_resolucion` pasó de 2026-10-13 a 2026-10-21, porque los resultados salen tras el cierre del 20-oct. ~~No se editó el CSV.~~ **[Corregido, conciliación 14-oct-2026 ~03:00 UTC, `bitacora/arbitraje/2026-10-13.md` §4]:** el CSV sí se editó: el mismo commit (`dada92a`, 13-oct 21:41 UTC) cambió `fecha_resolucion` de 2026-10-13 a 2026-10-21 en las cuatro filas del 3T26 de `empresas/AMXB.MX/pronosticos.csv`, y nada más (criterio, punto, p10/p90 y probabilidades quedan iguales; cotejado con `git show dada92a`). El cambio de fecha es correcto: la invitación oficial (PDF de arriba, sha256 `2a26c3c7…`, consultada el 14-oct 03:0x UTC) dice "will announce Third Quarter 2026 Earnings on Tuesday, October 20th, 2026 after the market close". El CSV no tiene columna de notas, así que la constancia de la edición queda aquí.
+
+## Adenda 21-oct-2026 (resultado 3T26 y post-mortem)
+- **Fuente primaria:** BMV, evento relevante del 20-10-2026 15:37 ([eventemi_1596486_1.pdf](https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596486_1.pdf)) y XBRL IFRS del trimestre ([ifrsxbrl_1596479_2026-03_1.zip](https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596479_2026-03_1.zip)). Al 21-oct ~17:50 UTC aún no había 6-K en EDGAR ni PDF en q4cdn.
+- **3T26:**
+  - Ingresos de Ps 250,634 M (+7.6% a/a; +4.0% t/t).
+  - EBITDA de 102,156 M (40.8%) y EBIT de 57,113 M.
+  - Pérdida cambiaria de 3,603 M y tasa efectiva de 25.3% (cálculo propio).
+  - UN mayoritaria de 24,282 M; participación no controladora de −1,621 M.
+  - UPA de 0.41 (24,282 / 59.9 mil M = 0.405).
+  - Líneas celulares de México: 81,781 mil (−2.75 M contra 84,531 en junio), por −2.9 M de bajas de prepago (depuración y registro) y +144 mil altas de pospago.
+  - Deuda neta de 400,081 M (1.21x EBITDAaL).
+  - Minoritario en balance: 64,974 M.
+- **Pronósticos de la §8:**
+  - Ingresos **fuera** del intervalo (por arriba del p90; error −3.05%).
+  - UPA dentro, en el p90 (error −19.5%).
+  - Binario de ingresos: Sí (Brier 0.3025). Binario de líneas: Sí (Brier 0.25).
+  - Detalle en `empresas/AMXB.MX/resoluciones.csv` y `empresas/AMXB.MX/post-mortem-2026-10-21.md`. `pronosticos.csv` no se modificó.
+- **§7, escenario:** el disparador "bajas de Telcel > 2 M líneas" se rebasó en el 3T. Aun así, el servicio móvil de México creció +5.4% y el EBITDA de México +6.0%. Se mantiene el escenario **base**, y se propone (sin aplicar) cambiar el disparador a "ingreso por servicio móvil de México < +2% a/a".
+- **§6:** el VE debe sumar ~65 mil M de participación no controladora en libros (≈ 3.6% del VE; cálculo propio); pendiente verificar si ya la incluía. Por los resultados, las cifras de la §6 (precio del 24-sep) quedan desactualizadas.
+- **§8, tasa base:** AMX superó el consenso de ingresos de Investing por **8/8** trimestres (sorpresa del 3T26: +2.7%).

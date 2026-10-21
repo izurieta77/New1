@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+AMXB.MX-ingresos-3T26,2026-10-21,250634,,-3.05,no,,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596486_1.pdf
+AMXB.MX-upa-3T26,2026-10-21,0.41,,-19.51,si,,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596486_1.pdf
+AMXB.MX-ingresos_mayor_consenso-3T26,2026-10-21,250634,1,,,0.3025,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596486_1.pdf
+AMXB.MX-lineas_telcel_perdida_neta-3T26,2026-10-21,81781,1,,,0.2500,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596486_1.pdf
