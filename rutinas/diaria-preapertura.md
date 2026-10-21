@@ -21,6 +21,7 @@ Este procedimiento escrito manda sobre el texto del disparador, que ya indica se
    - Decide si hace falta una **decisión extraordinaria**: solo por una alerta alta confirmada, un cortacircuitos o el filtro roto. Lo normal es "sin acción"; regístralo en una línea.
    - Si hay boletas reales del día, verifica sus condiciones de validez (REGLAS §5b) y ponlas al inicio del brief.
 7. **Brief:** escribe `bitacora/briefs/AAAA-MM-DD.md` con régimen; **tipo de cambio** (línea obligatoria "Tipo de cambio" del paso 1b, con el efecto de precio separado del efecto cambiario por cuenta); geopolítica y política; empresas; pronósticos nuevos y resueltos, con Brier acumulado; papel y riesgo; aprendizaje o error. Si es feriado de NYSE y BMV, basta un brief corto, pero la línea "Tipo de cambio" va siempre.
+   - **Hora del encabezado (nota del orquestador, 21-oct-2026, por la revisión del 20-oct §1.3, error reincidente):** el encabezado lleva la hora **real** de la corrida: `date -u` y, aparte, la hora de CDMX = UTC − 6 h (sin horario de verano). 06:52 es la hora programada; no se escribe como la de la corrida. Ejemplo: "corrida 12:57 UTC = 06:57 CDMX".
 8. **Cierre de la rutina:**
    - deja el latido (REGLAS §3);
    - commit `pre-apertura: AAAA-MM-DD`, `git pull --rebase --autostash` y push, con hasta 4 reintentos;

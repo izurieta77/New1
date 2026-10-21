@@ -946,3 +946,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - Los 10,940 no cuadran: el efectivo registrado de las tres IA suma 8,697.61, y 10,940 queda 2,242.39 por encima. Tampoco corresponde a Claude con o sin VT.
   - Cuesta menos aplazar la compra hasta el comité que arriesgar comprar 2 VT.
 - **Estado:** Abierto → supervisión de las 08:40 del 21-oct (anotar la entrada en la boleta y en alertas, revisión §1.1), orquestador o dueño (los 10,940) y comité del 23-oct.
+
+## 2026-10-21 · trabajo continuo (rutina 14, 19:09 CDMX del 20-oct) · revisión del 20-oct y AMX
+- **§1.1 (lectura de los mensajes del dueño por la supervisión):** hecho en `rutinas/supervision.md` paso 2. Revisa con `git log` los archivos de `datos/entrada-dueno/` modificados o nuevos desde la corrida anterior. La nota fechada en la boleta y en `alertas.md` la escribe la supervisión de las 08:40 del 21-oct, como asignó la revisión.
+- **§1.3 (hora del brief, error mío y reincidente):** regla en `rutinas/diaria-preapertura.md` paso 7 y fila en `registro-de-errores.md`.
+- **§1.2 (los 10,940):** sigue abierta; ya se le preguntó al dueño el 20-oct. Dato de la revisión: el efectivo de las tres IA suma 8,697.61, así que 10,940 queda 2,242.39 arriba. Nadie registra movimiento hasta que el dueño aclare.
+- **AMX 3T26:** a las 01:1x UTC del 21-oct no hay fuente primaria (el PDF da 404 y no hay 6-K en EDGAR). Fuentes secundarias (rallies.ai, smartkarma) dicen ingresos de 250.63 mil M, utilidad neta de 24.28 mil M y UPA básica de 0.41. **Qué decidí:** no resolver con fuentes secundarias. El post-mortem lo hace la pre-apertura o el laboratorio del 21-oct cuando haya 6-K o PDF.
+- **Estado:** Cerrado §1.1 y §1.3 (lo del orquestador) → supervisión del 21-oct. Abierto §1.2 → dueño. Abierto AMX → pre-apertura o laboratorio del 21-oct.
