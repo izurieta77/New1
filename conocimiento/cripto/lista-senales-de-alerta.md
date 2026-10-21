@@ -243,6 +243,18 @@
 - **E9:** diferencial de BTCMXN de **0.502%** (compra 1,524,694 y venta 1,532,360). Se tomaron cinco muestras de 14:26 a 14:29 UTC, casi idénticas. **ÁMBAR puntual por umbral.** El lado de compra tiene apenas 13,012 MXN a ±0.5% y el de venta 525,071. Lo causó una compra a mercado que barrió las ventas hasta 1,530,000 a las 14:09:55 UTC, en el repunte de BTC, y el libro no se ha rellenado. El volumen de 24 h es de 0.347 BTC. Es el mismo patrón puntual del 16-oct (0.61%). Una venta del tamaño de la cuenta, ~2,000 MXN, cabe en ese lado.
 - **E6, E7, E10:** sin novedad.
 - **Conclusión: no hay disparador.** No hay ninguna ROJA. Las ÁMBAR son E5 y A9 (sin cambio), E3 (por umbral) y E9 (puntual).
+
+**Seguimiento del 21-oct-2026** [I]. Revisión de contraparte de la corrida de las 08:17 del miércoles. El estudio de hoy fue Makarov-Schoar y la prima de BTCMXN ([`fichas/2026-10-21-makarov-schoar-prima-btcmxn.md`](fichas/2026-10-21-makarov-schoar-prima-btcmxn.md)):
+
+- **E1 (método F):** `api.llama.fi/protocol/binance-cex`, filas de 00:00 UTC (21-oct contra 14-oct): **+1.72%** sin BNB (+US$2.50 mil millones). **Limpio.**
+- **E2:** US$174.13 mil millones rastreados y **BNB 15.6%**. Hay 640,612 BTC (BTC+BTCB+WBTC, +1.05% en 7 días); la cifra no se compara con los 635,689 del 20-oct, que pueden tener otra canasta. **Limpio.**
+- **E3:** sin reporte nuevo. ÁMBAR por umbral, sin cambio.
+- **E5:** no hay cargos ni actos nuevos (Google News RSS de 2 días). **ÁMBAR sin cambio.** Noticia: Binance toma 100 M USD de Circle (Yahoo Finance, titular, B). No es señal de riesgo.
+- **E8:** USDC/USDT 1.00099 y FDUSD/USDT 0.9991 (Binance); USDT/USD 0.9988 y USDC/USD 0.9999 (Kraken). **Limpio.**
+- **E9:** siete muestras de 14:22 a 14:3x UTC: 1.526%, 0.394, 0.394, 0.835, 0.489, 0.489 y 0.399%. **La mediana es 0.489%.** La de 1.526% llegó justo después de compras a mercado que barrieron hasta 1,563,000 a las 14:14. La postura vieja de 1,533,704 de las 04:17 y 05:41 ya se repuso, y la compra está entre −0.32% y −0.71% del implícito. **ÁMBAR intermitente, a la baja.** Bitso btc_mxn: diferencial 0.085% y 1.13 M MXN a −0.5% del implícito.
+  - El estudio de hoy da la calibración: en 90 días la prima de cierre de BTCMXN tuvo |p| > 0.5% en el 1.3% de las horas, con vida media de 0.4 h, y se mueve −0.30 pp por cada +1% del USD/MXN. E9 mide liquidez, no un precio roto. Refuerza la propuesta de medir contra el implícito con un umbral de compra < −1.0%.
+- **E6, E7, E10:** sin novedad de exchanges centralizados. El hackeo de Drift (DeFi en Solana, ~270 M) no es un exchange top-10. Bitget, hackeado en septiembre, planea comprar un exchange tailandés (titulares, B); no se verificó el estado de sus retiros.
+- **Conclusión: no hay disparador.** No hay ninguna ROJA. Las ÁMBAR son E5 y A9 (sin cambio), E3 (por umbral) y E9 (intermitente, a la baja).
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)

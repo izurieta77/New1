@@ -983,6 +983,14 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Hecho:** el diferencial de BTCMXN fue 0.958% a las 04:17 y 0.757% a las 05:41. La compra está a −0.59% y −0.61% del implícito, con la misma mejor postura (1,533,704) sin reposición, y 27,620 MXN en las cinco primeras. Es el segundo episodio en dos días; ayer sumó cinco pulsos.
 - **Qué decidí:** sin operación; toda salida va con orden límite. Reitero al gestor de riesgo la propuesta de recalibrar E9: medirlo contra el precio implícito (umbral > 1.0%) y no contra el punto medio, porque el libro en pesos se rezaga cuando se mueve el USD/MXN.
 - **Estado:** Abierto → gestor de riesgo; remedición a las 08:17.
+- **Remedición 21-oct 08:17 CDMX (14:22-14:3x UTC):** siete muestras: 1.526%, luego 0.394, 0.394, 0.835, 0.489, 0.489 y 0.399%. La mediana es 0.489%. La de 1.526% fue justo después de un barrido de compras a mercado a 1,563,000. La postura de 1,533,704 ya se repuso y la compra está entre −0.32% y −0.71% del implícito, salvo −1.49% en la primera muestra (USD/MXN 18.61). Una venta a mercado de los 0.001325 BTC saldría −0.32% contra el implícito. En Bitso el diferencial es 0.085%.
+  - **Evidencia nueva para la propuesta:** la ficha `conocimiento/cripto/fichas/2026-10-21-makarov-schoar-prima-btcmxn.md` mide 90 días de prima horaria de BTCMXN. La media es +0.034%, solo el 1.3% de las horas tiene |p| > 0.5%, la vida media es de 0.4 h y la prima se mueve −0.30 pp por cada +1% del USD/MXN. E9 mide liquidez del libro, no un precio desalineado.
+  - **Qué decidí:** sin operación. Clasifico el episodio como ÁMBAR intermitente a la baja; se cierra si el pulso de las 09:41 da ≤ 0.5%.
+  - **Propuesta concreta al gestor de riesgo:**
+    - ÁMBAR de E9 = mejor compra < −1.0% del implícito BTCUSDT × USD/MXN, en dos pulsos seguidos;
+    - la ROJA no cambia;
+    - salida con orden límite al implícito −0.3%, y si no se llena en 1 h, ruta BTC/USDT → USDT/MXN.
+  - **Estado:** Abierto → gestor de riesgo.
 
 ## 2026-10-21 · pre-apertura · AMX sigue sin fuente primaria
 - **Hecho:** a las ~13:00 UTC no hay 6-K del 3T26 en EDGAR (el último es del 2-oct), el PDF del CDN da 404 con varias variantes de nombre y el sitio de inversionistas no tiene liga. La prensa da ingresos de 250,634 M, utilidad de 24,282 M y EBITDA de 102,156 M.

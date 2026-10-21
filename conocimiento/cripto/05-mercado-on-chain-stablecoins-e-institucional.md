@@ -527,3 +527,18 @@ Ficha [`fichas/2026-10-20-cftc-anprm-spot-apalancado.md`](fichas/2026-10-20-cftc
 - **Fecha más temprana de vigencia [I]:** ~ago-2027, con una ruta mínima propia.
 - **Para la cuenta [I]:** nada directo; es solo spot y no está en EUA. Refuerza que el saldo en el exchange es riesgo de contraparte. E5 sigue en ÁMBAR, sin cambio.
 - **Pendientes:** V.B, V.E-V.H y el Apéndice A; los comentarios en regulations.gov; la URL del episodio de Bankless con Selig (grado C hasta verificarlo).
+
+### Adenda (21-oct-2026): arbitraje entre exchanges, Makarov y Schoar (JFE 2020), y la prima de BTCMXN
+
+Ficha [`fichas/2026-10-21-makarov-schoar-prima-btcmxn.md`](fichas/2026-10-21-makarov-schoar-prima-btcmxn.md) (+ `.py`). Segundo paper de la cola académica del Doctorado.
+- **Paper [H, A; versión aceptada íntegra, LSE]:**
+  - En 2017-18 las primas entre países fueron grandes y se movían juntas: Corea >15% y Japón ~10%. Dentro de un mismo país, <1%.
+  - **México (Bitso): prima 2.7% y beta de arbitraje 0.078** (tabla 5).
+  - La causa son los controles de capital, no los costos (50-75 pb).
+  - El volumen firmado común explica 80-85% del rendimiento diario: 10,000 BTC mueven ~3-4%.
+- **Réplica en BTCMXN de Binance, 90 días [I, A en datos]:**
+  - prima media +0.034%, p5/p95 ±0.25%, vida media 0.4 h;
+  - −0.30 pp de prima por cada +1% del USD/MXN en la hora: el libro en pesos se rezaga ~30%;
+  - beta de presión ~0.0045 contra el rendimiento de 7 días.
+  - La prima mexicana desapareció, como anticipaba el paper con las stablecoins.
+- **Para la cuenta [O]:** E9 es liquidez, no precio. Hay que medirla contra el implícito, con un umbral ÁMBAR de compra < −1.0% (propuesta con el gestor de riesgo). La salida va con orden límite al implícito −0.3%. Bitso hoy tiene un libro en pesos ~28 veces más profundo a −0.5%.
