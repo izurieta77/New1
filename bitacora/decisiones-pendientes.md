@@ -1091,3 +1091,4 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** seguir el precedente: abierta (informativa), cruce confirmado al cierre en UPRO (−3.44%), QQQM (−2.68%) y BTC (−3.05% a −3.11% en pesos); la revisa la pre-apertura del 23-oct.
   - **Por qué:** es lo conservador; cerrarla con el cruce vigente ocultaría una alta que el decisor vespertino y el comité del 23-oct deben ver.
   - **Estado:** Abierto → pre-apertura del 23-oct (cerrarla o sustituirla).
+- **Cierre 22-oct 16:17 CDMX (22:18 UTC):** E9 vuelve a VERDE (0.291%). Se cierra el episodio ÁMBAR del 22-oct. Sigue pendiente con el gestor de riesgo la propuesta de umbral. **Estado:** Cerrado (episodio).
