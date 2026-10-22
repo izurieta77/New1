@@ -2,7 +2,7 @@
 
 > Métrica: TWR en MXN de la cuenta combinada (GBM + Binance), con GBM y Binance también por separado. **CETES 28:** con `BANXICO_TOKEN` en el entorno, `python3 herramientas/banxico.py` da la tasa oficial de subasta (SIE SF43936; al 24-sep-2026: 6.15% anual); sin token, se usa el proxy anotado y se dice que es proxy. Solo se registran datos que reporte el dueño en `competencia/rivales.csv`. No se atribuye habilidad solo por el saldo final. Temporada: 28-sep-2026 al 28-ene-2027.
 
-Actualizado: **2026-10-21 (cierre)** para los cuatro libros de Claude (fila del 21-oct de cada `equity.csv`) y para los cuatro rivales (valuación de cierre del 21-oct con las posiciones reportadas por el dueño; precios y tipo de cambio en `competencia/valuacion-real-2026-10-21.md`). El peso perdió 1.39% en el día (USD/MXN 18.6692), lo que sube el valor en MXN de todo lo que está en dólares.
+Actualizado: **2026-10-21 (cierre)** para los cuatro libros de Claude (fila del 21-oct de cada `equity.csv`) y para los cuatro rivales (valuación de cierre del 21-oct con las posiciones reportadas por el dueño; precios y tipo de cambio en `competencia/valuacion-real-2026-10-21.md`). El peso perdió 1.39% en el día [Conciliación 22-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-21.md` §6: el dólar subió **1.38%** y el peso perdió **1.37%**] (USD/MXN 18.6692), lo que sube el valor en MXN de todo lo que está en dólares.
 
 **Meta del dueño para las tres IAs (25-sep-2026):** +40% mínimo, +60% bueno, +200% excepcional en la temporada. Cuando haya datos, se marca por cuenta si la alcanzó (`config/parametros.json` → `meta_temporada_dueno`).
 

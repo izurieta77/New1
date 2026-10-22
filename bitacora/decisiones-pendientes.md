@@ -1002,20 +1002,20 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **P0155, umbral de 21.07 contra la barra de 21.12.** La barra diaria de Yahoo AMXB.MX del 20-oct dice 21.12 (probablemente la subasta de cierre), y `regularMarketPrice` dice 21.07 (último a las 19:59:57 UTC). La pregunta fija el umbral literal en 21.07. **Decidí:** dejar el umbral literal de 21.07 y compararlo con la barra diaria del 21-oct. Si el cierre cae entre 21.07 y 21.12, quien resuelva lo marca para el árbitro, no lo decide solo.
 - **P0078 y P0084 resueltos antes de su fecha (22-oct).** El criterio dice "primer dato publicado". FRED ya publicó DCOILWTICO del 14-oct = 101.91. **Decidí:** resolver los dos en 1, porque el dato que manda el criterio ya existe y no hay forma de que cambie el resultado (muy lejos de 80 y de 90). La conciliación puede revertirlo si prefiere esperar a la fecha.
 - **Nota de proceso, error mío.** Al consultar `data.sec.gov/submissions` (AMX), puse en el User-Agent el correo del dueño en vez de uno genérico. Fue una sola consulta de solo lectura a la SEC, que exige un contacto en el User-Agent. **Corrección:** las consultas a EDGAR usan un User-Agent genérico, como la pre-apertura. No hace falta otra acción.
-- **Estado:** Abierto → conciliación de la noche del 21-oct (P0155, P0078 y P0084).
+- **Estado:** Abierto → conciliación de la noche del 21-oct (P0155, P0078 y P0084). **[Conciliación 22-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-21.md` §4-§5]: Cerrado.** P0155 = SÍ ratificado (22.71 > 21.07 y > 21.12). P0078 y P0084: resolución anticipada ratificada, con aviso de cifra (la EIA da 96.34 para el WTI del 14-oct, no 101.91; el resultado es SÍ con cualquiera).
 - **Nota del orquestador (21-oct 13:35 UTC):** el orquestador cometió el mismo error el 20-oct, a las 15:05 CDMX: puso el correo del dueño en el User-Agent de una consulta de solo lectura a sec.gov para verificar el 8-K de Netflix. **Regla desde hoy:** las consultas a EDGAR usan un User-Agent genérico sin datos personales. **Estado:** Cerrado.
 
 ## 2026-10-21 · inteligencia (rutina 7, 11:05 CDMX) · dos dudas y una fuente nueva
 - **P0049, P0069 y P0085 con FRED en mantenimiento.** A las 17:1x UTC, fredgraph.csv devuelve "Site Maintenance" en las tres series. La EIA, de donde FRED toma esas series (publicación del 21-oct), da para el 16-oct un Brent RBRTE de 119.33 y un Henry Hub de 3.22. Con eso P0049 (≥ 100), P0069 (≥ 110) y P0085 (≥ 3.20) serían SÍ. **Decidí:** no resolver, porque el criterio dice FRED. P0085 queda a solo 2 centavos del umbral, y si FRED vuelve, basta una lectura. Si FRED sigue caído al vencer P0085 (22-oct), propongo a la conciliación resolverlos con la EIA como fuente de origen, con nota.
 - **El WTI no cuadra entre FRED y la EIA.** A las 07:05, FRED DCOILWTICO dio 100.86 el 13-oct y 101.91 el 14-oct. La EIA (RWTC, publicación del 21-oct) da 95.39 y 96.34. El Brent (126.55) y el Henry Hub (3.22) del 14-oct sí cuadran. **No cambia** P0078 ni P0084 (≥ 80 y ≥ 90 se cumplen con las dos fuentes), pero alguna lectura está mal o hubo una revisión. **Decidí:** dejar los resultados y pedir que se vuelva a leer DCOILWTICO cuando FRED regrese.
 - **Fuente nueva del FIX sin `BANXICO_TOKEN`:** el DOF publica el FIX de Banxico en `https://sidofqa.segob.gob.mx/dof/sidof/indicadores/158/<dd-mm-aaaa>/<dd-mm-aaaa>` (JSON). La fecha es la de publicación en el DOF, un día hábil después de que se determina el FIX: el del 20-oct es 18.4200 (DOF del 21-oct) y el del 19-oct es 18.4253. **Propuesta** para el bloque de trabajo continuo: que `herramientas/fx_alerta.py` lo use como respaldo del FIX en lugar de los cierres de Yahoo reetiquetados. No modifiqué la herramienta (solo lectura).
-- **Estado:** Abierto → conciliación de la noche del 21-oct.
+- **Estado:** Abierto → conciliación de la noche del 21-oct. **[Conciliación 22-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-21.md` §5 y §7]:** P0049 y P0069 resueltos SÍ con la EIA (RBRTE del 16-oct = 119.33), por la cláusula "primer dato publicado"; P0085 no tiene esa cláusula, así que lo resuelve el 22-oct FRED o, si sigue caído, la conciliación de esa noche. WTI FRED contra EIA: aviso de cifra, sin efecto. FIX del DOF: propuesta para el trabajo continuo (herramienta). Cerrado en lo de la conciliación.
 
 ## 2026-10-21 · laboratorio (rutina 2) · R18: el cortacircuitos de −8% se tocaría en ~48% de los trimestres
 - **Hallazgo (A y B concordantes):** con la mezcla vigente del papel (UPRO 26.9%), la probabilidad histórica 1990-2026 de caer ≥ 8% bajo el máximo en 63 días es **~48%**; sin UPRO, ~30%; con UPRO al 13.5%, ~36%. En MXN, 43%.
   - **Qué decidí:** no tocar cortacircuitos, pesos ni cartera. Los niveles los fijó el dueño (25-sep) y el tamaño es del comité.
   - **Punto para el comité del 23-oct (junto con R16 y R17):** el −8% está dentro del ruido normal de esta mezcla. Opciones a discutir: (a) bajar UPRO (~13.5% quita 11 pp); (b) proponer al dueño recalibrar los niveles a la volatilidad de la cartera; (c) dejarlo así sabiendo que el primer nivel se disparará con frecuencia.
-- **Estado:** Abierto → comité del 23-oct; dueño si se propone recalibrar.
+- **Estado:** Abierto → comité del 23-oct; dueño si se propone recalibrar. **[Conciliación 22-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-21.md` §1, vinculante]: la lectura del 48% no aplica a la cuenta** (`arena_agresivo`, primer nivel −12%). El comité lee P ≈ 21% (21.0% A / 21.4% B) y ~4.6 pp de mejora al bajar UPRO a 13.5%. Recálculo propio cuadra. Cerrado en lo del registro; el tamaño sigue con el comité.
 
 ## 2026-10-21 · laboratorio · AMX resuelto con fuente primaria de la BMV
 - **Hecho:** evento relevante de la BMV del 20-oct a las 15:37 (`bmv.com.mx/docs-pub/eventemi/eventemi_1596486_1.pdf`), cotejado con el XBRL IFRS (ifrsxbrl_1596479). Post-mortem en `empresas/AMXB.MX/post-mortem-2026-10-21.md`; 4 pronósticos resueltos en `resoluciones.csv`.
@@ -1028,7 +1028,7 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Hecho:** a las 21:0x UTC, fredgraph.csv no responde (código 000, dos intentos de hasta 60 s) en DCOILBRENTEU, DHHNGSP y DCOILWTICO. P0049 y P0069 tienen fecha de resolución de hoy y su criterio dice "si FRED no lo publica al 21-oct, primer dato publicado".
 - **Decidí:** no resolverlos hoy y dejarlos para mañana, como propuso la corrida de las 11:05. Si FRED vuelve, se resuelven con su primer dato del 16-oct (la EIA da Brent 119.33, así que se espera SÍ en los dos). Si sigue caído al vencer P0085 (22-oct), se mantiene la propuesta de las 11:05: la conciliación decide si se usa la EIA (fuente de origen de esas series) con nota.
 - **Por qué:** es la opción conservadora: el criterio literal nombra a FRED y "primer dato publicado" no tiene fecha límite.
-- **Estado:** Abierto → inteligencia 20:05 / conciliación de la noche del 21-oct.
+- **Estado:** Abierto → inteligencia 20:05 / conciliación de la noche del 21-oct. **[Conciliación 22-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-21.md` §5]: Cerrado.** Resueltos SÍ con la EIA (119.33), reabribles si FRED contradice.
 
 ## 2026-10-21 · revisión (rutina 11, 21-oct 23:58 UTC) · R18 mide el cortacircuitos del perfil estándar y lista para el expediente del 23-oct
 - **Hecho:** R18 y AC-24 toman −8%/−12% de `config/parametros.json` → `cortacircuitos_drawdown` (perfil estándar). El papel `arena-claude` usa `arena_agresivo` (−12% reduce 50% táctico; −20% sin apalancados; −28%; −35%), según `herramientas/parametros.py` L66-L67. La cifra aplicable ya calculada es P(≥ 12% en 63 días) = 21.0% (A) / 21.4% (B) con UPRO al 26.9%.
@@ -1041,11 +1041,26 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - (e) R12, duplicados P0032/P0037, P0118 y zona horaria de `fecha_creacion`.
   - (f) P0078 y P0084 resueltos antes de su fecha; P0049, P0069 y P0085 con FRED caído.
   - (g) Umbral de E9 (gestor de riesgo).
-- **Estado:** Abierto → laboratorio (adenda), conciliación de esta noche (fallo sobre R18) y auditoría semanal o comité del 23-oct (expediente).
+- **Estado:** Abierto → laboratorio (adenda), conciliación de esta noche (fallo sobre R18) y auditoría semanal o comité del 23-oct (expediente). **[Conciliación 22-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-21.md` §1-§2]: Cerrado.** Adenda ratificada; estado "No replicado" respecto de H1 literal. El expediente lo arma la auditoría semanal del 23-oct en `bitacora/comite/2026-10-23-expediente.md`, antes del comité, con la lista (a)-(i) del fallo §2 como mínimo.
 
 ## 2026-10-22 · trabajo continuo (01:15 UTC) · R18 corregido al perfil `arena_agresivo`: el punto del comité cambia
 - **Hecho:** adenda fechada en `laboratorio/replicas/R18-tamano-upro-cortacircuitos.md` y en `laboratorio/auditorias/AC-24-R18/informe.md`, más una nota en la fila R18 de `tabla-maestra.md`. Con UPRO al 26.9%, P(tocar −12% en 63 días) = 21.0% (A) / 21.4% (B); P(−20%) = 3.1% (A); P(−28%) = 0.2% (A). Bajar UPRO a 13.5% quita ~4.6 pp, no 11.
 - **Corrige el punto del laboratorio del 21-oct** (entrada "R18: el cortacircuitos de −8%…"): **en esta cuenta, −8% no dispara nada.** Las opciones (a)-(c) de esa entrada se discuten con el 21% y no con el 48%. La opción (b), recalibrar niveles, pierde casi toda su base.
 - **Duda que queda:** P(−20%) y P(−28%) solo tienen lado A. Si el comité los usa, el auditor debe recalcularlos antes.
 - **Duda que queda:** el brief del 20-oct L132 dijo "el siguiente nivel es −8%". Hay que verificar que `herramientas/portafolio.py` L540 y `herramientas/supervision.py` L102 reciban los parámetros efectivos (`parametros_efectivos("arena_agresivo")`) para la cuenta GBM. Lo hace la próxima pre-apertura o la auditoría semanal; no se tocó código en esta corrida.
-- **Estado:** Cerrado (adenda) → comité del 23-oct: punto (d) con la adenda. Abierto: la verificación del perfil en el código de reportes.
+- **Estado:** Cerrado (adenda) → comité del 23-oct: punto (d) con la adenda. Abierto: la verificación del perfil en el código de reportes. **[Conciliación 22-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-21.md` §1 c]: Cerrado.** `portafolio.py` L633 y `supervision.py` L232 usan `parametros_efectivos("arena_agresivo")`; `reporte` imprime "Siguiente nivel: -12%". El −8% del brief del 20-oct fue de transcripción (nota fechada en L132).
+
+## 2026-10-22 · conciliación (noche del 21-oct) · Cierres de la revisión del 21-oct
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-21.md`):
+  - **R18 (§1, vinculante):** el comité lee 21%, no 48%. La adenda está verificada con un recálculo propio y el código de reportes usa el perfil correcto.
+  - **Expediente del 23-oct (§2):** lo arma la auditoría semanal, con la lista (a)-(i).
+  - **VT (§3):** EN ESPERA. El 22-oct solo hay línea VIGENTE si el dueño confirma por escrito y se cumple el semáforo. **Desde el 23-oct la boleta caduca** y decide el comité.
+  - **Pronósticos (§4-§5):** P0155 y P0145 ratificados. P0078 y P0084 ratificados, con aviso de cifra del WTI. P0049 y P0069 resueltos SÍ con la EIA. P0085 queda para el 22-oct.
+  - **Menores (§6):** notas fechadas en los briefs del 20 y 21-oct, el marcador, `valuacion-real-2026-10-21.md` y la adenda de R18; 3 filas nuevas y 1 nota en el registro de errores.
+- **Brier:** 0.2074 (n = 63), NO cumple ≤ 0.20. **Suite:** sin cambios de código (corrida de control en la conciliación).
+- **Escalados:**
+  - **dueño:** VT, los 10,940, la búsqueda por ticker y los latidos;
+  - **comité:** el efectivo real, "¿en qué invertimos?" y el tamaño de UPRO;
+  - **orquestador:** el expediente y el formato de la tabla FX;
+  - **gestor de riesgo:** E9.
+- **Estado:** Cerrado en lo de la conciliación; lo escalado sigue abierto con su responsable.
