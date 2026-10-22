@@ -91,3 +91,9 @@ Fondeo a 2T26: captación de 25,499, CEBURES de 17,133, préstamos interbancario
 11. Conocimiento interno `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.1, §4.7 y §4.8 (25-sep-2026).
 12. Conocimiento interno `conocimiento/23-geopolitica-y-riesgo-politico-global.md`, cronología de la guerra de Irán (25-sep-2026).
 13. Gentera, Relación con Inversionistas, calendario (consultado el 25-sep-2026): https://www.gentera.com.mx/gentera/relacion-inversionistas
+
+## Adenda 2026-10-22 (post-mortem del 3T26; los pronósticos de la §8 no se modifican)
+- **Resultado 3T26** (BMV, evento relevante del 21-oct, [eventemi_1596864_1.pdf](https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596864_1.pdf)): ingresos totales de la operaciónᵃ de **Ps 13,610 M** (cálculo propio con la definición de la §8), UN controladora de 2,261 M y **UPA de ~1.43** (1,579.2 M acciones).
+- **Pronósticos:** ingresos **fuera** del intervalo por 10 M (arriba del p90; error −2.65%); UPA dentro (error +1.4%). Binario de ingresos: Sí (Brier 0.2209); binario de UPA: No (Brier 0.2025). Detalle en `resoluciones.csv` y `post-mortem-2026-10-22.md`.
+- **§7:** la etapa 3 subió a **4.57%** (umbral bajista: 4.5%) y el costo de riesgo a 15.8% (umbral bajista: 16%); provisiones de 3,753 M (+31.7% a/a). El fondeo más barato (gasto por intereses −18.6% a/a) sostuvo el margen. Señal mixta con sesgo bajista en calidad de activos; probabilidades sin cambio hasta la revisión de la ficha.
+- **§4.10:** el segundo pago del dividendo (~Ps 1,642.9 M) se fija para el **13-nov-2026**.

@@ -109,3 +109,8 @@ Verificador adversarial. Fuentes primarias leídas: Alpek 2Q26 Results (íntegro
 **No verificado o pendiente:** la fecha de 3T26 (no hay calendario de la emisora accesible); las cifras de Brent antes de la guerra y de Polymarket (conocimiento interno [11]); el precio objetivo del agregador; las acciones en circulación de Yahoo (2,098.9 M contra 2,084 M promedio en el reporte, una diferencia de 0.7% en la capitalización).
 
 **Veredicto:** confiable. Las cifras del último reporte, el consenso, la guía y los hechos de la cadena causal son correctos. Había una incoherencia aritmética entre el punto de ingresos y su supuesto de precio, corregida en el supuesto sin mover el pronóstico.
+
+## Adenda 2026-10-22 (post-mortem del 3T26; los pronósticos de la §8 no se modifican)
+- **Resultado 3T26** (reporte trimestral XBRL entregado a la BMV el 21-oct, [ifrsxbrl_1596828_2026-03_1.zip](https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596828_2026-03_1.zip)): ingresos de **Ps 37,589 M** (US$2,179 M), EBITDA comparable de **US$276 M** (reportado 303), utilidad controladora de 2,421 M y **UPA de 1.16**.
+- **Pronósticos:** ingresos **fuera** del intervalo (arriba del p90; error −9.55%: el supuesto de precio −6.5% t/t fue +1%); UPA dentro, cerca del p90 (error −48%). Binarios: ingresos > 33,770, Sí (Brier 0.2209); EBITDA comparable > 200, Sí (Brier 0.1444). Detalle en `resoluciones.csv` y `post-mortem-2026-10-22.md`.
+- **Guía 2026 de EBITDA comparable elevada a US$990 M** (antes 750-800), arriba del rango del escenario base (780-850); deuda neta/EBITDA de 1.9x. El año 2026 se mueve hacia el alcista; 2027 sigue dependiendo de Ormuz. Probabilidades sin cambio hasta la revisión de la ficha.

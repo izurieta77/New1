@@ -199,3 +199,8 @@ El promedio es de 12.7x; el P/U actual está en línea.
 5. Consenso y fechas (25-sep-2026): TradingView https://www.tradingview.com/symbols/BMV-BOLSA%2FA/forecast/ · Yahoo Finance quoteSummary BOLSAA.MX
 6. Yahoo Finance, chart de BOLSAA.MX y MXN=X; quoteSummary de B3SA3.SA, NUAM.SN, ICE y CME (25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/BOLSAA.MX · `empresas/BOLSAA.MX/dossier-2026-09-25.md`
 7. Conocimiento interno: `conocimiento/16-macro-global-divisas-y-el-peso.md` (Banxico 6.50%, peso) · `23-geopolitica-y-riesgo-politico-global.md` (guerra de Irán, mar-2026) · `24-politica-publica-regulacion-y-mercados.md` §4.8-4.10 · `03-maestria-valuacion-y-analisis-fundamental.md` §2.3 y §2.7
+
+## Adenda 2026-10-22 (post-mortem del 3T26; los pronósticos de la §8 no se modifican)
+- **Resultado 3T26** (comunicado del 20-oct, [GBMV-doc-BMV_3T26_esp.pdf](https://www.bmv.com.mx/docs-pub/reporteTrimestral/GBMV-doc-BMV_3T26_esp.pdf)): ingresos de **Ps 1,161 M** (+5.4% a/a; −3.1% t/t), gastos de 606 M, utilidad neta de 396.9 M y **UPA de 0.72** (551.6 M acciones). El XBRL da UPA de 0.80 con utilidad consolidada; el criterio usa la del comunicado.
+- **Pronósticos:** ingresos dentro (error +1.64%) y UPA dentro (error −1.39%), ambos mejores que el consenso. Binarios: ingresos > 1,200, No (Brier 0.1225); UPA > 0.74, No (Brier 0.09). Detalle en `resoluciones.csv` y `post-mortem-2026-10-22.md`.
+- **§7:** VOPD de capitales de Ps 17,116 M, debajo del umbral bajista (~18 mil M); gasto de 606 M, debajo del umbral de 620 M; derivados (+19%) y OTC (+11%) compensan. Señal mixta; probabilidades sin cambio hasta la revisión de la ficha.
