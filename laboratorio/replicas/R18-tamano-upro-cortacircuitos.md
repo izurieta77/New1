@@ -81,3 +81,24 @@ Con ventanas sin traslape, B da 49.3% para la vigente.
   - Los cortacircuitos se diseñaron como freno ante algo anormal. Con esta mezcla se dispararían por volatilidad normal, y cada disparo obliga a reducir el satélite a la mitad: vender abajo, la misma mecánica que R16 midió en el stop.
 - **No es una recomendación de cambio.** Es insumo para el comité: ajustar el tamaño (UPRO a ~13.5% baja 11 pp) o recalibrar los niveles a la volatilidad de la mezcla. Las dos son decisiones del comité y del dueño (los cortacircuitos los fijó el dueño el 25-sep).
 - **Etiqueta:** no aplica (calibración de riesgo, no prueba de ventaja).
+
+## Adenda 2026-10-22 01:15 UTC (trabajo continuo) · perfil de riesgo correcto: `arena_agresivo`
+> El pre-registro y los resultados de arriba no se editan. Esta adenda responde a la revisión del 21-oct §1.1 (`bitacora/decisiones-pendientes.md`, entrada de la revisión del 21-oct).
+
+- **Hecho (error de etiqueta):** H1 y el juicio usan el −8% de `config/parametros.json` → `cortacircuitos_drawdown`, que es el perfil **estándar**. El papel GBM (`arena-claude`) corre con el perfil **`arena_agresivo`** (`config/parametros.json` → `perfiles_riesgo.arena_agresivo`; `herramientas/parametros.py`, `parametros_efectivos`). Sus niveles son: −12% reduce el táctico 50%, −20% sin ETF apalancados, −28% pausa 2 semanas y −35% límite duro. **En esta cuenta, −8% no dispara nada.**
+- **El estado sigue "No replicado"**, porque H1 está escrita literalmente sobre el −8%. Lo que cambia es la lectura para el comité.
+- **Recálculo con las funciones de `R18.py`** (`cargar`, `rendimientos`, `curva`, `prob_toque`; H = 63, ventanas traslapadas), sin modificar el script. Lado A (Yahoo), con B donde ya existía la cifra:
+
+| UPRO | P(≥ 12%) A / B | P(≥ 20%) A | P(≥ 28%) A |
+|---|---|---|---|
+| 0% | 14.8% / 15.3% | 3.8% | 1.2% |
+| 13.5% | 16.4% / 16.6% | 4.2% | 1.0% |
+| **26.9% (vigente)** | **21.0% / 21.4%** | **3.1%** | **0.2%** |
+| 40% | 26.5% / 26.9% | 4.1% | 0.0% |
+
+- **Lectura corregida:**
+  - El primer nivel aplicable (−12%) se tocaría en **~21% de los trimestres**, no en 48%. Sigue arriba del umbral de 15% del pre-registro, pero es de otro orden de magnitud.
+  - Bajar UPRO a 13.5% quita **~4.6 pp** (no 11 pp). Sin UPRO, la mezcla aún lo toca en ~15%.
+  - El nivel de −20% (el que quita los apalancados) queda en 3-4% en todas las variantes. No es monótono en UPRO porque el filtro V0 saca al 3x en las caídas largas; con n chico de episodios, esa diferencia es ruido.
+  - P(≥ 20%) y P(≥ 28%) solo tienen lado A. Antes de usarlos para una decisión, falta que B los recalcule.
+- **Para el comité del 23-oct:** leer esta adenda, no el 48%. El argumento "el primer nivel se dispara con la volatilidad normal" pierde fuerza. Queda una pregunta menor: ¿21% por trimestre es aceptable para un freno que recorta el táctico a la mitad?

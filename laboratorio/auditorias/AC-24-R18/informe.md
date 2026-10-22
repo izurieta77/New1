@@ -51,3 +51,8 @@ Con ventanas sin traslape (142 trimestres de 63 días), la mezcla vigente da 49.
 - **Rendimiento total aproximado:** el TR viene de multpl (mensual), no de un índice TR oficial.
 - **NDX sin dividendos,** como en A, lo que subestima levemente el rendimiento de QQQM y no afecta la métrica de caída.
 - **Las ventanas traslapadas no son independientes.** Por eso se agrega la cifra con ventanas sin traslape.
+
+## Adenda 2026-10-22 01:15 UTC (orquestador, trabajo continuo) · perfil `arena_agresivo`
+- Este informe audita contra el −8% del perfil estándar, igual que A. El papel corre con `arena_agresivo` (−12%, −20%, −28%, −35%). Ver la adenda en `replicas/R18-tamano-upro-cortacircuitos.md`.
+- La columna "P ≥ 12%" de B ya es la cifra aplicable: **21.4%** con UPRO al 26.9% (A: 21.0%). P(≥ 20%) y P(≥ 28%) no los calculó B; quedan pendientes para una auditoría futura.
+- El informe no se reescribe.

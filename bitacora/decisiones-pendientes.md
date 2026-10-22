@@ -1042,3 +1042,10 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - (f) P0078 y P0084 resueltos antes de su fecha; P0049, P0069 y P0085 con FRED caído.
   - (g) Umbral de E9 (gestor de riesgo).
 - **Estado:** Abierto → laboratorio (adenda), conciliación de esta noche (fallo sobre R18) y auditoría semanal o comité del 23-oct (expediente).
+
+## 2026-10-22 · trabajo continuo (01:15 UTC) · R18 corregido al perfil `arena_agresivo`: el punto del comité cambia
+- **Hecho:** adenda fechada en `laboratorio/replicas/R18-tamano-upro-cortacircuitos.md` y en `laboratorio/auditorias/AC-24-R18/informe.md`, más una nota en la fila R18 de `tabla-maestra.md`. Con UPRO al 26.9%, P(tocar −12% en 63 días) = 21.0% (A) / 21.4% (B); P(−20%) = 3.1% (A); P(−28%) = 0.2% (A). Bajar UPRO a 13.5% quita ~4.6 pp, no 11.
+- **Corrige el punto del laboratorio del 21-oct** (entrada "R18: el cortacircuitos de −8%…"): **en esta cuenta, −8% no dispara nada.** Las opciones (a)-(c) de esa entrada se discuten con el 21% y no con el 48%. La opción (b), recalibrar niveles, pierde casi toda su base.
+- **Duda que queda:** P(−20%) y P(−28%) solo tienen lado A. Si el comité los usa, el auditor debe recalcularlos antes.
+- **Duda que queda:** el brief del 20-oct L132 dijo "el siguiente nivel es −8%". Hay que verificar que `herramientas/portafolio.py` L540 y `herramientas/supervision.py` L102 reciban los parámetros efectivos (`parametros_efectivos("arena_agresivo")`) para la cuenta GBM. Lo hace la próxima pre-apertura o la auditoría semanal; no se tocó código en esta corrida.
+- **Estado:** Cerrado (adenda) → comité del 23-oct: punto (d) con la adenda. Abierto: la verificación del perfil en el código de reportes.
