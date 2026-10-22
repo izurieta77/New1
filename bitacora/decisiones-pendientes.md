@@ -1075,3 +1075,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **P0068 (guía de capex de Meta) y P0158 (INPC de la 1.ª quincena de octubre ≥ 3.50%):** tienen fecha de resolución del 6-nov y del 26-oct, pero el documento que nombra el criterio ya salió y no puede cambiar. El 8-K de Meta del 21-oct da 135-145 (antes 130-145), y el INEGI (boletín 633/26) da 3.62%. **Decidí:** resolver los dos en SÍ hoy, con el mismo precedente que P0078 y P0084 (conciliación del 22-oct).
 - **Por qué:** en los tres casos el dato es primario (A) y el resultado no depende de esperar. La conciliación puede revertirlos si prefiere la fecha o la fuente literal.
 - **Estado:** Abierto → conciliación de la noche del 22-oct (ratificar P0041, P0068 y P0158).
+
+## 2026-10-22 · cripto (pulso 09:41 CDMX) · E9 ÁMBAR dos pulsos seguidos (tercer episodio) → aviso al gestor de riesgo
+
+- **Hecho:** el diferencial de BTCMXN fue 0.753% a las 08:17 y 0.861% a las 09:41, con la compra a −0.35/−0.27% del implícito. Lo abre el lado de venta: el costo de salida es ~0.3%.
+- **Qué decidí:** sin operación; salida con orden límite o por Bitso. Es el tercer episodio en tres días con costo de salida < 1%, así que reitero al gestor de riesgo la propuesta de umbral (compra < −1.0% del implícito en dos pulsos), que hoy dejaría a E9 en VERDE.
+- **Estado:** Abierto → gestor de riesgo.
