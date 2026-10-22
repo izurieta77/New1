@@ -1069,3 +1069,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Hecho:** `herramientas/portafolio.py` (perfil por defecto `arena_agresivo`, L602/L633), `herramientas/supervision.py` L232 y `herramientas/fx_alerta.py` L725-L729 usan `parametros_efectivos("arena_agresivo")`. `portafolio.py reporte` da "Siguiente nivel: −12%". El "−8%" del brief del 20-oct salió de una llamada manual a `riesgo.estado_cortacircuitos` sin parámetros, no del código de las rutinas.
 - **Qué decidí:** no tocar el código. Regla para el brief: el cortacircuitos se toma de `portafolio.py reporte`.
 - **Estado:** Cerrado (la duda abierta en el trabajo continuo del 22-oct 01:15).
+
+## 2026-10-22 · inteligencia (rutina 7, 07:05 CDMX) · tres resoluciones con fuente o fecha que no son las literales
+- **P0041 (FIX ≥ 18.50):** el criterio dice "FIX SF43718 (Banxico)". Sin `BANXICO_TOKEN` no se puede leer el SIE. Usé el DOF: el FIX del 21-oct es **18.6425** (publicación del 22-oct). El DOF publica el mismo FIX que Banxico determina. **Decidí:** resolver SÍ con nota, reabrible si el SIE contradice.
+- **P0068 (guía de capex de Meta) y P0158 (INPC de la 1.ª quincena de octubre ≥ 3.50%):** tienen fecha de resolución del 6-nov y del 26-oct, pero el documento que nombra el criterio ya salió y no puede cambiar. El 8-K de Meta del 21-oct da 135-145 (antes 130-145), y el INEGI (boletín 633/26) da 3.62%. **Decidí:** resolver los dos en SÍ hoy, con el mismo precedente que P0078 y P0084 (conciliación del 22-oct).
+- **Por qué:** en los tres casos el dato es primario (A) y el resultado no depende de esperar. La conciliación puede revertirlos si prefiere la fecha o la fuente literal.
+- **Estado:** Abierto → conciliación de la noche del 22-oct (ratificar P0041, P0068 y P0158).
