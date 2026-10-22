@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+GENTERA.MX-ingresos_totales_operacion-3T26,2026-10-22,13610,,-2.65,no,,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596864_1.pdf
+GENTERA.MX-upa-3T26,2026-10-22,1.43,,1.40,si,,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596864_1.pdf
+GENTERA.MX-ingresos_mayor_consenso-3T26,2026-10-22,13610,1,,,0.2209,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596864_1.pdf
+GENTERA.MX-upa_mayor_consenso-3T26,2026-10-22,1.43,0,,,0.2025,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596864_1.pdf

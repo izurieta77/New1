@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+ALPEKA.MX-ingresos-3T26,2026-10-22,37589,,-9.55,no,,https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596828_2026-03_1.zip
+ALPEKA.MX-upa-3T26,2026-10-22,1.16,,-48.28,si,,https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596828_2026-03_1.zip
+ALPEKA.MX-ingresos_mayor_consenso-3T26,2026-10-22,37589,1,,,0.2209,https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596828_2026-03_1.zip
+ALPEKA.MX-ebitda_comparable_mayor_200-3T26,2026-10-22,276,1,,,0.1444,https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596828_2026-03_1.zip

@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+BOLSAA.MX-ingresos-3T26,2026-10-22,1161,,1.64,si,,https://www.bmv.com.mx/docs-pub/reporteTrimestral/GBMV-doc-BMV_3T26_esp.pdf
+BOLSAA.MX-upa-3T26,2026-10-22,0.72,,-1.39,si,,https://www.bmv.com.mx/docs-pub/reporteTrimestral/GBMV-doc-BMV_3T26_esp.pdf
+BOLSAA.MX-ingresos_mayor_consenso-3T26,2026-10-22,1161,0,,,0.1225,https://www.bmv.com.mx/docs-pub/reporteTrimestral/GBMV-doc-BMV_3T26_esp.pdf
+BOLSAA.MX-upa_mayor_consenso-3T26,2026-10-22,0.72,0,,,0.0900,https://www.bmv.com.mx/docs-pub/reporteTrimestral/GBMV-doc-BMV_3T26_esp.pdf
