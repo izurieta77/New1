@@ -1029,3 +1029,16 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Decidí:** no resolverlos hoy y dejarlos para mañana, como propuso la corrida de las 11:05. Si FRED vuelve, se resuelven con su primer dato del 16-oct (la EIA da Brent 119.33, así que se espera SÍ en los dos). Si sigue caído al vencer P0085 (22-oct), se mantiene la propuesta de las 11:05: la conciliación decide si se usa la EIA (fuente de origen de esas series) con nota.
 - **Por qué:** es la opción conservadora: el criterio literal nombra a FRED y "primer dato publicado" no tiene fecha límite.
 - **Estado:** Abierto → inteligencia 20:05 / conciliación de la noche del 21-oct.
+
+## 2026-10-21 · revisión (rutina 11, 21-oct 23:58 UTC) · R18 mide el cortacircuitos del perfil estándar y lista para el expediente del 23-oct
+- **Hecho:** R18 y AC-24 toman −8%/−12% de `config/parametros.json` → `cortacircuitos_drawdown` (perfil estándar). El papel `arena-claude` usa `arena_agresivo` (−12% reduce 50% táctico; −20% sin apalancados; −28%; −35%), según `herramientas/parametros.py` L66-L67. La cifra aplicable ya calculada es P(≥ 12% en 63 días) = 21.0% (A) / 21.4% (B) con UPRO al 26.9%.
+- **Qué decidí:** no cambiar el estado "No replicado", porque H1 está escrita literalmente sobre el −8%. Pido una adenda fechada en R18 y AC-24 con los niveles de `arena_agresivo` (−12% y −20%), sin reescribir el pre-registro, y que el comité lea la adenda y no la lectura del 48%. **Por qué:** es lo conservador. El error es de etiqueta y no movió órdenes, pero podía llevar a recortar UPRO con una premisa falsa.
+- **Lista mínima para el expediente del comité del 23-oct** (hoy está dispersa en este archivo):
+  - (a) VT: EN ESPERA sin confirmación escrita; la ventana cierra el 22-oct; alternativas RSP o VEA (W42).
+  - (b) "10,940 pesos" sin aclarar (el efectivo GBM de las tres IA suma 8,697.61) y la búsqueda por ticker VT/VEA/RSP/ACWI, ambos pendientes del dueño.
+  - (c) "¿En qué invertimos?" del dueño (20-oct).
+  - (d) R16, R17 y R18 con la corrección de arriba.
+  - (e) R12, duplicados P0032/P0037, P0118 y zona horaria de `fecha_creacion`.
+  - (f) P0078 y P0084 resueltos antes de su fecha; P0049, P0069 y P0085 con FRED caído.
+  - (g) Umbral de E9 (gestor de riesgo).
+- **Estado:** Abierto → laboratorio (adenda), conciliación de esta noche (fallo sobre R18) y auditoría semanal o comité del 23-oct (expediente).
