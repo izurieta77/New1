@@ -1,0 +1,6 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+Q.MX-ingresos-3T26,2026-10-22,19507,,0.99,si,,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596530_1.pdf
+Q.MX-prima_emitida-3T26,2026-10-22,18663,,-4.36,si,,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596530_1.pdf
+Q.MX-upa-3T26,2026-10-22,4.425,,-24.29,no,,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596530_1.pdf
+Q.MX-ingresos_mayor_consenso-3T26,2026-10-22,19507,1,,,0.0900,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596530_1.pdf
+Q.MX-upa_mayor_consenso-3T26,2026-10-22,4.425,1,,,0.3969,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596530_1.pdf

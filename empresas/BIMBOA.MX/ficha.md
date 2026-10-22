@@ -129,3 +129,10 @@ Verificador adversarial. Fuentes primarias leídas: reportes de Grupo Bimbo del 
 - UPA: aplicadas al consenso de 0.866, las sorpresas primarias dan 0.63-0.83 (mediana de 0.77). Una de ocho queda abajo del p10 (0.66) y ninguna llega al punto de 0.82. El intervalo no es estrecho, pero el **punto parece alto frente al sesgo histórico** (la UPA falló 8 de 8). No se cambió el pronóstico; queda como alerta para el post-mortem.
 
 **Veredicto:** muy confiable en cifras y guía, todas de fuente primaria y cuadradas. Hubo un error de conteo en el historial de sorpresas y una imprecisión de base en la guía de inflación. El pronóstico de UPA podría tener sesgo optimista.
+
+## Adenda 2026-10-22 (resultado del 3T26 y post-mortem)
+- **Fuente primaria:** comunicado "Grupo Bimbo Reports 3Q26 Results" del 22-oct ([PDF de RI](https://d2rwhogv2mrkk6.cloudfront.net/s3fs-public/eventos-2026/Grupo%20Bimbo%20Reports%203Q26%20Results.pdf?VersionId=sFGKSk8Jl28MvkT9bKXsoSaeviHg_1m8)) y XBRL del trimestre en la BMV, enviado el 22-oct a las 14:00 CDMX ([ifrsxbrl_1597181_2026-03_1.zip](https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1597181_2026-03_1.zip)).
+- **3T26:** ventas de Ps 106,061 M (−1.3%; +3.6% sin tipo de cambio); UAFIDA ajustada de 16,644 M (15.7%, +100 pb); costo financiero de 3,142 M; UN mayoritaria de 4,109 M (+22.1%); UPA de 0.96 (BMV); Norteamérica con margen de 10.8%; deuda neta / UAFIDA de 2.4x.
+- **§8:** ventas dentro del intervalo (error +0.23%); UPA dentro, a un centavo del p90 (error −14.6%). Binario de ventas > 106,340: No (Brier 0.25). Binario de margen > 14.7%: Sí (Brier 0.09). Los pronósticos del 25-sep no se modifican; el detalle está en `resoluciones.csv` y `post-mortem-2026-10-22.md`.
+- **§7:** Norteamérica quedó dentro del rango 10-11%, así que se mantiene el escenario base, con sesgo alcista por México y el desapalancamiento. La alerta de sesgo de UPA (8 de 8 debajo del consenso) no se repitió: +10.9% sobre el consenso.
+- **Dato:** el reporte da ventas del 3T25 de 107,427 M (la ficha usaba 107,421). El margen base de 14.69% no cambia.

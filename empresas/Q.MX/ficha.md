@@ -174,3 +174,10 @@ El P/VL actual está debajo del promedio de 2.55x.
 9. Consenso y fechas (25-sep-2026): TradingView https://www.tradingview.com/symbols/BMV-Q/forecast/ · Investing https://www.investing.com/equities/qualitas-controladora-sab-de-cv-earnings · Yahoo Finance quoteSummary Q.MX
 10. Yahoo Finance, chart de Q.MX, MXN=X, PGR y PSSA3.SA (25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/Q.MX · `empresas/Q.MX/dossier-2026-09-25.md`
 11. Conocimiento interno: `conocimiento/16-macro-global-divisas-y-el-peso.md` (Banxico 6.50%) · `24-politica-publica-regulacion-y-mercados.md` §4.7-4.8 · `03-maestria-valuacion-y-analisis-fundamental.md` §2.3 y §2.6
+
+## Adenda 2026-10-22 (resultado del 3T26 y post-mortem)
+- **Fuente primaria:** BMV, evento relevante "Q*- Reporte Trimestral 3T26" del 20-oct-2026 a las 17:05 CDMX ([eventemi_1596530_1.pdf](https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1596530_1.pdf)), cotejado con la información financiera acumulada de la BMV ([infinasg_1596511_2026-03_1.pdf](https://www.bmv.com.mx/docs-pub/infinasg/infinasg_1596511_2026-03_1.pdf)).
+- **3T26:** prima emitida de Ps 18,663 M (+7.7%); devengada de 18,200 M (+2.2%); RIF de 1,307 M; devengada + RIF = 19,507 M; siniestralidad de 63.4%; combinado de 92.7%; utilidad neta de 1,770 M (+2.1%); UPA de 4.425 con la convención de 400 M acciones.
+- **§8:** ingresos dentro del intervalo (error +0.99%) y prima emitida dentro (−4.36%). UPA **fuera** del intervalo, por arriba del p90 (error −24.3%). Binario de ingresos > 19,220: Sí (Brier 0.09). Binario de UPA > 3.53: Sí (Brier 0.3969). Los pronósticos del 25-sep no se modifican; el detalle está en `resoluciones.csv` y `post-mortem-2026-10-22.md`.
+- **§7:** se cumplió el disparador alcista de emisión (+5% o más). El combinado (92.7%) quedó a 0.7 pp del umbral alcista, y el ROE de 12 meses fue de 17.2%. Se mantiene el base con sesgo alcista, sin reasignar probabilidades.
+- **Lección clave:** la siniestralidad se sobreestimó porque se sumó el IVA a la base del 3T25 en lugar de usar los trimestres que ya lo traían.

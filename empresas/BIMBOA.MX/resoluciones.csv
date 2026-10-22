@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+BIMBOA.MX-ingresos-3T26,2026-10-22,106061,,0.23,si,,https://d2rwhogv2mrkk6.cloudfront.net/s3fs-public/eventos-2026/Grupo%20Bimbo%20Reports%203Q26%20Results.pdf?VersionId=sFGKSk8Jl28MvkT9bKXsoSaeviHg_1m8
+BIMBOA.MX-upa-3T26,2026-10-22,0.96,,-14.58,si,,https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1597181_2026-03_1.zip
+BIMBOA.MX-ingresos_mayor_consenso-3T26,2026-10-22,106061,0,,,0.2500,https://d2rwhogv2mrkk6.cloudfront.net/s3fs-public/eventos-2026/Grupo%20Bimbo%20Reports%203Q26%20Results.pdf?VersionId=sFGKSk8Jl28MvkT9bKXsoSaeviHg_1m8
+BIMBOA.MX-margen_uafida_mayor_3T25-3T26,2026-10-22,15.69,1,,,0.0900,https://d2rwhogv2mrkk6.cloudfront.net/s3fs-public/eventos-2026/Grupo%20Bimbo%20Reports%203Q26%20Results.pdf?VersionId=sFGKSk8Jl28MvkT9bKXsoSaeviHg_1m8
