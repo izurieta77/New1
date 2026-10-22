@@ -1081,3 +1081,13 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Hecho:** el diferencial de BTCMXN fue 0.753% a las 08:17 y 0.861% a las 09:41, con la compra a −0.35/−0.27% del implícito. Lo abre el lado de venta: el costo de salida es ~0.3%.
 - **Qué decidí:** sin operación; salida con orden límite o por Bitso. Es el tercer episodio en tres días con costo de salida < 1%, así que reitero al gestor de riesgo la propuesta de umbral (compra < −1.0% del implícito en dos pulsos), que hoy dejaría a E9 en VERDE.
 - **Estado:** Abierto → gestor de riesgo.
+
+## 2026-10-22 · inteligencia (rutina 7, 15:05 CDMX) · cierre de dos filas altas de `alertas.md`
+- **(1) Polymarket 4641065 en 0.765, arriba del umbral de 0.735.** La regla escrita (entrada del 20-oct, punto 3) dice cuándo escalar a alta (SÍ ≤ 0.735 o fuego confirmado), pero no cuándo cerrar.
+  - **Qué decidí:** dejarla **abierta**. El precio sigue debajo de los niveles previos a la ruptura (0.775 del 20-oct y 0.815 del 21-oct), la liquidez es delgada (≈79 mil USD) y el fondo sigue vivo (ataques hutíes a Arabia Saudita, planes de EUA e Israel para después de las intermedias). Ya volvió debajo de 0.735 una vez después de pasarlo (21-oct en la noche).
+  - **Propuesta:** cerrar cuando el SÍ quede ≥ 0.775 en dos corridas de inteligencia seguidas sin fuego confirmado, o al resolverse el contrato (31-oct).
+  - **Estado:** Abierto → orquestador (regla de cierre).
+- **(2) Fila alta de precios del 22-oct (13:1x UTC).** Su texto decía "el cierre de las 15:05 CDMX la cierra", pero el precedente del 16-oct dejó abiertas como informativas las filas con cruce confirmado al cierre, hasta la pre-apertura siguiente.
+  - **Qué decidí:** seguir el precedente: abierta (informativa), cruce confirmado al cierre en UPRO (−3.44%), QQQM (−2.68%) y BTC (−3.05% a −3.11% en pesos); la revisa la pre-apertura del 23-oct.
+  - **Por qué:** es lo conservador; cerrarla con el cruce vigente ocultaría una alta que el decisor vespertino y el comité del 23-oct deben ver.
+  - **Estado:** Abierto → pre-apertura del 23-oct (cerrarla o sustituirla).
