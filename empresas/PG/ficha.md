@@ -117,3 +117,8 @@ Notas: UPA core = non-GAAP de la empresa. FCF = flujo operativo − capex. Deuda
 9. Yahoo Finance quoteSummary y chart de PG, PG.MX, pares, divisas y Brent (25-sep-2026): https://query2.finance.yahoo.com/v10/finance/quoteSummary/PG
 10. Conocimiento interno: `conocimiento/23-geopolitica-y-riesgo-politico-global.md` §4.3 y `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.4.
 11. Nasdaq/Zacks, fecha y consenso (consultado el 25-sep-2026): https://api.nasdaq.com/api/analyst/PG/earnings-date
+
+## Adenda 2026-10-22 (cierre) · resultado del 1T FY27
+- **8-K del 22-oct:** ventas 23,276 M (orgánico +4.0%: volumen +2.4%, mezcla +1.1%, precio +0.4%; tipo de cambio 0) y UPA core 2.00 (+1%). Margen bruto core −150 pb. Guía orgánica 1-3% y UPA core 0-3% sin cambio; ventas totales 2-4% por Thorne.
+- **Pronósticos del 25-sep:** los dos puntos **fuera del p10-p90, por arriba**. Binarios: ventas > consenso (p 0.30) Sí, Brier 0.49; UPA > consenso (p 0.60) Sí, Brier 0.16.
+- **Escenario:** el orgánico del 1T está en el rango alcista (≥3%); el precio subió +5.6% el día del reporte. Lecciones en `post-mortem-2026-10-22.md` (no apostar contra el consenso con una inferencia no verificada; p90 ≥ dato del año anterior).

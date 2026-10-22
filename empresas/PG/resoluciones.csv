@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+PG-ingresos-1TFY27,2026-10-22,23276,,-3.33,no,,https://www.sec.gov/Archives/edgar/data/0000080424/000008042426000250/fy2627q1jas8-kexhibit991.htm
+PG-upa_core-1TFY27,2026-10-22,2.00,,-5.00,no,,https://www.sec.gov/Archives/edgar/data/0000080424/000008042426000250/fy2627q1jas8-kexhibit991.htm
+PG-ingresos_mayor_consenso-1TFY27,2026-10-22,23276,1,,,0.4900,https://www.sec.gov/Archives/edgar/data/0000080424/000008042426000250/fy2627q1jas8-kexhibit991.htm
+PG-upa_core_mayor_consenso-1TFY27,2026-10-22,2.00,1,,,0.1600,https://www.sec.gov/Archives/edgar/data/0000080424/000008042426000250/fy2627q1jas8-kexhibit991.htm
