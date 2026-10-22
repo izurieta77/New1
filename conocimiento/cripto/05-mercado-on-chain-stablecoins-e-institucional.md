@@ -542,3 +542,15 @@ Ficha [`fichas/2026-10-21-makarov-schoar-prima-btcmxn.md`](fichas/2026-10-21-mak
   - beta de presión ~0.0045 contra el rendimiento de 7 días.
   - La prima mexicana desapareció, como anticipaba el paper con las stablecoins.
 - **Para la cuenta [O]:** E9 es liquidez, no precio. Hay que medirla contra el implícito, con un umbral ÁMBAR de compra < −1.0% (propuesta con el gestor de riesgo). La salida va con orden límite al implícito −0.3%. Bitso hoy tiene un libro en pesos ~28 veces más profundo a −0.5%.
+
+### Adenda (22-oct-2026): ¿Tether infla el precio? Griffin y Shams (JF 2020) fuera de muestra
+
+Ficha [`fichas/2026-10-22-griffin-shams-tether.md`](fichas/2026-10-22-griffin-shams-tether.md) (+ `.py`). Es el tercer paper de la cola académica del Doctorado.
+
+- **Paper [H]:** según el resumen oficial (A; solo se tuvo acceso al resumen), las compras con Tether en 2017-18 llegaron después de caídas, se atribuyen a una sola entidad y subieron el precio. Eso favorece la hipótesis de oferta. Las magnitudes vienen de un resumen secundario (C): unas 87 horas explican ~50% del rendimiento de BTC.
+  - La CFTC (8450-21, A) confirmó que las reservas no alcanzaban: hubo respaldo completo solo 27.6% de los días de 2016-2018. La manipulación no la confirmó.
+- **Prueba propia, 2,334 días de jun-2020 a oct-2026 [I, A en datos]:**
+  - La emisión de USDT llega **después de alzas** (t NW de 2.0 a 4.5), lo que es la huella de la demanda.
+  - La emisión **no predice** el día siguiente (t 1.18).
+  - Emisión neta de −0.73 mm en 30 días.
+- **Para la cuenta [O]:** no entra ninguna señal de emisión en el filtro. En E8 se vigilan la paridad y las reservas, no la emisión. Una quema de más de 2-3 mm en un día, junto con un descuento de más de 1%, sería un evento de cola.
