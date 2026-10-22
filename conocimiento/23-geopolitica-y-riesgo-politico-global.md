@@ -231,6 +231,14 @@ Reacción de mercados:
 - Las sospechas de *insider trading* en los mercados sobre Irán documentadas por Bloomberg **(no verificado en esta ronda)**.
 - **Regla:** un mercado de predicción es un *prior* útil y barato. Antes de usarlo hay que leer (1) la regla exacta de resolución, (2) el volumen y (3) si hay ventaja informativa de *insiders*. Grado para uso táctico: **C**.
 - **Adenda 2026-10-05 (barrido trimestral 2026-Q4): cuarto punto de lectura.** Hay que considerar **(4) el sesgo favorito-*longshot***. Con 588 millones de operaciones de Polymarket (nov-2022 a mar-2026), las compras por debajo de 10¢ pierden en promedio 19.3¢ por dólar y las de 90¢ o más ganan 0.83¢. El efecto es robusto en Política y Cripto, aunque su tamaño depende de cómo se agrupen los contratos (Cardozo y Rivero-Wildemauwe, arXiv 2609.12878, grado C). En PredictIt, con tope de US$850, el sesgo fue aún mayor (Zitzewitz, NBER w35845, solo abstract). En elecciones no hay sesgo partidista sistemático de 1880 a 2025 (Zitzewitz, NBER w35846, solo abstract). Detalle en el cap. 08 §4, ítems 26-28.
+- **Adenda 2026-10-22 (laboratorio): quinto punto de lectura, riesgo de resolución.** Mahrous y Di Pietro (arXiv 2610.29578v1, 21-oct-2026, ICAIF '26; HTML completo leído, §4-§7; código y datos en Zenodo 10.5281/zenodo.23376383; **grado B−**: 802,863 mercados de Polymarket, 2023-may-2026, asociacional, una sola plataforma, sin pre-registro).
+  - **Disputas en el oráculo:** se disputan 0.31% de los mercados (1,634 de 529,408).
+  - **Qué sube el momio de disputa** (casos y controles pareados):
+    - fuente de resolución no identificable frente a una fuente mecánica: **OR 4.93** [3.25, 7.47];
+    - cada grado de dificultad de lectura: +23%;
+    - tener cualquier cláusula de casos límite: 3.8×. Pero entre los que la tienen, una cobertura más densa baja el momio (OR 0.25).
+  - **Volumen:** con datos de lanzamiento se predice bien dentro de la muestra (AUC 0.94), pero fuera del tiempo cae a 0.58.
+  - **Cómo se usa aquí:** antes de tomar el precio de un contrato geopolítico como probabilidad, se revisa si su criterio depende de una fuente mecánica o de una interpretación. Un contrato de este último tipo carga una prima de riesgo de resolución que no es probabilidad del evento. Un ejemplo es el 4641065 (alto el fuego EUA-Irán: "ataque aéreo o con misiles que impacte Irán", sin fuente nombrada). La base de 0.3% es baja, así que el ajuste es pequeño. No cambia ninguna regla.
   - **Consecuencia:** una probabilidad de un dígito en un mercado (p. ej. "China invade Taiwán en 2026" a 3.75% el 25-sep) se lee como **cota superior** del *prior*, no como estimación central. Los precios de 90% o más son ligeramente conservadores. Ninguna regla operable cambia, porque los mercados de predicción no disparan órdenes. Cambio de criterio de lectura registrado en `registro-de-errores.md`.
 
 ---

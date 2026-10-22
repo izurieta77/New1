@@ -104,3 +104,19 @@ Con ventanas sin traslape, B da 49.3% para la vigente.
 - **Para el comité del 23-oct:** leer esta adenda, no el 48%. El argumento "el primer nivel se dispara con la volatilidad normal" pierde fuerza. Queda una pregunta menor: ¿21% por trimestre es aceptable para un freno que recorta el táctico a la mitad?
 
 > **[Conciliación 22-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-21.md` §1] Adenda verificada; fallo vinculante para el comité del 23-oct.** Recalculé con código propio, escrito desde cero (no importa `R18.py` ni `R16.py`), y con datos de Yahoo bajados en esta corrida (^GSPC, ^SP500TR, ^VIX, ^NDX; DTB3 de la copia de AC-17, con el último dato arrastrado). Hay 9,001 ventanas al 14-oct. Con UPRO al 26.9%, P(≥ 8%) = 47.8%, **P(≥ 12%) = 21.0%**, P(≥ 20%) = 3.1%, P(≥ 28%) = 0.2% y P(≥ 35%) = 0.0%. Con 0%: 14.8 / 3.8 / 1.2%; con 13.5%: 16.4 / 4.2 / 1.0%; con 40%: 26.5 / 4.1 / 0.0%. **Las cuatro filas de la tabla de la adenda cuadran a la décima.** El recálculo es independiente en el código, no en la fuente de datos (es la misma fuente A). P(≥ 20%) y P(≥ 28%) siguen sin lado B. El pre-registro está intacto (`git diff 1e12150..79543d5` solo agrega líneas al final) y el estado sigue "No replicado" respecto de H1 literal (−8%). **Para el comité, la cifra aplicable es 21%, no 48%.** Además verifiqué que el código de reportes usa el perfil correcto: `riesgo.estado_cortacircuitos` con `parametros_efectivos("arena_agresivo")` da los niveles −12/−20/−28/−35%, y `portafolio.py reporte` imprime "Siguiente nivel: -12%".
+
+### Nota 2026-10-22 18:2x UTC (laboratorio) · lado B de los niveles −20% y −28%
+- El auditor recalculó P(≥ 20%) y P(≥ 28%) con su código de AC-24 (`auditorias/AC-24-R18/ac24_niveles_arena.py`, sin leer `R18.py`). P(≥ 12%) reproduce exactamente su cifra previa.
+- **B (A):**
+
+  | UPRO | P(≥ 20%) | P(≥ 28%) |
+  |---|---|---|
+  | 0% | 4.1% (3.8%) | 1.2% (1.2%) |
+  | 13.5% | 4.4% (4.2%) | 1.0% (1.0%) |
+  | **26.9%** | **3.5% (3.1%)** | **0.6% (0.2%)** |
+  | 40% | 4.5% (4.1%) | 0.4% (0.0%) |
+
+- **Concuerdan**, con una diferencia máxima de 0.4 pp. **Rige B** por ser la más conservadora: con la mezcla vigente, **P(−20%) = 3.5%** y **P(−28%) = 0.6%** por trimestre.
+- **Por qué difieren en −28%:** abril de 2025 queda al filo de la regla del 0.97. B calcula la SMA200 solo con los días comunes a todas sus series, y a DTB3 le faltan dos días de 2024. Con la SMA sobre todos los días de SPX, B da 0.3% / 0.0%, como A.
+- **La muestra es chica:** son 9 episodios que tocan −20% y 2 que tocan −28% (2008 y 2025). La falta de monotonicidad en UPRO también aparece en B: el filtro V0 recorta el episodio de 2008. Es ruido de n chico.
+- Para el comité, la cifra aplicable sigue siendo **P(−12%) ≈ 21%**.

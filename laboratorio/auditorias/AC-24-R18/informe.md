@@ -56,3 +56,49 @@ Con ventanas sin traslape (142 trimestres de 63 días), la mezcla vigente da 49.
 - Este informe audita contra el −8% del perfil estándar, igual que A. El papel corre con `arena_agresivo` (−12%, −20%, −28%, −35%). Ver la adenda en `replicas/R18-tamano-upro-cortacircuitos.md`.
 - La columna "P ≥ 12%" de B ya es la cifra aplicable: **21.4%** con UPRO al 26.9% (A: 21.0%). P(≥ 20%) y P(≥ 28%) no los calculó B; quedan pendientes para una auditoría futura.
 - El informe no se reescribe.
+
+## Adenda 2026-10-22 · Lado B de P(≥ 20%) y P(≥ 28%) (perfil `arena_agresivo`)
+- **Código:** `ac24_niveles_arena.py`, nuevo. Reutiliza las curvas de `b.py` sin modificarlo; lo ejecuta con runpy y manda su JSON a un archivo temporal, así que `b-resultados.json` no cambia. La métrica de toque y el conteo de episodios están escritos en el archivo nuevo. No se leyó `R18.py`.
+- **Datos:** los mismos de la ejecución B; `datos/SHA256SUMS` verificado OK. Son 8,921 inicios con ventana traslapada (H = 63) y 142 sin traslape.
+- **Control:** P(≥ 12%) reproduce exactamente las cifras previas de B (15.3 / 16.6 / 21.4 / 26.9%).
+
+| UPRO | P≥12% B | P≥20% A | **P≥20% B** | Δ B−A | P≥28% A | **P≥28% B** | Δ B−A | P≥35% B | Sin traslape B (≥12 / ≥20 / ≥28) |
+|---|---|---|---|---|---|---|---|---|---|
+| 0% | 15.3% | 3.8% | **4.1%** | +0.3 | 1.2% | **1.2%** | 0.0 | 0.3% | 16.2 / 3.5 / 1.4% (23 / 5 / 2 de 142) |
+| 13.5% | 16.6% | 4.2% | **4.4%** | +0.2 | 1.0% | **1.0%** | 0.0 | 0.1% | 19.0 / 2.8 / 1.4% (27 / 4 / 2) |
+| **26.9% (vigente)** | 21.4% | 3.1% | **3.5%** | +0.4 | 0.2% | **0.6%** | +0.4 | 0.0% | 23.9 / 2.8 / 1.4% (34 / 4 / 2) |
+| 40% | 26.9% | 4.1% | **4.5%** | +0.4 | 0.0% | **0.4%** | +0.4 | 0.0% | 28.2 / 2.8 / 0.7% (40 / 4 / 1) |
+
+**Episodios con UPRO al 26.9% (n pequeño).** Se cuentan como bloques de inicios contiguos cuya ventana de 63 días toca el nivel:
+- **≥ 20%:** 9 bloques. Por fecha de inicio: 1998, 2000-T3, 2001-T1, 2002-T2, 2008-T3, 2018-T4, 2019-12/2020-02 (COVID), 2022-T1 y 2024-12/2025-03 (aranceles).
+  - Cada bloque tiene entre 16 y 60 inicios.
+  - Son 8 drawdowns distintos de pico a recuperación de la curva completa.
+  - Sin traslape, solo 4 de 142 trimestres.
+- **≥ 28%:** 2 bloques, 2008 (−31.1%) y 2025 (−28.6%).
+- **Conclusión:** la cifra de −20% descansa en unos 9 episodios y la de −28% en 2. Diferencias de ±1 pp entre variantes equivalen a 1 o 2 episodios.
+- **No monotonicidad:** B también la tiene (4.1 / 4.4 / 3.5 / 4.5%), igual que A.
+  - Con más UPRO aparecen más episodios cortos (6 → 9 → 9 → 11 bloques).
+  - Pero V0 saca al 3x de las caídas largas, y el bloque de 2008 se acorta: 134 inicios con 0%, 60 con 26.9%.
+  - Es ruido de pocos episodios, no una señal.
+
+**Diferencias contra A, explicadas:**
+- **P(≥ 28%) con UPRO al 26.9% y al 40% (+0.4 pp).** Todo viene del episodio de abril de 2025 y de un empate al filo de la regla del 0.97.
+  - El 28-mar-2025, SPX/SMA200 da 0.97005 en B, que calcula la SMA sobre días comunes. B omite el 14-oct-2024 y el 11-nov-2024 porque DTB3 no tiene esos días.
+  - Con todos los días de SPX, la razón es 0.96907 y V0 sale.
+  - En B, el 3x sigue dentro el 3 y el 4 de abril (señal de t−2), y la curva vigente cae −28.6%. Con 40% cae −33.1%.
+  - **Sensibilidad:** recalculando B con la SMA200 sobre todos los días de SPX, P(≥ 28%) baja a 0.3% (vigente) y 0.0% (40%), prácticamente igual que A (0.2 / 0.0%). P(≥ 20%) queda en 3.4% y 4.2%.
+- **P(≥ 20%) (+0.2 a +0.4 pp en todas las variantes).** Hay un sesgo pequeño y uniforme por la fuente, que no cambia con la SMA:
+  - El rendimiento total de B se aproxima con el dividendo mensual de multpl.
+  - El NASDAQ100 viene de FRED.
+  - La tasa es DTB3 con días omitidos.
+  - Está muy por debajo de la tolerancia.
+
+**Veredicto:**
+- **A y B concuerdan dentro de ±1.5 pp en las 8 celdas.** La diferencia máxima es de 0.4 pp.
+- **Rige la cifra más conservadora, la de B en todas las celdas.** Para la mezcla vigente:
+  - **P(≥ 20%) = 3.5% por trimestre** (sin traslape: 2.8%, 4 de 142).
+  - **P(≥ 28%) = 0.6%** (sin traslape: 1.4%, 2 de 142; se toma la mayor, 1.4%, si se quiere el techo).
+  - Ambas cifras se apoyan en unos 9 y 2 episodios. Su error de muestreo real es del orden de su propio tamaño.
+- **El veredicto sobre R18 no cambia:** sigue "No replicado" respecto de H1 literal (−8%).
+- **Lectura para el comité:** la cifra aplicable es P(≥ 12%) ≈ 21%. Los niveles de −20% y −28% son raros (≈ 3-4% y ≤ 1.4% por trimestre). La regla 0.97 tiene un caso al filo en 2025 que mueve P(≥ 28%) entre 0.3% y 0.6%.
+- **Salida:** la corrida está en `python3 -I ac24_niveles_arena.py datos`.
