@@ -1064,3 +1064,8 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **orquestador:** el expediente y el formato de la tabla FX;
   - **gestor de riesgo:** E9.
 - **Estado:** Cerrado en lo de la conciliación; lo escalado sigue abierto con su responsable.
+
+## 2026-10-22 · pre-apertura (13:0x UTC) · cierre de la verificación del perfil en el código de reportes
+- **Hecho:** `herramientas/portafolio.py` (perfil por defecto `arena_agresivo`, L602/L633), `herramientas/supervision.py` L232 y `herramientas/fx_alerta.py` L725-L729 usan `parametros_efectivos("arena_agresivo")`. `portafolio.py reporte` da "Siguiente nivel: −12%". El "−8%" del brief del 20-oct salió de una llamada manual a `riesgo.estado_cortacircuitos` sin parámetros, no del código de las rutinas.
+- **Qué decidí:** no tocar el código. Regla para el brief: el cortacircuitos se toma de `portafolio.py reporte`.
+- **Estado:** Cerrado (la duda abierta en el trabajo continuo del 22-oct 01:15).
