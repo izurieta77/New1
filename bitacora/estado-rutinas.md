@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-23 12:57 UTC · pre-apertura · OK · (este commit) · MIXTO (+0); ES −0.45%, Brent 110.15 (−2.7%), VIX 19.96; FX-1 OK (18.7562); Polymarket Irán 0.775; Fed sin cambio 92.5%; P0130 NO; nuevos P0168-P0171; Brier 0.2020 (n=71); papel ≈20,294 pre-mercado (DD −2.8%, siguiente −12%), UPRO a 6.2% del stop; comité hoy con boletas condicionadas a confirmar efectivo
 2026-10-23 11:42 UTC · cripto (pulso extra 05:41) · OK · (este commit) · BTC 81,648.37 (−0.20% vs 04:17), ETH 2,400.18, 4h −0.30%; filtro ENCENDIDO (colchón +15.57%); BTC +0.53% en pesos; Polymarket 0.775; E9 0.575%; sin alertas
 2026-10-23 10:20 UTC · cripto (pulso 04:17) · OK · (este commit) · BTC 81,811.86 (−0.14% vs 00:17), ETH 2,403.09, 4h −0.05%, OI −1.22%; filtro ENCENDIDO (colchón +15.80%); BTC +0.66% en pesos; Polymarket 0.775; E9 0.637% (salida ~0.4%); sin alertas
 2026-10-23 06:24 UTC · cripto (pulso 00:17) · OK · (este commit) · BTC 81,928.00 (+0.55% vs 18:42), ETH 2,407.13, 4h +0.70%, OI +2.02%; filtro ENCENDIDO (colchón +15.96% sobre 70,650.78); BTC +0.40% en pesos vs 22-oct; Polymarket 0.775; E9 0.731% (salida ~0.2%); sin alertas
