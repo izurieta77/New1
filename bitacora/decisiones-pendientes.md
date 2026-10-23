@@ -1104,3 +1104,9 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Estado:** Abierto → dueño (captura del efectivo y de los movimientos desde el 7-oct) y comité.
 - **(3) Expediente del comité del 23-oct.** No existe aún. Lo arma la auditoría semanal (fallo 2026-10-21 §2) con los puntos (a)-(i), más (j) la entrada y la pregunta del dueño, (k) VT caducada en estado desconocido, (l) la cuenta GBM que no cuadra y (m) el Brier 0.2040 (n = 70).
   - **Estado:** Abierto → auditoría semanal.
+
+## 2026-10-23 · trabajo continuo (01:2x UTC) · la cuenta GBM compartida no cuadra: insumo para el comité
+- **Hecho:** lo no registrado de la captura del 22-oct cuesta ≈11,850 MXN, y el efectivo registrado de las tres IA es de 8,697.61. Faltan ≈3,150 MXN. UBER es compatible solo con compras del 9 al 19-oct; NFLX, con el 21-oct; AMKR sola no explica los 10,940 del 20-oct. Detalle en `competencia/conciliacion-cuenta-gbm-2026-10-22.md`.
+- **Qué decidí:** no registrar nada de terceros. En el marcador, el efectivo de Claude queda "registrado, sin confirmar" y los drawdowns de grok-gbm y chatgpt-gbm "del registro, no confirmado" (revisión §1.3 y §1.4).
+- **Para el comité del 23-oct:** toda boleta real queda condicionada a que el dueño confirme el efectivo disponible y los movimientos desde el 7-oct. Se le hace una sola petición, con los tres puntos del §5 del documento.
+- **Estado:** Abierto → auditoría y comité del 23-oct (expediente, punto (l) de la revisión).
