@@ -1212,3 +1212,10 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(3) Fila alta de UPRO de las 11:05:** la cerré porque el cierre da −1.93% en pesos (FX 18.6480 contra 18.6910, comparando las dos a las 21:00 UTC). El margen es de 0.08%.
   - **Qué decidí:** si la rutina de Cierre valúa con un USD/MXN ≤ 18.6338, el cierre cruzaría −2% y debe reabrirla.
   - **Estado:** Abierto → rutina de Cierre.
+
+## 2026-10-23 · comité W43 (22:5x UTC) · decisiones y lo que queda abierto
+- **Hecho:** el comité aprobó B1 en papel (vender 1 UPRO; orden O0006 para el lunes 26-oct a las 14:45 UTC), A-real (sin boleta) y A en Binance. Ver `bitacora/decisiones/2026-10-23-CARTERA-W43-B1-recorte-UPRO.md`.
+- **Abierto → dueño:** una sola petición: (a) el efectivo disponible en GBM; (b) los movimientos desde el 7-oct; (c) si la orden VT del 19-oct se llenó; (d) quién decidió NFLX, UBER, LULU, RLY, AOA y VOO.
+- **Abierto → orquestador:**
+  - **Tope de pérdida:** `rutinas/REGLAS-MOTOR.md` §4 dice 10,000 MXN y `config/parametros.json` dice 5,000 (provisional, ratificado el 2-oct; es el que aplica `riesgo.py`). **No se tocó nada.** Hasta aclararlo rige el más restrictivo (5,000). Se le pregunta al dueño junto con la petición de arriba.
+- **Estado:** Abierto → comité del 30-oct (B2' si el dueño confirma), rutina de cierre del 26-oct (ejecutar O0006) y dueño.
