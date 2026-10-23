@@ -1,0 +1,78 @@
+== banderas: comis_fuera
+Periodo 1994-01-03 a 2026-10-16 (8249 días). FIX 3.1075 -> 18.4930. INPC dic-93 13.843 -> ago-26 145.462. V0 encendido 73.1%
+Var  CAGR pre CAGR post  arrastre  CAGR USD    ops comis%ini ISR/final parte FX
+M     18.758%   17.933%    0.825p   12.469%   1347     1.899     0.101     7.8%
+A     19.058%   18.305%    0.753p   12.754%    365     1.891     0.106     7.5%
+F     18.393%   17.770%    0.624p   12.124%    247     1.722     0.112     6.8%
+B     17.172%   16.818%    0.354p   10.967%      2     0.091     0.104     2.7%
+
+H1: arrastre M = 0.825 pp -> REFUTADA (>= 1.0)
+H2: M - F = 0.201 pp -> REFUTADA (>= 0.3)
+H3: parte cambiaria M = 7.8% -> REFUTADA (>= 30%)
+(comis%ini = comisiones totales en MXN de la variante con ISR, en unidades de la inversión inicial convertida al FX inicial)
+
+== banderas: reentrada_w
+Periodo 1994-01-03 a 2026-10-16 (8249 días). FIX 3.1075 -> 18.4930. INPC dic-93 13.843 -> ago-26 145.462. V0 encendido 73.1%
+Var  CAGR pre CAGR post  arrastre  CAGR USD    ops comis%ini ISR/final parte FX
+M     18.786%   18.019%    0.767p   12.496%   1344     1.972     0.096     8.3%
+A     19.173%   18.471%    0.702p   12.863%    365     2.071     0.101     7.4%
+F     18.786%   18.174%    0.612p   12.496%    245     1.891     0.105     6.7%
+B     17.172%   16.819%    0.353p   10.967%      2     0.091     0.104     2.8%
+
+H1: arrastre M = 0.767 pp -> REFUTADA (>= 1.0)
+H2: M - F = 0.155 pp -> REFUTADA (>= 0.3)
+H3: parte cambiaria M = 8.3% -> REFUTADA (>= 30%)
+(comis%ini = comisiones totales en MXN de la variante con ISR, en unidades de la inversión inicial convertida al FX inicial)
+
+== banderas: fx_dexmxus
+Periodo 1994-01-03 a 2026-10-16 (8249 días). FIX 3.1080 -> 18.5026. INPC dic-93 13.843 -> ago-26 145.462. V0 encendido 73.1%
+Var  CAGR pre CAGR post  arrastre  CAGR USD    ops comis%ini ISR/final parte FX
+M     18.759%   17.993%    0.766p   12.469%   1347     1.920     0.096     8.5%
+A     19.059%   18.360%    0.699p   12.754%    362     1.910     0.101     8.0%
+F     18.395%   17.816%    0.579p   12.124%    245     1.735     0.107     7.3%
+B     17.173%   16.820%    0.353p   10.967%      2     0.091     0.104     2.8%
+
+H1: arrastre M = 0.766 pp -> REFUTADA (>= 1.0)
+H2: M - F = 0.187 pp -> REFUTADA (>= 0.3)
+H3: parte cambiaria M = 8.5% -> REFUTADA (>= 30%)
+(comis%ini = comisiones totales en MXN de la variante con ISR, en unidades de la inversión inicial convertida al FX inicial)
+
+== banderas: cpi_ocde
+Periodo 1994-01-03 a 2026-10-16 (8249 días). FIX 3.1075 -> 18.4930. INPC dic-93 15.793 -> ago-26 168.368. V0 encendido 73.1%
+Var  CAGR pre CAGR post  arrastre  CAGR USD    ops comis%ini ISR/final parte FX
+M     18.758%   17.997%    0.761p   12.469%   1344     1.921     0.095     8.2%
+A     19.058%   18.362%    0.696p   12.754%    362     1.910     0.100     7.8%
+F     18.393%   17.818%    0.575p   12.124%    245     1.736     0.106     7.1%
+B     17.172%   16.819%    0.353p   10.967%      2     0.091     0.104     2.8%
+
+H1: arrastre M = 0.761 pp -> REFUTADA (>= 1.0)
+H2: M - F = 0.186 pp -> REFUTADA (>= 0.3)
+H3: parte cambiaria M = 8.2% -> REFUTADA (>= 30%)
+(comis%ini = comisiones totales en MXN de la variante con ISR, en unidades de la inversión inicial convertida al FX inicial)
+
+== banderas: comis_fuera,reentrada_w
+Periodo 1994-01-03 a 2026-10-16 (8249 días). FIX 3.1075 -> 18.4930. INPC dic-93 13.843 -> ago-26 145.462. V0 encendido 73.1%
+Var  CAGR pre CAGR post  arrastre  CAGR USD    ops comis%ini ISR/final parte FX
+M     18.786%   17.957%    0.829p   12.496%   1347     1.950     0.101     7.9%
+A     19.173%   18.412%    0.761p   12.863%    365     2.048     0.106     7.1%
+F     18.786%   18.127%    0.659p   12.496%    247     1.876     0.110     6.4%
+B     17.172%   16.818%    0.354p   10.967%      2     0.091     0.104     2.7%
+
+H1: arrastre M = 0.829 pp -> REFUTADA (>= 1.0)
+H2: M - F = 0.170 pp -> REFUTADA (>= 0.3)
+H3: parte cambiaria M = 7.9% -> REFUTADA (>= 30%)
+(comis%ini = comisiones totales en MXN de la variante con ISR, en unidades de la inversión inicial convertida al FX inicial)
+
+== banderas: comis_fuera,reentrada_w,fx_dexmxus,cpi_ocde
+Periodo 1994-01-03 a 2026-10-16 (8249 días). FIX 3.1080 -> 18.5026. INPC dic-93 15.793 -> ago-26 168.368. V0 encendido 73.1%
+Var  CAGR pre CAGR post  arrastre  CAGR USD    ops comis%ini ISR/final parte FX
+M     18.788%   17.960%    0.828p   12.496%   1347     1.949     0.101     8.2%
+A     19.174%   18.414%    0.760p   12.863%    368     2.048     0.105     7.3%
+F     18.787%   18.129%    0.658p   12.496%    247     1.876     0.110     6.7%
+B     17.173%   16.819%    0.354p   10.967%      2     0.091     0.104     2.7%
+
+H1: arrastre M = 0.828 pp -> REFUTADA (>= 1.0)
+H2: M - F = 0.169 pp -> REFUTADA (>= 0.3)
+H3: parte cambiaria M = 8.2% -> REFUTADA (>= 30%)
+(comis%ini = comisiones totales en MXN de la variante con ISR, en unidades de la inversión inicial convertida al FX inicial)
+

@@ -15,6 +15,12 @@ import csv, json, math, re, sys, datetime as dt
 
 DATOS = sys.argv[1] if len(sys.argv) > 1 else "datos"
 SALIDA = sys.argv[2] if len(sys.argv) > 2 else "b-resultados.json"
+# Sensibilidades (solo para explicar diferencias con A; la corrida base no lleva banderas):
+#   comis_fuera  : comisiones fuera de la base fiscal (costo sin comisión de compra, venta bruta)
+#   reentrada_w  : al reentrar, UPRO se compra al 26.9% del total (no con la manga), tope el efectivo
+#   fx_dexmxus   : USD/MXN de FRED DEXMXUS (copia de A en R19-datos) en lugar del FIX
+#   cpi_ocde     : OCDE MEXCPIALLMINMEI + 4% anual desde 2024-08 (como A) en lugar del INPC
+BANDERAS = set(sys.argv[3].split(",")) if len(sys.argv) > 3 and sys.argv[3] else set()
 INI, FIN = dt.date(1994, 1, 3), dt.date(2026, 10, 16)
 C = 0.0029            # comisión GBM 0.25% + IVA, por operación (compra y venta)
 ISR = 0.10
@@ -88,6 +94,16 @@ dy = leer_multpl()
 fix = leer_banxico("banxico_fix_SF43718.csv")
 inpc_d = leer_banxico("banxico_inpc_SP1.csv")
 INPC = {(d.year, d.month): v for d, v in inpc_d.items()}
+if "fx_dexmxus" in BANDERAS:
+    fix = leer_fred("../../../replicas/R19-datos/DEXMXUS.csv")
+if "cpi_ocde" in BANDERAS:
+    INPC = {(d.year, d.month): v for d, v in leer_fred("../../../replicas/R19-datos/MEXCPIALLMINMEI.csv").items()}
+    y, m = max(INPC); v = INPC[(y, m)]
+    while (y, m) < (2026, 12):
+        m += 1
+        if m == 13:
+            y, m = y + 1, 1
+        v *= 1.04 ** (1 / 12); INPC[(y, m)] = v
 
 # Días: SPX ∩ VIX ∩ NDX (tasa y FX con último dato disponible).
 dias = sorted(d for d in spx if d in vix and d in ndx and d <= FIN)
@@ -176,8 +192,9 @@ def simular(variante, con_isr):
             return
         val = monto / (1 + C); pos[k] += val
         fxi = FX[i]; y, m = mes_menos(dias[i], 1)
-        base[k]["usd"] += monto; base[k]["mxn"] += monto * fxi
-        base[k]["real"] += monto * fxi / inpc(y, m)
+        cb = val if "comis_fuera" in BANDERAS else monto
+        base[k]["usd"] += cb; base[k]["mxn"] += cb * fxi
+        base[k]["real"] += cb * fxi / inpc(y, m)
         reg["ops"] += 1; reg["comis_usd"] += monto - val
 
     def vender(k, val, i):                           # val = valor de mercado vendido; regresa neto
@@ -185,14 +202,15 @@ def simular(variante, con_isr):
             return 0.0
         q = min(1.0, val / pos[k]) if pos[k] > 0 else 1.0
         neto = val * (1 - C); fxi = FX[i]
+        nb = val if "comis_fuera" in BANDERAS else neto   # monto que entra a la base fiscal
         b = base[k]
         c_usd, c_nom, c_real = q * b["usd"], q * b["mxn"], q * b["real"]
         y, m = mes_menos(dias[i], 2)
         c_act = max(c_nom, c_real * inpc(y, m))      # factor del agregado, nunca < 1
-        gan = neto * fxi - c_act
+        gan = nb * fxi - c_act
         g_año[dias[i].year] = g_año.get(dias[i].year, 0.0) + gan
-        reg["g_mxn_nom"] += neto * fxi - c_nom
-        reg["g_usd_fx"] += (neto - c_usd) * fxi
+        reg["g_mxn_nom"] += nb * fxi - c_nom
+        reg["g_usd_fx"] += (nb - c_usd) * fxi
         b["usd"] -= c_usd; b["mxn"] -= c_nom; b["real"] -= c_real
         pos[k] -= val
         if pos[k] < 1e-14:
@@ -265,6 +283,10 @@ def simular(variante, con_isr):
             elif nuevo != upro_on:
                 if not nuevo:                         # salida: vender todo UPRO
                     caja_upro += vender("upro", pos["upro"], i)
+                elif "reentrada_w" in BANDERAS:       # sensibilidad: al 26.9% del total
+                    caja += caja_upro; caja_upro = 0.0
+                    monto = min(W["upro"] * total() * (1 + C), caja)
+                    caja -= monto; comprar("upro", monto, i)
                 else:                                 # entrada: recomprar con toda la manga
                     comprar("upro", caja_upro, i); caja_upro = 0.0
             upro_on = nuevo

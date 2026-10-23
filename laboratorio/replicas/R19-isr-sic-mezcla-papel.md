@@ -88,3 +88,23 @@ Periodo del 1994-01-03 al 2026-10-16, 8,253 días (`R19-salida.txt`, `R19-result
   - El ISR del SIC cuesta ~0.8 pp por año con la mezcla vigente. Más de la mitad viene del **filtro** del 3x (salidas y reentradas), no del rebalanceo mensual. El rebalanceo anual quita 0.06 pp de impuesto, y además rinde más antes de impuestos en esta muestra.
   - **En plazos largos, la parte cambiaria de la ganancia gravable es chica (~7%).** El 100% cambiario del caso real de SPYM (ficha del 22-oct) es un efecto de **plazo corto**: con dos semanas, el tipo de cambio domina, y con décadas, domina el rendimiento en dólares.
   - El costo fiscal es la mitad del de comprar y mantener todo en el S&P, que difiere el impuesto hasta el final (0.35 pp).
+
+## Resultados · ejecución B (AC-25, auditor de réplicas, 2026-10-23)
+- **Código desde cero:** `auditorias/AC-25-R19/b.py`. Se escribió antes de leer `R19.py`.
+- **Segunda fuente:** FIX de Banxico (SF43718) e INPC oficial (SP1) hasta sep-2026, sin extrapolar; CBOE, multpl y FRED para el mercado. Informe en `auditorias/AC-25-R19/informe.md`.
+
+| Variante | Arrastre A | Arrastre B | Parte cambiaria A / B |
+|---|---|---|---|
+| M | **0.81** | 0.76 | 6.8% / 8.2% |
+| A | 0.75 | 0.70 | — |
+| F | 0.65 | 0.58 | — |
+| B | 0.35 | 0.35 | 2.8% / 2.8% |
+
+- **Concuerdan:** el arrastre de M difiere en 0.05 pp (la tolerancia es 0.2), y H1, H2 y H3 quedan refutadas en las dos versiones.
+- **Estado: Replicado.** Como mide un costo, rige la cifra más alta: **0.81 pp por año (A)**.
+
+## Desviaciones del pre-registro
+- **2026-10-23 (encontrada por B):**
+  - **Comisiones:** A **no incluye las comisiones en la base fiscal**. `Lote.compra` registra el costo neto de la comisión de compra, y `Lote.venta` usa la venta bruta, sin restar la comisión de venta. El §4 pide incluirlas. B reprodujo la regla de A, y eso explica casi toda la diferencia: A sobreestima el arrastre en ~0.05 pp. El sesgo va del lado conservador para un costo, así que no se corrige `R19.py` (ya está commiteado y es la ejecución pre-registrada) y se deja anotado.
+  - **Variante F:** A recompra UPRO al 26.9% del total en cada reentrada del filtro, un rebalanceo parcial. B usa la lectura literal: recompra solo con lo que dejó la venta. Esto explica la diferencia de CAGR antes de ISR de F (18.80% contra 18.39%).
+- **Por qué la parte cambiaria es baja (explicación de B):** el INPC subió ×10.5 y el tipo de cambio ×6.0 entre 1994 y 2026. La actualización del costo neutraliza el efecto cambiario en tenencias largas.
