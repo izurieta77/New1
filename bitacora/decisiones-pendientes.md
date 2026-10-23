@@ -1110,3 +1110,13 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** no registrar nada de terceros. En el marcador, el efectivo de Claude queda "registrado, sin confirmar" y los drawdowns de grok-gbm y chatgpt-gbm "del registro, no confirmado" (revisión §1.3 y §1.4).
 - **Para el comité del 23-oct:** toda boleta real queda condicionada a que el dueño confirme el efectivo disponible y los movimientos desde el 7-oct. Se le hace una sola petición, con los tres puntos del §5 del documento.
 - **Estado:** Abierto → auditoría y comité del 23-oct (expediente, punto (l) de la revisión).
+
+## 2026-10-22 · inteligencia 20:05 CDMX (23-oct 02:1x UTC) · cómo contar las lecturas para cerrar la fila de Polymarket y el cambio de base del FX
+- **(1) ¿Cuenta la lectura del pulso cripto (0.775 a las 00:42 UTC) para la regla propuesta de "dos corridas de inteligencia seguidas con SÍ ≥ 0.775"?**
+  - **Qué decidí:** no la cuento. La de esta corrida (0.775 a las 02:04 UTC, con 276 mil USD de liquidez y sin fuego confirmado) es la **1.ª**. La 2.ª toca a las 07:05 CDMX del 23-oct.
+  - **Por qué:** es lo conservador, y la propuesta dice "de inteligencia". Además, la regla todavía no está ratificada.
+  - **Estado:** Abierto → orquestador (ratificar la regla y el criterio de conteo).
+- **(2) La base del 21-oct cambió de 18.6632 a 18.6787 en `fx_alerta.py`,** porque Yahoo reescribió la barra al completarse.
+  - **Qué decidí:** para el cálculo en pesos de esta corrida uso la base nueva (18.6787). Así las cifras quedan unos 0.08 pp más negativas que con 18.6632, y ninguna conclusión cambia.
+  - **Por qué:** es la que da la herramienta oficial ahora.
+  - **Estado:** Informativo (la conciliación decide si se recalculan las cifras de las 07:05, 11:05 y 15:05; ninguna conclusión cambia).
