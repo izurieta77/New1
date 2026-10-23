@@ -68,3 +68,23 @@ Del 1994-01-03 al último día común de los datos (DEXMXUS al 16-oct-2026).
 
 ## Desviaciones del pre-registro
 (ninguna todavía)
+
+## Resultados · ejecución A (2026-10-23, después del commit `3231990`)
+Periodo del 1994-01-03 al 2026-10-16, 8,253 días (`R19-salida.txt`, `R19-resultados.json`).
+
+| Variante | CAGR MXN antes de ISR | CAGR después de ISR | Arrastre (pp/año) | Parte cambiaria de la ganancia nominal realizada |
+|---|---|---|---|---|
+| M: vigente, rebalanceo mensual + filtro | 18.75% | 17.94% | **0.81** | **6.8%** |
+| A: rebalanceo anual + filtro | 19.27% | 18.52% | 0.75 | 5.7% |
+| F: solo filtro | 18.80% | 18.15% | 0.65 | 5.1% |
+| B: 100% S&P TR, comprar y mantener | 17.13% | 16.77% | 0.35 | 2.8% |
+
+- **Sensibilidad a la inflación extrapolada después de 2024-07 (M):** 0.83 pp con 0% y 0.80 pp con 8%. No cambia nada.
+- **Veredicto A:**
+  - **H1 refutada:** el arrastre de 0.81 pp es menor a 1.0.
+  - **H2 refutada:** M − F = 0.16 pp, menos de 0.3.
+  - **H3 refutada:** 6.8%, menos de 30%.
+- **Lectura preliminar (pendiente de B):**
+  - El ISR del SIC cuesta ~0.8 pp por año con la mezcla vigente. Más de la mitad viene del **filtro** del 3x (salidas y reentradas), no del rebalanceo mensual. El rebalanceo anual quita 0.06 pp de impuesto, y además rinde más antes de impuestos en esta muestra.
+  - **En plazos largos, la parte cambiaria de la ganancia gravable es chica (~7%).** El 100% cambiario del caso real de SPYM (ficha del 22-oct) es un efecto de **plazo corto**: con dos semanas, el tipo de cambio domina, y con décadas, domina el rendimiento en dólares.
+  - El costo fiscal es la mitad del de comprar y mantener todo en el S&P, que difiere el impuesto hasta el final (0.35 pp).

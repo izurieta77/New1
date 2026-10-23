@@ -39,7 +39,7 @@
 | C2 | Reconocimiento de ingresos (NIF D-1, IFRS 15, ASC 606) | cap. 25 (mención) | Parcial |
 | C3 | Arrendamientos, instrumentos financieros y deterioro (IFRS 16 y 9; ASC 842 y 326) | ficha 16-oct (IFRS 9 pérdida esperada: etapas y efecto escalón, con ejercicio; norma no leída en texto íntegro); arrendatario en la ficha de C1 | Parcial |
 | C4 | Consolidación, combinaciones de negocios, entidades de interés variable y partes relacionadas | ficha 19-oct (IFRS 10 §7/§23/§25/B94, IFRS 3 §19/§32/§42 e IAS 24 §9 leídos en texto íntegro de EUR-Lex por sección; ejercicio en código: crédito mercantil parcial y completo, por etapas, compra de minoritarios y múltiplos con minoritario); faltan VIE (ASC 810), NIF B-7/B-8, IFRS 11/12, IAS 28/36 | Parcial |
-| C5 | Impuestos diferidos, pensiones y pagos basados en acciones | ficha 11-oct (impuesto diferido: resumen oficial NIC 12, LISR, ejercicio en código); pensiones y NIIF 2 pendientes | Parcial |
+| C5 | Impuestos diferidos, pensiones y pagos basados en acciones | ficha 11-oct (impuesto diferido: resumen oficial NIC 12, LISR, ejercicio en código); ficha 23-oct (NIC 12 §34, §41, §47 y §81(c) en texto íntegro vía AASB 112; tasa efectiva y tipo de cambio con ejercicio y contraejemplo Alpek); pensiones y NIIF 2 pendientes | Parcial |
 | C6 | Análisis y reformulación de estados financieros; calidad de utilidades | caps. 03 y 25 | Capítulo |
 | C7 | Valuación basada en contabilidad (ingreso residual) | cap. 03 | Parcial |
 | C8 | Contabilidad empírica: relevancia de valor, gestión de utilidades, informatividad | ficha 14-oct (devengos, Sloan 1996 leído por secciones; ejercicio) y réplica R13 (Replicado, A y B); faltan Ball-Brown y gestión de utilidades | Parcial |

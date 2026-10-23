@@ -1,0 +1,9 @@
+R19 A · 1994-01-03 a 2026-10-16 · 8253 días
+| Variante | CAGR MXN antes de ISR | CAGR después de ISR | Arrastre (pp/año) | ISR pagado / capital inicial | Parte cambiaria de la ganancia nominal realizada |
+|---|---|---|---|---|---|
+| Vigente, rebalanceo mensual + filtro | 18.75% | 17.94% | 0.81 | 22.01x | 6.8% |
+| Rebalanceo anual + filtro | 19.27% | 18.52% | 0.75 | 27.02x | 5.7% |
+| Solo filtro (sin rebalanceo) | 18.80% | 18.15% | 0.65 | 25.41x | 5.1% |
+| 100% S&P TR, compra y mantén | 17.13% | 16.77% | 0.35 | 16.81x | 2.8% |
+Sensibilidad (M): inflación extrapolada 0% → 0.83 pp; 8% → 0.80 pp
+H1 (arrastre M ≥ 1.0 pp): False | H2 (M − F ≥ 0.3 pp): False (0.16) | H3 (parte cambiaria ≥ 30%): False

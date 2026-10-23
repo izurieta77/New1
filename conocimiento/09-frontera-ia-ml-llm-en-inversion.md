@@ -199,6 +199,18 @@
 
 ---
 
+- **Adenda 2026-10-23 (laboratorio): un sistema multiagente con LLM y un "núcleo invariante", operado en vivo (en papel).** Feng, Dai, Pan, Lau, Liu y Xu, "Governed Self-Evolution for Autonomous Investing" (arXiv 2610.30557v1, 22-oct-2026; HTML leído §4-§6; código abierto en github.com/yebof/quant-agent). **Grado C:** una sola configuración, 102 días en una ventana alcista, sin pre-registro y en cuenta de papel sin impacto de mercado.
+  - **Diseño:** 9 agentes. El núcleo invariante lo forman las reglas de riesgo (solo efectivo, tope de 20% por posición y de 40% por sector, freno de pérdida diaria de 3%) y los prompts del gestor de riesgo, que **ningún agente puede editar**. Lo único que se aprende son secciones de "lecciones" de menos de 300 caracteres, con 12 invariantes deterministas y un commit por ciclo.
+  - **Resultado en vivo (8-abr a 10-sep-2026):** **+5.0% contra +12.4% del SPY**; Sharpe 1.39 contra 2.28; MDD −6.0% contra −4.5%; beta 0.16 (Tabla 3).
+  - **Señales:** el IC de los analistas es casi cero (técnico: −0.004 a 0.031). Las compras de los analistas solas rinden +1.3%, y la intención del gestor con salidas y riesgo, +12.2% (Tabla 1).
+  - **Agente único:** con datos crudos, uno solo pierde −1.35 pp a 5 días contra el SPY, y el diseño desplegado no se distingue de cero.
+  - **Red team:** 0 de 30 inyecciones de prompt se siguieron.
+  - **Para este sistema:**
+    1. Confirma el diseño que ya usamos: las reglas de riesgo en `config/parametros.json` y en código, fuera del alcance de los agentes, y el cambio de cartera solo vía comité.
+    2. Advierte que en una ventana alcista el sistema con freno y beta baja **pierde contra el índice**. Es la misma lectura de R16-R18: la protección cuesta rendimiento.
+    3. Que la señal individual sea casi nula es coherente con el Brier de 0.20 y con la regla de no atribuir habilidad por saldo.
+  - No cambia ninguna regla.
+
 ## 5. Evidencia real: qué funciona, qué no, magnitudes netas y decaimiento
 
 ### 5.1 ML en sección cruzada

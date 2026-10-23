@@ -1,0 +1,64 @@
+{
+ "periodo": [
+  "1994-01-03",
+  "2026-10-16"
+ ],
+ "n_dias": 8253,
+ "sha256": {
+  "r16_r12": "a4789527c9e19ceb0e06ebf4f1809ad5e985331b65700029bc12afd2fd4ab8c5",
+  "DEXMXUS": "60c8c775e7308e070bad43c65386f7b3855d65410101ba496f15c5df85187738",
+  "MEXCPIALLMINMEI": "afc67b0202566cb891f4d683e177a6ac61f9f19eb9e8d59a3862a6becb4eb34e"
+ },
+ "variantes": {
+  "M": {
+   "nombre": "Vigente, rebalanceo mensual + filtro",
+   "cagr_pre": 0.18747814373893568,
+   "cagr_post": 0.17936029074785997,
+   "arrastre_pp": 0.8117852991075702,
+   "isr_sobre_capital": 22.007566605011704,
+   "parte_fx": 0.06833284989073296,
+   "final_pre": 279.5463019737826,
+   "final_post": 223.24875940723217
+  },
+  "A": {
+   "nombre": "Rebalanceo anual + filtro",
+   "cagr_pre": 0.1926995562620164,
+   "cagr_post": 0.18518670108367563,
+   "arrastre_pp": 0.7512855178340772,
+   "isr_sobre_capital": 27.019632055294075,
+   "parte_fx": 0.05743773970242905,
+   "final_pre": 322.7896507558686,
+   "final_post": 262.39378110439196
+  },
+  "F": {
+   "nombre": "Solo filtro (sin rebalanceo)",
+   "cagr_pre": 0.1879686060595389,
+   "cagr_post": 0.1814915831040258,
+   "arrastre_pp": 0.6477022955513112,
+   "isr_sobre_capital": 25.406389351149613,
+   "parte_fx": 0.05050780278612066,
+   "final_pre": 283.35639943619435,
+   "final_post": 236.86192031495116
+  },
+  "B": {
+   "nombre": "100% S&P TR, compra y mantén",
+   "cagr_pre": 0.17127960333931602,
+   "cagr_post": 0.167745163300155,
+   "arrastre_pp": 0.35344400391610353,
+   "isr_sobre_capital": 16.80855573545521,
+   "parte_fx": 0.02779029154325674,
+   "final_pre": 178.1974770620324,
+   "final_post": 161.3889213265772
+  }
+ },
+ "sensibilidad_inflacion_extrapolada_M_pp": {
+  "0.0": 0.8252465585573354,
+  "0.08": 0.7981795835201755
+ },
+ "hipotesis": {
+  "H1_arrastre_M>=1.0pp": false,
+  "H2_M-F>=0.3pp": false,
+  "H3_parte_fx>=30%": false,
+  "M-F_pp": 0.16408300355625904
+ }
+}
