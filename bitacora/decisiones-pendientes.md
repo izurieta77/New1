@@ -1142,3 +1142,14 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Menores (§5):** notas en el brief (L10, L123, L135), el marcador L13, `rivales.csv` L34, la supervisión del 22-oct y la boleta del 19-oct; 2 filas en el registro de errores.
 - **Escalados:** dueño (efectivo, movimientos desde el 7-oct, atribución; si separa la cuenta compartida); comité (dirección: VT o alternativas, "¿qué vendemos?" para el libro de Claude, UPRO); orquestador (expediente y regla de Polymarket); gestor de riesgo (E9).
 - **Estado:** Cerrado en lo de la conciliación; lo escalado sigue abierto con su responsable.
+
+## 2026-10-23 · estudio CFF íntegro (fase 1) · errores detectados en el cap. 29 → verificador
+
+Los encontraron los estudios nuevos de `conocimiento/fiscal-cff/` (01 y 06), contra el texto vigente del CFF (Diputados, DOF 09-04-2026, sha256 be7427b2…). El cap. 29 no se editó.
+1. **§2.0, línea 38:** el decreto DOF 07-11-2025 tocó los arts. **113 Bis y 115 Ter**, no "113, 115".
+2. **Líneas 128 y 398:** el art. 109 dice "con sus recargos"; la actualización es del 108.
+3. **Línea 127:** falta que el 111 Bis y el 113 Bis tienen querella propia, y que el 113, 114-A, 114-B y 115 Ter se persiguen de oficio.
+4. **Línea 398:** dice "menor de 2,531,920.00"; la ley dice "no exceda de".
+5. **§2.4, ejercicio 1 del §5 y pregunta 5:** el factor de actualización va "hasta el diezmilésimo" (art. 17-A, último párrafo; verificado), no con seis decimales (1.013051). Las diferencias son de centavos a pocos pesos y no cambian las conclusiones.
+6. **Matiz:** el art. 6o. fr. I cubre también las contribuciones que se calculan "por períodos establecidos en Ley", no solo las retenciones.
+- **Estado:** Abierto → verificador (corregir el cap. 29 y registrar en `conocimiento/registro-de-errores.md`).
