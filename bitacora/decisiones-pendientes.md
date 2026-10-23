@@ -1153,3 +1153,24 @@ Los encontraron los estudios nuevos de `conocimiento/fiscal-cff/` (01 y 06), con
 5. **§2.4, ejercicio 1 del §5 y pregunta 5:** el factor de actualización va "hasta el diezmilésimo" (art. 17-A, último párrafo; verificado), no con seis decimales (1.013051). Las diferencias son de centavos a pocos pesos y no cambian las conclusiones.
 6. **Matiz:** el art. 6o. fr. I cubre también las contribuciones que se calculan "por períodos establecidos en Ley", no solo las retenciones.
 - **Estado:** Abierto → verificador (corregir el cap. 29 y registrar en `conocimiento/registro-de-errores.md`).
+
+## 2026-10-23 · multa SGM · hallazgo sobre el momento de pedir el estímulo del 90% (LIF 2026 transitorio 22.º)
+
+Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
+- **Hecho [A]:** LIF 2026 (Diputados, sha256 a305ca23…) transitorio Vigésimo Segundo, fr. III: los créditos deben ser "firmes", no impugnados; la solicitud va "a más tardar el 31 de octubre de 2026". Si el crédito es solo de multas por obligaciones distintas de la de pago y se cumple la obligación omitida, el estímulo es del **90%**.
+- **Hecho [A]:** RMF 2026 (compilado de la 1.ª modificación), regla 9.2.3 fr. III: el crédito no está firme "cuando un acto administrativo conexo sea materia de impugnación". Regla 9.2.8: el trámite es la ficha 9/LIF. Regla 9.2.9 fr. II: obliga a "consentir íntegramente el crédito fiscal". Las modificaciones 2.ª, 3.ª y 4.ª (anticipada del 22-oct) no tocan el capítulo 9.2.
+- **Hecho [A]:** Anexo 2, ficha 9/LIF: se presenta del 1-ene al **31-oct-2026** por Mi portal (Servicio o solicitudes → trámite "ESTIMULO FISCAL LIF 2026"). Requisitos:
+  - escrito libre;
+  - protesta de decir verdad, entre otras cosas, de "Que el adeudo se encuentra firme";
+  - si es por representante: instrumento que acredite la representación e identificación oficial.
+- **Inferencia [C]:** el plazo para impugnar (recurso o juicio) vence el **jue 29-oct**: es el día hábil 30 desde el 17-sep, cuando surtió efectos la notificación; recalculado hoy con el art. 12. Con la lectura estricta (firme = venció el plazo para impugnar), la ventana para presentar con protesta de "firme" es el **vie 30-oct** o el sáb 31-oct. La lectura de la regla 9.2.3 (no firme = impugnado) permitiría presentarla antes.
+  - **Riesgo:** protestar "firme" antes del 30-oct podría leerse como declaración falsa (art. 115 Ter CFF, vigente desde 2026).
+  - **Riesgo:** la solicitud del 18-sep pudo rechazarse por eso.
+  - Lo decide el dueño con su contador o abogado.
+- **Costo de cada ruta:**
+  - Pagar con 20% antes del 29-oct: $31,488.
+  - Estímulo del 90%: $3,936.
+  - Si el estímulo se niega después de dejar pasar el 29-oct: $39,360 más actualización.
+  - El punto de equilibrio del memo (≈22% de probabilidad de aprobación) sigue vigente.
+- **Bloqueo:** la ficha exige acreditar la representación. Es la misma pregunta pendiente de si el contador tiene poder de SGM.
+- **Estado:** Abierto → dueño.
