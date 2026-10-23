@@ -1174,3 +1174,14 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - El punto de equilibrio del memo (≈22% de probabilidad de aprobación) sigue vigente.
 - **Bloqueo:** la ficha exige acreditar la representación. Es la misma pregunta pendiente de si el contador tiene poder de SGM.
 - **Estado:** Abierto → dueño.
+
+## 2026-10-23 · inteligencia 07:05 CDMX (13:1x UTC) · regla de cierre de Polymarket cumplida y rodamiento del Brent en Yahoo
+- **(1) Polymarket 4641065: la regla de cierre propuesta se cumple.** 1.ª lectura de inteligencia: 0.775 (02:04 UTC, 20:05 CDMX del 22-oct). 2.ª: **0.795** (13:12 UTC, 07:05 CDMX del 23-oct), sin fuego de EUA confirmado (war.gov y whitehouse.gov sin nada sobre Irán; centcom.mil 403).
+  - **Qué decidí:** **no cierro la fila** de `alertas.md`: la regla sigue sin ratificar. Agregué la actualización y la propuesta en la misma fila.
+  - **Propuesta al orquestador:** cerrar la fila (2026-10-21 21:1x UTC) con estas dos lecturas, y abrir una fila nueva si el SÍ vuelve a ≤ 0.735 o hay fuego confirmado. Matiz para decidir: la liquidez cayó de 276 mil a 92 mil USD entre las dos lecturas.
+  - **Estado:** Abierto → orquestador (ratificar la regla y cerrar la fila).
+- **(2) Yahoo `BZ=F` rodó de diciembre (BZZ26) a enero (BZF27) el 23-oct.** El `chartPreviousClose` de hoy (108.66) es el de enero, pero la barra diaria del 22-oct todavía muestra 113.17 (diciembre). Por eso la pre-apertura leyó "Brent 110.15, −2.67%"; por contrato, el Brent **sube** ≈1.3%. Pasó lo mismo con `NG=F` (noviembre a diciembre: "+11%" que en realidad es −2%).
+  - **Qué decidí:** anotarlo en la tabla (A) y no tocar ningún pronóstico. Aplico el precedente de P0136 (conciliación del 20-oct): el criterio literal sobre la serie continua tal como la publique Yahoo.
+  - **Qué cambia:** P0122 (≥ 110 el 30-oct) pasa de un margen de ≈+3.7% a ≈0%; P0146 (< 105) de −8% a −4.6%. **P0168** (pre-apertura, p 0.62) se justificó leyendo el rodamiento como baja; la distancia al umbral sí es correcta sobre enero. Que la conciliación decida si se anota la nota en P0168.
+  - **Para las herramientas:** cualquier cambio diario de `BZ=F`, `CL=F` o `NG=F` debe compararse contra el `chartPreviousClose` de la misma consulta, no contra la barra diaria anterior, en los días de rodamiento (pasó con `CL=F` el 20-oct y hoy con `BZ=F` y `NG=F`).
+  - **Estado:** Abierto → conciliación (nota en P0168 y corrección del §1 del brief del 23-oct) y orquestador (regla de herramientas).
