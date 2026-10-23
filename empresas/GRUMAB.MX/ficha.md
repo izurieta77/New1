@@ -95,3 +95,8 @@ Capitalización ≈ US$4.52 mil M (Ps 80.0 mil M; 336.2 M acciones). El VE con a
 7. Gruma, Próximos eventos (consultado el 25-sep-2026; solo lista el 2T26): https://www.gruma.com/es/inversionistas/inversionistas-gruma/proximos-eventos.aspx
 8. Yahoo Finance (consultado el 25-sep-2026): quoteSummary (earningsTrend, calendarEvents y earnings) https://query2.finance.yahoo.com/v10/finance/quoteSummary/GRUMAB.MX · chart https://query1.finance.yahoo.com/v8/finance/chart/GRUMAB.MX y MXN=X · `empresas/GRUMAB.MX/dossier-2026-09-25.md`
 9. Conocimiento interno `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.11 (T-MEC) y `16-macro-global-divisas-y-el-peso.md` (25-sep-2026).
+
+## Adenda 2026-10-23 (post-mortem del 3T26; los pronósticos de la §8 no se modifican)
+- **Resultado 3T26** (XBRL entregado a la BMV el 21-oct, [ifrsxbrl_1596817_2026-03_1.zip](https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596817_2026-03_1.zip)): ventas netas de **US$1,650.6 M** (+1% a/a; volumen −2%), UAFIRDA ajustado de 280.3 M (margen de 17.0%), utilidad mayoritaria de 131.6 M, tasa efectiva de 30.1% y **UPA diluida de US$0.39**.
+- **Pronósticos:** ventas dentro (error +0.27%, mejor que el consenso) y UPA dentro (error −7.69%, peor que el consenso). Binarios: ventas > 1,665, No (Brier 0.1444); UPA ≥ 0.38, Sí (Brier 0.5625). Detalle en `resoluciones.csv` y `post-mortem-2026-10-23.md`.
+- **§7:** el volumen de EUA (−4%) toca el umbral bajista y el margen UAFIRDA de EUA (17.9%) queda debajo de 19%: las dos señales apuntan al bajista; el resto de las regiones sostiene el consolidado. Probabilidades sin cambio hasta la revisión de la ficha.

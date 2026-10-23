@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+GRUMAB.MX-ingresos-3T26,2026-10-23,1650.6,,0.27,si,,https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596817_2026-03_1.zip
+GRUMAB.MX-upa-3T26,2026-10-23,0.39,,-7.69,si,,https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596817_2026-03_1.zip
+GRUMAB.MX-ingresos_mayor_consenso-3T26,2026-10-23,1650.6,0,,,0.1444,https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596817_2026-03_1.zip
+GRUMAB.MX-upa_mayor_consenso-3T26,2026-10-23,0.39,1,,,0.5625,https://www.bmv.com.mx/docs-pub/ifrsxbrl/ifrsxbrl_1596817_2026-03_1.zip
