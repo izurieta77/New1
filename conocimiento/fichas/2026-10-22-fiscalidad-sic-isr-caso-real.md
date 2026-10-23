@@ -34,7 +34,7 @@ Motivo: el 22-oct el dueño preguntó "¿qué vendemos y a dónde movemos todo p
 - **Ganancia fiscal 68.54 MXN; ISR 6.85 MXN.**
 - **Descomposición:**
   - SPYM **−2.17% en dólares** (91.66 → 89.66 USD);
-  - el dólar **+4.24%** (17.985 → 18.7468);
+  - el dólar **+4.24%** (17.985 → 18.7468); *[auditoría W43, 23-oct: 18.7468 es el USD/MXN de ~13:00 UTC, no el de la captura (10:45 CDMX = 16:45 UTC, ≈18.71). Con el de la captura: dólar +4.03% y SPYM −1.98% en USD. Ver nota al final]*
   - en pesos, +1.97%, que cuadra con la captura.
 - **Toda la ganancia gravable es cambiaria:** en dólares la posición pierde.
 
@@ -42,7 +42,7 @@ Motivo: el 22-oct el dueño preguntó "¿qué vendemos y a dónde movemos todo p
 
 | Venta | Resultado fiscal (con comisiones) | ISR |
 |---|---|---|
-| Todo | **−262.10** | **0**; constancia de pérdida por 262.10, compensable 10 años |
+| Todo | **−262.10** | **0**; constancia de pérdida por 262.10, compensable 10 años *[auditoría W43: solo si no hubo otras enajenaciones en 2026; ver nota al final]* |
 | Solo las ganadoras (SPYM, NFLX, LULU) | +218.26 | 21.83 |
 | Solo las perdedoras (NVDA, UBER, FSLR) | −480.36 | 0; pérdida compensable |
 
@@ -77,3 +77,11 @@ La ficha D8 del 10-oct decía que "la compensación entre emisoras del mismo eje
 - **"Fiscalidad 2026 y SIC": de Documentado a Comprendido con comprobación.** Su siguiente prueba ("cálculo de ISR sobre ganancia SIC con caso numérico verificado") queda cumplida con un caso real y dos comprobaciones.
 - **No sube a Contrastado.** Falta contrastarlo con una constancia real de GBM y con la RMF 2026. La aprobación del Paquete 2027 (Senado ~31-oct, DOF en noviembre) sigue en vigilancia.
 - **D8:** se cierra la duda de la compensación entre emisoras. Sigue **Parcial** en `ESTADO.md`, porque faltan apalancados, derivados y cripto.
+
+## Nota de auditoría W43 · 23-oct-2026 (fact-check; el texto de arriba no se reescribe)
+1. **Rango del artículo.** El art. 129 no termina en L10356: su último párrafo (numerales 1 a 4: acciones no colocadas entre el gran público, accionistas con ≥ 10%, operaciones fuera de bolsa o cruces, fusiones y escisiones) llega hasta ~L10404 de `LISR.txt`. Ninguno aplica a este caso: la regla 3.2.12 de la RMF 2026 considera colocados entre el gran público los valores listados en el SIC, y el dueño no tiene el 10% de ninguna emisora ni opera fuera de bolsa. La conclusión no cambia.
+2. **RMF 2026 (texto completo; búsqueda por "artículo 129", "índices accionarios" y "SIC") y Anexo 7.** No encontré en lo que revisé ninguna regla que contradiga el neteo entre emisoras ni el trato de un ETF de índice accionario del SIC como fr. II. La regla 3.15.9 pide calcular por **serie** cuando la emisora tiene varias, y después se suma igual. El criterio normativo 37/ISR/N confirma el 10% de la fr. I para acciones extranjeras del SIC. Las reglas sobre fideicomisos que replican índices de deuda (3.2.15 y 3.2.16) son de fideicomisos mexicanos. No revisé las resoluciones de modificación de 2026 posteriores a la versión base.
+3. **Tipo de cambio de la descomposición (error menor).** El 18.7468 del código es de ~13:00 UTC. La captura es de 16:45 UTC, cuando Yahoo `MXN=X` (5 min) marcaba ≈18.71. Con ese dato, el dólar sube **+4.03%** y SPYM implícito en USD baja **−1.98%** (en lugar de +4.24% y −2.17%). Con precios de NYSE Arca (91.40 al llenado del 7-oct a las 16:15 UTC; 89.75 a las 16:45 UTC del 22-oct): SPYM **−1.81%** y dólar **+4.09%**. La ganancia fiscal de 68.54 no cambia, porque sale de los importes en MXN.
+4. **"Toda cambiaria": se sostiene, con precisión.** Del +97.50 bruto en MXN, el efecto cambiario es ≈ **+199**, el de precio ≈ **−98** y el cruce ≈ −4. El componente cambiario es **mayor** que la ganancia: sin el movimiento del peso, la venta daría una pérdida fiscal de ≈ −127 MXN con comisiones.
+5. **Caso 2 (alcance).** −262.10 es el resultado de vender **estas seis** emisoras. El resultado del ejercicio y la constancia incluyen **toda** enajenación de 2026 del contribuyente bajo el art. 129, en este contrato y en cualquier otro intermediario. La captura ya no muestra AMKR (`competencia/conciliacion-cuenta-gbm-2026-10-22.md`, H2). Si se vendió en el rango del 20 o del 22-oct (≈ 721-784 MXN por título, contra 940 de costo), agrega ≈ −480 a −670 MXN de pérdida (con comisiones). El ISR seguiría en 0, pero la constancia no sería de 262.10. VISTA A y GFNORTE O, si se vendieron, también entran.
+6. **Duda abierta, no corregida (nv).** Para el factor del Caso 3, el art. 17-A CFF usa el "INPC del mes anterior al más reciente del periodo". El art. 129 cierra el periodo en el "mes inmediato anterior a la venta". Leídos literalmente, para una venta en septiembre darían INPC de julio, no de agosto. No encontré una regla de la RMF que lo resuelva. Queda por verificar con una constancia de GBM.

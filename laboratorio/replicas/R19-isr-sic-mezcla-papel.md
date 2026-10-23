@@ -108,3 +108,13 @@ Periodo del 1994-01-03 al 2026-10-16, 8,253 días (`R19-salida.txt`, `R19-result
   - **Comisiones:** A **no incluye las comisiones en la base fiscal**. `Lote.compra` registra el costo neto de la comisión de compra, y `Lote.venta` usa la venta bruta, sin restar la comisión de venta. El §4 pide incluirlas. B reprodujo la regla de A, y eso explica casi toda la diferencia: A sobreestima el arrastre en ~0.05 pp. El sesgo va del lado conservador para un costo, así que no se corrige `R19.py` (ya está commiteado y es la ejecución pre-registrada) y se deja anotado.
   - **Variante F:** A recompra UPRO al 26.9% del total en cada reentrada del filtro, un rebalanceo parcial. B usa la lectura literal: recompra solo con lo que dejó la venta. Esto explica la diferencia de CAGR antes de ISR de F (18.80% contra 18.39%).
 - **Por qué la parte cambiaria es baja (explicación de B):** el INPC subió ×10.5 y el tipo de cambio ×6.0 entre 1994 y 2026. La actualización del costo neutraliza el efecto cambiario en tenencias largas.
+
+## Nota 2026-10-23 23:1x UTC (auditoría semanal W43, abogado del diablo) · omisiones que van en contra
+- "Replicado" significa que A y B concuerdan **sobre el mismo modelo**, no que el modelo esté completo. Faltan tres cosas:
+  1. **Impuestos sobre dividendos** (retención de EUA de 10-30% más la de México; [GBM, FAQ](https://gbm.com/faqs/como-funcionan-los-impuestos-sobre-los-dividendos-en-trading-mx)). Con un rendimiento por dividendo de ~0.9% suman **~0.18-0.30 pp**.
+  2. **El efectivo en MXN** con retención sobre intereses: +0.05-0.15 pp.
+  3. **El tratamiento fiscal de UPRO** (ETF con swaps): no está verificado que entre al art. 129 fr. II. Es el que más arrastre genera por el filtro.
+- **Arrastre total probable:** **~1.0-1.2 pp por año**, justo en el umbral de H1. **H1 no se considera refutada de forma robusta.**
+- **El rebalanceo mensual cuesta 0.4-0.6 pp por año en total** (CAGR después de ISR: 17.94% contra 18.52% en A; 17.99% contra 18.36% en B), sobre todo por comisiones, no por ISR.
+- **El ~7% cambiario depende de la muestra:** en 1994-2026 el INPC (×10.5) subió más que el tipo de cambio (×6.0).
+- **Siguiente prueba:** R19b, con dividendos y efectivo en MXN, y la confirmación de GBM o del SAT sobre UPRO antes del 30-nov.

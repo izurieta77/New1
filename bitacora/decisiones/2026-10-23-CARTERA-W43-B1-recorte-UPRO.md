@@ -98,3 +98,10 @@
 - **P0173:** índice del papel ≥ 100.967150 al 20-nov; p 0.52 (claude).
 - **P0174:** Polymarket 4641065 resuelve SÍ; p 0.70 (geopolítico).
 - **Vigentes:** P0127 (UPRO > 135.76 el 30-oct, p 0.82) y P0164 (BTC ≥ 85,000 el 5-nov, p 0.24).
+
+## Nota 2026-10-23 23:1x UTC (auditoría semanal W43, `bitacora/semanal/2026-W43-abogado.md`)
+- **La dirección de B1 se refuerza; la cifra que la sostenía no era la correcta.**
+  - Contra el máximo histórico de la cuenta, que es como mide el cortacircuitos, P(−12%) ≈ 25% a 63 días con 26.9% contra ≈ 17% con 13.5%, y ≈ 45% contra ≈ 30% a 126 días. B1 quita **8-15 pp**, no 4.6.
+  - **B1 no protege la cola profunda:** −20% en 12 meses ≈ 25-27% con cualquier peso, y un día tipo 1987 ≈ −24%.
+- El argumento fiscal de la respuesta al dueño ("vender no paga ISR") sigue en pie para hoy. El costo fiscal de largo plazo de la mezcla está subestimado en R19 (~1.0-1.2 pp por año).
+- **El Brier de 0.1979 no prueba habilidad** ni se distingue de 0.20.

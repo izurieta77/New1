@@ -122,12 +122,12 @@ Decisión del dueño (25-sep-2026): describió el patrón de horarios de un riva
 | Indicador | Valor | Fecha |
 |---|---|---|
 | Pronósticos registrados / resueltos | Bitácora 174 / 74 (33 resueltos en la semana, con Brier de la semana 0.1697). Empresas: 57 numéricos con intervalo, 48 dentro del p10-p90 (84.2%; en la semana 34 de 41, 82.9%) | 23-oct-2026 |
-| Brier acumulado | **0.1979** (n = 74): por primera vez cumple ≤ 0.20. Por autor: claude 0.2115 (n = 44), vigía 0.1799 (n = 26), cripto 0.1647 (n = 4). Binarios de empresas: 0.1929 (n = 57). El abogado del diablo audita si 0.1979 se distingue de 0.20 (`bitacora/semanal/2026-W43-abogado.md`) | 23-oct-2026 |
+| Brier acumulado | **0.1979** (n = 74), **no distinguible de 0.20** (IC 95%: 0.167-0.229). Agrupado por variable da 0.2056 y sin duplicados ni triviales, 0.226 (`bitacora/semanal/2026-W43-abogado.md` §3); el umbral **no se da por cumplido**. Por autor: claude 0.2115 (n = 44), vigía 0.1799 (n = 26), cripto 0.1647 (n = 4). Binarios de empresas: 0.1929 (n = 57). El abogado del diablo audita si 0.1979 se distingue de 0.20 (`bitacora/semanal/2026-W43-abogado.md`) | 23-oct-2026 |
 | Cuenta real arena: TWR / drawdown máximo | GBM +0.44% / −0.91% (efectivo registrado, sin confirmar); Binance +0.21% / −1.71% | 23-oct-2026 |
 | Portafolio de papel: TWR / drawdown máximo | GBM +0.97% / −3.35%. Referencias desde el 28-sep: benchmark 50/50 +2.03%; S&P 500 TR en MXN +3.02%; IPC +7.60%; CETES ≈ +0.41% (proxy de 6.21%). Binance +0.87% / −1.76%. **Comité W43: B1, recortar 1 UPRO (O0006, lunes 26-oct)** | 23-oct-2026 (desde el 28-sep) |
 | Estado de dominio | 62 temas: 14 Documentado, 14 Documentado con comprobación, 15 Comprendido con comprobación, 6 Contrastado, 7 Replicado, 4 Capítulo, 2 Localizado. En la semana subieron 4 (Brier, Fiscalidad SIC, D1, C4-C5) y se agregaron 6 (cripto) | 23-oct-2026 |
 | Laboratorio | 37 pruebas en el resumen: 0 ventaja demostrada, 9 oportunidad investigable, 25 descartadas, 3 no aplica. En la semana: R12, R16, R17, R18 (+ adenda) y R19 (AC-21 a AC-25) | 23-oct-2026 |
 | Rivales con datos | 4 cuentas reales. **Las de GBM son del registro: la cuenta compartida no cuadra** (`competencia/conciliacion-cuenta-gbm-2026-10-22.md`) | 23-oct-2026 |
-| Criterio de salida de fase 0 | **Se cumplen 2 de 3:** ≥ 50 resueltos (74) y Brier ≤ 0.20 (0.1979, en el filo). **Falta:** los 3 meses (25-dic-2026) | 23-oct-2026 |
+| Criterio de salida de fase 0 | **Se cumple 1 de 3:** ≥ 50 resueltos (74). **Brier no** (0.1979 puntual, pero no distinguible de 0.20; depurado, 0.21-0.23). **Faltan** los 3 meses (25-dic-2026). Prueba propuesta: Brier ≤ 0.20 con cota superior del IC < 0.21 y n ≥ 100 agrupado por variable | 23-oct-2026 |
 | Días para fin de fase 0 del patrimonio principal | 66 (28-dic-2026) | 23-oct-2026 |
 | Días para fin de la temporada arena | 97 (28-ene-2027) | 23-oct-2026 |

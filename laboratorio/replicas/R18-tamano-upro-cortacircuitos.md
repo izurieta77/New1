@@ -120,3 +120,16 @@ Con ventanas sin traslape, B da 49.3% para la vigente.
 - **Por qué difieren en −28%:** abril de 2025 queda al filo de la regla del 0.97. B calcula la SMA200 solo con los días comunes a todas sus series, y a DTB3 le faltan dos días de 2024. Con la SMA sobre todos los días de SPX, B da 0.3% / 0.0%, como A.
 - **La muestra es chica:** son 9 episodios que tocan −20% y 2 que tocan −28% (2008 y 2025). La falta de monotonicidad en UPRO también aparece en B: el filtro V0 recorta el episodio de 2008. Es ruido de n chico.
 - Para el comité, la cifra aplicable sigue siendo **P(−12%) ≈ 21%**.
+
+### Nota 2026-10-23 23:1x UTC (auditoría semanal W43, abogado del diablo) · la métrica no es la del cortacircuitos
+- **El problema:** R18 mide la caída **bajo el máximo desde el inicio de cada ventana**. El cortacircuitos de `herramientas/riesgo.py` (L82-L89) mide contra el **máximo histórico de la cuenta**, y el papel ya está a −3.3% de su pico.
+- **Recálculo del abogado** (solo lado A, grado C), con UPRO al 26.9%:
+
+  | Medida | Con 26.9% | Con 13.5% |
+  |---|---|---|
+  | P(−12% en 63 días), sin condicionar | ~33% | — |
+  | P(−12% en 63 días), con el drawdown de hoy | ~25% | ~17% |
+  | P(−12% en 126 días) | ~45% | ~30% |
+
+  Bajar el UPRO quita **~8-15 pp**, no 4.6. El tamaño del UPRO **no** controla la cola profunda: MDD de la mezcla −54/−58%, P(−20% en 12 meses) 25-27% con cualquier peso, y un día tipo 1987 (fuera de la muestra) ≈ −29%.
+- **Estado:** sin cambio (H1 es literal). Hace falta que B recalcule con el máximo histórico antes del 30-oct. La decisión W43 (B1) sale **reforzada** en su dirección.
