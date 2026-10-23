@@ -1092,3 +1092,15 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Por qué:** es lo conservador; cerrarla con el cruce vigente ocultaría una alta que el decisor vespertino y el comité del 23-oct deben ver.
   - **Estado:** Abierto → pre-apertura del 23-oct (cerrarla o sustituirla).
 - **Cierre 22-oct 16:17 CDMX (22:18 UTC):** E9 vuelve a VERDE (0.291%). Se cierra el episodio ÁMBAR del 22-oct. Sigue pendiente con el gestor de riesgo la propuesta de umbral. **Estado:** Cerrado (episodio).
+
+## 2026-10-22 · revisión (rutina 11, 23-oct 00:0x UTC) · Pregunta del dueño sin registro, efectivo GBM sin confirmar y expediente del 23-oct
+- **(1) "¿Qué vendemos y a dónde movemos todo?"** (`datos/entrada-dueno/2026-10-22.md`). La respuesta del chat no quedó en ningún archivo. Según el orquestador, se le recomendó no vender todo: −128.80 MXN en el SIC, casi todo en NVDA y UBER, por la corrección de chips e IA (SMH −6.0% al cierre, −17% contra su máximo de 3 meses; S&P −1.2%). Revisé las cifras y cuadran.
+  - **Qué decidí:** ninguna orden, y la pregunta va al comité del 23-oct.
+  - **Por qué:** REGLAS §4 dice que la cartera de Claude solo se mueve por el comité. Las posiciones de las otras IA son del dueño y de ellas.
+  - **Estado:** Abierto → orquestador (archivar la respuesta) y comité.
+- **(2) Efectivo GBM sin confirmar.** NFLX, UBER, LULU y la sección USA costaron ≈11,820 MXN, y el efectivo registrado de las tres IA es 8,697.61.
+  - **Qué decidí:** el libro de Claude se queda como está registrado (3 SPYM + 5,040.16), con la nota "sin confirmar". No se estima ningún saldo (REGLAS §5).
+  - **Toda boleta nueva del comité queda condicionada** a que el dueño confirme el efectivo disponible.
+  - **Estado:** Abierto → dueño (captura del efectivo y de los movimientos desde el 7-oct) y comité.
+- **(3) Expediente del comité del 23-oct.** No existe aún. Lo arma la auditoría semanal (fallo 2026-10-21 §2) con los puntos (a)-(i), más (j) la entrada y la pregunta del dueño, (k) VT caducada en estado desconocido, (l) la cuenta GBM que no cuadra y (m) el Brier 0.2040 (n = 70).
+  - **Estado:** Abierto → auditoría semanal.
