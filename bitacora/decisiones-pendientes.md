@@ -1199,3 +1199,16 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Qué decidí:** no resolver P0005, P0001, P0003 ni P0004, aunque su `fecha_resolucion` sea hoy. El criterio pide el dato del 23-oct; leo "si falta, último dato previo" como un día sin dato publicado (feriado), no como un dato que todavía no sale. Es la lectura conservadora.
   - Expectativas: P0001 SÍ, P0003 NO y P0004 NO; P0005 y P0128 en el filo (^TNX 4.99).
   - **Estado:** Abierto → conciliación (resolver el 26-27-oct, cuando FRED publique).
+
+## 2026-10-23 · inteligencia 15:05 CDMX (21:1x UTC) · P0135 sin fila en equity.csv, FRED sin respuesta y UPRO cerca del umbral
+- **(1) P0135** (índice de `bitacora/equity.csv` del 23-oct ≥ 100.920): a las 21:0x todavía no existe la fila del 23-oct; la escribe la rutina de Cierre (15:37 CDMX). Con `portafolio.py valuar --sin-guardar` (USD/MXN 18.6480) da 20,193.43 MXN, índice ≈100.967.
+  - **Qué decidí:** no resolverlo. El criterio literal es la fila guardada, y el margen es de solo ≈9 MXN: con un USD/MXN < 18.639 en la valuación del Cierre, el resultado cambia a NO.
+  - **Estado:** Abierto → rutina de Cierre o conciliación (resolver con la fila que se guarde).
+- **(2) FRED no respondió** (HTTP/2 INTERNAL_ERROR y timeout de 30 s). El Tesoro ya publicó el 10 años del 23-oct: **5.00**.
+  - **Qué decidí:** no resolver P0005, P0128, P0051, P0001, P0003 ni P0004 (mismo criterio de las 11:05).
+  - Expectativas: P0005 SÍ (justo en 5.00), P0128 NO, P0051 SÍ, P0004 NO (^GSPC 7,623.68), P0003 NO y P0001 SÍ.
+  - Ojo con P0005 y P0128: los decide un redondeo. Si FRED publica 5.00, P0005 es SÍ y P0128 es NO.
+  - **Estado:** Abierto → conciliación (26-27-oct).
+- **(3) Fila alta de UPRO de las 11:05:** la cerré porque el cierre da −1.93% en pesos (FX 18.6480 contra 18.6910, comparando las dos a las 21:00 UTC). El margen es de 0.08%.
+  - **Qué decidí:** si la rutina de Cierre valúa con un USD/MXN ≤ 18.6338, el cierre cruzaría −2% y debe reabrirla.
+  - **Estado:** Abierto → rutina de Cierre.
