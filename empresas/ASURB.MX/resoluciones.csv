@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+ASURB.MX-ingresos-3T26,2026-10-23,10420.5,,-9.31,si,,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1597192_1.pdf
+ASURB.MX-upa-3T26,2026-10-23,7.1960,,-8.28,si,,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1597192_1.pdf
+ASURB.MX-ingresos_mayor_consenso-3T26,2026-10-23,10420.5,1,,,0.1764,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1597192_1.pdf
+ASURB.MX-upa_mayor_consenso-3T26,2026-10-23,7.1960,0,,,0.0144,https://www.bmv.com.mx/docs-pub/eventemi/eventemi_1597192_1.pdf

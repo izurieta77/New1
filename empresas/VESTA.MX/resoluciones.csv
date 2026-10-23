@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+VESTA.MX-ingresos-3T26,2026-10-23,79.6,,1.01,si,,https://d1io3yog0oux5.cloudfront.net/_a97d61def23f5b56c47196ea9549d7c3/vesta/db/2288/21966/quarterly_reports/Quarterly+Report+3Q+2026+VF.pdf
+VESTA.MX-upa-3T26,2026-10-23,0.1199,,-49.96,si,,https://d1io3yog0oux5.cloudfront.net/_a97d61def23f5b56c47196ea9549d7c3/vesta/db/2288/21966/quarterly_reports/Quarterly+Report+3Q+2026+VF.pdf
+VESTA.MX-ingresos_mayor_consenso-3T26,2026-10-23,79.6,0,,,0.0900,https://d1io3yog0oux5.cloudfront.net/_a97d61def23f5b56c47196ea9549d7c3/vesta/db/2288/21966/quarterly_reports/Quarterly+Report+3Q+2026+VF.pdf
+VESTA.MX-upa_mayor_consenso-3T26,2026-10-23,0.1199,1,,,0.1444,https://d1io3yog0oux5.cloudfront.net/_a97d61def23f5b56c47196ea9549d7c3/vesta/db/2288/21966/quarterly_reports/Quarterly+Report+3Q+2026+VF.pdf
