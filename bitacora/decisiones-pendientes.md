@@ -1120,3 +1120,14 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
   - **Qué decidí:** para el cálculo en pesos de esta corrida uso la base nueva (18.6787). Así las cifras quedan unos 0.08 pp más negativas que con 18.6632, y ninguna conclusión cambia.
   - **Por qué:** es la que da la herramienta oficial ahora.
   - **Estado:** Informativo (la conciliación decide si se recalculan las cifras de las 07:05, 11:05 y 15:05; ninguna conclusión cambia).
+
+## 2026-10-22 · investigador vespertino (turno fiscal, 23-oct 02:2x UTC) · texto aprobado de la LIF 2027 sin leer
+- **Hecho (A):** el 13-oct Diputados aprobó la LIF 2027, con una modificación al **vigésimo transitorio**, y la reforma a la LISR. Las dos se turnaron al Senado.
+- **Por qué sigue sin leerse:** los PDF del dictamen y de las reservas en la Gaceta están escaneados, sin texto, y el OCR local falló. El portal del Senado da 403 y el del DOF falla la verificación TLS desde este entorno.
+- **Qué falta saber:**
+  - qué dice el vigésimo transitorio modificado;
+  - si la fr. XIX del art. 25 (IEPS por diferencias de litros, inicio el 1-jul-2027) quedó igual;
+  - si el dictamen de la LISR tocó el art. 129.
+- **Qué decidí:** ningún cambio de parámetros. La próxima corrida fiscal (25-oct), o una posterior al pleno del Senado (previsto para el 27-oct), lee la minuta o el dictamen del Senado, o el DOF.
+- **Alternativa:** que el dueño o su contador confirmen el texto final con una fuente legible.
+- **Estado:** Abierto → investigador (turno fiscal siguiente).

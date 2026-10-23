@@ -279,3 +279,11 @@ La ventaja fiscal y estructural es **segura y medible**: se conoce de antemano y
 - **§4, punto 2 (SPIVA U.S. Mid-Year 2026):** se confirma 83.33% a 10 años. Se agregan 67.18% en el semestre y 92.61% a 20 años (texto congelado en V05). **Grado A.**
 - **§4, punto 3 (SPIVA Latin America):** ya se publicó la edición de mitad de 2026 (~12-sep-2026), pero **no se obtuvo** (403 en spglobal.com; el Internet Archive cortó la conexión). La cifra de México al 30-jun-2026 sigue pendiente.
 - **Estado legislativo:** dictámenes en comisión previstos para el 14-15 de octubre; plazos del 20-oct (Diputados) y del 31-oct (Senado). **Mientras no se publique en el DOF, no se modifica ningún parámetro.** La RMF 2027 se revisará en el barrido de enero de 2027.
+
+## Adenda 2026-10-22 (investigador vespertino, turno fiscal)
+
+- **Estado legislativo (A, Gaceta Parlamentaria de Diputados, página de votaciones `gp66_a3primero.html`, consultada el 23-oct-2026):**
+  - El 13-oct-2026 la Cámara de Diputados aprobó la LIF 2027 (331-118) y la reforma a la LISR (349-118). Las dos se turnaron al Senado.
+  - Al 23-oct la página no registra la aprobación del Senado. Según la prensa (C), el pleno está previsto para el 27-oct.
+  - Detalle en el cap. 33 §9.11.
+- **§2.2 (art. 129) y §2.4 (retención de intereses del 0.68% propuesta):** no se pudo leer si el dictamen aprobado cambió algo respecto de la iniciativa, porque el PDF está escaneado y no tiene texto. Lo leído sigue igual: la iniciativa no toca el art. 129 (adenda del 5-oct). **Ningún parámetro cambia** hasta la publicación en el DOF.
