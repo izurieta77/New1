@@ -1074,19 +1074,19 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **P0041 (FIX ≥ 18.50):** el criterio dice "FIX SF43718 (Banxico)". Sin `BANXICO_TOKEN` no se puede leer el SIE. Usé el DOF: el FIX del 21-oct es **18.6425** (publicación del 22-oct). El DOF publica el mismo FIX que Banxico determina. **Decidí:** resolver SÍ con nota, reabrible si el SIE contradice.
 - **P0068 (guía de capex de Meta) y P0158 (INPC de la 1.ª quincena de octubre ≥ 3.50%):** tienen fecha de resolución del 6-nov y del 26-oct, pero el documento que nombra el criterio ya salió y no puede cambiar. El 8-K de Meta del 21-oct da 135-145 (antes 130-145), y el INEGI (boletín 633/26) da 3.62%. **Decidí:** resolver los dos en SÍ hoy, con el mismo precedente que P0078 y P0084 (conciliación del 22-oct).
 - **Por qué:** en los tres casos el dato es primario (A) y el resultado no depende de esperar. La conciliación puede revertirlos si prefiere la fecha o la fuente literal.
-- **Estado:** Abierto → conciliación de la noche del 22-oct (ratificar P0041, P0068 y P0158).
+- **Estado:** Abierto → conciliación de la noche del 22-oct (ratificar P0041, P0068 y P0158). **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §6]:** **Cerrado.** Los tres SÍ ratificados con la fuente primaria leída por esta rutina (DOF 18.6425; 8-K de Meta 135-145; INEGI 633/26 3.62%).
 
 ## 2026-10-22 · cripto (pulso 09:41 CDMX) · E9 ÁMBAR dos pulsos seguidos (tercer episodio) → aviso al gestor de riesgo
 
 - **Hecho:** el diferencial de BTCMXN fue 0.753% a las 08:17 y 0.861% a las 09:41, con la compra a −0.35/−0.27% del implícito. Lo abre el lado de venta: el costo de salida es ~0.3%.
 - **Qué decidí:** sin operación; salida con orden límite o por Bitso. Es el tercer episodio en tres días con costo de salida < 1%, así que reitero al gestor de riesgo la propuesta de umbral (compra < −1.0% del implícito en dos pulsos), que hoy dejaría a E9 en VERDE.
-- **Estado:** Abierto → gestor de riesgo.
+- **Estado:** Abierto → gestor de riesgo. **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §7]:** Es un parámetro: sigue escalado al gestor de riesgo.
 
 ## 2026-10-22 · inteligencia (rutina 7, 15:05 CDMX) · cierre de dos filas altas de `alertas.md`
 - **(1) Polymarket 4641065 en 0.765, arriba del umbral de 0.735.** La regla escrita (entrada del 20-oct, punto 3) dice cuándo escalar a alta (SÍ ≤ 0.735 o fuego confirmado), pero no cuándo cerrar.
   - **Qué decidí:** dejarla **abierta**. El precio sigue debajo de los niveles previos a la ruptura (0.775 del 20-oct y 0.815 del 21-oct), la liquidez es delgada (≈79 mil USD) y el fondo sigue vivo (ataques hutíes a Arabia Saudita, planes de EUA e Israel para después de las intermedias). Ya volvió debajo de 0.735 una vez después de pasarlo (21-oct en la noche).
   - **Propuesta:** cerrar cuando el SÍ quede ≥ 0.775 en dos corridas de inteligencia seguidas sin fuego confirmado, o al resolverse el contrato (31-oct).
-  - **Estado:** Abierto → orquestador (regla de cierre).
+  - **Estado:** Abierto → orquestador (regla de cierre). **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §7]:** La regla de cierre sigue con el orquestador; el criterio de conteo (solo corridas de inteligencia) se ratifica.
 - **(2) Fila alta de precios del 22-oct (13:1x UTC).** Su texto decía "el cierre de las 15:05 CDMX la cierra", pero el precedente del 16-oct dejó abiertas como informativas las filas con cruce confirmado al cierre, hasta la pre-apertura siguiente.
   - **Qué decidí:** seguir el precedente: abierta (informativa), cruce confirmado al cierre en UPRO (−3.44%), QQQM (−2.68%) y BTC (−3.05% a −3.11% en pesos); la revisa la pre-apertura del 23-oct.
   - **Por qué:** es lo conservador; cerrarla con el cruce vigente ocultaría una alta que el decisor vespertino y el comité del 23-oct deben ver.
@@ -1097,29 +1097,29 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **(1) "¿Qué vendemos y a dónde movemos todo?"** (`datos/entrada-dueno/2026-10-22.md`). La respuesta del chat no quedó en ningún archivo. Según el orquestador, se le recomendó no vender todo: −128.80 MXN en el SIC, casi todo en NVDA y UBER, por la corrección de chips e IA (SMH −6.0% al cierre, −17% contra su máximo de 3 meses; S&P −1.2%). Revisé las cifras y cuadran.
   - **Qué decidí:** ninguna orden, y la pregunta va al comité del 23-oct.
   - **Por qué:** REGLAS §4 dice que la cartera de Claude solo se mueve por el comité. Las posiciones de las otras IA son del dueño y de ellas.
-  - **Estado:** Abierto → orquestador (archivar la respuesta) y comité.
+  - **Estado:** Abierto → orquestador (archivar la respuesta) y comité. **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §4 j-k y §7]:** Respuesta archivada en `datos/entrada-dueno/2026-10-22.md` con la aclaración de opinión fuera del libro de Claude. **Cerrado en lo del registro**; la decisión sigue con el comité.
 - **(2) Efectivo GBM sin confirmar.** NFLX, UBER, LULU y la sección USA costaron ≈11,820 MXN, y el efectivo registrado de las tres IA es 8,697.61.
   - **Qué decidí:** el libro de Claude se queda como está registrado (3 SPYM + 5,040.16), con la nota "sin confirmar". No se estima ningún saldo (REGLAS §5).
   - **Toda boleta nueva del comité queda condicionada** a que el dueño confirme el efectivo disponible.
-  - **Estado:** Abierto → dueño (captura del efectivo y de los movimientos desde el 7-oct) y comité.
+  - **Estado:** Abierto → dueño (captura del efectivo y de los movimientos desde el 7-oct) y comité. **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §1]:** **Cerrado en lo del registro:** no se registra nada; el efectivo de Claude queda "registrado; última confirmación del dueño el 7-oct; en duda desde la captura del 22-oct"; toda compra del comité queda EN ESPERA hasta que el dueño confirme el efectivo (§1.4). El dato sigue abierto con el dueño.
 - **(3) Expediente del comité del 23-oct.** No existe aún. Lo arma la auditoría semanal (fallo 2026-10-21 §2) con los puntos (a)-(i), más (j) la entrada y la pregunta del dueño, (k) VT caducada en estado desconocido, (l) la cuenta GBM que no cuadra y (m) el Brier 0.2040 (n = 70).
-  - **Estado:** Abierto → auditoría semanal.
+  - **Estado:** Abierto → auditoría semanal. **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §4]:** Ratificado: lo arma la auditoría semanal, antes del comité, con el mínimo (a)-(n). Sigue abierto con la auditoría.
 
 ## 2026-10-23 · trabajo continuo (01:2x UTC) · la cuenta GBM compartida no cuadra: insumo para el comité
 - **Hecho:** lo no registrado de la captura del 22-oct cuesta ≈11,850 MXN, y el efectivo registrado de las tres IA es de 8,697.61. Faltan ≈3,150 MXN. UBER es compatible solo con compras del 9 al 19-oct; NFLX, con el 21-oct; AMKR sola no explica los 10,940 del 20-oct. Detalle en `competencia/conciliacion-cuenta-gbm-2026-10-22.md`.
 - **Qué decidí:** no registrar nada de terceros. En el marcador, el efectivo de Claude queda "registrado, sin confirmar" y los drawdowns de grok-gbm y chatgpt-gbm "del registro, no confirmado" (revisión §1.3 y §1.4).
 - **Para el comité del 23-oct:** toda boleta real queda condicionada a que el dueño confirme el efectivo disponible y los movimientos desde el 7-oct. Se le hace una sola petición, con los tres puntos del §5 del documento.
-- **Estado:** Abierto → auditoría y comité del 23-oct (expediente, punto (l) de la revisión).
+- **Estado:** Abierto → auditoría y comité del 23-oct (expediente, punto (l) de la revisión). **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §1]:** `05a66c6` ratificado como insumo, no como registro; ninguna hipótesis (A-C) se adopta. **Cerrado en lo del registro**; sigue con la auditoría (expediente) y el comité.
 
 ## 2026-10-22 · inteligencia 20:05 CDMX (23-oct 02:1x UTC) · cómo contar las lecturas para cerrar la fila de Polymarket y el cambio de base del FX
 - **(1) ¿Cuenta la lectura del pulso cripto (0.775 a las 00:42 UTC) para la regla propuesta de "dos corridas de inteligencia seguidas con SÍ ≥ 0.775"?**
   - **Qué decidí:** no la cuento. La de esta corrida (0.775 a las 02:04 UTC, con 276 mil USD de liquidez y sin fuego confirmado) es la **1.ª**. La 2.ª toca a las 07:05 CDMX del 23-oct.
   - **Por qué:** es lo conservador, y la propuesta dice "de inteligencia". Además, la regla todavía no está ratificada.
-  - **Estado:** Abierto → orquestador (ratificar la regla y el criterio de conteo).
+  - **Estado:** Abierto → orquestador (ratificar la regla y el criterio de conteo). **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §7]:** Conteo ratificado: la lectura del pulso cripto no cuenta; 02:04 UTC es la 1.ª. La regla sigue con el orquestador.
 - **(2) La base del 21-oct cambió de 18.6632 a 18.6787 en `fx_alerta.py`,** porque Yahoo reescribió la barra al completarse.
   - **Qué decidí:** para el cálculo en pesos de esta corrida uso la base nueva (18.6787). Así las cifras quedan unos 0.08 pp más negativas que con 18.6632, y ninguna conclusión cambia.
   - **Por qué:** es la que da la herramienta oficial ahora.
-  - **Estado:** Informativo (la conciliación decide si se recalculan las cifras de las 07:05, 11:05 y 15:05; ninguna conclusión cambia).
+  - **Estado:** Informativo (la conciliación decide si se recalculan las cifras de las 07:05, 11:05 y 15:05; ninguna conclusión cambia). **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §7]:** **Cerrado:** no se recalculan las tablas anteriores (precedente del fallo 2026-10-20 §9).
 
 ## 2026-10-22 · investigador vespertino (turno fiscal, 23-oct 02:2x UTC) · texto aprobado de la LIF 2027 sin leer
 - **Hecho (A):** el 13-oct Diputados aprobó la LIF 2027, con una modificación al **vigésimo transitorio**, y la reforma a la LISR. Las dos se turnaron al Senado.
@@ -1131,3 +1131,14 @@ Cada rutina anota aquí lo que decidió sin poder consultar al dueño (ver `ruti
 - **Qué decidí:** ningún cambio de parámetros. La próxima corrida fiscal (25-oct), o una posterior al pleno del Senado (previsto para el 27-oct), lee la minuta o el dictamen del Senado, o el DOF.
 - **Alternativa:** que el dueño o su contador confirmen el texto final con una fuente legible.
 - **Estado:** Abierto → investigador (turno fiscal siguiente).
+
+## 2026-10-23 · conciliación (noche del 22-oct) · Cierres de la revisión del 22-oct y de la cuenta GBM compartida
+- **Cerrados con fallo** (`bitacora/arbitraje/2026-10-22.md`):
+  - **Cuenta GBM compartida (§1):** no se registra ninguna operación de terceros ni ningún depósito. Libro de Claude = 3 SPYM (confirmadas por la captura) + 5,040.16 "registrado; última confirmación del dueño el 7-oct; en duda desde la captura del 22-oct". **Toda compra del comité queda EN ESPERA** hasta que el dueño confirme por escrito el efectivo disponible (≥ 8,697.61, o que el de Claude no se usó) y el monto + 0.29% quepa en 5,040.16. Las ventas de SPYM solo requieren que las 3 estén a la vista.
+  - **Drawdown de grok-gbm y chatgpt-gbm (§2):** "del registro, no confirmado"; notas en el brief L150 y la valuación L35-L36.
+  - **VT (§3):** 0 VT en la cuenta (captura, fuente primaria); no se registra llenado; boleta **CADUCADA desde el 23-oct sin ejecución registrada**. `alertas.md` L11 cerrada.
+  - **Expediente (§4):** lo arma la auditoría semanal; mínimo (a)-(n), con la pregunta literal del dueño y las respuestas archivadas.
+  - **Pronósticos (§6):** P0041, P0068 y P0158 ratificados. **Brier 0.2040 (n = 70), NO cumple ≤ 0.20.**
+  - **Menores (§5):** notas en el brief (L10, L123, L135), el marcador L13, `rivales.csv` L34, la supervisión del 22-oct y la boleta del 19-oct; 2 filas en el registro de errores.
+- **Escalados:** dueño (efectivo, movimientos desde el 7-oct, atribución; si separa la cuenta compartida); comité (dirección: VT o alternativas, "¿qué vendemos?" para el libro de Claude, UPRO); orquestador (expediente y regla de Polymarket); gestor de riesgo (E9).
+- **Estado:** Cerrado en lo de la conciliación; lo escalado sigue abierto con su responsable.

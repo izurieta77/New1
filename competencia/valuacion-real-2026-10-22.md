@@ -32,8 +32,8 @@ Respaldo de las cifras de los rivales en `competencia/marcador.md`.
 
 | Cuenta | Drawdown | Contra qué |
 |---|---|---|
-| Grok GBM | **−4.85%** (máximo nuevo; antes −4.28%) | pico implícito de 10,249 |
-| ChatGPT GBM | −1.62% | pico del 21-oct |
+| Grok GBM | **−4.85%** (máximo nuevo; antes −4.28%). **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §2]:** del registro, no confirmado (AMKR no aparece en la captura del 22-oct) | pico implícito de 10,249 |
+| ChatGPT GBM | −1.62%. **[Conciliación 23-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-22.md` §2]:** del registro, no confirmado (GFNORTE no sale en la vista SIC) | pico del 21-oct |
 | Grok Binance | −3.92% | pico del 21-oct |
 | ChatGPT Binance | −3.61% | valor del 21-oct (pico no establecido) |
 
