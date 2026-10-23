@@ -1185,3 +1185,17 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Qué cambia:** P0122 (≥ 110 el 30-oct) pasa de un margen de ≈+3.7% a ≈0%; P0146 (< 105) de −8% a −4.6%. **P0168** (pre-apertura, p 0.62) se justificó leyendo el rodamiento como baja; la distancia al umbral sí es correcta sobre enero. Que la conciliación decida si se anota la nota en P0168.
   - **Para las herramientas:** cualquier cambio diario de `BZ=F`, `CL=F` o `NG=F` debe compararse contra el `chartPreviousClose` de la misma consulta, no contra la barra diaria anterior, en los días de rodamiento (pasó con `CL=F` el 20-oct y hoy con `BZ=F` y `NG=F`).
   - **Estado:** Abierto → conciliación (nota en P0168 y corrección del §1 del brief del 23-oct) y orquestador (regla de herramientas).
+
+## 2026-10-23 · inteligencia 11:05 CDMX (17:1x UTC) · Polymarket en 0.755, UPRO cruzó −2% en la sesión y FRED sin dato del 23-oct
+- **(1) Polymarket 4641065 baja a 0.755 (17:04 UTC)**, después de 0.795 a las 14:00 y 0.785 a las 15:00-15:30. Sigue sin fuego de EUA confirmado (war.gov y whitehouse.gov). El frente hutí-saudí escala: otra ola de misiles, Brent de diciembre en 117 y la evacuación de la sede de Aramco (D/C).
+  - **Qué decidí:** no cierro la fila y **cambio la recomendación de las 07:05: mantenerla abierta.** La regla propuesta (dos lecturas seguidas ≥ 0.775) se cumplió a las 07:05, pero la 3.ª lectura (0.755) ya no la cumpliría.
+  - **Propuesta al orquestador:** si ratifica la regla, que agregue una condición: la lectura más reciente de inteligencia debe seguir ≥ 0.775 al momento de cerrar. Con eso no se cierra hoy.
+  - **Estado:** Abierto → orquestador.
+- **(2) UPRO cruzó −2% en pesos de las 14:17 a las 14:36 UTC (peor punto −2.24%) y luego regresó (−1.21% a las 17:07).** La supervisión de las 14:41 no lo vio, porque solo lee un precio por corrida.
+  - **Qué decidí:** abrí una fila nueva, alta y marginal, en `alertas.md`, igual que en los precedentes del 19 y el 20-oct. No pide orden.
+  - **Para las herramientas:** que la supervisión revise el mínimo y el máximo de la sesión en pesos (vela por vela, con el FX del mismo minuto) y no solo el precio del momento.
+  - **Estado:** Abierto → orquestador (herramienta) y cierre (cerrar la fila con el precio final).
+- **(3) FRED responde (200), pero no hay dato del 23-oct en DGS10, SP500, DEXMXUS ni DCOILWTICO.**
+  - **Qué decidí:** no resolver P0005, P0001, P0003 ni P0004, aunque su `fecha_resolucion` sea hoy. El criterio pide el dato del 23-oct; leo "si falta, último dato previo" como un día sin dato publicado (feriado), no como un dato que todavía no sale. Es la lectura conservadora.
+  - Expectativas: P0001 SÍ, P0003 NO y P0004 NO; P0005 y P0128 en el filo (^TNX 4.99).
+  - **Estado:** Abierto → conciliación (resolver el 26-27-oct, cuando FRED publique).
