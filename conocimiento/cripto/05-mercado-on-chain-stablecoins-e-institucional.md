@@ -554,3 +554,14 @@ Ficha [`fichas/2026-10-22-griffin-shams-tether.md`](fichas/2026-10-22-griffin-sh
   - La emisión **no predice** el día siguiente (t 1.18).
   - Emisión neta de −0.73 mm en 30 días.
 - **Para la cuenta [O]:** no entra ninguna señal de emisión en el filtro. En E8 se vigilan la paridad y las reservas, no la emisión. Una quema de más de 2-3 mm en un día, junto con un descuento de más de 1%, sería un evento de cola.
+
+### Adenda (23-oct-2026): ¿la atención predice? Liu y Tsyvinski (§4.2) con visitas a Wikipedia, 2015-2026
+
+Ficha [`fichas/2026-10-23-atencion-wikipedia-liu-tsyvinski.md`](fichas/2026-10-23-atencion-wikipedia-liu-tsyvinski.md) (+ `.py`). Es el cuarto paper de la cola académica del Doctorado.
+
+- **Paper [H, A]:** en 2011-may-2018, una σ más de búsquedas de "Bitcoin" (contra las 4 semanas previas) sube el rendimiento +1.84 pp a 1 semana y +2.30 pp a 2 (tabla 19); quintil alto menos bajo, +7.39 pp sin mirar adelante (tabla 22). La atención también sigue al precio (tabla 25).
+- **Prueba propia, 589 semanas con Wikipedia "Bitcoin" (Wikimedia REST, agente `user`) [I, B]:**
+  - en el traslape con el paper replica: +2.75 pp a 1 semana (t NW 2.99);
+  - **fuera de muestra (jun-2018 a oct-2026) desaparece:** −0.43 pp (t −0.99) en niveles y −0.16 (t −0.42) en log; Q5−Q1 de **−0.32 pp** (t −0.25). En 2022+ todo es cero. Un b positivo a 4 semanas (t ~2.2) sale entre 24 pruebas y se esfuma en 2022+.
+  - Hoy la atención está en el percentil 4 de la serie (semana al 18-oct). No es señal.
+- **Para la cuenta [O]:** nada entra al filtro ni al pulso. "Nadie mira bitcoin, es el piso" es una narrativa sin respaldo fuera de muestra.
