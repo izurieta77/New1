@@ -1264,3 +1264,15 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Duda:** ¿vale una réplica pre-registrada (R20) de 𝒮(−12%, +1%, 10, 10) sobre el 3x sintético con filtro V0, ejecución en t+1 y corrección por la malla? ¿O se descarta porque la autocorrelación diaria del S&P no es positiva y la teoría ya predice el nulo?
 - **Opción conservadora mientras tanto:** no se agrega ninguna capa; el stop vigente de 135.76 y el filtro siguen igual.
 - **Estado:** Abierto → laboratorio (prioridad baja; antes va el lado B de R18).
+
+## 2026-10-24 13:1x UTC · inteligencia 07:05 CDMX (sábado) · ventana de P0105, etiqueta de `fx_alerta.py` y fecha de Alphabet
+- **(1) P0105 vence "a más tardar el 2026-10-25", sin zona horaria.**
+  - **Qué decidí:** proponer cerrar la ventana a las 23:59 del 25-oct en hora de CDMX (26-oct 05:59 UTC). Es la más tardía entre CDMX, Washington (EDT) y Teherán, así que no deja fuera una confirmación de última hora. Es lo más conservador para no resolver antes de tiempo.
+  - **Expectativa:** NO. Al 24-oct 13:1x UTC no hay confirmación de un acuerdo mutuo ni del inicio de la cuenta de siete días. Pezeshkian culpa a EUA del fracaso del acuerdo interino; la Casa Blanca habla de posibles pláticas en Pakistán.
+  - **Estado:** Abierto → conciliación del 26-oct o inteligencia 07:05 del 26-oct (barrido de Reuters, AP, Bloomberg, whitehouse.gov y state.gov antes de resolver).
+- **(2) `fx_alerta.py`, otra cara del error de fin de semana (sin editar).** El sábado a las 13:08 UTC la línea dice "Δ1 −0.23% vs 18.6910 **del 23-oct**". El Δ1 es correcto (es el movimiento del viernes), pero 18.6910 es la base del **22-oct**: la etiqueta de fecha sale corrida un día. A las 02:07 UTC el error era otro (Δ1 +0.00% contra el mismo spot). Las dos vienen del mismo reetiquetado de `referencia_yahoo()` cuando la fecha de Londres ya es el sábado.
+  - **Qué decidí:** no editar (solo lectura). Lo sumo a la entrada del 24-oct 02:1x UTC para la prueba con un sábado.
+  - **Estado:** Abierto → orquestador / trabajo continuo.
+- **(3) Fecha del reporte de Alphabet (28-oct) sin fuente primaria.** abc.xyz carga dinámico y no la muestra; solo la confirman calendarios de terceros. MSFT (28-oct) y AMZN (29-oct, 21:00 UTC) sí están en sus páginas de inversionistas. Apple (2-nov) está en prensa B.
+  - **Qué decidí:** tratar el 28-oct como C en la agenda.
+  - **Estado:** Abierto → pre-apertura del 26-oct (reintentar abc.xyz o buscar el 8-K).

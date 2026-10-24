@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-24 13:20 UTC · inteligencia (07:05, sábado) · OK · (este commit) · barrido + podcasts; Polymarket 4641065 0.785 (verificado), alta abierta, sin fuego confirmado; State Dept actualizó alertas de viaje de 8 países el 23-oct; peso +9.98% en 7 semanas (verificado); agenda verificada: FOMC 28-oct, MSFT 28, PIB/PCE y AMZN 29, PIB MX 30; P0105 lista (NO); nada resuelto
 2026-10-24 11:43 UTC · cripto (pulso extra 05:41) · OK · (este commit) · BTC 80,624.26 (+0.07% vs 04:17), ETH 2,365.66, 4h −0.21%; filtro ENCENDIDO (colchón +14.02%); Polymarket 0.785; E9 0.457% VERDE; sin alertas
 2026-10-24 10:19 UTC · cripto (pulso 04:17) · OK · (este commit) · BTC 80,571.42 (−0.26% vs 00:17), ETH 2,365.30, 4h −0.25%; filtro ENCENDIDO (colchón +13.95%); Polymarket 0.785; E9 0.344% VERDE; sin alertas
 2026-10-24 06:20 UTC · cripto (pulso 00:17) · OK · (este commit) · BTC 80,781.82 (+0.22% vs 18:42), ETH 2,378.94, 4h −0.19%, OI +1.27%; filtro ENCENDIDO (colchón +14.24% sobre 70,710.61); Polymarket 0.765; E9 0.450% VERDE; sin alertas
