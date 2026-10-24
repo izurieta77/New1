@@ -163,7 +163,7 @@
 | Gobernanza y clientes | 1-3 años | Proporción de Core y Knots; propuestas de soft fork; conflictos de política | C |
 | Presupuesto de seguridad | 5-20 años | Porcentaje de comisiones; hashrate en USD por halving | B (mecánica) / C (efecto) |
 | Bug de consenso | Cualquiera | Avisos de seguridad de Bitcoin Core; divergencias de cadena | B (4 precedentes) |
-| Cuántico | Sin fecha | No cubierto en G1 | Sin evaluar |
+| Cuántico | 2030+ (fuentes C/D: Q-Day 2030 como muy pronto, 2033-2035 probable) | Recursos para secp256k1 (IACR 2026/625: ≤1,200 qubits lógicos, ≤90 M Toffoli); estatus de BIP-360/361; primer BIP de firmas PQ | B en el mecanismo (BIPs, FIPS) / C en la fecha. Adenda del 24-oct |
 
 ## 6. Lo que no cubren estos 5 recursos (no lo encontré en lo que revisé)
 
@@ -228,3 +228,16 @@ Avanza el **tema 2** de "Temas que no cubren los 35 recursos" (`00-plan-de-estud
 - **H5 estimado con datos en vivo de la red (mempool.space, altura 969,453 hoy):** ≈ 11-abr-2028, con el tiempo medio de bloque de la ventana de ajuste vigente (proyección lineal, no fecha fija del protocolo).
 - **Para invertir:** no cambia el filtro de tendencia vigente (SMA200 × 0.97/1.03) de `arena-claude-binance`; el reloj del halving es demasiado lento e impreciso para sustituir una regla diaria y mecánica. Sirve como contexto de régimen: estar hoy pasado el pico típico del ciclo y acercándose a la zona histórica de mínimo es un argumento adicional (no el único) para no aumentar la exposición más allá de lo aprobado por el comité mientras la señal de tendencia no lo respalde.
 - **Pendiente que queda:** repetir 3.1-3.3 con ETH como contraste (activo sin halving); extender la ventana de la caída de H4 más allá de 1,460 días cuando haya más historia.
+
+## Adenda 24-oct-2026 · Riesgo cuántico (cierra el hueco de §5 y §6)
+
+Ficha: [fichas/2026-10-24-poscuantica-bitcoin.md](fichas/2026-10-24-poscuantica-bitcoin.md) (+ `.py`).
+
+- **[H] Qué está en juego:** las firmas (ECDSA/Schnorr) con Shor, no la prueba de trabajo. La exposición larga afecta P2PK, P2MS, salidas reusadas y Taproot (bc1p); la corta (*on-spend*, en el mempool) afecta a cualquier salida al gastarse ([BIP-360 v0.12.1](https://raw.githubusercontent.com/bitcoin/bips/master/bip-0360.mediawiki), A).
+- **[H] Propuestas (todas *Draft*):** BIP-360 P2MR (P2TR sin ruta de llave, SegWit v2, `bc1z`), que solo resuelve la exposición larga. BIP-361 (Lopp y otros): fase A ~3 años tras activarse (no se puede enviar a direcciones vulnerables) y fase B 2 años después (gasto ECDSA/Schnorr restringido); depende de un BIP de firmas que no existe.
+- **[I] Comprobado en Python:**
+  - de 2017 a 2026, el Toffoli para secp256k1 bajó ÷1,431 (Roetteler → Babbush et al.);
+  - firmar con ML-DSA-44 (FIPS 204) multiplica ×7.0 una transacción 1-2, y con SLH-DSA-128s (FIPS 205), ×13.8;
+  - un ataque de 10 minutos le gana a la primera confirmación ~34-37% de las veces (300 bloques reales de mempool.space);
+  - el reloj de la máquina decide el barrido: 14 llaves al año a 26 días por llave, contra 52,560 a 10 minutos.
+- **[I] Para invertir:** nada operativo en la temporada. En autocustodia, no reusar direcciones. Queda como cola de largo plazo, con dos signos: robo de las P2PK antiguas o congelamiento por BIP-361.

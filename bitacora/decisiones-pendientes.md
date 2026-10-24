@@ -1276,3 +1276,10 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(3) Fecha del reporte de Alphabet (28-oct) sin fuente primaria.** abc.xyz carga dinámico y no la muestra; solo la confirman calendarios de terceros. MSFT (28-oct) y AMZN (29-oct, 21:00 UTC) sí están en sus páginas de inversionistas. Apple (2-nov) está en prensa B.
   - **Qué decidí:** tratar el 28-oct como C en la agenda.
   - **Estado:** Abierto → pre-apertura del 26-oct (reintentar abc.xyz o buscar el 8-K).
+
+## 2026-10-24 · orquestador (cripto 08:17) · P0168 tenía 12 campos en pronosticos.csv
+
+- **Hecho:** la nota que agregó la conciliación del 23-oct (commit 11e2c57) a P0168 tenía comas sin comillas, y la fila quedó en 12 campos.
+- **Qué hice:** uní los campos 10 a 12 en uno solo, entrecomillado. No cambié texto, p, fechas ni resultado. El archivo queda en 10 campos y CRLF en todas las filas.
+- **Regla:** quien escriba notas con comas en `pronosticos.csv` debe usar `herramientas/pronosticos.py` o el módulo `csv`, no concatenar texto.
+- **Estado:** Cerrado.
