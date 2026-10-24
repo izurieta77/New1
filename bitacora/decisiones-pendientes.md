@@ -1283,3 +1283,10 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Qué hice:** uní los campos 10 a 12 en uno solo, entrecomillado. No cambié texto, p, fechas ni resultado. El archivo queda en 10 campos y CRLF en todas las filas.
 - **Regla:** quien escriba notas con comas en `pronosticos.csv` debe usar `herramientas/pronosticos.py` o el módulo `csv`, no concatenar texto.
 - **Estado:** Cerrado.
+
+## 2026-10-24 · vigia (inteligencia 11:05) · ¿Se cierra por reversión la alerta BTC −2.21% de las 15:43?
+
+- **Hecho:** BTC tocó −2.43% en pesos (15:25 UTC) y a las 17:08 UTC estaba en −1.19% (BTCUSDT 80,223.97, FX congelado en 18.648).
+- **Qué decidí:** marqué la fila "Cerrada por reversión", con reapertura si el pulso vuelve a ver un cruce de −2%. Es el mismo criterio que la alerta de UPRO del 20 y el 23-oct ("ya revertida"), y no pide orden.
+- **Nota aparte:** en el RSS de travel.state.gov, la alerta de Cisjordania viene fechada el "Mon, 26 Oct 2026", una fecha futura. No la usé.
+- **Estado:** Abierto → la supervisión confirma el criterio.
