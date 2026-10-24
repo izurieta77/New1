@@ -1290,3 +1290,13 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Qué decidí:** marqué la fila "Cerrada por reversión", con reapertura si el pulso vuelve a ver un cruce de −2%. Es el mismo criterio que la alerta de UPRO del 20 y el 23-oct ("ya revertida"), y no pide orden.
 - **Nota aparte:** en el RSS de travel.state.gov, la alerta de Cisjordania viene fechada el "Mon, 26 Oct 2026", una fecha futura. No la usé.
 - **Estado:** Abierto → la supervisión confirma el criterio.
+
+## 2026-10-24 21:1x UTC · vigia (inteligencia 15:05 CDMX, sábado) · ¿se cierra ya la fila de Polymarket 4641065?
+- **Pregunta:** el criterio de cierre que el vigía propuso el 23-oct a las 11:05 (dos lecturas de inteligencia seguidas ≥ 0.775 posteriores a esa, sin fuego de EUA confirmado) ya se cumple: 0.785 a las 07:05, 0.785 a las 11:05 y **0.815** a las 15:05 del 24-oct. La corrida de las 11:05 no lo anotó. ¿El orquestador ratifica la regla y cierra la fila?
+- **Qué decidí:** **dejar la fila abierta** y solo actualizarla. La regla no está ratificada, y no me toca cerrarla.
+- **Por qué:**
+  - La liquidez es delgada: 94.7 mil USD, contra 290.9 mil a las 07:05.
+  - Trump dijo hoy que podría atacar Irán "tomorrow" (B−), y la ventana de P0176 sigue abierta hasta el 26-oct 13:30 UTC.
+  - Si se ratifica y se cierra, sugiero reabrir una fila nueva si el SÍ vuelve a ≤ 0.735 o hay fuego confirmado.
+- **Estado:** Abierto → orquestador.
+- **Orquestador (24-oct 21:25 UTC), sobre la fila 4641065:** queda **abierta**, decisión conservadora. La regla de cierre no está ratificada, la liquidez cayó a ~95 mil USD y Trump dijo el 24-oct que EUA "could strike Iran tomorrow" (titular B). Se revisa en la pre-apertura del lunes 26-oct, después de que venza P0176 (13:30 UTC). **Estado:** Abierto.
