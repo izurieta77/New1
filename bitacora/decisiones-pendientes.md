@@ -1258,3 +1258,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Estado:** Abierto → conciliación (26-27-oct).
 - **(3) P0176** se registró con `fecha_creacion` 2026-10-23, la fecha CDMX de la corrida, igual que el archivo de inteligencia. Es el mismo punto de zona horaria que quedó abierto con P0175. Lo decide la conciliación.
   - **Estado:** Abierto → conciliación.
+
+## 2026-10-24 02:2x UTC · investigador vespertino (23-oct CDMX) · ¿probar un stop amplio de ventana móvil en el UPRO?
+- **Contexto:** Lo-Remorov (JFM 2017, grado B, adenda del cap. 07 del 23-oct): los stops de dos semanas con −12% a −16% y reentrada de +0.5% a +1.5% son los únicos que empatan o mejoran un poco a comprar y mantener en acciones, y solo por volatilidad. R16 probó un stop desde la entrada, no uno de ventana móvil.
+- **Duda:** ¿vale una réplica pre-registrada (R20) de 𝒮(−12%, +1%, 10, 10) sobre el 3x sintético con filtro V0, ejecución en t+1 y corrección por la malla? ¿O se descarta porque la autocorrelación diaria del S&P no es positiva y la teoría ya predice el nulo?
+- **Opción conservadora mientras tanto:** no se agrega ninguna capa; el stop vigente de 135.76 y el filtro siguen igual.
+- **Estado:** Abierto → laboratorio (prioridad baja; antes va el lado B de R18).

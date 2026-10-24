@@ -738,3 +738,35 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
   - La MDD de 4.44% que destaca la conclusión es la de una cartera casi en efectivo.
   - El régimen decodificado cambió en **55 de 56 meses**; los propios autores lo atribuyen a la inestabilidad del HMM con ventanas cortas.
 - **Para el sistema [I]:** es el contraejemplo de manual de "protege la caída" (cap. 02 §6.1). Una MDD baja con rendimiento de efectivo no es protección, es no estar invertido. Hay que comparar siempre contra 1/N y contra el efectivo, igual que en R01 y R17. **Sin cambio de regla.**
+
+### Adenda (23-oct-2026, investigador vespertino): stops amplios y reentrada, verificados en texto completo. Lo y Remorov (2017, *J. Financial Markets* 34, 1-15; doi:10.1016/j.finmar.2017.02.003)
+- **Por qué hoy:** el abogado del diablo W43 (`bitacora/semanal/2026-W43-abogado.md`, conclusión 1) cita este trabajo para decir que "las capas rápidas no sirven" es una generalización. La cita venía de segunda mano (CXO Advisory) y el capítulo no tenía el artículo.
+- **Cita y tipo:** Lo, A. W. y Remorov, A., "Stop-loss strategies with serial correlation, regime switching, and transaction costs", *J. Financial Markets* 34 (jun-2017), 1-15. Publicado con revisión de pares (Crossref: 27 citas). Working paper previo: SSRN 2695383 (2015).
+- **Acceso [H]:** **lectura íntegra del capítulo 1** de la tesis doctoral de Remorov (MIT, 2016, "Dynamic Trading and Behavioral Finance", trabajo conjunto con Lo). Es lo que aloja `dspace.mit.edu/handle/1721.1/107017`: no es la versión editada de la revista. PDF sha256 `e8f64afb2012…`. Leí §1.1-1.7 y los apéndices 1.8.7-1.8.8. No leí la versión final de la JFM, así que las cifras pueden diferir de la publicada.
+- **Muestra y método:**
+  - Acciones individuales de CRSP (NYSE, AMEX y NASDAQ), 1964-2014. Excluye ETF, REIT y precios menores de 5 USD. La estrategia **se reinicia cada año natural** y las métricas son promedios de acción-año.
+  - Costos: medio diferencial de compra-venta (estimaciones de Hasbrouck antes de 1993). Activo seguro: T-bill de 30 días.
+  - Regla 𝒮(γ, δ, J, I): sale si el rendimiento acumulado de los **últimos J días** cae a γ o menos. Reentra si el de los últimos I días llega a δ o más. **No es una caída contra el máximo** (ni histórico ni de la posición), ni un stop desde el precio de entrada.
+- **Hallazgos [H]:**
+  1. **Teoría.** Con AR(1), el rendimiento de un stop estrecho es casi lineal en ρ(1)·σ, la autocorrelación por la volatilidad. El stop óptimo **solo existe con autocorrelación positiva** (fig. 1-7, programación dinámica). Con ρ ≤ 0 lo óptimo es comprar y mantener.
+  2. **Stops estrechos.** 𝒮(0%, ·, 1, 1) pierde más de −20% al año contra +15.2% de comprar y mantener, por costos.
+     - En 𝒮(−2%, 0%, 1, 1), el exceso sobre comprar y mantener solo es positivo con ρ(1) ≥ 15% (+5.5% al año). Con ρ(1) ≤ −10% es −56.6%.
+     - La proporción de acciones con ρ(1) > 10% bajó de >20% (1964-88) a 5.2% (2009-14).
+  3. **Stops amplios (lo que se discute).** Los de dos semanas (I = J = 10), con stop de −12% a −16% y reentrada con +0.5% a +1.5%, son los mejores en equivalente cierto media-varianza: −14.9% a −16.3% contra −18.3% de comprar y mantener.
+     - La mejora **viene solo de la menor volatilidad**: en rendimiento bruto todos quedan debajo de comprar y mantener.
+     - La asimetría empeora con stops amplios. En la caída máxima "logran mejora, sobre todo a dos semanas", pero en la conclusión, con datos históricos, quedan "a la par" de comprar y mantener. En el resumen: "reducen el riesgo de caída, **pero no sustancialmente**".
+  4. **Reentrada.** Con stops estrechos conviene **reentrar pronto** después de salir. El stop "retrasado" (ejecutar en t+1) mejora un poco con stops amplios y mucho con los estrechos (+2 a +5 pp al año), por la reversión de un día.
+  5. **Regímenes (ap. 1.8.7).** La ventaja del stop sale de estar fuera en el régimen malo. Pero una volatilidad alta en ese régimen la **destruye**, contra lo que predice la simulación, por la entrada y salida repetida.
+- **Limitaciones:**
+  - Son acciones individuales, no un índice ni un 3x. Un 3x diario tiene la autocorrelación del índice, y su volatilidad multiplica los disparos.
+  - El reinicio anual trunca las caídas de más de un año.
+  - El equivalente cierto es negativo para todos (aversión alta), y la comparación es solo contra comprar y mantener, no contra una exposición reducida.
+  - No hay corrección por búsqueda en la malla de parámetros (γ, δ, I, J).
+  - **Réplicas:** Kaminski-Lo (2014) es el marco del que parte (con el S&P mensual, no es independiente). Nuestro R16 (A y B) es la única prueba sobre un 3x. No conozco una réplica independiente del panel de acciones.
+- **Grado: B.** Publicado, con método cerrado y verificado contra el texto. Lo que se transfiere al UPRO es solo cualitativo.
+- **Para el sistema [I]:**
+  1. **R16 se sostiene, y el abogado tiene razón en el matiz.** La evidencia externa no dice "los stops no sirven". Dice que un stop solo suma con **persistencia de corto plazo** (ρ > 0) y que, con costos, un stop amplio a lo sumo **empata** a comprar y mantener en caídas y gana algo en volatilidad. El S&P diario no tiene ρ > 0 sostenida desde los noventa (*inferencia, no la medí hoy*: en el panel de Lo-Remorov la ρ media de las acciones es negativa desde 1989, y Kurth-Eisler-Rej-Bouchaud 2026, en `estado-de-dominio.csv`, encuentran que la tendencia en índices casi no rinde desde 2009). Agregar un stop de ventana móvil como **capa nueva** no tiene respaldo.
+  2. **Los cortacircuitos no son lo que se probó aquí.** Lo-Remorov y Kaminski-Lo estudian stops de una posición con ventana móvil. Nuestros cortacircuitos miden la caída de la **cuenta contra su máximo histórico** (`riesgo.estado_cortacircuitos`), que es la familia Grossman-Zhou/CPPI (§2.7). Ninguno de los dos papers valida ni refuta los niveles −8/−12/−20/−35. La pregunta del abogado (la métrica de R18 contra la del freno) sigue abierta: la cierra el lado B de R18 antes del 30-oct, no la literatura.
+  3. **Reentrada.** Esto confirma el hallazgo de R16 (con reentrada a 21 días el Sharpe queda igual y la MDD mejora 1.7 pp). La regla de reentrada pesa tanto como el nivel del stop. Si el comité quiere un stop en el UPRO, debe definir la reentrada **antes**, igual que el stop.
+  4. **Ejecución en t+1** (O0006, vela de 14:45 UTC): en stops amplios el retraso de un día **no** cuesta y hasta suma un poco. No contradice el costo de 1.84-3.56 pp/año de R06, que es de **señales de filtro** en apalancados, no de stops.
+- **Qué cambia:** **ninguna regla ni parámetro.** Se corrige la cita del abogado W43 (fila en `registro-de-errores.md`): el enlace de DSpace es la tesis, no el artículo de la JFM.
