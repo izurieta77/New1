@@ -1219,3 +1219,15 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Abierto → orquestador:**
   - **Tope de pérdida:** `rutinas/REGLAS-MOTOR.md` §4 dice 10,000 MXN y `config/parametros.json` dice 5,000 (provisional, ratificado el 2-oct; es el que aplica `riesgo.py`). **No se tocó nada.** Hasta aclararlo rige el más restrictivo (5,000). Se le pregunta al dueño junto con la petición de arriba.
 - **Estado:** Abierto → comité del 30-oct (B2' si el dueño confirma), rutina de cierre del 26-oct (ejecutar O0006) y dueño.
+
+## 2026-10-24 00:0x UTC · revisión (rutina 11, entregables del 23-oct) · VT en la decisión W43 y cobertura del expediente
+- **(1) ¿La pregunta "(c) si la orden VT del 19-oct se llenó" y la advertencia "si ya tienes 1 VT del 19-oct, no captures otra" (decisión W43 L10, L12 y L19; L1218 de este archivo) son inconsistentes o solo redundantes frente al fallo 2026-10-22 §3?**
+  - **Qué decidí:** son **inconsistentes**. El fallo fijó la posición en 0 VT, conocida, y retiró esa advertencia (§3.4). La pre-apertura del 23-oct reintrodujo "estado desconocido" y de ahí pasó al expediente, al marcador, a W43 y a la decisión.
+  - **Opción conservadora:** el registro se queda en **0 VT** y no se registra ni se revierte nada. La advertencia que vale es la del §3.4 ("si ves VT en tu portafolio, no captures: repórtalo"). Pedirle de más al dueño no compra nada, así que el riesgo operativo es nulo. Por eso es "corregir" y no bloqueante.
+  - **Estado:** Abierto → orquestador (notas fechadas), pre-apertura (brief L7) y cierre (marcador L13). Revisión §1.1.
+- **(2) El expediente W43 omite b, e, f, g, k y n del fallo §4, y no dice por qué.**
+  - **Qué decidí:** no invalida la decisión, porque A-real es lo más conservador y B1 reduce riesgo. Se pide una adenda.
+  - **Estado:** Abierto → orquestador. Revisión §1.2.
+- **(3) O0006, "^VIX >= 25" sin hora.**
+  - **Qué decidí:** usar la lectura del precedente (cierre previo). Si a las 14:45 el VIX está ≥ 25, la venta de 1 título se hace igual (reduce riesgo) y manda la regla del filtro para el resto.
+  - **Estado:** Abierto → cierre del 26-oct. Revisión §2.1.
