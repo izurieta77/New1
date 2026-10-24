@@ -1240,3 +1240,21 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Pendiente de otras rutinas:** la pre-apertura del lunes, nota en el brief del 23-oct L7; el cierre, nota en el marcador L13 con la redacción única del efectivo.
 - **Duda que queda:** P0175 se registró con `fecha_creacion` 2026-10-24 (fecha UTC; en CDMX todavía era el 23-oct). Es el mismo problema de zona horaria del punto (e). Lo decide la conciliación.
 - **Estado:** Cerrado (lo del orquestador). Abierto → pre-apertura y cierre.
+
+## 2026-10-24 02:1x UTC · inteligencia 20:05 CDMX del 23-oct · etiqueta de Δ1 de `fx_alerta.py` en fin de semana, FRED y P0176
+- **(1) Posible error en `herramientas/fx_alerta.py`, sin editar.** El sábado a las 02:07 UTC la línea dice "Δ1 +0.00% vs 18.6480 del 22-oct". La base correcta del 22-oct es 18.6910 y el Δ1 real es −0.23%.
+  - **Causa probable** (lectura del código y de Yahoo `MXN=X` 1d):
+    - Con el mercado cerrado no hay barra con fecha de Londres del sábado. Por eso el punto en vivo del viernes (21:29 UTC, 18.6480) queda en la fecha de Londres del 23-oct.
+    - `parsear_diario_yahoo()` deja el último cierre de esa fecha, así que pisa el de la barra completa (18.7208).
+    - `referencia_yahoo()` la reetiqueta al 22-oct, porque la fecha de Londres ya es el 24-oct.
+    - Además, el `previousClose` del 1m (18.691) entra como la referencia "provisional" del 23-oct.
+    - Como `hoy` en CDMX sigue siendo el 23-oct, Δ1 compara el spot contra el mismo 18.6480.
+  - **Efecto:** de la noche del viernes al domingo, Δ1 no ve el movimiento del viernes. Un AVISO de Δ1 del viernes saldría como OK en las corridas de fin de semana. Δ10 y el episodio usan otras referencias y no parecen verse afectados. El σd y el mínimo/máximo de 15 días tienen un punto sesgado.
+  - **Qué decidí:** no editar (la instrucción es de solo lectura). Para los cálculos en pesos uso 18.6910 como base del 22-oct, igual que a las 15:05.
+  - **Propuesta para quien mantenga la herramienta:** descartar el punto en vivo cuando su fecha de Londres sea menor que `fecha_londres` y ya exista una barra completa de esa fecha. Agregar una prueba con un sábado.
+  - **Estado:** Abierto → orquestador / trabajo continuo.
+- **(2) FRED ya responde, pero solo llega al 22-oct** (DGS10 4.96; SP500 21-oct; DEXMXUS 16-oct; DCOILWTICO 20-oct).
+  - **Qué decidí:** no resolver P0005, P0128, P0051, P0001, P0003 ni P0004.
+  - **Estado:** Abierto → conciliación (26-27-oct).
+- **(3) P0176** se registró con `fecha_creacion` 2026-10-23, la fecha CDMX de la corrida, igual que el archivo de inteligencia. Es el mismo punto de zona horaria que quedó abierto con P0175. Lo decide la conciliación.
+  - **Estado:** Abierto → conciliación.
