@@ -1173,7 +1173,7 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - Si el estímulo se niega después de dejar pasar el 29-oct: $39,360 más actualización.
   - El punto de equilibrio del memo (≈22% de probabilidad de aprobación) sigue vigente.
 - **Bloqueo:** la ficha exige acreditar la representación. Es la misma pregunta pendiente de si el contador tiene poder de SGM.
-- **Estado:** Abierto → dueño.
+- **Estado:** Abierto → dueño. [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §1] **Hechos [A] ratificados** con los textos oficiales (LIF 2026 sha256 a305ca23…; RMF compilado SAT sha256 edd1ae82…; Anexo 2 compilado, ficha 9/LIF "Modificada en la Primera Modificación… DOF 17-jul-2026"). **Plazo: jue 29-oct correcto** (CFF 75 VII, 121 y LFPCA 13/58-2/74 dicen "30 días siguientes"; RMF 2.1.6 sin inhábiles entre 18-sep y 29-oct). Matices para el dueño y su contador, sin decidir: la LIF habla de créditos "firmes **o consentidos**" y el art. 115 Ter exige "a sabiendas" y un procedimiento "regulado en este Código". La ruta es del dueño. Cerrado en lo de hechos; abierto → dueño.
 
 ## 2026-10-23 · inteligencia 07:05 CDMX (13:1x UTC) · regla de cierre de Polymarket cumplida y rodamiento del Brent en Yahoo
 - **(1) Polymarket 4641065: la regla de cierre propuesta se cumple.** 1.ª lectura de inteligencia: 0.775 (02:04 UTC, 20:05 CDMX del 22-oct). 2.ª: **0.795** (13:12 UTC, 07:05 CDMX del 23-oct), sin fuego de EUA confirmado (war.gov y whitehouse.gov sin nada sobre Irán; centcom.mil 403).
@@ -1184,7 +1184,7 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Qué decidí:** anotarlo en la tabla (A) y no tocar ningún pronóstico. Aplico el precedente de P0136 (conciliación del 20-oct): el criterio literal sobre la serie continua tal como la publique Yahoo.
   - **Qué cambia:** P0122 (≥ 110 el 30-oct) pasa de un margen de ≈+3.7% a ≈0%; P0146 (< 105) de −8% a −4.6%. **P0168** (pre-apertura, p 0.62) se justificó leyendo el rodamiento como baja; la distancia al umbral sí es correcta sobre enero. Que la conciliación decida si se anota la nota en P0168.
   - **Para las herramientas:** cualquier cambio diario de `BZ=F`, `CL=F` o `NG=F` debe compararse contra el `chartPreviousClose` de la misma consulta, no contra la barra diaria anterior, en los días de rodamiento (pasó con `CL=F` el 20-oct y hoy con `BZ=F` y `NG=F`).
-  - **Estado:** Abierto → conciliación (nota en P0168 y corrección del §1 del brief del 23-oct) y orquestador (regla de herramientas).
+  - **Estado:** Abierto → conciliación (nota en P0168 y corrección del §1 del brief del 23-oct) y orquestador (regla de herramientas). [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §9] Hecho: nota en P0168 (criterio sin cambio) y en el brief L32 y L62. **Cerrado lo de la conciliación**; la regla de herramientas sigue → orquestador.
 
 ## 2026-10-23 · inteligencia 11:05 CDMX (17:1x UTC) · Polymarket en 0.755, UPRO cruzó −2% en la sesión y FRED sin dato del 23-oct
 - **(1) Polymarket 4641065 baja a 0.755 (17:04 UTC)**, después de 0.795 a las 14:00 y 0.785 a las 15:00-15:30. Sigue sin fuego de EUA confirmado (war.gov y whitehouse.gov). El frente hutí-saudí escala: otra ola de misiles, Brent de diciembre en 117 y la evacuación de la sede de Aramco (D/C).
@@ -1198,39 +1198,39 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(3) FRED responde (200), pero no hay dato del 23-oct en DGS10, SP500, DEXMXUS ni DCOILWTICO.**
   - **Qué decidí:** no resolver P0005, P0001, P0003 ni P0004, aunque su `fecha_resolucion` sea hoy. El criterio pide el dato del 23-oct; leo "si falta, último dato previo" como un día sin dato publicado (feriado), no como un dato que todavía no sale. Es la lectura conservadora.
   - Expectativas: P0001 SÍ, P0003 NO y P0004 NO; P0005 y P0128 en el filo (^TNX 4.99).
-  - **Estado:** Abierto → conciliación (resolver el 26-27-oct, cuando FRED publique).
+  - **Estado:** Abierto → conciliación (resolver el 26-27-oct, cuando FRED publique). [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §6] Lectura ratificada ("si falta" = día sin dato publicado). Sigue abierto.
 
 ## 2026-10-23 · inteligencia 15:05 CDMX (21:1x UTC) · P0135 sin fila en equity.csv, FRED sin respuesta y UPRO cerca del umbral
 - **(1) P0135** (índice de `bitacora/equity.csv` del 23-oct ≥ 100.920): a las 21:0x todavía no existe la fila del 23-oct; la escribe la rutina de Cierre (15:37 CDMX). Con `portafolio.py valuar --sin-guardar` (USD/MXN 18.6480) da 20,193.43 MXN, índice ≈100.967.
   - **Qué decidí:** no resolverlo. El criterio literal es la fila guardada, y el margen es de solo ≈9 MXN: con un USD/MXN < 18.639 en la valuación del Cierre, el resultado cambia a NO.
-  - **Estado:** Abierto → rutina de Cierre o conciliación (resolver con la fila que se guarde).
+  - **Estado:** Abierto → rutina de Cierre o conciliación (resolver con la fila que se guarde). [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §6] P0135 = SÍ ratificado: fila 2026-10-23 de `equity.csv`, índice 100.967150 ≥ 100.921150 (recálculo propio con Yahoo y FX 18.6480). **Cerrado.**
 - **(2) FRED no respondió** (HTTP/2 INTERNAL_ERROR y timeout de 30 s). El Tesoro ya publicó el 10 años del 23-oct: **5.00**.
   - **Qué decidí:** no resolver P0005, P0128, P0051, P0001, P0003 ni P0004 (mismo criterio de las 11:05).
   - Expectativas: P0005 SÍ (justo en 5.00), P0128 NO, P0051 SÍ, P0004 NO (^GSPC 7,623.68), P0003 NO y P0001 SÍ.
   - Ojo con P0005 y P0128: los decide un redondeo. Si FRED publica 5.00, P0005 es SÍ y P0128 es NO.
-  - **Estado:** Abierto → conciliación (26-27-oct).
+  - **Estado:** Abierto → conciliación (26-27-oct). [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §6] Lectura ratificada: FRED al 24-oct 03:0x UTC llega al 22-oct (DGS10 4.96), así que P0001, P0003, P0004, P0005, P0051 y P0128 esperan. Sigue abierto → conciliación del 26-27-oct.
 - **(3) Fila alta de UPRO de las 11:05:** la cerré porque el cierre da −1.93% en pesos (FX 18.6480 contra 18.6910, comparando las dos a las 21:00 UTC). El margen es de 0.08%.
   - **Qué decidí:** si la rutina de Cierre valúa con un USD/MXN ≤ 18.6338, el cierre cruzaría −2% y debe reabrirla.
-  - **Estado:** Abierto → rutina de Cierre.
+  - **Estado:** Abierto → rutina de Cierre. [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §6] El Cierre valuó con 18.6480 (> 18.6338): UPRO −1.93% en pesos, no cruza −2%; la fila no se reabre. **Cerrado.**
 
 ## 2026-10-23 · comité W43 (22:5x UTC) · decisiones y lo que queda abierto
 - **Hecho:** el comité aprobó B1 en papel (vender 1 UPRO; orden O0006 para el lunes 26-oct a las 14:45 UTC), A-real (sin boleta) y A en Binance. Ver `bitacora/decisiones/2026-10-23-CARTERA-W43-B1-recorte-UPRO.md`.
-- **Abierto → dueño:** una sola petición: (a) el efectivo disponible en GBM; (b) los movimientos desde el 7-oct; (c) si la orden VT del 19-oct se llenó; (d) quién decidió NFLX, UBER, LULU, RLY, AOA y VOO.
+- **Abierto → dueño:** una sola petición: (a) el efectivo disponible en GBM; (b) los movimientos desde el 7-oct; (c) si la orden VT del 19-oct se llenó; (d) quién decidió NFLX, UBER, LULU, RLY, AOA y VOO. [Nota conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §2] (c) queda reemplazado por "si ves VT en tu portafolio, no captures: repórtalo": la posición es 0 VT, conocida, y la boleta está CADUCADA (fallo 2026-10-22 §3). La petición al dueño es (a), (b) y (d).
 - **Abierto → orquestador:**
-  - **Tope de pérdida:** `rutinas/REGLAS-MOTOR.md` §4 dice 10,000 MXN y `config/parametros.json` dice 5,000 (provisional, ratificado el 2-oct; es el que aplica `riesgo.py`). **No se tocó nada.** Hasta aclararlo rige el más restrictivo (5,000). Se le pregunta al dueño junto con la petición de arriba.
+  - **Tope de pérdida:** `rutinas/REGLAS-MOTOR.md` §4 dice 10,000 MXN y `config/parametros.json` dice 5,000 (provisional, ratificado el 2-oct; es el que aplica `riesgo.py`). **No se tocó nada.** Hasta aclararlo rige el más restrictivo (5,000). Se le pregunta al dueño junto con la petición de arriba. [Nota conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §7 (revisión 2.2)] No es una discrepancia: `config/parametros.json` trae `valor` 5,000 (provisional del 29-sep, con motivo) y `valor_dueno_25_sep` 10,000, y REGLAS §4 manda el más restrictivo. La ratificación sigue siendo del dueño (parámetro).
 - **Estado:** Abierto → comité del 30-oct (B2' si el dueño confirma), rutina de cierre del 26-oct (ejecutar O0006) y dueño.
 
 ## 2026-10-24 00:0x UTC · revisión (rutina 11, entregables del 23-oct) · VT en la decisión W43 y cobertura del expediente
 - **(1) ¿La pregunta "(c) si la orden VT del 19-oct se llenó" y la advertencia "si ya tienes 1 VT del 19-oct, no captures otra" (decisión W43 L10, L12 y L19; L1218 de este archivo) son inconsistentes o solo redundantes frente al fallo 2026-10-22 §3?**
   - **Qué decidí:** son **inconsistentes**. El fallo fijó la posición en 0 VT, conocida, y retiró esa advertencia (§3.4). La pre-apertura del 23-oct reintrodujo "estado desconocido" y de ahí pasó al expediente, al marcador, a W43 y a la decisión.
   - **Opción conservadora:** el registro se queda en **0 VT** y no se registra ni se revierte nada. La advertencia que vale es la del §3.4 ("si ves VT en tu portafolio, no captures: repórtalo"). Pedirle de más al dueño no compra nada, así que el riesgo operativo es nulo. Por eso es "corregir" y no bloqueante.
-  - **Estado:** Abierto → orquestador (notas fechadas), pre-apertura (brief L7) y cierre (marcador L13). Revisión §1.1.
+  - **Estado:** Abierto → orquestador (notas fechadas), pre-apertura (brief L7) y cierre (marcador L13). Revisión §1.1. [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §2] Ratificado: 0 VT conocido. Notas del orquestador (`84711c6`) verificadas; las que faltaban (brief L7, marcador L13, `rivales.csv` L36 y L1218 de este archivo) las puso esta conciliación. **Cerrado.**
 - **(2) El expediente W43 omite b, e, f, g, k y n del fallo §4, y no dice por qué.**
   - **Qué decidí:** no invalida la decisión, porque A-real es lo más conservador y B1 reduce riesgo. Se pide una adenda.
-  - **Estado:** Abierto → orquestador. Revisión §1.2.
+  - **Estado:** Abierto → orquestador. Revisión §1.2. [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §3] La adenda de `84711c6` cubre b, e, g, k y n; faltaba (f), que el fallo del 22-oct dio por cerrado (línea agregada). **Cerrado.**
 - **(3) O0006, "^VIX >= 25" sin hora.**
   - **Qué decidí:** usar la lectura del precedente (cierre previo). Si a las 14:45 el VIX está ≥ 25, la venta de 1 título se hace igual (reduce riesgo) y manda la regla del filtro para el resto.
-  - **Estado:** Abierto → cierre del 26-oct. Revisión §2.1.
+  - **Estado:** Abierto → cierre del 26-oct. Revisión §2.1. [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §4] Lectura **ratificada** y anotada en las notas de O0006. La aplica el cierre del 26-oct. **Cerrado como regla.**
 
 ## 2026-10-24 · trabajo continuo (01:1x UTC) · correcciones del comité W43 (revisión del 23-oct §1.1-§1.7)
 - **Hecho:** notas fechadas en la decisión W43, en el expediente (adenda con (a), (b), (c), (e), (g), (i), (k), (m) y (n)) y en `bitacora/semanal/2026-W43.md`. Se registró **P0175**, la refutación de B1 con fórmula contrafactual, antes de ejecutar O0006.
@@ -1238,8 +1238,8 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - el punto (c) de la petición al dueño pasa a "si ves VT en tu portafolio, no captures: repórtalo";
   - VT = 0, conocido; boleta CADUCADA (fallo 2026-10-22 §3).
 - **Pendiente de otras rutinas:** la pre-apertura del lunes, nota en el brief del 23-oct L7; el cierre, nota en el marcador L13 con la redacción única del efectivo.
-- **Duda que queda:** P0175 se registró con `fecha_creacion` 2026-10-24 (fecha UTC; en CDMX todavía era el 23-oct). Es el mismo problema de zona horaria del punto (e). Lo decide la conciliación.
-- **Estado:** Cerrado (lo del orquestador). Abierto → pre-apertura y cierre.
+- **Duda que queda:** P0175 se registró con `fecha_creacion` 2026-10-24 (fecha UTC; en CDMX todavía era el 23-oct). Es el mismo problema de zona horaria del punto (e). Lo decide la conciliación. [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §5] **No se corrige:** la anterioridad la prueba el commit (`84711c6`, 24-oct 01:12 UTC, antes de la vela del 26-oct 14:45 UTC), no la etiqueta; ninguna regla fija la zona de `fecha_creacion` y el Brier no la usa (precedente 2026-10-16). La regla única es del comité del 30-oct (punto (e), sin tratar en el W43).
+- **Estado:** Cerrado (lo del orquestador). Abierto → pre-apertura y cierre. [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §2 y 5] Las notas que tocaban a la pre-apertura (brief L6-L7) y al cierre (marcador L11/L13) ya las puso esta conciliación. **Cerrado.** Duda de `fecha_creacion`: ver abajo.
 
 ## 2026-10-24 02:1x UTC · inteligencia 20:05 CDMX del 23-oct · etiqueta de Δ1 de `fx_alerta.py` en fin de semana, FRED y P0176
 - **(1) Posible error en `herramientas/fx_alerta.py`, sin editar.** El sábado a las 02:07 UTC la línea dice "Δ1 +0.00% vs 18.6480 del 22-oct". La base correcta del 22-oct es 18.6910 y el Δ1 real es −0.23%.
@@ -1255,9 +1255,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Estado:** Abierto → orquestador / trabajo continuo.
 - **(2) FRED ya responde, pero solo llega al 22-oct** (DGS10 4.96; SP500 21-oct; DEXMXUS 16-oct; DCOILWTICO 20-oct).
   - **Qué decidí:** no resolver P0005, P0128, P0051, P0001, P0003 ni P0004.
-  - **Estado:** Abierto → conciliación (26-27-oct).
+  - **Estado:** Abierto → conciliación (26-27-oct). [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §6] Lectura ratificada: FRED al 24-oct 03:0x UTC llega al 22-oct (DGS10 4.96), así que P0001, P0003, P0004, P0005, P0051 y P0128 esperan. Sigue abierto → conciliación del 26-27-oct.
 - **(3) P0176** se registró con `fecha_creacion` 2026-10-23, la fecha CDMX de la corrida, igual que el archivo de inteligencia. Es el mismo punto de zona horaria que quedó abierto con P0175. Lo decide la conciliación.
-  - **Estado:** Abierto → conciliación.
+  - **Estado:** Abierto → conciliación. [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §5] Igual que P0175: no se corrige; la ventana de P0176 empieza a las 00:00 UTC del 24-oct y el commit (`966f138`) es de las 02:12:35 UTC, así que el pronóstico se escribió ~2 h **dentro** de su propia ventana. Se acepta porque no hubo fuego confirmado en ese lapso (inteligencia 20:05, sin ataque en war.gov/whitehouse.gov), pero se anota. **Cerrado**; regla → comité del 30-oct.
 
 ## 2026-10-24 02:2x UTC · investigador vespertino (23-oct CDMX) · ¿probar un stop amplio de ventana móvil en el UPRO?
 - **Contexto:** Lo-Remorov (JFM 2017, grado B, adenda del cap. 07 del 23-oct): los stops de dos semanas con −12% a −16% y reentrada de +0.5% a +1.5% son los únicos que empatan o mejoran un poco a comprar y mantener en acciones, y solo por volatilidad. R16 probó un stop desde la entrada, no uno de ventana móvil.

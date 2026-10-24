@@ -78,4 +78,5 @@ Responde en español, en 15 líneas o menos.
 - **(k) Respuestas al dueño del 22-oct:** las opciones (A) mantener, (B) recortar NVDA y UBER y (C) todo a CETES no se ratificaron de forma explícita. La decisión ratifica (A) solo para el libro de Claude.
 - **(m) Condición de las ventas de SPYM:** el dueño debe tener las 3 SPYM a la vista el día de la venta. No aplica, porque no se decidió vender SPYM.
 - **(n) Polymarket:** el cierre de la fila y el conteo de lecturas (fallo §7) quedan del orquestador. El dictamen geopolítico reporta el cierre del 23-oct en 0.725, y se registró P0174.
+- **(f) Pronósticos resueltos antes de su fecha** [Nota conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §3]: no entra porque el fallo 2026-10-22 §4 lo dio por **cerrado e informativo** (ratificados en su §6). Con esto la adenda cubre (a)-(n) completo.
 - **Efectivo (revisión §1.3):** donde dice "sin confirmar desde el 22-oct", léase "efectivo 5,040.16 registrado; última confirmación del dueño el 7-oct; en duda desde la captura del 22-oct (la cuenta compartida no cuadra)".

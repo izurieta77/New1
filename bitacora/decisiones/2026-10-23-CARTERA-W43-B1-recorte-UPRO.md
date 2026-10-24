@@ -19,7 +19,7 @@
 - **Antes de mover nada:** confirma el efectivo disponible y si VT se ejecutó. Faltan ≈3,150 MXN por conciliar en la cuenta compartida.
 
 ## Tesis y cómo se refuta
-- **Tesis de B1:** con el UPRO al 26.6%, P(tocar −12% en 63 días) ≈ 21%; con 13.3%, ≈ 16.4% (R18 + adenda; A y B concuerdan).
+- **Tesis de B1:** con el UPRO al 26.6%, P(tocar −12% en 63 días) ≈ 21%; con 13.3%, ≈ 16.4% (R18 + adenda; A y B concuerdan). [Nota conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §7 (revisión 2.3)]: R18 simuló UPRO al **26.9% y 13.5%**; 26.6% y 13.3% son los pesos del 23-oct. Ver además la nota de L102 sobre la métrica contra el máximo histórico.]
   - El stop está a 6.1%, y R16 dice que el stop no protege. **El tamaño es la palanca**: R16-R18 lo muestran y el abogado del diablo lo nota.
   - El costo es una comisión de 7.79 MXN.
 - **Refutación al 20-nov:** que el papel con un UPRO rinda menos que el contrafactual con dos (`competencia/marcador.md`, reconstruible) **y** que no haya tocado −12%. Va con el pronóstico **P0173**.
@@ -86,7 +86,7 @@
   | Una semana tipo abril de 2025 | −15.5% | −11.3% |
 
 - **Reasignar el efectivo** cabe hasta 2 SPYM (57.8%), pero no se recomienda: devuelve la beta que B1 quita.
-- **Discrepancia anotada:** `rutinas/REGLAS-MOTOR.md` §4 dice tope de 10,000 MXN y `config/parametros.json` dice 5,000 (el que usa `riesgo.py`). Va a decisiones-pendientes; no se cambió nada.
+- **Discrepancia anotada:** `rutinas/REGLAS-MOTOR.md` §4 dice tope de 10,000 MXN y `config/parametros.json` dice 5,000 (el que usa `riesgo.py`). Va a decisiones-pendientes; no se cambió nada. [Nota conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §7 (revisión 2.2)]: no es una contradicción. El JSON trae las dos cifras (`valor` 5,000 provisional del 29-sep y `valor_dueno_25_sep` 10,000) y REGLAS §4 manda el más restrictivo. Ratificarlo es del dueño.]
 
 ## Verificación (orquestador, 23-oct ~22:55 UTC, antes del commit)
 - **Venta:** 1 UPRO = 144.04 × 18.6480 = 2,686.06 MXN; comisión 0.29% = 7.79.

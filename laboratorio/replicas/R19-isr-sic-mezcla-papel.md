@@ -9,7 +9,7 @@
 | Pre-registro escrito el | 2026-10-23, antes de cualquier corrida |
 | Commit del pre-registro y del código | el commit que trae este archivo junto con `R19.py` (sha256 arriba). El script corre solo después de ese commit |
 | Responsable | orquestador (A); auditor-de-replicas (B) |
-| Estado | Pendiente |
+| Estado | Replicado (ver L104 y `laboratorio/tabla-maestra.md`) [Nota conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §8 (revisión 2.5)]: decía "Pendiente"] |
 
 **Conocimiento previo declarado:**
 - R18 mide el riesgo de la mezcla en USD, sin impuestos ni tipo de cambio.
