@@ -105,3 +105,18 @@
   - **B1 no protege la cola profunda:** −20% en 12 meses ≈ 25-27% con cualquier peso, y un día tipo 1987 ≈ −24%.
 - El argumento fiscal de la respuesta al dueño ("vender no paga ISR") sigue en pie para hoy. El costo fiscal de largo plazo de la mezcla está subestimado en R19 (~1.0-1.2 pp por año).
 - **El Brier de 0.1979 no prueba habilidad** ni se distingue de 0.20.
+
+## Correcciones de la revisión del 23-oct
+[Nota del orquestador, 24-oct-2026 01:1x UTC (trabajo continuo), por la revisión del 23-oct §1.1-§1.7, `bitacora/revisiones/2026-10-23.md`]
+- **§1.1 VT:** el registro vigente es el del fallo 2026-10-22 §3: **0 VT en la cuenta, cosa conocida por las capturas del 22-oct; boleta CADUCADA desde el 23-oct, sin ejecución registrada.**
+  - En esta decisión, "estado desconocido" y "advertencia que sigue vigente" (L10-L12) no aplican.
+  - El punto (c) de la petición al dueño se reemplaza por la fórmula del fallo §3.4: "si ves VT en tu portafolio, no captures: repórtalo".
+- **§1.2 Expediente incompleto:** lo que faltaba está en la adenda de `bitacora/comite/2026-10-23-expediente.md`. **Ratificación (fallo §4 k):** para el **libro de Claude**, el comité ratifica la opción **(A) mantener** de las respuestas al dueño del 22-oct. Las opciones (B) recortar NVDA y UBER y (C) todo a CETES son de posiciones ajenas o de toda la cuenta: quedan como opinión, no como decisión.
+- **§1.3 / §1.5 Efectivo:** donde dice "sin confirmar desde el 22-oct" y "+0.44% en GBM", la redacción única es: **"efectivo 5,040.16 registrado; última confirmación del dueño el 7-oct; en duda desde la captura del 22-oct (la cuenta compartida no cuadra)"**. El +0.44% se calcula con ese efectivo registrado.
+- **§1.4 Refutación verificable:** se registró **P0175** antes de ejecutar O0006. Pregunta: ¿al 20-nov el índice real queda debajo del contrafactual con 2 UPRO **y** no tocó −12% contra su máximo histórico? p 0.45. La fórmula del contrafactual está escrita en el criterio. P0173 queda solo como pronóstico de dirección.
+- **§1.6 Alcance del −262 MXN:** son las **seis emisoras de la cuenta compartida que se veían en la captura**, no el libro de Claude ni el ejercicio completo. Si hubo otras enajenaciones en 2026 (AMKR, quizá VISTA o GFNORTE), la constancia cambia. La conclusión, que vender no ahorra ISR, se sostiene.
+- **§1.7 Horas (reincidente):** las horas de este archivo se corrigen con `git log`:
+  - la decisión entró en `22e1b07` a las **22:54:30 UTC**;
+  - la verificación de la L91 fue anterior a ese commit;
+  - la "Nota 23:1x UTC" entró en `85c5670` a las **22:56:38 UTC**.
+  - **Regla:** la hora de una nota se toma de `date -u` al escribirla, y ninguna nota dice una hora posterior a su commit.

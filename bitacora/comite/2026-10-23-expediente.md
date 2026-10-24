@@ -66,3 +66,16 @@ TESIS A EVALUAR (statu quo): "Mantener sin cambios la cartera de papel y la real
 4. una frase para responderle al dueño "¿qué vendemos?", que distinga el libro de Claude de lo demás.
 
 Responde en español, en 15 líneas o menos.
+
+---
+**Adenda** [Nota del orquestador, 24-oct-2026 01:1x UTC (trabajo continuo), por la revisión del 23-oct §1.1-§1.7, `bitacora/revisiones/2026-10-23.md`]. Son puntos del fallo 2026-10-22 §4 que el expediente no traía o traía incompletos, con su motivo. No cambian la decisión, porque A-real es la opción más conservadora.
+- **(a) VT:** el estado correcto es **0 VT, conocido; boleta CADUCADA desde el 23-oct** (fallo §3). Este expediente decía "estado desconocido" por error.
+- **(b) "10,940 pesos":** sigue sin aclarar. Se explica con la cuenta compartida (§1 del fallo). Faltó por omisión.
+- **(c) "¿En qué invertimos?":** entra implícito en B2', condicionada al efectivo.
+- **(e) R12, P0032/P0037, P0118 y zona horaria de `fecha_creacion`:** sin cambio respecto de los fallos del 14 al 19-oct. Faltó por omisión, y no es decisión de cartera.
+- **(g) Umbral de E9:** abierto, con tercer episodio el 22-oct. Solo salió en el dictamen cripto. Lo decide el gestor de riesgo, que no lo trató.
+- **(i) DD de los reales:** real GBM −0.91% y real Binance −1.71%, los dos máximos nuevos. Ninguno llega a un cortacircuitos.
+- **(k) Respuestas al dueño del 22-oct:** las opciones (A) mantener, (B) recortar NVDA y UBER y (C) todo a CETES no se ratificaron de forma explícita. La decisión ratifica (A) solo para el libro de Claude.
+- **(m) Condición de las ventas de SPYM:** el dueño debe tener las 3 SPYM a la vista el día de la venta. No aplica, porque no se decidió vender SPYM.
+- **(n) Polymarket:** el cierre de la fila y el conteo de lecturas (fallo §7) quedan del orquestador. El dictamen geopolítico reporta el cierre del 23-oct en 0.725, y se registró P0174.
+- **Efectivo (revisión §1.3):** donde dice "sin confirmar desde el 22-oct", léase "efectivo 5,040.16 registrado; última confirmación del dueño el 7-oct; en duda desde la captura del 22-oct (la cuenta compartida no cuadra)".

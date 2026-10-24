@@ -1231,3 +1231,12 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(3) O0006, "^VIX >= 25" sin hora.**
   - **Qué decidí:** usar la lectura del precedente (cierre previo). Si a las 14:45 el VIX está ≥ 25, la venta de 1 título se hace igual (reduce riesgo) y manda la regla del filtro para el resto.
   - **Estado:** Abierto → cierre del 26-oct. Revisión §2.1.
+
+## 2026-10-24 · trabajo continuo (01:1x UTC) · correcciones del comité W43 (revisión del 23-oct §1.1-§1.7)
+- **Hecho:** notas fechadas en la decisión W43, en el expediente (adenda con (a), (b), (c), (e), (g), (i), (k), (m) y (n)) y en `bitacora/semanal/2026-W43.md`. Se registró **P0175**, la refutación de B1 con fórmula contrafactual, antes de ejecutar O0006.
+- **Corrige la entrada del comité W43 de arriba:**
+  - el punto (c) de la petición al dueño pasa a "si ves VT en tu portafolio, no captures: repórtalo";
+  - VT = 0, conocido; boleta CADUCADA (fallo 2026-10-22 §3).
+- **Pendiente de otras rutinas:** la pre-apertura del lunes, nota en el brief del 23-oct L7; el cierre, nota en el marcador L13 con la redacción única del efectivo.
+- **Duda que queda:** P0175 se registró con `fecha_creacion` 2026-10-24 (fecha UTC; en CDMX todavía era el 23-oct). Es el mismo problema de zona horaria del punto (e). Lo decide la conciliación.
+- **Estado:** Cerrado (lo del orquestador). Abierto → pre-apertura y cierre.
