@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-25 21:11 UTC · inteligencia (15:05, domingo) · OK · Polymarket 4641065 0.845 (liquidez 103k), fila abierta; embajada EUA en Arabia Saudita ordena salida de personal no esencial (urgencia media; sube a alta si UPRO −2% en pesos a la reapertura, ES≈7,608); Brasil conteo sin resultado (Polymarket Lula 0.32); futuros/FX aún sin barra dominical; BTC 80,518; sin alertas nuevas
 2026-10-25 19:43 UTC · cripto (13:41, pulso extra) · OK · BTC 80,602 (+0.07%) · colchón +13.92% · E9 0.128% VERDE · OI 845.5M · Polymarket 0.855 · sin vencidos · sin alertas
 2026-10-25 18:19 UTC · cripto (12:17, pulso) · OK · BTC 80,738 (+0.49%) · colchón +14.11% · E9 0.108% VERDE · OI 844.4M · Polymarket 0.855 · sin vencidos · sin alertas
 2026-10-25 17:12 UTC · inteligencia (11:05, domingo) · OK · Polymarket 4641065 0.855 (liquidez −56%, máximo desde 21-oct), fila abierta hasta el lunes; sin fuego de EUA confirmado (Trump: 'won't strike Iran today'); Tadawul −2.65% sin cambio; Brasil cierra casillas 20:00 UTC; BTC 80,802; sin alertas nuevas; prueba 2% en pesos a la reapertura
