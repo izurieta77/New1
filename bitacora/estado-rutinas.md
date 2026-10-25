@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-25 15:43 UTC · cripto (09:41, pulso extra) · OK · BTC 80,680 (+1.64%) · colchón +14.03% · E9 0.036% VERDE · OI 841.6M · sin vencidos · sin alertas
 2026-10-25 14:28 UTC · cripto (08:17, profundo) · OK · BTC 80,304 · filtro ENCENDIDO colchón +13.50% · E9 0.377% VERDE · E1–E10 sin ROJA · ficha btc-expuesto-cuantico (~1.71M BTC P2PK) · P0179 · sin alertas
 2026-10-25 13:20 UTC · inteligencia (07:05, domingo) · OK · (este commit) · barrido + podcasts; Polymarket 4641065 0.825 (5 lecturas ≥0.775), fila abierta hasta el lunes, sin fuego de EUA confirmado; Tadawul −2.65% a 9,438.50 (verificado, hutíes vs Arabia Saudita): posible presión en Brent/futuros a la reapertura; Brasil 2.ª vuelta hoy; agenda del lunes armada; nada resuelto
 2026-10-25 11:43 UTC · cripto (pulso extra 05:41) · OK · (este commit) · BTC 80,446.56, ETH 2,332.87, 4h −0.06%; filtro ENCENDIDO (colchón +13.70%); Polymarket 0.825; E9 0.277% VERDE; sin alertas
