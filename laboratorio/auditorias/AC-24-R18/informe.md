@@ -102,3 +102,61 @@ Con ventanas sin traslape (142 trimestres de 63 días), la mezcla vigente da 49.
 - **El veredicto sobre R18 no cambia:** sigue "No replicado" respecto de H1 literal (−8%).
 - **Lectura para el comité:** la cifra aplicable es P(≥ 12%) ≈ 21%. Los niveles de −20% y −28% son raros (≈ 3-4% y ≤ 1.4% por trimestre). La regla 0.97 tiene un caso al filo en 2025 que mueve P(≥ 28%) entre 0.3% y 0.6%.
 - **Salida:** la corrida está en `python3 -I ac24_niveles_arena.py datos`.
+
+## Adenda 2026-10-24 · Lado B con la métrica del cortacircuitos (máximo histórico de la cuenta)
+- **Motivo:** la auditoría W43 (`bitacora/semanal/2026-W43-abogado.md` §1) señaló que R18 mide la caída contra el máximo **desde el inicio de cada ventana**, mientras que `riesgo.estado_cortacircuitos` (`herramientas/riesgo.py` L82-L89) mide DD(t) = índice(t)/max_{s≤t} índice(s) − 1, con el máximo **desde que abrió la cuenta**. El abogado calculó solo el lado A (grado C).
+- **Código:** `ac24_maximo_historico.py`, nuevo. Reutiliza las curvas de `b.py` igual que la adenda del 22-oct (runpy, JSON a un temporal; `b-resultados.json` no cambia). La métrica está escrita en el archivo nuevo: el pico se actualiza con cada máximo nuevo y se toca el nivel si DD ≤ −u en algún día de t0+1..t0+H. No se leyó `R18.py` ni el código del abogado.
+- **Datos:** los mismos de B (`datos/SHA256SUMS` OK). Corrida: `python3 -I ac24_maximo_historico.py datos` (~3 s).
+- **Control:** la definición (a) reproduce exactamente las cifras previas de B a 63 días (P≥12% = 15.3 / 16.6 / 21.4 / 26.9%; P≥20% = 4.1 / 4.4 / 3.5 / 4.5%).
+
+**Definiciones**
+- **(a) Incondicional, cuenta nueva:** para cada t0, el pico es índice(t0) y se mide P(DD toca −u en los siguientes H días). Es la métrica de R18.
+- **(b) Condicional al estado de hoy:** pico de la cuenta = max(índice[t0−L .. t0]), con L = 20, 25 o 30 días hábiles. Se toman los t0 con DD(t0) ∈ [−3.8%, −2.8%] y se mide P(DD contra ese pico, que se sigue actualizando, toque −u en t0+1..t0+H).
+  - **Por qué L ≈ 20:** la cuenta de papel abrió el 28-sep-2026 y lleva ~20 sesiones al 23-oct. Su pico (104.41) fue el 9-oct, 10 sesiones antes, y hoy está en 100.97, es decir, −3.30%. Con L = 20, "pico de la cuenta" significa lo mismo que en la cuenta real: no puede venir de antes de su apertura.
+  - **Sensibilidad:** L = 20 → 30 baja la P entre 1 y 4 pp. Cuanto más corto es L, más rápida fue la caída de −3.3% que se exige y más volátil es el régimen que se condiciona (agrupamiento de volatilidad). L = 63 o 126 da cifras parecidas a L = 30 con 26.9% y 40%, y menores con 0% y 13.5%.
+- **(a′) Definición del lado A (abogado):** el pico es el máximo desde el inicio de la serie (1990). Se cuentan los inicios con DD(t0) > −u, y también el subconjunto con DD(t0) ∈ [−5%, −2%]. Solo sirve para cotejar con A.
+
+**Tabla B.** Celdas (b) como L20 / L25 / L30; n ≈ 620-780 inicios condicionados (traslapados).
+
+| UPRO | (a) −12% 63 d | (b) −12% 63 d | (a) −12% 126 d | (b) −12% 126 d | (a) −20% 63 d | (b) −20% 63 d | (a) −20% 126 d | (b) −20% 126 d |
+|---|---|---|---|---|---|---|---|---|
+| 0% | 15.3% | 18.5 / 16.9 / 15.9% | 26.8% | 29.1 / 26.3 / 25.4% | 4.1% | 4.4 / 3.6 / 3.3% | 9.7% | 10.8 / 9.6 / 9.7% |
+| 13.5% | 16.6% | 22.3 / 20.8 / 19.8% | 30.4% | 34.1 / 32.1 / 30.9% | 4.4% | 6.3 / 5.9 / 3.7% | 12.8% | 17.5 / 16.0 / 13.9% |
+| **26.9% (vigente)** | 21.4% | **28.4 / 26.1 / 24.6%** | 41.4% | **46.2 / 44.6 / 42.1%** | 3.5% | **4.9 / 5.0 / 4.1%** | 12.5% | **16.8 / 15.3 / 13.6%** |
+| 40% | 26.9% | 32.2 / 30.3 / 31.3% | 50.9% | 54.6 / 52.4 / 52.5% | 4.5% | 4.7 / 4.9 / 6.1% | 15.2% | 15.7 / 13.9 / 13.5% |
+
+- **n efectivo chico:** los inicios que tocan −12% a 126 días con 26.9% se agrupan en ~13 bloques (episodios); los de −20% a 126 días, en ~9. A 63 días, −12% se reparte en ~25 bloques y −20% en ~10.
+
+**Cotejo con A, misma definición (a′)**
+
+| Celda | A (abogado) | B (a′) | Δ B−A |
+|---|---|---|---|
+| −12% 63 d, arranca arriba de −12%: 0 / 13.5 / 26.9 / 40% | 14.1 / 20.0 / 33.3 / 37.8% | 15.4 / 20.3 / 33.3 / 38.3% | +1.3 / +0.3 / 0.0 / +0.5 |
+| −12% 63 d, DD ∈ [−5, −2]%: 13.5 / 26.9% | 17.1 / 25.1% | 17.2 / 25.6% | +0.1 / +0.5 |
+| −12% 126 d, DD ∈ [−5, −2]%: 13.5 / 26.9% | 29.6 / 44.7% | 29.3 / 45.6% | −0.3 / +0.9 |
+| Cuenta nueva −20% 252 d: 0 / 13.5 / 26.9% | 16.6 / 25.4 / 27.1% | 16.9 / 25.9 / 27.4% | +0.3 / +0.5 / +0.3 |
+
+- **Con la misma definición, A y B concuerdan en las 11 celdas.** Diez quedan dentro de ±1 pp. La mayor diferencia es +1.3 pp (0%, sin condicionar) y viene del mismo sesgo de fuente de B ya documentado el 22-oct (dividendo de multpl, NASDAQ100 de FRED, días omitidos por DTB3).
+- **Nota sobre el "~33% sin condicionar" de A:** usa el máximo desde 1990 e incluye arranques que ya están, por ejemplo, a −10%. No describe ni una cuenta nueva (21.4%) ni la cuenta de hoy. En la nota de R18 del 23-oct, la cifra "P(−12% en 126 días) ≈ 45%" es la **condicional** (columna "Ídem, 126 d" del abogado), no la incondicional (B a′ incondicional a 126 d: 51.3%).
+
+**Cotejo con las cifras titulares de A contra la definición pedida (b)**
+
+| | A (DD ∈ [−5, −2]% vs máx. desde 1990) | B (b) L20 / L25 / L30 | Δ con L20 (L25) | ¿±3 pp? |
+|---|---|---|---|---|
+| 26.9%, −12% 63 d | ~25% (25.1) | 28.4 / 26.1 / 24.6% | +3.3 (+1.0) | Sí con L25-L30; al filo con L20 |
+| 26.9%, −12% 126 d | ~45% (44.7) | 46.2 / 44.6 / 42.1% | +1.5 (−0.1) | Sí |
+| 13.5%, −12% 63 d | ~17% (17.1) | 22.3 / 20.8 / 19.8% | +5.2 (+3.7) | **No** (sí con L30: +2.7) |
+| 13.5%, −12% 126 d | ~30% (29.6) | 34.1 / 32.1 / 30.9% | +4.5 (+2.5) | Sí con L25-L30; no con L20 |
+
+- **Origen de las diferencias:** es la definición, no el código. A condiciona a una banda ancha (−5 a −2%) contra un pico que puede tener años. (b) exige una caída de −3.3% desde un pico de los últimos 20-30 días, que se parece más a la cuenta real y deja una muestra de régimen más volátil. Con 13.5% el efecto es mayor.
+- **La reducción por bajar UPRO de 26.9% a 13.5%** es de 6.1 pp a 63 días y 12.1 pp a 126 días con L20 (5.3 y 12.5 pp con L25), no los ~8 y ~15 pp de A. Es más que los 4.6 pp de R18 y menos que lo que estimó A.
+
+**Veredicto**
+- **El lado A se confirma.** Con su misma definición, B concuerda dentro de ±1.3 pp en las 11 celdas. Con la definición pedida (b), la cifra de 26.9% concuerda dentro de ±3 pp con L25-L30 (con L20 el desvío es +3.3 pp a 63 días). La de 13.5% queda **por encima** de A en +2.5 a +5.2 pp.
+- **Rige la más conservadora (la mayor; B L20):**
+  - **UPRO al 26.9%: P(tocar −12% contra el pico de la cuenta, con DD de −3.3%) ≈ 28% a 63 días y ≈ 46% a 126 días.** P(−20%) ≈ 5% a 63 días y ≈ 17% a 126 días.
+  - UPRO al 13.5%: ≈ 22% / 34% para −12% y ≈ 6% / 18% para −20%.
+  - Cuenta nueva sin condicionar, 26.9%: 21.4% / 41.4% para −12% y 3.5% / 12.5% para −20%.
+- **Falsador C1 del abogado** ("si B da ≤ 21% con 26.9%, cae mi objeción"): B da 25.6% con su definición y 24.6-28.4% con la de hoy. **La objeción se sostiene.**
+- **Lectura:** a 126 días, el primer freno se dispara en casi una de cada dos trayectorias desde el estado actual con el UPRO vigente, y en una de cada tres con 13.5%. En −20%, el tamaño del UPRO mueve poco a 63 días y nada entre 13.5% y 40% a 126 días (14-18%), lo que confirma que la cola la pone la beta sin apalancar. Los intervalos reales son anchos, porque son ~9-13 episodios por celda.
+- **Sobre R18:** su estado sigue en "No replicado" respecto de H1 literal (−8%). Esta adenda solo corrige la métrica aplicable al cortacircuitos.
