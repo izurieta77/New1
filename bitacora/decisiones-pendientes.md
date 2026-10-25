@@ -1330,3 +1330,11 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Propuesta al orquestador:** que cada rutina escriba la hora de su sección y de su latido con `date -u` justo antes del `git commit`, nunca estimada.
   - **Estado:** Abierto → orquestador (regla).
 - **(3) Sin cambios** en la ruta de la multa SGM (dueño), en el tope 5,000 / 10,000 (dueño, parámetro) ni en la petición (a), (b) y (d) al dueño.
+
+## 2026-10-25 · cripto 08:17 CDMX · E1 (método F): la réplica no da la cifra del 24-oct
+
+- **Pregunta:** el 24-oct, la bitácora puso E1 sin BNB en **+2.47%** (24 contra 17-oct). Hoy, con unidades por token de `chainTvls` en filas de 00:00 UTC, valuadas al precio del día *t* y sin BNB, la misma ventana da **+1.01%**; la de 25 contra 18-oct, **+0.72%**. El script de referencia (`scratchpad/g4/calc/flujos_binance_defillama.py`) sigue fuera del repositorio, así que no sé cuál de las dos variantes es la oficial.
+- **Qué decidí:** reportar +0.72% con la variante de hoy y dejarlo **limpio**. Las dos lecturas quedan muy lejos del umbral ÁMBAR de −2.1%, así que la conclusión no cambia.
+- **Por qué:** es la opción conservadora. La diferencia no mueve ningún disparador, pero el método debería ser uno solo.
+- **Propuesta:** el bloque de trabajo continuo mueve un script de E1 a `herramientas/` con una prueba, como ya sugería la sección F de `lista-senales-de-alerta.md`.
+- **Estado:** Abierto → orquestador.

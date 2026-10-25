@@ -241,3 +241,11 @@ Ficha: [fichas/2026-10-24-poscuantica-bitcoin.md](fichas/2026-10-24-poscuantica-
   - un ataque de 10 minutos le gana a la primera confirmación ~34-37% de las veces (300 bloques reales de mempool.space);
   - el reloj de la máquina decide el barrido: 14 llaves al año a 26 días por llave, contra 52,560 a 10 minutos.
 - **[I] Para invertir:** nada operativo en la temporada. En autocustodia, no reusar direcciones. Queda como cola de largo plazo, con dos signos: robo de las P2PK antiguas o congelamiento por BIP-361.
+
+## Adenda 25-oct-2026 · Conteo propio del BTC expuesto (P2PK de coinbase)
+
+Ficha: [fichas/2026-10-25-btc-expuesto-cuantico.md](fichas/2026-10-25-btc-expuesto-cuantico.md) (+ `.py` y muestra `.jsonl`).
+
+- **[I] Comprobado con datos de la cadena (A):** muestra estratificada de 360 coinbases de los bloques 0-419,999 (API Esplora de blockstream.info y mempool.space). Quedan **~1.71 M BTC en P2PK de coinbase sin gastar (IC 95%: 1.27-2.14 M), ≈8.5% de la oferta**, casi todo de 2009-2010, en ~34,125 llaves de 50 BTC. Coincide con el "over 1.7 million BTC" de Babbush et al. ([arXiv 2603.28846](https://arxiv.org/abs/2603.28846) v2, B).
+- **[H] Totales (B, paper; sin réplica propia):** ~6.9 M BTC vulnerables (34%), en su mayoría por reuso de dueños activos que pueden migrar. **Los que importan para la oferta son los dormidos: ~2.3 M (11.4%).** La cifra de 6.65 M del cap. 05 (Galaxy, C) queda en el mismo orden.
+- **[I] Para invertir:** con un reloj de 10 min por llave, una sola máquina barre las P2PK de coinbase en ~237 días. La cola es real pero lejana; nada operativo en la temporada.
