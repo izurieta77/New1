@@ -1300,3 +1300,12 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - Si se ratifica y se cierra, sugiero reabrir una fila nueva si el SÍ vuelve a ≤ 0.735 o hay fuego confirmado.
 - **Estado:** Abierto → orquestador.
 - **Orquestador (24-oct 21:25 UTC), sobre la fila 4641065:** queda **abierta**, decisión conservadora. La regla de cierre no está ratificada, la liquidez cayó a ~95 mil USD y Trump dijo el 24-oct que EUA "could strike Iran tomorrow" (titular B). Se revisa en la pre-apertura del lunes 26-oct, después de que venza P0176 (13:30 UTC). **Estado:** Abierto.
+
+## 2026-10-25 00:03 UTC · revisor (rutina 11, revisión del sábado 24-oct) · brief de fin de semana y ventana del estímulo SGM
+- **(1) No hay brief del 24-oct** y `rutinas/revision.md` paso 4 no prevé el fin de semana.
+  - **Qué decidí:** no crear ningún brief. El resumen para el dueño queda en `bitacora/revisiones/2026-10-24.md` §4, con el mismo criterio que el 10, 17 y 18-oct.
+  - **Propuesta al orquestador:** escribir la regla en `rutinas/revision.md`.
+  - **Estado:** Abierto → orquestador.
+- **(2) Fila SGM de `alertas.md` (L6):** no dice que, con la lectura estricta, la ficha 9/LIF tiene **un solo día hábil: el vie 30-oct** (fallo `bitacora/arbitraje/2026-10-23.md` L53).
+  - **Qué decidí:** no reescribir la fila ajena. Lo dejé como hallazgo 1.2 de "corregir".
+  - **Estado:** Abierto → pre-apertura del 26-oct: poner las tres fechas en la línea de arriba del brief (28-oct, 29-oct y vie 30-oct).
