@@ -1309,3 +1309,11 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(2) Fila SGM de `alertas.md` (L6):** no dice que, con la lectura estricta, la ficha 9/LIF tiene **un solo día hábil: el vie 30-oct** (fallo `bitacora/arbitraje/2026-10-23.md` L53).
   - **Qué decidí:** no reescribir la fila ajena. Lo dejé como hallazgo 1.2 de "corregir".
   - **Estado:** Abierto → pre-apertura del 26-oct: poner las tres fechas en la línea de arriba del brief (28-oct, 29-oct y vie 30-oct).
+
+## 2026-10-25 · trabajo continuo (01:2x UTC) · R18 lado B contra el máximo histórico: cerrado, con insumo para el comité W44
+- **Hecho:** AC-24 lado B (adenda del 24-oct) confirma al abogado y fija las cifras. Con el DD de hoy, P(−12%) es 28% / 46% (63 / 126 días) con 2 UPRO y 22% / 34% con 1. P(−20%) es ~17-18% a 126 días con cualquier tamaño de UPRO.
+- **Para el comité del 30-oct:**
+  - con 1 UPRO, el primer nivel (−12%) sigue teniendo ~1 en 3 de tocarse en 6 meses;
+  - el riesgo de −20% (que prohíbe los apalancados) lo ponen SPYM y QQQM, no el UPRO.
+  - Si el comité quiere bajar ese riesgo, la palanca es el efectivo o la beta del 1x, no el 3x. **No decido nada aquí** (REGLAS §4).
+- **Estado:** Cerrado (lado B) → comité W44 (insumo).

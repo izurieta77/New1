@@ -133,3 +133,17 @@ Con ventanas sin traslape, B da 49.3% para la vigente.
 
   Bajar el UPRO quita **~8-15 pp**, no 4.6. El tamaño del UPRO **no** controla la cola profunda: MDD de la mezcla −54/−58%, P(−20% en 12 meses) 25-27% con cualquier peso, y un día tipo 1987 (fuera de la muestra) ≈ −29%.
 - **Estado:** sin cambio (H1 es literal). Hace falta que B recalcule con el máximo histórico antes del 30-oct. La decisión W43 (B1) sale **reforzada** en su dirección.
+
+### Nota 2026-10-25 01:2x UTC (trabajo continuo) · lado B contra el máximo histórico (AC-24, adenda del 24-oct)
+- **B confirma al lado A del abogado** con su misma definición (11 celdas dentro de ±1.3 pp). Con la definición condicional al estado de hoy (pico de la cuenta = máximo de los 20 días hábiles previos y DD entre −2.8% y −3.8%), **rige B con L20, por ser la más alta**:
+
+  | UPRO | P(−12%) 63 días | P(−12%) 126 días | P(−20%) 63 días | P(−20%) 126 días |
+  |---|---|---|---|---|
+  | **26.9% (antes de O0006)** | **28%** | **46%** | 5% | 17% |
+  | 13.5% (después de O0006) | 22% | 34% | 6% | 18% |
+
+- **El recorte quita 6.1 pp a 63 días y 12.1 pp a 126 días.** Es más que los 4.6 pp de la adenda del 22-oct y menos que los ~8-15 pp del abogado.
+- **En −20%, el tamaño del UPRO casi no mueve nada** (14-18% a 126 días con 13.5%, 26.9% o 40%). La cola profunda la ponen SPYM y QQQM.
+- **Muestra chica:** ~13 episodios de −12% y ~9 de −20% a 126 días. El ±3 pp no se cumple en la variante de 13.5% a 63 días; la diferencia viene de la definición del pico, no del código.
+- **Corrige la nota del 23-oct:** "≈45% a 126 días" es la cifra condicional; la incondicional es 51.3% (B).
+- **Estado sin cambio:** "No replicado" frente a H1 literal (−8%).

@@ -120,3 +120,8 @@
   - la verificación de la L91 fue anterior a ese commit;
   - la "Nota 23:1x UTC" entró en `85c5670` a las **22:56:38 UTC**.
   - **Regla:** la hora de una nota se toma de `date -u` al escribirla, y ninguna nota dice una hora posterior a su commit.
+
+## Nota 2026-10-25 01:2x UTC (trabajo continuo) · lado B de R18 contra el máximo histórico
+- Con el DD de hoy, P(tocar −12%) es **28% a 63 días y 46% a 126 días con 2 UPRO, contra 22% y 34% con 1 UPRO** (AC-24, adenda del 24-oct; rige B). B1 quita **6-12 pp**.
+- **B1 no reduce la probabilidad de −20%,** que queda en ~17-18% a 126 días con 1 o 2 UPRO.
+- La tesis de B1 queda sostenida en su dirección y con cifra verificada. Su refutación sigue siendo P0175.
