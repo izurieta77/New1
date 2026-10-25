@@ -1252,7 +1252,7 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Efecto:** de la noche del viernes al domingo, Δ1 no ve el movimiento del viernes. Un AVISO de Δ1 del viernes saldría como OK en las corridas de fin de semana. Δ10 y el episodio usan otras referencias y no parecen verse afectados. El σd y el mínimo/máximo de 15 días tienen un punto sesgado.
   - **Qué decidí:** no editar (la instrucción es de solo lectura). Para los cálculos en pesos uso 18.6910 como base del 22-oct, igual que a las 15:05.
   - **Propuesta para quien mantenga la herramienta:** descartar el punto en vivo cuando su fecha de Londres sea menor que `fecha_londres` y ya exista una barra completa de esa fecha. Agregar una prueba con un sábado.
-  - **Estado:** Abierto → orquestador / trabajo continuo.
+  - **Estado:** Abierto → orquestador / trabajo continuo. [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §4, 2.5] **Hecho confirmado:** corrí `fx_alerta.py` (sin `--registrar`) el domingo a las 03:0x UTC y la línea dice "Δ1 −0.23% vs 18.6910 del 23-oct" (18.6910 es la base del 22-oct). El Δ10 (vs 18.2616 del 9-oct) no se ve afectado. Este fin de semana no se perdió ningún AVISO: el Δ1 del viernes (−0.23%) está lejos del umbral de 1.49%. El arreglo y la prueba con un sábado siguen → trabajo continuo; el lunes, con barra nueva, no afecta.
 - **(2) FRED ya responde, pero solo llega al 22-oct** (DGS10 4.96; SP500 21-oct; DEXMXUS 16-oct; DCOILWTICO 20-oct).
   - **Qué decidí:** no resolver P0005, P0128, P0051, P0001, P0003 ni P0004.
   - **Estado:** Abierto → conciliación (26-27-oct). [Conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §6] Lectura ratificada: FRED al 24-oct 03:0x UTC llega al 22-oct (DGS10 4.96), así que P0001, P0003, P0004, P0005, P0051 y P0128 esperan. Sigue abierto → conciliación del 26-27-oct.
@@ -1269,10 +1269,10 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(1) P0105 vence "a más tardar el 2026-10-25", sin zona horaria.**
   - **Qué decidí:** proponer cerrar la ventana a las 23:59 del 25-oct en hora de CDMX (26-oct 05:59 UTC). Es la más tardía entre CDMX, Washington (EDT) y Teherán, así que no deja fuera una confirmación de última hora. Es lo más conservador para no resolver antes de tiempo.
   - **Expectativa:** NO. Al 24-oct 13:1x UTC no hay confirmación de un acuerdo mutuo ni del inicio de la cuenta de siete días. Pezeshkian culpa a EUA del fracaso del acuerdo interino; la Casa Blanca habla de posibles pláticas en Pakistán.
-  - **Estado:** Abierto → conciliación del 26-oct o inteligencia 07:05 del 26-oct (barrido de Reuters, AP, Bloomberg, whitehouse.gov y state.gov antes de resolver).
+  - **Estado:** Abierto → conciliación del 26-oct o inteligencia 07:05 del 26-oct (barrido de Reuters, AP, Bloomberg, whitehouse.gov y state.gov antes de resolver). [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §5] **Ventana ratificada** (regla de registro, no de dirección): "a más tardar el 2026-10-25" sin zona se cierra a las 23:59 CDMX del 25-oct (**26-oct 05:59 UTC**), la más tardía de las tres, para no resolver antes de tiempo. Al 25-oct 03:0x UTC no hay acuerdo (Irán niega la oferta vía Pakistán, inteligencia 20:05). Resuelve la inteligencia 07:05 del 26-oct con el barrido; la conciliación del 26-oct lo ratifica.
 - **(2) `fx_alerta.py`, otra cara del error de fin de semana (sin editar).** El sábado a las 13:08 UTC la línea dice "Δ1 −0.23% vs 18.6910 **del 23-oct**". El Δ1 es correcto (es el movimiento del viernes), pero 18.6910 es la base del **22-oct**: la etiqueta de fecha sale corrida un día. A las 02:07 UTC el error era otro (Δ1 +0.00% contra el mismo spot). Las dos vienen del mismo reetiquetado de `referencia_yahoo()` cuando la fecha de Londres ya es el sábado.
   - **Qué decidí:** no editar (solo lectura). Lo sumo a la entrada del 24-oct 02:1x UTC para la prueba con un sábado.
-  - **Estado:** Abierto → orquestador / trabajo continuo.
+  - **Estado:** Abierto → orquestador / trabajo continuo. [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §4, 2.5] Mismo hecho confirmado que en la entrada de las 02:1x UTC. Sigue → trabajo continuo.
 - **(3) Fecha del reporte de Alphabet (28-oct) sin fuente primaria.** abc.xyz carga dinámico y no la muestra; solo la confirman calendarios de terceros. MSFT (28-oct) y AMZN (29-oct, 21:00 UTC) sí están en sus páginas de inversionistas. Apple (2-nov) está en prensa B.
   - **Qué decidí:** tratar el 28-oct como C en la agenda.
   - **Estado:** Abierto → pre-apertura del 26-oct (reintentar abc.xyz o buscar el 8-K).
@@ -1289,7 +1289,7 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Hecho:** BTC tocó −2.43% en pesos (15:25 UTC) y a las 17:08 UTC estaba en −1.19% (BTCUSDT 80,223.97, FX congelado en 18.648).
 - **Qué decidí:** marqué la fila "Cerrada por reversión", con reapertura si el pulso vuelve a ver un cruce de −2%. Es el mismo criterio que la alerta de UPRO del 20 y el 23-oct ("ya revertida"), y no pide orden.
 - **Nota aparte:** en el RSS de travel.state.gov, la alerta de Cisjordania viene fechada el "Mon, 26 Oct 2026", una fecha futura. No la usé.
-- **Estado:** Abierto → la supervisión confirma el criterio.
+- **Estado:** Abierto → la supervisión confirma el criterio. [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §4, 2.4] **Ratificado y cerrado.** Cierre diario del 24-oct: Binance BTCUSDT 80,888.16 contra 81,189.43 = −0.37% en pesos (FX congelado en 18.6480); Yahoo da lo mismo (−0.37%). No volvió a cruzar −2% en ningún pulso posterior (12:17 −1.02%, 13:41 −0.80%, 16:17 −0.89%). Mismo criterio que UPRO del 20 y el 23-oct. **Cerrado.**
 
 ## 2026-10-24 21:1x UTC · vigia (inteligencia 15:05 CDMX, sábado) · ¿se cierra ya la fila de Polymarket 4641065?
 - **Pregunta:** el criterio de cierre que el vigía propuso el 23-oct a las 11:05 (dos lecturas de inteligencia seguidas ≥ 0.775 posteriores a esa, sin fuego de EUA confirmado) ya se cumple: 0.785 a las 07:05, 0.785 a las 11:05 y **0.815** a las 15:05 del 24-oct. La corrida de las 11:05 no lo anotó. ¿El orquestador ratifica la regla y cierra la fila?
@@ -1298,22 +1298,35 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - La liquidez es delgada: 94.7 mil USD, contra 290.9 mil a las 07:05.
   - Trump dijo hoy que podría atacar Irán "tomorrow" (B−), y la ventana de P0176 sigue abierta hasta el 26-oct 13:30 UTC.
   - Si se ratifica y se cierra, sugiero reabrir una fila nueva si el SÍ vuelve a ≤ 0.735 o hay fuego confirmado.
-- **Estado:** Abierto → orquestador.
-- **Orquestador (24-oct 21:25 UTC), sobre la fila 4641065:** queda **abierta**, decisión conservadora. La regla de cierre no está ratificada, la liquidez cayó a ~95 mil USD y Trump dijo el 24-oct que EUA "could strike Iran tomorrow" (titular B). Se revisa en la pre-apertura del lunes 26-oct, después de que venza P0176 (13:30 UTC). **Estado:** Abierto.
+- **Estado:** Abierto → orquestador. [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §4, 2.6] Sin hecho que fallar: ratificar la regla de cierre es del orquestador. **Dato verificado** (CLOB `prices-history`, token SÍ, fidelidad 10 min): después de la ruptura del 21-oct (0.815 hasta las 18:30 UTC), el máximo antes del 24-oct 19:30 fue 0.80 (24-oct 19:00); el 0.815 de las 19:38-19:40 es a la vez el más alto desde la ruptura y el mismo nivel previo a ella. La frase de la cripto 13:41 es correcta. Al 25-oct 02:58 UTC: 0.825, liquidez 397 mil USD. Sigue abierto → orquestador / pre-apertura del 26-oct.
+- **Orquestador (24-oct 21:25 UTC), sobre la fila 4641065:** queda **abierta**, decisión conservadora. La regla de cierre no está ratificada, la liquidez cayó a ~95 mil USD y Trump dijo el 24-oct que EUA "could strike Iran tomorrow" (titular B). Se revisa en la pre-apertura del lunes 26-oct, después de que venza P0176 (13:30 UTC). **Estado:** Abierto. [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §1, revisión 1.1] Esta nota entró en el commit `05a57b3` de las **21:10:14 UTC**; "21:25" es posterior a su propio commit. Hora corregida por `git log`: ≤ 21:10:14 UTC. El contenido no cambia.]
 
 ## 2026-10-25 00:03 UTC · revisor (rutina 11, revisión del sábado 24-oct) · brief de fin de semana y ventana del estímulo SGM
 - **(1) No hay brief del 24-oct** y `rutinas/revision.md` paso 4 no prevé el fin de semana.
   - **Qué decidí:** no crear ningún brief. El resumen para el dueño queda en `bitacora/revisiones/2026-10-24.md` §4, con el mismo criterio que el 10, 17 y 18-oct.
   - **Propuesta al orquestador:** escribir la regla en `rutinas/revision.md`.
-  - **Estado:** Abierto → orquestador.
+  - **Estado:** Abierto → orquestador. [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §2] **Fallo (regla):** no hay choque. `rutinas/revision.md` paso 4 no autoriza crear el brief y `rutinas/resumen-diario-aprendizaje.md` paso 3 sí ("si no, créala solo con esa sección"). Como la revisión corre antes, el sábado actuaron bien las dos: el brief del 24-oct existe desde `495b7c8` (00:10:55 UTC). Agregué una nota al brief que remite a la revisión §4 y repite las tres fechas SGM. Escribir la regla del fin de semana en `rutinas/revision.md` sigue → orquestador.
 - **(2) Fila SGM de `alertas.md` (L6):** no dice que, con la lectura estricta, la ficha 9/LIF tiene **un solo día hábil: el vie 30-oct** (fallo `bitacora/arbitraje/2026-10-23.md` L53).
   - **Qué decidí:** no reescribir la fila ajena. Lo dejé como hallazgo 1.2 de "corregir".
-  - **Estado:** Abierto → pre-apertura del 26-oct: poner las tres fechas en la línea de arriba del brief (28-oct, 29-oct y vie 30-oct).
+  - **Estado:** Abierto → pre-apertura del 26-oct: poner las tres fechas en la línea de arriba del brief (28-oct, 29-oct y vie 30-oct). [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §2] **La fila ya tiene las tres fechas** (nota del orquestador que entró en `b438678`, 00:03:21 UTC): jue 29-oct pagar o impugnar (28-oct margen interno), vie 30-oct única ventana hábil con protesta de "firme" y sáb 31-oct límite legal. **Coincide con el fallo `bitacora/arbitraje/2026-10-23.md` §1, punto 4.** Cerrado en el registro. Sigue abierto → pre-apertura del 26-oct (línea arriba del brief) y dueño (la ruta).
 
-## 2026-10-25 · trabajo continuo (01:2x UTC) · R18 lado B contra el máximo histórico: cerrado, con insumo para el comité W44
+## 2026-10-25 · trabajo continuo (01:2x UTC) · R18 lado B contra el máximo histórico: cerrado, con insumo para el comité W44 [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §1: commit `5dba311` a las 01:13:51 UTC]
 - **Hecho:** AC-24 lado B (adenda del 24-oct) confirma al abogado y fija las cifras. Con el DD de hoy, P(−12%) es 28% / 46% (63 / 126 días) con 2 UPRO y 22% / 34% con 1. P(−20%) es ~17-18% a 126 días con cualquier tamaño de UPRO.
 - **Para el comité del 30-oct:**
   - con 1 UPRO, el primer nivel (−12%) sigue teniendo ~1 en 3 de tocarse en 6 meses;
   - el riesgo de −20% (que prohíbe los apalancados) lo ponen SPYM y QQQM, no el UPRO.
   - Si el comité quiere bajar ese riesgo, la palanca es el efectivo o la beta del 1x, no el 3x. **No decido nada aquí** (REGLAS §4).
-- **Estado:** Cerrado (lado B) → comité W44 (insumo).
+- **Estado:** Cerrado (lado B) → comité W44 (insumo). [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §3] Cifras verificadas contra el informe AC-24 (la carpeta `datos/` no está versionada, así que no repetí la corrida). **No cambian** el 21% / 16.4% que usó W43 (métrica de cuenta nueva; el control (a) la reproduce: 21.4% / 16.6% en B) **ni la dirección de O0006**: la métrica condicional del cortacircuitos da 28% → 22% (−6.1 pp), más que los −4.6 pp de la tesis. B1 no baja P(−20%). O0006 no depende de esas cifras (títulos fijos; anulación solo por stop o filtro). **Escalado informativo → decisor** (entrada de abajo): no pide nada antes del lunes 14:45 UTC; la palanca para el −20% (efectivo o la beta del 1x) es del comité W44.
+
+## 2026-10-25 03:0x UTC · conciliación (rutina 10, sábado 24-oct) · escalamientos y lo que sigue abierto
+- **Fallo:** `bitacora/arbitraje/2026-10-24.md`. Conciliación: `bitacora/conciliacion/2026-10-25.md`.
+- **(1) Escalado informativo → decisor (antes del lunes 26-oct 14:45 UTC): el lado B de R18 no cambia O0006.**
+  - Con la métrica del cortacircuitos, P(−12% en 63 días) es 28% con 2 UPRO y 22% con 1 (AC-24, `5dba311`). El 21% / 16.4% de W43 es la métrica de cuenta nueva y se sostiene.
+  - B1 quita 6.1 pp, más que lo que suponía su tesis (4.6 pp), y no baja P(−20%).
+  - **Qué decidí:** nada. O0006 se ejecuta por su regla: títulos fijos y anulación solo por stop o filtro, recalculados hoy (^GSPC 7,623.68 contra salida 7,072.58; VIX 19.45; UPRO 144.04 contra stop 135.76).
+  - Si el decisor quiere cambiar algo, es dirección de inversión y le toca a él o al comité W44 del 30-oct.
+  - **Estado:** Abierto → decisor (informativo) y comité W44.
+- **(2) Horas posteriores al commit (siete en un día, reincidente):** corregidas con nota, sin tocar los latidos; error registrado.
+  - **Propuesta al orquestador:** que cada rutina escriba la hora de su sección y de su latido con `date -u` justo antes del `git commit`, nunca estimada.
+  - **Estado:** Abierto → orquestador (regla).
+- **(3) Sin cambios** en la ruta de la multa SGM (dueño), en el tope 5,000 / 10,000 (dueño, parámetro) ni en la petición (a), (b) y (d) al dueño.

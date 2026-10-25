@@ -134,7 +134,7 @@ Con ventanas sin traslape, B da 49.3% para la vigente.
   Bajar el UPRO quita **~8-15 pp**, no 4.6. El tamaño del UPRO **no** controla la cola profunda: MDD de la mezcla −54/−58%, P(−20% en 12 meses) 25-27% con cualquier peso, y un día tipo 1987 (fuera de la muestra) ≈ −29%.
 - **Estado:** sin cambio (H1 es literal). Hace falta que B recalcule con el máximo histórico antes del 30-oct. La decisión W43 (B1) sale **reforzada** en su dirección.
 
-### Nota 2026-10-25 01:2x UTC (trabajo continuo) · lado B contra el máximo histórico (AC-24, adenda del 24-oct)
+### Nota 2026-10-25 01:2x UTC (trabajo continuo) · lado B contra el máximo histórico (AC-24, adenda del 24-oct) [Conciliación 25-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-24.md` §1] Hora por `git log`: la nota entró en `5dba311` a las **01:13:51 UTC** (código e informe en `f273735`, 01:13:12); "01:2x" es posterior al commit.]
 - **B confirma al lado A del abogado** con su misma definición (11 celdas dentro de ±1.3 pp). Con la definición condicional al estado de hoy (pico de la cuenta = máximo de los 20 días hábiles previos y DD entre −2.8% y −3.8%), **rige B con L20, por ser la más alta**:
 
   | UPRO | P(−12%) 63 días | P(−12%) 126 días | P(−20%) 63 días | P(−20%) 126 días |
