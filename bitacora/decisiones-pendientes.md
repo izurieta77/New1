@@ -1380,3 +1380,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(2) Escalado → comité W44 y decisor (dirección de inversión, informativo):** R19b da 1.26 pp como piso. La corrección del art. 142 fr. V sube el central a ~1.4-1.5 pp. La frecuencia de rebalanceo y el destino del efectivo los decide el comité. **O0006 no cambia** y se ejecuta por su regla a las 14:45 UTC (filtro y stop recalculados: ^GSPC 7,623.68 contra 7,072.58; VIX 19.45; UPRO 144.04 contra 135.76). **Estado:** Abierto → comité W44.
 - **(3) Escalado → gestor de riesgo / dueño (parámetro):** cómo se lee el umbral de 0.735 de Polymarket (toque de 0.67 verificado). **Estado:** Abierto.
 - **(4) Sin cambios:** t_m y W-8BEN (dueño), multa SGM (dueño), tope 5,000 / 10,000 (dueño).
+
+## 2026-10-26 13:35 UTC · Error del brief de pre-apertura sobre Brasil (EWZ)
+- **Hecho:** el brief `bitacora/briefs/2026-10-26.md` descartó la caída premercado de EWZ como "volumen 0, no se usan". Yahoo reporta volumen 0 en premercado por diseño; Nasdaq (api.nasdaq.com, tiempo real) muestra EWZ en 31.56 (−25.90%) a las 9:32 ET con 48.0 M de volumen (verificado por el orquestador, 13:35 UTC).
+- **Acción:** registrar en `conocimiento/registro-de-errores.md` vía verificador; regla propuesta: en premercado no descartar un precio Yahoo por volumen 0 sin contrastar con Nasdaq.
+- **Impacto en cartera:** ninguno directo (sin activos brasileños; USD/MXN 18.61, sin contagio). P0180 y P0181 van a SÍ; se resuelven al cierre.
+- **Estado:** Abierto → verificador / pre-apertura de mañana.
