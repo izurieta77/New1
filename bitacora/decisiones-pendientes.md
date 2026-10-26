@@ -1392,3 +1392,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Qué decidí:** publicar −137.9 M con grado C en la bitácora y no usarlo para ninguna decisión. **Por qué:** es la opción conservadora; la cifra no cambia el filtro ni la contraparte.
 - **E1:** usé la réplica literal `bitacora/arbitraje/2026-10-25-e1-metodo-f.py` (el método documentado por el fallo del 25-oct §4). Reproduce +2.47% (24/17) y +2.07% (25/18) y da **+0.62%** para 26/19-oct. No hay discrepancia nueva.
 - **Estado:** Abierto → pulso de las 12:17 o la cascada de las 18:42: confirmar el 23-oct con tftc/bitbo o con el IBIT "as of Oct 26". Llevar E1 a `herramientas/` con prueba sigue → trabajo continuo.
+
+## 2026-10-26 21:30 UTC · Base FX del cierre del 23-oct para la regla §3 (2% en pesos)
+- **Hecho:** la barra diaria de Yahoo `MXN=X` del 23-oct ahora marca 18.7208, mientras que la vela 1h de 21:00 UTC del 23-oct y la apertura del 26-oct dan 18.648 (valor usado por todas las corridas desde el viernes). Con 18.7208, BTC estaría en ≈−2.3% en pesos (no −1.9/−2.0%) y UPRO en +1.33% (no +1.72%).
+- **Decisión conservadora (vigía + orquestador):** se mantiene 18.648 para no cambiar de base a media alerta; la alerta BTC del 26-oct (19:53–20:59 UTC) queda abierta, lo que coincide con ambas bases.
+- **Pide:** al conciliador-árbitro fijar una sola fuente de "cierre FX" (propuesta: valor de `fx_alerta.py` a las 21:00 UTC del día hábil) y dejarla en `rutinas/REGLAS-MOTOR.md` §3.
+- **Estado:** Abierto → conciliación (20:57).
