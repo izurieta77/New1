@@ -8,8 +8,8 @@
 | Origen | Auditoría W43 (`bitacora/semanal/2026-W43-abogado.md` §2) y nota del 23-oct en `R19-isr-sic-mezcla-papel.md`: el modelo de R19 omite el impuesto a los dividendos y el efectivo en MXN. La estimación del abogado es de ~1.0-1.2 pp |
 | Pre-registro escrito el | 2026-10-26 01:1x UTC (25-oct en CDMX), antes de cualquier corrida |
 | Commit | el commit que trae este archivo junto con `R19b.py` |
-| Responsable | orquestador (A); auditor-de-replicas (B, pendiente) |
-| Estado | Pendiente |
+| Responsable | orquestador (A); auditor-de-replicas (B, `auditorias/AC-26-R19b/`) |
+| Estado | **Replicado** (B AC-26, 26-oct-2026). H2b es frágil: 0.27-0.37 pp según la convención |
 
 **Conocimiento previo declarado:** R19 da 0.81 pp (A) y 0.76 (B) sin dividendos gravados ni efectivo en MXN. Mi expectativa es de 1.0-1.3 pp para el caso central.
 
@@ -76,3 +76,38 @@
   - **El τ_div real es t_m + 9 pp con W-8BEN** (44% con t_m de 35%) **y t_m + 27 pp sin él**. El 20% central solo vale si t_m ≈ 11%.
   - **Estimación lineal con la propia tabla** (no es una corrida): el arrastre central sería **~1.43-1.47 pp por año**. H1b se sostiene con más margen.
   - **Pendiente R19b-bis:** τ_div de 39%, 44%, 57% y 62%. Requiere la t_m del dueño, que no es un parámetro del sistema.
+
+## Doble ejecución independiente (2026-10-26)
+- **Qué hizo B (`laboratorio/auditorias/AC-26-R19b/`).** Escribió `b.py` (sha256 `cb9ec1bb…61e2`) a partir de su propio AC-25. Solo leyó el pre-registro §1-5 y la nota del investigador; leyó `R19b.py` después de tener sus cifras.
+- **Fuentes de B distintas a las de A:**
+  - S&P: CBOE SPX + dividendo de multpl.
+  - **CETES 28 días de Banxico SIE SF43936** (subasta semanal, hasta el 22-oct-2026).
+  - FIX SF43718 e INPC SP1 de Banxico.
+- **Convención.** La corrida principal usa las desviaciones de R19 que el §4 manda conservar: comisiones fuera de la base y reentrada al 26.9%.
+- **Control.** Con efectivo en USD y τ = 0, B reproduce AC-25 exacto: 0.764.
+
+| Variante | τ_div / τ_int | Arrastre A | Arrastre B | Δ B−A |
+|---|---|---|---|---|
+| M | 10/0 | 0.87 | 0.89 | +0.02 |
+| M | 10/20 | 1.18 | 1.20 | +0.02 |
+| M | 20/0 | 0.96 | 0.98 | +0.02 |
+| **M central** | **20/20** | **1.26** | **1.29** | **+0.03** |
+| M | 30/0 | 1.04 | 1.06 | +0.02 |
+| M | 30/20 | 1.35 | 1.37 | +0.02 |
+| A | 20/20 | 1.17 | 1.19 | +0.02 |
+| F | 20/20 | 0.94 | 0.96 | +0.02 |
+| B (100% S&P) | 20/20 | 0.78 | 0.79 | +0.01 |
+| M − F | 20/20 | 0.32 | 0.33 | +0.01 |
+| M, sensibilidad τ_div 44% (t_m 35% + 9 pp) | 44/20 | — | **1.50** | |
+
+- **Diferencias.** Todas son ≤ 0.03 pp.
+  - **Residuo de R19 (~+0.02):** viene de la fuente del TR y de la hora de ejecución, y ya estaba medido en AC-25.
+  - **Fuente de los datos:** con la serie de CETES de FRED de A, M se mueve +0.007; con DEXMXUS, +0.002.
+- **Veredicto B:**
+  - **H1b sostenida:** 1.29 ≥ 1.0, con rango de 0.89 a 1.37.
+  - **H2b sostenida por poco:** 0.33 ≥ 0.3. Concuerda con A, con el central de M dentro de ±0.2.
+- **Fragilidad de H2b.** Con las comisiones dentro de la base fiscal, como manda el §4 de R19, B da M = 1.23 y **M − F = 0.27**, debajo del umbral. Si UPRO también paga un dividendo gravado, M − F sube a 0.37.
+- **Cifra para el comité:**
+  - **~1.25-1.30 pp por año** con τ_div de 20%.
+  - **~1.45-1.50 pp por año con τ_div de 44%.** Esta es una corrida, no una estimación lineal, y confirma la estimación del investigador (1.43-1.47).
+

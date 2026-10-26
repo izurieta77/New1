@@ -27,6 +27,7 @@ SALIDA = sys.argv[2] if len(sys.argv) > 2 else "b-resultados.json"
 #   fx_dexmxus   : USD/MXN de FRED DEXMXUS (copia de A en R19-datos) en lugar del FIX
 #   cpi_ocde     : OCDE MEXCPIALLMINMEI + 4% anual desde 2024-08 (como A) en lugar del INPC
 #   caja_usd     : efectivo en USD a DTB3 sin impuesto (control: reproduce R19/AC-25 con τ_div = 0)
+#   cetes_fred   : CETES de FRED INTGSTMXM193N mensual (copia de A en R19-datos), /252 por día hábil
 #   upro_div     : también se grava 1× el dividendo del S&P dentro de UPRO (sensibilidad)
 # El §4 de R19b manda conservar las desviaciones de A en R19: correr con "comis_fuera,reentrada_w".
 BANDERAS = set(sys.argv[3].split(",")) if len(sys.argv) > 3 and sys.argv[3] else set()
@@ -136,6 +137,10 @@ DH = [1] + [sum(1 for k in range(1, (dias[i] - dias[i - 1]).days + 1)
 RF = [RFa[i] / 100 / 252 * DH[i] for i in range(n)]
 # CETES: tasa vigente al cierre de i−1, devengo simple por días naturales / 360
 RC = [0.0] + [CET[i - 1] / 100 / 360 * (dias[i] - dias[i - 1]).days for i in range(1, n)]
+if "cetes_fred" in BANDERAS:
+    _cf = {(d.year, d.month): v for d, v in leer_fred("../../../replicas/R19-datos/INTGSTMXM193N.csv").items()}
+    _ult = _cf[max(_cf)]
+    RC = [0.0] + [_cf.get((dias[i].year, dias[i].month), _ult) / 100 / 252 * DH[i] for i in range(1, n)]
 r_px = [0.0] * n; r_div = [0.0] * n
 r_tr = [0.0] * n; r_ndx = [0.0] * n
 for i in range(1, n):

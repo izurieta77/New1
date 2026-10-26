@@ -1,0 +1,40 @@
+== banderas: comis_fuera,reentrada_w,cetes_fred
+Banderas: cetes_fred,comis_fuera,reentrada_w
+M     20%   20%   19.573%   18.281%    1.293p   1347    23.21     2.23     2.77
+A     20%   20%   19.894%   18.700%    1.194p    365    27.32     2.48     2.69
+F     20%   20%   19.313%   18.350%    0.964p    247    25.33     1.44     4.16
+B     20%   20%   17.172%   16.382%    0.790p      2    14.95     3.79     0.00
+M     44%   20%   19.573%   18.069%    1.504p   1347    21.77     4.67     2.65
+M     20%   20%   19.573%   18.281%    1.293p   1347    23.21     2.23     2.77
+H1b: arrastre M central = 1.293 pp -> sostenida (>= 1.0); rango M 0.89-1.38
+H2b: M - F = 0.329 pp -> sostenida (>= 0.3)
+== banderas: comis_fuera,reentrada_w,upro_div
+Banderas: comis_fuera,reentrada_w,upro_div
+M     20%   20%   19.541%   18.173%    1.368p   1347    22.52     3.29     2.65
+A     20%   20%   19.866%   18.589%    1.277p    365    26.50     3.74     2.57
+F     20%   20%   19.291%   18.288%    1.003p    247    25.04     2.73     3.75
+B     20%   20%   17.172%   16.382%    0.790p      2    14.95     3.79     0.00
+M     44%   20%   19.541%   17.864%    1.677p   1347    20.53     6.77     2.49
+M     20%   20%   19.541%   18.173%    1.368p   1347    22.52     3.29     2.65
+H1b: arrastre M central = 1.368 pp -> sostenida (>= 1.0); rango M 0.93-1.50
+H2b: M - F = 0.365 pp -> sostenida (>= 0.3)
+== banderas: comis_fuera,reentrada_w,fx_dexmxus
+Banderas: comis_fuera,fx_dexmxus,reentrada_w
+M     20%   20%   19.572%   18.284%    1.288p   1347    23.27     2.22     2.71
+A     20%   20%   19.887%   18.698%    1.188p    365    27.33     2.48     2.63
+F     20%   20%   19.309%   18.352%    0.957p    247    25.39     1.44     4.07
+B     20%   20%   17.173%   16.383%    0.790p      2    14.95     3.79     0.00
+M     44%   20%   19.572%   18.073%    1.499p   1347    21.83     4.67     2.60
+M     20%   20%   19.572%   18.284%    1.288p   1347    23.27     2.22     2.71
+H1b: arrastre M central = 1.288 pp -> sostenida (>= 1.0); rango M 0.89-1.38
+H2b: M - F = 0.331 pp -> sostenida (>= 0.3)
+== banderas: comis_fuera,reentrada_w,cetes_fred,fx_dexmxus,cpi_ocde
+Banderas: cetes_fred,comis_fuera,cpi_ocde,fx_dexmxus,reentrada_w
+M     20%   20%   19.604%   18.314%    1.291p   1347    23.20     2.24     2.79
+A     20%   20%   19.915%   18.724%    1.192p    365    27.28     2.49     2.70
+F     20%   20%   19.332%   18.369%    0.963p    247    25.31     1.44     4.22
+B     20%   20%   17.173%   16.384%    0.790p      2    14.94     3.79     0.00
+M     44%   20%   19.604%   18.102%    1.502p   1347    21.76     4.69     2.66
+M     20%   20%   19.604%   18.314%    1.291p   1347    23.20     2.24     2.79
+H1b: arrastre M central = 1.291 pp -> sostenida (>= 1.0); rango M 0.88-1.38
+H2b: M - F = 0.328 pp -> sostenida (>= 0.3)

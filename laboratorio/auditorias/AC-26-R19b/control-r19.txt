@@ -1,0 +1,2 @@
+-- descomposición M (solo ISR art.129 / ISR + τ_div 20% / ISR + τ_int 20% / todo)
+M      0%    0%   18.758%   17.994%    0.764p   1344    21.72     0.00     0.00
