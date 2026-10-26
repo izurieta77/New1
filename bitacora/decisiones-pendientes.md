@@ -1386,3 +1386,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Acción:** registrar en `conocimiento/registro-de-errores.md` vía verificador; regla propuesta: en premercado no descartar un precio Yahoo por volumen 0 sin contrastar con Nasdaq.
 - **Impacto en cartera:** ninguno directo (sin activos brasileños; USD/MXN 18.61, sin contagio). P0180 y P0181 van a SÍ; se resuelven al cierre.
 - **Estado:** Abierto → verificador / pre-apertura de mañana.
+
+## 2026-10-26 14:3x UTC · cripto 08:17 CDMX · flujo ETF del 23-oct sin fuente primaria y E1 con la réplica de la conciliación
+- **Hecho:** el flujo de los ETF spot de BTC del vie 23-oct (−137.9 M) solo está en prensa (Decrypt, tracker propio; Pluang da una semana de +305 M que cuadra con tftc al 22-oct + −137.9). tftc y bitbo siguen al 22-oct, Farside da 403 e iShares sigue "as of Oct 23" (el "as of Oct 26" que confirmaría el IBIT del 23-oct no había salido a las 14:3x UTC).
+- **Qué decidí:** publicar −137.9 M con grado C en la bitácora y no usarlo para ninguna decisión. **Por qué:** es la opción conservadora; la cifra no cambia el filtro ni la contraparte.
+- **E1:** usé la réplica literal `bitacora/arbitraje/2026-10-25-e1-metodo-f.py` (el método documentado por el fallo del 25-oct §4). Reproduce +2.47% (24/17) y +2.07% (25/18) y da **+0.62%** para 26/19-oct. No hay discrepancia nueva.
+- **Estado:** Abierto → pulso de las 12:17 o la cascada de las 18:42: confirmar el 23-oct con tftc/bitbo o con el IBIT "as of Oct 26". Llevar E1 a `herramientas/` con prueba sigue → trabajo continuo.

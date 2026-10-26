@@ -565,3 +565,12 @@ Ficha [`fichas/2026-10-23-atencion-wikipedia-liu-tsyvinski.md`](fichas/2026-10-2
   - **fuera de muestra (jun-2018 a oct-2026) desaparece:** −0.43 pp (t −0.99) en niveles y −0.16 (t −0.42) en log; Q5−Q1 de **−0.32 pp** (t −0.25). En 2022+ todo es cero. Un b positivo a 4 semanas (t ~2.2) sale entre 24 pruebas y se esfuma en 2022+.
   - Hoy la atención está en el percentil 4 de la serie (semana al 18-oct). No es señal.
 - **Para la cuenta [O]:** nada entra al filtro ni al pulso. "Nadie mira bitcoin, es el piso" es una narrativa sin respaldo fuera de muestra.
+
+### Adenda (26-oct-2026): DVOL, prima de riesgo de volatilidad y prima de evento del FOMC
+
+Ficha [`fichas/2026-10-26-dvol-prima-de-evento.md`](fichas/2026-10-26-dvol-prima-de-evento.md) (+ `.py` y foto `.json`). Es el siguiente punto de la cola académica del Doctorado (microestructura de opciones).
+
+- **Qué es el DVOL [H, A]:** índice de Deribit a 30 días con la fórmula de variance swap del VIX (dos vencimientos alrededor de 30 días, solo OTM con delta ≥ 5%, precio por profundidad hasta 2 BTC). Movimiento diario de 1σ ≈ DVOL/√365.
+- **Prima de riesgo de volatilidad [I, A], 2021-2026:** el DVOL supera la realizada de los 30 días siguientes por **+8.4 pts en promedio** (t 4.5 sin traslape; 72% de los días). Se encogió con los años y **en 2026 es −0.3**. Cuando la realizada pasada es < 35 (hoy 24.8), la realizada siguiente promedió 44.6 contra un DVOL de 41.4: **VRP −3.2; la calma no dura**. El DVOL pronostica mejor que la realizada pasada (R² 0.37 contra 0.17).
+- **Prima de evento del FOMC [I, A]:** en 46 decisiones (2021-2026), la varianza 08:00→08:00 UTC del día FOMC fue **0.75×** la de un día hábil normal (IC 0.47-1.11), con movimientos medianos algo mayores y menos colas. La cadena del 26-oct cobra **1.48×** para el tramo 28→29-oct (σ 2.07%): prima cara frente a la historia. Pronóstico **P0184** (p = 0.22).
+- **Para la cuenta [O]:** nada operativo (solo spot). El colchón del filtro (−11.2% hasta la salida) es ~1.1 σ mensual con el DVOL, no ~1.7 σ como sugiere la vol30. El pulso reporta DVOL y vol30 juntos.
