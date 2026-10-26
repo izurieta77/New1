@@ -1353,3 +1353,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - (2) R19c: verificar si UPRO (ETF con swaps) entra al art. 129 fr. II, con GBM o una fuente del SAT;
   - (3) las cachés de R12/R16 no están en git; cualquier réplica que dependa de ellas debe declarar su sha.
 - **Estado:** Abierto → laboratorio o trabajo continuo (B de R19b) y comité W44 (insumo).
+
+## 2026-10-26 02:15 UTC · Polymarket 4641065 tocó 0.67 (bajo el umbral de 0.735) durante ~5 min
+- **Hecho:** de 21:56:53 a 22:01:57 UTC del 25-oct, trades de monto chico en 0.67–0.73 (data-api.polymarket.com/trades); a las 02:04 UTC volvió a 0.825 (verificado por el orquestador a las 02:15 UTC: 0.825). Liquidez del libro 69–78k USD, la más baja de la serie.
+- **Decisión conservadora (orquestador):** no se abre alerta alta nueva; se trata como tropiezo de libro delgado, no como lectura sostenida. La fila abierta de 4641065 registra el toque y sigue abierta hasta la pre-apertura del lunes (tras P0176, 13:30 UTC).
+- **Propuesta para el gestor de riesgo:** definir el umbral 0.735 como "dos lecturas consecutivas de pulso" o "precio medio de 15 min", para no depender de toques de minutos en libros de <100k USD.
+- **Estado:** Abierto → gestor de riesgo / pre-apertura 26-oct.
