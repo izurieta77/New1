@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-26 12:59 UTC · pre-apertura · AVISO · (este commit) · MIXTO (+0); ES +0.29%, VIX 19.27; FX-1 OK (18.6705); multa SGM arriba del brief (29-oct legal); O0006 válida para las 14:45 UTC; Brasil: gana Lula, datos de EWZ/BRL en conflicto; Polymarket Irán 0.855, Fed 94.4% sin cambio; Cemex reporta hoy; P0105 NO; nuevos P0181-P0183; Brier 0.1964 puntual (no se da por cumplido); nota VT en el brief del 23-oct
 2026-10-26 11:43 UTC · cripto (05:41, pulso extra) · OK · BTC 80,413 · +0.57% en pesos · colchón +13.58% · E9 0.109% VERDE · OI 822.7M · funding 1.06e-04 · Polymarket 0.855 · sin alertas
 2026-10-26 10:19 UTC · cripto (04:17, pulso) · OK · BTC 80,436 · +0.70% en pesos · colchón +13.61% · E9 0.073% VERDE · OI 823.3M (−2.98%) · funding 8.3e-05 · Polymarket 0.855 · sin alertas
 2026-10-26 06:24 UTC · cripto (00:17, pulso) · OK · BTC 80,108 (−0.69%) · +0.28% en pesos · colchón +13.15% · E9 0.070% VERDE · OI 848.6M · Polymarket 0.835 · sin alertas
