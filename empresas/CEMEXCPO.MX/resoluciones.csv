@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+CEMEXCPO.MX-ingresos-3T26,2026-10-26,4590.4,,-2.19,si,,https://www.sec.gov/Archives/edgar/data/1076378/000119312526430975/d110472dex2.htm
+CEMEXCPO.MX-upa-3T26,2026-10-26,0.28,,-21.43,si,,https://www.sec.gov/Archives/edgar/data/1076378/000119312526430975/d110472dex2.htm
+CEMEXCPO.MX-ingresos_mayor_consenso-3T26,2026-10-26,4590.4,1,,,0.1600,https://www.sec.gov/Archives/edgar/data/1076378/000119312526430975/d110472dex2.htm
+CEMEXCPO.MX-ebitda_mayor_950-3T26,2026-10-26,990.2,1,,,0.2025,https://www.sec.gov/Archives/edgar/data/1076378/000119312526430975/d110472dex1.htm

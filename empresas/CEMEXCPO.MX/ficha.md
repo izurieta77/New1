@@ -88,3 +88,18 @@ Historia al cierre de año (cálculo propio): P/U de 13.5x, 7.0x, 62.6x, 8.8x y 
 9. SEC companyfacts, 20-F en XBRL: https://data.sec.gov/api/xbrl/companyfacts/CIK0001076378.json
 10. Conocimiento interno, caps. 21, 23 y 24 (Irán, Brent, T-MEC, 301; 25-sep-2026).
 11. Cemex RI, "Earnings Webcast 3Q26, October 26, 2026" (consultado el 25-sep-2026): https://www.cemex.com/investors
+
+## Adenda 2026-10-26 (post-mortem del 3T26; los pronósticos de la §8 no se modifican)
+- **Resultado 3T26** (6-K del 26-oct: [comunicado](https://www.sec.gov/Archives/edgar/data/1076378/000119312526430975/d110472dex1.htm) y [reporte](https://www.sec.gov/Archives/edgar/data/1076378/000119312526430975/d110472dex2.htm)):
+  - Ventas de **US$4,590.4 M** (+8%).
+  - UAFIDA de **990.2** (+12%; margen de 21.6%).
+  - Otros gastos de +25.9 (ganancia).
+  - **Tasa efectiva de 29.45%** (33.5% en el 3T25).
+  - UN controladora de 407.5 y **UPA diluida de operaciones continuas de US$0.28 por ADS** (1,458 M ADS).
+- **Pronósticos:**
+  - Ventas dentro del intervalo (error −2.19%, mejor que el consenso).
+  - UPA dentro, pero en el borde (error −21.43%; p90 de 0.29).
+  - Binarios: ventas > 4,456.6, Sí (Brier 0.16); UAFIDA ≥ 950, Sí (Brier 0.2025).
+  - Detalle en `resoluciones.csv` y `post-mortem-2026-10-26.md`.
+- **Guía 2026 reiterada:** UAFIDA +16-17% comparable, con USD/MXN de 18.25-18.50 en el 4T26. La guía de volumen de concreto baja. 9M26: UAFIDA de 2,802, y el 4T26 necesita 768-818 para el rango base de la §7 (cálculo propio).
+- **§7:** consistente con el escenario base. EUA vende más (+5%), pero su margen cae 1.7 pp. Probabilidades sin cambio hasta la revisión de la ficha.
