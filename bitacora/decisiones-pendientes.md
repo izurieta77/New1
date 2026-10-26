@@ -1338,3 +1338,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Por qué:** es la opción conservadora. La diferencia no mueve ningún disparador, pero el método debería ser uno solo.
 - **Propuesta:** el bloque de trabajo continuo mueve un script de E1 a `herramientas/` con una prueba, como ya sugería la sección F de `lista-senales-de-alerta.md`.
 - **Estado:** Abierto → orquestador.
+
+## 2026-10-26 00:03 UTC · revisor (rutina 11, revisión del domingo 25-oct) · brief de fin de semana y clon superficial
+
+- **(1) Brief del 25-oct:** no existe. **Qué decidí:** no lo creo y dejo el resumen para el dueño en `bitacora/revisiones/2026-10-25.md` §4. **Por qué:** es el precedente del fallo `bitacora/arbitraje/2026-10-24.md` §2 (el brief de fin de semana lo crea el aprendizaje). **Estado:** Abierto → aprendizaje del 25-oct (si crea el brief, puede copiar la §4).
+- **(2) Verificación de mensajes del dueño con un clon superficial:** `git log --since="2026-10-23 00:05" -- datos/entrada-dueno/ bitacora/real/operaciones.csv` solo devuelve `22e1b07`, el commit frontera (`.git/shallow`), que aparece como si agregara todos los archivos. **Qué decidí:** tratarlo como un artefacto y comprobarlo con el contenido: el último archivo de entrada es del 22-oct y la última operación real, del 7-oct. **Por qué:** es la lectura conservadora que se puede verificar sin hacer `fetch --unshallow` (no cambio el checkout por instrucción del orquestador). **Estado:** Cerrado (informativo).
+- **(3) Horas posteriores al commit, cuarta reincidencia** (revisión 1.1): la regla propuesta el 25-oct (L1331) sigue sin ratificar. **Estado:** Abierto → orquestador (regla).
