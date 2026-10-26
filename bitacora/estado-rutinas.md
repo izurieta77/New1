@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-26 17:41 UTC · supervisión (11:41 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,055.24 cuadra con lo registrado; UPRO papel 8.3% sobre stop; FX-1 OK 18.5600; sin mensajes del dueño
 2026-10-26 17:30 UTC · inteligencia (11:05, lunes) · ALERTA · 2 altas: UPRO +2.71% en pesos al alza (abierta, sin orden; UPRO 147.47 verificado) y BTC −2.25% en pesos (29 min, cerrada por reversión); S-1 de Anthropic en EDGAR (verificado) impulsa tecnología; Brasil EWZ −20.7%, sin contagio al MXN (18.58); Polymarket 4641065 0.865; siguiente ID P0185
 2026-10-26 16:41 UTC · supervisión (10:40 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,059.54 cuadra con lo registrado; UPRO papel 8.2% sobre stop; FX-1 OK 18.5847; sin mensajes del dueño
 2026-10-26 15:44 UTC · cripto (09:41, pulso extra) · OK · BTC 80,696 · +0.34% en pesos · colchón +13.98% · E9 0.277% VERDE · OI 829.7M · funding 9.6e-05 · sin alertas
