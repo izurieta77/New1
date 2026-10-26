@@ -63,6 +63,8 @@ print(f"IC 95% bootstrap: {lo95:,.0f} - {hi95:,.0f} BTC")
 # Comparación con Babbush et al. (arXiv 2603.28846 v2): >1.7 M BTC en P2PK (todas las P2PK, no solo coinbase),
 # ~6.9 M BTC vulnerables en total (fig. 5) y ~2.3 M vulnerables y dormidos 5 años (fig. 13).
 ALTURA = 973080  # punta de la cadena, blockstream.info/api/blocks/tip/height, 25-oct-2026 14:3x UTC
+# [Nota conciliación 26-oct-2026 03:0x UTC, bitacora/arbitraje/2026-10-25.md §1: "14:3x" es posterior al commit 7c11e2b
+# (14:28:00 UTC); la lectura fue entre 14:21:36 (bloque 973,080) y 14:28:00 UTC. Solo comentario: el cálculo no cambia.]
 OFERTA = 210000 * (50 + 25 + 12.5 + 6.25) + (ALTURA + 1 - 840000) * 3.125  # emisión teórica por calendario
 print(f"Oferta emitida por calendario a la altura {ALTURA:,}: {OFERTA:,.0f} BTC")
 for nombre, b in [("P2PK coinbase (propio)", total), ("P2PK total (paper)", 1.7e6),

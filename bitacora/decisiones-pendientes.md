@@ -1328,7 +1328,7 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Estado:** Abierto → decisor (informativo) y comité W44.
 - **(2) Horas posteriores al commit (siete en un día, reincidente):** corregidas con nota, sin tocar los latidos; error registrado.
   - **Propuesta al orquestador:** que cada rutina escriba la hora de su sección y de su latido con `date -u` justo antes del `git commit`, nunca estimada.
-  - **Estado:** Abierto → orquestador (regla).
+  - **Estado:** Abierto → orquestador (regla). [Conciliación 26-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-25.md` §1] Quinta reincidencia: el 25-oct se repitió en inteligencia 11:05, 15:05 y 20:05, en la ficha cripto de las 08:17 y en la entrada "02:15 UTC" de abajo. Sigue → orquestador (regla, **escalada otra vez**).
 - **(3) Sin cambios** en la ruta de la multa SGM (dueño), en el tope 5,000 / 10,000 (dueño, parámetro) ni en la petición (a), (b) y (d) al dueño.
 
 ## 2026-10-25 · cripto 08:17 CDMX · E1 (método F): la réplica no da la cifra del 24-oct
@@ -1337,13 +1337,13 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Qué decidí:** reportar +0.72% con la variante de hoy y dejarlo **limpio**. Las dos lecturas quedan muy lejos del umbral ÁMBAR de −2.1%, así que la conclusión no cambia.
 - **Por qué:** es la opción conservadora. La diferencia no mueve ningún disparador, pero el método debería ser uno solo.
 - **Propuesta:** el bloque de trabajo continuo mueve un script de E1 a `herramientas/` con una prueba, como ya sugería la sección F de `lista-senales-de-alerta.md`.
-- **Estado:** Abierto → orquestador.
+- **Estado:** Abierto → orquestador. [Conciliación 26-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-25.md` §4, 2.3] **Fallo (hechos): el oficial es el +2.47% del 24-oct, no la variante de hoy.** La réplica literal de la sección F (`bitacora/arbitraje/2026-10-25-e1-metodo-f.py`) reproduce lo publicado el 16, 20, 21 y 24-oct (+0.69%, +1.32%, +1.72% y +2.47%) y da **+2.07%** para 25/18-oct. El +0.72% de las 08:17 no sigue el método. Sigue limpio. **Cerrado el hecho.** Llevar E1 a `herramientas/` con una prueba sigue → trabajo continuo.
 
 ## 2026-10-26 00:03 UTC · revisor (rutina 11, revisión del domingo 25-oct) · brief de fin de semana y clon superficial
 
-- **(1) Brief del 25-oct:** no existe. **Qué decidí:** no lo creo y dejo el resumen para el dueño en `bitacora/revisiones/2026-10-25.md` §4. **Por qué:** es el precedente del fallo `bitacora/arbitraje/2026-10-24.md` §2 (el brief de fin de semana lo crea el aprendizaje). **Estado:** Abierto → aprendizaje del 25-oct (si crea el brief, puede copiar la §4).
+- **(1) Brief del 25-oct:** no existe. **Qué decidí:** no lo creo y dejo el resumen para el dueño en `bitacora/revisiones/2026-10-25.md` §4. **Por qué:** es el precedente del fallo `bitacora/arbitraje/2026-10-24.md` §2 (el brief de fin de semana lo crea el aprendizaje). **Estado:** Abierto → aprendizaje del 25-oct (si crea el brief, puede copiar la §4). [Conciliación 26-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-25.md` §3] **Cerrado:** el aprendizaje lo creó solo con la sección (`94f0662`, 00:11:39 UTC), como prevé `rutinas/resumen-diario-aprendizaje.md` paso 3.
 - **(2) Verificación de mensajes del dueño con un clon superficial:** `git log --since="2026-10-23 00:05" -- datos/entrada-dueno/ bitacora/real/operaciones.csv` solo devuelve `22e1b07`, el commit frontera (`.git/shallow`), que aparece como si agregara todos los archivos. **Qué decidí:** tratarlo como un artefacto y comprobarlo con el contenido: el último archivo de entrada es del 22-oct y la última operación real, del 7-oct. **Por qué:** es la lectura conservadora que se puede verificar sin hacer `fetch --unshallow` (no cambio el checkout por instrucción del orquestador). **Estado:** Cerrado (informativo).
-- **(3) Horas posteriores al commit, cuarta reincidencia** (revisión 1.1): la regla propuesta el 25-oct (L1331) sigue sin ratificar. **Estado:** Abierto → orquestador (regla).
+- **(3) Horas posteriores al commit, cuarta reincidencia** (revisión 1.1): la regla propuesta el 25-oct (L1331) sigue sin ratificar. **Estado:** Abierto → orquestador (regla). [Conciliación 26-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-25.md` §1] Notas fechadas puestas; error registrado como reincidente. Sigue → orquestador (regla).
 
 ## 2026-10-26 · trabajo continuo (2026-10-26 01:12 UTC) · R19b: el costo fiscal del SIC es ~1.26 pp por año, no 0.8
 - **Hecho:** R19b, ejecución A. Pre-registro y script en `4755d91`, antes de correr. Con el impuesto a los dividendos (20%) y el efectivo en CETES gravado (20%), la mezcla con rebalanceo mensual pierde **1.26 pp por año** (rango 0.87-1.35); rebalanceando una vez al año, 1.17; comprando y manteniendo el S&P, 0.78. El control reproduce R19 exacto.
@@ -1352,13 +1352,13 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - (1) el lado B de R19b, con el auditor;
   - (2) R19c: verificar si UPRO (ETF con swaps) entra al art. 129 fr. II, con GBM o una fuente del SAT;
   - (3) las cachés de R12/R16 no están en git; cualquier réplica que dependa de ellas debe declarar su sha.
-- **Estado:** Abierto → laboratorio o trabajo continuo (B de R19b) y comité W44 (insumo).
+- **Estado:** Abierto → laboratorio o trabajo continuo (B de R19b) y comité W44 (insumo). [Conciliación 26-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-25.md` §2] **Fallo (registro): el pre-registro es válido.** `4755d91` (01:11:41) trae el pre-registro y `R19b.py`, cuyo sha256 `45200286…` coincide con el declarado y con el de HEAD; la ejecución entró después, en `b4055da` (01:12:45), y `R19b-salida.txt` cuadra con la tabla. **Observación:** el pre-registro dice "antes de cualquier corrida", pero la desviación declara una primera ejecución fallida (`FileNotFoundError`) sin decir la hora; no produjo cifras, así que no invalida nada. **No afecta O0006** (títulos fijos; se anula solo por stop o filtro). Para el comité W44, el 1.26 pp es un **piso**: la letra del art. 142 fr. V (LISR, "además de acumularlos") confirma la corrección del investigador (entrada de abajo). La frecuencia de rebalanceo y el efectivo en CETES son **dirección de inversión → comité W44**.
 
 ## 2026-10-26 02:15 UTC · Polymarket 4641065 tocó 0.67 (bajo el umbral de 0.735) durante ~5 min
 - **Hecho:** de 21:56:53 a 22:01:57 UTC del 25-oct, trades de monto chico en 0.67–0.73 (data-api.polymarket.com/trades); a las 02:04 UTC volvió a 0.825 (verificado por el orquestador a las 02:15 UTC: 0.825). Liquidez del libro 69–78k USD, la más baja de la serie.
 - **Decisión conservadora (orquestador):** no se abre alerta alta nueva; se trata como tropiezo de libro delgado, no como lectura sostenida. La fila abierta de 4641065 registra el toque y sigue abierta hasta la pre-apertura del lunes (tras P0176, 13:30 UTC).
 - **Propuesta para el gestor de riesgo:** definir el umbral 0.735 como "dos lecturas consecutivas de pulso" o "precio medio de 15 min", para no depender de toques de minutos en libros de <100k USD.
-- **Estado:** Abierto → gestor de riesgo / pre-apertura 26-oct.
+- **Estado:** Abierto → gestor de riesgo / pre-apertura 26-oct. [Conciliación 26-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-25.md` §4] Hora: esta entrada entró en `f129534`, de las **02:13:14 UTC**; "02:15" es posterior a su propio commit (vale ≤ 02:13:14). **Hecho verificado** con data-api (operaciones): 0.70 a las 21:56:53, mínimo de **0.67 a las 21:58:00**, de vuelta arriba de 0.735 a las 22:01:57; el punto medio del CLOB de 1 min tocó 0.69. A las 02:58 UTC: 0.845, liquidez 96.7 mil USD. Definir el umbral (dos lecturas o media de 15 min) es un **parámetro → gestor de riesgo / dueño**; no lo decido.
 
 ## 2026-10-26 · investigador vespertino (25-oct CDMX, 02:1x UTC) · τ_div de R19b y la regla del UCITS
 - **Hecho:** por la letra de la LISR (arts. 5 y 142 fr. V) y del Convenio (art. 10), τ_div = t_m + 9 pp con W-8BEN y t_m + 27 pp sin él. El 20% central de R19b omite la acumulación. Detalle en la adenda del cap. 27 del 25-oct y en el registro de errores.
@@ -1366,4 +1366,17 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - (1) ¿Qué t_m usa el sistema para el dueño? No es un parámetro; el cap. 11 usa 35% en ejemplos. **Qué propongo:** R19b-bis, o una desviación declarada, con τ_div = 39% y 44% con W-8BEN y 57% y 62% sin él. Que el laboratorio o el trabajo continuo la corra; no edité R19b.
   - (2) §6.3 regla 1 del cap. 27: si se sostiene la inferencia de §2.7 (un UCITS de acumulación no causa las capas 2 y 3 cada año), la ventaja del UCITS es de ~0.29 pp al año a favor, no 0.05 en contra. **Qué propongo:** verificarlo contra la RMF 2026 o con una consulta a GBM antes de cambiar el criterio.
   - (3) ¿El patrimonio real tiene W-8BEN en el SIC? Sin él, cada dividendo de EUA paga ~18 puntos más.
-- **Estado:** Abierto → laboratorio (1), abogado del diablo u orquestador (2) y dueño (3).
+- **Estado:** Abierto → laboratorio (1), abogado del diablo u orquestador (2) y dueño (3). [Conciliación 26-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-25.md` §2] **Hecho verificado** en la LISR congelada (`V05…/datos/legal/LISR.txt`), art. 142 fr. V, 2.º párrafo: "además de acumularlos … deberán enterar de forma adicional … la tasa del 10% … definitivo". La capa 3 existe por la letra. La t_m del dueño y el W-8BEN son datos del **dueño**; no los toqué.
+
+## 2026-10-26 03:0x UTC · conciliación (rutina 10, domingo 25-oct) · escalamientos y lo que sigue abierto
+- **Fallo:** `bitacora/arbitraje/2026-10-25.md`. Conciliación: `bitacora/conciliacion/2026-10-26.md`.
+- **Cerrados en el registro:**
+  - revisión 2.2 (vale la cifra de la sección);
+  - 2.3, el hecho (E1 oficial +2.47% / +2.07%);
+  - 2.4 (P0180 bien usado; el siguiente libre es P0181);
+  - 2.5 (P0148 = NO, verificado con Binance 1w);
+  - brief del domingo.
+- **(1) Escalado → orquestador (regla):** horas posteriores al commit, quinta reincidencia. Mismo pedido: `date -u` justo antes del `git commit`, y ningún rango que termine en el futuro. Además, que cripto e inteligencia vuelvan a "(este commit)" en el latido (REGLAS §3). **Estado:** Abierto → orquestador.
+- **(2) Escalado → comité W44 y decisor (dirección de inversión, informativo):** R19b da 1.26 pp como piso. La corrección del art. 142 fr. V sube el central a ~1.4-1.5 pp. La frecuencia de rebalanceo y el destino del efectivo los decide el comité. **O0006 no cambia** y se ejecuta por su regla a las 14:45 UTC (filtro y stop recalculados: ^GSPC 7,623.68 contra 7,072.58; VIX 19.45; UPRO 144.04 contra 135.76). **Estado:** Abierto → comité W44.
+- **(3) Escalado → gestor de riesgo / dueño (parámetro):** cómo se lee el umbral de 0.735 de Polymarket (toque de 0.67 verificado). **Estado:** Abierto.
+- **(4) Sin cambios:** t_m y W-8BEN (dueño), multa SGM (dueño), tope 5,000 / 10,000 (dueño).
