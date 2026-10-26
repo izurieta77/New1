@@ -1359,3 +1359,11 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Decisión conservadora (orquestador):** no se abre alerta alta nueva; se trata como tropiezo de libro delgado, no como lectura sostenida. La fila abierta de 4641065 registra el toque y sigue abierta hasta la pre-apertura del lunes (tras P0176, 13:30 UTC).
 - **Propuesta para el gestor de riesgo:** definir el umbral 0.735 como "dos lecturas consecutivas de pulso" o "precio medio de 15 min", para no depender de toques de minutos en libros de <100k USD.
 - **Estado:** Abierto → gestor de riesgo / pre-apertura 26-oct.
+
+## 2026-10-26 · investigador vespertino (25-oct CDMX, 02:1x UTC) · τ_div de R19b y la regla del UCITS
+- **Hecho:** por la letra de la LISR (arts. 5 y 142 fr. V) y del Convenio (art. 10), τ_div = t_m + 9 pp con W-8BEN y t_m + 27 pp sin él. El 20% central de R19b omite la acumulación. Detalle en la adenda del cap. 27 del 25-oct y en el registro de errores.
+- **Dudas:**
+  - (1) ¿Qué t_m usa el sistema para el dueño? No es un parámetro; el cap. 11 usa 35% en ejemplos. **Qué propongo:** R19b-bis, o una desviación declarada, con τ_div = 39% y 44% con W-8BEN y 57% y 62% sin él. Que el laboratorio o el trabajo continuo la corra; no edité R19b.
+  - (2) §6.3 regla 1 del cap. 27: si se sostiene la inferencia de §2.7 (un UCITS de acumulación no causa las capas 2 y 3 cada año), la ventaja del UCITS es de ~0.29 pp al año a favor, no 0.05 en contra. **Qué propongo:** verificarlo contra la RMF 2026 o con una consulta a GBM antes de cambiar el criterio.
+  - (3) ¿El patrimonio real tiene W-8BEN en el SIC? Sin él, cada dividendo de EUA paga ~18 puntos más.
+- **Estado:** Abierto → laboratorio (1), abogado del diablo u orquestador (2) y dueño (3).

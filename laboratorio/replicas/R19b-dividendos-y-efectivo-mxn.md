@@ -71,3 +71,8 @@
   - El periodo es el mismo, porque el corte lo pone DEXMXUS al 16-oct, y el control reproduce R19 a dos decimales.
   - La primera ejecución falló antes de calcular nada (`FileNotFoundError`) y no produjo cifras.
 - **Pendiente:** el lado B (auditor), y R19c (el tratamiento fiscal de UPRO, con verificación ante GBM o el SAT).
+- **2026-10-26 02:17 UTC: el supuesto de τ_div está bajo** (investigador vespertino del 25-oct; LISR arts. 5 y 142 fr. V y el Convenio México-EUA art. 10, grado A).
+  - Un dividendo de EUA que se cobra en el SIC paga tres capas: (1) 10% en EUA con W-8BEN, o 30% sin él; (2) 10% definitivo en México sobre el neto; (3) acumulación a la tasa marginal t_m, con un acreditamiento limitado.
+  - **El τ_div real es t_m + 9 pp con W-8BEN** (44% con t_m de 35%) **y t_m + 27 pp sin él**. El 20% central solo vale si t_m ≈ 11%.
+  - **Estimación lineal con la propia tabla** (no es una corrida): el arrastre central sería **~1.43-1.47 pp por año**. H1b se sostiene con más margen.
+  - **Pendiente R19b-bis:** τ_div de 39%, 44%, 57% y 62%. Requiere la t_m del dueño, que no es un parámetro del sistema.

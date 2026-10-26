@@ -287,3 +287,40 @@ La ventaja fiscal y estructural es **segura y medible**: se conoce de antemano y
   - Al 23-oct la página no registra la aprobación del Senado. Según la prensa (C), el pleno está previsto para el 27-oct.
   - Detalle en el cap. 33 §9.11.
 - **§2.2 (art. 129) y §2.4 (retención de intereses del 0.68% propuesta):** no se pudo leer si el dictamen aprobado cambió algo respecto de la iniciativa, porque el PDF está escaneado y no tiene texto. Lo leído sigue igual: la iniciativa no toca el art. 129 (adenda del 5-oct). **Ningún parámetro cambia** hasta la publicación en el DOF.
+
+## Adenda 2026-10-25 (investigador vespertino, turno fiscal): tasa efectiva total sobre dividendos de EUA vía SIC
+
+**Acceso:** lectura íntegra de la LISR vigente (arts. 5 y 142 fr. V). El PDF de Diputados descargado el 26-oct-2026 02:1x UTC tiene el mismo sha256 que la copia congelada en V05 (`803c2875c09c…`, última reforma DOF 01-04-2024). Lectura íntegra del Convenio México-EUA, art. 10 (texto del IRS congelado en V05). **No revisé la RMF 2026**; una regla puede facilitar el entero, pero no puede quitar la acumulación que fija la ley.
+
+- **§2.3 se confirma y se precisa (grado A, por la letra de la ley).** Sobre un dividendo bruto D de una emisora o ETF de EUA, una persona física residente con tasa marginal anual t_m (tarifa del art. 152) paga tres capas:
+  1. **EUA:** 10% de D con W-8BEN (Convenio, art. 10(2)(b), "in other cases"); 30% sin él. Entre 1994 y 1998 la tasa del tratado fue de 15% (art. 10(3)).
+  2. **México, pago adicional definitivo:** 10% "al monto ... efectivamente distribuido ... sin incluir el monto del impuesto retenido" (art. 142 fr. V, 2.º párrafo). Es decir, 9% de D con W-8BEN y 7% sin él. Este régimen existe desde la LISR de 2014.
+  3. **México, acumulación:** el dividendo "además" se acumula (art. 142 fr. V). El ingreso acumulado incluye el impuesto de EUA (art. 5, 1.er párrafo). Contra el ISR que resulte se acredita el impuesto de EUA, con dos límites:
+     - el ISR mexicano que corresponda a ese ingreso, calculado por país (art. 5, párrafo de personas físicas);
+     - lo que exceda la tasa del tratado "sólo podrán acreditar[lo] ... una vez agotado el procedimiento de resolución de controversias" (art. 5). Sin W-8BEN, en la práctica solo se acreditan 10 de los 30 puntos. El excedente no es deducible (art. 5).
+- **Fórmula [cálculo propio, dos métodos coinciden; t_m ≥ 10%]:**
+  - con W-8BEN: **τ_div = t_m + 9 pp**;
+  - sin W-8BEN: **τ_div = t_m + 27 pp** (si no se agota el procedimiento amistoso ni se reclama la devolución en EUA).
+
+| t_m | Con W-8BEN | Sin W-8BEN |
+|---|---|---|
+| 10.88% | 19.9% | 37.9% |
+| 21.36% | 30.4% | 48.4% |
+| 30% | 39% | 57% |
+| 35% | **44%** | **62%** |
+
+- **Lo que esto corrige:**
+  - *R19b* usa "20% = 10% EUA + 10% México" como caso central. Ese supuesto **omite la acumulación** (capa 3). Solo es correcto si t_m ≈ 11%.
+  - *Pregunta 3 de este capítulo:* "acreditas el impuesto extranjero" sin W-8BEN es incompleto. Solo se acreditan 10 puntos, salvo que se agote el procedimiento amistoso.
+  - Ver el registro de errores, 2026-10-25.
+- **Efecto sobre las reglas de §6 [inferencia, sin cambiar ningún criterio aquí]:**
+  - **§6.2 regla 3 (no tramitar el W-8BEN en la arena):** se sostiene. El ahorro real es de 18 puntos del dividendo, no 20 (sin W-8BEN, el 10% adicional se calcula sobre una base menor). Con un rendimiento de ~1%, son ~0.18 pp al año. Para la arena, de 20,000 MXN, no compensa los 75 USD + IVA.
+  - **§6.3 regla 1:** la comparación "UCITS de acumulación +0.05 pp contra un ETF de EUA con W-8BEN" solo cuenta retenciones en origen.
+    - Si se sostiene la inferencia de §2.7 (acumulación contra distribución), el UCITS de acumulación no reparte y no paga ni la capa 2 ni la 3 cada año: 15% contra t_m + 9%.
+    - Con t_m = 35%, eso es ~0.29 pp al año **a favor** del UCITS, con un rendimiento de 1%. El dividendo reinvertido paga 10% del art. 129 al vender.
+    - La inferencia sigue en grado C. Va a decisiones pendientes.
+- **Límites:**
+  - no conozco la t_m del dueño; el sistema no la tiene como parámetro;
+  - no revisé la RMF 2026 ni una constancia real de GBM;
+  - las distribuciones de ganancias de capital de un RIC tienen otra retención en EUA, que no se modela;
+  - antes de 2014 no existía la capa 2 (afecta a los respaldos de 1994-2013, no al costo de hoy).
