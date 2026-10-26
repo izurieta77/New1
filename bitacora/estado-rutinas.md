@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-26 15:44 UTC · cripto (09:41, pulso extra) · OK · BTC 80,696 · +0.34% en pesos · colchón +13.98% · E9 0.277% VERDE · OI 829.7M · funding 9.6e-05 · sin alertas
 2026-10-26 15:41 UTC · supervisión (09:41 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,069.87 cuadra con lo registrado; UPRO papel 9.1% sobre stop; FX-1 OK 18.5719; O0006 pendiente de registro por el cierre; sin mensajes del dueño
 2026-10-26 14:55 UTC · cripto (08:17, profundo) · OK · BTC 79,730 (−0.80% 4h) · filtro reconfirmado SMA200 72,987.78 salida 70,798.14 ENCENDIDO colchón +12.62% · E9 mediana 0.144% VERDE · E1 +0.62% limpio, sin ROJA · ETF 23-oct −137.9M (C, Decrypt) · ficha dvol-prima-de-evento (prima FOMC cara 1.48× vs 0.75× histórico) · P0184 p=0.22 · sin alertas
 2026-10-26 14:43 UTC · supervisión (08:42 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,059.48 cuadra con lo registrado; UPRO papel 8.5% sobre stop; FX-1 OK 18.5694; O0006 válida para la vela 14:45; sin mensajes del dueño
