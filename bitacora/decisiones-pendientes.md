@@ -1344,3 +1344,12 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(1) Brief del 25-oct:** no existe. **Qué decidí:** no lo creo y dejo el resumen para el dueño en `bitacora/revisiones/2026-10-25.md` §4. **Por qué:** es el precedente del fallo `bitacora/arbitraje/2026-10-24.md` §2 (el brief de fin de semana lo crea el aprendizaje). **Estado:** Abierto → aprendizaje del 25-oct (si crea el brief, puede copiar la §4).
 - **(2) Verificación de mensajes del dueño con un clon superficial:** `git log --since="2026-10-23 00:05" -- datos/entrada-dueno/ bitacora/real/operaciones.csv` solo devuelve `22e1b07`, el commit frontera (`.git/shallow`), que aparece como si agregara todos los archivos. **Qué decidí:** tratarlo como un artefacto y comprobarlo con el contenido: el último archivo de entrada es del 22-oct y la última operación real, del 7-oct. **Por qué:** es la lectura conservadora que se puede verificar sin hacer `fetch --unshallow` (no cambio el checkout por instrucción del orquestador). **Estado:** Cerrado (informativo).
 - **(3) Horas posteriores al commit, cuarta reincidencia** (revisión 1.1): la regla propuesta el 25-oct (L1331) sigue sin ratificar. **Estado:** Abierto → orquestador (regla).
+
+## 2026-10-26 · trabajo continuo (2026-10-26 01:12 UTC) · R19b: el costo fiscal del SIC es ~1.26 pp por año, no 0.8
+- **Hecho:** R19b, ejecución A. Pre-registro y script en `4755d91`, antes de correr. Con el impuesto a los dividendos (20%) y el efectivo en CETES gravado (20%), la mezcla con rebalanceo mensual pierde **1.26 pp por año** (rango 0.87-1.35); rebalanceando una vez al año, 1.17; comprando y manteniendo el S&P, 0.78. El control reproduce R19 exacto.
+- **Insumo para el comité W44:** el rebalanceo mensual cuesta ~0.3 pp por año de impuestos frente a solo el filtro, y el efectivo en CETES lleva retención. Conviene revisar la frecuencia de rebalanceo de la cuenta real. **No decido nada aquí.**
+- **Pendiente:**
+  - (1) el lado B de R19b, con el auditor;
+  - (2) R19c: verificar si UPRO (ETF con swaps) entra al art. 129 fr. II, con GBM o una fuente del SAT;
+  - (3) las cachés de R12/R16 no están en git; cualquier réplica que dependa de ellas debe declarar su sha.
+- **Estado:** Abierto → laboratorio o trabajo continuo (B de R19b) y comité W44 (insumo).

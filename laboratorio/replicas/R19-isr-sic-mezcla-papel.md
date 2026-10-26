@@ -118,3 +118,6 @@ Periodo del 1994-01-03 al 2026-10-16, 8,253 días (`R19-salida.txt`, `R19-result
 - **El rebalanceo mensual cuesta 0.4-0.6 pp por año en total** (CAGR después de ISR: 17.94% contra 18.52% en A; 17.99% contra 18.36% en B), sobre todo por comisiones, no por ISR.
 - **El ~7% cambiario depende de la muestra:** en 1994-2026 el INPC (×10.5) subió más que el tipo de cambio (×6.0).
 - **Siguiente prueba:** R19b, con dividendos y efectivo en MXN, y la confirmación de GBM o del SAT sobre UPRO antes del 30-nov.
+
+## Nota 2026-10-26 (trabajo continuo) · R19b
+- **R19b** (`R19b-dividendos-y-efectivo-mxn.md`, ejecución A) agrega dividendos gravados y efectivo en CETES gravado. Con eso, el **arrastre central de M es 1.26 pp por año** (rango 0.87-1.35). **H1 de R19 (≥ 1.0 pp) queda superada por R19b** en el caso central; R19 sigue siendo válido solo para el modelo sin esas dos omisiones. Falta el lado B de R19b.

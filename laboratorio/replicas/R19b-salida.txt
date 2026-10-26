@@ -1,0 +1,14 @@
+R19b A · arrastre total = CAGR MXN sin ningún impuesto − CAGR con ISR art. 129 + dividendos + intereses
+| Variante | τ_div | τ_int | efectivo | CAGR pre | CAGR post | Arrastre (pp/año) |
+|---|---|---|---|---|---|---|
+| M | 10% | 0% | MXN (CETES) | 19.54% | 18.67% | 0.87 |
+| M | 10% | 20% | MXN (CETES) | 19.54% | 18.37% | 1.18 |
+| M | 20% | 0% | MXN (CETES) | 19.54% | 18.59% | 0.96 |
+| M | 20% | 20% | MXN (CETES) | 19.54% | 18.28% | 1.26 |
+| M | 30% | 0% | MXN (CETES) | 19.54% | 18.50% | 1.04 |
+| M | 30% | 20% | MXN (CETES) | 19.54% | 18.19% | 1.35 |
+| A | 20% | 20% | MXN (CETES) | 19.98% | 18.81% | 1.17 |
+| F | 20% | 20% | MXN (CETES) | 19.32% | 18.38% | 0.94 |
+| B | 20% | 20% | MXN (CETES) | 17.13% | 16.34% | 0.78 |
+| Control R19 (M) | 0% | 0% | T-bill USD | 18.75% | 17.94% | 0.81 |
+H1b (central M ≥ 1.0 pp): True (1.26) · rango M 0.87-1.35 · H2b (M − F ≥ 0.3): True

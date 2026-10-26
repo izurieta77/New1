@@ -42,3 +42,32 @@
 
 ## Desviaciones del pre-registro
 (ninguna todavía)
+
+## Resultados · ejecución A (2026-10-26 01:12 UTC, después del commit `4755d91`)
+| Variante | τ_div | τ_int | CAGR sin impuestos | CAGR con impuestos | Arrastre (pp/año) |
+|---|---|---|---|---|---|
+| M | 10% | 0% | 19.54% | 18.67% | 0.87 |
+| M | 10% | 20% | 19.54% | 18.37% | 1.18 |
+| M | 20% | 0% | 19.54% | 18.59% | 0.96 |
+| **M (central)** | **20%** | **20%** | **19.54%** | **18.28%** | **1.26** |
+| M | 30% | 0% | 19.54% | 18.50% | 1.04 |
+| M | 30% | 20% | 19.54% | 18.19% | 1.35 |
+| A | 20% | 20% | 19.98% | 18.81% | 1.17 |
+| F | 20% | 20% | 19.32% | 18.38% | 0.94 |
+| B (100% S&P TR) | 20% | 20% | 17.13% | 16.34% | 0.78 |
+| Control R19 (M, T-bill USD, sin dividendos ni intereses gravados) | 0% | 0% | 18.75% | 17.94% | 0.81 |
+
+- **Veredicto A:**
+  - **H1b sostenida:** el arrastre central de M es **1.26 pp**, con rango de 0.87 a 1.35.
+  - **H2b sostenida por poco:** M − F = 0.32 pp.
+- **Lectura:**
+  - El abogado del diablo tenía razón: el costo fiscal real de la mezcla con rebalanceo mensual es **~1.2-1.3 pp por año**, no ~0.8. Lo que más pesa es el impuesto a los intereses del efectivo (+0.3 pp con 20%); el impuesto a los dividendos suma +0.1-0.2 pp.
+  - Con dividendos gravados, comprar y mantener el S&P también cuesta 0.78 pp por año.
+  - El efectivo en CETES sube el CAGR antes de impuestos (19.54% contra 18.75%) por las tasas mexicanas altas de 1994-2008.
+- **El control reproduce R19 exacto** (18.75%, 17.94% y 0.81), así que las cachés reconstruidas no cambian el resultado.
+
+## Desviaciones del pre-registro
+- **2026-10-26 01:12 UTC: cachés reconstruidas.** Esta copia del repositorio es nueva, y las cachés de R12 y R16 no están en git (`.gitignore`). R16 y R12 las volvieron a descargar el 26-oct: el sha256 combinado es `42339a50…`, contra `a4789527…` en R19.
+  - El periodo es el mismo, porque el corte lo pone DEXMXUS al 16-oct, y el control reproduce R19 a dos decimales.
+  - La primera ejecución falló antes de calcular nada (`FileNotFoundError`) y no produjo cifras.
+- **Pendiente:** el lado B (auditor), y R19c (el tratamiento fiscal de UPRO, con verificación ante GBM o el SAT).
