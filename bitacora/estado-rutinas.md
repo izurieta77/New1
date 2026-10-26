@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-26 11:43 UTC · cripto (05:41, pulso extra) · OK · BTC 80,413 · +0.57% en pesos · colchón +13.58% · E9 0.109% VERDE · OI 822.7M · funding 1.06e-04 · Polymarket 0.855 · sin alertas
 2026-10-26 10:19 UTC · cripto (04:17, pulso) · OK · BTC 80,436 · +0.70% en pesos · colchón +13.61% · E9 0.073% VERDE · OI 823.3M (−2.98%) · funding 8.3e-05 · Polymarket 0.855 · sin alertas
 2026-10-26 06:24 UTC · cripto (00:17, pulso) · OK · BTC 80,108 (−0.69%) · +0.28% en pesos · colchón +13.15% · E9 0.070% VERDE · OI 848.6M · Polymarket 0.835 · sin alertas
 2026-10-26 03:43 UTC · supervisor-vespertino · OK | 0 sin latido · (este commit) · cierre de la cascada vespertina del domingo 25-oct: las 19 corridas esperadas dejaron latido (8 cripto, 4 inteligencia, revisión, aprendizaje, trabajo-continuo, decisor, investigador, conciliación; sin rutinas de mercado en fin de semana); sin bloqueos nuevos; hoy lunes 26-oct 14:45 UTC ejecuta O0006; abierto al dueño: multa SGM (29/30/31-oct) y efectivo GBM
