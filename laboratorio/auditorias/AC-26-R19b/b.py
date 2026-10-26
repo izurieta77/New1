@@ -350,43 +350,61 @@ def simular(variante, con_isr, td=0.0, ti=0.0):
     años = (dias[-1] - dias[i_ini]).days / 365.25
     reg["final_mxn"] = mxn
     reg["cagr_mxn"] = (mxn / m0) ** (1 / años) - 1
-    reg["cagr_usd"] = (usd / (1.0 / FX[i_ini])) ** (1 / años) - 1 if not con_isr else None
+    reg["cagr_usd"] = (usd / (1.0 / FX[i_ini])) ** (1 / años) - 1
     reg["parte_cambiaria"] = 1 - reg["g_usd_fx"] / reg["g_mxn_nom"] if reg["g_mxn_nom"] else None
     reg["perdidas_vivas_al_final"] = sum(p for _, p in perdidas)
     return reg
 
 
-out = {"fuente": "B: CBOE SPX + multpl div, CBOE VIX, FRED NASDAQ100, FRED DTB3, Banxico FIX SF43718, Banxico INPC SP1",
+out = {"fuente": "B: CBOE SPX + multpl div, CBOE VIX, FRED NASDAQ100, FRED DTB3, Banxico FIX SF43718, "
+                 "Banxico INPC SP1, Banxico CETES 28 SF43936",
+       "banderas": sorted(BANDERAS),
        "inicio": str(dias[i_ini]), "fin": str(dias[-1]), "dias": n - i_ini,
-       "fx_ini": FX[i_ini], "fx_fin": FX[-1],
-       "inpc_dic1993": INPC[(1993, 12)], "inpc_ago2026": INPC[(2026, 8)],
+       "fx_ini": FX[i_ini], "fx_fin": FX[-1], "cetes_ini": CET[i_ini], "cetes_fin": CET[-1],
+       "div_yield_medio": sum(r_div[i_ini + 1:]) / ((dias[-1] - dias[i_ini]).days / 365.25),
        "pct_v0_on_1994": sum(1 for i in range(i_ini + 1, n) if estado[i - 2]) / (n - i_ini - 1),
-       "variantes": {}}
-L = [f"Periodo {out['inicio']} a {out['fin']} ({out['dias']} días). FIX {out['fx_ini']:.4f} -> {out['fx_fin']:.4f}. "
-     f"INPC dic-93 {out['inpc_dic1993']:.3f} -> ago-26 {out['inpc_ago2026']:.3f}. V0 encendido {out['pct_v0_on_1994']:.1%}",
-     f"{'Var':3s} {'CAGR pre':>9s} {'CAGR post':>9s} {'arrastre':>9s} {'CAGR USD':>9s} {'ops':>6s} {'comis%ini':>9s} "
-     f"{'ISR/final':>9s} {'parte FX':>8s}"]
-for v in ["M", "A", "F", "B"]:
-    pre, post = simular(v, False), simular(v, True)
-    d = {"cagr_pre": pre["cagr_mxn"], "cagr_post": post["cagr_mxn"],
-         "arrastre_pp": (pre["cagr_mxn"] - post["cagr_mxn"]) * 100,
-         "cagr_usd_pre": pre["cagr_usd"], "final_mxn_pre": pre["final_mxn"], "final_mxn_post": post["final_mxn"],
-         "ops_post": post["ops"], "ops_pre": pre["ops"], "isr_total_mxn": post["isr_mxn"], "pagos_isr": post["pagos"],
-         "parte_cambiaria_post": post["parte_cambiaria"], "parte_cambiaria_pre": pre["parte_cambiaria"],
-         "g_mxn_nominal_post": post["g_mxn_nom"], "g_usd_x_fx_post": post["g_usd_fx"],
-         "perdidas_vivas_final": post["perdidas_vivas_al_final"],
-         "base_gravable": {str(k): round(x, 6) for k, x in post["base_gravable"].items()}}
-    out["variantes"][v] = d
-    L.append(f"{v:3s} {d['cagr_pre']:9.3%} {d['cagr_post']:9.3%} {d['arrastre_pp']:8.3f}p {d['cagr_usd_pre']:9.3%} "
-             f"{d['ops_post']:6d} {post['comis_usd']*FX[i_ini]:9.3f} {post['isr_mxn']/post['final_mxn']:9.3f} "
-             f"{d['parte_cambiaria_post']:8.1%}")
-M, F = out["variantes"]["M"], out["variantes"]["F"]
-out["H1"] = {"arrastre_M_pp": M["arrastre_pp"], "sostenida": M["arrastre_pp"] >= 1.0}
-out["H2"] = {"M_menos_F_pp": M["arrastre_pp"] - F["arrastre_pp"], "sostenida": M["arrastre_pp"] - F["arrastre_pp"] >= 0.3}
-out["H3"] = {"parte_cambiaria_M": M["parte_cambiaria_post"], "sostenida": M["parte_cambiaria_post"] >= 0.30}
-L.append(f"\nH1: arrastre M = {M['arrastre_pp']:.3f} pp -> {'sostenida' if out['H1']['sostenida'] else 'REFUTADA'} (>= 1.0)")
-L.append(f"H2: M - F = {out['H2']['M_menos_F_pp']:.3f} pp -> {'sostenida' if out['H2']['sostenida'] else 'REFUTADA'} (>= 0.3)")
-L.append(f"H3: parte cambiaria M = {M['parte_cambiaria_post']:.1%} -> {'sostenida' if out['H3']['sostenida'] else 'REFUTADA'} (>= 30%)")
-L.append("(comis%ini = comisiones totales en MXN de la variante con ISR, en unidades de la inversión inicial convertida al FX inicial)")
+       "rejilla": {}, "sensibilidad_tdiv44": {}, "descomposicion_M_central": {}}
+L = [f"Banderas: {','.join(sorted(BANDERAS)) or '(ninguna)'}",
+     f"Periodo {out['inicio']} a {out['fin']} ({out['dias']} días). FIX {out['fx_ini']:.4f} -> {out['fx_fin']:.4f}. "
+     f"CETES28 {out['cetes_ini']:.2f}% -> {out['cetes_fin']:.2f}%. Dividendo medio {out['div_yield_medio']:.2%}/año. "
+     f"V0 encendido {out['pct_v0_on_1994']:.1%}",
+     f"{'Var':3s} {'τdiv':>5s} {'τint':>5s} {'CAGR pre':>9s} {'CAGR post':>9s} {'arrastre':>9s} {'ops':>6s} "
+     f"{'ISR/ini':>8s} {'Div/ini':>8s} {'Int/ini':>8s}"]
+PRE = {}
+
+
+def fila(v, td, ti):
+    if v not in PRE:
+        PRE[v] = simular(v, False)
+    pre, post = PRE[v], simular(v, True, td, ti)
+    d = {"tau_div": td, "tau_int": ti, "cagr_pre": pre["cagr_mxn"], "cagr_post": post["cagr_mxn"],
+         "arrastre_pp": (pre["cagr_mxn"] - post["cagr_mxn"]) * 100, "cagr_usd_pre": pre["cagr_usd"],
+         "final_mxn_pre": pre["final_mxn"], "final_mxn_post": post["final_mxn"], "ops_post": post["ops"],
+         "isr_mxn": post["isr_mxn"], "imp_div_mxn": post["div_mxn"], "imp_int_mxn": post["int_mxn"],
+         "parte_cambiaria_post": post["parte_cambiaria"]}
+    L.append(f"{v:3s} {td:5.0%} {ti:5.0%} {d['cagr_pre']:9.3%} {d['cagr_post']:9.3%} {d['arrastre_pp']:8.3f}p "
+             f"{d['ops_post']:6d} {post['isr_mxn']:8.2f} {post['div_mxn']:8.2f} {post['int_mxn']:8.2f}")
+    return d
+
+
+for td in (0.10, 0.20, 0.30):
+    for ti in (0.0, 0.20):
+        out["rejilla"][f"M_{td:.2f}_{ti:.2f}"] = fila("M", td, ti)
+for v in ("A", "F", "B"):
+    out["rejilla"][f"{v}_0.20_0.20"] = fila(v, 0.20, 0.20)
+L.append("-- sensibilidad declarada: τ_div = 44% (t_m 35% + 9 pp, W-8BEN), τ_int = 20%")
+for v in ("M", "F"):
+    out["sensibilidad_tdiv44"][v] = fila(v, 0.44, 0.20)
+L.append("-- descomposición M (solo ISR art.129 / ISR + τ_div 20% / ISR + τ_int 20% / todo)")
+for nom, td, ti in (("solo_isr", 0, 0), ("isr_div", 0.2, 0), ("isr_int", 0, 0.2), ("todo", 0.2, 0.2)):
+    out["descomposicion_M_central"][nom] = fila("M", td, ti)
+M, F = out["rejilla"]["M_0.20_0.20"], out["rejilla"]["F_0.20_0.20"]
+rng = [x["arrastre_pp"] for k, x in out["rejilla"].items() if k.startswith("M_")]
+out["H1b"] = {"arrastre_M_pp": M["arrastre_pp"], "sostenida": M["arrastre_pp"] >= 1.0, "rango_M": [min(rng), max(rng)]}
+out["H2b"] = {"M_menos_F_pp": M["arrastre_pp"] - F["arrastre_pp"], "sostenida": M["arrastre_pp"] - F["arrastre_pp"] >= 0.3}
+L.append(f"\nH1b: arrastre M central = {M['arrastre_pp']:.3f} pp -> {'sostenida' if out['H1b']['sostenida'] else 'REFUTADA'} (>= 1.0); "
+         f"rango M {min(rng):.2f}-{max(rng):.2f}")
+L.append(f"H2b: M - F = {out['H2b']['M_menos_F_pp']:.3f} pp -> {'sostenida' if out['H2b']['sostenida'] else 'REFUTADA'} (>= 0.3)")
+L.append("(ISR/ini, Div/ini, Int/ini = impuestos totales pagados en MXN por 1 MXN inicial)")
 print("\n".join(L))
 json.dump(out, open(SALIDA, "w"), indent=2, ensure_ascii=False, default=str)
