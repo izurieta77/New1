@@ -547,3 +547,20 @@ La nota de verificación de arriba decía que el portal de Hacienda estaba caíd
 - [H, prensa] **Calendario:** la Comisión de Hacienda votaría los dictámenes el 14-15 de octubre (Excélsior y Capital México); se mantienen los plazos del 20-oct y el 31-oct. [I] La aprobación sigue siendo casi segura por la mayoría. Lo que hay que vigilar son los cambios en comisión al mecanismo de deducciones de personas morales, que es lo que más mueve las utilidades después de impuestos de las emisoras (cap. 25).
 
 Fuentes: https://gaceta.diputados.gob.mx/Gaceta/66/2026/sep/20260908.html · anexo C: https://gaceta.diputados.gob.mx/PDF/66/2026/sep/20260908-C.pdf · anexo E: https://gaceta.diputados.gob.mx/PDF/66/2026/sep/20260908-E.pdf · https://www.excelsior.com.mx/nacional/ley-ingresos-2027
+
+## Adenda 2026-10-26 (laboratorio): ¿el mercado le cree al gobierno cuando presiona a la Fed?
+**Fuente:** Baretti, Collodel y Zacché, "Jawboning the Fed: Do Markets Listen When Administrations Talk?", arXiv 2610.32300v1 (23-oct-2026), econ.GN. Leí el HTML de §1-§6 (el resto, robustez y apéndices, no). **Grado B−**: muestra larga (Reuters de 1988 a 2025, 666 eventos de presión clasificados por tres LLM con validación humana de κ = 0.68), pero es de forma reducida, no causal, y no declara pre-registro.
+
+- **Hallazgos (Tabla 2):**
+  - Cada evento de presión "dovish" de la administración baja el futuro de fondos federales del primer mes **0.91 pb** (≈ +3.7 pp de probabilidad de recorte) y menos en plazos más largos (FFc4: 0.50 pb). Los futuros del Tesoro no se mueven.
+  - **La presión "hawkish" no tiene efecto detectable.**
+  - Sin los periodos de Trump, el efecto es ~50% **mayor** (FFc1: 1.58 pb) y dura ~6 meses.
+- **El canal no es de credibilidad:** ni las swaps de inflación ni el VIX ni el MOVE responden (Tablas 9-10). El mercado lo lee como una función de reacción anticipada: el efecto crece cuando la mayoría de la Junta es del partido del presidente (Tabla 3).
+- **Dólar:** sin los periodos de Trump, el DXY baja 7.5 pb por evento (Tabla 11). En la muestra completa no es significativo.
+- **Inconsistencias del propio paper:**
+  - el resumen dice que el efecto desaparece después de tres meses, pero el texto lo encuentra hasta seis;
+  - en lo "hawkish", el resumen dice "sin efecto" y el texto, "en el límite".
+- **Para este sistema:**
+  - Una declaración de la Casa Blanca contra la Fed mueve, en promedio, **menos de 1 pb el futuro del mes**. Es ruido frente a un FOMC (el 28-oct, con mantener en 94%).
+  - Para P0131, P0143 y similares, la base es el precio del mercado de predicción, no los titulares de presión política.
+  - No cambia ninguna regla.
