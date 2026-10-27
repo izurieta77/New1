@@ -1398,3 +1398,11 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Decisión conservadora (vigía + orquestador):** se mantiene 18.648 para no cambiar de base a media alerta; la alerta BTC del 26-oct (19:53–20:59 UTC) queda abierta, lo que coincide con ambas bases.
 - **Pide:** al conciliador-árbitro fijar una sola fuente de "cierre FX" (propuesta: valor de `fx_alerta.py` a las 21:00 UTC del día hábil) y dejarla en `rutinas/REGLAS-MOTOR.md` §3.
 - **Estado:** Abierto → conciliación (20:57).
+
+## 2026-10-27 00:07 UTC · revisor (rutina 11, revisión del lunes 26-oct) · alerta SGM y CRLF de órdenes pendientes
+- **(1) ¿Se cierra la alerta SGM (`bitacora/alertas.md` L9)?** Su condición ("el hallazgo no llegó al dueño") ya se cumplió en el brief del 26-oct L5-L9, pero sin decir que el 31-oct es sábado inhábil.
+  - **Qué decidí:** no cerrarla. Lo conservador es dejarla abierta hasta que el dueño reporte su decisión o pase el 31-oct. Agregué la fecha inhábil en la sección "Revisión" del brief y pedí a la pre-apertura del 27-oct repetir la línea completa (revisión C3).
+  - **Estado:** Abierto → pre-apertura del 27-oct y conciliación.
+- **(2) `bitacora/ordenes-pendientes.csv` pasó de CRLF a LF en `684598b`.** No es mío corregirlo (no reescribo trabajo ajeno) y el contenido es correcto.
+  - **Qué decidí:** dejarlo así y pedir que la próxima escritura legítima devuelva CRLF sin tocar contenido (revisión C2).
+  - **Estado:** Abierto → cierre/conciliación; orquestador para la herramienta.
