@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+KOFUBL.MX-ingresos-3T26,2026-10-26,79718,,-5.29,no,,https://www.sec.gov/Archives/edgar/data/910631/000129281426005006/kofpr3q26_6k.htm
+KOFUBL.MX-upa-3T26,2026-10-26,0.3703,,1.28,si,,https://www.sec.gov/Archives/edgar/data/910631/000129281426005006/kofpr3q26_6k.htm
+KOFUBL.MX-ingresos_mayor_consenso-3T26,2026-10-26,79718,1,,,0.3025,https://www.sec.gov/Archives/edgar/data/910631/000129281426005006/kofpr3q26_6k.htm
+KOFUBL.MX-margen_operativo_mayor_3T25-3T26,2026-10-26,0.149,1,,,0.1444,https://www.sec.gov/Archives/edgar/data/910631/000129281426005006/kofpr3q26_6k.htm

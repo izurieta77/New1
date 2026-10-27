@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+V-ingresos-4TF26,2026-10-27,12139,,-0.16,si,,https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000126/q42026earningsrelease.htm
+V-upa-4TF26,2026-10-27,3.48,,-1.15,si,,https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000126/q42026earningsrelease.htm
+V-ingresos_mayor_consenso-4TF26,2026-10-27,12139,1,,,0.1764,https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000126/q42026earningsrelease.htm
+V-upa_mayor_consenso-4TF26,2026-10-27,3.48,1,,,0.2025,https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000126/q42026earningsrelease.htm

@@ -126,3 +126,9 @@ Verificador adversarial. Fuentes primarias leídas: 6-K del 2T26 (íntegro: resu
 **Calibración (para el post-mortem):** con las sorpresas de ingresos de los últimos 8 trimestres (desviación estándar de 0.75%, media de +0.3%) aplicadas al consenso, el resultado va de 75,171 a 76,990: todos dentro de 73,600-77,400. El intervalo no es estrecho; si acaso, es amplio. El binario de 0.45 es coherente con el intervalo, que implica 0.43. El sesgo por la base (totales contra netos) favorece ligeramente al "Sí".
 
 **Veredicto:** confiable. Cifras, guía y cadena causal coinciden con los 6-K. Hubo errores de etiqueta (división en vez de país) y de conteo, sin efecto en los pronósticos.
+
+## Adenda (27-oct-2026, cierre): resultado del 3T26 (publicado el 26-oct)
+- **Real** (6-K del 26-oct): ingresos totales de Ps 79,718 M (+10.9%), margen operativo de 14.9%, impuestos de 33.4% y UPA de 0.37.
+- **Contra la §8** (no se modifica): ingresos **fuera del intervalo** (−5.29%); UPA dentro (+1.28%). Binarios: ingresos SÍ (p 0.45, Brier 0.3025) y margen SÍ (p 0.62, Brier 0.1444).
+- **Precio:** −4.7% en dos sesiones.
+- **Post-mortem:** `post-mortem-2026-10-27.md`.

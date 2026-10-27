@@ -104,3 +104,9 @@ Múltiplos: P/U de 12 meses de 31.3x GAAP (UPA 11.76) y 28.8x no-GAAP (12.78); a
 21. New York Post (9-sep-2026; sólo titular): https://nypost.com/2026/09/09/us-news/trump-will-pledge-to-slash-out-of-control-credit-card-swipe-fees-at-gop-midterm-convention/
 22. Conocimiento interno: `conocimiento/23-...` §4.3 (guerra de Irán, Polymarket) y `conocimiento/24-...` §4.1-4.3.
 23. Transcripción del 2T26 de Mastercard, Investing.com (30-jul-2026): https://www.investing.com/news/transcripts/earnings-call-transcript-mastercard-tops-q2-2026-estimates-on-strong-spending-93CH-4825118
+
+## Adenda (27-oct-2026, cierre): resultado del 4T fiscal 2026
+- **Real** (8-K del 27-oct): ingresos de US$12,139 M (+13%) y UPA no-GAAP de 3.48 (+17%); GAAP 3.19, con una provisión de litigio de 474. Tasa no-GAAP de 18.4%. Recompra de US$4.0 mil M.
+- **Contra los pronósticos de la §8** (no se modifican): los dos puntos quedaron dentro del intervalo de 80% y fueron mejores que el consenso (errores de −0.16% y −1.15%). Binarios SÍ/SÍ, con Brier de 0.1764 y 0.2025.
+- **Precio:** cerró en 401.86 (−1.5%) y bajó −1.7% en el after-hours.
+- **Post-mortem:** `post-mortem-2026-10-27.md`. Para el siguiente modelo: margen con la mediana de 4 trimestres e incentivos por separado.
