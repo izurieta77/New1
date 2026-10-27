@@ -1,0 +1,36 @@
+B_principal_DFF_252_rec_SP500TR                            n=4359 M1=-1.551 M1b=-1.749 tramos=[-1.26, -1.57, -2.22] (n=[2423, 911, 1025]) H2dif=-0.96 M3 c=-1.25 b=-0.206 t=-1.46 M4 b=-0.03222 t=-6.47
+DTB3_252_rec_SP500TR                                       n=4359 M1=-1.601 M1b=-1.816 tramos=[-1.27, -1.68, -2.31] (n=[2391, 935, 1033]) H2dif=-1.04 M3 c=-1.30 b=-0.210 t=-1.46 M4 b=-0.03223 t=-6.46
+DTB3_252_rec_SP500TR_tasa_mismo_dia                        n=4359 M1=-1.600 M1b=-1.814 tramos=[-1.32, -1.55, -2.29] (n=[2390, 935, 1034]) H2dif=-0.97 M3 c=-1.32 b=-0.195 t=-1.36 M4 b=-0.03222 t=-6.45
+DTB3_252_adj_SP500TR_tasa_mismo_dia(=receta pre-registro)  n=4359 M1=-1.600 M1b=-1.815 tramos=[-1.32, -1.54, -2.3] (n=[2390, 935, 1034]) H2dif=-0.98 M3 c=-1.31 b=-0.197 t=-1.37 M4 b=-0.03214 t=-6.44
+DFF_252_rec_SP500TR_tramosDTB3                             n=4359 M1=-1.551 M1b=-1.749 tramos=[-1.18, -1.73, -2.25] (n=[2391, 935, 1033]) H2dif=-1.07 M3 c=-1.25 b=-0.206 t=-1.46 M4 b=-0.03222 t=-6.47
+DFF_act360_rec_SP500TR                                     n=4359 M1=-1.497 M1b=-1.675 tramos=[-1.26, -1.51, -2.05] (n=[2423, 911, 1025]) H2dif=-0.79 M3 c=-4.07 b=+1.711 t=+8.74 M4 b=-0.03227 t=-6.49
+DTB3_act360_rec_SP500TR                                    n=4359 M1=-1.552 M1b=-1.750 tramos=[-1.26, -1.62, -2.15] (n=[2391, 935, 1033]) H2dif=-0.89 M3 c=-4.06 b=+1.696 t=+8.75 M4 b=-0.03225 t=-6.46
+DFF_252_rec_SPYTR                                          n=4359 M1=-1.468 M1b=-1.917 tramos=[-1.02, -1.72, -2.3] (n=[2423, 911, 1025]) H2dif=-1.28 M3 c=-1.07 b=-0.269 t=-1.86 M4 b=-0.01047 t=-0.66
+DTB3_252_rec_SPYTR                                         n=4359 M1=-1.519 M1b=-1.985 tramos=[-1.1, -1.65, -2.36] (n=[2391, 935, 1033]) H2dif=-1.26 M3 c=-1.16 b=-0.249 t=-1.73 M4 b=-0.01048 t=-0.66
+DFF_act360_rec_SPYTR                                       n=4359 M1=-1.414 M1b=-1.844 tramos=[-1.02, -1.66, -2.13] (n=[2423, 911, 1025]) H2dif=-1.11 M3 c=-2.76 b=+0.895 t=+6.37 M4 b=-0.01048 t=-0.66
+DTB3_252_adj_SP500TR_mismo_dia_desde_0629(=ventana efectiva de A) n=4358 M1=-1.592 M1b=-1.806 tramos=[-1.3, -1.54, -2.3] (n=[2389, 935, 1034]) H2dif=-1.00 M3 c=-1.30 b=-0.200 t=-1.39 M4 b=-0.03214 t=-6.44
+control UPRO rec-adj {'media_diaria_anual_pp': 2.5422503623792587e-05, 'max_abs': 0.0005280490628940537}
+control SPYTR-SP500TR {'media_diaria_anual_pp': -0.027624185758094437}
+diagnostico devengo {"tasa<3% | 1 dia": {"n": 2614, "media_pb_dia": -1.0488356311576676}, "tasa<3% | 2 dias": {"n": 29, "media_pb_dia": -8.285977992279168}, "tasa<3% | >=3 dias": {"n": 691, "media_pb_dia": 1.7389387374632774}, "tasa>=3% | 1 dia": {"n": 799, "media_pb_dia": -2.434574908271849}, "tasa>=3% | 2 dias": {"n": 13, "media_pb_dia": -2.557789400519021}, "tasa>=3% | >=3 dias": {"n": 213, "media_pb_dia": 5.052944964234796}}
+dia semana {"SP500TR | tasa<3%": {"vie": -3.21, "lun": 1.74, "mar": 0.91, "mie": -0.14, "jue": -1.86}, "SP500TR | tasa>=3%": {"vie": -5.08, "lun": 5.11, "mar": -1.14, "mie": -0.08, "jue": -2.81}, "SPYTR | tasa<3%": {"vie": -1.34, "lun": -0.84, "mar": 0.8, "mie": -0.33, "jue": -0.75}, "SPYTR | tasa>=3%": {"vie": -3.44, "lun": 1.03, "mar": -0.01, "mie": -1.11, "jue": -0.91}}
+diagnostico H3 {"UPRO_menos_3SPYTR_sobre_rSP500TR": {"b": -0.005334610807317005, "t_NW6": -0.3427350600559418}, "SPYTR_menos_SP500TR_sobre_rSP500TR": {"b": -0.008976556885085146, "t_NW6": -1.8959970585372528}, "sd_diaria_SPYTR_menos_SP500TR_pb": 6.642151388944297}
+veredicto {"DFF": {"H1 (M1 <= -0.5 pp)": true, "H2 (alto - bajo <= -0.5 pp)": true, "H3 (pendiente<0 y t_NW6 <= -2)": true}, "DTB3": {"H1 (M1 <= -0.5 pp)": true, "H2 (alto - bajo <= -0.5 pp)": true, "H3 (pendiente<0 y t_NW6 <= -2)": true}}
+anual (principal DFF):
+  2009 n=131 brecha=-1.55 DFF=0.14  | DTB3 brecha=-1.60
+  2010 n=252 brecha=-0.54 DFF=0.18  | DTB3 brecha=-0.62
+  2011 n=252 brecha=-1.90 DFF=0.10  | DTB3 brecha=-2.00
+  2012 n=250 brecha=-0.08 DFF=0.14  | DTB3 brecha=-0.19
+  2013 n=252 brecha=-1.16 DFF=0.11  | DTB3 brecha=-1.26
+  2014 n=252 brecha=-1.41 DFF=0.09  | DTB3 brecha=-1.53
+  2015 n=252 brecha=-1.21 DFF=0.13  | DTB3 brecha=-1.37
+  2016 n=252 brecha=-0.26 DFF=0.39  | DTB3 brecha=-0.42
+  2017 n=251 brecha=-1.19 DFF=1.00  | DTB3 brecha=-1.33
+  2018 n=251 brecha=-2.28 DFF=1.83  | DTB3 brecha=-2.07
+  2019 n=252 brecha=-1.72 DFF=2.16  | DTB3 brecha=-1.92
+  2020 n=253 brecha=-2.62 DFF=0.37  | DTB3 brecha=-2.65
+  2021 n=252 brecha=-1.04 DFF=0.08  | DTB3 brecha=-1.11
+  2022 n=251 brecha=-2.36 DFF=1.68  | DTB3 brecha=-1.67
+  2023 n=250 brecha=-1.96 DFF=5.02  | DTB3 brecha=-1.87
+  2024 n=252 brecha=-1.86 DFF=5.15  | DTB3 brecha=-2.22
+  2025 n=250 brecha=-2.58 DFF=4.21  | DTB3 brecha=-2.87
+  2026 n=204 brecha=-2.34 DFF=3.67  | DTB3 brecha=-2.26

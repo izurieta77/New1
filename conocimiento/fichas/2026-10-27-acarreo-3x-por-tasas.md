@@ -4,7 +4,7 @@
 
 ## Fuente y nivel de acceso
 - **Derivación:** cap. 01 §crecimiento geométrico (G ≈ A − σ²/2) y cap. 07 §2.1. Ficha previa `2026-09-29-volatility-drag.md` (L* = 2.68 con tasas cercanas a cero).
-- **Brecha real:** R20 lado A (`laboratorio/replicas/R20-brecha-upro-sintetico-tasas.md`, 27-oct): −1.59 pp por año en total; −1.31 con DTB3 < 0.5%, −1.54 con 0.5-3% y **−2.30 con ≥ 3%**. El lado B está en curso.
+- **Brecha real:** R20 (`laboratorio/replicas/R20-brecha-upro-sintetico-tasas.md`, 27-oct, **Replicado**): −1.59 pp por año en total (A), −1.55 (B, con DFF); −1.31 con DTB3 < 0.5%, −1.54 con 0.5-3% y **−2.30 con ≥ 3%** (B: −2.22).
 - **Externo:** Bianchi y Goldberg (arXiv:2604.27287, lectura íntegra el 26-oct, grado C). Su "anomalía" de 2022-23 es en ≈51% acarreo omitido (adenda del 26-oct en el cap. 07).
 
 ## Supuestos y derivación
@@ -45,4 +45,4 @@
   - los backtests sintéticos (R16, R18) sobrestiman al UPRO en ~2.3 pp por año en este régimen.
 
 ## Estado nuevo
-**Crecimiento geométrico y matemática del compuesto:** se mantiene en *Comprendido con comprobación* mientras falte el lado B de R20. Si B concuerda, sube a **Contrastado**: tiene fórmula comprobada, la brecha medida contra datos reales y el contraste externo de Bianchi-Goldberg y R11-B.
+**Crecimiento geométrico y matemática del compuesto:** sube de *Comprendido con comprobación* a **Contrastado** (27-oct, después de que B de R20 (AC-27) concordara: −1.55 contra −1.59 pp por año). Tiene la fórmula comprobada, la brecha medida contra datos reales y el contraste externo de Bianchi-Goldberg y R11-B. [Nota: el "timing" de Bianchi-Goldberg (H3 de R20) es frágil a la construcción del índice; la brecha (H1 y H2) no lo es.]
