@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-27 01:28 UTC · decisor vespertino (26-oct) · OK · (este commit) · nada amerita actuar antes del viernes; sin orden nueva; O0006 ya ejecutada; sin cortacircuitos (papel DD −2.6%); FX-1 OK 18.5559 (Δ1 −0.87%); BTC filtro ENCENDIDO (+13.1% sobre la salida); alertas §3 del día cerradas; SGM abierta a nombre del dueño
 2026-10-27 01:12 UTC · trabajo continuo (26-oct CDMX) · OK · (este commit) · revisión C2: CRLF restaurado en ordenes-pendientes.csv sin tocar contenido; m1: commit de O0006 = 684598b; regla de fin de línea en registro-de-errores
 2026-10-27 00:45 UTC · cripto (18:42 del 26-oct, cascada) · OK · BTC 80,270 · cierre 26-oct 80,150.56 · SMA200 73,029.59 salida 70,838.70 reentrada 75,220.48 vol30 24.76% ENCENDIDO · P0021 resuelto NO · alerta BTC −2% en pesos cerrada (−1.62%) · E9 0.153% VERDE · Polymarket 0.895
 2026-10-27 00:11 UTC · aprendizaje · OK · (este commit) · resumen del 26-oct: R19b replicado (~1.3-1.5 pp/año), τ_div de 3 capas (LISR 142-V), CINIIF 12 (ASUR), DVOL sin prima en 2026, Brasil (EWZ −19.8%); 2 temas nuevos, ninguno subió; 4 correcciones (τ_div, cachés, git, horas/E1)
