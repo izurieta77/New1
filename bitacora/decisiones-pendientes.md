@@ -1412,3 +1412,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Estado:** Cerrado.
 - **m1 (commit de O0006):** `commit_ejecucion` = `684598b`.
   - **Estado:** Cerrado. La entrada del revisor "(2) CRLF" queda atendida.
+
+## 2026-10-27 02:30 UTC · Fecha del FOMC corregida: 27–28 oct (no 28–29)
+- **Hecho (A, verificado por el orquestador):** federalreserve.gov/monetarypolicy/fomccalendars.htm lista "October 27-28"; decisión el miércoles 28-oct, 14:00 ET (18:00 UTC).
+- **Impacto:** varias bitácoras y prompts del 26-oct decían "28–29". P0184 (|ln apertura 8h 29-oct 08:00 / 28-oct 08:00| > 2.07%) **sigue siendo válido**: su ventana contiene el anuncio de las 18:00 UTC del 28-oct. La ficha `conocimiento/cripto/fichas/2026-10-26-dvol-prima-de-evento.md` debe precisar que el "tramo FOMC" es el que contiene la decisión del 28-oct (no reunión 28–29).
+- **Acción:** verificador corrige la redacción de la ficha; decisor y supervisor usan el 28-oct 18:00 UTC.
+- **Estado:** Abierto → verificador.
