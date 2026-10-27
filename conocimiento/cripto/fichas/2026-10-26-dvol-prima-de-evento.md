@@ -72,6 +72,7 @@ Código: [`2026-10-26-dvol-prima-de-evento.py`](2026-10-26-dvol-prima-de-evento.
 | vie 30-oct | 35.64 | 29→30 (PIB EUA, BCE) | 33.96 | 1.78% |
 | vie 6-nov | 38.49 | 30-oct→6-nov (elección de EUA 3-nov) | 39.92 | 5.53% en 7 d |
 
+- *Precisión (27-oct-2026, decisiones-pendientes del 27-oct 02:30 UTC):* el "tramo FOMC" es el **28→29-oct** (vencimientos de 08:00 UTC) porque es el que **contiene la decisión del miércoles 28-oct a las 18:00 UTC**; la reunión es el 27–28 de octubre (federalreserve.gov), no el 28–29.
 - **Razón implícita del tramo FOMC: 1.48** contra la base limpia 27→28 (1.42 con base 27→28 + 29→30). Varianza extra = salto de evento 1σ de **~1.13-1.18%**.
 - **La historia dice 0.75 (IC 0.47-1.11); el mercado cobra 1.48.** El cociente implícito queda fuera del intervalo histórico: **la prima de evento del FOMC en BTC está cara frente a lo que el FOMC ha movido a BTC desde 2021.**
 - Escala de régimen: σ realizada de los últimos 20 días hábiles = 1.36%; con la razón histórica, el día FOMC "debería" valer ~1.18%, no 2.07%.

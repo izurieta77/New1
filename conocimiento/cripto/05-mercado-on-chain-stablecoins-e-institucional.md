@@ -574,3 +574,12 @@ Ficha [`fichas/2026-10-26-dvol-prima-de-evento.md`](fichas/2026-10-26-dvol-prima
 - **Prima de riesgo de volatilidad [I, A], 2021-2026:** el DVOL supera la realizada de los 30 días siguientes por **+8.4 pts en promedio** (t 4.5 sin traslape; 72% de los días). Se encogió con los años y **en 2026 es −0.3**. Cuando la realizada pasada es < 35 (hoy 24.8), la realizada siguiente promedió 44.6 contra un DVOL de 41.4: **VRP −3.2; la calma no dura**. El DVOL pronostica mejor que la realizada pasada (R² 0.37 contra 0.17).
 - **Prima de evento del FOMC [I, A]:** en 46 decisiones (2021-2026), la varianza 08:00→08:00 UTC del día FOMC fue **0.75×** la de un día hábil normal (IC 0.47-1.11), con movimientos medianos algo mayores y menos colas. La cadena del 26-oct cobra **1.48×** para el tramo 28→29-oct (σ 2.07%): prima cara frente a la historia. Pronóstico **P0184** (p = 0.22).
 - **Para la cuenta [O]:** nada operativo (solo spot). El colchón del filtro (−11.2% hasta la salida) es ~1.1 σ mensual con el DVOL, no ~1.7 σ como sugiere la vol30. El pulso reporta DVOL y vol30 juntos.
+
+### Adenda (27-oct-2026): variance swap propio y prima de evento de la elección de EUA (3-nov)
+
+Ficha [`fichas/2026-10-27-variance-swap-eleccion.md`](fichas/2026-10-27-variance-swap-eleccion.md) (+ `.py` y foto `.json`). Sigue la cola académica del Doctorado (microestructura de opciones).
+
+- **Réplica del DVOL [I, A]:** con la fórmula del VIX sobre la cadena pública de Deribit (precio en USD a plazo = `mark_price` × F), el swap a 30 días da **39.12**; con la regla del DVOL (solo |Δ| ≥ 5%) da **37.49 contra 37.47 publicado**. Las alas profundas que el DVOL excluye pesan 8.2% de la varianza. Swap − IV ATM: +1.4 a +5.4 pts según el plazo.
+- **Elección intermedia (martes 3-nov, 2 U.S.C. § 7) [I, A]:** el tramo 31-oct→6-nov cotiza una vol a plazo de 42.3 contra 35.3 de la base 6→13-nov: **salto de 1σ ~3.0%**, el día de resultados vale **3.6×** un día base. Historia (día de resultados contra 20 días previos, sin 2022 por FTX): mediana **~1×** en 5 elecciones, intermedias 1.0-4.2×, 2024 sola en 22.6×. Muestra insuficiente para llamarla cara.
+- **FOMC con swap [I, A]:** razón 1.35 contra la base 6→13-nov (ATM 1.24): sigue arriba del techo histórico 1.11. La lectura del 26-oct se mantiene.
+- **Para la cuenta [O]:** nada operativo (spot, sin opciones). Un salto electoral de 3σ (~9%) no alcanza la salida del filtro (colchón +13.3%). Pronóstico **P0190**.
