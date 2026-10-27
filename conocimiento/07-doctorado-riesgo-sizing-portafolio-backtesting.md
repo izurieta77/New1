@@ -770,3 +770,12 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
   3. **Reentrada.** Esto confirma el hallazgo de R16 (con reentrada a 21 días el Sharpe queda igual y la MDD mejora 1.7 pp). La regla de reentrada pesa tanto como el nivel del stop. Si el comité quiere un stop en el UPRO, debe definir la reentrada **antes**, igual que el stop.
   4. **Ejecución en t+1** (O0006, vela de 14:45 UTC): en stops amplios el retraso de un día **no** cuesta y hasta suma un poco. No contradice el costo de 1.84-3.56 pp/año de R06, que es de **señales de filtro** en apalancados, no de stops.
 - **Qué cambia:** **ninguna regla ni parámetro.** Se corrige la cita del abogado W43 (fila en `registro-de-errores.md`): el enlace de DSpace es la tesis, no el artículo de la JFM.
+
+### Adenda (26-oct-2026, investigador vespertino): la "anomalía" de los ETF apalancados de 2022-2023 es sobre todo acarreo. Bianchi y Goldberg (arXiv:2604.27287 v1, 30-abr-2026)
+- **Qué dicen:** SSO (−11.1%) y UPRO (−28.2%) perdieron mientras el S&P 500 quedó plano (+0.08%) de ene-2022 a dic-2023. Dos tercios de la brecha los atribuyen a la composición y la volatilidad, y el resto a Cov(λ, R), la covarianza entre la razón diaria R_ETF/R y el índice.
+- **Grado C:** working paper. Usa rendimientos de precio e ignora "dividends and market frictions". Su covarianza es una identidad que absorbe financiamiento, dividendos y comisión.
+- **Verificación propia** (`fichas/codigo/2026-10-26-bianchi-goldberg-upro-acarreo.py`; Yahoo y FRED DFF):
+  - reproduce su brecha de UPRO (−5.42 contra −5.44 pp/año);
+  - el acarreo (2 × fed funds de 3.36%, 3 × dividendos de 1.66% y comisión de 0.91%) explica ≈51% de la brecha;
+  - quedan −2.0 pp/año contra el precio ajustado (−0.85 en SSO). Es consistente con el sesgo ya medido en R11-B (sintético ~1.6 pp/año sobre UPRO real).
+- **Qué cambia:** ninguna regla. Refuerza §2.1: el costo del 3x no es solo σ²; con tasas altas suma ~2r. Además, los backtests sintéticos (R16, R18) son optimistas en ~1.6-2 pp/año contra el UPRO real.
