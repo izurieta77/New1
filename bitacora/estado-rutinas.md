@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-27 21:20 UTC · inteligencia (15:05, martes) · ALERTA · UPRO confirmada al cierre +2.30% en pesos (149.55, verificado), sin orden; QQQM +1.86% y BTC +1.39% no cruzan; Israel: boca de urna sin ganador; Fed sin cambio 0.95; Polymarket 4641065 0.935; Visa 3T +13%; P0185 WTI en 100.20 (umbral); siguiente ID P0191
 2026-10-27 20:41 UTC · supervisión (14:41 CDMX, última del día) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,115.48 cuadra con lo registrado; UPRO papel 10.2% sobre stop; FX-1 OK 18.6784; sin mensajes del dueño en el día
 2026-10-27 19:43 UTC · cripto (13:41, pulso extra) · OK · BTC 80,748 · +1.41% en pesos · colchón +13.97% · E9 0.179% VERDE · OI 812.6M · Polymarket 0.935 · sin alertas cripto
 2026-10-27 19:41 UTC · supervisión (13:41 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,122.98 cuadra con lo registrado; UPRO papel 10.6% sobre stop; FX-1 OK 18.6737; sin mensajes del dueño
