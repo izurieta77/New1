@@ -779,3 +779,13 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
   - el acarreo (2 × fed funds de 3.36%, 3 × dividendos de 1.66% y comisión de 0.91%) explica ≈51% de la brecha;
   - quedan −2.0 pp/año contra el precio ajustado (−0.85 en SSO). Es consistente con el sesgo ya medido en R11-B (sintético ~1.6 pp/año sobre UPRO real).
 - **Qué cambia:** ninguna regla. Refuerza §2.1: el costo del 3x no es solo σ²; con tasas altas suma ~2r. Además, los backtests sintéticos (R16, R18) son optimistas en ~1.6-2 pp/año contra el UPRO real.
+
+### Adenda (27-oct-2026, laboratorio): control de drawdown con filtro de Kalman y MPC. Peng, Khushi y Poon, "CAST" (arXiv:2609.14205 v1, 13-sep-2026; ICDM 2026)
+- **Acceso:** lectura del PDF completo (tablas I-III, protocolo y resultados).
+- **Qué hace:** un filtro de Kalman acopla 30 acciones por correlación y un control predictivo (MPC) penaliza la incertidumbre del pronóstico. Prueba fuera de muestra 2010-2025 en NASDAQ, CSI300, TPX100 y "Global30"; calibra en 2005-2010.
+- **Resultado reportado:** la MDD más baja o casi (NASDAQ 0.114; Global30 0.031) y MDD de un dígito en COVID-2020 y en 2022.
+- **Grado C.** Es una conferencia arbitrada, pero tiene tres defectos que anulan su uso para nosotros:
+  1. **Cero costos de transacción y de deslizamiento**, con reoptimización diaria.
+  2. **No compara contra comprar y mantener en la tabla principal.** En NASDAQ el valor final es de 1,633 USD por cada 1,000 en 15 años (≈3.3% anual); el NASDAQ Composite se multiplicó varias veces en ese periodo. La MDD baja se compra con exposición baja (la trampa del §2.7: "menor MDD por menos riesgo" no es control de drawdown).
+  3. Universo de 30 acciones sin criterio de supervivencia declarado.
+- **Qué cambia:** **ninguna regla.** Refuerza la prueba que ya usamos para cualquier regla de protección (R16 y R17): medir la MDD **con el mismo riesgo** o contra la alternativa simple, nunca sola. Quita el pendiente del 23-oct (la tenía como "CAST, aprendizaje por refuerzo"; **no usa RL**, es Kalman con MPC). La corrección va en el registro de errores.

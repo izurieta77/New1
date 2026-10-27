@@ -47,3 +47,30 @@
 
 ### 5. Salida
 `R20-resultados.json`, la sección de resultados de este archivo y la fila de la tabla maestra.
+
+## RESULTADOS · Ejecución A (27-oct-2026, después del commit del pre-registro `635e4d0`)
+- **Datos:** sha256 de la caché `94226cbe…ee65`. Del 2009-06-26 al 2026-10-23, 4,358 días.
+- **M1:** brecha aritmética de **−1.592 pp por año**. **M1b:** CAGR real 32.41% contra 34.22% del sintético = **−1.81 pp**.
+- **M2, por tramo de DTB3:**
+
+  | Tramo | Días | Tasa media | Brecha |
+  |---|---|---|---|
+  | < 0.5% | 2,389 | 0.10% | −1.31 pp |
+  | 0.5-3% | 935 | 1.61% | −1.54 pp |
+  | ≥ 3% | 1,034 | 4.44% | **−2.30 pp** |
+
+- **M2, por año:** de −0.19 (2012) a −2.89 (2025). 2018-2026 en −1.1 a −2.9; 2009-2017 en −0.2 a −2.0.
+- **M3:** constante de **−1.30 pp por año**, pendiente sobre la tasa de −0.20, **t NW(6) = −1.39, no significativa**.
+- **M4:** pendiente de la brecha sobre r(^SP500TR) de −0.032, **t NW(6) = −6.44**. El apalancamiento efectivo diario es ≈2.97, no 3.
+
+**Veredicto A, con el umbral literal:**
+- **H1 sostenida** (−1.59 ≤ −0.5).
+- **H2 sostenida** (−2.30 − (−1.31) = −0.99 ≤ −0.5).
+- **H3 sostenida** (t = −6.44 ≤ −2).
+
+**Lectura** [inferencia]:
+- La brecha es sobre todo un **diferencial fijo** (~1.3 pp por año: financiamiento de los swaps sobre la T-bill, costos de rebalanceo y diferencias de precio contra NAV) más un **apalancamiento efectivo algo menor que 3**.
+- Lo que separa a los tramos coincide con el periodo de tasas altas (2018-19 y 2022-26). M3 no muestra que escale con la tasa, así que H2 se sostiene como **descripción del régimen** y no como mecanismo.
+- **Consecuencia para nuestros backtests:** R16, R17 y R18 sobrestiman al UPRO en ~1.6 pp por año en promedio y en ~2.3 en el régimen actual.
+
+**Estado:** en curso, a la espera de B (AC-27).
