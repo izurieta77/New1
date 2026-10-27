@@ -1406,3 +1406,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(2) `bitacora/ordenes-pendientes.csv` pasó de CRLF a LF en `684598b`.** No es mío corregirlo (no reescribo trabajo ajeno) y el contenido es correcto.
   - **Qué decidí:** dejarlo así y pedir que la próxima escritura legítima devuelva CRLF sin tocar contenido (revisión C2).
   - **Estado:** Abierto → cierre/conciliación; orquestador para la herramienta.
+
+## 2026-10-27 01:12 UTC · orquestador (trabajo continuo, 26-oct CDMX) · cierre de C2 y m1 de la revisión del 26-oct
+- **C2 (CRLF→LF en `bitacora/ordenes-pendientes.csv`):** restaurado CRLF sin cambiar contenido (`git diff --ignore-cr-at-eol` muestra solo la celda de m1). No existe herramienta del repo que reescriba ese CSV: el error fue de mi script ad hoc del cierre. Regla en `conocimiento/registro-de-errores.md` (fila 2026-10-27): leer en binario, conservar el `lineterminator` original y comprobar el diff.
+  - **Estado:** Cerrado.
+- **m1 (commit de O0006):** `commit_ejecucion` = `684598b`.
+  - **Estado:** Cerrado. La entrada del revisor "(2) CRLF" queda atendida.
