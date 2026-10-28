@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-28 17:25 UTC · inteligencia (11:05, miércoles FOMC) · OK · ninguna posición cruza ±2% en pesos (ni intradía); P0191 = SÍ (BoC 2.5%, comunicado oficial verificado); FOMC sin cambio 0.9525 antes del anuncio; presidente de la Fed es Kevin Warsh (verificado en federalreserve.gov; corrige 'Powell' de las 07:05); EIA crudo −1.89M; CLZ26 103.04 (P0185 va a NO); Polymarket 4641065 0.955; siguiente ID P0197
 2026-10-28 16:41 UTC · supervisión (10:41 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,119.28 cuadra con lo registrado; UPRO papel 10.8% sobre stop; FX-1 OK 18.6530; sin mensajes del dueño
 2026-10-28 15:45 UTC · cripto (09:41, pulso extra) · OK · BTC 80,620 · −0.25% en pesos · colchón +13.75% · E9 0.043% VERDE · OI 772.0M · Polymarket 0.955 · sin alertas
 2026-10-28 15:41 UTC · supervisión (09:41 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,126.31 cuadra con lo registrado; UPRO papel 10.9% sobre stop; FX-1 OK 18.6690; sin mensajes del dueño
