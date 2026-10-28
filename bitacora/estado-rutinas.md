@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-28 12:59 UTC · pre-apertura · OK · (este commit) · MIXTO/TRANSICIÓN (+0); FX-1 OK 18.6226; FOMC hoy (sin cambio 0.9465), Polymarket Irán 0.955; Ras Tanura (hutíes) y Brent BZF27 111.47; FEMSA 3T26 publicado (ingresos 235,609 apenas arriba del p90; UPA 2.00 dentro); papel ≈20,604 (DD ≈−1.3%); UPRO 10.9% sobre el stop; P0192-P0195; Brier 0.1918 (n=85, IC 0.164-0.221); SGM: hoy límite interno
 2026-10-28 11:44 UTC · cripto (05:41, pulso extra) · OK · BTC 81,385 · +0.51% en pesos · colchón +14.83% · E9 0.051% VERDE · OI 768.3M · funding 1.24e-04 · Polymarket 0.955 · sin alertas
 2026-10-28 10:20 UTC · cripto (04:17, pulso) · OK · BTC 81,498 (+2.41%) · +0.67% en pesos · colchón +14.99% · E9 0.003% VERDE · OI 766.0M (−4.4%) · funding 1.20e-04 · base P0184 81,082.00 · sin alertas
 2026-10-28 06:20 UTC · cripto (00:17, pulso) · OK · BTC 80,988 (+1.44%) · +0.20% en pesos · colchón +14.26% · E9 0.077% VERDE · OI 801.3M (−2.2%) · Polymarket 0.945 · sin alertas
