@@ -601,3 +601,9 @@ Ficha [`fichas/2026-10-27-variance-swap-eleccion.md`](fichas/2026-10-27-variance
 - **[I] BTC:** con el DVOL solo hay 2 elecciones. 2024 da +2.56, en el percentil 71 de la nula, y 2022 está contaminada por FTX. **No hay evidencia propia.** En la cadena del 28-oct, el vencimiento del 6-nov tiene más pendiente put que el 31-oct y el 13-nov (una foto).
 - **2026:** prima parcial del VIX en el percentil 39 (normal), DVOL +1.8 pts contra la ventana *a*.
 - **Para la cuenta [O]:** es una regla de lectura, no de operación. Un VIX o un DVOL altos en las 4 semanas previas a una elección son en parte prima que se espera que se desinfle. No se leen como cambio de régimen. Pronóstico **P0196** (caída del DVOL al pasar el 3-nov, p = 0.70).
+
+### Adenda (28-oct-2026, laboratorio): el precio de la incertidumbre política en opciones de acciones. Kelly, Pástor y Veronesi (NBER w19812, revisión de jul-2015; publicado en *Journal of Finance* 2016)
+- **Acceso:** lectura de la introducción y de los resultados principales (PDF íntegro de NBER).
+- **[H, A]** En 20 países, las opciones de acciones cuya vida abarca una elección nacional o una cumbre global tienen una volatilidad implícita **1.43 puntos por año mayor** (ajustada por las opciones vecinas). En un put ATM de un mes eso es ~5.1% más caro; los puts 5% y 10% OTM salen 9.6% y 16.0% más caros. La prima es mayor con la economía débil (8% contra 1%).
+- **Contraste con BTC [I]:** la cadena de Deribit del 27-oct cotiza la elección intermedia de EUA con una vol a plazo de 42.3 contra 35.3 de la base (ficha cripto del 27-oct). Son **~7 puntos, unas cinco veces la prima promedio de las acciones en KPV**, aunque se miden distinto (KPV usa IV de un mes ajustada por las vecinas; la ficha, varianza a plazo de un tramo de 6 días). La comparación es de orden de magnitud, no prueba.
+- **Para la cuenta [O]:** nada operativo. Cierra el pendiente de la ficha del 27-oct (punto 2: "leer KPV si hay copia legal").
