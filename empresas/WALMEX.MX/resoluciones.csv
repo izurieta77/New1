@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+WALMEX.MX-ingresos-3T26,2026-10-27,248828,,-1.14,si,,https://files.walmex.mx/upload/files/2026/EN/Quarterly/3Q26/Walmex%203Q26%20Earnings%20Release.pdf
+WALMEX.MX-upa-3T26,2026-10-27,0.642,,11.37,no,,https://files.walmex.mx/upload/files/2026/EN/Quarterly/3Q26/Walmex%203Q26%20Earnings%20Release.pdf
+WALMEX.MX-ingresos_mayor_consenso-3T26,2026-10-27,248828,0,,,0.0100,https://files.walmex.mx/upload/files/2026/EN/Quarterly/3Q26/Walmex%203Q26%20Earnings%20Release.pdf
+WALMEX.MX-upa_mayor_consenso-3T26,2026-10-27,0.642,0,,,0.1444,https://files.walmex.mx/upload/files/2026/EN/Quarterly/3Q26/Walmex%203Q26%20Earnings%20Release.pdf

@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+MSFT-ingresos-1TFY27,2026-10-28,92279,,-0.52,si,,https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm
+MSFT-upa-1TFY27,2026-10-28,4.89,,-1.43,si,,https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm
+MSFT-ingresos_mayor_consenso-1TFY27,2026-10-28,92279,1,,,0.0324,https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm
+MSFT-upa_mayor_consenso-1TFY27,2026-10-28,4.89,1,,,0.0784,https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm

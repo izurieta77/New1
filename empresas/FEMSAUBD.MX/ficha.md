@@ -131,3 +131,6 @@ Verificador adversarial. Fuentes primarias leídas: 6-K ex. 99.1 del 2T26 (ínte
 **Calibración (para el post-mortem):** el pronóstico de ingresos (+0.5% sobre TradingView y +2.5% sobre Investing) es coherente con la historia: las sorpresas de ingresos contra Investing en 8 trimestres promediaron +0.6%, en un rango de −3.0% a +2.3%. El intervalo de ±2.3% cubre 7 de 8. En la UPA, el sesgo del punto (−11% contra el consenso) sigue el patrón de fallas, pero parte de las fallas históricas fue cambiaria y no se repetiría con el peso de este trimestre.
 
 **Veredicto:** confiable con una corrección de dato. Las cifras del 2T26, el consenso y los hechos de la cadena causal coinciden con la fuente primaria. Se eliminó una guía de capex sin respaldo y se amplió la cola baja del intervalo de UPA.
+
+## Adenda (28-oct-2026, cierre): resultado del trimestre
+- Ver `post-mortem-2026-10-28.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

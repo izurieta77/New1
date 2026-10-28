@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+FEMSAUBD.MX-ingresos-3T26,2026-10-28,235609,,-2.38,no,,https://www.sec.gov/Archives/edgar/data/1061736/000110465926119381/tm2628435d1_ex99-1.htm
+FEMSAUBD.MX-upa-3T26,2026-10-28,2.00,,-10.00,si,,https://www.sec.gov/Archives/edgar/data/1061736/000110465926119381/tm2628435d1_ex99-1.htm
+FEMSAUBD.MX-ingresos_mayor_consenso-3T26,2026-10-28,235609,1,,,0.1600,https://www.sec.gov/Archives/edgar/data/1061736/000110465926119381/tm2628435d1_ex99-1.htm
+FEMSAUBD.MX-upa_mayor_consenso-3T26,2026-10-28,2.00,0,,,0.0900,https://www.sec.gov/Archives/edgar/data/1061736/000110465926119381/tm2628435d1_ex99-1.htm

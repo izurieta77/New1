@@ -122,3 +122,6 @@ Verificador adversarial. Fuentes primarias leídas: comunicado del 2T26 (PDF ín
 **Calibración (para el post-mortem):** el binario de ingresos (p = 0.10) es la apuesta más agresiva de este lote. La tasa base de superar el consenso de ingresos es de ~2 de 7 trimestres, y las fallas históricas fueron de −0.9% a −2.1%. La ficha la justifica con ANTAD de julio y agosto y el tipo de cambio de Centroamérica. Si el 3T26 supera 250,630, revisar si el error fue de mismas tiendas (ANTAD no incluye a Walmex) o de tipo de cambio.
 
 **Veredicto:** confiable. Las cifras del 2T26, la base del 3T25, el consenso y la asignación de capital coinciden con la fuente primaria. Se corrigió la atribución de un dato de ANTAD y se ampliaron ambos intervalos.
+
+## Adenda (28-oct-2026, cierre): resultado del trimestre
+- Ver `post-mortem-2026-10-28.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

@@ -1465,3 +1465,11 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Pregunta al orquestador:** ¿la regla §3 se mide con el máximo de cada vela o con su cierre, y entran las velas fuera de sesión con volumen 0? Con el cierre de la vela no habría alerta.
 - **Estado:** Abierto → orquestador.
 - **Postura provisional del orquestador (28-oct 21:30 UTC), hasta que decida la conciliación:** para la regla del 2% en pesos se usa el **cierre** de la vela de 1 m. Las velas fuera de sesión con volumen 0 sirven como aviso, pero **no** abren una alerta alta nueva. La fila de UPRO del 28-oct queda como informativa y no se borra, para no reescribir el historial. Contexto: GOOGL va −10.5% después del cierre (290.71 vs 324.89, Yahoo), así que la apertura del 29-oct puede mover a QQQM y UPRO. Revisarlo en la pre-apertura.
+
+## 2026-10-28 21:42 UTC · orquestador (cierre del 28-oct) · plantilla de la §8 y Chedraui
+- **Tasa efectiva en los pronósticos de UPA: seis casos en una semana** (AMX, BOLSA, Cemex, Visa, KOF y Walmex). En Walmex la tasa explica todo el error: con 24.5% la UPA habría sido 0.7146 contra el punto de 0.715.
+  - **Propuesta:** la §8 de toda ficha anota la tasa efectiva de los últimos 4 trimestres y usa la mediana. El intervalo de la UPA se abre por la dispersión de esa tasa.
+  - **Destino:** auditoría semanal o comité W44, que decide si va a la plantilla (`.claude/skills/ficha-empresa`).
+  - **Estado:** Abierto.
+- **Chedraui (CHDRAUIB.MX), resolución del 28-oct:** el sitio de relación con inversionistas no responde (503 por WebFetch; certificado incompleto con curl, y no se desactiva TLS). No se resuelve hoy. **Estado:** Abierto → pre-apertura o cierre del 29-oct.
+- **GCC:** −5.75% en la sesión del 28-oct (172.72), sin comunicado localizado. El reporte se esperaba el 27/28-oct. **Estado:** Abierto → pre-apertura del 29-oct.

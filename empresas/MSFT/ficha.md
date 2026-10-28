@@ -127,3 +127,6 @@ Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 4T FY26 (í
 **Calibración (para el post-mortem):** el punto de UPA (+2.0% sobre el consenso) supone un COGS arriba del tope de la guía y un opex en el tope, así que es conservador frente a la sorpresa media histórica (+8.8%; ~+5.3% sin partidas discretas). La sorpresa de +12.7% del 1T FY26 puede reflejar consensos que incluían las pérdidas de OpenAI (no verificado).
 
 **Veredicto:** muy confiable en hechos: no hubo errores de dato. Se corrigieron un binario incoherente y un intervalo estrecho.
+
+## Adenda (28-oct-2026, cierre): resultado del trimestre
+- Ver `post-mortem-2026-10-28.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.
