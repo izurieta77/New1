@@ -1446,3 +1446,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - **Estado:** Cerrado por el orquestador. Su cumplimiento lo vigila el supervisor vespertino.
 - **C4 (Visa −1.49% contra el cierre equivocado):** corregido con notas fechadas (−0.57% contra 404.16). **Estado:** Cerrado.
 - **Duda conservadora:** no instalo un *git hook*, porque `.git/hooks` no viaja con el repo y la sesión puede ser nueva. La regla depende de que cada rutina corra el comando y la auditoría lo detecta al día siguiente.
+
+## 2026-10-28 02:20 UTC · Ataque hutí a Ras Tanura: el orquestador sube la graduación de D a B
+- **Hecho:** Google News RSS (6 h) trae varias fuentes independientes entre las 21:43 y las 23:40 UTC del 27-oct: Maritime Executive, TradeWinds ("Fire burns at Saudi Gulf export hub"), Marine News, FXStreet y un reporte de que Arabia Saudita apagó el incendio cerca de instalaciones de Aramco. El vigía lo dejó en D por falta de confirmación primaria.
+- **Decisión:** que hubo ataque e incendio queda en **B**. La magnitud del daño sigue en D hasta que haya un comunicado de Aramco o del gobierno saudí. Sin alerta: CLZ26 va +1.41% en USD, no es posición y ninguna posición cruza ±2% en pesos.
+- **Para:** la pre-apertura del 28-oct, que debe revisar Brent/WTI y el comunicado de Aramco.
+- **Estado:** Abierto → pre-apertura.
