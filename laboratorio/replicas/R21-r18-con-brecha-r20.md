@@ -9,7 +9,7 @@
 | Pre-registro escrito el | 2026-10-28 17:52 UTC, antes de cualquier corrida |
 | Commit | el commit que trae este archivo junto con `R21.py` |
 | Responsable | orquestador (A); auditor-de-replicas (B, `auditorias/AC-28-R21/`) |
-| Estado | en curso |
+| Estado | **Replicado** (B AC-28, 28-oct-2026) |
 
 **Conocimiento previo declarado:** R18 (3x sintético) y R20 (UPRO real −1.59 pp por año en total, −2.30 con DTB3 ≥ 3%; B −1.55 / −2.22). Expectativa: con el peso vigente (13.5%), la brecha casi no mueve las colas. Sería un cambio de décimas de punto en P(−12%) y de ~−0.2 pp por año en el CAGR de la mezcla.
 
@@ -33,3 +33,31 @@
 - **Sesgos declarados:**
   - los pesos de R18 no son los del libro de hoy (el efectivo real es 18.4%, no 5.3%);
   - la brecha de R20 se midió en 2009-2026 y aquí se aplica también a 1990-2008.
+
+## RESULTADOS · Ejecución A (28-oct-2026, después del commit del pre-registro `1554d62`)
+Datos: sha256 de la caché de R16 `42339a50…466b`; del 1990-10-17 al 2026-10-16, 9,065 días.
+
+| Peso | Modo | P(−12%) 63 d / 126 d | P(−20%) 63 d / 126 d | CAGR |
+|---|---|---|---|---|
+| U13.5 | sin brecha | 16.43 / 30.12 | 4.19 / 12.59 | 13.297% |
+| U13.5 | constante (−1.59) | 16.45 / 30.13 | 4.25 / 12.60 | 13.114% |
+| U13.5 | tramos | 16.45 / **30.43** | 4.25 / 12.60 | **13.083%** |
+| U27 | sin brecha | 21.02 / 40.91 | 3.05 / 12.00 | 14.125% |
+| U27 | tramos | 21.28 / 42.16 | 3.05 / 12.12 | 13.698% |
+
+- **H1 sostenida:** ΔP(−12%, 126 d) = **+0.31 pp** ≤ 1.0.
+- **H2 sostenida:** ΔCAGR = **−0.214 pp por año**, dentro de [−0.30, −0.10].
+- Con U27: +1.25 pp y −0.43 pp por año.
+
+## RESULTADOS · Ejecución B (auditor-de-replicas, `auditorias/AC-28-R21/`, 28-oct-2026)
+- **Método:** código desde cero, sin importar R16/R18/R21. Yahoo descargado hoy; DTB3 copiado de AC-27, porque FRED no respondió.
+- **Variante con otra fuente** (FRED NASDAQ100 y CBOE VIX): todas las celdas a ≤ 0.03 pp.
+- **Sin brecha, B reproduce R18.** Las 30 celdas coinciden con A a ≤ 0.01 pp y el CAGR al milésimo.
+- **Una diferencia de A:** `prob` de `R21.py` omite la última ventana completa (8,939 en vez de 8,940). Es menor y no cambia los veredictos.
+- **Veredicto B:** H1 (+0.31 pp) y H2 (−0.214) sostenidas.
+- **Estado: Replicado.** La independencia es de código y de las series del NDX y del VIX, no del proveedor del S&P TR (Yahoo en las dos).
+
+**Lectura para el comité W44:**
+- Con el UPRO en 13.5%, la brecha de R20 **no cambia las colas** de R18: +0.3 pp en P(−12%). Cuesta ~0.2 pp por año de CAGR.
+- Con el 27% de antes de B1, la brecha sí pesaba: +1.25 pp y −0.43 pp por año.
+- **Las probabilidades de R18 siguen siendo válidas para el libro vigente**, con la salvedad del 25-oct (métrica contra el máximo de la ventana, no contra el histórico).

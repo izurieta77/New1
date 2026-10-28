@@ -1,0 +1,31 @@
+AC-28 · B independiente de R21
+sha256 de los datos:
+  6da7f149324ec456c80f6d7e96c90b5d3bcaa3d0f6a4274f7840542db9809265  cboe_VIX_History.csv  <- https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv
+  bbf5cf79827f89fdc123f14e8d567fcfa327a3e33fc00836b952e0da6e8038b3  fred_DTB3.csv  <- COPIA de AC-27-R20/datos/fred_DTB3.csv (FRED sin respuesta)
+  48b13530971b07714e0cd32db5bacfdbfa94380b1b2207c846843ea08a56e06d  fred_NASDAQ100.csv  <- COPIA de AC-26-R19b/datos/NASDAQ100.csv (FRED sin respuesta)
+  da8434730971b560dcf84332dbf00fa014264fd99a42d41c0a27b6ce0273acf1  yahoo_GSPC.json  <- https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=567993600&period2=1793296679&interval=1d&events=div%7Csplit
+  5de5fbec0a46b14908f869df5d8421eda7b306a58cb22f379ffe5469353a37f4  yahoo_NDX.json  <- https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=567993600&period2=1793296680&interval=1d&events=div%7Csplit
+  3f451e11e53c43388481f842a36709243f0d2bd6d770418dc6079f088b6dec8e  yahoo_SP500TR.json  <- https://query1.finance.yahoo.com/v8/finance/chart/%5ESP500TR?period1=567993600&period2=1793296680&interval=1d&events=div%7Csplit
+  d710e40e14ef85c6a4d018858b04dcbbe4295d4ad60ec20cb4e9d9f738d5b5eb  yahoo_VIX.json  <- https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=567993600&period2=1793296680&interval=1d&events=div%7Csplit
+
+== Principal: Yahoo ^GSPC/^SP500TR/^VIX/^NDX + FRED DTB3: 9065 días, 1990-10-17 a 2026-10-16
+peso   modo        P12_63  P20_63  P12_126  P20_126    CAGR    vol     MDD díasON
+U13.5  sin         16.43%   4.19%   30.11%   12.58%  13.29% 19.10% -56.93% 6773
+U13.5  constante   16.45%   4.25%   30.12%   12.60%  13.10% 19.10% -56.98% 6773
+U13.5  tramos      16.45%   4.25%   30.43%   12.60%  13.07% 19.10% -57.00% 6773
+U27    sin         21.02%   3.05%   40.91%   12.00%  14.11% 20.26% -55.59% 6773
+U27    constante   21.26%   3.05%   42.14%   12.00%  13.75% 20.26% -55.70% 6773
+U27    tramos      21.28%   3.05%   42.16%   12.11%  13.69% 20.26% -55.73% 6773
+H1 ΔP(−12%,126d) U13.5 tramos−sin = +0.31 pp → sostenida (≤ 1.0)
+H2 ΔCAGR U13.5 tramos−sin = -0.213 pp/año (base 252: -0.213) → sostenida ([−0.30, −0.10])
+
+== Sensibilidad de fuente: FRED NASDAQ100 + CBOE VIX: 9060 días, 1990-10-17 a 2026-10-16
+peso   modo        P12_63  P20_63  P12_126  P20_126    CAGR    vol     MDD díasON
+U13.5  sin         16.44%   4.19%   30.13%   12.59%  13.29% 19.14% -56.93% 6770
+U13.5  constante   16.46%   4.26%   30.14%   12.60%  13.10% 19.14% -56.98% 6770
+U13.5  tramos      16.46%   4.26%   30.44%   12.60%  13.07% 19.14% -57.00% 6770
+U27    sin         21.03%   3.06%   40.93%   12.01%  14.12% 20.30% -55.59% 6770
+U27    constante   21.27%   3.06%   42.15%   12.01%  13.75% 20.29% -55.70% 6770
+U27    tramos      21.29%   3.06%   42.17%   12.12%  13.69% 20.29% -55.73% 6770
+H1 ΔP(−12%,126d) U13.5 tramos−sin = +0.31 pp → sostenida (≤ 1.0)
+H2 ΔCAGR U13.5 tramos−sin = -0.213 pp/año (base 252: -0.213) → sostenida ([−0.30, −0.10])
