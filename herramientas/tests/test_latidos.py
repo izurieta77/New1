@@ -38,6 +38,10 @@ class TestLatidos(unittest.TestCase):
         self.assertTrue(lt.RE_HORA_VAGA.search("a las ~21:5x"))
         self.assertFalse(lt.RE_HORA_VAGA.search("a las 21:50 UTC"))
 
+    def test_auditoria_usa_fecha_de_autor(self):
+        # el rebase cambia la fecha del committer; la de autor es la del commit original
+        self.assertEqual(lt.FORMATO_LOG, "%H %aI")
+
 
 if __name__ == "__main__":
     unittest.main()

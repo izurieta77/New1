@@ -33,6 +33,11 @@ RE_INICIO_FECHA = re.compile(r"^\d{4}-\d{2}-\d{2} ")
 # horas aproximadas que no deben escribirse: "13:1x", "~13:35", "13:3x-13:4x"
 RE_HORA_VAGA = re.compile(r"(~\s?\d{1,2}:\d{2}|\b\d{1,2}:\d[xX]\b)")
 TOLERANCIA = timedelta(minutes=1)
+# Hora de referencia del commit = fecha de AUTOR (%aI), no la del committer (%cI).
+# [Conciliación 28-oct-2026, `bitacora/arbitraje/2026-10-27.md` §1] `git pull --rebase` reescribe la
+# fecha del committer (p. ej. 48d8067: autor 14:42:15, committer 14:42:53), lo que haría pasar
+# latidos de hasta ~1 min más tarde; la revisión compara contra %ad (autor). La de autor no cambia al rebasar.
+FORMATO_LOG = "%H %aI"
 
 
 def ahora_utc() -> datetime:
@@ -104,7 +109,7 @@ def cmd_antes_de_commit(bitacora: bool) -> int:
 
 
 def cmd_auditar(desde: str) -> int:
-    log = _git("log", f"--since={desde}T00:00:00Z", "--format=%H %cI", "--", ARCHIVO)
+    log = _git("log", f"--since={desde}T00:00:00Z", f"--format={FORMATO_LOG}", "--", ARCHIVO)
     total = malos = 0
     for fila in log.splitlines():
         sha, fecha = fila.split(" ", 1)

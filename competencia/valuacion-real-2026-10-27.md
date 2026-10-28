@@ -4,7 +4,7 @@ Respaldo de las cifras de los rivales en `competencia/marcador.md`.
 - **Posiciones:** las registradas (`gbm-real-2026-10-07.md` y `binance-real-2026-10-07.md`), sin flujos nuevos.
 - **Las de GBM no cuadran con la captura del dueño del 22-oct** (`competencia/conciliacion-cuenta-gbm-2026-10-22.md`): son **del registro, no confirmadas**.
 
-**Insumos** (Yahoo chart v8, `regularMarketPrice`; consulta de ~21:5x UTC):
+**Insumos** (Yahoo chart v8, `regularMarketPrice`; consulta de ~21:5x UTC) [Conciliación 28-oct-2026, `bitacora/arbitraje/2026-10-27.md` §1: el commit del cierre `fb1e654` es de las 21:42:54 UTC; la consulta vale ≤ 21:42 UTC; las cotizaciones de Yahoo son de ≤ 21:41 UTC y no cambian]:
 
 | Tipo | Activo | Precio | Hora de la cotización |
 |---|---|---|---|
