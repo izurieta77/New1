@@ -51,4 +51,5 @@ Sesión: "Sistema de inversión · Supervisión, conciliación y revisión". Age
    - si la rutina es de mercado y hoy es fin de semana o feriado (NYSE/BMV cerradas), no es una falla: anótalo así;
    - si no hay motivo para que faltara, es un bloqueo: escríbelo en `bitacora/bloqueos.md` con la rutina, la hora esperada y que nadie dejó latido.
 3. Revisa también `bitacora/decisiones-pendientes.md`: si algo lleva más de 48 horas sin cerrarse, escala con una alerta.
+3b. **Horas de los latidos** (desde el 28-oct-2026; REGLAS §3): corre `python3 herramientas/latidos.py auditar --desde AAAA-MM-DD` con la fecha de hoy y escribe en tu latido "N latidos con hora posterior al commit" (con las rutinas). Si N > 0 en dos días seguidos para la misma rutina, abre una fila Media en `bitacora/alertas.md` a nombre de esa rutina.
 4. **Cierre:** una línea en `bitacora/estado-rutinas.md` ("supervisor-vespertino · OK | N sin latido"); commit `supervision-vespertina: AAAA-MM-DD` solo si hubo bloqueos nuevos; pull --rebase y push; respuesta final de 4 líneas o menos.

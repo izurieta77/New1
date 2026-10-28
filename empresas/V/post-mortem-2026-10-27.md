@@ -14,7 +14,7 @@
   - Tasa efectiva GAAP 18.5%; no-GAAP 18.4%.
 - **Recompras:** ~11 M acciones por US$4.0 mil M (promedio 369.12).
 - **Guía:** el comunicado no trae guía cuantitativa para FY27 (va en la llamada, que no se leyó).
-- **Precio:** cierre regular de 401.86 (−1.49% contra 407.92); after-hours 394.91 a las 21:37 UTC (−1.7%). P0189 (cierre del 28-oct contra el del 27-oct) resuelve mañana.
+- **Precio:** cierre regular de 401.86 (−1.49% contra 407.92); after-hours 394.91 a las 21:37 UTC (−1.7%). P0189 (cierre del 28-oct contra el del 27-oct) resuelve mañana. [Nota orquestador 28-oct-2026, revisión del 27-oct C4: −1.49% era contra el cierre del **23-oct** (407.92); contra el del 26-oct (**404.16**, Yahoo 1d) el día fue **−0.57%**. El after-hours (−1.7% contra 401.86) está bien.]
 
 ## 2. Pronósticos contra resultado
 | Pronóstico | Nuestro (p10-p90) | Consenso | Real | Error nuestro | Error del consenso | Puntuación |

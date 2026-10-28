@@ -108,5 +108,5 @@ Múltiplos: P/U de 12 meses de 31.3x GAAP (UPA 11.76) y 28.8x no-GAAP (12.78); a
 ## Adenda (27-oct-2026, cierre): resultado del 4T fiscal 2026
 - **Real** (8-K del 27-oct): ingresos de US$12,139 M (+13%) y UPA no-GAAP de 3.48 (+17%); GAAP 3.19, con una provisión de litigio de 474. Tasa no-GAAP de 18.4%. Recompra de US$4.0 mil M.
 - **Contra los pronósticos de la §8** (no se modifican): los dos puntos quedaron dentro del intervalo de 80% y fueron mejores que el consenso (errores de −0.16% y −1.15%). Binarios SÍ/SÍ, con Brier de 0.1764 y 0.2025.
-- **Precio:** cerró en 401.86 (−1.5%) y bajó −1.7% en el after-hours.
+- **Precio:** cerró en 401.86 (−1.5%) y bajó −1.7% en el after-hours. [Nota orquestador 28-oct-2026, revisión del 27-oct C4: −1.49% era contra el cierre del **23-oct** (407.92); contra el del 26-oct (**404.16**, Yahoo 1d) el día fue **−0.57%**. El after-hours (−1.7% contra 401.86) está bien.]
 - **Post-mortem:** `post-mortem-2026-10-27.md`. Para el siguiente modelo: margen con la mediana de 4 trimestres e incentivos por separado.

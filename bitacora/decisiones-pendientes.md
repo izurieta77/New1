@@ -1437,3 +1437,12 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(1) R20 → comité W44 (insumo, no decisión).** La ficha `conocimiento/fichas/2026-10-27-acarreo-3x-por-tasas.md` dice "insumo para el comité W44", pero no había entrada que lo encaminara. **Qué decidí:** encaminarlo aquí sin proponer ningún cambio de tamaño. El comité del 30-oct lee: R20 Replicado (brecha −1.59 / −1.55 pp por año; −2.30 / −2.22 con tasa ≥ 3%); R18 se calculó con el sintético y es optimista para el UPRO; con r = 3.8% y σ = 17%, el 3x empata al 1x con μ ≈ 11.2% antes del filtro; H3 (el "timing" y el apalancamiento efectivo de 2.97) se retira como mecanismo. O0006 no cambia. **Estado:** Abierto → comité W44.
 - **(2) SGM, brief del 27-oct L8 ("2-nov, ya tarde").** Contradice el fallo `bitacora/arbitraje/2026-10-26.md` §3, según el cual el 2-nov es respaldo de grado B. **Qué decidí:** no reescribo la sección de la pre-apertura. Puse la versión correcta en la sección "Revisión" del brief y pido a la pre-apertura del 28-oct que la repita arriba. La alerta de `alertas.md` L10 sigue abierta. **Estado:** Abierto → pre-apertura del 28-oct.
 - **(3) Horas posteriores al commit, 7.ª reincidencia** (8 registros; revisión §2 C1). La comprobación mecánica sigue sin adoptarse. **Estado:** Abierto → orquestador (ya escalado en L1425).
+
+## 2026-10-28 01:12 UTC · orquestador (trabajo continuo, 27-oct CDMX) · revisión del 27-oct C1 y C4
+- **C1 (horas posteriores al commit, 7.ª reincidencia):** control mecánico adoptado.
+  - Herramienta `herramientas/latidos.py` con tres comandos: `ahora`, `antes-de-commit` (sale con 1 si un latido nuevo tiene hora futura o vaga) y `auditar --desde`. Tiene 7 pruebas en `herramientas/tests/test_latidos.py`.
+  - Va en REGLAS §3 (todas las rutinas) y en el paso 3b del supervisor vespertino.
+  - La auditoría del 26 y 27-oct encuentra 10 latidos de 64 (inteligencia ×7 y cripto 08:17 ×2, más 1 del 25-oct).
+  - **Estado:** Cerrado por el orquestador. Su cumplimiento lo vigila el supervisor vespertino.
+- **C4 (Visa −1.49% contra el cierre equivocado):** corregido con notas fechadas (−0.57% contra 404.16). **Estado:** Cerrado.
+- **Duda conservadora:** no instalo un *git hook*, porque `.git/hooks` no viaja con el repo y la sesión puede ser nueva. La regla depende de que cada rutina corra el comando y la auditoría lo detecta al día siguiente.

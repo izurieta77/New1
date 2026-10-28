@@ -94,6 +94,11 @@ Al terminar cada rutina, agrega una línea **al inicio** de `bitacora/estado-rut
 
 `AAAA-MM-DD HH:MM UTC · <rutina> · OK | PARCIAL | FALLÓ · <commit> · <una línea de qué hizo>`
 
+**Hora del latido: mecánica, no a mano** (orquestador, 28-oct-2026; revisión del 27-oct C1, 7.ª reincidencia de horas posteriores al commit):
+1. La hora sale de `python3 herramientas/latidos.py ahora`, que imprime `AAAA-MM-DD HH:MM UTC`, o de `date -u '+%Y-%m-%d %H:%M UTC'`, ejecutado **al escribir el latido, justo antes del commit**. Nunca una hora estimada, con "x", con "~" ni con rangos.
+2. **Después de `git add` y antes de `git commit`, corre `python3 herramientas/latidos.py antes-de-commit`.** Si sale con "LATIDO MAL", corrige la línea con la hora que imprime y vuelve a correrlo. Con `--bitacora` avisa también las horas vagas ("13:1x", "~21:5x") en lo agregado bajo `bitacora/`. En el texto de los archivos, las horas de consulta se escriben exactas o como "antes de HH:MM" (la del commit), nunca adivinadas hacia adelante.
+3. El supervisor vespertino corre `python3 herramientas/latidos.py auditar --desde AAAA-MM-DD` (hoy) y reporta el conteo (§9b de `rutinas/supervision.md`).
+
 ## 4. Portafolio de papel (cuenta `arena-claude`, perfil `arena_agresivo`)
 
 - **Órdenes pendientes** (`bitacora/ordenes-pendientes.csv`):
