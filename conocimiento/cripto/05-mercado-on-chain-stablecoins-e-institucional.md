@@ -583,3 +583,10 @@ Ficha [`fichas/2026-10-27-variance-swap-eleccion.md`](fichas/2026-10-27-variance
 - **Elección intermedia (martes 3-nov, 2 U.S.C. § 7) [I, A]:** el tramo 31-oct→6-nov cotiza una vol a plazo de 42.3 contra 35.3 de la base 6→13-nov: **salto de 1σ ~3.0%**, el día de resultados vale **3.6×** un día base. Historia (día de resultados contra 20 días previos, sin 2022 por FTX): mediana **~1×** en 5 elecciones, intermedias 1.0-4.2×, 2024 sola en 22.6×. Muestra insuficiente para llamarla cara.
 - **FOMC con swap [I, A]:** razón 1.35 contra la base 6→13-nov (ATM 1.24): sigue arriba del techo histórico 1.11. La lectura del 26-oct se mantiene.
 - **Para la cuenta [O]:** nada operativo (spot, sin opciones). Un salto electoral de 3σ (~9%) no alcanza la salida del filtro (colchón +13.3%). Pronóstico **P0190**.
+
+### Adenda (27-oct-2026, investigador vespertino): la volatilidad cripto del fin de semana anticipa la varianza del lunes en el S&P desde 2024. Ebadollahyvahed y Umeorah (arXiv:2610.35702 v1, 26-oct-2026)
+- **[H, C]** Con la varianza Garman-Klass de sábado y domingo de BTC, ETH y XRP como factor común, la varianza intradía del lunes del S&P 500 sube **~28% por cada 1σ** después de 2024 (γ = 0.256, p = 0.005; ~115 lunes). Antes de 2024 la relación es nula. La ruptura cae a fines de 2023, con los ETF spot en puerta, pero los flujos de los ETF no explican el efecto.
+- **[C]** Fuera de muestra: QLIKE −22% en el S&P, con DM p = 0.066. Es una muestra corta y la ruptura se elige dentro de la propia muestra.
+- **[I, A en datos]** **Comprobación propia** con BTC solo y Yahoo (`fichas/2026-10-27-fin-de-semana-cripto-lunes.py`): post-2024, corr 0.413 y γ 0.254 (t 2.81), +30% por 1σ; pre-2024, corr −0.01. **Reproduce.**
+- **Límite:** es varianza dentro de la sesión, **sin el hueco de apertura**.
+- **Para la cartera [O]:** ninguna regla. Sirve como alerta de contexto para la supervisión del lunes del UPRO (riesgo intradía de acercarse al stop).
