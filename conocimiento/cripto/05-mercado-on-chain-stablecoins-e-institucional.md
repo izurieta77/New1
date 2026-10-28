@@ -590,3 +590,14 @@ Ficha [`fichas/2026-10-27-variance-swap-eleccion.md`](fichas/2026-10-27-variance
 - **[I, A en datos]** **Comprobación propia** con BTC solo y Yahoo (`fichas/2026-10-27-fin-de-semana-cripto-lunes.py`): post-2024, corr 0.413 y γ 0.254 (t 2.81), +30% por 1σ; pre-2024, corr −0.01. **Reproduce.**
 - **Límite:** es varianza dentro de la sesión, **sin el hueco de apertura**.
 - **Para la cartera [O]:** ninguna regla. Sirve como alerta de contexto para la supervisión del lunes del UPRO (riesgo intradía de acercarse al stop).
+
+### Adenda (28-oct-2026): el precio de la incertidumbre política. Kelly, Pástor y Veronesi (JF 2016), replicado con el VIX y el DVOL
+- **[H, A] KPV** (NBER WP 19812 rev. jul-2015, leído íntegro; la versión de JF no se leyó): en 271 elecciones y cumbres de 20 países (1990-2012), las opciones cuya vida abarca el evento son más caras que las del mismo plazo que no lo abarcan. **IVD +1.43 pts** (≈ +5.1% de precio en un put ATM), con más prima de varianza y más pendiente put. El efecto crece con la economía débil y con la elección cerrada.
+- **[I, A/B] Réplica propia en EUA** (VIX de plazo constante, mismas ventanas de 20 días; `fichas/2026-10-28-kpv-incertidumbre-politica.py`):
+  - 1990-2012: **+2.61** (9/12 positivos).
+  - **2014-2024, fuera de la muestra de KPV: +4.19 (6/6 positivos, p placebo 0.008).**
+  - El mismo martes en años impares da −0.40.
+  - La vol sube antes de la elección y cae después. **El efecto sobrevive.**
+- **[I] BTC:** con el DVOL solo hay 2 elecciones. 2024 da +2.56, en el percentil 71 de la nula, y 2022 está contaminada por FTX. **No hay evidencia propia.** En la cadena del 28-oct, el vencimiento del 6-nov tiene más pendiente put que el 31-oct y el 13-nov (una foto).
+- **2026:** prima parcial del VIX en el percentil 39 (normal), DVOL +1.8 pts contra la ventana *a*.
+- **Para la cuenta [O]:** es una regla de lectura, no de operación. Un VIX o un DVOL altos en las 4 semanas previas a una elección son en parte prima que se espera que se desinfle. No se leen como cambio de régimen. Pronóstico **P0196** (caída del DVOL al pasar el 3-nov, p = 0.70).

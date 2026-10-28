@@ -116,4 +116,5 @@ Con la mediana histórica de las intermedias limpias (razón ~2.4 entre 0.98 y 4
 - **Siguiente prueba:**
   1. resolver P0190 (4-nov) y P0184 (29-oct); repetir B con los diarios del 3-4-nov cuando se listen;
   2. leer Kelly-Pástor-Veronesi (JF 2016) si hay copia legal, y el PDF de CBOE para la regla de corte exacta;
+     - **Hecho el 28-oct (KPV):** WP NBER 19812 leído íntegro y replicado con el VIX: la prima electoral sobrevive fuera de muestra. Ver `2026-10-28-kpv-incertidumbre-politica.md`. Queda pendiente el PDF de CBOE.
   3. VRP de swap con franja completa en la serie histórica (requiere cadenas históricas: sin vía pública gratuita conocida).
