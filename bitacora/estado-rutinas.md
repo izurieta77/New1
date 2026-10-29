@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-29 17:20 UTC · inteligencia (11:05, jueves) · OK · ninguna posición cruza ±2% en pesos (BTC máx +1.57%); P0066 = NO (EIA gas 3,724 Bcf); Ormuz: buque en llamas (B, UKMTO vía prensa), 'Irán cierra Ormuz' solo ANI (C/D; orquestador verificó Brent −1.3% a 110.16 y Polymarket 4641065 0.9645 → mercado no lo descuenta); GOOGL −12%, MSFT −1.1%; peso 18.81 (peor desde ago-2025); siguiente ID P0203
 2026-10-29 16:42 UTC · supervisión (10:42 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,145.47 cuadra con lo registrado; UPRO papel 9.8% sobre stop; FX-1 OK 18.8076; sin mensajes del dueño
 2026-10-29 15:59 UTC · supervisión (09:59 CDMX; disparo tardío) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,150.47 cuadra con lo registrado; UPRO papel 10.3% sobre stop; FX-1 OK 18.7953; sin mensajes del dueño
 2026-10-29 15:58 UTC · cripto (09:41, pulso extra) · OK · BTC 81,753 (+1.83% 4h) · +1.42% en pesos · colchón +15.28% · E9 0.046% VERDE · OI 721.9M (−1.0%) · Polymarket 0.968 · sin alertas
