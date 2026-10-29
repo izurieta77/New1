@@ -324,3 +324,9 @@ La ventaja fiscal y estructural es **segura y medible**: se conoce de antemano y
   - no revisé la RMF 2026 ni una constancia real de GBM;
   - las distribuciones de ganancias de capital de un RIC tienen otra retención en EUA, que no se modela;
   - antes de 2014 no existía la capa 2 (afecta a los respaldos de 1994-2013, no al costo de hoy).
+
+### Adenda (28-oct-2026, investigador vespertino): Paquete Económico 2027, retención sobre intereses y límite de intereses deducibles
+- **[B]** La iniciativa de LIF 2027 (8-sep-2026; resumen de EY del 10-sep, PDF íntegro) propone una **retención anual de 0.68% sobre el capital** (0.90% en 2026). Trámite: Diputados la aprobó (Comisión de Hacienda el 13-oct, 28 a 8) y el Senado la conoció en primera lectura sin cambios (prensa). **No verificado en el DOF**, que dio 503.
+- **[B]** También propone bajar el límite de intereses netos deducibles del 30% al 20% de la utilidad fiscal ajustada, y mantener 10% para la ganancia en OPIs.
+- **Efecto:** la retención es a cuenta, así que no cambia el ISR definitivo sobre el interés real (error típico 10 de este capítulo). El límite de intereses importa para la tasa efectiva de 2027 de las emisoras apalancadas del universo.
+- **Pendiente:** leer el texto publicado en el DOF (LIF 2027, art. de la tasa de retención) cuando salga.
