@@ -1522,3 +1522,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - la conciliación ataca las del 28-oct que pudieron haber reportado antes (BBAJIO, GEV, KIMBER, LAB, LIVEPOL, ORBIA, RA, SIGMA, VOLARA).
 - **Regla propuesta para `rutinas/diaria-cierre.md` paso 4:** "la lista de empresas a revisar sale de `empresas/*/pronosticos.csv` con fecha_resolucion ≤ hoy + 3 y sin `resoluciones.csv`, no del calendario del brief".
 - **Estado:** Abierto → cierre del 29-oct (la regla) y conciliación (el rezago).
+
+## 2026-10-29 17:58 UTC · orquestador (laboratorio del 29-oct) · R22 para la plantilla §8 y el comité W44
+- **R22 (No replicado por un defecto de datos de A).** En las dos construcciones, la **mediana de 4 trimestres** pronostica la tasa efectiva mejor que el último trimestre, y mucho mejor que el 21% fijo. Su error típico es de ~3-3.6 pp de tasa, ≈ 4-5% de UPA.
+- **Para la propuesta de la plantilla §8** (entrada del 28-oct): usar la mediana de 4 como punto y **abrir el intervalo de la UPA en ±4-5% solo por la tasa**. Los seis casos mexicanos de la semana (1.5 a 7.7 pp) están en la cola alta de ese error.
+- **Pendiente:** R22b con nuevo pre-registro (unión de etiquetas y 4T reconstruido).
+- **Estado:** Abierto → comité W44 o auditoría semanal.

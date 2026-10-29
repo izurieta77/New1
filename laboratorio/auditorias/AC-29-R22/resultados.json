@@ -1,0 +1,1285 @@
+{
+ "fuente": "SEC companyfacts (data.sec.gov) + efts entity search",
+ "ua": "SistemaInversionNew1/1.0 investigacion",
+ "universo": [
+  "WMT",
+  "COST",
+  "KO",
+  "PG",
+  "PM",
+  "AMZN",
+  "TSLA",
+  "HD",
+  "XOM",
+  "CVX",
+  "CAT",
+  "GE",
+  "GEV",
+  "RTX",
+  "LLY",
+  "JNJ",
+  "ABBV",
+  "MRK",
+  "UNH",
+  "TMO",
+  "GOOGL",
+  "META",
+  "NFLX",
+  "JPM",
+  "V",
+  "MA",
+  "BAC",
+  "MS",
+  "GS",
+  "WFC",
+  "NVDA",
+  "AAPL",
+  "MSFT",
+  "AVGO",
+  "MU",
+  "AMD",
+  "INTC",
+  "PLTR",
+  "ORCL",
+  "CSCO",
+  "LRCX",
+  "AMAT",
+  "DELL",
+  "PANW",
+  "CRWD",
+  "ANET",
+  "SNDK",
+  "TXN",
+  "UBER"
+ ],
+ "emisoras": {
+  "WMT": {
+   "cik": [
+    104169
+   ],
+   "sin4T": {
+    "trimestres": 55,
+    "validos": 53,
+    "objetivos": 6,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 73,
+    "validos": 69,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "COST": {
+   "cik": [
+    909832
+   ],
+   "sin4T": {
+    "trimestres": 45,
+    "validos": 45,
+    "objetivos": 6,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 59,
+    "validos": 59,
+    "objetivos": 11,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 6
+  },
+  "KO": {
+   "cik": [
+    21344
+   ],
+   "sin4T": {
+    "trimestres": 49,
+    "validos": 49,
+    "objetivos": 8,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 61,
+    "validos": 60,
+    "objetivos": 17,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 8
+  },
+  "PG": {
+   "cik": [
+    80424
+   ],
+   "sin4T": {
+    "trimestres": 0,
+    "validos": 0,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 0,
+    "validos": 0,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "PM": {
+   "cik": [
+    1413329
+   ],
+   "sin4T": {
+    "trimestres": 51,
+    "validos": 51,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 67,
+    "validos": 66,
+    "objetivos": 19,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 10
+  },
+  "AMZN": {
+   "cik": [
+    1018724
+   ],
+   "sin4T": {
+    "trimestres": 67,
+    "validos": 51,
+    "objetivos": 5,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 73,
+    "validos": 56,
+    "objetivos": 11,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 5
+  },
+  "TSLA": {
+   "cik": [
+    1318605
+   ],
+   "sin4T": {
+    "trimestres": 50,
+    "validos": 25,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 66,
+    "validos": 32,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 10
+  },
+  "HD": {
+   "cik": [
+    354950
+   ],
+   "sin4T": {
+    "trimestres": 55,
+    "validos": 55,
+    "objetivos": 7,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 72,
+    "validos": 71,
+    "objetivos": 19,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "XOM": {
+   "cik": [
+    2115436,
+    34088
+   ],
+   "sin4T": {
+    "trimestres": 49,
+    "validos": 45,
+    "objetivos": 9,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 65,
+    "validos": 57,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 9
+  },
+  "CVX": {
+   "cik": [
+    93410
+   ],
+   "sin4T": {
+    "trimestres": 56,
+    "validos": 51,
+    "objetivos": 9,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 74,
+    "validos": 65,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 9
+  },
+  "CAT": {
+   "cik": [
+    18230
+   ],
+   "sin4T": {
+    "trimestres": 55,
+    "validos": 53,
+    "objetivos": 9,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 71,
+    "validos": 64,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 9
+  },
+  "GE": {
+   "cik": [
+    40545
+   ],
+   "sin4T": {
+    "trimestres": 56,
+    "validos": 39,
+    "objetivos": 6,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 71,
+    "validos": 43,
+    "objetivos": 11,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 6
+  },
+  "GEV": {
+   "cik": [
+    1996810
+   ],
+   "sin4T": {
+    "trimestres": 12,
+    "validos": 7,
+    "objetivos": 2,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 15,
+    "validos": 9,
+    "objetivos": 4,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 2
+  },
+  "RTX": {
+   "cik": [
+    101829
+   ],
+   "sin4T": {
+    "trimestres": 56,
+    "validos": 54,
+    "objetivos": 7,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 73,
+    "validos": 67,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 7
+  },
+  "LLY": {
+   "cik": [
+    59478
+   ],
+   "sin4T": {
+    "trimestres": 60,
+    "validos": 54,
+    "objetivos": 7,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 74,
+    "validos": 66,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 7
+  },
+  "JNJ": {
+   "cik": [
+    200406
+   ],
+   "sin4T": {
+    "trimestres": 56,
+    "validos": 53,
+    "objetivos": 6,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 74,
+    "validos": 66,
+    "objetivos": 15,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "ABBV": {
+   "cik": [
+    1551152
+   ],
+   "sin4T": {
+    "trimestres": 44,
+    "validos": 42,
+    "objetivos": 7,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 58,
+    "validos": 51,
+    "objetivos": 14,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "MRK": {
+   "cik": [
+    310158
+   ],
+   "sin4T": {
+    "trimestres": 49,
+    "validos": 42,
+    "objetivos": 4,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 65,
+    "validos": 51,
+    "objetivos": 11,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 4
+  },
+  "UNH": {
+   "cik": [
+    731766
+   ],
+   "sin4T": {
+    "trimestres": 55,
+    "validos": 54,
+    "objetivos": 6,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 72,
+    "validos": 69,
+    "objetivos": 16,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "TMO": {
+   "cik": [
+    97745
+   ],
+   "sin4T": {
+    "trimestres": 48,
+    "validos": 40,
+    "objetivos": 9,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 61,
+    "validos": 51,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "GOOGL": {
+   "cik": [
+    1652044
+   ],
+   "sin4T": {
+    "trimestres": 37,
+    "validos": 37,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 49,
+    "validos": 48,
+    "objetivos": 19,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "META": {
+   "cik": [
+    1326801
+   ],
+   "sin4T": {
+    "trimestres": 47,
+    "validos": 43,
+    "objetivos": 7,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 62,
+    "validos": 57,
+    "objetivos": 15,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 7
+  },
+  "NFLX": {
+   "cik": [
+    1065280
+   ],
+   "sin4T": {
+    "trimestres": 56,
+    "validos": 51,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 74,
+    "validos": 61,
+    "objetivos": 16,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "JPM": {
+   "cik": [
+    19617
+   ],
+   "sin4T": {
+    "trimestres": 55,
+    "validos": 52,
+    "objetivos": 9,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 72,
+    "validos": 69,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 9
+  },
+  "V": {
+   "cik": [
+    1403161
+   ],
+   "sin4T": {
+    "trimestres": 37,
+    "validos": 36,
+    "objetivos": 9,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 47,
+    "validos": 46,
+    "objetivos": 17,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "MA": {
+   "cik": [
+    1141391
+   ],
+   "sin4T": {
+    "trimestres": 56,
+    "validos": 54,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 74,
+    "validos": 70,
+    "objetivos": 19,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 6
+  },
+  "BAC": {
+   "cik": [
+    70858
+   ],
+   "sin4T": {
+    "trimestres": 55,
+    "validos": 46,
+    "objetivos": 7,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 70,
+    "validos": 58,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 7
+  },
+  "MS": {
+   "cik": [
+    895421
+   ],
+   "sin4T": {
+    "trimestres": 67,
+    "validos": 58,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 72,
+    "validos": 63,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 10
+  },
+  "GS": {
+   "cik": [
+    886982
+   ],
+   "sin4T": {
+    "trimestres": 50,
+    "validos": 48,
+    "objetivos": 9,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 64,
+    "validos": 61,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 9
+  },
+  "WFC": {
+   "cik": [
+    72971
+   ],
+   "sin4T": {
+    "trimestres": 56,
+    "validos": 54,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 73,
+    "validos": 67,
+    "objetivos": 16,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 10
+  },
+  "NVDA": {
+   "cik": [
+    1045810
+   ],
+   "sin4T": {
+    "trimestres": 52,
+    "validos": 43,
+    "objetivos": 5,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 69,
+    "validos": 56,
+    "objetivos": 11,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "AAPL": {
+   "cik": [
+    320193
+   ],
+   "sin4T": {
+    "trimestres": 55,
+    "validos": 55,
+    "objetivos": 8,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 70,
+    "validos": 70,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 8
+  },
+  "MSFT": {
+   "cik": [
+    789019
+   ],
+   "sin4T": {
+    "trimestres": 55,
+    "validos": 54,
+    "objetivos": 9,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 70,
+    "validos": 65,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "AVGO": {
+   "cik": [
+    1730168
+   ],
+   "sin4T": {
+    "trimestres": 29,
+    "validos": 15,
+    "objetivos": 3,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 37,
+    "validos": 19,
+    "objetivos": 7,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 3
+  },
+  "MU": {
+   "cik": [
+    723125
+   ],
+   "sin4T": {
+    "trimestres": 52,
+    "validos": 33,
+    "objetivos": 4,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 67,
+    "validos": 43,
+    "objetivos": 9,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 4
+  },
+  "AMD": {
+   "cik": [
+    2488
+   ],
+   "sin4T": {
+    "trimestres": 62,
+    "validos": 29,
+    "objetivos": 1,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 68,
+    "validos": 33,
+    "objetivos": 4,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 1
+  },
+  "INTC": {
+   "cik": [
+    50863
+   ],
+   "sin4T": {
+    "trimestres": 42,
+    "validos": 30,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 55,
+    "validos": 39,
+    "objetivos": 1,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "PLTR": {
+   "cik": [
+    1321655
+   ],
+   "sin4T": {
+    "trimestres": 21,
+    "validos": 11,
+    "objetivos": 5,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 28,
+    "validos": 15,
+    "objetivos": 11,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 5
+  },
+  "ORCL": {
+   "cik": [
+    1341439
+   ],
+   "sin4T": {
+    "trimestres": 19,
+    "validos": 18,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 25,
+    "validos": 24,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "CSCO": {
+   "cik": [
+    858877
+   ],
+   "sin4T": {
+    "trimestres": 39,
+    "validos": 37,
+    "objetivos": 5,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 52,
+    "validos": 49,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 5
+  },
+  "LRCX": {
+   "cik": [
+    707549
+   ],
+   "sin4T": {
+    "trimestres": 52,
+    "validos": 46,
+    "objetivos": 6,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 65,
+    "validos": 58,
+    "objetivos": 19,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 6
+  },
+  "AMAT": {
+   "cik": [
+    6951
+   ],
+   "sin4T": {
+    "trimestres": 55,
+    "validos": 49,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 73,
+    "validos": 65,
+    "objetivos": 19,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "DELL": {
+   "cik": [
+    1571996
+   ],
+   "sin4T": {
+    "trimestres": 30,
+    "validos": 17,
+    "objetivos": 6,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 38,
+    "validos": 20,
+    "objetivos": 15,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 6
+  },
+  "PANW": {
+   "cik": [
+    1327567
+   ],
+   "sin4T": {
+    "trimestres": 54,
+    "validos": 12,
+    "objetivos": 1,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 60,
+    "validos": 14,
+    "objetivos": 3,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 1
+  },
+  "CRWD": {
+   "cik": [
+    1535527
+   ],
+   "sin4T": {
+    "trimestres": 26,
+    "validos": 4,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 34,
+    "validos": 5,
+    "objetivos": 1,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "ANET": {
+   "cik": [
+    1596532
+   ],
+   "sin4T": {
+    "trimestres": 47,
+    "validos": 43,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 53,
+    "validos": 49,
+    "objetivos": 18,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 10
+  },
+  "SNDK": {
+   "cik": [
+    2023554
+   ],
+   "sin4T": {
+    "trimestres": 10,
+    "validos": 6,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 11,
+    "validos": 7,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 0
+  },
+  "TXN": {
+   "cik": [
+    97476
+   ],
+   "sin4T": {
+    "trimestres": 56,
+    "validos": 54,
+    "objetivos": 10,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "con4T": {
+    "trimestres": 73,
+    "validos": 68,
+    "objetivos": 19,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+   },
+   "emulacion_A_objetivos": 10
+  },
+  "UBER": {
+   "cik": [
+    1543151
+   ],
+   "sin4T": {
+    "trimestres": 27,
+    "validos": 7,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "con4T": {
+    "trimestres": 34,
+    "validos": 8,
+    "objetivos": 0,
+    "etiqueta_pretax_con_mas_trimestres": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+   },
+   "emulacion_A_objetivos": 0
+  }
+ },
+ "sin_4T_comparable_con_A": {
+  "n_objetivos": 307,
+  "n_emisoras": 43,
+  "reglas": {
+   "ultimo": {
+    "n": 307,
+    "MAE_pp": 3.5347,
+    "mediana_EA_pp": 2.2005,
+    "error_UPA_medio_pct": 4.4689,
+    "error_UPA_mediano_pct": 2.7176
+   },
+   "mediana4": {
+    "n": 307,
+    "MAE_pp": 2.9867,
+    "mediana_EA_pp": 2.0144,
+    "error_UPA_medio_pct": 3.7991,
+    "error_UPA_mediano_pct": 2.4278
+   },
+   "media4": {
+    "n": 307,
+    "MAE_pp": 3.1446,
+    "mediana_EA_pp": 2.1131,
+    "error_UPA_medio_pct": 3.9669,
+    "error_UPA_mediano_pct": 2.529
+   },
+   "mediana8": {
+    "n": 5,
+    "MAE_pp": 2.9808,
+    "mediana_EA_pp": 3.4649,
+    "error_UPA_medio_pct": 3.658,
+    "error_UPA_mediano_pct": 4.2792
+   },
+   "fijo21": {
+    "n": 307,
+    "MAE_pp": 5.7872,
+    "mediana_EA_pp": 4.6019,
+    "error_UPA_medio_pct": 6.9867,
+    "error_UPA_mediano_pct": 5.6817
+   }
+  },
+  "submuestra_mediana8": {
+   "n": 5,
+   "ultimo": 3.5252,
+   "mediana4": 3.5966,
+   "media4": 3.8165,
+   "mediana8": 2.9808,
+   "fijo21": 2.6002
+  },
+  "signos": {
+   "gana_mediana4": 174,
+   "gana_ultimo": 133,
+   "empates": 0,
+   "p_dos_colas": 0.02228089419004675
+  },
+  "dif_MAE_ultimo_menos_mediana4": {
+   "punto": 0.548,
+   "IC95_iid": [
+    0.1991,
+    0.9287
+   ],
+   "IC95_conglomerado_emisora": [
+    0.1949,
+    0.9636
+   ]
+  },
+  "H1": true,
+  "H2": true,
+  "veredicto": "H1 se cumple: MAE mediana-4 2.987 pp vs ultimo 3.535 pp, signos p=2.23e-02. H2 se cumple: MAE mediana-4 2.987 pp vs umbral 3.0 pp."
+ },
+ "con_4T_reconstruido": {
+  "n_objetivos": 657,
+  "n_emisoras": 45,
+  "reglas": {
+   "ultimo": {
+    "n": 657,
+    "MAE_pp": 4.833,
+    "mediana_EA_pp": 2.8846,
+    "error_UPA_medio_pct": 6.3804,
+    "error_UPA_mediano_pct": 3.5333
+   },
+   "mediana4": {
+    "n": 657,
+    "MAE_pp": 3.5887,
+    "mediana_EA_pp": 2.1094,
+    "error_UPA_medio_pct": 4.82,
+    "error_UPA_mediano_pct": 2.5469
+   },
+   "media4": {
+    "n": 657,
+    "MAE_pp": 3.7775,
+    "mediana_EA_pp": 2.2263,
+    "error_UPA_medio_pct": 5.015,
+    "error_UPA_mediano_pct": 2.6964
+   },
+   "mediana8": {
+    "n": 570,
+    "MAE_pp": 3.4769,
+    "mediana_EA_pp": 2.0787,
+    "error_UPA_medio_pct": 4.7374,
+    "error_UPA_mediano_pct": 2.5689
+   },
+   "fijo21": {
+    "n": 657,
+    "MAE_pp": 6.4365,
+    "mediana_EA_pp": 5.159,
+    "error_UPA_medio_pct": 8.0359,
+    "error_UPA_mediano_pct": 6.1865
+   }
+  },
+  "submuestra_mediana8": {
+   "n": 570,
+   "ultimo": 4.629,
+   "mediana4": 3.4007,
+   "media4": 3.6006,
+   "mediana8": 3.4769,
+   "fijo21": 6.1539
+  },
+  "signos": {
+   "gana_mediana4": 400,
+   "gana_ultimo": 257,
+   "empates": 0,
+   "p_dos_colas": 2.679697217214124e-08
+  },
+  "dif_MAE_ultimo_menos_mediana4": {
+   "punto": 1.2443,
+   "IC95_iid": [
+    0.9018,
+    1.6117
+   ],
+   "IC95_conglomerado_emisora": [
+    0.8483,
+    1.6636
+   ]
+  },
+  "H1": true,
+  "H2": false,
+  "veredicto": "H1 se cumple: MAE mediana-4 3.589 pp vs ultimo 4.833 pp, signos p=2.68e-08. H2 no se cumple: MAE mediana-4 3.589 pp vs umbral 3.0 pp.",
+  "n_objetivos_4T": 142,
+  "MAE_en_objetivos_4T": {
+   "ultimo": 5.4162,
+   "mediana4": 4.2678,
+   "media4": 4.3245,
+   "fijo21": 7.3754
+  }
+ },
+ "atribucion": {
+  "B_restringido_a_las_29_emisoras_de_A": {
+   "n_objetivos": 198,
+   "n_emisoras": 29,
+   "reglas": {
+    "ultimo": {
+     "n": 198,
+     "MAE_pp": 3.3583,
+     "mediana_EA_pp": 2.3974,
+     "error_UPA_medio_pct": 4.2814,
+     "error_UPA_mediano_pct": 2.9616
+    },
+    "mediana4": {
+     "n": 198,
+     "MAE_pp": 3.013,
+     "mediana_EA_pp": 2.3191,
+     "error_UPA_medio_pct": 3.8557,
+     "error_UPA_mediano_pct": 2.6508
+    },
+    "media4": {
+     "n": 198,
+     "MAE_pp": 3.1741,
+     "mediana_EA_pp": 2.3791,
+     "error_UPA_medio_pct": 4.046,
+     "error_UPA_mediano_pct": 2.8274
+    },
+    "mediana8": {
+     "n": 5,
+     "MAE_pp": 2.9808,
+     "mediana_EA_pp": 3.4649,
+     "error_UPA_medio_pct": 3.658,
+     "error_UPA_mediano_pct": 4.2792
+    },
+    "fijo21": {
+     "n": 198,
+     "MAE_pp": 5.5779,
+     "mediana_EA_pp": 4.3931,
+     "error_UPA_medio_pct": 6.7346,
+     "error_UPA_mediano_pct": 5.3718
+    }
+   },
+   "submuestra_mediana8": {
+    "n": 5,
+    "ultimo": 3.5252,
+    "mediana4": 3.5966,
+    "media4": 3.8165,
+    "mediana8": 2.9808,
+    "fijo21": 2.6002
+   },
+   "signos": {
+    "gana_mediana4": 110,
+    "gana_ultimo": 88,
+    "empates": 0,
+    "p_dos_colas": 0.13539129748732076
+   },
+   "dif_MAE_ultimo_menos_mediana4": {
+    "punto": 0.3454,
+    "IC95_iid": [
+     -0.0169,
+     0.7257
+    ],
+    "IC95_conglomerado_emisora": [
+     0.0038,
+     0.6944
+    ]
+   },
+   "H1": false,
+   "H2": false,
+   "veredicto": "H1 no se cumple: MAE mediana-4 3.013 pp vs ultimo 3.358 pp, signos p=1.35e-01. H2 no se cumple: MAE mediana-4 3.013 pp vs umbral 3.0 pp."
+  },
+  "B_solo_14_emisoras_que_A_pierde": {
+   "n_objetivos": 109,
+   "n_emisoras": 14,
+   "reglas": {
+    "ultimo": {
+     "n": 109,
+     "MAE_pp": 3.8549,
+     "mediana_EA_pp": 1.569,
+     "error_UPA_medio_pct": 4.8097,
+     "error_UPA_mediano_pct": 1.9039
+    },
+    "mediana4": {
+     "n": 109,
+     "MAE_pp": 2.9389,
+     "mediana_EA_pp": 1.705,
+     "error_UPA_medio_pct": 3.6963,
+     "error_UPA_mediano_pct": 1.9237
+    },
+    "media4": {
+     "n": 109,
+     "MAE_pp": 3.0909,
+     "mediana_EA_pp": 1.8087,
+     "error_UPA_medio_pct": 3.8232,
+     "error_UPA_mediano_pct": 2.0255
+    },
+    "mediana8": {
+     "n": 0
+    },
+    "fijo21": {
+     "n": 109,
+     "MAE_pp": 6.1673,
+     "mediana_EA_pp": 4.9281,
+     "error_UPA_medio_pct": 7.4447,
+     "error_UPA_mediano_pct": 6.0814
+    }
+   },
+   "submuestra_mediana8": {
+    "n": 0
+   },
+   "signos": {
+    "gana_mediana4": 64,
+    "gana_ultimo": 45,
+    "empates": 0,
+    "p_dos_colas": 0.08422157489670003
+   },
+   "dif_MAE_ultimo_menos_mediana4": {
+    "punto": 0.916,
+    "IC95_iid": [
+     0.2169,
+     1.7673
+    ],
+    "IC95_conglomerado_emisora": [
+     0.1666,
+     1.7963
+    ]
+   },
+   "H1": false,
+   "H2": true,
+   "veredicto": "H1 no se cumple: MAE mediana-4 2.939 pp vs ultimo 3.855 pp, signos p=8.42e-02. H2 se cumple: MAE mediana-4 2.939 pp vs umbral 3.0 pp."
+  },
+  "emulacion_regla_etiqueta_de_A_29_emisoras": {
+   "n_objetivos": 194,
+   "n_emisoras": 29,
+   "reglas": {
+    "ultimo": {
+     "n": 194,
+     "MAE_pp": 3.4063,
+     "mediana_EA_pp": 2.4182,
+     "error_UPA_medio_pct": 4.3429,
+     "error_UPA_mediano_pct": 3.0045
+    },
+    "mediana4": {
+     "n": 194,
+     "MAE_pp": 3.0294,
+     "mediana_EA_pp": 2.3191,
+     "error_UPA_medio_pct": 3.8774,
+     "error_UPA_mediano_pct": 2.6508
+    },
+    "media4": {
+     "n": 194,
+     "MAE_pp": 3.1959,
+     "mediana_EA_pp": 2.3791,
+     "error_UPA_medio_pct": 4.0742,
+     "error_UPA_mediano_pct": 2.8274
+    },
+    "mediana8": {
+     "n": 5,
+     "MAE_pp": 2.9808,
+     "mediana_EA_pp": 3.4649,
+     "error_UPA_medio_pct": 3.658,
+     "error_UPA_mediano_pct": 4.2792
+    },
+    "fijo21": {
+     "n": 194,
+     "MAE_pp": 5.6761,
+     "mediana_EA_pp": 4.5217,
+     "error_UPA_medio_pct": 6.8525,
+     "error_UPA_mediano_pct": 5.4644
+    }
+   },
+   "submuestra_mediana8": {
+    "n": 5,
+    "ultimo": 3.5252,
+    "mediana4": 3.5966,
+    "media4": 3.8165,
+    "mediana8": 2.9808,
+    "fijo21": 2.6002
+   },
+   "signos": {
+    "gana_mediana4": 109,
+    "gana_ultimo": 85,
+    "empates": 0,
+    "p_dos_colas": 0.09842638832808566
+   },
+   "dif_MAE_ultimo_menos_mediana4": {
+    "punto": 0.377,
+    "IC95_iid": [
+     0.013,
+     0.7657
+    ],
+    "IC95_conglomerado_emisora": [
+     0.0234,
+     0.7513
+    ]
+   },
+   "H1": false,
+   "H2": false,
+   "veredicto": "H1 no se cumple: MAE mediana-4 3.029 pp vs ultimo 3.406 pp, signos p=9.84e-02. H2 no se cumple: MAE mediana-4 3.029 pp vs umbral 3.0 pp."
+  }
+ }
+}

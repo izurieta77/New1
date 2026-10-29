@@ -30,6 +30,9 @@ ETIQ_TAX = ["IncomeTaxExpenseBenefit"]
 # ExxonMobil Holdings Corp (CIK 2115436, ticker XOM en efts) es la nueva tenedora; la historia
 # XBRL esta en Exxon Mobil Corp (CIK 34088). Se unen ambas.
 PREDECESORAS = {"XOM": [34088]}
+# Emisoras con objetivos en la ejecucion A (R22-resultados.json), solo para la seccion de atribucion.
+A_EMISORAS = ["COST", "KO", "PM", "AMZN", "TSLA", "CVX", "CAT", "GEV", "RTX", "LLY", "MRK", "META", "JPM", "MA",
+              "BAC", "MS", "GS", "WFC", "AAPL", "AVGO", "MU", "AMD", "PLTR", "CSCO", "LRCX", "DELL", "PANW", "ANET", "TXN"]
 
 _ultimo = [0.0]
 def get(url):
@@ -56,10 +59,11 @@ def cache_json(nombre, url):
 def cik(ticker):
     t = ticker.replace(".", "-").upper()
     ruta = os.path.join(DATOS, f"efts_{t}.json")
-    for intento in range(5):
-        d = cache_json(f"efts_{t}.json", f"https://efts.sec.gov/LATEST/search-index?keysTyped={t}")
+    for intento in range(6):
+        q = t if intento < 2 else t.lower()  # respaldo: la consulta en minusculas
+        d = cache_json(f"efts_{t}.json", f"https://efts.sec.gov/LATEST/search-index?keysTyped={q}")
         if "hits" in d: break
-        os.remove(ruta); time.sleep(3)  # error transitorio del buscador
+        os.remove(ruta); time.sleep(2)  # error del buscador (p. ej. 'GE' devolvia ConnectionError)
     for h in d["hits"]["hits"]:
         tks = [x.strip().upper() for x in h["_source"].get("tickers", "").split(",")]
         if t in tks: return int(h["_id"])
@@ -93,9 +97,9 @@ def trimestres(periodos, con_q4):
     q4 = {}
     if con_q4:
         anuales = {k: v for k, v in periodos.items() if 350 <= dur(k) <= 380 and v[1].startswith("10-K")}
-        nueve = {k: v[0] for k, v in periodos.items() if 260 <= dur(k) <= 290}
+        nueve = {k: v[0] for k, v in periodos.items() if 245 <= dur(k) <= 290}  # 36-40 semanas (COST: 12+12+12)
         for (ini, fin), (va, _) in anuales.items():
-            cands = [(k, v) for k, v in nueve.items() if k[0] == ini and 60 <= (fin - k[1]).days <= 110]
+            cands = [(k, v) for k, v in nueve.items() if k[0] == ini and 75 <= (fin - k[1]).days <= 125]  # 4T de 12-17 semanas
             if not cands: continue
             k9, v9 = max(cands, key=lambda x: x[0][1])
             if any(abs((fin - f).days) <= 5 for f in q): continue  # ya hay 4T directo
@@ -116,9 +120,21 @@ def combinar(lista, con_q4):
                 res[f] = v; origen[f] = (e, "4T" if f in q4 and f not in q else "Q")
     return res, origen, [x[1] for x in hechas]
 
-def etr_serie(facts, con_q4):
+def una_etiqueta(lista, con_q4):
+    """Emulacion de la regla de A: una sola etiqueta, la de mas trimestres, sin rellenar."""
+    mejor = max(lista, key=lambda x: len(trimestres(x[1], con_q4)[0]), default=None)
+    return combinar([mejor] if mejor else [], con_q4)
+
+ETIQ_A = ["IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic"]  # lista de A, solo para la atribucion
+
+def etr_serie(facts, con_q4, emular_a=False):
     tax, otax, _ = combinar(series(facts, ETIQ_TAX), con_q4)
-    pre, opre, orden = combinar(series(facts, ETIQ_PRETAX), con_q4)
+    if emular_a:
+        pre, opre, orden = una_etiqueta(series(facts, ETIQ_A), con_q4)
+    else:
+        pre, opre, orden = combinar(series(facts, ETIQ_PRETAX), con_q4)
     pts = []
     for f, p in pre.items():
         t = next((tax[g] for g in tax if abs((g - f).days) <= 5), None)
@@ -155,6 +171,7 @@ def analizar(obs):
     res = {"n_objetivos": len(obs), "n_emisoras": len({o["tk"] for o in obs}), "reglas": {}}
     for r in reglas:
         sub = [o for o in obs if o[r] is not None]
+        if not sub: res["reglas"][r] = {"n": 0}; continue
         ea = [100 * abs(o[r] - o["real"]) for o in sub]
         upa = [100 * abs(o[r] - o["real"]) / (1 - o["real"]) for o in sub]
         res["reglas"][r] = {"n": len(sub), "MAE_pp": round(sum(ea) / len(ea), 4),
@@ -162,7 +179,7 @@ def analizar(obs):
                             "error_UPA_medio_pct": round(sum(upa) / len(upa), 4),
                             "error_UPA_mediano_pct": round(statistics.median(upa), 4)}
     s8 = [o for o in obs if o["mediana8"] is not None]
-    res["submuestra_mediana8"] = {"n": len(s8), **{r: round(sum(100 * abs(o[r] - o["real"]) for o in s8) / len(s8), 4) for r in reglas}}
+    res["submuestra_mediana8"] = {"n": 0} if not s8 else {"n": len(s8), **{r: round(sum(100 * abs(o[r] - o["real"]) for o in s8) / len(s8), 4) for r in reglas}}
     eu = [100 * abs(o["ultimo"] - o["real"]) for o in obs]
     em = [100 * abs(o["mediana4"] - o["real"]) for o in obs]
     gana_m = sum(1 for a, b in zip(eu, em) if b < a); gana_u = sum(1 for a, b in zip(eu, em) if a < b)
@@ -199,7 +216,7 @@ def main():
            if r["mercado"] == "US" and r["ticker"] not in ("BRK-B", "SPCX")]
     salida = {"fuente": "SEC companyfacts (data.sec.gov) + efts entity search", "ua": UA,
               "universo": tks, "emisoras": {}}
-    obs = {False: [], True: []}
+    obs = {False: [], True: []}; emu = []
     for tk in tks:
         c = cik(tk)
         ciks = [c] + PREDECESORAS.get(tk, [])
@@ -216,11 +233,23 @@ def main():
             for o in pr: o["tk"] = tk
             obs[q4] += pr
             info["con4T" if q4 else "sin4T"] = {"trimestres": len(pts), "validos": sum(p["valido"] for p in pts),
-                                                "objetivos": len(pr), "etiqueta_pretax_principal": etq}
+                                                "objetivos": len(pr), "etiqueta_pretax_con_mas_trimestres": etq}
+        pts, _ = etr_serie(facts, False, emular_a=True)
+        pr = pronosticos(pts)
+        for o in pr: o["tk"] = tk
+        info["emulacion_A_objetivos"] = len(pr)
+        emu += pr
         salida["emisoras"][tk] = info
-        print(tk, c, info["sin4T"]["objetivos"], info["con4T"]["objetivos"], info["sin4T"]["etiqueta_pretax_principal"], file=sys.stderr)
+        print(tk, c, info["sin4T"]["objetivos"], info["con4T"]["objetivos"], info["sin4T"]["etiqueta_pretax_con_mas_trimestres"], file=sys.stderr)
     salida["sin_4T_comparable_con_A"] = analizar(obs[False])
     salida["con_4T_reconstruido"] = analizar(obs[True])
+    # Atribucion de diferencias con A (no son parte del veredicto)
+    A29 = set(A_EMISORAS)
+    salida["atribucion"] = {
+        "B_restringido_a_las_29_emisoras_de_A": analizar([o for o in obs[False] if o["tk"] in A29]),
+        "B_solo_14_emisoras_que_A_pierde": analizar([o for o in obs[False] if o["tk"] not in A29]),
+        "emulacion_regla_etiqueta_de_A_29_emisoras": analizar([o for o in emu if o["tk"] in A29]),
+    }
     solo4 = [o for o in obs[True] if o["q4"]]
     salida["con_4T_reconstruido"]["n_objetivos_4T"] = len(solo4)
     if solo4:
