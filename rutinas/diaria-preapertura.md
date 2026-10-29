@@ -24,5 +24,6 @@ Este procedimiento escrito manda sobre el texto del disparador, que ya indica se
    - **Hora del encabezado (nota del orquestador, 21-oct-2026, por la revisión del 20-oct §1.3, error reincidente):** el encabezado lleva la hora **real** de la corrida: `date -u` y, aparte, la hora de CDMX = UTC − 6 h (sin horario de verano). 06:52 es la hora programada; no se escribe como la de la corrida. Ejemplo: "corrida 12:57 UTC = 06:57 CDMX".
 8. **Cierre de la rutina:**
    - deja el latido (REGLAS §3);
+   - **Antes del commit (orquestador, 29-oct-2026; fallos `bitacora/arbitraje/2026-10-27.md` §1 y `2026-10-28.md` C1):** escribe la hora de tu latido y de tus notas con `python3 herramientas/latidos.py ahora` (o `date -u`) en ese momento, y corre `python3 herramientas/latidos.py antes-de-commit --bitacora`; si avisa, corrige la hora antes de hacer el commit. Nunca escribas una hora posterior al momento del commit ni rangos que terminen en el futuro;
    - commit `pre-apertura: AAAA-MM-DD`, `git pull --rebase --autostash` y push, con hasta 4 reintentos;
    - respuesta final de 12 líneas o menos.

@@ -1463,8 +1463,8 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Hecho:** el máximo de la vela de 1 m de las 20:01 UTC de UPRO (153.00 USD con FX 18.6044) da +2.02% en pesos contra el 27-oct. El umbral era 152.97. El cierre de la vela da +1.69% y el cierre oficial, +0.86%.
 - **Decisión:** abrí una alerta **informativa** en `bitacora/alertas.md`, como el precedente del 20-oct (after-hours). No pide acción.
 - **Pregunta al orquestador:** ¿la regla §3 se mide con el máximo de cada vela o con su cierre, y entran las velas fuera de sesión con volumen 0? Con el cierre de la vela no habría alerta.
-- **Estado:** Abierto → orquestador.
-- **Postura provisional del orquestador (28-oct 21:30 UTC), hasta que decida la conciliación:** para la regla del 2% en pesos se usa el **cierre** de la vela de 1 m. Las velas fuera de sesión con volumen 0 sirven como aviso, pero **no** abren una alerta alta nueva. La fila de UPRO del 28-oct queda como informativa y no se borra, para no reescribir el historial. Contexto: GOOGL va −10.5% después del cierre (290.71 vs 324.89, Yahoo), así que la apertura del 29-oct puede mover a QQQM y UPRO. Revisarlo en la pre-apertura.
+- **Estado:** Abierto → orquestador. [Conciliación 29-oct-2026 03:04 UTC, `bitacora/arbitraje/2026-10-28.md` §7] **Fallo (choque de reglas):** la fila UPRO del 28-oct queda como **informativa, cerrada por reversión**, con cualquiera de las dos lecturas (cierre de la vela de las 20:01: +1.69%; máximo: +2.02%). Mientras el orquestador no fije el texto: se mide con el **cierre** de la vela de 1 m, y **el volumen 0 de Yahoo fuera de sesión no basta para descartar** una vela, porque choca con la regla de EWZ (`conocimiento/registro-de-errores.md`, fila 2026-10-27: Yahoo da volumen 0 en horario extendido por diseño); antes de descartarla se contrasta con Nasdaq. El texto de la regla (`rutinas/inteligencia.md` L23) → **orquestador**. Cerrado el hecho.
+- **Postura provisional del orquestador (28-oct 21:30 UTC), hasta que decida la conciliación:** para la regla del 2% en pesos se usa el **cierre** de la vela de 1 m. Las velas fuera de sesión con volumen 0 sirven como aviso, pero **no** abren una alerta alta nueva. La fila de UPRO del 28-oct queda como informativa y no se borra, para no reescribir el historial. Contexto: GOOGL va −10.5% después del cierre (290.71 vs 324.89, Yahoo), así que la apertura del 29-oct puede mover a QQQM y UPRO. Revisarlo en la pre-apertura. [Conciliación 29-oct-2026 03:04 UTC, `bitacora/arbitraje/2026-10-28.md` §1: entró en `797d1e3`, 21:15:51 UTC; la hora vale ≤ 21:15.]
 
 ## 2026-10-28 21:42 UTC · orquestador (cierre del 28-oct) · plantilla de la §8 y Chedraui
 - **Tasa efectiva en los pronósticos de UPA: seis casos en una semana** (AMX, BOLSA, Cemex, Visa, KOF y Walmex). En Walmex la tasa explica todo el error: con 24.5% la UPA habría sido 0.7146 contra el punto de 0.715.
@@ -1475,13 +1475,13 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **GCC:** −5.75% en la sesión del 28-oct (172.72), sin comunicado localizado. El reporte se esperaba el 27/28-oct. **Estado:** Abierto → pre-apertura del 29-oct.
 
 ## 2026-10-29 00:07 UTC · revisor (rutina 11, revisión del miércoles 28-oct) · SGM en la pre-apertura del 29-oct, R21 al comité W44 y horas
-- **(1) Multa SGM → pre-apertura del jue 29-oct (primera sección del brief).** Ninguna rutina nombra la multa; la del 28-oct la puso arriba solo porque la revisión del 27 lo pidió. **Qué decidí:** pedirlo aquí, en la fila L12 de `bitacora/alertas.md` (nota fechada) y en la sección "Revisión" del brief del 28-oct. Texto mínimo: "**HOY jue 29-oct vence impugnar o pagar con el 20%**; vie 30-oct último día seguro para la ficha 9/LIF; sáb 31-oct inhábil; lun 2-nov solo como respaldo (grado B, `bitacora/arbitraje/2026-10-26.md` §3)", más la frase obligatoria del memo, literal. **Por qué:** es el día del vencimiento y lo conservador es repetirlo, no suponer que la rutina lo hereda. **Estado:** Abierto → pre-apertura del 29-oct; lo cierra la conciliación cuando el dueño decida o pase el plazo.
-- **(2) R21 → comité W44 (insumo, no decisión).** Con el UPRO en 13.5%, la brecha de R20 sube P(−12%, 126 d) +0.31 pp y cuesta −0.21 pp/año (A = B); con 27%, +1.25 pp y −0.43. Las colas de R18 siguen sirviendo para el libro vigente (salvedades: pesos de R18 con 5.3% de efectivo contra 18.4% real; métrica contra el máximo de la ventana). **R21 no compara contra una mezcla sin UPRO**: la pregunta de si el 3x aporta la sigue contestando R20 + `conocimiento/fichas/2026-10-27-acarreo-3x-por-tasas.md` (empate con μ ≈ 11.2%). **Qué decidí:** encaminarlo sin proponer cambio de tamaño. **Estado:** Abierto → comité W44 (30-oct).
-- **(3) Horas de latido: 9.ª reincidencia** (inteligencia 07:05, 11:05, 15:05; cripto 08:17; más una nota del orquestador "21:30 UTC" en `797d1e3` de las 21:15:51). `latidos.py antes-de-commit` no está en `rutinas/inteligencia.md`, `rutinas/cripto.md` ni `rutinas/diaria-preapertura.md`. **Estado:** Abierto → orquestador (alerta Media de `alertas.md` L6 sigue abierta).
-- **(4) Brief del 28-oct L52 "Powell":** el presidente es Kevin Warsh (federalreserve.gov). **Estado:** Abierto → pre-apertura del 29-oct o conciliación (nota fechada).
+- **(1) Multa SGM → pre-apertura del jue 29-oct (primera sección del brief).** Ninguna rutina nombra la multa; la del 28-oct la puso arriba solo porque la revisión del 27 lo pidió. **Qué decidí:** pedirlo aquí, en la fila L12 de `bitacora/alertas.md` (nota fechada) y en la sección "Revisión" del brief del 28-oct. Texto mínimo: "**HOY jue 29-oct vence impugnar o pagar con el 20%**; vie 30-oct último día seguro para la ficha 9/LIF; sáb 31-oct inhábil; lun 2-nov solo como respaldo (grado B, `bitacora/arbitraje/2026-10-26.md` §3)", más la frase obligatoria del memo, literal. **Por qué:** es el día del vencimiento y lo conservador es repetirlo, no suponer que la rutina lo hereda. **Estado:** Abierto → pre-apertura del 29-oct; lo cierra la conciliación cuando el dueño decida o pase el plazo. [Conciliación 29-oct-2026 03:04 UTC, `bitacora/arbitraje/2026-10-28.md` §4] Verificado: la fila L12 de `alertas.md` lo pide igual. Sigue **Abierto → pre-apertura del 29-oct** (primera sección: "HOY vence impugnar o pagar con 20%") **y dueño** (la ruta).
+- **(2) R21 → comité W44 (insumo, no decisión).** Con el UPRO en 13.5%, la brecha de R20 sube P(−12%, 126 d) +0.31 pp y cuesta −0.21 pp/año (A = B); con 27%, +1.25 pp y −0.43. Las colas de R18 siguen sirviendo para el libro vigente (salvedades: pesos de R18 con 5.3% de efectivo contra 18.4% real; métrica contra el máximo de la ventana). **R21 no compara contra una mezcla sin UPRO**: la pregunta de si el 3x aporta la sigue contestando R20 + `conocimiento/fichas/2026-10-27-acarreo-3x-por-tasas.md` (empate con μ ≈ 11.2%). **Qué decidí:** encaminarlo sin proponer cambio de tamaño. **Estado:** Abierto → comité W44 (30-oct). [Conciliación 29-oct-2026 03:04 UTC, `bitacora/arbitraje/2026-10-28.md` §3] Atendido por `4913f01` (nota exploratoria contra U0; las cifras de U13.5 cuadran con `R21-resultados.json`). Cerrado en el registro; sigue **Abierto → comité W44** (dirección).
+- **(3) Horas de latido: 9.ª reincidencia** (inteligencia 07:05, 11:05, 15:05; cripto 08:17; más una nota del orquestador "21:30 UTC" en `797d1e3` de las 21:15:51). `latidos.py antes-de-commit` no está en `rutinas/inteligencia.md`, `rutinas/cripto.md` ni `rutinas/diaria-preapertura.md`. **Estado:** Abierto → orquestador (alerta Media de `alertas.md` L6 sigue abierta). [Conciliación 29-oct-2026 03:04 UTC, `bitacora/arbitraje/2026-10-28.md` §1] **10.ª reincidencia** después de esta entrada (`be95f3a`, latido 02:20 con commit 02:15:15). El paso sigue fuera de las rutinas. **Tercer escalamiento → orquestador, como bloqueo de proceso.** Sigue Abierto.
+- **(4) Brief del 28-oct L52 "Powell":** el presidente es Kevin Warsh (federalreserve.gov). **Estado:** Abierto → pre-apertura del 29-oct o conciliación (nota fechada). [Conciliación 29-oct-2026 03:04 UTC, `bitacora/arbitraje/2026-10-28.md` §2] Nota puesta por `4913f01` (L52) y verificada en federalreserve.gov ("Kevin Warsh, Chairman"). También puse nota en `bitacora/inteligencia/2026-10-28.md` L39. **Cerrado.**
 
 ## 2026-10-29 01:11 UTC · orquestador (trabajo continuo, 28-oct CDMX) · revisión del 28-oct C2 y C3
-- **C2 (Powell en el brief del 28-oct):** nota fechada en L52. El presidente de la Fed es Kevin Warsh. **Estado:** Cerrado.
+- **C2 (Powell en el brief del 28-oct):** nota fechada en L52. El presidente de la Fed es Kevin Warsh. **Estado:** Cerrado. [Conciliación 29-oct-2026 03:04 UTC, `bitacora/arbitraje/2026-10-28.md` §2] **Ratificado.**
 - **C3 (R21 sin encaminar y sin contraste contra la mezcla sin UPRO):** se agregó la nota exploratoria en `laboratorio/replicas/R21-r18-con-brecha-r20.md`.
   - **Para el comité del viernes 30-oct (W44), punto de riesgo del UPRO:**
     - (1) R20: el UPRO real rinde ~1.5 pp por año menos que el sintético, y ~2.2 con tasas ≥ 3%;
@@ -1489,3 +1489,28 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
     - (3) **exploratorio:** con la brecha, el 13.5% de UPRO aporta +0.73 pp por año de CAGR contra U0, a cambio de +5.0 pp en P(−12%, 126 d) y +3.2 pp en P(−20%);
     - (4) ficha del 27-oct: con r = 3.8% el empate del 3x contra el 1x exige μ ≈ 11.2%.
   - **Estado:** Abierto → comité W44.
+
+## 2026-10-29 03:06 UTC · conciliación (rutina 10, miércoles 28-oct) · escalamientos y lo que sigue abierto
+- **Fallo:** `bitacora/arbitraje/2026-10-28.md`. Conciliación: `bitacora/conciliacion/2026-10-29.md`.
+- **Cerrados:**
+  - C2: Warsh, ratificado en federalreserve.gov, con nota también en la inteligencia L39;
+  - C3: R21 encaminado; la nota contra U0 cuadra en U13.5, pero la fila U0 no es reproducible desde el clon;
+  - m1 (P0193), m2 (brief L99) y m3 (CLZ26 102.78 asentado);
+  - Powell/Warsh del revisor (4);
+  - la duda del vigía sobre la regla del 2%, como hecho (§7);
+  - P0003 = NO ratificado (EIA 109.72);
+  - los 8 resueltos del 28-oct, ratificados.
+- **(1) Escalado → orquestador (cumplimiento, tercera vez, BLOQUEO DE PROCESO):** 10.ª reincidencia (`be95f3a`). El próximo trabajo continuo, antes de cualquier otra tarea, mete `python3 herramientas/latidos.py antes-de-commit --bitacora` entre `git add` y `git commit` en `rutinas/inteligencia.md` L28, `rutinas/cripto.md` L29 y `rutinas/diaria-preapertura.md` L27, y conviene ponerlo también en las demás rutinas que hacen commit. **Estado:** Abierto → orquestador.
+- **(2) Escalado → orquestador (regla):** texto de la regla del 2% en `rutinas/inteligencia.md` L23, con cierre de la vela 1 m y sin descartar velas solo por volumen 0 (choque con la regla de EWZ). Mientras tanto vale la lectura interina del fallo §7. **Estado:** Abierto → orquestador.
+- **(3) Escalado → dueño (multa SGM):** **HOY, jue 29-oct, vence impugnar o pagar con 20%.** La pre-apertura del 29-oct lo pone como primera sección del brief ("HOY vence"). La ruta es del dueño. **Estado:** Abierto → pre-apertura del 29-oct y dueño.
+- **(4) Escalado → auditor de réplicas / orquestador (m5):** versionar el recorte de datos de cada auditoría, o su sha256. **Estado:** Abierto.
+- **(5) Siguen abiertos sin cambio:**
+  - fuente única del cierre FX (orquestador);
+  - Ras Tanura (pre-apertura);
+  - Chedraui y GCC (pre-apertura o cierre del 29-oct);
+  - tasa efectiva en la §8 de la plantilla (semanal o comité W44);
+  - R19b, R20, R21 y rebalanceo (comité W44);
+  - umbral de Polymarket (gestor de riesgo / dueño);
+  - t_m, W-8BEN, tope 5,000 / 10,000 y efectivo GBM (dueño);
+  - m4 (laboratorio);
+  - P0066, P0184, P0192 y P0197: vencen hoy y su dato aún no existe.
