@@ -1514,3 +1514,11 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - t_m, W-8BEN, tope 5,000 / 10,000 y efectivo GBM (dueño);
   - m4 (laboratorio);
   - P0066, P0184, P0192 y P0197: vencen hoy y su dato aún no existe.
+
+## 2026-10-29 12:58 UTC · orquestador (pre-apertura del 29-oct) · rezago de resoluciones de empresas
+- **Hecho:** 25 empresas con pronósticos de fecha entre el 28-oct y el 2-nov sin `resoluciones.csv` (lista en el brief del 29-oct). Alphabet ya reportó el 28-oct. Es la tercera omisión en tres días (KOF, Walmex, Alphabet).
+- **Qué decidí:**
+  - el cierre de hoy prioriza GOOGL y las de hoy con comunicado localizable;
+  - la conciliación ataca las del 28-oct que pudieron haber reportado antes (BBAJIO, GEV, KIMBER, LAB, LIVEPOL, ORBIA, RA, SIGMA, VOLARA).
+- **Regla propuesta para `rutinas/diaria-cierre.md` paso 4:** "la lista de empresas a revisar sale de `empresas/*/pronosticos.csv` con fecha_resolucion ≤ hoy + 3 y sin `resoluciones.csv`, no del calendario del brief".
+- **Estado:** Abierto → cierre del 29-oct (la regla) y conciliación (el rezago).
