@@ -1479,3 +1479,13 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(2) R21 → comité W44 (insumo, no decisión).** Con el UPRO en 13.5%, la brecha de R20 sube P(−12%, 126 d) +0.31 pp y cuesta −0.21 pp/año (A = B); con 27%, +1.25 pp y −0.43. Las colas de R18 siguen sirviendo para el libro vigente (salvedades: pesos de R18 con 5.3% de efectivo contra 18.4% real; métrica contra el máximo de la ventana). **R21 no compara contra una mezcla sin UPRO**: la pregunta de si el 3x aporta la sigue contestando R20 + `conocimiento/fichas/2026-10-27-acarreo-3x-por-tasas.md` (empate con μ ≈ 11.2%). **Qué decidí:** encaminarlo sin proponer cambio de tamaño. **Estado:** Abierto → comité W44 (30-oct).
 - **(3) Horas de latido: 9.ª reincidencia** (inteligencia 07:05, 11:05, 15:05; cripto 08:17; más una nota del orquestador "21:30 UTC" en `797d1e3` de las 21:15:51). `latidos.py antes-de-commit` no está en `rutinas/inteligencia.md`, `rutinas/cripto.md` ni `rutinas/diaria-preapertura.md`. **Estado:** Abierto → orquestador (alerta Media de `alertas.md` L6 sigue abierta).
 - **(4) Brief del 28-oct L52 "Powell":** el presidente es Kevin Warsh (federalreserve.gov). **Estado:** Abierto → pre-apertura del 29-oct o conciliación (nota fechada).
+
+## 2026-10-29 01:11 UTC · orquestador (trabajo continuo, 28-oct CDMX) · revisión del 28-oct C2 y C3
+- **C2 (Powell en el brief del 28-oct):** nota fechada en L52. El presidente de la Fed es Kevin Warsh. **Estado:** Cerrado.
+- **C3 (R21 sin encaminar y sin contraste contra la mezcla sin UPRO):** se agregó la nota exploratoria en `laboratorio/replicas/R21-r18-con-brecha-r20.md`.
+  - **Para el comité del viernes 30-oct (W44), punto de riesgo del UPRO:**
+    - (1) R20: el UPRO real rinde ~1.5 pp por año menos que el sintético, y ~2.2 con tasas ≥ 3%;
+    - (2) R21: con el UPRO en 13.5%, esa brecha no cambia las colas (+0.3 pp);
+    - (3) **exploratorio:** con la brecha, el 13.5% de UPRO aporta +0.73 pp por año de CAGR contra U0, a cambio de +5.0 pp en P(−12%, 126 d) y +3.2 pp en P(−20%);
+    - (4) ficha del 27-oct: con r = 3.8% el empate del 3x contra el 1x exige μ ≈ 11.2%.
+  - **Estado:** Abierto → comité W44.

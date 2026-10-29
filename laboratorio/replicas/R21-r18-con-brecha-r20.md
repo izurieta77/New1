@@ -61,3 +61,17 @@ Datos: sha256 de la caché de R16 `42339a50…466b`; del 1990-10-17 al 2026-10-1
 - Con el UPRO en 13.5%, la brecha de R20 **no cambia las colas** de R18: +0.3 pp en P(−12%). Cuesta ~0.2 pp por año de CAGR.
 - Con el 27% de antes de B1, la brecha sí pesaba: +1.25 pp y −0.43 pp por año.
 - **Las probabilidades de R18 siguen siendo válidas para el libro vigente**, con la salvedad del 25-oct (métrica contra el máximo de la ventana, no contra el histórico).
+
+## Nota exploratoria (trabajo continuo, 2026-10-29 01:11 UTC; revisión del 28-oct C3): contra la mezcla **sin** UPRO
+**No es parte del pre-registro ni del estado "Replicado".** Es un cálculo exploratorio con las mismas funciones de `R21.py` y `R18.py` y los mismos datos (1990-10-17 a 2026-10-16). En U0 el peso del UPRO pasa a SPYM.
+
+| Mezcla | CAGR | P(−12%, 126 d) | P(−20%, 126 d) | MDD | Vol anual |
+|---|---|---|---|---|---|
+| U0 (sin UPRO) | 12.36% | 25.46% | 9.37% | −58.3% | 18.56% |
+| U13.5, sin brecha | 13.30% | 30.12% | 12.59% | −56.9% | 19.10% |
+| **U13.5, con la brecha de R20** | **13.08%** | **30.43%** | **12.60%** | −57.0% | 19.10% |
+
+- **Lectura** [inferencia]: con la brecha, el 13.5% de UPRO aporta **+0.73 pp por año de CAGR** frente a no tenerlo. Lo paga con **+5.0 pp de probabilidad de tocar −12%** y **+3.2 pp de tocar −20%** en 126 días; la MDD no empeora, por el filtro.
+- **Por eso "las probabilidades de R18 siguen siendo válidas" no es un respaldo del 3x.** Dice solo que la brecha no cambia el costo en colas del UPRO, que ya era de ~5 pp en P(−12%).
+- **Límite:** es una muestra (1990-2026) con un S&P fuerte. El rendimiento extra del 3x depende de μ − r (ficha del 27-oct: con r = 3.8% y σ = 17%, el empate es μ ≈ 11.2%).
+- Es **insumo para el comité W44**, no una decisión.
