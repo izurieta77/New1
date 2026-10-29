@@ -114,3 +114,6 @@ Notas: \*FCF = flujo operativo − compras brutas de PP&E (XBRL); con la definic
 8. Nasdaq/Zacks, fecha y consenso (25-sep-2026): https://api.nasdaq.com/api/analyst/AMZN/earnings-date
 9. Conocimiento interno: `conocimiento/21-industrias-y-ciclos-sectoriales-2026.md` §4.3 y R13; `conocimiento/25-pronostico-de-resultados-y-estados-financieros.md` §2.7.
 10. Conocimiento interno: `conocimiento/23-geopolitica-y-riesgo-politico-global.md` §4.3 y `conocimiento/24-politica-publica-regulacion-y-mercados.md`.
+
+## Adenda (29-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-29.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

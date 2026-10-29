@@ -1528,3 +1528,14 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Para la propuesta de la plantilla §8** (entrada del 28-oct): usar la mediana de 4 como punto y **abrir el intervalo de la UPA en ±4-5% solo por la tasa**. Los seis casos mexicanos de la semana (1.5 a 7.7 pp) están en la cola alta de ese error.
 - **Pendiente:** R22b con nuevo pre-registro (unión de etiquetas y 4T reconstruido).
 - **Estado:** Abierto → comité W44 o auditoría semanal.
+
+## 2026-10-29 21:41 UTC · orquestador (cierre del 29-oct) · rezago de empresas y pronóstico de la guía
+- **Resueltas hoy con el 8-K:** GOOGL, CAT, LLY, MA, AMZN e INTC.
+- **Quedan del rezago:**
+  - AAPL (sin 8-K 2.02 al cierre);
+  - GCARSO, GMEXICO, PINFRA, Megacable, Chedraui y GCC (sin comunicado leído);
+  - BBAJIO, GEV, KIMBER, LAB, LIVEPOL, ORBIA, RA, SIGMA y VOLARA (28-oct).
+  - **Estado:** Abierto → conciliación del 29-oct y cierre del 30-oct.
+- **Hallazgo para la plantilla §8:** en CAT (−9.3%), GOOGL (−12.6%) e INTC (−20.5% en el after-hours) el trimestre salió dentro de nuestros intervalos y el precio se movió por la guía o el capex.
+  - **Propuesta:** agregar a la §8 un pronóstico de la guía (o del capex) del siguiente trimestre, con su consenso.
+  - **Estado:** Abierto → comité W44 o auditoría semanal, junto con la propuesta de tasa efectiva (R22).

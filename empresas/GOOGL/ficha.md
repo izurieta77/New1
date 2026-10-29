@@ -109,3 +109,6 @@ Binarios:
 12. Conocimiento cap. 24 §4.5 (Brinkema, CNBC 2-sep-2026) y cap. 23 §4.5 (tregua al 10-ene-2027): conocimiento/24-politica-publica-regulacion-y-mercados.md; conocimiento/23-geopolitica-y-riesgo-politico-global.md
 13. Ficha SPCX, 2026-09-25: empresas/SPCX/ficha.md
 14. Tablero de mercado (FRED DGS10, DFF), 2026-09-25: bitacora/briefs/2026-09-25-tablero-v2.md
+
+## Adenda (29-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-29.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

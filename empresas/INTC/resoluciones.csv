@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+INTC-ingresos-3T26,2026-10-29,16513,,2.65,si,,https://www.sec.gov/Archives/edgar/data/50863/000005086326000188/q326earningsrelease.htm
+INTC-upa_ajustada-3T26,2026-10-29,0.52,,-15.38,si,,https://www.sec.gov/Archives/edgar/data/50863/000005086326000188/q326earningsrelease.htm
+INTC-ingresos_mayor_consenso-3T26,2026-10-29,16513,1,,,0.0484,https://www.sec.gov/Archives/edgar/data/50863/000005086326000188/q326earningsrelease.htm
+INTC-upa_mayor_consenso-3T26,2026-10-29,0.52,1,,,0.0676,https://www.sec.gov/Archives/edgar/data/50863/000005086326000188/q326earningsrelease.htm

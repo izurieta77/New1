@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+MA-ingresos-3T26,2026-10-29,9807,,-1.50,si,,https://www.sec.gov/Archives/edgar/data/1141391/000114139126000122/ma09302026-exx991xearnings.htm
+MA-upa-3T26,2026-10-29,5.31,,-2.64,si,,https://www.sec.gov/Archives/edgar/data/1141391/000114139126000122/ma09302026-exx991xearnings.htm
+MA-ingresos_mayor_consenso-3T26,2026-10-29,9807,1,,,0.2025,https://www.sec.gov/Archives/edgar/data/1141391/000114139126000122/ma09302026-exx991xearnings.htm
+MA-upa_mayor_consenso-3T26,2026-10-29,5.31,1,,,0.1764,https://www.sec.gov/Archives/edgar/data/1141391/000114139126000122/ma09302026-exx991xearnings.htm

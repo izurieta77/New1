@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+LLY-ingresos-3T26,2026-10-29,24397,,-4.91,si,,https://www.sec.gov/Archives/edgar/data/59478/000005947826000104/q326lillysalesandearningsp.htm
+LLY-upa_nogaap-3T26,2026-10-29,7.48,,5.61,si,,https://www.sec.gov/Archives/edgar/data/59478/000005947826000104/q326lillysalesandearningsp.htm
+LLY-ingresos_mayor_consenso-3T26,2026-10-29,24397,1,,,0.0625,https://www.sec.gov/Archives/edgar/data/59478/000005947826000104/q326lillysalesandearningsp.htm
+LLY-upa_mayor_consenso-3T26,2026-10-29,7.48,0,,,0.0784,https://www.sec.gov/Archives/edgar/data/59478/000005947826000104/q326lillysalesandearningsp.htm

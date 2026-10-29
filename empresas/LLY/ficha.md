@@ -122,3 +122,6 @@ Verificador adversarial. Nivel de acceso: comunicado 8-K del 2T26 (lectura ínte
 
 **Sigue sin verificar (ya marcado):** divisa de las notas de cupón bajo; plazo de gracia de la Sección 232; el título de PharmExec dice "US$2 mil M" para AtaiBeckley, pero rige el 10-Q (~2.8 mil M al cierre); historial de sorpresas de ingresos anterior al 2T26.
 **Veredicto:** confiable. Resultados, guía, consenso y hechos de la cadena causal coinciden con la fuente primaria. Los errores fueron de etiqueta ("vacunas"), una discrepancia que ya tenía explicación en el 10-K y una fecha sin fuente. Ninguno cambia el punto, los intervalos ni los binarios.
+
+## Adenda (29-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-29.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+GOOGL-ingresos-3T26,2026-10-28,127577,,0.17,si,,https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm
+GOOGL-upa_diluida-3T26,2026-10-28,2.12,,3.77,si,,https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm
+GOOGL-ingresos_mayor_consenso-3T26,2026-10-28,127577,1,,,0.1764,https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm
+GOOGL-upa_sin_valores_capital_mayor_consenso-3T26,2026-10-28,2.67,0,,,0.1600,https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm

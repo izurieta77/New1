@@ -224,3 +224,6 @@ Aritmética recalculada con Python.
 - La expectativa de un cliente de 14A antes de 2027 (Motley Fool).
 
 **Veredicto:** confiable en datos. El pronóstico original era sobreconfiado del lado alto; ya se corrigió.
+
+## Adenda (29-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-29.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

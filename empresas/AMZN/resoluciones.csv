@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+AMZN-ingresos-3T26,2026-10-29,201944,,1.02,si,,https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm
+AMZN-upa_gaap-3T26,2026-10-29,1.89,,16.40,si,,https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm
+AMZN-ingresos_mayor_consenso-3T26,2026-10-29,201944,0,,,0.5184,https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm
+AMZN-upa_gaap_mayor_consenso-3T26,2026-10-29,1.89,0,,,0.5625,https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm

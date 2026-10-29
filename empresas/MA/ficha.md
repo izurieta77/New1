@@ -100,3 +100,6 @@ Múltiplos: P/U de 12 meses de 31.1x GAAP (UPA 18.18) y 30.1x ajustado (18.78); 
 17. Conocimiento interno: `conocimiento/23-...` §4.3 (guerra de Irán, Polymarket) y `conocimiento/24-...` §4.1-4.3 (Fed, GENIUS Act).
 18. `bitacora/briefs/2026-09-25-tablero-v2.md` (USD/MXN 17.706, +4.5% en 1 mes).
 19. Business Wire, fecha del 2T26 (8-jul-2026): https://www.businesswire.com/news/home/20260708369638/en/Mastercard-Incorporated-to-Host-Conference-Call-on-Second-Quarter-2026-Financial-Results
+
+## Adenda (29-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-29.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

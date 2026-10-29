@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+CAT-ingresos-3T26,2026-10-29,20682,,0.57,si,,https://www.sec.gov/Archives/edgar/data/18230/000001823026000052/ex991toformcat3q2026earnin.htm
+CAT-upa_ajustada-3T26,2026-10-29,7.2,,-2.08,si,,https://www.sec.gov/Archives/edgar/data/18230/000001823026000052/ex991toformcat3q2026earnin.htm
+CAT-ingresos_mayor_consenso-3T26,2026-10-29,20682,1,,,0.1024,https://www.sec.gov/Archives/edgar/data/18230/000001823026000052/ex991toformcat3q2026earnin.htm
+CAT-upa_ajustada_mayor_consenso-3T26,2026-10-29,7.2,1,,,0.1764,https://www.sec.gov/Archives/edgar/data/18230/000001823026000052/ex991toformcat3q2026earnin.htm

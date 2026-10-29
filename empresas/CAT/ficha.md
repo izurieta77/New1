@@ -118,3 +118,6 @@ Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 2T26 (resul
 **Calibración (para el post-mortem):** el punto de UPA (7.05) queda solo +1.9% sobre el consenso, contra sorpresas de +9.5% a +31% en los últimos cuatro trimestres. En contra de repetir esas sorpresas hay tres razones: el 2T26 traía ~US$0.65 por acción de IEEPA, que no se repite; la guía anual implica un margen del 2S26 menor que el del 1S26 (20.1% ajustado en el 1S con IEEPA, ≈19.1% sin él [7]); y el 10-Q prevé aranceles de US$600 M en el trimestre. *Inferencia:* el sesgo del punto es conservador. Si CAT vuelve a sorprender por más de 10%, el resultado caerá cerca del nuevo p90, no fuera del intervalo.
 
 **Veredicto:** confiable. Las cifras del 2T26, el backlog y la guía cuadran con el 8-K y el 10-Q. Los intervalos eran estrechos frente al historial de sorpresas y se ampliaron; los puntos y los binarios no cambiaron.
+
+## Adenda (29-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-29.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.
