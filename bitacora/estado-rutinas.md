@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-29 20:41 UTC · supervisión (14:41 CDMX, última del día) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,164.11 cuadra con lo registrado; UPRO papel 10.0% sobre stop; FX-1 OK 18.8544 (Δ1 +1.23%); sin mensajes del dueño en el día
 2026-10-29 19:43 UTC · cripto (13:41, pulso extra) · OK · BTC 80,911 · +0.62% en pesos · colchón +14.09% · E9 0.383% VERDE · OI 727.1M · Polymarket 0.9635 · sin alertas
 2026-10-29 19:41 UTC · supervisión (13:41 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,150.36 cuadra con lo registrado; UPRO papel 9.5% sobre stop; FX-1 OK 18.8336; sin mensajes del dueño
 2026-10-29 18:41 UTC · supervisión (12:40 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,146.87 cuadra con lo registrado; UPRO papel 9.0% sobre stop; FX-1 OK 18.8526; sin mensajes del dueño
