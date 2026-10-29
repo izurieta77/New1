@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-29 18:41 UTC · supervisión (12:40 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,146.87 cuadra con lo registrado; UPRO papel 9.0% sobre stop; FX-1 OK 18.8526; sin mensajes del dueño
 2026-10-29 18:21 UTC · cripto (12:17, pulso) · OK · BTC 80,882 · +0.60% en pesos (FX 18.84) · colchón +14.05% · E9 0.293% VERDE · OI 725.6M · Polymarket 0.95 (baja por Ormuz) · sin alertas
 2026-10-29 17:58 UTC · laboratorio · OK · (este commit) · R22 (pronóstico de tasa efectiva) No replicado: A 29 emisoras (H1 p 0.085, H2 3.029 pp, refutadas) vs B 43 (p 0.022, 2.987 pp, sostenidas) por defecto de etiquetas XBRL de A; en ambas la mediana de 4 gana al último trimestre; ficha F11 ΔCoVaR (F11 Localizado → Documentado); Duong et al. arXiv:2610.37487 (C) en cap. 17; tabla maestra 41
 2026-10-29 17:41 UTC · supervisión (11:40 CDMX) · AVISO (2 bloqueos abiertos ya registrados) · (este commit) · 4 libros sin cortacircuitos; real GBM 10,154.36 cuadra con lo registrado; UPRO papel 9.4% sobre stop; FX-1 OK 18.8530 (Δ1 +1.22%); sin mensajes del dueño
