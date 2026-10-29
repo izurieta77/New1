@@ -1,0 +1,159 @@
+{
+ "emisoras": 29,
+ "observaciones": 194,
+ "usados": [
+  [
+   "COST",
+   6
+  ],
+  [
+   "KO",
+   8
+  ],
+  [
+   "PM",
+   10
+  ],
+  [
+   "AMZN",
+   5
+  ],
+  [
+   "TSLA",
+   10
+  ],
+  [
+   "CVX",
+   9
+  ],
+  [
+   "CAT",
+   9
+  ],
+  [
+   "GEV",
+   2
+  ],
+  [
+   "RTX",
+   7
+  ],
+  [
+   "LLY",
+   7
+  ],
+  [
+   "MRK",
+   4
+  ],
+  [
+   "META",
+   7
+  ],
+  [
+   "JPM",
+   9
+  ],
+  [
+   "MA",
+   6
+  ],
+  [
+   "BAC",
+   7
+  ],
+  [
+   "MS",
+   10
+  ],
+  [
+   "GS",
+   9
+  ],
+  [
+   "WFC",
+   10
+  ],
+  [
+   "AAPL",
+   8
+  ],
+  [
+   "AVGO",
+   3
+  ],
+  [
+   "MU",
+   4
+  ],
+  [
+   "AMD",
+   1
+  ],
+  [
+   "PLTR",
+   5
+  ],
+  [
+   "CSCO",
+   5
+  ],
+  [
+   "LRCX",
+   6
+  ],
+  [
+   "DELL",
+   6
+  ],
+  [
+   "PANW",
+   1
+  ],
+  [
+   "ANET",
+   10
+  ],
+  [
+   "TXN",
+   10
+  ]
+ ],
+ "fallidos": [
+  "GE: Ticker GE no encontrado en EDGAR (emisora no registrada en la SEC o ticker distinto)"
+ ],
+ "MAE_pp": {
+  "ultimo": 3.406,
+  "mediana4": 3.029,
+  "media4": 3.196,
+  "mediana8": 2.981,
+  "fija21": 5.676
+ },
+ "mediana_AE_pp": {
+  "ultimo": 2.418,
+  "mediana4": 2.319,
+  "media4": 2.379,
+  "mediana8": 3.465,
+  "fija21": 4.522
+ },
+ "n_por_regla": {
+  "ultimo": 194,
+  "mediana4": 194,
+  "media4": 194,
+  "mediana8": 5,
+  "fija21": 194
+ },
+ "signos_mediana4_vs_ultimo": {
+  "mejor": 109,
+  "peor": 85,
+  "z": 1.72,
+  "p_dos_colas": 0.0849
+ },
+ "dif_MAE_ultimo_menos_mediana4_IC95": [
+  0.004,
+  0.76
+ ],
+ "error_UPA_pct_mediana4": 3.88,
+ "H1_mediana4_mejor_que_ultimo": false,
+ "H2_MAE_mediana4_le_3pp": false
+}

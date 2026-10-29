@@ -468,3 +468,13 @@ Yardeni [13] hasta 2022; cálculo propio de 2023 a 2026. "Recuperación" = prime
   - Su modelo de diversidad y dispersión, que reparte entre las dos carteras, supera fuera de muestra (1995-2024, después de 15 pb de costos) a ambas.
   - Para el sistema: la concentración del S&P 500 en IA es un riesgo de régimen que el SPYM/QQQM del papel carga completo. No cambia ninguna regla.
 
+
+### Adenda (29-oct-2026, laboratorio): ΔCoVaR propio y redes de transmisión contemporánea en bancos europeos
+- **[A en la definición]** Adrian y Brunnermeier, "CoVaR" (NBER w17454; AER 2016), §1-§3.1 en lectura íntegra: ΔCoVaR_q = β_q (VaR_q − VaR_50), estimado con regresión cuantílica.
+  - **Ejercicio propio** (`fichas/2026-10-29-doctorado-finanzas-f11-delta-covar.md`; semanal 2005-2026): ΔCoVaR al 1% de −2.3 a −8.7 pp en seis bancos de EUA contra XLF, y ~−4 pp en GFNORTE e INBURSA contra el IPC.
+  - **El VaR propio no ordena el riesgo sistémico** (C tiene el peor VaR y no el mayor ΔCoVaR).
+  - La cola del 1% es inestable (MS: β de 0.17 al 1% contra 0.48 al 5%).
+- **[C]** Duong, Moneta, Lillo, Giannetti y Nguyen (arXiv:2610.37487 v1, 27-oct-2026, 54 pp.; resumen e introducción leídos): red contemporánea no gaussiana (DirectLiNGAM) entre 51 bancos europeos, con puntajes de impacto (SIS) y vulnerabilidad (SVS) ponderados por capitalización.
+  - **Lo útil:** los roles **receptores** se reproducen mejor que los transmisores, y algunas conexiones informan sobre la dependencia de cola posterior.
+  - **Límite que declaran los propios autores:** el modelo de muestra completa **no cumple el criterio de independencia de choques** que exige la identificación, y otros órdenes dan asimetrías parecidas. La dirección causal no está identificada.
+  - **Qué cambia:** nada. Confirma que las medidas de mercado (ΔCoVaR, MES, SRISK) miden mejor la **vulnerabilidad** que la **causalidad**.

@@ -1,6 +1,6 @@
 # Estado de los tres doctorados
 
-> Actualizado: 2026-10-28 (laboratorio: C7 con ficha y comprobación; sigue en Parcial); antes 2026-10-19 (laboratorio: C9 de Sin a Parcial; contabilidad queda sin áreas en Sin); antes 2026-10-19 (trabajo continuo del 18-oct: C4 de Sin a Parcial); antes 2026-10-16 (trabajo continuo: C3 de Sin a Parcial); antes 2026-10-14 (laboratorio: C8 de Sin a Parcial); antes 2026-10-12 (laboratorio: D10; antes 2026-10-10, conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
+> Actualizado: 2026-10-29 (laboratorio: F11 con ficha de ΔCoVaR; sigue en Parcial); antes 2026-10-28 (laboratorio: C7 con ficha y comprobación; sigue en Parcial); antes 2026-10-19 (laboratorio: C9 de Sin a Parcial; contabilidad queda sin áreas en Sin); antes 2026-10-19 (trabajo continuo del 18-oct: C4 de Sin a Parcial); antes 2026-10-16 (trabajo continuo: C3 de Sin a Parcial); antes 2026-10-14 (laboratorio: C8 de Sin a Parcial); antes 2026-10-12 (laboratorio: D10; antes 2026-10-10, conciliación; antes decía 2026-10-05 aunque la tabla ya tenía notas del 8, 9 y 10-oct). Lo mantienen el laboratorio, el trabajo continuo y el balance mensual. Cobertura: **Sin** = nada en el repositorio; **Parcial** = hay material, pero no cubre el área; **Capítulo** = capítulo escrito sin ficha comprobada; **Comprobada** = capítulo y ficha con ejercicio en el estado de dominio. Las filas "Sin" y "Parcial" tienen su tema en `conocimiento/estado-de-dominio.csv`, en "Pendiente" o "Documentado", para que las rutinas las tomen.
 
 ## Doctorado en finanzas (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
@@ -15,7 +15,7 @@
 | F8 | Valuación | cap. 03 | Capítulo |
 | F9 | Econometría financiera y aprendizaje automático | caps. 20 y 09 | Capítulo |
 | F10 | Finanzas internacionales y macrofinanzas | cap. 16 | Capítulo |
-| F11 | Intermediación financiera, banca y riesgo sistémico | cap. 17 (crisis) | Parcial |
+| F11 | Intermediación financiera, banca y riesgo sistémico | cap. 17 (crisis); ficha 29-oct (ΔCoVaR de Adrian-Brunnermeier con regresión cuantílica propia y comprobación; bancos de EUA y México) | Parcial |
 
 ## Doctorado en derecho fiscal (11 áreas)
 | # | Área | Dónde está hoy | Cobertura |
