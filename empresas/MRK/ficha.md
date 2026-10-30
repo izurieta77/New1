@@ -84,3 +84,6 @@ Capitalización de US$365.1 mil M y VE de 411.9 mil M. **P/U 2027e de 15.5x** (9
 11. Yahoo chart de MRK.MX (consultado el 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/MRK.MX
 12. Yahoo Finance (24-sep-2026): https://finance.yahoo.com/healthcare/articles/merck-jumps-winrevair-moves-earlier-200515525.html · https://finance.yahoo.com/healthcare/articles/merck-remigromig-tri-specific-agonist-104500588.html
 13. Conocimiento interno `conocimiento/24-politica-publica-regulacion-y-mercados.md` (Sección 232), 25-sep-2026.
+
+## Adenda (30-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-30.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+KO-ingresos-3T26,2026-10-27,13380,,-2.84,no,,https://www.sec.gov/Archives/edgar/data/21344/000162828026067403/a2026q3earningsreleaseex-9.htm
+KO-upa_comparable-3T26,2026-10-27,0.91,,-1.10,si,,https://www.sec.gov/Archives/edgar/data/21344/000162828026067403/a2026q3earningsreleaseex-9.htm
+KO-ingresos_mayor_consenso-3T26,2026-10-27,13380,1,,,0.1156,https://www.sec.gov/Archives/edgar/data/21344/000162828026067403/a2026q3earningsreleaseex-9.htm
+KO-upa_mayor_consenso-3T26,2026-10-27,0.91,1,,,0.1444,https://www.sec.gov/Archives/edgar/data/21344/000162828026067403/a2026q3earningsreleaseex-9.htm

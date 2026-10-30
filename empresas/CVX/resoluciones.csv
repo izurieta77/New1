@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+CVX-ingresos-3T26,2026-10-30,67798,,-1.47,si,,https://www.sec.gov/Archives/edgar/data/93410/000009341026000196/a09302026ex9918-k.htm
+CVX-upa_ajustada-3T26,2026-10-30,5.28,,-20.45,si,,https://www.sec.gov/Archives/edgar/data/93410/000009341026000196/a09302026ex9918-k.htm
+CVX-ingresos_mayor_consenso-3T26,2026-10-30,67798,1,,,0.0025,https://www.sec.gov/Archives/edgar/data/93410/000009341026000196/a09302026ex9918-k.htm
+CVX-upa_ajustada_mayor_consenso-3T26,2026-10-30,5.28,1,,,0.5184,https://www.sec.gov/Archives/edgar/data/93410/000009341026000196/a09302026ex9918-k.htm

@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+ABBV-ingresos-3T26,2026-10-30,17404,,0.26,si,,https://www.sec.gov/Archives/edgar/data/1551152/000155115226000033/abbv-20260930xexhibit991.htm
+ABBV-upa_ajustada-3T26,2026-10-30,3.82,,-7.07,si,,https://www.sec.gov/Archives/edgar/data/1551152/000155115226000033/abbv-20260930xexhibit991.htm
+ABBV-ingresos_mayor_consenso-3T26,2026-10-30,17404,1,,,0.0900,https://www.sec.gov/Archives/edgar/data/1551152/000155115226000033/abbv-20260930xexhibit991.htm
+ABBV-upa_mayor_consenso-3T26,2026-10-30,3.82,0,,,0.0225,https://www.sec.gov/Archives/edgar/data/1551152/000155115226000033/abbv-20260930xexhibit991.htm

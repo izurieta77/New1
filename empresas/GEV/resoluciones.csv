@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+GEV-ingresos-3T26,2026-10-28,12642,,-5.08,no,,https://www.sec.gov/Archives/edgar/data/1996810/000199681026000162/gevpressrelease3q26.htm
+GEV-upa-3T26,2026-10-28,4.81,,-18.92,no,,https://www.sec.gov/Archives/edgar/data/1996810/000199681026000162/gevpressrelease3q26.htm
+GEV-ingresos_mayor_consenso-3T26,2026-10-28,12642,1,,,0.2704,https://www.sec.gov/Archives/edgar/data/1996810/000199681026000162/gevpressrelease3q26.htm
+GEV-upa_mayor_consenso-3T26,2026-10-28,4.81,1,,,0.3844,https://www.sec.gov/Archives/edgar/data/1996810/000199681026000162/gevpressrelease3q26.htm

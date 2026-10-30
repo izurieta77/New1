@@ -99,3 +99,6 @@ Notas:
 8. Nasdaq/Zacks, fecha, pronósticos y sorpresas (consultados el 25-sep-2026): https://api.nasdaq.com/api/analyst/KO/earnings-date · https://api.nasdaq.com/api/company/KO/earnings-surprise
 9. 8-K, comunicado 3T25 (21-oct-2025): https://www.sec.gov/Archives/edgar/data/21344/000162828025045577/a2025q3earningsreleaseex-9.htm
 10. Conocimiento interno `conocimiento/23-geopolitica-y-riesgo-politico-global.md`, cronología de la guerra de Irán, y `conocimiento/24-politica-publica-regulacion-y-mercados.md` §4.1 (25-sep-2026).
+
+## Adenda (30-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-30.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

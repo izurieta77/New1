@@ -121,3 +121,6 @@ Verificador adversarial. Nivel de acceso: comunicados 8-K del 3T25, 4T25, 1T26 y
 
 **Sigue sin verificar (ya marcado o solo de fuente secundaria):** precios de pedidos >20% sobre el 4T25 (solo en la transcripción [10]); plantas de Prolec fuera de EUA; cliente >10%; historial de sorpresas de ingresos anterior al 2T26.
 **Veredicto:** confiable. Resultados, guía, consenso y hechos de la cadena causal coinciden con las fuentes primarias. Los errores fueron un dato de la tabla (UPA del 4T25), la fecha no reconocida como confirmada, la mezcla de bases GAAP y ajustada en el consenso de Zacks y supuestos incompletos. Ninguno cambia el punto, los intervalos ni los binarios.
+
+## Adenda (30-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-30.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

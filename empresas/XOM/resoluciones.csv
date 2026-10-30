@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+XOM-ingresos-3T26,2026-10-30,113164,,-0.14,si,,https://www.sec.gov/Archives/edgar/data/2115436/000211543626000018/livef8k3q26992.htm
+XOM-upa_ajustada-3T26,2026-10-30,4.23,,-16.08,no,,https://www.sec.gov/Archives/edgar/data/2115436/000211543626000018/livef8k3q26992.htm
+XOM-ingresos_mayor_consenso-3T26,2026-10-30,113164,1,,,0.0144,https://www.sec.gov/Archives/edgar/data/2115436/000211543626000018/livef8k3q26992.htm
+XOM-upa_ajustada_mayor_consenso-3T26,2026-10-30,4.23,1,,,0.3249,https://www.sec.gov/Archives/edgar/data/2115436/000211543626000018/livef8k3q26992.htm

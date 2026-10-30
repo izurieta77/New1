@@ -1,0 +1,5 @@
+id,fecha_resolucion,valor_real,resultado_binario,error_punto_pct,dentro_p10_p90,brier,fuente
+MRK-ingresos-3T26,2026-10-29,18085,,-2.96,no,,https://www.sec.gov/Archives/edgar/data/310158/000110465926119825/tm2628203d1_ex99-1.htm
+MRK-upa_nogaap-3T26,2026-10-29,2.49,,-7.63,si,,https://www.sec.gov/Archives/edgar/data/310158/000110465926119825/tm2628203d1_ex99-1.htm
+MRK-ingresos_mayor_consenso-3T26,2026-10-29,18085,1,,,0.1156,https://www.sec.gov/Archives/edgar/data/310158/000110465926119825/tm2628203d1_ex99-1.htm
+MRK-upa_mayor_consenso-3T26,2026-10-29,2.49,1,,,0.1225,https://www.sec.gov/Archives/edgar/data/310158/000110465926119825/tm2628203d1_ex99-1.htm

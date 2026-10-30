@@ -137,3 +137,6 @@ SBC/ingresos: n.d. (no está en companyfacts; *inferencia:* inmaterial). Las acc
 17. Motley Fool vía Yahoo, GNL a 2030 (22-sep-2026): https://finance.yahoo.com/energy/articles/exxon-just-set-bold-2030-160501222.html
 18. Bloomberg vía Yahoo, Sheffield (24-sep-2026): https://finance.yahoo.com/energy/articles/shale-tycoon-claims-exxon-ceo-124336695.html
 19. Investing.com, transcripción del 2T26 (31-jul-2026): https://www.investing.com/news/transcripts/earnings-call-transcript-exxonmobil-posts-strong-q2-2026-results-as-shares-slip-93CH-4828782
+
+## Adenda (30-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-30.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

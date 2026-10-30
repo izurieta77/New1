@@ -84,3 +84,6 @@ Capitalización de US$468.5 mil M y VE de 532.9 mil M. P/U 2026e de **18.9x** (U
 11. MarketBeat, historial y guía (consultado el 25-sep-2026): https://www.marketbeat.com/stocks/NYSE/ABBV/earnings/
 12. Yahoo chart de ABBV.MX (consultado el 25-sep-2026): https://query1.finance.yahoo.com/v8/finance/chart/ABBV.MX
 13. Conocimiento interno `conocimiento/24-politica-publica-regulacion-y-mercados.md` (Sección 232 a fármacos; Crowell y Duane Morris), 25-sep-2026.
+
+## Adenda (30-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-30.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.

@@ -119,3 +119,6 @@ Verificador adversarial. Fuentes primarias leídas: 8-K ex. 99.1 del 2T26 (ínte
 **Calibración (para el post-mortem):** el punto de UPA (4.20) queda 11% debajo del consenso, contra un historial de 7 sorpresas positivas en 8 trimestres. La tesis es que los efectos de tiempo del 3T26 serán negativos: el Brent subió de 72.9 a 106.6. *Inferencia:* con la sensibilidad observada en el 1T26 (~−US$50 M por dólar), el alza de ~US$34 implica ≈ −US$1.7 mil M, más negativo que los −1.3 mil M del puente, así que la tesis es coherente. El riesgo es que el mercado ya los descuente tras el aviso interino (~8-9 oct) y que los márgenes de refinación sorprendan. El punto de ingresos queda 18% sobre el consenso. *Inferencia:* el consenso de ingresos parece desactualizado (solo 8 analistas; el 2T26 fue de 70,055 con un Brent similar).
 
 **Veredicto:** confiable con correcciones. Las cifras del 2T26 y la guía del 3T26 están bien. El error material era de base: el pronóstico de ventas se comparaba con un consenso de ingresos totales, y el binario de ingresos era incoherente con su propio intervalo. Ambos quedaron corregidos en la ficha y en `pronosticos.csv`.
+
+## Adenda (30-oct-2026, cierre): resultado del 3T26
+- Ver `post-mortem-2026-10-30.md` y `resoluciones.csv`. Los pronósticos de la §8 no se modifican.
