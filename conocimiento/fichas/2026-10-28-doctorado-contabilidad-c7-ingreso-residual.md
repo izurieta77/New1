@@ -23,16 +23,17 @@
 2. **Contraejemplo, excedente sucio:** un ORI de −2 por año que no pasa por la utilidad. RIV − DDM = **20.5473** = VP exacto del ORI en 30 años (20.5473). El RIV sobrevalúa justo lo que el ORI le quita al libro.
 3. **Visa, excedente limpio por año** (ΔB − (X − D − recompras)): el residuo sin ORI es de **+0.2 a +1.1 mil M USD por año** desde 2010.
    - Encaja con los pagos en acciones que se abonan al capital: es la partida "sucia" típica de una emisora con mucha compensación en acciones.
-   - 2008 es la OPI (emisión de 34 mil M).
+   - 2008 es la reestructuración y la OPI: el residuo de 34.3 mil M suma la OPI (ProceedsFromIssuanceOfCommonStock 19.1 mil M) y las acciones emitidas en la reorganización de oct-2007 (StockIssued, no monetario, 17.9 mil M), menos ajustes. [Verificador W44, 30-oct-2026: antes decía "OPI (emisión de 34 mil M)"; fuente: SEC companyfacts, 10-K FY2010.]
    - El ORI llegó a −2.81 mil M (2022, tipo de cambio).
 4. **Qué descuenta el precio** (B FY25 de 37.9 mil M; ROE de 51.3%; r = 9%, supuesto):
    - capitalización de 756 mil M ⇒ **g perpetuo del ingreso residual ≈ 6.8%** (5.7% con r = 8%; 7.8% con r = 10%);
    - **segunda comprobación:** Gordon sobre distribuciones con pago = 1 − g/ROE da los mismos 756 mil M.
+   - [Verificador W44, 30-oct-2026: insumos FY25 confirmados en companyfacts (B 37,909 M; X 20,058 M; B FY24 39,137 M), así como 1,882 M de acciones diluidas del 4T FY26 y el cierre de 401.86 del 27-oct (Yahoo). Pero el mismo 8-K del 27-oct ([q42026earningsrelease.htm](https://www.sec.gov/Archives/edgar/data/1403161/000140316126000126/q42026earningsrelease.htm)) ya trae el **FY26**: patrimonio de 36,111 M al 30-sep-2026 y utilidad de 23,504 M, lo que da un ROE de 62.0%. Con esos datos (r = 9%), **g ≈ 6.3%** (5.3% con r = 8%; 7.4% con r = 10%), con un pago implícito de 90% (D1 de 20.1 mil M). El 6.8% es correcto con los datos FY25, pero mezcla el libro de hace un año con el precio y las acciones de oct-2026. Cálculo propio.]
 
 ## Evidencia empírica y límites
 - Con ROE de 51% el libro casi no informa: el 95% del valor es VP del ingreso residual.
 - El supuesto que pesa es g: con P = 756, un g de 6.8% para siempre equivale a que Visa crezca más que la economía nominal indefinidamente. [Inferencia] El precio descuenta que la ventaja de la red se mantiene.
-- **Inconsistencia que detecta el modelo:** en estado estacionario el pago implícito sería de 87% (1 − 6.8/51.3), con distribuciones de 16.9 mil M. Visa distribuyó 22.9 mil M en FY25, más de lo que gana: el libro baja y el ROE sube por construcción. **Con recompras mayores a la utilidad, el ROE no es una variable exógena.** Se debe modelar el ingreso residual sobre el capital invertido operativo, no sobre el patrimonio contable (Penman; no leído).
+- **Inconsistencia que detecta el modelo:** en estado estacionario el pago implícito sería de 87% (1 − 6.8/51.3), con distribuciones de 16.9 mil M. Visa distribuyó 22.9 mil M en FY25 (25.6 mil M en FY26, contra una utilidad de 23.5 mil M; 8-K del 27-oct, [Verificador W44]), más de lo que gana: el libro baja y el ROE sube por construcción. **Con recompras mayores a la utilidad, el ROE no es una variable exógena.** Se debe modelar el ingreso residual sobre el capital invertido operativo, no sobre el patrimonio contable (Penman; no leído).
 - La evidencia empírica de Ohlson citada en el EFMA (Bernard 1995: 68% contra 29% de los dividendos; Penman-Sougiannis 1998; Francis-Ohlson-Oswald 2000) es **de segunda mano**: no se usa como prueba.
 
 ## Contraejemplo
