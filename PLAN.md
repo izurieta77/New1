@@ -117,17 +117,17 @@ Decisión del dueño (25-sep-2026): describió el patrón de horarios de un riva
 
 ## 8. Avance (lo actualiza la auditoría del viernes)
 
-Última actualización: auditoría semanal 2026-W43 (23-oct-2026, ~23:00 UTC; hora real del commit `5e9f0b7`: 22:55:05 UTC, nota de la conciliación del 24-oct, fallo 2026-10-23 §5). Detalle en `bitacora/semanal/2026-W43.md`. (Antes: W42, 16-oct.)
+Última actualización: auditoría semanal 2026-W44 (30-oct-2026). Detalle en `bitacora/semanal/2026-W44.md`. (Antes: W43, 23-oct.)
 
 | Indicador | Valor | Fecha |
 |---|---|---|
-| Pronósticos registrados / resueltos | Bitácora 174 / 74 (33 resueltos en la semana, con Brier de la semana 0.1697). Empresas: 57 numéricos con intervalo, 48 dentro del p10-p90 (84.2%; en la semana 34 de 41, 82.9%) | 23-oct-2026 |
-| Brier acumulado | **0.1979** (n = 74), **no distinguible de 0.20** (IC 95%: 0.167-0.229). Agrupado por variable da 0.2056 y sin duplicados ni triviales, 0.226 (`bitacora/semanal/2026-W43-abogado.md` §3); el umbral **no se da por cumplido**. Por autor: claude 0.2115 (n = 44), vigía 0.1799 (n = 26), cripto 0.1647 (n = 4). Binarios de empresas: 0.1929 (n = 57). El abogado del diablo auditó si 0.1979 se distingue de 0.20: no se distingue (`bitacora/semanal/2026-W43-abogado.md`) [Nota conciliación 24-oct-2026 03:0x UTC, `bitacora/arbitraje/2026-10-23.md` §8 (revisión 2.4)]: tiempo verbal corregido] | 23-oct-2026 |
-| Cuenta real arena: TWR / drawdown máximo | GBM +0.44% / −0.91% (efectivo registrado, sin confirmar); Binance +0.21% / −1.71% | 23-oct-2026 |
-| Portafolio de papel: TWR / drawdown máximo | GBM +0.97% / −3.35%. Referencias desde el 28-sep: benchmark 50/50 +2.03%; S&P 500 TR en MXN +3.02%; IPC +7.60%; CETES ≈ +0.41% (proxy de 6.21%). Binance +0.87% / −1.76%. **Comité W43: B1, recortar 1 UPRO (O0006, lunes 26-oct)** | 23-oct-2026 (desde el 28-sep) |
-| Estado de dominio | 62 temas: 14 Documentado, 14 Documentado con comprobación, 15 Comprendido con comprobación, 6 Contrastado, 7 Replicado, 4 Capítulo, 2 Localizado. En la semana subieron 4 (Brier, Fiscalidad SIC, D1, C4-C5) y se agregaron 6 (cripto) | 23-oct-2026 |
-| Laboratorio | 37 pruebas en el resumen: 0 ventaja demostrada, 9 oportunidad investigable, 25 descartadas, 3 no aplica. En la semana: R12, R16, R17, R18 (+ adenda) y R19 (AC-21 a AC-25) | 23-oct-2026 |
-| Rivales con datos | 4 cuentas reales. **Las de GBM son del registro: la cuenta compartida no cuadra** (`competencia/conciliacion-cuenta-gbm-2026-10-22.md`) | 23-oct-2026 |
-| Criterio de salida de fase 0 | **Se cumple 1 de 3:** ≥ 50 resueltos (74). **Brier no** (0.1979 puntual, pero no distinguible de 0.20; depurado, 0.21-0.23). **Faltan** los 3 meses (25-dic-2026). Prueba propuesta: Brier ≤ 0.20 con cota superior del IC < 0.21 y n ≥ 100 agrupado por variable | 23-oct-2026 |
-| Días para fin de fase 0 del patrimonio principal | 66 (28-dic-2026) | 23-oct-2026 |
-| Días para fin de la temporada arena | 97 (28-ene-2027) | 23-oct-2026 |
+| Pronósticos registrados / resueltos | Bitácora 210 / 131 (57 resueltos en la semana, con Brier de la semana 0.1670). Empresas: 93 numéricos con intervalo, 76 dentro del p10-p90 (81.7%; en la semana 28 de 36, 77.8%) | 30-oct-2026 |
+| Brier acumulado | **0.1845** (n = 131), IC 95% 0.163-0.206; arriba de 0.20 en el 8.1% de los remuestreos (W43: 44%). Agrupado por variable y fecha: 0.1832. **El umbral no se da por cumplido** (el IC cruza 0.20). Por autor: claude 0.2004 (n = 86), vigía 0.1604 (n = 36), cripto 0.1286 (n = 9). Binarios de empresas: 0.1845 (n = 93). Frente a mercados de predicción (3 pares): propio 0.0761 contra 0.0589 del mercado | 30-oct-2026 |
+| Cuenta real arena: TWR / drawdown máximo | GBM +0.42% / −1.17% (efectivo registrado, sin confirmar); Binance −1.87% / −3.75% (retiros de Binance cerrados desde el 30-oct) | 30-oct-2026 |
+| Portafolio de papel: TWR / drawdown máximo | GBM +0.56% / −3.69%. Referencias desde el 28-sep: benchmark 50/50 +2.13%; S&P 500 TR en MXN +3.68%; IPC +7.37%; CETES ≈ +0.57%. Binance −1.25% / −3.79%. **Comité W44: U0, vender el último UPRO (O0008, lunes 2-nov); O0007 anulada; regla única de contingencia "retirar, no vender"** | 30-oct-2026 (desde el 28-sep) |
+| Estado de dominio | 72 temas: 14 Documentado, 21 Documentado con comprobación, 17 Comprendido con comprobación, 8 Contrastado, 7 Replicado, 4 Capítulo, 1 Localizado. En la semana subieron 3 y se agregaron 10 | 30-oct-2026 |
+| Laboratorio | 40 pruebas en el resumen: 0 ventaja demostrada, 9 oportunidad investigable, 23 descartadas, 8 no aplica. En la semana: R19b, R20, R21, R22 y R22b (AC-26 a AC-29) | 30-oct-2026 |
+| Rivales con datos | 4 cuentas reales; Claude va adelante en GBM y en Binance (+1.46 pp sobre Grok GBM). Las de GBM siguen siendo del registro (cuenta compartida sin cuadrar) | 30-oct-2026 |
+| Criterio de salida de fase 0 | **Se cumple 1 de 3:** ≥ 50 resueltos (131). **Brier no** (0.1845 puntual; IC cruza 0.20). **Faltan** los 3 meses (25-dic-2026). Prueba propuesta: Brier ≤ 0.20 con cota superior del IC < 0.21 y n ≥ 100 agrupado por variable: **la cota superior ya es 0.206 (< 0.21) y el agrupado 0.1832 con 114 grupos**; falta el plazo y que la cota quede bajo 0.20 para declararlo | 30-oct-2026 |
+| Días para fin de fase 0 del patrimonio principal | 59 (28-dic-2026) | 30-oct-2026 |
+| Días para fin de la temporada arena | 90 (28-ene-2027) | 30-oct-2026 |
