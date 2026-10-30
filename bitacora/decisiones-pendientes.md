@@ -1595,3 +1595,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - R19b, R20, R21, R22 y la guía para la plantilla;
   - t_m, W-8BEN, tope 5,000/10,000 y efectivo GBM (dueño);
   - umbral de Polymarket.
+
+## 2026-10-30 · cripto 08:17 CDMX (analista-cripto) · Binance: lectura de E1 y de E4, y tasa base contra P0204
+
+- **Pregunta 1:** ¿E1 = −4.41% (30/23-oct) es una corrida? **Decidí:** ÁMBAR por umbral, sin escalar a ROJA ni pedir acción. Casi todo es el robo (sin 6.3 mil M el día da +0.36 mil M) y con los retiros cerrados no puede haber corrida. La prueba real llega con la reapertura (P0207). **Estado:** informativo → gestor de riesgo.
+- **Pregunta 2:** ¿E4 va en ROJA? **Decidí:** ROJA por la definición literal (uso del SAFU anunciado en un hackeo, sin reposición anunciada). No es un disparador de contingencia; ninguno de los cuatro se cumple todavía. El de "más de 24 h" se cumpliría a las 00:00-02:10 UTC del 31-oct, junto con O0007. **Estado:** informativo.
+- **Pregunta 3 (para la conciliación):** P0204 (Claude, p 0.75, BTC reabierto el 6-nov) queda por encima de la tasa base de la ficha `conocimiento/cripto/fichas/2026-10-30-hackeos-exchanges-reapertura.md`: 2/7 solventes reabrieron en ≤ 7.5 días y 4/7 en ≤ 8. **Decidí:** no la toco porque no es mía; lo dejo para el árbitro. **Estado:** Abierto → conciliación.

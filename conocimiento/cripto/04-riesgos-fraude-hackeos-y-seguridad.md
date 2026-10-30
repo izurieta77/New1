@@ -191,3 +191,10 @@ Este capítulo existe para ver venir ese riesgo con datos públicos.
 - **[H, B]** En 40 exchanges (2010-2013), 18 cerraron. De 9 con brecha, 5 cerraron después. De los cerrados con evidencia, 6 dicen haber reembolsado y 5 no.
 - **[H, B]** En el modelo de riesgos proporcionales, el volumen reduce el riesgo de cierre y la brecha lo multiplica por 2.36 (p = 0.134). Los más populares sufren más brechas.
 - **[I]** Para Binance (hackeo de US$5.3-5.8 mil M con retiros pausados, 29-oct-2026), el tamaño es protector contra el cierre, pero la muestra no tiene un caso de ese tamaño. El dato que falta es **cuánto duran las pausas de retiro**, que es lo que mide el disparador de 24 h de `config/parametros.json`.
+
+### Adenda (30-oct-2026, analista cripto): cuánto dura la pausa, cuánto se va el cliente al reabrir y cuánto recupera
+- **Ficha:** `fichas/2026-10-30-hackeos-exchanges-reapertura.md` (con su `.py` y la foto `.json`). Son 11 casos, de Mt.Gox 2014 a Bitget 2026, con fechas de prensa B que coincide.
+- **[I]** De 7 exchanges solventes que pausaron retiros, **ninguno reabrió en 48 h**. La mediana es de **8 días** (rango 4-20) y la reapertura es por fases: primero BTC o fiat. Los insolventes tardan de meses a años (DMM 281 días, WazirX 463, Mt.Gox nunca).
+- **[I]** Con el método F en DefiLlama, al reabrir **Bitget perdió −10.2%** de sus reservas en 3 días y **Bybit −27.0%** en 2 (Bybit no pausó). En ambos casos, la reposición tapó la corrida en la ventana de 7 días.
+- **[I]** Recuperación: los solventes pagaron **100% nominal** (Bitfinex con un recorte de 36% que redimió en ~8 meses); los insolventes, 0.68 en promedio y tarde.
+- **[I]** Binance (US$6.3 mil M) pierde **4.3%** de sus reservas sin BNB, menos que Bybit (9.0%) o Bitget (6.3%), que pagaron todo. El riesgo inmediato es la cola de retiros al reabrir, no la quiebra. Por eso conviene sacar el saldo en la primera hora de reapertura del riel.

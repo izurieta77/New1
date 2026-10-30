@@ -255,6 +255,21 @@
   - El estudio de hoy da la calibración: en 90 días la prima de cierre de BTCMXN tuvo |p| > 0.5% en el 1.3% de las horas, con vida media de 0.4 h, y se mueve −0.30 pp por cada +1% del USD/MXN. E9 mide liquidez, no un precio roto. Refuerza la propuesta de medir contra el implícito con un umbral de compra < −1.0%.
 - **E6, E7, E10:** sin novedad de exchanges centralizados. El hackeo de Drift (DeFi en Solana, ~270 M) no es un exchange top-10. Bitget, hackeado en septiembre, planea comprar un exchange tailandés (titulares, B); no se verificó el estado de sus retiros.
 - **Conclusión: no hay disparador.** No hay ninguna ROJA. Las ÁMBAR son E5 y A9 (sin cambio), E3 (por umbral) y E9 (intermitente, a la baja).
+
+**Seguimiento del 30-oct-2026** [I]. Revisión de contraparte de la corrida de las 08:17 del viernes, **en pleno evento de cola**: el hackeo de Binance (US$6.3 mil M, comunicado A) y los retiros pausados desde ≈00:00 UTC. Consultas de 14:22 a 14:31 UTC. El estudio de hoy: hackeos de exchanges y tasas base de reapertura ([`fichas/2026-10-30-hackeos-exchanges-reapertura.md`](fichas/2026-10-30-hackeos-exchanges-reapertura.md)):
+
+- **E1 (método F, réplica `bitacora/arbitraje/2026-10-25-e1-metodo-f.py`):** 30-oct contra 23-oct, **−4.41%** (−US$6.15 mil M). **ÁMBAR**: pasa el umbral de −2.1% y no llega al ROJO de −5.3%. La réplica reproduce las cifras de 27/20 (+0.72%), 28/21 (−0.06%) y 29/22 (+0.28%). Casi todo es el robo: el día 29→30 da −5.94 mil M, y sin los 6.3 mil M queda en +0.36 mil M. Con los retiros cerrados no puede haber corrida; la prueba real llega al reabrir (P0207).
+- **E2:** rastreado sin BNB, US$133.21 mil M; **BNB 15.8%**; BTC 645,677 (−0.58% contra el 23-oct y −2.44% en un día, −16.0 mil BTC el 29→30, sin explicar). **VERDE** por umbral.
+- **E3:** no hay PoR nueva. Binance promete una "once the remediation is complete" (A). La prensa (IBTimes, CCN; C) dice que el ETH podría quedar < 1:1. Contra eso, DefiLlama todavía ve 7.21 M de ETH+WETH, frente a los 3.80 M de pasivos de la PoR del 1-oct; las canastas no son comparables, así que no se concluye nada. **ÁMBAR**, con riesgo de ROJA si la PoR nueva sale < 100%.
+- **E4:** SAFU de 15,000 BTC × 76,890 ≈ US$1.15 mil M. Binance dice que cubre "from the SAFU fund and the company's funds" (A) y no ha anunciado la reposición. CZ habla de un hueco de ~2 mil M (The Defiant, B−). **ROJA** por definición: uso del fondo en un hackeo sin reposición anunciada.
+- **E5:** sin cargos ni restricción a México. El regulador de EAU "vigila" a Binance (Gulf News, B−). **ÁMBAR** sin cambio.
+- **E6:** 0/990 retiros; BTC y MXN cerrados ([endpoint](https://www.binance.com/bapi/capital/v1/public/capital/getNetworkCoinAll), A). **ROJA** (A2).
+- **E7:** incidente mayor que el SAFU, con comunicado en menos de 24 h. **ROJA** (A11).
+- **E8:** USDC/USDT 1.00176 y FDUSD/USDT 0.9981 (Binance); USDT/USD 0.99824 y USDC/USD 0.9997 (Kraken). **VERDE**. Los congelamientos de Tether y Circle recaen sobre el atacante, no sobre Binance.
+- **E9:** seis muestras de BTCMXN (14:22-14:30 UTC): 0.094, 0.066, 0.137, 0.383, 0.274 y 0.231%; **mediana 0.18%, VERDE**. La compra está −0.04% contra el implícito (76,890 × 18.8513).
+- **E10:** ningún rival top-10 pausó retiros. Binance TR, que es filial, pausó (Türkiye Today, B); Aave congeló préstamos en 16 redes y Jupiter Lend demora retiros (B). **VERDE** por umbral, con vigilancia diaria.
+- **Conclusión:** hay **cuatro ROJAS** (E4, E6, E7 y A2/A11), pero **ningún disparador formal de la contingencia se cumple todavía**. El de "más de 24 h" se cumpliría a las 00:00-02:10 UTC del 31-oct; los otros tres no aplican. La alerta alta sigue abierta y O0007 queda igual. No se proponen órdenes nuevas.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
