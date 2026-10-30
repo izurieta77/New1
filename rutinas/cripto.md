@@ -26,6 +26,6 @@ Sesión: "Sistema de inversión · Inteligencia y cripto". Agente: `analista-cri
 6. **Alertas:** si una posición abierta tiene cripto y hay un movimiento de 8% o más en 4 horas, o un evento de cola (exchange, stablecoin o regulación), agrégalo a `bitacora/alertas.md`.
 7. **Cierre de la rutina:**
    - latido;
-   - **Antes del commit (orquestador, 29-oct-2026; fallos `bitacora/arbitraje/2026-10-27.md` §1 y `2026-10-28.md` C1):** escribe la hora de tu latido y de tus notas con `python3 herramientas/latidos.py ahora` (o `date -u`) en ese momento, y corre `python3 herramientas/latidos.py antes-de-commit --bitacora`; si avisa, corrige la hora antes de hacer el commit. Nunca escribas una hora posterior al momento del commit ni rangos que terminen en el futuro;
+   - **Antes del commit (orquestador, 29-oct-2026; fallos `bitacora/arbitraje/2026-10-27.md` §1 y `2026-10-28.md` C1):** escribe la hora de tu latido y de tus notas con `python3 herramientas/latidos.py ahora` (o `date -u`) en ese momento, **y encadena el control al commit**: `python3 herramientas/latidos.py antes-de-commit --bitacora && git commit …` (si sale `LATIDO MAL`, rc 1, el commit no ocurre: corrige la hora con `$(python3 herramientas/latidos.py ahora)` y repite). El latido se escribe como **último paso** antes de ese comando [ajuste 30-oct-2026, revisión del 29-oct C1]. Nunca escribas una hora posterior al momento del commit ni rangos que terminen en el futuro;
    - commit `cripto: AAAA-MM-DD HH:MM`, pull --rebase y push, con hasta 4 reintentos;
    - respuesta final de 6 líneas o menos.
