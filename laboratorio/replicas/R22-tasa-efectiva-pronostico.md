@@ -56,7 +56,7 @@
 - **Por qué difieren:** la regla de A ("gana la etiqueta de utilidad antes de impuestos con la serie más larga") elige, en 12 emisoras (WMT, HD, JNJ, ABBV, UNH, GOOGL, NFLX, V, NVDA, MSFT, AMAT, TMO), una etiqueta que **dejó de reportarse en 2021**, así que esas emisoras se quedan sin objetivos desde 2022. Se suman GE y XOM. **Con la regla de A, B reproduce A al tercer decimal.**
 - **Estado (rige el más conservador):** **No replicado.** H1 y H2 quedan refutadas en A y sostenidas en B; la discrepancia se explica por un defecto de datos de A (registro de errores), no por el método.
 - **Lectura vigente** [inferencia, válida en las dos construcciones]:
-  - la **mediana de 4 trimestres le gana siempre al último trimestre**, por 0.35 a 1.24 pp de MAE;
+  - la **mediana de 4 trimestres le gana siempre al último trimestre**, por 0.35 a 1.24 pp de MAE; [Nota orquestador 2026-10-30 01:11 UTC, revisión del 29-oct m1: "le gana siempre" es más fuerte de lo que sostiene A. Lo correcto: **gana en el punto en las dos construcciones; con significancia estadística solo en B** (signos p = 0.022 en B, contra p = 0.085 en A, que es el lado que rige).]
   - el 21% fijo es la peor regla (5.7-6.4 pp);
   - aun con la mejor regla, el error típico es de **~3-3.6 pp de tasa ≈ 4-5% de UPA**, y el intervalo de la UPA tiene que incluirlo.
   - H2 (≤ 3 pp) es frágil.

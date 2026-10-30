@@ -4,7 +4,7 @@
 
 ## 1. Resultado real ([comunicado del 8-K](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm), leído por WebFetch)
 - Ventas netas de US$201,944 M (+12.1% contra 180,169); AWS 45,984 (+39%) con utilidad operativa de 17,773; utilidad de operación de 28,076; UPA diluida GAAP de 1.89 (1.95 en el 3T25, que llevaba 9.5 mil M de ganancias de Anthropic); otros ingresos de −703 M. Guía del 4T: ventas de 240-247 mil M y utilidad de operación de 28.5-33.5 mil M.
-- **Precio:** cierre regular 243.79; after-hours 231.12 (−5.2%) (Yahoo).
+- **Precio:** cierre regular 243.79; after-hours 231.12 (−5.2%) [Nota 2026-10-30 01:11 UTC, revisión del 29-oct m5: precio de Yahoo 1m de las 21:38-21:39 UTC del 29-oct (consulta del cierre); las lecturas posteriores difieren] (Yahoo).
 
 ## 2. Pronósticos contra resultado
 | Pronóstico | Nuestro (p10-p90) | Consenso | Real | Error del punto | Puntuación |

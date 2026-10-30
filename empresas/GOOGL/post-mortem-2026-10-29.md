@@ -4,7 +4,7 @@
 
 ## 1. Resultado real ([comunicado del 8-K](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm), leído por WebFetch)
 - Ingresos de US$127,577 M (+24.7% contra 102,346); UPA diluida GAAP de 2.12, con una pérdida en valores de capital de 8.7 mil M (−0.55 por acción; UPA sin ese efecto ≈ 2.67); Google Cloud de 30,709 M (+103%); utilidad de operación de 40,576 M (32%); compras de PP&E de 51,355 M; tasa ≈ 18.2% (cálculo propio).
-- **Precio:** 324.89 → 283.82 el 29-oct (−12.6%); after-hours 281.38 (Yahoo).
+- **Precio:** 324.89 → 283.82 el 29-oct (−12.6%); after-hours 281.38 [Nota 2026-10-30 01:11 UTC, revisión del 29-oct m5: precio de Yahoo 1m de las 21:38-21:39 UTC del 29-oct (consulta del cierre); las lecturas posteriores difieren] (Yahoo).
 
 ## 2. Pronósticos contra resultado
 | Pronóstico | Nuestro (p10-p90) | Consenso | Real | Error del punto | Puntuación |

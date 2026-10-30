@@ -1552,3 +1552,12 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Decisión conservadora del orquestador:** alerta alta y escalada al dueño ahora, sin esperar las 24 h. Recomendación: sacar el MXN y el BTC del sublibro real (≈4,927 MXN) en cuanto haya algún riel abierto. Nada automático: requiere al dueño.
 - **Pide:** gestor de riesgo, que confirme o ajuste. Decisor, que dé instrucciones a las otras 2 IAs de la cuenta compartida. Supervisor, que mida cada 4 h si los retiros están abiertos o pausados.
 - **Estado:** Abierto → dueño (acción humana), gestor de riesgo, supervisor.
+
+## 2026-10-30 01:11 UTC · orquestador (trabajo continuo, 29-oct CDMX) · rezago de empresas: herramienta y lista completa
+- **Hecho:** `herramientas/rezago_empresas.py` (2 pruebas). Con hoy = 30-oct y una ventana de 3 días hay **28 empresas vencidas sin resolución**, algunas desde el 20-oct: GAP, KO, INBURSA, Megacable, OMA, Peñoles, GCC, GFNORTE, BBAJIO, CHDRAUI, GEV, KIMBER, LAB, LIVEPOL, ORBIA, RA, SIGMA, VOLARA, AAPL, GCARSO, GMEXICO, PINFRA, ABBV, AC, ALSEA, CVX, MRK y XOM.
+- **Regla nueva** en `rutinas/diaria-cierre.md` paso 4: la lista sale de la herramienta, no del calendario del brief.
+- **Para la auditoría semanal y el comité W44:**
+  - los binarios de empresa (`empresas/*/resoluciones.csv`) **no entran** al Brier global de `bitacora/pronosticos.csv`, así que la calibración que reportamos omite ~40 resoluciones de empresa con sus Brier;
+  - las 28 vencidas sesgan la muestra hacia lo que sí se revisó.
+- **Qué decidí (conservador):** no resolver hoy las 28 en un bloque, para no mezclar con la rutina de mercado. El cierre del 30-oct empieza por las de EUA con 8-K (AAPL, ABBV, CVX, MRK, XOM, KO, GEV) y la conciliación sigue con las mexicanas.
+- **Estado:** Abierto → cierre del 30-oct, conciliación y auditoría W44.

@@ -4,7 +4,7 @@
 
 ## 1. Resultado real ([comunicado del 8-K](https://www.sec.gov/Archives/edgar/data/50863/000005086326000188/q326earningsrelease.htm), leído por WebFetch)
 - Ingresos netos de US$16,513 M (+21% contra 13,653); UPA GAAP de 0.60 y **non-GAAP de 0.52**; margen bruto GAAP de 43.0% (non-GAAP 44.1%). **Guía del 4T: ingresos de 15.0-16.0 mil M y UPA non-GAAP de 0.25**.
-- **Precio:** cierre regular 92.07; after-hours 73.17 (**−20.5%**) por la guía (Yahoo).
+- **Precio:** cierre regular 92.07; after-hours 73.17 (**−20.5%**) [Nota 2026-10-30 01:11 UTC, revisión del 29-oct m5: precio de Yahoo 1m de las 21:38-21:39 UTC del 29-oct (consulta del cierre); las lecturas posteriores difieren] por la guía (Yahoo).
 
 ## 2. Pronósticos contra resultado
 | Pronóstico | Nuestro (p10-p90) | Consenso | Real | Error del punto | Puntuación |

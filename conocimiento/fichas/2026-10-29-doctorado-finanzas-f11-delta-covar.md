@@ -8,7 +8,7 @@
 - **Adrian y Brunnermeier, "CoVaR"**, NBER WP 17454 (*American Economic Review* 106(7), 2016). **Lectura íntegra de §1-§3.1** (definiciones, ec. 2-5 y estimación por regresión cuantílica). Grado **A** en la definición.
 - **Definición 1:** CoVaR_q^{j|i} es el VaR_q del sistema j condicionado a que la institución i esté en su VaR_q, y **ΔCoVaR_q^i = CoVaR_q^{j|X_i=VaR_q} − CoVaR_q^{j|X_i=Mediana}**.
 - **Con regresión cuantílica** (ec. 5): ΔCoVaR_q^i = β̂_q (VaR_q^i − VaR_50^i).
-- **Datos:** Yahoo, cierres ajustados semanales, 2005-2026 (1,138 semanas). Sistema: XLF para EUA e ^MXX para México.
+- **Datos:** Yahoo, cierres ajustados semanales, 2005-2026 (1,138 semanas). [Nota orquestador 2026-10-30 01:11 UTC, revisión del 29-oct m6: consulta del 29-oct-2026 entre las 17:51 y las 17:53 UTC (laboratorio; el commit `4acc431` es de las 17:53). Las barras semanales llegan a la semana del 26-oct-2026, y Yahoo puede reescribir la última.] Sistema: XLF para EUA e ^MXX para México.
 
 ## Supuestos y derivación
 - La regresión cuantílica ŷ_q = α̂_q + β̂_q x da el cuantil condicional del sistema; al evaluarla en x = VaR_q^i se obtiene CoVaR. La resta contra x = mediana deja solo la pendiente por la distancia entre cola y mediana.
