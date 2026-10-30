@@ -1561,3 +1561,12 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - las 28 vencidas sesgan la muestra hacia lo que sí se revisó.
 - **Qué decidí (conservador):** no resolver hoy las 28 en un bloque, para no mezclar con la rutina de mercado. El cierre del 30-oct empieza por las de EUA con 8-K (AAPL, ABBV, CVX, MRK, XOM, KO, GEV) y la conciliación sigue con las mexicanas.
 - **Estado:** Abierto → cierre del 30-oct, conciliación y auditoría W44.
+
+## 2026-10-30 01:29 UTC · decisor vespertino (29-oct) · contingencia de contraparte de Binance: tres reglas que no coinciden
+- **Hecho:** A2 y A11 en ROJA por el hackeo y la pausa de retiros (alerta del 30-oct 00:50 UTC).
+- **Duda:** la regla de `lista-senales-de-alerta.md` §3 ("una ROJA activa la contingencia") contradice `parametros.json` (> 24 h) y la decisión del 25-sep (> 48 h o acción de autoridad).
+- **Qué decidí (conservador):**
+  - O0007 condicional en papel: venta si a las 21:50 UTC del 30-oct los retiros siguen suspendidos;
+  - para la cuenta real, la boleta pide **retirar, no vender**, en cuanto reabran.
+- **Destino:** gestor de riesgo y comité W44 (hoy), para dejar una sola regla.
+- **Estado:** Abierto.
