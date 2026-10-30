@@ -1606,3 +1606,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 
 - **Pregunta 1:** BTC cruzó −2% en pesos solo 2 minutos (14:36-14:37 UTC, −2.08% en el peor punto) y a las 17:08 estaba en −1.46%. ¿Fila propia en `bitacora/alertas.md`? **Decidí:** no abrir una fila aparte. Lo anoté como informativo dentro de la fila nueva de SPYM (17:08 UTC), y la alerta de contraparte de Binance sigue abierta aparte. **Por qué:** fue un cruce transitorio, sin cambio de tesis, y la fila de Binance ya pone esa posición en alerta alta. **Estado:** informativo → supervisor.
 - **Pregunta 2:** ¿Registro el pronóstico de práctica `autor=vigia` a las 11:05? **Decidí:** no. `rutinas/inteligencia.md` §4 lo pone en la corrida de las 20:05, así que P0208 queda libre. **Estado:** informativo.
+
+## 2026-10-30 18:40 UTC · UPRO a 2% de su stop (135.76) en plena caída del Nasdaq
+- **Hecho (A, Yahoo 1m, ≈18:40 UTC):** UPRO 138.44, que está **+1.97% sobre el stop de 135.76** (cierre en papel). En pesos contra el cierre del 29-oct: UPRO −7.45%, QQQM −4.43% y SPYM −2.27%, con FX 18.813. Las tres posiciones de ETF cruzan el −2%.
+- **Regla vigente (REGLAS-MOTOR, nota del 5-oct):** el Cierre revisa el stop de UPRO con el **cierre** del día. Si UPRO cierra el 30-oct por debajo de 135.76, genera la venta del 100% de UPRO para el lunes 2-nov a las 14:45 UTC. Hay que revisar también la salida del filtro de apalancados (^GSPC < SMA200 × 0.97 o VIX ≥ 25; el VIX estaba en 20.08 a las 17:08).
+- **Decisión conservadora (orquestador):** no se adelanta ninguna orden intradía, porque la regla es al cierre. La inteligencia de las 15:05 y el Cierre deben dejar escrito si el stop se disparó. **Real:** si el dueño tiene UPRO en GBM con stop registrado, el stop de GBM actúa solo; revisar en la app.
+- **Estado:** Abierto → Cierre del 30-oct, supervisor.
