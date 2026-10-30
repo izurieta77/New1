@@ -1546,7 +1546,7 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **(3) Expediente W44 → auditoría semanal del 30-oct (C2).** No existe como archivo. La lista de piezas, con su línea, está en `bitacora/revisiones/2026-10-29.md` §0: R18 lado B, R19b, R20, R21, R22 y la guía para la plantilla; la pregunta del dueño del 22-oct; el efectivo GBM sin confirmar (5,040.16); la multa SGM solo como contexto. **Qué decidí:** no lo armo yo, porque es trabajo del comité. Dejo el índice para que el paso 6 lo use. **Estado:** Abierto → auditoría semanal.
 - **(4) Disparos tardíos de la supervisión (m3):** 08:40 → 15:01 UTC y 09:40 → 15:59 UTC. Hoy no hubo impacto. **Estado:** Abierto → orquestador (informativo).
 
-## 2026-10-30 00:55 UTC · Binance: retiros pausados por hackeo de US$5.3–5.8 mil millones (contraparte en ROJA por señales)
+## 2026-10-30 00:55 UTC · Binance: retiros pausados por hackeo de US$5.3–5.8 mil millones (contraparte en ROJA por señales) [Conciliación 30-oct-2026 03:07 UTC, `bitacora/arbitraje/2026-10-29-binance.md`: entró en `48502f7` (00:44:52 UTC), así que la hora vale ≤ 00:44. Cifra oficial: ≈US$6.3 mil M (comunicado de las 02:23 UTC, A). "Desde ≈21:50" no tiene fuente para BTC/MXN.]
 - **Hecho (B, varias fuentes):** desde ≈21:50 UTC del 29-oct hay retiros pausados (no se sabe si todos los activos ni si el SPEI) y un hackeo mayor que el fondo SAFU. Binance dice que los fondos de los clientes están a salvo (CoinDesk).
 - **Regla:** el disparador formal de `contingencia_contraparte` exige más de 24 h de retiros suspendidos, así que vence ≈21:50 UTC del 30-oct. Las señales A2 y A11 de la lista ya están en ROJA.
 - **Decisión conservadora del orquestador:** alerta alta y escalada al dueño ahora, sin esperar las 24 h. Recomendación: sacar el MXN y el BTC del sublibro real (≈4,927 MXN) en cuanto haya algún riel abierto. Nada automático: requiere al dueño.
@@ -1569,5 +1569,29 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - O0007 condicional en papel: venta si a las 21:50 UTC del 30-oct los retiros siguen suspendidos;
   - para la cuenta real, la boleta pide **retirar, no vender**, en cuanto reabran.
 - **Destino:** gestor de riesgo y comité W44 (hoy), para dejar una sola regla.
-- **Estado:** Abierto.
-- **Actualización 02:25 UTC del 30-oct (orquestador, verificado en fuente A):** consulté `binance.com/bapi/capital/v1/public/capital/getNetworkCoinAll`. **Retiros cerrados en 990 de 990 activos**, incluidos BTC (red BTC y demás), USDT y MXN (FIAT_MONEY/SPEI). **Los depósitos siguen abiertos en 706.** Reglas inmediatas para el dueño y las otras 2 IAs: **NO depositar nada en Binance**, no vender dentro de Binance mientras no haya retiro y sacar primero lo que reabra primero (SPEI o BTC). El reloj de 24 h de la contingencia es ambiguo: 21:50 UTC del 30-oct si se cuenta desde la primera pausa parcial, 00:04 UTC del 31-oct si se cuenta desde la suspensión total anunciada. **Decisión conservadora: cuenta la fecha más temprana (21:50 UTC del 30-oct).** P0203 da p=0.30 a que el retiro de BTC esté reabierto para esa hora.
+- **Estado:** Abierto. [Conciliación 30-oct-2026 03:07 UTC, fallo `bitacora/arbitraje/2026-10-29-binance.md` §2: **la hora de O0007 queda cerrada.** La verificación pasa a las 00:00 UTC del 31-oct, 24 h después de la primera evidencia de BTC/MXN suspendidos (B; A desde las 02:10), y ya no a las 21:50, que se había calculado desde una pausa parcial sin BTC/MXN confirmados. **Jerarquía:** rige la configuración (REGLAS §4b). **Sigue abierto → gestor de riesgo, comité W44 y dueño:** unificar el texto de las tres reglas; la sombra de papel vende con los retiros cerrados, mientras la boleta real dice no vender; y si se anticipa la orden.]
+- **Actualización 02:25 UTC del 30-oct (orquestador, verificado en fuente A):** [Conciliación 30-oct-2026 03:07 UTC: entró en `32fca10` (02:16:07 UTC); la hora vale ≤ 02:16.] consulté `binance.com/bapi/capital/v1/public/capital/getNetworkCoinAll`. **Retiros cerrados en 990 de 990 activos**, incluidos BTC (red BTC y demás), USDT y MXN (FIAT_MONEY/SPEI). **Los depósitos siguen abiertos en 706.** Reglas inmediatas para el dueño y las otras 2 IAs: **NO depositar nada en Binance**, no vender dentro de Binance mientras no haya retiro y sacar primero lo que reabra primero (SPEI o BTC). El reloj de 24 h de la contingencia es ambiguo: 21:50 UTC del 30-oct si se cuenta desde la primera pausa parcial, 00:04 UTC del 31-oct si se cuenta desde la suspensión total anunciada. **Decisión conservadora: cuenta la fecha más temprana (21:50 UTC del 30-oct).** P0203 da p=0.30 a que el retiro de BTC esté reabierto para esa hora.
+
+## 2026-10-30 03:07 UTC · conciliación (rutina 10, jueves 29-oct) · Binance, revisión del 29-oct y lo que sigue abierto
+- **Fallos:** `bitacora/arbitraje/2026-10-29-binance.md` y `bitacora/arbitraje/2026-10-29.md`. Conciliación: `bitacora/conciliacion/2026-10-30.md`.
+- **Binance (hechos, A):** comunicado oficial "Security Incident Update" de las 02:23 UTC del 30-oct. Impacto ≈US$6.3 mil M y ≈3 mil M congelados. Binance cubre con el SAFU y fondos propios; "User funds are safe". Depósitos y retiros suspendidos, sin fecha de reapertura. En el endpoint a las 02:59 UTC, 0/990 retiros (BTC y MXN cerrados) y depósitos abiertos en 706. No hay orden real emitida. Exposición registrada del dueño: Claude ≈4,938, ChatGPT ≈4,700 y Grok ≈4,838 MXN; **≈14,476 MXN** en total.
+- **Cerrados:**
+  - hora de verificación de O0007, corregida a 00:00 UTC del 31-oct;
+  - C1 en lo textual (`bfb6067` verificado);
+  - C3 (lectura del revisor ratificada);
+  - m1, m5 y m6 (`f3d3c17`);
+  - P0066, P0184, P0192 y P0197, ratificados;
+  - duda del "rezago" de la conciliación: no se atendió hoy, por la prioridad de Binance (ver abajo).
+- **(1) Escalado → orquestador (cumplimiento, BLOQUEO DE PROCESO):** es la 12.ª reincidencia, y ya con el encadenado en el texto (`48502f7` +11 min y `32fca10` +10 min). El paso siguiente es el hook versionado (`core.hooksPath`) en el paso 0 de cada rutina y la hora con `$(python3 herramientas/latidos.py ahora)` dentro del `sed`. **Estado:** Abierto → orquestador.
+- **(2) Escalado → gestor de riesgo, comité W44 (22:47 UTC) y dueño:** una sola regla de contraparte. La configuración cambia solo con el dueño. Hay que resolver la incoherencia papel/real y si se anticipa O0007. **Estado:** Abierto.
+- **(3) Escalado → dueño:** opciones de Binance (fallo §4). Las acciones reales son del dueño. El plan B de Bitso no está documentado como probado. **Estado:** Abierto → dueño.
+- **(4) Multa SGM:** **HOY vie 30-oct es el último día seguro (ficha 9/LIF, $3,936).** La pre-apertura la pone primero en el brief, con la aclaración de C3. **Estado:** Abierto → pre-apertura y dueño.
+- **(5) Siguen abiertos sin cambio:**
+  - expediente W44 → auditoría semanal; se agregan Binance y "binarios de empresa fuera del Brier";
+  - rezago de empresas mexicanas → cierre del 30-oct y W44;
+  - fuente única del cierre FX y m3 (disparos tardíos) → orquestador;
+  - regla del 2%;
+  - versionar los recortes;
+  - R19b, R20, R21, R22 y la guía para la plantilla;
+  - t_m, W-8BEN, tope 5,000/10,000 y efectivo GBM (dueño);
+  - umbral de Polymarket.
