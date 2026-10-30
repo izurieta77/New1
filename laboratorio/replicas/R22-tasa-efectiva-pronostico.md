@@ -61,3 +61,5 @@
   - aun con la mejor regla, el error típico es de **~3-3.6 pp de tasa ≈ 4-5% de UPA**, y el intervalo de la UPA tiene que incluirlo.
   - H2 (≤ 3 pp) es frágil.
 - **Para repetir:** R22b, con nuevo pre-registro (unión de etiquetas periodo a periodo y 4T reconstruido), para que A y B midan lo mismo.
+
+> **Nota 2026-10-30 17:50 UTC:** la corrección pre-registrada es R22b (`R22b-tasa-efectiva-corregida.md`), **Replicado**. Este archivo conserva el resultado original de A.

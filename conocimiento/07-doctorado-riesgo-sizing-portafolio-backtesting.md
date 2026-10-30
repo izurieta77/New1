@@ -789,3 +789,12 @@ Las cifras propias son reproducibles con `herramientas/datos.py` y `herramientas
   2. **No compara contra comprar y mantener en la tabla principal.** En NASDAQ el valor final es de 1,633 USD por cada 1,000 en 15 años (≈3.3% anual); el NASDAQ Composite se multiplicó varias veces en ese periodo. La MDD baja se compra con exposición baja (la trampa del §2.7: "menor MDD por menos riesgo" no es control de drawdown).
   3. Universo de 30 acciones sin criterio de supervivencia declarado.
 - **Qué cambia:** **ninguna regla.** Refuerza la prueba que ya usamos para cualquier regla de protección (R16 y R17): medir la MDD **con el mismo riesgo** o contra la alternativa simple, nunca sola. Quita el pendiente del 23-oct (la tenía como "CAST, aprendizaje por refuerzo"; **no usa RL**, es Kalman con MPC). La corrección va en el registro de errores.
+
+### Adenda (30-oct-2026, laboratorio): la automatización sincronizada, no la concentración de modelos, amplifica las caídas. Kohli (arXiv:2610.37705 v1, 26-oct-2026, 30 pp.)
+- **[C]** Es un modelo de agentes multiactivo, calibrado a la concentración de proveedores de IA, la correlación entre modelos, la rotación minorista y 33 años de rendimientos reales. De un solo autor y sin datos de agentes reales.
+- **Resultado:**
+  - el número efectivo de decisores independientes es de ~2 con la concentración actual, pero **la concentración no explica la liquidación de mercado**;
+  - las pérdidas de cola del índice suben con la raíz de la adopción y son 1.47-1.90 veces mayores con agentes que con robo-asesores periódicos;
+  - **las sincronizan los mecanismos automáticos: coberturas de riesgo, recortes por drawdown y ejecución por atención**;
+  - dispersar los parámetros de esas coberturas, escalonar la ejecución y poner un freno de participación reduce la liquidación de cola en 63%.
+- **Para nosotros [I]:** nuestros cortacircuitos son exactamente un "recorte por drawdown" con umbrales fijos y conocidos. Con capital minúsculo no movemos el mercado, pero el paper refuerza dos prácticas ya vigentes: **ejecutar con rezago y en una vela fija** (O0001-O0006) y no reaccionar en el mismo minuto que todos (la alerta de −2% es informativa, no una orden). Ninguna regla cambia.

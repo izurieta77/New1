@@ -1,0 +1,61 @@
+{
+ "emisoras_con_serie": 48,
+ "fallidos": [],
+ "sin_4T": {
+  "objetivos": 309,
+  "MAE_pp": {
+   "ultimo": 3.54,
+   "mediana4": 3.0,
+   "media4": 3.162,
+   "mediana8": 2.981,
+   "fija21": 5.77
+  },
+  "n": {
+   "ultimo": 309,
+   "mediana4": 309,
+   "media4": 309,
+   "mediana8": 5,
+   "fija21": 309
+  },
+  "signos": {
+   "mejor": 175,
+   "peor": 134,
+   "p_exacta": 0.02272
+  },
+  "IC95_dif_MAE": [
+   0.192,
+   0.922
+  ],
+  "error_UPA_pct_mediana4": 3.81
+ },
+ "con_4T": {
+  "objetivos": 647,
+  "MAE_pp": {
+   "ultimo": 4.856,
+   "mediana4": 3.62,
+   "media4": 3.8,
+   "mediana8": 3.527,
+   "fija21": 6.46
+  },
+  "n": {
+   "ultimo": 647,
+   "mediana4": 647,
+   "media4": 647,
+   "mediana8": 553,
+   "fija21": 647
+  },
+  "signos": {
+   "mejor": 392,
+   "peor": 255,
+   "p_exacta": 0.0
+  },
+  "IC95_dif_MAE": [
+   0.882,
+   1.607
+  ],
+  "error_UPA_pct_mediana4": 4.87
+ },
+ "H1_sin4T_signos_p_lt_0.05_y_mediana4_mejor": true,
+ "H2_sin4T_MAE_mediana4_le_3": true,
+ "H3_con4T_signos_p_lt_0.05_y_mediana4_mejor": true
+}
