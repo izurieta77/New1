@@ -270,6 +270,21 @@
 - **E10:** ningún rival top-10 pausó retiros. Binance TR, que es filial, pausó (Türkiye Today, B); Aave congeló préstamos en 16 redes y Jupiter Lend demora retiros (B). **VERDE** por umbral, con vigilancia diaria.
 - **Conclusión:** hay **cuatro ROJAS** (E4, E6, E7 y A2/A11), pero **ningún disparador formal de la contingencia se cumple todavía**. El de "más de 24 h" se cumpliría a las 00:00-02:10 UTC del 31-oct; los otros tres no aplican. La alerta alta sigue abierta y O0007 queda igual. No se proponen órdenes nuevas.
 
+**Seguimiento del 31-oct-2026** [I]. Revisión de contraparte de la corrida de las 08:17 del sábado, ~42 h después del choque. Consultas de 14:20 a 14:24 UTC. El estudio de hoy: la cola de retiros y el precio al reabrir ([`fichas/2026-10-31-cola-retiros-reapertura.md`](fichas/2026-10-31-cola-retiros-reapertura.md)):
+
+- **E1 (método F, réplica `bitacora/arbitraje/2026-10-25-e1-metodo-f.py`):** 31-oct contra 24-oct, **−4.93%** (−US$6.98 mil M). **ÁMBAR**, a 0.37 pts de ROJA (−5.3%). El flujo de un día (30→31) es **+US$0.002 mil M**: no hay salida nueva, y la ventana se ahonda solo porque cambió la base t−7. Con los retiros cerrados no puede haber corrida. El riesgo de cruzar ROJA es al reabrir (Bitget: 71% de la salida de 3 días cayó el primer día).
+- **E2:** rastreado sin BNB, US$134.5 mil M; **BNB 16.1%** (sin duplicar las claves `OwnTokens`); BTC 645,043 (−1.84% contra el 24-oct; −3 BTC en un día). **VERDE**.
+- **E3:** no hay foto de PoR. El Update #2 prometía la "initial snapshot in 12 hours" (≈07:33 UTC de hoy) y el resultado para el lunes 2-nov. No aparece en el CMS (catálogo 49, 14:23 UTC: lo último sigue siendo el Update #2, sin editar) ni en la prensa (CNBC y The Defiant solo repiten "by Monday"). **ÁMBAR**: el rezago contra lo prometido ya es de ~7 h.
+- **E4:** SAFU de 15,000 BTC × 77,487 ≈ US$1.16 mil M; Binance absorbe la pérdida (Update #2, A) y no ha anunciado la reposición. **ROJA** por definición.
+- **E5:** sin cargos ni restricción a México. El FBI y el Servicio Secreto colaboran (Reuters, Investing; B). Maxine Waters pide rendición de cuentas (declaración). **ÁMBAR** sin cambio.
+- **E6:** **0/990 retiros** a las 14:20 UTC ([endpoint](https://www.binance.com/bapi/capital/v1/public/capital/getNetworkCoinAll), A). BTC (BTC, SEGWITBTC, Lightning, BSC y ETH) y MXN/FIAT_MONEY cerrados; depósitos abiertos en 705. **ROJA** (A2); el disparador de más de 24 h se cumple desde ≈00:00-02:10 UTC.
+- **E7:** **ROJA** (A11) sin cambio.
+- **E8:** USDC/USDT 1.00124 y FDUSD/USDT 0.9984 (Binance); USDT/USD 0.99885 y USDC/USD 0.9999 (Kraken). **VERDE**.
+- **E9:** seis muestras de BTCMXN (14:20:39-14:22:23 UTC), las seis iguales: 1,456,220 / 1,457,247, **diferencial 0.070%, VERDE**. El medio está +0.14% sobre el implícito (77,487.18 × 18.774) y +12 pb sobre Bitso (1,454,960 / 1,454,970).
+- **E10:** ningún rival top-10 pausó retiros (Google News, 24 h). **VERDE**.
+- **Señal nueva para vigilar (ficha de hoy):** **BNB/BTC**, −1.45% contra el cierre previo al choque (744.89 / 80,848.64). El análogo de Bitget (BGB/BTC −2.8% a 7 días de reabrir) dice que esta señal se mueve antes que E1. Umbral propuesto: −3% (P0217); lo calibra el gestor de riesgo.
+- **Conclusión:** las mismas **cuatro ROJAS** (E4, E6, E7 y A2/A11). **El disparador formal se cumple** ("retiros suspendidos más de 24 h"), pero la respuesta (vender y retirar) no se puede ejecutar con los rieles cerrados, y rige la regla W44 ("retirar, no vender, no depositar"). La alerta alta sigue **abierta**. No hay órdenes nuevas.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)

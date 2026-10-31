@@ -198,3 +198,10 @@ Este capítulo existe para ver venir ese riesgo con datos públicos.
 - **[I]** Con el método F en DefiLlama, al reabrir **Bitget perdió −10.2%** de sus reservas en 3 días y **Bybit −27.0%** en 2 (Bybit no pausó). En ambos casos, la reposición tapó la corrida en la ventana de 7 días.
 - **[I]** Recuperación: los solventes pagaron **100% nominal** (Bitfinex con un recorte de 36% que redimió en ~8 meses); los insolventes, 0.68 en promedio y tarde.
 - **[I]** Binance (US$6.3 mil M) pierde **4.3%** de sus reservas sin BNB, menos que Bybit (9.0%) o Bitget (6.3%), que pagaron todo. El riesgo inmediato es la cola de retiros al reabrir, no la quiebra. Por eso conviene sacar el saldo en la primera hora de reapertura del riel.
+
+### Adenda (31-oct-2026, analista cripto): el precio dentro del exchange pausado, la forma de la cola y la ruta de salida
+- **Ficha:** `fichas/2026-10-31-cola-retiros-reapertura.md` (con su `.py` y la foto `.json`; velas de 1 h de Bitget y Binance, A como dato; flujos de DefiLlama, C).
+- **[I]** **El BTC dentro de un exchange pausado no se abarata.** Bitget contra Binance durante la pausa de sep-2026: mediana +0.6 pb, máximo 5.6 pb (prima). Binance hoy, con 0/990 retiros: +6.8 pb contra Deribit y +12 pb en BTC/MXN contra Bitso. El BTC y la moneda de cotización quedan atrapados juntos, y los depósitos abiertos ponen techo a la prima.
+- **[I]** **El estrés se ve en el token propio:** BGB/BTC −5.3% en la hora del choque, ~0% al reabrir y −2.8% a 7 días de reabrir; BNB/BTC −3.9% en la hora del choque y −1.45% a ~42 h (P0217).
+- **[I]** **La cola es un pulso:** en Bitget, 71% de la salida de tres días ocurrió el primer día (−0.46 mil M, igual a los US$463 M de Bloomberg); en Bybit, el 100% en ~34 h. La reapertura va por fases (BTC → ETH → USDT → fiat).
+- **[I]** **Ruta para saldos chicos:** el retiro Lightning de Binance (máximo 0.01 BTC por retiro) cuesta 0.075% de 0.001325 BTC, contra 1.51% por la red BTC. Bitso recibe con una factura que caduca (A). El MXN probablemente abra al final.

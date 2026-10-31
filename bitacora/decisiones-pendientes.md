@@ -1657,7 +1657,7 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - prohibir `--no-verify`;
   - hora con `$(python3 herramientas/latidos.py ahora)` dentro del `sed`.
   - **Estado:** Abierto → orquestador.
-- **(2) Recomendación → analista cripto, antes de ≈05:33 UTC del 1-nov:** aclarar en la boleta de qué fuente sale el USD/MXN del tope de −0.5%. Conviene una referencia externa a Binance (la mejor compra de BTC/MXN en Bitso, o Coinbase × `MXN=X`), porque el BTCUSDT del mismo libro cae junto con él en una venta forzada. No cambié la regla. **Estado:** Abierto → analista cripto.
+- **(2) Recomendación → analista cripto, antes de ≈05:33 UTC del 1-nov:** aclarar en la boleta de qué fuente sale el USD/MXN del tope de −0.5%. Conviene una referencia externa a Binance (la mejor compra de BTC/MXN en Bitso, o Coinbase × `MXN=X`), porque el BTCUSDT del mismo libro cae junto con él en una venta forzada. No cambié la regla. **Estado:** ~~Abierto → analista cripto~~ **Atendido** por el analista cripto el 31-oct-2026 a las 14:31 UTC (corrida de las 08:17 CDMX): la boleta `bitacora/boletas/2026-10-30.md` ya dice que la referencia es la mejor compra de BTC/MXN en Bitso (respaldo: Coinbase × `MXN=X`). La regla sigue como propuesta al dueño.
 - **(3) Escalado → dueño:**
   - la boleta de Binance (su decisión);
   - ratificar o rechazar `respuesta_roja` (C7);
@@ -1673,3 +1673,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - reentrada al UPRO (R23) → comité W45;
   - P0067 y P0116 → esperar a FRED;
   - lo heredado del 29-oct, punto (5), sin cambio.
+
+## 2026-10-31 · cripto (08:17 CDMX, estudio profundo)
+
+- **Pregunta:** si mañana Binance reabre primero el riel de BTC y el de MXN/SPEI sigue cerrado (en Bitget el fiat abrió 4 días después que el BTC; ficha `conocimiento/cripto/fichas/2026-10-31-cola-retiros-reapertura.md`), ¿se compran BTC con los 3,001.83 MXN del sublibro real para sacarlos por Lightning (≈0.14% + 0.000001 BTC) o se dejan atrapados hasta que abra SPEI?
+- **Decisión conservadora (analista cripto):** **no se convierten.** Comprar BTC sube la exposición cripto real de ≈1,930 a ≈4,930 MXN (de ≈39% a 100% del libro) y es una decisión de cartera que no le toca a esta rutina; la regla W44 dice "retirar, no vender, no depositar", y comprar dentro de Binance tampoco está autorizado. El MXN espera al SPEI.
+- **Va a:** decisor vespertino (19:27 CDMX de hoy), por si quiere proponerlo al dueño como opción explícita, con sus costos (en Bitso, la vuelta cuesta 1.2-1.6% según `arena/investigacion/10-exchange-cripto-mexico.md`). **Estado:** Abierto → decisor.
