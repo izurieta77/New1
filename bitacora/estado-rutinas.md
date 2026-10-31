@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-31 22:19 UTC · cripto (16:17, pulso) · ALERTA · Binance retiros 0/990 (A, 22:19), sin Update #4 · BTC 77,645 · ≈+0.52% en pesos · colchón +9.41% · E9 0.044% VERDE · funding_8h 2.3e-05 · Polymarket 0.987 sin resolver
 2026-10-31 21:10 UTC · inteligencia (15:05, sábado) · ALERTA · Binance retiros 0/990 (A, 21:10) y sin Update #4; Polymarket 4641065 0.9895 sin resolver (ventana IRST cerrada sin fuego reportado), P0187/P0174/P0054/P0008 abiertos; Rubio: Trump 'aún no decide' (B−); BTC +0.14% en pesos, nada cruza 2%
 2026-10-31 19:42 UTC · cripto (13:41, pulso extra) · ALERTA · Binance retiros 0/990 (A, 19:42), sin aviso nuevo tras el Update #3 · BTC 77,616 · ≈+0.48% en pesos · colchón +9.37% · E9 0.086% VERDE · Polymarket 0.9865
 2026-10-31 18:19 UTC · cripto (12:17, pulso) · ALERTA · Binance retiros 0/990 (A, 18:19) · BTC 77,744 · ≈+0.65% en pesos · colchón +9.55% · E9 0.055% VERDE · funding_8h 8.3e-05 · Polymarket 0.988
