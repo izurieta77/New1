@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-31 15:43 UTC · cripto (09:41, pulso extra) · ALERTA · Binance retiros 0/990 (A, 15:42) · BTC 77,576 · +0.43% en pesos · colchón +9.31% · E9 0.054% VERDE · Polymarket 0.9785
 2026-10-31 14:45 UTC · cripto (08:17, profundo) · ALERTA · Binance 0/990 retiros (A); sin Update #3, PoR 7 h tarde · BTC 77,487 sin descuento vs Deribit · filtro ENCENDIDO colchón +9.19% · E9 0.070% VERDE · E1 −4.93% ÁMBAR, E4/E6/E7 ROJA · IBIT 29-oct +12.8M (A), 30-oct −643M (C) · ficha cola-retiros-reapertura (Lightning 0.075% vs red BTC 1.5%; fiat abre al final) · P0217 p=0.42
 2026-10-31 13:20 UTC · inteligencia (07:05, sábado) · ALERTA · Binance 0/990 retiros (A, verificado); sin Update #3 ni PoR visible; E1 −4.93% ÁMBAR (flujo diario ≈0); Polymarket 4641065 0.98 (vence ≈20:29 UTC por regla IRST); sin fuego de EUA confirmado; BTC +0.12% en pesos; Sección 232 robótica (riesgo futuro México)
 2026-10-31 11:43 UTC · cripto (05:41, pulso extra) · ALERTA · Binance retiros 0/990 (A, 11:42) · BTC 77,534 · +0.37% en pesos · colchón +9.25% · E9 0.055% VERDE · Polymarket 0.972
