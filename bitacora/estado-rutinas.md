@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-10-31 13:20 UTC · inteligencia (07:05, sábado) · ALERTA · Binance 0/990 retiros (A, verificado); sin Update #3 ni PoR visible; E1 −4.93% ÁMBAR (flujo diario ≈0); Polymarket 4641065 0.98 (vence ≈20:29 UTC por regla IRST); sin fuego de EUA confirmado; BTC +0.12% en pesos; Sección 232 robótica (riesgo futuro México)
 2026-10-31 11:43 UTC · cripto (05:41, pulso extra) · ALERTA · Binance retiros 0/990 (A, 11:42) · BTC 77,534 · +0.37% en pesos · colchón +9.25% · E9 0.055% VERDE · Polymarket 0.972
 2026-10-31 10:19 UTC · cripto (04:17, pulso) · ALERTA · Binance retiros 0/990 (A, 10:18) · BTC 77,511 · +0.35% en pesos · colchón +9.22% · E9 0.013% VERDE · Polymarket 0.97
 2026-10-31 06:19 UTC · cripto (00:17, pulso) · ALERTA · Binance retiros 0/990 (A, 06:18); reapertura oficial ≈05:33 UTC del 1-nov · BTC 77,296 · +0.07% en pesos · colchón +8.92% · E9 0.044% VERDE · Polymarket 0.9655
