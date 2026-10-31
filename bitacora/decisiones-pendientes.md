@@ -1600,7 +1600,7 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 
 - **Pregunta 1:** ¿E1 = −4.41% (30/23-oct) es una corrida? **Decidí:** ÁMBAR por umbral, sin escalar a ROJA ni pedir acción. Casi todo es el robo (sin 6.3 mil M el día da +0.36 mil M) y con los retiros cerrados no puede haber corrida. La prueba real llega con la reapertura (P0207). **Estado:** informativo → gestor de riesgo.
 - **Pregunta 2:** ¿E4 va en ROJA? **Decidí:** ROJA por la definición literal (uso del SAFU anunciado en un hackeo, sin reposición anunciada). No es un disparador de contingencia; ninguno de los cuatro se cumple todavía. El de "más de 24 h" se cumpliría a las 00:00-02:10 UTC del 31-oct, junto con O0007. **Estado:** informativo.
-- **Pregunta 3 (para la conciliación):** P0204 (Claude, p 0.75, BTC reabierto el 6-nov) queda por encima de la tasa base de la ficha `conocimiento/cripto/fichas/2026-10-30-hackeos-exchanges-reapertura.md`: 2/7 solventes reabrieron en ≤ 7.5 días y 4/7 en ≤ 8. **Decidí:** no la toco porque no es mía; lo dejo para el árbitro. **Estado:** Abierto → conciliación.
+- **Pregunta 3 (para la conciliación):** P0204 (Claude, p 0.75, BTC reabierto el 6-nov) queda por encima de la tasa base de la ficha `conocimiento/cripto/fichas/2026-10-30-hackeos-exchanges-reapertura.md`: 2/7 solventes reabrieron en ≤ 7.5 días y 4/7 en ≤ 8. **Decidí:** no la toco porque no es mía; lo dejo para el árbitro. **Estado:** Abierto → conciliación. **[Conciliación 31-oct-2026 03:10 UTC, `bitacora/arbitraje/2026-10-30.md` §7: Cerrado.** Un pronóstico registrado no se cambia; se califica el 6-nov y la tasa base queda como insumo de calibración.]**
 
 ## 2026-10-30 · inteligencia 11:05 CDMX (vigía) · Cruce breve de BTC y el pronóstico de práctica
 
@@ -1623,17 +1623,53 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 
 ## 2026-10-30 · revisión (rutina 11, 2026-10-31 00:05 UTC) · regla "retirar, no vender" en papel antes de que el dueño la ratifique; consulta del dueño sin registro
 - **(1) Duda:** la decisión W44 ya aplica en papel la regla única "retirar, no vender" (O0007 anulada), pero el texto vigente de `config/parametros.json` → `cripto_binance.contingencia_contraparte.respuesta_roja` dice "vender BTC a MXN con límite y retirar por SPEI". Además, el expediente (L11) le atribuye la regla al dueño, cuando sale del decisor del 29-oct (`bitacora/revisiones/2026-10-30.md` C7). **Qué decidí:** no revierto nada. Con todos los rieles cerrados, vender dentro de Binance no reduce la contraparte; el filtro SMA200, los stops y los topes siguen mandando; y la desviación ya está anotada en la entrada W44, punto 2. Es lo conservador porque no agrega operaciones. **Pido** que el dueño ratifique o rechace el texto antes del 6-nov, y que la auditoría semanal corrija la atribución de L11. **Estado:** Abierto → dueño y auditoría semanal.
-- **(2) Consulta del dueño del 30-oct ("¿BTC y ETH seguirán bajando? ¿conviene meter mucho?"):** se respondió en `bitacora/investigador/2026-10-30-btc-eth-fondo-o-escalon.md` (sin órdenes; 6 de 6 en contra), pero no está guardada literal en `datos/entrada-dueno/` (REGLAS §0e; 2.ª vez, como el 22-oct). **Qué decidí:** no la reconstruyo, para no inventar texto del dueño. **Corrige:** el orquestador, que agrega la entrada con hora CDMX y el texto, o con la marca "parafraseada". **Estado:** Abierto → orquestador.
-- **(3) Boleta real Binance, rama "solo abre SPEI", sin límite:** BLOQUEANTE en `bitacora/alertas.md`. **Qué decidí mientras tanto:** lo conservador es retirar, no vender. **Estado:** Abierto → analista-cripto (cascada 18:42 CDMX) antes de ≈05:33 UTC del 1-nov. **[Decisor 31-oct 01:2x UTC: Cerrado; la regla de límite ya está en la boleta desde las 00:1x UTC.]**
+- **(2) Consulta del dueño del 30-oct ("¿BTC y ETH seguirán bajando? ¿conviene meter mucho?"):** se respondió en `bitacora/investigador/2026-10-30-btc-eth-fondo-o-escalon.md` (sin órdenes; 6 de 6 en contra), pero no está guardada literal en `datos/entrada-dueno/` (REGLAS §0e; 2.ª vez, como el 22-oct). **Qué decidí:** no la reconstruyo, para no inventar texto del dueño. **Corrige:** el orquestador, que agrega la entrada con hora CDMX y el texto, o con la marca "parafraseada". **Estado:** Abierto → orquestador. **[Conciliación 31-oct-2026 03:10 UTC, `bitacora/arbitraje/2026-10-30.md` §3: Cerrado.** Está en `datos/entrada-dueno/2026-10-30.md` L47-L51 (`149f7d4`, misma sesión que respondió); atribución corregida.]**
+- **(3) Boleta real Binance, rama "solo abre SPEI", sin límite:** BLOQUEANTE en `bitacora/alertas.md`. **Qué decidí mientras tanto:** lo conservador es retirar, no vender. **Estado:** Abierto → analista-cripto (cascada 18:42 CDMX) antes de ≈05:33 UTC del 1-nov. **[Decisor 31-oct antes de 01:29 UTC (`6bb0167`): Cerrado; la regla de límite ya está en la boleta desde antes de las 00:12 UTC (`149f7d4`). [Conciliación 31-oct-2026 03:07 UTC, `bitacora/arbitraje/2026-10-30.md` §1: ratificado; Cerrado.]**
 
-## 2026-10-31 01:2x UTC · orquestador (trabajo continuo, 30-oct CDMX) · R23 corrido (A): el último UPRO cuesta ~10 pp de cola por 0.4 pp de CAGR con μ = 7%
+## 2026-10-31 antes de 01:18 UTC (commit `7a5cbfa` 01:17:29; decía una hora vaga posterior al commit — [Conciliación 31-oct-2026 03:07 UTC, `bitacora/arbitraje/2026-10-30.md` §5) · orquestador (trabajo continuo, 30-oct CDMX) · R23 corrido (A): el último UPRO cuesta ~10 pp de cola por 0.4 pp de CAGR con μ = 7%
 - **Qué se hizo:** pre-registro `laboratorio/replicas/R23-u0-contra-u13-upro-real.md` + `R23.py` en `feddc59` (01:13 UTC) y ejecución A después. H1 sostenida (por la cláusula de cola: ΔP(−12%) +10.1 pp; la de CAGR, +0.38 pp, superó el 0.30 del abogado), **H2 refutada** (μ de empate 5.76%, fuera de [6, 12]), H3 y H4 sostenidas. Exploratorio: con rf 3.8%, μ* = 7.06%.
 - **Para el comité W45 (dirección, no decido aquí):** regla de reentrada al UPRO propuesta en R23 (filtro encendido **y** DTB3 ≤ 2.5%, o μ ≥ 9% adoptado por escrito). La decisión U0 no cambia.
 - **Hallazgo metodológico:** el μ de empate de la ficha del 27-oct (11.2%) era de 3x contra 1x sin filtro ni mezcla; con filtro y 13.5% de peso baja a 5.8-7.1% según rf. Las dos cifras son correctas en su definición; conviene anotar la diferencia en la ficha (trabajo continuo o laboratorio).
 - **B llegó (AC-30, 01:2x UTC): Replicado**; ΔCAGR a ≤0.002 pp y ΔP(−12%) a ≤0.10 pp de A; μ* idéntico. Tabla maestra y dominio cerrados.
 - **Estado:** B Cerrado; Abierto → comité W45 (regla de reentrada).
 
-## 2026-10-31 02:3x UTC · orquestador (investigador vespertino) · colisión de ID P0215 y commit con marcadores de conflicto, ya corregidos
+## 2026-10-31 antes de 02:24 UTC (commit `5093f15` 02:23:02; decía una hora vaga posterior al commit — [Conciliación 31-oct-2026 03:07 UTC, `bitacora/arbitraje/2026-10-30.md` §4) · orquestador (investigador vespertino) · colisión de ID P0215 y commit con marcadores de conflicto, ya corregidos
 - **Qué pasó:** la inteligencia de las 20:05 (commit de 02:25 UTC) y el investigador vespertino (02:20 UTC) registraron a la vez un P0215. Al rebasar, el conflicto en `bitacora/pronosticos.csv` se resolvió mal en el primer intento y el commit `2bde0a1` subió **con marcadores de conflicto** durante ~3 minutos; `8eb350f` lo corrigió: el del vigía conserva P0215 y el del investigador pasa a **P0216** (cierre de BTC < 58,559 antes del 31-dic, 0.12), con sus referencias en cripto/01, cripto/05, dominio y bitácora.
 - **Para la conciliación:** verificar que `pronosticos.py puntuar` corre limpio y que no quedó ninguna referencia cruzada. **Propuesta de regla:** `pronosticos.py agregar` debería tomar el ID de `origin` tras un `git pull` o usar un sufijo por autor; mientras, las rutinas que se traslapan (inteligencia 20:05 e investigador 20:12) registran el pronóstico al final de su corrida, no al principio.
-- **Estado:** Corregido; Abierto → conciliación (verificación) y trabajo continuo (regla de IDs).
+- **Estado:** Corregido; Abierto → conciliación (verificación) y trabajo continuo (regla de IDs). **[Conciliación 31-oct-2026 03:10 UTC, `bitacora/arbitraje/2026-10-30.md` §4: verificación Cerrada.** Sin duplicados ni marcadores; la última línea (P0216) había quedado en LF y se corrigió a CRLF (217/217). La regla de IDs sigue Abierta → trabajo continuo.]**
+
+## 2026-10-31 03:10 UTC · conciliación (rutina 10, viernes 30-oct) · revisión del 30-oct, Binance y lo que sigue abierto
+- **Fallos:** `bitacora/arbitraje/2026-10-30.md`. Conciliación: `bitacora/conciliacion/2026-10-31.md`.
+- **Binance (A, 02:58:56 UTC):** `getNetworkCoinAll` da 0/990 retiros y 706 depósitos; BTC (todas las redes) y MXN/SPEI cerrados. Sin Update #3 en el CMS; el Update #2 (19:33:34 UTC) sigue igual: reapertura por fases ≈05:33 UTC del 1-nov. **No depositar.**
+- **Cerrados:**
+  - B1 (boleta completa; queda como propuesta al dueño);
+  - C2 (consulta registrada);
+  - C4 (hora de O0007);
+  - C6, M1-M4, M6 y M7 (`feddc59`, verificados);
+  - M5 (hora CDMX en la boleta);
+  - la atribución de C7;
+  - P0215/P0216 (verificación + CRLF);
+  - P0204 (no se cambia);
+  - P0132, P0142 y P0152 ratificados.
+- **(1) Escalado → orquestador (BLOQUEO DE PROCESO):** la 12.ª reincidencia sigue después de la revisión (`7b99fb4` +6.5 min, `c1b069e` +1.4 min). Mecanismo propuesto, no instalado:
+  - hook versionado `.githooks/pre-commit` (`exec python3 herramientas/latidos.py antes-de-commit --bitacora`);
+  - `git config core.hooksPath .githooks` en el paso 0 de cada rutina;
+  - prohibir `--no-verify`;
+  - hora con `$(python3 herramientas/latidos.py ahora)` dentro del `sed`.
+  - **Estado:** Abierto → orquestador.
+- **(2) Recomendación → analista cripto, antes de ≈05:33 UTC del 1-nov:** aclarar en la boleta de qué fuente sale el USD/MXN del tope de −0.5%. Conviene una referencia externa a Binance (la mejor compra de BTC/MXN en Bitso, o Coinbase × `MXN=X`), porque el BTCUSDT del mismo libro cae junto con él en una venta forzada. No cambié la regla. **Estado:** Abierto → analista cripto.
+- **(3) Escalado → dueño:**
+  - la boleta de Binance (su decisión);
+  - ratificar o rechazar `respuesta_roja` (C7);
+  - Bitso nivel ≥2 con CLABE;
+  - multa SGM: sin reporte; el lun 2-nov es solo respaldo B;
+  - qué es "mucho" en su consulta BTC/ETH.
+  - **Estado:** Abierto → dueño.
+- **(4) Siguen abiertos:**
+  - C3 y C5 → pre-apertura del lun 2-nov;
+  - M8 y M9 → orquestador;
+  - historial de `tabla-maestra.md` L5 y la fuente del "tope del 10%" (M7) → laboratorio e investigador;
+  - regla de IDs de pronósticos → trabajo continuo;
+  - reentrada al UPRO (R23) → comité W45;
+  - P0067 y P0116 → esperar a FRED;
+  - lo heredado del 29-oct, punto (5), sin cambio.
