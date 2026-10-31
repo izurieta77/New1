@@ -1630,5 +1630,5 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Qué se hizo:** pre-registro `laboratorio/replicas/R23-u0-contra-u13-upro-real.md` + `R23.py` en `feddc59` (01:13 UTC) y ejecución A después. H1 sostenida (por la cláusula de cola: ΔP(−12%) +10.1 pp; la de CAGR, +0.38 pp, superó el 0.30 del abogado), **H2 refutada** (μ de empate 5.76%, fuera de [6, 12]), H3 y H4 sostenidas. Exploratorio: con rf 3.8%, μ* = 7.06%.
 - **Para el comité W45 (dirección, no decido aquí):** regla de reentrada al UPRO propuesta en R23 (filtro encendido **y** DTB3 ≤ 2.5%, o μ ≥ 9% adoptado por escrito). La decisión U0 no cambia.
 - **Hallazgo metodológico:** el μ de empate de la ficha del 27-oct (11.2%) era de 3x contra 1x sin filtro ni mezcla; con filtro y 13.5% de peso baja a 5.8-7.1% según rf. Las dos cifras son correctas en su definición; conviene anotar la diferencia en la ficha (trabajo continuo o laboratorio).
-- **Pendiente:** ejecución B (AC-30, lanzada 01:1x UTC); al llegar, se cierra el estado en la tabla maestra. Si B no llega esta noche, la conciliación lo marca.
-- **Estado:** Abierto → auditor (B) y comité W45 (regla de reentrada).
+- **B llegó (AC-30, 01:2x UTC): Replicado**; ΔCAGR a ≤0.002 pp y ΔP(−12%) a ≤0.10 pp de A; μ* idéntico. Tabla maestra y dominio cerrados.
+- **Estado:** B Cerrado; Abierto → comité W45 (regla de reentrada).

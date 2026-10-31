@@ -9,7 +9,7 @@
 | Pre-registro escrito el | 2026-10-31 01:12 UTC, antes de cualquier corrida (el script solo se compiló con `py_compile`) |
 | Commit | el commit que trae este archivo junto con `R23.py` |
 | Responsable | orquestador (A); auditor-de-replicas (B, `auditorias/AC-30-R23/`) |
-| Estado | pendiente de ejecución |
+| Estado | **Replicado** (B AC-30, 31-oct-2026; ver sección al final) |
 
 **Conocimiento previo declarado:** R18 (3x sintético; U0 convención SPYM), R20 (brecha UPRO real −1.59 pp/año; −2.30 con DTB3 ≥ 3%), R21 (con la brecha, U13.5: P(−12%, 126 d) 30.43%, CAGR 13.083%; nota exploratoria vs U0-SPYM: +0.73 pp CAGR por +5.0 pp P(−12%)). Ficha del 27-oct: el 3x empata al 1x con μ ≈ 11.2% (r 3.8%, σ 17%) **antes del filtro** y sin mezcla. Expectativa honesta: en 1990-2026 (S&P TR ≈ 10-11%) U13.5 gana algo de CAGR a U0; con μ = 7% casi no gana o pierde; fuera de muestra 2009-2026 (μ ≈ 14%) gana claramente pero con más cola. **Sesgo declarado:** el resultado se usará en una decisión ya tomada (U0); los umbrales se fijan aquí para que no se muevan después.
 
@@ -79,3 +79,20 @@ Con `rf` desplazado a **3.8%** de media (el nivel de hoy) en el contrafactual: �
 - La decisión U0 de W44 **no dependía** de R23 y R23 no la contradice: para que el 13.5% de UPRO valga sus ~10 pp de cola hace falta creer en un S&P ≥ 9% nominal sostenido (ΔCAGR ≥ +0.6 a +1.0 pp con `rf` 3.8%). Con el μ de Vanguard/Morningstar (4-7%) o el 7% del macro W44, no suma.
 - **Regla de reentrada propuesta (para el comité, no automática):** reentrar al UPRO solo si (a) el filtro V0 está encendido **y** (b) la tasa corta (DTB3) está ≤ 2.5% **o** el comité adopta por escrito un μ ≥ 9% con evidencia; nunca por "ya rebotó".
 - Límite claro: R23 mide la cola con la métrica de R18 (máximo de cada ventana) y sin impuestos; R19b añade ~1.3-1.5 pp/año de ISR al libro en MXN, que castiga más a la pata que más rota.
+
+## Doble ejecución independiente (31-oct-2026) · B, `auditorias/AC-30-R23/` (`ac30.py`, `salida.txt`, `informe.md`)
+Código desde cero (biblioteca estándar; sin leer ni importar `R16.py`/`R18.py`/`R21.py`/`R23.py`); las mismas cachés que declara el pre-registro (sha256 de R16 `42339a50…466b`, R12 `44d25f4e…d466`, R20 `94226cbe…ee65`). 9,065 días (1990-10-17 a 2026-10-16); OOS 4,353 días (2009-06-29 a 2026-10-16; la caché de la señal termina el 16-oct, no el 23). Control: brecha UPRO real − sintético en OOS −1.593 pp/año (R20-A −1.592).
+
+| | B | A | Diferencia |
+|---|---|---|---|
+| ΔCAGR U13.5 − U0-efectivo, μ = 7% | +0.380 pp | +0.379 pp | 0.001 (≤ 0.15) |
+| ΔP(−12%, 126 d), μ = 7% | +10.05 pp | +10.14 pp | 0.09 (≤ 1.0) |
+| μ* de empate | 5.76% | 5.76% | 0 |
+| OOS real: ΔCAGR / ΔP(−12%) | +2.43 / +11.49 pp | +2.43 / +11.56 pp | 0.00 / 0.07 |
+| H4: CAGR real − sintético+brecha | +0.019 pp | +0.019 pp | 0 |
+| 1990-2026 U13.5: CAGR / MDD / P(−12%) / P(−20%) | 13.073 / −57.00 / 30.23 / 12.48 | 13.083 / −57.00 / 30.43 / 12.60 | 0.01 / 0 / 0.20 / 0.12 |
+| 1990-2026 U0-efectivo | 11.244 / −53.60 / 21.73 / 7.97 | 11.253 / −53.60 / 21.87 / 8.04 | 0.01 / 0 / 0.14 / 0.07 |
+
+- **Veredictos de B: H1 sostenida, H2 refutada, H3 sostenida, H4 sostenida.** Iguales a A.
+- **Diferencias de nivel, explicadas y verificadas:** (1) B calcula el CAGR con años calendario y A con 252 días/año: con 252 d B reproduce el CAGR de A al milésimo en todas las celdas (−0.01 pp histórico, −0.03 pp OOS). (2) B mide el toque en ventanas de 126 puntos (t..t+125) y A en 127 (t..t+126, la lectura literal de R18): con 127 puntos B reproduce P(−12%) y P(−20%) de A al centésimo en las 12 celdas. MDD, δ y μ* coinciden sin ajuste. Ninguna diferencia toca un umbral.
+- **Estado: Replicado** (H1-H4 concordantes; ΔCAGR a ≤ 0.15 pp y ΔP(−12%) a ≤ 1.0 pp). Independencia de código, no de datos.

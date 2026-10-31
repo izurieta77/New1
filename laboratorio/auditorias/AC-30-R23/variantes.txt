@@ -1,0 +1,21 @@
+[a] U0-efectivo  CAGR cal 11.244  CAGR 252 11.253  puntos 9066
+[a] U0-SPYM      CAGR cal 12.347  CAGR 252 12.357  puntos 9066
+[a] U13.5        CAGR cal 13.073  CAGR 252 13.083  puntos 9066
+[b] μ=5.5%  ΔCAGR(U13.5−U0-ef) = -0.079 pp
+[b] μ=6.0%  ΔCAGR(U13.5−U0-ef) = +0.073 pp
+[b] μ=6.5%  ΔCAGR(U13.5−U0-ef) = +0.226 pp
+[b] μ=7.0%  ΔCAGR(U13.5−U0-ef) = +0.380 pp
+[c] U0-efectivo  CAGR 11.282 MDD -53.34 P12 21.73 P20 7.56
+[c] U0-SPYM      CAGR 12.372 MDD -58.13 P12 25.31 P20 9.31
+[c] U13.5        CAGR 13.111 MDD -56.75 P12 30.23 P20 12.06
+[d] μ* (convención 252 d): 5.764%; ΔCAGR μ=7% (252): +0.379 pp
+[e] U13.5 hist P12 con 8941 ventanas: 30.232; curva sin punto inicial (8940 ventanas): 30.235
+[f] ventana de 127 puntos (t..t+126) y CAGR 252 d — histórico:
+    U0-efectivo  CAGR252 11.253  P12 21.87  P20 8.04  ventanas 8940
+    U0-SPYM      CAGR252 12.357  P12 25.46  P20 9.37  ventanas 8940
+    U13.5        CAGR252 13.083  P12 30.43  P20 12.60  ventanas 8940
+[f] μ=7%, ventana 127: P12 U13.5 33.48  U0-ef 23.34  Δ +10.13; ΔCAGR252 +0.380
+[f] OOS UPRO real, ventana 127 y CAGR 252:
+    U0-efectivo  CAGR252 13.611  P12 18.95  P20 3.41  ventanas 4228
+    U0-SPYM      CAGR252 15.429  P12 22.92  P20 5.18  ventanas 4228
+    U13.5        CAGR252 16.044  P12 30.51  P20 9.32  ventanas 4228

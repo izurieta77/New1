@@ -1,0 +1,56 @@
+AC-30 · R23 ejecución B independiente
+  sha256 R16-datos/series.json: 42339a50651abad53c797f316204686f75f49fe51895df25cab46fb51453466b
+  sha256 R12-datos/series.json: 44d25f4ee012b2b31f4d5ccd863e0af7e00a8f9caad9518aa7d686ef6218d466
+  sha256 R20-datos/series.json: 94226cbe4a0675185076f2e8e875ca51cede80144df0f3b5c1ce1291d806ee65
+Fechas comunes (GSPC, TR, VIX, NDX, DTB3): 9266 de 1990-01-02 a 2026-10-16
+Días de rendimiento con señal: 9065 de 1990-10-17 a 2026-10-16 (curva arranca en 1990-10-16)
+Filtro V0 encendido: 6773 días (74.7%)
+rf medio muestral (DTB3): 2.627%  CAGR S&P TR muestral: 11.606%
+
+(1) 1990-2026, 3x sintético con brecha por tramos de R20-A
+mezcla           CAGR      MDD  P(-12%)  P(-20%)     vol   vent
+U0-efectivo    11.244   -53.60    21.73     7.97   16.13   8941
+U0-SPYM        12.347   -58.33    25.31     9.31   18.56   8941
+U13.5          13.073   -57.00    30.23    12.48   19.10   8941
+Δ(U13.5 − U0-efectivo): CAGR +1.829 pp; P(−12%) +8.50 pp; P(−20%) +4.51 pp
+Δ(U13.5 − U0-SPYM):     CAGR +0.725 pp; P(−12%) +4.92 pp
+
+(2) Contrafactual de deriva (δ diaria constante en r_TR y r_NDX; rf fijo; señal fija)
+    μ   δ×252 mezcla           CAGR      MDD  P(-12%)  P(-20%)  ΔCAGR / ΔP12 / ΔP20 vs U0-efectivo
+    5   -6.11 U0-efectivo     5.863   -66.73    23.55     8.23
+    5   -6.11 U0-SPYM         6.039   -73.15    27.38    11.22
+    5   -6.11 U13.5           5.632   -70.56    34.59    13.01  -0.230 / +11.04 / +4.78
+    7   -4.22 U0-efectivo     7.498   -61.86    23.20     8.18
+    7   -4.22 U0-SPYM         7.951   -68.50    26.81     9.95
+    7   -4.22 U13.5           7.878   -64.91    33.25    12.84  +0.380 / +10.05 / +4.66
+    9   -2.36 U0-efectivo     9.128   -56.39    22.46     8.05
+    9   -2.36 U0-SPYM         9.861   -63.16    26.53     9.88
+    9   -2.36 U13.5          10.130   -59.26    32.79    12.67  +1.002 / +10.33 / +4.62
+   11   -0.54 U0-efectivo    10.753   -54.11    21.74     8.04
+   11   -0.54 U0-SPYM        11.770   -58.87    26.44     9.70
+   11   -0.54 U13.5          12.388   -57.53    31.18    12.56  +1.635 / +9.44 / +4.52
+   13    1.24 U0-efectivo    12.373   -52.41    21.63     7.44
+   13    1.24 U0-SPYM        13.677   -57.07    25.30     9.12
+   13    1.24 U13.5          14.652   -55.76    28.90    11.54  +2.279 / +7.27 / +4.10
+ΔCAGR en μ=3%: -0.830 pp; en μ=15%: +2.933 pp
+μ* de empate (ΔCAGR = 0): 5.759%
+
+(3) Fuera de muestra 2009-06-29 → fin de la caché, UPRO real (adjclose) contra sintético+brecha
+Días OOS: 4353 de 2009-06-29 a 2026-10-16 (curva arranca 2009-06-26); sin UPRO: 0
+Filtro encendido en OOS: 3504 días (80.5%); CAGR S&P TR OOS: 15.141%
+modo       mezcla           CAGR      MDD  P(-12%)  P(-20%)     vol
+real       U0-efectivo    13.584   -26.37    18.80     3.36   14.56
+real       U0-SPYM        15.399   -30.59    22.75     5.13   16.90
+real       U13.5          16.012   -28.81    30.29     9.22   17.87
+sintético  U0-efectivo    13.584   -26.37    18.80     3.36   14.56
+sintético  U0-SPYM        15.399   -30.59    22.75     5.13   16.90
+sintético  U13.5          15.993   -28.81    30.29     9.22   17.91
+UPRO real: Δ(U13.5 − U0-efectivo) CAGR +2.428 pp; P(−12%) +11.49 pp; P(−20%) +5.86 pp
+H4: CAGR U13.5 real − sintético+brecha = +0.019 pp
+Control UPRO real vs sintético sin brecha (sin filtro), OOS: brecha aritmética -1.593 pp/año
+
+VEREDICTOS
+H1 (μ=7%: ΔCAGR +0.380 pp < 0.30 o ΔP(−12%) +10.05 pp > 3.0): SOSTENIDA
+H2 (μ* = 5.76% en [6%, 12%]): REFUTADA
+H3 (OOS real: ΔCAGR +2.428 > 1.0 y ΔP(−12%) +11.49 ≥ 3.0): SOSTENIDA
+H4 (|real − sintético| = 0.019 pp ≤ 0.50): SOSTENIDA
