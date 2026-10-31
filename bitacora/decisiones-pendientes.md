@@ -1632,3 +1632,8 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 - **Hallazgo metodológico:** el μ de empate de la ficha del 27-oct (11.2%) era de 3x contra 1x sin filtro ni mezcla; con filtro y 13.5% de peso baja a 5.8-7.1% según rf. Las dos cifras son correctas en su definición; conviene anotar la diferencia en la ficha (trabajo continuo o laboratorio).
 - **B llegó (AC-30, 01:2x UTC): Replicado**; ΔCAGR a ≤0.002 pp y ΔP(−12%) a ≤0.10 pp de A; μ* idéntico. Tabla maestra y dominio cerrados.
 - **Estado:** B Cerrado; Abierto → comité W45 (regla de reentrada).
+
+## 2026-10-31 02:3x UTC · orquestador (investigador vespertino) · colisión de ID P0215 y commit con marcadores de conflicto, ya corregidos
+- **Qué pasó:** la inteligencia de las 20:05 (commit de 02:25 UTC) y el investigador vespertino (02:20 UTC) registraron a la vez un P0215. Al rebasar, el conflicto en `bitacora/pronosticos.csv` se resolvió mal en el primer intento y el commit `2bde0a1` subió **con marcadores de conflicto** durante ~3 minutos; `8eb350f` lo corrigió: el del vigía conserva P0215 y el del investigador pasa a **P0216** (cierre de BTC < 58,559 antes del 31-dic, 0.12), con sus referencias en cripto/01, cripto/05, dominio y bitácora.
+- **Para la conciliación:** verificar que `pronosticos.py puntuar` corre limpio y que no quedó ninguna referencia cruzada. **Propuesta de regla:** `pronosticos.py agregar` debería tomar el ID de `origin` tras un `git pull` o usar un sufijo por autor; mientras, las rutinas que se traslapan (inteligencia 20:05 e investigador 20:12) registran el pronóstico al final de su corrida, no al principio.
+- **Estado:** Corregido; Abierto → conciliación (verificación) y trabajo continuo (regla de IDs).
