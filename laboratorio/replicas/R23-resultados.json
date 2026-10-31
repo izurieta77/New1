@@ -1,0 +1,239 @@
+{
+ "sha256_r16": "42339a50651abad53c797f316204686f75f49fe51895df25cab46fb51453466b",
+ "sha256_r20_datos": "94226cbe4a0675185076f2e8e875ca51cede80144df0f3b5c1ce1291d806ee65",
+ "historico_sintetico_brecha": {
+  "U0-efectivo": {
+   "CAGR_pct": 11.253,
+   "MDD_pct": -53.6,
+   "P12_126d": 21.87,
+   "P20_126d": 8.04
+  },
+  "U0-SPYM": {
+   "CAGR_pct": 12.357,
+   "MDD_pct": -58.33,
+   "P12_126d": 25.46,
+   "P20_126d": 9.37
+  },
+  "U13.5": {
+   "CAGR_pct": 13.083,
+   "MDD_pct": -57.0,
+   "P12_126d": 30.43,
+   "P20_126d": 12.6
+  },
+  "dCAGR_U13_menos_U0efectivo_pp": 1.83,
+  "dP12_U13_menos_U0efectivo_pp": 8.56,
+  "n_dias": 9065,
+  "periodo": [
+   "1990-10-17",
+   "2026-10-16"
+  ]
+ },
+ "spx_tr_cagr_muestra_pct": 11.615,
+ "rf_media_pct": 2.627,
+ "contrafactual_deriva": {
+  "mu_5": {
+   "U0-efectivo": {
+    "CAGR_pct": 5.864,
+    "MDD_pct": -66.74,
+    "P12_126d": 23.7,
+    "P20_126d": 8.33
+   },
+   "U0-SPYM": {
+    "CAGR_pct": 6.04,
+    "MDD_pct": -73.16,
+    "P12_126d": 27.51,
+    "P20_126d": 11.31
+   },
+   "U13.5": {
+    "CAGR_pct": 5.632,
+    "MDD_pct": -70.57,
+    "P12_126d": 34.84,
+    "P20_126d": 13.13
+   },
+   "dCAGR_U13_menos_U0efectivo_pp": -0.232,
+   "dP12_U13_menos_U0efectivo_pp": 11.14,
+   "n_dias": 9065,
+   "periodo": [
+    "1990-10-17",
+    "2026-10-16"
+   ],
+   "delta_diario": -0.00024250182095786332
+  },
+  "mu_7": {
+   "U0-efectivo": {
+    "CAGR_pct": 7.499,
+    "MDD_pct": -61.88,
+    "P12_126d": 23.34,
+    "P20_126d": 8.26
+   },
+   "U0-SPYM": {
+    "CAGR_pct": 7.952,
+    "MDD_pct": -68.51,
+    "P12_126d": 26.96,
+    "P20_126d": 10.02
+   },
+   "U13.5": {
+    "CAGR_pct": 7.878,
+    "MDD_pct": -64.93,
+    "P12_126d": 33.48,
+    "P20_126d": 12.96
+   },
+   "dCAGR_U13_menos_U0efectivo_pp": 0.379,
+   "dP12_U13_menos_U0efectivo_pp": 10.14,
+   "n_dias": 9065,
+   "periodo": [
+    "1990-10-17",
+    "2026-10-16"
+   ],
+   "delta_diario": -0.00016761441388035703
+  },
+  "mu_9": {
+   "U0-efectivo": {
+    "CAGR_pct": 9.129,
+    "MDD_pct": -56.41,
+    "P12_126d": 22.6,
+    "P20_126d": 8.12
+   },
+   "U0-SPYM": {
+    "CAGR_pct": 9.862,
+    "MDD_pct": -63.18,
+    "P12_126d": 26.69,
+    "P20_126d": 9.96
+   },
+   "U13.5": {
+    "CAGR_pct": 10.13,
+    "MDD_pct": -59.27,
+    "P12_126d": 33.02,
+    "P20_126d": 12.79
+   },
+   "dCAGR_U13_menos_U0efectivo_pp": 1.001,
+   "dP12_U13_menos_U0efectivo_pp": 10.42,
+   "n_dias": 9065,
+   "periodo": [
+    "1990-10-17",
+    "2026-10-16"
+   ],
+   "delta_diario": -9.410843736035179e-05
+  },
+  "mu_11": {
+   "U0-efectivo": {
+    "CAGR_pct": 10.754,
+    "MDD_pct": -54.12,
+    "P12_126d": 21.88,
+    "P20_126d": 8.11
+   },
+   "U0-SPYM": {
+    "CAGR_pct": 11.771,
+    "MDD_pct": -58.88,
+    "P12_126d": 26.6,
+    "P20_126d": 9.78
+   },
+   "U13.5": {
+    "CAGR_pct": 12.388,
+    "MDD_pct": -57.54,
+    "P12_126d": 31.39,
+    "P20_126d": 12.67
+   },
+   "dCAGR_U13_menos_U0efectivo_pp": 1.634,
+   "dP12_U13_menos_U0efectivo_pp": 9.51,
+   "n_dias": 9065,
+   "periodo": [
+    "1990-10-17",
+    "2026-10-16"
+   ],
+   "delta_diario": -2.1933751201186347e-05
+  },
+  "mu_13": {
+   "U0-efectivo": {
+    "CAGR_pct": 12.374,
+    "MDD_pct": -52.42,
+    "P12_126d": 21.77,
+    "P20_126d": 7.51
+   },
+   "U0-SPYM": {
+    "CAGR_pct": 13.678,
+    "MDD_pct": -57.08,
+    "P12_126d": 25.45,
+    "P20_126d": 9.18
+   },
+   "U13.5": {
+    "CAGR_pct": 14.652,
+    "MDD_pct": -55.77,
+    "P12_126d": 29.09,
+    "P20_126d": 11.64
+   },
+   "dCAGR_U13_menos_U0efectivo_pp": 2.278,
+   "dP12_U13_menos_U0efectivo_pp": 7.32,
+   "n_dias": 9065,
+   "periodo": [
+    "1990-10-17",
+    "2026-10-16"
+   ],
+   "delta_diario": 4.895710187657887e-05
+  }
+ },
+ "mu_empate_pct": 5.76,
+ "fuera_de_muestra_upro_real": {
+  "U0-efectivo": {
+   "CAGR_pct": 13.611,
+   "MDD_pct": -26.37,
+   "P12_126d": 18.95,
+   "P20_126d": 3.41
+  },
+  "U0-SPYM": {
+   "CAGR_pct": 15.429,
+   "MDD_pct": -30.59,
+   "P12_126d": 22.92,
+   "P20_126d": 5.18
+  },
+  "U13.5": {
+   "CAGR_pct": 16.044,
+   "MDD_pct": -28.81,
+   "P12_126d": 30.51,
+   "P20_126d": 9.32
+  },
+  "dCAGR_U13_menos_U0efectivo_pp": 2.433,
+  "dP12_U13_menos_U0efectivo_pp": 11.56,
+  "n_dias": 4353,
+  "periodo": [
+   "2009-06-29",
+   "2026-10-16"
+  ]
+ },
+ "fuera_de_muestra_sintetico_brecha": {
+  "U0-efectivo": {
+   "CAGR_pct": 13.611,
+   "MDD_pct": -26.37,
+   "P12_126d": 18.95,
+   "P20_126d": 3.41
+  },
+  "U0-SPYM": {
+   "CAGR_pct": 15.429,
+   "MDD_pct": -30.59,
+   "P12_126d": 22.92,
+   "P20_126d": 5.18
+  },
+  "U13.5": {
+   "CAGR_pct": 16.025,
+   "MDD_pct": -28.81,
+   "P12_126d": 30.51,
+   "P20_126d": 9.32
+  },
+  "dCAGR_U13_menos_U0efectivo_pp": 2.414,
+  "dP12_U13_menos_U0efectivo_pp": 11.56,
+  "n_dias": 4353,
+  "periodo": [
+   "2009-06-29",
+   "2026-10-16"
+  ]
+ },
+ "H1_mu7_dCAGR_pp": 0.379,
+ "H1_mu7_dP12_pp": 10.14,
+ "H1_objecion_se_sostiene": true,
+ "H2_sostenida": false,
+ "H3_dCAGR_real_pp": 2.433,
+ "H3_dP12_real_pp": 11.56,
+ "H3_sostenida": true,
+ "H4_real_vs_sintetico_dCAGR_pp": 0.019,
+ "H4_sostenida": true
+}

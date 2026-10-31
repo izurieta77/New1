@@ -34,3 +34,48 @@
 - Datos: caché de R16 (S&P TR, VIX, DTB3; 1990-2026, sha256 `42339a50…466b`) y de R12 (^NDX); `R20-datos/series.json` (UPRO adjclose desde 2009-06-26). Nada se descarga.
 - Rebalanceo mensual a pesos objetivo; costos anuales de R18 (UPRO 0.91%, SPYM 0.02%, QQQM 0.15%); sin impuestos ni comisiones de operación (R19b: ~1.3-1.5 pp/año de ISR para el libro en MXN, no se modela aquí).
 - **Sesgos:** (1) la señal del filtro se calcula sobre el precio real; el δ solo desplaza rendimientos, no la señal (simplificación); (2) la brecha de R20 se midió en 2009-2026 y se aplica a 1990-2008; (3) el UPRO real empieza en 2009 (sin 2000-02 ni 2008); (4) μ = 7% es un supuesto, no un pronóstico; la ficha del 27-oct y el macro W44 lo usan como μ plausible; (5) los pesos (QQQM 26.8%, efectivo 5.3%) son los de R18, no los del libro de hoy (efectivo 18.9%, 32% tras O0008).
+
+## RESULTADOS · Ejecución A (31-oct-2026 01:1x UTC, después del commit del pre-registro `feddc59` 01:13:12 UTC)
+Datos: caché de R16 (sha256 `42339a50…466b`), 1990-10-17 a 2026-10-16, 9,065 días; `R20-datos/series.json` (UPRO real) sha256 en `R23-resultados.json`. S&P TR en la muestra: CAGR **11.615%**; `rf` media **2.627%**. Salida íntegra en `R23-salida.txt`.
+
+### Histórico 1990-2026 (sintético con brecha por tramos, sin desplazar)
+| Cartera | CAGR | MDD | P(−12%, 126 d) | P(−20%, 126 d) |
+|---|---|---|---|---|
+| U0-efectivo | 11.253% | −53.6% | 21.87% | 8.04% |
+| U0-SPYM (informativa) | 12.357% | −58.3% | 25.46% | 9.37% |
+| U13.5 | 13.083% | −57.0% | 30.43% | 12.60% |
+
+U13.5 − U0-efectivo: **+1.83 pp/año de CAGR por +8.56 pp de P(−12%)** (y +4.6 pp de P(−20%)).
+
+### Contrafactual de deriva (δ constante; `rf` fijo en su media muestral de 2.63%)
+| μ del S&P TR | CAGR U0-efectivo | CAGR U13.5 | ΔCAGR (pp) | P(−12%) U0-ef / U13.5 | ΔP(−12%) (pp) |
+|---|---|---|---|---|---|
+| 5% | 5.864 | 5.632 | **−0.232** | 23.70 / 34.84 | +11.14 |
+| **7%** | 7.499 | 7.878 | **+0.379** | 23.34 / 33.48 | **+10.14** |
+| 9% | 9.129 | 10.130 | +1.001 | 22.60 / 33.02 | +10.42 |
+| 11% | 10.754 | 12.388 | +1.634 | 21.88 / 31.39 | +9.51 |
+| 13% | 12.374 | 14.652 | +2.278 | 21.77 / 29.09 | +7.32 |
+
+**μ de empate (ΔCAGR = 0): 5.76%.**
+
+### Fuera de muestra 2009-06-29 a 2026-10-16 (4,353 días; UPRO real)
+| Cartera | CAGR | MDD | P(−12%, 126 d) | P(−20%, 126 d) |
+|---|---|---|---|---|
+| U0-efectivo | 13.611% | −26.4% | 18.95% | 3.41% |
+| U0-SPYM | 15.429% | −30.6% | 22.92% | 5.18% |
+| U13.5 (UPRO real) | 16.044% | −28.8% | 30.51% | 9.32% |
+| U13.5 (sintético + brecha, mismas fechas) | 16.025% | −28.8% | 30.51% | 9.32% |
+
+### Veredictos
+- **H1 sostenida, pero por la segunda cláusula.** Con μ = 7%, ΔCAGR = **+0.379 pp** (≥ 0.30: la parte de rendimiento del criterio del abogado **no** se cumple) y ΔP(−12%) = **+10.14 pp** (> 3.0: la de cola sí). La objeción a U13.5 se sostiene porque el UPRO compra 0.38 pp/año con 10 pp más de probabilidad de un −12% semestral.
+- **H2 refutada (por poco):** μ* = **5.76%**, debajo del rango [6%, 12%] pre-registrado. Lectura: con `rf` en 2.63% (media 1990-2026) y la mezcla con filtro, el 3x al 13.5% empieza a sumar CAGR desde un S&P de ~5.8%, mucho menos que el 11.2% de la ficha del 27-oct (que era 3x contra 1x sin filtro ni mezcla, con r = 3.8%). El filtro recorta la pérdida del 3x en los mercados bajistas y baja el umbral.
+- **H3 sostenida:** fuera de muestra, U13.5 ganó **+2.43 pp/año** a U0-efectivo y le sumó **+11.56 pp** a P(−12%) (MDD −28.8% contra −26.4%). En el mejor periodo del UPRO (S&P ≈ 14%), el 3x sí pagó, y con la cola que se esperaba.
+- **H4 sostenida:** |ΔCAGR real − sintético| = **0.019 pp**. **Salvedad:** no es validación independiente: la brecha de R20 se calibró en esta misma ventana, así que la coincidencia es casi por construcción (comprobación: 3,504 días con filtro encendido, correlación diaria real-sintético 0.9969, diferencia media +0.013 pp/año). Lo que sí confirma es que el motor de R23 usa el UPRO real y que la brecha de R20 está bien aplicada.
+
+### Exploratorio (no pre-registrado; después de ver A)
+Con `rf` desplazado a **3.8%** de media (el nivel de hoy) en el contrafactual: μ* = **7.06%**; con μ = 7%, ΔCAGR = **−0.018 pp** y ΔP(−12%) = +10.45 pp; con μ = 9%, +0.60 pp; con μ = 11%, +1.22 pp. Es decir, **a la tasa de hoy el último UPRO empata en rendimiento con un S&P del 7% y cuesta ~10 pp de probabilidad de −12% semestral en todos los μ**.
+
+### Lectura para el comité (I)
+- La decisión U0 de W44 **no dependía** de R23 y R23 no la contradice: para que el 13.5% de UPRO valga sus ~10 pp de cola hace falta creer en un S&P ≥ 9% nominal sostenido (ΔCAGR ≥ +0.6 a +1.0 pp con `rf` 3.8%). Con el μ de Vanguard/Morningstar (4-7%) o el 7% del macro W44, no suma.
+- **Regla de reentrada propuesta (para el comité, no automática):** reentrar al UPRO solo si (a) el filtro V0 está encendido **y** (b) la tasa corta (DTB3) está ≤ 2.5% **o** el comité adopta por escrito un μ ≥ 9% con evidencia; nunca por "ya rebotó".
+- Límite claro: R23 mide la cola con la métrica de R18 (máximo de cada ventana) y sin impuestos; R19b añade ~1.3-1.5 pp/año de ISR al libro en MXN, que castiga más a la pata que más rota.
