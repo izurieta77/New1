@@ -1,6 +1,6 @@
 # Comité semanal de cartera W44 · viernes 30-oct-2026 · U0 (vender el último UPRO) y contingencia Binance unificada
 
-> Preside: decisor (rol aplicado por el orquestador). Expediente: `bitacora/comite/2026-10-30-expediente.md`. Fase 0: el papel decide; lo real solo se propone al dueño. Última decisión de cartera: W43 (23-oct), 5 días hábiles → toca comité.
+> Decisión tomada el 30-oct-2026 a las 22:56 UTC (16:56 CDMX), commit `3a50d33` 22:58 UTC ([Nota 31-oct-2026 01:1x UTC, revisión del 30-oct M6]). Preside: decisor (rol aplicado por el orquestador). Expediente: `bitacora/comite/2026-10-30-expediente.md`. Fase 0: el papel decide; lo real solo se propone al dueño. Última decisión de cartera: W43 (23-oct), 5 días hábiles → toca comité.
 
 ## Tesis aprobada y cómo se refuta
 - **Papel GBM: U0.** Vender 1 UPRO (13.2% del libro) el lunes 2-nov a las 14:45 UTC (O0008). El efectivo (~32%) no se reasigna. No se vuelve a entrar al UPRO sin un **R23 pre-registrado** (U0 contra U13.5, μ de 5/7/9/11%, r 3.8%, fuera de muestra 2009-2026 con UPRO real).

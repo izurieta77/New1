@@ -1,4 +1,4 @@
-# ¿BTC y ETH seguirán bajando? ¿Conviene "meter mucho" ahora? · 30-oct-2026, 23:00-23:45 UTC
+# ¿BTC y ETH seguirán bajando? ¿Conviene "meter mucho" ahora? · 30-oct-2026, 23:00-23:41 UTC (commit `608874d` 23:41:20; [Nota 31-oct-2026 01:1x UTC, revisión del 30-oct M4])
 
 > Pregunta directa del dueño tras el "Paquete Grok" del 30-oct ("acumular en 76-78k"). Fase 0: esto es análisis y pronóstico calificable, no una recomendación real. Seis dictámenes en paralelo: `analista-cripto`, `vigia-de-informacion`, `analista-cuantitativo`, `analista-macro`, `abogado-del-diablo`, más la base propia (cap. cripto/01 §11, cripto/05 §4, fichas del 1-oct y 30-oct). Convención: **H** hecho con fuente, **I** inferencia, **P** pronóstico.
 
@@ -44,6 +44,8 @@
 7. **Sesgos detectados:** anclaje al ATH; falacia del jugador ("ya cayó, toca subir"); costo hundido con Binance; extrapolación del rebote de junio; narrativa del ciclo (grado C); confirmación (se cita el +17 M del ETF y se ignora octubre plano y ETH −1,080 M).
 
 ## 4. La versión que sí sobrevive (I; para el comité, no orden)
+
+> **Fase 0:** el sistema no recomienda inversiones reales fuera de la arena. Los tamaños de abajo son el marco que el comité usaría si el dueño pidiera una tesis formal; la decisión y el dinero son suyos ([Nota 31-oct-2026 01:1x UTC, revisión del 30-oct M7]).
 - **Tamaño:** ≤ 5% del patrimonio líquido (tope vigente); hasta ~15% solo si el dueño firma por escrito un tope de pérdida del 10% y acepta −60% adicional como escenario posible. Nunca dinero que el negocio pueda necesitar en 24 meses.
 - **Forma:** 4-6 tramos mensuales; tramo 1 **después** de la PoR del 2-nov y del cierre del 4-nov (o tras el FOMC del 9-dic si no sube). Solo con el filtro encendido (cierre > 70,953). Si cierra abajo: **se pausa, no se promedia a la baja**.
 - **Activo:** BTC. ETH ≤ 1/3 del tramo cripto y solo si el flujo de ETF de ETH vuelve a positivo 4 semanas seguidas y ETH/BTC deja de hacer mínimos.
