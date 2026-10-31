@@ -228,7 +228,7 @@ Avanza el **tema 2** de "Temas que no cubren los 35 recursos" (`00-plan-de-estud
 - **H5 estimado con datos en vivo de la red (mempool.space, altura 969,453 hoy):** ≈ 11-abr-2028, con el tiempo medio de bloque de la ventana de ajuste vigente (proyección lineal, no fecha fija del protocolo).
 - **Para invertir:** no cambia el filtro de tendencia vigente (SMA200 × 0.97/1.03) de `arena-claude-binance`; el reloj del halving es demasiado lento e impreciso para sustituir una regla diaria y mecánica. Sirve como contexto de régimen: estar hoy pasado el pico típico del ciclo y acercándose a la zona histórica de mínimo es un argumento adicional (no el único) para no aumentar la exposición más allá de lo aprobado por el comité mientras la señal de tendencia no lo respalde.
 - **Pendiente que queda:** repetir 3.1-3.3 con ETH como contraste (activo sin halving); extender la ventana de la caída de H4 más allá de 1,460 días cuando haya más historia.
-- **Nota del 30-oct-2026 (investigador vespertino):** Molnar, arXiv:2607.26188 (jul-2026, grado C), midió lo mismo con Bitstamp/Coin Metrics sin conocer esta ficha (techos a 525/546/534 días; caídas −83.8/−76.7%) y prerregistró un piso del ciclo entre el 5-oct y el 16-nov-2026. Detalle, contraste y prueba fechada (P0215) en la adenda del 30-oct de `cripto/05`.
+- **Nota del 30-oct-2026 (investigador vespertino):** Molnar, arXiv:2607.26188 (jul-2026, grado C), midió lo mismo con Bitstamp/Coin Metrics sin conocer esta ficha (techos a 525/546/534 días; caídas −83.8/−76.7%) y prerregistró un piso del ciclo entre el 5-oct y el 16-nov-2026. Detalle, contraste y prueba fechada (P0216) en la adenda del 30-oct de `cripto/05`.
 
 ## Adenda 24-oct-2026 · Riesgo cuántico (cierra el hueco de §5 y §6)
 
