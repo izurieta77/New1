@@ -284,6 +284,10 @@
 - **E10:** ningún rival top-10 pausó retiros (Google News, 24 h). **VERDE**.
 - **Señal nueva para vigilar (ficha de hoy):** **BNB/BTC**, −1.45% contra el cierre previo al choque (744.89 / 80,848.64). El análogo de Bitget (BGB/BTC −2.8% a 7 días de reabrir) dice que esta señal se mueve antes que E1. Umbral propuesto: −3% (P0217); lo calibra el gestor de riesgo.
 - **Conclusión:** las mismas **cuatro ROJAS** (E4, E6, E7 y A2/A11). **El disparador formal se cumple** ("retiros suspendidos más de 24 h"), pero la respuesta (vender y retirar) no se puede ejecutar con los rieles cerrados, y rige la regla W44 ("retirar, no vender, no depositar"). La alerta alta sigue **abierta**. No hay órdenes nuevas.
+- **[Adenda de la conciliación, 1-nov-2026 03:04 UTC, `bitacora/arbitraje/2026-10-31.md` M2; revisión del 31-oct M2. Lo de arriba es de las 14:20-14:24 UTC, antes del Update #3]:** el Security Incident | Recovery Update #3 (CMS `1fdf1f61559c401da0435895ffcccb62`, 31-oct 14:24:57 UTC, editado 15:23; A, leído a las 02:59 UTC del 1-nov) cambia dos lecturas, **no** los colores:
+  - **E3:** Binance dice que tomó una foto de PoR "at 2026-10-31 00:00 (UTC)" y que "has already been updated on the PoR website"; la prueba zk completa, "by Tuesday, 2026-11-03 (UTC)". Desde aquí la página de PoR no es legible, así que la foto es **anunciada, no verificada**. **Sigue ÁMBAR** (el 47.º reporte mensual, foto del 1-oct, no apareció: rezago > 30 días desde el 31-oct). Se revisa el 3-nov.
+  - **E4:** el Update #3 anuncia el "partial deployment of the Secure Asset Fund for Users (SAFU)" y el compromiso de "replenishing the SAFU to return the fund size to approximately US$1 billion". La columna ROJA dice "uso del fondo por un hackeo sin reposición"; la ÁMBAR, "sin reposición **anunciada**". Por la letra, la ROJA pide reposición hecha, no prometida: **sigue ROJA** hasta que el saldo de SAFU vuelva a ≈US$1 mil M de forma verificable.
+  - E6 (0/990 retiros a las 02:59:13 UTC del 1-nov, A) y E7 siguen ROJAS. La contingencia y la regla W44 no cambian.
 
 ---
 

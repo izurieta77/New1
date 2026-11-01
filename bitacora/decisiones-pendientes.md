@@ -1678,13 +1678,48 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
 
 - **Pregunta:** si mañana Binance reabre primero el riel de BTC y el de MXN/SPEI sigue cerrado (en Bitget el fiat abrió 4 días después que el BTC; ficha `conocimiento/cripto/fichas/2026-10-31-cola-retiros-reapertura.md`), ¿se compran BTC con los 3,001.83 MXN del sublibro real para sacarlos por Lightning (≈0.14% + 0.000001 BTC) o se dejan atrapados hasta que abra SPEI?
 - **Decisión conservadora (analista cripto):** **no se convierten.** Comprar BTC sube la exposición cripto real de ≈1,930 a ≈4,930 MXN (de ≈39% a 100% del libro) y es una decisión de cartera que no le toca a esta rutina; la regla W44 dice "retirar, no vender, no depositar", y comprar dentro de Binance tampoco está autorizado. El MXN espera al SPEI.
-- **Va a:** decisor vespertino (19:27 CDMX de hoy), por si quiere proponerlo al dueño como opción explícita, con sus costos (en Bitso, la vuelta cuesta 1.2-1.6% según `arena/investigacion/10-exchange-cripto-mexico.md`). **Estado:** Abierto → decisor.
+- **Va a:** decisor vespertino (19:27 CDMX de hoy), por si quiere proponerlo al dueño como opción explícita, con sus costos (en Bitso, la vuelta cuesta 1.2-1.6% según `arena/investigacion/10-exchange-cripto-mexico.md`). **Estado:** Abierto → decisor. [1-nov-2026 03:07 UTC, `bitacora/arbitraje/2026-10-31.md` §6: el decisor del 31-oct **no corrió** (sin latido ni commit). Sigue la decisión conservadora (no se convierte). Escalado al decisor del 1-nov (19:27 CDMX) y al dueño, porque la reapertura puede llegar antes.]
 
 ## 2026-11-01 00:03 UTC · revisor (rutina 11, sábado 31-oct) · hook de latidos y hora de la reapertura de Binance
-- **(1) Hook de latidos (revisión del 31-oct C1; fallo `bitacora/arbitraje/2026-10-30.md` C1):** no está adoptado (no hay `.githooks/` ni `core.hooksPath`) y ya van 13 reincidencias (hoy `7702989`, `bc80d10` y `acc2e68`). **Duda:** ¿se instala el hook versionado? **Decisión conservadora:** no lo instalo; cambiar la configuración del repo no le toca al revisor, y `.git/hooks` no viaja con el repo. Sigue la auditoría diaria. **Estado:** Abierto → orquestador; la configuración, el dueño.
-- **(2) Hora de la reapertura (revisión del 31-oct C2):** el Update #3 de Binance (A, CMS `1fdf1f61559c401da0435895ffcccb62`, 14:24:57 UTC del 31-oct) solo dice "on Sunday, 2026-11-01"; ya no da las ≈05:33 UTC. La boleta `bitacora/boletas/2026-10-30.md` L6 todavía dice ≈05:30 UTC (23:30 CDMX). **Decisión conservadora:** no reescribo la boleta (es trabajo del analista cripto). Para todas las rutinas, la ventana de reapertura es todo el domingo 1-nov en UTC (desde las 18:00 CDMX del sábado) y la regla sigue igual: no depositar; retirar por el primer riel que abra. **Estado:** Abierto → analista cripto (18:42 CDMX de hoy).
+- **(1) Hook de latidos (revisión del 31-oct C1; fallo `bitacora/arbitraje/2026-10-30.md` C1):** no está adoptado (no hay `.githooks/` ni `core.hooksPath`) y ya van 13 reincidencias (hoy `7702989`, `bc80d10` y `acc2e68`). **Duda:** ¿se instala el hook versionado? **Decisión conservadora:** no lo instalo; cambiar la configuración del repo no le toca al revisor, y `.git/hooks` no viaja con el repo. Sigue la auditoría diaria. **Estado:** Abierto → orquestador; la configuración, el dueño. [1-nov-2026 03:07 UTC, `bitacora/arbitraje/2026-10-31.md` §5: reescalado; +1 reincidencia tras la revisión (`4ccfa06`, +2 min); no lo instalé.]
+- **(2) Hora de la reapertura (revisión del 31-oct C2):** el Update #3 de Binance (A, CMS `1fdf1f61559c401da0435895ffcccb62`, 14:24:57 UTC del 31-oct) solo dice "on Sunday, 2026-11-01"; ya no da las ≈05:33 UTC. La boleta `bitacora/boletas/2026-10-30.md` L6 todavía dice ≈05:30 UTC (23:30 CDMX). **Decisión conservadora:** no reescribo la boleta (es trabajo del analista cripto). Para todas las rutinas, la ventana de reapertura es todo el domingo 1-nov en UTC (desde las 18:00 CDMX del sábado) y la regla sigue igual: no depositar; retirar por el primer riel que abra. **Estado:** ~~Abierto → analista cripto (18:42 CDMX de hoy).~~ **Cerrado** (1-nov-2026 03:07 UTC, `bitacora/arbitraje/2026-10-31.md` §1): la nota del orquestador en la boleta L6 queda ratificada (ventana: todo el domingo 1-nov UTC; a las 02:59:13 UTC, 0/990 retiros y sin Update #4).
 
-## 2026-11-01 00:1x UTC · orquestador (aprendizaje del 31-oct) · O0008 y el fin del horario de verano de EUA (M5 de la revisión del 31-oct)
+## 2026-11-01 00:1x UTC [Conciliación 1-nov-2026 03:07 UTC, `bitacora/arbitraje/2026-10-31.md` §7: commit `c682db7` 00:10:53 UTC; "00:1x" vale ≤ 00:10] · orquestador (aprendizaje del 31-oct) · O0008 y el fin del horario de verano de EUA (M5 de la revisión del 31-oct)
 - **Duda:** O0008 dice "lunes 2-nov a las 14:45 UTC, como O0001-O0006". El horario de verano de EUA termina el domingo 1-nov, así que las 14:45 UTC del lunes son las **09:45 ET**, 15 minutos después de la apertura, no las 10:45 ET de las órdenes anteriores (una hora y cuarto después de abrir).
 - **Qué decidí:** no toco la orden (REGLAS §4: fuera del comité no se cambian órdenes; la hora UTC escrita es la regla literal y es ejecutable). La diferencia es de liquidez de la primera media hora, no de validez.
-- **Estado:** Abierto → conciliación de esta noche (si juzga que la regla del precedente era "10:45 ET" y no "14:45 UTC", lo falla antes del lunes; si no, se ejecuta a las 14:45 UTC) y pre-apertura del lunes.
+- **Estado:** ~~Abierto → conciliación de esta noche (si juzga que la regla del precedente era "10:45 ET" y no "14:45 UTC", lo falla antes del lunes; si no, se ejecuta a las 14:45 UTC) y pre-apertura del lunes.~~ **Cerrado** (1-nov-2026 03:07 UTC, `bitacora/arbitraje/2026-10-31.md` M5): se mantiene **14:45 UTC** (la decisión W44 y la fila lo fijan en UTC). La vela es válida (09:45 ET, minuto 15 de la sesión) pero no es comparable en hora de mercado con O0001-O0006; nota en O0008 y el cierre del 2-nov lo anota en el brief. Si las órdenes futuras en USD se fijan en ET y no en UTC, lo decide el comité W45.
+
+## 2026-11-01 03:07 UTC · conciliación (rutina 10, sábado 31-oct) · revisión del 31-oct, Binance y lo que sigue abierto
+- **Fallos:** `bitacora/arbitraje/2026-10-31.md`. Conciliación: `bitacora/conciliacion/2026-11-01.md`.
+- **Binance (A, 02:59:13 UTC):** `getNetworkCoinAll` da 0/990 retiros y 704 depósitos; BTC (todas las redes, Lightning incluida) y MXN/FIAT_MONEY cerrados. **No hay Update #4** (CMS, 02:59:33 UTC, todos los catálogos). El Update #3 sigue: "on Sunday, 2026-11-01", sin hora. **No depositar; retirar al reabrir.**
+- **Cerrados:**
+  - §1 (ventana = todo el domingo UTC; nota de L6 ratificada);
+  - §2 C3 (manda L10: bid de Bitso, con Coinbase × `MXN=X` de respaldo; nota en L9);
+  - §3 M2 (E3 ÁMBAR y E4 ROJA, con adenda);
+  - M1 (corte 20:29 UTC);
+  - M3 (≈1,928 MXN al 31-oct);
+  - M4 (el 2-nov es inhábil bancario, no inhábil del SAT; SGM sigue B);
+  - M5 (O0008 a las 14:45 UTC, con nota);
+  - `alertas.md` L5;
+  - la nota de P0047.
+- **(1) Escalado → orquestador (BLOQUEO DE PROCESO) y dueño (configuración):** hook de latidos (§5). **Estado:** Abierto.
+- **(2) Escalado → orquestador:** el trabajo continuo, el decisor y el investigador vespertino del 31-oct **no corrieron** (§6; REGLAS §0b, "todos los días"). ¿Disparador, límite de uso u omisión? **Estado:** Abierto → orquestador; el supervisor de las 21:42 los cuenta.
+- **(3) Escalado → decisor (1-nov 19:27 CDMX) y dueño:** si abre BTC antes que SPEI, ¿se convierte el MXN? Mientras tanto, no se convierte. **Estado:** Abierto.
+- **(4) Escalado → dueño:**
+  - la boleta de Binance y la referencia del tope (bid de Bitso o BTCUSDT × FX; el sistema propone Bitso);
+  - `respuesta_roja` (C7);
+  - Bitso nivel ≥2 con CLABE;
+  - multa SGM: el lun 2-nov es el respaldo B, hábil para el SAT aunque los bancos cierren;
+  - qué es "mucho" en su consulta BTC/ETH.
+  - **Estado:** Abierto → dueño.
+- **(5) Escalado → comité W45:**
+  - la forma de la hora de las órdenes en USD (UTC o ET; M5);
+  - la reentrada al UPRO (R23).
+  - **Estado:** Abierto.
+- **(6) Siguen abiertos:**
+  - M6 y M9, formato de latidos (`OK · (este commit) · ALERTA …`) → orquestador;
+  - P0067 y P0116 → FRED;
+  - P0008, P0054, P0174 y P0187 → resolución de Polymarket;
+  - P0215 → 12:00 UTC del 1-nov;
+  - P0218 → 00:00 UTC del 2-nov;
+  - lo heredado del 30-oct, punto (4), sin cambio.
