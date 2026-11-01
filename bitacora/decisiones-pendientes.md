@@ -1723,3 +1723,9 @@ Complementa `datos/asunto-fiscal-sgm/memo-multa-2026-10-06.md`.
   - P0215 → 12:00 UTC del 1-nov;
   - P0218 → 00:00 UTC del 2-nov;
   - lo heredado del 30-oct, punto (4), sin cambio.
+
+## 2026-11-01 06:18 UTC · Orquestador (pulso cripto 00:17 CDMX) · Binance reabre BTC por red Bitcoin
+- **Hecho (A):** Update #4 (04:08:56 UTC) y endpoint a las 06:18 UTC: retiro de BTC por red BTC abierto; Lightning y MXN/SPEI cerrados (no están en la fase uno).
+- **Decisión conservadora tomada:** se propone al dueño retirar el BTC real por red Bitcoin ahora (W44 punto 4, "primera hora"); no se espera a Lightning (ahorro ≈28 MXN contra riesgo de contraparte). El MXN **no** se convierte a BTC (sigue el punto (3) para el decisor del 1-nov 19:27 CDMX).
+- **(a) Escalado → decisor/conciliador:** registrar en papel el traspaso de 0.002698 BTC a un sublibro Bitso (W44 punto 6) con la referencia fijada en `bitacora/cripto/2026-11-01.md` (BTCUSDT 77,966.00 a las 06:18 UTC, FX 18.774, comisión 0.00002 BTC). No existe todavía el sublibro ni el formato en `portafolio.py`; no se inventa en un pulso. **Estado:** Abierto.
+- **(b) Escalado → dueño:** confirmar que hizo el retiro (hora, monto, txid) para cerrar la alerta del 1-nov 06:18 UTC. **Estado:** Abierto.
