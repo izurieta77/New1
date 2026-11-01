@@ -289,6 +289,21 @@
   - **E4:** el Update #3 anuncia el "partial deployment of the Secure Asset Fund for Users (SAFU)" y el compromiso de "replenishing the SAFU to return the fund size to approximately US$1 billion". La columna ROJA dice "uso del fondo por un hackeo sin reposición"; la ÁMBAR, "sin reposición **anunciada**". Por la letra, la ROJA pide reposición hecha, no prometida: **sigue ROJA** hasta que el saldo de SAFU vuelva a ≈US$1 mil M de forma verificable.
   - E6 (0/990 retiros a las 02:59:13 UTC del 1-nov, A) y E7 siguen ROJAS. La contingencia y la regla W44 no cambian.
 
+**Seguimiento del 1-nov-2026** [I]. Revisión de contraparte de la corrida de las 08:17 del domingo, el día uno de la reapertura (fase uno del Recovery Update #4, de 06:00 a 09:00 UTC). Consultas de 14:19 a 14:24 UTC. El estudio de hoy: [`fichas/2026-11-01-reapertura-binance-dia-uno.md`](fichas/2026-11-01-reapertura-binance-dia-uno.md).
+
+- **E1 (método F):** la fila del 1-nov contra la del 25-oct da **−4.74%** (−US$6.70 mil M): **ÁMBAR**. La fila intradía de las 13:29 UTC contra la de 00:00 da **−2.78% en ≈7.5 h** (−US$3.75 mil M; USDT −1.74, BTC −1.06, USDC −0.60). Si no saliera nada más, la fila del 2-nov contra la del 26-oct ya daría −7.09%. **Lo más probable es que E1 marque ROJA mañana.**
+- **E2:** BNB 16.6% de lo rastreado (US$157.5 mil M, sin duplicar OwnTokens). BTC en carteras: 631,450 a las 13:29 (−13,597 en el día; −3.3% contra el 25-oct). **VERDE**, pero el BTC se acerca al ÁMBAR (−5%).
+- **E3:** el Update #4 dice que la foto está "on the PoR website", lo que no se pudo verificar desde aquí; la prueba zk se espera "by Tuesday, 2026-11-03". **ÁMBAR**.
+- **E4:** el Update #4 dice que Binance ya cubrió ≈95% de lo robado y no menciona la reposición del SAFU. **ROJA** sin cambio: la reposición sigue prometida, no verificada.
+- **E5:** sin cargos ni restricción a México. La prensa del día (Reuters, WSJ, BBC; B) solo cubre la reapertura. **ÁMBAR** sin cambio.
+- **E6:** **15/990 activos con retiro abierto** ([endpoint](https://www.binance.com/bapi/capital/v1/public/capital/getNetworkCoinAll), A, 14:20 UTC). BTC por la red BTC está abierto; **Lightning y MXN/FIAT_MONEY siguen cerrados**, y el SPEI lleva más de 48 h así. **ROJA** para el MXN del dueño; ÁMBAR para el BTC.
+- **E7:** **ROJA** (A11) sin cambio.
+- **E8:** USDC/USDT 1.0010 y FDUSD/USDT 0.9982 (Binance); USDT/USD 0.99865 y USDC/USD 0.9997 (Kraken). **VERDE**.
+- **E9:** BTCMXN 1,468,674 / 1,469,601: **diferencial 0.063%, VERDE**. Hay 44,235 MXN del lado de compra a ±0.5%. El medio está +0.21% sobre el implícito (78,091.49 × 18.774) y +16 pb sobre Bitso.
+- **E10:** ningún rival top-10 pausó retiros (Google News, 24 h; Indodax en mantenimiento, fuera del top-10). **VERDE**.
+- **BNB/BTC:** −1.75% en la vela de la apertura y **−0.50% a las 13:00 UTC** (−0.49% a las 14:20). El umbral de P0217 es −3%. El token y el flujo se separaron (ficha de hoy).
+- **Conclusión:** las ROJAS son **E4, E6 (MXN), E7 y A2/A11**, y E1 cruzará probablemente mañana. El disparador formal sigue cumplido desde el 31-oct y rige la regla W44: retirar el BTC en especie por la red BTC, no vender, no depositar. **El MXN es el único saldo sin salida.** La alerta alta sigue abierta. No hay órdenes nuevas.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)

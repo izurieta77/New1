@@ -205,3 +205,9 @@ Este capítulo existe para ver venir ese riesgo con datos públicos.
 - **[I]** **El estrés se ve en el token propio:** BGB/BTC −5.3% en la hora del choque, ~0% al reabrir y −2.8% a 7 días de reabrir; BNB/BTC −3.9% en la hora del choque y −1.45% a ~42 h (P0217).
 - **[I]** **La cola es un pulso:** en Bitget, 71% de la salida de tres días ocurrió el primer día (−0.46 mil M, igual a los US$463 M de Bloomberg); en Bybit, el 100% en ~34 h. La reapertura va por fases (BTC → ETH → USDT → fiat).
 - **[I]** **Ruta para saldos chicos:** el retiro Lightning de Binance (máximo 0.01 BTC por retiro) cuesta 0.075% de 0.001325 BTC, contra 1.51% por la red BTC. Bitso recibe con una factura que caduca (A). El MXN probablemente abra al final.
+
+### Adenda (1-nov-2026, analista cripto): reapertura de Binance, día uno
+- **Ficha:** `fichas/2026-11-01-reapertura-binance-dia-uno.md` (con su `.py` y la foto `.json`; DefiLlama, C, con la fila intradía de las 13:29 UTC; velas de 1 h de Binance, Coinbase y Kraken, A como dato).
+- **[I]** **Binance reabrió BTC antes que Bitget:** ≤56.5 h de pausa contra 84 h. A las 14:20 UTC, 15 de 990 activos con retiro abierto; Lightning y MXN/SPEI siguen cerrados.
+- **[I]** **La cola es grande en dólares y ordenada en ritmo:** −US$3.75 mil M (−2.78%, sin BNB) en ≈7.5 h, con 62% en stablecoins y −13,597 BTC. Por hora, −0.37%, contra −0.49% de Bitget en su primer día. Si no saliera nada más, E1 de la fila del 2-nov ya daría −7.09% (ROJA).
+- **[I]** **El token propio se separa del flujo:** BNB/BTC tocó −1.75% justo al abrir y repuntó a −0.50% en 7 h, al revés que BGB. La prima del BTC interno durante la pausa (+8.1 pb de mediana contra Coinbase) se achicó a +6.3 pb al reabrir: no hubo descuento (n = 2 con Bitget).
