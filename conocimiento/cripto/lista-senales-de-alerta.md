@@ -304,6 +304,21 @@
 - **BNB/BTC:** −1.75% en la vela de la apertura y **−0.50% a las 13:00 UTC** (−0.49% a las 14:20). El umbral de P0217 es −3%. El token y el flujo se separaron (ficha de hoy).
 - **Conclusión:** las ROJAS son **E4, E6 (MXN), E7 y A2/A11**, y E1 cruzará probablemente mañana. El disparador formal sigue cumplido desde el 31-oct y rige la regla W44: retirar el BTC en especie por la red BTC, no vender, no depositar. **El MXN es el único saldo sin salida.** La alerta alta sigue abierta. No hay órdenes nuevas.
 
+**Seguimiento del 2-nov-2026** [I]. Revisión de contraparte de la corrida de las 08:17 del lunes, día dos de la reapertura. **La corrida se disparó tarde:** estaba programada a las 14:17 UTC y empezó a las 15:22 UTC; las consultas son de 15:23 a 15:25 UTC. Estudio: [`fichas/2026-11-02-reapertura-binance-dia-dos.md`](fichas/2026-11-02-reapertura-binance-dia-dos.md).
+
+- **E1 (método F, réplica `bitacora/arbitraje/2026-10-25-e1-metodo-f.py`) — cifra oficial:** fila del 2-nov contra la del 26-oct, **−8.78% (−US$12.41 mil M): ROJA**. La aproximación del vigía (−8.73%) queda confirmada. Es la fila n.º 6 de 1,441 desde nov-2022; solo la corrida del 16-20-dic-2022 fue peor. Sin el robo (6.3 mil M) quedaría en ≈−4.3%. Hay más salida: la fila intradía de las 14:08:59 UTC da −1.26% en el día dos, y la proyección de la fila del 3-nov es −9.98%. La primera fila sin el robo en la ventana es la del 6-nov.
+- **E2:** BNB 16.8% de lo rastreado. BTC en carteras: 623,620 a las 14:09, −4.64% contra el 26-oct. **VERDE**, a 0.36 puntos del ÁMBAR (−5%).
+- **E3:** el Recovery Update #5 (A, CMS `185bd9a4717f44088b3be70287b8237f`) dice que la prueba zk de la foto del 31-oct está completa para los 10 tokens ("backed at a minimum of 1:1"). Habrá otra foto el 4-nov, con su prueba en 40-50 h. No la verifiqué con la herramienta y no tengo el ratio por activo: **ÁMBAR** (mejora: ya no hay rezago).
+- **E4:** **ROJA** sin cambio. El Update #5 repite "≈95% cubierto"; no hay saldo del SAFU verificable.
+- **E5:** sin noticia nueva de cargos ni de restricción a México. La búsqueda web de hoy no dio nada del 2-nov. **ÁMBAR** sin cambio.
+- **E6:** **14 de 991 activos y 30 pares** con retiro abierto (A, 15:23 UTC). BTC por la red Bitcoin está **abierto**; **Lightning y MXN/FIAT_MONEY cerrados** por "maintenance". USDT/TRX se cerró por "hot wallet" (13:16) y reabrió antes de las 15:23. Hay 390 redes cerradas por "replenishes the hot wallet". **ROJA** para el MXN y ÁMBAR para el BTC.
+- **E7:** **ROJA** (A11) sin cambio.
+- **E8:** USDC/USDT 1.0012 y FDUSD/USDT 0.9977 (Binance); USDT/USD 0.99852 y USDC/USD 0.9997 (Kraken). **VERDE**.
+- **E9:** BTCMXN 1,451,104 / 1,451,323, **diferencial 0.015%: VERDE**. Hay 25,550 MXN del lado de compra a ±0.5%. El medio está +0.04% sobre el implícito (77,863.62 × 18.6297) y +0.17% sobre Bitso.
+- **E10:** ningún top-10 pausó retiros (búsqueda web del día sin hallazgos; grado bajo). **VERDE**.
+- **BNB/BTC:** 0.009046, **−1.82%** contra la base de P0217 (umbral −3%). Empeoró desde el −0.50% del 1-nov a las 13:00: el token vuelve a ceder.
+- **Conclusión:** las ROJAS son **E1, E4, E6 (MXN), E7 y A2/A11**. E1 es la ROJA nueva, pero no es un disparador nuevo: la contingencia está cumplida desde el 31-oct, y rige W44 ("retirar, no vender, no depositar"). La alerta alta sigue abierta, con la acción del dueño pendiente (retirar 0.001325 BTC por la red Bitcoin). No hay órdenes nuevas.
+
 ---
 
 ## F. Método reproducible de flujos (E1 y E2)
