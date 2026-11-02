@@ -1,4 +1,5 @@
 # Estado de las rutinas (la más reciente arriba)
+2026-11-02 19:44 UTC · cripto (13:41, pulso extra) · ALERTA · Binance 15/991 y 28 pares (A, 19:43): BTC red Bitcoin abierto, Lightning y MXN/SPEI cerrados · BTC 76,816 (mínimo 24h 76,718) · −2.97% en pesos (alerta del 17:47 abierta) · FX 18.5810 · colchón +8.19% · E9 −0.019% VERDE · Polymarket 0.9945
 2026-11-02 19:41 UTC · supervisión (13:40 CDMX, lunes) · OK · (este commit) · sin disparos: papel 19,878 / real 9,986, UPRO 140.15 > stop (colchón 3.2%), filtro se cumple, VIX 20.99, FX-1 OK · O0008 pendiente · Binance 15/991, MXN cerrado
 2026-11-02 18:40 UTC · supervisión (12:40 CDMX, lunes) · AVISO · (este commit) · sin disparos: papel 19,994 / real 10,008, UPRO 142.34 > stop (4.8%), filtro se cumple, FX-1 OK · O0008 pendiente · Binance sin cambio · laboratorio sin commit (misma sesión que la pre-apertura)
 2026-11-02 18:25 UTC · cripto (12:17, pulso; prog. 18:17) · ALERTA · Binance 14/991 y 28 pares (A, 18:24): BTC red Bitcoin abierto, Lightning y MXN/SPEI cerrados · BTC 77,156 · −2.66% en pesos (alerta del 17:47 abierta) · FX 18.5592 · colchón +8.67% · E9 0.032% VERDE · Polymarket 0.9915
